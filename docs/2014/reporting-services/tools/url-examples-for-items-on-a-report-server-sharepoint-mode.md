@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099446"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemplos de URL para itens de relatório publicados em um servidor de relatório em modo de SharePoint (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099446"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL para um site ou subsite de servidor do SharePoint  
  Ao implantar uma fonte de dados de relatório, você deve usar uma URL para um site e subsite do SharePoint, caso haja um. Na URL, o nome de site aparece imediatamente depois do nome do servidor, por exemplo, http://*servername/site* ou http://*servername/site/subsite*.  
   
- Em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] aplicativo Web [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou 2007, o site e o subsite correspondem frequentemente às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Workspaces**. A lista dos sites aparece nesta seção.  
+ Em um aplicativo Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], o site e o subsite com frequência correspondem às guias no site principal. Para localizar o nome do site ou do subsite, clique em **Página Inicial**e, em seguida, **Todo Conteúdo do Site**. Role para a parte inferior e procure por **Sites e Workspaces**. A lista dos sites aparece nesta seção.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL para uma biblioteca do SharePoint  
  Ao implantar um relatório ou um item relacionado à biblioteca do SharePoint, você deve usar uma URL para biblioteca do SharePoint. A URL usada para uma biblioteca difere dependendo da versão do SharePoint que você está usando.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099446"
 |O relatório de exemplo Company Sales na pasta **Documents/Doc** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |O relatório de exemplo de vendas da empresa na **Central de Relatórios** em uma instância do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] ou do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>Publicando de uma ferramenta de criação em uma biblioteca do SharePoint  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Publicando de uma ferramenta de criação para uma biblioteca do SharePoint  
  Quando você usa a ferramenta de criação de relatório para publicar relatórios e arquivos relacionados em uma biblioteca, os arquivos são validados antes de serem adicionados. Se você carregar os relatórios e os arquivos relacionados, usando a ação **Carregar** na biblioteca do SharePoint, nenhuma validação ocorrerá. Você não saberá se o arquivo é válido até acessar o relatório, gerenciando, editando ou executando-o.  
   
 > [!NOTE]  

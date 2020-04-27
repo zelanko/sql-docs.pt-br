@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 142fd8bf2116d4cc672aeb607938ea8c1c73bf8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097992"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserver_configurationsetting"></a>Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
@@ -52,7 +52,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  *SenderEmailAddress*  
  O endereço de email usado no campo 'De:' nos emails enviados do servidor de relatório.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -64,9 +64,9 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  Esse método não fornece um modo de os usuários definirem a entrada **SendUsing** no arquivo de configuração do servidor de relatório para um valor diferente de 1. Para configurar o servidor de relatório para algo diferente de e-mail SMTP, você deverá editar o arquivo de configuração manualmente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

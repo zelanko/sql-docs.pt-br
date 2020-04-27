@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097217"
 ---
 # <a name="msreportserver_instance-class"></a>Classe MSReportServer_Instance
@@ -45,9 +45,9 @@ public class MSReportServer_Instance
  Qualquer membro público estático (**Compartilhado** no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) desse tipo é seguro para operações com vários threads. Não há garantia de que qualquer membro da instância seja seguro para threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Plataforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
  [Membros de MSReportServer_Instance](msreportserver-instance-members.md)  

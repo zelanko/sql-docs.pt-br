@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099546"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Definir propriedades de implantação (Reporting Services)
@@ -65,7 +65,7 @@ ms.locfileid: "66099546"
   
 10. Na caixa de texto **TargetServerURL** , digite a URL do servidor de relatórios de destino. Antes de publicar um relatório, defina essa propriedade com uma URL de servidor de relatório válida. Ao publicar em um servidor de relatório executado no modo nativo, use a URL do diretório virtual do servidor de relatório (por exemplo, http: *//server/reportserver* ou https: *//server/reportserver)* . Este é o diretório virtual do servidor de relatório e não o Gerenciador de Relatórios.  
   
-     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, http://*servername*, http://*servername*/*site* ou http://*servername*/*site*/*subsite*).  
+     Quando publicar em um servidor de relatório executado no modo integrado do SharePoint, use uma URL de um site de nível superior ou subsite do SharePoint. Se você não especificar um site, o site de nível superior padrão será usado (por exemplo, http://*ServerName*, http://*ServerName*/*ou o* *subsite*do http://*nomedoservidor*/*site*/).  
   
 ### <a name="to-set-configuration-manager-properties"></a>Para definir as propriedades do Gerenciador de Configuração  
   
@@ -84,8 +84,8 @@ ms.locfileid: "66099546"
  [Publicando fontes de dados e relatórios](../reports/publishing-data-sources-and-reports.md)   
  [Visualizando relatórios](../reports/previewing-reports.md)   
  [Ajuda F1 Report Designer](report-designer-f1-help.md)   
- [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Caixa de diálogo Páginas de Propriedades do Projeto](project-property-pages-dialog-box.md)   
+ [Exemplos de URL para itens de relatório publicados em um servidor de relatório no modo do SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Caixa de diálogo páginas de propriedades do projeto](project-property-pages-dialog-box.md)   
  [Publicar relatórios em um servidor de relatórios](../reports/publishing-reports-to-a-report-server.md)  
   
   

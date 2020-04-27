@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098835"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Carregar documentos em uma biblioteca do SharePoint (Reporting Services no modo do SharePoint)
@@ -50,6 +50,6 @@ ms.locfileid: "66098835"
 ## <a name="see-also"></a>Consulte Também  
  [Publicar um relatório em uma biblioteca do SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Conceder permissões para itens do servidor de relatório em um site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

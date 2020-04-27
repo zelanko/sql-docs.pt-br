@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099662"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
@@ -64,11 +64,11 @@ ms.locfileid: "66099662"
  **SnapshotCompression**  
  Define como os instantâneos são compactados. O valor padrão é `SQL`. Os valores válidos são os seguintes:  
   
- **SQL =** Os instantâneos são compactados quando armazenados no banco de dados do servidor de relatório. Esse é o comportamento atual.  
+ **SQL =** Instantâneos são compactados quando armazenados no banco de dados do servidor de relatórios. Esse é o comportamento atual.  
   
- **Nenhum** = instantâneos não são compactados.  
+ **None** = Instantâneos não são compactados.  
   
- **Todos =** Os instantâneos são compactados para todas as opções de armazenamento, que incluem o banco de dados do servidor de relatório ou o sistema de arquivos.  
+ **All =** Instantâneos são compactados para todas as opções de armazenamento que incluem o banco de dados do servidor de relatórios ou o sistema de arquivos.  
   
  **SystemReportTimeout**  
  O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
@@ -79,11 +79,9 @@ ms.locfileid: "66099662"
  **EnableIntegratedSecurity**  
  Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é `True`. Os valores válidos são os seguintes:  
   
- 
-  `True` = a segurança integrada do Windows está habilitada.  
+ `True` = a segurança integrada do Windows está habilitada.  
   
- 
-  `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
+ `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
   
  `EnableLoadReportDefinition`  
  Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. A definição dessa opção determina o valor da propriedade `EnableLoadReportDefinition` no servidor de relatórios.  
@@ -111,7 +109,7 @@ ms.locfileid: "66099662"
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propriedades de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Servidor de relatório na ajuda Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Propriedades do sistema do servidor de relatório](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Implantação de script e tarefas administrativas](script-deployment-and-administrative-tasks.md)   
  [Habilitar e desabilitar Meus Relatórios](../report-server/enable-and-disable-my-reports.md)  

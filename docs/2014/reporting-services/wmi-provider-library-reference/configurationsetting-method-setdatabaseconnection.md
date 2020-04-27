@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098097"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>Método SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
@@ -58,13 +58,13 @@ public void BackupEncryptionKey(string Server,
   
 -   2 - Serviço do Windows  
   
- *Usu*  
+ *UserName*  
  O nome de conta usada para se conectar ao banco de dados do servidor de relatório.  
   
  *Senha*  
  A senha usada para se conectar ao banco de dados do servidor de relatório.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -86,9 +86,9 @@ public void BackupEncryptionKey(string Server,
  O método SetDatabaseConnection não concede permissões para as contas especificadas. Você deve chamar o método [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) para cada conta que requer acesso ao banco de dados do servidor de relatório e executar o script resultante.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

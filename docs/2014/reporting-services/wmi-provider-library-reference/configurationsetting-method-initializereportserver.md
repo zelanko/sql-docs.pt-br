@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098352"
 ---
 # <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>Método InitializeReportServer (WMI MSReportServer_ConfigurationSetting)
@@ -44,7 +44,7 @@ public void InitializeReportServer(string InstallationID,
  *InstallationID*  
  Uma cadeia de caracteres usada para criptografar a chave de criptografia antes de ela ser retornada.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
  *ExtendedErrors[]*  
@@ -63,9 +63,9 @@ public void InitializeReportServer(string InstallationID,
  Se a propriedade [IsInitialized](configurationsetting-property-isinitialized.md) do servidor de relatório for definida `true` como quando o método InitializeReportServer for chamado, o método retornará êxito sem tentar criptografar a chave de criptografia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

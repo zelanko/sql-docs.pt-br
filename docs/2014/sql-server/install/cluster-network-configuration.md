@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096443"
 ---
 # <a name="cluster-network-configuration"></a>Configuração de rede do cluster
@@ -26,7 +26,7 @@ ms.locfileid: "66096443"
 ## <a name="options"></a>Opções  
  Nome de rede do cluster de failover-esse é o nome usado para identificar a instância de cluster de failover na rede. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Configurações de rede** -especifique o tipo de IP e o endereço IP para sua instância de cluster de failover.  
+ **Configurações de Rede** — Especifique o tipo e o endereço IP da instância de cluster de failover.  
   
  Durante as operações Adicionar Nó e Remover Nó, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exibe uma lista somente leitura dos endereços IP existentes para o cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

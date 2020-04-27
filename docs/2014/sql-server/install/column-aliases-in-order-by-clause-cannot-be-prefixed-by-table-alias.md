@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096314"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Aliases de coluna na cláusula ORDER BY não podem ter como prefixo o alias da tabela
@@ -25,7 +25,7 @@ ms.locfileid: "66096314"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Por exemplo, a consulta a seguir executa no [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], mas retorna uma erro no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]:  
   
 ```  

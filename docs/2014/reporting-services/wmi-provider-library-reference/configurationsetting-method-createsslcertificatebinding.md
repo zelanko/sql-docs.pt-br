@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098536"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>Método CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
@@ -37,26 +37,26 @@ public void CreateSSLCertificateBinding(string application,
     int lcid, out string error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Aplicativo*  
  O nome do aplicativo para o qual a associação de certificado deve ser criada.  
   
  *CertificateHash*  
  O hash para o certificado.  
   
- *IPAddress*  
+ *EndereçoIP*  
  O endereço IP para o aplicativo.  
   
  *Porta*  
  A porta SSL relacionada à associação.  
   
- *LCID*  
+ *Lcid*  
  A localidade a ser usada para as mensagens de erro retornadas.  
   
  *Erro*  
  [fora] A descrição dos erros ocorridos.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -80,9 +80,9 @@ public void CreateSSLCertificateBinding(string application,
 5.  Uma reserva de URL que especifica que existe um nome de host, mas o nome de host não corresponde ao nome de host do certificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100104"
 ---
 # <a name="preview-view"></a>Modo Visualizar
@@ -45,13 +45,13 @@ ms.locfileid: "66100104"
  **Página Atual**  
  Exibe a página atual do relatório.  
   
- **Total de páginas**  
+ **Total de Páginas**  
  Exibe o total de páginas do relatório.  
   
- **Próxima página**  
+ **Próxima Página**  
  Escolha essa opção para ir para a próxima página do relatório.  
   
- **Última página**  
+ **Última Página**  
  Escolha essa opção para ir para a última página do relatório.  
   
  **Voltar para o Relatório Pai**  
@@ -72,19 +72,19 @@ ms.locfileid: "66100104"
  **Configurar Página**  
  Escolha essa opção para alterar as propriedades de páginas e de impressão. Use Layout de Impressão para exibir as alterações antes de imprimir.  
   
- **Exportação**  
+ **Exportar**  
  Escolha essa opção para exportar o relatório renderizado em um formato específico.  
   
  **Zoom**  
  Selecione um fator de zoom para ampliar ou reduzir o relatório.  
   
- **Pesquisar texto**  
+ **Texto de Pesquisa**  
  Digite o texto para procurar uma correspondência no relatório. Não é possível usar operadores de pesquisa. Clique em **Localizar** para procurar a primeira instância.  
   
  **Considerar**  
  Escolha essa opção para começar a procurar o texto de pesquisa no relatório.  
   
- **Localizar próximo**  
+ **Localizar Próximo**  
  Escolha essa opção para procurar a próxima instância do texto de pesquisa.  
   
 ## <a name="see-also"></a>Consulte Também  

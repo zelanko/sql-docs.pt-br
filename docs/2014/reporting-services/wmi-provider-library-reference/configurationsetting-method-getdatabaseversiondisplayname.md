@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098405"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Método GetDatabaseVersionDisplayName (WMI)
@@ -39,7 +39,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *DisplayName*  
  [fora] Uma cadeia de caracteres que contém o nome para exibição que corresponde à versão fornecida.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="remarks"></a>Comentários  
@@ -47,18 +47,12 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
 |**Versão**|`Version`|**Nome de exibição**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|
-  @DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
-|RS 2005 SP1|
-  @DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
-|RS 2005 RTM|
-  @DBVersion = 'C.0.8.40'|SQL Server 2005|  
-|RS 2000 SP2|
-  @DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
-|RS 2000 SP1|
-  @DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
-|RS 2000 RTM|
-  @DBVersion = 'C.0.6.43'|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = 'C.0.8.40'|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = 'C.0.6.54'|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = 'C.0.6.51'|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |Hotfix||Versão mais próxima aplicável|  
   
  Para uma *Versão* anterior ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000, é retornado um HRESULT de ACT_E_BAD_VERSION.  
@@ -67,9 +61,9 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método teve êxito. Um valor diferente de zero indica que ocorreu um erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099736"
 ---
 # <a name="schedule-properties-general-page"></a>Propriedades da Agenda (página Geral)
@@ -56,11 +56,11 @@ ms.locfileid: "66099736"
  **Mês (Padrão de Recorrência)**  
  Especifica opções para execução de uma operação agendada em intervalos de um mês ou quando o padrão que você quer repetir é baseado em meses. Você pode especificar uma agenda mensal para o dia, hora e minuto que você quer a agenda seja executada. Você pode omitir meses específicos da agenda.  
   
- **Uma vez**  
+ **Mesmo**  
  Especifica uma agenda que só é executada uma vez, em uma data e hora específica.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Servidor de relatório na ajuda Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Criar, modificar e excluir agendas](../subscriptions/create-modify-and-delete-schedules.md)   
  [Agendas](../subscriptions/schedules.md)  

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096888"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Depois de atualização, novas palavras-chave reservadas não poderão ser usadas como identificadores
@@ -27,7 +27,7 @@ ms.locfileid: "66096888"
 ## <a name="component"></a>Componente  
  Mecanismo de Banco de Dados  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  No nível de compatibilidade 90 ou inferior, as seguintes palavras não são palavras-chave reservadas e podem ser usadas como identificadores ou nomes de objeto em scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. No nível de compatibilidade 100, estas palavras são palavras-chave totalmente reservadas e não devem ser usadas como identificadores ou nomes de objeto.  
   
 -   EXTERNAL  
@@ -52,7 +52,7 @@ ms.locfileid: "66096888"
 -   Faça referência ao objeto usando identificadores delimitados. Por exemplo, a instrução `CREATE TABLE [MERGE] ([MERGE] int);` usa colchetes para delimitar a mesclagem de nome de objeto.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Palavras-chave reservadas &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Palavras-chave reservadas &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   

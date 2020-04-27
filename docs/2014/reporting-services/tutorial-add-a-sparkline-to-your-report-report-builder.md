@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099038"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
@@ -26,8 +26,8 @@ ms.locfileid: "66099038"
   
  O vídeo [como: criar um minigráfico em uma tabela (Construtor de relatórios vídeo)](https://technet.microsoft.com/bi/ff871942.aspx) ilustra como criar um relatório semelhante com minigráficos.  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
- Neste tutorial, você aprenderá a fazer o seguinte:  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
+ Neste tutorial, você aprenderá a:  
   
  1. [Criar um relatório com uma tabela](#CreateTable)  
   
@@ -53,13 +53,13 @@ ms.locfileid: "66099038"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a>1. criar um relatório com uma tabela  
+##  <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. criar um relatório com uma tabela  
   
 #### <a name="to-create-a-report"></a>Para criar um relatório  
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     A caixa de diálogo **introdução** é aberta.  
+     A caixa de diálogo **Guia de Introdução** é aberta.  
   
     > [!NOTE]  
     >  Se a caixa de diálogo **introdução** não for exibida, no botão **Construtor de relatórios** , clique em **novo**.  
@@ -73,7 +73,7 @@ ms.locfileid: "66099038"
     > [!NOTE]  
     >  Este tutorial não precisa de dados específicos; ele só precisa de uma conexão com um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Se você já tiver uma conexão de fonte de dados listada em **Conexões de Fonte de Dados**, será possível selecioná-la e ir para a etapa 10. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-5.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+5.  Clique em **Novo**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 6.  Em **Nome**, digite **Vendas de Produtos**, um nome para a fonte de dados.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66099038"
   
 13. Clique em **Próximo**.  
   
-##  <a name="Query"></a>2. criar uma consulta no assistente de tabela  
+##  <a name="2-create-a-query-in-the-table-wizard"></a><a name="Query"></a>2. criar uma consulta no assistente de tabela  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 > [!NOTE]  
@@ -109,7 +109,7 @@ ms.locfileid: "66099038"
   
 1.  Na página **Criar uma consulta** , o designer de consultas relacionais é aberto. Para este tutorial, você usará o designer de consulta baseado em texto.  
   
-2.  Clique em **Editar Como Texto**. O designer de consulta baseado em texto exibe um painel de consulta e um painel de resultados.  
+2.  Clique em **Editar como texto**. O designer de consulta baseado em texto exibe um painel de consulta e um painel de resultados.  
   
 3.  Cole a consulta [!INCLUDE[tsql](../includes/tsql-md.md)] a seguir na caixa **Consulta** .  
   
@@ -146,23 +146,23 @@ ms.locfileid: "66099038"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Na barra de ferramentas do designer de consultas, clique em executar (**!**).  
+4.  Na barra de ferramentas do designer de consultas, clique em Executar (**!**).  
   
-     A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **subcategoria**, **produto**, **vendas**e **quantidade**.  
+     A consulta é executada e exibe o conjunto de resultados dos campos **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **Organizar campos** , arraste **Sales** até **Valores**.  
   
-     As **vendas** são agregadas pela função SUM. O valor é [Sum(Sales)].  
+     **Sales** é agregado pela função Sum. O valor é [Sum(Sales)].  
   
 7.  Arraste **Product** até **Grupos de linhas**.  
   
 8.  Arraste **SalesDate** até **Grupos de colunas**.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
-10. Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+10. Na página **escolher o layout** , em opções, verifique se a **opção** **Mostrar Subtotais e totais gerais** está selecionada.  
   
      O painel Visualizar do assistente exibe uma tabela com três linhas. Ao executar o relatório, cada linha será exibida da seguinte forma:  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66099038"
   
     3.  A terceira linha aparecerá uma vez para a tabela a fim de exibir totais gerais.  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Na página **Escolha um estilo** , no painel **Estilos** , selecione **Ardósia**.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66099038"
   
 15. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Sparkline"></a>3. adicionar um minigráfico  
+##  <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. adicionar um minigráfico  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>Para adicionar um minigráfico a uma tabela  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66099038"
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a>4. alinhar os minigráficos vertical e horizontalmente  
+##  <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. alinhar os minigráficos vertical e horizontalmente  
  Os Minigráficos são difíceis de ler quando nem todos usam as mesmas medições. Os eixos horizontal e vertical de cada um deles precisa corresponder ao resto.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Para definir o alinhamento dos minigráficos na tabela  
@@ -243,12 +243,12 @@ ms.locfileid: "66099038"
   
  Observe que todas as barras agora estão alinhadas com as barras nas outras linhas.  
   
-##  <a name="FormatCurrency"></a>5. (opcional) formatar dados como moeda  
- Por padrão, os dados de resumo do campo **Sales** exibem um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
+##  <a name="5-optional-format-data-as-currency"></a><a name="FormatCurrency"></a>5. (opcional) formatar dados como moeda  
+ Por padrão, os dados de resumo do campo **vendas** exibem um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
   
 #### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
   
-1.  Clique em **design** para alternar para o modo Design.  
+1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
 2.  Clique na célula na segunda linha (sob a linha títulos de coluna) na coluna **SalesDate** e arraste para selecionar todas as células que contêm `[Sum(Sales)]`.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66099038"
   
  Os valores de resumo para exibição de **vendas** como moeda.  
   
-##  <a name="FormatDates"></a>6. (opcional) formatar dados como datas  
+##  <a name="6-optional-format-data-as-dates"></a><a name="FormatDates"></a>6. (opcional) formatar dados como datas  
  Por padrão, o campo **SalesDate** exibe informações de data e hora. É possível formatá-lo para exibir somente a data.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Para formatar um campo de data como o formato padrão  
@@ -277,7 +277,7 @@ ms.locfileid: "66099038"
   
  Os valores de **SalesDate** são exibidos no formato de data padrão.  
   
-##  <a name="Width"></a>7. (opcional) alterar larguras de coluna  
+##  <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (opcional) alterar larguras de coluna  
  Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de texto é expandida verticalmente para acomodar o texto quando a página é renderizada. No relatório renderizado, cada linha é expandida até a altura da caixa de texto renderizada mais alta da linha. A altura da linha na superfície de design não tem nenhum efeito na altura da linha no relatório renderizado.  
   
  Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a largura da coluna para acomodar em uma única linha o conteúdo esperado das caixas de texto da coluna.  
@@ -294,7 +294,7 @@ ms.locfileid: "66099038"
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Title"></a>8. (opcional) adicionar um título de relatório  
+##  <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (opcional) adicionar um título de relatório  
  Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
  O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -317,12 +317,12 @@ ms.locfileid: "66099038"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>9. salvar o relatório  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. salvar o relatório  
  Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Sites e Servidores Recentes**.  
   
@@ -332,19 +332,19 @@ ms.locfileid: "66099038"
   
 4.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-5.  Clique em **Save** (Salvar).  
+5.  Clique em **Salvar**.  
   
  O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Isso conclui o tutorial para criar um relatório de tabela com minigráficos. Para obter mais informações sobre minigráficos, consulte [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  

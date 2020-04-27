@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100010"
 ---
 # <a name="server-properties-general-page"></a>Propriedades do Servidor (página Geral)
@@ -33,19 +33,19 @@ ms.locfileid: "66100010"
  **Versão**  
  Essa propriedade é somente leitura. Especifica a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você está usando.  
   
- **Versão**  
+ **Edição**  
  Essa propriedade é somente leitura. Especifica a instância do servidor de relatório atual. O Gerenciador de Relatório não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- **Modo de autenticação**  
+ **Modo de Autenticação**  
  Essa propriedade é somente leitura. Identifica os tipos de solicitações de autenticação aceitos pela instância do servidor de relatórios. Para alterar o modo de autenticação, você deve editar o arquivo RSReportServer.config. Para obter mais informações, consulte [Authentication with the Report Server](../security/authentication-with-the-report-server.md).  
   
  **URL**  
  Essa propriedade é somente leitura. Especifica a URL para o serviço Web Servidor de Relatórios. Esse valor é especificado na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, veja [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
- **Habilitar uma pasta meus relatórios para cada usuário**  
+ **Habilitar uma pasta Meus Relatórios para cada usuário**  
  Disponibilize Meus Relatórios aos usuários. Essa opção só está disponível para servidores de relatórios de modo nativo.  
   
- **Selecione a função a ser aplicada a cada pasta meus relatórios**  
+ **Selecione a função a ser aplicada a cada pasta Meus Relatórios**  
  Especifique uma definição de função a ser usada na segurança de Meus Relatórios. A definição de função identifica o conjunto de tarefas que tem suporte em cada pasta Meus Relatórios.  
   
  **Habilitar download para o controle de impressão do cliente ActiveX**  
@@ -55,7 +55,7 @@ ms.locfileid: "66100010"
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Habilitar e desabilitar meus relatórios](../report-server/enable-and-disable-my-reports.md)   
- [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Servidor de relatório na ajuda Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Proteger Meus Relatórios](../security/secure-my-reports.md)  
   
   

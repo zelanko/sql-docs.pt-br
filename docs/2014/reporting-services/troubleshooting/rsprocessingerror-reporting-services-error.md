@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099141"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erro do Reporting Services
@@ -55,7 +55,7 @@ ms.locfileid: "66099141"
   
 -   Um parâmetro que tem a propriedade Nullable definida como `False` detectou um valor nulo no parâmetro.  
   
--   Uma expressão da propriedade Hidden de uma região de dados que contém um erro: a referência do objeto não foi definida para uma instância de um objeto.  
+-   Uma expressão para a propriedade oculta de uma região de dados contém um erro: referência de objeto não definida para uma instância de objeto.  
   
 -   Expressão que incluiu uma chamada de função inválida ou erro de sintaxe.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099141"
  Um parâmetro de vários valores não pode ser Nulo. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Relatório principal com sub-relatório que não possa ser processado  
- Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a mensagem a seguir será exibida: "Não foi possível processar o sub-relatório".  
+ Um relatório com sub-relatórios deve ser processado pela mesma versão do processador de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante a atualização de relatórios para a versão atual do esquema de definição de relatórios, o relatório principal e os sub-relatórios poderão ou não ser atualizados ao mesmo tempo. Se a versão não for compatível entre um relatório e seus sub-relatórios, a seguinte mensagem será exibida: "Não foi possível processar o sub-relatório".  
   
  Você deve alterar o relatório principal ou os sub-relatórios de forma que todos os relatórios possam ser processados pela mesma versão do processador de relatórios. Para obter informações sobre o motivo pelo qual um relatório falha ao ser atualizado, consulte [Atualizar relatórios](../install-windows/upgrade-reports.md).  
   

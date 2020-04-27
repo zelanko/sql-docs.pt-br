@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098356"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Método ListSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
@@ -38,29 +38,29 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
     out Int32 length, out Int32 HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *LCID*  
  A localidade a ser usada para as mensagens de erro retornadas.  
   
- *Aplicativo []*  
+ *Application[]*  
  [fora] Os aplicativos que têm associações de certificado.  
   
- *CertificateHash []*  
+ *CertificateHash[]*  
  [fora] Os hashes dos certificados.  
   
- *IPAddress []*  
+ *IPAddress[]*  
  [fora] O endereço IP dos aplicativos.  
   
- *Porta []*  
+ *Port[]*  
  [fora] O número de porta armazenado na associação em rsreportserver.config.  
   
- *Erros []*  
+ *Errors[]*  
  [fora] As descrições dos erros ocorridos.  
   
  *Comprimento*  
  [fora] O tamanho da matriz retornada pelo método.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -69,9 +69,9 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

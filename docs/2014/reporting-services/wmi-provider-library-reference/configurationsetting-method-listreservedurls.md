@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098273"
 ---
 # <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>Método ListReservedURLs (WMI MSReportServer_ConfigurationSetting)
@@ -37,22 +37,22 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>parâmetros  
- *Aplicativo []*  
+ *Application[]*  
  [fora] Os aplicativos que têm reservas de URL.  
   
- *UrlString []*  
+ *UrlString[]*  
  [fora] As URLs que estão reservadas.  
   
- *Conta []*  
+ *Account[]*  
  [fora] Os nomes de conta associados com a conta para as reservas de URL.  
   
- *AccountId []*  
+ *AccountSID[]*  
  [out] Os SIDs da conta associados com a conta para as reservas de URL.  
   
  *Comprimento*  
  [fora] O tamanho das matrizes retornadas pelo método.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -61,9 +61,9 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

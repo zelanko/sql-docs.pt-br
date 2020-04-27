@@ -22,19 +22,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099908"
 ---
 # <a name="reporting-services-tools"></a>Ferramentas do Reporting Services
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contém um conjunto de ferramentas gráficas e de script que dão suporte ao desenvolvimento e ao uso de relatórios avançados em um ambiente gerenciado. O conjunto de ferramentas inclui ferramentas de desenvolvimento, de configuração e de administração, além de ferramentas de visualização de relatórios. Este tópico dá uma visão geral breve de cada ferramenta do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e como ela pode ser acessada.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contém um conjunto de ferramentas gráficas e de script que dão suporte ao desenvolvimento e ao uso de relatórios avançados em um ambiente gerenciado. O conjunto de ferramentas inclui ferramentas de desenvolvimento, de configuração e de administração, além de ferramentas de visualização de relatórios. Este tópico dá uma visão geral breve de cada ferramenta do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e como ela pode ser acessada.  
   
  Para localizar uma ferramenta imediatamente, consulte [Tutorial: Como localizar e iniciar as ferramentas do Reporting Services &#40;SSRS&#41;](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Ferramentas de criação de relatório  
- A tabela a seguir lista as ferramentas disponíveis para a criação de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]relatórios no.  
+ A tabela a seguir lista as ferramentas disponíveis para criação de relatórios no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Ferramenta|DESCRIÇÃO|Como acessar|  
 |----------|-----------------|-------------------|  
@@ -45,10 +45,10 @@ ms.locfileid: "66099908"
 ## <a name="tools-for-report-server-administration"></a>Ferramentas para administração do servidor de relatório  
  Um conjunto de ferramentas gráficas e de script está disponível para administrar o servidor de relatório [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]no. As ferramentas que você usa dependem do modo de implantação de seu servidor de relatório.  
   
-### <a name="native-mode"></a>nativo  
+### <a name="native-mode"></a>Modo nativo  
  A tabela a seguir lista as ferramentas disponíveis para administrar o servidor de relatório implantado em modo nativo.  
   
-|Ferramenta|DESCRIÇÃO|Como acessar|  
+|Ferramenta|Descrição|Como acessar|  
 |----------|-----------------|-------------------|  
 |Gerenciador de Configurações do Reporting Services|Use essa ferramenta para configurar uma instalação do Reporting Services. Observe que o Gerenciador de Configurações do Reporting Services não ajuda a gerenciar o conteúdo do servidor de relatório, a habilitar recursos adicionais ou a conceder acesso ao servidor. As tarefas disponíveis incluem:<br /><br /> Configurar as instâncias locais e remotas do servidor de relatório<br /><br /> Configurar a conta de serviço do Servidor de Relatório.<br /><br /> Criar e configurar uma ou mais URLs de serviço Web.<br /><br /> Configurar a URL do Gerenciador de Relatórios<br /><br /> Criar e configurar o banco de dados do servidor de relatório.<br /><br /> Configurar uma implantação de expansão.<br /><br /> Fazer backup, restaurar ou substituir a chave simétrica usada para criptografar cadeias de conexão e credenciais armazenadas.<br /><br /> Configurar a conta de execução autônoma.<br /><br /> Configurar um servidor SMTP para entrega de email.<br /><br /> <br /><br /> Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).|Menu Iniciar|  
 |SQL Server Management Studio|Use essa ferramenta para gerenciar uma ou mais instâncias do servidor de relatório em um único ambiente, inclusive:<br /><br /> Gerenciar instâncias locais e remotas do servidor de relatório<br /><br /> Configurar propriedades do servidor de relatório<br /><br /> Modificar definições de função<br /><br /> Desativar recursos do servidor de relatório que você não está usando<br /><br /> Gerenciar trabalhos<br /><br /> Gerenciar agendas compartilhadas|Menu Iniciar|  
@@ -60,7 +60,7 @@ ms.locfileid: "66099908"
 ### <a name="sharepoint-integrated-mode"></a>Modo integrado do SharePoint  
  No modo do SharePoint, o Reporting Services é um aplicativo de serviço na arquitetura do SharePoint e é administrado diretamente pelo SharePoint  
   
-|Ferramenta|DESCRIÇÃO|Como acessar|  
+|Ferramenta|Descrição|Como acessar|  
 |----------|-----------------|-------------------|  
 |Administração Central do SharePoint|Use a Administração Central do SharePoint para criar, consultar e gerenciar os aplicativos de serviço compartilhados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Para obter mais informações, consulte [Configuração e administração de um servidor de relatório &#40;modo do SharePoint do Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md).|Navegador para a URL do site do SharePoint para a Administração Central|  
 |Cmdlets do PowerShell|Use os cmdlets do PowerShell para criar, consultar e gerenciar os aplicativos de serviço compartilhados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Para obter mais informações, consulte [Cmdlets do PowerShell para o modo SharePoint do Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|Shell de Gerenciamento do SharePoint 2010|  
@@ -68,10 +68,10 @@ ms.locfileid: "66099908"
 ## <a name="tools-for-report-content-management"></a>Ferramentas para gerenciamento de conteúdo de relatório  
  Um conjunto de ferramentas gráficas e de script está disponível para gerenciar conteúdo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]no. As ferramentas que você usa dependem do modo de implantação de seu servidor de relatório.  
   
-|Ferramenta|DESCRIÇÃO|Como acessar|  
+|Ferramenta|Descrição|Como acessar|  
 |----------|-----------------|-------------------|  
 |URL do serviço Web do Servidor de Relatório|Use essa ferramenta para procurar conteúdo no catálogo de relatórios em uma página de navegação de item genérica.<br /><br /> Para obter mais informações, consulte [Report Server Web Service](../report-server-web-service/report-server-web-service.md).|Navegador|  
-|Gerenciador de Relatórios|**(Somente no modo nativo)** Use essa ferramenta para administrar uma única instância do servidor de relatório de um local remoto em uma conexão HTTP. É possível fazer o seguinte:<br /><br /> Exibir, pesquisar, imprimir e assinar os relatórios.<br /><br /> Criar, proteger e manter a hierarquia de pastas para organizar itens no servidor.<br /><br /> Configure a segurança baseada em função que determina o acesso a itens e operações.<br /><br /> Configurar propriedades de execução de relatório, histórico de relatórios e parâmetros de relatório.<br /><br /> Criar modelos de relatório que se conectam e recuperam dados de uma fonte de dados do Microsoft SQL Server Analysis Services ou de uma fonte de dados relacional do SQL Server.<br /><br /> Definir a segurança do item de modelo para permitir acesso a entidades específicas no modelo ou mapear entidades para relatórios de clickthrough predefinidos que você cria com antecedência.<br /><br /> Criar agendas compartilhadas e fontes de dados compartilhadas para tornar as agendas e as conexões de fonte de dados mais gerenciáveis.<br /><br /> Criar assinaturas dirigidas aos dados que distribuem relatórios para uma grande lista de destinatários.<br /><br /> Criar relatórios vinculados para reutilizar e redefinir o propósito de um relatório existente de diferentes maneiras.<br /><br /> Iniciar o Construtor de Relatórios para criar relatórios que você possa salvar e executar no servidor de relatório.<br /><br /> <br /><br /> Para obter mais informações, consulte [Gerenciador de Relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md).||  
+|Gerenciador de Relatórios|**(Apenas modo nativo)** Use essa ferramenta para administrar uma única instância do servidor de relatório em um local remoto por meio de uma conexão HTTP. É possível fazer o seguinte:<br /><br /> Exibir, pesquisar, imprimir e assinar os relatórios.<br /><br /> Criar, proteger e manter a hierarquia de pastas para organizar itens no servidor.<br /><br /> Configure a segurança baseada em função que determina o acesso a itens e operações.<br /><br /> Configurar propriedades de execução de relatório, histórico de relatórios e parâmetros de relatório.<br /><br /> Criar modelos de relatório que se conectam e recuperam dados de uma fonte de dados do Microsoft SQL Server Analysis Services ou de uma fonte de dados relacional do SQL Server.<br /><br /> Definir a segurança do item de modelo para permitir acesso a entidades específicas no modelo ou mapear entidades para relatórios de clickthrough predefinidos que você cria com antecedência.<br /><br /> Criar agendas compartilhadas e fontes de dados compartilhadas para tornar as agendas e as conexões de fonte de dados mais gerenciáveis.<br /><br /> Criar assinaturas dirigidas aos dados que distribuem relatórios para uma grande lista de destinatários.<br /><br /> Criar relatórios vinculados para reutilizar e redefinir o propósito de um relatório existente de diferentes maneiras.<br /><br /> Iniciar o Construtor de Relatórios para criar relatórios que você possa salvar e executar no servidor de relatório.<br /><br /> <br /><br /> Para obter mais informações, consulte [Gerenciador de Relatórios &#40;modo nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md).||  
 |Utilitário RS|Essa ferramenta é um host de script que pode ser usado para executar operações de script. Use essa ferramenta para executar scripts do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que copiam dados entre os bancos de dados do servidor de relatório, publicam relatórios, criam itens em um banco de dados do servidor de relatório e outras funções.<br /><br /> Para obter mais informações, consulte [Utilitários de prompt de comando do Servidor de Relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Prompt de comando|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098852"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
@@ -26,7 +26,7 @@ ms.locfileid: "66098852"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
 1.  [Criar um relatório de tabela e conjunto de dados no Assistente de Tabela ou Matriz](#Setup)  
@@ -58,7 +58,7 @@ ms.locfileid: "66098852"
 ## <a name="requirements"></a>Requisitos  
  Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. criar um relatório de tabela e um conjunto de relatórios do assistente de tabela ou matriz  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. criar um relatório de tabela e um conjunto de relatórios do assistente de tabela ou matriz  
  Crie um relatório de tabela, uma fonte de dados e um conjunto de dados. Ao criar o layout da tabela, você incluirá apenas alguns campos. Depois de concluir o assistente, você adicionará manualmente colunas. O assistente facilita a criação de layout da tabela e a aplicação de um estilo.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66098852"
   
 1.  Clique em **Iniciar**, aponte para **programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]clique em **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
-     A caixa de diálogo **Guia de Introdução** é exibida.  
+     A caixa de diálogo **introdução** é exibida.  
   
     > [!NOTE]  
     >  Se a caixa de diálogo **introdução** não for exibida, no botão **Construtor de relatórios** , clique em **novo**.  
@@ -85,13 +85,13 @@ ms.locfileid: "66098852"
   
 4.  Na página **Escolher um conjunto de dados** , clique em **Criar um conjunto de dados**.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **Escolher uma conexão com uma fonte de dados** , selecione uma fonte de dados do tipo **SQL Server**. Selecione uma fonte de dados na lista ou navegue até o servidor de relatório para selecionar uma.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
-8.  Na página **criar uma consulta** , clique em **Editar como texto**.  
+8.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 9. Cole a seguinte consulta no painel de consulta:  
   
@@ -123,9 +123,9 @@ ms.locfileid: "66098852"
   
      A consulta especifica nomes de colunas que incluem data de nascimento, nome, sobrenome, estado ou província, identificador de país/região, sexo e compras desde o início do ano.  
   
-10. Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**). O conjunto de resultados exibe 20 linhas de dados e inclui as seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Na barra de ferramentas do designer de consultas, clique em **executar** (**!**). O conjunto de resultados exibe 20 linhas de dados e inclui as seguintes colunas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Na página **Organizar campos** , arraste os campos a seguir, na ordem especificada, da lista **Campos Disponíveis** para a lista **Valores** .  
   
@@ -150,13 +150,13 @@ ms.locfileid: "66098852"
   
      A Soma não é mais aplicada a YTDPurchase.  
   
-15. Clique em **Próximo**.  
+15. Clique em **Avançar**.  
   
 16. Na página **Escolher o layout**, clique em **Avançar**.  
   
 17. Na página **escolher um estilo** , clique em **Tablet**e em **concluir**.  
   
-##  <a name="UpdateNames"></a>2. atualizar os nomes padrão da fonte de dados e do DataSet  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. atualizar os nomes padrão da fonte de dados e do DataSet  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>Para atualizar o nome padrão da fonte de dados  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098852"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. exibir nome, inicial e sobrenome  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. exibir nome, inicial e sobrenome  
  Use a função **Left** e o operador **Concatenate** (**&**) em uma expressão avaliada com um nome que inclui uma inicial e um sobrenome. Você pode criar a expressão passo a passo ou ignorá-la no procedimento e copiar/colar a expressão do tutorial na caixa de diálogo **Expressão** .  
   
 #### <a name="to-add-the-name-column"></a>Para adicionar a coluna Nome  
@@ -215,7 +215,7 @@ ms.locfileid: "66098852"
   
 12. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Gender"></a>4. usar imagens para exibir o gênero  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. usar imagens para exibir o gênero  
  Use imagens para mostrar o sexo de uma pessoa e identificar valores de sexo desconhecidos, usando uma terceira imagem. Você adicionará ao relatório três imagens ocultas e uma nova coluna para exibir as imagens. Em seguida, determine a imagem que aparece na coluna, com base no valor do campo Sexo.  
   
  Para aplicar uma cor à célula da tabela que contém a imagem quando você transforma o relatório em um relatório de barras, adicione um retângulo e, depois, adicione a imagem ao retângulo. Você precisa usar um retângulo porque pode aplicar uma cor do plano de fundo a um retângulo, mas não a uma imagem.  
@@ -296,7 +296,7 @@ ms.locfileid: "66098852"
   
 14. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Lookup"></a>5. Pesquisar nome do CountryRegion  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. Pesquisar nome do CountryRegion  
  Crie o conjunto de dados CountryRegion e use a função **Lookup** para exibir o nome de um país/região, em vez do identificador do país/região.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>Para criar o conjunto de dados CountryRegion  
@@ -313,7 +313,7 @@ ms.locfileid: "66098852"
   
 6.  Verifique se o tipo de consulta **Texto** está selecionado e clique em **Designer de Consultas**.  
   
-7.  Clique em **Editar como texto**.  
+7.  Clique em **Editar como Texto**.  
   
 8.  Copie e cole a seguinte consulta no painel de consulta:  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098852"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Clique em **Executar** (**!**) para executar a consulta.  
+9. Clique em **executar** (**!**) para executar a consulta.  
   
      Os resultados da consulta são os identificadores e nomes de país/região.  
   
@@ -370,8 +370,8 @@ ms.locfileid: "66098852"
   
 11. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Count"></a>6. contagem de dias desde a última compra  
- Adicione uma coluna e, em seguida **** , use a função `ExecutionTime` Now ou a variável global interna para calcular o número de dias a partir de hoje desde a última compra de uma pessoa.  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. contagem de dias desde a última compra  
+ Adicione uma coluna e, em seguida **Now** , use a função `ExecutionTime` Now ou a variável global interna para calcular o número de dias a partir de hoje desde a última compra de uma pessoa.  
   
 #### <a name="to-add-the-days-ago-column"></a>Para adicionar a coluna Days Ago  
   
@@ -416,7 +416,7 @@ ms.locfileid: "66098852"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. Use um indicador para mostrar a comparação de vendas  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Use um indicador para mostrar a comparação de vendas  
  Adicione uma nova coluna e use um indicador para mostrar se as compras ACUMULAdas no ano de uma pessoa (no ano) estão acima ou abaixo das compras médias no ano. A função **Round** remove os decimais dos valores.  
   
  A configuração do indicador e seus estados exige várias etapas. Se desejar, no procedimento "para configurar o indicador", você poderá ignorar e copiar/colar as expressões concluídas deste tutorial na caixa de diálogo **expressão** .  
@@ -521,7 +521,7 @@ ms.locfileid: "66098852"
   
 38. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="GreenBar"></a>8. tornar o relatório um relatório de "barra verde"  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. tornar o relatório um relatório de "barra verde"  
  Use um parâmetro para especificar a cor a ser aplicada para alternar linhas no relatório, transformando-o em um relatório de barras.  
   
 #### <a name="to-add-a-parameter"></a>Para adicionar um parâmetro  
@@ -638,7 +638,7 @@ ms.locfileid: "66098852"
   
      O relatório é renderizado e linhas alternativas têm o plano de fundo escolhido por você.  
   
-##  <a name="DateFormat"></a>adicional Formatar coluna de data  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>adicional Formatar coluna de data  
  Formate a coluna **Last Purchase**, que contém datas.  
   
 #### <a name="to-format-date-column"></a>Para formatar coluna de dados  
@@ -651,7 +651,7 @@ ms.locfileid: "66098852"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>adicional Adicionar um título de relatório  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>adicional Adicionar um título de relatório  
  Adicione um título ao relatório.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -672,14 +672,14 @@ ms.locfileid: "66098852"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>adicional Salvar o relatório  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>adicional Salvar o relatório  
  É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador. Para obter mais informações, consulte [Salvando relatórios &#40;Construtor de Relatórios&#41;](report-builder/saving-reports-report-builder.md).  
   
  Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Sites e Servidores Recentes**.  
   
@@ -689,19 +689,19 @@ ms.locfileid: "66098852"
   
 4.  Em **Nome**, substitua o nome padrão por **Resumo de Comparação de Vendas**.  
   
-5.  Clique em **Save** (Salvar).  
+5.  Clique em **Salvar**.  
   
  O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
 #### <a name="to-save-the-report-to-your-computer"></a>Para salvar o relatório no computador  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Resumo de Comparação de Vendas**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

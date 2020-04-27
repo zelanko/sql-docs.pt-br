@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100037"
 ---
 # <a name="project-property-pages-dialog-box"></a>caixa de diálogo Páginas de Propriedades do Projeto
-  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_**Propriedades**.  
+  Use as páginas de propriedades do projeto para configurar as propriedades de implantação de um projeto do Servidor de Relatório. Para abrir essa caixa de diálogo, no menu **Projeto**, clique em _\<Report Project Name>_ **Propriedades**.  
   
  Depois que você definir as propriedades de configuração, poderá selecionar uma configuração na lista suspensa **Configurações da Solução** da barra de ferramentas.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66100037"
  Para criar configurações adicionais, clique em **Configuration Manager** na barra de ferramentas.  
   
  **Configuration Manager**  
- Gerencie configurações da solução inteira ou adicione outras configurações. Para obter mais informações, consulte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a documentação.  
+ Gerencie configurações da solução inteira ou adicione outras configurações. Para obter mais informações, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **OutputPath**  
  Digite ou cole o caminho para armazenar a definição de relatório usada na verificação da compilação, na implantação e na visualização de relatórios. O caminho deve ser diferente do caminho que você usa para o projeto e um caminho relativo que é uma pasta filho sob o caminho do projeto.  
@@ -44,7 +44,7 @@ ms.locfileid: "66100037"
 >  Você pode usar várias configurações para alternar entre caminhos que dependem da tarefa você executa.  
   
  **ErrorLevel**  
- Digite a severidade dos problemas de compilação que são relatados como erros. Problemas com níveis de severidade menor ou igual ao valor de **ERRORLEVEL** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
+ Digite a severidade dos problemas de compilação que são relatados como erros. Problemas com níveis de severidade menor ou igual ao valor de **ErrorLevel** são relatados como erros; caso contrário, os problemas são relatados como avisos. Qualquer erro causará falha na tarefa de compilação. Os níveis de severidade válidos são de 0 a 4, inclusive. O valor padrão é 2.  
   
  **StartItem**  
  Selecione o relatório exibido no navegador da Web depois que o projeto é publicado no servidor de relatório ou na janela de visualização quando o projeto é executado localmente. Um item de inicialização é necessário para configurações que criam, mas não implantam o projeto, e para usar o comando **Debug** (**F5**). Ele é necessário para configurações que implantam o projeto.  

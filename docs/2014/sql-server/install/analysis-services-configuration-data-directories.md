@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096807"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuração do Analysis Services - diretórios de dados
@@ -22,7 +22,7 @@ ms.locfileid: "66096807"
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
   
-|DESCRIÇÃO|Diretório padrão|Recomendações|  
+|Descrição|Diretório padrão|Recomendações|  
 |-----------------|-----------------------|---------------------|  
 |Diretório raiz de dados|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Data\|Verifique se a pasta \Program Files\Microsoft SQL Server \ está protegida com permissões limitadas. O desempenho do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, em muitas configurações, do desempenho do armazenamento no qual o diretório de dados está localizado. Coloque esse diretório no armazenamento de melhor desempenho conectado ao sistema. Para instalações de cluster de failover, verifique se os diretórios de dados estão colocados no disco compartilhado.|  
 |Diretório do arquivo de log|C:\Arquivos de Programas\microsoft SQL Server\MSAS12. \<InstanceId> \OLAP\Log\|esse é o diretório para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] arquivos de log e inclui o log FlightRecorder. Se você aumentar a duração do registrador de voo, atente para que o diretório de logs tenha espaço suficiente.|  

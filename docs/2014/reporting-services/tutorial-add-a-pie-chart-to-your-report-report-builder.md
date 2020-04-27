@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099045"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de pizza ao relatório (Construtor de Relatórios)
@@ -26,7 +26,7 @@ ms.locfileid: "66099045"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
 1.  [Criar um gráfico de pizza no Assistente de gráfico](#Chart)  
@@ -51,7 +51,7 @@ ms.locfileid: "66099045"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. criar um gráfico de pizza no assistente de gráfico  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. criar um gráfico de pizza no assistente de gráfico  
  Na caixa de diálogo Guia de Introdução, use o Assistente de Gráfico para criar um conjunto de dados inserido, escolha uma fonte de dados compartilhada e crie um gráfico de pizza.  
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ ms.locfileid: "66099045"
      A caixa de diálogo Guia de Introdução é exibida.  
   
     > [!NOTE]  
-    >  Se a caixa de diálogo Guia de Introdução não for exibida, no botão Construtor de Relatórios, clique em **Novo**.  
+    >   Se a caixa de diálogo Guia de Introdução não for exibida, no botão Construtor de Relatórios, clique em **Novo**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66099045"
     > [!NOTE]  
     >  A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **Crie uma Consulta** , clique em **Editar como Texto**.  
+6.  Na página **criar uma consulta** , clique em **Editar como texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66099045"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
-##  <a name="ChartType"></a>2. escolher o tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. escolher o tipo de gráfico  
  Você pode escolher um dos diversos tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-pie-chart"></a>Para adicionar um gráfico de pizza  
@@ -105,9 +105,9 @@ ms.locfileid: "66099045"
   
      Na página **Organizar campos de gráfico** , arraste o campo Produto até o painel **Categorias** . Esse painel define o número de fatias do gráfico de pizza. Neste exemplo, haverá oito fatias, uma para cada produto.  
   
-2.  Arraste o campo Vendas até o painel **Valores** . Sales representa a quantidade de vendas da subcategoria. O painel **Valores** exibe `[Sum(Sales)]` porque o gráfico exibe a agregação de cada produto.  
+2.  Arraste o campo Vendas até o painel **Valores** . Sales representa a quantidade de vendas da subcategoria. O painel **valores** é `[Sum(Sales)]` exibido porque o gráfico exibe a agregação de cada produto.  
   
-3.  Clique em **Próximo**.  
+3.  Clique em **Avançar**.  
   
 4.  Na página **escolher um estilo** , no painel estilos, selecione um estilo.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66099045"
   
  O relatório exibe o gráfico de pizza com oito fatias, uma para cada produto. O tamanho de cada fatia representa as vendas desse produto. Três das fatias são bastante finas.  
   
-##  <a name="Percentages"></a>3. exibir porcentagens em cada fatia  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. exibir porcentagens em cada fatia  
  Em cada fatia da pizza, é possível exibir uma porcentagem dessa fatia comparada à pizza inteira.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>Para exibir as porcentagens em cada fatia do gráfico de pizza  
@@ -149,7 +149,7 @@ ms.locfileid: "66099045"
   
  O relatório exibe a porcentagem do todo para cada fatia da pizza.  
   
-##  <a name="CombineSlices"></a>4. combinar fatias pequenas em uma fatia  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. combinar fatias pequenas em uma fatia  
  Três das fatias do gráfico são bastante pequenas. É possível combinar várias fatias pequenas em uma fatia maior que representa todas elas.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>Para combinar fatias no gráfico de pizza menores do que 5% em uma fatia  
@@ -172,7 +172,7 @@ ms.locfileid: "66099045"
   
  Na legenda, a categoria "Outro" agora existe. A nova fatia da pizza combina todas as fatias que estavam abaixo de 5% em uma fatia que representa 6% da pizza inteira.  
   
-##  <a name="DrawingEffect"></a>5. personalizar o efeito de desenho  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. personalizar o efeito de desenho  
  No Assistente de Gráfico, o estilo padrão de um gráfico de pizza é Ocean, que apresenta um efeito de desenho Côncavo. Você poderá alterá-lo depois de executar o assistente.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>Para adicionar um efeito de desenho ao gráfico de pizza  
@@ -196,7 +196,7 @@ ms.locfileid: "66099045"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. adicionar um título de relatório  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. adicionar um título de relatório  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
@@ -218,17 +218,17 @@ ms.locfileid: "66099045"
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Save"></a>7. salvar o relatório  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. salvar o relatório  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  No botão Construtor de Relatórios, clique em **Salvar como**.  
+2.  No botão Construtor de Relatórios , clique em **Salvar como**.  
   
 3.  Em **Nome**, digite **Gráfico de Pizza de Vendas**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
  O relatório é salvo no servidor de relatório.  
   

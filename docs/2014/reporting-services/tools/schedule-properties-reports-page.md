@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099793"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriedades da Agenda (página Relatórios)
@@ -38,8 +38,8 @@ ms.locfileid: "66099793"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar, modificar e excluir agendas](../subscriptions/create-modify-and-delete-schedules.md)   
- [Agendamento](../subscriptions/schedules.md)   
- [Servidor de Relatório na ajuda F1 do Management Studio](report-server-in-management-studio-f1-help.md)   
+ [Agendas](../subscriptions/schedules.md)   
+ [Servidor de relatório na ajuda Management Studio F1](report-server-in-management-studio-f1-help.md)   
  [Conectar-se a um servidor de relatório no Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Configurar propriedades gerais para um relatório &#40;Report Manager&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   

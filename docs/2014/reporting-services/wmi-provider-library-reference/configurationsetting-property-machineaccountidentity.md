@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3e9e871ab8bceebe2aa6507883fcac19c610db8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097596"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>Propriedade MachineAccountIdentity (WMI)
@@ -36,9 +36,9 @@ public string MachineAccountIdentity;
  Um valor `String` que contém a identidade da conta da máquina do computador em que o servidor de relatório está instalado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-properties.md)  
+ [Propriedades de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-properties.md)  
   
   

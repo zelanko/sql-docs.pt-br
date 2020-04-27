@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099833"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099833"
   
  **Neste tópico:**  
   
--   [Local do arquivo](#bkmk_filelocation)  
+-   [Localização do arquivo](#bkmk_filelocation)  
   
 -   [Argumentos](#bkmk_arguments)  
   
@@ -57,10 +57,10 @@ ms.locfileid: "66099833"
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a>Local do arquivo  
- O **RS. exe** está localizado em **\Program Files\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Local do arquivo  
+ **RS.exe** está localizado em **\Arquivos de Programas\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-##  <a name="bkmk_arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a>Argumentos  
  **-?**  
  (Opcional) Exibe a sintaxe de argumentos **rs** .  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66099833"
  (Opcional) Especifica que os comandos no arquivo de script são executados em um lote. Se algum comando falhar, o lote será revertido. Alguns comandos não podem ser processados em lote e são executados como de costume. Somente exceções emitidas e não controladas no resultado de script resultam em reversão. Se o script controlar uma exceção e retornar normalmente de `Main`, o lote será confirmado. Se você omitir esse parâmetro, os comandos serão executados sem criar um lote. Para obter mais informações, consulte [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v`*globalvar*  
- (Opcional) Especifica variáveis globais usadas no script. Se o script usa variáveis globais, você deve especificar esse argumento. O valor que você especifica deve ser válido para a variável global definida no arquivo .rss. É necessário especificar uma variável global para cada argumento **–v**.  
+ (Opcional) Especifica variáveis globais usadas no script. Se o script usa variáveis globais, você deve especificar esse argumento. O valor que você especifica deve ser válido para a variável global definida no arquivo .rss. Você deve especificar uma variável global para o argumento **de cada-v** .  
   
  O argumento `-v` é especificado na linha de comando e é usado para definir o valor de uma variável global definida no seu script em tempo de execução. Por exemplo, se seu script contiver uma variável nomeada *parentFolder*, você poderá especificar um nome para aquela pasta na linha de comando:  
   
@@ -109,17 +109,17 @@ ms.locfileid: "66099833"
  **-t**  
  (Opcional) Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissões  
  Para executar essa ferramenta, você deve ter permissão para se conectar à instância do servidor de relatório no qual o script está sendo executado. Você pode executar scripts para fazer alterações no computador local ou em um computador remoto. Para fazer alterações em um servidor de relatório instalado em um computador remoto, especifique o computador remoto no argumento `-s`.  
   
-##  <a name="bkmk_examples"></a> Exemplos  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Exemplos  
  O exemplo a seguir ilustra como especificar o arquivo de script que contém o script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e os métodos do serviço Web que você quer executar.  
   
 ```  
 rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
- Para obter um exemplo detalhado, consulte [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+  Para obter um exemplo detalhado, consulte [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  Para ver exemplos adicionais, consulte [Executar um arquivo de script do Reporting Services](run-a-reporting-services-script-file.md)  
   
@@ -129,7 +129,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  O script deve ser gravado no código [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e armazenado em Unicode ou arquivo de texto UTF-8 com uma extensão de nome de arquivo .rss. Você não pode depurar scripts com o utilitário **rs** . Para depurar um script, execute o código no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 > [!TIP]  
->  Para obter um exemplo detalhado, consulte [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+>   Para obter um exemplo detalhado, consulte [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executar um arquivo de script Reporting Services](run-a-reporting-services-script-file.md)   

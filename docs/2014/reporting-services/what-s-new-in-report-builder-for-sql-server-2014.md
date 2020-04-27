@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ac6191407e02a2dc15ab210c5e9276e761df75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098679"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>O que&#39;s novos no Construtor de Relatórios para SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "66098679"
 > [!TIP]  
 >  Para obter as informações e os recursos mais recentes relativos aos novos recursos desta versão, consulte [Informações adicionais sobre as novidades do SQL Server Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkId=207147).  
   
-##  <a name="ExcelRenderer"></a>Renderizador do Excel para Microsoft Excel 2007-2010 e Microsoft Excel 2003  
+##  <a name="excel-renderer-for-microsoft-excel-2007-2010-and-microsoft-excel-2003"></a><a name="ExcelRenderer"></a>Renderizador do Excel para Microsoft Excel 2007-2010 e Microsoft Excel 2003  
  A extensão de renderização do Excel do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nova no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]renderiza um relatório como um documento do Excel compatível com [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010, bem como com [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 com o Pacote de Compatibilidade do Microsoft Office para Word, Excel e PowerPoint instalado. O formato é o Office Open XML e a extensão de arquivo dos arquivos é .xlsx.  
   
  Esta extensão de renderização do Excel remove limitações da versão anterior, compatíveis com o Excel 2003. Veja uma lista do aperfeiçoamento na extensão de renderização:  
@@ -40,7 +40,7 @@ ms.locfileid: "66098679"
   
  Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-##  <a name="WordRenderer"></a>Renderizador de Word para Microsoft Word 2007-2010 e Microsoft Word 2003  
+##  <a name="word-renderer-for-microsoft-word-2007-2010-and-microsoft-word-2003"></a><a name="WordRenderer"></a>Renderizador de Word para Microsoft Word 2007-2010 e Microsoft Word 2003  
  A extensão de renderização do Word do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nova no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]renderiza um relatório como um documento do Word compatível com [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010, bem como com [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003 com o Pacote de Compatibilidade do [!INCLUDE[msCoName](../includes/msconame-md.md)] Office para Word, Excel e PowerPoint instalado. O formato é o Office Open XML e a extensão de arquivo dos arquivos é docx.  
   
  Além de disponibilizar os recursos que são novos no Word 2007-2010 para relatórios exportados, os arquivos *.docx de relatórios exportados tendem a ser menores. Os relatórios exportados usando o renderizador do Word são geralmente significativamente menores que os mesmos relatórios exportados usando o renderizador do Word 2003.  

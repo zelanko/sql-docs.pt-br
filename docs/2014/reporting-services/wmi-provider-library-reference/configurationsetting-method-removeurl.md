@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098166"
 ---
 # <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>Método RemoveURL (WMI MSReportServer_ConfigurationSetting)
@@ -35,27 +35,27 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
     out string Error, out int HRESULT);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Aplicativo*  
  O nome do aplicativo do qual remover a reserva.  
   
  *URLString*  
  A URL para a reserva.  
   
- *LCID*  
+ *lcid*  
  A localidade a ser usada para as mensagens de erro retornadas.  
   
  *Erro*  
  [fora] A descrição do erro ocorrido.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
 ## <a name="remarks"></a>Comentários  
- *UrlString* não inclui o nome do diretório virtual-o [método SetVirtualDirectory &#40;](configurationsetting-method-setvirtualdirectory.md) o método de&#41;MSReportServer_ConfigurationSetting do WMI é fornecido para essa finalidade.  
+ *UrlString* não inclui o nome do Diretório Virtual – o método [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) é fornecido para essa finalidade.  
   
  Antes de chamar o método [ReserveURL](configurationsetting-method-reserveurl.md) , forneça um valor para a propriedade de configuração VirtualDirectory do parâmetro *Application* . Use o método [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) para definir a propriedade VirtualDirectory.  
   
@@ -64,9 +64,9 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Este método faz com que todos os domínios de aplicativo sem-configuração façam uma reciclagem e parem de funcionar durante esta operação; os domínios de aplicativo são reiniciados após o término da operação.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

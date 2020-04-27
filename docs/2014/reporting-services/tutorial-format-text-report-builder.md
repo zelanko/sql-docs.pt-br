@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098897"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatar texto (Construtor de Relatórios)
@@ -28,7 +28,7 @@ ms.locfileid: "66098897"
   
  Uma versão aprimorada do relatório criado por você neste tutorial está disponível como um relatório de exemplo do Construtor de Relatórios da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter mais informações sobre como baixar este relatório de exemplo e outros, consulte [Construtor de relatórios relatórios de exemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
   
 ### <a name="set-up-the-report"></a>Configurar o relatório  
  1. [Criar um relatório em branco com uma fonte de dados e um conjunto de dados](#CreateReport)  
@@ -53,7 +53,7 @@ ms.locfileid: "66098897"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Criar um relatório em branco com uma fonte de dados e um conjunto de dados  
   
 #### <a name="to-create-a-blank-report"></a>Para criar um relatório em branco  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66098897"
   
 #### <a name="to-create-a-dataset"></a>Para criar um conjunto de dados  
   
-1.  No painel dados do relatório, clique em **novo**e, em seguida, clique em **DataSet**.  
+1.  No painel de dados do relatório, clique em **Novo**e em **Conjunto de Dados**.  
   
 2.  Verifique se a fonte de dados é **TextDataSource**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66098897"
   
 4.  Verifique se o tipo de consulta **Texto** está selecionado e, em seguida, clique em **Designer de Consulta**.  
   
-5.  Clique em **Editar como texto**.  
+5.  Clique em **Editar como Texto**.  
   
 6.  Cole a seguinte consulta no painel de consulta:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66098897"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>Adicionar um campo ao Design Surface do relatório  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Adicionar um campo ao Design Surface do relatório  
  Se você quiser que um campo do conjunto de dados seja exibido em um relatório, seu primeiro impulso poderá ser de arrastá-lo diretamente para a superfície de design. Este exercício aponta por que isso não funciona e o que fazer em vez disso.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para adicionar um campo ao relatório (e obter o resultado errado)  
@@ -189,7 +189,7 @@ ms.locfileid: "66098897"
   
 7.  Selecione a caixa de listagem e pressione a tecla DEL.  
   
-##  <a name="AddTable"></a>Adicionar uma tabela ao Design Surface do relatório  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Adicionar uma tabela ao Design Surface do relatório  
  Crie essa tabela para que você tenha um lugar para colocar hiperlinks e texto girado.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Para adicionar uma tabela ao relatório  
@@ -220,7 +220,7 @@ ms.locfileid: "66098897"
   
 12. Clique em **Executar**.  
   
-##  <a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Adicionar um hiperlink ao relatório  
  Nesta seção, você adiciona um hiperlink ao texto na tabela da seção anterior.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>Para adicionar um hiperlink ao relatório  
@@ -247,7 +247,7 @@ ms.locfileid: "66098897"
   
 10. Clique em um link. Se o computador estiver conectado à Internet, um navegador abrirá um tópico da Ajuda do Construtor de Relatórios.  
   
-##  <a name="RotateText"></a>Girar texto no relatório  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Girar texto no relatório  
  Nesta seção, você gira um texto na tabela das seções anteriores.  
   
 #### <a name="to-rotate-text"></a>Para girar texto  
@@ -269,15 +269,15 @@ ms.locfileid: "66098897"
   
 7.  Na guia **início** da seção **parágrafo** , **clique nos botões central e** **Centro** para localizar o texto no centro da célula, verticalmente e horizontalmente.  
   
-8.  Clique em executar (**!**).  
+8.  Clique em Executar (**!**).  
   
  Agora o texto na célula `[Territory]` é executado verticalmente da parte inferior para a parte superior das células.  
   
-##  <a name="FormatHTML"></a>Exibindo texto com formatação HTML  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Exibindo texto com formatação HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Para exibir texto formatado como HTML  
   
-1.  Clique em **design** para alternar para o modo Design.  
+1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
 2.  Na guia **Inserir** , clique em **Caixa de Texto**e, na superfície de design, clique e arraste para criar uma caixa de texto abaixo da tabela, com cerca de 10 centímetros de largura e 8 centímetros de altura.  
   
@@ -313,11 +313,11 @@ ms.locfileid: "66098897"
   
  O texto na caixa de texto é exibido como um título, um parágrafo e uma lista com marcadores.  
   
-##  <a name="FormatCurrency"></a>Formatar moeda  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>Formatar moeda  
   
 #### <a name="to-format-numbers-as-currency"></a>Para formatar números como moeda  
   
-1.  Clique em **design** para alternar para o modo Design.  
+1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
 2.  Clique na célula da tabela superior que contenha `[Sum(Sales)]`, mantenha a tecla SHIFT pressionada e clique na célula da tabela inferior que contenha `[Sum(Sales)]`.  
   
@@ -331,14 +331,14 @@ ms.locfileid: "66098897"
   
  O relatório agora exibe dados formatados e é mais fácil de ler.  
   
-##  <a name="Save"></a>Salvar o relatório  
+##  <a name="save-the-report"></a><a name="Save"></a>Salvar o relatório  
  É possível salvar relatórios em um servidor de relatório, em uma biblioteca do SharePoint ou no computador.  
   
  Neste tutorial, salve o relatório em um servidor de relatório. Se você não tiver acesso ao servidor de relatório, salve o relatório no computador.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Sites e Servidores Recentes**.  
   
@@ -348,19 +348,19 @@ ms.locfileid: "66098897"
   
 4.  Em **Nome**, substitua o nome padrão por um nome de sua escolha.  
   
-5.  Clique em **Save** (Salvar).  
+5.  Clique em **Salvar**.  
   
  O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu Computador**e, em seguida, navegue até a pasta na qual você deseja salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por um nome de sua escolha.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Há várias maneiras de Formatar texto em Construtor de Relatórios [tutorial: Criando um relatório de formato livre &#40;Construtor de Relatórios&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contém mais exemplos.  

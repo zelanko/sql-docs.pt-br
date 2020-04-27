@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099194"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de barras ao relatório (Construtor de Relatórios)
@@ -30,7 +30,7 @@ ms.locfileid: "66099194"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
 1.  [Criar um gráfico no Assistente de Gráfico](#Chart)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099194"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. criar um relatório de gráfico do assistente de gráfico  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. criar um relatório de gráfico do assistente de gráfico  
  Na caixa de diálogo **introdução** , crie um conjunto de dados inserido, escolha uma fonte de dados compartilhada e crie um gráfico de barras usando o assistente de gráfico.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66099194"
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     A caixa de diálogo **Guia de Introdução** é exibida.  
+     A caixa de diálogo **introdução** é exibida.  
   
     > [!NOTE]  
     >  Se a caixa de diálogo **introdução** não for exibida, clique no botão Construtor de relatórios e, em seguida, clique em **novo**.  
@@ -87,7 +87,7 @@ ms.locfileid: "66099194"
     > [!NOTE]  
     >  A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **criar uma consulta** , clique em **Editar como texto**.  
+6.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099194"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
-##  <a name="ChartType"></a>2. escolher o tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. escolher o tipo de gráfico  
  Você pode escolher um dos diversos tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
@@ -129,7 +129,7 @@ ms.locfileid: "66099194"
   
 5.  Arraste SalesYear2008 para o painel Valores em SalesYear2009. SalesYear2008 representa o valor das vendas daquele vendedor no ano de 2008.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
 7.  Na página **escolher um estilo** , no painel estilos, selecione um estilo.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66099194"
   
  O relatório exibe o gráfico de barras para as vendas de cada vendedor nos anos de 2008 e 2009. O comprimento da barra corresponde ao total de vendas.  
   
-##  <a name="AllValues"></a>3. modificar a exibição de nomes no eixo vertical  
+##  <a name="3-modify-the-display-of-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. modificar a exibição de nomes no eixo vertical  
  Por padrão, apenas alguns valores no eixo vertical são exibidos. É possível alterar o gráfico para exibir todas as categorias.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Para exibir todas as pessoas de vendas junto com o eixo da categoria de um gráfico de barras  
@@ -165,7 +165,7 @@ ms.locfileid: "66099194"
 > [!NOTE]  
 >  Se você não conseguir ler os nomes dos vendedores no eixo vertical, poderá aumentar o tamanho do gráfico ou alterar as opções de formatação dos rótulos do eixo.  
   
-###  <a name="CategoryExpression"></a>Exibir sobrenome e nome no eixo vertical  
+###  <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Exibir sobrenome e nome no eixo vertical  
  Você pode alterar a expressão de categoria para incluir o sobrenome seguido do nome de cada vendedor.  
   
 ##### <a name="to-change-the-category-expression"></a>Para alterar a expressão de categoria  
@@ -193,7 +193,7 @@ ms.locfileid: "66099194"
 > [!NOTE]  
 >  Se você não conseguir ler os nomes dos vendedores no eixo vertical, poderá aumentar o tamanho do gráfico ou alterar as opções de formatação dos rótulos do eixo.  
   
-##  <a name="Sort"></a>4. alterar a ordem de classificação dos nomes no eixo vertical  
+##  <a name="4-change-the-sort-order-for-names-on-the-vertical-axis"></a><a name="Sort"></a>4. alterar a ordem de classificação dos nomes no eixo vertical  
  Quando você classifica dados em um gráfico, está alterando a ordem de valores no eixo de categoria.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Para classificar os nomes em ordem alfabética no gráfico de barras  
@@ -220,7 +220,7 @@ ms.locfileid: "66099194"
   
  Os nomes no eixo horizontal são classificados em ordem inversa, com **Alerca** na parte superior e **Zeng** na parte inferior.  
   
-##  <a name="Legend"></a>5. mover a legenda  
+##  <a name="5-move-the-legend"></a><a name="Legend"></a>5. mover a legenda  
  Para melhorar a capacidade de leitura dos valores do gráfico, mova a legenda do gráfico. Por exemplo, em um gráfico de barras no qual as barras são mostradas na horizontal, você pode alterar a posição da legenda para que ela fique acima ou abaixo da área do gráfico. Isso dá mais espaço na horizontal às barras.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Para exibir a legenda abaixo da área de gráfico de um gráfico de barras  
@@ -239,7 +239,7 @@ ms.locfileid: "66099194"
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="ChartTitle"></a>6. título do gráfico  
+##  <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. título do gráfico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>Para alterar o título do gráfico acima da área de gráfico de um gráfico de barras  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66099194"
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Horizontal"></a>7. Formatar e rotular o eixo horizontal  
+##  <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. Formatar e rotular o eixo horizontal  
  Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>Para formatar os números no eixo horizontal  
@@ -278,7 +278,7 @@ ms.locfileid: "66099194"
   
  O relatório exibe a quantidade de vendas no eixo horizontal como moeda em milhares, sem dígitos decimais.  
   
-##  <a name="Filter"></a>8. adicionar um filtro para exibir os cinco valores principais  
+##  <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. adicionar um filtro para exibir os cinco valores principais  
  Você pode adicionar um filtro ao gráfico para especificar os dados do conjunto de dados a serem incluídos ou excluídos no gráfico.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>Para adicionar um filtro e exibir os cinco valores principais  
@@ -309,7 +309,7 @@ ms.locfileid: "66099194"
   
  O gráfico exibe os cinco nomes de vendedores principais dos dados de vendas de 2009.  
   
-##  <a name="Title"></a>9. adicionar um título de relatório  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. adicionar um título de relatório  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
@@ -317,7 +317,7 @@ ms.locfileid: "66099194"
   
 2.  Digite **gráfico de barras de vendas**, pressione Enter e digite os **cinco principais vendedores para 2009**, portanto, tem esta aparência:  
   
-     **Gráfico de barras de vendas**  
+     **Gráfico de Barras de Vendas**  
   
      **Cinco Principais Vendedores de 2009**  
   
@@ -331,17 +331,17 @@ ms.locfileid: "66099194"
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Save"></a>10. salvar o relatório  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. salvar o relatório  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+2.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 3.  Em **Nome**, digite **Gráfico de Barras de Vendas**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
  O relatório é salvo no servidor de relatório.  
   

@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098735"
 ---
 # <a name="view-page-reports-report-manager"></a>Página Exibir, Relatórios (Gerenciador de Relatórios)
   Use a página Exibir de relatórios para exibir um relatório. Quando você abre um relatório pela primeira vez no Gerenciador de Relatórios, ele é formatado em HTML. Relatórios HTML incluem uma barra de ferramentas de relatórios que aparece no topo do relatório para que você possa navegar pelas páginas do relatório, pesquisar no relatório ou exportá-lo para um formato diferente. O diagrama a seguir mostra a barra de ferramentas do relatório.  
   
- ![Barra de ferramentas de relatório](media/htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
+ ![Barra de ferramentas do relatório](media/htmlviewer-toolbar.gif "Barra de ferramentas do relatório")  
 Barra de ferramentas do relatório  
   
  No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os relatórios podem ser configurados para executar sob demanda ou de um instantâneo de execução de relatório. Se um relatório for executado sob demanda, todo o processamento dos dados e do relatório ocorrerá cada vez que você abrir o relatório. Se você exibir um relatório configurado para executar como um instantâneo de execução de relatório, o processamento dos dados terá ocorrido quando o instantâneo foi criado.  
@@ -35,7 +35,7 @@ Barra de ferramentas do relatório
  Um relatório que contém campos de entrada e um botão **Exibir Relatório** é um relatório com parâmetros. Para exibir um relatório com parâmetros, você pode precisar fornecer valores que são usados para executar o relatório.  
   
 > [!NOTE]  
->  Instantâneos de execução de relatório e alguns formatos de exportação não estarão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Instantâneos de execução de relatório e alguns formatos de exportação não estarão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [recursos com suporte nas edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099315"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
@@ -32,14 +32,14 @@ ms.locfileid: "66099315"
 ## <a name="report-server-events"></a>Eventos do servidor de relatório  
  Os eventos a seguir do servidor de relatório são registrados no log do aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID do evento|Type|Categoria|Fonte|DESCRIÇÃO|  
+|ID do evento|Type|Categoria|Fonte|Descrição|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Erro|Agendamento|Servidor de relatório|O SQL Server Agent deve estar em execução quando você define uma operação agendada (por exemplo, assinatura e entrega de relatório).|  
-|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Erro|Inicialização/desligamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|O>de origem não pode se conectar ao banco de dados do servidor de relatório. * \<* Para obter mais informações, consulte [Serviço Windows do Servidor de Relatório &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
-|108|Erro|Extensão|Servidor de relatório<br /><br /> Gerenciador de Relatórios|O>de origem não pode carregar uma extensão de entrega, processamento de dados ou renderização. * \<*<br /><br /> Provavelmente, esse é o resultado de uma implantação incompleta ou remoção de uma extensão. Para obter mais informações, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md) e [Implantando uma extensão de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
+|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Erro|Inicialização/desligamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não pode se conectar ao banco de dados do servidor de relatório. Para obter mais informações, consulte [Serviço Windows do Servidor de Relatório &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
+|108|Erro|Extensão|Servidor de relatório<br /><br /> Gerenciador de Relatórios|A *\<Source>* não pode carregar uma extensão de entrega, de processamento de dados ou de renderização.<br /><br /> Provavelmente, esse é o resultado de uma implantação incompleta ou remoção de uma extensão. Para obter mais informações, consulte [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md) e [Implantando uma extensão de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
 |109|Informações|Gerenciamento|Servidor de relatório<br /><br /> Gerenciador de Relatórios|Um arquivo de configuração foi modificado. Para saber mais, confira [Arquivos de Configuração do Reporting Services](../report-server/reporting-services-configuration-files.md).|  
 |110|Aviso|Gerenciamento|Servidor de relatório<br /><br /> Gerenciador de Relatórios|Uma configuração em um dos arquivos de configuração foi modificada e não é mais válida. Um valor padrão será usado em vez disso. Para saber mais, confira [Arquivos de Configuração do Reporting Services](../report-server/reporting-services-configuration-files.md).|  
-|111|Erro|Registro em log|Servidor de relatório<br /><br /> Gerenciador de Relatórios|O>de origem não pode criar o log de rastreamento. * \<* Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
+|111|Erro|Registro em log|Servidor de relatório<br /><br /> Gerenciador de Relatórios|A *\<Source>* não pode criar o log de rastreamento. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
 |112|Aviso|Segurança|Servidor de relatório|O servidor de relatório detectou uma possível negação de ataque de serviço. Para obter mais informações, consulte [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).|  
 |113|Erro|Registro em log|Servidor de relatório|O servidor de relatório não pode criar um contador de desempenho.|  
 |114|Erro|Inicialização/desligamento|Gerenciador de Relatórios|O Gerenciador de Relatórios não pode se conectar ao serviço Servidor de Relatório.|  
@@ -47,7 +47,7 @@ ms.locfileid: "66099315"
 |116|Erro|Interna|Servidor de relatório<br /><br /> Gerenciador de Relatórios<br /><br /> Processador de agendamento e entrega|Ocorreu um erro interno.|  
 |117|Erro|Inicialização/desligamento|Servidor de relatório|O banco de dados do servidor de relatório é uma versão inválida.|  
 |118|Aviso|Registro em log|Servidor de relatório<br /><br /> Gerenciador de Relatórios|O arquivo de rastreamento não está mais no local do diretório previsto; um novo arquivo de rastreamento será criado no diretório padrão. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
-|119|Erro|Ativação|Servidor de relatório<br /><br /> Processador de agendamento e entrega|O>de origem não recebeu acesso ao conteúdo do banco de dados do servidor de relatório. * \<*|  
+|119|Erro|Ativação|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não recebeu acesso ao conteúdo do banco de dados do servidor de relatório.|  
 |120|Erro|Ativação|Servidor de relatório|A chave simétrica não pode ser descriptografada. Provavelmente, houve uma alteração na conta na qual o serviço é executado. Para obter mais informações, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Erro|Inicialização/desligamento|Servidor de relatório|Falha ao iniciar o serviço RPC (Chamada de Procedimento Remoto).|  
 |122|Aviso|Entrega|Processador de agendamento e entrega|O Processador de Agendamento e Entrega não pode se conectar ao servidor de SMTP usado para entrega de email. Para obter mais informações sobre conexões de servidor SMTP, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
@@ -56,10 +56,9 @@ ms.locfileid: "66099315"
 |125|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi extraída com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |126|Informações|Ativação|Servidor de relatório|A chave usada para criptografar dados foi aplicada com êxito. Para obter mais informações sobre chaves, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |127|Informações|Ativação|Servidor de relatório|O conteúdo criptografado foi removido com êxito do banco de dados do servidor de relatório. Para obter mais informações sobre como excluir dados criptografados não recuperáveis, consulte [Configurar e gerenciar chaves de criptografia &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|128|Erro|Ativação|Servidor de relatório|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componentes de edições diferentes não podem ser usados juntos.|  
+|128|Erro|Ativação|Servidor de relatório|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Componentes de edições diferentes não podem ser usados juntos.|  
 |129|Erro|Gerenciamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|Uma definição de arquivo de configuração criptografada não pode ser descriptografada.|  
-|130|Erro|Gerenciamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|O>de origem não pode localizar o arquivo de configuração. * \<* Arquivos de configuração são exigidos pelo servidor de relatório.|  
+|130|Erro|Gerenciamento|Servidor de relatório<br /><br /> Processador de agendamento e entrega|A *\<Source>* não pode localizar o arquivo de configuração. Arquivos de configuração são exigidos pelo servidor de relatório.|  
 |131|Erro|Segurança|Servidor de relatório<br /><br /> Processador de agendamento e entrega|Um valor de dados de usuário criptografado não pôde ser descriptografado.|  
 |132|Erro|Segurança|Servidor de relatório|Ocorreu uma falha durante a criptografia de dados de usuário. O valor não pode ser salvo.|  
 |133|Erro|Gerenciamento|Servidor de relatório<br /><br /> Gerenciador de Relatórios<br /><br /> Processador de agendamento e entrega|Falha no carregamento da configuração do arquivo. Esse erro poderá ocorrer se o XML não for válido.|  

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criação de um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
+title: 'Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099031"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Criar um relatório de tabela básico (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
- Neste tutorial, você aprenderá a fazer o seguinte:  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
+ Neste tutorial, você aprenderá a:  
   
 1.  [Criar um Novo Relatório em Introdução](#CreateTable)  
   
@@ -54,14 +54,14 @@ ms.locfileid: "66099031"
 ## <a name="requirements"></a>Requisitos  
  Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a>1. criar um novo relatório de Introdução  
+##  <a name="1-create-a-new-report-from-getting-started"></a><a name="CreateTable"></a>1. criar um novo relatório de Introdução  
  Crie um relatório de tabela na caixa de diálogo **introdução** . Há dois modos: design de relatório e design de conjunto de dados compartilhado. No modo design de relatório, especifique dados no painel de Dados do Relatório e o layout do relatório na superfície de design. No modo design de conjunto de dados compartilhado, crie consultas de conjunto de dados para compartilhar com outras pessoas. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     A caixa de diálogo **introdução** é aberta.  
+     A caixa de diálogo **Guia de Introdução** é aberta.  
   
     > [!NOTE]  
     >  Se a caixa de diálogo **introdução** não for exibida, no botão **Construtor de relatórios** , clique em **novo**.  
@@ -70,7 +70,7 @@ ms.locfileid: "66099031"
   
 3.  No painel direito, verifique se a opção **Assistente de Tabela ou Matriz** está selecionada.  
   
-##  <a name="DataConnection"></a>1a. Especificar uma conexão de dados no assistente de tabela  
+##  <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. Especificar uma conexão de dados no assistente de tabela  
  Uma conexão de dados contém as informações para estabelecer conexões com uma fonte de dados externa, como um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Geralmente, você obtém as informações sobre a conexão e o tipo de credenciais a ser usado do proprietário da fonte de dados. Para especificar uma conexão de dados, você pode usar uma fonte de dados compartilhada do servidor de relatório ou criar uma fonte de dados inserida que será usada somente neste relatório.  
   
  Neste tutorial, você usará uma fonte de dados inserida. Para saber mais sobre como usar fontes de dados compartilhadas, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "66099031"
   
 1.  Na página **Escolher um conjunto de dados** , selecione **Criar um conjunto de dados**e clique em **Avançar**. A página **Escolher uma conexão com uma fonte de dados** é aberta.  
   
-2.  Clique em **Nova**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+2.  Clique em **Novo**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 3.  Em **nome**, digite **vendas do produto** um nome para a fonte de dados.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "66099031"
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-10. Clique em **Próximo**.  
+10. Clique em **Avançar**.  
   
-##  <a name="Query"></a>1B. Criar uma Consulta no Assistente de Tabela  
+##  <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1B. Criar uma Consulta no Assistente de Tabela  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ ms.locfileid: "66099031"
   
 1.  Na página **Criar uma consulta** , o designer de consultas relacionais é aberto. Para este tutorial, você usará o designer de consulta baseado em texto.  
   
-     Clique em **Editar Como Texto**. O designer de consulta baseado em texto exibe um painel de consulta e um painel de resultados.  
+     Clique em **Editar como texto**. O designer de consulta baseado em texto exibe um painel de consulta e um painel de resultados.  
   
 2.  Cole a consulta [!INCLUDE[tsql](../includes/tsql-md.md)] a seguir na caixa **Consulta** .  
   
@@ -155,20 +155,20 @@ ms.locfileid: "66099031"
   
     ```  
   
-3.  Na barra de ferramentas do designer de consultas, clique em **Executar** (**!**).  
+3.  Na barra de ferramentas do designer de consultas, clique em **executar** (**!**).  
   
      A consulta executa e exibe o conjunto de resultados para os campos SalesDate, Subcategory, Product, Sales e Quantity.  
   
      No conjunto de resultados, os cabeçalhos das colunas têm como base os nomes na consulta. No conjunto de dados, os cabeçalhos das colunas se transformam nos nomes dos campos e são salvos no relatório. Depois de concluir o assistente, você poderá usar o painel de Dados do Relatório para exibir a coleção de campos do conjunto de dados.  
   
-4.  Clique em **Próximo**.  
+4.  Clique em **Avançar**.  
   
-##  <a name="Groups"></a>1C. Organizar Dados em Grupos no Assistente de Tabela  
+##  <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1C. Organizar Dados em Grupos no Assistente de Tabela  
  Quando você seleciona campos nos quais fazer agrupamentos, cria uma tabela com linhas e colunas que exibem dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
   
-1.  Na página **Organizar campos** , arraste Product até **Valores**.  
+1.  Na página **organizar campos** , arraste produto para **valores**.  
   
 2.  Arraste Quantity até **Values** e coloque-o abaixo de Product.  
   
@@ -188,14 +188,14 @@ ms.locfileid: "66099031"
   
      As etapas 4 e 5 organizam os valores dos campos primeiro por data e depois por subcategoria de produto dessa data.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
-##  <a name="Subtotals"></a>1D. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
+##  <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1D. Adicionar Linhas de Subtotal e de Total no Assistente de Tabela  
  Depois de criar grupos, é possível adicionar e formatar linhas nas quais exibir valores de agregação dos campos. Você pode optar por exibir todos os dados ou deixar um usuário expandir e recolher dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
   
-1.  Na página **Escolher o layout** , em **Opções**, verifique se a opção **Mostrar subtotais e totais gerais** está selecionada.  
+1.  Na página **escolher o layout** , em opções, verifique se a **opção** **Mostrar Subtotais e totais gerais** está selecionada.  
   
 2.  Verifique se a opção **Bloqueado, subtotal abaixo** está selecionada.  
   
@@ -213,9 +213,9 @@ ms.locfileid: "66099031"
   
 3.  Desmarque a opção **Expandir/recolher grupos**. Neste tutorial, o relatório criado não usa o recurso de detalhamento que permite a um usuário expandir uma hierarquia de grupo pai para exibir linhas de grupo filho e linhas de detalhes.  
   
-4.  Clique em **Próximo**.  
+4.  Clique em **Avançar**.  
   
-##  <a name="Style"></a>1e. Escolher um Estilo no Assistente de Tabela  
+##  <a name="1e-choose-a-style-in-the-table-wizard"></a><a name="Style"></a>1e. Escolher um Estilo no Assistente de Tabela  
  Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda.  
   
 #### <a name="to-specify-a-table-style"></a>Para especificar um estilo de tabela  
@@ -230,12 +230,12 @@ ms.locfileid: "66099031"
   
  A tabela é adicionada à superfície de design. A tabela tem 5 colunas e 5 linhas. O painel Grupos de Linhas mostra três grupos de linhas: SalesDate, Subcategory e Details. Os dados detalhados são todos os dados recuperados pela consulta do conjunto de dados.  
   
-##  <a name="FormatCurrency"></a>2. formatar dados como moeda  
+##  <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2. formatar dados como moeda  
  Por padrão, os dados resumidos do campo Sales exibe um número geral. Formate-o para exibir o número como moeda. Ative/desative **Estilos de Espaço Reservado** para exibir caixas de texto formatadas e texto de espaço reservado como valores de exemplo.  
   
 #### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
   
-1.  Clique em **design** para alternar para o modo Design.  
+1.  Clique em **Design** a fim de alternar para a exibição de design.  
   
 2.  Clique na célula da segunda linha (na linha dos cabeçalhos das colunas) na coluna Vendas e arraste-a para baixo para selecionar todas as células que contenham `[Sum(Sales)]`.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "66099031"
   
  Os valores resumidos de Vendas são exibidos como conversor de moedas.  
   
-##  <a name="FormatDate"></a>3. formatar dados como data  
+##  <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3. formatar dados como data  
  Por padrão, o campo SalesDate exibe informações de data e hora. É possível formatá-lo para exibir somente a data.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Para formatar um campo de data como o formato padrão  
@@ -286,7 +286,7 @@ ms.locfileid: "66099031"
   
  O valor de SalesDate é exibido com o nome do mês, e não com o número dele.  
   
-##  <a name="Width"></a>4. alterar larguras de coluna  
+##  <a name="4-change-column-widths"></a><a name="Width"></a>4. alterar larguras de coluna  
  Por padrão, cada célula da tabela contém uma caixa de texto. Uma caixa de texto é expandida verticalmente para acomodar o texto quando a página é renderizada. No relatório renderizado, cada linha é expandida até a altura da caixa de texto renderizada mais alta da linha. A altura da linha na superfície de design não tem nenhum efeito na altura da linha no relatório renderizado.  
   
  Para reduzir a quantidade de espaço vertical que cada linha ocupa, expanda a largura da coluna para acomodar em uma única linha o conteúdo esperado das caixas de texto da coluna.  
@@ -303,7 +303,7 @@ ms.locfileid: "66099031"
   
 4.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Title"></a>5. adicionar um título de relatório  
+##  <a name="5-add-a-report-title"></a><a name="Title"></a>5. adicionar um título de relatório  
  Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório. No entanto, se ele não usar um cabeçalho, será possível colocar o título em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
  O texto pode ser aprimorado ainda mais aplicando-se estilos, tamanhos e cores de fontes diferentes a frases e caracteres individuais do texto. Para obter mais informações, consulte [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -326,12 +326,12 @@ ms.locfileid: "66099031"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>6. salvar o relatório  
+##  <a name="6-save-the-report"></a><a name="Save"></a>6. salvar o relatório  
  Salve o relatório em um servidor de relatório ou no computador. Se você não salvar o relatório no servidor de relatório, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para salvar o relatório em um servidor de relatório  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Sites e Servidores Recentes**.  
   
@@ -341,21 +341,21 @@ ms.locfileid: "66099031"
   
 4.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-5.  Clique em **Save** (Salvar).  
+5.  Clique em **Salvar**.  
   
  O relatório será salvo no servidor de relatório. O nome do servidor de relatório ao qual você está conectado é exibido na barra de status da parte inferior da janela.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para salvar o relatório no computador  
   
-1.  No botão **Construtor de relatórios** , clique em **salvar como**.  
+1.  No botão **Construtor de Relatórios** , clique em **Salvar como**.  
   
 2.  Clique em **Área de Trabalho**, **Meus Documentos**ou **Meu computador**e procure a pasta na qual você quer salvar o relatório.  
   
 3.  Em **Nome**, substitua o nome padrão por **Vendas de Produtos**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
-##  <a name="Export"></a>7. exportar o relatório  
+##  <a name="7-export-the-report"></a><a name="Export"></a>7. exportar o relatório  
  Os relatórios podem ser exportados para diversos formatos, como Microsoft Excel e CSV (valores separados por vírgulas). Para obter mais informações, consulte [Exportando relatórios &#40;Construtor de relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Neste tutorial, você exportará o relatório para o Excel e definirá uma propriedade no relatório para atribuir um nome personalizado à guia Pasta de Trabalho.  
@@ -385,7 +385,7 @@ ms.locfileid: "66099031"
   
 5.  Verifique se o tipo de arquivo é **pasta de trabalho do Excel**.  
   
-6.  Clique em **Save** (Salvar).  
+6.  Clique em **Salvar**.  
   
 #### <a name="to-view-the-report-in-excel"></a>Para exibir o relatório no Excel  
   

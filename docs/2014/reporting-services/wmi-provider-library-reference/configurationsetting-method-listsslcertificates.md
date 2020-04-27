@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098329"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>Método ListSSLCertificates (WMI MSReportServer_ConfigurationSetting)
@@ -37,19 +37,19 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ```  
   
 ## <a name="parameters"></a>parâmetros  
- *CertificateHash []*  
+ *CertificateHash[]*  
  [fora] O certificado efetua hash.  
   
- *CertName []*  
+ *CertName[]*  
  [fora] Nomes do certificado.  
   
- *Nome do host []*  
+ *HostName[]*  
  [fora] Nomes de host dos certificados.  
   
  *Comprimento*  
  [out] Representa o comprimento das matrizes *CertificateHash*, *CertName* e *HostName* .  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -58,9 +58,9 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

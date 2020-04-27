@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099807"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
@@ -75,7 +75,7 @@ ms.locfileid: "66099807"
  `-j`  
  Configura uma instância de servidor de relatório remota para compartilhar o banco de dados do servidor de relatório usado pela instância do servidor de relatório local.  
   
- **-r**  *InstallationID*  
+ **-r**  *installationID*  
  Remove as informações de chave simétrica de uma instância de servidor de relatório específica, removendo assim o servidor do relatório de uma implantação em expansão. O *ID_instalação* é um valor GUID que pode ser localizado no arquivo RSReportserver.config.  
   
  `-f`  *Grupo*  
@@ -103,7 +103,7 @@ ms.locfileid: "66099807"
  `-v`  *la*  
  (Necessário para `-u`) Especifica a senha de uma conta de administrador no computador remoto que você quer unir à implantação em expansão.  
   
- *rastreamento* **-t**    
+ **-t**  *trace*  
  Produz mensagens de erro para o log de rastreamento. Esse argumento não exige um valor. Para obter mais informações, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Permissões  
@@ -164,7 +164,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 rskeymgmt -r <installationID>  
 ```  
   
-## <a name="file-location"></a>Local do arquivo  
+## <a name="file-location"></a>Localização do arquivo  
  O rskeymgmt. exe está localizado na ** \< *unidade*>: \Program Files\Microsoft SQL Server\110\Tools\Binn** ou na ** \< *unidade*>: \Program Files (x86) \Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
 ## <a name="remarks"></a>Comentários  
@@ -175,8 +175,8 @@ rskeymgmt -r <installationID>
  Para obter mais informações sobre as chaves de criptografia, consulte [Configurar e gerenciar chaves de criptografia &#40; 	Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar um servidor de relatório &#40;Gerenciador de Configurações do SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services servidor de relatório &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Configurar uma implantação em expansão do servidor de relatório no modo nativo &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilitários de prompt de comando do servidor de relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

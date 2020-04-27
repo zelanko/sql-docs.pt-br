@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098137"
 ---
 # <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Método ReserveURL (WMI MSReportServer_ConfigurationSetting)
@@ -42,13 +42,13 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  A URL para a reserva.  
   
- *LCID*  
+ *lcid*  
  A localidade a ser usada para as mensagens de erro retornadas.  
   
  *Erro*  
  [fora] A descrição do erro ocorrido.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -62,9 +62,9 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Este método faz com que todos os domínios de aplicativo façam uma reciclagem agressiva. Os domínios de aplicativo são reiniciados após o término desta operação.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

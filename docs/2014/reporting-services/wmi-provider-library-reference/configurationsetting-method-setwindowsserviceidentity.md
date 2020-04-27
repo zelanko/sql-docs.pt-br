@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097883"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>Método SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting)
@@ -44,13 +44,13 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *UseBuiltInAccount*  
  Indica se a conta especificada é uma conta interna do Windows.  
   
- *Considerar*  
+ *Conta*  
  A conta do Windows a ser utilizada para executar o serviço de Windows, no formato "DOMAIN\alias".  
   
  *Senha*  
  A senha para a conta.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -66,9 +66,9 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  A conta especificada no parâmetro de *conta* requer `LogonAsService` direitos no Windows. O método concede esse direito à conta especificada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

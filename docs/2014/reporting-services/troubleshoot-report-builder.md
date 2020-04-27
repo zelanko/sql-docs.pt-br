@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099343"
 ---
 # <a name="troubleshoot-report-builder"></a>Solução de problemas do Construtor de Relatórios
@@ -25,11 +25,11 @@ ms.locfileid: "66099343"
  Os tópicos a seguir podem ajudá-lo a solucionar problemas de relatórios, quer você seja um autor de relatório ou um administrador de servidor de relatório.  
   
 ## <a name="report-authors"></a>Autores de relatório  
- [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Solucionar problemas de partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Solução de problemas de gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administradores  
  [Instalar, desinstalar e oferecer suporte ao Construtor de Relatórios](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

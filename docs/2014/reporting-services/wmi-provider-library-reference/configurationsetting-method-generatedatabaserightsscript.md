@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098479"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>parâmetros  
- *Usu*  
+ *UserName*  
  O nome de usuário ou o identificador de segurança (SID) do Windows do usuário ao qual o script concederá direitos.  
   
  *DatabaseName*  
@@ -58,7 +58,7 @@ out Int32 HRESULT);
  *Script*  
  [out] Uma cadeia de caracteres que contém o script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerado.  
   
- *RESULTADO*  
+ *HRESULT*  
  [out] Valor que indica se a chamada obteve êxito ou falhou.  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -75,20 +75,14 @@ out Int32 HRESULT);
   
  A tabela a seguir mostra as contas que são convertidas e sua representação remota.  
   
-|Conta/SID que está convertido|Nome Comum|Nome remoto|  
+|Conta/SID que está convertido|Nome comum|Nome remoto|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Sistema Local|
-  \<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|Sistema Local|
-  \<Domain>\\<ComputerName\>$|  
-|Nome do computador\sistema local|Sistema Local|
-  \<Domain>\\<ComputerName\>$|  
-|LocalSystem|Sistema Local|
-  \<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|Serviço de Rede|
-  \<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Serviço de Rede|
-  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|Sistema Local|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
+|Nome do computador\sistema local|Sistema Local|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Sistema Local|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Serviço de Rede|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Serviço Local|Erro – veja abaixo.|  
 |NT AUTHORITY\LocalService|Serviço Local|Erro – veja abaixo.|  
   
@@ -104,9 +98,8 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<MachineName>|testlab14|  
-|
-  \<MachineFQDN>|example.redmond.microsoft.com|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
  Quando *IsWindowsUser* é definido como `true`, o provedor WMI chama LOOKUPACCOUNTNAME para obter o SID da conta e, em seguida, chama LookupAccountSID para obter o nome a ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colocado no script. Isso assegura que o nome da conta usado transmitirá a validação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -120,9 +113,9 @@ out Int32 HRESULT);
  O script gerado dá suporte ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 e ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Membros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
+ [Membros de MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

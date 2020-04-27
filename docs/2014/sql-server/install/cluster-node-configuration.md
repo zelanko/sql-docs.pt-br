@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096427"
 ---
 # <a name="cluster-node-configuration"></a>Configuração do nó do cluster
@@ -26,6 +26,6 @@ ms.locfileid: "66096427"
 ## <a name="options"></a>Opções  
  Nome da instância – use a lista suspensa para selecionar a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cluster de failover a ser modificada. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Nome deste nó** – este campo será populado com o nome do computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação. Este é o nó do cluster de failover que será adicionado ou removido da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Nome deste nó** – Este campo será populado com o nome do computador que está executando a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este é o nó do cluster de failover que será adicionado ou removido da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

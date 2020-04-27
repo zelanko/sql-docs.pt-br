@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099133"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Adicionar um gráfico de colunas ao relatório (Construtor de Relatórios)
@@ -30,7 +30,7 @@ ms.locfileid: "66099133"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>O que você aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>O que você aprenderá  
  Neste tutorial, você aprenderá a:  
   
 1.  [Criar um gráfico no Assistente de Gráfico](#Chart)  
@@ -59,7 +59,7 @@ ms.locfileid: "66099133"
 ## <a name="requirements"></a>Requisitos  
  Para obter informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. criar um relatório de gráfico do assistente de gráfico  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. criar um relatório de gráfico do assistente de gráfico  
  Na caixa de diálogo **introdução** , use o assistente de gráfico para criar um conjunto de dados inserido, escolha uma fonte de dados compartilhada e crie um gráfico de colunas.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "66099133"
   
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.  
   
-     A caixa de diálogo **Guia de Introdução** é exibida.  
+     A caixa de diálogo **introdução** é exibida.  
   
     > [!NOTE]  
     >  Se a caixa de diálogo **introdução** não for exibida, no botão **Construtor de relatórios** , clique em **novo**.  
@@ -85,7 +85,7 @@ ms.locfileid: "66099133"
     > [!NOTE]  
     >  A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para obter mais informações, consulte [Formas alternativas de obter uma conexão de dados &#40;Construtor de Relatórios&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Na página **criar uma consulta** , clique em **Editar como texto**.  
+6.  Na página **Crie uma consulta** , clique em **Editar como Texto**.  
   
 7.  Cole a seguinte consulta no painel de consulta:  
   
@@ -108,22 +108,22 @@ ms.locfileid: "66099133"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.  
+8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.  
   
 9. Clique em **Próximo**.  
   
-##  <a name="ChartType"></a>2. escolher o tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. escolher o tipo de gráfico  
  Você pode escolher um dos diversos tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-column-chart"></a>Para adicionar um gráfico de colunas  
   
-1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão. Clique em **Próximo**.  
+1.  Na página **Escolher um tipo de gráfico** , o gráfico de colunas é o tipo de gráfico padrão. Clique em **Avançar**.  
   
 2.  Na página **Organizar campos de gráfico** , arraste o campo SalesDate até **Categorias**. As categorias são exibidas no eixo horizontal.  
   
 3.  Arraste o campo Sales até **Valores**. A caixa **Valores** exibe Sum(Sales) porque a soma do valor total das vendas é agregada para cada data. Os valores são exibidos no eixo vertical.  
   
-4.  Clique em **Próximo**.  
+4.  Clique em **Avançar**.  
   
 5.  Na página **escolher um estilo** , na caixa estilos, selecione um estilo.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66099133"
   
 8.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Horizontal"></a>3. Formatar e rotular o eixo horizontal  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. Formatar e rotular o eixo horizontal  
  Por padrão, o eixo horizontal exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>Para formatar uma data no eixo horizontal  
@@ -154,7 +154,7 @@ ms.locfileid: "66099133"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Na guia Início , clique em **Executar** para visualizar o relatório.  
+7.  Na guia Início, clique em **Executar** para visualizar o relatório.  
   
  A data é exibida no formato selecionado. Observe que o gráfico não rotula cada categoria no eixo horizontal. Por padrão, somente rótulos que se ajustam próximo ao eixo são incluídos.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66099133"
   
  No gráfico, os rótulos são girados e o rótulo a cada três datas é mostrado.  
   
-##  <a name="Legend"></a>4. mover a legenda  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. mover a legenda  
  A legenda é criada automaticamente de categoria e dados de série.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>Para mover a legenda abaixo da área de gráfico de um gráfico de colunas  
@@ -203,7 +203,7 @@ ms.locfileid: "66099133"
   
 6.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="ChartTitle"></a>5. título do gráfico  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. título do gráfico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>Para alterar o título do gráfico acima da área do gráfico  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099133"
   
 3.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Vertical"></a>6. Formatar e rotular o eixo vertical  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. Formatar e rotular o eixo vertical  
  Por padrão, o eixo vertical exibe valores em um formato geral que é dimensionado para ajustar o tamanho do gráfico automaticamente.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>Para formatar os números no eixo vertical como moeda  
@@ -242,7 +242,7 @@ ms.locfileid: "66099133"
   
 12. Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Average"></a>7. adicionar uma média móvel  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. adicionar uma média móvel  
   
 #### <a name="to-add-a-moving-average"></a>Para adicionar uma média móvel  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099133"
   
  O gráfico exibe uma linha que mostra a média móvel para o total de vendas por data, a cada quatro datas.  
   
-##  <a name="Title"></a>8. adicionar um título de relatório  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. adicionar um título de relatório  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
   
@@ -276,7 +276,7 @@ ms.locfileid: "66099133"
   
 3.  Digite **gráfico de vendas**, pressione Enter e digite **janeiro a dezembro de 2009**, portanto, tem esta aparência:  
   
-     **Gráfico de vendas**  
+     **Gráfico de Vendas**  
   
      **Janeiro a dezembro de 2009**  
   
@@ -290,17 +290,17 @@ ms.locfileid: "66099133"
   
 7.  Clique em **Executar** para visualizar o relatório.  
   
-##  <a name="Save"></a>9. salvar o relatório  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. salvar o relatório  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
   
 1.  Alterne para a exibição de design de relatório.  
   
-2.  No botão Construtor de Relatórios, clique em **Salvar como**.  
+2.  No botão Construtor de Relatórios , clique em **Salvar como**.  
   
 3.  Em **Nome**, digite **Gráfico de Colunas do Pedido de Vendas**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você concluiu com êxito o tutorial Adicionando um gráfico de colunas ao seu relatório. Para saber mais sobre gráficos, consulte [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) e [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
