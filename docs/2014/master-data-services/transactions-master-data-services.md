@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478503"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
@@ -56,12 +56,12 @@ ms.locfileid: "65478503"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma &#40;de transação Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma transação &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
 -   [Administradores &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [&#40;de anotações Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

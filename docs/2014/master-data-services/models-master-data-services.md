@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482545"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -76,7 +76,7 @@ ms.locfileid: "65482545"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   [Visão geral do Master Data Services](master-data-services-overview-mds.md)  
+-   [Visão geral de Master Data Services](master-data-services-overview-mds.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

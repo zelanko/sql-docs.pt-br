@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102185"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos cliente no servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos cliente em relação ao servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.  
   
 > [!NOTE]  
 >  Em versões anteriores do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], todo o suporte de autenticação era dado pelo IIS. A partir da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o IIS não é mais usado. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] trata todas as solicitações de autenticação internamente.  
@@ -34,9 +34,9 @@ ms.locfileid: "66102185"
 ## <a name="authentication-types"></a>Tipos de autenticação  
  Todos os usuários ou aplicativos que solicitam acesso a conteúdo ou operações do servidor de relatório devem ser autenticados com o tipo de autenticação configurado no servidor de relatório para que o acesso seja permitido. A tabela a seguir descreve os tipos de autenticação suportados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|DESCRIÇÃO|  
+|Nome do tipo de autenticação|Valor da Camada de Autenticação HTTP|Usado por padrão|Descrição|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
-|RSWindowsNegotiate|Negociar|Sim|Tenta usar Kerberos para a Autenticação Integrada do Windows primeiro, mas reverterá para NTLM se o Active Directory não puder conceder um tíquete para a solicitação do cliente ao servidor de relatório. Negotiate só reverterá para NTLM se a permissão não estiver disponível. Se a primeira tentativa resultar em um erro que não seja de permissão ausente, o servidor de relatório não fará uma segunda tentativa.|  
+|RSWindowsNegotiate|Negotiate|Sim|Tenta usar Kerberos para a Autenticação Integrada do Windows primeiro, mas reverterá para NTLM se o Active Directory não puder conceder um tíquete para a solicitação do cliente ao servidor de relatório. Negotiate só reverterá para NTLM se a permissão não estiver disponível. Se a primeira tentativa resultar em um erro que não seja de permissão ausente, o servidor de relatório não fará uma segunda tentativa.|  
 |RSWindowsNTLM|NTLM|Sim|Usa NLTM para Autenticação Integrada do Windows.<br /><br /> As credenciais não serão delegadas ou representadas em outras solicitações. As solicitações subsequentes seguirão uma nova sequência de desafio/resposta. Dependendo das configurações de segurança de rede, talvez o usuário precise informar credenciais ou a solicitação de autenticação poderá ser processada de maneira transparente.|  
 |RSWindowsKerberos|Kerberos|Não|Usa Kerberos para Autenticação Integrada do Windows. Você deve configurar o Kerberos por meio da configuração dos SPNs (nomes das entidades de serviço) para suas contas de serviço, o que exige privilégios de administrador de domínio. Se você configurar a delegação de identidade com o Kerberos, o token do usuário que está solicitando um relatório também poderá ser usado em uma conexão adicional com as fontes de dados externas que fornecem dados para relatórios.<br /><br /> Antes de especificar RSWindowsKerberos, certifique-se de que o navegador usado dá suporte a esse tipo de autenticação. Se você estiver usando o Internet Explorer, a autenticação de Kerberos só terá suporte através de Negotiate. O Internet Explorer não formulará uma solicitação de autenticação que especifique Kerberos diretamente.|  
 |RSWindowsBasic|Basic|Não|A autenticação Básica é definida no protocolo HTTP e só pode ser usada para autenticar solicitações HTTP no servidor de relatório.<br /><br /> As credenciais são transmitidas na solicitação HTTP em codificação base64. Se você usar a autenticação básica, use SSL para criptografar informações da conta de usuário antes de enviá-las pela rede. O SSL é um canal criptografado usado para enviar uma solicitação de conexão do cliente ao servidor de relatório por meio de uma conexão HTTP TCP/IP. Para obter mais informações, consulte o tópico sobre [Como usar SSL para criptografar dados confidenciais](https://go.microsoft.com/fwlink/?LinkId=71123) no site do [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
@@ -77,7 +77,7 @@ ms.locfileid: "66102185"
 |Configurar o tipo de Autenticação Integrada do Windows.|[Configurar a Autenticação do Windows no servidor de relatório](configure-windows-authentication-on-the-report-server.md)|  
 |Configurar o tipo de Autenticação Básica.|[Configurar a autenticação Básica no servidor de relatório](configure-basic-authentication-on-the-report-server.md)|  
 |Configurar a autenticação de formulários ou um tipo de Autenticação Personalizada.|[Configurar autenticação personalizada ou de formulários no servidor de relatório](configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Habilitar o gerenciador de relatório para tratar o cenário da autenticação personalizada.|[Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Habilitar o gerenciador de relatório para tratar o cenário da autenticação personalizada.|[Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   

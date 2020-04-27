@@ -13,40 +13,40 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65805159"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
-  Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de espelhamento de banco de dados** .  
+  Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
   
  A caixa de diálogo tenta se conectar a ambas as instâncias do servidor. Essas conexões são assincronamente estabelecidas. A caixa de diálogo mostra o status da conexão de cada parceiro. Se o parceiro não estiver conectado, você poderá clicar em **Conectar**.  
   
- **Para usar SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
+ **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opções  
- *Instância do servidor e seu status de conexão*  
- Nome de uma instância de servidor parceiro no formato __**\\**_INSTANCE_NAME_do sistema. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
+ *A instância de servidor e seu status de conexão*  
+ Nome de uma instância de servidor parceiro no formato _SYSTEM_**\\**_INSTANCE_NAME_do sistema. Com relação a uma instância de servidor padrão, o nome do sistema é exibido.  
   
  Esse campo indica também se o monitor está conectado atualmente à instância de servidor. Os status de conexão possíveis são:  
   
--   **Não conectado a**  *server_instance_name*  
+-   **Não conectado a** *nome_da_instância_do_servidor*  
   
--   **Tentando se conectar ao**  *server_instance_name*  
+-   **Tentando se conectar a** *nome_da_instância_do_servidor*  
   
--   **Conectado a**  *server_instance_name*  
+-   **Conectado a** *nome_da_instância_do_servidor*  
   
     > [!NOTE]  
-    >  Se você não for um membro da função de servidor fixa **sysadmin** , esse status será **Conectado a** *server_instance_name* **(Permissões limitadas)**.  
+    >  Se você não for um membro da função de servidor fixa **sysadmin**, esse status será **Conectado a** *nome_da_instância_do_servidor* **(Permissões limitadas)** .  
   
  O nome de cada uma das instâncias de servidor de parceiro é exibido em um campo separado de *Instância de servidor e status de conexão* . O campo superior relacionará o servidor principal quando o monitor começar a ser executado.  
   
  **Conectar**/**Cancelar**  
- Um botão **conectar**/**Cancelar** é associado a cada *instância de servidor e a seus campos de status de conexão* . O status do botão depende do status da conexão:  
+ O botão **Conectar**/**Cancelar** é associado a cada um dos campos *Instância de servidor e seu status de conexão* . O status do botão depende do status da conexão:  
   
 -   Se não houver nenhuma conexão com a instância de servidor, o texto do botão será **Conectar**. Clique para estabelecer conexão com a instância de servidor.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65805159"
 |**Avisar se a idade da transação não enviada mais antiga exceder o limite**|O limite indica o número de minutos de transações que ainda não foram enviadas da fila de envio para a instância de servidor de espelho. Esse valor ajuda a medir o potencial de perda de dados em termos de tempo.|  
 |**Avisar se a sobrecarga espelhada confirmada exceder o limite**|O limite indica o número de milissegundos de retardo por transação (pertinente só em modo de alta segurança). Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração.|  
   
- **Habilitado em '** * \<instância do servidor>* **'**  
+ **Habilitado em '** *\<instância do servidor>* **'**  
  Uma caixa de seleção em branco indica que o aviso está desabilitado presentemente na instância de servidor. Para habilitar um aviso, clique em sua caixa de seleção.  
   
- **Limite em '** * \<instância do servidor>* **'**  
+ **Limite em '** *\<instância do servidor>* **'**  
  Quando um aviso for habilitado, defina o limite no lado esquerdo dessa coluna. Um evento ocorrerá se o limite especificado tiver sido atingido quando a tabela de status for atualizada. Se você desabilitar um limite depois de configurar um valor, o valor permanecerá no campo e será usado quando você reabilitar o aviso.  
   
  Quando um aviso não for habilitado, o campo permanecerá inativo.  

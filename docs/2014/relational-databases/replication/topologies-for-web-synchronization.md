@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273543"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologias para sincronização da Web
-  Você pode escolher entre uma variedade de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] topologias de replicação da sincronização da Web. Os modos comuns para configurar a sincronização da Web incluem:  
+  Escolha uma opção entre uma variedade de topologias de replicação de sincronização da Web do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os modos comuns para configurar a sincronização da Web incluem:  
   
 -   Servidor único  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63273543"
 > [!NOTE]  
 >  Essa configuração só é recomendada para cenários de intranet. Para demais cenários, é recomendado que o servidor de IIS e o Publicador/Distribuidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estejam em computadores separados.  
   
- ![Sincronização da Web com um único servidor](media/web-sync02.gif "Sincronização da Web com um único servidor")  
+ ![Sincronização da Web com um só servidor](media/web-sync02.gif "Sincronização da Web com um só servidor")  
   
 ## <a name="two-servers"></a>Dois servidores  
  Você pode colocar o IIS em um servidor e configurar o Publicador e o Distribuidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em outro servidor. O servidor que executa o IIS pode ser isolado da Internet por um firewall. Os assinantes sincronizam conectando-se ao IIS.  
@@ -57,7 +57,7 @@ ms.locfileid: "63273543"
  ![Sincronização da Web com republicação](media/web-sync05.gif "Sincronização da Web com republicação")  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar sincronização da Web](configure-web-synchronization.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)   
  [Sincronização da Web para replicação de mesclagem](web-synchronization-for-merge-replication.md)  
   
   

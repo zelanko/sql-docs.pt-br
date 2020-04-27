@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482740"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional Administração do Sistema (Master Data Manager)
@@ -49,16 +49,16 @@ ms.locfileid: "65482740"
   
  [Criar um pacote de implantação de modelo usando o Assistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
- [Solução de problemas de implantação de modelo (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
+ [Solucionando problemas de implantação de modelo (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Regras de negócio  
  [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
  [Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
- [Condições de regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
+ [Condições de regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-conditions-master-data-services.md)  
   
- [Ações de regra de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
+ [Ações de regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Aplicativo Web Master Data Manager](../../2014/master-data-services/master-data-manager-web-application.md)  

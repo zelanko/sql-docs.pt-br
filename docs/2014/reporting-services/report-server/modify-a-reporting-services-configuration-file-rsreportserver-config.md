@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103756"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103756"
   
 -   [Para editar um arquivo de configuração do Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lendo e usando valores de configuração  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lendo e usando valores de configuração  
  Um servidor de relatório lê os arquivos de configuração quando o serviço é iniciado e sempre que o arquivo de configuração é salvo. Os valores novos e revisados entram em vigor em um novo domínio de aplicativo depois que o domínio de aplicativo atual expira. Sempre que possível, as solicitações que ainda estão sendo processadas no domínio de aplicativo atual podem ser concluídas. No entanto, algumas configurações requerem uma operação de reciclagem imediata do domínio de aplicativo. Neste caso, todas as solicitações em andamento são reinicializadas em um novo domínio de aplicativo.  
   
  Se o servidor de relatório detectar um valor inválido, registrará um erro no log de aplicativo do Windows e não será inicializado ou usará um valor padrão, dependendo do erro:  
@@ -46,13 +46,13 @@ ms.locfileid: "66103756"
   
  Todas as alterações do arquivo de configuração, inclusive alterações bem-sucedidas, são registradas no arquivo de log de rastreamento do servidor de relatório. Somente erros são registrados no log de eventos de aplicativo.  
   
-##  <a name="bkmk_default_values"></a> Sobre valores padrão  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Sobre valores padrão  
  A maioria das configurações tem valores padrão que são especificados internamente no servidor de relatório. O servidor de relatório usa esses valores se um valor definido pelo usuário for inválido ou não for especificado. Se for necessário usar um valor padrão devido a uma configuração inválida, um erro será gravado no arquivo de log de rastreamento.  
   
-##  <a name="bkmk_delete_config_settings"></a> Excluindo configurações  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Excluindo configurações  
  Para configurações que têm valores padrão, a remoção da configuração do arquivo de configuração não tem nenhum efeito. A maioria das configurações é definida e configurada de fato internamente. Se você excluir um item do arquivo de configuração, a cópia interna ainda estará disponível e usará o valor padrão definido para ela.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Para editar um arquivo de configuração do Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Para editar um arquivo de configuração do Reporting Services  
   
 1.  Localize o arquivo de configuração que deseja editar:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66103756"
   
     -   [Autenticação com o servidor de relatório](../security/authentication-with-the-report-server.md)  
   
-    -   [Configurar o Gerenciador de Relatórios para transmitir cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+    -   [Configurar o Gerenciador de Relatórios para passar cookies de autenticação personalizados](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
     -   [Personalizar parâmetros de extensão de renderização em RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106285"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatando a legenda em um gráfico (Construtor de Relatórios e SSRS)
@@ -79,7 +79,7 @@ ms.locfileid: "66106285"
  Por padrão, o texto da legenda não é otimizado para caber na área de legenda. Para fazer com que o texto da legenda se ajuste automaticamente ao espaço alocado, defina a `False` Propriedade AutoFitTextDisabled como e defina um tamanho mínimo de fonte para a propriedade MinFontSize com o menor tamanho de fonte que você acha que será apresentável e ainda permitirá a otimização da legenda.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caixa de diálogo Propriedades da legenda, &#40;geral Construtor de Relatórios e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Caixa de diálogo Propriedades da Legenda, Geral &#40;Construtor de Relatórios e SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Formatando um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

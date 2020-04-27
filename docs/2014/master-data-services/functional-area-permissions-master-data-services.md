@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479403"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
@@ -26,17 +26,17 @@ ms.locfileid: "65479403"
   
 -   **Explorer**  
   
--   **Gerenciamento de versões**  
+-   **Gerenciamento de Versões**  
   
--   **Gerenciamento de integração**  
+-   **Gerenciamento de Integração**  
   
--   **Administração do sistema**  
+-   **Administração do Sistema**  
   
--   **Permissões de usuário e grupo**  
+-   **Permissões de Usuário e Grupo**  
   
  Ao atribuir permissão a uma área funcional, você torna uma área da interface do usuário visível para o usuário ou grupo.  
   
- Na área funcional **Explorer** , permissões adicionais atribuídas a objetos de modelo e membros de hierarquia determinam quais dados que um usuário pode acessar. Dentro de todas as outras áreas funcionais, um usuário deve ser um administrador de modelo para exibir um modelo e agir sobre ele. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Na área funcional **Explorer** , permissões adicionais atribuídas a objetos de modelo e membros de hierarquia determinam quais dados que um usuário pode acessar. Dentro de todas as outras áreas funcionais, um usuário deve ser um administrador de modelo para exibir um modelo e agir sobre ele. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  Um usuário ou grupo deve ter permissão a, pelo menos, uma área funcional e um modelo na guia **Modelos** para acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

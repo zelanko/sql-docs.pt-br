@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480828"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de Dados de Conhecimento DQS e domínios
@@ -38,10 +38,10 @@ ms.locfileid: "65480828"
   
  ![Base de Dados de Conhecimento e Domínios do DQS](../../2014/data-quality-services/media/dqs-knowledgebasesanddomains.gif "Base de Dados de Conhecimento e Domínios do DQS")  
   
-##  <a name="How"></a>Como criar e compilar uma base de dados de conhecimento do DQS  
+##  <a name="how-to-create-and-build-a-dqs-knowledge-base"></a><a name="How"></a>Como criar e compilar uma base de dados de conhecimento do DQS  
  Criar uma base de dados de conhecimento do DQS envolve os processos e componentes a seguir:  
   
- **Descoberta de conhecimento**  
+ **Descoberta da Base de Dados de Conhecimento**  
  Um processo assistido por computador que cria conhecimento em uma base de dados de conhecimento processando um exemplo de dados  
   
  **Gerenciamento de domínio**  
@@ -50,10 +50,10 @@ ms.locfileid: "65480828"
  **Serviços de Dados de Referência**  
  Um processo de gerenciamento de domínio que permite validar seus dados em relação a dados mantidos e garantidos por um provedor de dados de referência.  
   
- **Política de correspondência**  
+ **Política de Correspondência**  
  Uma política que define como o DQS processa registros para identificar duplicatas potenciais e não correspondências, que se integra à base de dados de conhecimento em um processo interativo e assistido por computador.  
   
-##  <a name="Discovery"></a>Descoberta de conhecimento  
+##  <a name="knowledge-discovery"></a><a name="Discovery"></a>Descoberta de conhecimento  
  A criação da base de dados de conhecimento é inicialmente um processo guiado por computador. A atividade de descoberta de conhecimento cria uma base de dados de conhecimento analisando um exemplo de dados por meio de critérios de qualidade de dados, com a procura de inconsistências de dados e erros de sintaxe, e a proposição de alterações nos dados. Esta análise é baseada em algoritmos criados no DQS.  
   
  O administrador de dados prepara o processo com a vinculação de uma base de conhecimento a uma tabela ou exibição de banco de dados do SQL Server que contêm dados de exemplo similares aos dados que a base de conhecimento será usada para analisar. Em seguida, o administrador de dados mapeia um domínio da base de conhecimento para cada coluna dos dados de exemplo a serem analisados. Um domínio pode ser um domínio único que é mapeado para um campo único ou pode ser um domínio composto que consiste em vários domínios únicos, cada um dos quais mapeado para parte dos dados em um único campo (consulte "Domínios Compostos" abaixo). Quando você executa a descoberta da base de dados de conhecimento, o DQS extrai informações de qualidade de dados dos dados de exemplo nos domínios da base de conhecimento. Quando você tiver executado a análise de descoberta de conhecimento, terá uma base de dados de conhecimento com a qual será possível realizar a correção de dados.  
@@ -67,7 +67,7 @@ ms.locfileid: "65480828"
   
  No entanto, você pode controlar as letras maiúsculas e minúsculas de valores que você exporta nos resultados da limpeza. Faça isso configurando a propriedade de domínio **Formatar Saída para** (consulte [Definir propriedades de domínio](../../2014/data-quality-services/set-domain-properties.md)) e usando a caixa de seleção **Padronizar Saída** ao exportar os resultados da limpeza (consulte [Limpar dados usando o conhecimento &#40;interno&#41; do DQS](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="Domains"></a>Gerenciamento de domínio  
+##  <a name="domain-management"></a><a name="Domains"></a> Gerenciamento de Domínio  
  O gerenciamento de domínio permite que o administrador de dados altere e aumente interativamente os metadados que são gerados pela atividade de descoberta da base de dados de conhecimento assistida por computador. Cada alteração que você faz é para um domínio da base de dados de conhecimento. Na atividade de gerenciamento de domínio, você pode fazer o seguinte:  
   
 -   Criar um novo domínio. O novo domínio pode ser vinculado ou copiado de um domínio existente.  
@@ -136,7 +136,7 @@ ms.locfileid: "65480828"
   
  A correspondência pode ser executada nos domínios únicos que compõem o domínio composto, mas não no próprio domínio composto.  
   
-##  <a name="Matching"></a>Correspondência de dados  
+##  <a name="data-matching"></a><a name="Matching"></a>Correspondência de dados  
  Além de fazer alterações manuais a uma base de dados de conhecimento por meio do gerenciamento de domínio, você poderá adicionar conhecimento correspondente a uma base de dados de conhecimento. Para preparar o DQS para o processo de eliminação de duplicação de dados, você deverá criar uma política compatível que o DQS usará para calcular a probabilidade de uma correspondência. A política inclui uma ou mais regras correspondentes que o administrador de dados cria para identificar como o DQS deve comparar linhas de dados. O administrador de dados determina quais campos de dados na linha devem ser comparados e quanto peso cada campo deve ter na comparação. O administrador de dados também determinará quanto de probabilidade será considerada uma correspondência. O DQS adiciona as regras de correspondência à base de dados de conhecimento para serem usadas para executar a atividade de correspondência no projeto de qualidade de dados.  
   
  Para obter mais informações sobre a base de dados de conhecimento e a correspondência de dados, consulte [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  

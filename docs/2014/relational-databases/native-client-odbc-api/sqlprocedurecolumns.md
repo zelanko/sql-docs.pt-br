@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046706"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`Retorna uma linha relatando os atributos de valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de retorno de todos os procedimentos armazenados.  
   
- `SQLProcedureColumns`retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *schemas*, *ProcName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando valores inválidos são usados nesses parâmetros.  
+ `SQLProcedureColumns`retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *schemas*, *ProcName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
   
  É possível executar `SQLProcedureColumns` em um cursor de servidor estático. Uma tentativa de executar `SQLProcedureColumns` em um cursor atualizável (dinâmico ou conjunto de chaves) retornará SQL_SUCCESS_WITH_INFO, indicando que o tipo de cursor foi alterado.  
   
  A tabela a seguir lista as colunas retornadas pelo conjunto de resultados e como elas foram estendidas para tratar os tipos de dados **udt** e **xml** por meio do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Retorna o nome do catálogo que contém o UDT (tipo definido pelo usuário).|  
 |SS_UDT_SCHEMA_NAME|Retorna o nome do esquema que contém o UDT.|  
@@ -52,7 +52,7 @@ ms.locfileid: "63046706"
 |NUM_PREC_RADIX|NULO|  
 |NULLABLE|SQL_NULLABLE|  
 |COMENTÁRIOS|NULO|  
-|COLUMN_DEF|NULO. Os tipos de tabela não podem ter valores padrão.|  
+|COLUMN_DEF|NULL. Os tipos de tabela não podem ter valores padrão.|  
 |SQL_DATA_TYPE|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|NULO|  
 |CHAR_OCTET_LENGTH|NULO|  
@@ -72,8 +72,7 @@ ms.locfileid: "63046706"
  Para obter mais informações gerais, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Suporte de SQLProcedureColumns a UDTs CLR grandes  
- 
-  `SQLProcedureColumns` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLProcedureColumns` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   

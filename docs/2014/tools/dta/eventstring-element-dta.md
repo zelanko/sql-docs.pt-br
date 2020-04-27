@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211112"
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
@@ -43,12 +43,11 @@ ms.locfileid: "68211112"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|
-  `string`, tamanho é ilimitado.|  
+|**Tipo de dados e comprimento**|`string`, tamanho é ilimitado.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Exigido uma vez se não houver outro tipo de carga de trabalho especificada. É preciso especificar um elemento filho `EventString`, `File` ou  `Database` para o pai `Workload`, mas só pode ser usado um tipo. Por exemplo, se for especificada uma carga de trabalho com o elemento `EventString`, não será possível especificar uma carga de trabalho com o elemento `File` no mesmo arquivo de entrada XML.|  
+|**C'**|Exigido uma vez se não houver outro tipo de carga de trabalho especificada. É preciso especificar um elemento filho `EventString`, `File` ou  `Database` para o pai `Workload`, mas só pode ser usado um tipo. Por exemplo, se for especificada uma carga de trabalho com o elemento `EventString`, não será possível especificar uma carga de trabalho com o elemento `File` no mesmo arquivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

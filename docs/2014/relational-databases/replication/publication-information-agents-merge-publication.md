@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021762"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informações da Publicação, Agentes (publicação de mesclagem)
@@ -47,7 +47,7 @@ ms.locfileid: "63021762"
 -   Concluído  
   
  **Agente**  
- O Snapshot Agent. Essa é a única publicação associada a uma publicação de mesclagem. O Merge Agent é associado a assinaturas para essa publicação. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ O Snapshot Agent. Essa é a única publicação associada a uma publicação de mesclagem. O Merge Agent é associado a assinaturas para essa publicação. Para obter mais informações, consulte [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última Hora de Início**  
  A última vez que o agente foi iniciado.  
@@ -61,6 +61,6 @@ ms.locfileid: "63021762"
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)  
+ [Monitorando a replicação](monitoring-replication.md)  
   
   

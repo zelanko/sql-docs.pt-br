@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102179"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página Segurança (Configurações de Site - Gerenciador de Relatórios)
@@ -39,7 +39,7 @@ ms.locfileid: "66102179"
  **Delete (excluir)**  
  Clique para excluir uma atribuição de função existente. Antes de clicar em **Excluir**, marque a caixa de seleção ao lado do nome do grupo ou usuário a ser removido. Você não poderá excluir uma atribuição de função se ela for a única. A exclusão de uma atribuição de função não exclui uma conta de grupo ou usuário, nem as definições da função.  
   
- **Nova atribuição de função**  
+ **Atribuição de Nova Função**  
  Clique para abrir a página Atribuição de Nova Função do Sistema, a qual é usada para criar atribuições de função do sistema adicionais para o site do servidor de relatório. Para obter mais informações, consulte [novas atribuições de função do sistema: página Editar atribuições de função do sistema &#40;Report Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Editar**  

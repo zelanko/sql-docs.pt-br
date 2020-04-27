@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63256054"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrando servidores com o uso do Gerenciamento Baseado em Políticas
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: administração de servidores com Gerenciamento Baseado em Políticas
   Bem-vindo ao tutorial Administrando servidores com o uso do Gerenciamento Baseado em Políticas. Este tutorial é dirigido a usuários que estão familiarizado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas ainda não conhecem o Gerenciamento Baseado em Políticas.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  

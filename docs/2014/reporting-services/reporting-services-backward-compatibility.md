@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7203740ba7f52dfc2cd3793a20fed9fecf5f9468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102996"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
@@ -30,8 +30,8 @@ ms.locfileid: "66102996"
 |Tópico|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)|Descreve recursos que existiam em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , mas que foram removidos em versões posteriores.|  
-|[Recursos preteridos no SQL Server Reporting Services do SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Descreve recursos que existem nesta versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para fins de compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do SQL Server.|  
-|[Alterações recentes no SQL Server Reporting Services do SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
+|[Recursos preteridos do SQL Server Reporting Services no SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)|Descreve recursos que existem nesta versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para fins de compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do SQL Server.|  
+|[Alterações recentes no SQL Server Reporting Services no SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Descreve problemas que podem ocorrer durante a atualização do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Descreve recursos que foram alterados no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  

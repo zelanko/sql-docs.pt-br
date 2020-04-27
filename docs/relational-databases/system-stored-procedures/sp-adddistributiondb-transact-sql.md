@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771349"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`É o modo de segurança a ser usado ao conectar-se ao distribuidor. *security_mode* é **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação; **1** especifica a autenticação integrada do Windows.  
   
-`[ @login = ] 'login'`É o nome de logon usado ao conectar-se ao distribuidor para criar o banco de dados de distribuição. Isso será necessário se *security_mode* for definido como **0**. *logon* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'`É o nome de logon usado ao conectar-se ao distribuidor para criar o banco de dados de distribuição. Isso será necessário se *security_mode* for definido como **0**. *login* é **sysname**, com um padrão de NULL.  
   
 `[ @password = ] 'password'`É a senha usada ao conectar-se ao distribuidor. Isso será necessário se *security_mode* for definido como **0**. a *senha* é **sysname**, com um padrão de NULL.  
   
-`[ @createmode = ] createmode`** é **int**, com um padrão de 1, e pode ser um dos valores a seguir.  
+`[ @createmode = ] createmode`*createmode* é **int**, com um padrão de 1, e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (padrão)|Crie um banco de dados ou use o banco de dados existente e aplique o arquivo **instdist. SQL** para criar objetos de replicação no banco de dados de distribuição.|  
@@ -168,7 +168,7 @@ GO
  [&#41;&#40;Transact-SQL de sp_changedistributiondb](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdistributiondb](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar Distribuição](../../relational-databases/replication/configure-distribution.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Configurar a distribuição](../../relational-databases/replication/configure-distribution.md)  
   
   

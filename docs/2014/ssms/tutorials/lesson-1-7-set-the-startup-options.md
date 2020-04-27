@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312622"
 ---
 # <a name="set-the-startup-options"></a>Definir as opções de inicialização
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]pode ser configurado para abrir a superfície de design para a configuração preferida quando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o é iniciado. Configurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ser aberto na configuração preferida pode economizar tempo.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode ser configurado para abrir a superfície de design na configuração preferida quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é iniciado. Configurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ser aberto na configuração preferida pode economizar tempo.  
   
 ## <a name="configuring-startup-options"></a>Configurando as opções de inicialização  
   
@@ -32,9 +32,9 @@ ms.locfileid: "63312622"
   
     -   **Abrir nova janela de consulta**.  
   
-    -   Abra o pesquisador **de objetos e a nova consulta**.  
+    -   **Abrir Pesquisador de Objetos e nova consulta**.  
   
-    -   **Abra o pesquisador de objetos e o monitor de atividade**.  
+    -   **Abrir Pesquisador de Objetos e Monitor de Atividade**.  
   
     -   **Abrir ambiente vazio**.  
   

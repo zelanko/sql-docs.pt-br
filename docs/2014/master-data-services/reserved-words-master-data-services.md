@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482571"
 ---
 # <a name="reserved-words-master-data-services"></a>Palavras reservadas (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65482571"
   
 -   [Modelos](#models)  
   
--   [Entidades](#entities)  
+-   [Entities](#entities)  
   
 -   [Hierarquias explícitas](#exhierarchies)  
   
@@ -36,20 +36,20 @@ ms.locfileid: "65482571"
   
 -   [Membros](#members)  
   
-##  <a name="models"></a>Modelos  
+##  <a name="models"></a><a name="models"></a>Modelos  
  Se você criar um modelo com o nome definido como **nome**, não selecione **criar entidade com o mesmo nome que o modelo** porque o **nome** não pode ser usado para o nome de uma entidade.  
   
-##  <a name="entities"></a>Contabilidade  
+##  <a name="entities"></a><a name="entities"></a>Contabilidade  
  Para nomes de entidade, você não pode usar **Name** nem **Code**.  
   
-##  <a name="exhierarchies"></a>Hierarquias explícitas  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Hierarquias explícitas  
  Para nomes de hierarquia explícita, você não pode usar **Name** nem **Code**.  
   
-##  <a name="attributes"></a>Atributos  
+##  <a name="attributes"></a><a name="attributes"></a>Atributos  
   
--   **SESSÃO**  
+-   **ID**  
   
--   **Código**  
+-   **Auto-completar**  
   
 -   **Nome**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "65482571"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>Os  
+##  <a name="members"></a><a name="members"></a>Os  
  Para membros, você não pode usar **MDMMemberStatus** ou **root** para o valor do atributo **Code** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Visão geral do Master Data Services](master-data-services-overview-mds.md)  
+ [Visão geral de Master Data Services](master-data-services-overview-mds.md)  
   
   

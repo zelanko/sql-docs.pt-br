@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108503"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lição 2: Definir uma conexão de dados e uma tabela de dados para o relatório pai
@@ -28,11 +28,11 @@ ms.locfileid: "66108503"
   
      Isso adicionará um novo arquivo XSD **DataSet1.xsd** ao projeto e abrirá o Designer de Conjunto de Dados.  
   
-3.  Na janela Caixa de Ferramentas, arraste um controle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** até a superfície de design. Isso inicializará o Assistente de Configuração do **TableAdapter** .  
+3.  Na janela caixa de ferramentas, arraste um controle **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** para a superfície de design. Isso inicializará o Assistente de Configuração do **TableAdapter** .  
   
 4.  Na página **escolher sua conexão de dados** , clique em **nova conexão**.  
   
-5.  Se esta for a primeira vez que você criou uma fonte de dados no Visual Studio, você verá a página **Escolher Fonte de Dados**. Na caixa **Fonte de Dados** , selecione **Microsoft SQL Server**.  
+5.  Se esta for a primeira vez que você criou uma fonte de dados no Visual Studio, você verá a página **escolher fonte de dados** . Na caixa **Fonte de Dados** , selecione **Microsoft SQL Server**.  
   
 6.  Na caixa de diálogo **Adicionar Conexão** , realize as seguintes etapas:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108503"
   
 7.  Se você tiver selecionado **Usar Autenticação do SQL Server** na Etapa 6 (b), selecione a opção que especificará se os dados confidenciais serão incluídos na cadeia de caracteres ou defina as informações no código do aplicativo.  
   
-8.  Na página **salvar a cadeia de conexão no arquivo de configuração do aplicativo** , digite o nome da cadeia de conexão ou aceite o **AdventureWorks2008ConnectionString**padrão. Clique em **Próximo**.  
+8.  Na página **salvar a cadeia de conexão no arquivo de configuração do aplicativo** , digite o nome da cadeia de conexão ou aceite o **AdventureWorks2008ConnectionString**padrão. Clique em **Avançar**.  
   
 9. Na página **escolher um tipo de comando** , selecione **usar instruções SQL**e clique em **Avançar**.  
   

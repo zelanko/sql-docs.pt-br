@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482888"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Recursos e tarefas do Master Data Services
@@ -40,7 +40,7 @@ ms.locfileid: "65482888"
   
 -   [Transações &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [&#40;de anotações Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Anotações &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
 -   [Hierarquias &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
@@ -50,13 +50,13 @@ ms.locfileid: "65482888"
   
 -   [Regras de negócio &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [Master Data Services de &#40;de validação&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Validação &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [Versões &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [Master Data Services de notificações &#40;&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [Notificações &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [Master Data Services de &#40;de segurança&#41;](../../2014/master-data-services/security-master-data-services.md)  
+-   [Segurança &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
 ## <a name="move-data"></a>Mover dados  
   

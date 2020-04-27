@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480610"
 ---
 # <a name="end-the-domain-management-activity"></a>Terminar a atividade Gerenciamento de Domínio
@@ -24,11 +24,11 @@ ms.locfileid: "65480610"
  **Concluir**  
  Clique para concluir o gerenciamento de domínio. Será exibido um pop-up que permite que você faça o seguinte:  
   
--   **Sim – publicar a base de dados de conhecimento e sair**: a base de dados de conhecimento será publicada para o usuário atual ou outras pessoas usarem. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
+-   **Sim – Publique a base de dados de conhecimento e saia**: a base de dados de conhecimento será publicada para uso do usuário atual ou de outros usuários. A base de dados de conhecimento não será bloqueada, o estado da base de dados de conhecimento (na tabela de bases de dados de conhecimento) será definido como vazio e as atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à tela Abrir Base de Dados de Conhecimento.  
   
 -   **Não-salve o trabalho na base de dados de conhecimento e saia**: seu trabalho será salvo, a base de dados de conhecimento permanecerá bloqueada e o estado da base de dados de conhecimento será definido como em funcionamento. As atividades de Gerenciamento de Domínio e Descoberta da Base de Dados de Conhecimento estarão disponíveis. Você será retornado à home page.  
   
--   **Cancelar-permanecer na tela atual**: o pop-up será fechado e você será retornado para a tela de gerenciamento de domínio.  
+-   **Cancelar – Mantenha-se na tela atual**: o pop-up será fechado e você será retornado para a tela Gerenciamento de Domínio.  
   
  **Cancelar**  
  Clique para encerrar a atividade de Gerenciamento de Domínio, o que resultará na perda do trabalho, e retorne à página inicial do DQS.  

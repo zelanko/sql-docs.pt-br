@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070874"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Classificar e agrupar resultados da consulta (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "63070874"
  [Recolher grupos de linhas &#40;Visual Database Tools&#41;](collapse-groups-of-rows-visual-database-tools.md)  
  Descreve as várias formas de recolher linhas; por exemplo, como calcular ou eliminar duplicatas.  
   
- [Classificar por &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
+ [Classificar com ORDER BY &#40;Visual Database Tools&#41;](sort-with-order-by-visual-database-tools.md)  
  Fornece etapas para retornar resultados na ordem especificada.  
   
  [Classificar em ordem crescente ou decrescente &#40;Visual Database Tools&#41;](sort-in-ascending-or-descending-order-visual-database-tools.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "63070874"
  [Classificar várias colunas em consultas &#40;Visual Database Tools&#41;](sort-multiple-columns-in-queries-visual-database-tools.md)  
  Fornece etapas para definir a ordem dos conjuntos de resultados de várias colunas.  
   
- [Agrupar linhas nos resultados da consulta &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
+ [Agrupar linhas em resultados da consulta &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md)  
  Fornece etapas para criar subconjuntos de informações resumidas por meio da organização de dados em grupos.  
   
  [Especificar condições para grupos &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  

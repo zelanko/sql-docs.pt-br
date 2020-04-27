@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103279"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>arquivo de configuração ReportingServicesService
   O arquivo ReportingServicesService.exe.config inclui configurações de rastreamento.  
   
-## <a name="file-location"></a>Local do arquivo  
+## <a name="file-location"></a>Localização do arquivo  
  Este arquivo está localizado na pasta \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Editando diretrizes  
@@ -71,18 +71,18 @@ ms.locfileid: "66103279"
 ## <a name="configuration-settings"></a>Definições de configuração  
  A tabela a seguir fornece informações sobre configurações específicas. As configurações são apresentadas na ordem em que aparecem no arquivo de configuração.  
   
-|Configuração|DESCRIÇÃO|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**RStrace**|Especifica os namespaces usados para erros e rastreamento.|  
 |**DefaultTraceSwitch**|Especifica o nível de informações que é relatado no log de rastreamento ReportServerService. Cada nível inclui as informações relatadas por todos os níveis de baixa numeração. A desabilitação do rastreamento não é recomendada. Os valores válidos incluem:<br /><br /> 0 = Desabilita o rastreamento<br /><br /> 1 = Exceções e reinicializações<br /><br /> 2 = Exceções, reinicializações, avisos<br /><br /> 3 = Exceções, reinicializações, avisos, mensagens de status (padrão)<br /><br /> 4 = Modo detalhado|  
-|**Nome do arquivo**|Especifica a primeira parte do nome de arquivo de log. O valor especificado por `Prefix` completa o resto do nome. Por padrão, o nome é ReportServerService_.|  
+|**FileName**|Especifica a primeira parte do nome de arquivo de log. O valor especificado por `Prefix` completa o resto do nome. Por padrão, o nome é ReportServerService_.|  
 |**FileSizeLimitMb**|Especifica o limite superior do tamanho do log de rastreamento. O arquivo é medido em megabytes. Os valores válidos são de 0 a um inteiro máximo. O valor padrão é 32.|  
 |**KeepFilesForDays**|Especifica o número de dias depois dos quais um arquivo de log de rastreamento será excluído. Os valores válidos são de 0 a um inteiro máximo. O valor padrão é 14.|  
 |`Prefix`|Especifica um valor gerado que diferencia uma instância de log de outra. Por padrão, os valores do carimbo de data/hora são adicionados aos nomes de arquivo de log de rastreamento. Esse valor é definido como " tid, time ". Não modifique esta configuração.|  
 |**TraceListeners**|Especifica um destino para a saída do conteúdo do log de rastreamento. Você pode especificar vários destinos usando uma vírgula para separar cada um. Os valores válidos incluem:<br /><br /> DebugWindow (padrão)<br /><br /> File (padrão)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica se os logs de rastreamento contêm dados para um período de 24 horas. Um log de rastreamento exclusivo deve existir para cada componente em cada dia. Esse valor é definido como "Unique (default)". Não modifique esse valor.|  
 |**Componentes**|Especifica os componentes para os quais são criados logs de rastreamento. O valor padrão é `all`. Outros valores válidos para esta configuração incluem os nomes de componentes internos. Não modifique esse valor.|  
-|**Appmodel**|Especifica configurações que oferecem suporte para a compatibilidade com versões anteriores. As configurações de runtime são usadas para redirecionar solicitações relacionadas à versão anterior de Microsoft.ReportingServices.Interfaces para a nova versão.<br /><br /> Todas as configurações desta seção são descritas na documentação do produto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações, procure “Configurações de esquema de runtime” no site do MSDN ou na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
+|**Runtime**|Especifica configurações que oferecem suporte para a compatibilidade com versões anteriores. As configurações de runtime são usadas para redirecionar solicitações relacionadas à versão anterior de Microsoft.ReportingServices.Interfaces para a nova versão.<br /><br /> Todas as configurações desta seção são descritas na documentação do produto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obter mais informações, procure “Configurações de esquema de runtime” no site do MSDN ou na documentação do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)   

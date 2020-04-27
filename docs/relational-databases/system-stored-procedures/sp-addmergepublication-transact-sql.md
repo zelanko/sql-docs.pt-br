@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278356"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -86,10 +86,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`É o modo da sincronização inicial dos assinantes para a publicação. *sync_mode* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**nativo** (padrão)|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas.|  
-|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
+|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. Necessário para dar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes e não.|  
   
 `[ @allow_push = ] 'allow_push'`Especifica se as assinaturas push podem ser criadas para a publicação fornecida. *allow_push* é **nvarchar (5)**, com um padrão true, que permite assinaturas push na publicação.  
   
@@ -162,10 +162,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Especifica que as partições pré-computadas devem ser usadas para otimizar o processo de sincronização. *use_partition_groups* é **nvarchar (5)** e pode ser um destes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**true**|A publicação usa partições pré-computadas.|  
-|**for**|A publicação não usa partições pré-computadas.|  
+|**false**|A publicação não usa partições pré-computadas.|  
 |NULL (padrão)|O sistema escolhe a estratégia de particionamento.|  
   
  Partições pré-computadas são usadas por padrão. Para evitar o uso de partições preputadas, *use_partition_groups* deve ser definido como **false**. Quando NULL, o sistema decidirá se partições pré-computadas podem ser usadas. Se as partições preputadas não puderem ser usadas, esse valor será efetivamente **falso** sem gerar erros. Nesses casos, *keep_partition_changes* pode ser definida como **true** para fornecer alguma otimização. Para obter mais informações, consulte [filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e otimizar o [desempenho de filtro com parâmetros com partições de computação](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -216,11 +216,11 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`Especifica onde os registros de conflitos são armazenados. *conflict_logging* é **nvarchar (15)** e pode ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Publicador**|Registros de conflito são armazenados no Publicador.|  
-|**Assinante**|Registros de conflito são armazenados no Assinante que causou o conflito. Sem suporte para [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.|  
-|**ambos**|Registros de conflito são armazenados no Publicador e no Assinante.|  
+|**programa**|Registros de conflito são armazenados no Publicador.|  
+|**farão**|Registros de conflito são armazenados no Assinante que causou o conflito. Sem suporte para [!INCLUDE[ssEW](../../includes/ssew-md.md)] assinantes.|  
+|**mesmo**|Registros de conflito são armazenados no Publicador e no Assinante.|  
 |NULL (padrão)|A replicação define automaticamente *conflict_logging* para ambos quando o valor *backward_comp_level* é **90RTM** e para **o** **Publicador** em todos os outros casos.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -245,7 +245,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Publicar objetos de banco de dados e](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [&#41;&#40;Transact-SQL de sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergepublication](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   

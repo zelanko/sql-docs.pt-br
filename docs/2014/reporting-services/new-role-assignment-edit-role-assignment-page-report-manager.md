@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108163"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Página Atribuição de Nova Função: Editar Atribuição de Função (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função ou Editar Atribuição de Função para conceder permissões a itens de servidor de relatório e operações. Cada usuário que solicita acesso a um servidor de relatórios deve ter uma atribuição de função que define o nível de acesso. Você pode criar atribuições de função no nó raiz ou em determinado relatório, modelo, pasta, recurso ou fonte de dados compartilhada. A segurança do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é imposta pelas atribuições de função que você aplica aos itens. Uma atribuição de função faz a correspondência entre um grupo ou usuário e uma definição de função, sendo que cada definição identifica as tarefas que os grupos ou usuários podem executar em um item específico.  
   
- As atribuições de função no nível de item podem ter um grande impacto. Embora elas possam ser associadas a um único relatório ou pasta, também podem ser definidas em um nível mais alto na hierarquia de pastas e podem ser herdadas por pastas e itens que estão na parte inferior da árvore. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](security/grant-user-access-to-a-report-server.md).  
+ As atribuições de função no nível de item podem ter um grande impacto. Embora elas possam ser associadas a um único relatório ou pasta, também podem ser definidas em um nível mais alto na hierarquia de pastas e podem ser herdadas por pastas e itens que estão na parte inferior da árvore. Para obter mais informações, consulte [conceder acesso de usuário a um servidor de relatório &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md).  
   
 ## <a name="navigation"></a>Navegação  
  Use o procedimento a seguir para navegar para este local na interface do usuário.  
@@ -36,7 +36,7 @@ ms.locfileid: "66108163"
 4.  Se desejar adicionar uma nova atribuição de função, na barra de ferramentas, clique em **Atribuição de Nova Função**. Se desejar editar uma atribuição de função, clique em **Editar** , ao lado do nome do grupo ou usuário a ser editado.  
   
     > [!NOTE]  
-    >  Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança.  
+    >   Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança.  
   
 ## <a name="options"></a>Opções  
  **Nome do Grupo ou do Usuário**  

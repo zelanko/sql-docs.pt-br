@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067656"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
@@ -27,7 +27,7 @@ ms.locfileid: "63067656"
 > [!NOTE]  
 >  Os atributos do identificador de coluna ODBC não estão disponíveis em todos os conjuntos de resultados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Identificador de campo|DESCRIÇÃO|  
+|Identificador de campo|Descrição|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
@@ -68,7 +68,7 @@ ms.locfileid: "63067656"
 |SQL_CA_SS_COLUMN_UTYPE|Tipo de dados básico do tipo de dados definido pelo usuário da coluna do SQL Server. As definições dos valores de tipo estão em sqlncli.h.|  
 |SQL_CA_SS_COLUMN_VARYLEN|TRUE se os dados da coluna puderem variar em comprimento; ou FALSE em caso contrário.|  
 |SQL_CA_SS_COMPUTE_BYLIST|Ponteiro para uma matriz de WORD (unsigned short) que especifica as colunas usadas na frase BY de uma cláusula COMPUTE. Se a cláusula COMPUTE não especificar uma frase BY, um ponteiro NULL será retornado.<br /><br /> O primeiro elemento da matriz contém a contagem de colunas de lista BY. Os elementos adicionais são os ordinais da coluna.|  
-|SQL_CA_SS_COMPUTE_ID|*computeid* de uma linha que é o resultado de uma cláusula COMPUTE na instrução SELECT TRANSACT-SQL atual.|  
+|SQL_CA_SS_COMPUTE_ID|*computeid* de uma linha que é o resultado de uma cláusula COMPUTE na instrução SELECT Transact-SQL atual.|  
 |SQL_CA_SS_NUM_COMPUTES|Número de cláusulas COMPUTE especificado na instrução SELECT Transact-SQL atual.|  
 |SQL_CA_SS_NUM_ORDERS|Número de colunas especificado em uma cláusula ORDER BY da instrução SELECT Transact-SQL ou ODBC.|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63067656"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritor específicos de driver para fornecer informações adicionais para indicar o nome da coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo em que é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do catálogo, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME do IRD, que é um campo de leitura-gravação.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema no qual é definido um nome da coleção de esquemas XML. Se não for possível localizar o nome do esquema, essa variável conterá uma cadeia de caracteres vazia.<br /><br /> Essas informações são retornadas do campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME do IRD, que é um campo de leitura-gravação.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63067656"
   
  Além disso, o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduziu campos de descritor específicos de driver para fornecer informações adicionais para uma coluna de UDT (tipo definido pelo usuário) de um conjunto de resultados ou um parâmetro de UDT de um procedimento armazenado ou consulta parametrizada. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|O nome do catálogo que contém o UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|O nome do esquema que contém o UDT.|  
@@ -99,8 +99,7 @@ ms.locfileid: "63067656"
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Suporte do SQLColAttribute a UDTs CLR grandes  
- 
-  `SQLColAttribute` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColAttribute` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Suporte do SQLColAttribute a colunas esparsas  
  SQLColAttribute consulta o novo campo IRD (descritor de linha de implementação), SQL_CA_SS_IS_COLUMN_SET, para determinar se uma `column_set` coluna é uma coluna.  

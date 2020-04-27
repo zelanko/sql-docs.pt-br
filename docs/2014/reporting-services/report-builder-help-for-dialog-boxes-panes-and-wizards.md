@@ -18,18 +18,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107955"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes
   Esta seção contém Ajuda para muitos dos assistentes, exibições, painéis e caixas de diálogo do Construtor de Relatórios. De modo alternativo, você pode abrir a Ajuda pressionando F1 ou clicando no botão Ajuda exibido na caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md)   
- [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Modo de exibição de design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md)   
+ [Assistente de mapa e assistente de camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Solução de problemas do Construtor de Relatórios](../../2014/reporting-services/troubleshoot-report-builder.md)  
   
   

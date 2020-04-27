@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104644"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
@@ -38,12 +38,12 @@ ms.locfileid: "66104644"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|ícone|DESCRIÇÃO|  
+|ícone|Descrição|  
 |----------|-----------------|  
-|![Identificador de linha com 3 linhas paralelas para linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com 3 linhas paralelas para linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
+|![Identificador de linha com três linhas paralelas para a linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  
 |![Dois colchetes paralelos mostrando grupos aninhados](../media/rs-icontablix-nestedgroupnodetails.gif "Dois colchetes paralelos mostrando grupos aninhados")|Um grupo externo, um grupo interno; nenhum grupo detalhado|  
-|![2 colchetes & 3 linhas empilhadas para detalhes de & aninhados](../media/rs-icontablix-nestedgroupwithdetails.gif "2 colchetes & 3 linhas empilhadas para aninhadas & detalhes")|Um grupo externo, um grupo interno e o grupo detalhado filho|  
+|![Dois colchetes e três linhas empilhadas para aninhadas e detalhes](../media/rs-icontablix-nestedgroupwithdetails.gif "Dois colchetes e três linhas empilhadas para aninhadas e detalhes")|Um grupo externo, um grupo interno e o grupo detalhado filho|  
 |![Um grupo externo com linha de rodapé, um grupo interno](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Um grupo externo com linha de rodapé, um grupo interno")|Um grupo externo com uma linha de rodapé para totais e um grupo interno|  
 |![colchete de grupo externo, colchete de grupo interno, detalhes](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "colchete de grupo externo, colchete de grupo interno, detalhes")|Um grupo externo com uma linha de rodapé para totais, um grupo interno com uma linha de rodapé para totais e uma linha detalhada|  
 |![cabeçalho e rodapé pai e também grupo filho](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "cabeçalho e rodapé pai e também grupo filho")|Um grupo externo com um cabeçalho para rótulos e um rodapé para totais, além de um grupo interno; nenhum grupo detalhado|  
@@ -84,7 +84,7 @@ ms.locfileid: "66104644"
   
  A seguinte figura mostra uma região de dados tablix com grupos de linhas aninhados e um grupo detalhado.  
   
- ![Modo de design, adicionar total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de design, adicionar total de linhas ao grupo e à tabela")  
+ ![Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela")  
   
  Em uma região de dados tablix que exibe dados detalhados, o grupo detalhado é o grupo filho interno. As linhas adicionadas a um grupo detalhado se repetem uma vez por linha no conjunto de resultados da consulta referente ao conjunto de dados vinculado à região de dados tablix. A seguinte figura mostra a última página do relatório renderizado. Nela, é possível ver as últimas linhas detalhadas e a linha de subtotal referente ao último pedido.  
   

@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480344"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gerenciar usuários de DQS em SSMS
   Este tópico descreve como criar usuários adicionais na instância do SQL Server usando o SQL Server Management Studio e como concedê-los funções DQS apropriadas do [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] no banco de dados DQS_MAIN.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Sua conta de usuário do Windows deve ser membro da função de servidor fixa apropriada (como securityadmin, serveradmin ou sysadmin) para criar um logon do SQL e conceder funções DQS adequadas.  
   
-##  <a name="GrantRoles"></a>Criar um logon do SQL e conceder a função DQS  
+##  <a name="create-a-sql-login-and-grant-dqs-role"></a><a name="GrantRoles"></a>Criar um logon do SQL e conceder a função DQS  
   
 1.  Inicie o Microsoft SQL Server Management Studio.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65480344"
   
 3.  Clique com o botão direito do mouse na pasta **Segurança** , aponte para **Novo**e clique em **Logon**.  
   
-4.  Na caixa de diálogo **Logon – Novo**, especifique o nome de um usuário do Windows na caixa **Nome de Logon**, especifique o tipo de autenticação como **Autenticação do Windows** e clique em **Pesquisar** para validar o usuário.  
+4.  Na caixa de diálogo **logon – novo** , especifique o nome de um usuário do Windows na caixa **nome de logon** , especifique o tipo de autenticação como autenticação do **Windows**e clique em **Pesquisar** para validar o usuário.  
   
     > [!NOTE]  
     >  O DQS dá suporte somente à autenticação do Windows; a autenticação do SQL Server não tem suporte.  

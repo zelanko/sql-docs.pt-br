@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478850"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Página Configuração do Servidor do Master Data Services (Gerenciador de Configuração)
@@ -24,9 +24,9 @@ ms.locfileid: "65478850"
   
 ## <a name="server-configuration"></a>Configuração do Servidor  
   
-|Nome do controle|DESCRIÇÃO|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
 |**Windows PowerShell**|Exibe a versão do Windows PowerShell instalada no computador local. O Windows PowerShell versão 1.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
-|**Serviços de Informação da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
+|**Serviços de Informações da Internet**|Exibe a versão do IIS (Serviços de Informações da Internet) que está instalada no computador local. O IIS versão 7.0 ou posterior é necessário para uso do Gerenciador de Configuração do Master Data Services.|  
   
   

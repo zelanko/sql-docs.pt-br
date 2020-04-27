@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107717"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Renderizando para HTML (Construtor de Relatórios e SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107717"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>Renderização em MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Renderizando em MHTML  
  A extensão de renderização HTML também pode renderizar relatórios em MHTML (encapsulamento MIME de documentos HTML agregados). O MHTML estende o HTML para inserir objetos codificados, como imagens, no documento HTML. Usando a extensão de renderização MHTML, você pode inserir recursos, como imagens, documentos ou outros arquivos binários, como estruturas MIME, no relatório HTML, em um único arquivo. Os relatórios MHTML também são úteis para serem inseridos em mensagens de email, pois todos os recursos estão incluídos no relatório. Embora na verdade seja a extensão de renderização HTML que renderiza o MHTML, esse recurso também pode ser referido como a extensão de renderização MHTML.  
   
-##  <a name="BrowserSupport"></a>Suporte a navegador  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>Suporte a navegador  
  Essa extensão de renderização oferece suporte às seguintes versões de navegador:  
   
 -   Internet Explorer 5.5 e posterior  
@@ -45,7 +45,7 @@ ms.locfileid: "66107717"
   
  Devido a considerações de navegador cruzadas, o relatório renderizado pode variar ligeiramente do navegador para navegador. Por exemplo, a caixa de texto contém uma propriedade chamada WritingMode. O Firefox não oferece suporte a essa propriedade.  
   
-##  <a name="HTMLSpecificRenderingRules"></a>Regras de renderização específicas de HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a>Regras de renderização específicas de HTML  
  As seguintes regras específicas de HTML são aplicadas ao renderizar:  
   
 -   O processador cria uma estrutura de tabela HTML para conter todos os itens em cada coleção de `ReportItems`, se houver mais de uma.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107717"
   
 -   Todas as coordenadas e tamanhos de item de relatório são convertidos para milímetros. Todos os outros tamanhos, inclusive propriedades de estilo, retêm suas unidades originais. Diferenças de tamanho e posição menores que 0,2 mm são tratadas como 0 mm.  
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interatividade  
  Alguns elementos interativos têm suporte em HTML. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -85,11 +85,11 @@ ms.locfileid: "66107717"
   
  Uma funcionalidade adicional de pesquisa e localização é fornecida pelo controle Web Forms do ReportViewer.  
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configurações de informações do dispositivo  
  Você pode alterar algumas configurações padrão para este processador, incluindo qual modo deve ser renderizado, alterando as configurações de informações de dispositivo: Para obter mais informações, consulte [Configurações de informações do dispositivo HTML](../html-device-information-settings.md).  
 
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

@@ -19,18 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103795"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitorando o desempenho do servidor de relatório
   Use as ferramentas de monitoramento de desempenho para monitorar o desempenho do servidor de relatório e avaliar a atividade do servidor, observar as tendências, diagnosticar gargalos do sistema e reunir dados que podem ajudar a determinar se a configuração atual do sistema é suficiente. Para ajustar o desempenho do servidor, você pode especificar com que frequência o domínio de aplicativo de servidor de relatório deve ser reciclado. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="sources-of-performance-data"></a>Fontes de dados de desempenho  
- Use uma combinação de tecnologias e ferramentas para obter informações abrangentes sobre como o sistema está funcionando. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server fornecem informações sobre o desempenho através das seguintes ferramentas:  
+ Use uma combinação de tecnologias e ferramentas para obter informações abrangentes sobre como o sistema está funcionando. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server fornecem informações sobre o desempenho através das seguintes ferramentas:  
   
 -   Gerenciador de Tarefas  
   
@@ -42,8 +41,7 @@ ms.locfileid: "66103795"
   
  Você pode usar o Console de Desempenho e o Visualizador de Eventos para criar logs e alertas sobre processamento de relatórios e consumo de recursos. Para obter informações sobre eventos do Windows que são gerados pelo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Log de Aplicativos do Windows](windows-application-log.md). Para obter informações sobre o Console de Desempenho, consulte “Contadores de Desempenho do Windows”, mais adiante neste tópico.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também fornecem informações sobre o banco de dados de servidor de relatório e bancos de dados temporários usados para cache e gerenciamento de sessão.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também fornecem informações sobre o banco de dados de servidor de relatório e bancos de dados temporários usados para cache e gerenciamento de sessão.  
   
 ## <a name="windows-performance-counters"></a>Contadores de desempenho do Windows  
  O monitoramento de contadores de desempenho específicos permitem:  
@@ -59,16 +57,13 @@ ms.locfileid: "66103795"
 -   Validar alterações que foram feitas na configuração do sistema para ter o efeito desejado de desempenho.  
   
 ## <a name="reporting-services-performance-objects"></a>Objetos de Desempenho do Reporting Services  
- 
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] contém os seguintes objetos de desempenho:  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] contém os seguintes objetos de desempenho:  
   
 -   **Serviço Web MSRS 2011** e `MSRS 2011 SharePoint Mode Web Service` para monitorar o desempenho do servidor de relatório. Esses objetos de desempenho incluem uma coleção de contadores usados para controlar o processamento do servidor de relatório iniciado normalmente por meio de operações interativas de exibição de relatórios. Esses contadores são redefinidos sempre que o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] interrompe o serviço Web Servidor de Relatórios.  
   
--   
-  `MSRS 2011 Windows Service` e `MSRS 2011 Windows Service SharePoint Mode` para monitorar as operações agendadas e a entrega do relatório. Esses objetos de desempenho incluem uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por meio de operações agendadas. As operações agendadas incluem assinatura e entrega, instantâneos de execução de relatório e histórico de relatório.  
+-   `MSRS 2011 Windows Service` e `MSRS 2011 Windows Service SharePoint Mode` para monitorar as operações agendadas e a entrega do relatório. Esses objetos de desempenho incluem uma coleção de contadores usados para controlar o processamento de relatórios que é iniciado por meio de operações agendadas. As operações agendadas incluem assinatura e entrega, instantâneos de execução de relatório e histórico de relatório.  
   
--   
-  `ReportServer:Service` e `ReportServerSharePoint:Service` para monitorar eventos relacionados a HTTP e gerenciamento da memória. Esses contadores são específicos ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP para o servidor de relatório, como solicitações, conexões e tentativas de logon. Esse objeto de desempenho também inclui contadores relacionados a gerenciamento de memória.  
+-   `ReportServer:Service` e `ReportServerSharePoint:Service` para monitorar eventos relacionados a HTTP e gerenciamento da memória. Esses contadores são específicos ao [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP para o servidor de relatório, como solicitações, conexões e tentativas de logon. Esse objeto de desempenho também inclui contadores relacionados a gerenciamento de memória.  
   
  Se você tiver várias instâncias de servidor de relatório em um único computador, poderá monitorar as instâncias juntas ou separadamente. Escolha quais instâncias devem ser incluídas ao adicionar um contador. Para obter mais informações sobre como usar o Console de Desempenho (perfmon.msc) e adicionar contadores, consulte a documentação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
@@ -90,15 +85,15 @@ ms.locfileid: "66103795"
  [Contadores de desempenho para o modo do SharePoint do serviço Web do MSRS 2014 e objetos de desempenho do modo do SharePoint do serviço Windows MSRS 2014 &#40;modo do SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Descreve os contadores de desempenho usados pelo serviço do Windows Servidor de Relatório.  
   
- [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](performance-counters-reportserver-service-performance-objects.md)  
+ [Contadores de desempenho para os objetos de desempenho ReportServer: Service e ReportServerSharePoint: Service](performance-counters-reportserver-service-performance-objects.md)  
  Descreve os contadores de desempenho relacionados a memória e ao HTTP no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Eventos de um servidor de relatório no modo integrado do SharePoint  
  Descreve os eventos de diagnóstico úteis a serem registrados quando você executar um ambiente de relatórios com um produto do SharePoint.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar a memória disponível para aplicativos do servidor de relatório](../report-server/configure-available-memory-for-report-server-applications.md)   
- [Reporting Services servidor de relatório &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
- [Ferramentas do Reporting Services](../tools/reporting-services-tools.md)  
+ [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
+ [Ferramentas de Reporting Services](../tools/reporting-services-tools.md)  
   
   

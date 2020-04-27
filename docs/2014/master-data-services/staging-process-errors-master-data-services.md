@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478789"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erros de processo de preparo (Master Data Services)
@@ -28,9 +28,9 @@ ms.locfileid: "65478789"
 |210003|Os valores de atributos fazem referência a um membro que não existe ou está inativo.|Quando você prepara atributos baseados em domínio, deve usar o código, em lugar do nome. Aplica-se a **ImportType0**, **1**e **2**.|Folha<br /><br /> Consolidado|  
 |210006|O código de membro está inativo.|**ImportType** = **1** e você especificou um código de membro que não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210032|O nome da hierarquia está ausente ou não é válido.|A hierarquia explícita não foi encontrada ou o valor de **HierarchyName** estava em branco.|Consolidado<br /><br /> Relação|  
-|210035|Como não existe uma regra de negócio de geração de código, o **MemberCode** é necessário.|Ao criar ou atualizar membros, um **MemberCode** sempre é necessário, a menos que você esteja usando a geração de código automática. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
-|210036|Como existe uma regra de negócio de geração de código, o **MemberCode** não é necessário.|Ao criar ou atualizar membros, um **MemberCode** não é necessário quando você está usando a geração de código automática. Porém, se preferir, você poderá especificar um código. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
-|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "ROOT".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
+|210035|Como não existe uma regra de negócio de geração de código, o **MemberCode** é necessário.|Ao criar ou atualizar membros, um **MemberCode** sempre é necessário, a menos que você esteja usando a geração de código automática. Para obter mais informações, consulte [criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
+|210036|Como existe uma regra de negócio de geração de código, o **MemberCode** não é necessário.|Ao criar ou atualizar membros, um **MemberCode** não é necessário quando você está usando a geração de código automática. Porém, se preferir, você poderá especificar um código. Para obter mais informações, consulte [criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Folha<br /><br /> Consolidado|  
+|210041|"ROOT" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "root".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210042|"MDMUNUSED" não é um código de membro válido.|O valor de **MemberCode** contém a palavra "MDMUNUSED".|Folha<br /><br /> Consolidado<br /><br /> Relação|  
 |210052|O MemberCode não pode ser desativado porque é usado como um valor de atributo baseado em domínio.|Quando **importType** = **3** ou **4**, o preparo falhará se o membro for usado como um valor de atributo para outros membros. Use **ImportType5** ou **6** para definir o valor como NULL ou altere os valores antes de executar o processo de preparo.|Folha<br /><br /> Consolidado|  
 |300002|O código de membro não é válido.|Relações: o código de membro pai ou filho não existe.<br /><br /> Folha ou consolidada: **importType** = **3** ou **4** e o código de membro não existe.|Folha<br /><br /> Consolidado<br /><br /> Relação|  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108635"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
@@ -31,8 +31,7 @@ ms.locfileid: "66108635"
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Maneiras de atualizar um banco de dados do servidor de relatório de modo nativo  
  A seguinte lista identifica as condições nas quais um banco de dados do servidor de relatório é atualizado:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atualiza uma única instância de um servidor de relatório. O esquema de banco de dados do servidor de relatório é atualizado automaticamente após a inicialização do serviço, e o servidor de relatório determina que a versão do esquema de banco de dados não corresponde à do servidor.  
   
      Durante a inicialização do serviço, o servidor de relatório verifica se a versão do esquema de banco de dados corresponde à versão do servidor. Se a versão do esquema de banco de dados for mais antiga, ela será atualizada automaticamente para a versão de esquema exigida pelo servidor de relatório. A atualização automática é especialmente útil se você restaurou ou anexou um banco de dados de servidor de relatório mais antigo. Uma mensagem é inserida no arquivo de log de rastreamento do servidor de relatório, indicando que a versão do esquema de banco de dados foi atualizada.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66108635"
  Além do banco de dados do servidor de relatório, um servidor de relatório também usa um banco de dados temporário. O banco de dados temporário é atualizado automaticamente quando você atualiza o banco de dados do servidor de relatório.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permissões necessárias para atualizar um banco de dados do Servidor de Relatório  
- Se você estiver atualizando uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que contenha um banco de dados do servidor de relatório, poderá ver uma mensagem de erro se a atualização de banco de dados for executada com permissões insuficientes. Por padrão, a Instalação usa o token de segurança do usuário que está executando o programa Instalação para se conectar à instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e atualizar o esquema. Se você tiver permissões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** no servidor de banco de dados que hospeda os bancos de dados do servidor de relatório, a atualização do banco de dados será bem-sucedida. Da mesma maneira, se você executar a Instalação no prompt de comando e especificar os argumentos RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD para uma conta que tem a permissão de **sysadmin** para modificar o esquema no computador remoto, a atualização do banco de dados será bem-sucedida.  
+ Se você estiver atualizando uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que contenha um banco de dados do servidor de relatório, poderá ver uma mensagem de erro se a atualização de banco de dados for executada com permissões insuficientes. Por padrão, a Instalação usa o token de segurança do usuário que está executando o programa Instalação para se conectar à instância remota do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e atualizar o esquema. Se você tiver permissões [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** no servidor de banco de dados que hospeda os bancos de dados do servidor de relatório, a atualização do banco de dados será bem-sucedida. Da mesma maneira, se você executar a Instalação no prompt de comando e especificar os argumentos RSUPGRADEDATABASEACCOUNT e RSUPGRADEPASSWORD para uma conta que tem a permissão de **sysadmin** para modificar o esquema no computador remoto, a atualização do banco de dados será bem-sucedida.  
   
  Todavia, se você não tiver permissão de **sysadmin** no banco de dados do computador remoto, a conexão será recusada com o seguinte erro:  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66108635"
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Assistente para alterar banco de dados &#40;modo nativo do SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Atualizar e migrar Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Migre uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Migrar uma instalação do Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

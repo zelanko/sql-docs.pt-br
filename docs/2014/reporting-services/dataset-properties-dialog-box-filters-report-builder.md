@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109378"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros (Construtor de Relatórios)
@@ -41,7 +41,7 @@ ms.locfileid: "66109378"
  **Seta para baixo**  
  Mova o filtro selecionado para baixo na lista.  
   
- **Expression**  
+ **Expressão**  
  Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão expressão (**FX**) para editar a expressão.  
   
  **Tipo de dados**  
@@ -58,8 +58,8 @@ ms.locfileid: "66109378"
  Digite a expressão ou o valor a ser usado quando for avaliar a expressão especificada na caixa **Expressão** . Clique no botão expressão (**FX**) para editar a expressão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Conjuntos de itens de relatório inseridos e conjuntos de &#40;compartilhados Construtor de Relatórios e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Adicionar um filtro a um conjunto de &#40;Construtor de Relatórios e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

@@ -13,23 +13,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105903"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
-  As expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmica. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>**.  
+  As expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmica. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>** .  
   
- As expressões podem ser simples ou complexas. *Expressões simples* contêm uma referência a um único campo de conjunto de, parâmetro ou campo interno. As expressões complexas podem conter várias referências internas, operadores e chamadas de função. Por exemplo, uma expressão complexa pode incluir a função Sum aplicada ao campo Sales.  
+ As expressões podem ser simples ou complexas. As*expressões simples* contêm uma referência a um único campo de conjunto de dados, parâmetro ou campo interno. As expressões complexas podem conter várias referências internas, operadores e chamadas de função. Por exemplo, uma expressão complexa pode incluir a função Sum aplicada ao campo Sales.  
   
- As expressões são gravadas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Uma expressão começa com um sinal de igual (=) seguido por uma combinação de referências a coleções internas, como campos de conjunto de dados e parâmetros, constantes, funções e operadores.  
+ As expressões são gravadas no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Uma expressão começa com um sinal de igual (=) seguido por uma combinação de referências a coleções internas, como campos de conjunto de dados e parâmetros, constantes, funções e operadores.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a>Usando expressões simples  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Usando expressões simples  
  As expressões simples aparecem na superfície de design e em caixas de diálogo entre colchetes. Por exemplo, um campo de conjunto de dados é exibido como `[ProductID]`. As expressões simples são criadas automaticamente quando você arrasta um campo de um conjunto de dados até uma caixa de texto. É criado um espaço reservado, e a expressão define o valor subjacente. Você também pode digitar expressões diretamente em uma célula da região de dados ou em uma caixa de texto, ambas na superfície de design ou em uma caixa de diálogo (por exemplo, `[ProductID]`).  
   
  A tabela a seguir lista exemplos de como usar expressões simples. A tabela descreve a funcionalidade, a propriedade a ser definida, a caixa de diálogo que você costuma usar para defini-la e o valor da propriedade. É possível digitar a expressão simples diretamente na superfície de design, em uma caixa de diálogo ou no painel Propriedades, ou ainda editá-la na caixa de diálogo Expressão, exatamente como você faria com qualquer expressão.  
@@ -50,7 +50,7 @@ ms.locfileid: "66105903"
   
  
   
-##  <a name="Complex"></a>Usando expressões complexas  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Usando expressões complexas  
  As expressões complexas podem conter várias referências internas, operadores e chamadas de função e são exibidas na superfície de design como `<<Expr>>`. Para ver ou alterar o texto da expressão, abra a caixa de diálogo **Expressão** ou digite diretamente no painel Propriedades. A tabela a seguir lista maneiras comuns de usar uma expressão complexa para exibir ou organizar dados ou alterar a aparência de um relatório, inclusive a propriedade a ser definida, a caixa de diálogo que você costuma usar para defini-la e o valor da propriedade. Você pode digitar uma expressão diretamente em uma caixa de diálogo, na superfície de design ou no painel Propriedades.  
   
 |Funcionalidade|Propriedade, contexto e caixa de diálogo|Valor da propriedade|  
@@ -61,12 +61,12 @@ ms.locfileid: "66105903"
 |Formate os dados de uma caixa de texto de acordo com o valor.|Cor de um espaço reservado dentro de uma caixa de texto na linha de detalhes de um tablix. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Fonte**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calcule um valor uma única vez para fazer referência a ele em todo o relatório.|Valor de uma variável de relatório. Use **Caixa de Diálogo Propriedades de Relatório, Variáveis**.|`=Variables!MyCalculation.Value`|  
 |Inclua valores específicos de mais de um campo de um conjunto de dados.|Equação de filtro para um grupo em um tablix. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|Para o tipo de dados, selecione **Booliano**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!`*Mostrar\<>de parâmetro booliano*`.Value`|  
+|Oculte uma caixa de texto na superfície de design que pode ser alternada pelo usuário através de um parâmetro booliano denominado *Show*.|Propriedade oculta em uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Caixa de Texto, Visibilidade**.|`=Not Parameters!` *Mostrar\<parâmetro booliano>* `.Value`|  
 |Especifique um cabeçalho de página dinâmico ou o conteúdo de um rodapé.|Valor de um espaço reservado dentro de uma caixa de texto que é colocada no cabeçalho ou rodapé de uma página.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Especifique uma fonte de dados dinamicamente usando um parâmetro.|Cadeia de conexão na Fonte de dados. Use **Caixa de Diálogo de Propriedades de Fonte de Dados, Geral**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifique todos os valores para um parâmetro multivalor escolhido pelo usuário.|Valor de um espaço reservado dentro de uma caixa de texto. Use **Caixa de Diálogo de Propriedades de Grupo Tablix, Filtros**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |Especifique quebras de página para cada 20 linhas em um tablix sem nenhum outro grupo.|Expressão de grupo para um grupo em um tablix. Use **Caixa de Diálogo de Propriedades de Grupo, Quebras de Páginas**. Selecione a opção **Entre cada instância de um grupo**.|`=Ceiling(RowNumber(Nothing)/20)`|  
-|Especifique a visibilidade condicional com base em um parâmetro.|Propriedade oculta de um tablix. Use **Caixa de Diálogo de Propriedades Tablix, Visibilidade**.|`=Not Parameters!<`*parâmetro booliano*`>.Value`|  
+|Especifique a visibilidade condicional com base em um parâmetro.|Propriedade oculta de um tablix. Use **Caixa de Diálogo de Propriedades Tablix, Visibilidade**.|`=Not Parameters!<` *parâmetro booliano* `>.Value`|  
 |Especifique uma data formatada para uma determinada cultura.|Valor de um espaço reservado dentro de uma caixa de texto em uma região de dados. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Geral**.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |Concatene uma cadeia de caracteres e um número formatado como porcentagem com duas casas decimais.|Valor de um espaço reservado dentro de uma caixa de texto em uma região de dados. Use **Caixa de Diálogo Propriedades de Caixa de Texto, Geral**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   

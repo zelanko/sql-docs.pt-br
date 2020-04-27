@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103586"
 ---
 # <a name="preload-the-cache-report-manager"></a>Pré-carregar o cache (Gerenciador de Relatórios)
@@ -84,7 +84,7 @@ ms.locfileid: "66103586"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  Clique em **Próximo**.  
+8.  Clique em **Avançar**.  
   
 9. Especifique a consulta ou o comando que recupera dados de assinante. Opcionalmente, aumente o período de tempo limite para as consultas que levam muito tempo para serem processadas. Por exemplo:  
   
@@ -121,9 +121,9 @@ ms.locfileid: "66103586"
   
 ## <a name="see-also"></a>Consulte Também  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Desempenho, instantâneos, cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatório](set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

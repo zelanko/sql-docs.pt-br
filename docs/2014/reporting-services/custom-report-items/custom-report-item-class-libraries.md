@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264887"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de classes de itens de relatório personalizados
@@ -131,8 +131,8 @@ ms.locfileid: "63264887"
 |`Fields`|A coleção de campos (`Microsoft.ReportDesigner.Field`) a serem soltos.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Linguagem RDL &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
- [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)   
- [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
+ [Linguagem de definição de relatório &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [Criando um componente de tempo de execução de item de relatório personalizado](creating-a-custom-report-item-run-time-component.md)   
+ [Criando um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
   
   

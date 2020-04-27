@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b8d19d1f1fc33bfcd90f7cd801b2256a88859c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105725"
 ---
 # <a name="grouping-pane-report-builder"></a>Painel Agrupamento (Construtor de Relatórios)
@@ -27,11 +27,11 @@ ms.locfileid: "66105725"
 > [!NOTE]  
 >  Caso não veja o painel Agrupamento, na guia **Exibir** , no grupo **Mostrar/Ocultar**, clique em **Agrupamento**.  
   
- As células nas áreas dos grupos de linhas e de colunas podem ser membros estáticos ou dinâmicos de um grupo de linhas ou colunas tablix. Os membros estáticos repetem-se uma vez por grupo e normalmente contêm rótulos ou totais. Já os membros dinâmicos se repetem uma vez por instância de grupo e normalmente contêm os valores exclusivos da expressão de grupo. À medida que você seleciona células Tablix nas áreas dos grupos de linhas ou de colunas, o membro do grupo correspondente é selecionado no painel Grupos de Linhas ou Grupos de Colunas. Por outro lado, caso você selecione grupos no painel Agrupamento, a célula correspondente associada ao membro do grupo é selecionada na superfície de design. Para obter mais informações sobre áreas de grupo de linhas e colunas do Tablix, consulte [áreas de região de dados tablix &#40;Construtor de relatórios e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
+ As células nas áreas dos grupos de linhas e de colunas podem ser membros estáticos ou dinâmicos de um grupo de linhas ou colunas tablix. Os membros estáticos repetem-se uma vez por grupo e normalmente contêm rótulos ou totais. Já os membros dinâmicos se repetem uma vez por instância de grupo e normalmente contêm os valores exclusivos da expressão de grupo. À medida que você seleciona células Tablix nas áreas dos grupos de linhas ou de colunas, o membro do grupo correspondente é selecionado no painel Grupos de Linhas ou Grupos de Colunas. Por outro lado, caso você selecione grupos no painel Agrupamento, a célula correspondente associada ao membro do grupo é selecionada na superfície de design. Para obter mais informações sobre as áreas dos grupos de linhas e de colunas Tablix, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  O painel Agrupamento oferece suporte aos seguintes modos:  
   
--   **Os.** Use o modo padrão para adicionar, editar ou excluir grupos. É possível adicionar grupos pai, filho e detalhados, arrastando campos do painel de dados do relatório e os inserindo na hierarquia de grupo. Para adicionar um grupo adjacente, você deve usar o atalho **Adicionar Grupo** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Padrão.** Use o modo padrão para adicionar, editar ou excluir grupos. É possível adicionar grupos pai, filho e detalhados, arrastando campos do painel de dados do relatório e os inserindo na hierarquia de grupo. Para adicionar um grupo adjacente, você deve usar o atalho **Adicionar Grupo** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Avançado**. Use o **modo Avançado** para exibir todos os membros dos grupos de linhas e de colunas e definir propriedades em membros estáticos. Quando você cria grupos ou adiciona totais, as propriedades que controlam a forma como a região de dados Tablix processa linhas e colunas em todas as páginas de relatório são definidas automaticamente. Para ajustar essas propriedades manualmente, você deve defini-las no membro Tablix. Para obter mais informações, consulte [Controlando a exibição da região de dados Tablix em uma página do relatório &#40;Construtor de Relatórios e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66105725"
   
 -   **HideIfNoRows**. Booliano. Somente para membros estáticos. Se definido, Hidden e ToggleItem serão ignorados. Oculte esse membro caso a região de dados Tablix não contenha nenhuma linha de dados.  
   
--   **ManterJunto**. Booliano. Indica que o membro tablix inteiro e todos os membros aninhados devem ser mantidos em conjunto em uma página, se possível.  
+-   **KeepTogether**. Booliano. Indica que o membro tablix inteiro e todos os membros aninhados devem ser mantidos em conjunto em uma página, se possível.  
   
 -   `KeepWithGroup`. Booliano. Somente para membros de linha estáticos. Sempre que possível, mantenha a linha com o membro dinâmico irmão anterior ou seguinte, caso não esteja oculto. Para manter um cabeçalho de linha com seu grupo associado, defina KeepWithGroup como **After**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66105725"
   
 -   **Estático** Indica um membro estático com uma célula de cabeçalho.  
   
--   **(Estático)** Indica um membro estático sem célula de cabeçalho, conhecido como static oculto.  
+-   **(Estático)** Indica um membro estático sem uma célula de cabeçalho, conhecido como estático oculto.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

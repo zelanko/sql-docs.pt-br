@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106697"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106697"
   
     2.  Um parâmetro de consulta para cada parâmetro em cascata. Um parâmetro de consulta limita os dados recuperados da fonte de dados especificando determinados valores a serem incluídos ou excluídos da consulta. Normalmente, parâmetros de consulta ocorrem em uma cláusula de restrição na consulta. Por exemplo, em uma instrução SELECT do [!INCLUDE[tsql](../../includes/tsql-md.md)] , os parâmetros de consulta ocorrem na cláusula WHERE. Para obter mais informações, consulte "Filtering Rows by Using WHERE and HAVING" na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-6.  Clique em **Executar** ( **!** ). Depois que você incluir parâmetros de consulta e executar a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente.  
+6.  Clique em **Executar** (**!**). Depois que você incluir parâmetros de consulta e executar a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente.  
   
     > [!NOTE]  
     >  A ordem dos parâmetros de consulta na primeira vez que você executa uma consulta determina a ordem como eles são criados no relatório. Para alterar a ordem, consulte [Alterar a ordem de um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "66106697"
   
      O comando SELECT DISTINCT remove valores duplicados do conjunto de resultados para que você obtenha cada valor exclusivo da coluna especificada na tabela especificada.  
   
-     Clique em **Executar** ( **!** ). O conjunto de resultados mostra os valores que estão disponíveis para esse primeiro parâmetro.  
+     Clique em **Executar** (**!**). O conjunto de resultados mostra os valores que estão disponíveis para esse primeiro parâmetro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -155,10 +155,10 @@ ms.locfileid: "66106697"
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar, alterar ou excluir um parâmetro de relatório &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Adicionar um parâmetro ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Report Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Tutorial: adicionar um parâmetro ao seu relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [TUTORIAIS &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md)   
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Adicionar filtros de conjunto de dados, filtros de região e filtros de grupo &#40;Construtor de Relatórios e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Conjuntos de itens de relatório inseridos e conjuntos de &#40;compartilhados Construtor de Relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

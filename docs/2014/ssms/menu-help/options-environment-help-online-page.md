@@ -13,31 +13,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283322"
 ---
 # <a name="options-environment-help-online-page"></a>Opções (página ambiente – ajuda-online)
-  A caixa de diálogo **Opções** permite especificar as fontes de ajuda a serem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usadas para pesquisas, incluindo a ajuda F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
+  A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
   
- **Ao carregar o conteúdo da ajuda**  
+ **Ao carregar o conteúdo da Ajuda**  
  Define a ordem em que as fontes de Ajuda são usadas para ajuda de F1 e especifica quais fontes de Ajuda serão usadas.  
   
--   **Experimente o online primeiro e, em seguida, local**  
+-   **Tente primeiro online e então local**  
   
 -   Ajuda das fontes online são localizadas primeiro e ,em seguida, a ajuda do computador local.  
   
--   **Tente o local primeiro e, em seguida, online**  
+-   **Tentar Local Primeiro, depois Online**  
   
 -   Ajuda do computador local é localizada primeiro, em seguida, as fontes online.  
   
--   **Tentar somente local, não online**  
+-   **Tente apenas local e não online**  
   
      Somente a Ajuda instalada em seu computador é usada para ajuda de F1.  
   
- **Pesquisar esses provedores**  
+ **Pesquise esses provedores**  
  Especifica a ordem na qual as fontes de Ajuda são usadas ao pesquisar Ajuda por meio de palavras-chave.  
   
  **Comunidade Codezone**  
@@ -46,7 +46,7 @@ ms.locfileid: "63283322"
  **Detalhes**  
  Exibe uma descrição breve para cada provedor selecionado na lista **Comunidade Codezone** , quando disponível.  
   
- **Ler a política de privacidade**  
+ **Ler política de privacidade**  
  Exibe a política de privacidade [!INCLUDE[msCoName](../../includes/msconame-md.md)] para uso online.  
   
   

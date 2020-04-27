@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101786"
 ---
 # <a name="predefined-roles"></a>Funções predefinidas
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
   
 ## <a name="how-to-use-predefined-roles"></a>Como usar funções predefinidas  
@@ -31,26 +30,26 @@ ms.locfileid: "66101786"
   
 2.  Identifique quais usuários e grupos requerem acesso ao servidor de relatório, e em que nível. A maioria dos usuários deve ser atribuída à função **Navegador** ou à função **Construtor de Relatórios** . Um número menor de usuários deve ser atribuído à função **Publicador** . Pouquíssimos usuários devem receber a função **Gerenciador de Conteúdo**.  
   
-3.  Quando você estiver pronto para atribuir contas de usuário e grupo a funções específicas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
+3.  Quando você estiver pronto para atribuir contas de usuário e grupo a funções específicas, use o Gerenciador de Relatórios. Para obter mais informações, consulte [conceder acesso de usuário a um servidor de relatório &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
   
-##  <a name="bkmk_rolelist"></a>Definições de função predefinidas  
+##  <a name="predefined-role-definitions"></a><a name="bkmk_rolelist"></a>Definições de função predefinidas  
  As funções predefinidas são determinadas pelas tarefas às quais oferecem suporte. Você pode modificar essas funções ou substituí-las por funções personalizadas.  
   
- O *escopo* define os limites dentro dos quais as funções são usadas. As funções de nível de item fornecem níveis variados de acesso aos itens do servidor de relatório e às operações que afetam esses itens. Essas funções são definidas no nó raiz (Base) e em todos os itens na hierarquia de pastas do servidor de relatório. As funções de nível de sistema autorizam o acesso ao nível do site. As funções de nível de item e de sistema são mutuamente exclusivas, mas são utilizadas em conjunto para fornecer permissões abrangentes ao conteúdo e às operações do servidor de relatório.  
+ *Escopo* define os limites dentro dos quais as funções são usadas. As funções de nível de item fornecem níveis variados de acesso aos itens do servidor de relatório e às operações que afetam esses itens. Essas funções são definidas no nó raiz (Base) e em todos os itens na hierarquia de pastas do servidor de relatório. As funções de nível de sistema autorizam o acesso ao nível do site. As funções de nível de item e de sistema são mutuamente exclusivas, mas são utilizadas em conjunto para fornecer permissões abrangentes ao conteúdo e às operações do servidor de relatório.  
   
  A tabela a seguir descreve as funções predefinidas, o escopo e como esses itens são usados.  
   
-|Função predefinida|Escopo|DESCRIÇÃO|  
+|Função predefinida|Escopo|Descrição|  
 |---------------------|-----------|-----------------|  
-|[Função Gerenciador de conteúdo](#bkmk_content)|Item|Inclui todas as tarefas de nível de item. Os usuários atribuídos a essa função têm permissão total para gerenciar o conteúdo do servidor de relatório, podendo inclusive conceder permissões para outros usuários e definir a estrutura de pastas para armazenar relatórios e outros itens.|  
-|[Função de Publicador](#bkmk_publisher)|Item|Os usuários atribuídos a essa função podem adicionar itens a um servidor de relatório, podendo inclusive criar e gerenciar pastas que contêm esses itens.|  
-|[Função navegador](#bkmk_browser)|Item|Os usuários atribuídos a essa função podem executar e assinar relatórios e navegar pela estrutura de pastas.|  
-|[Construtor de Relatórios função](#bkmk_reportbuilder)|Item|Os usuários atribuídos a essa função podem criar e editar relatórios no Construtor de Relatórios.|  
-|[Função meus relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um workspace pessoal para armazenar e utilizar relatórios e outros itens.|  
-|[Função Administrador do sistema](#bkmk_systemadministrator)|Sistema|Os usuários atribuídos a essa função podem habilitar recursos e definir padrões, definir a segurança do site, criar definições de função no Management Studio e gerenciar trabalhos.|  
-|[Função de usuário do sistema](#bkmk_systemuser)|Sistema|Os usuários atribuídos a essa função podem exibir informações básicas sobre o servidor de relatório, como as informações de agendamento em uma agenda compartilhada.|  
+|[Função Gerenciador de Conteúdo](#bkmk_content)|Item|Inclui todas as tarefas de nível de item. Os usuários atribuídos a essa função têm permissão total para gerenciar o conteúdo do servidor de relatório, podendo inclusive conceder permissões para outros usuários e definir a estrutura de pastas para armazenar relatórios e outros itens.|  
+|[Função Publicador](#bkmk_publisher)|Item|Os usuários atribuídos a essa função podem adicionar itens a um servidor de relatório, podendo inclusive criar e gerenciar pastas que contêm esses itens.|  
+|[Função Navegador](#bkmk_browser)|Item|Os usuários atribuídos a essa função podem executar e assinar relatórios e navegar pela estrutura de pastas.|  
+|[Função Construtor de Relatórios](#bkmk_reportbuilder)|Item|Os usuários atribuídos a essa função podem criar e editar relatórios no Construtor de Relatórios.|  
+|[Função Meus Relatórios](#bkmk_myreports)|Item|Os usuários atribuídos a essa função podem gerenciar um workspace pessoal para armazenar e utilizar relatórios e outros itens.|  
+|[Função Administrador do Sistema](#bkmk_systemadministrator)|Sistema|Os usuários atribuídos a essa função podem habilitar recursos e definir padrões, definir a segurança do site, criar definições de função no Management Studio e gerenciar trabalhos.|  
+|[Função Usuário do Sistema](#bkmk_systemuser)|Sistema|Os usuários atribuídos a essa função podem exibir informações básicas sobre o servidor de relatório, como as informações de agendamento em uma agenda compartilhada.|  
   
-##  <a name="bkmk_content"></a>Função Gerenciador de conteúdo  
+##  <a name="content-manager-role"></a><a name="bkmk_content"></a>Função Gerenciador de conteúdo  
  A função **Gerenciador de Conteúdo** é uma função predefinida que inclui tarefas úteis para um usuário que gerencia relatórios e conteúdo Web, mas não é necessariamente autor de relatórios ou gerencia um servidor Web ou instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um gerenciador de conteúdo implanta relatórios, gerencia modelos de relatório e conexões de fontes de dados, além de tomar decisões sobre como os relatórios devem ser usados. Todas as tarefas do nível de item são selecionadas por padrão para a definição da função **Gerenciador de Conteúdo** .  
   
  A função **Gerenciador de Conteúdo** é frequentemente usada com a função **Administrador do Sistema** . Juntas, as duas definições de função fornecem um conjunto completo de tarefas a usuários que solicitam acesso total a todos os itens em um servidor de relatório. Apesar de a função **Gerenciador de Conteúdo** dar acesso completo a relatórios, modelos de relatórios, pastas, entre outros itens dentro da hierarquia de pastas, ela não fornece acesso a itens ou operações no nível do site. Tarefas como a criação e gerenciamento de agendas compartilhadas, configuração das propriedades do servidor e gerenciamento de definições de função são tarefas no nível do sistema incluídas na função **Administrador do Sistema** . Por esse motivo, recomendamos que você crie uma segunda atribuição de função no nível do site que forneça acesso a agendas compartilhadas.  
@@ -58,7 +57,7 @@ ms.locfileid: "66101786"
 ### <a name="content-manager-tasks"></a>Tarefas do Gerenciador de Conteúdo  
  A tabela a seguir lista as tarefas incluídas na função **Gerenciador de conteúdo** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
@@ -82,7 +81,7 @@ ms.locfileid: "66101786"
   
  A função **Gerenciador de Conteúdo** é usada em segurança padrão. Para obter mais informações, consulte [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_publisher"></a>Função de Publicador  
+##  <a name="publisher-role"></a><a name="bkmk_publisher"></a>Função de Publicador  
  A função **Publicador** é uma definição de função interna que inclui tarefas que permitem que os usuários adicionem conteúdo a um servidor de relatório. Para facilitar, essa função é predefinida. Ela não é usada até que você crie atribuições de função que a incluam. Essa função foi desenvolvida para os usuários que criam relatórios ou modelos no Designer de Relatórios ou no Designer de Modelo e, em seguida, publicam esses itens em um servidor de relatório.  
   
 > [!CAUTION]  
@@ -95,7 +94,7 @@ ms.locfileid: "66101786"
 ### <a name="publisher-tasks"></a>Tarefas da função Publisher  
  A tabela a seguir lista as tarefas que estão incluídas na função **Publicador** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados e publicá-los em uma pasta do servidor de relatório.|  
 |Gerenciar as fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
@@ -109,7 +108,7 @@ ms.locfileid: "66101786"
   
  No mínimo, os usuários que publicam relatórios a partir do Designer de Relatórios precisam da tarefa “Gerenciar relatórios” para adicionar um relatório ao servidor de relatório. Se o usuário precisar publicar relatórios que usam fontes de dados compartilhadas ou arquivos externos, inclua também “Gerenciar fontes de dados” e “Gerenciar recursos”. Caso o usuário também precise criar uma pasta como parte do processo de publicação, inclua “Gerenciar pastas”.  
   
-##  <a name="bkmk_browser"></a>Função navegador  
+##  <a name="browser-role"></a><a name="bkmk_browser"></a>Função navegador  
  A função **Navegador** é uma função predefinida que inclui tarefas úteis para o usuário que gerencia relatórios, mas não é necessariamente o autor de relatórios, nem os gerencia. Essa função fornece recursos básicos para o uso convencional de um servidor de relatório. Sem essas tarefas, pode ser difícil para usuários usarem um servidor de relatório.  
   
  A função **Navegador** deve ser usada com a função **Usuário do Sistema** . Juntas, as duas definições de função fornecem um conjunto completo de tarefas para usuários que interagem com itens em um servidor de relatório. Apesar de a função **Navegador** fornecer acesso de exibição a relatórios, modelos de relatórios, pastas, entre outros itens dentro da hierarquia de pastas, ela não fornece acesso a itens ou operações de site, como agendas compartilhadas, úteis para a criação de assinaturas, por exemplo. Por esse motivo, recomendamos que você crie uma segunda atribuição de função no nível do site que forneça acesso a agendas compartilhadas.  
@@ -117,7 +116,7 @@ ms.locfileid: "66101786"
 ### <a name="browser-tasks"></a>Tarefas de Navegador  
  A tabela a seguir descreve as tarefas incluídas na definição de função **Navegador** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
 |Exibir recursos|Exibir recursos e propriedades de recurso.|  
@@ -130,13 +129,13 @@ ms.locfileid: "66101786"
   
  Como mínimo, essa função deve ser compatível com ambas as tarefas "Exibir relatórios" e "Exibir pastas" para oferecer suporte à exibição e navegação em pastas. Você remova a tarefa "Exibir pastas", exceto se desejar eliminar a navegação de pasta. Igualmente, você remova a tarefa "Exibir relatórios", a menos que queira impedir que os usuários visualizem relatórios. Esses tipos de modificação sugerem a necessidade de uma definição de função personalizada aplicada de forma seletiva em um grupo específico de usuários.  
   
-##  <a name="bkmk_reportbuilder"></a>Construtor de Relatórios função  
+##  <a name="report-builder-role"></a><a name="bkmk_reportbuilder"></a>Construtor de Relatórios função  
  A função **Construtor de Relatórios** é uma função predefinida que inclui tarefas para carregar relatórios no Construtor de Relatórios, bem como exibir e navegar na hierarquia de pasta. Para criar e modificar relatórios no Construtor de Relatórios, você também deve ter uma atribuição de função de sistema que inclua a tarefa “Executar definições de relatório”, necessária para processar relatórios localmente no Construtor de Relatórios.  
   
 ### <a name="report-builder-tasks"></a>Tarefas do Construtor de Relatórios  
  A tabela a seguir descreve as tarefas que estão incluídas na definição da função **Construtor de Relatórios** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
@@ -150,7 +149,7 @@ ms.locfileid: "66101786"
   
  A tarefa mais importante desta definição de função é “Consumir relatórios”, que permite ao usuário carregar uma definição de relatório do servidor de relatório em uma instância local do Construtor de Relatórios. Se não desejar oferecer suporte a essa tarefa, exclua esta definição de função e use a função **Navegador** para oferecer suporte ao acesso geral a um servidor de relatório.  
   
-##  <a name="bkmk_myreports"></a>Função meus relatórios  
+##  <a name="my-reports-role"></a><a name="bkmk_myreports"></a>Função meus relatórios  
  A função **Meus Relatórios** é uma função predefinida que inclui um conjunto de tarefas que são úteis para os usuários do recurso Meus Relatórios. Esta definição de função inclui tarefas que concedem permissões administrativas a usuários na pasta Meus Relatórios que eles possuem.  
   
  Embora seja possível escolher outra função para usar com o recurso Meus Relatórios, é recomendado escolher a função usada exclusivamente para a segurança de Meus Relatórios. Para obter mais informações, consulte [Proteger Meus Relatórios](secure-my-reports.md).  
@@ -158,7 +157,7 @@ ms.locfileid: "66101786"
 ### <a name="my-reports-tasks"></a>Tarefas de Meus Relatórios  
  A tabela a seguir lista as tarefas incluídas na função **meus relatórios** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados que são baseados em relatórios armazenados na pasta Meus Relatórios do usuário.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
@@ -176,7 +175,7 @@ ms.locfileid: "66101786"
   
  Embora a tarefa “Definir políticas de segurança para itens” não faça parte da definição de função por padrão, você pode adicionar essa tarefa à função **Meus Relatórios** para que os usuários possam personalizar as configurações de segurança para subpastas e relatórios.  
   
-##  <a name="bkmk_systemadministrator"></a>Função Administrador do sistema  
+##  <a name="system-administrator-role"></a><a name="bkmk_systemadministrator"></a>Função Administrador do sistema  
  A função **Administrador do Sistema** é uma função predefinida que inclui tarefas úteis para um administrador de servidor de relatório que tem a responsabilidade geral por um servidor de relatório, mas não necessariamente por seu conteúdo.  
   
  Para criar uma atribuição de função que inclui essa função, use a página Configurações de Site do Gerenciador de Relatórios ou use os comandos acionados com o clique com o botão direito do mouse no nó do servidor de relatórios no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -186,10 +185,10 @@ ms.locfileid: "66101786"
 ### <a name="system-administrator-tasks"></a>Tarefas de Administrador do Sistema  
  A tabela a seguir lista as tarefas incluídas na função **administrador do sistema** .  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Iniciar a execução da definição de relatório sem publicá-la em um servidor de relatório.|  
-|Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [gerenciar um processo em execução](../subscriptions/manage-a-running-process.md).|  
+|Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [Gerenciar um processo em execução](../subscriptions/manage-a-running-process.md).|  
 |Gerenciar propriedades de servidor de relatório|Exibir e modificar propriedades que se aplicam ao servidor de relatório e a itens gerenciados pelo servidor de relatório.<br /><br /> Esta tarefa oferece suporte para a renomeação do Gerenciador de Relatórios, a habilitação de Meus Relatórios e a configuração de padrões de históricos de relatórios.|  
 |Gerenciar funções|Criar, exibir, modificar e excluir definições de função.<br /><br /> Os membros da função **Administrador do Sistema** podem usar a página Configurações de Site para gerenciar funções.|  
 |Gerenciar agendas compartilhadas|Criar, exibir, modificar e excluir agendas compartilhadas que são usadas para executar ou atualizar relatórios.|  
@@ -197,12 +196,12 @@ ms.locfileid: "66101786"
   
  A função **Administrador do Sistema** é usada na segurança padrão. Para obter mais informações, consulte [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_systemuser"></a>Função de usuário do sistema  
- A função **Usuário do Sistema** é uma função predefinida que inclui tarefas que permitem aos usuários visualizar informações básicas sobre o servidor de relatório. Também inclui suporte para carregar um relatório em Construtor de Relatórios. O Construtor de Relatórios é um aplicativo cliente que pode processar um relatório de maneira independente de um servidor de relatório. A tarefa "Executar Definições de Relatórios" é planejada para ser usada com o Construtor de Relatórios. Se você não estiver usando o Construtor de Relatórios, poderá remover essa tarefa da função **Usuário do Sistema** . A tabela a seguir lista as tarefas incluídas na definição da função de **usuário do sistema** .  
+##  <a name="system-user-role"></a><a name="bkmk_systemuser"></a>Função de usuário do sistema  
+ A função **Usuário do Sistema** é uma função predefinida que inclui tarefas que permitem aos usuários visualizar informações básicas sobre o servidor de relatório. Também inclui suporte para carregar um relatório em Construtor de Relatórios. O Construtor de Relatórios é um aplicativo cliente que pode processar um relatório de maneira independente de um servidor de relatório. A tarefa "Executar Definições de Relatórios" é planejada para ser usada com o Construtor de Relatórios. Se você não estiver usando o Construtor de Relatórios, poderá remover essa tarefa da função **Usuário do Sistema** . A tabela a seguir lista as tarefas incluídas na definição da função **Usuário do Sistema** .  
   
 ### <a name="system-user-tasks"></a>Tarefas Usuário do Sistema  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Execute um relatório sem publicá-lo em um servidor de relatório.|  
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a opção Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para Report Manager é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  
@@ -212,7 +211,7 @@ ms.locfileid: "66101786"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
- [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)   
+ [Conceder acesso de usuário a um servidor de relatório &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Modifique ou exclua uma atribuição de função &#40;Report Manager&#41;](role-assignments-modify-or-delete.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Tarefas e permissões](tasks-and-permissions.md)  

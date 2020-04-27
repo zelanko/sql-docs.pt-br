@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107206"
 ---
 # <a name="manage-shared-datasets"></a>Gerenciar conjuntos de dados compartilhados
@@ -47,12 +47,12 @@ ms.locfileid: "66107206"
 |-|-|  
 |Editar nome|Alterar o nome do conjunto de dados compartilhado. Todas as referências de itens dependentes continuarão funcionando.|  
 |Editar Descrição|Alterar a descrição do conjunto de dados compartilhado.|  
-|Editar o tempo limite de execução da consulta|Definir o tempo limite de execução da consulta em segundos. Zero (0) segundos significa que não há tempo limite. Determina o número de segundos antes que a consulta do conjunto de tempo expire. Para especificar nenhum valor de tempo limite, use 0. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Editar o tempo limite de execução da consulta|Definir o tempo limite de execução da consulta em segundos. Zere (0) segundo significa nenhum tempo limite. Determina o número de segundos antes do tempo limite da consulta do conjunto de dados se esgotar. Para especificar nenhum valor de tempo limite, use 0. Para obter mais informações, consulte [Definindo valores de tempo limite para processamento de relatórios e conjuntos de dados compartilhados &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Exibir itens dependentes|Exibir os itens que usam esse conjunto de dados compartilhado: partes de relatório publicadas, fontes de dados compartilhadas e relatórios.|  
   
  As seguintes propriedades de conjunto de dados compartilhado são configuradas automaticamente:  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|Se a fonte de dados compartilhada associada tem credenciais salvas no servidor de relatório.|  
 |HasUserProfileDependencies|Se o relatório tem uma referência à coleção global Usuário em sua consulta ou expressões de filtro.|  
@@ -71,30 +71,30 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>Controlando o acesso à definição do conjunto de dados compartilhado  
  Por padrão, as tarefas a seguir se aplicam a operações em conjuntos de dados compartilhados.  
   
--   **Exibir relatórios** Exibir itens de conjunto de e propriedades de item compartilhados.  
+-   **Exibir Relatórios** Exibir itens do conjunto de dados compartilhados e propriedades de item.  
   
--   **Relatórios de consumo** Ler definições de conjuntos de conjunto de banco de uma.  
+-   **Relatórios de Consumo** Ler definições de conjunto de dados compartilhado.  
   
--   **Gerenciar relatórios** Crie e exclua conjuntos de valores compartilhados e edite as propriedades do conjunto de linhas compartilhado.  
+-   **Gerenciar Relatórios** Criar e excluir conjuntos de dados compartilhados e editar propriedades de conjunto de dados compartilhado.  
   
--   **Definir segurança em itens** Exiba e modifique as configurações de segurança para conjuntos de os de conjunto de valores compartilhados.  
+-   **Definir segurança de itens** Exibir e modificar configurações de segurança para conjuntos de dados compartilhados.  
   
  Para obter mais informações sobre quais tarefas e permissões controlam o acesso às propriedades de fonte de dados em um servidor de relatório no modo nativo, consulte [Proteger itens de conjunto de dados compartilhados](../security/secure-shared-dataset-items.md).  
   
- As permissões para exibir e editar propriedades de itens em uma biblioteca do SharePoint são determinadas pelo administrador do site. Para obter mais informações, consulte [referência de permissão de site e lista do SharePoint para itens do servidor de relatório](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ As permissões para exibir e editar propriedades de itens em uma biblioteca do SharePoint são determinadas pelo administrador do site. Para obter mais informações, consulte [Referência à permissão de listas e sites do SharePoint para itens do Servidor de Relatório](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Como trabalhar com propriedades de conjuntos de dados compartilhados em um servidor de relatório  
  Você pode usar uma variedade de ferramentas para trabalhar com conjuntos de dados compartilhados. A tabela a seguir resume as abordagens e ferramentas e fornece um link para informações adicionais.  
   
 |Tarefa|Ferramenta|Link|  
 |----------|----------|----------|  
-|Adicionar um conjunto de dados compartilhado ou alterar propriedades da definição de conjuntos de dados compartilhados.|Salvar no Construtor de Relatórios.<br /><br /> Implantar no Designer de Relatórios.<br /><br /> Carregar um arquivo .rsd no Gerenciador de Relatórios.|[Conjuntos de itens de relatório inseridos e conjuntos de &#40;de relatórios compartilhados Construtor de relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) na [documentação do construtor de relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) no msdn.Microsoft.com<br /><br /> [&#40;Report Manager de carregamento da página de arquivos&#41;](../upload-file-page-report-manager.md)<br /><br /> Se você carregar um conjunto de dados compartilhado antes da fonte de dados compartilhada da qual ele depende ser publicada, deverá associar o conjunto de dados compartilhado manualmente à fonte de dados compartilhada. Para obter mais informações, veja [Página Propriedades Gerais, conjuntos de dados compartilhados &#40;Gerenciador de Relatórios&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
-|Alterar propriedades de item de conjunto de dados compartilhado.|Gerenciador de Relatórios|[Página Propriedades gerais, conjuntos de Report Manager compartilhados &#40;&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
+|Adicionar um conjunto de dados compartilhado ou alterar propriedades da definição de conjuntos de dados compartilhados.|Salvar no Construtor de Relatórios.<br /><br /> Implantar no Designer de Relatórios.<br /><br /> Carregar um arquivo .rsd no Gerenciador de Relatórios.|[Conjuntos de dados inseridos de relatório e conjuntos de dados compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) na [documentação do Construtor de Relatórios](https://go.microsoft.com/fwlink/?LinkId=154494) em msdn.microsoft.com<br /><br /> [Página Carregar Arquivo &#40;Gerenciador de Relatórios&#41;](../upload-file-page-report-manager.md)<br /><br /> Se você carregar um conjunto de dados compartilhado antes da fonte de dados compartilhada da qual ele depende ser publicada, deverá associar o conjunto de dados compartilhado manualmente à fonte de dados compartilhada. Para obter mais informações, veja [Página Propriedades Gerais, conjuntos de dados compartilhados &#40;Gerenciador de Relatórios&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
+|Alterar propriedades de item de conjunto de dados compartilhado.|Gerenciador de Relatórios|[Página Propriedades Gerais, conjuntos de dados compartilhados &#40;Gerenciador de Relatórios&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Especificar propriedades adicionais de conjunto de dados compartilhado para uma instância de conjunto de dados compartilhado em um relatório.|Designer de Relatórios do Construtor de Relatórios|[Caixa de diálogo Propriedades do Conjunto de Dados, Consulta](../dataset-properties-dialog-box-query.md)|  
-|Associar a uma fonte de dados compartilhada diferente para um conjunto de dados compartilhado.|Gerenciador de Relatórios|[Página de seleção de fonte de dados &#40;Report Manager&#41;](../data-source-selection-page-report-manager.md)|  
+|Associar a uma fonte de dados compartilhada diferente para um conjunto de dados compartilhado.|Gerenciador de Relatórios|[Página Seleção de Fonte de Dados &#40;Gerenciador de Relatórios&#41;](../data-source-selection-page-report-manager.md)|  
 |Verificar valores padrão para parâmetros de conjunto de dados.|Abrir no Construtor de Relatórios ou usar a sintaxe de acesso de URL.|Por exemplo:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Habilitar o cache|Gerenciador de Relatórios|[Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página de cache, conjuntos de armazenamento compartilhados &#40;Report Manager&#41;](../caching-page-shared-datasets-report-manager.md)|  
-|Criar ou editar um plano de atualização de cache|Gerenciador de Relatórios|[Opções de atualização do cache &#40;Report Manager&#41;](../cache-refresh-options-report-manager.md)|  
+|Habilitar o cache|Gerenciador de Relatórios|[Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página Cache, Conjuntos de Dados Compartilhados &#40;Gerenciador de Relatórios&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|Criar ou editar um plano de atualização de cache|Gerenciador de Relatórios|[Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](../cache-refresh-options-report-manager.md)|  
 |Exibir o esquema de definição do conjunto de dados compartilhado.|Gerenciador de Relatórios|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |No modo integrado do SharePoint, sincronizar a definição do conjunto de dados compartilhado entre o servidor de relatório e o site do SharePoint|Páginas do aplicativo do SharePoint|Alterar propriedades de item de conjunto de dados compartilhado<br /><br /> Alterar opções de cache<br /><br /> Alterar a fonte de dados compartilhada|  
   

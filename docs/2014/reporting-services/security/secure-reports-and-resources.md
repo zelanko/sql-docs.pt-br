@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101667"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger relatórios e recursos
@@ -77,7 +77,7 @@ ms.locfileid: "66101667"
  (create-and-manage-role-assignments.md)   
  [Configurar o acesso ao Construtor de Relatórios](../report-server/configure-report-builder-access.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
- [Proteger itens de fontes de dados compartilhadas](secure-shared-data-source-items.md)   
- [Armazenar credenciais em uma fonte de dados do Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Proteger itens de fonte de dados compartilhados](secure-shared-data-source-items.md)   
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

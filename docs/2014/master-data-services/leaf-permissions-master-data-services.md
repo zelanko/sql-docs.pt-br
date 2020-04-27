@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479177"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
@@ -28,26 +28,26 @@ ms.locfileid: "65479177"
   
  Para entidades sem hierarquias explícitas habilitadas, atribuir permissão a **Folha** é o mesmo que atribuir permissão à entidade.  
   
- **Registra**  
+ **Observações:**  
   
 -   As permissões de folha aplicam-se apenas à área funcional **Gerenciador** da interface do usuário.  
   
 -   As permissões atribuídas aos atributos **Name** e **Code** não são impostas.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|Os membros folha são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
-|**Cumulativo**|Os membros de folha são exibidos e o usuário pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
-|**Deny**|Os membros de folha da entidade não são exibidos.|  
+|**Atualização**|Os membros de folha são exibidos e o usuário pode adicionar, remover ou alterá-los.<br /><br /> Se existem membros consolidados, os nomes e os códigos são exibidos, mas o usuário não pode adicionar, remover ou alterá-los.|  
+|**Negar**|Os membros de folha da entidade não são exibidos.|  
   
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários apenas com permissões de atributo não podem adicionar ou remover membros.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|O atributo é exibido, mas o usuário não pode alterar valores de atributo.|  
-|**Cumulativo**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Atualização**|O atributo é exibido e o usuário pode alterar valores de atributo.|  
+|**Negar**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  

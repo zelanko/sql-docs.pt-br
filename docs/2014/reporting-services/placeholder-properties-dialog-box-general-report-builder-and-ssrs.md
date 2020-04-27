@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108095"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Espaço Reservado, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Propriedades do Espaço Reservado** para alterar o valor, a Dica de Ferramenta e as opções de marcação de um espaço reservado em uma caixa de texto.  
   
 ## <a name="options"></a>Opções  
- **Chamada**  
+ **Rotular**  
  Digite um rótulo para o espaço reservado. O rótulo é exibido apenas na superfície de design.  
   
  **Valor**  
@@ -36,9 +36,9 @@ ms.locfileid: "66108095"
  **Tipo de marcação**  
  Selecione uma opção para indicar como o espaço reservado é renderizado.  
   
--   **Texto sem formatação** Exiba o espaço reservado como texto simples. O HTML é tratado como texto literal.  
+-   **Texto sem-Formatação** Exibe o espaço reservado como texto simples. O HTML é tratado como texto literal.  
   
--   **HTML**  Exiba o espaço reservado como HTML. Se o valor da expressão do espaço reservado contiver marcas HTML válidas, elas serão renderizadas como HTML.  
+-   **HTML**  Exibe o espaço reservado como HTML. Se o valor da expressão do espaço reservado contiver marcas HTML válidas, elas serão renderizadas como HTML.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   

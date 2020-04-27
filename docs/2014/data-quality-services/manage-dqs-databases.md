@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484468"
 ---
 # <a name="manage-dqs-databases"></a>Gerenciar bancos de dados do DQS
   Esta seção fornece informações sobre as atividades de gerenciamento de banco de dados que podem ser executadas nos bancos de dados DQS como backup/restauração ou anexar/desanexar.  
   
-##  <a name="BackupRestore"></a>Fazer backup e restaurar os bancos de dados do DQS  
+##  <a name="backup-and-restore-the-dqs-databases"></a><a name="BackupRestore"></a> Backup e restauração dos bancos de dados do DQS  
  O backup e a restauração de bancos de dados do SQL Server são operações comuns que administradores de banco de dados executam para impedir a perda de dados em caso de desastre, recuperando dados dos bancos de dados de backup. O[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] é implementado basicamente por dois bancos de dados do SQL Server: DQS_MAIN e DQS_PROJECTS. Os procedimentos de backup e restauração dos bancos de dados [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) são semelhante a qualquer outro banco de dados do SQL Server. Há três desafios associados com backup e restauração dos bancos de dados DQS:  
   
 -   As operações de backup e restauração dos bancos de dados DQS devem estar sincronizadas. Caso contrário, o [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurado não será funcional.  
@@ -42,7 +42,7 @@ ms.locfileid: "65484468"
 >  -   No modelo de recuperação Simples, quando os registros de log permanecem ativos por muito tempo, (por exemplo, uma transação longa e demorada), o truncamento de log pode ser atrasado e, portanto, pode resultar no preenchimento do log de transação. Além disso, o truncamento do log não reduz o tamanho do arquivo de log físico (arquivo .ldf). Para reduzir o tamanho de um arquivo de log físico, você precisará reduzir o arquivo de log. Para obter informações sobre a solução de problemas do log de transações, consulte [O Log de transações &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou o artigo do Suporte da Microsoft em [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Você deve executar regularmente um backup completo ou diferencial dos bancos de dados DQS e deve fazer backup do log de transação assim como realizar a recuperação pontual de dados. Para obter mais informações, consulte [Backups completos de banco de dados &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Fazer backup de um log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="DetachAttach"></a>Desanexar/anexar os bancos de dados do DQS  
+##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> Anexar/desanexar bancos de dados DQS  
  Você pode desanexar os arquivos de dados e de log de transação dos bancos de dados DQS, e reanexá-los nos bancos de dados na mesma instância ou em outra do SQL Server se quiser alterar os bancos de dados DQS para uma instância diferente do SQL Server no mesmo computador ou para mover o banco de dados.  
   
  Para obter informações detalhadas sobre ideias a serem consideradas antes e durante a desanexação e anexação de bancos de dados no SQL Server, consulte [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  

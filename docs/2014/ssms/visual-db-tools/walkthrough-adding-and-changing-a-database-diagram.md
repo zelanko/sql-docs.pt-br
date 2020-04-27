@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273741"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
@@ -78,8 +78,8 @@ ms.locfileid: "63273741"
   
     |**Nome da Coluna**|**Tipo de Dados**|**Permitir Nulos**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|verificado|  
-    |`T1col2`|`varchar(50)`|verificado|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|verificado|  
   
 4.  Clique com o botão direito do mouse em `T1col1` e selecione **Definir Chave Primária**.  
@@ -111,20 +111,19 @@ ms.locfileid: "63273741"
   
 4.  Digite `T1col3 > 5` e clique em **OK**.  
   
-     
-  `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
+     `Table1` agora tem uma restrição que todos os valores inseridos em `T1col3` devem ser maior que 5.  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
 #### <a name="to-create-relationships-between-tables"></a>Para criar relações entre tabelas  
   
 1.  Crie uma nova tabela no Designer de Diagrama denominada `Table2` com as seguintes colunas:  
   
-    |**Nome da coluna**|**Tipo de Dados**|**Permitir Nulos**|  
+    |**Nome da coluna**|**Tipo de dados**|**Permitir Nulos**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|não verificado|  
-    |`T2col2`|`varchar(50)`|verificado|  
-    |`T2col3`|`xml`|verificado|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  As colunas no lado da chave primária de uma relação de chave estrangeira devem participar de uma Chave Primária ou de uma Restrição Exclusiva.  
@@ -178,7 +177,7 @@ ms.locfileid: "63273741"
   
      Um índice XML com valores padrão será adicionado à lista **Índice XML Selecionado** .  
   
-4.  Clique em **fechar**  
+4.  Clique em **Fechar**.  
   
     > [!NOTE]  
     >  Os índices XML são criados por coluna. O primeiro índice XML é primário; qualquer índice adicional é secundário.  

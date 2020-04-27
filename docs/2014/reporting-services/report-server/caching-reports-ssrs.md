@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104107"
 ---
 # <a name="caching-reports-ssrs"></a>Armazenando relatórios em cache (SSRS)
@@ -76,6 +76,6 @@ ms.locfileid: "66104107"
  [Pré-carregar o cache &#40;Report Manager&#41;](preload-the-cache-report-manager.md)   
  [Agendas](../subscriptions/schedules.md)   
  [Conjuntos de &#40;de armazenamento compartilhados do cache&#41;SSRS](cache-shared-datasets-ssrs.md)   
- [Opções de atualização do cache &#40;Report Manager&#41;](../cache-refresh-options-report-manager.md)  
+ [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](../cache-refresh-options-report-manager.md)  
   
   

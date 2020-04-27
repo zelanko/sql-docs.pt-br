@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103731"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover ou excluir um item (Gerenciador de Relatórios)
@@ -30,11 +30,11 @@ ms.locfileid: "66103731"
   
 |ícone|Item móvel|  
 |----------|-------------------|  
-|![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")|Relatório|  
-|![Ícone de relatório vinculado](../media/hlp-16linked.gif "Ícone de relatório vinculado")|Relatório vinculado|  
+|![Report icon](../media/hlp-16doc.gif "Ícone do relatório")|Relatório|  
+|![Ícone do relatório vinculado](../media/hlp-16linked.gif "Ícone do relatório vinculado")|Relatório vinculado|  
 |![Ícone de pasta](../media/hlp-16folder.gif "Ícone de pasta")|Pasta|  
 |![ícone de recurso genérico](../media/hlp-16file.gif "ícone de recurso genérico")|Recurso genérico|  
-|![Ícone de fonte de dados compartilhada](../media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")|Fonte de dados compartilhada|  
+|![Shared data source icon](../media/hlp-16datasource.png "Ícone da fonte de dados compartilhada")|Fonte de dados compartilhada|  
 ||Conjunto de dados compartilhado|  
   
  Nem todos os itens com os quais você trabalha podem ser movidos. Não é possível mover itens associados a um relatório, como assinaturas ou histórico de relatório. Esses itens são movidos com os seus relatórios associados. De maneira semelhante, não é possível mover itens, como agendas compartilhadas, que existem fora da hierarquia de pasta. Não é possível mover itens sem a devida permissão. A permissão para mover um item é concedida quando as seguintes tarefas são selecionadas na atribuição de função para o item em questão: "Gerenciar relatórios," "Gerenciar modelos", "Gerenciar pastas" e "Gerenciar fontes de dados".  

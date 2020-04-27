@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482948"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permissões de membro de hierarquia (Master Data Services)
@@ -34,11 +34,11 @@ ms.locfileid: "65482948"
   
  As permissões de membro de hierarquia aplicam-se à versão do modelo que recebe as permissões, e a qualquer cópia futura da versão. Elas não se aplicam a versões anteriores a que você está atribuindo.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|Os membros são exibidos, mas o usuário não pode alterá-los. O usuário também não pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.<br /><br /> Observação: se você atribuir permissão **somente leitura** à **raiz**, os membros em **raiz** serão somente leitura; no entanto, em hierarquias explícitas e coleções, o usuário pode mover membros para **raiz** e pode adicionar novos membros à **raiz**.|  
-|**Cumulativo**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
-|**Deny**|Os membros não são exibidos.|  
+|**Atualização**|Os membros são exibidos e o usuário pode alterá-los. O usuário também pode mover os membros em qualquer hierarquia explícita ou coleções a que os membros pertencem.|  
+|**Negar**|Os membros não são exibidos.|  
   
  Na guia **Membros da Hierarquia** , as permissões que você atribui não entram em vigor imediatamente. A frequência com que as permissões são aplicadas depende da **Configuração de intervalo de processamento da segurança de membro** na tabela de Configurações do Sistema no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . É possível aplicar permissões de membros imediatamente seguindo as etapas em [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
   
@@ -60,6 +60,6 @@ ms.locfileid: "65482948"
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Membros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarquias &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Aplicar permissões de membro imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [Aplicar permissões de membros imediatamente &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280428"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Explorando o modelo de clustering (Tutorial de mineração de dados básico)
@@ -24,7 +24,7 @@ ms.locfileid: "63280428"
   
 
   
-##  <a name="ClusterDiagramTab"></a>Guia diagrama de cluster  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>Guia diagrama de cluster  
  A guia Diagrama de Cluster exibe todos os clusters existentes em um modelo de mineração. As linhas entre os clusters representam "proximidade" e estão sombreadas com base no grau de semelhança que os clusters têm. A cor real de cada cluster representa a frequência da variável e o estado no cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>Para explorar o modelo na guia Diagrama de Cluster  
@@ -57,7 +57,7 @@ ms.locfileid: "63280428"
   
 
   
-##  <a name="ClusterProfilesTab"></a>Guia perfis de cluster  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>Guia perfis de cluster  
  A guia **perfis de cluster** fornece uma visão geral do `TM_Clustering` modelo. A guia **perfis de cluster** contém uma coluna para cada cluster no modelo. A primeira coluna listas os atributos associados a pelo menos um cluster. O resto do visualizador contém a distribuição dos estados de um atributo para cada cluster. A distribuição de uma variável discreta é mostrada como uma barra colorida com o número máximo de barras exibidas na lista de **barras de histograma** . São exibidos atributos contínuos com um gráfico de diamante que representa o desvio médio e padrão em cada cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>Para explorar o modelo na guia Perfis de Cluster  
@@ -84,7 +84,7 @@ ms.locfileid: "63280428"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>Guia características do cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>Guia características do cluster  
  Com a guia **características do cluster** , você pode examinar mais detalhadamente as características que compõem um cluster. Em vez de comparar as características de todos os clusters (como na guia Perfis de Cluster), você pode explorar um cluster por vez. Por exemplo, se você selecionar **compradores de bicicleta alto** na lista de **clusters** , poderá ver as características dos clientes neste cluster. Embora a exibição seja diferente do visualizador Perfis de Cluster, as informações são as mesmas.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "63280428"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>Guia discriminação de cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>Guia discriminação de cluster  
  Com a guia **discriminação de cluster** , você pode explorar as características que distinguem um cluster de outro. Depois de selecionar dois clusters, um da lista **cluster 1** e outro na lista **cluster 2** , o visualizador calcula as diferenças entre os clusters e exibe uma lista dos atributos que distinguem os clusters.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>Para explorar o modelo na guia Distinção de Cluster  

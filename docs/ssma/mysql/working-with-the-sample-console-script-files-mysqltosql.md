@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904892"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Trabalhando com os arquivos de script de console de exemplo (MySQLToSQL)
@@ -54,7 +54,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     Para obter mais informações sobre como gerar relatórios, consulte [gerando relatórios &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **Registra**  
+    **Observações:**  
   
     -   Certifique-se de que o argumento de linha de comando do arquivo de valor da variável seja passado para o aplicativo de console e VariableValueFileSample. xml seja atualizado com os valores especificados pelo usuário.  
   
@@ -79,7 +79,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     Mapeamento de esquema do banco de dados de origem para o esquema de destino.  
   
-    **Attribute**  
+    **Atributo**  
   
     -   `source-schema:`Especifica o banco de dados de origem que exige a conversão.  
   
@@ -93,7 +93,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     2.  Se o usuário tiver que avaliar vários objetos/bancos de dados, ele poderá especificar `metabase-object` vários nós, conforme ilustrado no exemplo 4 do `convert-schema` comando do arquivo de script do console de exemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
     `object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
   
@@ -105,7 +105,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     2.  Se o usuário tiver que avaliar vários objetos/bancos de dados, ele poderá especificar `metabase-object` vários nós, conforme ilustrado no exemplo 3 do `synchronize-target` comando do arquivo de script do console de exemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
     `object-name:`Especifique o nome do banco de dados/objeto do SQL Server que requer a criação. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
   
@@ -117,7 +117,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     2.  Se o usuário tiver que avaliar vários objetos/bancos de dados, ele poderá especificar `metabase-object` vários nós, conforme ilustrado no exemplo 2 do `migrate-data` comando do arquivo de script do console de exemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
     `object-name:`Especifica o nome do banco de dados/tabelas de origem que exige a migração. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`  
   

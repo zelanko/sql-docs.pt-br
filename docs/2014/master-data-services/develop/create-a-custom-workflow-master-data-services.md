@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479541"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Criar um fluxo de trabalho personalizado (Master Data Services)
@@ -62,7 +62,7 @@ ms.locfileid: "65479541"
   
 4.  Herde de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> em sua declaração de classe. A declaração de classe deve ser semelhante a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
-5.  Implementar o <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> interface. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
+5.  Implemente a interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. O método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> é chamado pelo Serviço de Integração de Fluxo de Trabalho MDS SQL Server para iniciar o fluxo de trabalho.  
   
 6.  Copie seu assembly no local do executável do Serviço de Integração de Fluxo de trabalho MDS do SQL Server, denominado Microsoft.MasterDataServices.Workflow.exe, em \<Sua pasta de instalação>\Master Data Services\WebApplication\bin.  
   
@@ -87,9 +87,7 @@ ms.locfileid: "65479541"
     </setting>  
     ```  
   
-     O texto interno da marca \<value> está na forma de \<Workflow tag>=\<assembly-qualified workflow type name>. 
-  \<Workflow tag> é um nome que você usa para identificar o assembly de manipulador de fluxo de trabalho ao criar uma regra de negócios em [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. 
-  \<assembly-qualified workflow type name> é o nome qualificado de namespace da sua classe de fluxo de trabalho, seguido por uma vírgula, seguida pelo nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você poderá incluir várias marcas \<setting> se tiver criado vários manipuladores de fluxo de trabalho para tipos diferentes de fluxos de trabalho.  
+     O texto interno da marca \<value> está na forma de \<Workflow tag>=\<assembly-qualified workflow type name>. \<Workflow tag> é um nome que você usa para identificar o assembly de manipulador de fluxo de trabalho ao criar uma regra de negócios em [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<assembly-qualified workflow type name> é o nome qualificado de namespace da sua classe de fluxo de trabalho, seguido por uma vírgula, seguida pelo nome de exibição do assembly. Se seu assembly usar um nome forte, você também terá que incluir informações de versão e seu PublicKeyToken. Você poderá incluir várias marcas \<setting> se tiver criado vários manipuladores de fluxo de trabalho para tipos diferentes de fluxos de trabalho.  
   
 > [!NOTE]  
 >  Dependendo da configuração do seu servidor, você poderá visualizar um erro do tipo "Acesso negado" ao tentar salvar o arquivo Microsoft.MasterDataServices.Workflow.exe.config. Se isso ocorrer, desabilite temporariamente o UAC (Controle de Conta de Usuário) no servidor. Para fazer isso, abra o Painel de controle e clique em **Sistema e Segurança**. Em **Central de Ações**, clique em **Alterar Configurações de Controle de Conta de Usuário**. Na caixa de diálogo **Configurações de Controle de Conta de Usuário**, deslize a barra para a parte inferior para que você nunca seja notificado. Reinicie seu computador e repita as etapas anteriores para editar seu arquivo de configuração. Depois de salvar o arquivo, reinicie suas configurações de UAC no nível padrão.  
@@ -120,7 +118,7 @@ ms.locfileid: "65479541"
   
  Crie uma regra de negócio que inicie um fluxo de trabalho personalizado no [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] seguindo estas etapas:  
   
-1.  No editor de regra de negócios do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], depois que você especificar as condições da sua regra de negócios, arraste a ação **Iniciar Fluxo de Trabalho** da lista **Ações externas** para o rótulo **Ação** do painel **THEN**.  
+1.  No editor de regras de negócio [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]do, depois de especificar as condições de sua regra de negócio, arraste a ação **Iniciar fluxo de trabalho** da lista **ações externas** para o rótulo de **ação** do painel **then** .  
   
 2.  No painel **Editar Ação**, na caixa **Tipo de fluxo de trabalho**, digite a marca que identifica seu assembly de manipulador de fluxo de trabalho. Essa é a marca que você especificou no arquivo de configuração do assembly, por exemplo TEST.  
   

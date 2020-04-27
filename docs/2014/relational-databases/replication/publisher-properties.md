@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261983"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Propriedades do Publicador Replicação do SQL Server
   Esta seção contém informações sobre as propriedades do Publicador disponíveis no distribuidor e no Publicador. 
 
 ## <a name="general"></a>Geral  
-  A página **Geral** da caixa de diálogo **Propriedades do Publicador** exibe informações somente leitura no Distribuidor e no banco de dados de distribuição que o Publicador usa. Para alterar o Distribuidor ou o banco de dados de um Publicador:  
+   A página **Geral** da caixa de diálogo **Propriedades do Publicador** exibe informações somente leitura no Distribuidor e no banco de dados de distribuição que o Publicador usa. Para alterar o Distribuidor ou o banco de dados de um Publicador:  
   
 1.  Desabilite a publicação no Publicador. Para obter mais informações, consulte [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md).    
 2.  Reconfigure a publicação e a distribuição Para obter mais informações, consulte [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
@@ -58,10 +58,10 @@ ms.locfileid: "63261983"
   A página **Bancos de dados de Publicação** da caixa de diálogo **Propriedades do Publicador** permite que um usuário da função de servidor fixa **sysadmin** habilite bancos de dados para replicação. Habilitar um banco de dados não publica esse banco de dados, mas permite que qualquer usuário na função de banco de dados fixa **db_owner** daquele banco de dados crie uma ou mais publicações no banco de dados.  
   
 ### <a name="options"></a>Opções  
- **Transacional.**  
+ **Transacional**  
  Marque essa caixa de seleção para permitir que usuários na função de banco de dados fixa **db_owner** criem publicações de instantâneo ou transacionais no banco de dados. 
   
- **Mesclagem**  
+ **Mescle**  
  Marque essa caixa de seleção para permitir que usuários na função de banco de dados fixa **db_owner** criem publicações de mesclagem no banco de dados.  
 
 ## <a name="subscribers"></a>Publicadores

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102538"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar uma fonte de dados compartilhada em uma biblioteca do SharePoint
@@ -30,13 +30,13 @@ ms.locfileid: "66102538"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra um projeto do Servidor de Relatório existente ou novo.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo _\<project>_ **Páginas de Propriedades do**  será exibida.  
+2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo **páginas de propriedades** do _ \<projeto>_ é aberta.  
   
 3.  Escolha a **Configuração** que deseja usar para publicar no site do SharePoint.  
   
 4.  Para publicar fontes de dados compartilhadas no seu projeto e substituir as fontes de dados compartilhadas publicadas, defina **OverwriteDataSources** como **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, digite uma URL em uma biblioteca do SharePoint ou pasta de biblioteca. Por exemplo, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Opcional) Para **TargetDataSourceFolder**, digite uma URL em uma biblioteca do SharePoint ou pasta de biblioteca. Por exemplo, *http://TestServer/TestSite/Documents/DataSources* .  
   
      Se você não especificar um valor, o valor **TargetReportFolder** será usado.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66102538"
   
 ## <a name="see-also"></a>Consulte Também  
  [Publicar um relatório em uma biblioteca do SharePoint](publish-a-report-to-a-sharepoint-library.md)   
- [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Caixa de diálogo Páginas de Propriedades do Projeto](../tools/project-property-pages-dialog-box.md)   
+ [Exemplos de URL para itens de relatório publicados em um servidor de relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Caixa de diálogo páginas de propriedades do projeto](../tools/project-property-pages-dialog-box.md)   
  [Definir propriedades de implantação &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Publicando relatórios em um servidor de relatório](publishing-reports-to-a-report-server.md)   
  [Usar uma conexão de dados do Office &#40;.odc&#41; com relatórios &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  

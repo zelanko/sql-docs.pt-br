@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109121"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página Propriedades Gerais, Recursos (Gerenciador de Relatórios)
@@ -62,6 +62,6 @@ ms.locfileid: "66109121"
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página de exibição, recursos &#40;Report Manager&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página Propriedades de segurança, itens &#40;Report Manager&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [Página Propriedades de Segurança, Itens &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

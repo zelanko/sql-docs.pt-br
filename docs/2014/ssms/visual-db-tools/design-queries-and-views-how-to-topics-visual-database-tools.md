@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316065"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Tópicos de instruções de como criar consultas e exibições (Visual Database Tools)
   O Designer de Consulta e Exibição pode ajudar a criar e a manter a recuperação de dados e as partes de manipulação de dados de seu aplicativo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Abra o designer de consulta e exibição &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Abrir o Designer de Consulta e Exibição &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Fornece etapas para abrir uma consulta nova ou existente ou exibir no Designer de Consulta e Exibição.  
   
- [Navegue no designer de consulta e exibição &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Navegar no Designer de Consulta e Exibição &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Fornece uma lista de combinações de teclas e operações de mouse que você pode utilizar no Designer de Consulta e Exibição.  
   
  [Ferramentas do Designer de Consulta e Exibição &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484309"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores de um arquivo do Excel para um domínio
@@ -30,17 +30,17 @@ ms.locfileid: "65484309"
   
 -   Importe valores para um domínio existente e populado; nesse caso, somente os novos valores são importados. Todos os valores que já existem não serão importados.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para importar domínios de um arquivo do Excel, o Excel deve ser instalado no computador em que o aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] está instalado para que os valores de domínio ou um domínio completo sejam importados; você deve criar um arquivo do Excel com valores de domínio (consulte [How the import works](#How)); você deve criar e abrir uma base de dados de conhecimento para a qual o domínio será importado.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar valores de domínio de um arquivo do Excel.  
   
-##  <a name="Import"></a>Importar valores de um arquivo do Excel para um domínio  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Importar valores de um arquivo do Excel para um domínio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65484309"
   
 14. Clique em **Concluir** para adicionar os valores à base de dados de conhecimento.  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de importar valores de um arquivo do Excel para um domínio  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>Acompanhamento: depois de importar valores de um arquivo do Excel para um domínio  
  Depois que você importar valores para um domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Synonyms"></a>Importando sinônimos  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a>Importando sinônimos  
  Os sinônimos são importados da seguinte maneira:  
   
 -   Primeiro, todos os valores são importados; depois, a conexão de sinônimo é estabelecida.  
@@ -88,7 +88,7 @@ ms.locfileid: "65484309"
   
 -   Se os valores não puderem ser conectados manualmente no aplicativo por algum motivo, isso não será aplicável através da operação de importação.  
   
-##  <a name="How"></a>Como a importação funciona  
+##  <a name="how-the-import-works"></a><a name="How"></a>Como a importação funciona  
  Os seguintes valores são importados por esta operação:  
   
  Na operação de importação, o DQS realiza a importação a partir de um arquivo do Excel, da seguinte maneira:  

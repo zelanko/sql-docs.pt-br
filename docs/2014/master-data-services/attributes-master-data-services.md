@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480153"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
@@ -80,11 +80,11 @@ ms.locfileid: "65480153"
 |----------------------|-----------|  
 |Criar um novo atributo de texto de formato livre|[Criar um atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
 |Criar um novo atributo numérico de formato livre|[Criar um atributo numérico &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|Criar um novo atributo de link de formato livre|[Criar um atributo de link &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|Criar um novo atributo de link de formato livre|[Criar um atributo de vínculo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
 |Criar um novo atributo de arquivo.|[Criar um atributo de arquivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Criar um novo atributo baseado em domínio.|[Criar um atributo baseado em domínio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Alterar o nome de um atributo existente.|[Alterar um nome de atributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Adicionar atributos existentes a um grupo de rastreamento de alterações.|[Adicionar atributos a um grupo de Controle de Alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Adicionar atributos existentes a um grupo de rastreamento de alterações.|[Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Excluir um atributo existente.|[Excluir um atributo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Alterar a ordem dos atributos.|[Alterar a ordem dos atributos](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   

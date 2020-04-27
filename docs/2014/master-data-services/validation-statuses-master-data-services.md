@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478540"
 ---
 # <a name="validation-statuses-master-data-services"></a>Status da validação (Master Data Services)
   Na área funcional **Gerenciamento de Versões** , na página **Validar Versão** , os seguintes status são possíveis.  
   
-|Status|DESCRIÇÃO|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Aguardando a validação|Todos os membros recém-criados que estão esperando para serem validados.|  
 |Aguardando a revalidação|Membros existentes que estão esperando para serem validados.|  

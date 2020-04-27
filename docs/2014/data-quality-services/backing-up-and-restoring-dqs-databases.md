@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481150"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Fazendo backup e restaurando banco de dados do DQS
   Este tópico descreve como fazer backup e restaurar os bancos de dados do DQS.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve saber ou se lembrar da senha da chave mestra do banco de dados que forneceu durante a instalação do servidor DQS.  
   
@@ -30,15 +30,15 @@ ms.locfileid: "65481150"
   
 -   Verifique se não há usuários conectados no servidor DQS.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
 -   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa sysadmin na instância do SQL Server para executar as operações de backup e restauração.  
   
 -   Você deve ter a função dqs_administrator no banco de dados DQS_MAIN para terminar as atividades em execução ou interromper os processos em execução no DQS.  
   
-##  <a name="BackupRestore"></a>Fazer backup e restaurar bancos de dados do DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Fazer backup e restaurar bancos de dados do DQS  
   
 1.  Inicie o Microsoft SQL Server Management Studio e conecte-se à instância apropriada do SQL Server.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65481150"
   
     ```  
   
-12. Pressione F5 para executar as instruções. Verifique o painel **resultados** para verificar se as instruções foram executadas com êxito.  
+12. Pressione F5 para executar as instruções. Consulte o painel **Resultados** para verificar se as instruções foram executadas com êxito.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar bancos de dados do DQS](../../2014/data-quality-services/manage-dqs-databases.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b5b343a32480d7d8ae59e9fa27fbe7d1f531213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106018"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Exibir cabeçalhos de linhas e colunas em várias páginas (Construtor de Relatórios e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106018"
   
  O modo como você controla as linhas e as colunas dependerá se a região de dados de tablix tem cabeçalhos de grupo. Quando você clicar em uma região de dados de tablix que tem cabeçalhos de grupo, uma linha pontilhada mostrará as áreas de tablix, como mostrado na figura seguinte:  
   
- ![Áreas de região de dados Tablix](../media/rs-tablixareas.gif "Áreas de região de dados Tablix")  
+ ![Áreas da região de dados Tablix](../media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
   
  Cabeçalhos de grupos de linhas e colunas são criados automaticamente quando você adiciona grupos usando o assistente de Nova Tabela ou de Novo Gráfico, adicionando campos ao painel Agrupamento ou usando menus de contexto. Se a região de dados de tablix tiver apenas uma área de corpo de tablix e nenhum cabeçalho de grupo, as linhas e as colunas serão os membros do tablix.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66106018"
   
 1.  Na superfície de design, clique no manipulador de linha ou coluna da região de dados de tablix para selecioná-la. O painel Agrupamento exibe os grupos de linhas e colunas.  
   
-2.  No lado direito do painel Agrupamento, clique na seta para baixo e, em seguida, clique em **modo avançado**. O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
+2.  À direita lado do painel Agrupamento, clique na seta para baixo e, em seguida, clique em **Modo Avançado**. O painel Grupos de Linhas exibe os membros hierárquicos estáticos e dinâmicos para a hierarquia de grupos de linhas e o painel Grupos de colunas mostra uma exibição semelhante para a hierarquia de grupos de coluna.  
   
 3.  Clique no membro estático que corresponde àquele (linha ou coluna) que deverá permanecer visível durante a rolagem. O painel Propriedades exibe as propriedades de **Membro de Tablix** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66106018"
 ## <a name="see-also"></a>Consulte Também  
  [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Controlando quebras de página, cabeçalhos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Controlando quebras de páginas, títulos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Exibir cabeçalhos e rodapés com um grupo &#40;Construtor de Relatórios e SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   

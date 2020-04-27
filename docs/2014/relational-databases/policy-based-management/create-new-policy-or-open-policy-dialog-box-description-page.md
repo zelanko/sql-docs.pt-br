@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255233"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Caixas de diálogo Criar Nova Política ou Abrir Política, página Descrição
@@ -42,7 +42,7 @@ ms.locfileid: "63255233"
  **Criado por**  
  O logon que criou a política.  
   
- **Data da modificação**  
+ **Data de modificação**  
  A data da última alteração da política.  
   
  **Modificado por**  

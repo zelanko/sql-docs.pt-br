@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284848"
 ---
 # <a name="roles-ssas-tabular"></a>Funções (SSAS tabular)
@@ -29,7 +29,7 @@ ms.locfileid: "67284848"
   
  Seções neste tópico:  
   
--   [Noções básicas sobre funções](#bkmk_underst)  
+-   [Compreendendo funções](#bkmk_underst)  
   
 -   [Permissões](#bkmk_permissions)  
   
@@ -39,30 +39,30 @@ ms.locfileid: "67284848"
   
 -   [Tarefas relacionadas](#bkmk_rt)  
   
-##  <a name="bkmk_underst"></a>Noções básicas sobre funções  
+##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Noções básicas sobre funções  
  As funções são usadas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no para gerenciar a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] segurança dos dados do e do. Existem dois tipos de funções no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   A função do servidor, uma função fixa que fornece acesso de administrador a uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 -   As funções de banco de dados, funções definidas por autores e administradores do modelo para controlar o acesso a banco de dados modelo e dados para usuários não administradores.  
   
- As funções definidas para um modelo tabular são funções de banco de dados. Ou seja, as funções contêm membros que consistem em usuários ou grupos do Windows que têm permissões específicas que definem a ação que esses membros podem realizar no banco de dados modelo. Uma função de banco de dados é criada como um objeto separado no banco de dados e se aplica somente ao banco de dados no qual a função foi criada. Os usuários do Windows e/ou grupos do Windows são incluídos na função pelo autor modelo, que, por padrão, tem permissões de Administrador no servidor de banco de dados de workspace; para um modelo implantado, por um administrador.  
+ As funções, definidas para um modelo de tabela, são funções de banco de dados. Ou seja, as funções contêm membros que consistem em usuários ou grupos do Windows que têm permissões específicas que definem a ação que esses membros podem realizar no banco de dados modelo. Uma função de banco de dados é criada como um objeto separado no banco de dados e se aplica somente ao banco de dados no qual a função foi criada. Os usuários do Windows e/ou grupos do Windows são incluídos na função pelo autor modelo, que, por padrão, tem permissões de Administrador no servidor de banco de dados de workspace; para um modelo implantado, por um administrador.  
   
  As funções em modelos tabulares podem ser definidas posteriormente com filtros de linha. Os filtros de linha usam expressões DAX para definir as linhas em uma tabela, e as linhas relacionadas nas muitas direções, que um usuário pode consultar. Os filtros de linha que usam expressões DAX somente podem ser definidos para as permissões de Leitura e Leitura e Processo. Para obter mais informações, consulte [Row Filters](#bkmk_rowfliters) mais adiante neste tópico.  
   
- Por padrão, quando você cria um novo projeto de modelo tabular, o projeto de modelo não tem nenhuma função. As funções podem ser definidas usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de workspace do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo foi implantado, os membros da função de servidor (Administrador do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) e administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Por padrão, quando você cria um novo projeto de modelo de tabela, o projeto de modelo não tem nenhuma função. As funções podem ser definidas usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Quando as funções são definidas durante a criação do modelo, elas são se aplicadas ao banco de dados de workspace do modelo. Quando o modelo é implantado, as mesmas funções são aplicadas ao modelo implantado. Depois que um modelo foi implantado, os membros da função de servidor (Administrador do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) e administradores de banco de dados podem gerenciar as funções associadas ao modelo e os membros associados a cada função usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  As funções definidas para um modelo configurado para o modo DirectQuery não podem usar filtros de linha, porém, as permissões definidas para cada função serão aplicadas.  
   
-##  <a name="bkmk_permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissões  
  Cada função tem uma única permissão de banco de dados definida (exceto para a permissão de Ler e Processar combinada). Por padrão, uma nova função terá a permissão Nenhum. Ou seja, quando os membros são adicionados à função com a permissão Nenhum, eles não podem modificar o banco de dados, executar uma operação de processo, consultar dados ou ver o banco de dados a menos que uma permissão diferente seja concedida.  
   
  Um grupo ou usuário do Windows pode ser um membro de qualquer número de funções, cada função com uma permissão diferente. Quando um usuário for um membro de várias funções, as permissões definidas para cada função serão cumulativas. Por exemplo, se um usuário for membro de uma função com permissão de leitura e também um membro de uma função com permissão Nenhum, ele terá permissão de leitura.  
   
  Cada função pode ter uma das seguintes permissões definidas:  
   
-|Permissões|DESCRIÇÃO|Filtros de linha usando DAX|  
+|Permissões|Descrição|Filtros de linha usando DAX|  
 |-----------------|-----------------|----------------------------|  
 |Nenhum|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
 |Ler|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
@@ -70,20 +70,20 @@ ms.locfileid: "67284848"
 |Processo|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não pode consultar o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  
 |Administrador|Os membros podem fazer modificações ao esquema modelo e consultar todos os dados no designer de modelo, no cliente de relatório e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Todos os dados podem ser consultados nesta função.|  
   
-##  <a name="bkmk_rowfliters"></a>Filtros de linha  
+##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>Filtros de linha  
  Os filtros de linha definem quais linhas em uma tabela podem ser consultadas por membros de uma função específica. Os filtros de linha são definidos para cada tabela em um modelo usando fórmulas DAX.  
   
  Os filtros de linha podem ser definidos somente para funções com as permissões Ler e Ler e Processar. Por padrão, se um filtro de linha não for definido para uma tabela específica, os membros de uma função que têm permissão de Leitura ou Leitura e Processo poderão consultar todas as linhas na tabela a menos que a filtragem cruzada seja aplicada de outra tabela.  
   
  Quando um filtro de linha é definido para uma tabela específica, uma fórmula DAX, que deve ser avaliada como um valor TRUE/FALSE, define as linhas que poderão ser consultadas por membros daquela função específica. As linhas não incluídas na fórmula DAX não poderão ser consultadas. Por exemplo, para membros da função Sales, a tabela Customers com a seguinte expressão de filtros de linha, *= Customers [Country] = "usa"*, os membros da função Sales só poderão ver os clientes nos EUA.  
   
- Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tem várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas, por exemplo:  
+ Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tiver várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas, por exemplo:  
   
 |Tabela|Expressão DAX|  
 |-----------|--------------------|  
 |Região|= Região [País] = "USA"|  
 |ProductCategory|= ProductCategory [Name] = "Bicicletas"|  
-|Transactions|=Transactions[Year]=2008|  
+|Transações|=Transactions[Year]=2008|  
   
  O efeito líquido destas permissões na tabela de Transações é que os membros terão permissão de consultar as linhas de dados quando o cliente estiver nos EUA, e a categoria de produto for bicicletas e o ano for 2008. Os usuários não poderiam consultar nenhuma transação fora dos EUA ou nenhuma transação que não fosse bicicletas nem em 2008, a menos que fossem membros de outra função que concede estas permissões.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "67284848"
   
  Para implementar uma segurança dinâmica, você pode usar as funções a seguir como parte de uma fórmula DAX para retornar o nome de usuário do usuário conectado atualmente ou a propriedade CustomData em uma cadeia de conexão:  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[Função de nome de usuário &#40;DAX&#41;](/dax/username-function-dax)|Retorna o domínio\ nome de usuário do usuário conectado atualmente.|  
 |[Função CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)|Retorna a propriedade CustomData em uma cadeia de conexão.|  
@@ -124,18 +124,18 @@ ms.locfileid: "67284848"
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Manufatura|  
-|5|Quality Assurance|  
+|5|Garantia de qualidade|  
 |6|Pesquisa e desenvolvimento|  
 |7|Sales and Marketing|  
   
-##  <a name="bkmk_testroles"></a>Testando funções  
- Ao criar um projeto de modelo, você pode usar o recurso Analisar no Excel para testar a eficácia das funções que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o nome de usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao modelo de workspace como uma fonte de dados. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
+##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Testando funções  
+ Ao criar um projeto de modelo, você pode usar o recurso Analisar no Excel para testar a eficácia das funções que você definiu. No menu **Modelo** no designer de modelo, quando você clica em **Analisar no Excel**, antes de o Excel abrir, a caixa de diálogo **Escolher Credenciais e Perspectiva** é aberta. Nesta caixa de diálogo, você pode especificar o nome de usuário atual, um nome de usuário diferente, uma função e uma perspectiva que você usará para se conectar ao modelo de workspace como uma fonte de dados. Para obter mais informações, consulte [Analisar no Excel &#40;SSAS de Tabela&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Tarefas relacionadas  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Criar e gerenciar funções &#40;SSAS de tabela&#41;](create-and-manage-roles-ssas-tabular.md)|As tarefas neste tópico descrevem como criar e gerenciar funções usando a caixa de diálogo **Gerenciador de Funções** .|  
+|[Criar e Gerenciar Funções &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md)|As tarefas neste tópico descrevem como criar e gerenciar funções usando a caixa de diálogo **Gerenciador de Funções** .|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   

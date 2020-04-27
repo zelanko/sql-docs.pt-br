@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568259"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios
@@ -29,7 +29,7 @@ ms.locfileid: "64568259"
 ## <a name="reporting-services-style-sheets"></a>Folhas de estilo do Reporting Services  
  A tabela a seguir descreve os arquivos de folha de estilo (.css) usados em uma instalação do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|Folha de estilo|DESCRIÇÃO|  
+|Folha de estilo|Descrição|  
 |-----------------|-----------------|  
 |Htmlviewer.css|Fornece uma folha de estilo de exemplo que pode ser usada como modelo para criar estilos personalizados para a barra de ferramentas do **relatório** no Visualizador de HTML.<br /><br /> Os estilos padrão usados pelo Visualizador de HTML são compilados no servidor de relatório. O arquivo Htmlviewer.css fornece um exemplo dos estilos usados pelo visualizador.|  
 |ReportingServices.css|Define estilos para o Gerenciador de Relatórios.|  
@@ -68,6 +68,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visualizador de HTML e a barra de ferramentas de relatório](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
+ [Arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
   
   

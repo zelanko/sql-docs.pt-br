@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105278"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Função CountRows (Construtor de Relatórios e SSRS)
@@ -35,8 +35,7 @@ CountRows(scope, recursive)
  (`String`) O nome de um conjunto de dados, região de dados ou grupo que contém os itens de relatório a serem contados.  
   
  *recursivos*  
- (**Enumerated Type**) Opcional. 
-  `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
+ (**Enumerated Type**) Opcional. `Simple` (padrão) ou `RdlRecursive`. Especifica se a agregação deve ser executada recursivamente.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um `Integer`.  

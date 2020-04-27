@@ -13,19 +13,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480640"
 ---
-# <a name="domain-management-domain-list"></a>Gerenciamento de domínio: lista de domínios
+# <a name="domain-management-domain-list"></a>Gerenciamento de Domínio: Lista de domínios
   Este tópico descreve os controles na lista Domínios da página **Gerenciamento de Domínio** no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Use este painel para selecionar um domínio no qual poderá executar operações de gerenciamento. O mesmo painel é usado para todas as páginas tabuladas na página **Gerenciamento de Domínio** .  
   
 ## <a name="options"></a>Opções  
   
 ### <a name="domains-list"></a>Lista de domínios  
- **Domínio**  
+ **Controlador**  
  Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte  
   
  **Criar um domínio composto**  
@@ -37,7 +37,7 @@ ms.locfileid: "65480640"
  **Criar uma cópia do domínio selecionado**  
  Crie uma cópia exata do domínio selecionado e adicione-a à base de dados de conhecimento. O nome da cópia será o nome do domínio que a originou, mais " – Cópia" anexado ao nome. Para disponibilizar este comando, clique com o botão direito do mouse em um domínio e clique em **Criar uma cópia**, ou clique no ícone acima da lista de domínios. Ele não está disponível para um domínio composto.  
   
- **Importar domínio do arquivo de dados**  
+ **Importar domínio de arquivo de dados**  
  Importe um domínio de um arquivo .dqs. Este comando exibe a caixa de diálogo **Importar do Arquivo de Dados** que o permite procurar o sistema de arquivos e selecionar um arquivo .dqs para um único domínio ou um domínio composto. Para disponibilizar este comando, clique no ícone acima da lista de domínios. Para obter mais informações, consulte [Importe um domínio de um arquivo .dqs](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md).  
   
  **Excluir domínio**  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107516"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Adicionar e verificar uma conexão de dados ou uma fonte de dados (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107516"
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Para criar uma referência a uma fonte de dados compartilhada  
   
-1.  Na barra de ferramentas do painel dados do relatório, clique em **novo** e em **fonte de dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova** e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107516"
   
 ### <a name="to-create-an-embedded-data-source"></a>Para criar uma fonte de dados inserida  
   
-1.  Na barra de ferramentas do painel Dados do Relatório, clique em **Nova**e em **Fonte de Dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
+1.  Na barra de ferramentas do painel dados do relatório, clique em **novo**e em **fonte de dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
 2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados ou aceite o padrão.  
   
@@ -92,8 +92,8 @@ ms.locfileid: "66107516"
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Conjuntos de itens de relatório inseridos e conjuntos de &#40;compartilhados Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

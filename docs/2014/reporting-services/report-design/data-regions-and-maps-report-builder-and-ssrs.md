@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106086"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiões de dados e mapas (Construtor de Relatórios e SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "66106086"
  É possível aninhar regiões de dados dentro de outras regiões de dados. Por exemplo, se quiser criar um registro de vendas para cada vendedor em um banco de dados, você poderá criar uma lista com caixas de texto e uma imagem para exibir as informações sobre o funcionário e, em seguida, adicionar a essa lista as regiões de dados de tabela e gráfico para mostrar o registro de vendas do funcionário. Para obter mais informações, consulte [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>Várias regiões de dados vinculadas ao mesmo conjunto de dados  
- Você pode vincular mais de uma região de dados ao mesmo conjunto de dados para fornecer diferentes exibições dos mesmos dados. Por exemplo, é possível mostrar os mesmos dados em uma tabela e em um gráfico. Você pode criar o relatório para fornecer botões de classificação interativos na tabela, de forma que, ao classificar a tabela, o gráfico seja classificado automaticamente. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto &#40;Construtor de relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Você pode vincular mais de uma região de dados ao mesmo conjunto de dados para fornecer diferentes exibições dos mesmos dados. Por exemplo, é possível mostrar os mesmos dados em uma tabela e em um gráfico. Você pode criar o relatório para fornecer botões de classificação interativos na tabela, de forma que, ao classificar a tabela, o gráfico seja classificado automaticamente. Para obter mais informações, consulte [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="data-for-a-data-region"></a>Dados para uma região de dados  
  Cada tablix, gráfico e medidor é criado para exibir dados de um único conjunto de dados. Um mapa exibe dados espaciais e dados analíticos dos mesmos conjuntos de dados ou de conjuntos de dados diferentes. Você também pode incluir valores de conjuntos de dados que não são vinculados à região de dados das seguintes maneiras:  
@@ -66,7 +66,7 @@ ms.locfileid: "66106086"
 ## <a name="see-also"></a>Consulte Também  
  [Conceitos de criação de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Layout de página e renderização &#40;Construtor de Relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Layout da página e renderização &#40;Construtor de Relatórios e SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
  [TUTORIAIS &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md)   
  [Tutoriais do Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

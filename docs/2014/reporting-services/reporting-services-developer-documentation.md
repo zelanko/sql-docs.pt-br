@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8c555d853fd791bed29a06f561021b138526ea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255097"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Guia do desenvolvedor&#39;s (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode aproveitar em seus próprios aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece várias interfaces de programação que você pode usar em seus aplicativos. Você pode usar os recursos e as capacidades existentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para criar relatório personalizado e ferramentas de gerenciamento nos sites da Web e nos aplicativos do Windows ou você poderá estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Estender a plataforma do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclui a criação de novos componentes e recursos que podem ser usados para acesso a dados, entrega de relatório e muito mais. Você pode comercializar esses componentes e recursos para empresas que estiverem usando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em sua organização.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63255097"
  [Itens de Relatório Personalizados](custom-report-items/custom-report-items.md)  
  Descreve como criar Itens de Relatório Personalizados para adicionar funcionalidade à RDL ou estender a funcionalidade de controles existentes.  
   
- [Usar assemblies personalizados com relatórios](custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Usando assemblies personalizados com relatórios](custom-assemblies/using-custom-assemblies-with-reports.md)  
  Descreve como usar assemblies personalizados com Relatórios incluindo referências de código na definição de relatório.  
   
  [Acessar o provedor WMI do Reporting Services](tools/access-the-reporting-services-wmi-provider.md)  
@@ -50,8 +50,8 @@ ms.locfileid: "63255097"
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
+ [Linguagem de definição de relatório &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
  [Referência técnica &#40;SSRS&#41;](technical-reference-ssrs.md)   
- [Reporting Services de desenvolvimento seguro &#40;&#41;](extensions/secure-development/secure-development-reporting-services.md)  
+ [Desenvolvimento seguro &#40;Reporting Services&#41;](extensions/secure-development/secure-development-reporting-services.md)  
   
   

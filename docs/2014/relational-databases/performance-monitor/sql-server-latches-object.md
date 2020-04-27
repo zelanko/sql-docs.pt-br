@@ -14,25 +14,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d0d9249a5cfb801e07a85132060bb4d1781346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63251097"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, objeto Latches
-  O objeto **SqlServer: travas** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar bloqueios de recursos internos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamados de travas. Monitorar as travas para determinar a atividade de usuário e o uso de recursos pode ajudar a identificar gargalos de desempenho.  
+  O objeto **SQLServer:Latches** no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece contadores para monitorar bloqueios de recursos internos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , chamados travas. Monitorar as travas para determinar a atividade de usuário e o uso de recursos pode ajudar a identificar gargalos de desempenho.  
   
- Esta tabela descreve os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **do** .  
+ Esta tabela descreve os contadores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Travas**do**.  
   
 |Contadores de travas do SQL Server|DESCRIÇÃO|  
 |---------------------------------|-----------------|  
-|**Tempo médio de espera de trava (MS)**|Tempo médio de espera de trava (em milissegundos) para solicitações de trava que tiveram de esperar.|  
-|**Esperas de trava/s**|Número de solicitações de trava que não puderam ser concedidas imediatamente.|  
-|**Número de supertravas**|Número de travas que atualmente são SuperLatches.|  
-|**Rebaixamentos da supertrava/s**|Número de SuperLatches que foram rebaixados a travas regulares no último segundo.|  
-|**Promoções de supertravamento/s**|Número de travas que foram promovidas a SuperLatches no último segundo.|  
-|**Tempo de espera total de trava (MS)**|Tempo de espera total de trava (em milissegundos) para solicitações de trava no último segundo.|  
+|**Tempo Médio de Espera de Trava (ms)**|Tempo médio de espera de trava (em milissegundos) para solicitações de trava que tiveram de esperar.|  
+|**Esperas de Trava/s**|Número de solicitações de trava que não puderam ser concedidas imediatamente.|  
+|**Número de SuperLatches**|Número de travas que atualmente são SuperLatches.|  
+|**Rebaixamentos de SuperLatches/s**|Número de SuperLatches que foram rebaixados a travas regulares no último segundo.|  
+|**Promoções para SuperLatch/s**|Número de travas que foram promovidas a SuperLatches no último segundo.|  
+|**Tempo de Espera Total de Trava (ms)**|Tempo de espera total de trava (em milissegundos) para solicitações de trava no último segundo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  

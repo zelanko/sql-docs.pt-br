@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255385"
 ---
 # <a name="updatable-subscriptions"></a>Assinaturas Atualizáveis
-  Com a replicação transacional, os dados replicados devem ser tratados como somente leitura; no entanto, você pode modificar os dados replicados em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante usando assinaturas atualizáveis. Se for necessário modificar dados no Assinante, escolha um das opções a seguir, dependendo de seus requisitos.  
+  Com a replicação transacional, os dados replicados devem ser tratados como somente leitura; no entanto, você pode modificá-los em um Assinante do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando assinaturas atualizáveis. Se for necessário modificar dados no Assinante, escolha um das opções a seguir, dependendo de seus requisitos.  
   
 |Tipo de assinatura atualizável|Requisitos|  
 |---------------------------------|------------------|  
@@ -28,7 +28,7 @@ ms.locfileid: "63255385"
 |Atualização enfileirada|O Publicador e o Assinante não precisam estar conectados para atualizar dados no Assinante. As atualizações podem ser feitas offline e, depois, sincronizadas entre o Publicador e o Assinante.|  
   
 ## <a name="options"></a>Opções  
- **Replicar alterações do assinante**  
+ **Replicar alterações do Assinante**  
  Marque a caixa de seleção na coluna **Replicar** para cada Assinante que possa fazer atualizações. Para esses assinantes que podem fazer atualizações, selecione a opção apropriada na caixa de listagem suspensa, na coluna **Confirmar no Publicador** :  
   
 -   Selecione **Confirmar as alterações simultaneamente** para uma assinatura de atualização imediata.  

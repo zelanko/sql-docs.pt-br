@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267425"
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvar rastreamentos e modelos de rastreamento
@@ -47,12 +47,10 @@ ms.locfileid: "63267425"
 >  Os usuários que tiverem a permissão SHOWPLAN, ALTER TRACE ou VIEW SERVER STATE poderão exibir consultas capturadas na saída do Plano de Execução. Essas consultas podem conter informações confidenciais, como senhas. Portanto, é recomendável que você somente conceda essas permissões a usuários autorizados a exibir informações confidenciais, como membros da função de banco de dados fixa **db_owner** ou membros da função de servidor fixa **sysadmin** . Além disso, também é recomendável somente salvar arquivos do Plano de Execução ou arquivos de rastreamento que contenham eventos relacionados ao Plano de Execução em um local que use o sistema de arquivos NTFS e restringir o acesso a usuários autorizados a exibir informações confidenciais.  
   
 ## <a name="saving-templates"></a>Salvando modelos  
- A definição de modelo de um rastreamento inclui as classes de evento, as colunas de dados, os filtros e todas as outras propriedades (menos os dados de evento capturados) que são usadas para criar um rastreamento. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornece modelos de sistema predefinidos para tarefas comuns de rastreamento e para tarefas específicas, como criar uma carga de trabalho que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar o design de banco de dados físico. Também é possível criar e salvar modelos definidos pelo usuário.  
+ A definição de modelo de um rastreamento inclui as classes de evento, as colunas de dados, os filtros e todas as outras propriedades (menos os dados de evento capturados) que são usadas para criar um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] fornece modelos de sistema predefinidos para tarefas comuns de rastreamento e para tarefas específicas, como criar uma carga de trabalho que o Orientador de Otimização do Mecanismo de Banco de Dados pode usar para ajustar o design de banco de dados físico. Também é possível criar e salvar modelos definidos pelo usuário.  
   
 ### <a name="importing-and-exporting-templates"></a>Importando e exportando modelos  
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar e exportar modelos de um servidor para outro. A exportação de um modelo é a migração de uma cópia de um modelo existente para um diretório especificado. A importação de um modelo é a criação de uma cópia de um modelo especificado. Quando esses modelos são exibidos no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é possível distingui-los dos modelos do sistema, devido ao termo "(user)" que acompanha seu nome. Não é possível substituir ou modificar diretamente um modelo do sistema predefinido.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar e exportar modelos de um servidor para outro. A exportação de um modelo é a migração de uma cópia de um modelo existente para um diretório especificado. A importação de um modelo é a criação de uma cópia de um modelo especificado. Quando esses modelos são exibidos no [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], é possível distingui-los dos modelos do sistema, devido ao termo "(user)" que acompanha seu nome. Não é possível substituir ou modificar diretamente um modelo do sistema predefinido.  
   
 ### <a name="analyzing-performance-with-templates"></a>Analisando o desempenho com modelos  
  Se você monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]com frequência, use modelos para analisar o desempenho. Os modelos capturam sempre os mesmos dados de eventos e usam a mesma definição de rastreamento para monitorar os mesmos eventos. Você não precisa definir as classes de evento e colunas de dados toda vez que cria um rastreamento. Além disso, um modelo pode ser passado a outro usuário para o monitoramento de eventos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por exemplo, um provedor de suporte pode fornecer um modelo a um cliente. O cliente usa o modelo para capturar os dados de evento necessários e, então, envia-os ao provedor de suporte para análise.  

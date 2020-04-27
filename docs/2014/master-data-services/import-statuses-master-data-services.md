@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479372"
 ---
 # <a name="import-statuses-master-data-services"></a>Importar status (Master Data Services)
   Na área funcional **Gerenciamento de Integração** da página **Lote de Preparação** , os status a seguir são possíveis.  
   
-|Status|DESCRIÇÃO|Status_ID|  
+|Status|Descrição|Status_ID|  
 |------------|-----------------|----------------|  
 |Enfileirados para execução|O lote não iniciou o processamento.|1|  
 |Executando|O lote está em processamento.|2|  

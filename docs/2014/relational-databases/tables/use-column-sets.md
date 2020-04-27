@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298629"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
@@ -139,7 +139,7 @@ GO
 ## <a name="examples"></a>Exemplos  
  Nos exemplos a seguir, uma tabela de documento contém o conjunto comum de colunas `DocID` e `Title`. O grupo de Produção quer uma coluna `ProductionSpecification` e `ProductionLocation` para todos os documentos da produção. O grupo Marketing quer uma coluna `MarketingSurveyGroup` para os documentos de marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>a. Criando uma tabela que possui um conjunto de colunas  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Criando uma tabela que possui um conjunto de colunas  
  O exemplo a seguir cria a tabela que usa colunas esparsas e inclui o conjunto de colunas `SpecialPurposeColumns`. O exemplo insere duas linhas na tabela e, depois, seleciona dados da tabela.  
   
 > [!NOTE]  

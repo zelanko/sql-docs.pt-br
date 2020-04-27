@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260747"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configurações da extensão de entrega do Reporting Services
@@ -40,13 +40,13 @@ ms.locfileid: "63260747"
   
 |Configuração|Valor|  
 |-------------|-----------|  
-|**TO**|O endereço de email que aparece na linha `To` da mensagem. Vários endereços de email são separados por ponto-e-vírgulas. Obrigatórios.|  
+|**Para**|O endereço de email que aparece na linha `To` da mensagem. Vários endereços de email são separados por ponto-e-vírgulas. Obrigatórios.|  
 |**CC**|O endereço de email que aparece na linha `Cc` da mensagem. Vários endereços de email são separados por ponto-e-vírgulas. Opcional.|  
 |**BCC**|O endereço de email que aparece na linha `Bcc` da mensagem. Vários endereços de email são separados por ponto-e-vírgulas. Opcional.|  
 |**ReplyTo**|O endereço de email que aparece no cabeçalho `Reply-To` da mensagem. O valor deve ser um único endereço de email. Opcional.|  
 |`IncludeReport`|Um valor que indica se será preciso incluir o relatório na entrega do email. Um valor `true` indica que o relatório será entregue no corpo da mensagem.|  
 |**RenderFormat**|O nome da extensão de renderização a ser usado na geração do relatório renderizado. O nome deve corresponder a uma das extensões de renderização visíveis instaladas no servidor de relatório. Esse valor será obrigatório se a configuração `IncludeReport` for definida como um valor `true`.|  
-|**Prioridade**|A prioridade com que a mensagem é enviada. Os valores válidos são `LOW`, `NORMAL` e `HIGH`. O valor padrão é `NORMAL`.|  
+|**Priority**|A prioridade com que a mensagem é enviada. Os valores válidos são `LOW`, `NORMAL` e `HIGH`. O valor padrão é `NORMAL`.|  
 |**Assunto**|O texto da linha de assunto da mensagem.|  
 |**Comentário**|O texto incluído no corpo da mensagem.|  
 |**IncludeLink**|Um valor que indica se será preciso incluir um link para o relatório no corpo do email.|  
@@ -66,6 +66,6 @@ ms.locfileid: "63260747"
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)   
- [Compilar aplicativos usando o Serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Criando aplicativos usando o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

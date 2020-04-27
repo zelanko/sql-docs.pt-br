@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108564"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
@@ -32,9 +32,9 @@ ms.locfileid: "66108564"
   
 -   [Verificar a instalação do modo do SharePoint](#bkmk_sharepointmode)  
   
--   [Verificar uma instalação do modo nativo](#bkmk_nativemode)  
+-   [Verificar uma instalação no modo Nativo](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>Verificar a instalação do modo do SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Verificar a instalação do modo do SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Para verificar o serviço Reporting Services  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108564"
   
 2.  Baixe o banco de dados de exemplo do Adventure Works e os relatórios de exemplo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do CodePlex. Para obter mais informações, consulte os [Exemplos de relatórios do AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a>Verificar uma instalação do modo nativo  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>Verificar uma instalação do modo nativo  
  Quando você instala um servidor de relatório do modo Nativo usando a configuração padrão, a Instalação instala e implanta o servidor. Você pode verificar se a Instalação implantou o servidor de relatório executando alguns testes simples. Você deve ser um administrador local para executar essas etapas. Para permitir que outros usuários executem o teste, você deve configurar o acesso ao servidor de relatório para tais usuários.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Para verificar se o servidor de relatório está instalado e em execução  

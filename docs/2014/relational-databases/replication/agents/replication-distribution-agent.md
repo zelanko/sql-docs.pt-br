@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210742"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
@@ -89,14 +89,14 @@ ms.locfileid: "68210742"
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-** _Server_name_do Publicador [**\\**_instance_name_]  
- É o nome do Publicador. Especifique *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-** _Server_name_do assinante [**\\**_instance_name_]  
- É o nome do Assinante. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ É o nome do Assinante. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-SubscriberDB** _subscriber_database_  
  É o nome do banco de dados do Assinante.  
@@ -105,21 +105,21 @@ ms.locfileid: "68210742"
  É o caminho para a pasta que contém o instantâneo inicial para uma assinatura.  
   
  **-BcpBatchSize** _bcp_batch_size_  
- É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação, e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote **1000** é usado.  
+ É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote **1000** é usado.  
   
  **-CommitBatchSize** _commit_batch_size_  
  É o número de transações a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 100.  
   
- **-CommitBatchThreshold**  _commit_batch_threshold_  
+ **-CommitBatchThreshold** _commit_batch_threshold_  
  É o número de comandos de replicação a ser emitido para o Assinante antes de uma instrução COMMIT ser emitida. O padrão é 1000.  
   
- **-Contínuo**  
+ **-Continuous**  
  Especifica se o agente tenta sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
- **-Definitionfile** _def_path_and_file_name_  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de prompt de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-** _Distribuidor_ do distribuidor  
+ **-Distributor** _distributor_  
  É o nome do Distribuidor. Para distribuição (push) do Distribuidor, o nome assume o padrão do Distribuidor local.  
   
  **-DistributorLogin** _distributor_login_  
@@ -134,7 +134,7 @@ ms.locfileid: "68210742"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL usada pelo Agente de Distribuição ao fazer conexões.  
   
-|Valor EncryptionLevel|DESCRIÇÃO|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -145,7 +145,7 @@ ms.locfileid: "68210742"
 
  Para obter mais informações, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
- **-Errorfile** _error_path_and_file_name_  
+ **-ErrorFile** _error_path_and_file_name_  
  É o caminho e nome de arquivo do arquivo de erros gerados pelo Agente de Distribuição. Esse arquivo é gerado em qualquer ponto onde a falha ocorreu durante a aplicação de transações de replicação no Assinante. Os erros que ocorrem no Publicador ou no Distribuidor não são registrados nesse arquivo. Esse arquivo contém as transações de replicação com falha e mensagens de erro associadas. Quando não especificado, o arquivo de erros é gerado no diretório atual do Agente de Distribuição. O nome do arquivo de erro é o nome do Agente de Distribuição com uma extensão .err. Se o nome de arquivo especificado existir, serão anexadas mensagens de erro ao arquivo. Esse parâmetro pode ter um máximo de 256 caracteres Unicode.  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
@@ -169,14 +169,14 @@ ms.locfileid: "68210742"
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Especifica a quantidade de histórico registrada durante uma operação de distribuição. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|DESCRIÇÃO|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Mensagens de Progresso são gravadas no console ou em um arquivo de saída. Registros de histórico não são registrados no banco de dados de distribuição.|  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
 |**2**|Insira novos registros de histórico, a menos que o registro seja para coisas como mensagens ociosas ou mensagens de trabalho de execução longa; em tal caso, atualize os registros anteriores.|  
-|**Beta**|Sempre insira novos registros, a menos que seja para mensagens ociosas.|  
+|**3**|Sempre insira novos registros, a menos que seja para mensagens ociosas.|  
   
- **-Hostname** _HOST_NAME_  
+ **-Hostname** _host_name_  
  É o nome do host usado na conexão com o Publicador. Esse parâmetro pode ter um máximo de 128 caracteres Unicode.  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
@@ -206,31 +206,31 @@ ms.locfileid: "68210742"
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Especifica o tamanho mínimo, em bytes, para dados de objeto binário grande acima do qual os dados serão associados como um fluxo. Você deve especificar **-UseOledbStreaming** para usar esse parâmetro. Os valores podem variar de 400 a 1048576 bytes, com um padrão de 16384 bytes.  
   
- **-Saída** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica se a saída deve ser detalhada. Se o nível detalhado for **0**, só mensagens de erro serão impressas. Se o nível detalhado for **1**, todas as mensagens de relatório de progresso serão impressas. Se o nível detalhado for **2** (padrão), todas as mensagens de erro e de relatório de progresso serão impressas, o que é útil na depuração.  
   
- **-Pacotes de** _packet_size_  
+ **-PacketSize** _packet_size_  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
  **-PollingInterval** _polling_interval_  
  É com que frequência, em segundos, o banco de dados de distribuição é consultado para transações replicadas. O padrão é 5 segundos.  
   
- **-Profilename** _profile_name_  
+ **-ProfileName** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
- **-Publicação de publicação**__    
+ **-Publication** _publication_  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
- **-QuotedIdentifier** _QUOTED_IDENTIFIER_  
+ **-QuotedIdentifier** _quoted_identifier_  
  Especifica o identificador entre aspas a ser usado. O primeiro caractere do valor indica o valor que o Agente de Distribuição usa. Se **QuotedIdentifier** for usado sem valor, o Agente de Distribuição usará um espaço. Se **QuotedIdentifier** não for usado, o Agente de Distribuição usará qualquer identificador entre aspas com suporte no Assinante.  
   
- **-SkipErrors** _native_error_id_ [**:**_... n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  É uma lista separada por dois pontos que especifica o número de erros a ser ignorado por esse agente.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -248,13 +248,13 @@ ms.locfileid: "68210742"
  **-SubscriberType** [ **0**| **1**| **3**]  
  Especifica o tipo de conexão de Assinante usado pelo Agente de Distribuição.  
   
-|Valor SubscriberType|DESCRIÇÃO|  
+|Valor SubscriberType|Descrição|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Fonte de dados ODBC|  
-|**Beta**|Fonte de dados OLE DB|  
+|**3**|Fonte de dados OLE DB|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|... **64**]  
+ **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
  É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante, mantendo muitas das características transacionais presentes ao usar um thread único. Para um Publicador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , há suporte para um intervalo de valores de 1 a 64. Esse parâmetro só tem suporte quando o Publicador e o Distribuidor estão sendo executados no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou versões posteriores. Esse parâmetro não tem suporte ou deve ser 0 para Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou assinaturas ponto a ponto.  
   
 > [!NOTE]  
@@ -273,7 +273,7 @@ ms.locfileid: "68210742"
  Especifica o tipo de assinatura para distribuição. Um valor **0** indica uma assinatura push, um valor **1** indica uma assinatura pull e um valor **2** indica uma assinatura anônima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. Confira o parâmetro **–MessageInterval** anterior.  
+ Especifica o intervalo da transação para registro de histórico. Se o número de transações confirmadas depois da última instância de registro de histórico for maior do que essa opção, uma mensagem de histórico será registrada. O padrão é 100. Um valor **0** indica **TransactionsPerHistory**. Consulte o parâmetro **-MessageInterval**anterior.  
   
  **-UseDTS**  
  Deve ser especificado como um parâmetro para uma publicação que permite transformação de dados.  

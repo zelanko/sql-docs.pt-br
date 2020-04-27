@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478877"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de exibição de assinatura (Master Data Services)
@@ -22,16 +22,16 @@ ms.locfileid: "65478877"
   
 ## <a name="subscription-view-formats"></a>Formatos de exibição da assinatura  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**Membros folha**|Contém membros folha e seus valores de atributo associados.|  
 |**Membros consolidados**|Contém membros consolidados e seus valores de atributo associados.|  
-|**Associações de coleção**|Contém uma lista de coleções e seus valores de atributo associados.|  
+|**Associação da coleção**|Contém uma lista de coleções e seus valores de atributo associados.|  
 |**Coleções**|Contém uma lista de coleções e os membros em cada uma, junto com valores de peso e ordem de classificação.|  
-|**Filho pai explícito**|Contém estruturas de hierarquia explícitas para uma entidade em um formato filho de pai.|  
-|**Níveis explícitos**|Contém estruturas de hierarquia explícitas para uma entidade em formato de nível.|  
-|**Filho pai derivado (exibição de hierarquia derivada)**|Contém uma estrutura de hierarquia derivada em formato filho de pai.|  
-|**Níveis derivados (exibição de hierarquia derivada)**|Contém uma estrutura de hierarquia derivada em formato de nível.|  
+|**Filho de Pai Explícito**|Contém estruturas de hierarquia explícitas para uma entidade em um formato filho de pai.|  
+|**Níveis Explícitos**|Contém estruturas de hierarquia explícitas para uma entidade em formato de nível.|  
+|**Filho de Pai Derivado (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato filho de pai.|  
+|**Níveis Derivados (Exibição de Hierarquia Derivada)**|Contém uma estrutura de hierarquia derivada em formato de nível.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exportando dados &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

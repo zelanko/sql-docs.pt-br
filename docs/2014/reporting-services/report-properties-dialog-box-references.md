@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104302"
 ---
 # <a name="report-properties-dialog-box-references"></a>Caixa de diálogo Propriedades do Relatório, Referências
@@ -42,15 +42,15 @@ ms.locfileid: "66104302"
  **Delete (excluir)**  
  Para excluir a instância de classe, selecione-a e clique no botão **Remover** .  
   
- **Operante**  
+ **Para cima**  
  Para classes que têm dependências, você pode mover esta referência mais para cima na lista.  
   
- **Ligou**  
+ **Para baixo**  
  Para classes que têm dependências, você pode mover esta referência mais para baixo na lista.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referências de código personalizado e assembly em expressões em Report Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referências de coleções de variáveis de grupo e de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [As coleções de variáveis de grupo e de relatório fazem referência &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

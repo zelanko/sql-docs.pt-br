@@ -16,18 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282145"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticação no Reporting Services
   A autenticação é o processo de estabelecimento do direito de um usuário a uma identidade. Existem muitas técnicas que você pode usar para autenticar um usuário. O modo mais comum é usar senhas. Quando você implementa a Autenticação de Formulários, por exemplo, deseja uma implementação que solicite credenciais dos usuários (normalmente por meio de alguma interface que solicita um nome de login e uma senha) e depois valide os usuários em um repositório de dados, como uma tabela de banco de dados ou um arquivo de configuração. Se as credenciais não puderem ser validadas, o processo de autenticação falhará e o usuário assumirá uma identidade anônima.  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticação personalizada no Reporting Services  
- No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o sistema operacional Windows lida com a autenticação de usuários por meio da segurança integrada ou da recepção explícita e da validação de credenciais de usuário. A autenticação personalizada pode ser desenvolvida no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para dar suporte a esquemas de autenticação adicionais. Isso é possível por meio da interface de extensão de segurança <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Todas as extensões herdam da interface base <xref:Microsoft.ReportingServices.Interfaces.IExtension> para qualquer extensão implantada e usada pelo servidor de relatório. 
-  <xref:Microsoft.ReportingServices.Interfaces.IExtension>, além de <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, são membros do namespace <xref:Microsoft.ReportingServices.Interfaces>.  
+ No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o sistema operacional Windows lida com a autenticação de usuários por meio da segurança integrada ou da recepção explícita e da validação de credenciais de usuário. A autenticação personalizada pode ser desenvolvida no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para dar suporte a esquemas de autenticação adicionais. Isso é possível por meio da interface de extensão de segurança <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Todas as extensões herdam da interface base <xref:Microsoft.ReportingServices.Interfaces.IExtension> para qualquer extensão implantada e usada pelo servidor de relatório. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, além de <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, são membros do namespace <xref:Microsoft.ReportingServices.Interfaces>.  
   
  A principal forma de autenticar em um servidor de relatório no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é o método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Esse membro do serviço Web Reporting Services pode ser usado para passar credenciais de usuário a um servidor de relatório para validação. Sua extensão de segurança subjacente implementa **IAuthenticationExtension. LogonUser** que contém o código de autenticação personalizado. Na amostra da Autenticação de Formulários, **LogonUser**, que executa uma verificação de autenticação nas credenciais fornecidas e em um repositório de usuários personalizado de um banco de dados. Um exemplo de implementação de **LogonUser** é semelhante a esta:  
   

@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316146"
 ---
 # <a name="design-tables-visual-database-tools"></a>Criar tabelas (Visual Database Tools)
   O Designer de Tabela dedica uma janela inteira à criação de uma tabela individual. Os tópicos desta seção explicam como usar o Designer de Tabela para criar e modificar tabelas de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Abrir Designer de Tabela &#40;ferramentas de banco de dados Visual&#41;](visual-database-tools.md)  
+ [Abrir o Designer de Tabela &#40;Ferramentas de Banco de Dados Visual&#41;](visual-database-tools.md)  
  Abra uma tabela de banco de dados nova ou existente.  
   
- [Salve seu trabalho em Designer de Tabela &#40;ferramentas de banco de dados Visual&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
+ [Salvar seu trabalho no Designer de Tabela &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  Salve alterações nas tabelas específicas ou em todas as tabelas abertas no Designer de Tabela.  
   
   

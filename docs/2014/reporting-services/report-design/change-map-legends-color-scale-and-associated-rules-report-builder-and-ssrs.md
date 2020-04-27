@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106362"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106362"
   
  As legendas incluem as seguintes partes de um mapa:  
   
--   **Legenda do mapa** Exibe um guia para ajudar a interpretar os dados analíticos que variam de acordo com a exibição de elementos do mapa em uma camada do mapa. Um mapa pode ter várias legendas. Para cada camada do mapa, especifique qual legenda deve ser usada. Uma legenda pode fornecer um guia para mais de uma camada do mapa.  
+-   **Legenda de mapa** Exibe um guia para ajudar a interpretar os dados analíticos que variam na exibição de elementos de mapas em uma camada do mapa. Um mapa pode ter várias legendas. Para cada camada do mapa, especifique qual legenda deve ser usada. Uma legenda pode fornecer um guia para mais de uma camada do mapa.  
   
 -   **Escala de cores** Exibe um guia para ajudar a interpretar as cores no mapa. Um mapa tem uma escala de cores. Várias camadas podem fornecer os dados para a escala de cores.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66106362"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Viewport"></a>Para alterar a posição de uma legenda relativa ao visor  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> Para alterar a posição de uma legenda em relação ao visor  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  Em modo de exibição de design, clique com o botão direito do mouse na legenda e abra a **** _ \<página de propriedades >item de relatório _.  
+1.  Em modo de exibição de design, clique com o botão direito do mouse na legenda e abra a **Properties** _ \<página de propriedades >item de relatório _.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="MapLegend"></a>Para alterar o layout de uma legenda de mapa  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> Para alterar o layout de uma legenda de mapa  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>Para alterar o layout de uma legenda de mapa  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="MapLegendTitle"></a>Para mostrar ou ocultar um título de legenda de mapa  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> Para mostrar ou ocultar um título de legenda de mapa  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>Para mostrar ou ocultar um título de legenda de mapa  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="ColorScaleTitle"></a>Para mostrar ou ocultar um título de escala de cores  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> Para mostrar ou ocultar um título de escala de cores  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>Para mostrar ou ocultar um título de escala de cores  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="MoveItems"></a>Para mover itens para fora da primeira legenda  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> Para remover itens da primeira legenda  
  Crie quantas legendas adicionais forem necessárias e atualize as regras de cada camada do mapa, especificando em qual legenda devem ser exibidos os resultados de regras.  
   
 #### <a name="to-create-a-new-legend"></a>Para criar uma nova legenda  
@@ -124,7 +124,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="TemplateStyle"></a>Para variar as cores do elemento do mapa com base em um estilo de modelo  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> Para variar cores do elemento do mapa com base em um estilo de modelo  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>Para variar cores do elemento do mapa com base em um estilo de modelo  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="ColorPalette"></a>Para variar as cores do elemento do mapa com base na paleta de cores  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>Para variar as cores do elemento do mapa com base em uma paleta de cores  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="ColorRanges"></a>Para variar as cores do elemento do mapa com base em intervalos de cores  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> Para variar as cores do elemento do mapa com base em intervalos de cores  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>Para variar as cores do elemento do mapa com base em intervalos de cores  
   
@@ -184,7 +184,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="CustomColors"></a>Para variar as cores do elemento do mapa com base em cores personalizadas  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> Para variar as cores do elemento do mapa com base em cores personalizadas  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>Para variar as cores do elemento do mapa com base em cores personalizadas  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="DistributionOptions"></a>Para definir opções de distribuição para uma legenda  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> Para definir as opções de distribuição de uma legenda  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>Para definir as opções de distribuição de uma legenda  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="RuleLegend"></a>Para alterar o conteúdo de uma legenda de regra  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> Para alterar o conteúdo de uma legenda de regras  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>Para alterar o conteúdo da legenda de cor, tamanho, largura ou tipo de marcador  
   
@@ -246,7 +246,7 @@ ms.locfileid: "66106362"
   
 2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em _ \<Mapear\>_**regra**de tipo de elemento.  
   
-3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
+3.  Verifique se **Visualizar dados usando** \<*tipo de regra*> está selecionado.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="ColorScale"></a>Para alterar o conteúdo da escala de cores  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> Para alterar o conteúdo da escala de cores  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>Para alterar o conteúdo da escala de cores ou de uma legenda de cor  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66106362"
   
 2.  Clique com o botão direito do mouse na camada que contém os dados desejados e clique em _ \<mapear tipo\>de elemento_regra de**cores**.  
   
-3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
+3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções **Visualizar dados usando** \<tipo de regra>.  
   
 4.  Em **Campo de dados**, verifique se os dados analíticos visualizados na camada estão selecionados.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="HideItems"></a>Para remover todos os itens de uma legenda  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> Para remover todos os itens de uma legenda  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>Para ocultar itens com base em uma regra  
   
@@ -298,7 +298,7 @@ ms.locfileid: "66106362"
   
   
   
-##  <a name="ChangeFormatItems"></a>Para alterar o formato do conteúdo em uma legenda  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> Para alterar o formato de conteúdo em uma legenda  
  Defina as opções de legenda para a regra associada à legenda de mapa.  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>Para alterar o formato de conteúdo em uma legenda  
@@ -309,7 +309,7 @@ ms.locfileid: "66106362"
   
 3.  Clique em **Legenda**.  
   
-4.  **Texto da legenda** exibe palavras-chave que especificam quais dados são exibidos na legenda. Use as palavras-chave do mapa e os formatos personalizados para ajudar a controlar o formato do texto da legenda. Por exemplo, #FROMVALUE {C2} especifica um formato de moeda com duas casas decimais. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+4.  O**Texto de legenda** exibe as palavras-chave que especificam quais dados são exibidos na legenda. Use as palavras-chave do mapa e os formatos personalizados para ajudar a controlar o formato do texto da legenda. Por exemplo, #FROMVALUE {C2} especifica um formato de moeda com duas casas decimais. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -318,8 +318,8 @@ ms.locfileid: "66106362"
 ## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Personalizar os dados e a exibição de um mapa ou da camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   

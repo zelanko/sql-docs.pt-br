@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103716"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movendo os bancos de dados do servidor de relatório para outro computador (modo nativo do SSRS)
@@ -26,15 +26,13 @@ ms.locfileid: "66103716"
   
 -   As agendas serão recriadas na primeira vez em que o serviço do servidor de relatório for reiniciado.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que são usados para acionar uma agenda serão recriados na nova instância do banco de dados. Não é necessário mover os trabalhos para o novo computador, mas você pode excluir os trabalhos que não serão mais usados.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que são usados para acionar uma agenda serão recriados na nova instância do banco de dados. Não é necessário mover os trabalhos para o novo computador, mas você pode excluir os trabalhos que não serão mais usados.  
   
 -   Assinaturas, relatórios em cache e instantâneos são preservados no banco de dados movido. Se um instantâneo não estiver capturando dados atualizados depois que o banco de dados for movido, desmarque as opções de instantâneo no Gerenciador de Relatórios, clique em **Aplicar** para salvar as alterações, recrie o agendamento e clique em **Aplicar** novamente para salvar as alterações.  
   
 -   Os dados do relatório temporário e da sessão de usuário que são armazenados em reportservertempdb são mantidos quando o banco de dados é movido.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias abordagens para mover bancos de dados, inclusive backup e restauração, anexação e desanexação e cópia. Nem todas as abordagens são apropriadas para realocar um banco de dados existente em uma nova instância do servidor. A abordagem que deve ser usada para mover o banco de dados do servidor de relatório varia dependendo dos requisitos de disponibilidade do sistema. O modo mais fácil para mover os bancos de dados do servidor de relatório é anexá-los e desanexá-los. No entanto, esta abordagem requer que o servidor de relatório fique offline enquanto o banco de dados é desanexado. O backup e a restauração são a melhor opção se você desejar minimizar as interrupções de serviço, mas é necessário executar os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para efetuar as operações. A cópia do banco de dados não é recomendada (principalmente se o Assistente para Copiar Banco de Dados for utilizado); as configurações de permissão não são preservadas no banco de dados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece várias abordagens para mover bancos de dados, inclusive backup e restauração, anexação e desanexação e cópia. Nem todas as abordagens são apropriadas para realocar um banco de dados existente em uma nova instância do servidor. A abordagem que deve ser usada para mover o banco de dados do servidor de relatório varia dependendo dos requisitos de disponibilidade do sistema. O modo mais fácil para mover os bancos de dados do servidor de relatório é anexá-los e desanexá-los. No entanto, esta abordagem requer que o servidor de relatório fique offline enquanto o banco de dados é desanexado. O backup e a restauração são a melhor opção se você desejar minimizar as interrupções de serviço, mas é necessário executar os comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para efetuar as operações. A cópia do banco de dados não é recomendada (principalmente se o Assistente para Copiar Banco de Dados for utilizado); as configurações de permissão não são preservadas no banco de dados.  
   
 > [!IMPORTANT]  
 >  As etapas descritas neste tópico são recomendadas quando a realocação do banco de dados do servidor de relatório for a única alteração feita na instalação existente. A migração de uma instalação inteira do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ou seja, a movimentação do banco de dados e a alteração da identidade do serviço Windows do Servidor de Relatório que usa o banco de dados) exige a reconfiguração da conexão e a redefinição de uma chave de criptografia.  
@@ -203,15 +201,15 @@ GO
   
 1.  Inicie o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e abra uma conexão com o servidor de relatório.  
   
-2.  Na página Banco de Dados, clique em **Alterar Banco de Dados**. Clique em **Próximo**.  
+2.  Na página Banco de Dados, clique em **Alterar Banco de Dados**. Clique em **Avançar**.  
   
-3.  Clique em **Escolher um banco de dados existente do servidor de relatório**. Clique em **Próximo**.  
+3.  Clique em **Escolher um banco de dados existente do servidor de relatório**. Clique em **Avançar**.  
   
-4.  Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que agora hospeda o banco de dados do servidor de relatório e clique em **Testar Conexão**. Clique em **Próximo**.  
+4.  Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que agora hospeda o banco de dados do servidor de relatório e clique em **Testar Conexão**. Clique em **Avançar**.  
   
-5.  Em Nome do Banco de Dados, selecione o banco de dados do servidor de relatório que deseja usar. Clique em **Próximo**.  
+5.  Em Nome do Banco de Dados, selecione o banco de dados do servidor de relatório que deseja usar. Clique em **Avançar**.  
   
-6.  Em Credenciais, especifique as credenciais que o servidor de relatório usará para conectar-se ao banco de dados do servidor de relatório. Clique em **Próximo**.  
+6.  Em Credenciais, especifique as credenciais que o servidor de relatório usará para conectar-se ao banco de dados do servidor de relatório. Clique em **Avançar**.  
   
 7.  Clique em **Avançar** e em **Concluir**.  
   
@@ -225,7 +223,7 @@ GO
  [Configurar a conta de execução autônoma &#40;Configuration Manager do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)  
   
   

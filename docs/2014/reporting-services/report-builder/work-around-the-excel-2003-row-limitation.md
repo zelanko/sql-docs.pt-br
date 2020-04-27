@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107548"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Solução do problema de limitação de linhas do Excel
@@ -28,7 +28,7 @@ ms.locfileid: "66107548"
   
 2.  Clique com o botão direito do mouse na linha de dados na tabela e clique em **Adicionar** > grupo**pai grupo** para adicionar um grupo de tabelas externo.  
   
-     ![Selecione o grupo pai](../media/datarow-selectparentgroup.png "Selecione o grupo pai")  
+     ![Selecionar o grupo pai](../media/datarow-selectparentgroup.png "Selecionar o grupo pai")  
   
 3.  Digite a fórmula a seguir na caixa de expressão **Agrupar por** e clique em **OK** para adicionar o grupo pai.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "66107548"
   
 4.  Exclua a coluna de grupo clicando com o botão direito do mouse no cabeçalho de coluna, clicando em **Excluir Colunas**, selecionando **Excluir colunas apenas**e clicando em **OK**.  
   
-     ![Excluir uma coluna de grupo](../media/groupcolumn-delete-updated.png "Excluir uma coluna de grupo")  
+     ![Excluir uma coluna do grupo](../media/groupcolumn-delete-updated.png "Excluir uma coluna do grupo")  
   
 5.  Clique com o botão direito do mouse em **Grupo 1** na seção **Grupos de Linhas** e clique em **Propriedades do Grupo**.  
   
-     ![Exibir propriedades da grupo](../media/groupproperties-updated.png "Exibir propriedades da grupo")  
+     ![Exibir propriedades do grupo](../media/groupproperties-updated.png "Exibir propriedades do grupo")  
   
 6.  Na página **Classificação** da caixa de diálogo **Propriedades do Grupo** , selecione a opção de classificação padrão e clique em **Excluir**.  
   
