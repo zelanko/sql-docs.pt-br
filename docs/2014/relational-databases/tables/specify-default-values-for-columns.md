@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196720"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores padrão para colunas
@@ -35,15 +35,15 @@ ms.locfileid: "68196720"
   
      [Segurança](#Security)  
   
--   **Para especificar um valor padrão, usando:**  
+-   **Para especificar um valor padrão usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Se sua entrada no campo **Valor Padrão** substituir um padrão associado (exibido sem parênteses), será solicitado que você desvincule o padrão e substitua-o pelo novo padrão.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68196720"
   
 -   Para inserir um objeto/função, digite o nome do objeto/função sem aspas.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar um valor padrão para uma coluna  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68196720"
   
 4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>Para especificar um valor padrão para uma coluna  
   

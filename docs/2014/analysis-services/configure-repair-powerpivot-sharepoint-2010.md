@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174465"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2010 (Ferramenta de Configuração do PowerPivot)
@@ -24,7 +24,7 @@ ms.locfileid: "78174465"
 
  
 
-##  <a name="bkmk_before"></a>Antes de começar
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>Antes de começar
  A Ferramenta de Configuração PowerPivot para SharePoint 2010 examina arquivos de programas, configurações do Registro e portas disponíveis. Para aproveitar ao máximo as ferramentas, examine os requisitos a seguir.
 
 -   Requisitos gerais para executar a ferramenta de configuração [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md).
@@ -33,7 +33,7 @@ ms.locfileid: "78174465"
 
 -   A porta 80 precisa estar disponível; uma das tarefas selecionadas exige que a ferramenta de configuração crie e configure um aplicativo Web.
 
-##  <a name="bkmk_using"></a>Usando a ferramenta de configuração do PowerPivot
+##  <a name="using-the-powerpivot-configuration-tool"></a><a name="bkmk_using"></a>Usando a ferramenta de configuração do PowerPivot
  A primeira página da ferramenta fornece um resumo dos valores de entrada usados para configurar o farm do SharePoint. Além dos valores de entrada que você fornece, são usados valores padrão para configurar o sistema. Os nomes padrão são usados para aplicativos de serviço, bancos de dados de aplicativo de serviço e propriedades de aplicativo de serviço.
 
 > [!TIP]
@@ -49,7 +49,7 @@ ms.locfileid: "78174465"
 
  ![Interface do usuário da Ferramenta de Configuração](media/ssas-pctui.gif "Interface do usuário da Ferramenta de Configuração")
 
-##  <a name="bkmk_steps"></a>Etapas de configuração
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Etapas de configuração
  O link para a ferramenta de configuração fica visível apenas quando o PowerPivot para SharePoint 2010 está instalado no servidor local.
 
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **Ferramenta de Configuração do PowerPivot**.
@@ -58,11 +58,11 @@ ms.locfileid: "78174465"
 
 3.  Expanda a janela para o tamanho total. Você verá uma barra de botões na parte inferior da janela que inclui os comandos **Validar**, **Executar**e **Sair** .
 
-4.  **Conta padrão:** Na guia parâmetros, digite uma conta de usuário de domínio para o nome de usuários da **conta padrão**. Esta conta é usada para provisionar serviços essenciais, inclusive o pool de aplicativos do serviço PowerPivot. Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.
+4.  **Conta Padrão:** Na guia Parâmetros, digite uma conta de usuário de domínio para **Nome de Usuário da Conta Padrão**. Esta conta é usada para provisionar serviços essenciais, inclusive o pool de aplicativos do serviço PowerPivot. Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.
 
-     **Frase secreta:** digite uma frase secreta. Para um novo farm do SharePoint, a frase secreta é usada sempre que um novo servidor ou aplicativo é adicionado ao farm do SharePoint. Se ele for um farm existente, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.
+     **Frase Secreta:** digite uma frase secreta. Para um novo farm do SharePoint, a frase secreta é usada sempre que um novo servidor ou aplicativo é adicionado ao farm do SharePoint. Se ele for um farm existente, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.
 
-5.  **Porta:** Opcionalmente, digite um número de porta para se conectar ao aplicativo Web da administração central ou use o número gerado aleatoriamente fornecido. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.
+5.  **Porta:** opcionalmente, digite um número de porta para se conectar ao aplicativo Web Administração Central ou use o número fornecido gerado aleatoriamente. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.
 
 6.  Clique em **registrar SQL Server Analysis Services (PowerPivot) no servidor local**.
 
@@ -81,7 +81,7 @@ ms.locfileid: "78174465"
 
 11. [Verifique uma instalação do PowerPivot para SharePoint](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).
 
-##  <a name="bkmk_input"></a>Valores de entrada usados para configurar o servidor
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>Valores de entrada usados para configurar o servidor
  A Ferramenta de Configuração do PowerPivot usa uma combinação de valores de entrada que você digita e valores padrão que ele detecta ou usa automaticamente.
 
  A lista de ações na ferramenta de configuração depende da configuração atual dos farms do SharePoint. Por exemplo, se o farm do SharePoint já estiver configurado, nenhuma ação será listada na ferramenta. Você pode executar a ferramenta a qualquer momento para configurar, reparar ou detectar erros de configuração. Se os serviços obrigatórios como Serviços do Excel ou Serviço de Repositório Seguro não estão sendo executados no farm, a ferramenta detectará os serviços ausentes e fornecerá opções para habilitá-los. Se nenhuma ação for necessária, a lista de tarefas estará vazia.
@@ -94,37 +94,37 @@ ms.locfileid: "78174465"
 ||Servidor de Banco de Dados|Instância nomeada local do PowerPivot, se houver.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do PowerPivot, a ferramenta populará o campo de servidor de banco de dados com esta instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio. Você deve fornecer uma instância. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|
 ||Senha|Entradas de usuário|Se estiver criando um novo farm, a frase secreta que você inserir será a frase secreta para o farm. Se você estiver adicionando o PowerPivot para SharePoint a um farm existente, você deverá fornecer a frase secreta que foi definida para o farm quando foi criado.|
 ||Porta da Administração Central do SharePoint|Padrão, se necessário|Se o farm não estiver configurado, a ferramenta fornecerá opções para criar o farm, inclusive um ponto de extremidade HTTP para a Administração Central. O padrão é um número de porta gerado aleatoriamente que não está em uso.|
-|**Configurar novo farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|
+|**Configurar Novo Farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|
 |**Configurar Instância do Serviço Local**|Senha da conta de serviço do Analysis Services|Entradas de usuário|Você deve digitar a senha da conta de serviço Analysis Services na página **registrar SQL Server Analysis Services (PowerPivot) no servidor local** .<br /><br /> A conta de serviço foi especificada durante a instalação. Você agora deve digitar a senha como uma entrada para registrar a instância de serviço local com o SharePoint.|
 |**Criar Aplicativo de Serviço PowerPivot**|Nome do aplicativo do serviço PowerPivot|Padrão|O nome padrão é Aplicativo de Serviço PowerPivot Padrão. Você pode substituir um valor diferente na ferramenta.|
 ||Servidor do banco de dados do aplicativo de serviço PowerPivot|Padrão|O servidor de banco de dados que hospeda o banco de dados do aplicativo de serviço PowerPivot. O nome do servidor padrão é o mesmo servidor de banco de dados usado para o farm. Você pode substituir um valor diferente na ferramenta.|
 ||Nome do banco de dados do aplicativo de serviço PowerPivot|Padrão|O nome de banco de dados padrão é baseado no nome de aplicativo de serviço, seguido por um GUID para garantir um nome exclusivo. Você pode substituir um valor diferente na ferramenta.|
 ||Atualizar pastas de trabalho para habilitar atualização de dados|Entradas de usuário|A atualização de dados falha e não tem suporte para pastas de trabalho PowerPivot do SQL Server 2008 R2. A opção **Atualizar pastas de trabalho para habilitar a atualização de dados** atualiza as pastas de trabalho para SQL Server versão do PowerPivot 2012.|
-|**Criar aplicativo Web padrão**|Nome do Aplicativo Web|Padrão, se necessário|Se nenhum aplicativo Web existir, a ferramenta criará um. O aplicativo Web será configurado para autenticação de modo clássico e escuta na **porta 80**. O tamanho máximo de carregamento de arquivo é definido como 2047 MB, o máximo permitido pelo SharePoint. O maior tamanho de carregamento de arquivo é acomodar arquivos grandes do PowerPivot.|
+|**Criar Aplicativo Web Padrão**|Nome do Aplicativo Web|Padrão, se necessário|Se nenhum aplicativo Web existir, a ferramenta criará um. O aplicativo Web será configurado para autenticação de modo clássico e escuta na **porta 80**. O tamanho máximo de carregamento de arquivo é definido como 2047 MB, o máximo permitido pelo SharePoint. O maior tamanho de carregamento de arquivo é acomodar arquivos grandes do PowerPivot.|
 ||URL|Padrão, se necessário|A ferramenta cria uma URL baseada no nome do servidor, usando as mesmas convenções de nomenclatura de arquivo que o SharePoint.|
 ||Pool de Aplicativos Web|Padrão, se necessário|A ferramenta cria um pool de aplicativos padrão no IIS.|
 ||Conta e Senha do Pool de Aplicativos Web|Padrão, se necessário|A conta do pool de aplicativos é baseada na conta padrão, mas você pode substituí-la na ferramenta.|
 ||Servidor de banco de dados de aplicativo Web|Padrão, se necessário|A instância de banco de dados padrão é pré-selecionada para armazenar o banco de dados de aplicativo, mas você pode especificar uma instância do SQL Server diferente na ferramenta.|
 ||Nome do banco de dados de aplicativo Web|Padrão, se necessário|O nome de banco de dados é baseado nas convenções de nomenclatura de arquivo de SharePoint, mas você pode escolher um nome diferente.|
-|**Implantar solução de aplicativo Web**|URL|Padrão, se necessário|A URL padrão é do aplicativo Web padrão.|
+|**Implantar Solução de Aplicativo Web**|URL|Padrão, se necessário|A URL padrão é do aplicativo Web padrão.|
 ||Tamanho Máximo do Arquivo (em MB)|Padrão, se necessário|A configuração padrão é 2047. As bibliotecas de documentos do SharePoint também têm um tamanho máximo e a configuração do PowerPivot não deve exceder a configuração da biblioteca de documentos. Para obter mais informações, consulte [Configurar o tamanho máximo de upload de arquivo &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|
-|**Criar conjunto de sites**|Administrador de site|Padrão, se necessário|A ferramenta usa a conta padrão. Você pode anulá-la na página **Criar Coleção de Sites** .|
+|**Criar Coleção de Sites**|Administrador de site|Padrão, se necessário|A ferramenta usa a conta padrão. Você pode anulá-la na página **Criar Coleção de Sites** .|
 ||Contact Email|Padrão, se necessário|Se o Microsoft Outlook estiver configurado no servidor, a ferramenta usará o endereço de email do usuário atual. Caso contrário, um valor de espaço reservado será usado.|
 ||URL do site|Padrão, se necessário|A ferramenta cria uma URL de site, usando as mesmas convenções de nomenclatura de URL que o SharePoint.|
 ||Título do site|Padrão, se necessário|A ferramenta adiciona o **Site do PowerPivot** como o título padrão.|
 |**Ativar Recurso do PowerPivot em uma Coleção de Sites**|URL do site||URL da coleção de sites para a qual você está ativando recursos do PowerPivot.|
 ||Habilite o recurso premium para este site||Habilite o recurso de site do SharePoint "PremiumSite".|
-|**Criar Serviço de Repositório Seguro aplicativo**|Nome do Aplicativo de Serviço||Digite o nome do aplicativo do serviço de Repositório Seguro.|
+|**Criar Aplicativo de Serviço de Repositório Seguro**|Nome do Aplicativo de Serviço||Digite o nome do aplicativo do serviço de Repositório Seguro.|
 ||Servidor de Banco de Dados||Digite o nome do servidor de banco de dados a ser usado para o aplicativo de serviço de Repositório Seguro.|
-|**Criar Serviço de Repositório Seguro proxy de aplicativo**|Nome do Aplicativo de Serviço||Digite o nome do aplicativo do serviço de Repositório Seguro.|
+|**Criar Proxy de Aplicativo de Serviço de Repositório Seguro**|Nome do Aplicativo de Serviço||Digite o nome do aplicativo do serviço de Repositório Seguro.|
 ||Proxy de aplicativo de serviço||Digite o nome do proxy de aplicativo do serviço de Repositório Seguro.  O nome aparecerá no grupo de conexões padrão que associa aplicativos a aplicativos Web de conteúdo do SharePoint.|
-|**Atualizar Serviço de Repositório Seguro chave mestra**|Proxy de aplicativo de serviço||Digite o nome do proxy de aplicativo do serviço de Repositório Seguro|
+|**Atualizar Chave Mestra do Serviço de Repositório Seguro**|Proxy de aplicativo de serviço||Digite o nome do proxy de aplicativo do serviço de Repositório Seguro|
 ||Senha||A chave mestra é usada para criptografia de dados. Por padrão, a frase secreta usada para gerar a chave é a mesma que é usada para provisionar novos servidores no farm. Você pode substituir a frase secreta padrão por uma frase secreta exclusiva.|
 |**Criar conta autônoma para datarefresh**|ID do Aplicativo de Destino||A ID do aplicativo pode ser um texto descritivo.|
 ||Nome Amigável para Aplicativo de Destino|||
 ||Nome de Usuário e Senha da Conta Autônoma||Digite as credenciais de uma conta de usuário do Windows que é usada pelo aplicativo de destino e é usada para executar a atualização de dados autônoma.|
 ||URL do site||Digite a URL do site da coleção de sites associada ao aplicativo de destino. Para associar a coleções de sites adicionais, use a Administração Central do SharePoint.|
-|**Criar aplicativo de serviço dos serviços do Excel**|Nome do Aplicativo de Serviço||Digite um nome de aplicativo de serviço. Um banco de dados de aplicativo de serviço com o mesmo nome será criado no servidor de banco de dados do farm do SharePoint.|
+|**Criar Aplicativo de Serviço dos Serviços do Excel**|Nome do Aplicativo de Serviço||Digite um nome de aplicativo de serviço. Um banco de dados de aplicativo de serviço com o mesmo nome será criado no servidor de banco de dados do farm do SharePoint.|
 |**Adicionar MSOLAP.5 como um Provedor Confiável**|Nome do Aplicativo de Serviço||Os Serviços do Excel no SharePoint 2010 usam o provedor OLE DB do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para se conectar a dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Esta etapa adicionará a versão do provedor OLE DB instalado com o PowerPivot para SharePoint, como provedor confiável para Serviços do Excel.|
 ||Nome do Servidor do PowerPivot|||
 |||||
@@ -133,7 +133,7 @@ ms.locfileid: "78174465"
 
  Se a ferramenta criar uma coleção de sites, criará um banco de dados de conteúdo no servidor de banco de dados, usando as mesmas convenções de nomenclatura de arquivo que o SharePoint. Não é possível alterar o nome do banco de dados do conteúdo.
 
-##  <a name="bkmk_nextsteps"></a>Próximas etapas
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> Próximas etapas
  Depois de concluir uma instalação do servidor, há várias tarefas pós-instalação a serem executadas:
 
 -   Conceder permissões do SharePoint a indivíduos e grupos. Essa tarefa é necessária para permitir o acesso a sites e conteúdo.
@@ -184,6 +184,6 @@ ms.locfileid: "78174465"
  ![As configurações do SharePoint](media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint") [enviam comentários e informações de contato por meio do Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
 
 ## <a name="see-also"></a>Consulte Também
- [](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Administração e configuração do PowerPivot ferramentas de configuração PowerPivot Server na administração central](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)
+ [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Administração e configuração do PowerPivot ferramentas de configuração PowerPivot Server na administração central](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)
 
 

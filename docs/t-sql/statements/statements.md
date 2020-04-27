@@ -13,12 +13,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b130cf3de5e416282c08ce45059db1ea21505ce7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633520"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086805"
 ---
 # <a name="transact-sql-statements"></a>instruções Transact-SQL
 
@@ -62,7 +62,7 @@ Instruções de permissões determinam quais logons e usuários podem acessar os
 
 ## <a name="service-broker-statements"></a>Instruções do Service Broker
 
-O Service Broker é um recurso que oferece suporte nativo para aplicativos de mensagens e enfileiramento. Para obter mais informações, veja [Service Broker](../../relational-databases/service-broker/event-notifications.md).
+O Service Broker é um recurso que oferece suporte nativo para aplicativos de mensagens e enfileiramento. Para obter mais informações, veja [Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).
 
 ## <a name="session-settings"></a>Configurações da sessão
 

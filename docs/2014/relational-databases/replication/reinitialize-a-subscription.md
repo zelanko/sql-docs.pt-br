@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199225"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
@@ -26,18 +26,18 @@ ms.locfileid: "68199225"
   
  **Neste tópico**  
   
--   **Para reinicializar uma assinatura usando:**  
+-   **Para reinicializar uma assinatura, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Reinicializar uma assinatura é um processo em duas partes:  
   
-1.  Uma única assinatura ou todas as assinaturas de uma publicação são *marcadas* para reinicialização. Marque as assinaturas para reinicialização na caixa de diálogo **Reinicializar Assinatura(s)** , que está disponível nas pastas **Publicações Locais** e **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Ao marcar uma assinatura para reinicialização, você tem as seguintes opções:  
+1.  Uma única assinatura ou todas as assinaturas de uma publicação são *marcadas* para reinicialização. Marque as assinaturas para reinicialização na caixa de diálogo **Reinicializar Assinaturas**, disponível nas pastas **Publicações Locais** e **Assinaturas Locais** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você também pode marcar assinaturas da guia **Todas as Assinaturas** e o nó de publicações no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor). Ao marcar uma assinatura para reinicialização, você tem as seguintes opções:  
   
      **Usar o instantâneo atual**  
      Selecione para aplicar o instantâneo atual ao Assinante da próxima vez que o Distribution Agent ou Merge Agent forem executados. Se não houver nenhum instantâneo válido disponível, essa opção não poderá ser selecionada.  
@@ -102,7 +102,7 @@ ms.locfileid: "68199225"
   
 3.  Na caixa de diálogo **Reinicializar Assinatura(s)** , selecione opções e então clique em **Marcar para Reinicialização**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas podem ser reinicializadas forma programática, usando procedimentos armazenados. O procedimento armazenado usado depende do tipo de assinatura (push ou pull) e o tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
@@ -139,29 +139,29 @@ ms.locfileid: "68199225"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando um dos valores a seguir para **@automatic_reinitialization_policy**:  
   
-    -   **1** -as alterações são carregadas do assinante antes que uma assinatura seja reinicializada automaticamente conforme exigido por uma alteração na publicação.  
+    -   **1** - alterações são carregadas do Assinante antes que a assinatura seja reinicializada automaticamente, de acordo com a alteração feita na publicação.  
   
-    -   **0** -as alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente conforme exigido por uma alteração na publicação.  
+    -   **0** - alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente, de acordo com a alteração feita na publicação.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
-     Para obter mais informações, consulte [Criar uma assinatura](publish/create-a-publication.md).  
+     Para obter mais informações, consulte [criar uma publicação](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para alterar a política de reinicialização para uma publicação de mesclagem existente  
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** e um dos seguintes valores para **@value**:  
   
-    -   **1** -as alterações são carregadas do assinante antes que uma assinatura seja reinicializada automaticamente conforme exigido por uma alteração na publicação.  
+    -   **1** - alterações são carregadas do Assinante antes que a assinatura seja reinicializada automaticamente, de acordo com a alteração feita na publicação.  
   
-    -   **0** -as alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente conforme exigido por uma alteração na publicação.  
+    -   **0** - alterações no Assinante são descartadas quando uma assinatura é reinicializada automaticamente, de acordo com a alteração feita na publicação.  
   
     > [!IMPORTANT]  
     >  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
      Para obter mais informações, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  Assinaturas individuais podem ser marcadas para reinicialização, para que durante a próxima sincronização, um novo instantâneo seja aplicado. As assinaturas podem ser reinicializadas programaticamente usando o RMO (Replication Management Objects). As classes que você usa dependem do tipo da publicação às quais as assinaturas pertencem e o tipo de assinatura (ou seja, uma assinatura push ou pull).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar uma assinatura pull para uma publicação transacional  
@@ -230,7 +230,7 @@ ms.locfileid: "68199225"
   
 5.  Sincronize a assinatura push. Para obter mais informações, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Esse exemplo reinicializa uma assinatura pull para uma publicação transacional.  
   
  [!code-csharp[HowTo#rmo_ReinitTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_reinittranpullsub)]  
@@ -244,8 +244,8 @@ ms.locfileid: "68199225"
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Reinicializar as assinaturas](reinitialize-subscriptions.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Reinicializar assinaturas](reinitialize-subscriptions.md)   
+ [Conceitos de Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Práticas recomendadas em relação à segurança de replicação](security/replication-security-best-practices.md)  
   
   

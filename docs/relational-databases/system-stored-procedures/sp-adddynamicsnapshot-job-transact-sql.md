@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771337"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
@@ -75,12 +75,12 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar o trabalho de instantâneo de dados filtrado. *frequency_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
 |**4** (padrão)|Diário|  
-|**8**|Semanalmente|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -100,7 +100,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Especifica as unidades para *frequency_subday_interval*. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -111,11 +111,11 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a ocorrência do trabalho de instantâneo de dados filtrados em cada mês. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
   
@@ -131,9 +131,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identifica o trabalho de instantâneo de dados filtrado na tabela do sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
+|**id**|**int**|Identifica o trabalho de instantâneo de dados filtrado na tabela do sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
 |**dynamic_snapshot_jobname**|**sysname**|Nome do trabalho de instantâneo de dados filtrado.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica exclusivamente o trabalho [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do agente no distribuidor.|  
   
@@ -151,7 +151,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [&#41;&#40;Transact-SQL de sp_dropdynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdynamicsnapshot_job](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   

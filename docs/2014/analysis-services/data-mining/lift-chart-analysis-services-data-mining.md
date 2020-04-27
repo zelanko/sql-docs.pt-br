@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174676"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de comparação de precisão (Analysis Services - Mineração de Dados)
@@ -31,7 +31,7 @@ ms.locfileid: "78174676"
 
  Um gráfico de ganho é um tipo de gráfico relacionado que contém as mesmas informações do gráfico de comparação de precisão, mas que também exibe o aumento projetado em ganho associado ao uso de cada modelo.
 
-##  <a name="bkmk_Top"></a>Compreendendo o gráfico de comparação de precisão
+##  <a name="understanding-the-lift-chart"></a><a name="bkmk_Top"></a>Compreendendo o gráfico de comparação de precisão
  Pode ser difícil entender gráficos de comparação de precisão em teoria. Portanto, para ilustrar o uso das ferramentas de gráfico de comparação de precisão e as informações no gráfico, esta seção apresenta um cenário no qual um gráfico de comparação de precisão é usado para estimar a resposta a uma campanha de mala direta.
 
  O departamento de marketing neste cenário sabe que uma taxa de resposta de 10 por cento é mais ou menos típica de campanhas de mala direta. Eles têm uma lista de 10.000 clientes potenciais armazenada em uma tabela do banco de dados. Com base na taxa de resposta típica, eles normalmente podem esperar que somente cerca de 1.000 clientes potenciais respondam. Porém, o dinheiro orçado para o projeto não é suficiente para atingir todos os 10.000 clientes do banco de dados e eles querem aumentar sua taxa de resposta. Suponha para este cenário que o orçamento deles permite remeter uma peça para somente 5.000 clientes. O departamento de marketing tem duas opções:
@@ -117,6 +117,6 @@ ms.locfileid: "78174676"
  [Voltar ao início](#bkmk_Top)
 
 ## <a name="see-also"></a>Consulte Também
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)
 
 

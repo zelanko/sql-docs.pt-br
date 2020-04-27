@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198947"
 ---
 # <a name="change-resource-pool-settings"></a>Alterar configurações do pool de recursos
@@ -27,17 +27,17 @@ ms.locfileid: "68198947"
   
 -   **Para alterar as configurações para um pool de recursos usando:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O percentual máximo de CPU deve ser igual a ou maior que o percentual mínimo de CPU. O percentual máximo de memória deve ser igual a ou maior que o percentual mínimo de memória.  
   
  A soma dos percentuais mínimos de CPU e dos percentuais mínimos de memória de todos os pools de recursos não deve exceder 100.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Alterar as configurações do pool de recursos exige permissão CONTROL SERVER.  
   
-##  <a name="ChgRPProp"></a> Alterar as configurações do pool de recursos usando o SQL Server Management Studio  
+##  <a name="change-resource-pool-settings-using-sql-server-management-studio"></a><a name="ChgRPProp"></a> Alterar as configurações do pool de recursos usando o SQL Server Management Studio  
  **Para alterar as configurações de um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e inclua **Pools de Recursos**.  
@@ -50,7 +50,7 @@ ms.locfileid: "68198947"
   
 5.  Para salvar as alterações, clique em **OK**  
   
-##  <a name="ChgRPTSQL"></a> Alterar o pool de recursos usando Transact-SQL  
+##  <a name="change-resource-pool-settings-using-transact-sql"></a><a name="ChgRPTSQL"></a> Alterar o pool de recursos usando Transact-SQL  
  **Para alterar as configurações de um pool de recursos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Execute a instrução `ALTER RESOURCE POOL` especificando os valores de propriedade a serem alterados.  

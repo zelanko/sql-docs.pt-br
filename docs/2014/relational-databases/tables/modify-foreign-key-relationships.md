@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196839"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relações de chave estrangeira
@@ -40,9 +40,9 @@ ms.locfileid: "68196839"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  A nova coluna de chave estrangeira deve corresponder ao tipo de dados e ao tamanho da coluna de chave primária à qual está relacionada, com estas exceções:  
   
 -   Uma coluna `char` ou `sysname` pode estar relacionada a uma coluna `varchar`.  
@@ -51,12 +51,12 @@ ms.locfileid: "68196839"
   
 -   Um tipo de dados de alias pode estar relacionado ao seu tipo base.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Para modificar uma chave estrangeira  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68196839"
   
 4.  No menu **Arquivo**, clique em **Salvar**_nome da tabela_.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para modificar uma chave estrangeira**  
   
  Para modificar uma restrição FOREIGN KEY usando o Transact-SQL, exclua primeiramente a FOREIGN KEY já existente e, em seguida, recrie-a com a nova definição. Para obter mais informações, consulte [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](create-foreign-key-relationships.md).  

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197111"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimento armazenados (Mecanismo de Banco de Dados)
-  Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções ou uma referência a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] método CLR (Common Runtime Language). Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
+  Um procedimento armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um grupo de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] ou uma referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os procedimentos lembram as construções em outras linguagens de programação porque podem:  
   
 -   Aceitar parâmetros de entrada e retornar vários valores no formulário de parâmetros de saída para o programa de chamada.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "68197111"
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimentos armazenados  
  Definido pelo usuário  
- Um procedimento definido pelo usuário pode ser criado em um banco de dados definido pelo usuário ou em todos os bancos de dados do sistema, exceto no banco de dados **Resource** . O procedimento pode ser desenvolvido em [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como uma referência a um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] método CLR (Common Runtime Language).  
+ Um procedimento definido pelo usuário pode ser criado em um banco de dados definido pelo usuário ou em todos os bancos de dados do sistema, exceto no banco de dados **Resource** . O procedimento pode ser desenvolvido em [!INCLUDE[tsql](../../includes/tsql-md.md)] ou como referência a um método CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Temporário  
  Procedimentos temporários são uma forma de procedimentos definidos pelo usuário. Os procedimentos armazenados são como um procedimento permanente, exceto que os procedimentos temporários são armazenados em **tempdb**. Há dois tipos de procedimentos temporários: local e global. Elas diferem uma da outra pelo nome, visibilidade e disponibilidade. Os procedimentos temporários locais têm um único sinal numérico (#) como primeiro caractere no nome; eles são visíveis somente na conexão atual do usuário e são excluídas quando a conexão é fechada. Os procedimentos temporários globais têm dois sinais numéricos (##) como os dois primeiros caracteres de seus nomes; ficam visíveis para qualquer usuário depois de criados e são excluído no final da última sessão do procedimento.  
   
  Sistema  
- Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_**, recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
+ Os procedimentos do sistema são fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eles são fisicamente armazenados no banco de dados **Resource** interno oculto, e logicamente aparecem no esquema **sys** de cada banco de dados definido pelo sistema e pelo usuário. Além disso, o banco de dados **msdb** também pode conter procedimentos armazenados do sistema no esquema **dbo** que são usados para agendar alertas e trabalhos. Como os procedimentos do sistema começam com o prefixo **sp_** , recomendamos que você não use esse perfil quando for nomear procedimentos definidos pelo usuário. Para obter uma lista completa de procedimentos do sistema, veja [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
   
  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte aos procedimentos do sistema que fornecem uma interface no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a programas externos para várias atividades de manutenção. Esses procedimentos estendidos usam o prefixo xp_. Para obter uma lista completa de procedimentos estendidos, veja [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   

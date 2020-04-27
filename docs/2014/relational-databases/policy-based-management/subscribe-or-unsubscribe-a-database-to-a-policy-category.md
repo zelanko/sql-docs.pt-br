@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212138"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Assinar ou cancelar a assinatura de um banco de dados a uma categoria de política
@@ -34,14 +34,14 @@ ms.locfileid: "68212138"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer associação na função de banco de dados fixa db_owner.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Para assinar ou cancelar a assinatura de um banco de dados a uma categoria de política  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68212138"
      **Política**  
      Quando os grupos de políticas são expandidos, exibe as políticas da categoria de políticas.  
   
-     **Enabled**  
+     **Habilitada**  
      Indica se as políticas estão habilitadas ou desabilitadas.  
   
      **Modo de Execução**  
@@ -76,9 +76,9 @@ ms.locfileid: "68212138"
   
 4.  Para assinar uma categoria de Gerenciamento Baseada em Políticas, marque a caixa de seleção de categoria na coluna **Assinado** . Para cancelar a assinatura de uma categoria, desmarque a caixa de seleção.  
   
-5.  Quando terminar, clique em **OK**.  
+5.  Ao concluir, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Para assinar um banco de dados para uma categoria de política  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ea37a9aecda0b3fbb6d61f7ba14a82f368c95aa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175173"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Dispersão (Analysis Services - Mineração de dados)
@@ -47,12 +47,12 @@ ms.locfileid: "78175173"
 
 |Tópicos|Links|
 |------------|-----------|
-|Fornece um passo a passo sobre como criar um gráfico de comparação de precisão para o modelo Mala Direta Dirigida.|[Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testando a exatidão com gráficos de comparação de precisão &#40;tutorial de mineração de dados básico&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|
-|Explica os tipos de gráficos relacionados.|[&#40;do gráfico de comparação de precisão Analysis Services-Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services-Mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [&#40;de matriz de classificação Analysis Services&#41;de mineração de dados](classification-matrix-analysis-services-data-mining.md)|
-|Descreve usos de validação cruzada para modelos de mineração e estruturas de mineração.|[&#40;de validação cruzada Analysis Services&#41;de mineração de dados](cross-validation-analysis-services-data-mining.md)|
-|Descreve as etapas para criar gráficos de comparação de precisão e outros gráficos de exatidão.|[Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
+|Fornece um passo a passo sobre como criar um gráfico de comparação de precisão para o modelo Mala Direta Dirigida.|[Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testando a precisão com gráficos de comparação de precisão &#40;Tutorial de mineração de dados básica&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|
+|Explica os tipos de gráficos relacionados.|[Gráfico de comparação de precisão &#40;Analysis Services – Mineração de dados&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de ganho &#40;Analysis Services – Mineração de dados&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Matriz de classificação &#40;Analysis Services – Mineração de dados&#41;](classification-matrix-analysis-services-data-mining.md)|
+|Descreve usos de validação cruzada para modelos de mineração e estruturas de mineração.|[Validação cruzada &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|
+|Descreve as etapas para criar gráficos de comparação de precisão e outros gráficos de exatidão.|[Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|
 
 ## <a name="see-also"></a>Consulte Também
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)
 
 

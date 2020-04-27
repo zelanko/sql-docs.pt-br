@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211685"
 ---
 # <a name="view-user-defined-functions"></a>Exibir funções definidas pelo usuário
@@ -43,14 +43,14 @@ ms.locfileid: "68211685"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O uso de **sys.sql_expression_dependencies** para localizar todas as dependências em uma função exige a permissão VIEW DEFINITION no banco de dados e a permissão SELECT em **sys.sql_expression_dependencies** no banco de dados. As definições de objeto de sistema, como as retornadas em OBJECT_DEFINITION, são publicamente visíveis.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar as propriedades de uma função definida pelo usuário  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68211685"
      **Usuário**  
      Nome do usuário desta conexão.  
   
-     **Data de criação**  
+     **Data da criação**  
      Exibe a data em que a função foi criada.  
   
      **Executar como**  
@@ -106,10 +106,10 @@ ms.locfileid: "68211685"
      **Identificador entre aspas**  
      Indica se o objeto foi criado com a opção de identificador entre aspas.  
   
-     **Associado a esquema**  
+     **Ligado a esquema**  
      Indica se a função é ligada a esquema. Os valores são True e False. Para obter informações sobre funções associadas ao esquema, veja a seção SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obter a definição e as propriedades de uma função  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212023"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Exibir e modificar propriedades de Publicador e Distribuidor
@@ -39,18 +39,18 @@ ms.locfileid: "68212023"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [RMO (Replication Management Objects)](#RMOProcedure)  
+     [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
--   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes**. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
+-   Nas versões de Publicadores anteriores ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], um usuário na função de servidor fixa **sysadmin** pode registrar Assinantes na página **Assinantes** . A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], não é mais necessário registrar Assinantes explicitamente para replicação.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Para exibir e modificar as propriedades do Distribuidor  
   
@@ -58,11 +58,11 @@ ms.locfileid: "68212023"
   
 2.  Clique com o botão direito do mouse na pasta **Replicação** e em seguida clique em **Propriedades do Distribuidor**.  
   
-3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>** .  
+3.  Exibir e modificar as propriedades na caixa de diálogo **Propriedades do Distribuidor – \<Distribuidor>**.  
   
-    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades ( **...** ) do banco de dados na página **Geral** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades de um banco de dados de distribuição, clique no botão de propriedades (**...**) do banco de dados na página **Geral** da caixa de diálogo.  
   
-    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades ( **…** ) para o Publicador na página **Publicadores** da caixa de diálogo.  
+    -   Para exibir e modificar as propriedades do Publicador associado ao Distribuidor, clique no botão de propriedades (**…**) para o Publicador na página **Publicadores** da caixa de diálogo.  
   
     -   Para acessar os perfis para os agentes de replicação, clique no botão **Padrões de Perfil** na página **Geral** da caixa de diálogo. Para saber mais, confira [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68212023"
   
 4.  Modifique propriedades, se necessário, depois clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As propriedades do Publicador e do Distribuidor podem ser exibidas programaticamente usando os procedimentos armazenados de replicação.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>Para exibir as propriedades do banco de dados de distribuição e do Distribuidor  
@@ -104,7 +104,7 @@ ms.locfileid: "68212023"
   
 4.  No Distribuidor, execute [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) para alterar as propriedades de um Publicador usando o Distribuidor.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemplos (Transact-SQL)  
  O seguinte exemplo de script [!INCLUDE[tsql](../../includes/tsql-md.md)] retorna as informações sobre o Distribuidor e o banco de dados de distribuição.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +122,7 @@ ms.locfileid: "68212023"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>Para exibir e modificar as propriedades do Distribuidor  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68212023"
 5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passe o novo valor de senha para o parâmetro *password* .  
   
     > [!IMPORTANT]  
-    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for preciso armazenar credenciais, use os serviços [criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
+    >  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se você precisar armazenar credenciais, use os [serviços de criptografia](https://go.microsoft.com/fwlink/?LinkId=34733) fornecidos pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework do Windows.  
   
 6.  (Opcional) Execute as etapas seguintes para alterar a senha em cada Publicador remoto que usa esse Distribuidor:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212023"
   
     5.  Chame o método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passe o novo valor de senha da etapa 5 para o parâmetro *password* .  
   
-###  <a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Exemplo (RMO)  
  Este exemplo mostra como alterar a Distribuição e as propriedades do banco de dados de distribuição.  
   
 > [!IMPORTANT]  
@@ -198,12 +198,12 @@ ms.locfileid: "68212023"
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)   
- [Configurar Distribuição](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Script de informações do Distribuidor e Publicador](administration/distributor-and-publisher-information-script.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos de Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Desabilitar publicação e distribuição](disable-publishing-and-distribution.md)   
+ [Configurar a distribuição](configure-distribution.md)   
+ [Conceitos de Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Script de informações do distribuidor e do Publicador](administration/distributor-and-publisher-information-script.md)   
+ [Conceitos de procedimentos armazenados do sistema de replicação](concepts/replication-system-stored-procedures-concepts.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

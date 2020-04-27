@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196457"
 ---
 # <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
@@ -34,20 +34,20 @@ ms.locfileid: "68196457"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Você não poderá excluir a função se houver funções Transact-SQL ou exibições no banco de dados que referenciem essa função e forem criadas usando SCHEMABINDING, ou se houver colunas computadas, restrições CHECK ou DEFAULT que referenciem a função.  
   
 -   Você não poderá excluir a função se houver colunas computadas que referenciem essa função e tenham sido indexadas.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer permissão ALTER no esquema ao qual a função pertence ou permissão CONTROL na função.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68196457"
     > [!IMPORTANT]  
     >  Clique em **Mostrar dependências** na caixa de diálogo **excluir objeto** para abrir a caixa de diálogo _function_name_**dependências** . Isso mostrará todos os objetos que dependem da função e todos os objetos dos quais a função depende.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para excluir uma função definida pelo usuário  
   

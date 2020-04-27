@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769176"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
@@ -74,11 +74,11 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Especifica o tipo de filtro que está sendo adicionado. *filter_type* é **tinyint**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Somente filtro de junção. Necessário para dar [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes.|  
 |**2**|Somente relação de registro lógico.|  
-|**Beta**|Relação de filtro de junção e registro lógico.|  
+|**3**|Relação de filtro de junção e registro lógico.|  
   
  Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -107,9 +107,9 @@ sp_addmergefilter [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de junção entre artigos de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Filtros de junção](../../relational-databases/replication/merge/join-filters.md)   
  [&#41;&#40;Transact-SQL de sp_changemergefilter](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergefilter](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpmergefilter](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

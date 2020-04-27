@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211290"
 ---
 # <a name="view-information-about-an-alert"></a>Exibir informações sobre um alerta
@@ -38,14 +38,14 @@ ms.locfileid: "68211290"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem exibir as informações sobre um alerta. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Para exibir informações sobre um alerta  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211290"
   
     -   [Propriedades do alerta: página novas opções de &#40;de alerta&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Página Histórico de &#40;de propriedades de alerta&#41;](alert-properties-history-page.md)  
+    -   [Propriedades do alerta &#40;página Histórico&#41;](alert-properties-history-page.md)  
   
-5.  Quando terminar, clique em **OK**.  
+5.  Ao concluir, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Para exibir informações sobre um alerta  
   

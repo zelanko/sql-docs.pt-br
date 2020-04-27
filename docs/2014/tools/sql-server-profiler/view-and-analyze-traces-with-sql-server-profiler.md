@@ -20,15 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211021"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Exibir e analisar rastreamentos com o SQL Server Profiler
-  Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)]O Orientador de otimização pode usar um arquivo de rastreamento que contenha eventos de lote do SQL e RPC (chamada de procedimento remoto) se a coluna de dados de **texto** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+  Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exibir dados de evento capturados em um rastreamento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibe dados com base em propriedades de rastreamento definidas. Um modo de analisar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é copiá-los para outro programa, como o Orientador de Otimização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] O Orientador de Otimização poderá usar um arquivo de rastreamento contendo um lote SQL e eventos de RPC (chamada de procedimento remoto) se a coluna de dados **Text** estiver incluída no rastreamento. Para certificar-se de que os eventos e colunas corretos são capturados para uso com o Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , use o modelo Ajuste predefinido, que é fornecido com o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Ao abrir um rastreamento por meio do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], o arquivo de rastreamento não precisa ter a extensão de arquivo .trc, caso tenha sido criado pelo [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou por procedimentos armazenados do sistema do Rastreamento do SQL.  
   
@@ -72,7 +71,7 @@ AND     CPU < (Duration * 1000)
   
     -   Abra o arquivo ou tabela de rastreamento e expanda o nó da classe de evento desejada; por exemplo, **Deadlock Chain**. Para obter mais informações, consulte [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) ou do [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
-    -   Pesquise os dados do rastreamento até localizar os eventos que está buscando (use o comando **Localizar** do menu **Editar** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como auxílio para localizar valores no rastreamento). Observe os valores nas colunas de dados **ClientProcessID** e **Start Time** dos eventos rastreados.  
+    -   Pesquise os dados do rastreamento até localizar os eventos que está buscando (use o comando **Localizar** do menu **Editar** do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ajudá-lo a localizar valores no rastreamento). Observe os valores nas colunas de dados **ClientProcessID** e **Start Time** dos eventos rastreados.  
   
 3.  Exiba os eventos em contexto.  
   
@@ -83,10 +82,10 @@ AND     CPU < (Duration * 1000)
  A mesma técnica pode ser usada para localizar qualquer evento agrupado. Após localizar os eventos que procura, agrupe-os por **ClientProcessID**, **ApplicationName**ou outra classe de evento para ver a atividade relacionada em ordem cronológica.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir um rastreamento salvo &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
+ [Exibir um rastreamento salvo &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [Exibir informações de filtro &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)   
- [Exibir informações de filtro &#40;&#41;Transact-SQL](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
+ [Exibir informações de filtro &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-filter-information-transact-sql.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)   
  [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)  
   

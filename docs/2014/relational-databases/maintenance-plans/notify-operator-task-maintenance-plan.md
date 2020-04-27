@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205958"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tarefa de Notificação do Operador (Plano de Manutenção)
-  Use a caixa de diálogo **tarefa notificar operadores** para adicionar uma notificação automática a este plano de manutenção. Para usar essa tarefa, você deve ter Database Mail habilitado e configurado corretamente com msdb como um banco de dados de host de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] email e ter um operador de agente com um endereço de email válido.  
+  Use a caixa de diálogo **Tarefa de Notificação do Operador** para adicionar uma notificação automática a este plano de manutenção. Para usar essa tarefa, é necessário ter o Database Mail habilitado e configurado de maneira adequada com o MSDB como um Banco de Dados Host de Email, além de ter um operador do Agente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com um endereço de email válido.  
   
  Esta tarefa usa o procedimento armazenado sp_notify_operator.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68205958"
  **Novo**  
  Crie uma nova conexão com o servidor para usar ao executar esta tarefa. A caixa de diálogo **Nova Conexão** é descrita abaixo.  
   
- **Operadores para notificar**  
+ **Operadores a notificar**  
  Especifique o destinatário do email.  
   
  **Assunto da mensagem de notificação**  
@@ -62,10 +62,10 @@ ms.locfileid: "68205958"
  Especifica como autenticar no servidor.  
   
  **Use a segurança integrada do Windows**  
- Conecte-se a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a autenticação do Windows.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  
@@ -75,6 +75,6 @@ ms.locfileid: "68205958"
   
 ## <a name="see-also"></a>Consulte Também  
  [Database Mail](../database-mail/database-mail.md)   
- [&#41;&#40;Transact-SQL de sp_notify_operator](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

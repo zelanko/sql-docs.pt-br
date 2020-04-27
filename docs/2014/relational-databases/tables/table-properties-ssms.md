@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196716"
 ---
 # <a name="table-properties"></a>Propriedades da tabela
@@ -36,7 +36,7 @@ ms.locfileid: "68196716"
   
 4.  [Página Armazenamento](#Storage)  
   
-##  <a name="GeneralPage"></a> Página Geral  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Página Geral  
  **Backup de banco de dados**  
  O nome do banco de dados que contém esta tabela.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68196716"
  **A tabela é replicada**  
  Indica quando a tabela é replicada em outro banco de dados usando a replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os valores possíveis são `True` ou `False`.  
   
-##  <a name="ChangeTracking"></a>Página de Controle de Alterações  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>Página de Controle de Alterações  
  **Controle de alterações**  
  Indica se o controle de alterações está habilitado para a tabela. O valor padrão é `False`.  
   
@@ -91,24 +91,24 @@ ms.locfileid: "68196716"
   
  Para habilitar o controle de alterações, a tabela deve ter uma chave primária e é necessário ter permissão para alterar a tabela. Você também pode configurar o controle de alterações usando [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
- **Rastrear colunas atualizadas**  
+ **Colunas de Rastreamento Atualizadas**  
  Indica se o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rastreia as colunas que foram atualizadas.  
   
  Para obter mais informações sobre o controle de alterações, veja [Sobre o controle de alterações &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a>Página filetable  
+##  <a name="filetable-page"></a><a name="FileTable"></a>Página filetable  
  Exibe as propriedades da tabela relacionada a FileTables. Para obter mais informações, veja [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
  **Ordenação da colunas de nome FileTable**  
  A ordenação aplicada à coluna **Name** em uma FileTable. A coluna **Name** contém nomes de arquivos e diretórios.  
   
- **Nome do diretório filetable**  
+ **Nome de diretório da FileTable**  
  A pasta raiz da FileTable.  
   
- **Namespace filetable habilitado**  
+ **Namespace habilitado da FileTable**  
  Quando `True`, este valor indica que a tabela é uma FileTable. Se você alterar esse valor para `False`, estará alterando a FileTable para uma tabela de usuário comum. Se você desejar reverter novamente a tabela para FileTable, ela precisará passar em uma verificação de consistência da FileTable para que a conversão seja bem-sucedida.  
   
-##  <a name="Storage"></a>Página armazenamento  
+##  <a name="storage-page"></a><a name="Storage"></a>Página armazenamento  
  Exibe as propriedades relacionadas ao armazenamento da tabela selecionada.  
   
 ### <a name="compression"></a>Compactação  
@@ -128,10 +128,10 @@ ms.locfileid: "68196716"
  **Grupo de arquivos de texto**  
  O nome do grupo de arquivos que contém os dados de texto para a tabela.  
   
- **Arquivos**  
+ **Grupo de arquivos**  
  O nome do grupo de arquivos que contém a tabela.  
   
- **A tabela está particionada**  
+ **Tabela é particionada**  
  Os valores possíveis são `True` e `False`.  
   
  **Grupo de arquivos FILESTREAM**  
@@ -140,10 +140,10 @@ ms.locfileid: "68196716"
  Se a tabela não contiver dados FILESTREAM, o campo ficará em branco.  
   
 ### <a name="general"></a>Geral  
- **O formato de armazenamento vardecimal está habilitado**  
+ **O formato de armazenamento VarDecimal está habilitado**  
  Quando `True`, esse valor somente leitura indica que `decimal` os tipos `numeric` de dados e são armazenados usando o formato de armazenamento vardecimal. Para alterar essa opção, use a `vardecimal storage format` opção de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). O formato de armazenamento vardecimal foi preterido. Em vez disso, use compactação ROW.  
   
- **Espaço de índice**  
+ **Espaço do índice**  
  A quantidade de espaço em megabytes que os índices ocupam na tabela. Este valor não inclui o uso do espaço de índice XML para a tabela. Se os índices XML pertencerem à tabela, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
   
  **Contagem de linhas**  
@@ -161,7 +161,7 @@ ms.locfileid: "68196716"
  **Esquema de partição**  
  Nome do esquema de partição se a tabela estiver particionada. Se a tabela não for particionada, o campo fica em branco.  
   
- **Número of partições**  
+ **Número de partições**  
  O número de partições da tabela.  
   
  **Esquema de partição FILESTREAM**  

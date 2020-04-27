@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196672"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restrições exclusivas e restrições de verificação
@@ -31,7 +31,7 @@ ms.locfileid: "68196672"
   
  [Tarefas relacionadas](#Tasks)  
   
-##  <a name="Unique"></a> Restrições UNIQUE  
+##  <a name="unique-constraints"></a><a name="Unique"></a> Restrições UNIQUE  
  Restrições são regras que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] impõe a você. Por exemplo, você pode usar as restrições UNIQUE para garantir que não há valores duplicados inseridos em colunas específicas que não participam de uma chave primária. Embora a restrição UNIQUE e a restrição PRIMARY KEY impõem exclusividade, use a restrição UNIQUE em vez da restrição PRIMARY KEY quando for impor a exclusividade de uma coluna, ou uma combinação de colunas, que não seja uma chave primária.  
   
  Diferente das restrições PRIMARY KEY, as restrições UNIQUE permitem o valor NULL. Porém, como com qualquer valor que participa de uma restrição UNIQUE, só um valor nulo é permitido por coluna. Uma restrição UNIQUE pode ser referenciada por uma restrição FOREIGN KEY.  
@@ -40,7 +40,7 @@ ms.locfileid: "68196672"
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria automaticamente um índice UNIQUE para impor a exclusividade do requisito da restrição UNIQUE. Portanto, se houver uma tentativa de inserir uma linha duplicada, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará uma mensagem de erro indicando que a restrição UNIQUE foi violada e a linha não será adicionada à tabela. A menos que um índice clusterizado seja explicitamente especificado, um índice não clusterizado e único é criado por padrão para impor a restrição UNIQUE.  
   
-##  <a name="Check"></a> Restrições CHECK  
+##  <a name="check-constraints"></a><a name="Check"></a> Restrições CHECK  
  Restrições CHECK impõe integridade de domínio limitando os valores aceitos por uma ou mais colunas. Você pode criar uma restrição CHECK com qualquer expressão lógica (Booleana) que retorne TRUE ou FALSE com base em operadores lógicos. Por exemplo, o intervalo de valores para uma coluna **salário** pode ser limitado pela criação de uma restrição CHECK, que apenas permite que os dados variem entre US$ 15.000 e US$ 100.000. Isto evita que salários sejam digitados além do intervalo de salário regular. A expressão lógica seria a seguinte: `salary >= 15000 AND salary <= 100000`.  
   
  Você pode aplicar várias restrições CHECK a uma única coluna. Você também pode aplicar uma única restrição CHECK a várias colunas criando-as ao nível de tabela. Por exemplo, uma restrição CHECK de várias colunas poderia ser usada para confirmar que qualquer linha com o valor de coluna **country_region** de **USA** também tenha um valor de dois caracteres na coluna **state** . Isto permite que várias condições sejam verificadas em um local.  
@@ -84,7 +84,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  A instrução `DELETE` tem êxito, embora a restrição `CHECK` especifique qual tabela `CheckTbl` deva ter pelo menos `1` linha.  
   
-##  <a name="Tasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tarefas relacionadas  
   
 > [!NOTE]  
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  

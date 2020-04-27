@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909395"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Esse parâmetro pode assumir um dos dois significados possíveis, dependendo do valor escolhido para @closed_high_end_point quando sys. sp_cdc_generate_wrapper_function for chamado para gerar o script de criação para a função de wrapper:  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      Somente as linhas na capture_instance CDC. <>_CT alterar a tabela que têm uma hora de confirmação associada menor ou igual a end_time estão incluídas no conjunto de resultados.  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      Somente as linhas no CDC. capture_instance_CT alterar a tabela que tem uma hora de confirmação associada estritamente menor que end_time estão incluídas no conjunto de resultados.  
   
@@ -76,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Pode ser uma das seguintes opções:  
   
- tudo  
+ all  
  Retorna todas as alterações do intervalo LSN especificado. Para alterações que ocorrem devido a uma operação de atualização, essa opção retorna apenas a linha que contém os novos valores após a aplicação da atualização.  
   
  all update old  
@@ -84,12 +83,12 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de coluna|DESCRIÇÃO|  
+|Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**binário (10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações que são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
-|__CDC_SEQVAL|**binário (10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|\<colunas de @column_list>|**varia**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
-|__CDC_OPERATION|**nvarchar (2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = ' all'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = ' todas as atualizações antigas '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
+|__CDC_STARTLSN|**binary(10)**|O LSN de confirmação da transação que é associado à alteração. Todas as alterações que são confirmadas na mesma transação compartilham o mesmo LSN de confirmação.|  
+|__CDC_SEQVAL|**binary(10)**|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
+|\<colunas de @column_list>|**consoante**|As colunas identificadas no argumento *column_list* para sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script que cria a função de wrapper.|  
+|__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para aplicar a linha ao ambiente de destino. Ele irá variar com base no valor do argumento *row_filter_option* fornecido na chamada:<br /><br /> *row_filter_option* = ' all'<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> *row_filter_option* = ' todas as atualizações antigas '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza os novos valores da operação<br /><br /> 'UO' – atualiza os valores antigos da operação|  
 |\<colunas de @update_flag_list>|**bit**|Um sinalizador de bits é nomeado acrescentando _uflag ao nome da coluna. O sinalizador é sempre definido como nulo quando \__CDC_OPERATION é ', ' I ', de ' atualizadas '. Quando \__CDC_OPERATION for ' un ', ele será definido como 1 se a atualização tiver produzido uma alteração na coluna correspondente. Caso contrário, será 0.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -113,6 +112,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211492"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planejando uma instalação do SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "68211492"
  [Novidades na instalação do SQL Server](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  Este tópico descreve os detalhes sobre os recursos novos ou aprimorados de instalação nesta versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisitos de hardware e software para instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  Este tópico lista os requisitos mínimos de hardware e software para a instalação e execução de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Considerações sobre segurança para uma instalação do SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

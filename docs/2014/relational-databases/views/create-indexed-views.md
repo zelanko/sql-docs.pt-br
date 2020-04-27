@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196432"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
@@ -29,7 +29,7 @@ ms.locfileid: "68196432"
   
   
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  As seguintes etapas são necessárias para criar uma exibição indexada e são essenciais para o êxito da implementação da exibição indexada:  
   
 1.  Verifique se as opções SET estão corretas para todas as tabelas existentes que serão referenciadas na exibição.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196432"
   
 5.  Crie o índice clusterizado exclusivo na exibição.  
   
-###  <a name="Restrictions"></a> Opções SET necessárias para exibições indexadas  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>Opções SET necessárias para exibições indexadas  
  A avaliação da mesma expressão poderá produzir resultados diferentes no [!INCLUDE[ssDE](../../includes/ssde-md.md)] quando houver diferentes opções SET ativas durante a execução da consulta. Por exemplo, depois que a opção SET CONCAT_NULL_YIELDS_NULL for definida como ON, a expressão **'** abc **'** + NULL retornará o valor NULL. Entretanto, depois que CONCAT_NULL_YIEDS_NULL for definido como OFF, a mesma expressão produzirá **'** abc **'**.  
   
  Para verificar se as exibições podem ser mantidas corretamente e retornar resultados consistentes, as exibições indexadas requerem valores fixos para várias opções SET. As opções SET na tabela a seguir devem ser definidas para os valores mostrados na coluna **requiredvalue** sempre que as seguintes condições ocorrerem:  
@@ -86,7 +86,7 @@ ms.locfileid: "68196432"
   
 -   Quando você cria o índice, a opção IGNORE_DUP_KEY deve ser definida como OFF (a configuração padrão).  
   
--   As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_ **.** _tablename_ na definição da exibição.  
+-   As tabelas devem ser referenciadas por meio de nomes de duas partes, _schema_**.**_tablename_ na definição da exibição.  
   
 -   Funções definidas pelo usuário referenciadas na exibição devem ser criadas usando a opção WITH SCHEMABINDING.  
   
@@ -130,12 +130,12 @@ ms.locfileid: "68196432"
   
 -   Se a definição de exibição contiver uma cláusula GROUP BY, a chave de índice clusterizado exclusivo poderá referenciar somente as colunas especificadas na cláusula GROUP BY.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  Quando você referencia os literais de cadeia de caracteres `datetime` e `smalldatetime` em exibições indexadas, é recomendável que converta explicitamente o literal no tipo de data desejado, usando um estilo de formato de data determinístico. Para obter uma lista de estilos de formato de data determinísticos, veja [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Expressões que envolvem a conversão implícita de cadeias de caracteres para `datetime` ou `smalldatetime` são consideradas não determinísticas. Isso ocorre porque os resultados dependem das configurações de LANGUAGE e DATEFORMAT da sessão de servidor. Por exemplo, os resultados da expressão `CONVERT (datetime, '30 listopad 1996', 113)` dependem da configuração LANGUAGE porque a cadeia de caracteres '`listopad`' significa meses diferentes em idiomas. Semelhantemente, na expressão `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta a cadeia de caracteres `'2000-12-01'` com base na configuração DATEFORMAT.  
   
  A conversão implícita de dados de caracteres não Unicode entre ordenações também é considerada não determinística.  
   
-###  <a name="Considerations"></a> Considerações  
+###  <a name="considerations"></a><a name="Considerations"></a>Considere  
  A configuração da opção **large_value_types_out_of_row** de colunas em uma exibição indexada é herdada da configuração da coluna correspondente na tabela base. Esse valor é definido usando [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). A configuração padrão para colunas formadas de expressões é 0. Isso significa que tipos de valor grandes são armazenados na linha.  
   
  As exibições indexadas podem ser criadas em uma tabela particionada e elas próprias podem ser particionadas.  
@@ -146,12 +146,12 @@ ms.locfileid: "68196432"
   
  Índices em tabelas e exibições podem ser desabilitados. Quando um índice clusterizado em uma tabela for desabilitado, os índices em exibições associadas à tabela também serão desabilitados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão CREATE VIEW no banco de dados e a permissão ALTER no esquema no qual a exibição está sendo criada.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Para criar uma exibição indexada  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196432"
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [DEFINIR ANSI_NULLS &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [DEFINIR ANSI_PADDING &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [DEFINIR ANSI_WARNINGS &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [DEFINIR ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [DEFINIR CONCAT_NULL_YIELDS_NULL &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [DEFINIR NUMERIC_ROUNDABORT &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

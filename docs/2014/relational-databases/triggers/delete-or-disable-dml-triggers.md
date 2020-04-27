@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196526"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Excluir ou desabilitar gatilhos DML
@@ -41,9 +41,9 @@ ms.locfileid: "68196526"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Quando um gatilho é excluído, ele é descartado do banco de dados atual. A tabela e os dados nos quais está baseada não são afetados. Excluir uma tabela exclui automaticamente todos os gatilhos da tabela.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "68196526"
   
 -   Ao desabilitar um gatilho, você não o descarta. O gatilho ainda existe como um objeto no banco de dados atual. Porém, o gatilho não será acionado quando qualquer instrução INSERT, UPDATE ou DELETE, em que ele tenha sido programado, for executada. Os gatilhos desabilitados podem ser habilitados novamente. A habilitação de um disparador não recria o mesmo. O gatilho é acionado da mesma forma como foi criado.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A exclusão de um gatilho DML requer permissão ALTER na tabela ou exibição na qual o gatilho está definido.  
   
  Para desabilitar ou habilitar um gatilho DML, no mínimo, um usuário deve ter a permissão ALTER na tabela ou exibição na qual o gatilho foi criado.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>Para excluir um gatilho DML  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68196526"
   
 4.  Para habilitar o gatilho, clique em **Habilitar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>Para excluir um gatilho DML  
   

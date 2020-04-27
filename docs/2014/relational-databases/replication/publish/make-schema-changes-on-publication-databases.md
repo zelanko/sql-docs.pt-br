@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199456"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Fazer alterações de esquema em bancos de dados de publicação
@@ -81,8 +81,7 @@ ms.locfileid: "68199456"
   
 -   Leitura não confirmada não é um nível de isolamento com suporte ao fazer o DDL em uma tabela publicada.  
   
--   
-  `SET CONTEXT_INFO` não deve ser usado para modificar o contexto de transações em que as alterações de esquema são executadas em objetos publicados.  
+-   `SET CONTEXT_INFO` não deve ser usado para modificar o contexto de transações em que as alterações de esquema são executadas em objetos publicados.  
   
 #### <a name="adding-columns"></a>Adicionando colunas  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68199456"
   
 -   Para adicionar uma nova coluna a uma tabela sem incluir essa coluna em uma publicação existente, desabilite a replicação de alterações de esquema e, em seguida, execute ALTER TABLE \<Table> ADD \<Column>.  
   
--   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>** .  
+-   Para incluir uma coluna existente em uma publicação existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
   
      Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá que as assinaturas sejam reinicializadas.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "68199456"
   
 -   Para remover uma coluna de uma publicação existente e remover a coluna da tabela no Publicador, execute ALTER TABLE \<Table> DROP \<Column>. Por padrão, a coluna é então descartada da tabela em todos os Assinantes.  
   
--   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>** .  
+-   Para remover uma coluna de uma publicação existente, mas manter a coluna na tabela no Publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) ou a caixa de diálogo **Propriedades da Publicação – \<Publicação>**.  
   
      Para obter mais informações, consulte [Definir e modificar um filtro de colunas](define-and-modify-a-column-filter.md). Isso exigirá a geração de um instantâneo novo.  
   
@@ -147,8 +146,7 @@ ms.locfileid: "68199456"
         |`hierarchyid`|Permitir alteração|Bloquear alteração|Bloquear alteração|  
         |`geography` e `geometry`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
         |`filestream`|Permitir alteração|Bloquear alteração|Bloquear alteração|  
-        |
-  `date`, `time`, `datetime2`, e `datetimeoffset`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
+        |`date`, `time`, `datetime2` e `datetimeoffset`|Permitir alteração|Permitir alteração<sup>1</sup>|Bloquear alteração|  
   
          <sup>1</sup> os assinantes do SQL Server Compact convertem esses tipos de dados no Assinante.  
   
@@ -160,11 +158,11 @@ ms.locfileid: "68199456"
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER VIEW &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-view-transact-sql)   
+ [ALTER PROCEDURE &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-procedure-transact-sql)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
- [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   
+ [Publicar objetos de banco de dados e](publish-data-and-database-objects.md)   
  [Regenerar os procedimentos transacionais personalizados para refletir alterações de esquema](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

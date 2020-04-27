@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206559"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de desempenho **JobSteps** do agente contém contadores de desempenho que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatam informações sobre etapas de trabalho do Agent. A tabela a seguir lista os contadores contidos nesse objeto.  
+  O objeto de desempenho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **do** Agent contém contadores de desempenho que relatam informações sobre etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A tabela a seguir lista os contadores contidos nesse objeto.  
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68206559"
 |----------|-----------------|  
 |**Etapas ativas**|Este contador informa o número de etapas de trabalho atualmente em execução.|  
 |**Etapas em fila**|Este contador informa o número de etapas de trabalho que estão prontas para execução pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas que ainda não foram iniciadas.|  
-|**Total de tentativas de etapa**|Esse contador informa o número total de vezes que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] houve uma nova tentativa de uma etapa de trabalho desde a última reinicialização do servidor.|  
+|**Total de repetições de etapas**|Esse contador informa o número total de vezes que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repetiu uma etapa de trabalho desde a última reinicialização do servidor.|  
   
  Cada contador no objeto contém as seguintes instâncias:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68206559"
 |**CmdExec**|Informações de etapas de trabalho que usam o subsistema **CmdExec** .|  
 |**Distribuição**|Informações de etapas de trabalho que usam o subsistema **Distribution** .|  
 |**Dts**|Informações de etapas de trabalho que usam o subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-|**Heterogêneo**|Informações de etapas de trabalho que usam o subsistema **LogReader** .|  
+|**LogReader**|Informações de etapas de trabalho que usam o subsistema **LogReader** .|  
 |**Mesclagem**|Informações de etapas de trabalho que usam o subsistema **Merge** .|  
 |**PowerShell**|Informações de etapas de trabalho que usam o subsistema **PowerShell** .|  
 |**QueueReader**|Informações de etapas de trabalho que usam o subsistema **QueueReader** .|  

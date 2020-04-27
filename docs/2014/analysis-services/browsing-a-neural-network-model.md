@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174195"
 ---
 # <a name="browsing-a-neural-network-model"></a>Procurando um modelo de rede neural
   Quando você abre uma rede neural ou modelo de regressão logística usando **Procurar**, o modelo é exibido em um visualizador interativo, semelhante ao visualizador de modelo da rede neural no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O visualizador ajuda a explorar correlações e obter informações sobre os padrões no modelo e os dados subjacentes.
 
-##  <a name="BKMK_Tabs"></a>Explorar o modelo
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar o modelo
  Os modelos que são baseados na Rede Neural ou os algoritmos de Regressão Logística da [!INCLUDE[msCoName](../includes/msconame-md.md)] são semelhantes porque analisam dados como um conjunto de conexões entre entradas e saídas conhecidas. O visualizador **Procurar** ajuda a explorar essas conexões, usando os seguintes controles:
 
 -   [Variáveis](#BKMK_Variables)
 
 -   [Entradas](#BKMK_Inputs)
 
--   [Saídas](#BKMK_Outputs)
+-   [outputs](#BKMK_Outputs)
 
  Se quiser fazer experiências com esse visualizador, crie um modelo usando o assistente [Assistente de Classificação &#40;Suplementos de Mineração de Dados para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) e use a opção **Avançado** para alterar o algoritmo para Regressão Logística da Microsoft na caixa de diálogo **Parâmetros do Algoritmo**.
 
-###  <a name="BKMK_Variables"></a>As
+###  <a name="variables"></a><a name="BKMK_Variables"></a>As
  O painel **Variáveis** exibe uma lista de variáveis de entrada pela ordem de seu efeito no modelo. Você usa os controles de **Entrada** e **Saída** para filtrar o modelo, afetando as variáveis que são exibidas, bem como sua ordem.
 
  Usando esse visualizador, você poderá explorar os fatores que são muito importantes para determinar se um cliente mais provavelmente pertence à categoria Comprador de bicicleta ou não.
@@ -72,17 +72,17 @@ ms.locfileid: "78174195"
 
      Uma dica de ferramenta é exibida que inclui uma pontuação de *importância*, um par de pontuações de *probabilidade* e um par de valores de *comparação*.
 
-    -   A **importância** é calculada em todo o conjunto de dados e identifica o atributo que, considerando todas as entradas, está mais correlacionado com o resultado de destino. O visualizador classifica os valores no gráfico pelas pontuações de importância.
+    -   A **importância** é calculada pelo conjunto de dados inteiro e identifica o atributo que, considerando todas as entradas, está mais correlacionado com o resultado de destino. O visualizador classifica os valores no gráfico pelas pontuações de importância.
 
-    -   A **probabilidade** é calculada para cada conjunto de pares atributo-valor, para os resultados de destino, em todo o conjunto de dados.
+    -   A **probabilidade** é calculada para cada conjunto de pares atributo-valor, para os resultados de destino em todo o conjunto de dados.
 
-    -   A comparação de **precisão** informa o quão útil esse par de atributo-valor específico é para promover um resultado ou outro.
+    -   A **comparação de precisão** informa a utilidade desse par atributo-valor específico para promover um resultado ou outro.
 
      Observação: a dica de ferramenta contém as mesmas informações independentemente de você posicionar o mouse sobre uma coluna ou sobre a outra.
 
  [Voltar ao início](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>Informações
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Informações
  O painel **Entradas** permite escolher um conjunto de entradas e aplicá-lo como um filtro para o modelo, o que permite ver o efeito dessas opções no resultado, com base nos dados de treinamento
 
 ##### <a name="explore-inputs"></a>Explorar entradas
@@ -113,7 +113,7 @@ ms.locfileid: "78174195"
 
  [Voltar ao início](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>Produz
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Produz
  No painel **Saídas**, você poderá escolher o resultado no qual está interessado. As redes neurais permitem especificar quantas colunas de resultados você desejar, embora adicionar mais saídas adicione também mais complexidade do modelo e pode exigir um tempo maior de processamento.
 
  Para comparar duas saídas, elas deverão ter sido designadas como colunas **Prever** ou **Prever apenas**.

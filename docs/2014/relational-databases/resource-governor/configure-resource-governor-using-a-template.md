@@ -13,27 +13,27 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198931"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar o administrador de recursos usando um modelo
   Você pode configurar o Administrador de recursos usando um modelo que é fornecido em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Antes de começar:**  [permissões](#Permissions)  
+-   **Antes de começar:**  [Permissões](#Permissions)  
   
--   **Para criar um grupo de carga de trabalho usando:**  [um modelo](#ConfRGTemplate)  
+-   **Para criar um grupo de carga de trabalho usando:** [um modelo](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Use as etapas a seguir para abrir e modificar um modelo que cria um pool de recursos e um grupo de cargas de trabalho para o pool. Além disso, esse modelo permite que você crie uma função de classificador definida pelo usuário que roteia novas conexões para o grupo padrão ou o grupo de cargas de trabalho que você criar.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  As instruções do [!INCLUDE[tsql](../../includes/tsql-md.md)] do administrador de recursos no modelo exigem a permissão CONTROL SERVER.  
   
-##  <a name="ConfRGTemplate"></a>Configurar Resource Governor usando um modelo  
- **Para configurar o administrador de recursos usando um modelo no[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> Configurar o administrador de recursos usando um modelo  
+ **Para configurar o Administrador de Recursos usando um modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no menu **Exibir** , clique em **Gerenciador de Modelos**.  
   

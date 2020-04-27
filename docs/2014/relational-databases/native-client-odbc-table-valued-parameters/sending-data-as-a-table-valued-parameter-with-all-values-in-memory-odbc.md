@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205454"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
@@ -102,8 +102,7 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Popule os buffers de parâmetro. 
-  `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
+4.  Popule os buffers de parâmetro. `cbTVP` é definido como o número de linhas a serem enviadas ao servidor.  
   
     ```  
     // Populate parameters.  

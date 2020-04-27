@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199427"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar atualização de assinaturas para publicações transacionais
@@ -29,12 +29,12 @@ ms.locfileid: "68199427"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Quando possível, solicite que os usuários insiram as credenciais de segurança em tempo de execução. Se for necessário armazenar credenciais em um arquivo de script, você deverá proteger o arquivo para impedir acesso não autorizado.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Habilite as assinaturas de atualização para publicações transacionais na página **Tipo de Publicação** do Assistente para Nova Publicação. Para obter mais informações sobre como usar esse assistente, consulte [Criar uma publicação](create-a-publication.md). Você não pode habilitar assinaturas de atualização após uma publicação ter sido criada.  
   
  Para usar assinaturas de atualização, você deve configurar também as opções no Assistente para Nova Assinatura. Para obter mais informações, consulte [Criar uma assinatura atualizável em uma publicação transacional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "68199427"
     > [!NOTE]  
     >  O Agente de Leitor de Fila será configurado mesmo se você usar apenas a assinatura de atualização imediata.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Ao criar uma publicação transacional de forma programática usando procedimentos armazenados de replicação, é possível ativar tanto as assinaturas de atualização imediatas como em fila.  
   
 #### <a name="to-create-a-publication-that-supports-immediate-updating-subscriptions"></a>Para criar uma publicação que ofereça suporte a assinaturas de atualização imediatas  
@@ -59,7 +59,7 @@ ms.locfileid: "68199427"
   
     -   Se você não estiver seguro quanto à existência de um trabalho do Agente do Leitor de Log para um banco de dados publicado, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) no Publicador do banco de dados de publicação. Se o conjunto de resultados estiver vazio, será preciso criar um trabalho do Log Reader Agent.  
   
-    -   No publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenciais do Windows sob as quais o agente **@job_name** é **@password**executado para e. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
+    -   No Publicador, execute [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenciais do Windows sob as quais o agente **@job_name** é **@password**executado para e. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
   
 2.  Execute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), especificando um valor de **true** para o parâmetro **@allow_sync_tran**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68199427"
   
     -   Se você não estiver seguro quanto à existência de um trabalho do Agente do Leitor de Log para um banco de dados publicado, execute [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) no Publicador do banco de dados de publicação. Se o conjunto de resultados estiver vazio, será preciso criar um trabalho do Log Reader Agent.  
   
-    -   No publicador, execute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as credenciais do Windows sob as quais o agente **@job_name** é **@password**executado para e. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
+    -   No Publicador, execute [sp_addlogreader_agent &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique as credenciais do Windows sob as quais o agente **@job_name** é **@password**executado para e. Se o agente usar autenticação do SQL Server ao se conectar ao Publicador, será necessário especificar também um valor **0** para **@publisher_security_mode** e as informações de logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** e **@publisher_password**.  
   
 2.  Se necessário, crie um trabalho do Queue Reader Agent para o Distribuidor.  
   
@@ -99,18 +99,18 @@ ms.locfileid: "68199427"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique um valor de **conflict_policy** para **@property** , o modo de política de conflito desejado de **pub wins**, **sub reinit**ou **sub wins** para **@value**.  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Exemplo (Transact-SQL)  
  Esse exemplo cria uma publicação que oferece suporte às assinaturas pull imediatas e em fila.  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir opções de resolução de conflitos de atualização na fila &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Definir opções de resolução de conflito de atualização na fila &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Tipos de publicação para replicação transacional](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Criar uma assinatura atualizável para uma publicação transacional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Assinaturas atualizáveis para replicação transacional](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Usar sqlcmd com variáveis de script](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

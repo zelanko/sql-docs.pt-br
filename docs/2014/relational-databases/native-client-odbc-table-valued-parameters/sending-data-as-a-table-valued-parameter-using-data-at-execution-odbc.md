@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205466"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Este exemplo mostra que você pode usar o streaming de linha, uma linha por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Este exemplo mostra que você pode usar o streaming de linha, várias linhas por chamada para SQLPutData, com ODBC TVP, semelhante a como você pode usar BCP. exe para carregar dados em um banco de dado.  
   
  Antes de compilar o exemplo, altere o nome do servidor na cadeia de conexão.  
