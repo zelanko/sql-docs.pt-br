@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074955"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Conceder permissões em uma dimensão (Analysis Services)
@@ -45,20 +45,20 @@ ms.locfileid: "66074955"
 ## <a name="set-permissions-on-a-database-dimension"></a>Definir permissões em uma dimensão de banco de dados  
  As dimensões de banco de dados são objetos autônomos em um banco de dados, permitindo a reutilização da dimensão dentro do mesmo modelo. Considere uma dimensão de banco de dados DATE usada várias vezes em um modelo, como as dimensões de cubo Data do Pedido, Data de Remessa e Data de Vencimento. Como os cubos e as dimensões do banco de dados são objetos pares em um banco de dados, você pode configurar as permissões de processamento de forma independente em cada objeto.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
 2.  No painel **Dimensões** , a definição de dimensão deve ser definida como **Todas as definições do banco de dados**.  
   
      Por padrão, as permissões são definidas como **Leitura**.  
   
-     Embora **Leitura/Gravação** esteja disponível, recomendamos não usar essa permissão. **Leitura/gravação** é usada para cenários de write-back de dimensão, que foram preteridos. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Embora **Leitura/Gravação** esteja disponível, recomendamos não usar essa permissão. **Leitura/Gravação** é usada para cenários de write-back de dimensão, os quais foram preteridos. Consulte [recursos de Analysis Services preteridos no SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Como opção, você pode definir as permissões **Ler Definição** e **Processo** em objetos de dimensão individuais, desde que essas permissões não estejam definidas no nível de banco de dados. Consulte [Conceder permissões de processo &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) e [Conceder permissões de leitura de definição em metadados de objeto &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obter detalhes.  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>Definir permissões em uma dimensão de cubo  
  As dimensões do cubo são dimensões de banco de dados que foram adicionadas a um cubo. Como tal, elas são estruturalmente dependentes de grupos de medidas associados. Embora você possa processar esses objetos atomicamente, em termos de autorização, faz sentido tratar os cubo e as dimensões de cubo como uma única entidade.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
 2.  No painel **dimensões** , altere o conjunto de dimensões para \<nome do cubo> **dimensões do cubo**.  
   

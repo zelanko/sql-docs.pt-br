@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072403"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Correspondência de Nomes (Assistente de Exibição da Fonte de Dados) (Analysis Services)
@@ -35,8 +35,8 @@ ms.locfileid: "66072403"
 |Selecionar|Para criar|  
 |------------|---------------|  
 |**Mesmo nome que a chave primária**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome da coluna de chave primária em uma tabela selecionada.|  
-|**Mesmo nome que o nome da tabela de destino**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome de uma tabela selecionada.|  
-|**Nome da tabela de destino + nome da chave primária**|Uma relação lógica com qualquer tabela na qual um nome de coluna corresponde ao nome da tabela selecionada concatenado com o nome da coluna de chave primária da tabela selecionada, nessa ordem. Caracteres não alfanuméricos dentro da concatenação são ignorados (por exemplo, "ID Produto", "ID_Produto" e "IDProduto", todos correspondem).|  
+|**Mesmo nome que a tabela de destino**|Uma relação lógica com qualquer tabela com um nome de coluna que corresponda ao nome de uma tabela selecionada.|  
+|**Nome da tabela de destino + nome de chave primária**|Uma relação lógica com qualquer tabela na qual um nome de coluna corresponde ao nome da tabela selecionada concatenado com o nome da coluna de chave primária da tabela selecionada, nessa ordem. Caracteres não alfanuméricos dentro da concatenação são ignorados (por exemplo, "ID Produto", "ID_Produto" e "IDProduto", todos correspondem).|  
   
  **Descrição e exemplo**  
  Exiba uma descrição e um exemplo do critério selecionado.  

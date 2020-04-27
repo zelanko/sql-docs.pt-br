@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078837"
 ---
 # <a name="modifying-the-product-dimension"></a>Modificando a dimensão Produto
@@ -95,23 +95,23 @@ ms.locfileid: "66078837"
   
 1.  No painel **Atributos** , selecione os seguintes atributos pressionando e mantendo a tecla CTRL pressionada enquanto clica em cada um deles:  
   
-    -   **Classes**  
+    -   **Classe**  
   
-    -   **Color**  
+    -   **Cor**  
   
     -   **Dias para fabricação**  
   
-    -   **Ponto de reordenação**  
+    -   **Reorder Point**  
   
-    -   **Nível de estoque de segurança**  
+    -   **Safety Stock Level**  
   
     -   **Tamanho**  
   
-    -   **Intervalo de tamanho**  
+    -   **Size Range**  
   
     -   **Estilo**  
   
-    -   **Weight**  
+    -   **Peso**  
   
 2.  No campo de propriedade **AttributeHierarchyDisplayFolder** na janela Propriedades, digite `Stocking`.  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66078837"
   
 3.  No painel **Atributos** , selecione os seguintes atributos:  
   
-    -   **Preço do vendedor**  
+    -   **Preço do Revendedor**  
   
-    -   **Preço da lista**  
+    -   **Preço da Lista**  
   
-    -   **Custo padrão**  
+    -   **Custo Padrão**  
   
 4.  Na célula da propriedade **AttributeHierarchyDisplayFolder** na janela Propriedades, digite `Financial`.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66078837"
   
     -   **Data de término**  
   
-    -   **Data de Início**  
+    -   **Data de início**  
   
     -   **Status**  
   
@@ -184,6 +184,6 @@ ms.locfileid: "66078837"
 ## <a name="see-also"></a>Consulte Também  
  [Definir cálculos nomeados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Criar hierarquias definidas pelo usuário](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurar o &#40;todo o nível de&#41; para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar o nível &#40;All&#41; para hierarquias de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

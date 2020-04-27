@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080298"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Limpar os caches do Analysis Services
   O Analysis Services armazena dados em cache dados para melhorar o desempenho da consulta. Este tópico fornece recomendações para usar o comando XMLA ClearCache para limpar caches que foram criados em resposta a uma consulta MDX. Os efeitos da execução de ClearCache variam dependendo se você está usando um modelo tabular ou multidimensional.  
   
- **Quando limpar o cache para modelos multidimensionais**  
+ **Quando limpar o cache de modelos multidimensionais**  
   
  Em bancos de dados multidimensionais, o Analysis Services compila caches no mecanismo de fórmula ao avaliar um cálculo e no mecanismo de armazenamento para os resultados de consultas de dimensões e de grupos de medidas. Consultas de grupos de medidas ocorrem quando o mecanismo de fórmula precisa de dados de medida para uma coordenada de célula ou subcubo. Consultas de dimensão ocorrem ao consultar hierarquias não naturais e ao aplicar autoexists.  
   
  É recomendável limpar o cache para executar testes de desempenho. Limpando o cache entre execuções de teste, você assegura que o cache não irá distorcer os resultados dos testes que avaliam o impacto de uma alteração de design de consulta.  
   
- **Quando limpar o cache para modelos de tabela**  
+ **Quando limpar o cache de modelos tabulares**  
   
  Geralmente, os modelos tabulares são armazenados na memória, quando agregações e outros cálculos são realizados no momento em que uma consulta é executada. Como tal, o comando ClearCache tem um efeito limitado sobre os modelos tabulares. Em um modelo tabular, os dados podem ser adicionados aos caches do Analysis Services se as consultas MDX forem executadas com base nesses dados. Em particular, as medidas DAX referidas pelas operações MDX e autoexist podem armazenar os resultados no cache de fórmulas e no cache de dimensão respectivamente. No entanto, observe que hierarquias não naturais e consultas de grupos de medidas não armazenam resultados em cache no mecanismo de armazenamento. Além disso, é importante reconhecer que as consultas DAX não armazenam os resultados em cache no mecanismo de fórmula e armazenamento. Enquanto o cache existir em resultado de consultas MDX, a execução do comando ClearCache em um modelo tabular invalidará os dados armazenados em cache do sistema.  
   

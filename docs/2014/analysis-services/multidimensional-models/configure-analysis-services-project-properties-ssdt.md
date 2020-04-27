@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076717"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar propriedades do projeto do Analysis Services (SSDT)
@@ -29,7 +29,7 @@ ms.locfileid: "66076717"
 ## <a name="property-description"></a>Descrição da Propriedade  
  A tabela a seguir descreve cada propriedade do projeto, lista seu valor padrão e fornece informações sobre como alterar seu valor.  
   
-|Propriedade|Configuração Padrão|DESCRIÇÃO|  
+|Propriedade|Configuração padrão|Descrição|  
 |--------------|---------------------|-----------------|  
 |Construir / Deployment Server Edition|A edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para desenvolver o projeto.|Especifica a edição do servidor no qual os projetos serão finalmente implantados. Quando houver vários desenvolvedores trabalhando em um projeto, eles precisam entender a edição do servidor para saber quais recursos incorporar ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Construir / Deployment Server Edition|A versão usada para desenvolver os projetos.|Especifica a versão do servidor no qual os projetos serão finalmente implantados.|  
@@ -51,6 +51,6 @@ ms.locfileid: "66076717"
   
 ## <a name="see-also"></a>Consulte Também  
  [Compilar projetos de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Implantar projetos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

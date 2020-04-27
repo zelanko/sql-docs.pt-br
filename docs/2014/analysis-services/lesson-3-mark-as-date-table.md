@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078792"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lição 4: Marcar como Tabela de Data
@@ -24,18 +24,18 @@ ms.locfileid: "66078792"
   
  Nesta lição, você aprenderá a marcar a tabela de Data importada e renomeada como a *tabela de Data* e a coluna de Data (na tabela de Data) como a *coluna de Data* (identificador exclusivo). Todo o uso da data de nome pode ser confuso, mas logo você terá a ideia.  
   
- Tempo estimado para conclusão desta lição: **3 minutos**  
+ Tempo estimado para concluir esta lição: **3 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 3: Renomear colunas](rename-columns.md).  
   
 ### <a name="to-set-mark-as-date-table"></a>Para definir Marcar Como Tabela de Data  
   
 1.  No designer de modelos, clique na tabela **Data** (guia).  
   
-2.  Clique no menu **Tabela**, clique em **Data** e, em seguida, clique em **Marcar Como Tabela de Data**.  
+2.  Clique no menu **tabela** , clique em **Data**e, em seguida, clique em **Marcar como tabela de data**.  
   
-3.  Na caixa de diálogo **Marcar Como Tabela de Data**, na caixa de listagem **Data**, selecione a coluna **Data** como o identificador exclusivo.  
+3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione a coluna **Data** como o identificador exclusivo.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Para continuar este tutorial, vá para a próxima lição: [Lição 5: Criar relações](lesson-4-create-relationships.md).  

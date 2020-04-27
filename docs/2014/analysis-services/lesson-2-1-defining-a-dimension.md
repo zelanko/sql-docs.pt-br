@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079092"
 ---
 # <a name="defining-a-dimension"></a>Definindo uma dimensão
@@ -35,33 +35,33 @@ ms.locfileid: "66079092"
   
 5.  Na lista **Tabela principal** , selecione **Date**.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
 7.  Na página **Selecionar Atributos de Dimensão** , marque as caixas de seleção dos seguintes atributos:  
   
-    -   **Chave de data**  
+    -   **Chave de Data**  
   
-    -   **Chave alternativa de data completa**  
+    -   **Chave Alternativa de Data Completa**  
   
-    -   **Nome do mês Inglês**  
+    -   **Nome do Mês em Inglês**  
   
-    -   **Trimestre do calendário**  
+    -   **Calendar Quarter**  
   
-    -   **Ano civil**  
+    -   **Calendar Year**  
   
-    -   **Semestre civil**  
+    -   **Calendar Semester**  
   
 8.  Altere a configuração da coluna **Tipo de Atributo** do atributo **Full Date Alternate Key** de **Regular** para **Date**. Para fazer isso, clique em **Regular** na coluna **Tipo de Atributo** . Em seguida, clique na seta para expandir as opções. Em seguida, clique**em data do****calendário** > de **Data** > . Clique em **OK**. Repita essas etapas para alterar o tipo de atributo dos atributos da seguinte maneira:  
   
-    -   **Nome do mês Inglês** para **mês**  
+    -   **English Month Name** para **Month**  
   
-    -   **Calendário trimestre** a **trimestre**  
+    -   **Calendar Quarter** para **Quarter**  
   
-    -   **Ano civil** para **ano**  
+    -   **Ano Civil** para **Ano**  
   
-    -   **Semestre do calendário** ao **semestre**  
+    -   **Calendar Semester** para **Half Year**  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página **Concluindo o Assistente** , no painel Visualização, é possível ver a dimensão **Data** e seus atributos.  
   

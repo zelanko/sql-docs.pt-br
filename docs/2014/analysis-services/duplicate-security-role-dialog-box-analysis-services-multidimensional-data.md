@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081495"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Função de Segurança Duplicada do Analysis Services (Analysis Services - Dados Multidimensionais)
@@ -30,6 +30,6 @@ ms.locfileid: "66081495"
   
 ## <a name="see-also"></a>Consulte Também  
  [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Funções de segurança &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Funções de Segurança &#40;Analysis Services – Dados Multidimensionais&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

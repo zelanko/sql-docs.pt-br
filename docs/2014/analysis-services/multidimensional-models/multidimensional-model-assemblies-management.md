@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073525"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gerenciamento de assemblies de modelo multidimensional
@@ -73,23 +73,22 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Para fins de compatibilidade com versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a sintaxe a seguir é também aceitável:  
   
- *AssemblyName*! *FullClassName*! *ProcedureName*(*argument1*, *argument2*,...)  
+ *AssemblyName*!*FullClassName*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
  Se a biblioteca COM oferece suporte para várias interfaces, a ID da interface também pode ser usada para resolver o nome do procedimento, conforme demonstrado aqui:  
   
- *AssemblyName*! *InterfaceName*! *ProcedureName*(*argument1*, *argument2*,...)  
+ *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
 ## <a name="security"></a>Segurança  
  A segurança dos assemblies baseia-se no modelo de segurança .NET Framework, que é um modelo de segurança de acesso por código. O .NET Framework oferece suporte a um mecanismo de segurança de acesso por código assumindo que o runtime pode hospedar tanto o código totalmente confiável quanto o parcialmente confiável. Os recursos protegidos pela segurança de código de acesso .NET Framework geralmente são envolvidos pelo código gerenciado que demanda a permissão correspondente antes de permitir o acesso ao recurso. A demanda para a permissão é satisfatória apenas quando todos os chamadores (no nível de assembly) na pilha de chamadas tiverem a permissão do recurso correspondente.  
   
  Para os assemblies, a permissão de execução é passada com a propriedade `PermissionSet` no objeto `Assembly`. As permissões que o código gerenciado recebe são determinadas pela política de segurança em vigor. Existem três níveis de política que estão em vigor em um ambiente de host não[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : empresa, computador e usuário. A lista efetiva de permissões que o código recebe é determinada pela interseção das permissões obtidas por esses três níveis.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um nível de política de segurança no nível do host ao CLR ao hospedá-lo; essa política é um nível de política adicional abaixo dos três níveis de política que estão sempre em funcionamento. Essa política é definida para todos os domínios de aplicativo criados pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  A política de nível host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma combinação de política fixa do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para assemblies de sistema e política específica de usuário para assemblies de usuário. A parte especificada pelo usuário da política host do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] baseia-se no proprietário do assembly especificando um de três recipientes de permissão para cada assembly.  
   
-|Configuração de permissões|DESCRIÇÃO|  
+|Configuração de permissões|Descrição|  
 |------------------------|-----------------|  
 |`Safe`|Fornece a permissão de computação interna. Esse recipiente de permissão não atribui permissões para acessar qualquer um dos recursos protegidos em .NET Framework. Este será o recipiente de permissão padrão de um assembly se não houver outro especificado com a propriedade `PermissionSet`.|  
 |`ExternalAccess`|Fornece o mesmo acesso que a configuração `Safe`, com a habilidade adicional de acessar recursos externos do sistema. Esse recipiente de permissão não oferece garantias de segurança (embora seja possível para proteger esse cenário), mas oferece garantias de confiabilidade.|  
@@ -108,9 +107,8 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  A propriedade `ImpersonationMode` pode ser definida como `ImpersonateCurrentUser` ou `ImpersonateAnonymous`. A configuração padrão, `ImpersonateCurrentUser`, executa um assembly na conta de login de rede do usuário atual. Se a `ImpersonateAnonymous` configuração for usada, o contexto de execução será correspondente à conta de*usuário de logon do Windows IUSER_* ServerName no servidor. Esta é a conta-convidado da Internet que limitou os privilégios no servidor. Um assembly executado nesse contexto só pode acessar recursos limitados no servidor local.  
   
-### <a name="application-domains"></a>Domínios de aplicativo  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+### <a name="application-domains"></a>Domínios do aplicativo  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não expõe os domínios de aplicativo diretamente. Devido a um conjunto de assemblies executado no mesmo domínio de aplicativo, os domínios de aplicativo podem descobrir um ao outro no momento de execução usando o namespace `System.Reflection` no .NET Framework, ou de alguma outra maneira, e podem chamá-los no modo associado mais recente. Essa chamadas estarão sujeitas às verificações de permissão usadas pela segurança com base na autorização do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Você não deve confiar na localização dos assemblies no mesmo domínio do aplicativo, pois o limite do domínio de aplicativo e dos assemblies que vão para cada domínio são definidos pela implementação.  
   

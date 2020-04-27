@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074215"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usando Cube Writebacks (MDX)
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   Alterando a granularidade da dimensão da dimensão incluída no write-back.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modificando dados &#40;&#41;MDX](mdx-data-modification-modifying-data.md)  
+ [Modificando dados &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

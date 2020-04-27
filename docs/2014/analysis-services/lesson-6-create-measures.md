@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078427"
 ---
 # <a name="lesson-7-create-measures"></a>Lição 7: Criar medidas
-  Nesta lição, você criará medidas a serem incluída no modelo. Semelhante às colunas calculadas que você criou na lição anterior, uma medida é essencialmente um cálculo criado por meio de uma fórmula DAX. No entanto, ao contrário de colunas calculadas, medidas são avaliadas com base em um *filtro* selecionado pelo usuário; por exemplo, uma coluna ou uma segmentação de dados adicionada ao campo Rótulos de Linha em uma Tabela Dinâmica.   Um valor para cada célula no filtro é então calculado pela medida aplicada. As medidas são cálculos avançados e flexíveis que você incluirá em quase todos os modelos de tabela, a fim de executar cálculos dinâmicos em dados numéricos. Para saber mais, consulte [Medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  
+  Nesta lição, você criará medidas a serem incluída no modelo. Semelhante às colunas calculadas que você criou na lição anterior, uma medida é essencialmente um cálculo criado por meio de uma fórmula DAX. No entanto, diferente das colunas calculadas, são avaliadas medidas com base em um *filtro*selecionado pelo usuário; por exemplo, uma coluna ou uma segmentação de dados adicionada ao campo Rótulos de Linha em um Tabela Dinâmica.   Um valor para cada célula no filtro é então calculado pela medida aplicada. As medidas são cálculos avançados e flexíveis que você incluirá em quase todos os modelos de tabela, a fim de executar cálculos dinâmicos em dados numéricos. Para saber mais, consulte [Medidas &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
- Para criar medidas, você usará a grade de medida. Por padrão, cada tabela tem uma grade de medida vazia; no entanto, você normalmente não criará medidas para todas as tabelas. A Grade de Medida aparece abaixo de uma tabela no designer de modelos em Exibição de Dados. Para ocultar ou mostrar a grade de medida para uma tabela, clique no menu **tabela** e clique em **Mostrar Grade de Medida**.  
+ Para criar medidas, você usará a grade de medida. Por padrão, cada tabela tem uma grade de medida vazia; porém, você não criará medidas normalmente para cada tabela. A Grade de Medida aparece abaixo de uma tabela no designer de modelos em Exibição de Dados. Para ocultar ou mostrar a grade de medida para uma tabela, clique no menu **tabela** e clique em **Mostrar Grade de Medida**.  
   
- Você pode criar uma medida clicando em uma célula vazia na grade de medida e digitando uma fórmula DAX na barra de fórmulas. Quando você clicar em ENTER para completar a fórmula, a medida aparecerá na célula. Você também pode criar medidas usando uma função de agregação padrão clicando em uma coluna e, em seguida, clicando no botão AutoSoma (**∑**) na barra de ferramentas. As medidas criadas com o recurso AutoSoma serão exibidas diretamente na célula da grade de medida abaixo da coluna, mas podem ser movidas se necessário.  
+ Você pode criar uma medida clicando em uma célula vazia na grade de medida e digitando uma fórmula DAX na barra de fórmulas. Quando você clicar em ENTER para concluir a fórmula, a medida será exibida na célula. Você também pode criar medidas usando uma função de agregação padrão clicando em uma coluna e, em seguida, clicando no botão AutoSoma (**∑**) na barra de ferramentas. As medidas criadas com o recurso AutoSoma serão exibidas diretamente na célula da grade de medida abaixo da coluna, mas podem ser movidas se necessário.  
   
  Nesta lição, você criará medidas inserindo uma fórmula DAX na barra de fórmulas e usando o recurso AutoSoma.  
   
- Tempo estimado para concluir esta lição: **30 minutos**  
+ Tempo estimado para conclusão desta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 6: Criar colunas calculadas](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Criar medidas  
@@ -66,7 +66,7 @@ ms.locfileid: "66078427"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
- Ao criar uma taxa de comparação entre um período incompleto e o período anterior, a fórmula deve levar em conta a proporção do período decorrido e compará-la à mesma proporção no período anterior. Nesse caso, [Dias – Trimestre Atual até Hoje]/[Dias do Trimestre Atual] fornece a proporção decorrida no período atual.  
+ Ao criar uma taxa de comparação entre um período incompleto e o período anterior, a fórmula deve levar em conta a proporção do período decorrido e compará-la à mesma proporção do período anterior. Nesse caso, [Dias – Trimestre Atual até Hoje]/[Dias do Trimestre Atual] fornece a proporção decorrida no período atual.  
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>Para criar a medida Pedido de Vendas de Contagem Distinta pela Internet na tabela Internet Sales  
   
@@ -95,8 +95,8 @@ ms.locfileid: "66078427"
     |Valor do Desconto Total pela Internet|Valor do desconto|SUM|=SUM([Valor do Desconto])|  
     |Custo Total do Produto da Internet|Custo Total do Produto|SUM|=SUM([Custo Total do Produto])|  
     |Vendas Totais pela Internet|Valor das Vendas|SUM|=SUM([Valor das Vendas])|  
-    |Margem Total da Internet|Margin|SUM|=SUM([Margin])|  
-    |Valor Total dos Imp. da Internet|Valor dos Imp.|SUM|=SUM([Valor dos Imp.])|  
+    |Margem Total da Internet|Margem|SUM|=SUM([Margem])|  
+    |Valor Total dos Imp. da Internet|Valor dos Impostos|SUM|=SUM([Valor dos Imp.])|  
     |Frete Total da Internet|Freight|SUM|=SUM([Freight])|  
   
 2.  Clicando em uma célula vazia na grade de medida e usando a fórmula DAX, crie e nomeie as seguintes medidas:  

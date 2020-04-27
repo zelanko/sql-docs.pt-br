@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075348"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Especificando opções de implantação de função e de partição
@@ -50,7 +50,7 @@ ms.locfileid: "66075348"
   
 -   As funções e os membros de função existentes no banco de dados de destino são retidos e nenhuma nova função será implantada.  
   
--   **Observação** Quando as funções e os membros existentes são mantidos, as permissões associadas a essas funções são redefinidas como None. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o assistente de implantação do Analysis Service, consulte "reter funções e membros" na base de dados de conhecimento Microsoft.  
+-   **Nota** Quando funções e membros existentes são retidos, as permissões associadas a essas funções são redefinidas como nenhuma. As permissões de segurança são contidas pelos objetos que protegem, não pelas funções de segurança com que estão associadas. Para obter mais informações sobre como trabalhar com esse comportamento usando o assistente de implantação do Analysis Service, consulte "reter funções e membros" na base de dados de conhecimento Microsoft.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificando as opções de implantação de partição e de função  
  Talvez seja necessário implantar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto usando opções de partição e função diferentes das armazenadas no arquivo nome \<do *projeto*>. deploymentoptions. Por exemplo, talvez você queira reter partições, funções e membros de função existentes, em vez de substituir todas as partições, funções e membros existentes, conforme indicado no \<arquivo *nome do projeto*>. deploymentoptions.  
@@ -63,7 +63,7 @@ ms.locfileid: "66075348"
   
      -ou-  
   
--   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para ser executado em modo de arquivo de resposta. (Para obter mais informações sobre o modo de arquivo de resposta, consulte [Executando o Assistente de Implantação do Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
+-   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para ser executado em modo de arquivo de resposta. (Para obter mais informações sobre o modo de arquivo de resposta, consulte [executando o assistente de implantação de Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
      -ou-  
   

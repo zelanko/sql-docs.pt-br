@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074707"
 ---
 # <a name="cube-space"></a>Espaço de cubo
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  Na consulta anterior, a hierarquia Geografia do Cliente definida pelo usuário dentro da dimensão Cliente é usada para definir a posição no espaço do cubo que foi anteriormente definida usando uma hierarquia de atributo. A posição idêntica no espaço do cubo pode ser definida usando hierarquias de atributo ou hierarquias definidas pelo usuário.  
   
-##  <a name="AttribRelationships"></a>Relações de atributo e espaço de cubo  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a>Relações de atributo e espaço de cubo  
  Definindo relações de atributo entre atributos relacionados aprimora o desempenho da consulta (facilitando a criação de agregações apropriadas) e afeta o membro de uma hierarquia de atributo relacionada que aparece com um membro de hierarquia de atributo. Por exemplo, quando você define uma tupla que inclui um membro da hierarquia de atributo Cidade e a tupla não define explicitamente o membro da hierarquia de atributo País, você poderia esperar que o membro padrão da hierarquia de atributo País seria o membro relacionado da hierarquia de atributo País. Porém, isso só ocorrerá se uma relação de atributo estiver definida entre a hierarquia de atributo Cidade e a hierarquia de atributo País.  
   
  O exemplo a seguir retorna o membro de uma hierarquia de atributo relacionada que não está explicitamente incluído na consulta.  
@@ -135,6 +135,6 @@ FROM [Adventure Works]
  [Trabalhando com membros, tuplas e conjuntos &#40;&#41;MDX](working-with-members-tuples-and-sets-mdx.md)   
  [Totais visuais e totais não visuais](visual-totals-and-non-visual-totals.md)   
  [Referência de linguagem MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
- [Expressões multidimensionais &#40;referência de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

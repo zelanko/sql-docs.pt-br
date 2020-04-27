@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076283"
 ---
 # <a name="create-calculated-members"></a>Criar membros calculados
@@ -42,7 +42,7 @@ ms.locfileid: "66076283"
   
  Hierarquias são divididas em níveis que contêm membros. Cada membro produz um título. Ao procurar dados em um cubo, os usuários finais podem fazer uma busca detalhada a partir de um título selecionado até títulos subordinados que antes não eram exibidos. O título do membro calculado é adicionado ao nível diretamente abaixo do membro pai selecionado.  
   
- **Expression**  
+ **Expressão**  
  Especifique a expressão que produz os valores do membro calculado. Ela pode ser escrita em MDX. A expressão pode conter uma das seguintes opções:  
   
 -   Expressões de dados que representam componentes de cubo, como dimensões, níveis, medidas, etc.  

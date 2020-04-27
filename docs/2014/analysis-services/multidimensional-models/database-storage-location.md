@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075897"
 ---
 # <a name="database-storage-location"></a>Local de armazenamento do banco de dados
@@ -33,9 +33,7 @@ ms.locfileid: "66075897"
 >  É recomendável definir o caminho UNC para usar uma SAN (Rede de Área de Armazenamento), uma rede baseada em iSCSI ou um disco anexado localmente. Qualquer caminho UNC para um compartilhamento de rede ou qualquer solução de armazenamento remoto de alta latência leva a uma instalação sem suporte.  
   
 ### <a name="dbstoragelocation-compared-to-storagelocation"></a>Comparação entre DbStorageLocation e StorageLocation  
- 
-  `DbStorageLocation` especifica a pasta em que estão todos os arquivos de metadados e dados do banco de dados, enquanto que `StorageLocation` especifica a pasta em que está uma ou mais partições de um cubo. 
-  `StorageLocation` pode ser definida de maneira independente de `DbStorageLocation`. Esta é uma decisão do dba do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com base nos resultados esperados e muitas vezes sobreporá o uso de uma propriedade ou outra.  
+ `DbStorageLocation` especifica a pasta em que estão todos os arquivos de metadados e dados do banco de dados, enquanto que `StorageLocation` especifica a pasta em que está uma ou mais partições de um cubo. `StorageLocation` pode ser definida de maneira independente de `DbStorageLocation`. Esta é uma decisão do dba do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com base nos resultados esperados e muitas vezes sobreporá o uso de uma propriedade ou outra.  
   
 ## <a name="dbstoragelocation-usage"></a>O uso de DbStorageLocation  
  A `DbStorageLocation` Propriedade Database é usada como parte de um `Create` comando de banco de `Detach` / `Attach` dados em uma sequência de comandos `Backup` / `Restore` de banco de dados, em uma `Synchronize` sequência de comandos de banco de dados ou em um comando de banco de dados. Ao alterar a propriedade `DbStorageLocation` do banco de dados, consideramos uma alteração estrutural no objeto de banco de dados. Isso significa que todos os metadados devem ser recriados e os dados devem ser reprocessados.  
@@ -50,6 +48,6 @@ ms.locfileid: "66075897"
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
  [Criar elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
  [Anexar elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Sincronizar elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
+ [Elemento Synchronize &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

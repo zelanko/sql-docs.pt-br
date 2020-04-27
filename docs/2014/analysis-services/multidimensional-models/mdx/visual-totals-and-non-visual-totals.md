@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073729"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totais visuais e totais não visuais
@@ -36,11 +36,11 @@ ms.locfileid: "66073729"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Todos os produtos**|**Acessórios**|**Bicicletas**|**Vestuário**|**Componentes**|  
-|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$66302381.56**|**$1777840.84**|**$11799076.66**|  
-|**Loja de bicicletas Specialty**|**$6756166.18**|**$65125.48**|**$6080117.73**|**$252933.91**|**$357989.07**|  
-|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$30892354.33**|**$592385.71**|**$3307774.48**|  
-|**Armazén**|**$38,726,913.48**|**$331169.64**|**$29329909.50**|**$932521.23**|**$8133313.11**|  
+||**Todos os Produtos**|**Acessórios**|**Bikes**|**Vestuário**|**Componentes**|  
+|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
+|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
+|**Armazén**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>Não visual em linhas e colunas  
  Para produzir uma tabela somente com dados dos produtos Accessories e Clothing, revendedores Value Added Reseller e Warehouse, mas mantendo os totais gerais, o seguinte poderia ser escrito usando NON VISUAL:  
@@ -61,10 +61,10 @@ ms.locfileid: "66073729"
   
 |||||  
 |-|-|-|-|  
-||**Todos os produtos**|**Acessórios**|**Vestuário**|  
-|**Todos os revendedores**|**$80450596.98**|**$571297.93**|**$1777840.84**|  
-|**Revendedor de valor agregado**|**$34,967,517.33**|**$175002.81**|**$592385.71**|  
-|**Armazén**|**$38,726,913.48**|**$331169.64**|**$932521.23**|  
+||**Todos os Produtos**|**Acessórios**|**Vestuário**|  
+|**Todos os Revendedores**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
+|**Revendedor de Valor Agregado**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
+|**Armazén**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>Não visual em linhas  
  Para criar uma tabela que totalize visualmente as colunas, mas nos totais de linhas exiba o total verdadeiro de todos os itens em [Category], a seguinte consulta deve ser emitida:  

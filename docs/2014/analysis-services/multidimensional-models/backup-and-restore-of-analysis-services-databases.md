@@ -22,14 +22,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077026"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e restauração de bancos de dados do Analysis Services
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui backup e restauração de forma que você possa recuperar um banco de dados e seus objetos de um ponto específico no tempo. Backup e restauração também é uma técnica válida por migrar bancos de dados para servidores atualizados, mover bancos de dados entre servidores ou implantar um banco de dados para um servidor de produção. Para fins de recuperação de dados, se você ainda não tem um plano de backup e seus dados são valiosos, deve criar e implementar um plano o mais breve possível.  
   
  Os comandos de backup e restauração são executados em um banco de dados implantado do Analysis Services. Para seus projetos e soluções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você deve usar o controle do código-fonte para garantir que possa recuperar versões específicas de seus arquivos de origem e, então, criar um plano de recuperação de dados para o repositório do sistema de controle do código-fonte que você estiver usando.  
@@ -40,20 +39,20 @@ ms.locfileid: "66077026"
   
  Este tópico inclui as seções a seguir:  
   
--   [Preparando para o backup](#bkmk_prep)  
+-   [Preparando para backup](#bkmk_prep)  
   
 -   [Fazendo backup de um banco de dados multidimensional ou tabular](#bkmk_cube)  
   
--   [Restaurando um banco de dados Analysis Services](#bkmk_restore)  
+-   [Restaurando um banco de dados do Analysis Services](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Pré-requisitos  
  Você deve ter permissões administrativas na instância do Analysis Services ou permissões de Controle completo (Administrador) no banco de dados do qual você está fazendo backup.  
   
  O local de restauração deve ser uma instância do Analysis Services que é da mesma versão ou de uma versão mais nova, como a instância da qual o backup foi feito. Embora você não possa restaurar um banco de dados de uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para uma versão anterior do Analysis Services, é prática comum restaurar um banco de dados de versão anterior, como o SQL Server 2012, em uma instância mais recente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  O local de restauração deve ser o mesmo tipo de servidor. Os bancos de dados tabulares somente podem ser restaurados para um Analysis Services que esteja sendo executado em modo tabular. Os bancos de dados multidimensionais exigem uma instância que é executada em modo multidimensional.  
   
-##  <a name="bkmk_prep"></a>Preparando para o backup  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>Preparando para o backup  
  Use a lista de verificação a seguir para preparar para o backup:  
   
 -   Verifique o local em que o arquivo de backup será armazenado. Se você estiver usando um local remoto, deverá especificá-lo como uma pasta UNC. Verifique se você pode acessar o caminho UNC.  
@@ -64,7 +63,7 @@ ms.locfileid: "66077026"
   
 -   Verifique se há arquivos existentes do mesmo nome. Se já existir um arquivo com o mesmo nome, o backup falhará, a menos que você especifique opções para substituir o arquivo.  
   
-##  <a name="bkmk_cube"></a>Fazendo backup de um banco de dados multidimensional ou tabular  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a> Fazendo backup de um banco de dados multidimensional ou de tabela  
  Os administradores podem fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um único arquivo de backup (.abf) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , seja qual for o tamanho do banco de dados. Para obter instruções passo a passo, consulte [Como fazer backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizar o backup de um banco de dados do Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
@@ -100,7 +99,7 @@ ms.locfileid: "66077026"
   
  Para obter mais informações sobre como fazer backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , consulte [Opções de backup](backup-options.md).  
   
-##  <a name="bkmk_restore"></a>Restaurando um banco de dados Analysis Services  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>Restaurando um banco de dados Analysis Services  
  Os administradores podem restaurar um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de um ou mais arquivos de backup.  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072156"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Caixa de diálogo Propriedades da Partição (SSMS)
@@ -28,7 +28,7 @@ ms.locfileid: "66072156"
   
 ## <a name="pages"></a>Pages (Páginas)  
   
-|Página|DESCRIÇÃO|  
+|Página|Descrição|  
 |----------|-----------------|  
 |**Seleção**|Use a página **Seleção** para selecionar a partição no grupo de medidas da qual você deseja exibir ou modificar propriedades. Para obter mais informações sobre essa página, consulte [Seleção &#40;Caixa de diálogo de propriedades de partição&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**Geral**|Use a página **Geral** para exibir e modificar as propriedades gerais da partição selecionada na página **Seleção** . Para obter mais informações sobre essa página, consulte [Geral &#40;Caixa de diálogo de propriedades de partição&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  

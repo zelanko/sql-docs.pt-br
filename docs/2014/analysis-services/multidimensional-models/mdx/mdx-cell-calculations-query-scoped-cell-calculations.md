@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074419"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Criando cálculos de célula no escopo da consulta (MDX)
@@ -29,7 +29,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  O valor `CellCalc_Identifier` é o nome das células calculadas. O valor `String_Expression` contém uma lista de expressões de conjunto MDX ortogonais e unidimensionais. Cada uma delas deve resolver uma das categorias listadas na tabela a seguir.  
   
-|Categoria|DESCRIÇÃO|  
+|Categoria|Descrição|  
 |--------------|-----------------|  
 |Conjunto vazio|Uma expressão de conjunto MDX resolvida em um conjunto vazio. Nesse caso, o escopo da célula calculada é o cubo inteiro.|  
 |Conjunto de membro único|Uma expressão de conjunto MDX resolvida em um único membro.|  
@@ -54,6 +54,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por outro lado, a linguagem MDX processará a fórmula do cálculo sempre que uma consulta MDX for emitida para um cubo que contém células incluídas na definição de células calculadas. Esse processamento ocorre independentemente do escopo de criação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR instrução de cálculo de célula &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Instrução CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

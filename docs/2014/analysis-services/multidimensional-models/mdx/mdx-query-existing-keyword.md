@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073973"
 ---
 # <a name="existing-keyword-mdx"></a>Palavra-chave EXISTING (MDX)
@@ -84,6 +84,6 @@ WHERE
  [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [DrilldownLevel&#41;MDX &#40;](/sql/mdx/drilldownlevel-mdx)   
  [Hierarquiar &#40;&#41;MDX](/sql/mdx/hierarchize-mdx)   
- [Referência de função MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
+ [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

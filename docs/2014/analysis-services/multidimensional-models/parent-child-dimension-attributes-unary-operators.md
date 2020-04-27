@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073452"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operadores unários em dimensões pai-filho
@@ -30,7 +30,7 @@ ms.locfileid: "66073452"
   
  A configuração padrão para a propriedade **UnaryOperatorColumn** de um atributo pai é (nenhum), que desabilita os operadores de rollup personalizado. A tabela a seguir lista os operadores unários e descreve como eles se comportam quando são aplicados a um nível.  
   
-|Operador unário|DESCRIÇÃO|  
+|Operador unário|Descrição|  
 |--------------------|-----------------|  
 |+ (sinal de mais)|O valor do membro é adicionado ao valor de agregação dos membros irmãos que ocorrem antes do membro. Esse operador será o operador padrão se nenhuma coluna de operador unário for definida para um atributo.|  
 |-(sinal de subtração)|O valor do membro é subtraído do valor de agregação dos membros irmãos que ocorrem antes do membro.|  

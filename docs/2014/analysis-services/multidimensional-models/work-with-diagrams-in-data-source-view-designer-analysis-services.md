@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072376"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabalhar com diagramas em um Designer de exibição da fonte de dados (Analysis Services)
@@ -39,9 +39,9 @@ ms.locfileid: "66072376"
   
  [Organizar objetos em um diagrama](#bkmk_arrangeobjects)  
   
- [Preservar a disposição do objeto](#bkmk_preserve)  
+ [Preservar a organização do objeto](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>Adicionar um diagrama  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a> Adicionar um diagrama  
  Diagramas de DSV são criados automaticamente quando você cria o DSV. Depois que o DSV existe, você pode criar diagramas adicionais, removê-los ou ocultar objetos específicos para criar uma representação mais gerenciável do DSV.  
   
  Para criar um novo diagrama, clique com o botão direito do mouse em qualquer lugar do painel **Organizador de Diagramas** , clique em **Novo Diagrama**.  
@@ -52,14 +52,14 @@ ms.locfileid: "66072376"
   
  É possível agrupar tabelas e consultas nomeadas relacionadas em diagramas separados de acordo com os negócios e facilitar o entendimento da exibição da fonte de dados que contém muitas tabelas, exibições e consultas nomeadas. A mesma tabela ou consulta nomeada pode ser incluída em vários diagramas, exceto \<para todas as tabelas> diagrama. No diagrama \<todas as tabelas>, todos os objetos contidos na exibição da fonte de dados são mostrados exatamente uma vez.  
   
-##  <a name="bkmk_edit"></a>Editar ou excluir um diagrama  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Editar ou excluir um diagrama  
  Ao trabalhar com um diagrama, preste atenção aos comandos usados por adicionar e remover objetos. Por exemplo, excluir um objeto de um diagrama o excluirá da DSV. Se você apenas desejar excluí-lo do diagrama, use **Ocultar Tabela** em vez disso.  
   
  ![Instantâneo do workspace de diagrama, menu de atalho](../media/ssas-olapdsv-diagram.gif "Instantâneo do workspace de diagrama, menu de atalho")  
   
  Embora você possa ocultar objetos individualmente, trazê-los de volta usando o comando Mostrar Tabelas Relacionadas retorna todos os objetos relacionados ao diagrama. Para controlar quais objetos são retornados para o workspace, arraste-os do painel de Tabelas em vez disso.  
   
-##  <a name="bkmk_findtables"></a>Localizar tabelas em um diagrama  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>Localizar tabelas em um diagrama  
  Se o esquema for grande, poderá ser difícil rolar uma determinada tabela no painel **Diagrama** . No entanto, as ferramentas a seguir facilitam a localização de uma tabela em um diagrama.  
   
 -   Role a lista de tabelas no painel **Tabelas** .  
@@ -74,14 +74,14 @@ ms.locfileid: "66072376"
   
      Você pode digitar cadeias de caracteres e caracteres curinga na caixa Filtro para exibir subconjuntos das tabelas no diagrama.  
   
-##  <a name="bkmk_arrangeobjects"></a>Organizar objetos em um diagrama  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a> Organizar os objetos em um diagrama  
  Embora o Designer de Exibição da Fonte de Dados possa definir vários diagramas para facilitar o entendimento da DSV, pode ser difícil a leitura de diagramas com dezenas de tabelas, bem como a reorganização manual dos layouts de tabelas pode ser um processo entediante. O Designer de Exibição da Fonte de Dados pode reorganizar automaticamente as tabelas do diagrama atual em um layout retangular ou diagonal com base nas relações entre as tabelas do mesmo.  
   
 -   No layout retangular, as linhas de relações são desenhadas entre as tabelas em vez de entre colunas. As linhas de relação são desenhadas horizontal e verticalmente entre as tabelas.  
   
 -   No layout diagonal, as linhas de relação são desenhadas o mais diretamente possível entre colunas relacionadas das tabelas. Uma relação com várias colunas é anexada à primeira coluna relacionada da tabela. Se as colunas de uma tabela não ficarem visíveis, as linhas serão desenhadas por cima da tabela.  
   
-##  <a name="bkmk_preserve"></a>Preservar a disposição do objeto  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>Preservar a disposição do objeto  
  Depois de organizar manualmente as tabelas da maneira desejada, adicionar mais tabelas ao diagrama pode fazer um diagrama remover todas as alterações recentes feitas no layout do objeto.  
   
  Esse comportamento é mais provável de ocorrer quando você adiciona uma tabela, fazendo o organizador de diagramas mover outras tabelas para acomodar a nova. Ele redesenha o diagrama para assegurar que todas as tabelas e linhas de conexão sejam representadas corretamente. Neste momento, os ajustes manuais na colocação de objetos específicos podem ser perdidos.  
@@ -90,6 +90,6 @@ ms.locfileid: "66072376"
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições da fonte de dados em modelos multidimensionais](data-source-views-in-multidimensional-models.md)   
- [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

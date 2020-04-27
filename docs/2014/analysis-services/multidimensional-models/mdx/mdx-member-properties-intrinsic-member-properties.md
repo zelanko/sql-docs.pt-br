@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074213"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriedades intrínsecas do membro (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expõe propriedades intrínsecas em membros de dimensão que você pode incluir em uma consulta para retornar dados ou metadados adicionais para uso em um aplicativo personalizado ou para ajudar na investigação ou na construção do modelo. Se você estiver usando as ferramentas de cliente do SQL Server, poderá exibir propriedades intrínsecas no SQL Server Management Studio (SSMS).  
   
  As propriedades intrínsecas incluem `ID`, `KEY`, `KEYx` e `NAME`, que são propriedades expostas por cada membro, em qualquer nível. Você também pode retornar informações de posição, como `LEVEL_NUMBER` ou `PARENT_UNIQUE_NAME`, entre outros.  
@@ -60,7 +59,7 @@ ms.locfileid: "66074213"
 ## <a name="context-sensitive-member-properties"></a>Propriedades do membro sensíveis ao contexto  
  Todos os membros de dimensão e membros de nível têm suporte a uma lista de propriedades intrínsecas do membro são sensíveis ao contexto. A tabela a seguir lista essas propriedades sensíveis ao contexto.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`ID`|A ID mantida internamente para o membro.|  
 |`Key`|O valor da chave de membro no tipo de dados original. MEMBER_KEY é para compatibilidade com versões anteriores.  MEMBER_KEY tem o mesmo valor que KEY0 para chaves não compostas e a propriedade MEMBER_KEY é nula para chaves compostas.|  
@@ -90,7 +89,7 @@ ms.locfileid: "66074213"
 > [!NOTE]  
 >  Colunas no conjunto de linhas de esquema MEMBERS suportam as propriedades intrínsecas do membro listadas na seguinte tabela. Para obter mais informações sobre `MEMBERS` o conjunto de linhas de esquema, consulte [MDSCHEMA_MEMBERS conjunto de linhas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`CATALOG_NAME`|O nome do cubo ao qual este membro pertence.|  
 |`CHILDREN_CARDINALITY`|O número de filhos de um membro. Isso pode ser uma estimativa, portanto, você não deve confiar nisso como sendo a contagem exata. Os provedores devem retornar a melhor estimativa possível.|  
@@ -102,7 +101,7 @@ ms.locfileid: "66074213"
 |`IS_DATAMEMBER`|Um booliano que indica se o membro é ou não um membro de dados.|  
 |`IS_PLACEHOLDERMEMBER`|Um booliano que indica se o membro é ou não um espaço reservado.|  
 |`KEYx`|A chave para o membro, onde x é o valor ordinal com base em zero da chave. KEY0 está disponível para chaves compostas e não compostas.<br /><br /> Se a chave for não composta, KEY0 será equivalente a `Key`.<br /><br /> Para chaves compostas, KEY0, KEY1, KEY2 e assim por diante, formam coletivamente a chave composta. Você pode fazer referência a cada uma independentemente em uma consulta para retornar essa parte da chave composta. Por exemplo, especificar KEY0 retorna a primeira parte da chave composta, especificar KEY1 retorna a parte seguinte da chave composta e assim por diante.<br /><br /> Observe que `KEYx` pode ser usado no contexto assim como sem contexto. Por esse motivo, ela é exibida em ambas as listas.<br /><br /> Para obter um exemplo de como usar essa propriedade de membro, consulte [Uma notícia simples do MDX: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID` *x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
+|`LCID`*x*|A conversão da legenda do membro no valor hexadecimal da identificação de localidade, em que *x* é o valor decimal da identificação de localidade (por exemplo, LCID1009 como Inglês – Canadá). Isso somente estará disponível se a conversão tiver a coluna da legenda associada à fonte de dados.|  
 |`LEVEL_NUMBER`|A distância do membro para a raiz da hierarquia. O nível raiz é zero.|  
 |`LEVEL_UNIQUE_NAME`|O nome exclusivo do nível ao qual o membro pertence. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
 |`MEMBER_CAPTION`|Um rótulo ou legenda associado ao membro. A legenda serve basicamente para fins de exibição. Se uma legenda não existir, a consulta retorna `MEMBER_NAME`.|  
@@ -113,8 +112,7 @@ ms.locfileid: "66074213"
 |`MEMBER_VALUE`|O valor do membro no tipo original.|  
 |`PARENT_COUNT`|O número de pais deste membro.|  
 |`PARENT_LEVEL`|A distância do pai do membro para o nível raiz da hierarquia. O nível raiz é zero.|  
-|`PARENT_UNIQUE_NAME`|O nome exclusivo do pai do membro. 
-  `NULL` é retornado para qualquer membro no nível raiz. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
+|`PARENT_UNIQUE_NAME`|O nome exclusivo do pai do membro. `NULL` é retornado para qualquer membro no nível raiz. Para provedores que geram nomes exclusivos por qualificação, cada componente desse nome é delimitado.|  
 |`SKIPPED_LEVELS`|O número de níveis ignorados do membro.|  
 |`UNARY_OPERATOR`|O operador unário do membro.|  
 |`UNIQUE_NAME`|O nome totalmente qualificado do membro, neste formato: [dimensão].[nível].[key6.]|  
@@ -135,7 +133,7 @@ ms.locfileid: "66074213"
 ### <a name="example"></a>Exemplo  
  Os exemplos a seguir mostram as consultas MDX que retornam propriedades intrínsecas.  
   
- **Exemplo 1: usar propriedades intrínsecas sensíveis ao contexto na consulta**  
+ **Exemplo 1: use as propriedades intrínsecas sensíveis ao contexto na consulta**  
   
  O exemplo a seguir retorna a ID pai, a chave e o nome de cada categoria de produto. Observe como as propriedades são expostas como medidas. Isso permite que você exiba as propriedades em um conjunto de células quando você executa a consulta, em vez da caixa de diálogo Propriedades do Membro no SSMS. Você pode executar uma consulta como essa para recuperar os metadados do membro de um cubo que já foi implantado.  
   
@@ -218,6 +216,6 @@ FROM [Adventure Works]
  [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)   
  [PrevMember&#41;MDX &#40;](/sql/mdx/prevmember-mdx)   
  [Usando propriedades do membro &#40;MDX&#41;](mdx-member-properties.md)   
- [Referência de função MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)  
+ [Referência da Função MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

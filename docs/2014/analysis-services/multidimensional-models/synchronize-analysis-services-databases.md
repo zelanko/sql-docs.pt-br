@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072847"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bancos de dados do Analysis Services
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui um recurso de sincronização de banco de dados que torna dois bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] equivalentes copiando os dados e os metadados de um banco de dados em um servidor de origem para um banco de dados de um servidor de destino. Use o recurso Sincronizar Banco de Dados para realizar as tarefas a seguir:  
   
 -   Implantar um banco de dados de um servidor de preparo em um servidor de produção.  
@@ -43,7 +42,7 @@ ms.locfileid: "66072847"
 > [!NOTE]  
 >  Os whitepapers a seguir, escritos para versões anteriores do Analysis Services, ainda se aplicam às soluções multidimensionais escalonáveis criadas usando o SQL Server 2012. Para obter mais informações, consulte [Consulta em expansão com o Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) e [Expansão de consulta para o Analysis Services com bancos de dados somente leitura](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  No servidor de destino do qual a sincronização do banco de dados é iniciada, você deve ser membro da função de administrador de servidor do Analysis Services. No servidor de origem, sua conta de usuário do Windows deve ter permissões de Controle Total no banco de dados de origem. Se você estiver sincronizando o banco de dados interativamente, lembre-se de que a sincronização é executada no contexto de segurança de sua identidade de usuário do Windows. Se sua conta tiver acesso negado a objetos específicos, os objetos serão excluídos da operação. Para obter mais informações sobre funções de administrador de servidor e permissões de banco de dados, consulte [permissões de administrador de servidor de concessão &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [conceder permissões de banco de dados &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  A porta TCP 2383 deve estar aberta em ambos os servidores para permitir conexões remotas entre instâncias padrão. Para obter mais informações sobre a criação de uma exceção no Firewall do Windows, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -82,7 +81,7 @@ ms.locfileid: "66072847"
   
 3.  Especifique o servidor de origem e o banco de dados de origem. Na página Selecionar Banco de Dados para Sincronização, em **Servidor de Origem** e em **Banco de Dados de Origem**, digite o nome do servidor de origem e do banco de dados de origem. Por exemplo, se você estiver implantando de um ambiente de teste para um servidor de produção, a origem será o banco de dados do servidor de preparo.  
   
-     **Servidor de destino** exibe o nome da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instância do com a qual os dados e metadados do banco de dados selecionados no banco de dado de **origem** são sincronizados.  
+     **Servidor de Destino** exibe o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] com a qual os dados e metadados do banco de dados selecionado em **Banco de dados de origem** são sincronizados.  
   
      A sincronização ocorrerá para bancos de dados de origem e destino que têm o mesmo nome. Se o servidor de destino já tiver um banco de dados que compartilha o mesmo nome que o banco de dados de origem, o banco de dados de destino será atualizado com os metadados e os dados de origem. Se o banco de dados não existir, ele será criado no servidor de destino.  
   
@@ -95,10 +94,10 @@ ms.locfileid: "66072847"
   
      A opção **Locais** exibe uma grade que lista a pasta de origem, a pasta de destino e o tamanho estimado das partições locais a serem armazenadas na instância de destino. A grade contém as seguintes colunas:  
   
-     **Pasta de origem**  
+     **Pasta de Origem**  
      Exibe o nome da pasta na instância de origem do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém a partição local. Se a coluna contiver o valor "(Padrão)", o local padrão da instância de origem conterá a partição local.  
   
-     **Pasta de destino**  
+     **Pasta de Destino**  
      Exibe o nome da pasta na instância de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual a partição local deve ser sincronizada. Se a coluna contiver o valor "(Padrão)", o local padrão da instância de destino conterá a partição local.  
   
      Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições locais armazenadas no local selecionado devem ser sincronizadas.  
@@ -117,10 +116,10 @@ ms.locfileid: "66072847"
      **Grupo de medidas**  
      Exibe o nome do grupo de medidas no cubo que contém a partição.  
   
-     **Nome da partição**  
+     **Nome da Partição**  
      Exibe o nome da partição.  
   
-     **Tamanho (MB)**  
+     **Tamanho(Mb)**  
      Exibe o tamanho, em MB (megabytes), da partição.  
   
 5.  Opcionalmente, altere a localização de partições remotas. Use a página **Especificar Locais para Partições Remotas** para indicar se partições remotas gerenciadas pelo banco de dados especificado no servidor de origem devem ser sincronizadas e para especificar uma instância e um banco de dados de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que as partições remotas selecionadas devem ser armazenadas.  
@@ -130,7 +129,7 @@ ms.locfileid: "66072847"
   
      A opção **Locais** exibe uma grade que lista detalhes sobre os locais nos quais partições remotas do banco de dados de origem são armazenadas, incluindo informações sobre a origem, o destino e o tamanho do armazenamento usado por cada local, disponíveis no banco de dados selecionado. A grade contém as seguintes colunas:  
   
-     **Sincronizá**  
+     **Sincronização**  
      Selecione para incluir um local que contém as partições remotas durante a sincronização.  
   
     > [!NOTE]  
@@ -139,7 +138,7 @@ ms.locfileid: "66072847"
      **Servidor de origem**  
      Exibe o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém as partições remotas.  
   
-     **Pasta de origem**  
+     **Pasta de Origem**  
      Exibe o nome da pasta na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém as partições remotas. Se a coluna contiver o valor "(Padrão)", o local padrão da instância exibida em **Servidor de Origem** conterá partições remotas.  
   
      **Servidor de destino**  
@@ -147,7 +146,7 @@ ms.locfileid: "66072847"
   
      Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Gerenciador de Conexões** e especifique uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
   
-     **Pasta de destino**  
+     **Pasta de Destino**  
      Exibe o nome da pasta na instância de destino do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na qual a partição remota deve ser sincronizada. Se a coluna contiver o valor "(Padrão)", o local padrão da instância de destino deverá conter a partição remota.  
   
      Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e especifique uma pasta na instância de destino na qual as partições remotas armazenadas no local selecionado devem ser sincronizadas.  
@@ -163,10 +162,10 @@ ms.locfileid: "66072847"
      **Grupo de medidas**  
      Exibe o nome do grupo de medidas no cubo que contém a partição.  
   
-     **Nome da partição**  
+     **Nome da Partição**  
      Exibe o nome da partição.  
   
-     **Tamanho (MB)**  
+     **Tamanho(Mb)**  
      Exibe o tamanho, em MB (megabytes), da partição.  
   
 6.  Especifique se as informações de permissão do usuário devem ser incluídas e se a compactação deve ser usada. Por padrão, o assistente compacta todos os dados e metadados antes de copiar os arquivos para o servidor de destino. Essa opção resulta em uma transmissão de arquivo mais rápida. Os arquivos são descompactados assim que chegam ao servidor de destino.  

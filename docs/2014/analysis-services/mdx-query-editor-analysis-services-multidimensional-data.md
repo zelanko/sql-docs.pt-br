@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077876"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor de Consultas MDX (Analysis Services - Dados Multidimensionais)
@@ -44,19 +44,19 @@ ms.locfileid: "66077876"
 |----------|----------------|  
 |**Connect**|Abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Desligar**|Desconecta o Editor de Consultas MDX de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Alterar conexão**|Abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância diferente do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Nova consulta com a conexão atual**|Abre uma nova janela Editor de Consultas MDX usando as informações de conexão da janela Editor de Consultas MDX atual.|  
-|**Bancos de dados disponíveis**|Altera a conexão para outro banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na mesma instância.|  
+|**Alterar Conexão**|Abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância diferente do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Nova Consulta com Conexão Atual**|Abre uma nova janela Editor de Consultas MDX usando as informações de conexão da janela Editor de Consultas MDX atual.|  
+|**Bancos de Dados Disponíveis**|Altera a conexão para outro banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na mesma instância.|  
 |**Executados**|Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas MDX.|  
 |**Passar**|Verifica a sintaxe do código selecionado. Se nenhum código estiver selecionado, esta opção verificará a sintaxe de toda a janela Editor de Consultas MDX.|  
-|**Cancelar execução de consulta**|Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando consultas são canceladas, podem ocorrer atrasos enquanto as transações são convertidas.|  
+|**Cancelar Consulta de Execução**|Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando consultas são canceladas, podem ocorrer atrasos enquanto as transações são convertidas.|  
   
 ## <a name="mdx-query-editor-window"></a>Janela Editor de Consultas MDX  
  As opções listadas na tabela a seguir estão disponíveis no Editor de Consultas MDX.  
   
 |Termo|Definição|  
 |----------|----------------|  
-|**janela Editor de consultas**|Digite as instruções e scripts MDX a serem executadas pelo Editor de Consultas MDX.<br /><br /> O menu de contexto do editor de consultas fornece as seguintes opções:<br /><br /> **Recortar**: copia a seleção atual para a área de transferência e remove a seleção da janela do editor de consultas.<br /><br /> **Copiar**: copia a seleção atual para a área de transferência.<br /><br /> **Colar**: cola o conteúdo da área de transferência na seleção atual.<br /><br /> **Conectar**: abre a caixa de diálogo **conectar ao servidor** para estabelecer uma conexão com uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância do.<br /><br /> **Desconectar: desconecta**o editor de consultas atual de uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Desconectar todas as consultas: desconecta**todos os editores de consulta abertos no momento.<br /><br /> **Alterar conexão**: abre a caixa de diálogo **conectar ao servidor** para estabelecer uma conexão com uma instância [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diferente.<br /><br /> **Abrir servidor no Pesquisador de objetos**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] abre a instância para a qual o editor de consultas atual está conectado no **pesquisador de objetos**.<br /><br /> **Execute**: execute o código selecionado ou, se nenhum código estiver selecionado, executará o código inteiro no editor de consultas atual.<br /><br /> **Janela Propriedades**: exibe a janela **Propriedades** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para a janela de consulta atual.<br /><br /> **Opções de consulta**: exibe a caixa de diálogo **Opções de consulta** .|  
+|**janela Editor de consultas**|Digite as instruções e scripts MDX a serem executadas pelo Editor de Consultas MDX.<br /><br /> O menu de contexto do editor de consultas fornece as seguintes opções:<br /><br /> **Recortar**: copia a seleção atual para a área de transferência e remove a seleção da janela do editor de consultas.<br /><br /> **Copiar**: copia a seleção atual para a área de transferência.<br /><br /> **Colar**: cola o conteúdo da área de transferência na seleção atual.<br /><br /> **Conectar**: abre a caixa de diálogo **Conectar ao Servidor** para estabelecer uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Desconectar: desconecta**o editor de consultas atual de uma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância.<br /><br /> **Desconectar todas as consultas: desconecta**todos os editores de consulta abertos no momento.<br /><br /> **Alterar conexão**: abre a caixa de diálogo **conectar ao servidor** para estabelecer uma conexão com uma instância [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diferente.<br /><br /> **Abrir servidor no Pesquisador de objetos**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] abre a instância para a qual o editor de consultas atual está conectado no **pesquisador de objetos**.<br /><br /> **Execute**: execute o código selecionado ou, se nenhum código estiver selecionado, executará o código inteiro no editor de consultas atual.<br /><br /> **Janela Propriedades**: exibe a janela **Propriedades** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para a janela de consulta atual.<br /><br /> **Opções de consulta**: exibe a caixa de diálogo **Opções de consulta** .|  
 |**Janela Metadados**|Exibe metadados para o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conectado no momento.|  
 |**Simples**|Selecione um cubo no banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] conectado no momento para exibir os metadados associados ao cubo na guia **Metadados** .|  
 |**Metadados**|Exibe os metadados do cubo selecionado em **Cubo**, incluindo grupos de medidas e medidas, indicadores chave de desempenho, dimensões, hierarquias, níveis, membros e propriedades de membros. Para recuperar a chave completamente qualificada de um objeto, proceda de uma das seguintes maneiras:<br /><br /> Arraste o objeto da guia **Metadados** para o painel de consulta.<br /><br /> Clique com o botão direito do mouse no objeto e selecione **Copiar**e clique com o botão direito do mouse no painel de consulta e selecione **Colar**.|  

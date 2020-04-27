@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081068"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Geral (caixa de diálogo Propriedades da Partição) (SSMS)
@@ -28,20 +28,20 @@ ms.locfileid: "66081068"
 |----------|----------------|  
 |**ID de Design de Agregação**|Exibe o identificador do design de agregação usado pela partição.|  
 |**Prefixo de agregação**|Exibe o prefixo padrão de instâncias de agregação que são contidas pela partição.|  
-|**Criar carimbo de data/hora**|Exibe a data e a hora de criação da partição.|  
+|**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da partição.|  
 |**Modo de Armazenamento Atual**|Exibe o modo de armazenamento atual da partição.<br /><br /> Observação: esse modo pode variar dependendo das configurações do cache pró-ativo da partição. Para obter mais informações sobre cache pró-ativo, consulte [Cache pró-ativo &#40;Partições&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Descrição**|Digite para alterar a descrição da partição.|  
 |**Estimativa de Linhas**|Digite o número estimado de linhas na fonte de dados subjacente representada pela partição. Esse valor é usado durante o processamento para estimar o tempo e o armazenamento necessários para processar a partição.|  
 |**Tamanho Estimado**|Exibe o tamanho estimado da partição.|  
-|**SESSÃO**|Exibe o identificador da partição.|  
+|**ID**|Exibe o identificador da partição.|  
 |**Último Processamento**|Exibe a data e a hora do último processamento da partição.|  
-|**Última atualização de esquema**|Exibe a data e a hora da última atualização dos metadados da partição.|  
+|**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da partição.|  
 |**Nome**|Exibe o nome da partição.|  
 |**Modo de Processamento**|Selecione o modo de processamento da partição. Para obter mais informações sobre os modos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de processamento para objetos, consulte [processamento de objeto de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID da Fonte de Dados Remota**|Exibe o identificador da fonte de dados remota da qual são recuperados os dados de origem da partição.<br /><br /> Observação: essa propriedade contém um valor apenas para partições remotas.|  
-|**Fatia**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
-|**Origem**|Exibe a tabela ou consulta que fornece os dados de origem da partição.|  
-|**Estado**|Exibe o estado do processamento atual da partição.|  
+|**Slicer**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
+|**Fonte**|Exibe a tabela ou consulta que fornece os dados de origem da partição.|  
+|**State**|Exibe o estado do processamento atual da partição.|  
 |**Local de armazenamento**|Exibe a pasta na qual são armazenados os dados da partição.<br /><br /> Observação: essa propriedade conterá um valor apenas se um local de armazenamento diferente do local de armazenamento padrão for especificado para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Tipo**|Exibe o tipo da partição.|  
   

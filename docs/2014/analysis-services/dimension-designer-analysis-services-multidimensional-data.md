@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081775"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Designer de Dimensão (Analysis Services - Dados multidimensionais)
@@ -35,7 +35,7 @@ ms.locfileid: "66081775"
 ## <a name="pages"></a>Pages (Páginas)  
  O Designer de Dimensão contém as seguintes páginas:  
   
- [Estrutura da dimensão](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Estrutura da Dimensão](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para exibir e modificar os atributos, hierarquias e níveis da dimensão.  
   
  [Relações de Atributo](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  

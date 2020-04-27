@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076897"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Adicionar inteligência de conta a uma dimensão
@@ -44,14 +44,14 @@ ms.locfileid: "66076897"
   
 -   A coluna **Tipos de Conta de Servidor** identifica o tipo de conta correspondente que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece. A tabela a seguir lista os tipos de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reconhece e a agregação padrão para cada um deles. As seleções serão feitas automaticamente se a tabela de dimensões usar o mesmo nome de tipo de conta que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Tipo de conta de servidor|Agregação|DESCRIÇÃO|  
+    |Tipo de conta de servidor|Agregação|Descrição|  
     |-------------------------|-----------------|-----------------|  
     |**Estatística**|`None`|Uma taxa calculada de algo ou a contagem de algo que não é agregada no decorrer do tempo. Esse tipo de conta não é convertido em outras moedas pelas regras de conversão.|  
-    |**Obrigação**|`LastNonEmpty`|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
+    |**Dívida**|`LastNonEmpty`|O dinheiro ou valor de coisas devidos em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente no decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Ativo**|`LastNonEmpty`|O dinheiro ou valor de coisas de propriedade em um momento específico. Esse tipo de conta não é acumulado com o passar do tempo e, portanto, não é agregado naturalmente com o decorrer do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados. Esse tipo de conta é convertido em outras moedas com a taxa Fim do Período.|  
     |**Saldo**|`LastNonEmpty`|A contagem de algo em um momento especificado. Esse tipo de conta é acumulado, mas não agregado naturalmente com o passar do tempo. Por exemplo, a quantia de Ano é o valor do último mês com dados.|  
-    |**Fluxo**|`Sum`|Uma conta com incremento de algo. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` mas não é convertido pelas regras de conversão de moeda.|  
-    |**Custos**|`Sum`|O dinheiro ou valor de coisas gasto. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` e é convertido em outras moedas pela taxa média.|  
+    |**Flow**|`Sum`|Uma conta com incremento de algo. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` mas não é convertido pelas regras de conversão de moeda.|  
+    |**Despesa**|`Sum`|O dinheiro ou valor de coisas gasto. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` e é convertido em outras moedas pela taxa média.|  
     |**Líqui**|`Sum`|O dinheiro ou valor de coisas recebido. Esse tipo de conta é agregado com o passar do tempo como uma `Sum` e é convertido em outras moedas pela taxa média.|  
   
     > [!NOTE]  

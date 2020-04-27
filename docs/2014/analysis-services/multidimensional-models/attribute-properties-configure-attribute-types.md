@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077406"
 ---
 # <a name="configure-attribute-types"></a>Configurar tipos de atributo
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os tipos de atributo ajudam a classificar um atributo em termos de funcionalidade de negócios. Existem muitos tipos de atributo, sendo que a maioria é usada por aplicativos cliente para exibir ou oferecer suporte a um atributo. No entanto, alguns tipos de atributo também têm significado específico para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por exemplo, alguns tipos de atributo identificam atributos que representam períodos de tempo em vários calendários de dimensões de tempo.  
   
-##  <a name="setting_attibute_types"></a>Definindo tipos de atributo  
+##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a>Definindo tipos de atributo  
  O valor da propriedade `Type` de um atributo determina seu tipo. Vários assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configuram os tipos de atributo ao definir dimensões ou atributos. Esses assistentes do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também configuram os tipos de atributo quando os assistentes adicionam funcionalidades às dimensões. Por exemplo, o Assistente de Business Intelligence aplica diversos tipos de atributo aos atributos de uma dimensão quando o assistente adiciona inteligência de contas para identificar nas dimensão os atributos que contêm nomes, códigos, números e estrutura de conta. O Assistente de Business Intelligence também utiliza tipos de atributo, como para conversão de moeda. Para obter mais informações, consulte [Criar uma dimensão de tipo Moeda](database-dimensions-create-a-currency-type-dimension.md).  
   
  As tabelas a seguir listam os tipos de atributo disponíveis no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Essas tabelas separam os tipos de atributo nas seguintes categorias:  
@@ -36,13 +36,13 @@ ms.locfileid: "66077406"
 |----------|----------------|  
 |[Tipos de atributo gerais](#general_attribute_types)|Esses valores estão disponíveis para todos os atributos e existem apenas para possibilitar a classificação dos atributos para uso por aplicativos cliente.|  
 |[Tipos de atributo de dimensão de conta](#account_dimension_attribute_types)|Esses valores identificam um atributo que pertence a uma dimensão de contas. Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](database-dimensions-finance-account-of-parent-child-type.md).|  
-|[Tipo de atributo de dimensão de moeda](#currency_dimension_attribute_types)|Esses valores identificam um atributo que pertence a uma dimensão de moedas. Para obter mais informações sobre dimensões de moeda, consulte [Criar uma dimensão de tipo de moeda](database-dimensions-create-a-currency-type-dimension.md).|  
+|[Tipo de atributo de dimensão de moedas](#currency_dimension_attribute_types)|Esses valores identificam um atributo que pertence a uma dimensão de moedas. Para obter mais informações sobre dimensões de moeda, consulte [Criar uma dimensão de tipo de moeda](database-dimensions-create-a-currency-type-dimension.md).|  
 |[Atributos de dimensão de alteração lenta](#slowly_changing_dimension_attribute_types)|Esses valores identificam um atributo que pertence a uma dimensão de alteração lenta.|  
 |[Atributos de dimensão de tempo](#time_dimension_attribute_types)|Esses valores identificam um atributo que pertence a uma dimensão de tempo. Para obter mais informações sobre dimensões de tempo, consulte [Criar uma dimensão de tipo de data](database-dimensions-create-a-date-type-dimension.md).|  
   
-###  <a name="general_attribute_types"></a>Tipos de atributo gerais  
+###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>Tipos de atributo gerais  
   
-|Valor do tipo de atributo|DESCRIÇÃO|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |`Address`|Representa um endereço.|  
 |`AddressBuilding`|Representa o identificador da construção do endereço.|  
@@ -152,36 +152,36 @@ ms.locfileid: "66077406"
 |`WebUrl`|Representa um endereço de URL.|  
 |`WebXmlOrXsl`|Representa conteúdo XML ou XSL.|  
   
-###  <a name="account_dimension_attribute_types"></a>Tipos de atributo de dimensão de conta  
+###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a>Tipos de atributo de dimensão de conta  
   
-|Valor do tipo de atributo|DESCRIÇÃO|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |`Account`|Representa o pai de uma conta. Normalmente, esse tipo de atributo é aplicado ao atributo pai de uma dimensão de contas.|  
 |`AccountName`|Representa o nome de uma conta. Normalmente, esse tipo de atributo é aplicado aos atributos de chave de uma dimensão de contas.|  
 |`AccountNumber`|Representa o número de uma conta.|  
 |`AccountType`|Representa o tipo de uma conta. Esse tipo de atributo identifica a função de agregação de um membro de conta em uma dimensão do tipo conta no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-###  <a name="currency_dimension_attribute_types"></a>Tipos de atributo de dimensão de moeda  
+###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a>Tipos de atributo de dimensão de moeda  
   
-|Valor do tipo de atributo|DESCRIÇÃO|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |`CurrencyDestination`|Representa a moeda de destino de um câmbio monetário. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de relatório, para uso em conversão de moeda. Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyIsoCode`|Representa o código da moeda da Organização de Padronização Internacional (ISO). Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyName`|Representa o nome de uma moeda. Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencySource`|Representa a moeda de origem de um câmbio monetário. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de moedas, para uso em conversão de moeda. Para obter mais informações sobre como a conversões de moeda, consulte [Conversões de moeda &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a>Tipos de atributo de dimensão de alteração lenta  
+###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a>Tipos de atributo de dimensão de alteração lenta  
   
-|Valor do tipo de atributo|DESCRIÇÃO|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Representa a data de término efetiva para um membro de uma dimensão de alteração lenta.|  
 |**ScdOriginalID**|Representa o identificador original de um membro em uma dimensão de alteração lenta.|  
 |**ScdStartDate**|Representa a data de início efetiva para um membro de uma dimensão de alteração lenta.|  
 |`ScdStatus`|Representa o status efetivo de um membro de uma dimensão de alteração lenta.|  
   
-###  <a name="time_dimension_attribute_types"></a>Tipos de atributo de dimensão de tempo  
+###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a>Tipos de atributo de dimensão de tempo  
   
-|Valor do tipo de atributo|DESCRIÇÃO|  
+|Valor do tipo de atributo|Descrição|  
 |--------------------------|-----------------|  
 |`Date`|Representa uma data. Normalmente, esse tipo de atributo é aplicado ao atributo de chave de uma dimensão de tempo ou dimensão de tempo de servidor.|  
 |`DayOfHalfYear`|Representa o ordinal de dia de um semestre.|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072337"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Nova Medida (Analysis Services - Dados Multidimensionais)
@@ -29,7 +29,7 @@ ms.locfileid: "66072337"
 -   Clicando com o botão direito do mouse no grupo de medidas ou medida no painel **Medidas** na guia **Estrutura do Cubo** do Designer de Cubo e selecionando **Nova Medida** no menu de contexto.  
   
 ## <a name="options"></a>Opções  
- **Usage**  
+ **Uso**  
  Selecione a função de agregação a ser usada pela nova medida.  
   
  **Tabela de origem**  

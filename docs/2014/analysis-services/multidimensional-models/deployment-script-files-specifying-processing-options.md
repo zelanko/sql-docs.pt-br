@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075233"
 ---
 # <a name="specifying-processing-options"></a>Especificando opções de processamento
@@ -29,7 +29,7 @@ ms.locfileid: "66075233"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Revisando as opções de processamento para implantação  
  As definições de configuração armazenadas no \<arquivo de *nome do projeto*>. deploymentoptions são as seguintes:  
   
--   **Método de processamento** Essa configuração controla se os objetos implantados são processados após a implantação e o tipo de processamento que será executado. Há três opções de processamento:  
+-   **Método de Processamento** Essa configuração controla se os objetos implantados são processados após a implantação e o tipo de processamento executados. Há três opções de processamento:  
   
     -   Processamento padrão  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075233"
   
     -   Nenhum  
   
--   **Opções de tabela de write-back** Se o Write-back estiver [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] habilitado no projeto, essa configuração definirá como o Write-back é manipulado. Há três opções de tabela de write-back:  
+-   **Opções de Tabelas de Write-back** Se o write-back estiver habilitado no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , essa configuração definirá como o write-back será manipulado. Há três opções de tabela de write-back:  
   
     -   Por padrão, a tabela de write-back existente será usada, se existir. Se uma tabela de write-back não existir, uma nova tabela será criada.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075233"
   
     -   Independentemente da existência de uma tabela de write-back, uma nova tabela será criada. Nesse caso, o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] excluirá qualquer tabela existente e vai substituí-la por uma nova.  
   
--   **Implantação transacional** Essa configuração controla se a implantação de alterações de metadados e comandos de processo ocorre em uma única transação ou em transações separadas.  
+-   **Implantação Transacional** Essa configuração controla se a implantação das alterações de metadados e dos comandos de processo ocorre em uma única transação ou em transações separadas.  
   
     -   Se essa opção for `True` (padrão), o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implantará todas as alterações de metadados e todos os comandos de processo em uma única transação.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66075233"
   
      -ou-  
   
--   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [executando o assistente de implantação de Analysis Services](running-the-analysis-services-deployment-wizard.md).  
+-   Execute o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no prompt de comando e defina o assistente para executar em modo de arquivo de resposta. Para obter mais informações sobre o modo de arquivo de resposta, consulte [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
      -ou-  
   

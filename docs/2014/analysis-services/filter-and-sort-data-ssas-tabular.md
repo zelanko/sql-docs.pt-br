@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081258"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtrar e classificar dados (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66081258"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Classificar dados em uma tabela &#40;SSAS tabular&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md) Classificar dados em uma tabela|As tarefas neste tópico descrevem como classificar dados em uma tabela por letras ou números.|  
 |[Filtrar dados em uma tabela &#40;SSAS tabular&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|As tarefas nesse tópico descrevem como aplicar filtros personalizados para controlar a exibição das linhas.|  

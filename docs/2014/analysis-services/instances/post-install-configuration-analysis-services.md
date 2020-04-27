@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079663"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuração de pós-instalação (Analysis Services)
@@ -32,8 +32,8 @@ ms.locfileid: "66079663"
 |[Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Crie uma regra de entrada no Firewall do Windows de modo que as solicitações possam ser roteadas através da porta TCP usada pela instância do Analysis Services. Esta tarefa é necessária. Ninguém pode acessar o Analysis Services em um computador remoto até que uma regra de entrada de firewall seja definida.|  
 |[Permissões de administrador de servidor Grant &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Durante a instalação, você precisava adicionar pelo menos uma conta de usuário à função Administrador da instância do Analysis Services. As permissões administrativas são necessárias a várias operações rotineiras do servidor, como processar dados de bancos de dados relacionais externos. Use as informações deste tópico para adicionar ou modificar a associação da função Administrador.|  
 |[Configurar contas de serviço &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Durante a instalação, a conta de serviço do Analysis Services foi fornecida, com permissões apropriadas para permitir o acesso controlado a programas executáveis e a arquivos de banco de dados. Como uma tarefa pós-instalação, agora você deve considerar se deve permitir o uso da conta de serviço ao executar tarefas adicionais. As cargas de trabalho de processamento e de consulta podem ser executadas na conta de serviço. Essas operações terão êxito somente quando a conta de serviço tiver as permissões apropriadas.|  
-|[Registrar uma instância de Analysis Services em um grupo de servidores](register-an-analysis-services-instance-in-a-server-group.md)|O SQL Server Management Studio (SSMS) permite criar grupos de servidores para organizar as instâncias do SQL Server. As implantações escalonáveis compostas de várias instâncias de servidor são mais fáceis de gerenciar em grupos de servidores. Use as informações deste tópico para organizar as instâncias do Analysis Services em grupos no SSMS.|  
-|[Determinar o modo de servidor de uma instância de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Durante a instalação, você escolhe um modo de servidor que determine o tipo de modelo (multidimensional ou de tabela) executado no servidor. Se você não tiver certeza do modo de servidor, use as informações deste tópico para determinar qual modo foi instalado.|  
+|[Registrar uma instância do Analysis Services em um grupo de servidores](register-an-analysis-services-instance-in-a-server-group.md)|O SQL Server Management Studio (SSMS) permite criar grupos de servidores para organizar as instâncias do SQL Server. As implantações escalonáveis compostas de várias instâncias de servidor são mais fáceis de gerenciar em grupos de servidores. Use as informações deste tópico para organizar as instâncias do Analysis Services em grupos no SSMS.|  
+|[Determina o Modo de Servidor de uma instância do Analysis Services.](determine-the-server-mode-of-an-analysis-services-instance.md)|Durante a instalação, você escolhe um modo de servidor que determine o tipo de modelo (multidimensional ou de tabela) executado no servidor. Se você não tiver certeza do modo de servidor, use as informações deste tópico para determinar qual modo foi instalado.|  
 |[Renomear uma instância do Analysis Services](rename-an-analysis-services-instance.md)|Um nome descritivo pode ajudá-lo a fazer a distinção entre as várias instâncias que têm diferentes modos de servidor, ou entre as instâncias usadas principalmente por departamentos ou equipes da organização. Se você quiser alterar o nome da instância para uma que o ajude a gerenciar melhor as instalações, use as informações deste tópico para saber como fazer.|  
   
 ## <a name="next-steps"></a>Próximas etapas  

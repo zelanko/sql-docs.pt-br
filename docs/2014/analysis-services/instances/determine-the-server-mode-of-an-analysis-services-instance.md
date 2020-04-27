@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080057"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determina o Modo de Servidor de uma instância do Analysis Services.
@@ -40,9 +40,9 @@ ms.locfileid: "66080057"
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|0|Esse é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
+|0|Este é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
 |1|Especifica instâncias do Analysis Services que foram instaladas como parte de um PowerPivot para implantação do SharePoint. Não altere a propriedade de modo de implantação da instância do Analysis Services que faz parte de uma instalação do PowerPivot para SharePoint. Dados PowerPivot não serão mais executados no servidor se você alterar o modo.|  
 |2|Especifica o modo de Tabela usado para hospedar bancos de dados modelo de tabela que usam o armazenamento na memória ou o armazenamento DirectQuery.|  
   
@@ -55,6 +55,6 @@ ms.locfileid: "66080057"
  [Conectar-se ao Analysis Services](connect-to-analysis-services.md)   
  [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Soluções de modelo multidimensional &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

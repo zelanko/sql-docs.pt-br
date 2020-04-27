@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078977"
 ---
 # <a name="browsing-the-cube"></a>Navegando pelo cubo
@@ -32,16 +32,16 @@ ms.locfileid: "66078977"
   
 2.  Clique na guia **navegador** para exibir o membro **todos** da hierarquia `Product Key` de atributo. Na lição três, você definirá uma hierarquia de usuário para a dimensão Produto que permitirá navegar pela dimensão.  
   
-3.  Alterne para o **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para fazer isso, clique duas vezes no cubo **Tutorial do Analysis Services** no nó **Cubos** do Gerenciador de Soluções.  
+3.  Alterne para o **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para fazer isso, clique duas vezes no cubo **Analysis Services tutorial** no nó **cubos** de Gerenciador de soluções.  
   
 4.  Selecione a guia **Navegador** e clique no ícone **Reconectar** na barra de ferramentas do designer.  
   
      O painel esquerdo do designer mostra os objetos no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . À direita da guia **Navegador** , existem dois painéis: o painel superior é o painel **Filtro** e o inferior é o painel **Dados** . Em uma lição posterior, o navegador de cubos será usado para fazer análises.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 3: Modificando medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lição 3: Como modificar medidas, atributos e hierarquias](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de consultas MDX &#40;Analysis Services de dados multidimensionais&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [Editor de Consultas MDX &#40;Analysis Services - Dados Multidimensionais&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

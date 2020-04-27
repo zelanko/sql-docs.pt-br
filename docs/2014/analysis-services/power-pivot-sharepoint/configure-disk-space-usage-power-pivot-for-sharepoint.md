@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071806"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar o uso do espaço em disco (PowerPivot para SharePoint)
@@ -80,13 +80,13 @@ ms.locfileid: "66071806"
   
 4.  Na seção Cache de Disco, você pode especificar quanto tempo um banco de dados permanece inativo em memória para atender novas solicitações (por padrão, 48 horas) e quanto tempo ele permanece no cache (por padrão, 120 horas).  
   
-     **Manter banco de dados inativo na memória** especifica quanto tempo um banco de dados inativo permanece na memória para atender a novas solicitações para esses dados. Um banco de dados ativo sempre será mantido em memória contanto que você esteja consultando-o, mas depois ele não permanecerá ativo. O sistema manterá o banco de dados em memória por um período de tempo adicional caso existam mais solicitações desses dados.  
+     **Mantenha Banco de dados Inativo em Memória** especifica quanto tempo um banco de dados inativo fica em memória para atender novas solicitações desses dados. Um banco de dados ativo sempre será mantido em memória contanto que você esteja consultando-o, mas depois ele não permanecerá ativo. O sistema manterá o banco de dados em memória por um período de tempo adicional caso existam mais solicitações desses dados.  
   
      Como os bancos de dados PowerPivot primeiro são armazenados em cache e, depois, carregados em memória, os arquivos de banco de dados consomem logo espaço em disco. Entretanto, apesar de o banco de dados estar ativo (e por 48 horas depois disso), todas as solicitações são direcionadas primeiro ao banco de dados em memória, ignorando o banco de dados em cache. Depois de 48 horas de inatividade, o arquivo é descarregado da memória, mas permanece no cache, onde poderá ser recarregado rapidamente se uma nova solicitação de conexão desses dados for interceptada pela instância de servidor do PowerPivot local. As solicitações de conexão a um banco de dados inativo são atendidas do cache e não da biblioteca de conteúdo, minimizando o impacto nos bancos de dados de conteúdo.  
   
      É importante observar que a biblioteca de conteúdo é o único local permanente para bancos de dados PowerPivot. Só serão usadas cópias armazenadas em cache se o banco de dados na biblioteca for igual à cópia em disco.  
   
-     **Manter banco de dados inativo no cache** especifica por quanto tempo um banco de dados inativo permanece no sistema de arquivos depois de ser descarregado da memória. O trabalho de limpeza usa esta configuração para determinar os arquivos a serem excluídos. Todos os bancos de dados PowerPivot que estiverem inativos por 168 horas (48 horas em memória e 120 horas no cache) serão excluídos do disco pelo trabalho de limpeza.  
+     **Mantenha Banco de dados Inativo em Cache** especifica por quanto tempo um banco de dados inativo permanece no sistema de arquivos depois de ser descarregado da memória. O trabalho de limpeza usa esta configuração para determinar os arquivos a serem excluídos. Todos os bancos de dados PowerPivot que estiverem inativos por 168 horas (48 horas em memória e 120 horas no cache) serão excluídos do disco pelo trabalho de limpeza.  
   
 5.  Clique em **OK** para salvar suas alterações.  
   

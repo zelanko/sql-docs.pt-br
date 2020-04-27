@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079448"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -32,7 +32,7 @@ ms.locfileid: "66079448"
  **Grupo de medidas associado**  
  Selecione o grupo de medidas associado ao KPI. O aplicativo cliente pode usar essas informações para determinar quais dimensões estão disponíveis quando o usuário procurar esse KPI.  
   
- **Expressão de Valor**  
+ **Expressão de valor**  
  Expanda para exibir ou editar a expressão MDX do valor do KPI.  
   
  Digite a expressão MDX que retorna o valor do KPI.  
@@ -65,7 +65,7 @@ ms.locfileid: "66079448"
 > [!NOTE]  
 >  Os valores abaixo-1 e acima de 1 são possíveis, mas podem não ser interpretados corretamente por aplicativos cliente de terceiros.  
   
- **Tendência**  
+ **Trend**  
  Expanda para exibir as opções **Gráfico de tendência** e **Expressão de tendência** .  
   
  **Gráfico de tendência**  
@@ -84,7 +84,7 @@ ms.locfileid: "66079448"
 > [!NOTE]  
 >  Os valores abaixo-1 e acima de 1 são possíveis, mas podem não ser interpretados corretamente por aplicativos cliente de terceiros.  
   
- **Propriedades adicionais**  
+ **Propriedades Adicionais**  
  Expanda para exibir as opções **Pasta de exibição**, **KPI Pai**, **Membro da hora atual**, **Peso**e **Descrição** .  
   
  **Pasta de exibição**  
@@ -106,7 +106,7 @@ ms.locfileid: "66079448"
 > [!IMPORTANT]  
 >  A expressão MDX deve retornar o nome exclusivo de um membro dentro de uma dimensão de tempo associada ao grupo de medidas especificado em **Grupo de medidas associado**.  
   
- **Weight**  
+ **Peso**  
  Expanda para exibir ou editar a expressão MDX do fator de ponderação do KPI.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  

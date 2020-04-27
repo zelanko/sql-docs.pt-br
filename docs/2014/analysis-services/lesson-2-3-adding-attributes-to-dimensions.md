@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079028"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Adicionando atributos em dimensões
@@ -56,7 +56,7 @@ ms.locfileid: "66079028"
   
     -   **NumberCarsOwned**  
   
-    -   **Telemóvel**  
+    -   **Telefone**  
   
     -   **DateFirstPurchase**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66079028"
   
 5.  Arraste as seguintes colunas da tabela **Geography** do painel **Exibição da Fonte de Dados** para o painel **Atributos** :  
   
-    -   **City**  
+    -   **Cidade**  
   
     -   **StateProvinceName**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079028"
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **Cor**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079028"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **Peso**  
   
     -   **DaysToManufacture**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079028"
   
     -   **DealerPrice**  
   
-    -   **Classes**  
+    -   **Classe**  
   
     -   **Estilo**  
   

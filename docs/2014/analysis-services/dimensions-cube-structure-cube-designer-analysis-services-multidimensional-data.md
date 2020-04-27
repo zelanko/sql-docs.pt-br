@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081702"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensões (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -45,7 +45,7 @@ ms.locfileid: "66081702"
  **Editar Dimensão**  
  Clique para exibir o Designer de Dimensão e editar a dimensão do banco de dados na qual a dimensão de cubo é baseada. Para obter mais informações sobre o Designer de Dimensão, consulte [Designer de Dimensão &#40;Analysis Services – Dados Multidimensionais&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Nome**  
+ **Renomear**  
  Clique para renomear a dimensão de cubo selecionada para o cubo.  
   
 > [!NOTE]  
@@ -63,13 +63,13 @@ ms.locfileid: "66081702"
 > [!NOTE]  
 >  Essa opção será exibida apenas se uma dimensão estiver selecionada.  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Clique para mover o banco de dados de cubo selecionado uma posição acima.  
   
 > [!NOTE]  
 >  Essa opção será exibida apenas se uma dimensão estiver selecionada.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Clique para mover o atributo do banco de dados de cubo selecionado uma posição para baixo.  
   
 > [!NOTE]  

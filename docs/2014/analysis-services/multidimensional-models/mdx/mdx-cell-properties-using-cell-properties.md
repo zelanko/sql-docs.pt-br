@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074339"
 ---
 # <a name="using-cell-properties-mdx"></a>Usando propriedades da célula (MDX)
@@ -47,15 +47,12 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Propriedades de célula intrínsecas suportadas  
  A tabela a seguir lista as propriedades de célula intrínsecas suportadas que são usadas no valor `<property>` .  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`ACTION_TYPE`|Um bitmask que indica quais tipos de ações existem na célula. Essa propriedade pode ter um dos seguintes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Observação: ações de detalhamento não são incluídas nas consultas que contêm um conjunto na cláusula where.|  
 |**BACK_COLOR**|A cor do plano de fundo por exibir a propriedade `VALUE` ou `FORMATTED_VALUE`. Para obter mais informações, consulte [Conteúdo de FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|O número ordinal da célula no conjunto de dados.|  
-|**FONT_FLAGS**|O bitmask que detalha os efeitos da fonte. Por exemplo, o valor 5 representa a combinação dos efeitos de fonte negrito (`MDFF_BOLD`) e sublinhado (`MDFF_UNDERLINE`). O valor é o resultado de uma operação OR bit a bit de uma ou mais destas constantes:<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|O bitmask que detalha os efeitos da fonte. Por exemplo, o valor 5 representa a combinação dos efeitos de fonte negrito (`MDFF_BOLD`) e sublinhado (`MDFF_UNDERLINE`). O valor é o resultado de uma operação OR bit a bit de uma ou mais destas constantes:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|A fonte que será usada para exibir a propriedade `VALUE` ou `FORMATTED_VALUE`.|  
 |**FONT_SIZE**|O tamanho de fonte que será usada para exibir a propriedade `VALUE` ou `FORMATTED_VALUE`.|  
 |**FORE_COLOR**|A cor de primeiro plano para exibir a propriedade `VALUE` ou `FORMATTED_VALUE`. Para obter mais informações, consulte [Conteúdo de FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  

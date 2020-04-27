@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071738"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar a coleta de dados de uso para o PowerPivot para SharePoint
@@ -24,17 +24,17 @@ ms.locfileid: "66071738"
   
  **Neste tópico:**  
   
- [Habilitar a coleta de dados de uso e escolher eventos que disparam a coleta de dados](#events)  
+ [Habilite a coleta de dados de uso e escolha eventos que disparem a coleta de dados](#events)  
   
  [Definir local do arquivo de log](#configdb)  
   
- [Configurar os trabalhos de timer usados na coleta de dados de uso](#jobs)  
+ [Configure os trabalhos de timer usados em coleta de dados de uso](#jobs)  
   
- [Limitar o tempo de armazenamento do histórico de dados de uso](#confighist)  
+ [Limite o tempo de armazenamento do histórico de dados de uso](#confighist)  
   
- [Definir categorias de resposta de consulta rápidas, médias e lentas para fins de relatório](#qrh)  
+ [Defina categorias de resposta de consulta rápida, média e lenta para fins de relatórios](#qrh)  
   
- [Especificar com que frequência as estatísticas de consulta são relatadas para o sistema de coleta de dados de uso](#ttr)  
+ [Especifique a frequência dos relatórios estatísticas de consulta para o sistema de coleta de dados de uso](#ttr)  
   
  [Abra a página Aplicativo do Serviço PowerPivot para acessar os parâmetros de configuração](#openconfig)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66071738"
 > [!IMPORTANT]  
 >  Dados de uso fornecem aprofundamento sobre como os usuários estão acessando dados e recursos, mas eles não garantem dados confiáveis, persistentes sobre operações de servidor e acesso de usuário. Por exemplo, se houver uma reinicialização de servidor, dados de uso de evento serão perdidos e não serão recuperáveis. Da mesma forma, se os arquivos de log temporários atingirem o tamanho máximo, nenhum novo dado será adicionado até que os arquivos sejam desmarcados. Se você precisa do recurso de auditoria, procure usar os recursos de fluxo de trabalho e tipo de conteúdo que o SharePoint fornece para criar um subsistema de auditoria para seu farm. Para obter mais informações, consulte a documentação do produto e da comunidade na Web.  
   
-##  <a name="events"></a>Habilitar a coleta de dados de uso e escolher eventos que disparam a coleta de dados  
+##  <a name="enable-usage-data-collection-and-choose-events-that-trigger-data-collection"></a><a name="events"></a>Habilitar a coleta de dados de uso e escolher eventos que disparam a coleta de dados  
  Configure a coleta de dados de uso na Administração Central do SharePoint.  
   
 1.  Na Administração Central, clique em **Monitoramento**.  
@@ -54,7 +54,7 @@ ms.locfileid: "66071738"
   
 4.  Na seção **Eventos para o log** , marque ou desmarque as caixas de seleção para habilitar ou desabilitar os seguintes eventos do Analysis Services:  
   
-    |Evento|DESCRIÇÃO|  
+    |Evento|Descrição|  
     |-----------|-----------------|  
     |**Conexões do PowerPivot**|O evento Conexão do PowerPivot é usado para monitorar conexões de servidor do PowerPivot que são feitas em nome de um usuário.|  
     |**Uso de Dados de Carregamento do PowerPivot**|O Uso de Dados de Carregamento do PowerPivot é usado para monitorar solicitações que carregam dados PowerPivot na memória do servidor. Um evento de carregamento é gerado para arquivos de dados PowerPivot carregados de um banco de dados de conteúdo ou do cache.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66071738"
   
 7.  Opcionalmente, você pode especificar se todas as mensagens ou apenas erros são registrados em log. Para obter mais informações sobre como restringir mensagens de evento, consulte [configurar e exibir arquivos de log do SharePoint e log de diagnóstico &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
-##  <a name="configdb"></a>Definir local do arquivo de log  
+##  <a name="set-log-file-location"></a><a name="configdb"></a>Definir local do arquivo de log  
  Os dados de uso do PowerPivot são armazenados inicialmente em arquivos de log de uso no servidor local e movidos em intervalos regulares para os bancos de dados de aplicativo de serviço PowerPivot. O local do arquivo de log é definido na Administração Central. O local padrão é:  
   
  `C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\logs`  
@@ -83,7 +83,7 @@ ms.locfileid: "66071738"
   
 3.  Em Configurações de Coleta de Dados de Uso, exiba ou modifique a localização do arquivo, o nome ou o tamanho máximo do arquivo. Se você especificar um tamanho de arquivo muito baixo, o tamanho de arquivo alcançará o limite máximo e nenhuma nova entrada será adicionada a ele até que seu conteúdo seja movido para o banco de dados de coleta de dados de uso central.  
   
-##  <a name="jobs"></a>Configurar os trabalhos de timer usados na coleta de dados de uso  
+##  <a name="configure-the-timer-jobs-used-in-usage-data-collection"></a><a name="jobs"></a>Configurar os trabalhos de timer usados na coleta de dados de uso  
  Os dados de uso e integridade do servidor PowerPivot são movidos para locais diferentes no sistema de coleta de dados de uso por dois trabalhos de timer:  
   
 -   O trabalho de timer "Importação de Dados de Uso do Microsoft SharePoint Foundation" move o uso do PowerPivot para o banco de dados do aplicativo de serviço PowerPivot.  
@@ -106,7 +106,7 @@ ms.locfileid: "66071738"
   
 7.  Verifique os relatórios para exibir os dados de atualização. Para obter mais informações, consulte [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
-##  <a name="confighist"></a>Limitar o tempo de armazenamento do histórico de dados de uso  
+##  <a name="limit-how-long-usage-data-history-is-stored"></a><a name="confighist"></a>Limitar o tempo de armazenamento do histórico de dados de uso  
  O histórico de dados de uso é armazenado para eventos (conexões, carga, descarga e processamento de consulta sob demanda) e atualização de dados (processamento de dados agendado). Embora dados de uso sejam coletados pelo sistema de coleta de dados de uso do SharePoint, os dados de relatório são movidos para um banco de dados de aplicativo PowerPivot e para um banco de dados de relatório para armazenamento por um prazo maior. A definição do histórico de dados de uso controla por quanto tempo dados de uso são retidos nos bancos de dados de aplicativo PowerPivot. O mesmo limite se aplica igualmente a todos os tipos de dados de uso armazenados no mesmo banco de dados do aplicativo do serviço PowerPivot.  
   
 1.  [Abra a página do aplicativo de serviço PowerPivot](#openconfig).  
@@ -127,7 +127,7 @@ ms.locfileid: "66071738"
   
  Para obter mais informações sobre como os dados de uso são coletados e armazenados, consulte [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
-##  <a name="qrh"></a>Definir categorias de resposta de consulta rápidas, médias e lentas para fins de relatório  
+##  <a name="define-fast-medium-and-slow-query-response-categories-for-reporting-purposes"></a><a name="qrh"></a>Definir categorias de resposta de consulta rápidas, médias e lentas para fins de relatório  
  O desempenho de processamento da consulta é medido em relação a categorias predefinidas que definem um ciclo da solicitação-resposta pelo tempo que leva para ser concluído. Categorias predefinidas incluem: Trivial, Rápido, Esperado, Demorado e Excedido. Toda solicitação para um servidor do PowerPivot corresponderá a uma das categorias com base no tempo para conclusão.  
   
  As informações de resposta da consulta são usadas em relatórios de atividades. Dentro dos relatórios, cada categoria é usada diferentemente para revelar melhor as tendências de desempenho do sistema PowerPivot. Por exemplo, são totalmente excluídas solicitações triviais pois isso remove ruídos nos dados e mostra tendências mais significativas que usam as categorias restantes. Em contraste, estatísticas de solicitação Demorado ou Excedido são proeminentes no relatório de forma que administradores ou proprietários de pasta de trabalho podem adotar uma ação corretiva imediatamente.  
@@ -148,7 +148,7 @@ ms.locfileid: "66071738"
   
 6.  Clique em **OK**.  
   
-##  <a name="ttr"></a>Especificar com que frequência as estatísticas de consulta são relatadas para o sistema de coleta de dados de uso  
+##  <a name="specify-how-often-query-statistics-are-reported-to-the-usage-data-collection-system"></a><a name="ttr"></a>Especificar com que frequência as estatísticas de consulta são relatadas para o sistema de coleta de dados de uso  
  O intervalo de tempo para relatório especifica a frequência dos relatórios estatísticas de consulta para o sistema de coleta de dados de uso. Estatísticas de consulta são acumuladas em um processo e relatadas como um único evento em intervalos regulares. Você pode ajustar o intervalo para gravar no arquivo de log com maior ou menor frequência.  
   
 1.  [Abra a página do aplicativo de serviço PowerPivot](#openconfig).  
@@ -163,7 +163,7 @@ ms.locfileid: "66071738"
   
 3.  Clique em **OK**.  
   
-##  <a name="openconfig"></a>Abra a página aplicativo de serviço PowerPivot para acessar as definições de configuração  
+##  <a name="open-the-powerpivot-service-application-page-to-access-configuration-settings"></a><a name="openconfig"></a>Abra a página aplicativo de serviço PowerPivot para acessar as definições de configuração  
  Você deve ser um administrador de farm ou de serviço para modificar as configurações do aplicativo de serviço. Se você definiu vários aplicativos de serviço PowerPivot no farm, deverá modificar cada um deles individualmente.  
   
 1.  Na Administração Central do SharePoint, em **Gerenciamento de Aplicativo**, clique em **Gerenciar aplicativos de serviço**.  
@@ -174,16 +174,16 @@ ms.locfileid: "66071738"
   
 4.  Em **Ações**, clique em **Configurar parâmetros do aplicativo de serviço**. A página Configurações do Aplicativo do Serviço PowerPivot será aberta.  
   
-##  <a name="defaultconfig"></a>A configuração padrão para a coleta de dados de uso do PowerPivot  
+##  <a name="the-default-configuration-for-powerpivot-usage-data-collection"></a><a name="defaultconfig"></a>A configuração padrão para a coleta de dados de uso do PowerPivot  
  Operações de coleta de dados de uso para serviço PowerPivot podem ser habilitadas com configurações padrão disponibilizá-las imediatamente em aplicativos que dão suporte ao recurso de integração Analysis Services. As configurações padrão incluem eventos que disparam coleta de dados de uso, limites sobre o tempo de armazenamento de dados de uso, e limites para categorizar tempos de resposta de consulta.  
   
  A tabela a seguir mostra os valores padrão da configuração da coleta de dados de uso.  
   
-|Configuração|Valor padrão|Type|Intervalo válido|  
+|Configuração|Valor Padrão|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services eventos de uso** (conexão, carregamento, descarregamento, solicitações)|\<> habilitado|Boolean|Estes valores são habilitados ou desabilitados.|  
-|**Intervalo de relatório de consulta**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
-|**Histórico de dados de uso**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
+|**Eventos de uso do Analysis Services** (Conexão, Carregamento, Descarregamento, Solicitações)|\<> habilitado|Boolean|Estes valores são habilitados ou desabilitados.|  
+|**Intervalo de Relatório de Consulta**|300 (em segundos)|Integer|1 até qualquer inteiro positivo. O padrão é 5 minutos.|  
+|**Histórico de Dados de Uso**|365 (em dias)|Integer|0 especifica ilimitado, mas você também pode definir um limite superior para expirar dados históricos e permitir sua exclusão automática. Valores válidos para um período de retenção limitado variam de 1 a 5000 (em dias).|  
 |Limite Superior de Resposta Trivial|500 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta trivial. Qualquer solicitação concluída entre 0 e 500 milissegundos é uma solicitação trivial e ignorada para fins de relatórios.|  
 |Limite superior de resposta rápida|1000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta rápida.|  
 |Limite Superior de Resposta Esperado|3000 (em milissegundos)|Integer|Define um limite superior que define uma troca de solicitação-resposta esperada.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077461"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
@@ -47,7 +47,7 @@ ms.locfileid: "66077461"
   
     -   Na lista suspensa **Tipo** , selecione o tipo de ação que você quer criar. A tabela a seguir lista os tipos de ações disponíveis.  
   
-        |Type|DESCRIÇÃO|  
+        |Tipo|Descrição|  
         |----------|-----------------|  
         |Dataset|Recupera um conjunto de dados.|  
         |Proprietário|Executa uma operação usando uma interface diferente das listadas nesta tabela.|  
@@ -63,7 +63,7 @@ ms.locfileid: "66077461"
   
         |Opção|Descrição|  
         |------------|-----------------|  
-        |Interativo|A ação é disparada pela interação do usuário.|  
+        |Interactive (Interativo)|A ação é disparada pela interação do usuário.|  
         |Lote|A ação é executada como uma operação de lote.|  
         |Em aberto|A ação é executada quando um usuário abre o cubo.|  
   

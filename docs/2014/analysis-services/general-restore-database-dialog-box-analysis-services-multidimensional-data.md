@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080952"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Geral (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
@@ -65,7 +65,7 @@ ms.locfileid: "66080952"
   
  Se esta opção for selecionada, você poderá escolher a quantidade de informações de segurança na lista suspensa habilitada ao selecionar esta opção. As seguintes opções estão disponíveis:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Copiar tudo**|Restaura as funções de banco de dados contidas no arquivo de backup, assim como as contas de usuário associadas às funções.|  
 |**Ignorar Associação**|Restaura as funções de banco de dados contidas no arquivo de backup, mas não restaura as contas de usuário associadas às funções.|  

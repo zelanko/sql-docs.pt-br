@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075934"
 ---
 # <a name="create-a-date-type-dimension"></a>Criar uma dimensão de tipo de data
@@ -40,8 +40,7 @@ ms.locfileid: "66075934"
  Dimensão de tempo de servidor  
  Se não houver uma tabela de dimensões à qual associar atributos relacionados a tempo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode definir uma dimensão de tempo de servidor com base em períodos de tempo. Para definir as hierarquias, os níveis e os membros representados pela dimensão de tempo de servidor, selecione períodos de tempo padrão ao criar a dimensão.  
   
- Os atributos de uma dimensão de tempo de servidor possuem uma associação tempo-atributo especial. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza os tipos de atributo relacionados a datas, como Ano, Mês ou Dia, para definir os membros dos atributos de uma dimensão de tempo.  
+ Os atributos de uma dimensão de tempo de servidor possuem uma associação tempo-atributo especial. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza os tipos de atributo relacionados a datas, como Ano, Mês ou Dia, para definir os membros dos atributos de uma dimensão de tempo.  
   
  Depois de incluir a dimensão de tempo de servidor em um cubo, defina a relação entre o grupo de medidas e a dimensão de tempo de servidor especificando uma relação na página **Definir Uso da Dimensão** do Assistente para Cubos.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075934"
   
  Você pode construir manualmente esses calendários distintos no Designer de Dimensão. No entanto, o Assistente para Dimensões fornece vários modelos de hierarquia que podem ser usados para gerar automaticamente diversos tipos de calendários quando você criar uma dimensão de tempo ou uma dimensão de tempo de servidor. A tabela a seguir descreve os vários calendários que o Assistente para Dimensões pode gerar.  
   
-|Calendário|DESCRIÇÃO|  
+|Calendário|Descrição|  
 |--------------|-----------------|  
 |Calendário padrão|Um calendário gregoriano de doze meses, começando em 1º. de janeiro e terminando em 31 de dezembro.<br /><br /> Independentemente de você usar o Assistente para Dimensões para criar uma dimensão de tempo ou uma dimensão de tempo de servidor, o assistente gerará uma hierarquia para um calendário padrão depois que você definir os atributos que representam os períodos de tempo da dimensão. Se você usar o Assistente para Dimensões para criar uma dimensão de tempo de servidor, poderá ajustar a data inicial do calendário padrão para outro dia que não seja 1º. de janeiro.|  
 |Calendário fiscal|Um calendário fiscal de doze meses. Ao selecionar esse calendário, especifique o dia e o mês iniciais para o ano fiscal usado pela empresa.<br /><br /> Observação: esse calendário estará disponível somente se você usar o Assistente para Dimensões para criar uma dimensão de tempo de servidor.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078457"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definindo a granularidade da dimensão dentro de um grupo de medidas
@@ -60,8 +60,7 @@ ms.locfileid: "66078457"
   
 12. Exclua a medida **trimestre** do calendário `Sales Quotas` do grupo de medidas.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detectou que a coluna subjacente à medida Trimestre do Calendário contém medidas. Entretanto, essa coluna e a coluna Trimestre Calendário contêm os valores que você utilizará para vincular o grupo de medidas Cotas de Vendas à dimensão Data posteriormente neste tópico.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detectou que a coluna subjacente à medida Trimestre do Calendário contém medidas. Entretanto, essa coluna e a coluna Trimestre Calendário contêm os valores que você utilizará para vincular o grupo de medidas Cotas de Vendas à dimensão Data posteriormente neste tópico.  
   
 13. No painel **medidas** , clique com o botão direito `Sales Quotas` do mouse no grupo de medidas e clique em **nova medida**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66078457"
   
 3.  No designer de cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo do tutorial do, clique na guia **uso da dimensão** e examine o uso da dimensão `Sales Quotas` dentro dos grupos de medidas e **cotas de vendas 1** .  
   
-     Observe que as **** dimensões de `Date` funcionário e cubo estão vinculadas aos grupos de medidas Sales **Quotasand Sales 1** por meio de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
+     Observe que as **Employee** dimensões de `Date` funcionário e cubo estão vinculadas aos grupos de medidas Sales **Quotasand Sales 1** por meio de relações regulares. Observe também que a dimensão do cubo **Região de Vendas** não está vinculada a nenhum desses grupos de medidas.  
   
 4.  Clique na célula na interseção da dimensão **região de vendas** e no `Sales Quotas` grupo de medidas e, em seguida, clique no botão procurar (**...**). A caixa de diálogo **definir relação** é aberta.  
   
@@ -180,7 +179,7 @@ ms.locfileid: "66078457"
   
 ## <a name="defining-attribute-relationships-between-the-calendar-quarter-attribute-and-the-other-dimension-attributes-in-the-date-dimension"></a>Definindo relações de atributo entre o atributo Calendar Quarter e outros atributos de dimensão na dimensão Date  
   
-1.  Alterne para **** o `Date` designer de dimensão da dimensão e, em seguida, clique na guia relações de **atributo** .  
+1.  Alterne para **Dimension Designer** o `Date` designer de dimensão da dimensão e, em seguida, clique na guia relações de **atributo** .  
   
      Observe que, embora o **ano civil** esteja vinculado ao **trimestre do calendário** por meio do atributo **semestre do calendário** , os atributos do calendário fiscal são vinculados somente uns aos outros; Eles não estão vinculados ao atributo de **trimestre do calendário** e, portanto, não serão `Sales Quotas` agregados corretamente no grupo de medidas.  
   
@@ -221,11 +220,11 @@ ms.locfileid: "66078457"
      ![Grupo de medidas Cota de Vendas dimensionado corretamente](../../2014/tutorials/media/l5-granularity-7.gif "Grupo de medidas Cota de Vendas dimensionado corretamente")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 6: Definindo cálculos](lesson-6-defining-calculations.md)  
+ [Lição 6: Como definir cálculos](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir uma relação regular e propriedades de relação regular](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Trabalhar com diagramas no designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

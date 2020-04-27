@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079873"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Verificar uma instalação do PowerPivot para SharePoint
   Uma instância do PowerPivot para SharePoint instalada em um farm do SharePoint é administrada por meio da Administração Central do SharePoint. É possível, ao menos, verificar as páginas na Administração Central e nos sites do SharePoint para verificar a disponibilidade dos componentes e recursos do servidor PowerPivot. No entanto, para verificar integralmente uma instalação, você deve ter uma pasta de trabalho PowerPivot que possa publicar no SharePoint e acessar em uma biblioteca. Para fins de teste, é possível publicar uma pasta de trabalho de exemplo que já contenha os dados PowerPivot e usá-la para confirmar se essa integração com o SharePoint está configurada corretamente.  
   
-##  <a name="verifyinstall"></a>Verificar a integração da administração central  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> Verificar a integração da Administração Central  
  Para verificar a integração do PowerPivot com a Administração Central, faça o seguinte:  
   
 1.  No menu Iniciar, clique em **todos os programas**, abra produtos do Microsoft SharePoint 2010 e clique em **Administração Central do SharePoint 2010**.  
@@ -37,7 +37,7 @@ ms.locfileid: "66079873"
   
     4.  Em **Adicionar este site à zona**, digite a URL do site e clique em **Adicionar**.  
   
-    5.  Clique em **Fechar** e, em seguida, em **OK**.  
+    5.  Clique em **Fechar**e clique em **OK**.  
   
         > [!NOTE]  
         >  A documentação de instalação do SharePoint inclui instruções adicionais para contornar erros de servidor proxy e para desabilitar a Configuração de Segurança Reforçada do Internet Explorer para que você possa baixar e instalar atualizações. Para obter mais informações, consulte a seção **Perform additional tasks** em [Deploy a single server with SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) no site da Microsoft.  
@@ -46,11 +46,11 @@ ms.locfileid: "66079873"
   
 4.  Verifique se **Recurso de Integração com o PowerPivot** está **Ativo**.  
   
-5.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar serviços no servidor**.  
+5.  Na administração central, em configurações do sistema, clique em **gerenciar serviços no servidor**.  
   
 6.  Verifique se o **SQL Server Analysis Services** e o **Serviço de Sistema PowerPivot do SQL Server** foram iniciados.  
   
-7.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+7.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 8.  Clique em **aplicativo de serviço PowerPivot padrão** para abrir o painel de gerenciamento PowerPivot para este aplicativo. No primeiro uso, o painel demora alguns minutos para carregar.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66079873"
 ## <a name="verify-data-access-on-the-server"></a>Verificar acesso a dados no servidor  
  Para verificar o acesso a dados PowerPivot no servidor, faça o seguinte:  
   
-1.  [Baixe](https://go.microsoft.com/fwlink/?LinkID=219108) o exemplo de dados piquenique que acompanha um tutorial de Reporting Services. Você usará a pasta de trabalho de exemplo nesse download para verificar o acesso aos dados PowerPivot. Extraia os arquivos.  
+1.  [Baixe](https://go.microsoft.com/fwlink/?LinkID=219108) os exemplos de dados Picnic que acompanham um tutorial do Reporting Services. Você usará a pasta de trabalho de exemplo nesse download para verificar o acesso aos dados PowerPivot. Extraia os arquivos.  
   
 2.  Carregue a pasta de trabalho (.xlsx) do Excel nos Documentos Compartilhados. A pasta de trabalho contém dados PowerPivot inseridos.  
   

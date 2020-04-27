@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080338"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologias de autenticação com suporte no Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080338"
   
  Para obter mais informações sobre os fluxos de autenticação do BI e do Analysis Services, consulte [Autenticação do Microsoft BI e delegação de identidade](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a>Noções básicas sobre suas alternativas de autenticação  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> Noções básicas sobre alternativas de autenticação  
  A conexão a um banco de dados do Analysis Services requer uma identidade de usuário ou grupo do Windows e as permissões associadas. A identidade pode ser um logon com finalidade geral usado por todos que precisam exibir um relatório, mas um cenário mais provável inclui a identidade de usuários individuais.  
   
  Em geral, um modelo tabular ou multidimensional terá diferentes níveis de acesso a dados, por objeto ou dentro dos próprios dados, dependendo de quem está fazendo a solicitação. Para atender a esse requisito, você pode usar autenticação NTLM, Kerberos, EffectiveUserName ou Básica. Todas essas técnicas oferecem um método para passar diferentes identidades de usuário com cada conexão. Entretanto, a maioria dessas opções está sujeita à limitação de um salto único. Somente o Kerberos com delegação permite que a identidade do usuário original flua por várias conexões de computadores até um repositório de dados de back-end em um servidor remoto.  
@@ -45,7 +45,7 @@ ms.locfileid: "66080338"
   
  Em soluções multicamadas, a restrição de um salto único do NLTM pode ser importante. A identidade do usuário que faz a solicitação pode ser representada em exatamente um servidor remoto, mas não vai além. Se a operação atual que está sendo realizada exigir serviços executados em vários computadores, você deverá configurar a delegação restrita Kerberos para reutilizar o token de segurança em servidores back-end. Como alternativa, você poderá reutilizar credenciais armazenadas ou a autenticação Básica para passar novas informações de identidade em uma conexão de salto único.  
   
- **Autenticação Kerberos e delegação restrita de Kerberos**  
+ **Autenticação Kerberos e delegação restrita Kerberos**  
   
  A autenticação Kerberos é a base da segurança integrada do Windows em domínios do Active Directory. Assim como o NTLM, a representação com Kerberos é limitada a um único salto, a menos que você habilite a delegação.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66080338"
   
  Para obter mais informações sobre o uso do EffectiveUserName no SharePoint, consulte [Usar o EffectiveUserName do Analysis Services no SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
- **Autenticação básica e usuário anônimo**  
+ **Autenticação Básica e usuário anônimo**  
   
  A autenticação Básica oferece ainda uma quarta alternativa de conexão com um servidor back-end como um usuário específico. Usando a autenticação Básica, o nome de usuário e a senha do Windows são passados na cadeia de conexão, introduzindo requisitos adicionais de criptografia durante a transmissão para garantir que informações confidenciais sejam protegidas enquanto você está em trânsito. Uma importante vantagem de usar a autenticação Básica é que a solicitação de autenticação pode atravessar limites de domínios.  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074024"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Usando eixos de consulta e slicer em um exemplo simples (MDX)
@@ -42,13 +42,13 @@ WHERE ( [Measures].[Packages] )
 ## <a name="the-results"></a>O resultado  
  O resultado é uma grade que identifica o valor da medida Pacotes em cada intersecção das dimensões de eixo COLUMNS e ROWS. A tabela a seguir mostra como seria essa grade.  
   
-||ar|marítima|  
+||aérea|marítima|  
 |-|---------|---------|  
 |1º trimestre|60|50|  
 |2º trimestre|45|45|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificando o conteúdo de um eixo de consulta &#40;&#41;MDX](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Especificando o conteúdo de um eixo de segmentação &#40;&#41;MDX](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Especificando o conteúdo de um eixo da segmentação &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072956"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Definir opções de representação (SSAS multidimensional)
@@ -39,13 +39,13 @@ ms.locfileid: "66072956"
 ## <a name="set-impersonation-options-in-management-studio"></a>Definir opções de representação no Management Studio  
  No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra a caixa de diálogo **Informações sobre Representação** clicando no botão de reticências (**...**) das seguintes propriedades destas caixas de diálogo:  
   
--   Caixa de diálogo **Propriedades do banco** de dados, por meio da propriedade informações de representação da fonte.  
+-   Caixa de diálogo**Propriedades de Banco de Dados** , por meio da propriedade Informações sobre Representação de Fonte de Dados.  
   
--   Caixa de diálogo **Propriedades da fonte de dados** , por meio da propriedade informações de representação.  
+-   Caixa de diálogo**Propriedades da Fonte de Dados** , por meio da propriedade Informações sobre Representação.  
   
--   Caixa de diálogo **Propriedades do assembly** , por meio da propriedade informações de representação.  
+-   Caixa de diálogo**Propriedades do Assembly** , por meio da propriedade Informações sobre Representação.  
   
-##  <a name="bkmk_options"></a>Opções de representação  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> Opções de representação  
  Todas as opções estão disponíveis na caixa de diálogo, mas nem todas as opções são apropriadas para todos os cenários. Use as informações a seguir para determinar a melhor opção para seu cenário.  
   
  **Usar nome de usuário e senha específicos**  
@@ -83,7 +83,7 @@ ms.locfileid: "66072956"
   
  Com a exceção de cubos locais e processamento usando associações fora de linha, esta opção não tem suporte para bancos de dados multidimensionais.  
   
- **Padrão** ou **herdar**  
+ **Padrão** ou **Herdar**  
  A caixa de diálogo usa **Padrão** para as opções de representação definidas no nível de banco de dados e **Herdar** para as opções de representação definidas no nível de fonte de dados.  
   
  **Fontes de dados – opção Inherit**  

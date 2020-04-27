@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078187"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lição 10: Criar hierarquias
-  Nesta lição, você criará hierarquias. Hierarquias são grupos de colunas organizados em níveis. Por exemplo, uma hierarquia de Geografia pode ter subníveis para País, Estado, Região e Cidade. As hierarquias podem aparecer separadas de outras colunas em uma lista de campos de aplicativo cliente de relatório, facilitando sua navegação e inclusão em um relatório pelos usuários do cliente. Para saber mais, consulte [Hierarquias &#40;SSAS Tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
+  Nesta lição, você criará hierarquias. Hierarquias são grupos de colunas organizados em níveis; por exemplo, uma hierarquia Geografia poderia ter subníveis para País, Estado, Município e Cidade. As hierarquias podem aparecer separadas de outras colunas em uma lista de campos de aplicativo cliente de relatório, facilitando sua navegação e inclusão em um relatório pelos usuários do cliente. Para saber mais, consulte [Hierarquias &#40;SSAS Tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  Para criar hierarquias, você usará o designer de modelos na *Exibição de Diagrama*. Não há suporte para a criação e o gerenciamento de hierarquias no designer de modelos na Exibição de Dados.  
   
  Tempo estimado para conclusão desta lição: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de realizar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 9: Criar perspectivas](lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Criar hierarquias  
@@ -36,7 +36,7 @@ ms.locfileid: "66078187"
     > [!TIP]  
     >  Use os controles do Minimapa no lado superior direito do designer de modelos para alterar o modo de exibição dos objetos em Exibição de Diagrama. Se você reposicionar objetos na Exibição de Diagrama, essa exibição será retida quando você salvar o projeto.  
   
-2.  No designer de modelo, clique com o botão `Product` direito do mouse na tabela e clique em **criar hierarquia**. Uma nova hierarquia aparece na parte inferior da janela da tabela.  
+2.  No designer de modelo, clique com o botão `Product` direito do mouse na tabela e clique em **criar hierarquia**. A nova hierarquia aparece na parte inferior da janela de tabela.  
   
 3.  No nome da hierarquia, renomeie a hierarquia `Category`digitando e pressione Enter.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078187"
 5.  Na `Category` hierarquia, clique com o botão direito do mouse na coluna **nome da categoria do produto** , clique em `Category` **renomear**e digite.  
   
     > [!NOTE]  
-    >  Renomear uma coluna em uma hierarquia não renomeia essa coluna na tabela. Uma coluna em uma hierarquia é apenas uma representação da coluna na tabela.  
+    >  A renomeação de uma coluna em uma hierarquia não renomeia essa coluna na tabela. Uma coluna em uma hierarquia é apenas uma representação da coluna na tabela.  
   
 6.  Na `Product` tabela, clique com o botão direito do mouse na coluna **nome da subcategoria do produto** e, no menu de contexto, aponte para **Adicionar à hierarquia**e clique em. `Category`  
   

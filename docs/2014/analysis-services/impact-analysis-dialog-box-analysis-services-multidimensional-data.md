@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080747"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Análise de Impacto (Analysis Services - Dados Multidimensionais)
@@ -29,7 +29,7 @@ ms.locfileid: "66080747"
  **Lista de objetos**  
  Exibe uma lista de objetos dependentes em uma grade. A grade contém as seguintes colunas:  
   
- **Object Name**  
+ **Nome do objeto**  
  Exibe o nome do objeto dependente que pode precisar ser processado. O ícone à esquerda do nome indica o tipo do objeto.  
   
  **Tipo**  

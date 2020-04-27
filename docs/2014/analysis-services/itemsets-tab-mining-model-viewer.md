@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079555"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Guia Conjuntos de Itens (Visualizador do Modelo de Mineração)
   Use o painel **Conjunto de Itens** para exibir os conjuntos de itens frequentes presentes em um modelo de mineração de regras por associação. Como um modelo de associação pode conter muitos conjuntos de itens, os controles são fornecidos no visualizador para ajudá-lo a filtrar os conjuntos de itens exibidos no visualizador.  
   
- **Para obter mais informações:** [algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [procurar um modelo usando o Visualizador de regras de associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obter mais informações:** [Algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [Procurar um modelo usando o Visualizador de regras da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -68,13 +68,13 @@ ms.locfileid: "66079555"
  **Máximo de linhas**  
  Limite o número de conjunto de itens que serão exibidos no visualizador. Por padrão, os conjuntos de itens são ordenados por suporte em ordem decrescente, de modo que abaixar este valor restringirá a lista aos conjuntos de itens mais comuns.  
   
- **Support**  
+ **Suporte**  
  Exibe o suporte para cada conjunto de itens.  
   
  **Tamanho**  
  Exibe o número de itens que há em cada conjunto de itens.  
   
- **Conjunto**  
+ **Conjunto de Itens**  
  Exibe a descrição da dimensão de cada conjunto de itens. Por padrão, os conjuntos de itens são apresentados como uma lista delimitada por vírgulas de atributos e os respectivos valores. Você pode alterar o modo como eles são exibidos usando a opção **Mostrar** .  
   
 ## <a name="see-also"></a>Consulte Também  

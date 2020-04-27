@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079281"
 ---
 # <a name="defining-a-data-source-view"></a>Definindo uma exibição da fonte de dados
@@ -28,7 +28,7 @@ ms.locfileid: "66079281"
   
 2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**. A página **Selecionar uma Fonte de Dados** é exibida.  
   
-3.  Em **Fontes de dados relacionais**, a fonte de dados **Adventure Works DW 2012** está selecionada. Clique em **Próximo**.  
+3.  Em **Fontes de dados relacionais**, a fonte de dados **Adventure Works DW 2012** está selecionada. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Para criar uma exibição de fonte de dados com base em várias fontes de dados, primeiro defina uma exibição da fonte de dados com base em uma única fonte de dados. Essa fonte de dados é, então, chamada a fonte de dados primária. Depois, você poderá adicionar tabelas e exibições de uma fonte de dados secundária. Ao projetar dimensões que contêm atributos baseados em tabelas relacionadas em várias fontes de dados, talvez seja necessário definir uma fonte de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como a fonte de dados primária para usar suas funcionalidades de mecanismo de consulta distribuída.  
@@ -52,7 +52,7 @@ ms.locfileid: "66079281"
   
 5.  Clique **>** para adicionar as tabelas selecionadas à lista **objetos incluídos** .  
   
-6.  Clique em **Avançar.**  
+6.  Clique em **Avançar**.  
   
 7.  No campo Nome, garanta que **Adventure Works DW 2012** é exibido e clique em **Concluir**.  
   

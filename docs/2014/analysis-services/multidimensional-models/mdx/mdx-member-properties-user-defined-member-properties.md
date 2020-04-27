@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074256"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Propriedades do membro definidas pelo usuário (MDX)
@@ -68,6 +68,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte Também  
  [Usando propriedades do membro &#40;MDX&#41;](mdx-member-properties.md)   
- [Propriedades &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

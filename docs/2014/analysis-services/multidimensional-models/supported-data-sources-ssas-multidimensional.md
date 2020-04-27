@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072856"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Fontes de dados com suporte (SSAS multidimensional)
   Este tópico descreve os tipos de fonte de dados que você pode usar em um modelo multidimensional.  
   
-##  <a name="bkmk_supported_ds"></a>Fontes de dados com suporte  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Fontes de dados com suporte  
  Você pode recuperar dados das fontes de dados na tabela a seguir: Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a instalação não instala os provedores listados para cada fonte de dados. Alguns deles podem já estar instalados com outros aplicativos no computador; em outros casos, você precisará baixar e instalar o provedor.  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66072856"
 |Fonte|Versões|Tipo de arquivo|Provedores <sup>1</sup>|  
 |Bancos de dados do Access|Microsoft Access 2007, 2010, 2013.|.accdb ou .mdb|Provedor OLE DB do Microsoft Jet 4.0|  
 |SQL Server bancos de dados relacionais <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 11.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
-|Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de Dados .NET Framework para SQL Server<br /><br /> Provedor de OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> Provedor de OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6, V12|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
 |Bancos de dados relacionais do Informix|V11.10|(não se aplica)|Provedor OLE DB para Informix|  
 |Bancos de dados relacionais IBM DB2|8.1|(não se aplica)|DB2OLEDB|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077616"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Guia Modelos (Visualizadores do Modelo de Mineração)
@@ -24,7 +24,7 @@ ms.locfileid: "66077616"
   
  Use esta exibição de um modelo de série temporal para extrair informações úteis sobre a análise de série temporal, inclusive a equação para o gráfico, as condições de ARIMA e os coeficientes.  
   
- **Para obter mais informações:** [algoritmo do Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [procurar um modelo usando o Visualizador do Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo do Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md)  
+ **Para obter mais informações:** [algoritmo MTS](data-mining/microsoft-time-series-algorithm.md), [Procurar um modelo usando o visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo MTS](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -60,7 +60,7 @@ ms.locfileid: "66077616"
   
  Se a árvore mostrada na lista suspensa tiver uma barra colorida mais longa, isso significará que o modelo tem muitas ramificações na árvore. Ramificar significa que a regressão é mais complexa e o modelo tem que ser quebrado em vários segmentos, com uma equação diferente (ou par de equações) em cada nó.  
   
- **Segundo plano**  
+ **Informações**  
  Use este controle para selecionar o estado que é representado pela cor do plano de fundo em cada nó.  
   
  **Expansão padrão**  

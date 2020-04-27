@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073034"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Executando o Assistente para Implantação do Analysis Services
   Ao usar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação para implantar um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto do, você pode executar o assistente das seguintes maneiras:  
   
--   **Interativamente** Quando executado interativamente, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação gera um script de implantação XML com base nos arquivos de entrada, conforme modificado interativamente pela entrada do usuário. O assistente aplica qualquer modificação de usuário somente ao script de implantação. O assistente não modifica os arquivos de entrada. Para saber mais sobre os arquivos de entrada, veja [Noções básicas sobre arquivos de entrada usados para criar o script de implantação](deployment-script-files-input-used-to-create-deployment-script.md).  
+-   **Interativamente** Quando executado interativamente, o Assistente para Implantação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gera um script de implantação XML baseado nos arquivos de entrada, como modificado interativamente pela entrada de usuário. O assistente aplica qualquer modificação de usuário somente ao script de implantação. O assistente não modifica os arquivos de entrada. Para saber mais sobre os arquivos de entrada, veja [Noções básicas sobre arquivos de entrada usados para criar o script de implantação](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 -   **No prompt de comando** Quando executado no prompt de comando, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] assistente de implantação gera um script de implantação XML for Analysis (XMLA) com base nos comutadores que você usa para executar o assistente. O assistente pode executar qualquer uma destas ações: alertá-lo para entrada de usuário e modificar arquivos de entrada com base naquela entrada; executar uma implantação autônoma silenciosa, que usa os arquivos de entrada como são; ou criar um script de implantação que você pode usar depois.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66073034"
   
  Para executar o assistente no modo de arquivo de resposta, use a opção **/a** .  
   
- **Modo silencioso**  
+ **Modo sem confirmação**  
  No modo silencioso, o assistente executa uma implantação autônoma silenciosa com base na informação residente nos arquivos de entrada.  
   
  Para executar o assistente no modo silencioso, use a opção **/s** . Quando você executar o assistente no modo silencioso, serão produzidas mensagens para o console ou, se fornecido, para um arquivo de log.  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074514"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Criando cálculos de célula em MDX (MDX)
@@ -34,11 +34,11 @@ ms.locfileid: "66074514"
   
  Em termos de escopo de criação, as células calculadas são similares a conjuntos nomeados e membros calculados no modo como as células calculas podem ser temporariamente criadas para o ciclo de vida de uma sessão ou de uma única consulta ou disponibilizadas globalmente como parte de um cubo:  
   
--   **Com escopo de consulta** Para criar uma célula calculada que é definida como parte de uma consulta MDX e, portanto, cujo escopo é limitado à consulta, você usa a palavra-chave WITH. Você pode usar a célula calculada em uma instrução MDX SELECT. Usando essa abordagem, a célula calculada criada pelo uso da palavra-chave `WITH` pode ser alterada sem afetar a instrução SELECT.  
+-   **Com escopo da consulta** Para criar uma célula calculada que seja definida como parte de uma consulta MDX e, portanto, cujo escopo esteja limitado à consulta, use a palavra-chave WITH. Você pode usar a célula calculada em uma instrução MDX SELECT. Usando essa abordagem, a célula calculada criada pelo uso da palavra-chave `WITH` pode ser alterada sem afetar a instrução SELECT.  
   
      Para obter mais informações sobre como usar a palavra-chave WITH para criar membros calculados, consulte [Criando cálculos de célula no escopo da consulta &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
--   **Escopo da sessão** Para criar um membro calculado cujo escopo seja mais largo do que o contexto da consulta, ou seja, cujo escopo é o tempo de vida da sessão MDX, use a instrução CREATE CELL CALCULAtion ou ALTER CUBE.  
+-   **Com escopo da sessão** Para criar um membro calculado cujo escopo seja mais amplo que o contexto da consulta, ou seja, cujo escopo seja o tempo de vida da sessão MDX, use a instrução CREATE CELL CALCULATION ou ALTER CUBE.  
   
      Para obter mais informações sobre como usar a instrução CREATE CELL CALCULATION ou ALTER CUBE para criar células calculadas em uma sessão, consulte [Criando células calculadas no escopo da sessão](mdx-cell-calculations-session-scoped-calculated-cells.md)  
   

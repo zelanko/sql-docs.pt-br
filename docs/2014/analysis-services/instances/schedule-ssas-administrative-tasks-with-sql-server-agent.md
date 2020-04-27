@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079678"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Agendar tarefas administrativas do SSAS com o SQL Server Agent
@@ -24,7 +24,7 @@ ms.locfileid: "66079678"
   
  Este tópico é um passo a passo que mostra dois modos de usar o SQL Server Agent para executar um script XMLA. O primeiro exemplo demonstra como agendar o processamento de uma única dimensão. O segundo exemplo mostra como combinar tarefas de processamento em um único script executado com base em uma agenda. Para concluir essas etapas, você precisará atender aos pré-requisitos a seguir.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O serviço SQL Server Agent deve ser instalado.  
   
  Por padrão, os trabalhos são executados na conta de serviço. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a conta padrão para SQL Server Agent é NT Service\SQLAgent $\<InstanceName>. Para executar um backup ou uma tarefa de processamento, essa conta deve ser um administrador do sistema na instância do Analysis Services. Para obter mais informações, consulte [conceder permissões de administrador do servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "66079678"
   
  Uma tarefa agendada do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é um script XMLA inserido em um trabalho do SQL Server Agent. A execução desse trabalho é agendada para as horas e com a frequência desejadas. Como o SQL Server Agent faz parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você trabalha com o Mecanismo de Banco de Dados e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para criar e agendar uma tarefa administrativa.  
   
-###  <a name="bkmk_CreateScript"></a>Criar um script para processar uma dimensão em um trabalho SQL Server Agent  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a>Criar um script para processar uma dimensão em um trabalho SQL Server Agent  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Abra uma pasta de banco de dados e localize uma dimensão. Clique com o botão direito do mouse na dimensão e selecione **Processar**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079678"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>Criar e agendar o trabalho de processamento de dimensões  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a>Criar e agendar o trabalho de processamento de dimensões  
   
 1.  Conecte-se a uma instância do Mecanismo de Banco de Dados e abra o Pesquisador de Objetos.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079678"
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemplo 2: Processando uma dimensão e uma partição em lote em uma tarefa agendada  
  Os procedimentos deste exemplo demonstram como criar e agendar um trabalho que processa uma dimensão de banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em lote e, ao mesmo tempo, processa uma partição de cubo que depende da dimensão para agregação. Para obter mais informações sobre processamento em lote de objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Processamento em lote &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a>Criar um script para processamento em lotes de uma dimensão e uma partição em um trabalho SQL Server Agent  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>Criar um script para processamento em lotes de uma dimensão e uma partição em um trabalho SQL Server Agent  
   
 1.  Usando o mesmo banco de dados, expanda **Dimensões**, clique com o botão direito do mouse na dimensão **Cliente** e selecione **Processo**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079678"
   
 12. Essa etapa copia o script XMLA para a Área de Transferência do Windows. Você pode deixar o script XMLA na Área de Transferência, salvá-lo em um arquivo ou colá-lo no Bloco de Notas ou em outro editor de texto.  
   
-###  <a name="bkmk_Scheduling"></a>Criar e agendar o trabalho de processamento em lotes  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a>Criar e agendar o trabalho de processamento em lotes  
   
 1.  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e abra o Pesquisador de Objetos.  
   
@@ -223,6 +223,6 @@ ms.locfileid: "66079678"
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções de processamento e configurações &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Criar script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

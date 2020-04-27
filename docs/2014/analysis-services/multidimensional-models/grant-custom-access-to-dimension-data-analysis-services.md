@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075059"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acesso personalizado a dados da dimensão (Analysis Services)
@@ -41,14 +41,14 @@ ms.locfileid: "66075059"
   
  A segurança básica de dimensão é a mais fácil, uma vez que basta selecionar quais atributos de dimensão e hierarquias de atributo devem ser incluídas ou excluídas da função. A segurança avançada é mais complexa e exige conhecimentos em scripts MDX. Veja abaixo a descrição das duas abordagens.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Nem todos os membros de medidas ou dimensão podem ser usados ​​em cenários de acesso personalizados. A conexão irá falhar se uma função restringir o acesso a uma medida ou membro padrão ou restringir o acesso a medidas que fazem parte de expressões de medida.  
   
- **Verificar se há obstruções na segurança da dimensão: medidas padrão, membros padrão e medidas usadas em expressões de medida**  
+ **Verifique se há obstruções à segurança da dimensão: medidas padrão, membros padrão e medidas usados em expressões de medidas**  
   
 1.  Em SQL Server Management Studio, clique com o botão direito do mouse em um cubo e selecione **cubo de script como** | **alterar para** | **nova janela do editor de consultas**.  
   
-2.  Procure `DefaultMeasure`. Encontre um para o cubo e um para cada perspectiva. Ao definir a segurança de dimensão, evite restringir o acesso a medidas padrão.  
+2.  Pesquise `DefaultMeasure`. Encontre um para o cubo e um para cada perspectiva. Ao definir a segurança de dimensão, evite restringir o acesso a medidas padrão.  
   
 3.  Em seguida, procure a `MeasureExpression`. A expressão de medida é baseada em um cálculo que inclui frequentemente outras medidas. Verifique se a medida que deseja restringir não foi usada em uma expressão. Como alternativa, restrinja o acesso, apenas certifique-se de também excluir qualquer referência a essa medida no cubo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66075059"
   
 ## <a name="basic-dimension-security"></a>Segurança básica de dimensão  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
      A função já deve ter acesso de leitura para o cubo. Consulte [Conceder permissões de cubo ou modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) se precisar de ajuda com esta etapa.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66075059"
   
  Você pode usar o Construtor MDX para escrever a instrução MDX. Consulte [Construtor MDX&#40;Analysis Services – Dados Multidimensionais&#41;](../mdx-builder-analysis-services-multidimensional-data.md) para ver os detalhes. A guia **Avançado** contém as seguintes opções:  
   
- **Attribute**  
+ **Atributo**  
  Selecione o atributo do qual você deseja gerenciar segurança de membro.  
   
  **Conjunto de membros permitido**  
@@ -113,7 +113,7 @@ ms.locfileid: "66075059"
   
  Por exemplo, suponha que uma função de banco de dados especifica `Male` como o membro padrão para o atributo `Gender`. A menos que uma consulta inclua explicitamente o atributo `Gender` e especifique um membro diferente para esse atributo, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retornará um conjunto de dados que incluirá apenas clientes masculinos. Para obter mais informações sobre como definir o membro padrão, consulte [Definir um membro padrão](attribute-properties-define-a-default-member.md).  
   
- **Habilitar total Visual**  
+ **Habilitar Totais Visuais**  
  A propriedade VisualTotals indica se os valores da célula agregada exibidos são calculados de acordo com todos os valores de célula ou só de acordo com os valores da células visíveis à função de banco de dados.  
   
  Por padrão, a propriedade VisualTotals é desabilitada (definida `False`como). Essa configuração padrão maximiza o desempenho porque o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode calcular rapidamente o total de todos os valores da célula, em vez de ter que passar tempo selecionando quais valores de células deverão ser calculados.  

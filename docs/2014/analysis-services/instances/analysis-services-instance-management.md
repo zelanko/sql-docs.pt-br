@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080346"
 ---
 # <a name="analysis-services-instance-management"></a>Gerenciamento de instância do Analysis Services
@@ -46,10 +46,10 @@ ms.locfileid: "66080346"
   
 |Link|Descrição da tarefa|  
 |----------|----------------------|  
-|[&#40;de configuração de pós-instalação Analysis Services&#41;](post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
+|[Configuração de pós-instalação &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Descreve as tarefas necessárias e opcionais que completam ou modificam uma instalação do Analysis.|  
 |[Conectar ao Analysis Services](connect-to-analysis-services.md)|Descreve as propriedades de cadeia de conexão, as bibliotecas de cliente, as metodologias de autenticação, e as etapas para estabelecer ou limpar conexões.|  
 |[Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md)|Descreve ferramentas e técnicas por monitorar uma instância de servidor, inclusive como usar o Desempenho do Sistema e o SQL Server Profiler.|  
-|[Criar script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explica como automatizar muitas tarefas administrativas, inclusive processamento.|  
+|[Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explica como automatizar muitas tarefas administrativas, inclusive processamento.|  
 |[Cenários de globalização para Analysis Services Multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explica o suporte ao idioma e à ordenação, as etapas para alterar ambas as propriedades e dicas para definir e testar comportamentos de idioma e de ordenação.|  
 |[Operações de log no Analysis Services](log-operations-in-analysis-services.md)|Descreve os logs e explica como configurá-los.|  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66080346"
  [Comparando soluções tabulares e multidimensionais &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Ferramentas de Configuração do PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administração e configuração do servidor PowerPivot na administração central](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Determinar o modo de servidor de uma instância de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

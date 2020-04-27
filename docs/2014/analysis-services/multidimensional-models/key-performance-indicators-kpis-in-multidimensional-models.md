@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074803"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>KPIs (indicadores chave de desempenho) em modelos multidimensionais
@@ -46,10 +46,10 @@ ms.locfileid: "66074803"
   
 |Termo|Definição|  
 |----------|----------------|  
-|Objetivo|Uma expressão numérica MDX ou um cálculo que retorna o valor de destino do KPI.|  
+|Goal|Uma expressão numérica MDX ou um cálculo que retorna o valor alvo do KPI.|  
 |Valor|Uma expressão numérica MDX que retorna o valor real do KPI.|  
-|Status|Uma expressão MDX que representa o estado do KPI em um ponto específico no tempo.<br /><br /> O status da expressão MDX deve retornar um valor normalizado entre -1 e 1. Valores iguais ou menores que -1 serão interpretados como "ruim" ou "baixo". Um valor de zero (0) será interpretado como "aceitável" ou "médio". Os valores iguais ou maiores que 1 serão interpretados como "bom" ou "alto".<br /><br /> Um número ilimitado de valores intermediários pode ser opcionalmente retornado e pode ser usado para exibir qualquer número de estados adicionais, caso tenham suporte pelo aplicativo cliente.|  
-|Tendência|Uma expressão MDX que avalia o valor do KPI com o passar do tempo. A tendência pode ser qualquer critério com base no tempo que seja útil em um contexto de negócios específico.<br /><br /> A expressão MDX de tendência permite que um usuário empresarial determine se o KPI está melhorando ou piorando ao longo do tempo.|  
+|Status|Uma expressão MDX que representa o estado do KPI em um point-in-time.<br /><br /> O status da expressão MDX deve retornar um valor normalizado entre -1 e 1. Valores iguais ou menores que -1 serão interpretados como "ruim" ou "baixo". Um valor de zero (0) será interpretado como "aceitável" ou "médio". Os valores iguais ou maiores que 1 serão interpretados como "bom" ou "alto".<br /><br /> Um número ilimitado de valores intermediários pode ser opcionalmente retornado e pode ser usado para exibir qualquer número de estados adicionais, caso tenham suporte pelo aplicativo cliente.|  
+|Tendência|Uma expressão MDX que avalia o valor do KPI ao longo do tempo. A tendência pode ser qualquer critério com base no tempo e que seja útil em um contexto empresarial específico.<br /><br /> A expressão MDX de tendência permite que um usuário empresarial determine se o KPI está melhorando ou piorando ao longo do tempo.|  
 |Indicador de status|Um elemento visual que fornece uma indicação rápida do status de um KPI. A exibição do elemento é determinada pelo valor da expressão MDX que avalia o status.|  
 |Indicador de tendência|Um elemento visual que fornece uma indicação rápida da tendência de um KPI. A exibição do elemento é determinada pelo valor da expressão MDX que avalia a tendência.|  
 |Pasta de exibição|A pasta na qual o KPI aparecerá quando um usuário estiver navegando no cubo.|  
@@ -60,8 +60,7 @@ ms.locfileid: "66074803"
 ## <a name="parent-kpis"></a>KPIs Pai  
  Uma organização pode rastrear diferentes métricas empresariais em diferentes níveis. Por exemplo, apenas dois ou três KPIs podem ser usados para medir o sucesso de toda a empresa, mas esses KPIs gerais podem ser usados em três ou quatro outros KPIs rastreados pelas unidades de negócios ao longo da empresa. Além disso, as unidades de negócio em uma empresa podem usar estatísticas diferentes para calcular o mesmo KPI, esses resultados são acumulados para o KPI geral.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação pai-filho entre KPIs. Essa relação pai-filho permite que os resultados do KPI filho seja usada para calcular os resultados do KPI pai. Os aplicativos cliente também podem usar essa relação para exibir os KPIs pai e filho adequadamente.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir uma relação pai-filho entre KPIs. Essa relação pai-filho permite que os resultados do KPI filho seja usada para calcular os resultados do KPI pai. Os aplicativos cliente também podem usar essa relação para exibir os KPIs pai e filho adequadamente.  
   
 ## <a name="weights"></a>Pesos  
  Os pesos também podem ser atribuídos à KPIs filho. Os pesos permitem que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ajuste proporcionalmente os resultados do KPI filho ao calcular o valor do KPI pai.  

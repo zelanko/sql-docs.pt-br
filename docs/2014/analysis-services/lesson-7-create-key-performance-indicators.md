@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078367"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lição 8: Criar indicadores chave de desempenho
-  Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *base* , em relação a um valor de *destino* , também definido por uma medida ou por um valor absoluto. Em aplicativos cliente de relatório, KPIs podem fornecer aos profissionais de negócios uma maneira rápida e fácil de entender um resumo de sucesso nos negócios ou para identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
+  Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Em aplicativos cliente de relatório, KPIs podem fornecer aos profissionais de negócios uma maneira rápida e fácil de entender um resumo de sucesso nos negócios ou para identificar tendências. Para obter mais informações, consulte [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
   
  Tempo estimado para conclusão desta lição: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 7: Criar medidas](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Criar indicadores chave de desempenho  
@@ -39,7 +39,7 @@ ms.locfileid: "66078367"
   
      Ao concluir a criação da fórmula, pressione ENTER.  
   
-     Essa medida servirá como a medida Base para o KPI.  
+     Esta medida servirá como medida Base para o KPI.  
   
 4.  Na grade de medida, clique com o botão direito do mouse na medida **Desempenho de Vendas pela Internet do Trimestre Atual** e clique em **Criar KPI**.  
   

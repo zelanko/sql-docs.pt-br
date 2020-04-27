@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077415"
 ---
 # <a name="define-a-default-member"></a>Definir um membro padrão
@@ -44,6 +44,6 @@ ms.locfileid: "66077415"
  Quando os níveis de uma hierarquia agregam-se naturalmente, você pode definir um membro padrão para qualquer atributo da hierarquia sem relação com os demais atributos da mesma. Por exemplo, na hierarquia país-província-cidade, você pode definir um membro padrão para cidade, como [cidade]. [Montreal] sem definir o membro padrão para o estado ou para o país.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar o &#40;todo o nível de&#41; para hierarquias de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar o nível &#40;All&#41; para hierarquias de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

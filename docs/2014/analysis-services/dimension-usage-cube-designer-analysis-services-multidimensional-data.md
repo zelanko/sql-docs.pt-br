@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081672"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso da Dimensão (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66081672"
   
 |Painel|Definição|  
 |----------|----------------|  
-|**Barra de ferramentas**|Use a barra de ferramentas para executar operações comuns nessa guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia uso da dimensão, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra**|Use a barra de ferramentas para executar operações comuns nessa guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia uso da dimensão, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Grade**|Use a grade para exibir e editar as relações entre dimensões e grupos de medidas do cubo. Para obter mais informações sobre esse painel, consulte [Grade &#40;guia Uso da Dimensão, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072739"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traduções em modelos multidimensionais
@@ -78,6 +78,6 @@ ms.locfileid: "66072739"
   
 ## <a name="see-also"></a>Consulte Também  
  [Cenários de globalização para Analysis Services multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Linguagens e agrupamentos &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [Idiomas e ordenações &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   
   

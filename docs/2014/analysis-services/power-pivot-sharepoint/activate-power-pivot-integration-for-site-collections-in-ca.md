@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072005"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Ativar a integração de recursos do PowerPivot para coleções de sites na Administração Central
@@ -24,7 +24,7 @@ ms.locfileid: "66072005"
   
  Você deve ativar a integração do PowerPivot para cada conjunto de sites que dê suporte ao processamento de consultas do PowerPivot.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Você deve ser um administrador de conjunto de sites.  
   
 ## <a name="activate-powerpivot-features"></a>Ativar os recursos do PowerPivot  
@@ -41,7 +41,7 @@ ms.locfileid: "66072005"
   
 5.  Clique em **Ativar**.  
   
-6.  Repita para conjuntos de sites adicionais abrindo cada site e clicando em **ações do site**.  
+6.  Repita a operação em outros conjuntos de sites, abrindo cada site e clicando em **Ações do Site**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração e configuração do servidor PowerPivot na administração central](power-pivot-server-administration-and-configuration-in-central-administration.md)   

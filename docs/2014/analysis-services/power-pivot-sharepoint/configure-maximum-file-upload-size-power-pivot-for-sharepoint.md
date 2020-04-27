@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071817"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurar o tamanho máximo do carregamento de arquivo (PowerPivot para SharePoint)
@@ -28,7 +28,7 @@ ms.locfileid: "66071817"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Configurar tamanho máximo de arquivo para Serviços do Excel  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique no nome do Aplicativo de Serviços do seu Excel.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071817"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurar o tamanho máximo do arquivo para um aplicativo Web do SharePoint  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos Web**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos Web**.  
   
     > [!NOTE]  
     >  Execute as etapas a seguir somente se você tiver aumentado o Tamanho Máximo da Pasta de Trabalho nos Serviços do Excel.  

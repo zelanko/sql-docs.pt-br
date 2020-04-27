@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077853"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadados (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -43,11 +43,11 @@ ms.locfileid: "66077853"
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em um elemento exibido no painel **Metadados** :  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Adicionar à consulta**|Clique para adicionar o objeto selecionado ao painel inferior da área de compilação da consulta.|  
 |**Adicionar ao Filtro**|Clique para adicionar a dimensão, atributo, hierarquia ou nível selecionado à área do **Navegador**.<br /><br /> Observação: esta opção será habilitada somente se uma dimensão, atributo, hierarquia ou nível for selecionado.|  
-|**Copy**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: essa opção copia o nome totalmente qualificado do objeto.|  
+|**Cópia**|Clique para adicionar o item selecionado à Área de Transferência.<br /><br /> Observação: essa opção copia o nome totalmente qualificado do objeto.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Barra de ferramentas &#40;guia navegador, designer de cubo&#41; &#40;Analysis Services de dados multidimensionais&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

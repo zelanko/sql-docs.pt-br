@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076936"
 ---
 # <a name="batch-processing-analysis-services"></a>Processamento em lotes (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "66076936"
   
  Este tópico inclui as seções a seguir:  
   
- [Processamento em lotes no SQL Server Data Tools](#bkmk_ssdt)  
+ [Processamento em lotes em Ferramentas de Dados do SQL Server](#bkmk_ssdt)  
   
  [Processamento em lotes usando XMLA no Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>Processamento em lotes no SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a>Processamento em lotes no SQL Server Data Tools  
  Antes que os objetos possam ser processados no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], o projeto que contém os objetos deve ser implantado. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Abra o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,9 +53,9 @@ ms.locfileid: "66076936"
   
 9. Em **Opções de processamento**, marque as seguintes configurações:  
   
-    -   A **ordem de processamento** é definida como **sequencial**e o modo de **transação** é definido como **uma transação**.  
+    -   **Ordem de processamento** é definido como **Sequencial**e **Modo de transação** é definido como **Uma Transação**.  
   
-    -   A **opção de tabela de write-back** está definida para **usar existente**.  
+    -   **Opção da Tabela de Write-back** é definida como **Usar existente**.  
   
     -   Em **Objetos Afetados**, marque a caixa de seleção **Objetos afetados pelo processo** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66076936"
   
 14. Clique em **Fechar** na tela **Processar Objetos** .  
   
-##  <a name="bkmk_xmla"></a>Processamento em lotes usando XMLA no Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Processamento em lotes usando XMLA no Management Studio  
  Você pode criar um script XMLA que executa processamento em lotes. Inicie gerando um script XMLA no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para cada objeto e, em seguida, combine-os em uma única Consulta de XMLA que você executa interativamente ou dentro de uma tarefa agendada.  
   
  Para obter instruções passo a passo, consulte **Exemplo 2** em [Agendar tarefas administrativas do SSAS com o SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  

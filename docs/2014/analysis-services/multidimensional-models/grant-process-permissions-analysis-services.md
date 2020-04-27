@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074885"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Conceder permissões de processo (Analysis Services)
@@ -93,6 +93,6 @@ ms.locfileid: "66074885"
  [Processar banco de dados, tabela ou partição](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Processamento de objeto de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
  [Conceder permissões de banco de dados &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Conceda permissões Read Definition em metadados de objeto &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Conceder permissões para ler definição em metadados de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

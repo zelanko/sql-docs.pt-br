@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071965"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Adicionar um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca (PowerPivot para SharePoint)
@@ -23,7 +23,7 @@ ms.locfileid: "66071965"
 > [!NOTE]  
 >  Se você já usa Bibliotecas de Conexão de Dados SharePoint, o tipo de conteúdo da Conexão de Modelo Semântico de BI é acrescentado automaticamente a esse modelo de biblioteca. Você poderá ignorar as etapas desta seção se usar uma biblioteca de conexão de dados que já o permite criar novos documentos de conexão de modelo semântico de BI.  
   
-##  <a name="bkmk_addtype"></a>Adicionar o tipo de conteúdo a uma biblioteca de documentos  
+##  <a name="add-the-content-type-to-a-document-library"></a><a name="bkmk_addtype"></a> Adicionar o tipo de conteúdo a uma biblioteca de documentos  
  Você deve ter pelo menos a permissão Gerenciar Listas para adicionar e configurar um tipo de conteúdo. Esta permissão é compilada no nível de permissão Design e superior.  
   
  O site que contém a biblioteca de documentos deve ter ativação de recurso para PowerPivot para SharePoint. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na administração central](activate-power-pivot-integration-for-site-collections-in-ca.md).  

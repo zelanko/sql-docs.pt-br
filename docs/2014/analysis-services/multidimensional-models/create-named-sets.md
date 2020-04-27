@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076137"
 ---
 # <a name="create-named-sets"></a>Criar conjuntos nomeados
@@ -29,7 +29,7 @@ ms.locfileid: "66076137"
  **Nome**  
  Selecione o nome do conjunto nomeado. Ele aparecerá para os usuários finais quando eles procurarem o cubo.  
   
- **Expression**  
+ **Expressão**  
  Especifique a expressão que produz o conjunto nomeado. Pode ser escrita em MDX. A expressão pode conter uma das seguintes opções:  
   
 -   Expressões de dados que representam componentes de cubo, como dimensões, níveis, medidas, etc.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079304"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lição 1: Criar um novo projeto de modelo de tabela
@@ -24,8 +24,8 @@ ms.locfileid: "66079304"
   
  Tempo estimado para conclusão desta lição: **10 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
- Este tópico é a primeira lição em um tutorial de criação de modelos tabulares. Para concluir esta lição, você deve ter o banco de dados AdventureWorksDW instalado em uma instância do SQL Server. Para obter mais informações, consulte [Modelagem de tabela &#40;Tutorial do Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
+## <a name="prerequisites"></a>Pré-requisitos  
+ Este tópico é a primeira lição em um tutorial de criação de modelo de tabela. Para concluir esta lição, você deve ter o banco de dados AdventureWorksDW instalado em uma instância do SQL Server. Para obter mais informações, consulte [Modelagem de tabela &#40;Tutorial do Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Criar um novo projeto de modelo de tabela  
   
@@ -50,17 +50,17 @@ ms.locfileid: "66079304"
   
  Em **Gerenciador de soluções**, clique com o botão `AW Internet Sales Tabular Model` direito do mouse no projeto e clique em **Propriedades**. A caixa de diálogo **Páginas de Propriedades de Modelo de Tabela de Vendas pela Internet do AW** é exibida. Essas são as propriedades do projeto avançadas. Você definirá posteriormente algumas dessas propriedades quando estiver pronto para implantar o modelo.  
   
- Agora, vamos examinar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Esta propriedade especifica se o modelo é implantado no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Para este tutorial, você criará e implantará o modelo no modo Na Memória.  
+ Agora, vamos examinar as propriedades do modelo. Em **Gerenciador de Soluções**, clique em **Model.bim**. Na janela **Propriedades** , você verá as propriedades do modelo, sendo **Modo DirectQuery** a mais importante delas. Esta propriedade especifica se o modelo é implantado no modo Na Memória (Desativado) ou no modo DirectQuery (Ativado). Neste tutorial, você criará e implantará o modelo no modo Em Memória.  
   
  Quando você criar um novo modelo, determinadas propriedades de modelo serão definidas automaticamente de acordo com as configurações de Modelagem de Dados que podem ser especificadas na caixa de diálogo de Ferramentas\Opções. As propriedades Backup de Dados, Servidor de Workspace e Retenção de Workspace especificam como e onde o banco de dados do workspace (o banco de dados de criação de modelos) tem seu backup feito, é retido na memória e compilado. Você pode alterar essas configurações mais tarde se necessário, mas por enquanto, apenas deixe essas propriedades como estão.  
   
  Quando você instalar o [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], vários novos itens de menu serão adicionados ao ambiente do Visual Studio. Vamos examinar os novos itens de menu que são específicos para a criação de modelos de tabela. Clique no menu **Modelo**. Aqui, você pode iniciar o Assistente de Importação de Tabela, exibir e editar conexões existentes, atualizar dados do workspace, procurar seu modelo no [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel com o recurso Analisar no Excel, criar perspectivas e funções, selecionar a exibição do modelo e definir opções de cálculo.  
   
- Clique no menu **Tabela**. Aqui, você pode criar e gerenciar relações entre tabelas, criar e gerenciar, especifique configurações de tabela de data, criar partições e editar propriedades de tabela.  
+ Clique no menu **Tabela** . Aqui, você pode criar e gerenciar relações entre tabelas, criar e gerenciar, especifique configurações de tabela de data, criar partições e editar propriedades de tabela.  
   
- Clique no menu **Coluna** . Aqui, você pode adicionar e excluir colunas em uma tabela, congelar colunas e especificar a ordem de classificação. Você também pode usar o recurso AutoSum para criar uma medida de agregação padrão para uma coluna selecionada. Outros botões da barra de ferramentas fornecem acesso rápido aos comandos e recursos usados com frequência.  
+ Clique no menu **Coluna** . Aqui, você pode adicionar e excluir colunas em uma tabela, congelar colunas e especificar a ordem de classificação. Você também pode usar o recurso AutoSum para criar uma medida de agregação padrão para uma coluna selecionada. Outros botões da barra de ferramentas fornecem acesso rápido a recursos e comandos frequentemente usados.  
   
- Explore algumas das caixas de diálogo e localizações para vários recursos específicos para a criação de modelos tabulares. Embora alguns itens ainda não estejam ativos, você pode obter uma boa ideia do ambiente de criação de modelos tabulares.  
+ Explore algumas das caixas de diálogo e locais de vários recursos específicos da criação de modelos de tabela. Embora alguns itens ainda não estejam ativos, você poderá ter uma boa noção do ambiente de criação de modelo de tabela.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Para continuar este tutorial, vá para a próxima lição: [Lição 2: Adicionar dados](lesson-2-add-data.md).  

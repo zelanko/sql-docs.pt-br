@@ -14,18 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080331"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tarefas administrativas do Analysis Services com SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar a execução de scripts DDL, tarefas de processamento de modelo de mineração e de cubo e Data Mining tarefas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consulta. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar a execução de scripts DDL, tarefas de processamento de modelo de mineração e de cubo e Data Mining tarefas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consulta. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode ser considerado como uma coleção de tarefas de manutenção e de fluxo de controle, que podem ser vinculadas para formar trabalhos de processamento de dados sequenciais e paralelos.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi projetado para executar operações de limpeza de dados durante as tarefas de processamento de dados e reunir dados de fonte de dados diferentes. Ao trabalhar com cubos e modelos de mineração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode transformar dados não numéricos em numéricos e garantir que os valores dos dados fiquem dentro dos limites previstos, criando assim dados limpos que serão usados para preencher tabelas de fatos e dimensões.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] foi projetado para executar operações de limpeza de dados durante as tarefas de processamento de dados e reunir dados de fonte de dados diferentes. Ao trabalhar com cubos e modelos de mineração, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pode transformar dados não numéricos em numéricos e garantir que os valores dos dados fiquem dentro dos limites previstos, criando assim dados limpos que serão usados para preencher tabelas de fatos e dimensões.  
   
 ## <a name="integration-services-tasks"></a>Tarefas do Integration Services  
  Há dois elementos principais em qualquer tarefa ou trabalho do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : elementos de fluxo de controle e de fluxo de dados. Os elementos de fluxo de controle definem a ordenação lógica da progressão do trabalho aplicando restrições de precedência. Os elementos de fluxo de dados referem-se à conectividade entre a saída de um componente para a entrada do componente seguinte, além de qualquer transformação de dados que possa ocorrer no intermédio. Com relação à decisão sobre para onde vão os dados, as restrições de precedência contêm a lógica para especificar qual componente receberá a saída. As [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tarefas que são mais relevantes para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluir a tarefa Executar DDL, a Analysis Services tarefa de processamento e a tarefa consulta de mineração de dados. Para cada uma delas, a Tarefa Enviar Email pode ser usada para enviar ao administrador uma mensagem de email contendo os resultados da tarefa.  
@@ -44,6 +42,6 @@ ms.locfileid: "66080331"
  [Destino de processamento de dimensões](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Transformação consulta de mineração de dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Processamento de objeto de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Criar script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Script de tarefas administrativas no Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

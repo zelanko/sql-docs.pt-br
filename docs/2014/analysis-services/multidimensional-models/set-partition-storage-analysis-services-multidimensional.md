@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072985"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Definir armazenamento de partição (Analysis Services – Multidimensional)
@@ -54,7 +54,7 @@ ms.locfileid: "66072985"
   
 ## <a name="storage-settings-descriptions"></a>Descrição das configurações de armazenamento  
   
-|Configuração de armazenamento padrão|DESCRIÇÃO|  
+|Configuração de armazenamento padrão|Descrição|  
 |------------------------------|-----------------|  
 |ROLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe e as agregações são armazenados em formato relacional. O servidor escuta as notificações quando os dados são alterados e todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações muito frequentes e contínuas, quando os dados mais recentes sempre são solicitados pelos usuários. Dependendo dos tipos de consulta gerados pelos aplicativos cliente, esse método fornece os tempos de resposta mais lentos.|  
 |HOLAP em tempo real|O OLAP é em tempo real. Os dados de detalhe são armazenados em um formato relacional, enquanto as agregações são armazenadas em um formato multidimensional. O servidor escuta as notificações quando os dados são alterados e atualiza as agregações OLAP multidimensionais (MOLAP) conforme necessário. Nenhum cache MOLAP é criado. Sempre que a fonte de dados é atualizada, o servidor passa para o OLAP relacional (ROLAP) em tempo real até que as agregações sejam atualizadas. Todas as consultas refletem o estado atual dos dados (latência zero).<br /><br /> Essa configuração normalmente seria usada para uma fonte de dados com atualizações frequentes e contínuas (mas não tão frequentes quanto o ROLAP em tempo real) e os usuários sempre solicitam os dados mais recentes. Esse método normalmente fornece um melhor desempenho geral do que o armazenamento ROLAP. Os usuários podem obter o desempenho MOLAP a partir dessa configuração se a fonte de dados permanecer silenciosa por um período longo o suficiente.|  

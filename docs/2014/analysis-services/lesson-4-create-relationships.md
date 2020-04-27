@@ -11,39 +11,39 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078576"
 ---
-# <a name="lesson-5-create-relationships"></a>Lição 5: Criar relações
-  Nesta lição, você aprenderá a verificar as relações que foram criadas automaticamente quando os dados foram importados e adicionará novas relações entre tabelas diferentes. Uma relação é uma conexão entre duas tabelas que estabelece como os dados nessas tabelas devem ser correlacionados. Por exemplo, as tabelas Product e Product Subcategory têm uma relação baseada no fato de que cada produto pertence a uma subcategoria. Para obter mais informações, consulte [Relações &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
+# <a name="lesson-5-create-relationships"></a>Lição 5: Criar Relações
+  Nesta lição, você aprenderá a verificar as relações que foram criadas automaticamente quando os dados foram importados e adicionará novas relações entre tabelas diferentes. Uma relação é uma conexão criada entre duas tabelas que estabelece como os dados dessas tabelas devem ser correlacionados. Por exemplo, as tabelas Product e Product Subcategory têm uma relação baseada no fato de que cada produto pertence a uma subcategoria. Para obter mais informações, consulte [Relações &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
   
  Tempo estimado para conclusão desta lição: **10 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 3: Renomear colunas](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Revisar relações existentes e adicionar novas relações  
- Ao importar dados usando o Assistente de Importação de Tabela, você importou sete tabelas do banco de dados AdventureWorksDW. Geralmente, se você importar dados de uma fonte relacional, os banco de dados existentes são importados automaticamente junto com os dados. No entanto, antes de prosseguir com a criação de seu modelo, você deve verificar se essas relações entre tabelas foram criadas corretamente. Para este tutorial, você também adicionará três novas relações.  
+ Ao importar dados usando o Assistente de Importação de Tabela, você importou sete tabelas do banco de dados AdventureWorksDW. Geralmente, se você importar dados de uma fonte relacional, os banco de dados existentes são importados automaticamente junto com os dados. No entanto, antes de prosseguir com a criação de seu modelo, você deve verificar se essas relações entre tabelas foram criadas corretamente. Para este tutorial, você adicionará também três novas relações.  
   
 #### <a name="to-review-existing-relationships"></a>Para examinar relações existentes  
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique no menu **Modelo** , aponte para **Exibição de Modelo**e clique em **Exibição de Diagrama**.  
   
-     O designer de modelo agora aparece na Exibição de Diagrama, um formato gráfico que exibe todas as tabelas que você importou com linhas entre elas. As linhas entre as tabelas indicam as relações que foram criadas automaticamente quando você importou os dados.  
+     Agora, o designer de modelos aparece em Exibição de Diagrama, um formato gráfico que exibe todas as tabelas que você importou com linhas entre elas. As linhas entre tabelas indicam as relações que foram criadas automaticamente quando você importar os dados.  
   
-     Use os controles de minimapa no canto superior direito do designer de modelos para ajustar a exibição de modo que ela inclua o máximo de tabelas possível. Também é possível clicar e arrastar tabelas para locais diferentes, aproximando as tabelas ou colocando-as em uma ordem específica. Mover tabelas não afeta as relações já existentes entre elas. Para exibir todas as colunas em uma tabela específica, clique e arraste uma borda de tabela para expandi-la ou diminuí-la.  
+     Use os controles de minimapa no canto superior direito do designer de modelos para ajustar a exibição de modo que ela inclua o máximo de tabelas possível. Você também pode clicar e arrastar tabelas para locais diferentes, colocando-as mais próximas umas das outras ou colocando-as em uma ordem específica. A movimentação de tabelas não afeta as relações já existentes entre elas. Para exibir todas as colunas em uma tabela específica, clique e arraste em uma borda de tabela expandi-la ou reduzi-la.  
   
-2.  Clique na linha sólida entre as tabelas **Cliente** e **Geografia** . A linha sólida entre essas duas tabelas mostra que essa relação está ativa, ou seja, ela é usada por padrão ao calcular fórmulas DAX.  
+2.  Clique na linha sólida entre as tabelas **Cliente** e **Geografia** . A linha sólida entre essas duas tabelas mostra que essa relação está ativa, ou seja, ela é usada por padrão durante o cálculo das fórmulas DAX.  
   
      Observe que, agora, a coluna **ID da Geografia** da tabela **Cliente** e a coluna **ID da Geografia** da tabela **Geografia** são exibidas cada uma dentro de uma caixa. Isso mostra que essas são as colunas usadas na relação. As propriedades da relação agora também aparecem na janela **Propriedades** .  
   
     > [!TIP]  
     >  Além de usar o designer de modelos na exibição de diagrama, você também pode usar a caixa de diálogo **gerenciar relações** para mostrar as relações entre todas as tabelas em um formato de tabela. Clique no menu **Tabela** e clique em **Gerenciar Relações**. A caixa de diálogo **Gerenciar Relações** mostra as relações que foram criadas automaticamente quando os dados foram importados.  
   
-3.  Use o designer de modelos na exibição de diagrama ou a caixa de diálogo **gerenciar relações** para verificar se as seguintes relações foram criadas quando cada uma das tabelas foi importada do banco de dados AdventureWorksDW:  
+3.  Use o designer de modelos na exibição de diagrama ou a caixa de diálogo **Gerenciar Relações** para verificar se as seguintes relações foram criadas quando cada uma das tabelas foi importada do banco de dados AdventureWorksDW:  
   
     |Ativo|Tabela|Tabela de Pesquisa Relacionada|  
     |------------|-----------|--------------------------|  

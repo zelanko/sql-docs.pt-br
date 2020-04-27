@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081080"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Geral (Designer de Banco de Dados) (Analysis Services - Dados Multidimensionais)
@@ -60,7 +60,7 @@ ms.locfileid: "66081080"
  Expanda a seção **Mapeamento de Tipo de Conta** para modificar a função de agregação padrão associada a cada **tipo** de conta do banco de dados selecionado.  
   
 > [!NOTE]  
->  Essa opção é aplicável apenas a cubos nos quais uma ou mais medidas usam a função de agregação *ByAccount* .  
+>   Essa opção é aplicável apenas a cubos nos quais uma ou mais medidas usam a função de agregação *ByAccount* .  
   
  Essa seção contém uma grade com as seguintes colunas:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66081080"
   
  Para adicionar um novo tipo de conta, clique em ** \<adicionar novo tipo de conta>**.  
   
- **Alias**  
+ **Receber**  
  Define o nome padrão do tipo de conta para uso pelo Assistente de Business Intelligence. Se essa coluna for deixada em branco, o padrão na coluna **Nome** será usado.  
   
  **Função de agregação**  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074857"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Principais conceitos em MDX (Analysis Services)
@@ -33,13 +33,13 @@ ms.locfileid: "66074857"
 ## <a name="measures-and-dimensions"></a>Medidas e dimensões  
  Um cubo do Analysis Services é composto por medida, dimensões e atributos de dimensão, todos demonstrados no exemplo do PivotTable.  
   
- As **medidas** são valores de dados numéricos encontrados em células, agregadas como soma, contagem, porcentagem, mín., máx. ou média. Os valores de medida são dinâmicos, calculados em tempo real, em resposta à navegação do usuário e interação com o PivotTable. Neste exemplo, as células mostram os Valores de Venda do Revendedor que aumentam ou diminuem se você expandir ou ocultar os eixos. É possível obter o Valor de Vendas do Revendedor para qualquer contexto e combinação de Data (ano, trimestre, mês ou data) e Território de Vendas (Grupo de países, País, Região). Outros termos sinônimos de medidas são os fatos (nas data warehouses) e campos calculados (em modelos de dados tabulares ou do Excel).  
+ **Medidas** são valores numéricos encontrados nas células, agregados como soma, contagem, percentual, mínimo, máximo ou média. Os valores de medida são dinâmicos, calculados em tempo real, em resposta à navegação do usuário e interação com o PivotTable. Neste exemplo, as células mostram os Valores de Venda do Revendedor que aumentam ou diminuem se você expandir ou ocultar os eixos. É possível obter o Valor de Vendas do Revendedor para qualquer contexto e combinação de Data (ano, trimestre, mês ou data) e Território de Vendas (Grupo de países, País, Região). Outros termos sinônimos de medidas são os fatos (nas data warehouses) e campos calculados (em modelos de dados tabulares ou do Excel).  
   
- As **dimensões** estão nos eixos de coluna e de linha de uma tabela dinâmica, fornecendo o significado por trás da medida. Dimensões são análogas a Tabelas em um modelo de dados relacional. Exemplos comuns de dimensões incluem Hora, Geografia, Produtos, Clientes, Funcionários e assim por diante. Este exemplo possui duas dimensões, o Território de Vendas nas linhas e a Data no topo, porém você pode facilmente arrastar e soltar outras dimensões associadas às Vendas do Revendedor, como Promoções ou Produtos, para ver o desempenho de vendas de acordo com essas dimensões. Sua capacidade de explorar os dados de maneiras interessantes depende das dimensões criadas e se elas possuem relação com as tabelas de fatos na fonte de dados.  
+ **Dimensões** encontram-se nos eixos de coluna e linha do PivotTable, fornecendo o significado por trás da medida. Dimensões são análogas a Tabelas em um modelo de dados relacional. Exemplos comuns de dimensões incluem Hora, Geografia, Produtos, Clientes, Funcionários e assim por diante. Este exemplo possui duas dimensões, o Território de Vendas nas linhas e a Data no topo, porém você pode facilmente arrastar e soltar outras dimensões associadas às Vendas do Revendedor, como Promoções ou Produtos, para ver o desempenho de vendas de acordo com essas dimensões. Sua capacidade de explorar os dados de maneiras interessantes depende das dimensões criadas e se elas possuem relação com as tabelas de fatos na fonte de dados.  
   
- Os **atributos de dimensão** são os itens nomeados dentro de uma dimensão, semelhante às colunas em uma tabela. Neste exemplo, os atributos da dimensão Território de Vendas consistem em Grupo de Países (Europa, América do Norte, Pacífico), País (Canadá, Estados Unidos) e Região (Central, Nordeste, Noroeste, Sudeste, Sudoeste).  
+ **Atributos de Dimensão** são os itens nomeados em uma dimensão, similar às colunas de uma tabela. Neste exemplo, os atributos da dimensão Território de Vendas consistem em Grupo de Países (Europa, América do Norte, Pacífico), País (Canadá, Estados Unidos) e Região (Central, Nordeste, Noroeste, Sudeste, Sudoeste).  
   
- Cada categoria tem um conjunto de valores de dados, ou membros, associado a ela. No nosso exemplo, os membros do atributo Grupo de Países são Europa, América do Norte e Pacífico. **Os membros** referem-se aos valores de dados reais que pertencem a um atributo.  
+ Cada categoria tem um conjunto de valores de dados, ou membros, associado a ela. No nosso exemplo, os membros do atributo Grupo de Países são Europa, América do Norte e Pacífico. **Membros** refere-se aos valores de dados reais pertencentes a um atributo.  
   
 > [!NOTE]  
 >  Um aspecto da modelagem de dados é formalizar os padrões e relacionamentos já existentes nos próprios dados. Ao trabalhar com dados que se enquadram em uma hierarquia natural, como no caso de países-regiões-cidades, você pode formalizar essa relação criando uma **relação de atributo**. Uma relação de atributo é uma relação de um para muitos entre atributos, por exemplo, uma relação entre um estado e uma cidade-um estado tem muitas cidades, mas uma cidade pertence a apenas um estado. A criação de relações de atributo no modelo acelera o desempenho da consulta, portanto, é uma prática recomendada criá-las se os dados oferecerem suporte a ela. Você pode criar uma relação de atributo no Designer de Dimensão no SQL Server Data Tools. Consulte [Define Attribute Relationships](attribute-relationships-define.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "66074857"
   
  Tudo acima é chamado de **membro pai**. Pacífico é o pai da Austrália.  
   
- **Componentes de uma hierarquia de atributo**  
+ **Componentes de uma hierarquia de atributos.**  
   
  Em conjunto, todos esses conceitos levam ao conceito de uma **hierarquia de atributo**. Uma hierarquia de atributo é uma árvore de membros de atributo que contém os seguintes níveis:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66074857"
   
  Vemos aqui como as hierarquias são usadas para fornecer um caminho de navegação em um PivotTable ou outros objetos de resumo de dados. Há dois tipos básicos: equilibrada e desbalanceada.  
   
- **Hierarquias balanceadas**  
+ **Hierarquias equilibradas**  
   
 |||  
 |-|-|  
@@ -116,33 +116,33 @@ ms.locfileid: "66074857"
 ## <a name="query-scope-cube-space"></a>Escopo da consulta (Espaço de cubo)  
  O escopo de uma consulta refere-se aos limites dentro dos quais os dados são selecionados. Ele pode variar de um cubo inteiro (um cubo é o maior objeto de consulta) até uma célula.  
   
- O **espaço do cubo** é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo.  
+ **Espaço de cubo** é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo.  
   
  **Subcubo** é um subconjunto de um cubo que representa uma exibição filtrada do cubo. Subcubos podem ser definidos com uma instrução Scope no script de cálculo MDX ou em cláusula de subseleção em uma consulta MDX ou como um cubo de sessão.  
   
- A **célula** refere-se ao espaço na interseção de um membro do membro de dimensão de medidas e um membro de cada hierarquia de atributo em um cubo.  
+ **Célula** refere-se ao espaço na interseção de um membro do membro de dimensão de medidas e um membro de cada hierarquia de atributo em um cubo.  
   
 ## <a name="other-modeling-terms"></a>Outros termos de modelagem  
  Esta seção é uma coleção de conceitos e termos que não se ajustam facilmente a outras seções, mas que você ainda precisa conhecer.  
   
- O **membro calculado** é um membro de dimensão que é definido e calculado no momento da consulta. Um membro calculado pode ser definido como uma consulta de usuário ou como script de cálculo MDX e armazenado no servidor. Um membro calculado corresponde a filas na tabela de dimensão da dimensão onde ele é definido.  
+ **Membro calculado** é um membro de dimensão definido e calculado na hora da consulta. Um membro calculado pode ser definido como uma consulta de usuário ou como script de cálculo MDX e armazenado no servidor. Um membro calculado corresponde a filas na tabela de dimensão da dimensão onde ele é definido.  
   
- A **contagem distinta** é um tipo especial de medida usado para itens de dados que só devem ser contados uma vez. O modelo de exemplo do AdventureWorks inclui diferentes medidas de contagem para Pedidos da Internet, Pedidos do Revendedor e Pedidos de Venda.  
+ **Contagem Distinta** é um tipo especial de medida usado para itens de dados que somente devem ser contados uma vez. O modelo de exemplo do AdventureWorks inclui diferentes medidas de contagem para Pedidos da Internet, Pedidos do Revendedor e Pedidos de Venda.  
   
  **Grupos de medidas** são uma coleção de uma ou mais medidas. A maioria deles são definidos pelo usuário, e você pode usá-los para reunir medidas relacionadas. A exceção são as medidas de contagens distintas. Elas sempre são colocadas em um grupo de medidas dedicado que contém somente a medida diferente. Você não pode ver o grupo de medidas na ilustração de exemplo de tabela dinâmica, mas ele aparece em uma lista de campos de tabela dinâmica, como uma coleção nomeada de medidas.  
   
- A **dimensão de medidas** é a dimensão que contém todas as medidas em um cubo. Ele não é exposto em um modelo multidimensional que você cria em SQL Server Data Tools, mas ele existe apenas o mesmo. Como ela contém medidas, todos os membros de uma dimensão de medidas são tipicamente agregados (geralmente por soma ou contagem).  
+ **Dimensão de medidas** é a dimensão que contém todas as medidas em um cubo. Ele não é exposto em um modelo multidimensional que você cria em SQL Server Data Tools, mas ele existe apenas o mesmo. Como ela contém medidas, todos os membros de uma dimensão de medidas são tipicamente agregados (geralmente por soma ou contagem).  
   
- Dimensões do **banco de dados e dimensões do cubo**. Em um modelo, você pode definir dimensões independentes que serão incluídas nos cubos do mesmo modelo. Quando você adiciona uma dimensão a um cubo, ela é chamada de dimensão de cubo. Por si só, em um projeto, como um item autônomo no Pesquisador de objetos, ele é chamado de dimensão de banco de dados. Por que esta diferença? Porque você pode definir suas propriedades independentemente. Na documentação do produto, você verá os dois termos usados, portanto, vale a pena entender o que significam.  
+ **Dimensões de Banco de Dados e de Cubo**. Em um modelo, você pode definir dimensões independentes que serão incluídas nos cubos do mesmo modelo. Quando você adiciona uma dimensão a um cubo, ela é chamada de dimensão de cubo. Por si só, em um projeto, como um item autônomo no Pesquisador de objetos, ele é chamado de dimensão de banco de dados. Por que esta diferença? Porque você pode definir suas propriedades independentemente. Na documentação do produto, você verá os dois termos usados, portanto, vale a pena entender o que significam.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Agora que você tem uma melhor compreensão de conceitos e terminologia importantes, prossiga para esses tópicos adicionais que explicam com mais detalhes os conceitos fundamentais no Analysis Services:  
   
--   [A consulta MDX básica &#40;&#41;MDX](mdx/mdx-query-the-basic-query.md)  
+-   [A consulta básica de MDX &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
   
--   [O script MDX básico &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
+-   [O script básico de MDX &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
--   [Modelagem multidimensional &#40;tutorial do Adventure Works&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Espaço do cubo](mdx/cube-space.md)   
@@ -153,6 +153,6 @@ ms.locfileid: "66074857"
  [Conceitos básicos de consulta MDX &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [Conceitos básicos de script MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Referência de linguagem MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
- [Expressões multidimensionais &#40;referência de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referência de expressões multidimensionais &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

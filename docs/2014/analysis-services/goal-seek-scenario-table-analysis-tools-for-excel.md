@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080735"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Cenário de Metas a Atingir (Ferramentas de Análise de Tabela para Excel)
@@ -81,7 +81,7 @@ ms.locfileid: "66080735"
   
  A ferramenta relata no painel de **resultados** da caixa de diálogo se foi bem-sucedida ao encontrar um cenário que atinja a meta desejada. Caso uma solução bem-sucedida tenha sido encontrada, a ferramenta também gerará uma recomendação informando sobre a alteração necessária. Por exemplo, a ferramenta de **busca de meta** pode informar que a distância de comutação deve ser inferior a 5 milhas.  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
  **A opção Meta a Atingir de Interesse na Compra encontrou uma solução.**  
   

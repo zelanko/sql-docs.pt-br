@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078796"
 ---
 # <a name="modifying-the-date-dimension"></a>Modificando a dimensão de data
@@ -175,7 +175,7 @@ ms.locfileid: "66078796"
   
      Esse script de SQL concatena o semestre e o ano para cada semestre na tabela em uma nova coluna.  
   
-10. Clique em **OK.**  
+10. Clique em **OK**  
   
 11. No menu **Arquivo** , clique em **Salvar Tudo**.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66078796"
   
 3.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
   
-4.  Na caixa de diálogo **Colunas de Chaves** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
+4.  Na caixa de diálogo **colunas de chave** , na lista **colunas disponíveis** , selecione a coluna **CalendarYear**e clique no **>** botão.  
   
 5.  Agora, as colunas **EnglishMonthName** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66078796"
   
 2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
   
-3.  Na caixa de diálogo **Colunas de Chaves** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
+3.  Na caixa de diálogo **colunas de chave** , na lista **colunas disponíveis** , selecione a coluna **CalendarYear**e clique no **>** botão.  
   
      Agora, as colunas **CalendarQuarter** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66078796"
   
 2.  Na janela **Propriedades** , clique no campo **KeyColumns** e clique no botão Procurar (**...**).  
   
-3.  Na caixa de diálogo **colunas de chave** , na lista **colunas disponíveis** , selecione a coluna **CalendarYear**e clique no **>** botão.  
+3.  Na caixa de diálogo **Colunas de Chave** , na lista **Colunas Disponíveis** , selecione a coluna **CalendarYear**e clique no botão **>** .  
   
      Agora, as colunas **CalendarSemester** e **CalendarYear** são exibidas na lista **Colunas de Chave** .  
   

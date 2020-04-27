@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077906"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de Medidas (guia Partições, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -31,15 +31,15 @@ ms.locfileid: "66077906"
   
  Clique para selecionar a linha inteira da partição.  
   
- **Nome da partição**  
+ **Nome da Partição**  
  Digite o nome da partição selecionada.  
   
- **Origem**  
+ **Fonte**  
  Digite o nome da tabela (para associação de tabela) ou da consulta (para associação de consulta) que fornece os dados da tabela de fatos para a partição selecionada.  
   
  Clique no botão **...** para exibir a caixa de diálogo **Origem da Partição** e definir a origem para a partição selecionada.  
   
- **Aggregation**  
+ **Agregação**  
  Exibe o modo de agregação e o modo de armazenamento da partição. O modo de armazenamento é exibido primeiro: ROLAP (processamento analítico online relacional), MOLAP (processamento analítico online multidimensional) ou HOLAP (processamento analítico online híbrido). O modo de agregação é exibido como uma porcentagem da otimização solicitada, como uma medida de espaço solicitado ou usado ou como o número de agregações criadas. Clique no botão **...** para exibir o **Assistente de Design de Agregação** e definir o design de agregação para a partição especificada.  
   
  **Descrição**  
@@ -71,7 +71,7 @@ ms.locfileid: "66077906"
 |**Configurações de write-back**|Clique para exibir a caixa de diálogo **Habilitar/Desabilitar Write-back** e especificar configurações de write-back para o grupo de medidas que contém a partição selecionada.|  
 |**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Processo**|Clique para exibir a caixa de diálogo **Processar** e processar a partição selecionada.|  
-|**Copy**|Esta opção está desabilitada.|  
+|**Cópia**|Esta opção está desabilitada.|  
 |**Colar**|Esta opção está desabilitada.|  
 |**Propriedades**|Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da partição selecionada.|  
   

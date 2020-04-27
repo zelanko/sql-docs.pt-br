@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077172"
 ---
 # <a name="set-usage-property"></a>Definir propriedade de uso
@@ -33,7 +33,7 @@ ms.locfileid: "66077172"
   
 2.  Em **Atributos**, clique com o botão direito do mouse no atributo cujo uso você deseja configurar, aponte para **Definir Utilização de Atributo**e, em seguida, clique em uma destas opções:  
   
-    -   **Regularmente**  
+    -   **Regular**  
   
     -   **Chave**  
   

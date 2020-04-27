@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078107"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nível e Membros (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -92,7 +92,7 @@ ms.locfileid: "66078107"
 > [!NOTE]  
 >  Esta opção será exibida somente se o modo write-back for habilitado.  
   
- **Nome**  
+ **Renomear**  
  Selecione para editar o nome do membro selecionado.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66078107"
  **Recolher Membro**  
  Recolhe o membro selecionado em **Árvore**.  
   
- **-**  
+ **Write-back**  
  Selecione para habilitar o modo write-back.  
   
 ## <a name="see-also"></a>Consulte Também  

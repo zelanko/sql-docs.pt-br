@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072348"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Conjunto Nomeado (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -29,7 +29,7 @@ ms.locfileid: "66072348"
  **Nome**  
  Digite o nome do conjunto nomeado.  
   
- **Expression**  
+ **Expressão**  
  Expanda para exibir ou editar a expressão MDX do conjunto nomeado.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  

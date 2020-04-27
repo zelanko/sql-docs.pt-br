@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072076"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>Partições (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -25,7 +25,7 @@ ms.locfileid: "66072076"
  A guia **Partições** contém os seguintes painéis:  
   
 ## <a name="panes"></a>Painéis  
- **Barra de ferramentas**  
+ **Barra**  
  Use a barra de ferramentas para executar ações comuns na guia.  
   
  **Grupos de medidas**  

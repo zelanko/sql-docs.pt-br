@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076755"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Procurar dados e metadados no Cubo
@@ -61,11 +61,11 @@ ms.locfileid: "66076755"
   
  Depois que você especificar a hierarquia, especifique o operador e a expressão de filtro. A tabela a seguir descreve os operadores e as expressões de filtro.  
   
-|Operador|Expressão de filtro|DESCRIÇÃO|  
+|Operador|Expressão de filtro|Descrição|  
 |--------------|-----------------------|-----------------|  
 |Igual a|Um ou mais membros|Os valores devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
 |Diferente de|Um ou mais membros|Os valores não devem ser iguais a um membro especificado.<br /><br /> (Fornece várias seleções de membro para hierarquias de atributo, além de hierarquias pai-filho e seleção única de membro para outras hierarquias.)|  
-|Entrada|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
+|No|Um ou mais conjuntos nomeados|Os valores devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Não está em|Um ou mais conjuntos nomeados|Os valores não devem estar em um conjunto nomeado especificado.<br /><br /> (Suporte somente a hierarquias de atributo.)|  
 |Intervalo (Inclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre ou ser iguais aos membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, nenhum intervalo será imposto e todos os valores serão permitidos.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  
 |Intervalo (Exclusivo)|Um ou dois membros delimitadores de um intervalo|Os valores devem estar entre os membros delimitadores. Se os membros delimitadores forem iguais ou somente um membro for especificado, os valores deve ser maiores que ou menores que o membro delimitador.<br /><br /> (Suporte somente a hierarquias de atributo. O intervalo deve estar em um nível de uma hierarquia. Não há suporte para intervalos não associados no momento.)|  
@@ -83,7 +83,7 @@ ms.locfileid: "66076755"
   
  Depois que você definir este filtro nas dimensões, poderá ativá-lo e desativá-lo clicando com o botão direito do mouse em qualquer lugar no painel de Dados e clicando em **Filtro Automático**.  
   
-##### <a name="filtering-data"></a>Filtrando dados  
+##### <a name="filtering-data"></a>Filtrar dados  
  Você pode usar a área de filtro para definir um subcubo no qual navegar. Você pode adicionar um filtro clicando em uma dimensão no painel de Filtro ou expandindo uma dimensão no painel de Metadados e arrastando uma hierarquia para o painel de Filtro. Em seguida, especifique **Operador** e **Expressão de filtro**.  
   
 ##### <a name="performing-actions"></a>Executando ações  

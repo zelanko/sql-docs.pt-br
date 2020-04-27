@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077919"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -65,19 +65,19 @@ ms.locfileid: "66077919"
 |**Três**|Exiba grupos de medidas e medidas em uma exibição de árvore.|  
 |**Grade**|Exiba grupos de medidas e medidas em uma grade.|  
   
- **Nome**  
+ **Renomear**  
  Selecione para renomear a medida ou grupo de medidas selecionado.  
   
  **Delete (excluir)**  
  Selecione para exibir a caixa de diálogo **Excluir Objetos** e excluir os objetos selecionados no painel **Medidas** .  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Selecione para mover a medida ou grupo de medidas selecionado uma posição para cima.  
   
 > [!NOTE]  
 >  Esta opção estará desabilitada se o item selecionado não puder ser movido para cima.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Selecione para mover a medida ou grupo de medidas selecionado uma posição para baixo.  
   
 > [!NOTE]  

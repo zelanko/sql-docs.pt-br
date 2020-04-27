@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080805"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grade (guia Uso da Dimensão, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -36,10 +36,10 @@ ms.locfileid: "66080805"
 |**Adicionar Dimensão do Cubo**|Selecione para exibir a caixa de diálogo **Adicionar Dimensão do Cubo** e adicionar referências a dimensões novas ou existentes do banco de dados ao cubo. Para obter mais informações sobre a caixa de diálogo **Adicionar Dimensão do Cubo**, consulte [Caixa de diálogo Adicionar Dimensão do Cubo &#40;Analysis Services – Dados Multidimensionais&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Novo Objeto Vinculado**|Selecione para exibir o **Assistente para Objetos Vinculados** e vincular grupos de medidas e dimensões de outros cubos, e para importar ações, KPIs e cálculos ao cubo selecionado. Para obter mais informações sobre o **Assistente para Objetos Vinculados**, consulte [Ajuda F1 do Assistente para Objetos Vinculados](linked-object-wizard-f1-help.md).|  
 |**Recortar**|Observação: esta opção está desabilitada.|  
-|**Copy**|Observação: esta opção está desabilitada.|  
+|**Cópia**|Observação: esta opção está desabilitada.|  
 |**Colar**|Observação: esta opção está desabilitada.|  
 |**Delete (excluir)**|Selecione para excluir a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada do cubo.|  
-|**Nome**|Selecione para renomear a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  
+|**Renomear**|Selecione para renomear a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  
 |**Propriedades**|Selecione para exibir a janela **Propriedades** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para a dimensão de cubo, grupo de medidas ou relação de dimensão selecionada.|  
   
 ## <a name="see-also"></a>Consulte Também  

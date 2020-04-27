@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076094"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Exibições de fontes de dados em modelos multidimensionais
@@ -31,9 +31,9 @@ ms.locfileid: "66076094"
  Você pode compilar várias exibições de fontes de dados em um projeto ou banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em uma ou mais fontes de dados e construir cada uma delas para atender aos requisitos de uma solução diferente.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Definindo uma exibição da fonte de dados &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [Como definir uma exibição da fonte de dados &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [Adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Como adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
  [Alterar propriedades em uma exibição da fonte de dados &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
@@ -45,15 +45,15 @@ ms.locfileid: "66076094"
   
  [Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [Substitua uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [Trabalhar com diagramas no designer de exibição da fonte de dados &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
  [Explorar dados em uma exibição da fonte de dados &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
  [Excluir uma exibição da fonte de dados &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [Atualize o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#40;Analysis Services do assistente de geração de esquema&#41;](schema-generation-wizard-analysis-services.md)   

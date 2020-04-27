@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073644"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mesclar partições no Analysis Services (SSAS - Multidimensional)
@@ -27,7 +27,7 @@ ms.locfileid: "66073644"
   
  [Requisitos](#bkmk_prereq)  
   
- [Atualizar a origem da partição depois de mesclar partições](#bkmk_Where)  
+ [Atualizar a Fonte da Partição após mesclar partições](#bkmk_Where)  
   
  [Considerações especiais para partições segmentadas por tabela de fatos ou consulta nomeada](#bkmk_fact)  
   
@@ -35,14 +35,14 @@ ms.locfileid: "66073644"
   
  [Como mesclar partições usando XMLA](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a>Cenários comuns  
+##  <a name="common-scenarios"></a><a name="bkmk_Scenario"></a>Cenários comuns  
  A única configuração mais comum para o uso da partição envolve a separação dos dados na dimensão de tempo. A granularidade de tempo associada a cada partição varia de acordo com os requisitos empresariais específicos do projeto. Por exemplo, a segmentação pode ser feita por anos, com o ano mais recente dividido em meses, mais uma partição separada para o mês vigente. A partição do mês vigente usa regularmente novos dados.  
   
  Quando o mês vigente termina, a partição é mesclada novamente nos meses da partição até o momento atual e o processo continua. No final do ano, terá sido formada uma partição inteira de ano novo.  
   
  Como este cenário demonstra, a mesclagem de partições pode se tornar uma tarefa de rotina executada regularmente, fornecendo uma abordagem progressiva para consolidar e organizar dados históricos.  
   
-##  <a name="bkmk_prereq"></a> Requisitos  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> Requisitos  
  As partições podem ser mescladas somente se satisfizerem todos os critérios a seguir:  
   
 -   Elas têm o mesmo grupo de medidas.  
@@ -66,7 +66,7 @@ ms.locfileid: "66073644"
   
  Para criar uma partição que possa ser mesclada no futuro, durante a criação da partição no Assistente para Partições, você pode optar por copiar o projeto de agregação de outras partições do cubo. Isso assegura que essas partições tenham o mesmo projeto de agregação. Ao serem mescladas, as agregações da partição de origem são combinadas com as agregações da partição de destino.  
   
-##  <a name="bkmk_Where"></a>Atualizar a origem da partição depois de mesclar partições  
+##  <a name="update-the-partition-source-after-merging-partitions"></a><a name="bkmk_Where"></a>Atualizar a origem da partição depois de mesclar partições  
  As partições são segmentadas por consulta, como a cláusula WHERE de uma consulta SQL usada para processar os dados, ou por uma tabela ou consulta nomeada que fornece dados à partição. A propriedade `Source` na partição indica se a partição está associada a uma consulta ou tabela.  
   
  Quando você mescla partições, o conteúdo das partições são consolidados, mas a propriedade `Source` não é atualizada para refletir o escopo adicional da partição. Isso significa que, se você reprocessar subsequentemente uma partição que mantém o `Source`original, obterá dados incorretos dessa partição. A partição agregará erroneamente dados no nível pai. O exemplo a seguir ilustra esse comportamento.  
@@ -85,7 +85,7 @@ ms.locfileid: "66073644"
   
  Após mesclar partições, sempre verifique `Source` para saber se o filtro está correto para os dados mesclados. Se você tiver iniciado com uma partição que incluía os dados históricos para Q1, Q2 e Q3, e agora mesclar Q4, ajuste o filtro para incluir Q4. Caso contrário, o processamento subsequente da partição gerará resultados incorretos. Ele não estará correto para Q4.  
   
-##  <a name="bkmk_fact"></a>Considerações especiais para partições segmentadas por tabela de fatos ou consulta nomeada  
+##  <a name="special-considerations-for-partitions-segmented-by-fact-table-or-named-query"></a><a name="bkmk_fact"></a>Considerações especiais para partições segmentadas por tabela de fatos ou consulta nomeada  
  Além das consultas, as partições também podem ser segmentadas por tabela ou consulta nomeada. Se as partições de origem e de destino usam a mesma tabela de fatos em uma fonte de dados ou exibição da fonte de dados, a propriedade `Source` é válida após mesclar partições. Ela especifica os dados da tabela de fatos que são apropriadas para a partição resultante. Como os fatos necessários para a partição resultante estão presentes na tabela de fatos, não é necessário fazer modificações na propriedade `Source`.  
   
  As partições que usam dados de várias tabelas de fatos ou consultas nomeadas exigem trabalho adicional. Você deve mesclar manualmente os fatos da tabela da partição de origem na tabela da partição de destino.  
@@ -110,7 +110,7 @@ ms.locfileid: "66073644"
   
  As tabelas de fatos podem ser mescladas antes ou depois da mesclagem das partições. No entanto, as agregações não representarão os fatos subjacentes com precisão até que as duas operações tenham sido concluídas. É recomendado mesclar as partições HOLAP ou ROLAP que acessam tabelas de fatos diferentes quando os usuários não estiverem conectados ao cubo que contém essas partições.  
   
-##  <a name="bkmk_partitionSSMS"></a>Como mesclar partições usando o SSMS  
+##  <a name="how-to-merge-partitions-using-ssms"></a><a name="bkmk_partitionSSMS"></a>Como mesclar partições usando o SSMS  
   
 > [!IMPORTANT]  
 >  Antes de mesclar partições, primeiro copie as informações de filtro de dados (normalmente, a cláusula WHERE para filtros baseados em consultas SQL). Após a conclusão da mesclagem, atualize a propriedade Origem da Partição da partição que contém os dados de fatos acumulados.  
@@ -128,7 +128,7 @@ ms.locfileid: "66073644"
   
 5.  Abra a `Source` Propriedade e modifique a cláusula WHERE para que ela inclua os dados da partição que você acabou de Mesclar. Lembre-se `Source` de que a propriedade não é atualizada automaticamente. Se você reprocessar sem primeiro atualizar o `Source`, talvez não obtenha todos os dados esperados.  
   
-##  <a name="bkmk_partitionsXMLA"></a>Como mesclar partições usando XMLA  
+##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Como mesclar partições usando o XMLA  
  Consulte este tópico para obter informações, [Mesclando partições &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Consulte Também  

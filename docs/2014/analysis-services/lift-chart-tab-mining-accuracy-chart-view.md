@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078097"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Guia do gráfico de comparação de precisão (Exibição de gráfico de precisão de mineração)
@@ -31,7 +31,7 @@ ms.locfileid: "66078097"
  Para obter informações gerais sobre métodos de medir a precisão de um modelo de mineração, veja [Gráfico de comparação de precisão &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## <a name="options"></a>Opções  
- **Tipo de gráfico**  
+ **Tipo de Gráfico**  
  Defina o tipo de gráfico para exibir no visualizador. É possível selecionar **Gráfico de Comparação de Precisão** ou **Gráfico de Ganho**.  
   
  **Configurações**  
@@ -39,12 +39,12 @@ ms.locfileid: "66078097"
   
  O gráfico de ganho não estará disponível se uma coluna previsível contínua for selecionada na guia **Mapeamento de Coluna** .  
   
- **Copy**  
+ **Cópia**  
  Copiar o gráfico para a área de transferência.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

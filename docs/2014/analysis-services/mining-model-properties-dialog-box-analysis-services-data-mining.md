@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077691"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Caixa de Diálogo Propriedades do Modelo de Mineração (Analysis Services – Mineração de Dados)
@@ -29,11 +29,11 @@ ms.locfileid: "66077691"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Exibe o nome do modelo de mineração.|  
-|**SESSÃO**|Exibe o identificador do modelo de mineração.|  
+|**ID**|Exibe o identificador do modelo de mineração.|  
 |**Descrição**|Exibe a descrição do modelo de mineração.|  
-|**Criar carimbo de data/hora**|Exibe a data e hora em que foi criado o modelo de mineração.|  
-|**Última atualização de esquema**|Exibe a data e a hora em que os metadados do modelo de mineração foram atualizados pela última vez.|  
-|**Estado**|Exibe o estado de processamento do modelo de mineração. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Criar Carimbo de Data/Hora**|Exibe a data e hora em que foi criado o modelo de mineração.|  
+|**Última Atualização de Esquema**|Exibe a data e a hora em que os metadados do modelo de mineração foram atualizados pela última vez.|  
+|**State**|Exibe o estado de processamento do modelo de mineração. Para obter mais informações sobre os valores dessa propriedade, consulte <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Último Processamento**|Exibe a data e a hora em que o modelo de mineração foi processado pela última vez.|  
   
 ## <a name="see-also"></a>Consulte Também  

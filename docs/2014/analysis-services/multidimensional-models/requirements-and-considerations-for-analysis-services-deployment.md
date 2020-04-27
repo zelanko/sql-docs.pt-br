@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073169"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos e considerações sobre a implantação do Analysis Services
   O desempenho e disponibilidade de uma solução dependem de muitos fatores, inclusive os recursos do hardware subjacente, a topologia de sua implantação de servidor, as características de sua solução (por exemplo, tendo partições distribuídas por vários servidores ou usando armazenamento de ROLAP que requer acesso direto ao mecanismo relacional), acordos de nível de serviço e a complexidade de seu modelo de dados.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisitos de memória e processador  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de mais recursos de memória e processador nos seguintes casos:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] precisa de mais recursos de memória e processador nos seguintes casos:  
   
 -   Ao processar cubos grandes ou complexos. Esse processamento requer mais recursos de memória e processador do que cubos pequenos ou simples.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "66073169"
   
  A quantidade de memória e os recursos do processador que estão disponíveis para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] variam, dependendo da edição do SQL Server, sistema operacional, capacidade de hardware e se você está usando processadores virtuais ou físicos. Para obter mais informações, siga estes links:  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisitos de hardware e software para instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [Computar limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Calcular limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [Recursos compatíveis com as edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66073169"
  Processamento de objetos  
  Durante o processamento, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] armazena cópias dos objetos que estão sendo processados no disco até o final desse procedimento. Quando o processamento termina, as cópias processadas dos objetos substituem os objetos originais. Portanto, é necessário fornecer espaço em disco adicional suficiente para uma segunda cópia de cada objeto a ser processado. Por exemplo, se desejar processar um cubo inteiro em uma única transação, é necessário espaço em disco suficiente para armazenar uma segunda cópia do cubo inteiro.  
   
-##  <a name="BKMK_Availability"></a>Considerações sobre disponibilidade  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Considerações sobre disponibilidade  
  Em um ambiente do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um cubo ou modelo de mineração pode não estar disponível para consulta devido a uma falha de hardware ou software. Um cubo também pode estar indisponível porque precisa ser processado.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Mantendo a disponibilidade caso ocorram falhas de hardware ou software  
@@ -87,7 +86,7 @@ ms.locfileid: "66073169"
   
  Para processar as atualizações incrementais de modo transparente em dados de origem, habilite o cache pró-ativo. O cache pró-ativo atualiza cubos com novos dados de origem sem exigir o processamento manual e sem afetar a disponibilidade dos cubos. Para obter mais informações, consulte [Cache pró-ativo &#40;Partições&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Considerações sobre escalabilidade  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Considerações sobre escalabilidade  
  Várias instâncias do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no mesmo computador podem causar problemas de desempenho. Para solucionar esses problemas, uma opção pode ser aumentar os recursos de processador, memória e disco no servidor. No entanto, talvez também seja necessário dimensionar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em vários computadores.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Dimensionando o Analysis Services em vários computadores  

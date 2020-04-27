@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081646"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Cenários de implantação do DirectQuery (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66081646"
   
  [Comparando configurações do DirectQuery](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a>Etapas de design e implantação  
+##  <a name="design-and-deployment-steps"></a><a name="bkmk_DQProcedure"></a>Etapas de design e implantação  
  **Etapa 1. Criar a solução**  
   
  Independentemente de qual modo você usará, você deve revisar as informações que descrevem as limitações nos dados que podem ser usados em modelos DirectQuery. Por exemplo, todos os dados usados em seu modelo e relatórios devem vir de um único banco de dados do SQL Server. Para obter mais informações, consulte [Modo DirectQuery &#40;SSAS Tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "66081646"
 |||  
 |-|-|  
 |**Somente DirectQuery**|**DirectQueryOnly**<br /><br /> Como você só especificou Consulta Direta, os metadados do modelo serão implantados no servidor, mas o modelo não será processado.<br /><br /> Observe que o cache que foi usado pelo banco de dados de workspace não será excluído automaticamente. Se você desejar garantir que os usuários não possam consultar os dados armazenados em cache, talvez convenha desmarcar o cache de tempo de design. Para obter mais informações, consulte [limpar os caches de Analysis Services](instances/clear-the-analysis-services-caches.md).|  
-|**Modo híbrido**|**DirectQuery com na memória**<br /><br /> **Na memória com DirectQuery**<br /><br /> Ambos os valores lhe permitem usar o cache ou a fonte de dados relacional, conforme necessário. A ordem define qual fonte de dados é usada por padrão ao responder consultas no modelo.<br /><br /> Em um modo híbrido, o cache deve ser processado ao mesmo tempo que os metadados modelo são implantados no servidor.<br /><br /> Você pode alterar esta configuração depois da implantação.|  
+|**Modo híbrido**|**DirectQuery com Na Memória**<br /><br /> **Na memória com DirectQuery**<br /><br /> Ambos os valores lhe permitem usar o cache ou a fonte de dados relacional, conforme necessário. A ordem define qual fonte de dados é usada por padrão ao responder consultas no modelo.<br /><br /> Em um modo híbrido, o cache deve ser processado ao mesmo tempo que os metadados modelo são implantados no servidor.<br /><br /> Você pode alterar esta configuração depois da implantação.|  
   
  **Etapa 8. Verificar modelo implantado**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66081646"
   
 -   Após a implantação do modelo, você poderá alterar essas propriedades.  
   
-##  <a name="bkmk_Configurations"></a>Comparando opções do DirectQuery  
+##  <a name="comparing-directquery-options"></a><a name="bkmk_Configurations"></a>Comparando opções do DirectQuery  
  **Somente DirectQuery**  
  Esta opção é preferida quando você deseja garantir uma única origem de dados, ou quando seus dados são muito grandes para caber na memória. Se você estiver trabalhando com uma fonte de dados relacional muito grande, durante o tempo de design, pode criar o modelo usando um subconjunto dos dados. Quando você implanta o modelo no modo somente DirectQuery, pode editar a definição de fonte de dados para incluir todos os dados necessários.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66081646"
   
 |||  
 |-|-|  
-|**DirectQuery sem cache**|Nenhum dado é carregado no cache. O modelo nunca pode ser processado.<br /><br /> O modelo só pode ser consultado usando clientes que suporte consultas de DAX. Especifica a origem da qual os resultados da consulta são retornados.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **DirectQuery do querymode******  = |  
+|**DirectQuery sem cache**|Nenhum dado é carregado no cache. O modelo nunca pode ser processado.<br /><br /> O modelo só pode ser consultado usando clientes que suporte consultas de DAX. Especifica a origem da qual os resultados da consulta são retornados.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **DirectQuery do querymode****DirectQuery**  = |  
 |**DirectQuery com consultas apenas no cache**|Falha na implantação. Não há suporte para essa configuração.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode****na memória**  = |  
   
  **Modo híbrido**  

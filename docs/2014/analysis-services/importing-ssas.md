@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 411901f318d08109d6f7c7ce724d76e1039dfa7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080507"
 ---
 # <a name="importing-ssas"></a>Importando (SSAS)
@@ -26,9 +26,9 @@ ms.locfileid: "66080507"
  **Detalhes**  
  Exibe as informações a seguir de cada operação de importação de dados.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
-|**Item de trabalho**|Exibe o nome da tabela ou exibição que está sendo importada.|  
+|**Item de Trabalho**|Exibe o nome da tabela ou exibição que está sendo importada.|  
 |**Status**|Indica se a tabela ou exibição foi importada com êxito e o número de linhas que foram importadas.|  
 |**Mensagem**|Se a importação da tabela ou exibição falhar, exibirá um link para mais informações. Estas informações são exibidas na janela Detalhes.<br /><br /> Para tentar importar a tabela ou exibição novamente, feche o assistente e execute-o novamente.|  
   
