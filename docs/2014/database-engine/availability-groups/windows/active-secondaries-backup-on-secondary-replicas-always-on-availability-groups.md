@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a94db154042f2cc6314459b6af4b52a43c2c9966
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62790675"
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: backup em réplicas secundárias (Grupos de Disponibilidade AlwaysOn)
@@ -33,10 +33,9 @@ ms.locfileid: "62790675"
   
   
   
-##  <a name="SupportedBuTypes"></a> Tipos de backup com suporte nas réplicas secundárias  
+##  <a name="backup-types-supported-on-secondary-replicas"></a><a name="SupportedBuTypes"></a>Tipos de backup com suporte em réplicas secundárias  
   
--   
-  `BACKUP DATABASE` só oferece suporte a backups completos somente cópia de bancos de dados, de arquivos ou de grupos de arquivos quando executado em réplicas secundárias. Observe que os backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
+-   `BACKUP DATABASE` só oferece suporte a backups completos somente cópia de bancos de dados, de arquivos ou de grupos de arquivos quando executado em réplicas secundárias. Observe que os backups somente cópia não afetam a cadeia de logs nem limpam o bitmap diferencial.  
   
 -   Não há suporte para backups diferenciais em réplicas secundárias.  
   
@@ -46,14 +45,14 @@ ms.locfileid: "62790675"
   
 -   Para fazer backup de um banco de dados secundário, uma réplica secundária deve ser capaz de se comunicar com a réplica primária e ser `SYNCHRONIZED` ou `SYNCHRONIZING`.  
   
-##  <a name="WhereBuJobsRun"></a> Configurando onde os trabalhos de backup são executados  
+##  <a name="configuring-where-backup-jobs-run"></a><a name="WhereBuJobsRun"></a>Configurando onde os trabalhos de backup são executados  
  A execução de backups em uma réplica secundária para descarregar a carga de trabalho do backup do servidor de produção primário é um grande benefício. No entanto, a execução de backups em réplicas secundárias introduz uma complexidade significativa no processo de determinação de onde os trabalhos de backup devem ser executados. Para resolver isto, configure onde os trabalhos de backup são executados, da seguinte maneira:  
   
 1.  Configure o grupo de disponibilidade para especificar em quais réplicas de disponibilidade você prefere que os backups sejam executados. Para obter mais informações, confira os parâmetros *AUTOMATED_BACKUP_PREFERENCE* e *BACKUP_PRIORITY* em [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql) ou [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
   
 2.  Crie trabalhos de backup com script para cada banco de dados de disponibilidade em cada instância de servidor que hospeda uma réplica de disponibilidade que é candidata a executar backups. Para obter mais informações, confira a seção “Acompanhamento: Depois de configurar o backup em réplicas secundárias” de [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar o backup em réplicas secundárias**  
   
 -   [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
@@ -72,7 +71,7 @@ ms.locfileid: "62790675"
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Backups somente cópia &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [Criar grupo de disponibilidade &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   
   

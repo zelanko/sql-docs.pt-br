@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814632"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>Bancos de dados criptografados com grupos de disponibilidade AlwaysOn (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62814632"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Restrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Se um banco de dados estiver criptografado ou contiver até mesmo uma DEK (chave de criptografia de banco de dados), você não poderá usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] nem o [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para adicionar um grupo de disponibilidade. Mesmo se um banco de dados criptografado for descriptografado, seus backups de log poderão conter dados criptografados. Nesse caso, a total sincronização inicial de dados poderia falhar no banco de dados. Isso é porque a operação de log de restauração pode exigir o certificado que foi usado pelas DEKs (chaves de criptografia de banco de dados), e esse certificado pode não estar disponível.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62814632"
   
     5.  Restaure esse backup de log no banco de dados secundário.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

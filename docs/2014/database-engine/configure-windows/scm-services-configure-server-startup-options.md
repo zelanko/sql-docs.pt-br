@@ -17,32 +17,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810359"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurar opções de inicialização do servidor (SQL Server Configuration Manager)
   Este tópico descreve como configurar as opções de inicialização que serão usadas sempre que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] for iniciado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para obter uma lista de opções de inicialização, veja [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
 ### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager grava parâmetros de inicialização no Registro. Eles entram em vigor na próxima vez que o [!INCLUDE[ssDE](../../includes/ssde-md.md)]for inicializado.  
   
  Em um cluster, as alterações devem ser feitas no servidor ativo quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está online, e entrarão em vigor quando o [!INCLUDE[ssDE](../../includes/ssde-md.md)] for reinicializado. A atualização do Registro das opções de inicialização no outro nó acontecerá no próximo failover.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A configuração de opções de inicialização de servidor é restrita a usuários que podem alterar as entradas relacionadas no Registro. Isso inclui os seguintes usuários.  
   
 -   Membros do grupo Administradores local.  
   
 -   A conta de domínio usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver configurado para ser executado em uma conta de domínio.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
   
 #### <a name="to-configure-startup-options"></a>Para configurar as opções de inicialização  
   
@@ -70,8 +70,8 @@ ms.locfileid: "62810359"
     >  Depois de terminar de usar o modo de usuário único, na caixa parâmetros de inicialização, selecione `-m` o parâmetro na caixa **parâmetros existentes** e clique em **remover**. Reinicie o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para restaurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como o modo multiusuário típico.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Iniciar o SQL Server no modo de usuário único](start-sql-server-in-single-user-mode.md)   
- [Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [Iniciar, parar ou pausar o serviço do SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Iniciar SQL Server no modo de usuário único](start-sql-server-in-single-user-mode.md)   
+ [Conectar-se a SQL Server quando os administradores do sistema estiverem bloqueados](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

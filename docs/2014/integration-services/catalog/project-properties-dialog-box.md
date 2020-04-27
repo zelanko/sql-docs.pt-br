@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771642"
 ---
 # <a name="project-properties-dialog-box"></a>Caixa de diálogo Propriedades do Projeto
@@ -33,7 +33,7 @@ ms.locfileid: "62771642"
   
 -   [Defina as opções na página Permissões](#permissions)  
   
-##  <a name="open_dialog"></a> Abra a caixa de diálogo Propriedades do Projeto  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Abra a caixa de diálogo Propriedades do Projeto  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62771642"
   
 5.  Clique com o botão direito do mouse no projeto e, em seguida, clique em **Propriedades**.  
   
-##  <a name="general"></a> Definir as opções na página Geral  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Definir as opções na página Geral  
  Use a página Geral para exibir as propriedades do projeto.  
   
  **Nome**  
@@ -65,7 +65,7 @@ ms.locfileid: "62771642"
  **Data de implantação**  
  Lista a data e a hora em que o projeto foi implantado ou reimplantado.  
   
-##  <a name="permissions"></a> Defina as opções na página Permissões  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Defina as opções na página Permissões  
  Use a página **Permissões** para exibir e definir as permissões explícitas para o projeto.  
   
  Procurar  

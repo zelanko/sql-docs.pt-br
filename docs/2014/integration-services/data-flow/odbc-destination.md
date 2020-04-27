@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771022"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -26,7 +26,7 @@ ms.locfileid: "62771022"
   
  O destino ODBC tem uma saída regular e uma saída de erro.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Opções de carregamento  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opções de carregamento  
  O destino ODBC pode usar um de dois módulos de carga de acesso. Defina o modo no [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../odbc-source-editor-connection-manager-page.md). Os dois modos são:  
   
 -   **Lote**: nesse modo, o destino ODBC tenta usar o método de inserção mais eficiente com base nos recursos do provedor ODBC percebido. Para a maioria dos provedores ODBC modernos, isso significa preparar uma instrução INSERT com parâmetros e usar uma associação de parâmetro de matriz row-wise (em que o tamanho da matriz é controlado pela propriedade **BatchSize** ). Se você selecionar **Lote** e o provedor não oferecer suporte a esse método, o destino ODBC alternará automaticamente para modo **Linha a linha** .  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770685"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar uma pesquisa no modo Sem Cache ou Cache Parcial

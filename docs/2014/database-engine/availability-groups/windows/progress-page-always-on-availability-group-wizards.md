@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789106"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página de Progresso (Assistentes de Grupo de Disponibilidade AlwaysOn)
@@ -39,19 +39,19 @@ ms.locfileid: "62789106"
  **Status**  
  Indica o resultado das etapas concluídas e o percentual de conclusão da etapa atual, da seguinte maneira:  
   
-|Result|DESCRIÇÃO|  
+|Result|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica que a operação desta etapa experimentou um erro. Clique no link para exibir uma caixa de diálogo de mensagem que descreve o erro.|  
 |**Em andamento (** *percentual concluído* **)**|Indica que a operação está ocorrendo agora e estima o percentual desta etapa que foi concluída.|  
 |**Êxito**|Indica que a operação desta etapa foi concluída com êxito.|  
   
- **Menos detalhes**  
+ **Menos Detalhes**  
  Clique para ocultar a grade de progresso.  
   
  **Cancelar**  
  Clique para ignorar todas as operações restantes e sair do assistente.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788526"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker com grupos de disponibilidade AlwaysOn (SQL Server)
@@ -25,11 +25,11 @@ ms.locfileid: "62788526"
   
  **Neste tópico:**  
   
--   [Requisitos de um serviço em um grupo de disponibilidade para receber mensagens remotas](#ReceiveRemoteMessages)  
+-   [Requisitos para um serviço em um grupo de disponibilidade para receber mensagens remotas](#ReceiveRemoteMessages)  
   
 -   [Requisitos para enviar mensagens para um serviço remoto em um grupo de disponibilidade](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> Requisitos para um serviço em um grupo de disponibilidade para receber mensagens remotas  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a>Requisitos de um serviço em um grupo de disponibilidade para receber mensagens remotas  
   
 1.  **Verifique se o grupo de disponibilidade tem um ouvinte.**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62788526"
   
      Para obter informações sobre como criar rotas, veja [Exemplos de roteamento do Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (na versão do [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] dos Manuais Online) e [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
   
-##  <a name="SendRemoteMessages"></a> Requisitos para enviar mensagens para um serviço remoto em um grupo de disponibilidade  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a>Requisitos para enviar mensagens para um serviço remoto em um grupo de disponibilidade  
   
 1.  **Criar uma rota para o serviço de destino.**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62788526"
   
 2.  **Verifique se msdb contém uma rota AutoCreatedLocal ou uma rota para o serviço específico.** (Para obter mais informações, veja [Requisitos para que um serviço em um grupo de disponibilidade receba mensagens remotas](#ReceiveRemoteMessages), acima neste tópico.)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62788526"
   
 -   [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+-   [Crie ou configure um ouvinte de grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
 -   [Criação e configuração de grupos de disponibilidade &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62788526"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
   

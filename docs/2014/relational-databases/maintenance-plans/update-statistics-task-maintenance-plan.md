@@ -15,15 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807067"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tarefa Atualização de Estatísticas (Plano de manutenção)
-  Use a caixa de diálogo **tarefa atualizar estatísticas** para atualizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações sobre os dados nas tabelas e índices. Essa tarefa cria uma nova amostra das estatísticas de distribuição de cada índice criado em tabelas de usuário no banco de dados. As estatísticas de distribuição são usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para otimizar a navegação em tabelas durante o processamento de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para construir as estatísticas de distribuição automaticamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma amostra periódica dos dados na tabela correspondente para cada índice. O tamanho da amostra tem como base o número de linhas na tabela e a frequência de modificação dos dados. Use essa opção para executar uma amostragem adicional usando a porcentagem de dados especificada nas tabelas. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa estas informações para criar planos de consulta melhores.  
+  Use a caixa de diálogo **Tarefa Atualizar Estatísticas** para atualizar informações do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre os dados nas tabelas e nos índices. Essa tarefa cria uma nova amostra das estatísticas de distribuição de cada índice criado em tabelas de usuário no banco de dados. As estatísticas de distribuição são usadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para otimizar a navegação em tabelas durante o processamento de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para construir as estatísticas de distribuição automaticamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz uma amostra periódica dos dados na tabela correspondente para cada índice. O tamanho da amostra tem como base o número de linhas na tabela e a frequência de modificação dos dados. Use essa opção para executar uma amostragem adicional usando a porcentagem de dados especificada nas tabelas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa estas informações para criar planos de consulta melhores.  
   
  Essa tarefa executa a instrução UPDATE STATISTICS.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62807067"
   
      Gere um plano de manutenção que execute tarefas de manutenção somente nos bancos de dados selecionados. Pelo menos um banco de dados da lista deverá ser selecionado se esta opção for escolhida.  
   
- **Observação** Os planos de manutenção são executados somente em bancos de dados definidos para o nível de compatibilidade 80 ou superior. Os bancos de dados definidos para o nível de compatibilidade 70 ou inferior não são exibidos.  
+ **Observação** Planos de manutenção são executados somente em bancos de dados definidos com nível de compatibilidade 80 ou superior. Os bancos de dados definidos para o nível de compatibilidade 70 ou inferior não são exibidos.  
   
  **Objeto**  
  Limita a grade **Seleção** para exibir tabelas, exibições ou ambas.  
@@ -67,16 +66,16 @@ ms.locfileid: "62807067"
  **Somente estatísticas de coluna**  
  Atualiza apenas as estatísticas de coluna.  
   
- **Somente estatísticas de índice**  
+ **Somente estatísticas do índice**  
  Só atualiza estatísticas do índice.  
   
- **Tipo de verificação**  
+ **Tipo de exame**  
  Tipo de exame usado para coletar estatísticas atualizadas.  
   
- **Verificação completa**  
+ **Exame completo**  
  Lê todas as linhas na tabela ou exibição para coletar as estatísticas.  
   
- **Exemplo por**  
+ **Amostra por**  
  Especifique a porcentagem da tabela ou exibição indexada ou o número de linhas de amostragem ao coletar estatísticas de tabelas ou exibições maiores.  
   
  **Exibir T-SQL**  
@@ -99,10 +98,10 @@ ms.locfileid: "62807067"
  Especifica como autenticar no servidor.  
   
  **Use a segurança integrada do Windows**  
- Conecte-se a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a autenticação do Windows.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  

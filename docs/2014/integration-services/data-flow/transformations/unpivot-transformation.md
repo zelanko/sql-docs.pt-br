@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770168"
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
@@ -29,11 +29,11 @@ ms.locfileid: "62770168"
   
  O diagrama a seguir mostra um conjunto de dados antes da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados após reverter a dinamização](../../media/mw-dts-18.gif "Conjunto de dados após reverter a dinamização")  
+ ![Conjunto de dados após a transformação de colunas em linhas](../../media/mw-dts-18.gif "Conjunto de dados após a transformação de colunas em linhas")  
   
  O diagrama a seguir mostra um conjunto de dados depois da transformação não dinâmica na coluna Produto.  
   
- ![Conjunto de dados antes de reverter a dinamização](../../media/mw-dts-17.gif "Conjunto de dados antes de reverter a dinamização")  
+ ![Conjunto de dados antes da transformação de colunas em linhas](../../media/mw-dts-17.gif "Conjunto de dados antes da transformação de colunas em linhas")  
   
  Em algumas circunstâncias, os resultados da transformação não dinâmica podem conter linhas com valores inesperados. Por exemplo, se os dados de exemplo a serem transformados mostrados no diagrama tivessem valores nulos em todas as colunas Qtd para Fred, a saída incluiria somente uma linha para Fred, e não cinco. A coluna Qtd conteria valor nulo ou zero, dependendo do tipo de dados da coluna.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62770168"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   

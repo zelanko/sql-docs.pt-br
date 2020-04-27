@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2423a011e75d346d196ebe5ebac2597ac30914a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788252"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algumas réplicas síncronas não são sincronizadas
@@ -29,10 +29,10 @@ ms.locfileid: "62788252"
 |-|-|  
 |**Nome da Política**|Estado de sincronização de dados de réplicas síncronas|  
 |**Problema**|Algumas réplicas síncronas não são sincronizadas.|  
-|**Categoria**|**Aviso**|  
-|**Faceta**|grupo de disponibilidade|  
+|**Categoria**|**Alerta**|  
+|**Particular**|grupo de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Essa política acumula o estado de sincronização de dados de todas as réplicas de disponibilidade e verifica se há réplicas de disponibilidade que não estão no estado de sincronização esperado. A política está em um estado não íntegro quando o estado de qualquer réplica assíncrona não é SYNCHRONIZING e o estado de qualquer réplica síncrona não é SYNCHRONIZED. Caso contrário, o estado da política é íntegro.  
   
 > [!NOTE]  
@@ -46,6 +46,6 @@ ms.locfileid: "62788252"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

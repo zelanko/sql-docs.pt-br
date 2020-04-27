@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792001"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Conectar-se à página Réplicas Secundárias Existentes (Assistente de Adição de Réplica e Assistente de Adição de Bancos de Dados)
-  Este tópico descreve as opções da página **Conectar a Réplicas Secundárias Existentes** . Este tópico é usado por [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   Este tópico descreve as opções da página **Conectar a Réplicas Secundárias Existentes**. Este tópico é usado por [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] e [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  **Colunas da grade:**  
- **Instância do Servidor**  
+ **Instância do servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
  **Conectado como**  
@@ -41,7 +41,7 @@ ms.locfileid: "62792001"
   
 
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

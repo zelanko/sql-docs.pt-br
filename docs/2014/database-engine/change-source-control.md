@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812729"
 ---
 # <a name="change-source-control"></a>Alterar Controle do Código-Fonte
@@ -31,7 +31,7 @@ ms.locfileid: "62812729"
 >  Esta caixa de diálogo também está disponível clicando com o botão direito do mouse no item no Gerenciador de Soluções.  
   
 ## <a name="options"></a>Opções  
- **Associar**  
+ **Associa**  
  Associe itens selecionados com um local de servidor de controle do código fonte especificado. Por exemplo, você pode usar esse botão para associar à última pasta de servidor de controle do código fonte conhecida e ao banco de dados. Se uma pasta de servidor ou banco de dados recente não puder ser localizada, você será solicitado a especificar outra.  
   
  **Procurar**  
@@ -77,7 +77,7 @@ ms.locfileid: "62812729"
 |----------------|---------------------|  
 |Válido|O item está corretamente associado e conectado com a pasta de servidor à qual pertence.|  
 |Inválido|O item está incorretamente associado com a pasta à qual pertence ou desconectado dela. Use o comando **Adicionar ao Controle do Código Fonte** em vez de **Associar** neste item.|  
-|Unknown (desconhecido)|O status do item sob controle do código fonte ainda não foi determinado.|  
+|Unknown|O status do item sob controle do código fonte ainda não foi determinado.|  
 |Não Controlado|O item não foi colocado sob controle do código fonte.|  
   
  **Desassociar**  

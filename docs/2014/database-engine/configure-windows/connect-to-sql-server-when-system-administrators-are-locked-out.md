@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782379"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectar-se ao SQL Server quando os administradores do sistema estão bloqueados
@@ -116,7 +116,7 @@ ms.locfileid: "62782379"
  Agora você deve ser capaz de se conectar normalmente com uma das contas que agora é um membro da função `sysadmin` de servidor fixa.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Iniciar o SQL Server no modo de usuário único](start-sql-server-in-single-user-mode.md)   
+ [Iniciar SQL Server no modo de usuário único](start-sql-server-in-single-user-mode.md)   
  [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md)  
   
   

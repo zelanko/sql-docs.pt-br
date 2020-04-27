@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771643"
 ---
 # <a name="validate-dialog-box"></a>Caixa de diálogo Validar
@@ -31,7 +31,7 @@ ms.locfileid: "62771643"
   
 -   [Definir as opções na página Geral](#general)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Validar  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Validar  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771643"
   
 5.  Clique com o botão direito do mouse no projeto ou pacote e clique em **Validar**.  
   
-##  <a name="general"></a> Definir as opções na página Geral  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Definir as opções na página Geral  
  **Ambiente**  
  Selecione o ambiente que você deseja usar para validar o projeto ou pacote.  
   

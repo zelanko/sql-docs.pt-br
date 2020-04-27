@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774830"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gerenciando memória para OLTP na memória
@@ -22,7 +22,7 @@ ms.locfileid: "62774830"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Seção|DESCRIÇÃO|  
+|Seção|Descrição|  
 |-------------|-----------------|  
 |[Estimar requisitos de memória para tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Estimar as necessidades de memória de uma tabela.|  
 |[Associar um banco de dados com tabelas com otimização de memória a um pool de recursos](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Passo a passo para associar um banco de dados a um pool de recursos.|  

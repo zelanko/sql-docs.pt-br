@@ -16,32 +16,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789007"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Página Resultados (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções da página **Resultados** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para exibir os resultados do assistente.  
   
-##  <a name="PageOptions"></a> Opções da página Resultados  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Opções da página Resultados  
  A grade **Resumo** contém as seguintes colunas:  
   
  **Nome**  
  Exibe uma frase que descreve uma operação específica.  
   
- **Resultado**  
+ **Disso**  
  Para cada etapa concluída, exibe um dos seguintes textos de hiperlink.  
   
-|Result|DESCRIÇÃO|  
+|Result|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica se houve falha na etapa de validação. Clique no link para exibir a mensagem de erro.|  
 |**Êxito**|Indica que a etapa de validação foi concluída com êxito.|  
   
 
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

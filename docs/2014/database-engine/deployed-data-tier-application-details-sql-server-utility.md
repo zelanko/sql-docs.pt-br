@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754077"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "62754077"
   
 -   Confiável: (True ou False)  
   
--   Collation  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62754077"
   
 -   Confiável: (True ou False)  
   
--   Collation  
+-   Ordenação  
   
 -   Nível de Compatibilidade: (por exemplo, Version100)  
   
@@ -166,9 +166,9 @@ ms.locfileid: "62754077"
 -   Hora do Último Relatório: esta coluna mostra a data e hora local do UCP usando o tipo de dados datetime. Para obter mais informações, veja o tópico [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nos Manuais Online do SQL Server. Ao usar o modelo de objeto do Utilitário, observe que o SSMS usa o tipo de dados datetimeoffset. Para obter mais informações, veja o tópico [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nos Manuais Online do SQL Server.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes de instâncias gerenciadas &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Detalhes do Instância Gerenciada &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Painel do utilitário &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Monitorar instâncias de SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

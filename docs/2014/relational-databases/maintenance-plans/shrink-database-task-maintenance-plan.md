@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806737"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tarefa reduzir banco de dados (Plano de Manutenção)
-  Use a caixa de diálogo **tarefa de redução de banco de dados** para criar uma tarefa que tente reduzir o tamanho dos banco de dados selecionados. Use as opções abaixo para determinar a quantidade de espaço não usado que permanecerá no banco de dados depois de ele ser reduzido (quanto maior a porcentagem, menos o banco de dados poderá ser reduzido). O valor é baseado na porcentagem dos dados reais no banco de dados. Por exemplo, se você reduzir um banco de dados de 100 MB contendo 60 MB de dados e 40 MB de espaço livre, com uma porcentagem de espaço livre de 50%, você ficará com 60 MB de dados e 30 MB de espaço livre (pois 50% de 60 MB são 30 MB). Somente o espaço em excesso no banco de dados é eliminado. Os valores válidos são de 0 a 100.  
+  Use a caixa de diálogo da **Tarefa Reduzir Banco de Dados** para criar uma tarefa que tenta reduzir o tamanho dos bancos de dados selecionados. Use as opções abaixo para determinar a quantidade de espaço não usado que permanecerá no banco de dados depois de ele ser reduzido (quanto maior a porcentagem, menos o banco de dados poderá ser reduzido). O valor é baseado na porcentagem dos dados reais no banco de dados. Por exemplo, se você reduzir um banco de dados de 100 MB contendo 60 MB de dados e 40 MB de espaço livre, com uma porcentagem de espaço livre de 50%, você ficará com 60 MB de dados e 30 MB de espaço livre (pois 50% de 60 MB são 30 MB). Somente o espaço em excesso no banco de dados é eliminado. Os valores válidos são de 0 a 100.  
   
  A redução de arquivos de dados recupera espaço com a movimentação de páginas de dados do final do arquivo para o espaço desocupado mais próximo à frente do arquivo. Quando espaço livre suficiente é criado no final do arquivo, as páginas de dados no final do arquivo podem ser desalocadas e retornadas para o sistema de arquivos.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806737"
   
 -   **Todos os bancos de dados**  
   
-     Gere um plano de manutenção que executa tarefas de manutenção em todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o tempdb.  
+     Gere um plano de manutenção que executa tarefas de manutenção em todos os bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto tempdb.  
   
 -   **Todos os bancos de dados do sistema**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62806737"
   
      Gere um plano de manutenção que execute tarefas de manutenção em todos os bancos de dados criados por usuários. Nenhuma tarefa de manutenção é executada com os bancos de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Esses bancos de dados**  
+-   **Estes bancos de dados**  
   
      Gere um plano de manutenção que execute tarefas de manutenção somente nos bancos de dados selecionados. Pelo menos um banco de dados da lista deverá ser selecionado se esta opção for escolhida.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62806737"
  **Reduzir o banco de dados quando ele ultrapassar**  
  Especifique o tamanho em megabytes que faz a tarefa ser executada.  
   
- **Quantidade de espaço livre para permanecer após a redução**  
+ **Espaço livre após a redução**  
  Deixe de reduzir quando o espaço livre nos arquivos de banco de dados alcançar esse tamanho.  
   
  **Exibir T-SQL**  
@@ -87,11 +87,11 @@ ms.locfileid: "62806737"
  **Digite as informações para fazer logon no servidor**  
  Especifica como autenticar no servidor.  
   
- **Usar a segurança integrada do Windows NT**  
- Conecte-se a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a autenticação do Windows.  
+ **Usar segurança Integrada do Windows NT**  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  

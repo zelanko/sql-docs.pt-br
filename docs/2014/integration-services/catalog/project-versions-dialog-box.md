@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771533"
 ---
 # <a name="project-versions-dialog-box"></a>Caixa de diálogo Versões do Projeto
@@ -30,7 +30,7 @@ ms.locfileid: "62771533"
   
 -   [Restaurar uma versão do projeto](#restore)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Versões de Projeto  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Versões de Projeto  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771533"
   
  Na caixa de diálogo **Versões do Projeto** , a tabela **Versões** exibe a lista de versões do projeto que foram implantadas no servidor, com a data e a hora em que a versão foi implantada, a data e a hora em que a versão foi restaurada (se tiver sido restaurada), a descrição de versão e um identificador de versão. A versão ativa no momento é indicada com uma marca de seleção na coluna **Atual** da tabela.  
   
-##  <a name="restore"></a> Restaurar uma versão do projeto  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Restaurar uma versão do projeto  
  Para restaurar uma versão anterior de um projeto, selecione a versão na tabela **Versões** e clique em **Restaurar para Versão Selecionada**. O projeto é restaurado para a versão selecionada e essa versão é indicada com uma marca de seleção na coluna **Atual** da tabela **Versões** .  
   
   

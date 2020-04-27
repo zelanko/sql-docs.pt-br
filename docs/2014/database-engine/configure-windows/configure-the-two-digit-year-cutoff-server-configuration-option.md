@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787025"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Configurar a opção two digit year cutoff de configuração de servidor
@@ -39,20 +39,20 @@ ms.locfileid: "62787025"
   
 -   **Acompanhamento:**  [após configurar a opção two-digit year cutoff](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Objetos de automação OLE usam 2030 como o ano de corte de dois dígitos. Você pode usar a opção **two digit year cutoff** para proporcionar consistência em valores de data entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativos cliente. Porém, para evitar ambiguidade de datas, use anos de quatro dígitos em seus dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Para configurar a opção two-digit year cutoff  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62787025"
   
 3.  Em **Suporte a ano de dois dígitos**, na caixa **Quando um ano de dois dígitos é inserido**, **interprete como um ano intermediário** , digite ou selecione um valor que é o ano final do tempo abrangido.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Para configurar a opção two-digit year cutoff  
   
@@ -88,7 +88,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: após configurar a opção two-digit year cutoff  
+##  <a name="follow-up-after-you-configure-the-two-digit-year-cutoff-option"></a><a name="FollowUp"></a> Acompanhamento: após configurar a opção two-digit year cutoff  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

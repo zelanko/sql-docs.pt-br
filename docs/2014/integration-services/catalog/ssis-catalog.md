@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771572"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
@@ -38,14 +38,14 @@ ms.locfileid: "62771572"
 > [!NOTE]  
 >  Se a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância à qual `SSISDB` o banco de dados está anexado, parar ou não responder, o processo ISServerExec. exe terminará. Uma mensagem é gravada em um log de Eventos do Windows.  
 >   
->  Se os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizarem failover como parte de um failover de cluster, os pacotes de execução não serão reiniciados. Você pode usar pontos de verificação para reiniciar pacotes. Para obter mais informações, consulte [Reiniciar pacotes por meio de pontos de verificação](../packages/restart-packages-by-using-checkpoints.md).  
+>  Se os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizarem failover como parte de um failover de cluster, os pacotes de execução não serão reiniciados. Você pode usar pontos de verificação para reiniciar pacotes. Para saber mais, confira [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificadores do objeto de catálogo  
- Quando você cria um novo objeto no catálogo, atribua um nome ao objeto. O nome do objeto é um identificador. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define regras que estabelecem que os caracteres podem ser usados em um identificador. Os nomes destes objetos devem seguir as regras de identificador.  
+ Quando você cria um novo objeto no catálogo, atribua um nome ao objeto. O nome do objeto é um identificador. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define regras que estabelecem que os caracteres podem ser usados em um identificador. Os nomes destes objetos devem seguir as regras de identificador.  
   
 -   Pasta  
   
--   Project  
+-   Projeto  
   
 -   Ambiente  
   
@@ -99,15 +99,15 @@ ms.locfileid: "62771572"
  **Limpar Logs Periodicamente**  
  A etapa de trabalho para limpeza de operações é executada quando esta propriedade é definida como `True`.  
   
- **Período de retenção (dias)**  
+ **Período de Retenção (dias)**  
  Define a idade máxima dos dados de operações permitidos (em dias). Os dados mais antigos são removidos.  
   
  O valor mínimo é um dia. O valor máximo é limitado apenas pelo valor máximo dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dados. Para obter informações sobre esse tipo de dados, consulte [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
- **Remover periodicamente versões antigas**  
+ **Remover Periodicamente Versões Antigas**  
  A etapa de trabalho para limpeza de versão de projeto é executada quando esta propriedade é definida como `True`.  
   
- **Número máximo de versões por projeto**  
+ **Número Máximo de Versões por Projeto**  
  Define quantas versões de um projeto são armazenadas no catálogo. As versões de projetos mais antigas são removidas.  
   
 ### <a name="encryption-algorithm"></a>Algoritmo de Criptografia  
@@ -131,7 +131,7 @@ ms.locfileid: "62771572"
   
  Alterar o algoritmo de criptografia é uma operação demorada. Primeiro, o servidor tem que usar o algoritmo previamente especificado para descriptografar todos os valores de configuração. Em seguida, o servidor tem que usar o novo algoritmo para criptografar novamente os valores. Durante este momento, não pode haver outras operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor. Assim, para permitir que operações do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continuem ininterruptas, o algoritmo de criptografia deverá ser um valor somente leitura na caixa de diálogo no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para alterar a configuração de propriedade **algoritmo de criptografia** , `SSISDB` defina o banco de dados para o modo de usuário único e, em seguida, chame o procedimento armazenado Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name*. Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Para alterar a configuração de propriedade **algoritmo de criptografia** , `SSISDB` defina o banco de dados para o modo de usuário único e, em seguida, chame o procedimento armazenado Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para o argumento *property_name* . Para os valores de propriedade com suporte, consulte [catalog.catalog_properties &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para obter mais informações sobre o procedimento armazenado, consulte [catalog.configure_catalog &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Para obter mais informações sobre o modo de usuário único, veja [Definir um banco de dados como modo de usuário único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para obter informações sobre criptografia e algoritmos de criptografia no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte os tópicos na seção [Criptografia do SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62771572"
   
  A tabela a seguir lista os nomes de propriedade mostrados na caixa de diálogo **Propriedades do Catálogo** e as propriedades correspondentes na exibição de banco de dados.  
   
-|Nome da Propriedade (caixa de diálogo**Propriedades do Catálogo** )|Nome da Propriedade (exibição de banco de dados)|  
+|Nome da propriedade (caixa de diálogo**Propriedades do catálogo** )|Nome da Propriedade (exibição de banco de dados)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nome do Algoritmo de Criptografia|ENCRYPTION_ALGORITHM|  
 |Limpar Logs Periodicamente|OPERATION_CLEANUP_ENABLED|  
@@ -168,7 +168,7 @@ ms.locfileid: "62771572"
   
 -   Para um projeto, use a página **Permissões** na [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Para gerenciar permissões usando Transact-SQL, chame [Catalog. grant_permission &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. deny_permission &#40;banco de dados ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) e [Catalog. Revoke_permission &#40;de banco de dados ssisdb ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database)&#41;. Para exibir permissões efetivas para a entidade de segurança atual para todos os objetos, consulte [catalog.effective_object_permissions &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Este tópico fornece descrições dos diferentes tipos de permissões. Para exibir as permissões atribuídas explicitamente ao usuário, consulte [catalog.explicit_object_permissions &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Para gerenciar permissões usando o Transact-SQL, chame [catalog.grant_permission &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) e [catalog.revoke_permission &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Para exibir permissões efetivas para a entidade de segurança atual para todos os objetos, consulte [catalog.effective_object_permissions &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Este tópico fornece descrições dos diferentes tipos de permissões. Para exibir as permissões atribuídas explicitamente ao usuário, consulte [catalog.explicit_object_permissions &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Pastas  
  Uma pasta contém um ou mais projetos e ambientes no `SSISDB` catálogo. Você pode usar a exibição [catalog.folders &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) para acessar informações sobre pastas no catálogo. Você pode usar os procedimentos armazenados a seguir para gerenciar pastas.  
@@ -204,7 +204,7 @@ ms.locfileid: "62771572"
   
 -   [catalog.object_versions &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-object-versions-ssisdb-database)  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  Use os parâmetros para atribuir valores às propriedades de pacote no tempo de execução do pacote. Para definir o valor de um pacote ou parâmetro de projeto e limpar o valor, chame [catalog.set_object_parameter_value &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database) e [catalog.clear_object_parameter_value &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database). Para definir o valor de um parâmetro para uma instância de execução, chame [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database). Você pode recuperar valores de parâmetro padrão chamando [catalog.get_parameter_values &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database).  
   
  Estas exibições mostram os parâmetros de todos os pacotes e projetos, e os valores de parâmetro usados para uma instância de execução.  

@@ -19,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf42651f256a2fb1e3c72e7bb7ff312486ea2472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810039"
 ---
 # <a name="security-requirements-for-managing-services"></a>Requisitos de segurança para gerenciar serviços
-  Para gerenciar os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do e do Agent, use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]SQL Server Configuration Manager ou. Gerencie os serviços em servidores agrupados com o Administrador Clusterizado.  
+  Para gerenciar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Services, use o SQL Server Configuration Manager ou o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Gerencie os serviços em servidores agrupados com o Administrador Clusterizado.  
   
  Para gerenciar o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e definir as opções de configuração de servidor, você deve ser um membro da função de servidor fixa **serveradmin** ou **sysadmin** . Membros do grupo **Administradores** do Windows podem iniciar e interromper serviços e configurar as opções de servidor que o Windows fornece.  
   

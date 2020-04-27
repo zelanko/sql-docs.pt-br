@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774530"
 ---
 # <a name="manage-checkouts"></a>Gerenciar check-outs
@@ -30,7 +30,7 @@ ms.locfileid: "62774530"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fazer check-out de arquivos](../../2014/database-engine/check-out-files.md)|Fornece instruções sobre como fazer check-out de um arquivo para que você possa modificá-lo.|  
 |[Desfazer check-outs](../../2014/database-engine/undo-checkouts.md)|Explica como cancelar um check-out existente.|  

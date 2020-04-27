@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788002"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Exibir as propriedades da réplica de disponibilidade (SQL Server)
   Este tópico descreve como exibir as propriedades de uma réplica de disponibilidade para um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir e alterar as propriedades de uma réplica de disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica primária e expanda a árvore de servidores.  
@@ -37,7 +37,7 @@ ms.locfileid: "62788002"
 5.  Na caixa de diálogo **Propriedades da Réplica de Disponibilidade** , use a página **Geral** para exibir as propriedades dessa réplica. Se estiver conectado à réplica primária, você poderá alterar as seguintes propriedades: modo de disponibilidade, modo de failover, acesso de conexão para a função primária, acesso de leitura para a função secundária (secundária legível) e o valor do tempo limite de sessão. Para obter mais informações, consulte [Propriedades da réplica de disponibilidade &#40;página geral&#41;](availability-replica-properties-general-page.md).  
   
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir as propriedades e os estados de réplicas de disponibilidade**  
   
  Para exibir as propriedades e os estados de réplicas de disponibilidade, use as seguintes exibições e a função do sistema:  
@@ -74,7 +74,7 @@ ms.locfileid: "62788002"
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade (o objeto de desempenho **SQLServer:Availability Replica**  ), consulte [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para exibir informações sobre os grupos de disponibilidade**  
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
@@ -83,7 +83,7 @@ ms.locfileid: "62788002"
   
 -   [Políticas AlwaysOn para problemas operacionais com o Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62788002"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)   
+ [Monitorar grupos de disponibilidade &#40;&#41;Transact-SQL](monitor-availability-groups-transact-sql.md)   
  [Políticas AlwaysOn para problemas operacionais com o Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Administração de um grupo de disponibilidade &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768018"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Executar o Assistente de Importação e Exportação do SQL Server
@@ -71,7 +71,7 @@ ms.locfileid: "62768018"
   
         |Propriedade|Valor|  
         |--------------|-----------|  
-        |Collation|Latin1_General_CS_AS_KS_WS|  
+        |Ordenação|Latin1_General_CS_AS_KS_WS|  
         |modelo de recuperação|Completo|  
         |Usar indexação de texto completo|True|  
   

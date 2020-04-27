@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813269"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)
@@ -30,14 +30,14 @@ ms.locfileid: "62813269"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Se você nunca adicionou nenhuma réplica de disponibilidade a um grupo de disponibilidade, consulte as seções "instâncias de servidor" e "grupos de disponibilidade e réplicas" em [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
--   Antes de adicionar uma réplica secundária, verifique se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está no mesmo cluster de WSFC (Windows Server Failover Clustering) que as réplicas existentes, mas reside em um nó de cluster diferente. Verifique também se essa instância de servidor atende a todos os outros pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, consulte [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Antes de adicionar uma réplica secundária, verifique se a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está no mesmo cluster de WSFC (Windows Server Failover Clustering) que as réplicas existentes, mas reside em um nó de cluster diferente. Verifique também se essa instância de servidor atende a todos os outros pré-requisitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obter mais informações, consulte [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Se uma instância de servidor selecionada para hospedar uma réplica de disponibilidade estiver sendo executada em uma conta de usuário de domínio e ainda não tiver um ponto de extremidade de espelhamento de banco de dados, o assistente poderá criar o ponto de extremidade e conceder a permissão CONNECT à conta de serviço da instância de servidor. No entanto, se o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver sendo executado como uma conta interna, como Sistema Local, Serviço Local ou Serviço de Rede, ou como uma conta que não pertença a um domínio, você deverá usar certificados para autenticação de ponto de extremidade, e o assistente não poderá criar um ponto de extremidade de espelhamento de banco de dados na instância de servidor. Nesse caso, é recomendável criar pontos de extremidade de espelhamento de banco de dados manualmente antes de iniciar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade.  
   
@@ -57,16 +57,16 @@ ms.locfileid: "62813269"
   
      Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
  Também requer a permissão CONTROL ON ENDPOINT se você desejar permitir que o Assistente para Adicionar Réplica ao Grupo de Disponibilidade gerencie o ponto de extremidade de espelhamento de banco de dados.  
   
 
   
-##  <a name="SSMSProcedure"></a> Usando o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)  
+##  <a name="using-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)  
  **Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e expanda a árvore de servidores.  
@@ -87,7 +87,7 @@ ms.locfileid: "62813269"
   
 6.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   
-    -   **Full**  
+    -   **Completo**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62813269"
   
 
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

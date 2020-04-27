@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809339"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propriedades do servidor (página Geral) - SQL Server Management Studio
-  Use esta página para exibir informações somente leitura sobre a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação.  
+  Use esta página para exibir informações somente leitura sobre a instalação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Grade de propriedades  
  Exiba as propriedades para o servidor selecionado, como, por exemplo, o nome do servidor, sistema operacional do servidor ou número de processadores.  
@@ -30,7 +30,7 @@ ms.locfileid: "62809339"
  **Nome**  
  Exibe o nome da instância de servidor.  
   
- **Produto**  
+ **Product**  
  Exibe a edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendo executada no momento.  
   
  **Sistema operacional**  
@@ -48,19 +48,19 @@ ms.locfileid: "62809339"
  **Memória**  
  Lista a quantidade de RAM instalada no servidor.  
   
- **Duo**  
+ **Processadores**  
  Exibe o número de CPUs instaladas.  
   
- **Diretório raiz**  
+ **Diretório Raiz**  
  Exibe o caminho para o local da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , normalmente C:\Arquivos de Programas\Microsoft SQL Server\\.  
   
  **Ordenação do Servidor**  
  Exibe a ordenação que tem o suporte do servidor. Uma ordenação especifica a página de código e ordem de classificação específicas a serem usadas para dados Unicode e não Unicode.  
   
- **Está clusterizado**  
+ **É clusterizado**  
  Exibirá **True** se a instância de servidor estiver configurada em um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou **False** se a instância de servidor não estiver clusterizada.  
   
- **HADR está habilitado**  
+ **Está habilitado para HADR**  
  Exibirá **True** se o recurso [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] estiver habilitado ou **False** se o recurso [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] estiver desabilitado. Para obter informações sobre como habilitar ou desabilitar o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consulte [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ## <a name="description-field"></a>Campo de descrição  

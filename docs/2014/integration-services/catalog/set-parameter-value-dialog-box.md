@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771622"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Caixa de diálogo Definir Valor do Parâmetro
@@ -26,7 +26,7 @@ ms.locfileid: "62771622"
   
 -   [Configurar as opções](#option)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Definir Valor do Parâmetro  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Definir Valor do Parâmetro  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62771622"
   
 4.  Clique com o botão direito do mouse em um pacote ou projeto, clique em **Configurar**e clique no botão de reticências na guia **Parâmetros** ou na guia **Gerenciadores de Conexões** .  
   
-##  <a name="option"></a> Configurar as opções  
+##  <a name="configure-the-options"></a><a name="option"></a> Configurar as opções  
  **Parâmetro**  
  Lista o nome do parâmetro.  
   

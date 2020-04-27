@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787092"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>Configurar a opção recovery interval de configuração de servidor
@@ -49,13 +49,13 @@ ms.locfileid: "62787092"
   
 -   **Acompanhamento:**  [depois de configurar a opção recovery interval](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O intervalo de recuperação afeta apenas bancos de dados que usam o tempo de recuperação de destino padrão (0). Para anular o intervalo de recuperação de servidor em um banco de dados, configure um tempo de recuperação de destino não padrão no banco de dados. Para obter mais informações, veja [Alterar o tempo de recuperação de destino de um banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Esta é uma opção avançada e deve ser alterada somente por um administrador de banco de dados experiente ou técnico certificado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62787092"
   
 -   Se você usar **sp_configure** para alterar o valor da opção **recovery interval** para mais de 60 (minutos), especifique RECONFIGURE WITH OVERRIDE. WITH OVERRIDE desabilita a verificação do valor da configuração (para valores que não são válidos ou não são recomendados).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para definir o intervalo de recuperação**  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na instância de servidor e selecione **Propriedades**.  
@@ -77,7 +77,7 @@ ms.locfileid: "62787092"
   
 3.  Em **Recuperação**, na caixa **Intervalo de recuperação (minutos)** , digite ou selecione um valor de 0 a 32767 para definir o intervalo máximo de tempo, em minutos, que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deveria gastar recuperando cada banco de dados na inicialização. O padrão é 0, que indica configuração automática pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Na prática, isso significa um tempo de recuperação inferior a um minuto e um ponto de verificação a cada um minuto aproximadamente para bancos de dados ativos.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-set-the-recovery-interval"></a>Para definir o intervalo de recuperação  
   
@@ -103,7 +103,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery internal  
+##  <a name="follow-up-after-you-configure-the-recovery-internal-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção recovery internal  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773392"
 ---
 # <a name="undo-checkouts"></a>Desfazer check-outs
@@ -51,7 +51,7 @@ ms.locfileid: "62773392"
      **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
-     **Exibição de árvore**  
+     **Exibição de Árvore**  
      Exibe a pasta e hierarquia de item para itens que você está revertendo o check-out.  
   
      **Desfazer check-out**  

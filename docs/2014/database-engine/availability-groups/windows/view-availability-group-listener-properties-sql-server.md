@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788022"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Exibir propriedades do ouvinte do grupo de disponibilidade (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62788022"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir as propriedades do ouvinte**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância de servidor que hospeda qualquer réplica de disponibilidade do grupo de disponibilidade cujo ouvinte você deseja exibir. Clique no nome do servidor para expandir a arvore de servidores.  
@@ -43,7 +43,7 @@ ms.locfileid: "62788022"
   
 5.  Isso abre a caixa de diálogo **Propriedades do Ouvinte do Grupo de Disponibilidade** . Para obter mais informações, veja [Propriedades do Ouvinte do Grupo de Disponibilidade (caixa de diálogo)](#AgListenerPropertiesDialog), mais adiante neste tópico.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Propriedades do Ouvinte do Grupo de Disponibilidade (caixa de diálogo)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> Propriedades do Ouvinte do Grupo de Disponibilidade (caixa de diálogo)  
  **Nome DNS do Ouvinte**  
  O nome da rede do ouvinte do grupo de disponibilidade.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62788022"
   
  A grade exibe cada uma das sub-redes nas quais o ouvinte escuta, e o endereço IP associado àquela sub-rede.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir as propriedades do ouvinte**  
   
  Para monitorar os ouvintes de disponibilidade, use as seguintes exibições:  
@@ -87,7 +87,7 @@ ms.locfileid: "62788022"
 > [!NOTE]  
 >  Para obter mais informações sobre como usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] para monitorar seu ambiente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , veja [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar ou configurar um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62788022"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

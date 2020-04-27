@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770584"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformação de BDD (Balanced Data Distributor)
@@ -24,7 +24,7 @@ ms.locfileid: "62770584"
   
  O diagrama a seguir mostra um exemplo simples de como usar a transformação de BDD. Neste exemplo, a transformação de BDD escolhe um buffer de pipeline de cada vez a partir dos dados de entrada de uma fonte de arquivo simples, e envia-o a um dos três caminhos de saída em uma forma round robin. No SQL Server Data Tools, você pode verificar os valores de um <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(tamanho padrão do buffer de pipeline) e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(número máximo de linhas padrão em um buffer de pipeline) na janela **Propriedades** que exibe as propriedades de uma tarefa de fluxo de dados.  
   
- ![Balanced Data Distributor](../../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
+ ![Distribuidor de Dados Equilibrado](../../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
   
  A transformação de BDD ajuda a melhorar o desempenho de um pacote em um cenário que satisfaça as seguintes condições:  
   
@@ -37,6 +37,6 @@ ms.locfileid: "62770584"
  Observe que, se o gargalo em um pacote SSIS for devido à taxa na qual os dados podem ser lidos da origem, o componente de BDD não ajudará a melhorar o desempenho. Se a causa do gargalo em um pacote SSIS for a falta de suporte do destino ao paralelismo, o BDD não ajudará; porém, você pode executar todas as transformações em paralelo e usar a transformação Union All para combinar os dados de saída provenientes de diferentes caminhos da saída da transformação de BDD antes de enviar os dados para o destino.  
   
 > [!IMPORTANT]  
->  Consulte o vídeo [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  
+>   Consulte o [vídeo Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) na biblioteca do TechNet para obter uma apresentação com uma demonstração sobre o uso da transformação.  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808394"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
@@ -52,7 +52,7 @@ ms.locfileid: "62808394"
  **Tamanho do pacote de rede**  
  O tamanho de pacote usado ao comunicar com o servidor. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
- **Tempo-limite da conexão**  
+ **Tempo limite da conexão**  
  O intervalo de tempo em segundos a esperar quando conectar ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antes de atingir o tempo-limite e retornar ao usuário uma falha em conectar. Para alterar isso, conecte novamente com as propriedades de conexão desejadas.  
   
  **Tempo limite de execução**  
@@ -64,7 +64,7 @@ ms.locfileid: "62808394"
 ## <a name="product-category"></a>Categoria do Produto  
  Exiba as propriedades do produto para a conexão atual. Essas propriedades descrevem o produto de servidor, versão, nome de instância e ordenação. As propriedades são definidas durante a instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nome do Produto**  
+ **Nome do produto**  
  O nome do produto do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Versão do produto**  
@@ -94,14 +94,14 @@ ms.locfileid: "62808394"
  **Sistema operacional**  
  A versão do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows instalada no servidor.  
   
- **Duo**  
+ **Processadores**  
  O número de processadores no servidor.  
   
- **Memória do sistema operacional**  
+ **Memória do Sistema Operacional**  
  O total de memória física no servidor, em megabytes.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Páginas de propriedades no SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Conectar ao servidor &#40;página de logon&#41; Mecanismo de Banco de Dados](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Conectar ao servidor &#40;página Logon&#41; Mecanismo de Banco de Dados](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

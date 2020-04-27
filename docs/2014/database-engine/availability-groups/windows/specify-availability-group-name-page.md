@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f2abf6a18b0d3c99a67e818be00ff7603de63c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789988"
 ---
 # <a name="specify-availability-group-name-page-new-availability-group-wizardadd-database-wizard"></a>Página Especificar Nome do Grupo de Disponibilidade (Assistente de Novo Grupo de Disponibilidade/Assistente para Adicionar Banco de Dados)
   Este tópico descreve as opções da página **Especificar nome de grupo de disponibilidade** . Este tópico é usado pelo [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e pelo [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a>Especificar opções de nome do grupo de disponibilidade  
+##  <a name="specify-availability-group-name-options"></a><a name="PageOptions"></a>Especificar opções de nome do grupo de disponibilidade  
  **Especificar um nome de grupo de disponibilidade**  
  Especifique o nome do grupo de disponibilidade. Para um novo grupo de disponibilidade, especifique um identificador válido do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que seja exclusivo em todos os grupos de disponibilidade no cluster do WSFC. O tamanho máximo de um nome de grupo de disponibilidade é 128 caracteres.  
   
-##  <a name="LaunchWiz"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

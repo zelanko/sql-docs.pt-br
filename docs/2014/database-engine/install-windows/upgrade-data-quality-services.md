@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775626"
 ---
 # <a name="upgrade-data-quality-services"></a>Atualizar o Data Quality Services
@@ -25,13 +25,13 @@ ms.locfileid: "62775626"
 > -   Você pode se conectar à versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do Data Quality Server usando a versão atual ou anterior do Cliente Data Quality ou a [Transformação de Limpeza DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) no Integration Services para executar suas tarefas de qualidade de dados.  
 > -   Você pode continuar a usar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel depois de atualizar o Data Quality Services e o Master Data Services para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. No entanto, qualquer versão anterior do suplemento Master Data Services para Excel não funcionará depois de atualizar para o SQL Server 2014 CTP2. Você pode baixar a versão do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 do suplemento Master Data Services para Excel [aqui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="Prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve estar conectado como um membro do grupo Administradores no computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
 -   Sua conta de usuário do Windows deve ser um membro da função de servidor fixa sysadmin na instância do SQL Server em que o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] está instalado.  
   
-##  <a name="Upgrade"></a> Atualizando o DQS  
+##  <a name="upgrading-dqs"></a><a name="Upgrade"></a> Atualizando o DQS  
  Para atualizar o DQS:  
   
 1.  Faça backup de seus bancos de dados do DQS antes de iniciar o processo de atualização. Para obter informações sobre como fazer backup de bancos de dados DQS, veja [Fazendo backup e restaurando banco de dados do DQS](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "62775626"
   
     5.  Uma mensagem de conclusão é exibida depois da atualização bem-sucedida do esquema de bancos de dados do DQS.  
   
-##  <a name="Verify"></a> Verificando a atualização do esquema de banco de dados do DQS  
+##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Verificando a atualização do esquema de banco de dados do DQS  
  Para verificar se o esquema de banco de dados do DQS foi atualizado com êxito, você poderá verificar a versão atual nos bancos de dados DQS_MAIN e DQS_PROJECTS consultando a tabela A_DB_VERSION em cada banco de dados. Para fazer isso:  
   
 1.  Inicie o SQL Server Management Studio e conecte-se à instância do SQL Server que contém o esquema de banco de dados do DQS atualizado.  
@@ -85,7 +85,7 @@ ms.locfileid: "62775626"
   
     |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1.200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775001"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renomear um computador que hospeda uma instância autônoma do SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "62775001"
   
  Você poderá se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o novo nome do computador depois de reiniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para garantir que @@SERVERNAME retorne o nome atualizado da instância do servidor local, execute manualmente o procedimento a seguir aplicável ao seu cenário. O procedimento usado depende de a atualização ser feita em um computador que hospeda uma instância padrão ou nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Para renomear um computador que hospeda uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>Para renomear um computador que hospeda uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Para um computador renomeado que hospeda uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute os seguintes procedimentos:  
   

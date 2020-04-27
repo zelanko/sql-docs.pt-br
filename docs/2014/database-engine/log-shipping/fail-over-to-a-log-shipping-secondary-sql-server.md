@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774178"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover para um envio de logs secundário (SQL Server)
@@ -46,20 +46,20 @@ ms.locfileid: "62774178"
 4.  Depois que os servidores secundários forem sincronizados, você poderá fazer o failover para o banco de dados que preferir recuperando o banco de dados secundário e redirecionando os clientes para aquela instância de servidor. A recuperação coloca o banco de dados em um estado consistente e online.  
   
     > [!NOTE]  
-    >  Ao disponibilizar um banco de dados secundário, você deve assegurar que os metadados estejam consistentes com os metadados do banco de dados primário original. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  Ao disponibilizar um banco de dados secundário, você deve assegurar que os metadados estejam consistentes com os metadados do banco de dados primário original. Para obter mais informações, consulte [gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  Depois de recuperar um banco de dados secundário, você poderá reconfigurá-lo para que atue como um banco de dados primário para outros bancos de dados secundários.  
   
      Se nenhum outro banco de dados secundário estiver disponível, veja [Configurar o envio de logs &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Alterar funções entre servidores de envio de log primários e secundários &#40;SQL Server&#41;](change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)  
   
--   [Gerenciamento de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)   
+ [Tabelas de envio de logs e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)   
  [Sobre o envio de logs &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Backups da parte final do log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   

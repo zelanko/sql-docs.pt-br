@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09dfdb2bfaaadc29a3a70c949380a5e3cd1a0512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810875"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Configurar a opção de configuração de servidor nested triggers
@@ -36,14 +36,14 @@ ms.locfileid: "62810875"
   
 -   **Acompanhamento:**  [depois de configurar a opção nested triggers](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>Para configurar a opção nested triggers  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62810875"
   
 2.  Na página **Avançado** , defina a opção **Permitir que Gatilhos Disparem Outros Gatilhos** como **Verdadeiro** (o padrão) ou **Falso**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-nested-triggers-option"></a>Para configurar a opção nested triggers  
   
@@ -77,7 +77,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de configurar a opção nested triggers  
+##  <a name="follow-up-after-you-configure-the-nested-triggers-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção nested triggers  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

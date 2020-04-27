@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774144"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Novo registro ou editar registro de servidor (guia Geral) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774144"
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
- Quando um servidor é registrado em Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido em Servidores Registrados. Para registrar um tipo diferente de servidor, clique em **Database Engine**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**, ou **Integration Services** na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
+ Quando um servidor é registrado em Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido em Servidores Registrados. Para registrar um tipo diferente de servidor, clique em **Mecanismo de Banco de Dados**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** ou **Integration Services** na barra de ferramentas **Servidores Registrados** antes de começar a registrar um novo servidor.  
   
  **Nome do servidor**  
  Selecione o servidor ao qual se conectar. O servidor conectado da última vez é exibido por padrão.  
@@ -44,12 +44,12 @@ ms.locfileid: "62774144"
  Essa opção não está disponível nesta versão.  
   
  **Nome do servidor registrado**  
- O nome que você deseja exibir em **Servidores Registrados**. Esse nome não precisa corresponder à caixa **Nome do servidor** .  
+ O nome que você deseja exibir nos **servidores registrados**. Esse nome não precisa corresponder à caixa **Nome do servidor** .  
   
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Testar**  
+ **Teste**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

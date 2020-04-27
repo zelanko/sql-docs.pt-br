@@ -17,38 +17,38 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812980"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>Página de Validação (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções da página **Validação** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]e ao [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para validar se o ambiente dá suporte a todas as opções de configuração feitas nas páginas anteriores do assistente.  
   
-##  <a name="PageOptions"></a> Opções da página Validação  
+##  <a name="validation-page-options"></a><a name="PageOptions"></a>Opções de página de validação  
  **Resultados da validação de grupo de disponibilidade.**  
  Esta grade exibe os resultados de cada etapa de validação concluída. As colunas da grade são as seguintes:  
   
  **Nome**  
  Exibe uma frase que descreve uma etapa específica.  
   
- **Resultado**  
+ **Disso**  
  Exibe um dos seguintes textos de hiperlink. Para obter mais informações sobre o resultado de determinada etapa de validação, clique no hiperlink.  
   
-|Result|DESCRIÇÃO|  
+|Result|Descrição|  
 |------------|-----------------|  
 |**Erro**|Indica se houve falha na etapa de validação. Clique no link para exibir a mensagem de erro.|  
-|**Ignorado**|Indica que a etapa de validação foi ignorada porque não é necessária por suas seleções. Clique no link para exibir o motivo pelo qual uma etapa foi ignorada.|  
+|**Ignorada**|Indica que a etapa de validação foi ignorada porque não é necessária por suas seleções. Clique no link para exibir o motivo pelo qual uma etapa foi ignorada.|  
 |**Êxito**|Indica que a etapa de validação foi concluída com êxito|  
-|**Aviso**|Indica um problema potencial com a configuração do grupo de disponibilidade.  Clique no link para exibir a mensagem de aviso.|  
+|**Alerta**|Indica um problema potencial com a configuração do grupo de disponibilidade.  Clique no link para exibir a mensagem de aviso.|  
   
  **Executar Novamente a Validação**  
  Clique para repetir as etapas da validação se você fizer uma alteração fora do assistente em resposta a um erro de validação.  
   
 
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805572"
 ---
 # <a name="create-custom-templates"></a>Criar modelos personalizados
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vem com modelos para muitas tarefas comuns, mas o poder real dos modelos está na capacidade de criar um modelo personalizado para um script complexo que você deve criar com frequência. Nesta prática, você criará um script simples com poucos parâmetros, mas modelos também são úteis para scripts longos e repetitivos.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é fornecido com modelos para várias tarefas comuns, mas o poder real dos modelos está na capacidade de criar um modelo personalizado para um script complexo que deve ser criado com frequência. Nesta prática, você criará um script simples com poucos parâmetros, mas modelos também são úteis para scripts longos e repetitivos.  
   
 ## <a name="using-custom-templates"></a>Usando modelos personalizados  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62805572"
   
 8.  Pressione F5 para executar esse script, criando o procedimento **WorkOrdersForBlade** .  
   
-9. No Pesquisador de objetos, clique com o botão direito do mouse no servidor e clique em **nova consulta**. Uma nova janela do Editor de Consultas é aberta.  
+9. No Pesquisador de Objetos, clique com o botão direito do mouse no servidor e clique em **Nova Consulta**. Uma nova janela do Editor de Consultas é aberta.  
   
 10. No Editor de Consultas, digite **EXECUTE dbo.WorkOrdersForBlade**e pressione F5 para executar a consulta. Confirme se o painel **Resultados** retorna uma lista dos pedidos de trabalho nas folhas.  
   

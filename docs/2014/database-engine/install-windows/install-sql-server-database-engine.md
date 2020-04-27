@@ -13,19 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779357"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Sobre o Mecanismo de Banco de Dados do SQL Server
   O componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o principal serviço para armazenamento, processamento e proteção de dados. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornece acesso controlado e processamento rápido de transações para atender aos requisitos dos mais exigentes aplicativos de consumo de dados em sua empresa.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar uma instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de ](install-sql-server-from-the-installation-wizard-setup.md)instalação.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a até 50 instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] em um único computador. Para criar uma instalação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;de ](install-sql-server-from-the-installation-wizard-setup.md)instalação.  
   
- **Importante** Para instalações locais, você deve executar a instalação como administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
+ **Importante** Para instalações locais, é necessário executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
  Os recursos a seguir são instalados quando você seleciona ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados** na página componentes a serem instalados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de instalação:  
   

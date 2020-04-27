@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770432"
 ---
 # <a name="data-conversion-transformation"></a>transformação Conversão de Dados
@@ -52,7 +52,7 @@ ms.locfileid: "62770432"
   
 ## <a name="see-also"></a>Consulte Também  
  [Análise rápida](../../fast-parse.md)   
- [Fluxo de Dados](../data-flow.md)   
+ [Fluxo de dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

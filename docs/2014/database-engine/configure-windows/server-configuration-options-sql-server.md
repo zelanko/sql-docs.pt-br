@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809564"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opções de configuração do servidor (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "62809564"
     |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
     |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
-    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
+    |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1046|  
     |[idioma padrão](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
     |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
@@ -107,7 +107,7 @@ ms.locfileid: "62809564"
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
     |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (Recomendamos 1024 como o máximo para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits e 2048 para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.)|0<br /><br /> Zero configura automaticamente o número máximo de threads de trabalho, dependendo do número de processadores, usando a fórmula (256 + (*\<processadores>* -4) * 8) para 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e duas vezes para 64 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
-    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1.024|  
+    |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
     |[gatilhos aninhados](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  

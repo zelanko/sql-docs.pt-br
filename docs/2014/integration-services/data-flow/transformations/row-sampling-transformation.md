@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770386"
 ---
 # <a name="row-sampling-transformation"></a>Transformação Amostragem de Linhas
@@ -53,7 +53,7 @@ ms.locfileid: "62770386"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md)  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807420"
 ---
 # <a name="cross-container-transactions"></a>Transações entre contêineres
@@ -24,7 +24,7 @@ ms.locfileid: "62807420"
   
  Qualquer consulta interpretada que faça referência a tabelas com otimização de memória é considerada uma parte de uma transação entre contêineres, seja ela executada de uma transação explícita ou implícita, ou no modo de confirmação automática.  
   
-##  <a name="isolation"></a>Isolamento de operações individuais  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>Isolamento de operações individuais  
  Cada transação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um nível de isolamento. O nível de isolamento padrão é Read Committed. Para usar um nível de isolamento diferente, você pode definir o nível de isolamento usando [SET TRANSACTION ISOLATION level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Geralmente, é necessário executar operações em tabelas com otimização de memória em um nível de isolamento diferente das operações em tabelas baseadas em disco. Em uma transação, é possível definir um nível de isolamento diferente para uma coleção de instruções ou para uma operação de leitura individual.  
@@ -99,7 +99,7 @@ commit
  A leitura de dados tem garantia de confirmação e estabilização até a hora de término lógica da transação.  
   
  SERIALIZABLE  
- Todas as garantias de leitura REPETIda e de eliminação de fantasma e a consistência transacional com relação a todas as operações de leitura serializáveis executadas por T. a desevitação de fantasma significa que a operação de verificação só pode retornar linhas adicionais que foram escritas por T, mas não linhas que foram gravadas por outras transações.  
+ Todas as garantias de leitura REPETIda e de eliminação de fantasma e a consistência transacional com relação a todas as operações de leitura serializáveis executadas por T. a desexecução de fantasma significa que a operação de verificação só pode retornar linhas adicionais que foram escritas por T, mas nenhuma linha que foi gravada por outras transações.  
   
  Considere a seguinte transação:  
   
@@ -172,7 +172,7 @@ commit
   
  As tabelas com otimização de memória oferecem suporte aos níveis de isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. Para transações de confirmação automática, as tabelas com otimização de memória oferecem suporte ao nível de isolamento READ COMMITTED.  
   
- Há suporte para os cenários a seguir:  
+ Os cenários a seguir têm suporte:  
   
 -   As transações entre contêineres READ UNCOMMITTED, READ COMMITTED e READ_COMMITTED_SNAPSHOT podem acessar tabelas com otimização de memória no isolamento SNAPSHOT, REPEATABLE READ e SERIALIZABLE. A garantia READ COMMITTED é mantida para a transação; todas as linhas lidas pela transação foram confirmadas no banco de dados.  
   

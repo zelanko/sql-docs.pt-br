@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806894"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows (SQL Server Management Studio)
@@ -71,7 +71,7 @@ ms.locfileid: "62806894"
   
     -   Os endereços TCP totalmente qualificados das instâncias do servidor principal e espelho estão especificados (na seção **Endereços de rede do servidor** ).  
   
-    -   Se o modo de operação estiver definido como **Alta segurança com failover automático (síncrono)** , o endereço TCP totalmente qualificado da instância do servidor testemunha também será especificado.  
+    -   Se o modo de operação estiver definido como **Alta segurança com failover automático (síncrono)**, o endereço TCP totalmente qualificado da instância do servidor testemunha também será especificado.  
   
 8.  Depois que o espelhamento começar, você poderá alterar o modo de operação e salvar a alteração clicando em **OK**. Observe que você pode alternar para o modo de segurança alta com failover automático apenas se tiver especificado primeiro um endereço de servidor testemunha.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "62806894"
     >  Para remover o servidor testemunha, exclua seu endereço de rede do campo **Testemunha** . Se você mudar do modo de alta segurança com failover automático para o modo de alto desempenho, o campo **Testemunha** será desmarcado automaticamente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [A troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Propriedades do banco de dados &#40;página espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Pausar ou retomar uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
- [Configurar um banco de dados espelho para usar a propriedade confiável &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [Configurar um banco de dados espelho para usar a propriedade TRUSTWORTHY &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [Remover o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Gerenciamento de logons e trabalhos após a troca de função &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Adicionar ou substituir uma testemunha de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

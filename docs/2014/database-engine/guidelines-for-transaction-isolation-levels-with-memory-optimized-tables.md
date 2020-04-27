@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779151"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Diretrizes para níveis de isolamento da transação com tabelas com otimização de memória

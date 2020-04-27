@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812541"
 ---
 # <a name="check-in-files"></a>Fazer check-in de arquivos
@@ -56,7 +56,7 @@ ms.locfileid: "62812541"
      **Classificar**  
      Classifica a ordem das colunas exibidas.  
   
-     **Exibição de árvore**  
+     **Exibição de Árvore**  
      Exibe a hierarquia de pastas e arquivos dos itens dos quais está fazendo check-in.  
   
  Se o arquivo com check-in não fizer parte de uma saída compartilhada, o ambiente do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fará imediatamente o check-in do arquivo. Caso contrário, você pode ser solicitado a mesclar sua versão com versões criadas por outros usuários.  

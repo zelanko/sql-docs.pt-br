@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779131"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Considerações para instalação do SQL Server usando SysPrep
@@ -30,7 +30,7 @@ ms.locfileid: "62779131"
   
  Para obter mais informações sobre como instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o usando o Sysprep, consulte [instalar SQL Server 2014 usando o Sysprep](install-sql-server-using-sysprep.md).  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Usos comuns do SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>Usos comuns do SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Você pode usar o recurso SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das seguintes maneiras:  
   
 -   Na etapa Preparar Imagem, você pode preparar uma ou mais instâncias não configuradas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo computador. Você pode configurar essas instâncias preparadas usando a etapa Concluir Imagem no mesmo computador.  
@@ -56,7 +56,7 @@ ms.locfileid: "62779131"
   
     -   Você não pode especificar IDs de produto de uma instância preparada de edições Express do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte  
+## <a name="supported-ssnoversion-installations"></a>Instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte  
  SysPrep no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dá suporte a todos os recursos, incluindo ferramentas, do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  É possível preparar várias instâncias para instalações lado a lado do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou versões anteriores. Os recursos destas instâncias devem oferecer suporte a SysPrep.  
@@ -71,10 +71,10 @@ ms.locfileid: "62779131"
   
  A partir do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a instalações de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da linha de comando.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitações do SysPrep  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitações do SysPrep  
  Não há suporte para a reparação de uma instância preparada. Se a instalação falhar durante a etapa Preparar Imagem ou Concluir Imagem, você deverá executar a desinstalação.  
   
-##  <a name="BKMK_PrepareImage"></a> Preparar imagem  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> Preparar imagem  
  A etapa Preparar Imagem instala o produto e os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não configura a instalação.  
   
  Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a serem instalados e o local de instalação dos arquivos de instalação do produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificados durante essa etapa. Você pode preparar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio da **preparação de imagem de uma instância autônoma para implantação do SysPrep** na página **Avançado** da **Central de Instalação** ou do prompt de comando.  
@@ -85,7 +85,7 @@ ms.locfileid: "62779131"
   
  Depois que a instância estiver preparada, um atalho no menu **Iniciar** ficará disponível para concluir a configuração da instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_CompleteImage"></a> Concluir Imagem  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> Concluir Imagem  
  Você pode concluir as instâncias preparadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando qualquer um dos seguintes métodos:  
   
 -   Usar o atalho no menu Iniciar.  

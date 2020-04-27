@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791948"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantendo um banco de dados de publicação AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791948"
   
  
   
-##  <a name="MaintainPublDb"></a> Mantendo um banco de dados publicado em um grupo de disponibilidade  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>Mantendo um banco de dados publicado em um grupo de disponibilidade  
  Manter um banco de dados de publicação AlwaysOn é basicamente o mesmo que manter um banco de dados de publicação padrão, com as seguintes considerações:  
   
 -   A administração deve ocorrer no host de réplica primária. No [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], as publicações aparecem sob a pasta **Publicações Locais** para o host de réplica primária e também para réplicas secundárias legíveis. Depois do failover, talvez você precise atualizar manualmente o [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] para que a alteração seja refletida se a réplica secundária elevada a primária não estiver legível.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791948"
   
 -   Para sincronizar uma assinatura no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] após o failover, sincronize as assinaturas pull do assinante e sincronize as assinaturas push do publicador ativo.  
   
-##  <a name="RemovePublDb"></a> Removendo um banco de dados publicado de um grupo de disponibilidade  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Removendo um banco de dados publicado de um grupo de disponibilidade  
  Considere os problemas a seguir se um banco de dados publicado for removido de um grupo de disponibilidade, ou se um grupo de disponibilidade que tem um banco de dados de membro publicado for removido.  
   
 -   Se o banco de dados de publicação no Publicador original for removido de uma réplica primária do grupo de `sp_redirect_publisher` disponibilidade, você deverá executar sem *@redirected_publisher* especificar um valor para o parâmetro a fim de remover o redirecionamento do par Publicador/banco de dados.  
@@ -100,7 +100,7 @@ ms.locfileid: "62791948"
   
      Neste momento, a cópia do banco de dados publicado pode ser retida ou removida.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar a replicação para grupos de disponibilidade AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815742"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidade AlwaysOn: interoperabilidade (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815742"
   
 
   
-##  <a name="Interop"></a>Recursos que interoperam com o Grupos de Disponibilidade AlwaysOn  
+##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>Recursos que interoperam com o Grupos de Disponibilidade AlwaysOn  
  A tabela a seguir lista os recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que interoperam com [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um link na coluna **Mais Informações** indica que existem considerações de interoperabilidade para um determinado recurso.  
   
 |Recurso|Mais informações|  
@@ -45,9 +45,8 @@ ms.locfileid: "62815742"
 |Agente de Serviço|[Service Broker com Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server Agent||  
   
-##  <a name="NoInterop"></a>Recursos que não interoperam com Grupos de Disponibilidade AlwaysOn  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não interopera com os seguintes recursos:  
+##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>Recursos que não interoperam com Grupos de Disponibilidade AlwaysOn  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não interopera com os seguintes recursos:  
   
 -   Transações envolvendo todos os bancos de dados/transações distribuídas  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62815742"
   
 -   Espelhamento de banco de dados  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   
-     [Guia de migração: migrando para o SQL Server 2012 clustering de failover e grupos de disponibilidade de clusters anteriores e implantações de espelhamento](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [Guia de migração: Migrando para o clustering de failover do SQL Server 2012 e os grupos de disponibilidade de implantações de clustering e espelhamento anteriores](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [Blogs da equipe do SQL Server AlwaysOn: o blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   

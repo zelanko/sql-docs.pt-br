@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791900"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriedades de réplica de disponibilidade (página Geral)
@@ -27,17 +27,17 @@ ms.locfileid: "62791900"
   
 -   [Exibir as propriedades da réplica de disponibilidade &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do grupo de disponibilidade**  
  O nome do grupo de disponibilidade. Esse é um nome especificado pelo usuário que deve ser exclusivo no WSFC (Windows Server Failover Cluster).  
   
- **Instância de servidor**  
+ **Instância do servidor**  
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primário**  
+ **Primary**  
  Atualmente a réplica primária.  
   
  **Secundário**  
@@ -57,7 +57,7 @@ ms.locfileid: "62791900"
   
  Para obter mais informações, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
- **Failover mode**  
+ **Modo de failover**  
  O modo de failover da réplica, um dos seguintes:  
   
  **Automático**  
@@ -73,9 +73,9 @@ ms.locfileid: "62791900"
  Todas as conexões são permitidas com os bancos de dados na réplica primária. Essa é a configuração padrão.  
   
  **Permitir conexões de leitura/gravação**  
- Conexões em que a propriedade de conexão Application Intent é definida como **ReadOnly** não são permitidas. Quando a propriedade Application Intent está definida como **ReadWrite** ou a propriedade de conexão de intenção de aplicativo não está definida, a conexão é permitida.  
+ Conexões em que a propriedade de conexão da tentativa de aplicativo está definida como **ReadOnly** não são permitidas. Quando a propriedade de tentativa de aplicativo é definida como **ReadWrite** ou a propriedade de conexão de tentativa de aplicativo não está definida, a conexão é permitida.  
   
- **Secundária Legível**  
+ **Secundário legível**  
  Se uma réplica de disponibilidade que está executando a função primária (isto é, está atuando como uma réplica secundária) pode aceitar conexões de clientes, um dos seguintes:  
   
  **Não**  

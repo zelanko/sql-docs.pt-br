@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62790215"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propriedades do grupo de disponibilidade: Novo Grupo de Disponibilidade (página Preferências de Backup)
@@ -28,7 +28,7 @@ ms.locfileid: "62790215"
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>Onde devem ocorrer os backups?  
  **Preferir Secundário**  
@@ -37,7 +37,7 @@ ms.locfileid: "62790215"
  **Somente Secundário**  
  Especifica que os backups nunca devem ser executados na réplica primária. Se a réplica primária for a única réplica online, o backup não deveria ocorrer.  
   
- **Primário**  
+ **Primary**  
  Especifica que os backups sempre devem ocorrer na réplica primária. Essa opção será útil se você precisar de recursos de backup, como a criação de backups diferenciais, que não têm suporte quando o backup é executado em uma réplica secundária.  
   
  **Qualquer Réplica**  
@@ -49,7 +49,7 @@ ms.locfileid: "62790215"
 ## <a name="replica-backup-priorities"></a>Prioridades de backup de réplica  
  Esta grade exibe a prioridade de backup atual de cada instância de servidor que hospeda uma réplica para o grupo de disponibilidade. Use essa grade para alterar a prioridade de backup de uma ou mais réplicas de disponibilidade.  
   
- **Instância do Servidor**  
+ **Instância do servidor**  
  O nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade.  
   
  **Prioridade de Backup (Mais Baixa = 1, Mais Alta = 100)**  

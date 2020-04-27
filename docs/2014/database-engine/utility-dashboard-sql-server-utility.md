@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773808"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Painel do Utilitário (Utilitário do SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "62773808"
  No lado direito inferior do painel, o gráfico de pizza de utilização de armazenamento exibe a taxa de espaço utilizado para liberar espaço em volumes que residem em computadores contendo instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os dados desta exibição são atualizados a cada 15 minutos.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar o Gerenciador do Utilitário para gerenciar o Utilitário do SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [Usar o Gerenciador do utilitário para gerenciar o Utilitário do SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Inscrever uma instância do SQL Server &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificar uma definição de política de integridade de recursos &#40;Utilitário do SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   

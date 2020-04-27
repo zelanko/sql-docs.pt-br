@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779367"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Adicionar recursos a uma instância do SQL Server 2014 (instalação)
@@ -37,7 +37,7 @@ ms.locfileid: "62779367"
   
 ## <a name="procedures"></a>Procedimentos  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>Para adicionar recursos a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>Para adicionar recursos a uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe. Para instalar a partir de um compartilhamento de rede, navegue para a pasta raiz no compartilhamento e clique duas vezes em setup.exe. Se a caixa de diálogo Instalação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] for exibida, clique em [!INCLUDE[clickOK](../../includes/clickok-md.md)] para instalar os pré-requisitos e clique em **Cancelar** para sair da instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   

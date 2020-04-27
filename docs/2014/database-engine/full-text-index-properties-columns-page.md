@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778851"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Propriedades do Índice de Texto Completo (página Colunas)
@@ -38,8 +38,8 @@ ms.locfileid: "62778851"
 |-|-|  
 |**Colunas disponíveis**|O nome da coluna.|  
 |**Idioma do separador de palavras**|O idioma cujos separadores de palavras e lematizadores executam a análise linguística em todos os dados indexados com texto completo.<br /><br /> Para obter mais informações, consulte [configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) e [escolha um idioma ao criar um índice de texto completo](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).|  
-|**Tipo**|O nome da coluna da tabela que mantém o tipo de documento da coluna selecionada. Essa é uma propriedade somente leitura.|  
-|**Semântica estatística**|Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.|  
+|**Tipo**|O nome da coluna da tabela que mantém o tipo de documento da coluna selecionada. Trata-se de uma propriedade somente leitura.|  
+|**Semântica Estatística**|Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Popular índices de texto completo](../relational-databases/search/populate-full-text-indexes.md)  

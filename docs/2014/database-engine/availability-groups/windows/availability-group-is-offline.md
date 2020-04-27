@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815419"
 ---
 # <a name="availability-group-is-offline"></a>O grupo de disponibilidade está offline
@@ -30,9 +30,9 @@ ms.locfileid: "62815419"
 |**Nome da Política**|Estado Online do Grupo de Disponibilidade|  
 |**Problema**|O grupo de disponibilidade está offline.|  
 |**Categoria**|**Crítico**|  
-|**Faceta**|grupo de disponibilidade|  
+|**Particular**|grupo de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Esta política verifica o estado online ou offline do grupo de disponibilidade. A política estará em estado não íntegro e um alerta será emitido quando o recurso de cluster do grupo de disponibilidade estiver offline ou o grupo de disponibilidade não tiver uma réplica primária.  
   
  O estado da política será íntegro quando o recurso de cluster do grupo de disponibilidade estiver online e o grupo de disponibilidade tiver uma réplica primária.  
@@ -74,6 +74,6 @@ ms.locfileid: "62815419"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

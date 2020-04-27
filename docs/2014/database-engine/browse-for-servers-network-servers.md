@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786679"
 ---
 # <a name="browse-for-servers-network-servers"></a>Procurar servidores (Servidores de Rede)
-  Se você está se conectando a um componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e não sabe o nome exato da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique em **Procurar mais** na caixa **Nome do servidor** para abrir a caixa de diálogo **Procurar Servidores** .  
+  Se você está se conectando a um componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e não sabe o nome exato da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], clique em **Procurar mais** na caixa **Nome do servidor** para abrir a caixa de diálogo **Procurar Servidores**.  
   
  Esta caixa de diálogo é populada pelo serviço [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser nos computadores de servidor. Há várias razões pelas quais o nome de uma instância pode não aparecer na lista:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62786679"
  Para se conectar a uma instância que não apareça na lista, digite uma cadeia de caracteres de conexão completa para a instância, incluindo o número da porta TCP/IP ou o nome pipe dos pipes nomeados.  
   
 ## <a name="options"></a>Opções  
- **Selecione uma instância de SQL Server na rede para sua conexão**  
+ **Selecione uma instância do SQL Server na rede para sua conexão**  
  Designe o servidor ao qual você deseja se conectar clicando na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exibida na árvore. Você pode mostrar ou ocultar partes do modo de exibição de árvore clicando nos nós marcados com um **+** símbolo **-** ou.  
   
   

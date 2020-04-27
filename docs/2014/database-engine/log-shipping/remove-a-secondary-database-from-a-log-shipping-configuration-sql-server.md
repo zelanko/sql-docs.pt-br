@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774820"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Remova um banco de dados secundário de uma configuração de envio de logs (SQL Server)
@@ -40,14 +40,14 @@ ms.locfileid: "62774820"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-remove-a-log-shipping-secondary-database"></a>Para remover um banco de dados secundário de envio de logs  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62774820"
   
 6.  Clique em **OK** para atualizar a configuração.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-remove-a-secondary-database"></a>Para remover um banco de dados secundário  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62774820"
   
 3.  No servidor secundário, desabilite os trabalhos de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "62774820"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

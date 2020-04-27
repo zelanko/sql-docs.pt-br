@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815399"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Alterar o contexto do cluster HADR da instância de servidor (SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "62815399"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
 > [!CAUTION]  
 >  Alterne o contexto do cluster HADR somente durante a migração entre clusters das implantações de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Só é possível alternar o contexto do cluster HADR do cluster WSFC local para um cluster remoto e, depois, do cluster remoto para o cluster local. Você não pode alternar o contexto do cluster HADR de um cluster remoto para outro cluster remoto.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62815399"
   
 -   Um contexto do cluster HADR remoto pode ser alternado novamente para o cluster local a qualquer momento. Entretanto, o contexto não poderá ser alternado novamente enquanto a instância de servidor estiver hospedando réplicas de disponibilidade.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   A instância de servidor na qual você altera o contexto do cluster HADR deve executar o [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] ou posterior (edição Enterprise ou superior).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62815399"
   
 -   Antes de alternar de um cluster remoto para o cluster local, verifique se todas as réplicas de confirmação síncrona foram sincronizadas (SYNCHRONIZED).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   É recomendável especificar o nome de domínio completo. Isso é necessário porque, para localizar o endereço IP de destino de um nome curto, ALTER SERVER CONFIGURATION usa a resolução DNS. Em algumas situações, dependendo da ordem de pesquisa de DNS, o uso de um nome curto pode gerar confusão. Por exemplo, considere o comando a seguir, que é executado em um nó no domínio `abc` , (`node1.abc.com`). O cluster de destino pretendido é o cluster `CLUS01` no domínio `xyz` (`clus01.xyz.com`). No entanto, o domínio local também hospeda um cluster denominado `CLUS01` (`clus01.abc.com`).  
   
@@ -67,15 +67,15 @@ ms.locfileid: "62815399"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
 -   **logon do SQL Server**  
   
      Requer a permissão CONTROL SERVER.  
   
--   **Conta do serviço SQL Server**  
+-   **SQL Server conta de serviço**  
   
      A conta do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância de servidor deve ter:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62815399"
   
  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para alterar o contexto do cluster WSFC de uma réplica de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica primária ou uma réplica secundária do grupo de disponibilidade.  
@@ -96,8 +96,8 @@ ms.locfileid: "62815399"
   
      onde:  
   
-     *cluster_windows*  
-     O CON (nome do objeto de cluster) de um cluster WSFC. Você pode especificar o nome curto ou o nome de domínio completo. É recomendável especificar o nome de domínio completo. Para obter mais informações, consulte [Recomendações](#Recommendations)anteriormente neste tópico.  
+     *windows_cluster*  
+     O CON (nome do objeto de cluster) de um cluster WSFC. Você pode especificar o nome curto ou o nome de domínio completo. É recomendável especificar o nome de domínio completo. Para obter mais informações, consulte [recomendações](#Recommendations), anteriormente neste tópico.  
   
      LOCAL  
      O cluster WSFC local.  
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de alternar o contexto do cluster de uma réplica de disponibilidade  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> Acompanhamento: depois de alternar o contexto do cluster de uma réplica de disponibilidade  
  O novo contexto do cluster HADR tem efeito imediatamente, sem a reinicialização da instância de servidor. A configuração de contexto do cluster HADR é uma configuração persistente em nível de instância que permanece inalterada se a instância de servidor é reiniciada.  
   
  Confirme o novo contexto do cluster HADR consultando a exibição de gerenciamento dinâmico [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) , da seguinte forma:  
@@ -136,7 +136,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Remover um ouvinte do grupo de disponibilidade &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
@@ -152,7 +152,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Artigos técnicos do SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

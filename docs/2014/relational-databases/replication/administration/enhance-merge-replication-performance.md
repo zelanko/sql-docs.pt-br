@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805872"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aprimorar o desempenho de replicação de mesclagem
@@ -33,7 +33,7 @@ ms.locfileid: "62805872"
   
 -   Colunas de índice usadas em filtros de linha e filtros de junção.  
   
-     Quando usar um filtro de linha em um artigo publicado, crie um índice em cada uma das colunas usadas na cláusula WHERE do filtro. Sem um índice, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o precisa ler cada linha na tabela para determinar se a linha deve ser incluída na partição. Com um índice, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consegue localizar rapidamente quais as linhas que deverão ser incluídas. O processamento mais rápido ocorre se a replicação conseguir resolver inteiramente a cláusula WHERE do filtro do índice de modo autônomo.  
+     Quando usar um filtro de linha em um artigo publicado, crie um índice em cada uma das colunas usadas na cláusula WHERE do filtro. Sem um índice, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precisa ler cada linha da tabela para determinar se a linha deve ser incluída na partição. Com um índice, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consegue localizar rapidamente quais as linhas que deverão ser incluídas. O processamento mais rápido ocorre se a replicação conseguir resolver inteiramente a cláusula WHERE do filtro do índice de modo autônomo.  
   
      Indexar todas as colunas usadas em filtros de junção também é importante. Cada vez que o Merge Agent é executado, ele pesquisa a tabela base para determinar quais as linhas da tabela pai e quais as linhas nas tabelas relacionadas estão incluídas na partição. Criar um índice em colunas unidas evita que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precise ler cada linha da tabela todas as vezes que o Merge Agent for executado.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62805872"
   
 -   Se uma assinatura for sincronizada em uma conexão rápida e as alterações forem enviadas do Editor e do Assinante, use o parâmetro **–ParallelUploadDownload** para o Agente de Mesclagem.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduziu um novo parâmetro Agente de Mesclagem: **-ParallelUploadDownload**. Definir esse parâmetro permite ao Merge Agent processar em paralelo as mudanças carregadas no Publicador e as baixadas no Assinante. É útil em ambientes com grandes volumes e largura de banda de rede alta. Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
+     O[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu um novo parâmetro no Agente de Mesclagem: **–ParallelUploadDownload**. Definir esse parâmetro permite ao Merge Agent processar em paralelo as mudanças carregadas no Publicador e as baixadas no Assinante. É útil em ambientes com grandes volumes e largura de banda de rede alta. Os parâmetros de agente podem ser especificados em perfis de agente e na linha de comando. Para obter mais informações, consulte:  
   
     -   [Trabalhar com perfis do Agente de Replicação](../agents/replication-agent-profiles.md)  
   
@@ -144,6 +144,6 @@ ms.locfileid: "62805872"
   
 -   Monitore o desempenho de sincronização usando a guia **Histórico de Sincronização** no Replication Monitor.  
   
-     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, consulte [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Para a replicação de mesclagem, o Replication Monitor exibe as estatísticas detalhadas na guia **Histórico de Sincronizações** para cada artigo processado durante a sincronização, incluindo tempo gasto em cada fase do processamento (carregar alterações, baixar alterações e assim por diante). Ajuda a definir tabelas específicas que estão causando lentidão e é o melhor local para a solução de problemas de desempenho com assinaturas de mesclagem. Para obter mais informações sobre como exibir estatísticas detalhadas, confira [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

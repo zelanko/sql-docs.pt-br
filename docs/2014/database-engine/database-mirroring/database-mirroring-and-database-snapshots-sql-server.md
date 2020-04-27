@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807234"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Espelhamento de banco de dados e instantâneos de banco de dados (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62807234"
   
      Neste ponto, novas conexões de cliente podem ser direcionadas programaticamente para o instantâneo mais recente.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um instantâneo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62807234"
 
   
 ## <a name="see-also"></a>Consulte Também  
- [Instantâneos de banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [Instantâneos do banco de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

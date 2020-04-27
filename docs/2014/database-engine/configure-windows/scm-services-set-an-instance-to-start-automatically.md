@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 300b539e132b9bda9bc6540c0aadcac6ab9f11a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809986"
 ---
 # <a name="set-an-instance-of-sql-server-to-start-automatically-sql-server-configuration-manager"></a>Definir uma instância do SQL Server para iniciar automaticamente (SQL Server Configuration Manager)
   Este tópico descreve como definir uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para iniciar automaticamente no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o SQL Server Configuration Manager. Durante a instalação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente é configurado para iniciar automaticamente. Se isto não foi feito, você poderá alterar essa definição a qualquer momento.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
   
 #### <a name="to-set-an-instance-of-sql-server-to-start-automatically"></a>Para configurar uma instância do SQL Server para iniciar automaticamente  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62809986"
   
 3.  No painel de detalhes, clique com o botão direito do mouse no nome da instância que deseja que seja iniciada automaticamente e clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades do SQL Server \<***instancename***>**, defina o **Modo Inicial** como **Automático**.  
+4.  Na caixa de diálogo **Propriedades do SQL Server \< ***InstanceName***>** , defina o **modo de início** como **automático**.  
   
 5.  Clique em **OK**e em seguida feche o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de Configuração.  
   

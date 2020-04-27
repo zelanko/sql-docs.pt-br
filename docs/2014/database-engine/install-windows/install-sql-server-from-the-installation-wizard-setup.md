@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775746"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Instalar o SQL Server 2014 por meio do Assistente de Instalação (Instalação)
@@ -36,13 +36,13 @@ ms.locfileid: "62775746"
   
 -   [Atualize para o SQL Server 2014 usando o assistente de instalação &#40;&#41;de ](upgrade-sql-server-using-the-installation-wizard-setup.md)instalação.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], examine os tópicos em [Planejando uma instalação do SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
 >  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto.  
   
-### <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>Para instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="to-install-sscurrent"></a>Para instalar o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
@@ -84,21 +84,20 @@ ms.locfileid: "62775746"
   
 12. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](../../sql-server/install/instance-configuration.md).  
   
-     **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, especifique um valor diferente para a caixa de texto **ID da Instância** .  
+     **ID da instância** – por padrão, o nome da instância é usado como a ID da instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, especifique um valor diferente para a caixa de texto **ID da Instância** .  
   
     > [!NOTE]  
     >  Instâncias autônomas típicas do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], com instâncias padrão ou nomeadas, não usam um valor não padrão para a caixa **ID da Instância**.  
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instâncias instaladas** – a grade mostra as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instâncias do que estão no computador em que a instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instâncias instaladas** : a grade mostra as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão no computador em que a Instalação está sendo executada. Se já existir uma instância padrão instalada no computador, instale uma instância nomeada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      O fluxo de trabalho do restante da instalação depende dos recursos especificados para a instalação. Talvez você não veja todas as páginas, dependendo de suas seleções.  
   
 13. Use a página Configuração do Servidor – Contas de Serviço para especificar contas de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos selecionados para instalação.  
   
-     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Você pode atribuir a mesma conta de logon a todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou configurar cada conta de serviço individualmente. Você também pode especificar se os serviços serão iniciados automaticamente ou manualmente, ou se eles serão desabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você configure contas de serviço individualmente para fornecer privilégios mínimos para cada serviço, em que os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recebem as permissões mínimas para concluir suas tarefas. Para obter mais informações, consulte [Configuração do servidor — Contas de serviço](../../sql-server/install/server-configuration-service-accounts.md) e [Configurar contas de serviço e permissões do Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
@@ -113,8 +112,7 @@ ms.locfileid: "62775746"
   
          Depois que um dispositivo estabelecer uma conexão com êxito com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mecanismo de segurança será o mesmo para Autenticação do Windows e Modo Misto. Para obter mais informações, consulte [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: você deve especificar pelo menos um administrador de sistema para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para adicionar a conta sob a qual a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executada, clique em **Adicionar Usuário Atual**. Para adicionar ou remover contas da lista de administradores do sistema, clique em **Adicionar** ou **Remover**e edite a lista de usuários, grupos ou computadores que terão privilégios de administrador para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Use a página Configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Diretórios de Dados para especificar diretórios de instalação não padrão. Para instalar nos diretórios padrão, clique em **Avançar**.  
   
@@ -154,9 +152,9 @@ ms.locfileid: "62775746"
   
     -   Se você ainda não tiver configurado um controlador, poderá deixar o nome do controlador em branco. No entanto, digite manualmente o nome do controlador no arquivo de **configuração do cliente** .  
   
-     Especifique o **Diretório de Trabalho** para o serviço Distributed Replay Client. O diretório de trabalho padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     Especifique o **diretório de trabalho** para o serviço de cliente do Distributed Replay. O diretório de trabalho padrão \<é a *letra da unidade*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\WorkingDir.  
   
-     Especifique o **Diretório de Resultado** para o serviço Distributed Replay Client. O diretório de resultado padrão é \<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     Especifique o **diretório de resultados** para o serviço de cliente do Distributed Replay. O diretório de resultado padrão \<é a *letra da unidade*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Program Files \DReplayClient\ResultDir.  
   
      Para continuar, clique em **Avançar**.  
   
@@ -168,12 +166,12 @@ ms.locfileid: "62775746"
   
 21. Após a instalação, a página Concluída fornece um link para o arquivo de log de resumo da instalação e outras observações importantes. Para concluir o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Fechar**.  
   
-22. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações, consulte [Exibir e ler SQL Server arquivos de log da instalação](view-and-read-sql-server-setup-log-files.md).  
+22. Se você for instruído a reiniciar o computador, faça-o agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para saber mais, veja [Exibir e ler arquivos de log da Instalação do SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Configure a nova instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para obter mais informações, consulte [configuração da área da superfície](../../relational-databases/security/surface-area-configuration.md).  
+ Para reduzir a área da superfície de um sistema vulnerável a ataques, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala e habilita seletivamente serviços e recursos essenciais. Para obter mais informações, consulte [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Validar uma instalação de SQL Server](validate-a-sql-server-installation.md)   

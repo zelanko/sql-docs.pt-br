@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774336"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
@@ -176,9 +176,9 @@ ms.locfileid: "62774336"
 -   Linguagem:  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [Detalhes do aplicativo da camada de dados implantados &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Painel do utilitário &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Monitorar instâncias de SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas do Utilitário do SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   

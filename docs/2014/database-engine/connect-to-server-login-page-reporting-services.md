@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808718"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Conectar ao Servidor (página Logon) Reporting Services
@@ -36,8 +36,7 @@ ms.locfileid: "62808718"
  Para um servidor de relatório executado no SharePoint em modo integrado, especifique um site do SharePoint. Você pode especificar qualquer site de uma coleção de sites que foi integrada ao [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O URL que você fornecer deve incluir o HTTP ou prefixo HTTPS. Você deve ter permissão para acessar o site do SharePoint para se conectar a ele no Management Studio. O nível de permissão que foi atribuído a você determinará quais itens você pode exibir e gerenciar. Para obter mais informações, consulte [Conectar-se a um servidor de relatório no Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **Autenticação**  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser configurado para aceitar solicitações de Autenticação do Windows ou de Autenticação de formulários que são manipulados por uma extensão de autenticação personalizada fornecida por você. Selecione um dos seguintes modos de autenticação ao se conectar ao Reporting Services:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser configurado para aceitar solicitações de Autenticação do Windows ou de Autenticação de formulários que são manipulados por uma extensão de autenticação personalizada fornecida por você. Selecione um dos seguintes modos de autenticação ao se conectar ao Reporting Services:  
   
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
  Conecte-se à instância de servidor de relatório usando as credenciais do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -45,14 +44,14 @@ ms.locfileid: "62808718"
  **Autenticação básica**  
  Conecte-se usando a **Autenticação Básica** se a instalação do Reporting Services estiver configurada para usar a Autenticação Básica.  
   
- **Autenticação de formulários**  
+ **Autenticação de Formulários**  
  Conecte-se usando a **Autenticação de Formulários** se a instalação do Reporting Services estiver configurada para usar uma extensão de autenticação personalizada.  
   
  **Nome de usuário**  
  Digite o nome de logon a ser usado na conexão. Essa opção estará disponível somente se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Senha**  
- Insira a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
+ Digite a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Lembrar senha**  
  Armazene a senha que você digitou. Essa opção será exibida somente se você clicar em **Opções**e poderá ser editada apenas se você selecionou conectar-se usando **Básica** ou **Autenticação de Formulários**.  

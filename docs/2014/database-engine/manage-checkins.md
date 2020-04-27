@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774288"
 ---
 # <a name="manage-checkins"></a>Gerenciar check-ins
@@ -28,7 +28,7 @@ ms.locfileid: "62774288"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fazer check-in de arquivos](../../2014/database-engine/check-in-files.md)|Fornece instruções sobre como fazer check-in em um arquivo modificado.|  
 |[Exibir uma lista de arquivos modificados](../../2014/database-engine/view-a-list-of-modified-files.md)|Explica como exibir uma lista de arquivos modificados em que você pode fazer check-in em conjunto quando terminar o trabalho.|  

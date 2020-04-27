@@ -16,10 +16,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772285"
 ---
 # <a name="sql-server-2014-product-specifications"></a>Especificações do produto para SQL Server 2014
@@ -42,7 +42,7 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [Computar limites de capacidade por edição do SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Calcular limites de capacidade por edição do SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  O número máximo de processadores com suporte para cada edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Edições e componentes do SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)  

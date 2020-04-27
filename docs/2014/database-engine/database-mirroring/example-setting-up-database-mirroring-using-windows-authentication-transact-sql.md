@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806819"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
@@ -50,7 +50,7 @@ GO
 |----------------------------|-----------------|-------------------------|  
 |Principal|PARTNERHOST1|*\<Mydomain>\\<dbousername\>*|  
 |Espelho|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
-|Witness (testemunha)|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
+|Witness (testemunha)|WITNESSHOST4|*\<Algumdomínio>\\<witnessuser\>*|  
   
 1.  Crie um ponto de extremidade na instância de servidor principal (instância padrão em PARTNERHOST1).  
   
@@ -143,7 +143,7 @@ GO
     GO  
     ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
@@ -155,13 +155,13 @@ GO
   
 -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Exemplo: Configurar o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Exemplo: configurando o espelhamento de banco de dados usando certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Central de segurança do Mecanismo de Banco de Dados do SQL Server e Banco de Dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

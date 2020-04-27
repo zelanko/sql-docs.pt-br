@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775382"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Atualizar para o SQL Server 2014 usando o Assistente de Instalação (instalação)
@@ -38,27 +38,27 @@ ms.locfileid: "62775382"
 > [!NOTE]  
 >  Não há suporte para atualização de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em um computador executando o [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1. Para obter mais informações sobre instalações do Server Core, consulte [instalar SQL Server 2014 no Server Core](install-sql-server-on-server-core.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e execução no compartilhamento remoto, e ser um administrador local.  
   
  Antes de atualizar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise os seguintes tópicos:  
   
 -   [Atualizar para o SQL Server 2014](upgrade-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware e software para instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Verificar parâmetros do Verificador de Configuração do Sistema](check-parameters-for-the-system-configuration-checker.md)  
   
 -   [Considerações sobre segurança para uma instalação do SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
--   [SQL Server Mecanismo de Banco de Dados compatibilidade com versões anteriores](../sql-server-database-engine-backward-compatibility.md)  
+-   [Compatibilidade com versões anteriores do Mecanismo de Banco de Dados do SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
 >  Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para obter mais informações sobre como adicionar recursos a uma instância atualizada do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] após a conclusão da operação de atualização, consulte [Adicionar recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedimento  
   
-#### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>Para atualizar para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-sscurrent"></a>Para atualizar para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62775382"
   
 6.  A página atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] será exibida em seguida se a caixa de seleção de atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] nas configurações do Painel de Controle\Todos os itens do Painel de Controle\Windows Update\Alterar não estiver marcada. Colocar a marca na página de atualização da [!INCLUDE[msCoName](../../includes/msconame-md.md)] modificará as configurações do computador para incluir as atualizações mais recentes quando você procurar pelo Windows Update.  
   
-7.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
+7.  Na página Atualizações de Produto, as atualizações mais recentes de produtos disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidas. Se você não desejar incluir as atualizações, desmarque a caixa de seleção **Incluir atualizações de produto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se nenhuma atualização de produto for descoberta, a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não exibirá esta página e avançará automaticamente para a página **Instalar Arquivos de Instalação** .  
   
 8.  Na página Instalar Arquivos de Instalação, a Instalação apresenta o andamento do download, da extração e da instalação dos arquivos de Instalação. Se uma atualização para a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for localizada, e for especificada para ser incluída, essa atualização também será instalada.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "62775382"
      Os pré-requisitos dos recursos selecionados são exibidos no painel à direita. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação instalará os pré-requisitos ainda não instalados na etapa de instalação descrita posteriormente neste procedimento.  
   
     > [!NOTE]  
-    >  Se você optou por fazer upgrade dos recursos compartilhados selecionando **\<Fazer upgrade somente de recursos compartilhados>** na página **Selecionar Instância**, todos os recursos compartilhados são pré-selecionados na página Seleção de Recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
+    >  Se você tiver optado por atualizar os recursos compartilhados selecionando ** \<atualizar somente recursos compartilhados>** na página **selecionar instância** , todos os recursos compartilhados serão selecionados na página seleção de recursos. Todos os componentes compartilhados são atualizados ao mesmo tempo.  
   
 12. Na página Configuração da Instância, especifique a ID da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, forneça um valor para a caixa de texto **ID da Instância** .  
+     **ID da instância** – por padrão, o nome da instância é usado como a ID da instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, forneça um valor para a caixa de texto **ID da Instância** .  
   
      Todos os service packs e atualizações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão aplicados a cada componente de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62775382"
   
      Para especificar a mesma conta de logon para todas as contas de serviço nessa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], forneça credenciais nos campos na parte inferior da página.  
   
-     **Observação de segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Observação sobre segurança** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Depois de concluir a especificação de informações de logon para serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , clique em **Avançar**.  
   

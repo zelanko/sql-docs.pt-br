@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774910"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Novo registro ou editar registro de servidor (guia Geral) (Analysis Services - Dados multidimensionais)
@@ -49,7 +49,7 @@ ms.locfileid: "62774910"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Testar**  
+ **Teste**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

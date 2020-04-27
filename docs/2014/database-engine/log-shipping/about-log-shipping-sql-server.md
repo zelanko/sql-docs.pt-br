@@ -26,14 +26,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774541"
 ---
 # <a name="about-log-shipping-sql-server"></a>Sobre o envio de logs (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O envio de logs permite que você envie automaticamente os backups de log de transações de um *banco de dados primário* em uma instância de *servidor primário* para um ou mais bancos de dados *secundários* em instâncias de *servidor secundário* separadas. Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um *banco de dados primário* em uma instância do *servidor primário* para um ou mais *banco de dados secundário* em outras instâncias de *servidor secundário* . Os backups de logs de transação são aplicados individualmente aos bancos de dados secundários. Uma terceira instância de servidor opcional, conhecida como *servidor monitor*, registra o histórico e o status das operações de backup e restauração e, opcionalmente, emite alertas se essas operações não forem executadas como foram agendadas.  
   
  **Neste tópico:**  
   
@@ -41,13 +41,13 @@ ms.locfileid: "62774541"
   
 -   [Termos e definições](#TermsAndDefinitions)  
   
--   [Visão geral do envio de logs](#ComponentsAndConcepts)  
+-   [Visão geral do envio de log](#ComponentsAndConcepts)  
   
 -   [Interoperabilidade](#Interoperability)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="Benefits"></a> Benefícios  
   
 -   Fornece uma solução de recuperação de desastres para um único banco de dados primário e um ou mais bancos de dados secundários, cada um em uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774541"
   
 -   Permite um atraso especificado pelo usuário entre o momento em que o servidor primário faz backup do log do banco de dados primário e quando os servidores secundários devem restaurar (aplicar) o backup do log. Um atraso mais longo pode ser útil, por exemplo, se dados forem alterados acidentalmente no banco de dados primário. Se a alteração acidental for notada rapidamente, um atraso pode permitir que você recupere dados ainda inalterados de um banco de dados secundário, antes que a alteração seja refletida lá.  
   
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Termos e definições  
  servidor primário  
  A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é seu servidor de produção.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774541"
 > [!TIP]  
 >  Para cada alerta, você precisa especificar um número de alerta. Além disso, configure o alerta para notificar um operador quando um alerta for gerado.  
   
-##  <a name="ComponentsAndConcepts"></a>Visão geral do envio de logs  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Visão geral do envio de log  
  O envio de logs engloba três operações:  
   
 1.  Backup do log de transações da instância do servidor primário.  
@@ -123,9 +123,9 @@ ms.locfileid: "62774541"
   
  As instâncias de servidor primário e secundário enviam seus próprios históricos e status para a instância do servidor monitor.  
   
- ![Configuração mostrando trabalhos de backup, cópia & restauração](../media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia & restauração")  
+ ![Configuração mostrando trabalhos de backup, cópia e restauração](../media/ls-typical-configuration.gif "Configuração mostrando trabalhos de backup, cópia e restauração")  
   
-##  <a name="Interoperability"></a>Interoperabilidade  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilidade  
  O envio de logs pode ser usado com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Pré-requisitos para migrar do envio de logs para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -135,10 +135,9 @@ ms.locfileid: "62774541"
 -   [Replicação e envio de logs &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e o espelhamento de banco de dados são mutuamente exclusivos. Um banco de dados que é configurado para um desses recursos não pode ser configurado para o outro.  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e o espelhamento de banco de dados são mutuamente exclusivos. Um banco de dados que é configurado para um desses recursos não pode ser configurado para o outro.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

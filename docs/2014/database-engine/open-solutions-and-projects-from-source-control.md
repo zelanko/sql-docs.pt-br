@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774771"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Abrir soluções e projetos no controle do código-fonte
@@ -27,7 +27,7 @@ ms.locfileid: "62774771"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Abrir soluções no controle do código-fonte](../../2014/database-engine/open-solutions-from-source-control.md)|Explica como usar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para abrir soluções diretamente do controle de código-fonte.|  
 |[Abrir projetos no controle do código-fonte](../../2014/database-engine/open-projects-from-source-control.md)|Explica como abrir um projeto do controle de código-fonte para ser possível fazer check-out e modificar os arquivos de projeto.|  

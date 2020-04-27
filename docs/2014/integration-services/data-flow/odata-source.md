@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771032"
 ---
 # <a name="odata-source"></a>Origem do OData
@@ -32,7 +32,7 @@ ms.locfileid: "62771032"
 |-|-|-|-|  
 |Linhas|ATOM|JSON|JSON (Light)|  
 |10000|113 segundos|74 segundos|68 segundos|  
-|1.000.000|1\.110 segundos|853 segundos|665 segundos|  
+|1.000.000|1.110 segundos|853 segundos|665 segundos|  
   
 > [!NOTE]  
 >  A origem OData SSIS usa o ODataLib 5.5.0 para avaliar os feeds do OData e pode ler todos os formatos suportados por essa biblioteca.  
@@ -45,15 +45,15 @@ ms.locfileid: "62771032"
   
 -   [Modifique a consulta de origem do OData em runtime](modify-odata-source-query-at-runtime.md)  
   
--   [Editor de origem OData &#40;página conexão&#41;](../odata-source-editor-connection-page.md)  
+-   [Editor de Origem do OData &#40;Página Conexão&#41;](../odata-source-editor-connection-page.md)  
   
--   [Editor de origem OData &#40;página colunas&#41;](../odata-source-editor-columns-page.md)  
+-   [Editor de Fonte OData &#40;Página Colunas&#41;](../odata-source-editor-columns-page.md)  
   
--   [Editor de origem OData &#40;página saída de erro&#41;](../odata-source-editor-error-output-page.md)  
+-   [Editor de Fonte OData &#40;Página Saída de Erro&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [Propriedades da origem do OData](odata-source-properties.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Conexões OData](../connection-manager/odata-connection-manager.md)  
+ [Gerenciador de conexões do OData](../connection-manager/odata-connection-manager.md)  
   
   

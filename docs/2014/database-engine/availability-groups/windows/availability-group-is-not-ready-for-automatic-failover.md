@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791860"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>O grupo de disponibilidade não está pronto para o failover automático
@@ -30,9 +30,9 @@ ms.locfileid: "62791860"
 |**Nome da Política**|Prontidão para Failover Automático do Grupo de Disponibilidade|  
 |**Problema**|O grupo de disponibilidade não está pronto para o failover automático.|  
 |**Categoria**|**Crítico**|  
-|**Faceta**|grupo de disponibilidade|  
+|**Particular**|grupo de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Esta política verifica se o grupo de disponibilidade tem ao menos uma réplica secundária pronta para failover. A política estará em estado não íntegro e um alerta será emitido quando o modo de failover da réplica primária for automático, mas nenhuma das réplicas secundárias do grupo de disponibilidade está pronta para failover.  
   
  A política estará em estado íntegro quando pelo menos uma réplica secundária estiver pronta para failover automático.  
@@ -52,6 +52,6 @@ ms.locfileid: "62791860"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

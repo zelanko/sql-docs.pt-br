@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809754"
 ---
 # <a name="remote-servers"></a>Servidores remotos
@@ -33,15 +33,14 @@ ms.locfileid: "62809754"
 ## <a name="remote-server-details"></a>Detalhes do servidor remoto  
  Os servidores remotos são definidos em pares. Para definir um par de servidores remotos, configure ambos os servidores para reconhecerem um ao outro como servidores remotos.  
   
- Na maioria das vezes, você não precisará definir opções de configuração para servidores remotos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define os padrões em ambos os computadores locais e remotos para permitir conexões de servidor remoto.  
+ Na maioria das vezes, você não precisará definir opções de configuração para servidores remotos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define os padrões em ambos os computadores locais e remotos para permitir conexões de servidor remoto.  
   
  Para que o acesso ao servidor remoto funcione, a opção de configuração **acesso remoto** deve ser definida como 1 no computador local e no computador remoto. (Essa é a definição padrão.) O  **acesso remoto** controla os logons de servidores remotos. Você pode redefinir essa opção de configuração usando o procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** ou o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para definir a opção no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], na página **Propriedades do Servidor - Conexões** , use **Permitir conexões remotas com este servidor**. Para acessar a página **Propriedades do Servidor – Conexões** , no Pesquisador de Objetos, clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**. Na página **Propriedades do Servidor** , clique na página **Conexões** .  
   
  No servidor local, é possível desabilitar uma configuração de servidor remoto para evitar o acesso ao servidor local por usuários do servidor remoto com o qual ele faz par.  
   
 ## <a name="security-for-remote-servers"></a>Segurança para servidores remotos  
- Para habilitar RPCs (chamadas de procedimento remoto) em um servidor remoto, é necessário configurar mapeamentos de logon no servidor remoto e, possivelmente, no servidor local que está executando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A RPC é desabilitada por padrão no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa configuração aumenta a segurança do servidor reduzindo sua área da superfície passível de ataque. Antes de usar RPC, é necessário habilitar esse recurso. Para obter mais informações, consulte [sp_configure &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
+ Para habilitar RPCs (chamadas de procedimento remoto) em um servidor remoto, é necessário configurar mapeamentos de logon no servidor remoto e, possivelmente, no servidor local que está executando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A RPC é desabilitada por padrão no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa configuração aumenta a segurança do servidor reduzindo sua área da superfície passível de ataque. Antes de usar RPC, é necessário habilitar esse recurso. Para obter mais informações, veja [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ### <a name="setting-up-the-remote-server"></a>Configurando o servidor remoto  
  Os mapeamentos de logon remoto devem ser configurados no servidor remoto. Usando esses mapeamentos, o servidor remoto mapeia o logon de entrada de uma conexão RPC, de um servidor especificado para um logon local. Os mapeamentos de logon remoto podem ser configurados com o procedimento armazenado **sp_addremotelogin** no servidor remoto.  
@@ -50,8 +49,7 @@ ms.locfileid: "62809754"
 >  A opção **confiável** de  **sp_remoteoption** não tem suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="setting-up-the-local-server"></a>Configurando o servidor local  
- Para logons locais de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você não precisa configurar um mapeamento de logon no servidor local. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o logon e a senha locais para se conectar ao servidor remoto. Para logons autenticados do Windows, configure um mapeamento de logon local em um servidor local que defina que o logon e a senha sejam usados por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando ele fizer uma conexão RPC para um servidor remoto.  
+ Para logons locais de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você não precisa configurar um mapeamento de logon no servidor local. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o logon e a senha locais para se conectar ao servidor remoto. Para logons autenticados do Windows, configure um mapeamento de logon local em um servidor local que defina que o logon e a senha sejam usados por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando ele fizer uma conexão RPC para um servidor remoto.  
   
  Para logons criados pela Autenticação do Windows, é necessário criar um mapeamento para um nome de logon e senha usando o procedimento armazenado **sp_addlinkedservlogin** . Esse nome de logon e essa senha devem corresponder ao logon e senha de entrada esperados pelo servidor remoto, conforme criado por **sp_addremotelogin**.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "62809754"
 >  Quando possível, use a Autenticação do Windows.  
   
 ### <a name="remote-server-security-example"></a>Exemplo de segurança de servidor remoto  
- Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. o **serverReceive** é configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon autenticado no **serverReceive**, chamado **Alice**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive**_,_ chamado **Joe**.  
+ Considere estas instalações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** está configurado para mapear um logon de entrada de **serverSend**, chamado **Sales_Mary**, para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no **serverReceive**, chamado **Brenda**. Outro logon de entrada de **serverSend**, chamado **Joe**, está mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em **serverReceive** _,_ chamado **Joe**.  
   
  O exemplo de código do Transact-SQL a seguir configura `serverSend` para executar RPCs em `serverReceive`.  
   
@@ -103,7 +101,7 @@ GO
 ## <a name="related-content"></a>Conteúdo relacionado  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
- [Configurar a opção remote access de configuração de servidor](configure-the-remote-access-server-configuration-option.md)  
+ [Configurar a opção de configuração do servidor remote access](configure-the-remote-access-server-configuration-option.md)  
   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

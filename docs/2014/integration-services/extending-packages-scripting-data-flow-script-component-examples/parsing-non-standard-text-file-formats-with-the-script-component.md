@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769002"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisando formatos de arquivo de texto fora do padrão com o componente Script
@@ -32,7 +32,7 @@ ms.locfileid: "62769002"
 > [!NOTE]  
 >  Se desejar criar um componente que possa ser reutilizado mais facilmente em várias tarefas de fluxo de dados e em vários pacotes, procure utilizar o código deste exemplo de componente Script como o ponto inicial de um componente de fluxo de dados personalizado. Para obter mais informações, consulte [Desenvolvendo um componente de fluxo de dados personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Exemplo 1: analisar registros delimitados por linha  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> Exemplo 1: analisar registros delimitados por linha  
  Este exemplo mostra como utilizar um arquivo de texto em que cada coluna de dados aparece em uma linha separada e analisá-lo em uma tabela de destino usando o componente Script.  
   
  Para obter mais informações sobre como configurar o componente Script para uso como uma transformação no fluxo de dados, consulte [criando uma transformação síncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Exemplo 2: dividir registros pai e filho  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Exemplo 2: dividir registros pai e filho  
  Este exemplo mostra como utilizar um arquivo de texto, em que uma linha delimitadora precede uma linha de registro pai, que é seguida de um número indefinido de linhas de registro filho, e analisa-as em tabelas de destino pai e filho, adequadamente normalizadas, através do componente Script. Esse exemplo simples pode ser facilmente adaptado para arquivos de origem que utilizam mais de uma linha ou coluna para cada registro pai e filho, desde que exista uma forma de identificar o início e o fim de cada registro.  
   
 > [!CAUTION]  
@@ -346,10 +346,10 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma transformação síncrona com o componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
- [Criar uma transformação assíncrona com o componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Criando uma transformação síncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Criando uma transformação assíncrona com o componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   

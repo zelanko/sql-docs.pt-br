@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808704"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Exibir ou alterar os locais padrão de arquivos de log e de dados (SQL Server Management Studio)
@@ -33,18 +33,18 @@ ms.locfileid: "62808704"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Acompanhamento:**  [alterando os locais padrão](#FollowUp)  
+-   **Acompanhamento:**  [Alterando os locais padrão](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
  A prática recomendada para proteger seus arquivos de dados e arquivos de log é garantir que eles sejam protegidos por ACLs (listas de controle de acesso). As ACLs devem ser definidas no diretório raiz em que os arquivos são criados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>Para exibir ou alterar os locais padrão dos arquivos de banco de dados  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62808704"
   
 3.  Em **Locais padrão de banco de dados**, exiba os locais atuais padrão dos novos arquivos de dados e novos arquivos de log. Para alterar um local padrão, digite um novo nome de caminho padrão no campo **Dados** ou **Log** ou clique no botão Procurar para localizar e selecionar um nome de caminho.  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de alterar os locais padrão  
+##  <a name="follow-up-after-changing-the-default-locations"></a><a name="FollowUp"></a>Acompanhamento: depois de alterar os locais padrão  
  Você deve parar e iniciar o serviço do SQL Server para concluir a alteração.  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Criar um banco de dados](../../relational-databases/databases/create-a-database.md)  
   
   

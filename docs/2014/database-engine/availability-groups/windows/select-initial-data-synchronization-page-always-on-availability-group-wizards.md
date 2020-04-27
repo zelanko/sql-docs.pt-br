@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789463"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Selecionar a página Sincronização de Dados Inicial (assistentes de Grupo de Disponibilidade AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "62789463"
   
 
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Suspenda as tarefas de backup de log para os bancos de dados primários durante a sincronização de dados inicial.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62789463"
   
      Se for necessário que as operações de backup e restauração sejam altamente protegidas, é recomendável selecionar a opção **Somente junção** ou **Ignorar a sincronização de dados inicial** .  
   
-##  <a name="Full"></a>Completo  
+##  <a name="full"></a><a name="Full"></a>Completo  
  Para cada banco de dados primário, a opção **Total** executará várias operações em um fluxo de trabalho: criará um backup completo e um backup de log do banco de dados primário, criará os bancos de dados secundários correspondentes restaurando esses backups em cada instância do servidor que estiver hospedando uma réplica secundária e unirá cada banco de dados secundário ao grupo de disponibilidade.  
   
  Selecione essa opção apenas se o ambiente atender os seguintes pré-requisitos para usar a sincronização de dados inicial completa, e se você desejar que o assistente inicie automaticamente a sincronização de dados.  
@@ -71,23 +71,23 @@ ms.locfileid: "62789463"
 > [!IMPORTANT]  
 >  Os backups de log farão parte de sua cadeia de backup de log. Armazene os arquivos de backup adequadamente.  
   
-##  <a name="Joinonly"></a> Somente junção  
+##  <a name="join-only"></a><a name="Joinonly"></a> Somente junção  
  Selecione essa opção apenas se os novos bancos de dados secundários já existirem em cada instância do servidor que hospeda uma réplica secundária para o grupo de disponibilidade. Para obter informações sobre como preparar bancos de dados secundários, consulte [Para preparar bancos de dados secundários manualmente](#PrepareSecondaryDbs), posteriormente nesta seção.  
   
  Se você selecionar **Somente junção**, o assistente tentará unir cada banco de dados secundário existente ao grupo de disponibilidade.  
   
-## <a name="skip-initial-data-synchronization"></a>Ignorar a sincronização de dados inicial  
+## <a name="skip-initial-data-synchronization"></a>Ignorar sincronização de dados inicial  
  Selecione esta opção se você desejar executar seus próprios backups de banco de dados e de log de cada banco de dados primário e, em seguida, restaurá-los em cada instância de servidor que hospeda uma réplica secundária. Quando sair do assistente, você precisará unir cada banco de dados secundário em cada réplica secundária.  
   
 > [!NOTE]  
 >  Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> Para preparar manualmente bancos de dados secundários  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a>Para preparar manualmente os bancos de dados secundários  
  Para preparar bancos de dados secundários independentemente de qualquer assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , você pode usar uma das seguintes abordagens:  
   
 -   Restaurar manualmente um backup recente do banco de dados primário usando RESTORE WITH NORECOVERY e, em seguida, restaurar cada backup de log subsequente usando RESTORE WITH NORECOVERY. Se os bancos de dados primários e secundários tiverem caminhos de arquivos diferentes, você deverá usar a opção WITH MOVE. Executar essa sequência de restauração em cada instância do servidor que hospeda uma réplica secundária para o grupo de disponibilidade.  Você pode usar o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell para executar estas operações de backup e restauração.  
   
-     **Para obter mais informações, consulte:**  
+     **Para obter mais informações:**  
   
      [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62789463"
     > [!NOTE]  
     >  Depois que você criar todos os bancos de dados secundários para o grupo de disponibilidade, se você desejar executar backups em réplicas secundárias, precisará reconfigurar a preferência de backup automatizada do grupo de disponibilidade.  
   
-     **Para obter mais informações, consulte:**  
+     **Para obter mais informações:**  
   
      [Pré-requisitos para migrar do envio de logs para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62789463"
   
  Opcionalmente, você pode preparar todos os bancos de dados secundários antes de executar o assistente. Em seguida, na página **Especificar a Sincronização de Dados Inicial** do assistente, selecione **Somente junção** para unir automaticamente seus novos bancos de dados secundários ao grupo de disponibilidade.  
   
-##  <a name="LaunchWiz"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

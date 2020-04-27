@@ -14,38 +14,38 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813806"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>Visão geral de instruções Transact-SQL para Grupos de Disponibilidade AlwaysOn (SQL Server)
   Este tópico apresenta as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] que oferecem suporte à implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e à criação e ao gerenciamento de grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade.  
   
   
-##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- [CREATE ENDPOINT... FOR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) cria um ponto de extremidade de espelhamento de banco de dados, caso não exista nenhum na instância de servidor. Cada instância de servidor na qual você pretende implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados requer um ponto de extremidade de espelhamento de banco de dados.  
+##  <a name="create-endpoint"></a><a name="CreateEndpoint"></a>CRIAR PONTO DE EXTREMIDADE  
+ [criar ponto de extremidade... POR DATABASE_MIRRORING](/sql/t-sql/statements/create-endpoint-transact-sql) cria um ponto de extremidade de espelhamento de banco de dados, se não houver nenhum na instância do servidor. Cada instância de servidor na qual você pretende implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou o espelhamento de banco de dados requer um ponto de extremidade de espelhamento de banco de dados.  
   
  Execute essa instrução na instância de servidor em que você está criando o ponto de extremidade. É possível criar somente um ponto de extremidade de espelhamento de banco de dados em uma instância. Para obter mais informações, consulte [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
-##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
+##  <a name="create-availability-group"></a><a name="CreateAG"></a>CRIAR GRUPO DE DISPONIBILIDADE  
  [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) cria um novo grupo de disponibilidade e opcionalmente um ouvinte de grupo de disponibilidade. No mínimo, você deve especificar sua instância de servidor local que se tornará a réplica primária inicial. Opcionalmente, você também pode especificar até quatro réplicas secundárias.  
   
  Execute CREATE AVAILABILITY GROUP na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em que você deseja hospedar a réplica primária inicial de seu novo grupo de disponibilidade. Essa instância de servidor deve residir em um nó de um WSFC (cluster de failover do Windows Server) (para obter mais informações, consulte [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
+##  <a name="alter-availability-group"></a><a name="AlterAG"></a>ALTERAR GRUPO DE DISPONIBILIDADE  
  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) oferece suporte à alteração de um grupo de disponibilidade existente ou de ouvinte de grupo de disponibilidade e ao failover de um grupo de disponibilidade.  
   
  Execute ALTER AVAILABILITY GROUP na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica primária atual.  
   
-##  <a name="AlterDb"></a> ALTER DATABASE... SET HADR...  
+##  <a name="alter-database--set-hadr-"></a><a name="AlterDb"></a>ALTERAR BANCO DE DADOS... DEFINIR HADR...  
  As opções da cláusula [SET HADR](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) da instrução ALTER DATABASE permitem unir um banco de dados secundário ao grupo de disponibilidade do banco de dados primário correspondente, removem um banco de dados unido e suspendem a sincronização de dados em um banco de dados unido e retomam a sincronização de dados.  
   
-##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  
+##  <a name="drop-availability-group"></a><a name="DropAG"></a>REMOVER GRUPO DE DISPONIBILIDADE  
  [DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql) remove um grupo de disponibilidade especificado e todas as suas réplicas. DROP AVAILABILITY GROUP pode ser executado em qualquer nó [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster de failover do WSFC.  
   
-##  <a name="Restrictions"></a> Restrições nas instruções Transact-SQL AVAILABILITY GROUP  
+##  <a name="restrictions-on-the-availability-group-transact-sql-statements"></a><a name="Restrictions"></a> Restrições nas instruções Transact-SQL AVAILABILITY GROUP  
  As instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP e DROP AVAILABILITY GROUP têm as seguintes limitações:  
   
 -   Com exceção de DROP AVAILABILITY GROUP, a execução dessas instruções requer que o serviço HADR seja habilitado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  

@@ -13,20 +13,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808657"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Conectar ao Servidor (página Propriedades da Conexão) Reporting Services
-  Use esta guia para exibir ou especificar opções ao se conectar com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou ao registrar o [!INCLUDE[ssRS](../includes/ssrs.md)] nos **Servidores Registrados**. **As opções** **conectar** e somente aparecem nessa caixa de diálogo durante a conexão. **Test** e **Save** aparecem apenas nesta caixa de diálogo durante o registro [!INCLUDE[ssRS](../includes/ssrs.md)].  
+  Use essa guia para exibir ou especificar opções ao se conectar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou registrar [!INCLUDE[ssRS](../includes/ssrs.md)] em **servidores registrados**. **Conectar** e **Opções** são exibidas apenas nessa caixa de diálogo durante a conexão. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Opções  
- **Tempo limite de conexão (em MS)**  
+ **Tempo limite de conexão (em ms)**  
  Insira o número de milissegundos a esperar para que uma conexão seja estabelecida antes de o tempo esgotar.  
   
- **Sempre usar SSL**  
+ **Sempre Usar SSL**  
  Conectar usando Secure Sockets Layer.  
   
  **Connect**  
@@ -35,7 +35,7 @@ ms.locfileid: "62808657"
  **Opções**  
  Clique para alterar a caixa de diálogo e ocultar as opções de conexão de servidor adicionais, como lembrar a senha.  
   
- **Testar**  
+ **Teste**  
  Ao registrar o [!INCLUDE[ssRS](../includes/ssrs.md)] em **Servidores Registrados**, clique para testar a conexão.  
   
  **Salvar**  

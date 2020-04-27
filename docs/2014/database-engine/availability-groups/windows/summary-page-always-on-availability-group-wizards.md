@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814062"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Página de Resumo (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções mostradas na página **Resumo** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a grade desta página para rever suas escolhas para o novo grupo de disponibilidade. Para fazer uma ou mais alterações, clique em **Anterior** para retornar às páginas relevantes. Quando estiver pronto, clique em **Avançar** para retornar à página **Resumo** . Quando estiver satisfeito com as opções, clique em **Concluir**.  
   
-##  <a name="PageOptions"></a> Opções da página Resumo  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opções da página Resumo  
  **Script**  
  Clique para gerar um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para as ações listadas na grade de resumo. Você será solicitado a especificar um destino para o script.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62814062"
   
 
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

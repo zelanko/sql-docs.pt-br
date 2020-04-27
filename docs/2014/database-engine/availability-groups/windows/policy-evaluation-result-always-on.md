@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789076"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Resultado de avaliação de política (AlwaysOn)
@@ -25,7 +25,7 @@ ms.locfileid: "62789076"
   
 
   
-##  <a name="Options"></a> Opções de caixas de diálogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a>Opções da caixa de diálogo  
  **Problema detectado**  
  Exibe uma linha para cada problema detectado. O ícone associado a um problema fornece um indicador visual para indicar a severidade do problema, como segue:  
   
@@ -37,12 +37,12 @@ ms.locfileid: "62789076"
  **Descrição**  
  Esta grade exibe uma breve descrição do problema selecionado.  
   
- **Mais informações**  
+ **Mais Informações**  
  Clique neste link para abrir o tópico de ajuda do problema selecionado.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Use políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

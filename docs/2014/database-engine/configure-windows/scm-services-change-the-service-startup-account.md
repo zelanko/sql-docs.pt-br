@@ -15,21 +15,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810427"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>Alterar a conta de inicialização de serviço do SQL Server (SQL Server Configuration Manager)
-  Este tópico descreve como usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Configuration Manager para alterar as opções de inicialização dos serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do e [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]alterar as contas de serviço que são usadas pelo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o PowerShell. Para obter mais informações sobre como selecionar uma conta de serviço adequada, consulte [Configurar contas de serviço e permissões do Windows](configure-windows-service-accounts-and-permissions.md).  
+  Este tópico descreve como usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para alterar as opções de inicialização dos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as contas de serviço usadas por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o PowerShell. Para obter mais informações sobre como selecionar uma conta de serviço adequada, consulte [Configurar contas de serviço e permissões do Windows](configure-windows-service-accounts-and-permissions.md).  
   
 > [!IMPORTANT]  
 >  Quando você altera a conta de inicialização do serviço do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (o [!INCLUDE[ssDE](../../includes/ssde-md.md)]) deve ser reiniciado para que a alteração entre em vigor. Quando o serviço é reinicializado, todos os bancos de dados associados com aquela instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficarão indisponíveis até que o serviço seja reiniciado com êxito. Se for necessário alterar a conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, faça isso durante a manutenção regular agendada ou quando os bancos de dados puderem ser colocados offline sem interromper as operações diárias.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Servidores clusterizados  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62810427"
   
      Durante a instalação do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é configurado para usar a conta de Serviço de Rede, mas desabilitado. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager pode alterar a conta atribuída para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas o serviço não pode ser habilitado ou iniciado. Depois da atualização da SKU do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] para não Express, o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não é habilitado automaticamente, mas pode ser habilitado quando necessário usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e alterando o modo de início do serviço para Manual ou Automático.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
   
 #### <a name="to-change-the-sql-server-service-startup-account"></a>Para alterar a conta de inicialização do serviço do SQL Server  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62810427"
   
 3.  No painel de detalhes clique com o botão direito do mouse no nome da instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que deseja alterar a conta de inicialização do serviço e em seguida clique em **Propriedades**.  
   
-4.  Na caixa de diálogo **Propriedades de \<***instancename***> do SQL Server**, clique na guia **Logon** e selecione um tipo de conta **Fazer logon como**.  
+4.  Na caixa de diálogo **Propriedades do SQL Server \< ***InstanceName***>** , clique na guia **logon** e selecione um tipo de conta **fazer logon como** .  
   
 5.  Após selecionar a nova conta de inicialização do serviço, clique em **OK**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62810427"
 6.  Clique em **Sim**e feche o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser serviço](start-stop-pause-resume-restart-sql-server-services.md)   
+ [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812288"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados
@@ -52,10 +52,10 @@ ms.locfileid: "62812288"
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  A abertura de portas no firewall pode deixar o servidor exposto a ataques mal-intencionados. Certifique-se de conhecer os sistemas de firewall antes de abrir portas. Para obter mais informações, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usando o SQL Server Configuration Manager  
  Aplica-se ao Windows Vista, Windows 7 e Windows Server 2008  
   
  Os procedimentos a seguir configuram o Firewall do Windows com o uso do Firewall do Windows com o snap-in MMC (Console de Gerenciamento Microsoft) de Segurança Avançada. O Firewall do Windows com Segurança Avançada configura apenas o perfil atual. Para obter mais informações sobre o Firewall do Windows com Segurança Avançada, consulte [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

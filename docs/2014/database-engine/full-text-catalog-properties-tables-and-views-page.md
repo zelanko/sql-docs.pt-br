@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779187"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriedades do catálogo de texto completo (página Tabelas e Exibições)
@@ -46,7 +46,7 @@ ms.locfileid: "62779187"
 |**Colunas disponíveis**|Exibe todas as colunas que são indexadas com texto completo. Marque a caixa de seleção para adicionar a coluna ao índice de texto completo.|  
 |**Idioma do separador de palavras**|Exibe o idioma do separador de palavras.|  
 |**Coluna de Tipo de Dados**|Lista o nome da coluna na tabela que contém o tipo de documento da coluna listada em **colunas disponíveis** se a coluna for uma `varbinary(max)` coluna ou `image` .|  
-|**Semântica estatística**|Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.|  
+|**Semântica Estatística**|Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.|  
   
 ## <a name="track-changes"></a>Controlar Alterações  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62779187"
   
 ## <a name="see-also"></a>Consulte Também  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
+ [ALTERAR o catálogo de texto completo &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Popular índices de texto completo](../relational-databases/indexes/indexes.md)  
   
   

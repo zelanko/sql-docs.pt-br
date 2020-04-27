@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773867"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar o SQL Server Management Studio
@@ -56,7 +56,7 @@ ms.locfileid: "62773867"
  [Editar scripts SQLCMD com o Editor de Consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
  Descreve os recursos e as limitações do uso do Editor de Consultas no modo SQLCMD.  
   
- [Codificação por cores nos Editores de Consulta](../relational-databases/scripting/color-coding-in-query-editors.md)  
+ [Codificação por cores no Editor de Consultas](../relational-databases/scripting/color-coding-in-query-editors.md)  
  Descreve o significado da codificação de cor nas janelas do Editor de Códigos.  
   
  [Atalhos de teclado do SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

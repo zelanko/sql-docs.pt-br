@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792086"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Adicionar soluções e projetos ao controle do código-fonte
@@ -29,7 +29,7 @@ ms.locfileid: "62792086"
   
  A tabela a seguir descreve os tópicos dessa seção.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Adicionar soluções ao controle do código-fonte](../../2014/database-engine/add-solutions-to-source-control.md)|Descreve os tipos de projeto que você pode adicionar e fornece instruções sobre como adicionar uma solução a um controle do código-fonte.|  
 |[Adicionar projetos ao controle do código-fonte](../../2014/database-engine/add-projects-to-source-control.md)|Fornece instruções sobre como adicionar um projeto a uma solução.|  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773664"
 ---
 # <a name="search-property-list-editor"></a>Editor da Lista de Propriedades de Pesquisa
@@ -27,7 +27,7 @@ ms.locfileid: "62773664"
   
 ## <a name="options"></a>Opções  
  **Nome da propriedade**  
- Especifique o nome a ser usado para identificar a propriedade em consultas de texto completo. Um nome de propriedade pode conter espaços internos. O tamanho máximo do **Nome da Propriedade** é de 256 caracteres. Esse nome pode ser um nome amigável, como "Autor" ou "Endereço Residencial" ou pode ser o nome canônico do Windows da propriedade, como `System.Author` ou `System.Contact.HomeAddress`. O **nome da propriedade** deve identificar exclusivamente a propriedade dentro do conjunto de propriedades.  
+ Especifique o nome a ser usado para identificar a propriedade em consultas de texto completo. Um nome de propriedade pode conter espaços internos. O tamanho máximo do **Nome da Propriedade** é de 256 caracteres. Esse nome pode ser um nome amigável, como "Autor" ou "Endereço Residencial" ou pode ser o nome canônico do Windows da propriedade, como `System.Author` ou `System.Contact.HomeAddress`. O**Nome da Propriedade** deve identificar a propriedade exclusivamente dentro do conjunto de propriedades.  
   
  Os desenvolvedores usam o nome da propriedade para identificar a propriedade no predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Portanto, ao adicionar uma propriedade, é importante especificar um valor que represente significativamente a propriedade.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62773664"
 > [!NOTE]  
 >  Propriedades de documento que usam identificadores de cadeia de caracteres não têm suporte da pesquisa de texto completo.  
   
- **Descrição da propriedade**  
+ **Descrição da Propriedade**  
  Opcionalmente, especifique uma descrição da propriedade. Esta é uma cadeia de caracteres de até 512 caracteres. Por exemplo, uma descrição pode conter informações sobre o conjunto de propriedades da propriedade ou informações sobre uma propriedade que não é evidente a partir de seu nome.  
   
 ## <a name="remarks"></a>Comentários  
@@ -56,8 +56,8 @@ ms.locfileid: "62773664"
  Consulte [ALTER Search Property LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  
- [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
- [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [ALTERAR lista de propriedades de pesquisa &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-search-property-list-transact-sql)   
+ [Pesquisar Propriedades do documento com listas de propriedades de pesquisa](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

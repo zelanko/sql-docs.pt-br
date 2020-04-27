@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 895e65f9538b588299520e9e22192935535b7931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815113"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro
@@ -29,10 +29,10 @@ ms.locfileid: "62815113"
 |-|-|  
 |**Nome da Política**|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|  
 |**Problema**|O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro.|  
-|**Categoria**|**Aviso**|  
-|**Faceta**|Banco de dados de disponibilidade|  
+|**Categoria**|**Alerta**|  
+|**Particular**|Banco de dados de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Esta política acumula o estado de sincronização de dados de todos os bancos de dados de disponibilidade (também chamados de "réplicas de banco de dados") na réplica de disponibilidade. A política estará em estado não íntegro quando alguma réplica de banco de dados não estiver no estado de sincronização de dados esperado. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
@@ -46,6 +46,6 @@ ms.locfileid: "62815113"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

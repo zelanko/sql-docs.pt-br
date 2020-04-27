@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779108"
 ---
 # <a name="migrate-query-plans"></a>Migrar planos de consulta
@@ -92,7 +92,7 @@ GO
  Execute a consulta novamente e examine o plano de consulta produzido. Você deve verificar se o plano corresponde ao que você especificou no guia de plano.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Dicas de consulta &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guias de plano](../../relational-databases/performance/plan-guides.md)  
   

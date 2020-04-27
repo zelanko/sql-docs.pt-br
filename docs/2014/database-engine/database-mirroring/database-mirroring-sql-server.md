@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807873"
 ---
 # <a name="database-mirroring-sql-server"></a>Espelhamento de banco de dados (SQL Server)
@@ -35,14 +35,14 @@ ms.locfileid: "62807873"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- O *espelhamento de banco de dados* é uma solução para aumentar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a disponibilidade de um banco de dados. O espelhamento é implementado por base de banco de dados e só funciona com bancos de dados que usam o modelo de recuperação completa.  
+ O*Espelhamento de banco de dados* é uma solução para aumentar a disponibilidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O espelhamento é implementado por base de banco de dados e só funciona com bancos de dados que usam o modelo de recuperação completa.  
   
 > [!IMPORTANT]  
 >  Para obter informações sobre o suporte para espelhamento de banco de dados, restrições, pré-requisitos, recomendações sobre como configurar servidores de parceiro e recomendações sobre como implantar o espelhamento de banco de dados, veja [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
 
   
-##  <a name="Benefits"></a>Benefícios do espelhamento de banco de dados  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a>Benefícios do espelhamento de banco de dados  
  O espelhamento de banco de dados é uma estratégia simples que oferece os seguintes benefícios:  
   
 -   Aumenta a disponibilidade de um banco de dados.  
@@ -59,7 +59,7 @@ ms.locfileid: "62807873"
   
      Para minimizar o tempo de inatividade de um banco de dados espelho, atualize de forma sequencial as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão hospedando os parceiros de failover. Isso ocasionará o tempo de inatividade de um único failover. Essa forma de atualização é conhecida como *atualização sem-interrupção*. Para obter mais informações, consulte [instalar um Service Pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
-##  <a name="TermsAndDefinitions"></a>Termos e definições de espelhamento de banco de dados  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Termos e definições de espelhamento de banco de dados  
  failover automático  
  O processo pelo qual, quando o servidor principal fica indisponível, o servidor espelho assume a função de servidor principal e torna sua cópia do banco de dados online como o banco de dados principal.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62807873"
  Witness (testemunha)  
  Para uso apenas com o modo de alta segurança, uma instância opcional do SQL Server que permite ao servidor espelho reconhecer quando iniciar um failover automático. Ao contrário dos dois parceiros de failover, a testemunha não atende ao banco de dados. O suporte ao failover automático é a única função da testemunha.  
   
-##  <a name="HowWorks"></a>Visão geral do espelhamento de banco de dados  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a>Visão geral do espelhamento de banco de dados  
  O espelhamento de banco de dados mantém duas cópias de um único banco de dados que devem estar localizadas em instâncias do servidor diferentes do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Geralmente, essas instâncias do servidor estão em localidades diferentes dos computadores. Iniciar o espelhamento de banco de dados em um banco de dados inicia uma relação, conhecida como uma *sessão de espelhamento de banco de dados*entre essas instâncias de servidor.  
   
  Uma instância do servidor atua como banco de dados para clientes ( *servidor principal*). A outra instância funciona como servidor em espera ativa ou passiva ( *servidor espelho*), dependendo da configuração e do estado da sessão de espelhamento. Quando uma sessão de espelhamento de banco de dados é sincronizada, o espelhamento de banco de dados fornece um servidor em espera ativa que oferece suporte rápido a failover , sem que haja perda de dados de transações confirmadas. Quando a sessão não é sincronizada, o servidor espelho fica, normalmente, disponível como servidor em espera passiva (com possível perda de dados).  
@@ -130,7 +130,7 @@ ms.locfileid: "62807873"
   
  
   
-###  <a name="OperatingModes"></a>Modos de operação  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a>Modos de operação  
  Uma sessão de espelhamento de banco de dados executa com operação síncrona ou assíncrona. No modo operacional assíncrono, as transações são confirmadas sem esperar que o servidor espelho grave o log no disco, o que maximiza o desempenho. Na operação síncrona, a transação é confirmada em ambos os parceiros, mas à custa da latência de transação aumentada.  
   
  Há dois modos operacionais de espelhamento. Um deles, o *modo de segurança alta* , dá suporte à operação síncrona. No modo de segurança alta, quando uma sessão é iniciada, o servidor espelho sincroniza rapidamente o banco de dados espelho com banco de dados principal. Assim que os bancos de dados são sincronizados, a transação é confirmada em ambos os parceiros, a custa do aumento de latência da transação.  
@@ -154,7 +154,7 @@ ms.locfileid: "62807873"
 > [!NOTE]  
 >  Estabelecer uma nova sessão de espelhamento ou adicionar uma testemunha para uma configuração de espelhamento existente exige que todas as instâncias de servidor envolvidas executem a mesma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No entanto, quando você estiver atualizando para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior, as versões das instâncias envolvidas podem variar. Para obter mais informações, consulte [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
-####  <a name="TxnSafety"></a>Segurança de transação e modos de operação  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> Segurança de transação e modos de operação  
  O que vai determinar se um modo de operação é assíncrono ou síncrono é a configuração de segurança da transação. Caso somente o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] seja usado para configurar o espelhamento de banco de dados, as definições de segurança da transação serão configuradas automaticamente quando o modo de operação for selecionado.  
   
  Se o [!INCLUDE[tsql](../../includes/tsql-md.md)] for usado para configurar o espelhamento de banco de dados, será necessário saber como definir a segurança de transação. A segurança de transação é controlada pela propriedade SAFETY da instrução ALTER DATABASE. Em um banco de dados que está sendo espelhado, SAFETY é FULL ou OFF.  
@@ -165,12 +165,12 @@ ms.locfileid: "62807873"
   
  Para obter mais informações, consulte [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
-###  <a name="RoleSwitching"></a>Troca de função  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a>Troca de função  
  No contexto da sessão de espelhamento de banco de dados, as funções principal e espelho podem ser, normalmente, alternadas em um processo conhecido como *troca de função*. A troca de função envolve a transferência da função principal ao servidor espelho. Na troca de função, o servidor espelho funciona como *parceiro de failover* do servidor principal. Quando ocorre a troca de função, o servidor espelho assume a função principal e coloca online a sua cópia do banco de dados, como banco de dados principal novo. O servidor principal anterior, se disponível, assume a função de espelho e seu banco de dados se torna o novo banco de dados espelho. Potencialmente, as funções podem ser alternadas de forma repetida.  
   
  Estas são as três formas de troca de função existentes.  
   
--   *Automatic failover*  
+-   *Failover automático*  
   
      Requer modo de segurança alta e a presença do servidor espelho e de uma testemunha. O banco de dados já deve estar sincronizado e a testemunha deve estar conectada ao servidor espelho.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "62807873"
   
  Em qualquer cenário de troca de função, assim que o novo banco de dados principal estiver online, para recuperar rapidamente os aplicativos cliente, reconecte-os ao banco de dados.  
   
-###  <a name="ConcurrentSessions"></a>Sessões simultâneas  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a>Sessões simultâneas  
  Uma determinada instância do servidor pode participar de várias sessões de espelhamento de banco de dados simultâneas (uma para cada banco de dados espelho) com as mesmas ou diferentes instâncias do servidor. Frequentemente, uma instância do servidor atua exclusivamente como um parceiro ou uma testemunha em todo o processo das sessões de espelhamento de banco de dados. Porém, como cada sessão é independente das demais, uma instância do servidor pode agir como um parceiro em algumas sessões e uma testemunha em outras. Por exemplo, considere as quatro sessões a seguir entre três instâncias de servidor (`SSInstance_1`, `SSInstance_2`e `SSInstance_3`). Cada instância do servidor atua como parceiro em algumas sessões e como testemunha em outras.  
   
 |Instância de servidor|Sessão para banco de dados A|Sessão para banco de dados B|Sessão para banco de dados C|Sessão para banco de dados D|  
@@ -211,18 +211,18 @@ ms.locfileid: "62807873"
 > [!NOTE]  
 >  Como os bancos de dados espelhados são independentes, eles não podem realizar failover em grupo.  
   
-###  <a name="ClientConnections"></a> Conexões cliente  
+###  <a name="client-connections"></a><a name="ClientConnections"></a>Conexões de cliente  
  O suporte à conexão de cliente para sessões de espelhamento de banco de dados é fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="ImpactOfPausing"></a>Impacto de pausar uma sessão no log de transações principal  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Impacto de pausar uma sessão no log de transações principal  
  O proprietário de banco de dados pode pausar uma sessão a qualquer momento. Ao fazer a pausa, preserva-se o estado da sessão enquanto durante a remoção do espelhamento. Quando uma sessão é pausada, o servidor principal não envia nenhum log novo registrado ao servidor espelho. Todos esses registros permanecem ativos e são acumulados no log de transações do banco de dados principal. Desde que uma sessão de espelhamento de banco de dados permaneça pausada, o log de transações não poderá ser truncado. No entanto, se a sessão de espelhamento de banco de dados permanecer pausada por muito tempo, o log poderá ser preenchido.  
   
  Para obter mais informações, consulte [Pausando e retomando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="SettingUpDbmSession"></a>Configurando sessão de espelhamento de banco de dados  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a>Configurando sessão de espelhamento de banco de dados  
  Antes de uma sessão de espelhamento ser iniciada, o proprietário do banco de dados ou o administrador do sistema deverá criar o banco de dados espelho, estabelecer os pontos de extremidades e logons e, em alguns casos, criar e configurar certificados. Para obter mais informações, consulte [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="InterOp"></a>Interoperabilidade e coexistência com outros recursos de Mecanismo de Banco de Dados  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a>Interoperabilidade e coexistência com outros recursos de Mecanismo de Banco de Dados  
  O espelhamento de banco de dados pode ser usado com os recursos ou componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a seguir.  
   
 -   [Envio de logs](database-mirroring-and-log-shipping-sql-server.md)  
@@ -233,7 +233,7 @@ ms.locfileid: "62807873"
   
 -   [Replicação](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>Nesta seção  
  [Pré-requisitos, restrições e recomendações para espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Descreve os pré-requisitos e as recomendações para configuração do espelhamento de banco de dados.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "62807873"
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
  Contém informações sobre como usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados **dbmmonitor** para monitorar o espelhamento ou as sessões do banco de dados.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 ### <a name="configuration-tasks"></a>Tarefas de configuração  
  **Usando SQL Server Management Studio**  
@@ -278,7 +278,7 @@ ms.locfileid: "62807873"
   
  **Usando o Transact-SQL**  
   
--   [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Permitir acesso à rede para um ponto de extremidade de espelhamento de banco de dados usando a autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
 -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779026"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriedades do Índice de Texto Completo (página Agendas)
@@ -36,7 +36,7 @@ ms.locfileid: "62779026"
  **Tipo de População**  
  Exibe o tipo de cada população agendada.  
   
- **Enabled**  
+ **Habilitada**  
  Indica se a população agendada está habilitada ou desabilitada atualmente.  
   
  **Descrição**  

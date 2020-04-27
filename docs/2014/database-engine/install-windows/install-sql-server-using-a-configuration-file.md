@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775279"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Instalar o SQL Server 2014 usando um arquivo de configuração
@@ -63,17 +63,17 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  A infraestrutura da instalação gravará todos os parâmetros adequados para as ações que foram executadas, com exceção de informações confidencias, como senhas. O parâmetro /IAcceptSQLServerLicenseTerms também não é gravado no arquivo de configuração e requer uma modificação do arquivo de configuração ou um valor a ser fornecido no prompt de comando. Para obter mais informações, consulte [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md) (Instalar o SQL Server 2014 do Prompt de Comando). Além disso, um valor é incluído para os parâmetros boolianos onde um valor geralmente não é fornecido por meio do prompt de comando.  
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>Usando o arquivo de configuração para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Usando o arquivo de configuração para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  É possível usar o arquivo de configuração apenas em instalações de linha de comando.  
   
 > [!NOTE]  
 >  Se você precisar fazer alterações no arquivo de configuração, é recomendável fazer uma cópia e trabalhar com a cópia.  
   
-#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>Como usar um arquivo de configuração para instalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Como usar um arquivo de configuração para instalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Execute a instalação por meio do prompt de comando e forneça o ConfigurationFile.ini usando o parâmetro *ConfigurationFile* .  
+-   Execute a instalação por meio do prompt de comando e forneça o ConfigurationFile. ini usando o parâmetro *ConfigurationFile* .  
   
-#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>Como usar um arquivo de configuração para preparar e concluir uma imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Como usar um arquivo de configuração para preparar e concluir uma imagem de uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
   
 1.  Para preparar uma ou mais instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e configurá-las na mesma máquina.  
   
@@ -91,7 +91,7 @@ FEATURES=SQL,Tools
   
     -   O arquivo de configuração de imagem completo pode ser armazenado com a imagem do Windows para automatizar a configuração das instâncias preparadas.  
   
-#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
+#### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Como instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
   
 1.  Opção de Instalação Integrada (criar um único cluster de failover de nó em um nó e, para nós adicionais, executar AddNode neles):  
   
@@ -113,11 +113,11 @@ FEATURES=SQL,Tools
   
     -   Em seguida, você pode fornecer esse arquivo ConfigurationFile.ini para concluir o cluster de failover.  
   
-#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como adicionar ou remover um nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
+#### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Como adicionar ou remover um nó de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o arquivo de configuração  
   
 -   Se você tiver um arquivo de configuração que foi usado anteriormente para adicionar um nó ou para remover um nó de um cluster de failover, poderá reutilizar esse mesmo arquivo para adicionar ou remover nós adicionais.  
   
-#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>Como atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o arquivo de configuração  
+#### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>Como atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o arquivo de configuração  
   
 1.  Execute Atualizar no nó passivo e capture o arquivo ConfigurationFile.ini. Isso pode ser feito executando a atualização real ou saindo no final sem fazer a atualização real.  
   
@@ -141,6 +141,6 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o SQL Server 2014 no prompt de comando](install-sql-server-from-the-command-prompt.md)   
  [Instalação do cluster de failover do SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [Atualizar um cluster de failover SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [Atualizar um cluster de failover do SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

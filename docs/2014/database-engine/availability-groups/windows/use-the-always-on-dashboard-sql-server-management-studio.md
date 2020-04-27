@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788723"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
@@ -51,23 +51,23 @@ ms.locfileid: "62788723"
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou secundária de um grupo de disponibilidade.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a>Para iniciar o painel AlwaysOn  
+##  <a name="to-start-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>Para iniciar o painel AlwaysOn  
   
 1.  No Pesquisador de Objetos, conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja executar o Painel AlwaysOn.  
   
 2.  Expanda o nó **Alta Disponibilidade AlwaysOn**, clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
   
-###  <a name="DashboardOptions"></a>Para alterar as opções do painel AlwaysOn  
+###  <a name="to-change-alwayson-dashboard-options"></a><a name="DashboardOptions"></a>Para alterar as opções do painel AlwaysOn  
  Você pode usar a caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o comportamento do Painel AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualização e habilitação automática de uma política de AlwaysOn definida automaticamente.  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
@@ -76,13 +76,13 @@ ms.locfileid: "62788723"
   
 3.  Para habilitar uma política definida pelo usuário, selecione **Habilitar política AlwaysOn definida pelo usuário**.  
   
-##  <a name="AvGroupsView"></a>Resumo do grupo de disponibilidade  
+##  <a name="availability-group-summary"></a><a name="AvGroupsView"></a>Resumo do grupo de disponibilidade  
  A tela de grupo de disponibilidade exibe uma linha de resumo para cada grupo de disponibilidade para o qual a instância de servidor conectada hospeda uma réplica. Esse painel exibe as seguintes colunas.  
   
  **Nome do Grupo de Disponibilidade**  
  O nome de um grupo de disponibilidade para o qual a instância local hospeda uma réplica.  
   
- **Instância Primária**  
+ **Instância primária**  
  O nome da instância do servidor que está hospedando a réplica primária do grupo de disponibilidade.  
   
  **Modo de Failover**  
@@ -98,7 +98,7 @@ ms.locfileid: "62788723"
 > [!TIP]  
 >  Clique nos títulos das colunas para classificar as informações de grupo de disponibilidade pelo nome do grupo de disponibilidade, a instância primária, o modo de failover ou o Problema.  
   
-##  <a name="AvGroupDetails"></a> Detalhes do grupo de disponibilidade  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Detalhes do grupo de disponibilidade  
  As informações de detalhes a seguir são exibidas para o grupo de disponibilidade que você seleciona na tela de resumo:  
   
  **Estado do grupo de disponibilidade**  
@@ -107,7 +107,7 @@ ms.locfileid: "62788723"
  **Primary instance**  
  O nome da instância do servidor que está hospedando a réplica primária do grupo de disponibilidade.  
   
- **Failover mode**  
+ **Modo de failover**  
  Exibe o modo de failover para o qual a réplica está configurada. Os valores possíveis do modo de failover são:  
   
 -   **Automático**. Indica que uma ou mais réplicas estão em modo de failover automático.  
@@ -117,7 +117,7 @@ ms.locfileid: "62788723"
  **Estado do cluster**  
  O nome e o estado do cluster onde a instância do servidor conectado e o grupo de disponibilidade são nós membros.  
   
-##  <a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Detalhes da réplica de disponibilidade  
  O painel **Réplica de Disponibilidade** exibe as seguintes colunas:  
   
  **Nome**  
@@ -150,12 +150,12 @@ ms.locfileid: "62788723"
  **Problemas**  
  Lista o nome do problema. Esse valor é mostrado por padrão. Para obter uma lista de todos os problemas da política AlwaysOn, consulte [políticas AlwaysOn para problemas operacionais com o grupos de disponibilidade AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
- **Modo de Disponibilidade**  
+ **Modo de disponibilidade**  
  Indica a propriedade de réplica que você define separadamente para cada réplica de disponibilidade. Esse valor é ocultado por padrão. Os valores possíveis são:  
   
 -   **Assíncrono**. A réplica secundária nunca é sincronizada com a réplica primária.  
   
--   **Synchronous**. Ao ficar em dia com o banco de dados primário, um banco de dados secundário entra nesse estado e permanece em dia, desde que a sincronização continue para o banco de dados.  
+-   **Síncrono**. Ao ficar em dia com o banco de dados primário, um banco de dados secundário entra nesse estado e permanece em dia, desde que a sincronização continue para o banco de dados.  
   
  **Modo de Conexão Primário**  
  Indica o modo usado para conexão à réplica primária.  Esse valor é ocultado por padrão.  
@@ -172,7 +172,7 @@ ms.locfileid: "62788723"
   
     -   Na réplica secundária, ao detectar que está desconectada, a réplica secundária tentará reconectar-se à réplica primária.  
   
--   **Connected**. Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.  
+-   **Conectado**. Uma réplica de disponibilidade remota que está conectada atualmente à réplica local.  
   
  **Estado Operacional**  
  Indica o estado operacional atual da réplica secundária. Esse valor é ocultado por padrão. Os valores possíveis são:  
@@ -203,14 +203,14 @@ ms.locfileid: "62788723"
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a>Para agrupar informações do grupo de disponibilidade  
+##  <a name="to-group-availability-group-information"></a><a name="AvDbDetails"></a> Para agrupar informações do grupo de disponibilidade  
  Para agrupar as informações, clique em **Agrupar por**e selecione uma das opções a seguir:  
   
 -   **Réplicas de disponibilidade**  
   
 -   **Bancos de dados de disponibilidade**  
   
--   **Synchronization state**  
+-   **Estado de sincronização**  
   
 -   **Prontidão de failover**  
   
@@ -348,12 +348,12 @@ ms.locfileid: "62788723"
  **Hora da Última Operação de Refazer**  
  Indica a hora em que o último registro de log que foi refeito no banco de dados secundário. Esse valor é ocultado por padrão.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Use políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

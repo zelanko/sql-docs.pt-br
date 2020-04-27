@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781396"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir o Administrador de Fonte de Dados ODBC
@@ -27,7 +27,7 @@ ms.locfileid: "62781396"
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Abrir o Administrador de Fonte de Dados ODBC no Windows Server 2008  
   
-1.  No menu **Iniciar** , aponte para **Ferramentas Administrativas**e clique em **Fontes de Dados (ODBC)** .  
+1.  No menu **Iniciar** , aponte para **Ferramentas Administrativas**e clique em **Fontes de Dados (ODBC)**.  
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Para abrir o Administrador de Fonte de Dados ODBC no Windows 7  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781396"
   
 2.  No **Painel de Controle**, clique em **Ferramentas Administrativas**.  
   
-3.  Em **Ferramentas Administrativas**, clique em **Fontes de Dados (ODBC)** .  
+3.  Em **Ferramentas Administrativas**, clique em **Fontes de Dados (ODBC)**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Verificar a versão do driver ODBC do SQL Server &#40;Windows&#41;](check-the-odbc-sql-server-driver-version-windows.md)  

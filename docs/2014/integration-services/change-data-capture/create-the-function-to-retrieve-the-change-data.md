@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771432"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Criar a função para recuperar os dados de alteração
@@ -209,8 +209,8 @@ go
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas linhas diferentes, a tabela de alteração conterá quatro linhas (duas com os valores antigos e duas com os valores novos), cada uma com o mesmo valor de **__$start_lsn** .|  
-|**_ _ $ seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
-|**_ de $ operação**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
+|**__$seqval**|`binary(10)`|Valor de sequência usado para organizar as alterações de linha em uma transação.|  
+|**_ de $ operação**|`int`|A operação DML (linguagem de manipulação de dados) associada à alteração. Pode ser um dos seguintes:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores anteriores à operação de atualização).<br /><br /> 4 = atualizar (valores posteriores à operação de atualização).|  
 |**_ de $ update_mask**|`varbinary(128)`|Uma máscara de bits com base nos ordinais de coluna da tabela de alteração identificando as colunas que foram alteradas. Você poderia examinar este valor se você tivesse que determinar quais colunas foram alteradas.|  
 |**\<colunas da tabela de origem capturadas>**|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada originalmente na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>Próxima etapa  
  Após ter criado a função com valor de tabela que consulta a existência de dados de alteração, a próxima etapa será iniciar a criação do fluxo de dados no pacote.  
   
- **Próximo tópico:** [recuperar e entender os dados de alteração](retrieve-and-understand-the-change-data.md)  
+ **Próximo tópico:** [Recuperar e compreender os dados de alteração](retrieve-and-understand-the-change-data.md)  
   
   

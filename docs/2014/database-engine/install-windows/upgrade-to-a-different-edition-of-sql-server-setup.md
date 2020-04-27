@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774570"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Atualizar para outra edição do SQL Server 2014 (instalação)
@@ -26,12 +26,12 @@ ms.locfileid: "62774570"
   
 -   [Computar limites de capacidade por edição do SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware e software para instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **em um ambiente clusterizado: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Executar a atualização de edição em um dos nós [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do cluster é suficiente. Esse nó pode ser ativo ou passivo, e o mecanismo não aciona os recursos offline durante a atualização da edição. Após a atualização da edição, será necessário reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou executar o failover em um nó diferente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura no compartilhamento remoto.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "62774570"
   
 ## <a name="procedure"></a>Procedimento  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Para atualizar para outra edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>Para atualizar para outra edição do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Na pasta raiz, clique duas vezes em setup.exe ou inicie a Central de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em Ferramentas de Configuração. Para instalar a partir de um compartilhamento de rede, localize a pasta raiz no compartilhamento e clique duas vezes em Setup.exe.  
   

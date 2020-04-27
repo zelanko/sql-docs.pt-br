@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809528"
 ---
 # <a name="server-properties-database-settings-page"></a>Propriedades do Servidor (página Configurações de Banco de Dados)
@@ -73,6 +73,6 @@ ms.locfileid: "62809528"
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [Especificar o fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
+ [Especificar fator de preenchimento para um índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   

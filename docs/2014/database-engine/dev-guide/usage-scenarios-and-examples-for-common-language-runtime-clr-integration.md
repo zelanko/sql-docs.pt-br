@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780706"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Cenários de uso e exemplos para a integração de CLR (Common Language Runtime)
@@ -29,7 +29,7 @@ ms.locfileid: "62780706"
   
  Para projetos completos do Visual Studio que implementam esses exemplos e materiais adicionais, visite [Microsoft SQL Server projetos da comunidade & exemplos no CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[Acessando código nativo em uma UDF CLR](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Mostra como invocar uma função em código C++ nativo (não gerenciado) a partir de uma função definida pelo usuário em um assembly, no seu banco de dados.|  
 |[Exemplo de parâmetro de matriz](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Demonstra como criar, atualizar ou excluir um conjunto de linhas em um banco de dados, passando uma matriz de informações de um cliente para um procedimento armazenado de integração CLR no servidor. Isso é feito com um UDT.|  

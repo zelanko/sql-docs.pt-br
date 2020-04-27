@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789848"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
@@ -36,7 +36,7 @@ ms.locfileid: "62789848"
   
  
   
-##  <a name="bkmk_Benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a>Benefícios  
  Direcionar conexões somente leitura a réplicas secundárias legíveis tem os seguintes benefícios:  
   
 -   Descarrega suas cargas de trabalho somente leitura secundárias de sua réplica primária, o que conserva seus recursos para cargas de trabalho críticas. Se você tiver missão carga de trabalho de leitura crítica ou que não possa tolerar latência, execute-a na primária.  
@@ -53,7 +53,7 @@ ms.locfileid: "62789848"
   
 -   As operações DML são permitidas em variáveis de tabela para os tipos baseados em disco e em tabela com otimização de memória na réplica secundária.  
   
-##  <a name="bkmk_Prerequisites"></a> Pré-requisitos para o grupo de disponibilidade  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a>Pré-requisitos para o grupo de disponibilidade  
   
 -   **Réplicas secundárias legíveis (obrigatório)**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62789848"
   
      Para obter mais informações, consulte [Sobre Acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
--   **Ouvinte de grupo de disponibilidade**  
+-   **Ouvinte do grupo de disponibilidade**  
   
      Para dar suporte ao roteamento somente leitura, um grupo de disponibilidade deve ter um [ouvinte do grupo de disponibilidade](../../listeners-client-connectivity-application-failover.md). O cliente somente leitura deve direcionar suas solicitações de conexão para este ouvinte e a cadeia de conexão do cliente deve especificar a intenção do aplicativo como "somente leitura." Ou seja, elas devem ser *solicitações de conexão de intenção de leitura*.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62789848"
 > [!NOTE]  
 >  Para obter informações sobre ouvintes do grupo de disponibilidade e mais informações sobre roteamento somente leitura, veja [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
-##  <a name="bkmk_LimitationsRestrictions"></a> Limitações e restrições  
+##  <a name="limitations-and-restrictions"></a><a name="bkmk_LimitationsRestrictions"></a> Limitações e restrições  
  Algumas operações não têm suporte total, como segue:  
   
 -   Assim que uma réplica legível é habilitada para leitura, pode começar a aceitar conexões para seus bancos de dados secundários. Porém, se houver transações ativas em um banco de dados primário, as versões de linha não estarão completamente disponíveis no banco de dados secundário correspondente. As transações ativas que existiam na réplica primária quando a réplica secundária foi configurada devem ser confirmadas ou revertidas. Até que esse processo termine, o mapeamento do nível de isolamento da transação no banco de dados secundário ficará incompleto e as consultas serão bloqueadas temporariamente.  
@@ -109,19 +109,19 @@ ms.locfileid: "62789848"
 > [!NOTE]  
 >  Se você consultar a exibição de gerenciamento dinâmico [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) em uma instância de servidor que está hospedando uma réplica secundária legível, poderá encontrar um problema de bloqueio REDO. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
   
-##  <a name="bkmk_Performance"></a> Considerações sobre desempenho  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a>Considerações sobre desempenho  
  Esta seção aborda várias considerações sobre desempenho de bancos de dados secundários legíveis  
   
  
   
-###  <a name="DataLatency"></a> Latência de dados  
+###  <a name="data-latency"></a><a name="DataLatency"></a> Latência de dados  
  A implementação do acesso somente leitura a réplicas secundárias será útil se as suas cargas de trabalho somente leitura puderem tolerar certa latência de dados. Nas situações em que a latência de dados é inaceitável, considere executar cargas de trabalho somente leitura na réplica primária.  
   
  A réplica primária envia registros de log de alterações no banco de dados primário para as réplicas secundárias. Em cada banco de dados secundário, um thread de restauração dedicado aplica os registros de log. Em um banco de dados secundário de acesso de leitura, uma determinada alteração de dados não aparece nos resultados da consulta até que o registro de log que contém a alteração seja aplicado ao banco de dados secundário e a transação seja confirmada no banco de dados primário.  
   
  Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem gargalos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
-####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latência de dados em banco de dados com tabelas com otimização de memória  
+####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latência de dados em banco de dados com tabelas com otimização de memória  
  Ao acessar tabelas com otimização de memória na réplica secundária para a carga de trabalho de leitura, um *carimbo de data/hora seguro* é usado para retornar linhas das transações confirmadas anteriores ao *carimbo de data/hora seguro*. O carimbo de data/hora seguro é a dica mais antiga de carimbo de data/hora usada pelo thread de coleta de lixo para coletar o lixo das linhas na réplica primária. Este carimbo de data/hora é atualizado quando o número de transações DML em tabelas com otimização de memória excede um limite interno desde a última atualização. Sempre que o carimbo de data/hora da transação mais antiga for atualizado na réplica primária, a transação DML seguinte em uma tabela com otimização de memória durável enviará este carimbo de data/hora para ser enviado à réplica secundária como parte de um registro de log especial. O thread REDO na réplica secundária atualiza o carimbo de data/hora seguro como parte do processamento desse registro de log.  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>O impacto do carimbo de data/hora seguro na latência  
@@ -154,7 +154,7 @@ GO
   
 ```  
   
-###  <a name="ReadOnlyWorkloadImpact"></a> Impacto da carga de trabalho somente leitura  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a>Impacto de carga de trabalho somente leitura  
  Ao configurar uma réplica secundária para acesso somente leitura, suas cargas de trabalho somente leitura nos bancos de dados secundários consumirão recursos do sistema, como CPU e E/S (para tabelas baseadas em disco) de threads de restauração, especialmente se as cargas de trabalho somente leitura (para tabelas baseadas em disco) consumirem muitos recursos de E/S. Não há nenhum impacto de E/S ao acessar tabelas com otimização de memória porque todas as linhas residem na memória.  
   
  Além disso, as cargas de trabalho somente leitura nas réplicas secundárias podem bloquear alterações de DDL (linguagem de definição de dados) aplicadas por meio de registros de log.  
@@ -168,21 +168,21 @@ GO
 > [!NOTE]  
 >  Se um thread de restauração estiver bloqueado por consultas em uma réplica secundária, o XEvent **sqlserver.lock_redo_blocked** será gerado.  
   
-###  <a name="bkmk_Indexing"></a> Indexação  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a>Indexação  
  Para otimizar cargas de trabalho somente leitura nas réplicas secundárias legíveis, talvez você queira criar índices nas tabelas nos bancos de dados secundários. Como você não pode fazer alterações de esquema ou de dados nos bancos de dados secundários, crie índices nos bancos de dados primários e permita que as alterações sejam transferidas para o banco de dados secundário por meio do processo de refazer.  
   
  Para monitorar a atividade de uso de índice em uma réplica secundária, consulte as colunas **user_seeks**, **user_scans**e **user_lookups** da exibição de gerenciamento dinâmico [sys.dm_db_index_usage_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql) .  
   
-###  <a name="Read-OnlyStats"></a> Estatísticas para bancos de dados somente leitura  
+###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Estatísticas para bancos de dados somente leitura  
  As estatísticas em colunas de tabelas e exibições indexadas são usadas para otimizar os planos da consulta. Para grupos de disponibilidade, as estatísticas que são criadas e mantidas nos bancos de dados primários são automaticamente persistidas nos bancos de dados secundários como parte da aplicação dos registros dos logs de transação. No entanto, a carga de trabalho somente leitura nos bancos de dados secundários talvez precise de estatísticas diferentes daquelas criadas nos bancos de dados primários. No entanto, como os bancos de dados secundários são restritos ao acesso somente leitura, não é possível criar estatísticas nos bancos de dados secundários.  
   
  Para resolver esse problema, a réplica secundária cria e mantém estatísticas temporárias para bancos de dados secundários em **tempdb**. O sufixo _readonly_database_statistic é anexado ao nome das estatísticas temporárias para diferenciá-las das permanentes que persistem do banco de dados primário.  
   
  Somente o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode criar e atualizar estatísticas temporárias. No entanto, você pode excluir estatísticas temporárias e monitorar suas propriedades usando as mesmas ferramentas que você utiliza para estatísticas permanentes:  
   
--   Exclua estatísticas temporárias usando a instrução [DROP STATISTICS](/sql/t-sql/statements/drop-statistics-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+-   Exclua estatísticas temporárias usando a instrução [drop Statistics](/sql/t-sql/statements/drop-statistics-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
--   Para monitorar as estatísticas, use as exibições de catálogo **sys.stats** e **sys.stats_columns** . **sys_stats** inclui uma coluna, **is_temporary**, para indicar quais estatísticas são permanentes e quais são temporárias.  
+-   Para monitorar as estatísticas, use as exibições de catálogo **sys.stats** e **sys.stats_columns**. **sys_stats** inclui uma coluna, **is_temporary**, para indicar quais estatísticas são permanentes e quais são temporárias.  
   
  Não há suporte para a atualização automática de estatísticas para tabelas com otimização de memória na réplica primária ou secundária. Você deve monitorar o desempenho de consulta e os planos na réplica secundária e atualizar manualmente as estatísticas na réplica primária quando necessário. No entanto, as estatísticas ausentes são criadas automaticamente na réplica primária e secundária.  
   
@@ -190,20 +190,20 @@ GO
   
 
   
-####  <a name="StalePermStats"></a> Estatísticas permanentes obsoletas em bancos de dados secundários  
+####  <a name="stale-permanent-statistics-on-secondary-databases"></a><a name="StalePermStats"></a> Estatísticas permanentes obsoletas em bancos de dados secundários  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecta quando as estatísticas permanentes em um banco de dados secundário estão obsoletas. Mas alterações não podem ser feitas nas estatísticas permanentes, exceto por alterações no banco de dados primário. Para a otimização das consultas, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cria estatísticas temporárias para tabelas baseadas em disco no banco de dados secundário e usa essas estatísticas em vez das estatísticas permanentes obsoletas.  
   
  Quando as estatísticas permanentes são atualizadas no banco de dados primário, elas persistem automaticamente no banco de dados secundário. Em seguida, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa as estatísticas permanentes atualizadas, que são mais atuais que as estatísticas temporárias.  
   
  Se o grupo de disponibilidade passar por failover, as estatísticas temporárias serão excluídas em todas as réplicas secundárias.  
   
-####  <a name="StatsLimitationsRestrictions"></a> Limitações e restrições  
+####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> Limitações e restrições  
   
 -   Como as estatísticas temporárias são armazenadas em **tempdb**, uma reinicialização do serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] faz com que todas as estatísticas temporárias desapareçam.  
   
 -   O sufixo _readonly_database_statistic fica reservado para estatísticas geradas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Você não pode usar esse sufixo na criação de estatísticas em um banco de dados primário. Para obter mais informações, consulte [Estatísticas](../../../relational-databases/statistics/statistics.md).  
   
-##  <a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
+##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> Acessando tabelas com otimização de memória em uma réplica secundária  
  Os níveis de isolamento de carga de trabalho de leitura na réplica secundária são apenas os permitidos na réplica primária. Não há nenhum mapeamento dos níveis de isolamento feitos na réplica secundária. Isso garante que qualquer carga de trabalho de relatório que possa ser executada na réplica primária possa ser executada na réplica secundária sem exigir nenhuma alteração. Isso facilita que você migre uma carga de trabalho de relatório da réplica primária para uma secundária ou vice-versa quando a réplica secundária não estiver disponível.  
   
  As consultas a seguir não são executadas na réplica secundária de modo semelhante da maneira que falharam na réplica primária.  
@@ -255,7 +255,7 @@ GO
     Memory optimized tables and natively compiled stored procedures cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT.  
     ```  
   
-##  <a name="bkmk_CapacityPlanning"></a> Considerações sobre o planejamento de capacidade  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> Considerações sobre o planejamento de capacidade  
   
 -   No caso de tabelas baseadas em disco, as réplicas secundárias legíveis podem exigir espaço no **tempdb** por duas razões:  
   
@@ -276,7 +276,7 @@ GO
     |Sim|Não|Nenhuma versão de linha, mas sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
     |Sim|Sim|Versões de linha e sobrecarga de 14 bytes|Versões de linha e sobrecarga de 14 bytes|  
   
-##  <a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Configurar o acesso somente leitura em uma réplica de disponibilidade &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -290,14 +290,14 @@ GO
   
 -   [Usar a caixa de diálogo Novo Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Blog da equipe do AlwaysOn do SQL Server: blog oficial da equipe do SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Sobre o acesso de conexão de cliente a réplicas de disponibilidade &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Ouvintes de grupo de disponibilidade, conectividade de cliente e failover de aplicativo &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Estatísticas](../../../relational-databases/statistics/statistics.md)  
   
   

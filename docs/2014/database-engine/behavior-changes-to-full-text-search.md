@@ -15,23 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813189"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Alterações de comportamento na pesquisa de texto completo
   Este tópico descreve alterações de comportamento em pesquisa de texto completo. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Alterações de comportamento na pesquisa de texto completo do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>Alterações de comportamento na pesquisa de texto completo do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informações que virão posteriormente.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Alterações de comportamento na pesquisa de texto completo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>Alterações de comportamento na pesquisa de texto completo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] instala uma nova versão dos separadores de palavras e lematizadores para inglês dos EUA (LCID 1033) e inglês do Reino Unido (LCID 2057). Porém, você poderá alternar para a versão anterior desses componentes se desejar reter o comportamento anterior. Para obter mais informações, consulte [Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Novos separadores de palavras e lematizadores instalados  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]atualiza todos os separadores de palavras e lematizadores usados pela pesquisa de texto completo e pela pesquisa semântica. Para obter consistência entre o conteúdo de índices e os resultados das consultas, nós recomendamos que você repopule os índices de texto completo existentes.  
+ O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] atualiza todos os separadores de palavras e lematizadores usados por Pesquisas de texto completo e semântico. Para obter consistência entre o conteúdo de índices e os resultados das consultas, nós recomendamos que você repopule os índices de texto completo existentes.  
   
 1.  Há novos separadores de palavras para inglês. Se você tiver que manter o comportamento anterior, consulte [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62813189"
      O mecanismo de texto completo indexa o conteúdo dos BLOBs FILESTREAM. Arquivos de indexação como imagens podem não ser úteis. Quando um BLOB FILESTREAM é atualizado, ele é reindexado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pesquisa de texto completo](../relational-databases/search/full-text-search.md)   
+ [Pesquisa de Texto Completo](../relational-databases/search/full-text-search.md)   
  [Compatibilidade com versões anteriores da pesquisa de texto completo](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Atualizar pesquisa de texto completo](../relational-databases/search/upgrade-full-text-search.md)   
  [Iniciar a pesquisa de texto completo](../relational-databases/search/get-started-with-full-text-search.md)  

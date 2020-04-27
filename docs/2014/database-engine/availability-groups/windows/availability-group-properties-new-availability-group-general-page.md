@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815649"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propriedades do Grupo de Disponibilidade e Novo Grupo de Disponibilidade (página geral)
-  Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade** .  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
+   Este tópico se aplica à guia **Geral** da caixa de diálogo **Novo Grupo de Disponibilidade** e da caixa de diálogo **Propriedades do Grupo de Disponibilidade**.  A caixa de diálogo **Novo Grupo de Disponibilidade** permite criar um novo grupo de disponibilidade sem usar o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. A caixa de diálogo **Propriedades do Grupo de Disponibilidade** permite exibir e alterar a configuração de um grupo de disponibilidade existente.  
   
  **Para exibir as propriedades do grupo de disponibilidade**  
   
 -   [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  **Nome do grupo de disponibilidade**  
  O nome do grupo de disponibilidade. Esse é um nome especificado pelo usuário que deve ser exclusivo no WSFC (Windows Server Failover Cluster).  
   
 ## <a name="availability-databases"></a>Bancos de dados de disponibilidade  
- **Database Name**  
+ **Nome do banco de dados**  
  O nome de um banco de dados que foi adicionado ao grupo de disponibilidade.  
   
  **Adicionar**  
@@ -43,11 +43,11 @@ ms.locfileid: "62815649"
  Clique para remover um banco de dados selecionado do grupo de disponibilidade.  
   
 ## <a name="availability-replicas"></a>Réplicas de Disponibilidade  
- **Instância de servidor**  
+ **Instância do servidor**  
  O nome de servidor da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda essa réplica e, para uma instância não padrão, seu nome de instância.  
   
  **Função**  
- **Primário**  
+ **Primary**  
  Atualmente a réplica primária.  
   
  **Secundário**  
@@ -56,7 +56,7 @@ ms.locfileid: "62815649"
  **Resolvendo**  
  Atualmente, a função de réplica está no processo de ser resolvida para a função primária ou secundária.  
   
- **Modo de Disponibilidade**  
+ **Modo de disponibilidade**  
  O modo de disponibilidade da réplica. Pode ser:  
   
  **Confirmação assíncrona**  
@@ -76,16 +76,16 @@ ms.locfileid: "62815649"
  **Manual**  
  Failover manual. O failover da réplica pode ser feito apenas manualmente pelo administrador do banco de dados.  
   
- **Conexões na Função Primária**  
+ **Conexões na função primária**  
  O tipo de conexões de cliente com suporte quando a réplica possui a função primária.  
   
  **Permitir todas as conexões**  
  Todas as conexões são permitidas com os bancos de dados na réplica primária. Essa é a configuração padrão.  
   
  **Permitir conexões de leitura/gravação**  
- Conexões em que a propriedade de conexão Application Intent é definida como **ReadOnly** não são permitidas. Quando a propriedade Application Intent está definida como **ReadWrite** ou não está definida, a conexão é permitida. Para obter mais informações sobre a propriedade de conexão Tentativa de Aplicativo, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Conexões em que a propriedade de conexão da tentativa de aplicativo está definida como **ReadOnly** não são permitidas. Quando a propriedade de tentativa de aplicativo é definida como **ReadWrite** ou a propriedade de conexão de tentativa de aplicativo não está definida, a conexão é permitida. Para obter mais informações sobre a propriedade de conexão Tentativa de Aplicativo, consulte [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- **Secundária Legível**  
+ **Secundário legível**  
  Se uma réplica de disponibilidade que está executando a função primária (isto é, está atuando como uma réplica secundária) pode aceitar conexões de clientes, um dos seguintes:  
   
  **Não**  
@@ -97,7 +97,7 @@ ms.locfileid: "62815649"
  **Sim**  
  Todas as conexões são permitidas para os bancos de dados secundários desta réplica, mas somente para acesso de leitura. Os bancos de dados secundários estão disponíveis para acesso de leitura.  
   
- **Tempo Limite da Sessão (segundos)**  
+ **Tempo limite da sessão (segundos)**  
  O número de segundos do período de tempo limite de sessão nesta réplica.  
   
  **URL do Ponto de Extremidade**  

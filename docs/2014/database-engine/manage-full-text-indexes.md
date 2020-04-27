@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775038"
 ---
 # <a name="manage-full-text-indexes"></a>Gerenciar índices de texto completo
      
-##  <a name="view"></a>Exibindo e alterando as propriedades de um índice de texto completo  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>Exibindo e alterando as propriedades de um índice de texto completo  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>Par exibir ou alterar as propriedades de um índice de texto completo no Management Studio  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62775038"
   
 5.  No painel **Selecionar uma página** , você pode selecionar qualquer uma das seguintes páginas:  
   
-    |Página|DESCRIÇÃO|  
+    |Página|Descrição|  
     |----------|-----------------|  
     |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**<br /><br /> <br /><br /> Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Geral&#41;](full-text-index-properties-general-page.md).|  
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [Propriedades do Índice de Texto Completo &#40;página Colunas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
@@ -41,12 +41,12 @@ ms.locfileid: "62775038"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
   
-##  <a name="props"></a>Exibindo as propriedades de tabelas e colunas indexadas  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>Exibindo as propriedades de tabelas e colunas indexadas  
  Muitas funções [!INCLUDE[tsql](../includes/tsql-md.md)], como OBJECTPROPERTYEX, podem ser usadas para obter o valor de diversas propriedades de indexação de texto completo. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
   
  A tabela a seguir lista as propriedades de texto completo relacionadas a colunas e tabelas indexadas e suas funções [!INCLUDE[tsql](../includes/tsql-md.md)] relacionadas.  
   
-|Propriedade|DESCRIÇÃO|Função|  
+|Propriedade|Descrição|Função|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|TYPE COLUMN na tabela que armazena as informações de tipo de documento da coluna.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|Se uma coluna foi habilitada para indexação de texto completo.|COLUMNPROPERTY|  
@@ -63,7 +63,7 @@ ms.locfileid: "62775038"
 |`TableFulltextPopulateStatus`|Status de população de uma tabela de texto completo.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|Se uma tabela tem um índice de texto completo ativo.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>Obtendo informações sobre a coluna de chave de texto completo  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>Obtendo informações sobre a coluna de chave de texto completo  
  Normalmente, o resultado de funções com valor de conjunto de linhas CONTAINSTABLE ou FREETEXTTABLE precisam ser unidas à tabela base. Nesses casos, você precisa saber o nome da coluna de chave exclusiva. Você pode perguntar se um dado índice exclusivo é usado como chave de texto completo e pode obter o identificador da coluna de chave de texto completo.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Para perguntar se um dado índice de texto completo é usado como a coluna de chave de texto completo  
@@ -125,7 +125,7 @@ GO
   
  Este exemplo retorna um conjunto de resultados chamado `Unique Key Column`, que exibe uma única linha contendo o nome da coluna de chave exclusiva da tabela Document, DocumentID. Observe que, se esta consulta continha um nome de índice inválido, se o nome de índice não correspondia à tabela, se a tabela não existia etc., será retornado NULL.  
   
-##  <a name="disable"></a>Desabilitando ou reabilitando uma tabela para indexação de texto completo  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>Desabilitando ou reabilitando uma tabela para indexação de texto completo  
  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], todos os bancos de dados criados pelo usuário são habilitados para texto completo por padrão. Além disso, uma tabela individual está automaticamente habilitada para indexação de texto completo desde que o índice de texto completo seja criado nela e uma coluna seja adicionada ao índice. Uma tabela está automaticamente desabilitada para indexação de texto completo quando a última coluna é descartada de seu índice de texto completo.  
   
  Em uma tabela que tenha um índice de texto completo, é possível desabilitar manualmente ou desabilitar de novo uma tabela para indexação de texto completo usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -138,7 +138,7 @@ GO
   
 3.  Selecione **Índice de Texto Completo**e clique em **Disable Full-Text index (Desabilitar Índice de Texto Completo)** ou **Enable Full-Text index (Habilitar Índice de Texto Completo)** .  
   
-##  <a name="remove"></a>Removendo um índice de texto completo de uma tabela  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>Removendo um índice de texto completo de uma tabela  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>Para remover um índice de texto completo de uma tabela  
   

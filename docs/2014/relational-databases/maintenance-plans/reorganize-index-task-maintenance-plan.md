@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807053"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tarefa de Reorganização de Índice (Plano de Manutenção)
@@ -40,7 +40,7 @@ ms.locfileid: "62807053"
   
 -   **Todos os bancos de dados do sistema**  
   
-     Gere um plano de manutenção que execute tarefas de manutenção em cada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um dos bancos de dados do sistema, exceto **tempdb**. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
+     Gere um plano de manutenção que executa tarefas de manutenção em cada banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exceto o **tempdb**. Nenhuma tarefa de manutenção é executada nos bancos de dados criados pelo usuário.  
   
 -   **Todos os bancos de dados de usuários**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62807053"
  Limita a grade **Seleção** para exibir tabelas, exibições ou ambas.  
   
  **Seleção**  
- Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando **tabelas e exibições** está selecionada na caixa **objeto** .  
+ Especifique as tabelas ou índices afetados por esta tarefa. Não disponível quando a opção **Tabelas e Exibições** é selecionada na caixa **Objeto** .  
   
  **Compactar objetos grandes**  
  Desaloque espaço em tabelas e exibições quando possível. Esta opção usa `ALTER INDEX LOB_COMPACTION = ON`.  
@@ -79,10 +79,10 @@ ms.locfileid: "62807053"
  Especifica como autenticar no servidor.  
   
  **Use a segurança integrada do Windows**  
- Conecte-se a uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] do [!INCLUDE[msCoName](../../includes/msconame-md.md)] com a autenticação do Windows.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] com a Autenticação do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar nome de usuário e senha específicos**  
- Conecte-se com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Essa opção não está disponível.  
+ Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa opção não está disponível.  
   
  **Nome de usuário**  
  Forneça um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ser usado na autenticação. Essa opção não está disponível.  

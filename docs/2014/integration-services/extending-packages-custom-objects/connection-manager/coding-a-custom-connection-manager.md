@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e11738fb33c45bf1d18b32bb4e3b1be4d0cf6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768894"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codificando um gerenciador de conexões personalizado
@@ -258,10 +258,10 @@ public override void ReleaseConnection(object connection)
 }  
 ```  
   
-![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um gerenciador de conexões personalizado](creating-a-custom-connection-manager.md)   
- [Desenvolver uma interface do usuário para um gerenciador de conexões personalizado](developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [Criando um Gerenciador de conexões personalizado](creating-a-custom-connection-manager.md)   
+ [Desenvolvendo uma interface do usuário para um gerenciador de conexões personalizado](developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   

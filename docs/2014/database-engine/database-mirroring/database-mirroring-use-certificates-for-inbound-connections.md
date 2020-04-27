@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807554"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada (Transact-SQL)
@@ -164,7 +164,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Permissões GRANT do ponto de extremidade &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [CONCEDER permissões de ponto de extremidade &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Configurar um banco de dados espelho criptografado](set-up-an-encrypted-mirror-database.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Solução de problemas de configuração de espelhamento de banco de dados &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  

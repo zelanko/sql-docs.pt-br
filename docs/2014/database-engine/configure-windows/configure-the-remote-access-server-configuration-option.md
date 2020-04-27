@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e499315b2807245a34d3ec4fe7d7616e98b76512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811348"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurar a opção remote access de configuração de servidor
@@ -33,26 +33,26 @@ ms.locfileid: "62811348"
   
      [Segurança](#Security)  
   
--   **Para configurar a opção de acesso remoto usando:**  
+-   **Para configurar a opção remote access, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção Remote Access](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção remote access](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A opção **remote access** se aplica apenas aos servidores que são adicionados usando [sp_addserver](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql)e está incluída para ter compatibilidade com versões anteriores.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-access-option"></a>Para configurar a opção remote access  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62811348"
   
 3.  Em **Conexões do servidor remoto**, marque ou desmarque a caixa de seleção **Permitir conexões remotas com este servidor** .  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-remote-access-option"></a>Para configurar a opção remote access  
   
@@ -82,7 +82,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de configurar a opção Remote Access  
+##  <a name="follow-up-after-you-configure-the-remote-access-option"></a><a name="FollowUp"></a>Acompanhamento: depois de configurar a opção Remote Access  
  Essa configuração não entrará em vigor até que você reinicie o SQL Server.  
   
 ## <a name="see-also"></a>Consulte Também  

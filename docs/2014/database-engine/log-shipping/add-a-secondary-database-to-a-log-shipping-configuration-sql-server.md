@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774329"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Adicionar um banco de dados secundário a uma configuração de envio de logs (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "62774329"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Para adicionar um banco de dados secundário de envio de logs  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62774329"
   
 4.  Clique em **Conectar** e conecte-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que deseja usar como servidor secundário.  
   
-5.  Na caixa **Banco de dados secundário** , escolha um banco de dados da lista ou digite o nome do banco de dados que você quer criar.  
+5.  Na caixa **banco de dados secundário** , escolha um banco de dados na lista ou digite o nome do banco de dados que você deseja criar.  
   
 6.  Na guia **Inicializar banco de dados secundário** , escolha a opção que deseja usar para inicializar o banco de dados secundário.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62774329"
   
 15. Clique em **OK** na caixa de diálogo Propriedades do Banco de Dados para iniciar o processo de configuração.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Para adicionar um banco de dados secundário de envio de logs  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62774329"
   
 5.  No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -112,6 +112,6 @@ ms.locfileid: "62774329"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

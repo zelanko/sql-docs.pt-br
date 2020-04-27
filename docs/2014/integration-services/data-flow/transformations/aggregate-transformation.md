@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770632"
 ---
 # <a name="aggregate-transformation"></a>Transformação Agregação
@@ -112,15 +112,15 @@ ms.locfileid: "62770632"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Agregação** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação Agregação &#40;guia agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor de Transformação Agregação &#40;guia Agregações&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor de transformação Agregação &#40;guia Avançado&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Agregação &#40;guia Avançado&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir propriedades, clique em um dos seguintes tópicos:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62770632"
  [Agregar valores em um conjunto de dados por meio da transformação Agregação](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fluxo de Dados](../data-flow.md)   
+ [Fluxo de dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

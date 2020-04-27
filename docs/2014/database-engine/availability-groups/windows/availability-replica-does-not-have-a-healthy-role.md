@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815593"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>A réplica de disponibilidade não têm uma função íntegra
@@ -30,9 +30,9 @@ ms.locfileid: "62815593"
 |**Nome da Política**|Estado da função da réplica de disponibilidade|  
 |**Problema**|A réplica de disponibilidade não tem uma função íntegra.|  
 |**Categoria**|**Crítico**|  
-|**Faceta**|Réplica de disponibilidade|  
+|**Particular**|Réplica de disponibilidade|  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Esta política verifica o estado da função da réplica de disponibilidade. O estado da política é não íntegro quando a função da réplica de disponibilidade não é primária nem secundária. Caso contrário, a política estará em um estado íntegro.  
   
 > [!NOTE]  
@@ -45,6 +45,6 @@ ms.locfileid: "62815593"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Use o painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

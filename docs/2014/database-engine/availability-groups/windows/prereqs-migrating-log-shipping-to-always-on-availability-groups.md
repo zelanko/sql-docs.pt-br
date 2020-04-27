@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789546"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn (SQL Server)
@@ -30,13 +30,13 @@ ms.locfileid: "62789546"
   
 -   [Pré-requisitos do grupo de disponibilidade](#AGPrereqsRealAddress)  
   
--   [Pré-requisitos de envio de logs](#LogShipPrereqs)  
+-   [Pré-requisitos para envio de logs](#LogShipPrereqs)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a> Pré-requisitos do grupo de disponibilidade  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Pré-requisitos do grupo de disponibilidade  
  Para permitir que trabalhos de backup sejam executados na réplica primária do grupo de disponibilidade, use as seguintes configurações de backup dos Grupos de Disponibilidade AlwaysOn:  
   
 |Propriedade|Configuração|  
@@ -44,13 +44,13 @@ ms.locfileid: "62789546"
 |A preferência de backup automatizada do grupo de disponibilidade|Apenas na réplica primária|  
 |Prioridade de backup da réplica primária.|>0|  
   
- **Para obter mais informações, consulte:**  
+ **Para obter mais informações:**  
   
  [Exibir as propriedades do grupo de disponibilidade &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
  [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> Pré-requisitos para envio de logs  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a>Pré-requisitos de envio de logs  
   
 -   O banco de dados primário para envio de logs deve residir na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica primária inicial/atual do grupo de disponibilidade.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62789546"
   
  Depois que você criar todos os bancos de dados secundários para o grupo de disponibilidade, se você desejar executar backups em réplicas secundárias, precisará reconfigurar a preferência de backup automatizada do grupo de disponibilidade.  
   
- **Para obter mais informações, consulte:**  
+ **Para obter mais informações:**  
   
- [Convertendo uma configuração monitoração envio para o grupo de disponibilidade](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (um blog SQL Server)  
+ [Convertendo uma configuração para envio de logs para Grupo de Disponibilidade](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (um blog do SQL Server)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Envio de logs**  
   
 -   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -89,7 +89,7 @@ ms.locfileid: "62789546"
   
 -   [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811330"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>Configurar a opção remote proc trans de configuração de servidor
@@ -38,7 +38,7 @@ ms.locfileid: "62811330"
   
      [Segurança](#Security)  
   
--   **Para configurar a opção remote proc trans usando:**  
+-   **Para configurar a opção remote proc trans, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,22 +46,22 @@ ms.locfileid: "62811330"
   
 -   **Acompanhamento:**  [depois de configurar a opção remote proc trans](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Devem ser permitidas conexões de servidor remoto antes que este valor possa ser definido.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
--   Essa opção é fornecida para compatibilidade com versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aplicativos que usam procedimentos armazenados remotos. Em vez de emitir chamadas a procedimentos armazenados remotos, use consultas distribuídas que fazem referência a servidores vinculados, definidos com [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
+-   Essa opção é fornecida para compatibilidade com versões anteriores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em aplicativos que usam procedimentos armazenados remotos. Em vez de emitir chamadas a procedimentos armazenados remotos, use consultas distribuídas que fazem referência a servidores vinculados, definidos com [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>Para configurar a opção remote proc trans  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62811330"
   
 3.  Em **Conexões de servidor remoto**, marque a caixa de seleção **Requer transações distribuídas para servidor para comunicação de servidor** .  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-remote-proc-trans-option"></a>Para configurar a opção remote proc trans  
   
@@ -93,7 +93,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de configurar a opção remote proc trans  
+##  <a name="follow-up-after-you-configure-the-remote-proc-trans-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção remote proc trans  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  

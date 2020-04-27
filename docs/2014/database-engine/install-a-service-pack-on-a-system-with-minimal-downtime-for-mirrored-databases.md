@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779590"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
@@ -56,7 +56,7 @@ ms.locfileid: "62779590"
   
 1.  Execute um backup de banco de dados completo em todos os bancos de dados principais.  
   
-     **Para fazer backup de um banco de dados**  
+     **Para fazer o backup de um banco de dados**  
   
     -   [Crie um &#40;de backup de banco de dados completo SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
@@ -72,11 +72,11 @@ ms.locfileid: "62779590"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Para alterar uma sessão em modo de alto desempenho para modo de segurança alta  
   
-1.  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, antes de executar uma atualização sem interrupção, altere o modo operacional para segurança alta sem failover automático. Use um dos seguintes métodos:  
+1.  Se a sessão de espelhamento estiver sendo executada em modo de alto desempenho, antes de executar uma atualização sem interrupção, altere o modo operacional para segurança alta sem failover automático. Use um dos métodos a seguir:  
   
-    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Segurança alta sem failover automático (síncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados** . Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: altere a opção **Modo de operação** para **Segurança alta sem failover automático (síncrono)** usando a [página Espelhamento](../relational-databases/databases/database-properties-mirroring-page.md) da caixa de diálogo **Propriedades do Banco de Dados**. Para obter informações sobre como acessar essa página, consulte [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   No [!INCLUDE[tsql](../includes/tsql-md.md)]: defina a segurança de transações para FULL. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   No [!INCLUDE[tsql](../includes/tsql-md.md)]: defina a segurança de transações para FULL. Para obter mais informações, consulte [alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;&#41;Transact-SQL ](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Para executar a atualização sem interrupção  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62779590"
   
     -   [Executar failover manualmente de uma sessão de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Executar failover manualmente em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   Fazer [failover manualmente de uma sessão de espelhamento de banco de dados &#40;&#41;Transact-SQL ](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
      Para obter informações sobre como funciona o failover manual, veja [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
@@ -140,10 +140,10 @@ ms.locfileid: "62779590"
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [Modos de operação de espelhamento de banco de dados](database-mirroring/database-mirroring-operating-modes.md)   
- [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [A troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Iniciar o monitor de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Exibir o estado de um banco de dados espelhado &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

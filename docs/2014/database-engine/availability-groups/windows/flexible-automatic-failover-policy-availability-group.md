@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789888"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Política de failover flexível para failover automático de um grupo de disponibilidade (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62789888"
   
   
   
-##  <a name="HCtimeout"></a>Limite de tempo limite de verificação de integridade  
- A DLL de recurso do WSFC do grupo de disponibilidade executa uma *verificação de integridade* da réplica primária, chamando o procedimento armazenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) na instância do SQL Server que hospeda a réplica primária. **sp_server_diagnostics** retorna resultados em um intervalo que é igual a 1/3 do limite de tempo limite de verificação de integridade para o grupo de disponibilidade. O limite do tempo limite da verificação de integridade padrão é de 30 segundos, levando **sp_server_diagnostics** a retornar em um intervalo de 10 segundos. Se **sp_server_diagnostics** for lento ou não estiver retornando informações, a DLL de recurso aguardará o intervalo completo do limite de tempo limite da verificação de integridade antes de determinar que a réplica primária não está respondendo. Se a réplica primária não estiver respondendo, um failover automático será iniciado, se tiver suporte no momento.  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> Limite do tempo limite da verificação de integridade  
+ A DLL de recurso do WSFC do grupo de disponibilidade executa uma *verificação de integridade* da réplica primária, chamando o procedimento armazenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) na instância do SQL Server que hospeda a réplica primária. **sp_server_diagnostics** retorna resultados em um intervalo 1/3 em relação ao limite do tempo limite da verificação de integridade para o grupo de disponibilidade. O limite do tempo limite da verificação de integridade padrão é de 30 segundos, levando **sp_server_diagnostics** a retornar em um intervalo de 10 segundos. Se **sp_server_diagnostics** for lento ou não estiver retornando informações, a DLL de recurso aguardará o intervalo completo do limite de tempo limite da verificação de integridade antes de determinar que a réplica primária não está respondendo. Se a réplica primária não estiver respondendo, um failover automático será iniciado, se tiver suporte no momento.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** não realiza verificações de integridade no nível de banco de dados.  
   
-##  <a name="FClevel"></a>Nível da condição de falha  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> Nível da condição de falha  
  O nível da condição de falha do grupo de disponibilidade determina se os dados de diagnóstico e as informações de integridade retornadas por **sp_server_diagnostics** garantem um failover automático. O *nível de condição de falha* especifica as condições de falha que disparam um failover automático. Há cinco níveis da condição de falha que variam do menos restritivo (nível 1) até o mais restritivo (nível 5). Um nível específico abrange todos os níveis menos restritivos. Portanto, o nível mais rígido, cinco, inclui os quatro níveis de condições menos restritivos e assim por diante.  
   
 > [!IMPORTANT]  
@@ -46,7 +46,7 @@ ms.locfileid: "62789888"
   
  A tabela a seguir descreve as condições de falha que correspondem a cada nível.  
   
-|Nível|Condição de falha|[!INCLUDE[tsql](../../../includes/tsql-md.md)]Valor|Valor de PowerShell|  
+|Nível|Condição de falha|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Valor de PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
 |Um|Em servidor inativo. Este é o nível menos restritivo. Especifica que um failover automático é iniciado quando uma destas condições ocorre:<br /><br /> O serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inativo.<br /><br /> A concessão do grupo de disponibilidade para conexão com o cluster WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, consulte [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Dois|Em servidor sem resposta. Especifica que um failover automático é iniciado quando uma destas condições ocorre:<br /><br /> A instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não se conecta ao cluster e o limite de tempo limite especificado pelo usuário do grupo de disponibilidade é excedido.<br /><br /> A réplica de disponibilidade está em estado de falha.|2|`OnServerUnresponsive`|  
@@ -57,16 +57,16 @@ ms.locfileid: "62789888"
 > [!NOTE]  
 >  A falta de resposta de uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para solicitações do cliente é irrelevante para grupos de disponibilidade.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar o failover automático**  
   
--   [Alterar o modo de disponibilidade de uma réplica de disponibilidade &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (o failover automático requer o modo de disponibilidade de confirmação síncrona)  
+-   [Alterar o modo de disponibilidade de uma réplica de disponibilidade &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (o failover automático exige o modo de disponibilidade de confirmação síncrona)  
   
 -   [Alterar o modo de failover de uma réplica de disponibilidade &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Configurar a política de failover flexível para controlar condições de failover automático (grupos de disponibilidade AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
@@ -74,8 +74,8 @@ ms.locfileid: "62789888"
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidade (Grupos de Disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Failover e modos de failover &#40;Grupos de Disponibilidade AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
- [WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [O Windows Server failover clustering &#40;&#41; WSFC com SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Política de failover para instâncias de cluster de failover](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [&#41;&#40;Transact-SQL de sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
   
   

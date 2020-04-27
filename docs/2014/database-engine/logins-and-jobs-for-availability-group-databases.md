@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774278"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gerenciamento de logons e trabalhos para os bancos de dados de um grupo de disponibilidade (SQL Server)
   Você deve manter o mesmo conjunto de logons de usuários e trabalhos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent rotineiramente em todo banco de dados primário de um grupo de disponibilidade AlwaysOn e nos bancos de dados secundários correspondentes. Os logons e trabalhos devem ser reproduzidos em toda instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que hospede uma réplica de disponibilidade para o grupo de disponibilidade.  
   
--   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Trabalhos do agente**  
+-   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Trabalhos do Agent**  
   
      Você precisa copiar manualmente trabalhos relevantes da instância de servidor que hospeda a réplica primária original nas instâncias de servidor que hospedam as réplicas secundárias originais. Para todos os bancos de dados, você precisa adicionar lógica no início de cada trabalho relevante para que o trabalho seja executado somente no banco de dados primário, ou seja, apenas quando a réplica local for a réplica primária do banco de dados.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "62774278"
   
 -   **Metadados adicionais**  
   
-     Os logons e os trabalhos não são as únicas informações que precisam ser recriadas em cada instância de servidor que hospeda uma réplica secundária para determinado grupo de disponibilidade. Por exemplo, talvez você precise recriar parâmetros de configuração de servidor, credenciais, dados criptografados, permissões, configurações de replicação, aplicativos do service broker, gatilhos (em nível de servidor) e assim por diante. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Os logons e os trabalhos não são as únicas informações que precisam ser recriadas em cada instância de servidor que hospeda uma réplica secundária para determinado grupo de disponibilidade. Por exemplo, talvez você precise recriar parâmetros de configuração de servidor, credenciais, dados criptografados, permissões, configurações de replicação, aplicativos do service broker, gatilhos (em nível de servidor) e assim por diante. Para obter mais informações, consulte [gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Os logons dos aplicativos que usam a autenticação do SQL Server ou Logon local do Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Os logons dos aplicativos que usam a autenticação do SQL Server ou Logon local do Windows  
  Se um aplicativo usar a autenticação do SQL Server ou um logon local do Windows, as SIDs incompatíveis poderão impedir que o logon do aplicativo seja resolvido em uma instância remota do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As SIDs incompatíveis fazem o logon se tornar um usuário órfão na instância do servidor remoto. Esse problema pode ocorrer quando um aplicativo se conectar a um banco de dados espelhado ou de envio de logs depois de um failover ou a um banco de dados de assinante de replicação que foi inicializado de um backup.  
   
- Para evitar esse problema, recomendamos que você tome medidas preventivas quando configurar esse aplicativo para usar um banco de dados que seja hospedado por uma instância remota do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A prevenção envolve transferir os logons e as senhas da instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para a instância remota do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre como evitar esse problema, confira o artigo 918992 –[Como transferir os logons e senhas entre instâncias do SQL Server](https://support.microsoft.com/kb/918992/)).  
+ Para evitar esse problema, recomendamos que você tome medidas preventivas quando configurar esse aplicativo para usar um banco de dados que seja hospedado por uma instância remota do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A prevenção envolve transferir os logons e as senhas da instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para a instância remota do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações sobre como evitar esse problema, consulte o artigo da base de dados 918992-[como transferir os logons e as senhas entre instâncias do SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  Esse problema afeta contas locais do windows em computadores diferentes. No entanto, esse problema não ocorre para contas de domínio porque o SID será o mesmo em cada computador.  
   
  Para obter mais informações, consulte [Usuários órfãos com espelhamento de banco de dados e envio de logs](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (um blog do mecanismo de banco de dados).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um logon](../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Criar um usuário de banco de dados](../relational-databases/security/authentication-access/create-a-database-user.md).  
+-   [Crie um usuário de banco de dados](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
 -   [Criar um trabalho](../ssms/agent/create-a-job.md)  
   

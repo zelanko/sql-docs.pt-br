@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811318"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permissões do sistema de arquivos para acesso ao mecanismo de banco de dados
@@ -47,7 +47,7 @@ ms.locfileid: "62811318"
 9. Clique em **Aplicar**e em **OK** duas vezes para sair.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciar os serviços de Mecanismo de Banco de Dados](manage-the-database-engine-services.md)   
+ [Gerenciar os serviços do Mecanismo de Banco de Dados](manage-the-database-engine-services.md)   
  [Mover bancos de dados do sistema](../../relational-databases/databases/system-databases.md)   
  [Mover bancos de dados de usuário](../../relational-databases/databases/move-user-databases.md)  
   

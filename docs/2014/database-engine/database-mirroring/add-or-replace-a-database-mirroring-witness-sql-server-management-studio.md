@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807430"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio)
@@ -40,15 +40,15 @@ ms.locfileid: "62807430"
   
 6.  Na caixa de diálogo **Incluir Servidor Testemunha** , clique em **Sim**e, em seguida, clique em **Avançar**.  
   
-7.  Na caixa de diálogo **Selecionar Servidores a Serem Configurados** , a caixa de seleção **Instância do servidor testemunha** é marcada automaticamente. Clique em **Próximo**.  
+7.  Na caixa de diálogo **Selecionar Servidores a Serem Configurados** , a caixa de seleção **Instância do servidor testemunha** é marcada automaticamente. Clique em **Avançar**.  
   
-8.  Na caixa de diálogo **Instância do Servidor Principal** mantenha a porta e o ponto de extremidade existentes. Clique em **Próximo**.  
+8.  Na caixa de diálogo **Instância do Servidor Principal** mantenha a porta e o ponto de extremidade existentes. Clique em **Avançar**.  
   
 9. Na caixa de diálogo **Instância do Servidor Testemunha** , clique em **Conectar**.  
   
 10. Na caixa de diálogo **Conectar ao Servidor** , especifique a instância de servidor testemunha no campo **Nome do servidor** e use Autenticação do Windows (o padrão). Clique em **Conectar**.  
   
-11. Quando uma conexão é estabelecida, a porta do ouvinte e o ponto de extremidade do espelhamento de banco de dados da instância do servidor testemunha são exibidos na caixa de diálogo **Instância do Servidor Testemunha** . Clique em **Próximo**.  
+11. Quando uma conexão é estabelecida, a porta do ouvinte e o ponto de extremidade do espelhamento de banco de dados da instância do servidor testemunha são exibidos na caixa de diálogo **Instância do Servidor Testemunha** . Clique em **Avançar**.  
   
 12. A caixa de diálogo **Contas de Serviço** contém campos para as contas de serviço de domínio das instâncias de servidor principal, espelho e testemunha.  
   
@@ -56,23 +56,23 @@ ms.locfileid: "62807430"
   
     -   Se a instância do servidor testemunha usar uma conta de serviço diferente de qualquer um dos parceiros, preencha os campos **Principal**, **Espelho**e **Testemunha** com o nome de conta:  
   
-         *DOMAINNAME* **\\** *username*  
+         *Nome de usuário* *DomainName* **\\**  
   
          O nome de domínio deve estar em maiúscula.  
   
-     Clique em **Próximo**.  
+     Clique em **Avançar**.  
   
 13. Opcionalmente, na tela de resumo **Concluir o Assistente** , verifique a configuração de testemunha e clique em **Concluir**.  
   
-14. Ao terminar, o assistente o leva de volta para a caixa de diálogo **Propriedades do Banco de Dados** , em que agora o endereço de rede do servidor da testemunha aparece no campo **Testemunha** . Além disso, **High-safety mode with automatic failover (synchronous) (Modo de segurança alta com failover automático (síncrono))** , que é exigido com uma testemunha, é selecionado automaticamente.  
+14. Ao terminar, o assistente o leva de volta para a caixa de diálogo **Propriedades do Banco de Dados** , em que agora o endereço de rede do servidor da testemunha aparece no campo **Testemunha** . Além disso, **High-safety mode with automatic failover (synchronous) (Modo de segurança alta com failover automático (síncrono))**, que é exigido com uma testemunha, é selecionado automaticamente.  
   
      Para habilitar a testemunha e alterar a sessão para o modo de segurança alta com failover automático, clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Testemunha de espelhamento de banco de dados](database-mirroring-witness.md)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
+ [Propriedades do banco de dados &#40;página espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Estabelecer uma sessão de espelhamento de banco de dados usando a autenticação do Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
  [Testemunha de espelhamento de banco de dados](database-mirroring-witness.md)  
   
   

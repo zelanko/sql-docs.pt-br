@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786741"
 ---
 # <a name="check-out-files"></a>Fazer check-out de arquivos
@@ -66,7 +66,7 @@ ms.locfileid: "62786741"
      **Classificar**  
      Classifique a ordem das colunas exibidas.  
   
-     **Exibição de árvore**  
+     **Exibição de Árvore**  
      Exiba a hierarquia de pastas e arquivos do item de check-out.  
   
 ## <a name="see-also"></a>Consulte Também  

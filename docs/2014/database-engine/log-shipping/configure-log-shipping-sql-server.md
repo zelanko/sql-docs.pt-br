@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774580"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
@@ -42,20 +42,20 @@ ms.locfileid: "62774580"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   O banco de dados primário deve usar o modelo de recuperação completa ou bulk-logged; se o banco de dados for alterado para o modelo de recuperação simples, o envio de logs deixará de funcionar.  
   
 -   Antes de configurar o envio de logs, é necessário criar um compartilhamento para disponibilizar os backups de log de transações no servidor secundário. Esse é um compartilhamento do diretório onde os backups de log de transação serão gerados. Por exemplo, se você fez backup dos logs de transação no diretório c:\data\tlogs\\, será possível criar o compartilhamento \\\\*primaryserver*\tlogs desse diretório.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Os procedimentos armazenados de envio de logs exigem a associação à função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Para configurar o envio de logs  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62774580"
   
 28. Na caixa de diálogo **Propriedades do Banco de Dados** , clique em **OK** para iniciar o processo de configuração.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Para configurar o envio de logs  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62774580"
   
 10. No servidor secundário, habilite as tarefas de cópia e restauração. Para obter mais informações, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Atualizar o envio de logs para SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -166,6 +166,6 @@ ms.locfileid: "62774580"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tabelas de envio de log e procedimentos armazenados](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

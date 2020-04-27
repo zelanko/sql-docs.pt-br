@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812268"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Configurar a opção de configuração de servidor de aumento de prioridade
@@ -39,20 +39,20 @@ ms.locfileid: "62812268"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção de aumento de prioridade](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção priority boost](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Aumentar demais a prioridade pode esgotar os recursos das funções essenciais do sistema operacional e de rede, o que resulta em problemas para desligar o SQL Server ou usar outras tarefas do sistema operacional no servidor.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-priority-boost-option"></a>Para configurar a opção de aumento de prioridade  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62812268"
   
 4.  Interrompa e reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-priority-boost-option"></a>Para configurar a opção de aumento de prioridade  
   
@@ -90,7 +90,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de configurar a opção de aumento de prioridade  
+##  <a name="follow-up-after-you-configure-the-priority-boost-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção priority boost  
  O servidor deve ser reiniciado para que a configuração entre em vigor.  
   
 ## <a name="see-also"></a>Consulte Também  

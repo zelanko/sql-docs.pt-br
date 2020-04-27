@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811622"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Configurar opção default language de configuração de servidor
@@ -30,26 +30,26 @@ ms.locfileid: "62811622"
   
      [Segurança](#Security)  
   
--   **Para configurar a opção de idioma padrão, usando:**  
+-   **Para configurar a opção default language, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Acompanhamento:**  [depois de configurar a opção de idioma padrão](#FollowUp)  
+-   **Acompanhamento:**  [depois de configurar a opção default language](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   O idioma padrão de um logon pode ser substituído usando CREATE LOGIN ou ALTER LOGIN. O idioma padrão de uma sessão é o idioma do logon daquela sessão, a menos que substituído por uma sessão individual usando APIs ODBC (Conectividade Aberta de Banco de Dados) ou OLE DB. Observe que você só pode definir a opção **default language** como uma ID de idioma definida em [sys.syslanguages](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) (0-32). Ao usar bancos de dados independentes, você pode definir um idioma padrão para um banco de dados usando CREATE DATABASE ou ALTER DATABASE, e para usuários de bancos de dados independentes, usando CREATE USER ou ALTER USER. A definição dos idiomas padrão em um banco de dados independente aceita o valor **langid** , o nome do idioma ou um alias do idioma, conforme listado em **sys.syslanguages**.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Permissões de execução sem parâmetros ou com apenas o primeiro parâmetro em **sp_configure** são concedidas a todos os usuários por padrão. Para executar **sp_configure** com ambos os parâmetros para alterar uma opção de configuração ou executar a instrução RECONFIGURE, o usuário deve ter a permissão ALTER SETTINGS no nível do servidor. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-language-option"></a>Para configurar a opção default language  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62811622"
   
      O idioma padrão é inglês.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-configure-the-default-language-option"></a>Para configurar a opção default language  
   
@@ -82,7 +82,7 @@ GO
   
  Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de configurar a opção de idioma padrão  
+##  <a name="follow-up-after-you-configure-the-default-language-option"></a><a name="FollowUp"></a> Acompanhamento: depois de configurar a opção default language  
  A configuração entra em vigor imediatamente sem reiniciar o servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
@@ -90,7 +90,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)   
- [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opções de configuração do servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

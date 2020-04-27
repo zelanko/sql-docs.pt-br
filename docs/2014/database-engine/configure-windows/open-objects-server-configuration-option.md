@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781783"
 ---
 # <a name="open-objects-server-configuration-option"></a>Opção de configuração de servidor open objects
-  Esta opção ainda está presente em **sp_configure**, embora sua funcionalidade tenha sido desabilitada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (A configuração não tem nenhum efeito.) Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o número de objetos de banco de dados abertos é gerenciado dinamicamente e é limitado somente pela memória disponível. A opção **open objects** disponível em **sp_configure** para compatibilidade com versões anteriores com scripts existentes.  
+  Esta opção ainda está presente em **sp_configure**, embora a funcionalidade dela tenha sido desabilitada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (A configuração não tem nenhum efeito.) Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o número de objetos de banco de dados abertos é gerenciado dinamicamente e é limitado somente pela memória disponível. A opção **open objects** disponível em **sp_configure** para compatibilidade com versões anteriores com scripts existentes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

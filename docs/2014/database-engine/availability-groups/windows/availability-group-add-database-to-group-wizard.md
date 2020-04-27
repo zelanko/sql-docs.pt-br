@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815721"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Banco de Dados ao Grupo de disponibilidade (SQL Server Management Studio)
@@ -36,12 +36,12 @@ ms.locfileid: "62815721"
   
      [Segurança](#Security)  
   
--   **Para adicionar um banco de dados usando:**  [Assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para adicionar um banco de dados usando:**  [Assistente para Adicionar Banco de Dados ao Grupo de disponibilidade (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Se você nunca adicionou um banco de dados a um grupo de disponibilidade, consulte a seção "bancos de dados de disponibilidade" em [pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Pré-requisitos, restrições e recomendações  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a>Pré-requisitos, restrições e recomendações  
   
 -   Você deve estar conectado à instância do servidor que hospeda a réplica primária atual.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "62815721"
   
      Se você não puder usar o assistente para executar a sincronização de dados inicial completa, precisará preparar seus bancos de dados secundários manualmente. Você pode fazer isto antes de ou depois de executar o assistente. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a>Usando o assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)  
- **Para usar o assistente para adicionar banco de dados ao grupo de disponibilidade**  
+##  <a name="using-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usando o assistente para adicionar banco de dados ao grupo de disponibilidade (SQL Server Management Studio)  
+ **Para usar o Assistente para Adicionar Banco de dados ao Grupo de Disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica primária do grupo de disponibilidade e expanda a árvore de servidores.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62815721"
   
 5.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   
-    -   **Full**  
+    -   **Completo**  
   
          Selecione esta opção se seu ambiente atender aos requisitos para iniciar automaticamente a sincronização de dados inicial (para obter mais informações, veja [Pré-requisitos, restrições e recomendações](#Prerequisites), anteriormente neste tópico).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62815721"
   
 11. Se a sincronização de dados inicial não foi iniciada automaticamente em todos os seus bancos de dados secundários, você precisará configurar qualquer banco de dados secundário que ainda não foi unido. Para obter mais informações, consulte [Iniciar movimentação de dados em um banco de dados secundário AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

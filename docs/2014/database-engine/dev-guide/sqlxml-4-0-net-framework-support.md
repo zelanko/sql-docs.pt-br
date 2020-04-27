@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780509"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Suporte ao .NET Framework do SQLXML 4.0
@@ -35,6 +35,6 @@ ms.locfileid: "62780509"
  Descreve como usar o Carregamento em Massa de SQLXML com o .NET Framework.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando o carregamento em massa de dados XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Como executar o carregamento em massa de dados XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

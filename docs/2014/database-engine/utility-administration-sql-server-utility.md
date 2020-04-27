@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773748"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
@@ -96,15 +96,15 @@ ms.locfileid: "62773748"
  O diretório do UMDW é configurável: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> normalmente é a unidade C:\. O arquivo de log, UMDW_\<GUID>_LOG, está localizado no mesmo diretório.  
   
 > [!NOTE]  
->  O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
+>  O local do arquivo UMDW (sysutility_mdw) pode ser alterado usando-se desanexar/anexar ou ALTER DATABASE. É recomendável usar ALTER DATABASE. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Voltar aos padrões prontos para uso  
  Para redefinir as configurações nessa guia para os valores padrão, clique no botão **Restaurar Padrões** e em **Aplicar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Painel do utilitário &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Detalhes do aplicativo da camada de dados implantado &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Detalhes de instâncias gerenciadas &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Detalhes do aplicativo da camada de dados implantados &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [Detalhes do Instância Gerenciada &#40;Utilitário do SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Monitorar instâncias do SQL Server no Utilitário do SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   
