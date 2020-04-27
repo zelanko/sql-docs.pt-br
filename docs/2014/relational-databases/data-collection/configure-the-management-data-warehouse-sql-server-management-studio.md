@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918813"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62918813"
 > [!NOTE]  
 >  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent estiver configurado para ser executado usando uma das contas de serviço do Sistema (Sistema Local, Serviço de Rede ou Serviço Local) e o data warehouse de gerenciamento for criado em uma instância diferente do coletor de dados, você deverá configurar os conjuntos de coleta para usar um proxy para carregar dados no data warehouse de gerenciamento.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurar o data warehouse de gerenciamento em uma ou várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está em execução.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "62918813"
   
 6.  Repita a etapa 5 até que todas as instâncias do banco de dados que usam o coletor de dados sejam configuradas para carregar os dados para o data warehouse de gerenciamento compartilhado.  
   
-####  <a name="Wizard"></a>Configurar o assistente de data warehouse de gerenciamento  
- **Página inicial**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Configurar o Assistente de Data Warehouse de Gerenciamento  
+ **Página de boas-vindas**  
   
  A página Bem-vindo é a página inicial do Assistente para Configurar Coleta de Dados. A exibição dessa página é opcional.  
   
- **Não mostrar esta página inicial novamente.**  
+ **Não mostrar essa página inicial novamente.**  
  Selecione para omitir esta página na próxima vez em que você iniciar o Assistente para Configurar Coleta de Dados.  
   
- **Configurar a página de armazenamento do data warehouse de gerenciamento**  
+ **Página Armazenamento do Assistente para Configurar Data Warehouse de Gerenciamento**  
   
  Use esta página para selecionar um servidor de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o data warehouse de gerenciamento. O data warehouse de gerenciamento é um banco de dados relacional que armazenará dados coletados.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918813"
   
  O opção **Novo** só estará disponível durante a configuração de um conjunto de coleta de dados.  
   
- **Página Mapear logons e usuários**  
+ **Página Mapear Logons e Usuários**  
   
  Use esta página para mapear logons para funções de usuário de banco de dados no data warehouse de gerenciamento.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918813"
   
  Especifique um logon marcando a caixa de seleção **Mapear** para o logon.  
   
- **Associação de função de banco de dados para:**  *\<data warehouse nome>*  
+ **Associação à função de banco de dados para:** *\<nome do data warehouse>*  
  Selecione a função do data warehouse de gerenciamento para o qual o logon está mapeado marcando a caixa de seleção em uma ou mais da opções a seguir:  
   
 -   **mdw_admin**  
@@ -105,11 +105,11 @@ ms.locfileid: "62918813"
  **Novo Logon**  
  Abra a caixa de diálogo **Logon - Novo** e crie um novo logon para o data warehouse de gerenciamento.  
   
- **Concluir a página do assistente**  
+ **Página Concluir o Assistente**  
   
  Use esta página para verificar e concluir a configuração de coleta de dados. A árvore exibida na janela de visualização mostra quais configurações serão aplicadas, além de quais ações serão executadas quando você clicar em **Concluir**.  
   
- **Página de progresso do assistente para configurar coleta de dados**  
+ **Página Progresso do Assistente para Configurar Coleta de Dados**  
   
  Use esta página para exibir os resultados de cada etapa de configuração.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62918813"
  **Parar**  
  Pare o processamento do assistente.  
   
- **Relatório**  
+ **Report**  
  Exiba um relatório da configuração de coleta de dados. São fornecidas as seguintes opções de relatório:  
   
 -   Exibir Relatório  
@@ -134,8 +134,8 @@ ms.locfileid: "62918813"
  Feche o assistente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [&#41;&#40;Transact-SQL de sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Coleta de Dados](data-collection.md)   
  [Gerenciar coleta de dados](manage-data-collection.md)  
   

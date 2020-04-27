@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917039"
 ---
 # <a name="master-database"></a>Banco de dados mestre
@@ -76,7 +76,7 @@ ms.locfileid: "62917039"
   
 -   Alteração de ordenação. A ordenação padrão é a ordenação do servidor.  
   
--   Alteração do proprietário do banco de dados. o **mestre** pertence a **SA**.  
+-   Alteração do proprietário do banco de dados. **master** pertence a **sa**.  
   
 -   Criando um catálogo de texto completo ou índice de texto completo.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62917039"
     >  A recriação de **master** recria todos os bancos de dados do sistema.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Recompilar bancos de dados do sistema](rebuild-system-databases.md)  
+ [Recriar bancos de dados do sistema](rebuild-system-databases.md)  
   
  [Bancos de dados do sistema](system-databases.md)  
   

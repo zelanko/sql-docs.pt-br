@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890752"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiando o pacote da Lição 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Etapa 1: Copiar o pacote da Lição 5
   Nesta tarefa, você criará uma cópia do pacote Lesson 5.dtsx criado na lição 5. Como alternativa, é possível adicionar o pacote concluído da Lição 5 incluído com o tutorial do projeto e copiá-lo. Você usará esta cópia nova ao longo de toda a lição 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar o pacote da Lição 5  
@@ -54,7 +54,7 @@ ms.locfileid: "62890752"
   
     1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Clique na guia **DOWNLOADS** .  
+    2.  Clique na guia **downloads** .  
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890752"
      Depois de copiar o pacote da lição 5, se você tiver atualmente os pacotes das lições anteriores em sua solução, clique com o botão direito do mouse em cada pacote das lições de 1 a 5 e clique em Excluir do Projeto. Ao terminar, você deve ter apenas a Lição 6.dtsx em sua solução.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: Convertendo o projeto para o modelo de implantação de projetos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Etapa 2: Convertendo o projeto para o modelo de implantação de projeto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

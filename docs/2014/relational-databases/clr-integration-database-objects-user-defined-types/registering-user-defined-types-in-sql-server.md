@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919946"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrando tipos definidos pelo usuário no SQL Server
@@ -177,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Um número que identifica cada objeto, com o primeiro objeto associado a um determinado **assembly_id** dado o valor de 1. Se houver vários objetos associados ao mesmo **assembly_id**, cada valor de **file_id** subsequente será incrementado em 1.  
   
- **disputa**  
+ **content**  
  A representação hexadecimal do assembly ou arquivo.  
   
  Você pode usar a função CAST ou CONVERT para converter o conteúdo da coluna de **conteúdo** em texto legível. A consulta a seguir converte o conteúdo do arquivo Point.cs a texto legível usando o nome da cláusula WHERE para restringir o conjunto de resultados definido a uma única linha.  

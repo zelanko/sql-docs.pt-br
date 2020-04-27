@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892637"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
@@ -43,7 +43,7 @@ ms.locfileid: "62892637"
   
 -   [Mensagens de erro do componente de fluxo de dados (DTSBC_E_ *)](#msgPipeline)  
   
-##  <a name="msgError"></a> Mensagens de erro  
+##  <a name="error-messages"></a><a name="msgError"></a> Mensagens de erro  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_E_`.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892637"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|O valor é %1!d! especificado como parâmetro de escala da função NULL com o tipo de dados %2 está fora do intervalo. A escala deve ficar no intervalo de %3!d! a %4!d!. A escala não deve exceder a precisão e não deve ser negativa.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|O valor é %1!d! especificado como parâmetro de comprimento da função "NULL" com o tipo de dados %2 é negativo e inválido. O comprimento deve ser positivo.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Não pode ser atribuído valor negativo a %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um destes:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|A propriedade personalizada "%1" para "%2" não pode ser definida como verdadeira.  O tipo de dados de coluna deve ser um dos seguintes: DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Não é possível reanexar "%1". Exclua o caminho, adicione um novo e anexe.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|A função "%1" requer %2!d! parâmeros, não %3!d! parâmetro. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|A função "%1" requer %2!d! parâmetro, não %3!d! parâmetros. O nome da função foi reconhecido, mas o número de parâmetros não é válido.|  
@@ -2017,7 +2017,7 @@ ms.locfileid: "62892637"
 |||DTS_E_GETCATMANAGERFAILED|Falha ao criar o Gerenciador de Categorias de Componentes COM devido ao erro 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|O componente %1!s! não inicializou devido ao erro 0x%2!8.8X! "%3!s!".|  
   
-##  <a name="msgWarning"></a> Mensagens de aviso  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Mensagens de aviso  
  Os nomes simbólicos das mensagens de aviso do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_W_`.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
@@ -2163,7 +2163,7 @@ ms.locfileid: "62892637"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|O %1 não tem nenhuma coluna de entrada mapeada para ele.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|A tabela "%1" foi alterada. Novas colunas podem ter sido adicionadas à tabela.|  
   
-##  <a name="msgInfo"></a> Mensagens informativas  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Mensagens informativas  
  Os nomes simbólicos das mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_I_`.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
@@ -2262,7 +2262,7 @@ ms.locfileid: "62892637"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|O %1 gravou o cache no arquivo "%2".|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|A propriedade de tamanho máximo de confirmação de inserção do destino de OLE DB "%1" é definida como 0. Essa configuração de propriedade pode fazer com que o pacote em execução pare de responder. Para obter mais informações, consulte o tópico da Ajuda F1 do Editor de Destino de OLE DB (Página do Gerenciador de Conexões).|  
   
-##  <a name="msgGeneral"></a> Mensagens de evento e gerais  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Mensagens de evento e gerais  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_MSG_`.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
@@ -2301,7 +2301,7 @@ ms.locfileid: "62892637"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nome do evento: %1<br /><br /> Mensagem: %9<br /><br /> Operador: %2<br /><br /> Nome da Origem: %3<br /><br /> ID da Origem: %4<br /><br /> ID de Execução: %5<br /><br /> Hora de Início: %6<br /><br /> Hora de Término: %7<br /><br /> Código de Dados: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome do evento: %1<br /><br /> Mensagem: %9<br /><br /> Operador: %2<br /><br /> Nome da Origem: %3<br /><br /> ID da Origem: %4<br /><br /> ID de Execução: %5<br /><br /> Hora de Início: %6<br /><br /> Hora de Término: %7<br /><br /> Código de Dados: %8|  
   
-##  <a name="msgSuccess"></a> Mensagens de êxito  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Mensagens de êxito  
  Os nomes simbólicos das mensagens de êxito do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTS_S_`.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  
@@ -2310,7 +2310,7 @@ ms.locfileid: "62892637"
 |0x40005|262149|DTS_S_TRUNCATED|O valor da cadeia de caracteres foi truncado. O buffer recebeu uma cadeia de caracteres muito longa para a coluna e a truncou.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Ocorreu um truncamento durante a avaliação da expressão. O truncamento ocorreu durante a avaliação, o que pode incluir qualquer momento da etapa intermediária.|  
   
-##  <a name="msgPipeline"></a> Mensagens de erro do componente de fluxo de dados  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Mensagens de erro do componente de fluxo de dados  
  Os nomes simbólicos das mensagens de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] começam com `DTSBC_E_`, onde "BC" refere-se à classe de base nativa da qual é derivada a maioria dos componentes de fluxo de dados da Microsoft.  
   
 |Código hexadecimal|Código decimal|Nome simbólico|Descrição|  

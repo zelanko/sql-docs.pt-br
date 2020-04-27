@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914353"
 ---
 # <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
@@ -57,8 +57,8 @@ ms.locfileid: "62914353"
 |Uma carga de trabalho de consulta muito pesada está em execução na instância do servidor.|Tente executar a consulta novamente com uma carga mais leve.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Pesquisa de texto completo](../search/full-text-search.md)   
+ [Definir a conta de serviço para o iniciador do daemon de filtro de texto completo](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Pesquisa de Texto Completo](../search/full-text-search.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_system_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar filtros de pesquisa](../search/configure-and-manage-filters-for-search.md)  

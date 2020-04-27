@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922148"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação completa)
@@ -45,7 +45,7 @@ ms.locfileid: "62922148"
 > [!NOTE]  
 >  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> Restaurando um banco de dados até o ponto de falha  
  Normalmente, a recuperação de um banco de dados até o ponto da falha envolve as seguintes etapas básicas:  
   
 1.  Faça um backup do log de transações ativas (conhecido como a parte final do log). Isso cria um backup do final do log. Se o log de transações ativas não estiver disponível, todas as transações naquela parte do log serão perdidas.  
@@ -72,8 +72,8 @@ ms.locfileid: "62922148"
 > [!NOTE]  
 >  Ao restaurar um backup de banco de dados em uma instância de servidor diferente, veja [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
- A sintaxe básica de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] para a sequência de restauração na ilustração anterior é a seguinte:  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
+ A sintaxe de [restauração](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para a sequência de restauração na ilustração anterior é a seguinte:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922148"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemplo: Recuperando até o ponto de falha (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Exemplo: Recuperando até o ponto de falha (Transact-SQL)  
  O exemplo a seguir de [!INCLUDE[tsql](../../includes/tsql-md.md)] mostra as opções essenciais em uma sequência de restauração que restaura o banco de dados até o ponto de falha. O exemplo cria um backup do final do log do banco de dados. Em seguida, o exemplo restaura um backup de banco de dados completo e, depois, restaura o backup do final do log. O exemplo recupera o banco de dados em uma etapa final, separada.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Restaurando um banco de dados em um ponto em um backup de log  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> Restaurando um banco de dados em um ponto em um backup de log  
  No modelo de recuperação completa, uma restauração de banco de dados completa pode ser recuperada normalmente até um ponto de hora, uma transação marcada ou um LSN dentro de um backup de log. Porém, no modelo de recuperação bulk-logged, se o backup de log contiver alterações registradas em massa, a recuperação pontual não será possível.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Exemplos de cenários de restauração point-in-time  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Para obter um exemplo de uma restauração pontual, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar um backup de banco de dados completo**  
   
 -   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
@@ -179,8 +179,8 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Backups de bancos de dados completos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [&#41;&#40;Transact-SQL de sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Backups completos de banco de dados &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

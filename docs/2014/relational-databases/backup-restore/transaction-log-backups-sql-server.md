@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920682"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backups de log de transações (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62920682"
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a>Como funciona uma sequência de backups de log  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Como funciona uma sequência de backups de log  
  A sequência de backups de log de transações *log chain* é independente dos backups de dados. Por exemplo, suponha a sequência de eventos a seguir.  
   
 |Hora|Evento|  
@@ -50,7 +50,7 @@ ms.locfileid: "62920682"
   
  O backup do log de transações criado às 20h contém registros de logs de transações de 16h até 20h, abrangendo a hora de conclusão do backup completo do banco de dados criado às 18h. A sequência de backups de logs de transações é a continuação do backup completo de banco de dados inicial criado às 8h até o último backup do log de transações criado às 20h. Para obter informações sobre como aplicar esses backups de log, veja o exemplo [Aplicar backups de log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recomendações  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Se um log de transações estiver danificado, o trabalho executado desde o backup válido mais recente será perdido. Portanto, recomendamos enfaticamente que você coloque seus arquivos de log em um armazenamento tolerante a falhas.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62920682"
   
 -   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito se acumularão muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar um backup de log de transações**  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "62920682"
   
  Para agendar trabalhos de backup, consulte [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  

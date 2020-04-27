@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921789"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar um banco de dados sem restaurar dados (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921789"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  A cláusula FFROM **=** \<*backup_device>* não é usada em restaurações somente recuperação porque nenhum backup é necessário.  
+>  A cláusula **=** \<from *backup_device>* não é usada para restaurações somente de recuperação porque nenhum backup é necessário.  
   
  **Exemplo**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  A sintaxe [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) para a restauração de um arquivo somente recuperação é:  
   
- Restore Database *database_name* { **=** File _logical_file_name_ | Grupo de arquivos _logical_filegroup_name_ } [,... **** **=** *n* ] com recuperação  
+ Restore Database *database_name* { **=** File _logical_file_name_ | Grupo de arquivos _logical_filegroup_name_ } [,... **,** **=** *n* ] com recuperação  
   
  **Exemplo**  
   
@@ -89,10 +89,10 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>Consulte Também  
- [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [&#40;de restauração online SQL Server&#41;](online-restore-sql-server.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
- [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
+ [Restaurações de arquivos &#40;modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
+ [Restaurações de arquivos &#40;modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

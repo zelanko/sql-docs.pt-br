@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921800"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restaurações de arquivos (modelo de recuperação simples)
@@ -50,7 +50,7 @@ ms.locfileid: "62921800"
   
 
   
-##  <a name="Overview"></a>Visão geral da restauração de arquivo e grupo de arquivos no modelo de recuperação simples  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Visão geral da restauração de arquivo e grupo de arquivos no modelo de recuperação simples  
  Um cenário de restauração de arquivos consiste em uma única sequência de restauração que copia, efetua roll forward e recupera os dados apropriados da seguinte maneira:  
   
 1.  Restaure cada arquivo danificado de seu mais recente backup de arquivos.  
@@ -58,7 +58,7 @@ ms.locfileid: "62921800"
 2.  Restaure o backup de arquivo diferencial mais recente para cada arquivo restaurado e recupere o banco de dados.  
   
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Etapas do Transact-SQL para a sequência de restauração de arquivos (modelo de recuperação simples)  
- Esta seção mostra as opções básicas de [!INCLUDE[tsql](../../../includes/tsql-md.md)]RESTORE[ do ](/sql/t-sql/statements/restore-statements-transact-sql) para uma sequência de restauração de arquivo simples. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
+ Esta seção mostra as opções básicas de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) do [!INCLUDE[tsql](../../../includes/tsql-md.md)] para uma sequência de restauração de arquivo simples. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos.  
   
  A sequência de restauração contém apenas duas instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] . A primeira instrução restaura um arquivo secundário, o arquivo `A`, que é restaurado usando WITH NORECOVERY. A segunda operação restaura dois outros arquivos, `B` e `C` , que são restaurados usando WITH RECOVERY de um dispositivo de backup diferente:  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62921800"
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação simples&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemplo: restauração offline de um grupo de arquivos primário e outro &#40;modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Exemplo: restauração offline do grupo de arquivos primário e mais um &#40;Modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
- **Para restaurar arquivos e grupos de arquivo**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
+ **Para restaurar arquivos e grupos de arquivos**  
   
 -   [Restaurar arquivos e grupos de arquivos sobre arquivos existentes &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62921800"
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](complete-database-restores-simple-recovery-model.md)   
+ [Restaurações completas de banco de dados &#40;o modelo de recuperação simples&#41;](complete-database-restores-simple-recovery-model.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

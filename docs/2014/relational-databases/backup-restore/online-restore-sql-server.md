@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876177"
 ---
 # <a name="online-restore-sql-server"></a>Restauração online (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62876177"
     > [!NOTE]  
     >  Alternativamente, você pode colocar o arquivo offline manualmente antes da sequência de restauração. Para obter mais informações, consulte "Colocando um banco de dados ou arquivo offline", adiante neste tópico.  
   
-##  <a name="taking_db_or_file_offline"></a>Colocando um banco de dados ou arquivo offline  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Colocando um banco de dados ou arquivo offline  
  Se você não quiser usar a restauração online, poderá colocar o banco de dados offline antes de iniciar a sequência de restauração usando um dos seguintes métodos:  
   
 -   Em qualquer modelo de recuperação, você pode colocar o banco de dados offline usando a seguinte instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
@@ -91,7 +91,7 @@ ms.locfileid: "62876177"
   
 -   [Exemplo: restauração online de um arquivo somente leitura &#40;Modelo de recuperação completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Restaurar arquivos e grupos de arquivos &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
@@ -104,8 +104,8 @@ ms.locfileid: "62876177"
 -   [Remover grupos de arquivos expirados &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
- [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
+ [Restaurações de arquivos &#40;modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
+ [Restaurações de arquivos &#40;modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)   
  [Restaurar páginas &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

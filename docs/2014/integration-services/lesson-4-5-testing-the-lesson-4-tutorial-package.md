@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891280"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Etapa 5: Testando o pacote de tutorial da Lição 4
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Etapa 5: Testar o pacote de tutorial da Lição 4
   No tempo de execução, o arquivo corrompido, Currency_BAD.txt, não gerará uma correspondência dentro da transformação Pesquisa de Códigos de Moeda. Como a saída de erro de Pesquisa de Códigos de Moeda foi configurada para redirecionar linhas com falhas para o novo destino de linhas com falha, o componente não falha e o pacote é executado com êxito. Todas as linhas com erro são gravadas em ErrorOutput.txt.  
   
  Nesta tarefa, você testará a configuração de saída do erro revisado executando o pacote. Com a execução bem-sucedida do pacote, você verá o conteúdo do arquivo ErrorOutput.txt.  
@@ -28,7 +28,7 @@ ms.locfileid: "62891280"
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
  Antes de você testar o pacote, é recomendável verificar se o fluxo de controle e o fluxo de dados do pacote da lição 4 contêm os objetos mostrados nos diagramas seguintes. O fluxo de controle deve ser idêntico ao fluxo de controle das lições 2 - 4.  
   
- **Fluxo de Controle**  
+ **Fluxo de controle**  
   
  ![Fluxo de controle no pacote](../../2014/tutorials/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62891280"
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Para executar o pacote de tutorial da lição 4  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **depurar** , clique em **Iniciar Depuração**.  
   
 2.  Terminada a execução do pacote, no menu **Depurar** , clique em **Parar Depuração**.  
   

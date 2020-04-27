@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899444"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referência de erros e eventos (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899444"
 |DTS_E_CONNECTIONNOTFOUND|Indica que o pacote não pode ser executado porque o gerenciador de conexões especificado não pode ser localizado.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica que o Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] deve conectar-se a uma fonte de dados para recuperar metadados novos ou atualizados para uma origem ou destino e que não é possível conectar-se à fonte de dados.|  
 |DTS_E_MULTIPLECACHEWRITES|Indica que o pacote não pode ser executado porque uma Transformação Cache está tentando gravar dados no cache na memória. No entanto outra Transformação Cache já foi gravada no cache na memória.|  
-|DTS_E_PRODUCTLEVELTOLOW|Indica que o pacote não pode ser executado porque a versão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] apropriada do não está instalada.|  
+|DTS_E_PRODUCTLEVELTOLOW|Indica que o pacote não pode ser executado porque a versão apropriada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] não foi instalada.|  
 |DTS_E_READNOTFILLEDCACHE|Indica que uma transformação Pesquisa está tentando ler dados do cache na memória ao mesmo tempo que uma transformação Cache está gravando dados no cache.|  
 |DTS_E_UNPROTECTXMLFAILED|Indica que o sistema não descriptografou um nó XML protegido.|  
 |DTS_E_WRITEWHILECACHEINUSE|Indica que uma Transformação Cache está tentando gravar dados no cache na memória ao mesmo tempo que uma transformação Pesquisa está lendo dados no cache na memória.|  

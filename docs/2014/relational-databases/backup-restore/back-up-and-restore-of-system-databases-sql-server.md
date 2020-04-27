@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0259f14bb814fd4157af95e4ce92f462d1fab68a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877263"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Fazer backup e restaurar bancos de dados do sistema (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62877263"
   
 -   Em algumas circunstâncias, os problemas que recuperam o banco de dados modelo podem exigir a reconstrução dos bancos de dados do sistema ou a substituição dos arquivos mdf e ldf para o banco de dados modelo. Para obter mais informações, consulte [Recriar bancos de dados do sistema](../databases/system-databases.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   

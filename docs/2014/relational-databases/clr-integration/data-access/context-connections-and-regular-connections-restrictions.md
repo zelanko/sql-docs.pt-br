@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919165"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrições em conexões comuns e de contexto
@@ -34,8 +34,7 @@ ms.locfileid: "62919165"
   
 -   Não existe suporte para a execução de atualizações em lote em uma conexão de contexto.  
   
--   
-  `SqlNotificationRequest` não pode ser usado com comandos que são executados em uma conexão de contexto.  
+-   `SqlNotificationRequest` não pode ser usado com comandos que são executados em uma conexão de contexto.  
   
 -   Não existe suporte para o cancelamento de comandos que estão sendo executados na conexão de contexto. O método `SqlCommand.Cancel` ignora a solicitação silenciosamente.  
   

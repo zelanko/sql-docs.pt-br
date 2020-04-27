@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891679"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Etapa 1: Copiando o pacote de implantação
+# <a name="step-1-copying-the-deployment-bundle"></a>Etapa 1: Copiar o pacote de implantação
   Nesta tarefa, você copiará o pacote de implantação no computador de destino.  
   
  O modo mais fácil de copiar o pacote de implantação no computador de destino é primeiro criar um compartilhamento público no computador de destino, mapear uma unidade para o compartilhamento público e, depois, copiar o pacote de implantação no compartilhamento. Se você não souber criar e configurar pastas públicas ou unidades de mapa, consulte a documentação do Windows.  
@@ -35,6 +35,6 @@ ms.locfileid: "62891679"
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Etapa 2: Executando o Assistente de Instalação de Pacotes](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

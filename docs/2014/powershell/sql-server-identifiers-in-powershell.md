@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922840"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores do SQL Server no PowerShell
@@ -36,8 +36,7 @@ ms.locfileid: "62922840"
 SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Os identificadores são os nomes de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como nomes de tabela ou coluna. Existem dois tipos de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Os identificadores são os nomes de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como nomes de tabela ou coluna. Existem dois tipos de identificadores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
 -   Os identificadores regulares estão limitados a um conjunto de caracteres que também são suportados em caminhos do Windows PowerShell. Esses nomes podem ser usados em caminhos do Windows PowerShell sem a necessidade de alterá-los.  
   

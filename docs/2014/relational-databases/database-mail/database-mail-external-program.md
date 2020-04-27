@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917624"
 ---
 # <a name="database-mail-external-program"></a>Programa externo do Database Mail
@@ -30,14 +30,14 @@ ms.locfileid: "62917624"
   
 -   [Tarefas relacionadas para configurar programa externo do Database Mail](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Conceitos de programas externos do Database Mail  
+##  <a name="database-mail-external-program-concepts"></a><a name="ComponentsAndConcepts"></a> Conceitos de programas externos do Database Mail  
  Ao ser iniciado, o programa externo se conecta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando autenticação do Windows e começa a processar mensagens de email. Quando não há nenhuma mensagem a enviar no tempo limite especificado, o programa é encerrado. Você pode configurar o tempo que o programa deve aguardar antes de encerrar, usando o Assistente para Configuração do Database Mail ou procedimentos armazenados do Database Mail. Para obter mais informações, veja [sysmail_configure_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql).  
   
  O programa externo armazena informações em tabelas do sistema no banco de dados **msdb** . Se o programa externo não puder se comunicar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele registrará erros no log de eventos de aplicativos do Microsoft Windows. Há ainda outros registros de mensagens quando o nível de log é definido como **Detalhado** na caixa de diálogo **Configurar Parâmetros do Sistema** do **Assistente para Configuração do Database Mail**.  
   
  Observe que, por questão de eficiência, o programa externo coloca em cache as informações de conta e perfil. Portanto, alterações na configuração de contas e perfis podem não se refletir no programa externo por alguns minutos.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas para configurar programa externo do Database Mail  
+##  <a name="tasks-related-to-configuring-database-mail-external-program"></a><a name="RelatedTasks"></a> Tarefas relacionadas para configurar programa externo do Database Mail  
   
 |Tarefa de configuração|Link do tópico|  
 |------------------------|----------------|  

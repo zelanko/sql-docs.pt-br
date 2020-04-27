@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899927"
 ---
 # <a name="term-extraction-transformation"></a>Transformação Extração de Termos
@@ -173,17 +173,17 @@ ms.locfileid: "62899927"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Extração de Termos** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação Extração de termos &#40;guia extração de termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Extração de Termos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de transformação Extração de termos &#40;guia exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Exclusão&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de transformação Extração de termos &#40;guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Extração de Termos &#40;Guia Avançado&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921933"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restaurações de arquivo (modelo de recuperação completa)
@@ -54,7 +54,7 @@ ms.locfileid: "62921933"
   
   
   
-##  <a name="Overview"></a> Restaurando arquivos danificados de backups de arquivo  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restaurando arquivos danificados de backups de arquivo  
   
 1.  Antes de restaurar um ou mais arquivos danificados, tente criar um [backup da parte final do log](tail-log-backups-sql-server.md).  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Exemplo: restauração offline do grupo de arquivos primário e mais um &#40;Modelo de recuperação completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar arquivos e grupos de arquivos**  
   
 -   [Restaurar arquivos em um novo local &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

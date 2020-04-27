@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912101"
 ---
 # <a name="audit-broker-login-event-class"></a>Classe de evento Audit Broker Login
@@ -26,7 +26,7 @@ ms.locfileid: "62912101"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Broker Login  
   
-|Coluna de dados|Type|DESCRIÇÃO|Número da coluna|Filtrável|  
+|Coluna de dados|Type|Descrição|Número da coluna|Filtrável|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Não usado nessa classe de evento.|10|Sim|  
 |**ClientProcessID**|**int**|Não usado nessa classe de evento.|9|Sim|  
@@ -53,7 +53,7 @@ ms.locfileid: "62912101"
   
  A tabela abaixo lista os valores de subclasse para essa classe de evento.  
   
-|ID|Subclasse|DESCRIÇÃO|  
+|ID|Subclasse|Descrição|  
 |--------|--------------|-----------------|  
 |1|Login Success|Um evento Login Success informa que o processo de logon do agente adjacente foi concluído com êxito.|  
 |2|Login Protocol Error|Um evento Login Protocol Error informa que o agente recebe uma mensagem bem formada, mas não válida para o estado atual do processo de logon. A mensagem pode ter sido perdida ou enviada fora de sequência.|  

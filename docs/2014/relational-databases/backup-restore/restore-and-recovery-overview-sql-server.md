@@ -21,15 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921014"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
-  Para recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma falha, um administrador de banco de dados precisa restaurar um conjunto de backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma sequência de restauração logicamente correta e significativa. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à restauração de dados de backups de um banco de dados inteiro, um arquivo de dados ou uma página de dados, como segue:  
+  Para recuperar um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma falha, um administrador de banco de dados precisa restaurar um conjunto de backups do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma sequência de restauração logicamente correta e significativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à restauração de dados de backups de um banco de dados inteiro, um arquivo de dados ou uma página de dados, como segue:  
   
 -   O banco de dados (uma *restauração completa do banco de dados*)  
   
@@ -47,19 +46,19 @@ ms.locfileid: "62921014"
   
  **Neste tópico:**  
   
--   [Visão geral dos cenários de restauração](#RestoreScenariosOv)  
+-   [Visão geral de cenários de restauração](#RestoreScenariosOv)  
   
--   [Modelos de recuperação e operações de restauração com suporte](#RMsAndSupportedRestoreOps)  
+-   [Modelos de recuperação e operações de restauração suportadas](#RMsAndSupportedRestoreOps)  
   
 -   [Restrições de restauração no modelo de recuperação simples](#RMsimpleScenarios)  
   
--   [Restaurar no modelo de recuperação bulk-logged](#RMblogRestore)  
+-   [Restauração no modelo de recuperação bulk-logged](#RMblogRestore)  
   
 -   [Orientador de recuperação de banco de dados (SQL Server Management Studio)](#DRA)  
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="RestoreScenariosOv"></a>Visão geral dos cenários de restauração  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>Visão geral dos cenários de restauração  
  Um *cenário de restauração* no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é o processo de restauração de dados de um ou mais backups seguida da recuperação do banco de dados. Os cenários de restauração com suporte dependem do modelo de recuperação do banco de dados e da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A tabela abaixo descreve os possíveis cenários de restauração que têm suporte para diversos modelos de recuperação.  
@@ -82,13 +81,13 @@ ms.locfileid: "62921014"
   
 -   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a restauração de arquivos ou páginas pode permitir que outros dados no banco de dados permaneçam online durante a operação de restauração.  
   
-##  <a name="RMsAndSupportedRestoreOps"></a>Modelos de recuperação e operações de restauração com suporte  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a>Modelos de recuperação e operações de restauração com suporte  
  As operações de restauração disponíveis para um banco de dados dependem de seu modelo de recuperação. A tabela abaixo resume se e qual extensão cada um dos modelos de recuperação suporta um determinado cenário de restauração.  
   
 |Operação de restauração|Modelo de recuperação completa|Modelo de recuperação bulk-logged|Modelo de recuperação simples|  
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recuperação de dados|Recuperação completa (se o log estiver disponível).|Exposição a alguma perda de dados.|Quaisquer dados desde o último backup completo ou diferencial serão perdidos.|  
-|Restauração pontual|Qualquer período coberto pelos backups de log.|Não permitido se o backup de log contiver quaisquer alterações com log de alteração em massa.|Sem suporte.|  
+|Restauração em um momento determinado|Qualquer período coberto pelos backups de log.|Não permitido se o backup de log contiver quaisquer alterações com log de alteração em massa.|Sem suporte.|  
 |Restauração de arquivo**\***|Suporte completo.|Casos.**\*\***|Disponível só para arquivos secundários somente leitura.|  
 |Restauração de página**\***|Suporte completo.|Casos.**\*\***|Nenhum.|  
 |Restauração por etapas (nível de grupo de arquivos)**\***|Suporte completo.|Casos.**\*\***|Disponível só para arquivos secundários somente leitura.|  
@@ -100,7 +99,7 @@ ms.locfileid: "62921014"
 > [!IMPORTANT]  
 >  Independentemente do modelo de recuperação de um banco de dados, um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado por uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja mais antiga do que a versão que criou o backup.  
   
-##  <a name="RMsimpleScenarios"></a>Cenários de restauração no modelo de recuperação simples  
+##  <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a>Cenários de restauração no modelo de recuperação simples  
  O modelo de recuperação simples impõe as seguintes restrições em operações de restauração:  
   
 -   Restauração de arquivo e restauração por etapas estão disponíveis apenas para grupos de arquivos secundários somente leitura. Para obter informações sobre esses cenários de restauração, veja [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md) e [Restaurações por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
@@ -114,7 +113,7 @@ ms.locfileid: "62921014"
 > [!IMPORTANT]  
 >  Independentemente do modelo de recuperação de um banco de dados, um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não pode ser restaurado por uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja mais antiga do que a versão que criou o backup.  
   
-##  <a name="RMblogRestore"></a>Restaurar no modelo de recuperação bulk-logged  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>Restaurar no modelo de recuperação bulk-logged  
  Esta seção aborda as considerações de restauração que são específicas do modelo de recuperação bulk-logged, que deve ser usado exclusivamente como complemento para o modelo de recuperação completa.  
   
 > [!NOTE]  
@@ -141,20 +140,20 @@ ms.locfileid: "62921014"
   
  Para obter informações sobre como executar uma restauração online, veja [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DRA"></a>Orientador de recuperação de banco de dados (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>Orientador de recuperação de banco de dados (SQL Server Management Studio)  
  O orientador de recuperação de banco de dados facilita a criação de planos de restauração que implementam sequências de restauração corretas. Muitos problemas conhecidos e aperfeiçoamentos de restauração de banco de dados solicitados pelos clientes foram resolvidos. Estes são os principais aperfeiçoamentos incorporados pelo orientador de recuperação de banco de dados:  
   
--   **Algoritmo de plano de restauração:**  O algoritmo usado para construir planos de restauração aumentou significativamente, particularmente para cenários de restauração complexos. Muitos casos extremos, inclusive cenários de bifurcação em restaurações pontuais, são tratados de forma mais eficiente do que nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo do plano de restauração:**  o algoritmo usado para criar planos de restauração melhorou significativamente, particularmente em cenários de restauração complexos. Muitos casos extremos, inclusive cenários de bifurcação em restaurações pontuais, são tratados de forma mais eficiente do que nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restaurações point-in-time:**  O Orientador de recuperação de banco de dados simplifica muito a restauração de um banco de dados para um determinado momento. Uma linha de tempo de backup visual aprimora significativamente o suporte a restaurações pontuais. Essa linha de tempo visual permite que você identifique um momento viável como ponto de recuperação de destino para a restauração de um banco de dados. A linha do tempo facilita a transposição de um caminho de recuperação bifurcado (um caminho que abrange bifurcações de recuperação). Um plano de restauração pontual inclui automaticamente os backups relevantes para a restauração do momento desejado (data e hora). Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restaurações pontuais:**  o Orientador de Recuperação de Banco de Dados simplifica consideravelmente a restauração de um banco de dados em um determinado momento. Uma linha de tempo de backup visual aprimora significativamente o suporte a restaurações pontuais. Essa linha de tempo visual permite que você identifique um momento viável como ponto de recuperação de destino para a restauração de um banco de dados. A linha do tempo facilita a transposição de um caminho de recuperação bifurcado (um caminho que abrange bifurcações de recuperação). Um plano de restauração pontual inclui automaticamente os backups relevantes para a restauração do momento desejado (data e hora). Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  Para obter mais informações, obtenha informações sobre o orientador de recuperação de banco de dados consultando os seguintes blogs sobre capacidade de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Orientador de recuperação: uma introdução](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Orientador de recuperação: Introdução](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Orientador de recuperação: usando o SSMS para criar/restaurar backups divididos](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Orientador de recuperação: Usando o SSMS para criar/restaurar backup divididos](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
  Nenhum.  
   
 ## <a name="see-also"></a>Consulte Também  

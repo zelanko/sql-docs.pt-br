@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921949"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gerenciar a tabela suspect_pages (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62921949"
   
  Uma página é considerada "suspeita" quando o [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] encontra um dos seguintes erros ao tentar ler uma página de dados:  
   
--   Um [erro 823](../errors-events/mssqlserver-823-database-engine-error.md) causado por uma CRC (verificação de redundância cíclica) emitida pelo sistema operacional, como um erro de disco (determinados erros de hardware)  
+-   Um [erro 823](../errors-events/mssqlserver-823-database-engine-error.md) causado por uma CRC (verificação de redundância cíclica) emitida por um sistema operacional como, por exemplo, um erro de disco (alguns erros de hardware)  
   
 -   Um [erro 824](../errors-events/mssqlserver-824-database-engine-error.md), como uma página interrompida (qualquer erro lógico)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921949"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   **Erros registrados na tabela suspect_pages**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921949"
   
      Um administrador de banco de dados pode também inserir ou atualizar registros. Por exemplo, a atualização de uma linha pode ser útil quando o administrador do banco de dados sabe que uma determinada página suspeita está realmente intacta, mas quer preservar o registro por algum tempo.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Qualquer pessoa com acesso ao **msdb** pode ler os dados na tabela **suspect_pages** . Qualquer um com permissão UPDATE na tabela suspect_pages pode atualizar seus registros. Os membros da função de banco de dados fixa **db_owner** no **msdb** ou da função de servidor fixa **sysadmin** podem inserir, atualizar e excluir registros.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Para gerenciar a tabela suspect_pages  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921949"
   
 4.  Na janela de consulta, edite, atualize ou exclua as linhas desejadas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Para gerenciar a tabela suspect_pages  
   

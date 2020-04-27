@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922560"
 ---
 # <a name="clr-hosted-environment"></a>Ambiente hospedado de CLR
@@ -135,7 +135,7 @@ ms.locfileid: "62922560"
   
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a camada de políticas do CAS no nível de host para configurar uma política de host que conceda um dos três conjuntos de permissões com base no conjunto de permissões armazenado nos catálogos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Código gerenciado em execução dentro do banco de dados sempre obtém um desses conjuntos de permissão de acesso de código.  
   
-### <a name="programming-model-restrictions"></a>Restrições do modelo de programação  
+### <a name="programming-model-restrictions"></a>Restrições do Modelo de Programação  
  O modelo de programação para código gerenciado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve a codificação de funções, procedimentos e tipos que normalmente não exigem o uso do estado mantido entre várias invocações nem o compartilhamento do estado entre várias sessões de usuário. Além disso, conforme descrito anteriormente, a presença do estado compartilhado pode causar exceções críticas que afetam a escalabilidade e a confiabilidade do aplicativo.  
   
  Dadas essas considerações, desencorajamos o uso de variáveis estáticas e membros de dados estáticos de classes usado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para assemblies SAFE e EXTERNAL_ACCESS, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] examina os metadados do assembly na ocasião CREATE ASSEMBLY e gerará uma falha na criação desses assemblies se encontrar o uso de membros e variáveis de dados estáticos.  

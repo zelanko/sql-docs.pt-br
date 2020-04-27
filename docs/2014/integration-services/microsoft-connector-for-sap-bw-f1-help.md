@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890633"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Ajuda F1 do Microsoft Connector 1.1 for SAP BW
@@ -45,7 +45,7 @@ ms.locfileid: "62890633"
   
 -   [Log de solicitações](data-flow/request-log.md)  
   
--   [Visualização](data-flow/preview.md)  
+-   [Visualizar](data-flow/preview.md)  
   
 ### <a name="sap-bw-destination-f1-help"></a>Ajuda F1 do destino SAP BW  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62890633"
   
 -   [Pesquisar InfoPackage](data-flow/look-up-infopackage.md)  
   
--   [Criar novo InfoObject](data-flow/create-new-infoobject.md)  
+-   [Criar Novo InfoObject](data-flow/create-new-infoobject.md)  
   
 -   [Criar InfoCube para os dados da transação](data-flow/create-infocube-for-transaction-data.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62890633"
   
 -   [Criar InfoSource para os dados da transação](data-flow/create-infosource-for-transaction-data.md)  
   
--   [Criar InfoSource para dados mestre](data-flow/create-infosource-for-master-data.md)  
+-   [Criar InfoSource para Dados Mestres](data-flow/create-infosource-for-master-data.md)  
   
 -   [Criar InfoPackage](data-flow/create-infopackage.md)  
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919667"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos do tipo definido pelo usuário
@@ -45,8 +45,7 @@ ms.locfileid: "62919667"
   
 -   Deve haver apenas uma serialização de um objeto UDT. Haverá falha na validação se as rotinas de serialização ou desserialização reconhecerem mais de uma representação de um objeto específico.  
   
--   
-  `SqlUserDefinedTypeAttribute.IsByteOrdered` deve ser `true` para comparar dados em ordem de byte. Se a interface IComparable não estiver implementada e `SqlUserDefinedTypeAttribute.IsByteOrdered` for `false`, as comparações de ordem de byte falharão.  
+-   `SqlUserDefinedTypeAttribute.IsByteOrdered` deve ser `true` para comparar dados em ordem de byte. Se a interface IComparable não estiver implementada e `SqlUserDefinedTypeAttribute.IsByteOrdered` for `false`, as comparações de ordem de byte falharão.  
   
 -   Um UDT definido em uma classe deve ter um construtor público que não leve argumentos. Você tem a opção de criar construtores de classe sobrecarregados adicionais.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62919667"
 ## <a name="native-serialization"></a>Serialização nativa  
  A escolha dos atributos de serialização adequados para o UDT depende do tipo de UDT que você está tentando criar. O formato de serialização `Native` utiliza uma estrutura muito simples que permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazene uma representação nativa eficiente do UDT em disco. O formato `Native` será recomendado se o UDT for simples e contiver somente campos dos tipos a seguir:  
   
- **bool**, **byte**, **SByte**, **Short**, **UShort**, **int**, **uint**, **Long**, **ULONG**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Os tipos de valor que são compostos de campos dos tipos acima são bons candidatos `Native` para o formato, `structs` como no Visual C#, ( `Structures` ou como são conhecidos em Visual Basic). Por exemplo, um UDT especificado com o formato de serialização `Native` pode conter um campo de outro UDT que também foi especificado com o formato `Native`. Se a definição de UDT for mais complexa e contiver tipos de dados na lista anterior, você precisará especificar o formato de serialização `UserDefined`.  
   

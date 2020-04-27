@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921061"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar um banco de dados do SQL Server até um ponto determinado (modelo de recuperação completa)
@@ -33,29 +33,29 @@ ms.locfileid: "62921061"
   
      [Segurança](#Security)  
   
--   **Para restaurar um banco de dados SQL Server para um ponto no tempo, usando:**  
+-   **Para restaurar um banco de dados do SQL Server em um momento determinado usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Use STANDBY para localizar um momento determinado desconhecido.  
   
 -   Especificar com antecedência o momento determinado em uma sequência de restauração  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE usarão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** e o proprietário (**dbo**) do banco de dados (para a opção FROM DATABASE_SNAPSHOT, o banco de dados sempre existe).  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
- **Para restaurar um banco de dados para um ponto no tempo**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+ **Para restaurar um banco de dados para um momento determinado**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância adequada do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e expanda a árvore de servidores.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "62921061"
   
      Para ver as descrições das opções, consulte [Restaurar banco de dados &#40;Página Opções&#41;](restore-database-options-page.md).  
   
-12. **Faça backup da parte final do log antes da restauração** será selecionada se for necessário para o ponto no tempo que você selecionou. Você não precisa modificar essa configuração, mas poderá escolher o backup da parte final do log até mesmo se não for necessário.  
+12. **Fazer backup da parte final do log antes da restauração** será selecionada se for necessário para o momento determinado que você selecionou. Você não precisa modificar essa configuração, mas poderá escolher o backup da parte final do log até mesmo se não for necessário.  
   
 13. As operações de restauração poderão falhar se houver conexões ativas com o banco de dados. Marque a opção **Fechar conexões existentes** para assegurar que todas as conexões ativas entre o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e o banco de dados sejam fechadas. Essa caixa de seleção define o banco de dados no modo de usuário único antes de executar as operações de restauração e define o banco de dados no modo de vários usuários ao concluir.  
   
 14. Selecione **Perguntar antes de restaurar cada backup** para que você seja solicitado entre cada operação de restauração. Isso normalmente só é necessário quando o banco de dados é grande e você deseja monitorar o status da operação de restauração.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Antes de começar**  
   
  Um momento especificado sempre é restaurado a partir de um backup de log. Em cada instrução RESTORE LOG da sequência de restauração, especifique a transação ou o tempo de destino em uma cláusula STOPAT idêntica. Como um pré-requisito para uma restauração pontual, você deve restaurar primeiro um backup de banco de dados completo cujo ponto de extremidade seja anterior ao tempo de recuperação designado. Esse backup de banco de dados completo pode ser anterior ao backup de banco de dados completo mais recente desde que você depois restaure todos os backups de log subsequentes, até o backup de log que contém o tempo determinado.  
@@ -136,9 +136,9 @@ ms.locfileid: "62921061"
   
  O ponto de recuperação é a última confirmação de transação que ocorreu em ou `datetime` antes do valor especificado por *tempo*.  
   
- Para restaurar apenas as modificações feitas antes de um ponto específico no tempo, especifique WITH STOPAT **=** *time* para cada backup que você restaurar. Isso garante que você não ultrapassará o tempo de destino.  
+ Para restaurar apenas as modificações feitas antes de um momento determinado, especifique WITH STOPAT **=** *hora* para cada backup restaurado. Isso garante que você não ultrapassará o tempo de destino.  
   
- **Para restaurar um banco de dados para um ponto no tempo**  
+ **Para restaurar um banco de dados para um momento determinado**  
   
 > [!NOTE]  
 >  Para obter um exemplo desse procedimento, veja [Exemplo (Transact-SQL)](#TsqlExample), mais adiante nesta seção.  
@@ -148,7 +148,7 @@ ms.locfileid: "62921061"
 2.  Execute a instrução RESTORE DATABASE usando a opção NORECOVERY.  
   
     > [!NOTE]  
-    >  Se uma sequência de restauração parcial excluir qualquer grupo de arquivos [FileStream](../blob/filestream-sql-server.md) , não haverá suporte para a restauração pontual. Você pode forçar a sequência de restauração a continuar. Contudo, os grupos de arquivos FILESTREAM omitidos de sua instrução RESTORE nunca poderão ser restaurados. Para forçar uma restauração pontual, especifique a opção CONTINUE_AFTER_ERROR juntamente com a opção STOPAT, STOPATMARK ou STOPBEFOREMARK, que você também deve especificar nas instruções RESTORE LOG subsequentes. Se você especificar CONTINUE_AFTER_ERROR, a sequência de restauração parcial terá êxito e o grupo de arquivos FILESTREAM se tornará irrecuperável.  
+    >  Se uma sequência de restauração parcial excluir qualquer grupo de arquivos [FILESTREAM](../blob/filestream-sql-server.md) , não haverá suporte para a restauração pontual. Você pode forçar a sequência de restauração a continuar. Contudo, os grupos de arquivos FILESTREAM omitidos de sua instrução RESTORE nunca poderão ser restaurados. Para forçar uma restauração pontual, especifique a opção CONTINUE_AFTER_ERROR juntamente com a opção STOPAT, STOPATMARK ou STOPBEFOREMARK, que você também deve especificar nas instruções RESTORE LOG subsequentes. Se você especificar CONTINUE_AFTER_ERROR, a sequência de restauração parcial terá êxito e o grupo de arquivos FILESTREAM se tornará irrecuperável.  
   
 3.  Restaurar o último backup de banco de dados diferencial e, se houver, sem recuperar o banco de dados (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62921061"
     > [!NOTE]  
     >  As opções RECOVERY e STOPAT. Se o backup de log de transações não contiver o tempo solicitado (por exemplo, se o tempo especificado estiver além do tempo coberto pelo log de transações), um aviso será gerado e o banco de dados permanecerá sem-recuperação.  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir restaura um banco de dados para seu estado de `12:00 AM` em `April 15, 2020` e mostra uma operação de restauração que envolve vários backups de log. No dispositivo de backup, `AdventureWorksBackups`, o backup de banco de dados completo a ser restaurado é o terceiro conjunto de backup no dispositivo (`FILE = 3`), o primeiro backup de log é o quarto conjunto de backup (`FILE = 4`), e o segundo backup de log é o quinto conjunto de backup (`FILE = 5`).  
   
 > [!IMPORTANT]  
@@ -180,7 +180,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Restaurar um backup de banco de dados &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -193,7 +193,7 @@ GO
 -   [Recuperar para um número de sequência de log &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [conjunto de backup &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [&#41;do conjunto de backup &#40;Transact-SQL](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

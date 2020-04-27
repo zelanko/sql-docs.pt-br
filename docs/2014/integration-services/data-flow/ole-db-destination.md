@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901480"
 ---
 # <a name="ole-db-destination"></a>Destino OLE DB
@@ -61,7 +61,7 @@ ms.locfileid: "62901480"
   
  O destino OLE DB tem uma entrada regular e uma saída de erro.  
   
- Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](integration-services-data-types.md).  
+ Para obter mais informações sobre tipos de dados, consulte [Integration Services tipos de dados](integration-services-data-types.md).  
   
 ## <a name="fast-load-options"></a>Opções de carregamento rápido  
  Se o destino OLE DB usa um modo de acesso a dados de carregamento rápido, você pode especificar as seguintes opções na interface do usuário, **Editor de Destino de OLE DB**, para esse destino:  
@@ -83,7 +83,7 @@ ms.locfileid: "62901480"
   
  Além das opções de carregamento rápido apresentadas na caixa de diálogo **Editor de Destino de OLE DB** , você pode configurar o destino OLE DB para usar as seguintes opções de carregamento em massa informando-as na propriedade FastLoadOptions na caixa de diálogo **Editor Avançado** .  
   
-|Opção de carregamento rápido|DESCRIÇÃO|  
+|Opção de carregamento rápido|Descrição|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Especifica o tamanho em quilobytes a ser inserido. A opção tem o formato `KILOBYTES_PER_BATCH`  =  \<de valor**>** inteiro positivo.|  
 |FIRE_TRIGGERS|Especifica se os gatilhos devem ser disparados na tabela de inserção. A opção tem o formato **FIRE_TRIGGERS**. A presença da opção indica que os gatilhos irão disparar.|  
@@ -101,11 +101,11 @@ ms.locfileid: "62901480"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destino de OLE DB** clique em um dos seguintes tópicos:  
   
--   [OLE DB editor de destino &#40;página do Gerenciador de conexões&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Editor de Destino OLE DB &#40;Página Gerenciador de Conexões&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Página Mapeamentos do OLE DB editor de destino &#40;&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Editor de Destino de OLE DB &#40;Página Mapeamentos&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Editor de destino OLE DB &#40;página saída de erro&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor de Destino OLE DB &#40;Página Saída de Erro&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

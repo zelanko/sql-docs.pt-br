@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891052"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Configurando e habilitando configurações de pacote
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Etapa 2: Habilitar e configurar configurações de pacote
   Nesta tarefa, você converterá o projeto no Modelo de Implantação de Pacote e habilitará configurações de pacote usando o Assistente de Configuração de Pacotes. Você usará esse assistente para gerar um arquivo de configuração XML que contenha definições de configuração para a propriedade `Directory` do contêiner Loop Foreach. O valor da propriedade de diretório é fornecido por uma nova variável de nível de pacote que você pode atualizar no tempo de execução. Adicionalmente, você populará uma pasta de dados de exemplo para usar durante o teste.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Para criar uma nova variável de nível de pacote mapeada para a propriedade de diretório  
@@ -26,7 +26,7 @@ ms.locfileid: "62891052"
   
 2.  No menu [!INCLUDE[ssIS](../includes/ssis-md.md)] , selecione **Variáveis**.  
   
-3.  Na janela **Variáveis** , clique no ícone Adicionar Variável .  
+3.  Na janela **Variáveis** , clique no ícone Adicionar Variável.  
   
 4.  Na caixa **Nome** , digite **varFolderName**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62891052"
   
 7.  Retorne à guia **Fluxo de Controle** e clique duas vezes no contêiner **Arquivo Foreach na Pasta** .  
   
-8.  Na página **Coleção** do **Editor de Loop Foreach**, clique em **Expressões** e, em seguida, clique no botão de reticências **(…)**.  
+8.  Na página **coleção** do editor de **loop foreach**, clique em **expressões**e, em seguida, clique no botão de reticências **(...)**.  
   
 9. No **Editor de expressões de propriedade**, clique na lista de **Propriedades** e selecione `Directory`.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62891052"
   
 5.  Na caixa de diálogo **Organizador de Configurações do Pacote** , selecione **Habilitar Configurações do Pacote**e clique em **Adicionar**.  
   
-6.  Na página inicial do Assistente de Configuração de Pacotes, clique em **Avançar**.  
+6.  Na página inicial do assistente de configuração de pacotes, clique em **Avançar**.  
   
 7.  Na página **Selecionar Tipo de Configuração** , verifique se o **Tipo de configuração** está definido como **Arquivo de configuração XML**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62891052"
   
 10. Na caixa de diálogo **Selecionar Local do Arquivo de Configuração** , em **Nome do arquivo** , digite **SSISTutorial**e clique em **Salvar**.  
   
-11. Na página **Selecionar tipo de configuração** , clique em **Avançar.**  
+11. Na página **Selecionar Tipo de Configuração** , clique em **Avançar**.  
   
 12. Na página **selecionar propriedades a serem exportadas** , no painel **objetos** , expanda **variáveis**, expanda **varFolderName**, **Propriedades**e selecione **valor**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62891052"
   
 15. Clique em **Concluir**.  
   
-16. Clique em **fechar**  
+16. Clique em **Fechar**.  
   
 17. O assistente cria um arquivo de configuração, chamado SSISTutorial.dtsConfig, que contém as definições de configuração de `value` da variável que define a propriedade `Directory` do enumerador.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "62891052"
 3.  Na `New Sample Data` pasta, Cole os arquivos copiados.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 3: Modificando o valor de configuração da propriedade de diretório](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Etapa 3: Modificar o valor de configuração da propriedade de diretório](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

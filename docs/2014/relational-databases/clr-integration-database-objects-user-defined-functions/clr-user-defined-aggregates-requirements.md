@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874476"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Requisitos para agregações CLR definidas pelo usuário
@@ -36,7 +36,7 @@ ms.locfileid: "62874476"
 ## <a name="aggregation-methods"></a>Métodos de agregação  
  A classe registrada como uma agregação definida pelo usuário deve dar suporte aos seguintes métodos de instância. Eles são os métodos que o processador de consultas usa para computar a agregação:  
   
-|Método|Sintaxe|DESCRIÇÃO|  
+|Método|Sintaxe|Descrição|  
 |------------|------------|-----------------|  
 |`Init`|public void init ();|O processador de consultas usa esse método para inicializar a computação da agregação. Ele é invocado uma vez para cada grupo que o processador de consultas está agregando. O processador de consultas pode optar por reutilizar a mesma instância da classe de agregação para computar agregações de grupos vários. O método `Init` deve executar qualquer limpeza, conforme necessário, de usos anteriores desta instância e habilitá-la para que uma nova computação de agregação seja reiniciada.|  
 |`Accumulate`|public void Accumulate (valor de tipo de entrada [, valor de tipo de entrada,...]);|Um ou mais parâmetros que representam os parâmetros da função. *input_type* deve ser o tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados gerenciado equivalente ao tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados nativo especificado por *input_sqltype* na `CREATE AGGREGATE` instrução. Para obter mais informações, consulte [mapeando dados de parâmetro CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Para UDTs (tipos definidos pelo usuário), o tipo de entrada é o mesmo que o tipo do UDT. O processador de consultas usa esse método para acumular os valores de agregação. Ele é invocado uma vez para obter cada valor no grupo que está sendo agregado. O processador de consultas o chama somente depois de chamar o método `Init` na instância determinada da classe de agregação. A implementação desse método deve atualizar o estado da instância para refletir o acúmulo do valor do argumento que é passado.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62874476"
 |Atualizada a descrição do método `Accumulate`; agora ele aceita mais de um parâmetro.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tipos definidos pelo usuário de CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [Tipos CLR definidos pelo usuário](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Invocando funções de agregação CLR definidas pelo usuário](clr-user-defined-aggregate-invoking-functions.md)  
   
   

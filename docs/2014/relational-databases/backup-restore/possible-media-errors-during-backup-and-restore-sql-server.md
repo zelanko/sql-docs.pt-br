@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876103"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erros de mídia possíveis durante backup e restauração (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876103"
   
   
   
-##  <a name="BckChecksums"></a> Somas de verificação de backup  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Somas de verificação de backup  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a três tipos de somas de verificação: uma soma de verificação nas páginas, uma soma de verificação nos blocos de log e uma soma de verificação de backup. Ao gerar uma soma de verificação de backup, o BACKUP verifica se a leitura de dados do banco de dados é consistente com qualquer soma de verificação ou indicação da página interrompida que estejam presentes no banco de dados.  
   
  A instrução BACKUP computa opcionalmente uma soma de verificação de backup no fluxo de backup; se a soma de verificação de página ou as informações da página interrompida estiverem presentes em uma determinada página, ao fazer o backup da página, o BACKUP também verifica a soma de verificação, o estado da página interrompida e a ID da página, na página. Ao criar uma soma de verificação de backup, uma operação de backup não acrescenta nenhuma soma de verificação às páginas. O backup das páginas é feito enquanto as mesmas existirem no banco de dados, e as páginas não são alteradas pelo backup.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876103"
   
 4.  Emite uma mensagem que o backup foi gerado com sucesso, mas contém erros de página.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para habilitar ou desabilitar as somas de verificação de backup**  
   
 -   [Habilitar ou desabilitar as somas de verificação de backup durante backup ou restauração &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

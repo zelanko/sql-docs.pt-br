@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c1a59d9e77806666c487b0778edd574bcaa5e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62926301"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Solucionando problemas de relatórios para execução de pacotes
@@ -40,6 +40,6 @@ ms.locfileid: "62926301"
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Relatórios do servidor do Integration Services](../reports-for-the-integration-services-server.md)  
   
- [Ferramentas de solução de problemas de execução de pacote](troubleshooting-tools-for-package-execution.md)  
+ [Solucionando problemas de ferramentas para execução de pacotes](troubleshooting-tools-for-package-execution.md)  
   
   

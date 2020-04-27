@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917562"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
@@ -37,7 +37,7 @@ ms.locfileid: "62917562"
   
  Este tópico inclui as seções a seguir.  
   
--   [Conceitos de banco de dados parcialmente independentes](#Concepts)  
+-   [Conceitos de banco de dados parcialmente independente](#Concepts)  
   
 -   [Contenção](#containment)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62917562"
   
 -   [Identificando a contenção de banco de dados](#Identifying)  
   
-##  <a name="Concepts"></a> Conceitos de banco de dados parcialmente independente  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a>Conceitos de banco de dados parcialmente independentes  
  Um banco de dados totalmente independente inclui todas as configurações e metadados necessários para definir o banco de dados e não tem nenhuma dependência de configuração da instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] onde o banco de dados está instalado. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], separar um banco de dados da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderia ser demorado e exigir conhecimento detalhado da relação entre o banco de dados e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os bancos de dados parcialmente independentes facilitam a separação de um banco de dados de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e de outros bancos de dados.  
   
  O banco de dados independente considera recursos em relação à contenção. Qualquer entidade definida pelo usuário que confie apenas em funções que residem no banco de dados é considerada totalmente contida. Qualquer entidade definida pelo usuário que confie apenas em funções que residem fora do banco de dados é considerada não contida. (Para obter mais informações, consulte a seção [Contenção](#containment) mais adiante neste tópico.)  
@@ -92,7 +92,7 @@ ms.locfileid: "62917562"
   
  Fora do limite de banco de dados está o *modelo de gerenciamento*que pertence às funções e ao gerenciamento em nível da instância. Exemplos de entidades localizadas fora do limite de banco de dados incluem tabelas do sistema, como **sys.endpoints**, usuários mapeados para logons e tabelas de usuário em outro banco de dados referenciadas por um nome de três partes.  
   
-##  <a name="containment"></a> Contenção  
+##  <a name="containment"></a><a name="containment"></a> Contenção  
  Entidades de usuário que residem inteiramente dentro do banco de dados são consideradas *contidas*. Qualquer entidade que resida fora do banco de dados ou que dependa da interação com funções fora do banco de dados é considerada como *não contida*.  
   
  Em geral, entidades de usuário entram nas seguintes categorias de contenção:  
@@ -101,7 +101,7 @@ ms.locfileid: "62917562"
   
 -   Entidades de usuário não contidas (que cruzam o limite de banco de dados), por exemplo, sys.server_principals ou a própria entidade de servidor (logon). Qualquer código que use essas entidades ou qualquer função que faça referência a essas entidades não é contido.  
   
-###  <a name="partial"></a> Partially Contained Database  
+###  <a name="partially-contained-database"></a><a name="partial"></a>Banco de dados parcialmente independente  
  O recurso de banco de dados independente está disponível atualmente apenas em um estado parcialmente contido. Um banco de dados parcialmente contido é um banco de dados independente que permite o uso de recursos não contidos.  
   
  Use as exibições [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) e [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) para retornar informações sobre objetos ou recursos não contidos. Por meio da determinação do status da contenção dos elementos de seu banco de dados, é possível descobrir quais objetos ou recursos devem ser substituídos os alterados para promover a contenção.  
@@ -111,7 +111,7 @@ ms.locfileid: "62917562"
   
  O comportamento de bancos de dados parcialmente independentes difere muito distintamente do comportamento de bancos de dados dependentes em termos de ordenação. Para obter mais informações sobre problemas de ordenação, consulte [Ordenações de banco de dados independentes](contained-database-collations.md).  
   
-##  <a name="benefits"></a> Benefícios do uso de bancos de dados parcialmente independentes  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a>Benefícios do uso de bancos de dados parcialmente independentes  
  Há problemas e complicações associadas aos bancos de dados dependentes que podem ser resolvidos por meio de um banco de dados parcialmente independente.  
   
 ### <a name="database-movement"></a>Movimentação do banco de dados  
@@ -133,7 +133,7 @@ ms.locfileid: "62917562"
 ### <a name="database-administration"></a>Administração de banco de dados  
  Manter as configurações de banco de dados no banco de dados, e não no banco de dados mestre, permite que o proprietário de cada banco de dados tenha mais controle sobre seu banco de dados, sem conceder a eles a permissão **sysadmin** .  
   
-##  <a name="Limitations"></a> Limitações  
+##  <a name="limitations"></a><a name="Limitations"></a>Limitações  
  Bancos de dados parcialmente independentes não permitem os recursos a seguir.  
   
 -   Os bancos de dados parcialmente independentes não podem usar replicação, Change Data Capture ou controle de alterações.  
@@ -149,7 +149,7 @@ ms.locfileid: "62917562"
 > [!WARNING]  
 >  Os procedimentos armazenados temporários são permitidos no momento. Como os procedimentos armazenados temporários violam a retenção, não se espera que eles tenham suporte em versões futuras de bancos de dados independentes.  
   
-##  <a name="Identifying"></a> Identificando a contenção do banco de dados  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> Identificando a contenção do banco de dados  
  Há duas ferramentas para facilitar a identificação do status de contenção do banco de dados. O [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) é uma exibição que mostra todas as entidades potencialmente não contidas no banco de dados. O evento database_uncontained_usage ocorre quando qualquer entidade não contida real é identificada em tempo de execução.  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
@@ -163,7 +163,7 @@ ms.locfileid: "62917562"
   
  [Ordenações de banco de dados independentes](contained-database-collations.md)  
   
- [Práticas recomendadas de segurança com bancos de dados independentes](security-best-practices-with-contained-databases.md)  
+ [Melhores práticas de segurança com bancos de dados independentes](security-best-practices-with-contained-databases.md)  
   
  [Migrar para um banco de dados parcialmente independente](migrate-to-a-partially-contained-database.md)  
   

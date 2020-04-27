@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916740"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar o tamanho de um heap
@@ -40,7 +40,7 @@ ms.locfileid: "62916740"
   
      ***Num_Variable_Cols***  = número de colunas de tamanho variável  
   
-     ***Max_Var_Size*** = total máximo em bytes de todas as colunas de tamanho variável  
+     ***Max_Var_Size***  = total máximo em bytes de todas as colunas de tamanho variável  
   
 3.  Parte da linha, conhecida como bitmap nulo, é reservada para gerenciar a nulabilidade da coluna. Calcule seu tamanho:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62916740"
   
 5.  Calcule o tamanho total da linha:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      O valor 4 na fórmula é a sobrecarga do cabeçalho da linha de dados.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916740"
   
 7.  Calcule o número de páginas necessário para armazenar todas as linhas:  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      O número de páginas estimado deve ser arredondado para cima, até a página inteira mais próxima.  
   

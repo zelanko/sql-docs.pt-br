@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891790"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Etapa 4: Adicionar uma tarefa de fluxo de dados ao pacote
   Depois de criar os gerenciadores de conexões para os dados de origem e destino, a próxima tarefa é adicionar a tarefa Fluxo de Dados ao seu pacote. Essa tarefa encapsula o mecanismo de fluxo de dados que move dados entre as origens e os destinos, além de fornecer funcionalidade para transformar, limpar e modificar os dados à medida que são movidos. A tarefa Fluxo de Dados é onde a maioria do trabalho de um processo de extração, transformação e carregamento (ETL) acontece.  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.locfileid: "62891790"
 4.  Clique com o botão direito do mouse na tarefa fluxo de dados, clique em **Propriedades**e, na `LocaleID` janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 5: Adicionando e configurando a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [Etapa 5: Adicionar e configurar a fonte de arquivo simples](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefa de Fluxo de Dados](control-flow/data-flow-task.md)  

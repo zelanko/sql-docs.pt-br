@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900820"
 ---
 # <a name="conditional-split-transformation"></a>Transformação Divisão Condicional
@@ -58,7 +58,7 @@ ms.locfileid: "62900820"
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir propriedades, clique em um dos seguintes tópicos:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62900820"
  [Dividir um conjunto de dados por meio da transformação Divisão Condicional](conditional-split-transformation.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fluxo de Dados](../data-flow.md)   
+ [Fluxo de dados](../data-flow.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

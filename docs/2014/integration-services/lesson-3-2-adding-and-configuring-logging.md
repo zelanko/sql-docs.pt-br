@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892431"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Etapa 2: Adicionando e configurando registro em log
+# <a name="step-2-adding-and-configuring-logging"></a>Etapa 2: Adicionar e configurar registro em log
   Nesta tarefa, você habilitará o log do fluxo de dados no pacote Lesson 3.dtsx. Então, você configurará um provedor de log de arquivo de texto para armazenar os eventos PipelineExecutionPlan e PipelineExecuteTrees em log. O provedor de log de arquivos de texto cria logs que são fáceis exibir e transportar. A simplicidade destes arquivos de log faz estes arquivos especialmente úteis durante a fase de teste básico de um pacote. É possível também exibir as entradas de log na janela Eventos de Log do Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Adicionar log ao pacote  
@@ -45,7 +45,7 @@ ms.locfileid: "62892431"
 9. No painel **Contêineres** , expandir todos os nós da hierarquia do contêiner do pacote, e limpe todas as caixas de seleção, inclusive a caixa de seleção **Extrair Dados de Exemplo de Moeda** . Agora marque a caixa de seleção **Extrair Dados de Exemplo de Moeda** para adquirir só os eventos para este nó.  
   
     > [!IMPORTANT]  
-    >  Se o estado da caixa de seleção **Extrair Dados de Exemplo de Moeda** estiver esmaecido em vez de marcado, a tarefa usará as configurações de log do contêiner pai e não será possível habilitar os eventos de log específicos da tarefa.  
+    >   Se o estado da caixa de seleção **Extrair Dados de Exemplo de Moeda** estiver esmaecido ao invés de marcada, a tarefa usará as configurações de log do contêiner pai e não será possível ativar os eventos de log específicos para a tarefa.  
   
 10. Na guia **Detalhes** , na coluna **Eventos** , selecione os eventos **PipelineExecutionPlan** e **PipelineExecutionTrees** .  
   
@@ -58,6 +58,6 @@ ms.locfileid: "62892431"
 14. Clique em **OK**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
- [Etapa 3: Testando o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Etapa 3: Testar o pacote de tutorial da Lição 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

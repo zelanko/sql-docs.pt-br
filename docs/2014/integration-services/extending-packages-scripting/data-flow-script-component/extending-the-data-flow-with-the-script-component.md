@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894800"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
-  O componente Script estende os recursos de fluxo de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] dados de pacotes com código personalizado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou Visual C# que é compilado e executado no tempo de execução do pacote. O componente Script simplifica o desenvolvimento de uma origem de fluxo de dados personalizada, transformação ou destino quando as origens, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não atendem totalmente aos seus requisitos. Após a configuração do componente com as entradas e saídas esperadas, ele grava todo o código de infraestrutura necessário, permitindo que você se concentre exclusivamente no código que é exigido para seu processamento personalizado.  
+  O componente Script estende as capacidades de fluxo de dados dos pacotes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] com o código personalizado escrito em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que é compilado e executado no tempo de execução do pacote. O componente Script simplifica o desenvolvimento de uma origem de fluxo de dados personalizada, transformação ou destino quando as origens, transformações e destinos incluídos no [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] não atendem totalmente aos seus requisitos. Após a configuração do componente com as entradas e saídas esperadas, ele grava todo o código de infraestrutura necessário, permitindo que você se concentre exclusivamente no código que é exigido para seu processamento personalizado.  
   
  Um componente Script interage com o pacote contido e com o fluxo de dados por meio das classes geradas automaticamente nos itens de projeto `ComponentWrapper` e `BufferWrapper`, que são instâncias das classes <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> e <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> respectivamente. Essas classes tornam conexões, variáveis e outros itens de pacote disponíveis como objetos com tipo e gerenciam entradas e saídas. O componente Script também pode usar o namespace [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e a biblioteca de classe [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como também assemblies personalizados, para implementar a funcionalidade personalizada.  
   
@@ -43,34 +43,34 @@ ms.locfileid: "62894800"
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir fornecem mais informações sobre o componente Script.  
   
- [Configurando o componente Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md)  
+ [Configurar o componente de Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md)  
  As propriedades que você configura no **Editor de Transformação Scripts** afetam a capacidade e o desempenho de código de componente Script.  
   
  [Codificando e Depurando o componente Script] (coding-and-debugging-the-script-component.md  
- Você usa o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente de desenvolvimento do VSTA (Tools for Applications) para desenvolver os scripts contidos no componente Script.  
+ Use o ambiente de desenvolvimento do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA (Tools for Applications) para desenvolver os scripts contidos no componente Script.  
   
- [Compreendendo o Component Object Model Script](understanding-the-script-component-object-model.md)  
+ [Compreender o Component Object Model do Script](understanding-the-script-component-object-model.md)  
  Um projeto de componente Script novo contém três itens de projeto com várias classes e propriedades e métodos gerados automaticamente.  
   
- [Usando variáveis no componente Script](using-variables-in-the-script-component.md)  
+ [Usar variáveis no componente de Script](using-variables-in-the-script-component.md)  
  O item de projeto do `ComponentWrapper` contém propriedades de acessador fortemente tipadas para variáveis de pacote.  
   
- [Conectando-se a fontes de dados no componente de Script](connecting-to-data-sources-in-the-script-component.md)  
+ [Conectar-se a fontes de dados no componente de Script](connecting-to-data-sources-in-the-script-component.md)  
  O item de projeto do `ComponentWrapper` também contém propriedades de acessador fortemente tipadas para conexões definidas no pacote.  
   
- [Gerando eventos no componente Script](raising-events-in-the-script-component.md)  
+ [Gerar eventos no componente de Script](raising-events-in-the-script-component.md)  
  Você pode gerar eventos para fornecer notificação de problemas e erros.  
   
- [Registrando o componente Script](logging-in-the-script-component.md)  
+ [Registrar o componente de Script](logging-in-the-script-component.md)  
  Você pode registrar informações para registrar provedores habilitados no pacote.  
   
  [Desenvolver tipos específicos de componentes de Script](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)  
  Estes exemplos simples explicam e se manifestam como usar o componente Script para desenvolver origens de fluxo de dados, transformações e destinos.  
   
- [Exemplos de componentes Script adicionais](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [Exemplos de componentes de Script adicionais](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Esses exemplos simples explicam e demonstram alguns possíveis usos para o componente Script.  
   
-![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como as soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da [!INCLUDE[msCoName](../../../includes/msconame-md.md)], bem como as soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Componente de script](../../data-flow/transformations/script-component.md)   

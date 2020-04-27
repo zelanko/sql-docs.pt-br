@@ -15,28 +15,28 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911398"
 ---
 # <a name="set-breakpoints"></a>Definir Pontos de Interrupção
   Use a caixa de diálogo **Definir Pontos de Interrupção** para especificar os eventos nos quais habilitar pontos de interrupção e para controlar o comportamento do ponto de interrupção.  
   
 ## <a name="options"></a>Opções  
- **Enabled**  
+ **Habilitada**  
  Selecione para habilitar um ponto de interrupção em um evento.  
   
- **Condição de interrupção**  
+ **Break Condition**  
  Exiba uma lista de eventos disponíveis nos quais definir pontos de interrupção.  
   
  **Tipo de contagem de acesso**  
  Especifique quando o ponto de interrupção entra em vigor.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Always**|A execução será sempre suspensa quando ocorrer o ponto de interrupção.|  
+|**Constante**|A execução será sempre suspensa quando ocorrer o ponto de interrupção.|  
 |**Contagem de ocorrências igual a**|A execução será suspensa quando o número de vezes que o ponto de interrupção ocorreu for igual à contagem de ocorrências.|  
 |**Ocorrência maior ou igual**|A execução será suspensa quando o número de vezes que o ponto de interrupção ocorreu for igual ou maior que a contagem de ocorrências.|  
 |**Várias contagens de ocorrências**|A execução será suspensa quando ocorrerem várias contagens de ocorrências. Por exemplo, se você definir esta opção como 5, a execução será suspensa a cada quinta vez.|  
@@ -45,6 +45,6 @@ ms.locfileid: "62911398"
  Especifique o número de ocorrências no qual engatilhe uma interrupção. Esta opção não estará disponível se o ponto de interrupção estiver sempre ativado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Depurar o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
+ [Depurando o fluxo de controle](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

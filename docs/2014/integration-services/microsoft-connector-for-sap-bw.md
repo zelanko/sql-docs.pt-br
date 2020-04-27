@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890588"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
@@ -29,11 +29,11 @@ ms.locfileid: "62890588"
 ## <a name="components"></a>Componentes  
  O [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW tem os seguintes componentes:  
   
--   **Origem do SAP BW** – a origem do SAP BW é um componente de origem de fluxo de dados que permite extrair dados de um sistema SAP Netweaver BW versão 7.  
+-   **Fonte de SAP BW**-a fonte de SAP BW é um componente de fonte de fluxo de dados que permite extrair dados de um sistema SAP NetWeaver BW versão 7.  
   
--   **Destino do SAP BW** – o destino do SAP BW é um componente de destino de fluxo de dados que permite carregar dados em um sistema SAP Netweaver BW versão 7.  
+-   **Destino de SAP BW**-o destino de SAP BW é um componente de destino de fluxo de dados que permite carregar dados em um sistema SAP NetWeaver BW versão 7.  
   
--   **Gerenciador de conexões do SAP BW** – o gerenciador de conexões do SAP BW conecta uma origem do SAP BW ou um destino do SAP BW a um sistema SAP Netweaver BW versão 7.  
+-   **SAP BW Gerenciador de conexões**– o SAP BW Gerenciador de conexões conecta uma fonte SAP BW ou destino de SAP BW a um sistema SAP NetWeaver BW versão 7.  
   
  Para obter um passo a passo que demonstre como configurar e usar o gerenciador de conexões do SAP BW, a origem e o destino, consulte o white paper [Usando o SQL Server Integration Services com SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Este white paper também mostra como configurar os objetos necessários no SAP BW.  
   

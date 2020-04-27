@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917102"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriedades do banco de dados (página Grupos de Arquivos)
@@ -40,7 +40,7 @@ ms.locfileid: "62917102"
  **Somente leitura**  
  Selecione para definir o grupo de arquivos com o status de somente leitura.  
   
- **Default**  
+ **Padrão**  
  Selecione para tornar este grupo de arquivos o grupo de arquivos padrão. Você pode ter um grupo de arquivos padrão para linha e outro para os dados do FILESTREAM.  
   
  **Adicionar**  

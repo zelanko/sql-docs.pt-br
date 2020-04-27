@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890925"
 ---
-# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Etapa 4: Testando o pacote de tutorial da Lição 5
+# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Etapa 4: Testar o pacote de tutorial da Lição 5
   Em tempo de execução, o pacote irá obter o valor da propriedade `Directory` de uma variável atualizada em tempo de execução, ao invés de utilizar o nome original de diretório que foi especificado quando você criou o pacote. O valor da variável é populado pelo arquivo SSISTutorial.dtsConfig.  
   
  Para verificar se, em tempo de execução, o pacote atualizou corretamente o Diretório com o novo valor, simplesmente execute o pacote. Devido a serem copiados apenas três arquivos de dados de exemplo para o novo diretório, o fluxo de dados irá executar apenas três vezes ao invés de interagir com 14 arquivos da pasta original.  
@@ -25,7 +25,7 @@ ms.locfileid: "62890925"
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
  Antes de testar o pacote, deve-se verificar se os fluxos de controle e de dados do pacote da Lição 5 contêm os objetos mostrados nos diagramas a seguir. O fluxo de controle deve ser idêntico ao fluxo de controle da Lição 4. O fluxo de dados deve ser idêntico ao fluxo de dados da lição 4.  
   
- **Fluxo de Controle**  
+ **Fluxo de controle**  
   
  ![Fluxo de controle no pacote](../../2014/tutorials/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62890925"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Para testar o pacote de tutorial da Lição 5  
   
-1.  No menu **Depurar** , clique em **Iniciar Depuração**.  
+1.  No menu **depurar** , clique em **Iniciar Depuração**.  
   
 2.  Após a conclusão da execução do pacote, no menu **depurar** , clique em **parar depuração**.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 6: Usando parâmetros com o modelo de implantação de projeto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lição 6: Como usar parâmetros com o modelo de implantação de projeto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902439"
 ---
 # <a name="flat-file-destination"></a>Destino de arquivo simples
@@ -44,9 +44,9 @@ ms.locfileid: "62902439"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
   
--   [Editor de destino de arquivo simples &#40;página Gerenciador de conexões&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de arquivo simples &#40;página Mapeamentos&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Editor de Destino de Arquivo Simples &#40;Página Mapeamentos&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

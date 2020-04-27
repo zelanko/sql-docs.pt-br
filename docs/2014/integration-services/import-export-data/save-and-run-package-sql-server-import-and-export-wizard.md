@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894760"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Salvar e Executar Pacote (Assistente de Importação e Exportação do SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62894760"
  **Executar imediatamente**  
  Selecione esta opção para executar o pacote imediatamente.  
   
- **Salvar pacote SSIS**  
+ **Salvar Pacote SSIS**  
  Salve o pacote para executá-lo posteriormente, com a opção de executá-lo imediatamente.  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ ms.locfileid: "62894760"
 > [!NOTE]  
 >  Essa opção só estará disponível se você tiver selecionado a opção **salvar pacote SSIS** .  
   
- **Nível de proteção do pacote**  
+ **Nível de Proteção do Pacote**  
  Selecione um nível de proteção na lista.  
   
  O nível de proteção determina o método de proteção, a senha ou a chave de usuário, bem como o escopo de proteção do pacote. A proteção pode incluir todos os dados ou apenas os dados confidenciais. Para entender os requisitos e as opções de segurança do pacote, consulte [controle de acesso para dados confidenciais em pacotes](../security/access-control-for-sensitive-data-in-packages.md) e [visão geral de segurança &#40;Integration Services&#41;](../security/security-overview-integration-services.md).  

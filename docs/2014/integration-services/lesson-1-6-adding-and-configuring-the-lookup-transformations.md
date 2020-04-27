@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891544"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionando e configurando a transformação Pesquisa
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Etapa 6: Adicionar e configurar a transformação Pesquisa
   Depois de configurar a fonte de Arquivo Simples para extrair dados do arquivo de origem, a próxima tarefa será definir as transformações Pesquisa necessárias para obter os valores de **CurrencyKey** e **DateKey**. Uma transformação Pesquisa executa uma pesquisa ao unir dados na entrada coluna para uma coluna especificada em um conjunto de dados referenciado. O conjunto de dados de referência pode ser uma tabela existente ou visualização, uma nova tabela ou o resultado de uma instrução SQL. Neste tutorial, a transformação Pesquisa usa um gerenciador de conexões OLE DB para conectar-se ao banco de dados que contém os dados que é a fonte do conjunto de dados de referência.  
   
 > [!NOTE]  
@@ -131,9 +131,9 @@ ms.locfileid: "62891544"
 12. `LocaleID` No janela Propriedades, verifique se a propriedade está definida como **Inglês (Estados Unidos)** e se a propriedade **defaultcodepage** está definida como **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 7: Adicionando e configurando o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Etapa 7: Adicionar e configurar o destino OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

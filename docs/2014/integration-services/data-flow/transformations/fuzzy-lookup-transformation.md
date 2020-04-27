@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900304"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformação Pesquisa Difusa
@@ -51,7 +51,7 @@ ms.locfileid: "62900304"
   
  Essa transformação tem uma entrada e uma saída.  
   
- Somente as colunas com os tipos de dados `DT_WSTR` e `DT_STR` podem ser usadas em correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Para obter mais informações, consulte [Integration Services tipos de dados](../integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido unir uma coluna com o tipo de dados `DT_WSTR` DTS a uma coluna com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de dados, mas inválido para unir uma coluna com o `DT_WSTR` tipo de dados a uma coluna com `int` o tipo de dados.  
+ Somente as colunas com os tipos de dados `DT_WSTR` e `DT_STR` podem ser usadas em correspondência difusa. A correspondência exata pode usar qualquer tipo de dados DTS, exceto `DT_TEXT`, `DT_NTEXT` e `DT_IMAGE`. Para obter mais informações, consulte [Integration Services Data Types](../integration-services-data-types.md). Colunas que participam da junção entre a tabela de entrada e de referência deve ter tipos de dados compatíveis. Por exemplo, é válido unir uma coluna com o tipo de dados `DT_WSTR` DTS a uma coluna com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de dados, mas inválido para unir uma coluna com o `DT_WSTR` tipo de dados a uma coluna com `int` o tipo de dados.  
   
  Você pode personalizar essa transformação especificando a quantidade máxima de memória, o algoritmo de comparação de linha e o cache de índices e tabelas de referência que a transformação usa.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62900304"
   
  As colunas de saída de transformação incluem as colunas de entrada marcadas como de passagem, as selecionadas na tabela de pesquisa e as seguintes colunas adicionais:  
   
--   **_Similarity**, uma coluna que descreve a similaridade entre os valores nas colunas de entrada e referência.  
+-   **_Similarity**, uma coluna que descreve a similaridade entre valores nas colunas de entrada e de referência.  
   
 -   **_Confidence**, uma coluna que descreve a qualidade da correspondência.  
   
@@ -126,24 +126,24 @@ ms.locfileid: "62900304"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação Pesquisa Difusa** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação pesquisa difusa &#40;guia tabela de referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de Transformação Pesquisa Difusa &#40;Guia Tabela de Referência&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de transformação pesquisa difusa &#40;guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter detalhes sobre como definir as propriedades de um componente de fluxo de dados, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Transformação pesquisa](lookup-transformation.md)   
- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [Transformação Agrupamento Difuso](fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)  
   
   

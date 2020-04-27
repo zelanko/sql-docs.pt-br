@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919596"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funções de valor escalar CLR
@@ -128,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` indica que uma biblioteca, e não um executável, deve ser produzida. Os executáveis não podem ser registrados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  `/t:library` indica que uma biblioteca, e não um executável, deve ser produzida. Os executáveis não podem ser registrados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Não há suporte para objetos de banco de dados do Visual C++ compilados com `/clr:pure` para a execução no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por exemplo, entre esses objetos de banco de dados estão funções de valor escalar.  

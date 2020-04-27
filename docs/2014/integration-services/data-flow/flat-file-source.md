@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902429"
 ---
 # <a name="flat-file-source"></a>Fonte de Arquivo Simples
@@ -55,11 +55,11 @@ ms.locfileid: "62902429"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Fonte de Arquivo Simples**, clique em um dos seguintes tópicos:  
   
--   [Editor de fonte de arquivo simples &#40;página Gerenciador de conexões&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor de fonte de arquivo simples &#40;página colunas&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Colunas&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor de fonte de arquivo simples &#40;página saída de erro&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor de Fonte de Arquivo Simples &#40;Página Saída de Erro&#41;](../flat-file-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

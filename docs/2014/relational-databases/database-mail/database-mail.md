@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917957"
 ---
 # <a name="database-mail"></a>Database Mail
@@ -26,7 +26,7 @@ ms.locfileid: "62917957"
   
  
   
-##  <a name="Benefits"></a>Benefícios do uso do Database Mail  
+##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Benefícios do uso do Database Mail  
  O Database Mail foi projetado de modo a garantir confiança, escalabilidade, segurança e suporte.  
   
 ### <a name="reliability"></a>Confiabilidade  
@@ -75,14 +75,14 @@ ms.locfileid: "62917957"
   
 
   
-##  <a name="VisualElement"></a>Arquitetura de Database Mail  
+##  <a name="database-mail-architecture"></a><a name="VisualElement"></a> Arquitetura do Database Mail  
  O Database Mail foi projetado em uma arquitetura de filas que usa tecnologias do Service Broker. Quando os usuários executam **sp_send_dbmail**, o procedimento armazenado insere um item na fila de emails e cria um registro que contém a mensagem do email. A inserção da nova entrada na fila de emails inicia o processo externo do Database Mail ((DatabaseMail.exe). O processo externo lê as informações de email e envia a mensagem ao servidor ou servidores de email adequados. O processo externo insere um item na fila Status quanto ao resultado da operação de envio. A inserção da nova entrada na fila de status faz com que seja iniciado um procedimento armazenado que atualiza o status da mensagem de email. Além de armazenar a mensagem de email enviada ou não, o Database Mail também registra eventuais anexos dos emails nas tabelas do sistema. As exibições do Database Mail fornecem o status das mensagens para a solução de problemas, e os procedimentos armazenados permitem a administração da fila do Database Mail.  
   
  ![msdb envia mensagens a um servidor de email SMTP](../../database-engine/media/databasemail.gif "msdb envia mensagens a um servidor de email SMTP")  
   
 
   
-##  <a name="ComponentsAndConcepts"></a>Introdução aos componentes Database Mail  
+##  <a name="introduction-to-database-mail-components"></a><a name="ComponentsAndConcepts"></a> Introdução aos componentes do Database Mail  
  O Database Mail consiste nos seguintes componentes principais:  
   
 -   Componentes de configuração e segurança  
@@ -101,7 +101,7 @@ ms.locfileid: "62917957"
   
      O Database Mail registra informações de log no banco de dados **msdb** e no log de eventos de aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Configurando o agente para usar o Database Mail:**  
+ **Configurando o Agente para usar o Database Mail:**  
   
  O SQL Server Agent pode ser configurado para usar o Database Mail. Isso é necessário para notificações de alerta e notificação automática quando um trabalho é concluído.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62917957"
   
  
   
-##  <a name="RelatedContent"></a>Tópicos de componentes do Database Mail  
+##  <a name="database-mail-component-topics"></a><a name="RelatedContent"></a> Tópicos de componentes do Database Mail  
   
 -   [Objetos de configuração do Database Mail](database-mail-configuration-objects.md)  
   

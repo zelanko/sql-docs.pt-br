@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890541"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lição 6: Usando parâmetros com o modelo de implantação de projeto
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lição 6: Como usar parâmetros com o modelo de implantação de projeto
   O SQL Server 2012 apresenta um novo modelo de implantação em que você pode implantar seus projetos no servidor do Integration Services. O servidor do Integration Services permite gerenciar e executar pacotes e configurar valores de runtime para pacotes.  
   
  Nesta lição, você modificará o pacote criado no [Lesson 5: Adding Package Configurations for the Package Deployment Model](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) para usar o Modelo de Implantação do Projeto. Você substitui o valor de configuração com um parâmetro para especificar o local de dados de exemplo. Você também pode copiar o pacote concluído da Lição 5 que está incluso no tutorial.  
@@ -32,15 +32,15 @@ ms.locfileid: "62890541"
 ## <a name="lesson-tasks"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  
   
-1.  [Etapa 1: Copiando o pacote da Lição 5](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [Etapa 1: Copiar o pacote da Lição 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Etapa 2: Convertendo o projeto para o modelo de implantação de projetos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Etapa 2: Convertendo o projeto para o modelo de implantação de projeto](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Etapa 3: Testando o pacote da Lição 6](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Etapa 3: Testar o pacote da Lição 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Etapa 4: Implantando o pacote da Lição 6](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Etapa 4: Implantar o pacote da Lição 6](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
- [Etapa 1: Copiando o pacote da Lição 5](lesson-6-1-copying-the-lesson-5-package.md)  
+ [Etapa 1: Copiar o pacote da Lição 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
   

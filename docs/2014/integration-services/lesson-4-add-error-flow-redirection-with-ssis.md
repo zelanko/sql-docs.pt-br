@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891312"
 ---
-# <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionando redirecionamento de fluxo de erro
+# <a name="lesson-4-adding-error-flow-redirection"></a>Lição 4: Adicionar redirecionamento de fluxo de erro
   Para lidar com erros que podem ocorrer no processo de transformação [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o oferece a capacidade de decidir por componente e por coluna como manipular dados que não podem ser transformados. Você pode escolher ignorar uma falha em determinadas colunas, redirecionar toda a linha com falha ou apenas causar falha no componente. Por padrão, todos os componentes no [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] são configurados para falhar quando ocorrerem erros. Causar falha em um componente, por sua vez, faz com que o pacote falhe e todo o processamento subsequente pare.  
   
  Em vez de permitir que as falhas interrompam a execução do pacote, é bom configurar e tratar erros de processamento em potencial conforme ocorrem dentro da transformação. Como você pode escolher ignorar as falhas para garantir que seu pacote seja executado com êxito, frequentemente é melhor redirecionar a linha com falhas para outro caminho de processamento, em que os dados e o erro podem ser persistentes, examinados e reprocessados posteriormente.  
@@ -34,17 +34,17 @@ ms.locfileid: "62891312"
 ## <a name="tasks-in-lesson"></a>Tarefas da lição  
  Esta lição contém as seguintes tarefas:  
   
--   [Etapa 1: Copiando o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Etapa 1: Copiar o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Etapa 2: Criando um arquivo corrompido](lesson-4-2-creating-a-corrupted-file.md)  
+-   [Etapa 2: Criar um arquivo corrompido](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Etapa 3: Adicionando redirecionamento de fluxo de erro](lesson-4-3-adding-error-flow-redirection.md)  
+-   [Etapa 3: Adicionar redirecionamento de fluxo de erro](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Etapa 4: Adicionando um destino de arquivo simples](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Etapa 4: Adicionar um destino de arquivo simples](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Etapa 5: Testando o pacote de tutorial da Lição 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Etapa 5: Testar o pacote de tutorial da Lição 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar a lição  
- [Etapa 1: Copiando o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
+ [Etapa 1: Copiar o pacote da Lição 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

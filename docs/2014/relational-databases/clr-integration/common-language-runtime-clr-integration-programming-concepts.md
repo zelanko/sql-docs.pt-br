@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922550"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Conceitos de programação da Integração CLR (Common Language Runtime)
@@ -60,7 +60,7 @@ ms.locfileid: "62922550"
  [Monitorando e diagnosticando objetos de banco de dados gerenciado](monitoring-and-troubleshooting-managed-database-objects.md)  
  Fornece informações sobre as ferramentas que podem ser usadas para monitorar e solucionar problemas em objetos de bancos de dados gerenciados e assemblies que são executados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Cenários de uso e exemplos de integração do CLR&#41; &#40;Common Language Runtime](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Cenários de uso e exemplos para a integração do CLR &#40;Common Language Runtime&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Descreve casos de uso e exemplos de códigos que usam objetos CLR.  
   
 ## <a name="see-also"></a>Consulte Também  

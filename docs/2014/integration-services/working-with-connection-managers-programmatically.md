@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877697"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabalhando programaticamente com gerenciadores de conexões
@@ -65,11 +65,11 @@ ms.locfileid: "62877697"
 |WMI|Gerenciador de conexões WMI|`System.Management.ManagementScope`||  
 |SQLMOBILE|Gerenciador de conexões do SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conectar-se a fontes de dados na tarefa Script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [Conectar-se a fontes de dados no componente de Script](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
- [Conectar-se a fontes de dados em uma tarefa personalizada](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [Conectando-se a fontes de dados na tarefa Script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [Conectando-se a fontes de dados no componente Script](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [Conectando a fontes de dados em uma tarefa personalizada](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

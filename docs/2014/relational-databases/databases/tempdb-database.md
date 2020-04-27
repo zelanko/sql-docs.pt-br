@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916842"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
-  O banco de dados do sistema **tempdb** é um recurso global disponível a todos os usuários conectados a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é usado para manter o seguinte:  
+   O banco de dados do sistema **tempdb** é um recurso global disponível para todos os usuários conectados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e é usado para manter o seguinte:  
   
 -   Os objetos de usuário temporários criados explicitamente como: tabelas temporárias globais ou locais, procedimentos armazenados temporários, variáveis de tabela ou cursores.  
   

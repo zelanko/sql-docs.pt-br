@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919315"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>Visão geral da integração CLR (Common Language Runtime)
@@ -51,7 +51,7 @@ ms.locfileid: "62919315"
  [Arquitetura da integração CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)  
  Descreve as metas de design da integração CLR.  
   
- [Habilitando a integração CLR](clr-integration-enabling.md)  
+ [Habilitando integração CLR](clr-integration-enabling.md)  
  Descreve como habilitar a integração CLR.  
   
 ## <a name="see-also"></a>Consulte Também  

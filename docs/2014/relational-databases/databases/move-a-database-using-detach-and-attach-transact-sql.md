@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917075"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover um banco de dados utilizando Desanexar e Anexar (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917075"
     > [!NOTE]  
     >  Se você tentar anexar o banco de dados sem especificar o arquivo de log, a operação de anexação procurará o arquivo de log em seu local original. Se ainda existir uma cópia do log no local original, essa cópia será anexada. Para evitar a utilização do arquivo de log original, especifique o caminho do novo arquivo de log ou remova a cópia original do arquivo de log (depois de copiá-la para o novo local).  
   
-3.  Anexe os arquivos copiados. Para saber mais, veja [Anexar um banco de dados](attach-a-database.md).  
+3.  Anexe os arquivos copiados. Para obter mais informações, consulte [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria uma cópia das [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instruções que são executadas em uma janela do editor de consultas que está conectada à instância do servidor à qual está anexada.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893037"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mapeamentos de coluna (Assistente de Importação e Exportação do SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62893037"
  O objetivo do Assistente de Importação e Exportação do SQL Server é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opções  
- **Origem**  
+ **Fonte**  
  Identifica a tabela, exibição ou consulta de origem selecionada.  
   
  **Destino**  
@@ -48,7 +48,7 @@ ms.locfileid: "62893037"
  **Editar SQL**  
  Use a instrução padrão na caixa de diálogo **instrução SQL CREATE TABLE** ou modifique-a para suas finalidades. Se essa instrução for modificada, também será necessário fazer alterações associadas no mapeamento de tabela.  
   
- **Remover e recriar tabela de destino**  
+ **Ignorar e recriar tabela de destino**  
  Escolha esta opção para substituir a tabela de destino. Esta opção só está disponível ao usar o assistente para criar a tabela de destino. A tabela de destino é ignorada e recriada somente se o pacote criado pelo assistente for salvo e o pacote for executado novamente.  
   
  **Habilitar inserção de identidade**  
@@ -59,7 +59,7 @@ ms.locfileid: "62893037"
   
  Esta lista tem as seguintes colunas:  
   
- **Origem**  
+ **Fonte**  
  Exiba cada coluna de origem para a qual é possível definir parâmetros de transformação.  
   
  **Destino**  
@@ -68,7 +68,7 @@ ms.locfileid: "62893037"
  **Tipo**  
  Selecione um tipo de dados para a coluna.  
   
- **Nullable**  
+ **Permite valor nulo**  
  Especifique se uma coluna permitirá um valor nulo.  
   
  **Tamanho**  

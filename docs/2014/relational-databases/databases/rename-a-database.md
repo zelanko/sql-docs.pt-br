@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916760"
 ---
 # <a name="rename-a-database"></a>Renomear um banco de dados
@@ -39,18 +39,18 @@ ms.locfileid: "62916760"
   
 -   **Acompanhamento:**  [Após renomear um banco de dados](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os bancos de dados de sistema não podem ser renomeados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>Para renomear um banco de dados  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62916760"
   
 4.  Digite o novo nome do banco de dados e, depois, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Para renomear um banco de dados  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>Acompanhamento: depois de renomear um banco de dados  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> Acompanhamento: depois de renomear um banco de dados  
  Faça backup do banco de dados **mestre** e, em seguida, renomeie qualquer banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  

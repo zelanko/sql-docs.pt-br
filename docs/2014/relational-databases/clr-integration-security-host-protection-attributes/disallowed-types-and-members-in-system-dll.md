@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919676"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Disallowed Types and Members In System.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que `HostProtectionAttribute` tenha um que `System.Security.Permissions.HostProtectionResource` especifique uma enumeração com um `ExternalProcessMgmt`valor `ExternalThreading`de `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, ****,, `Synchronization`SharedState, `UI`ou. A tabela a seguir lista os membros e os tipos do assembly System.dll cujos valores de HPA (Host Protection Attribute) não são permitidos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a programação comum de integração de linguagem (CLR) não permite o uso de um tipo ou membro que `HostProtectionAttribute` tenha um que `System.Security.Permissions.HostProtectionResource` especifique uma enumeração com um `ExternalProcessMgmt`valor `ExternalThreading`de `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**,, `Synchronization`SharedState, `UI`ou. A tabela a seguir lista os membros e os tipos do assembly System.dll cujos valores de HPA (Host Protection Attribute) não são permitidos.  
   
 > [!NOTE]  
 >  Esta lista foi gerada dos assembly com suporte. Para obter mais informações, consulte [bibliotecas de .NET Framework com suporte](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -211,9 +211,9 @@ ms.locfileid: "62919676"
 |System.IO.Compression.GZipStream.BeginWrite()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginRead()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginWrite()|ExternalThreading|  
-|System.Media.SoundPlayer|Interface do usuário|  
-|System.Media.SystemSound|Interface do usuário|  
-|System.Media.SystemSounds|Interface do usuário|  
+|System.Media.SoundPlayer|UI|  
+|System.Media.SystemSound|UI|  
+|System.Media.SystemSounds|UI|  
 |System.Net.ConnectStream.BeginRead()|ExternalThreading|  
 |System.Net.ConnectStream.BeginWrite()|ExternalThreading|  
 |System.Net.Dns.BeginGetHostAddresses()|ExternalThreading|  

@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922137"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de backup (página Geral)
-  Use a página **geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
+  Use a página **Geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
   
  **Para usar o SQL Server Management Studio para exibir o conteúdo de um dispositivo de backup**  
   
@@ -29,11 +29,11 @@ ms.locfileid: "62922137"
 -   [Exibir as propriedades e o conteúdo de um dispositivo de backup lógico &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opções  
- **Nome do dispositivo**  
+ **Nome de dispositivo**  
  Exibe o nome de um dispositivo de backup lógico existente ou especifica o nome de um novo dispositivo de backup lógico.  
   
- **Tape**  
- Exibe ou seleciona o dispositivo de fita de destino na lista **Fita** . Essa opção estará disponível somente se uma unidade de fita estiver conectada ao computador que está executando a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ **Fita**  
+ Exibe ou seleciona o dispositivo de fita de destino na lista **Fita** . Essa opção estará disponível apenas se uma unidade de fita for anexada ao computador que executa a instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Dispositivos de backup em fita em computadores remotos não são destinos de backup válidos.  
@@ -57,13 +57,13 @@ ms.locfileid: "62922137"
   
  O dispositivo de backup físico, que corresponde a um dispositivo de backup lógico, é inicializado quando o primeiro backup no conjunto de mídia é escrito ao dispositivo de backup lógico. Se o dispositivo de backup físico for um arquivo que ainda não existe, ele será criado nesse momento.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especifique um disco ou fita como um destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especificar um disco ou fita como destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Excluir um dispositivo de backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   

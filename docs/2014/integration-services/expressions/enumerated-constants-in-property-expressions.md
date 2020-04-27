@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898894"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
@@ -43,7 +43,7 @@ ms.locfileid: "62898894"
   
  [Propriedades comuns](#CommonProperties)  
   
-##  <a name="Package"></a> Pacote  
+##  <a name="package"></a><a name="Package"></a> Pacote  
  As tabelas a seguir relacionam os nomes amigáveis e os equivalentes em valor numérico para propriedades de pacotes definidas por você usando valores de um enumerador.  
   
  `PackageType`Propriedade-definido usando valores da `DTSPackageType` enumeração.  
@@ -86,7 +86,7 @@ ms.locfileid: "62898894"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Restrições de precedência  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Restrições de precedência  
  `EvalOp`Propriedade-definido usando valores da `DTSPrecedenceEvalOp` enumeração.  
   
 |Nome amigável em DTSPrecedenceEvalOp|Valor numérico|  
@@ -105,7 +105,7 @@ ms.locfileid: "62898894"
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Enumeradores de Loop Foreach  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Enumeradores de Loop Foreach  
  O Loop Foreach inclui um conjunto de enumeradores com propriedades que podem ser definidas por expressões de propriedade.  
   
 ### <a name="foreach-ado-enumerator"></a>Enumerador ADO Foreach  
@@ -143,7 +143,7 @@ ms.locfileid: "62898894"
 |Nó|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Tarefas  
+##  <a name="tasks"></a><a name="Tasks"></a> Tarefas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui várias tarefas com propriedades que podem ser definidas por expressões de propriedade.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tarefa Executar DDL do Analysis Services  
@@ -475,7 +475,7 @@ ms.locfileid: "62898894"
 |Rápido|1|  
 |Preciso|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Tarefas do Plano de Manutenção  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Tarefas do Plano de Manutenção  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui um conjunto de tarefas que executam tarefas do SQL Server para uso em planos de manutenção e pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não dá suporte ao trabalho programático com essas tarefas e a documentação de referência de programação não inclui documentação da API dessas tarefas e seus enumeradores.  
@@ -568,7 +568,7 @@ ms.locfileid: "62898894"
 |Índice|2|  
 |Todos|3|  
   
-##  <a name="CommonProperties"></a> Propriedades comuns  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Propriedades comuns  
  Pacotes, tarefas e os contêineres Loop Foreach, Loop For e Sequência podem usar as enumerações a seguir para definir as propriedades especificadas.  
   
  `ForceExecutionResult`Propriedade-definido usando valores da `DTSForcedExecResult` enumeração.  

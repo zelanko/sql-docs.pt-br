@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918966"
 ---
 # <a name="set-or-change-the-column-collation"></a>Definir ou alterar a ordenação de coluna
@@ -110,8 +110,8 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir ou alterar a ordenação do servidor](set-or-change-the-server-collation.md)   
- [Definir ou alterar a ordenação de banco de dados](set-or-change-the-database-collation.md)   
+ [Definir ou alterar o agrupamento do servidor](set-or-change-the-server-collation.md)   
+ [Definir ou alterar o agrupamento de banco de dados](set-or-change-the-database-collation.md)   
  [Suporte a ordenações e a Unicode](collation-and-unicode-support.md)  
   
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919689"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gerenciando assemblies de integração CLR
@@ -28,7 +28,7 @@ ms.locfileid: "62919689"
   
  As informações do assembly são armazenadas na tabela `sys.assembly_files` no banco de dados em que o assembly foi instalado. A tabela `sys.assembly_files` contém as colunas a seguir:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |assembly_id|O identificador definido para o assembly. Este número é atribuído a todos os objetos relacionados ao mesmo assembly.|  
 |name|O nome do objeto.|  

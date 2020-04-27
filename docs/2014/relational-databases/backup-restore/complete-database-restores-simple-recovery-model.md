@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877113"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restaurações completas de banco de dados (modelo de recuperação simples)
@@ -36,7 +36,7 @@ ms.locfileid: "62877113"
 > [!NOTE]  
 >  Para obter informações sobre suporte para backups de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja a seção “Suporte de compatibilidade” de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="Overview"></a> Visão geral da restauração de banco de dados no modelo de recuperação simples  
+##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Visão geral da restauração de banco de dados no modelo de recuperação simples  
  Uma restauração de banco de dados completa no modelo de recuperação simples envolve uma ou duas instruções [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , dependendo se você deseja restaurar um backup de banco de dados diferencial. Se você estiver usando somente um backup de banco de dados completo, simplesmente restaure o backup mais recente, conforme mostrado na ilustração abaixo.  
   
  ![Restaurando apenas um backup de banco de dados completo](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restaurando apenas um backup de banco de dados completo")  
@@ -48,7 +48,7 @@ ms.locfileid: "62877113"
 > [!NOTE]  
 >  Se você pretende restaurar um backup de banco de dados em uma instância de servidor diferente, consulte [Copiar bancos de dados com Backup e Restauração](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintaxe básica de RESTORE do Transact-SQL  
  A sintaxe básica [!INCLUDE[tsql](../../../includes/tsql-md.md)][RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) para restaurar um backup de banco de dados completo é:  
   
  RESTORE DATABASE *database_name* FROM *backup_device* [ WITH NORECOVERY ]  
@@ -60,7 +60,7 @@ ms.locfileid: "62877113"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="Example"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a>Exemplo (Transact-SQL)  
  O exemplo a seguir mostra inicialmente como usar a instrução [BACKUP](/sql/t-sql/statements/backup-transact-sql) para criar um backup de banco de dados completo e um backup de banco de dados diferencial do banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . O exemplo restaura em seguida estes backups em sequência. O banco de dados é restaurado a seu estado a partir do momento em que o backup de banco de dados diferencial é concluído.  
   
  O exemplo mostra as opções críticas em uma sequência de restauração referentes a um cenário de restauração de banco de dados completa. Uma *sequência de restauração* consiste em uma ou mais operações de restauração que movem dados por uma ou mais etapas da restauração. Sintaxe e detalhes que não sejam relevantes para esse propósito são omitidos. Quando você recupera um banco de dados, nós recomendamos especificar explicitamente a opção RECOVERY para que haja melhor clareza, mesmo que este seja o padrão.  
@@ -94,7 +94,7 @@ FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para restaurar um backup de banco de dados completo**  
   
 -   [Restaurar um backup de banco de dados no modelo de recuperação simples &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
@@ -116,8 +116,8 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [Backups de bancos de dados completos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [&#41;&#40;Transact-SQL de sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Backups completos de banco de dados &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

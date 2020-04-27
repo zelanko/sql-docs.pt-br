@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873552"
 ---
 # <a name="data-compression"></a>Data Compression
@@ -57,7 +57,7 @@ ms.locfileid: "62873552"
   
 -   Os detalhes de compactação de dados estão sujeitos a alteração sem aviso em service packs ou versões subsequentes.  
   
--   A compactação não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   A compactação não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   A compactação não está disponível para tabelas do sistema.  
   
@@ -253,7 +253,7 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementação de compactação de linha](row-compression-implementation.md)   
- [Implementação da compactação de página](page-compression-implementation.md)   
+ [Implementação de compactação de página](page-compression-implementation.md)   
  [Implementação de compactação Unicode](unicode-compression-implementation.md)   
  [CRIAR esquema de partição &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [CRIAR função de partição &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-partition-function-transact-sql)   

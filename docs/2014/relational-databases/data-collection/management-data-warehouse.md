@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918334"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
@@ -109,7 +109,7 @@ ms.locfileid: "62918334"
   
  Você pode obter informações detalhadas sobre o tipo de dados e o conteúdo de colunas de tabelas do banco de dados lendo a documentação do procedimento armazenado do coletor de dados adequado para cada uma das tabelas.  
   
-### <a name="best-practices"></a>Práticas Recomendadas  
+### <a name="best-practices"></a>Práticas recomendadas  
  Ao trabalhar com o data warehouse de gerenciamento, recomendamos que você siga estas práticas recomendadas:  
   
 -   Não modifique o metadados de tabelas de data warehouse de gerenciamento a menos que você esteja adicionando um tipo de coletor novo.  
@@ -126,9 +126,9 @@ ms.locfileid: "62918334"
 |Atualizada a lista de tabelas na seção "Esquema de instantâneos". Adicionados snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory e snapshots.io_virtual_file_stats. snapshots.os_process_memory e snapshots.distinct_query_stats foram removidos.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do data warehouse de gerenciamento &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [Coleta de Dados](data-collection.md)   
+ [Gerenciamento data warehouse procedimentos armazenados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [Coleta de dados](data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893591"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Escolher uma fonte de dados (Assistente de Importação e Exportação do SQL Server)
@@ -117,12 +117,12 @@ ms.locfileid: "62893591"
 ### <a name="data-source--flat-file-source"></a>Fonte de Dados = Fonte de Arquivos Simples  
  Consulte os tópicos a seguir para obter informações sobre as opções para uma fonte de dados de arquivos simples.  
   
- [Editor do Gerenciador de conexões de arquivos simples &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Editor do Gerenciador de conexões de arquivos simples &#40;página colunas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Editor do Gerenciador de conexões de arquivos simples &#40;página avançado&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Editor do Gerenciador de conexões de arquivos simples &#40;página Visualização&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

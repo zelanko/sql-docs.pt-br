@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921036"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "62921036"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="WhenUseful"></a> Quando uma restauração de página é útil?  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> Quando uma restauração de página é útil?  
  A restauração de página é usada para restaurar páginas danificadas isoladas. A restauração e recuperação de algumas páginas individuais pode ocorrer mais rapidamente do que a restauração de arquivo, reduzindo a quantidade de dados offline durante a operação de restauração. No entanto, se for necessário restaurar mais do que algumas páginas em um arquivo, será geralmente mais eficaz restaurar todo o arquivo. Por exemplo, se várias páginas em um dispositivo indicarem uma falha de dispositivo pendente, é recomendável a restauração do arquivo, possivelmente em outro local, e a reparação do dispositivo.  
   
  Além disso, nem todos os erros de página precisam de restauração. Pode ocorrer um problema nos dados armazenados em cache, como um índice secundário, que pode ser resolvido pelo recálculo dos dados. Por exemplo, se o administrador de banco de dados cancela um índice secundário e o recria, os dados corrompidos, embora fixos, não são indicados como tal na tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) .  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A restauração de página se aplica a bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usam os modelos de recuperação completa ou bulk-logged. Só há suporte para restauração de página para grupos de arquivos de leitura/gravação.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62921036"
   
          Uma prática recomendada para executar restauração de página é definir o banco de dados como modelo de recuperação completa e tentar um backup de log. Se o backup de log funcionar, você poderá continuar com a restauração da página. Se o backup de log falhar, você perderá trabalho desde o backup de log anterior ou terá de tentar executar DBCC com a opção REPAIR_ALLOW_DATA_LOSS.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Cenários de restauração de página:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "62921036"
   
      Quando você restaurar os backups de log subsequentes, eles só serão aplicados a arquivos de banco de dados que contêm pelo menos uma página que está sendo recuperada. Uma cadeia uniforme de backups de log deve ser aplicada à última restauração completa ou diferencial para trazer o grupo de arquivos que contém a página até o arquivo de log atual. Assim como em uma restauração de arquivo, o conjunto de roll forward é avançado com uma única passagem de restauração de log. Para que a restauração da página tenha êxito, as páginas restauradas devem ser recuperadas para um estado consistente com o banco de dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Se o banco de dados que está sendo restaurado não existir, o usuário deverá ter permissões CREATE DATABASE para poder executar o comando RESTORE. Se o banco de dados existir, as permissões RESTORE usarão como padrão os membros das funções de servidor fixas **sysadmin** e **dbcreator** e o proprietário (**dbo**) do banco de dados (para a opção FROM DATABASE_SNAPSHOT, o banco de dados sempre existe).  
   
  As permissões RESTORE são concedidas a funções nas quais as informações de associação estão sempre disponíveis para o servidor. Como a associação da função de banco de dados fixa pode ser verificada apenas quando o banco de dados está acessível e não danificado, o que nem sempre é o caso quando RESTORE é executado, os membros da função de banco de dados fixa **db_owner** não têm permissões RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Começando pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oferece suporte a restaurações de página.  
   
 #### <a name="to-restore-pages"></a>Para restaurar páginas  
@@ -163,7 +163,7 @@ ms.locfileid: "62921036"
   
 7.  Para restaurar as páginas listadas na grade de páginas, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Para especificar uma página em uma instrução RESTORE DATABASE, você precisará da ID do arquivo que contém a página e da ID da página. A sintaxe necessária é a seguinte:  
   
  `RESTORE DATABASE <database_name>`  
@@ -201,7 +201,7 @@ ms.locfileid: "62921036"
     > [!NOTE]  
     >  Essa sequência é análoga à sequência de restauração de um arquivo. Na realidade, restaurações de página e arquivo podem ser executadas como parte da mesma sequência.  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
  O exemplo a seguir restaura quatro páginas danificadas do arquivo `B` com `NORECOVERY`. Em seguida, dois backups de log são aplicados com `NORECOVERY`, seguido pelo backup do final do log que é restaurado com `RECOVERY`. Este exemplo executa uma restauração online. No exemplo, a ID de arquivo de `B` é `1`, e as IDs de página das páginas danificadas são `57`, `202`, `916`e `1016`.  
   
 ```sql  

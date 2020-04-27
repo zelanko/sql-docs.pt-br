@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892231"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parâmetros do Integration Services (SSIS)
-  Os parâmetros do[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar *parâmetros de projeto* no nível do projeto e *parâmetros de pacote* no nível do pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote.  
+  Os parâmetros do[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permitem atribuir valores às propriedades nos pacotes em tempo de execução do pacote. Você pode criar *parâmetros de projeto* em nível de projeto e *parâmetros de pacote* em nível de pacote. Os parâmetros do projeto são usados para fornecer uma entrada externa que o projeto recebe para um ou mais pacotes no projeto. Os parâmetros do pacote permitem modificar a execução do pacote sem a necessidade de editar e reimplantar o pacote.  
   
  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , você cria, modifica ou exclui parâmetros de projeto usando a janela **Project.params** . Você cria, modifica e exclui parâmetros de pacote usando a guia **Parâmetros** no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Você associa um novo parâmetro ou um existente à propriedade de uma tarefa usando a caixa de diálogo **Parametrizar** . Para saber mais sobre como usar a janela **Project.params** e a guia **Parâmetros** , consulte [Create Parameters](create-parameters.md). Para obter mais informações sobre a caixa de diálogo **Parametrizar** , consulte [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62892231"
   
  Você pode usar um único parâmetro para atribuir um valor a várias propriedades de pacote. Uma única propriedade de pacote pode receber apenas um valor de um único parâmetro.  
   
-###  <a name="executions"></a>Execuções e valores de parâmetro  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Execuções e valores de parâmetros  
  A *execução* é um objeto que representa uma única instância da execução do pacote. Ao criar uma execução, você especifica todos os detalhes necessários para executar um pacote, como os valores dos parâmetros de execução. Você também pode modificar os valores dos parâmetros para execuções existentes.  
   
  Quando você define explicitamente o valor de um parâmetro de execução, o valor é aplicável apenas àquela instância específica de execução. O valor de execução é usado em vez de um valor de servidor ou um valor de design. Se você não definir explicitamente um valor de execução, e um valor de servidor tiver sido especificado, o valor de servidor será usado.  
@@ -68,19 +68,19 @@ ms.locfileid: "62892231"
 #### <a name="determining-execution-parameter-values"></a>Determinando valores de parâmetros de execução  
  As seguintes exibições e procedimento armazenado Transact-SQL podem ser usados para exibir e definir valores de parâmetros.  
   
- [Catalog. execution_parameter_values &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(exibição)  
+ [catalog.execution_parameter_values &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database) (exibição)  
  Mostra os valores de parâmetros reais que serão usados por uma execução específica  
   
- [Catalog. get_parameter_values &#40;&#41;do banco de dados SSISDB](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (procedimento armazenado)  
+ [catalog.get_parameter_values &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (procedimento armazenado)  
  Resolve e mostra os valores reais do pacote especificado e da referência de ambiente  
   
- [Catalog. object_parameters &#40;banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (exibição)  
+ [catalog.object_parameters &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (exibição)  
  Exibe os parâmetros e as propriedades para todos os pacotes e projetos no catálogo do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusive o padrão do design e os valores padrão do servidor.  
   
  [catalog.set_execution_parameter_value &#40;Banco de dados SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Define o valor de um parâmetro para uma instância de execução no catálogo do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Você também pode usar a caixa de diálogo **Executar Pacote** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar o valor do parâmetro. Para obter mais informações, consulte [caixa de diálogo Executar Pacote](../../2014/integration-services/execute-package-dialog-box.md).  
+ Você também pode usar a caixa de diálogo **Executar Pacote** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar o valor do parâmetro. Para obter mais informações, consulte [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
  Você também pode usar a opção `/Parameter` do dtexec para modificar um valor de parâmetro. Para saber mais, veja [dtexec Utility](packages/dtexec-utility.md).  
   

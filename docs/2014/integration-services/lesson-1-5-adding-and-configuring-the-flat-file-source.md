@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891534"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionando e configurando a fonte de arquivo simples
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Etapa 5: Adicionar e configurar a fonte de arquivo simples
   Nesta tarefa, você irá adicionar e configurar uma fonte de arquivo simples ao seu pacote. Uma fonte de arquivo simples é um componente de fluxo de dados que usa metadados definidos por um gerenciador de conexões de arquivo simples para especificar o formato e a estrutura dos dados que serão extraídos do arquivo simples por um processo de transformação. Uma fonte de arquivo simples pode ser configurada para extrair dados de uma única fonte de arquivo simples usando a definição de formato de arquivo fornecida pelo gerenciador de conexões do arquivo simples.  
   
  Para este tutorial, você configurará a fonte de arquivo simples para `Sample Flat File Source Data` usar o Gerenciador de conexões que você criou anteriormente.  
@@ -43,10 +43,10 @@ ms.locfileid: "62891534"
 9. No janela Propriedades, verifique se a `LocaleID` Propriedade está definida como **Inglês (Estados Unidos)**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 6: Adicionando e configurando a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [Etapa 6: Adicionar e configurar a transformação Pesquisa](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Fonte de arquivo simples](data-flow/flat-file-source.md)   
- [Editor do Gerenciador de conexões de arquivos simples &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)  
+ [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)  
   
   

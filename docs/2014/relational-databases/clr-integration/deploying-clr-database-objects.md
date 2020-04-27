@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920832"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
@@ -92,7 +92,7 @@ ms.locfileid: "62920832"
   
 4.  No painel **escolher opções de script** , clique em **Avançar**ou altere as opções e clique em **Avançar**.  
   
-5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Próximo**.  
+5.  No painel **escolher tipos de objeto** , escolha o tipo de objeto de banco de dados a ser implantado. Clique em **Avançar**.  
   
 6.  Para cada tipo de objeto selecionado no painel **escolher tipos de objetos** , um painel ** \<escolher tipo>** é apresentado. Nesse painel, é possível escolher uma dentre todas as instâncias do tipo de objeto de banco de dados registrado no banco de dados especificado. Selecione um ou mais objetos e clique em **Avançar**.  
   

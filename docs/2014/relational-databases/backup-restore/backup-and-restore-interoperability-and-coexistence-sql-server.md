@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922431"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e restauração: interoperabilidade e coexistência (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922431"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Restauração de arquivo e inicialização de banco de dados  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Restauração de arquivo e inicialização de banco de dados  
  Esta seção é relevante apenas para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que têm diversos grupos de arquivos.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922431"
   
  Se a inicialização tiver êxito, qualquer grupo de arquivos que contiver um arquivo offline permanecerá offline.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Restauração online e índices desabilitados  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Restauração online e índices desabilitados  
  Esta seção é relevante apenas para bancos de dados com vários grupos de arquivos e para o modelo de recuperação simples, pelo menos um grupo de arquivos somente leitura.  
   
  Nesses casos, quando um banco de dados estiver online, o índice poderá ser criado, descartado, habilitado ou desabilitado apenas se todos os grupos de arquivos contendo qualquer parte do índice estiverem online.  
   
  Para obter informações sobre como restaurar grupos de arquivos offline, veja [Restauração online &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Espelhamento de banco de dados e backup e restauração  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Espelhamento de banco de dados e backup e restauração  
  Esta seção é relevante apenas para bancos de dados modelo completo que têm vários grupos de arquivos.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922431"
   
 -   Não é permitido restaurar o banco de dados principal.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Restauração por etapas e índices de texto completo  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Restauração por etapas e índices de texto completo  
  Esta seção só é relevante para bancos de dados contendo vários grupos de arquivos e, nos bancos de dados modelo simples, apenas para grupos de arquivos somente leitura.  
   
  Os índices de texto completo são armazenados em grupos de arquivos de banco de dados e podem ser afetados por uma restauração por etapas. Se o índice de texto completo residir no mesmo grupo de arquivos que quaisquer dados da tabela associada, a restauração por etapas funcionará normalmente.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922431"
   
  Assim que o grupo de arquivos de tabela base e o grupo de arquivos de índice de texto completo estiverem online, qualquer população de texto completo em pausa será retomada.  
   
-##  <a name="FileBnRandCompression"></a> Backup de arquivo, restauração e compactação  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Backup de arquivo, restauração e compactação  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte à compactação de dados de sistema de arquivos NTFS de grupos de arquivos e bancos de dados somente leitura.  
   
  Restaurando arquivos em um grupo de arquivo somente leitura há suporte em arquivos NTFS compactados. Backup e restauração destes grupos de arquivo funcionam essencialmente em qualquer grupo de arquivo somente leitura, com as seguintes exceções:  
@@ -123,7 +123,7 @@ ms.locfileid: "62922431"
 > [!NOTE]  
 >  Arquivos de Log de bancos de dados de leitura e gravação nunca deveriam ser colocados em sistemas de arquivo compactado.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

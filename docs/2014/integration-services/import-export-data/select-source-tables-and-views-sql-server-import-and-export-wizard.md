@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892664"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selecionar tabelas de origem e exibições (Assistente de Importação e Exportação do SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62892664"
 ## <a name="options"></a>Opções  
   
 ### <a name="tables-and-views-list"></a>Lista de tabelas e exibições  
- **Origem**  
+ **Fonte**  
  Usando as caixas de seleção, selecione da lista de tabelas e exibições disponíveis para copiar para o destino. Se uma tabela ou exibição de origem foi selecionada e nenhuma outra ação foi efetuada, o esquema e os dados da origem serão copiados sem qualquer alteração.  
   
  **Destino**  
@@ -45,7 +45,7 @@ ms.locfileid: "62892664"
  **Editar mapeamentos**  
  Use a caixa de diálogo **mapeamentos de coluna** para especificar as colunas de destino para receber os dados de origem. Você pode copiar apenas um subconjunto de colunas selecionando \<ignorar> na coluna **destino** da caixa de diálogo **mapeamentos de coluna** para colunas que você deseja ignorar.  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os dados de origem na caixa de diálogo **Visualizar dados** para verificá-los antes de executar a importação ou exportação. A caixa de diálogo **Visualizar dados** exibe até 200 linhas de dados.  
   
  Após visualizar os dados, é possível alterar as opções selecionadas para a origem e destino de dados. Para fazer essas alterações, na página **Selecionar Tabelas e Exibições de Origem**, clique em **Voltar** para retornar às páginas anteriores nas quais é possível alterar as seleções.  

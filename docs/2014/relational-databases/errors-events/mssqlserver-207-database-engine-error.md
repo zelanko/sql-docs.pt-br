@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915046"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
@@ -118,8 +118,8 @@ ms.locfileid: "62915046"
 -   A cláusula WHEN NOT MATCHED BY SOURCE na instrução MERGE faz referência a um valor que pode ser acessado. Modifique a instrução MERGE de forma que pelo menos uma linha seja retornada pela tabela de origem na cláusula WHEN NOT MATCHED BY SOURCE. Por exemplo, talvez você precise adicionar ou revisar a condição da pesquisa especificada para a cláusula. Como alternativa, é possível modificar a cláusula para especificar um valor que não faz referência à tabela de origem. Por exemplo, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## <a name="see-also"></a>Consulte Também  
- [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
- [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [MESCLAr &#40;&#41;Transact-SQL](/sql/t-sql/statements/merge-transact-sql)   
+ [DE &#40;&#41;Transact-SQL](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

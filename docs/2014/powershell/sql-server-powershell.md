@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922580"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]dá suporte ao Windows PowerShell, que é um shell de script poderoso que permite aos administradores e desenvolvedores automatizar a administração do servidor e a implantação de aplicativos. A linguagem do Windows PowerShell suporta uma lógica mais complexa que os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , fornecendo aos administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a capacidade de criar scripts de administração avançados. Os scripts do Windows PowerShell também podem ser usados para administrar outros produtos de servidor do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Isso fornece aos administradores uma linguagem de criação de scripts comum aos servidores.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] oferece suporte ao Windows PowerShell, que é um shell de geração de script avançado que permite aos administradores e desenvolvedores automatizarem a administração de servidor e a implantação de aplicativo. A linguagem do Windows PowerShell suporta uma lógica mais complexa que os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , fornecendo aos administradores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a capacidade de criar scripts de administração avançados. Os scripts do Windows PowerShell também podem ser usados para administrar outros produtos de servidor do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Isso fornece aos administradores uma linguagem de criação de scripts comum aos servidores.  
   
 ## <a name="sql-server-powershell-components"></a>Componentes do SQL Server PowerShell  
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um módulo de Windows PowerShell nomeado `sqlps` que é usado para importar os componentes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um ambiente de Windows PowerShell 2.0 ou script. O módulo `sqlps` carrega dois snap-ins do Windows PowerShell que implementam:  
@@ -43,8 +43,8 @@ ms.locfileid: "62922580"
 |Descreve como usar o provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar por uma hierarquia de objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Provedor do SQL Server PowerShell](sql-server-powershell-provider.md)|  
 |Descreve como usar o cmdlets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que especifica ações [!INCLUDE[ssDE](../includes/ssde-md.md)] como executar um script [!INCLUDE[tsql](../includes/tsql-md.md)] .|[Usar cmdlets do Mecanismo de Banco de Dados](../database-engine/use-the-database-engine-cmdlets.md)|  
 |Descreve como especificar identificadores delimitados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contêm caracteres sem suporte do Windows PowerShell.|[Identificadores do SQL Server no PowerShell](sql-server-identifiers-in-powershell.md)|  
-|Descreve como fazer conexões para Autenticação do SQL Server. Por padrão, os componentes do SQL Server PowerShell usam conexões de Autenticação do Windows que usam as credenciais do Windows do processo que executa o Windows PowerShell.|[Gerenciar a autenticação no PowerShell do Mecanismo de Banco de Dados](manage-authentication-in-database-engine-powershell.md)|  
-|Descreve como usar variáveis implementadas pelo provedor do SQL Server PowerShell para controlar quantos objetos são listados ao usar a conclusão de guia do Windows PowerShell. Isso é particularmente útil ao trabalhar em bancos de dados que contêm um grande número de objetos.|[Gerenciar &#40;de conclusão de guia SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
+|Descreve como fazer conexões para Autenticação do SQL Server. Por padrão, os componentes do SQL Server PowerShell usam conexões de Autenticação do Windows que usam as credenciais do Windows do processo que executa o Windows PowerShell.|[Gerenciar a autenticação no Mecanismo de Banco de Dados com o PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Descreve como usar variáveis implementadas pelo provedor do SQL Server PowerShell para controlar quantos objetos são listados ao usar a conclusão de guia do Windows PowerShell. Isso é particularmente útil ao trabalhar em bancos de dados que contêm um grande número de objetos.|[Gerenciar preenchimento com Tab &#40;SQL Server PowerShell&#41;](manage-tab-completion-sql-server-powershell.md)|  
 |Descreve como usar o Get-Help para obter informações sobre componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no ambiente Windows PowerShell.|[Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)|  
   
   
