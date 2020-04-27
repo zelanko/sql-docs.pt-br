@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240272"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -68,7 +68,7 @@ DBORDINALidxServerCol);
   
  Você não precisa copiar todos os dados de um arquivo de usuário para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados da coluna definindo o parâmetro idxServerCol como 0. Para ignorar um campo, você continua precisando de todas as informações para que o método funcione corretamente.  
   
- **Observação** A função [IBCPSession:: BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) pode ser usada para manter a especificação de formato fornecida por meio de **BCPColFmt**.  
+ **Observação** a função [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) pode ser usada para persistir a especificação do formato fornecida por meio de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
@@ -95,7 +95,7 @@ DBORDINALidxServerCol);
   
  O `cbUserData` valor representa a contagem de bytes de dados. Se os dados de caractere forem representados por caracteres largos Unicode `cbUserData` , um valor de parâmetro positivo representará o número de caracteres multiplicado pelo tamanho, em bytes, de cada caractere.  
   
- *pbUserDataTerm*[size_is] [em]  
+ *pbUserDataTerm*[size_is][in]  
  A sequência de terminador a ser usada para o campo. Este parâmetro é útil principalmente para tipos de dados character porque todos os outros tipos têm comprimento fixo ou, no caso de dados binary, exigem um indicador de comprimento que permite registrar com precisão o número de bytes presentes.  
   
  Para evitar encerrar os dados extraídos ou indicar que os dados em um arquivo de usuário não foram encerrados, defina este parâmetro como NULL.  

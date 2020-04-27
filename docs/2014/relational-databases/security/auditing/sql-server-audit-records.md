@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238384"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -35,7 +35,7 @@ ms.locfileid: "63238384"
 |**session_id**|Identificação da sessão em que ocorreu o evento.|`int`|Sim|  
 |**server_principal_id**|ID do contexto de logon em que a ação é executada.|`int`|Sim|  
 |**database_principal_id**|ID do contexto do usuário de banco de dados no qual a ação é executada.|`int`|Não|  
-|**ID de object_**|ID primária da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> databases<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|`int`|Não|  
+|**ID de object_**|ID primária da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema|`int`|Não|  
 |**target_server_principal_id**|Entidade de servidor a qual se aplica a ação auditável.|`int`|Sim|  
 |**target_database_principal_id**|Entidade de banco de dados a qual se aplica a ação auditável.|`int`|Não|  
 |**class_type**|Tipo de entidade auditável no qual ocorre a auditoria.|`varchar(2)`|Sim|  
@@ -49,20 +49,18 @@ ms.locfileid: "63238384"
 |**server_instance_name**|Nome da instância de servidor no qual a auditoria ocorreu. Usa o formato máquina\instância padrão.|`nvarchar(120)`|Sim|  
 |**database_name**|O contexto do banco de dados no qual a ação aconteceu.|`sysname`|Não|  
 |**schema_name**|O contexto do esquema no qual a ação aconteceu.|`sysname`|Não|  
-|**object_name**|O nome da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> databases<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|`sysname`|Não|  
+|**object_name**|O nome da entidade na qual a auditoria ocorreu. Isso inclui:<br /><br /> objetos do servidor<br /><br /> bancos de dados<br /><br /> objetos de banco de dados<br /><br /> objetos de esquema<br /><br /> instrução TSQL (se houver)|`sysname`|Não|  
 |**privacidade**|instrução TSQL (se houver)|`nvarchar(4000)`|Não|  
 |**additional_information**|Qualquer informação adicional sobre o evento, armazenado em XML.|`nvarchar(4000)`|Não|  
   
 ## <a name="remarks"></a>Comentários  
  Algumas ações não populam o valor de uma coluna porque pode não ser aplicável à ação.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena 4000 caracteres de dados para campos de caractere em um registro de auditoria. Quando os valores **additional_information** e **statement** obtidos de uma ação auditável retornam mais de 4000 caracteres, a coluna **sequence_no** é usada para gravar vários registros no relatório de auditoria para uma única ação de auditoria gravar esses dados. O processo é o seguinte:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazena 4000 caracteres de dados para campos de caractere em um registro de auditoria. Quando os valores **additional_information** e **statement** obtidos de uma ação auditável retornam mais de 4000 caracteres, a coluna **sequence_no** é usada para gravar vários registros no relatório de auditoria para uma única ação de auditoria gravar esses dados. O processo é o seguinte:  
   
 -   A coluna **statement** é dividida em 4000 caracteres.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava a primeira linha do registro de auditoria com os dados parciais. Todos os outros campos são duplicados em cada linha.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava a primeira linha do registro de auditoria com os dados parciais. Todos os outros campos são duplicados em cada linha.  
   
 -   O valor **sequence_no** é incrementado.  
   

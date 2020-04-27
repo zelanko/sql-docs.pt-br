@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250725"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>Objeto SQL Server, Broker e DBM Transport
@@ -41,20 +41,20 @@ ms.locfileid: "63250725"
 |**Tamanho Médio do Envio de Fragmento de Mensagem**|Esse contador informa o tamanho médio dos fragmentos de mensagem enviados pela rede.|  
 |**Envios de Fragmentos de Mensagem/s**|Esse contador informa o número de fragmentos de mensagem de todas as prioridades enviados pela rede por segundo.|  
 |**Recebimentos de Fragmento de Mensagem/s**|Esse contador informa o número de fragmentos de mensagem recebidos pela rede por segundo.|  
-|**Tamanho de recebimento de fragmento de MSG Méd.**|Esse contador informa o tamanho médio dos fragmentos de mensagem recebidos pela rede.|  
-|**Contagem de conexões abertas**|Esse contador informa o número de conexões de rede abertas no Service Broker.|  
-|**Bytes pendentes para e/s de recebimento**|Esse contador informa o número de bytes contidos nos fragmentos de mensagem que foram recebidos pela rede mas que ainda não foram colocados em fila nem descartados.|  
-|**Bytes pendentes para e/s de envio**|Esse contador informa o número total de bytes em fragmentos de mensagens que estão prontos para serem enviados pela rede.|  
-|**Fragmentações de mensagens pendentes para e/s de recebimento**|Esse contador informa o número de fragmentos de mensagem que foram recebidos pela rede mas que ainda não foram colocados em fila nem descartados.|  
-|**Fragmentações de mensagens pendentes para e/s de envio**|Esse contador informa o número total de fragmentos de mensagens que estão prontos para serem enviados pela rede.|  
-|**Total de bytes de e/s de recebimento**|Esse contador informa o número total de bytes recebidos pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
-|**Bytes de e/s de recebimento/s**|Esse contador informa o número total de bytes por segundo recebidos pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
-|**Tamanho médio de e/s de recebimento**|Esse contador informa o número médio de bytes de uma operação de recebimento de transporte.|  
+|**Tam. Méd. Receb. de Frag. de Mensagem**|Esse contador informa o tamanho médio dos fragmentos de mensagem recebidos pela rede.|  
+|**Contagem de Conexão Aberta**|Esse contador informa o número de conexões de rede abertas no Service Broker.|  
+|**Bytes Pend. de E/S de Recebimento**|Esse contador informa o número de bytes contidos nos fragmentos de mensagem que foram recebidos pela rede mas que ainda não foram colocados em fila nem descartados.|  
+|**Bytes Pendentes de E/S de Envio**|Esse contador informa o número total de bytes em fragmentos de mensagens que estão prontos para serem enviados pela rede.|  
+|**Frag. de Mens. Pend. de E/S de Envio**|Esse contador informa o número de fragmentos de mensagem que foram recebidos pela rede mas que ainda não foram colocados em fila nem descartados.|  
+|**Fragmentos de Mens. Pend. de E/S de Envio**|Esse contador informa o número total de fragmentos de mensagens que estão prontos para serem enviados pela rede.|  
+|**Total de Bytes de E/S de Recebimento**|Esse contador informa o número total de bytes recebidos pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
+|**Bytes de E/S de recebimento/s**|Esse contador informa o número total de bytes por segundo recebidos pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
+|**Tam. Médio de E/S de Recebimento**|Esse contador informa o número médio de bytes de uma operação de recebimento de transporte.|  
 |**E/Ss de Recebimento/s**|Esse contador informa o número de operações de E/S de recebimento de transporte por segundo que a camada de transporte do Service Broker / DBM concluiu. Observe que uma operação de recebimento de transporte pode conter mais de um fragmento de mensagem.|  
-|**Total de bytes de e/s de envio**|Esse contador informa o número total de bytes enviados pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
-|**Bytes de e/s de envio/s**|Esse contador informa o número total de bytes por segundo enviados pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
-|**Tamanho médio de e/s de envio**|Esse contador informa o tamanho médio em bytes de cada operação de envio de transporte. Observe que uma operação de envio de transporte pode conter mais de um fragmento de mensagem.|  
-|**E/SS de envio/s**|Esse contador informa o número de operações de E/S de envio de transporte por segundo que foram concluídas. Observe que uma operação de envio de transporte pode conter mais de um fragmento de mensagem.|  
+|**Total de Bytes de E/S de Envio**|Esse contador informa o número total de bytes enviados pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
+|**Bytes de E/S de Envio/s**|Esse contador informa o número total de bytes por segundo enviados pela rede pelos terminais do Service Broker e do Espelhamento de Banco de Dados.|  
+|**Tamanho Médio de E/S de Envio**|Esse contador informa o tamanho médio em bytes de cada operação de envio de transporte. Observe que uma operação de envio de transporte pode conter mais de um fragmento de mensagem.|  
+|**E/S de Envio/s**|Esse contador informa o número de operações de E/S de envio de transporte por segundo que foram concluídas. Observe que uma operação de envio de transporte pode conter mais de um fragmento de mensagem.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_broker_forwarded_messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   

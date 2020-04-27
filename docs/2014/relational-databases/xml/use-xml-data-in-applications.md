@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63232427"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
@@ -90,8 +90,7 @@ Set objConn = Nothing
   
  Esse exemplo mostra como definir a propriedade de compatibilidade de tipo de dados. Por padrão, isso é definido como 0 ao usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Se você definir o valor como 80, o provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fará com que as colunas de tipo `xml` e definidas pelo usuário sejam exibidas como tipos de dados do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Esses tipos são DBTYPE_WSTR e DBTYPE_BYTES, respectivamente.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client também deve estar instalado no computador cliente e a cadeia de conexão deve especificá-lo para uso como o provedor de dados com "`Provider=SQLNCLI11;...`".  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Native Client também deve estar instalado no computador cliente e a cadeia de conexão deve especificá-lo para uso como o provedor de dados com "`Provider=SQLNCLI11;...`".  
   
 #### <a name="to-test-this-example"></a>Para testar este exemplo  
   
@@ -148,12 +147,12 @@ Row 2
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Tratando XML de uma coluna de tipo xml usando o ADO.NET  
  Para manipular XML de uma `xml` coluna de tipo de dados usando ADO.net e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] o, você pode usar o comportamento padrão `SqlCommand` da classe. Por exemplo, uma coluna de tipo de dados `xml` e seus valores podem ser recuperados da mesma maneira como qualquer coluna SQL é recuperada usando um `SqlDataReader`. No entanto se você desejar trabalhar com o conteúdo de uma coluna de tipo de dados `xml` como XML, primeiro precisará atribuir o conteúdo a um tipo `XmlReader`.  
   
- Para obter mais informações e código de exemplo, consulte "valores de coluna XML em um leitor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] dados" na documentação do SDK do.  
+ Para obter mais informações e um código de exemplo, confira "Valores de coluna XML em um leitor de dados" na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Tratando uma coluna de tipo xml em parâmetros usando o ADO.NET  
  Para tratar um tipo de dados xml passado como um parâmetro no ADO.NET e no [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], é possível fornecer o valor como uma instância do tipo de dados `SqlXml`. Nenhum tratamento especial está envolvido porque as colunas de tipo de dados `xml` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem aceitar valores de parâmetros da mesma maneira que outras colunas e tipos de dados, como `string` ou `integer`.  
   
- Para obter mais informações e código de exemplo, consulte "valores XML como parâmetros de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] " na documentação do SDK.  
+ Para obter mais informações e um código de exemplo, confira "Valores XML como parâmetros de comando" na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Dados XML &#40;SQL Server&#41;](xml-data-sql-server.md)  

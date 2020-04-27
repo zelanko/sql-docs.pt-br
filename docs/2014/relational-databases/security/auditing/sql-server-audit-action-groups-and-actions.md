@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238130"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
   O recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consistem em zero ou mais itens de ação de auditoria. Esses itens de ação de auditoria podem ser um grupo de ações, como Server_Object_Change_Group ou ações individuais, como operações SELECT em uma tabela.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consistem em zero ou mais itens de ação de auditoria. Esses itens de ação de auditoria podem ser um grupo de ações, como Server_Object_Change_Group ou ações individuais, como operações SELECT em uma tabela.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group inclui CREATE, ALTER e DROP para qualquer objeto de servidor (Banco de Dados ou Ponto de Extremidade).  
@@ -128,7 +127,7 @@ ms.locfileid: "63238130"
   
  A tabela a seguir descreve os grupos de ações de auditoria no nível de banco de dados e fornece a Classe de Evento do SQL Server equivalente onde aplicável.  
   
-|Nome do grupo de ações|DESCRIÇÃO|  
+|Nome do grupo de ações|Descrição|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Esse evento é gerado sempre que uma senha é alterada por uma função de aplicativo. Equivalente a [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Esse evento é gerado sempre que uma auditoria é criada, modificada ou excluída. Esse evento é gerado sempre que qualquer especificação de auditoria é criada, modificada ou excluída. Qualquer alteração em uma auditoria é auditada nessa auditoria. Equivalente a [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -158,7 +157,7 @@ ms.locfileid: "63238130"
 ## <a name="database-level-audit-actions"></a>Ações de auditoria no nível do banco de dados  
  Ações no nível do banco de dados oferecem suporte à auditoria de ações específicas diretamente no esquema do banco de dados e em objetos do esquema, como tabelas, exibições, procedimentos armazenados, funções, procedimentos armazenados estendidos, filas e sinônimos. Tipos, coleção de esquema XML, banco de dados e esquema não são auditados. A auditoria de objetos de esquema pode ser configurada no esquema e no banco de dados, o que indica que os eventos em todos os objetos do esquema contidos no esquema ou banco de dados especificado serão auditados. A tabela a seguir descreve ações de auditoria no nível de banco de dados.  
   
-|Ação|DESCRIÇÃO|  
+|Ação|Descrição|  
 |------------|-----------------|  
 |SELECT|Esse evento é gerado sempre que SELECT é emitido.|  
 |UPDATE|Esse evento é gerado sempre que UPDATE é emitido.|  
@@ -178,7 +177,7 @@ ms.locfileid: "63238130"
 ## <a name="audit-level-audit-action-groups"></a>Grupos de ação de auditoria no nível de auditoria  
  Também é possível auditar as ações no processo de auditoria. Isso pode ocorrer no escopo de servidor ou no escopo do banco de dados. No escopo do banco de dados, isso ocorre somente para especificações de auditoria de banco de dados. A tabela a seguir descreve grupos de ações de auditoria no nível da auditoria.  
   
-|Nome do grupo de ações|DESCRIÇÃO|  
+|Nome do grupo de ações|Descrição|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Esse evento é gerado sempre que um dos comandos a seguir é emitido:<br /><br /> -CRIAR AUDITORIA DE SERVIDOR<br />-ALTERAR AUDITORIA DO SERVIDOR<br />-REMOVER AUDITORIA DE SERVIDOR<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-ALTERAR ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-DROP ESPECIFICAÇÃO DE AUDITORIA DE SERVIDOR<br />-CRIAR ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS<br />-ESPECIFICAÇÃO DE AUDITORIA ALTER DATABASE<br />-REMOVER ESPECIFICAÇÃO DE AUDITORIA DE BANCO DE DADOS|  
   

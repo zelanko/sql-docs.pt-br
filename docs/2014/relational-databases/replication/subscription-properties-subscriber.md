@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250267"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propriedades da assinatura Replicação do SQL Server 
@@ -39,20 +39,20 @@ Esta seção fornece informações sobre a caixa de diálogo **Propriedades da a
   
 ### <a name="options-for-all-subscriptions"></a>Opções para todas as assinaturas  
  **Segurança**  
- Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades ( **...** ).  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Distribution Agent ou Merge Agent são executados no Distribuidor. Para alterar a conta na qual o Distribution Agent ou Merge Agent fazem conexões com o Assinante, clique em **Conexão do Assinante**e, depois, clique no botão de propriedades (**...**).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
 ### <a name="publisher-options-for-transactional-subscriptions"></a>Opções do editor para assinaturas transacionais  
  **Evitar loop de transação**  
- Determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante: Essa opção é usada para replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
+ Determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante: Essa opção é usada para replicação transacional bidirecional. Para obter mais informações, consulte [replicação transacional bidirecional](transactional/bidirectional-transactional-replication.md).  
   
  **Assinatura atualizável**  
  Determina se as alterações do Assinante serão replicadas de volta no Publicador. As alterações podem ser replicadas usando atualização enfileirada ou imediata. A opção **Método de atualização do assinante** determina qual método usar. Para obter mais informações, consulte [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -96,11 +96,11 @@ Esta seção fornece informações sobre a caixa de diálogo **Propriedades da a
  Determina se essa assinatura pode ser sincronizada usando o Gerenciador de Sincronização do Windows da [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
  **Segurança**  
- Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades ( **...** ) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
+ Clique na linha **Conta de processo de agente** e, depois, clique no botão de propriedades (**...**) para alterar a conta na qual o Agente de Distribuição ou Agente de Mesclagem são executados no Assinante. As opções de segurança relacionadas a conexões dependem do tipo de assinatura:  
   
--   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades ( **...** ).    
--   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
--   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades ( **...** ).  
+-   Para assinaturas de uma publicação transacional: para alterar a conta na qual o Distribution Agent faz conexões com o Distribuidor, clique em **Conexão do Distribuidor**e, depois, clique no botão de propriedades (**...**).    
+-   Para assinaturas de atualização imediata de uma publicação transactional, além da conexão do Distribuidor descrita anteriormente, você pode alterar o método usado para propagar alterações do Assinante para o Publicador: clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
+-   Para assinaturas de publicações de mesclagem, clique em **Conexão do Publicador**e, depois, clique no botão de propriedades (**...**).  
   
  Para obter mais informações sobre as permissões exigidas para cada agente, consulte [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -110,7 +110,7 @@ Esta seção fornece informações sobre a caixa de diálogo **Propriedades da a
   
 ### <a name="options-for-merge-subscriptions"></a>Opções para assinaturas de mesclagem  
  **Definição de partição (HOST_NAME)**  
- Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()** . Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()** , consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para uma publicação que usa filtros com parâmetros, a replicação de mesclagem avalia uma das duas funções de sistema (ou ambas, se as referências de filtro funcionam) durante a sincronização para determinar a data em que um Assinante deve receber: **SUSER_SNAME()** ou **HOST_NAME()**. Por padrão, **HOST_NAME()** retorna o nome do computador no qual o Merge Agent está sendo executado, mas esse valor pode ser substituído no Assistente para Nova Assinatura. Para obter mais informações sobre filtros com parâmetros e substituição de **HOST_NAME ()**, consulte [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de assinatura** e **Prioridade**  
  Exibe se a assinatura é uma assinatura de cliente ou servidor (isso não pode ser alterado depois que a assinatura tiver sido criada). Assinaturas de Servidor podem republicar dados para outros Assinantes e podem ter atribuição de prioridade para resolução de conflito.  
@@ -126,7 +126,7 @@ Esta seção fornece informações sobre a caixa de diálogo **Propriedades da a
  Se você selecionar **Verdadeiro** para **Usar Sincronização da Web**:  
   
 -   Insira o endereço completo do servidor IIS em **Endereço do servidor Web**.   
--   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades ( **...** ) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.   
+-   Clique na linha **Conexão do Servidor Web** e, depois, clique no botão de propriedades (**...**) para definir ou alterar a conta na qual o Assinante se conecta ao servidor IIS.   
 -   Altere o **Tempo limite do servidor Web** se necessário. O tempo limite é o período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.  
   
  Para obter mais informações sobre a configuração, consulte [Configure Web Synchronization](configure-web-synchronization.md).  
@@ -134,6 +134,6 @@ Esta seção fornece informações sobre a caixa de diálogo **Propriedades da a
 ## <a name="see-also"></a>Consulte Também  
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
  [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
- [Assinar publicações](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

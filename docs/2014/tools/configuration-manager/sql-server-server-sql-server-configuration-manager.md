@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e80e485e866ee34355bd18bb3f484e75ffcf96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249686"
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;server&gt; (SQL Server Configuration Manager)
-  Este é o serviço que dá suporte ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  
+  Este é o serviço compatível com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para exibir as propriedades do serviço, clique nele com o botão direito do mouse no painel de detalhes e clique em **Propriedades**.  
   
  Para obter informações sobre o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consulte os Manuais Online.  
   

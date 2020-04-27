@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245747"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propriedades do SQL Server Agent (página Sistema de Alerta)
@@ -35,16 +35,16 @@ ms.locfileid: "63245747"
 > [!NOTE]  
 >  Após alterar o sistema de email, você deve reiniciar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para que a alteração entre em vigor.  
   
- **Perfil de email**  
+ **Perfil de Email**  
  Define o perfil para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usar. Você também pode selecionar ** \<novo perfil de Database Mail... >** para criar um novo perfil.  
   
  **Emails por pager**  
  As opções desta seção permitem configurar mensagens de email enviadas para endereços de pager para funcionarem com o seu sistema de paginação.  
   
- **Formatação de endereço para emails por pager**  
+ **Formatação de endereço para emails de pager**  
  Essa seção permite que você especifique o formato dos endereços e a linha de assunto incluída nos emails de pager.  
   
- **Para linha**  
+ **Linha Para**  
  Especifica as opções para a linha **Para** da mensagem  
   
  **Prefixo**  
@@ -56,7 +56,7 @@ ms.locfileid: "63245747"
  **Sufixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Para** de mensagens enviadas a um pager.  
   
- **Linha CC**  
+ **Linha Cc**  
  Especifica as opções para a linha **Cc** da mensagem.  
   
  **Prefixo**  
@@ -77,13 +77,13 @@ ms.locfileid: "63245747"
  **Sufixo**  
  Digite qualquer texto fixo que o seu sistema de pagers solicita no fim da linha **Assunto** de mensagens enviadas a um pager.  
   
- **Incluir corpo de email na mensagem de notificação**  
+ **Inclua o corpo de email em mensagem de notificação**  
  Inclui o corpo da mensagem de email na mensagem enviada ao pager.  
   
  **Operador à prova de falhas**  
  Essa seção permite que você especifique as opções para o operador à prova de falhas.  
   
- **Habilitar operador à prova de falhas**  
+ **Habilitar o operador à prova de falhas**  
  Especifica um operador à prova de falhas.  
   
  **Operador**  
@@ -92,7 +92,7 @@ ms.locfileid: "63245747"
  **Notificar usando**  
  Define o método a usar ao notificar o operador à prova de falhas.  
   
- **Substituição de token**  
+ **Substituição de Token**  
  Essa seção permite que você habilite tokens de etapa de trabalho que podem ser usados em trabalhos executados pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre tokens de etapa de trabalho, consulte [Usar tokens em etapas de trabalho](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
@@ -100,7 +100,7 @@ ms.locfileid: "63245747"
 >   
 >  Se precisar usar esses tokens, certifique-se de que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de habilitá-los.  
   
- **Substituir tokens de todas as respostas de trabalho para alertas**  
+ **Substitua os tokens para todas as respostas de trabalho a alertas**  
  Marque essa caixa de seleção para habilitar a substituição de token para trabalhos que são ativados pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  

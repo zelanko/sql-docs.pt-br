@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245338"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de Destino (guia Instruções de Download)
@@ -35,13 +35,13 @@ ms.locfileid: "63245338"
  **Operação**  
  Exiba a operação que a instrução de download executará.  
   
- **Object Name**  
+ **Nome do objeto**  
  Exiba o nome do objeto que será afetado pela instrução de download.  
   
- **Data de postagem**  
+ **Data da Postagem**  
  Exiba a data e hora local em que a instrução foi postada.  
   
- **Data de download**  
+ **Data do Download**  
  Exiba a data e a hora locais em que o servidor de destino baixou a instrução. Se ocorreu um erro durante o download, ele será indicado.  
   
  **Status do download de instruções**  
@@ -50,7 +50,7 @@ ms.locfileid: "63245338"
  **Delete (excluir)**  
  Exclua a instrução de download selecionada.  
   
- **Limpar**  
+ **Formatação**  
  Limpe o status da instrução de download selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  

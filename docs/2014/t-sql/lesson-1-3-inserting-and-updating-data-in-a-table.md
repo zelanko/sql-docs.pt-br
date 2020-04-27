@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250133"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Inserindo e atualizando dados em uma tabela (tutorial)
-  Agora que você criou a tabela **Products** , está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
+  Agora que você criou a tabela **Products**, está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "63250133"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Lendo os dados em uma tabela &#40;tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Lendo os dados em uma tabela &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

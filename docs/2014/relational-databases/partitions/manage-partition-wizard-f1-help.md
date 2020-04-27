@@ -24,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249676"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
-  Use o **Assistente para gerenciar partição** para gerenciar e modificar tabelas particionadas existentes por meio da alternância de partição ou da implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  
+  Use o **Assistente para Gerenciar Partição** para gerenciar e modificar as tabelas particionadas existentes por meio da troca de partição ou pela implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar o Assistente para Gerenciar Partição  
   
@@ -43,26 +43,26 @@ ms.locfileid: "63249676"
   
  Esta seção fornece as informações necessárias para gerenciar, modificar e implementar partições usando o **Assistente para Gerenciar Partição**.  
   
-##  <a name="Top"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Top"></a> Nesta seção  
  As seções a seguir fornecem ajuda sobre as páginas do **Assistente para Gerenciar Partição**.  
   
- [Assistente para gerenciar partição (página Selecionar ação de partição)](#SelectPartitionAction)  
+ [Assistente para Gerenciar Partição (página Selecionar Ação de Partição)](#SelectPartitionAction)  
   
- [Assistente para gerenciar partição (página de inserção)](#SwitchIn)  
+ [Assistente para Gerenciar Partição (página de ativação)](#SwitchIn)  
   
- [Assistente para gerenciar partição (página de extração)](#SwitchOut)  
+ [Assistente para Gerenciar Partição (página de desativação)](#SwitchOut)  
   
- [Assistente para gerenciar partição (página Selecionar opções da tabela de preparo)](#StagingTableOptions)  
+ [Assistente para Gerenciar Partição (Página Selecionar Opções da Tabela de Preparação)](#StagingTableOptions)  
   
- [Assistente para gerenciar partição (página Selecionar opção de saída)](#OutputOption)  
+ [Assistente para Gerenciar Partição (página Selecionar Opção de Saída)](#OutputOption)  
   
- [Assistente para gerenciar partição (página nova agenda de trabalho)](#NewJob)  
+ [Assistente para Gerenciar Partição (página Nova Agenda de Trabalho)](#NewJob)  
   
- [Assistente para gerenciar partição (página Resumo)](#Summary)  
+ [Assistente para Gerenciar Partição (página Resumo)](#Summary)  
   
- [Assistente para gerenciar partição (página progresso)](#Progress)  
+ [Assistente para Gerenciar Partição (página Progresso)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a>Página Selecionar ação de partição  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Página Selecionar Ação de Partição  
  Use a página **Selecionar Ação de Partição** para escolher a ação que você deseja executar na partição.  
   
 ### <a name="create-a-staging-table"></a>Criar uma tabela de preparação  
@@ -76,25 +76,25 @@ ms.locfileid: "63249676"
  Para gerenciar as partições em um cenário da janela deslizante, selecione **Gerenciar dados particionados em um cenário de janela deslizante**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Criar uma tabela de preparo para alternância de partição**  
+ **Criar uma tabela de preparo para alternar partições**  
  Cria uma tabela de preparação para os dados que você está ativando ou desativando na tabela particionada existente.  
   
- **Partição de extração**  
+ **Desativar partição**  
  Fornece opções ao remover uma partição da tabela.  
   
- **Partição de inserção**  
+ **Ativar partição**  
  Fornece opções ao adicionar uma partição à tabela.  
   
  **Gerenciar dados particionados em um cenário de janela deslizante**  
  Acrescenta uma partição vazia à tabela existente que pode ser usada para alternar dados. O assistente oferece suporte à alternância para a última partição e da primeira partição.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="SwitchIn"></a>Página Selecionar opções de inserção de partição  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Selecione as Opções de Inserção de Partição  
  Use a página **Selecione as opções de Inserção de Partição** para selecionar a tabela de preparo que você está ativando na tabela particionada.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Mostrar todas as partições**  
+ **Mostrar Todas as Partições**  
  Selecione para mostrar todas as partições, inclusive as partições que estão na tabela particionada no momento.  
   
  **Grade de partição**  
@@ -103,9 +103,9 @@ ms.locfileid: "63249676"
  **Tabela de inserção**  
  Selecione a partição de preparação que contém a partição à qual você deseja adicionar a tabela particionada. É necessário criar essa tabela de preparo antes de ativar as partições com o **Assistente para Gerenciar Partições**.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="SwitchOut"></a>Página Selecionar opções de desativação de partição  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Selecione as Opções de Extração de Partição  
  Use a página **Selecione as opções de Extração de Partição** para selecionar a partição e a tabela de preparo para reter os dados particionados que você está desativando na tabela particionada.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
@@ -118,12 +118,12 @@ ms.locfileid: "63249676"
  **Novo**  
  Digite um novo nome para a tabela de preparação que você deseja usar para a partição a ser desativada da tabela de origem atual.  
   
- **Pré-existente**  
+ **Existente**  
  Selecione uma tabela de preparação existente que você deseja usar para a partição a ser desativada da tabela de origem atual. Se a tabela existente contiver dados, eles serão substituídos pelos dados que você está desativando.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="StagingTableOptions"></a>Selecione a página Opções da tabela de preparo  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Página Selecionar Opções da Tabela de Preparação  
  Use a página **Selecionar Opções da Tabela de Preparação** para criar a tabela de preparo que você deseja usar para alternar os dados particionados.  
   
  As tabelas de preparação devem residir no mesmo grupo de arquivos da partição selecionada da tabela de origem. A tabela de preparação deve espelhar o design da tabela de origem e da tabela de destino.  
@@ -131,7 +131,7 @@ ms.locfileid: "63249676"
  Também é possível criar os mesmos índices na tabela de preparação existente na partição de origem. A tabela de preparação contém automaticamente uma restrição que se baseia nos elementos da partição de origem. Normalmente, essa restrição é gerada a partir do valor de limite da partição de origem.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Nome da tabela de preparo**  
+ **Nome da tabela de preparação**  
  Crie um nome para a tabela de preparação ou aceite o nome padrão exibido na caixa de edição.  
   
  **Alternar partição**  
@@ -140,12 +140,12 @@ ms.locfileid: "63249676"
  **Novo valor de limite**  
  Selecione ou digite o valor de limite desejado para a partição da tabela de preparação.  
   
- **Arquivos**  
+ **Grupo de arquivos**  
  Selecione um grupo de arquivos para a nova tabela.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="OutputOption"></a>Página Selecionar opção de saída  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Página Selecionar Opção de Saída  
  Use a página **Selecionar Opção de Saída** para especificar como deseja concluir as modificações em suas partições.  
   
 ### <a name="create-script"></a>Criar script  
@@ -161,18 +161,18 @@ ms.locfileid: "63249676"
  Gere o script para uma janela do Editor de Consultas. Se não houver uma janela de editor aberta, uma nova janela será aberta como destino para o script.  
   
 ### <a name="run-immediately"></a>Executar imediatamente  
- **Executar imediatamente**  
+ **Run immediately**  
  Faça com que o assistente conclua as modificações nas partições quando você clicar em **Avançar** ou em **Concluir**.  
   
 ### <a name="schedule"></a>Agenda  
  Selecione para modificar as partições de tabela na data e na hora agendadas.  
   
- **Alterar agendamento**  
+ **Alterar agenda**  
  Abre a caixa de diálogo **Novo Agendamento de Trabalho** , em que é possível selecionar, alterar ou exibir as propriedades do trabalho agendado.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="NewJob"></a>Página nova agenda de trabalho  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Página Nova Agenda de Trabalho  
  Use a página **Novo Agendamento de Trabalho** para exibir e alterar as propriedades do agendamento.  
   
 ### <a name="options"></a>Opções  
@@ -184,7 +184,7 @@ ms.locfileid: "63249676"
  **Trabalhos na agenda**  
  Exiba os trabalhos existentes que usam a agenda.  
   
- **Tipo de agendamento**  
+ **Tipo de agenda**  
  Selecione o tipo de agenda.  
   
  **Enabled**  
@@ -193,13 +193,13 @@ ms.locfileid: "63249676"
 ### <a name="recurring-schedule-types-options"></a>Opções de tipos de agenda recorrentes  
  Selecione a frequência do trabalho agendado.  
   
- **Ocorra**  
+ **Ocorre**  
  Selecione o intervalo no qual a agenda ocorre periodicamente.  
   
  **Repete-se a cada**  
  Selecione o número de dias ou semanas entre ocorrências periódicas da agenda. Essa opção não está disponível para agendas mensais.  
   
- **Monday**  
+ **Segunda-feira**  
  Defina o trabalho para ocorrer em uma segunda-feira. Disponível somente para agendamentos semanais.  
   
  **Terça-feira**  
@@ -211,22 +211,22 @@ ms.locfileid: "63249676"
  **Quinta-feira**  
  Defina o trabalho para ocorrer em uma quinta-feira. Disponível somente para agendamentos semanais.  
   
- **Às**  
+ **Sexta-feira**  
  Defina o trabalho para ocorrer em uma sexta-feira. Disponível somente para agendamentos semanais.  
   
  **Sábado**  
  Defina o trabalho para ocorrer em um sábado. Disponível somente para agendamentos semanais.  
   
- **Sunday**  
+ **Domingo**  
  Defina o trabalho para ocorrer em um domingo. Disponível somente para agendamentos semanais.  
   
- **Diário**  
+ **Day**  
  Selecione o dia do mês que a agenda ocorre. Disponível somente para agendas mensais.  
   
  **de cada**  
  Selecione o número de meses entre ocorrências da agenda. Disponível somente para agendas mensais.  
   
- **O parâmetro**  
+ **O**  
  Especifique uma agenda durante um dia específico da semana em uma semana específica durante o mês. Disponível somente para agendas mensais.  
   
  **Ocorre uma vez em**  
@@ -253,19 +253,19 @@ ms.locfileid: "63249676"
  **Hora**  
  Selecione a hora para que o trabalho seja executado.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use a página **Resumo** para examinar as opções selecionadas nas páginas anteriores.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Examine suas seleções**  
+ **Examinar as seleções**  
  Exibe as seleções feitas em cada página do assistente. Clique em um nó para expandir e exibir as opções selecionadas anteriormente.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
-##  <a name="Progress"></a> Página Progresso  
- Use a página **Progresso** para monitorar informações de status das ações do **Assistente para Gerenciar Partição**. Dependendo das opções que você selecionou no assistente, a página de **progresso** pode conter uma ou mais ações. A caixa superior exibe o status geral do assistente e o número de mensagens de status, erro e aviso que ele recebeu.  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progresso  
+ Use a página **Progresso** para monitorar informações de status das ações do **Assistente para Gerenciar Partição**. Dependendo das opções selecionadas no assistente, a página **Progresso** pode conter uma ou várias ações. A caixa superior exibe o status geral do assistente e o número de mensagens de status, erro e aviso que ele recebeu.  
   
 ### <a name="options"></a>Opções  
  **Detalhes**  
@@ -283,7 +283,7 @@ ms.locfileid: "63249676"
  **Parar**  
  Interrompe a ação do assistente.  
   
- **Relatório**  
+ **Report**  
  Crie um relatório contendo os resultados do **Assistente para Gerenciar Partição**. As opções são:  
   
 -   **Exibir Relatório**  
@@ -300,7 +300,7 @@ ms.locfileid: "63249676"
  **Fechar**  
  Feche o assistente.  
   
- ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [nesta seção](#Top)  
+ ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Nesta seção](#Top)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices particionados](partitioned-tables-and-indexes.md)  

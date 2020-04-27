@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237961"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversões executadas do cliente para o servidor
@@ -47,7 +47,7 @@ ms.locfileid: "63237961"
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor:: createaccess for chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
+|-|Não há suporte a nenhuma conversão. Se a associação for validada quando IAccessor::CreateAccessor for chamado, DBBINDSTATUS_UPSUPPORTEDCONVERSION será retornado em *rgStatus*. Quando a validação de acessador for adiada, DBSTATUS_E_BADACCESSOR será definido.|  
 |N/D|Não aplicável.|  
 |1|Se os dados fornecidos não forem válidos, DBSTATUS_E_CANTCONVERTVALUE será definido. Os dados de entrada são validados antes da aplicação das conversões; assim, mesmo quando um componente for ignorado por uma conversão subsequente, ele ainda deverá ser válido para que a conversão tenha êxito.|  
 |2|Os campos de hora são ignorados.|  
@@ -59,7 +59,7 @@ ms.locfileid: "63237961"
 |8|A hora é convertida a UTC. Se ocorrer um erro durante essa conversão, DBSTATUS_E_CANTCONVERTVALUE será definido.|  
 |9|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino.<br /><br /> Se o tipo de destino for DBTIMESTAMP, `smalldatetime`, `datetime` ou `datetime2`, a cadeia de caracteres deverá estar de acordo com a sintaxe de data, hora ou literais `datetime2`, ou com a sintaxe reconhecida pelo OLE. Se a cadeia de caracteres for um literal de data, todos os componentes de hora serão definidos como zero. Se a cadeia de caracteres for um literal de hora, a data será definida com a data atual.<br /><br /> Para todos os outros tipos de destino, a cadeia de caracteres deve estar de acordo com a sintaxe de literais do tipo de destino.|  
 |10|Se ocorrer o truncamento de frações de segundo com perda de dados, DBSTATUS_E_DATAOVERFLOW será definido. Para conversões de cadeia de caracteres, a verificação de estouro é possível somente quando a cadeia de caracteres estiver de acordo com a sintaxe ISO. Se a cadeia de caracteres for um literal de data OLE, as frações de segundo serão arredondadas.<br /><br /> Para conversão de DBTIMESTAMP (datetime) em smalldatetime, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client truncará silenciosamente o valor de segundos, em vez de gerar o erro DBSTATUS_E_DATAOVERFLOW.|  
-|11|O número de dígitos das frações de segundo (a escala) é determinado pelo tamanho da coluna de destino, de acordo com a seguinte tabela. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> Porém, se o tipo de origem for DBTIMESTAMP e as frações de segundo forem zero, não serão gerados dígitos de fração de segundo ou vírgulas decimais. Este comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando provedores OLE DB mais antigos.<br /><br /> Um tamanho de coluna de ~ 0 implica em tamanho ilimitado no OLE DB (9 dígitos, a menos que a regra de 3 dígitos para DBTIMESTAMP se aplique).<br /><br /> **DBTIME2** -8, 10.. 18 (comprimento em caracteres); 0, 1.. 9 (escala)<br /><br /> **DBTIMESTAMP** -19, 21.. 29 (comprimento em caracteres); 0, 1.. 9 (escala)<br /><br /> **DBTIMESTAMPOFFSET** -26, 28.. 36 (comprimento em caracteres); 0, 1.. 9 (escala)|  
+|11|O número de dígitos das frações de segundo (a escala) é determinado pelo tamanho da coluna de destino, de acordo com a seguinte tabela. Para tamanhos de coluna maiores do que o intervalo na tabela, é sugerida uma escala de 9. Essa conversão deve permitir até nove dígitos de frações de segundo, o máximo permitido pelo OLE DB.<br /><br /> Porém, se o tipo de origem for DBTIMESTAMP e as frações de segundo forem zero, não serão gerados dígitos de fração de segundo ou vírgulas decimais. Este comportamento assegura a compatibilidade com versões anteriores de aplicativos desenvolvidos usando provedores OLE DB mais antigos.<br /><br /> Um tamanho de coluna de ~ 0 implica em tamanho ilimitado no OLE DB (9 dígitos, a menos que a regra de 3 dígitos para DBTIMESTAMP se aplique).<br /><br /> **DBTIME2** - 8, 10..18 (comprimento em caracteres); 0, 1..9 (escala)<br /><br /> **DBTIMESTAMP** - 19, 21..29 (comprimento em caracteres); 0, 1..9 (escala)<br /><br /> **DBTIMESTAMPOFFSET** - 26, 28..36 (comprimento em caracteres); 0, 1..9 (escala)|  
 |12|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_DATE é mantida. As frações de segundo são truncadas para zero.|  
 |13|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_FILETIME é mantida. Se você usar a API FileTimeToSystemTime do Windows, a precisão de segundos fracionários estará limitada a 1 milissegundo.|  
 |14|A semântica de conversão anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para `smalldatetime` é mantida. Os segundos são definidos como zero.|  

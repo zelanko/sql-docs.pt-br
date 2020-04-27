@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245722"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de Destino (Guia do Status do Servidor de Destino)
@@ -38,16 +38,16 @@ ms.locfileid: "63245722"
  **Status**  
  Exiba o status do servidor de destino.  
   
- **Forçar sondagem**  
+ **Forçar Sondagem**  
  Clique nesse botão para forçar os servidores de destino selecionados a executar sondagem do servidor mestre.  
   
- **Forçar remoção**  
+ **Forçar Remoção**  
  Clique nesse botão para forçar os servidores de destino selecionados a remover o servidor mestre.  
   
- **Postar instruções**  
+ **Postar Instruções**  
  Poste instruções para os servidores de destino selecionados.  
   
- **Habilitar atualização automática**  
+ **Habilitar Atualização Automática**  
  Selecione essa opção para atualizar automaticamente a informações exibida.  
   
  **Atualizar a cada**  

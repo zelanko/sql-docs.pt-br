@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245418"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Solucionar problemas de trabalhos multisservidor que usam proxies
@@ -25,7 +25,7 @@ ms.locfileid: "63245418"
   
 -   "A etapa do trabalho requer uma conta proxy. Entretanto, a verificação de proxy está desabilitada no servidor de destino."  
   
-     Para resolver esse erro, defina o **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** >**** _ \<n_subchave do registro \SQLServerAgent\AllowDownloadedJobsToMatchProxyName como **1 (true)**. Por padrão, essa subchave é definida **** como 0`false`(). O valor de **MSSQL.** \< *n*> é o nome da instância; por exemplo, **MSSQL. 1** ou **MSSQL. 3**.  
+     Para resolver esse erro, defina o **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** >**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_subchave do registro \SQLServerAgent\AllowDownloadedJobsToMatchProxyName como **1 (true)**. Por padrão, essa subchave é definida **0** como 0`false`(). O valor de **MSSQL.** \< *n*> é o nome da instância; por exemplo, **MSSQL. 1** ou **MSSQL. 3**.  
   
 -   "Proxy não localizado."  
   

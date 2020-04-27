@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233074"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Novos recursos de data e hora com versões anteriores do SQL Server (OLE DB)
@@ -55,7 +55,7 @@ ms.locfileid: "63233074"
   
 -   Alternar para `datetime2` porque este é o tipo de dados preferido para data e hora.  
   
- Os aplicativos que usam metadados de servidor obtidos por meio de conjuntos de linhas de esquema ICommandWithParameters:: GetParameterInfo ou Schema para definir informações de tipo de parâmetro por meio de ICommandWithParameters:: SetParameterInfo falharão durante as conversões do cliente em que a cadeia de caracteres a representação de um tipo de origem é maior do que a representação de cadeia de caracteres do tipo de destino. Por exemplo, se uma associação de cliente usar DBTYPE_DBTIMESTAMP e a coluna de servidor for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Date, o Native Client converterá o valor em "aaaa-dd-mm hh: mm: SS. fff", mas os metadados do `nvarchar(10)`servidor serão retornados como. O estouro resultante causa DBSTATUS_E_CATCONVERTVALUE. Problemas semelhantes surgem com conversões de dados por IRowsetChange, pois os metadados do conjunto de linhas são definidos a partir dos metadados do ResultSet.  
+ Os aplicativos que usam metadados de servidor obtidos por meio de conjuntos de linhas ICommandWithParameters:: GetParameterInfo ou Schema para definir informações de tipo de parâmetro por meio de ICommandWithParameters:: SetParameterInfo falharão durante as conversões do cliente em que a representação de cadeia de caracteres de um tipo de origem é maior do que a representação de cadeia de caracteres do tipo de destino. Por exemplo, se uma associação de cliente usar DBTYPE_DBTIMESTAMP e a coluna de servidor for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Date, o Native Client converterá o valor em "aaaa-dd-mm hh: mm: SS. fff", mas os metadados do `nvarchar(10)`servidor serão retornados como. O estouro resultante causa DBSTATUS_E_CATCONVERTVALUE. Problemas semelhantes surgem com conversões de dados por IRowsetChange, pois os metadados do conjunto de linhas são definidos a partir dos metadados do ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas  
  Esta seção descreve metadados para parâmetros, colunas de resultados e conjuntos de linhas de esquema para clientes que são compilados com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uma versão do Native [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Client anterior a.  
@@ -89,7 +89,7 @@ ms.locfileid: "63233074"
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  A estrutura de DBCOLUMNINFO retorna as seguintes informações:  
   
-|Tipo de Parâmetro|wType|ulColumnSize|bPrecision|bScale|  
+|Tipo de parâmetro|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  

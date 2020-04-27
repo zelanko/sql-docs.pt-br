@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de linhas de data e hora e esquema | Microsoft Docs
+title: Conjuntos de linhas de esquema e data e hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238013"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Conjuntos de linhas de data e hora e esquema
@@ -27,10 +27,10 @@ ms.locfileid: "63238013"
   
 |Tipo de coluna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Limpar|0|  
+|date|DBTYPE_DBDATE|Liberada|0|  
 |time|DBTYPE_DBTIME2|Definir|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Limpar|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Limpar|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Liberada|0|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Liberada|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Definir|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Definir|0..7|  
   
@@ -91,6 +91,6 @@ ms.locfileid: "63238013"
  O OLE DB apenas define MINIMUM_SCALE e MAXIMUM_SCALE para tipos decimais e numéricos, portanto, o uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client destas colunas para time, datetime2 e datetimeoffset é não padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;de metadados &#40;OLE DB](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadados &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

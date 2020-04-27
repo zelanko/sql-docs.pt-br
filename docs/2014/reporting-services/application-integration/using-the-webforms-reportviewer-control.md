@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238208"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usando o controle WebForms ReportViewer
@@ -26,7 +26,7 @@ ms.locfileid: "63238208"
   
 1.  Crie um novo [!INCLUDE[msCoName](../../includes/msconame-md.md)] site do ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]o.  
   
-     \-Or  
+     \- Ou –  
   
      Abra um site ASP.NET existente e adicione um novo Web Form.  
   
@@ -157,7 +157,7 @@ End Class
   
 5.  Clique com o botão direito do mouse no arquivo Sales Order Detail.rdl no Gerenciador de Soluções e selecione **Renomear**. Renomeie o relatório como **Sales Order Detail.rdlc** pressione a ENTER.  
   
-     Se o Gerenciador de Soluções não estiver visível, abra-o no menu **Exibir** selecionando Gerenciador de Soluções.  
+     Se Gerenciador de Soluções não estiver visível, você poderá abri-lo no menu **Exibir** selecionando Gerenciador de soluções.  
   
  O exemplo de código a seguir criará um conjunto de dados para os dados do pedido de vendas e, depois, renderizará o relatório de detalhes do pedido de vendas em modo local.  
   
