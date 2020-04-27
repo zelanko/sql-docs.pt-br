@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069744"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Selecionar uma Exibição da Fonte de Dados (Assistente para Cubos)
   Use a página **Selecionar uma Exibição da Fonte de Dados** para selecionar a exibição da fonte de dados para o cubo vazio.  
   
 > [!NOTE]  
->  Essa página só será exibida se você tiver selecionado **Criar um cubo vazio** na página **Selecionar Método de Criação** .  
+>   Essa página só será exibida se você tiver selecionado **Criar um cubo vazio** na página **Selecionar Método de Criação** .  
   
 ## <a name="options"></a>Opções  
  **Exibição da fonte de dados**  
  Selecione a exibição da fonte de dados que será usada para o cubo vazio.  
   
- **Nenhuma**  
+ **Nenhum**  
  Selecione esta opção se não quiser usar uma exibição da fonte de dados. Esta opção é apropriada se você vai gerar a exibição da fonte de dados posteriormente ou se planeja utilizar o cubo apenas com grupos de medidas vinculadas.  
   
 ## <a name="see-also"></a>Consulte Também  

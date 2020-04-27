@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070016"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Caixa de diálogo Salvar Resultado da Consulta de Mineração de Dados (Exibição de Previsão do Modelo de Mineração)
@@ -33,7 +33,7 @@ ms.locfileid: "66070016"
  **Novo**  
  Abre o **Assistente de Fonte de Dados**.  
   
- **Nome da tabela**  
+ **Nome da Tabela**  
  Digite um nome para a nova tabela.  
   
  **Substitua se existir**  
@@ -57,6 +57,6 @@ ms.locfileid: "66070016"
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

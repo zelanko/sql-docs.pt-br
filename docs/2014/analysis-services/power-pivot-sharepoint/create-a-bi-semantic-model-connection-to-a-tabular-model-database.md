@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071658"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Create a BI Semantic Model Connection to a Tabular Model Database
@@ -26,17 +26,17 @@ ms.locfileid: "66071658"
   
  [Examinar pré-requisitos](#bkmk_prereq)  
   
- [Conceder Analysis Services permissões administrativas para aplicativos de serviço compartilhado](#bkmk_ssas)  
+ [Conceder permissões administrativas do Analysis Services para os Aplicativos de Serviços Compartilhados](#bkmk_ssas)  
   
  [Conceder permissões de leitura no banco de dados modelo de tabela](#bkmk_BISM)  
   
  [Create a BI Semantic Model Connection to a Tabular Model Database](#bkmk_connect)  
   
- [Configurar permissões do SharePoint na conexão de modelo semântico de BI](#bkmk_permissions)  
+ [Configurar permissões de SharePoint na conexão de modelo semântico de BI](#bkmk_permissions)  
   
  [Próximas etapas](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Examinar pré-requisitos  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
  Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de bi a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "66071658"
   
  Todos os computadores e usuários que participam da sequência de conexão devem estar no mesmo domínio ou domínio confiável (confiança bidirecional).  
   
-##  <a name="bkmk_ssas"></a>Conceder Analysis Services permissões administrativas para aplicativos de serviço compartilhado  
+##  <a name="grant-analysis-services-administrative-permissions-to-shared-service-applications"></a><a name="bkmk_ssas"></a>Conceder Analysis Services permissões administrativas para aplicativos de serviço compartilhado  
  As conexões que se originam do SharePoint para um banco de dados modelo de tabela em um servidor do Analysis Services são feitas, às vezes, por um serviço compartilhado em nome do usuário que solicita os dados. O serviço que faz a solicitação pode ser um aplicativo de serviço PowerPivot, um aplicativo de serviço Reporting Services ou um aplicativo de serviço PerformancePoint. Para que a conexão seja bem-sucedida, o serviço deve ter permissões administrativas no servidor do Analysis Services. No Analysis Services, somente um administrador tem permissão de fazer uma conexão representada em nome de outro usuário.  
   
  As permissões administrativas são necessárias quando a conexão é usada sob estas condições:  
@@ -66,7 +66,7 @@ ms.locfileid: "66071658"
   
  Para assegurar que esses comportamentos sejam executados como esperado, conceda a cada identidade de serviço permissões administrativas na instância do Analysis Services. Use as instruções a seguir para conceder a permissão necessária.  
   
- **Adicionar identidades de serviço à função de administrador do servidor**  
+ **Adicione identidades de serviço à função de Administrador de Servidor**  
   
 1.  No SQL Server Management Studio, conecte-se à instância do Analysis Services.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66071658"
   
      Você pode usar a Administração Central para determinar a identidade. Na seção Segurança, abra **Configurar contas de serviço** para visualizar qual conta do Windows está associada ao pool de aplicativos de serviço usado para cada aplicativo e siga as instruções fornecidas neste tópico para conceder permissões administrativas à conta.  
   
-##  <a name="bkmk_BISM"></a>Conceder permissões de leitura no banco de dados modelo de tabela  
+##  <a name="grant-read-permissions-on-the-tabular-model-database"></a><a name="bkmk_BISM"></a> Conceder permissões de leitura no banco de dados de modelo de tabela  
  Como o banco de dados está sendo executado em um servidor que é externo ao farm, parte de configurar suas conexões incluirá conceder permissões de usuário de banco de dados no servidor do Analysis Services de back-end. O Analysis Services usa um modelo de permissão baseado em função. Usuários que conectam a bancos de dados modelo devem fazer isso com permissões de leitura ou superiores, através de uma função que conceda acesso de leitura a seus membros.  
   
  Funções, e às vezes associação de função, são definidas quando o modelo é criado no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Você não pode usar o SQL Server Management Studio para criar funções, mas pode usá-lo para adicionar membros a uma função que já esteja definida. Para obter mais informações sobre como criar funções, consulte [Criar e gerenciar funções &#40;SSAS Tabular&#41;](../tabular-models/roles-ssas-tabular.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "66071658"
   
 3.  Na página Associação, adicione as contas de grupo e usuário do Windows que requerem acesso.  
   
-##  <a name="bkmk_connect"></a>Criar uma conexão de modelo semântico de BI para um banco de dados modelo de tabela  
+##  <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a><a name="bkmk_connect"></a>Criar uma conexão de modelo semântico de BI para um banco de dados modelo de tabela  
  Depois de definir permissões no Analysis Services, você poderá voltar para o SharePoint e criar uma conexão de modelo semântico de BI.  
   
 1.  Na biblioteca que conterá a conexão de modelo semântico de BI, clique em **Documentos** na faixa de opções do SharePoint.  
@@ -98,9 +98,9 @@ ms.locfileid: "66071658"
   
 3.  Defina as propriedades **Server** e **Database** . Se estiver incerto quanto ao nome do banco de dados, use o SQL Server Management Studio para exibir uma lista dos bancos de dados implantados no servidor.  
   
-     **Nome do servidor** é o nome de rede do servidor, o endereço IP ou o nome de domínio totalmente qualificado (por exemplo, MyServer.mydomain.Corp.Adventure-Works.com). Se o servidor estiver instalado como uma instância nomeada, insira o nome do servidor neste formato: computername\instancename.  
+     **Nome do servidor** é o nome de rede do servidor, o endereço IP ou o nome de domínio totalmente qualificado (por exemplo, myserver.mydomain.corp.adventure-works.com). Se o servidor estiver instalado como uma instância nomeada, insira o nome do servidor neste formato: computername\instancename.  
   
-     O **banco de dados** deve ser um banco de dados de tabela que esteja disponível no momento no servidor. Não especifique outro arquivo de conexão de modelo semântico de BI, um arquivo .odc (conexão de dados do Office), um banco de dados OLAP do Analysis Services ou uma pasta de trabalho PowerPivot. Para obter o nome do banco de dados, você pode usar o Management Studio para conectar-se ao servidor e exibir a lista de bancos de dados disponíveis. Use a página de propriedades do banco de dados para verificar se você tem o nome correto.  
+     **Banco de dados** deve ser um banco de dados de tabela que está disponível atualmente no servidor. Não especifique outro arquivo de conexão de modelo semântico de BI, um arquivo .odc (conexão de dados do Office), um banco de dados OLAP do Analysis Services ou uma pasta de trabalho PowerPivot. Para obter o nome do banco de dados, você pode usar o Management Studio para conectar-se ao servidor e exibir a lista de bancos de dados disponíveis. Use a página de propriedades do banco de dados para verificar se você tem o nome correto.  
   
 4.  Clique em **OK** para salvar a página. Nesse momento, o aplicativo de serviço PowerPivot verificará a conexão.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66071658"
   
      Você poderá verificar a conexão usando isso no Excel ou Power View para se conectar ao banco de dados modelo de tabela. Se a conexão de fonte de dados for bem-sucedida, a conexão será válida apesar do aviso de verificação.  
   
-##  <a name="bkmk_permissions"></a>Configurar permissões do SharePoint na conexão de modelo semântico de BI  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>Configurar permissões do SharePoint na conexão de modelo semântico de BI  
  A capacidade para usar uma conexão de modelo semântico de BI como uma fonte de dados para uma pasta de trabalho do Excel ou relatório do Reporting Services exige permissões de **Leitura** no item de conexão do modelo semântico de BI em uma biblioteca do SharePoint. O nível de permissão de leitura inclui a permissão **Abrir Itens** que habilita o carregamento de informações da conexão de modelo semântico de BI em um aplicativo de área de trabalho do Excel.  
   
  Há várias maneiras de conceder permissões no SharePoint. As instruções a seguir explicam como criar um novo grupo chamado **Usuários do BISM** que tem o nível de permissão de **Leitura** .  
@@ -139,7 +139,7 @@ ms.locfileid: "66071658"
   
 4.  Clique em **Remover Permissões do Usuário**.  
   
-##  <a name="bkmk_next"></a>Próximas etapas  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Próximas etapas  
  Depois de criar e proteger uma conexão de modelo semântico de BI, você poderá especificá-la como uma fonte de dados. Para obter mais informações, consulte [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte Também  

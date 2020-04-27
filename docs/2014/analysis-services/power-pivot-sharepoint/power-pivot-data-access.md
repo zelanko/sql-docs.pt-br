@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071249"
 ---
 # <a name="powerpivot-data-access"></a>Acesso a dados PowerPivot
@@ -28,7 +28,7 @@ ms.locfileid: "66071249"
   
  Em um farm do SharePoint, os Serviços do Excel usam o provedor local de OLE DB do MSOLAP para conectar-se a dados PowerPivot. O provedor envia a solicitação de conexão para um servidor do PowerPivot para SharePoint no farm. Esse servidor carrega os dados, executa a consulta e retorna o conjunto de resultados.  
   
-##  <a name="queryproc"></a>Consultando dados PowerPivot no SharePoint  
+##  <a name="querying-powerpivot-data-in-sharepoint"></a><a name="queryproc"></a>Consultando dados PowerPivot no SharePoint  
  Quando você exibe uma pastas de trabalho PowerPivot em uma biblioteca do SharePoint, o dados PowerPivot que estão dentro da pasta de trabalho são detectados, extraídos e processados separadamente em instâncias de servidor do Analysis Services dentro do farm, enquanto os Serviços do Excel renderizam a camada de apresentação. Você pode exibir a pasta de trabalho totalmente processada em uma janela de navegador ou em um aplicativo de área de trabalho do Excel 2010 que tenha o suplemento do PowerPivot.  
   
  O diagrama a seguir mostra como uma solicitação de processamento de consulta se move pelo farm. Como os dados PowerPivot fazem parte de uma pasta de trabalho do Excel 2010, uma solicitação de processamento de consulta ocorre quando um usuário abre uma pasta de trabalho do Excel em uma biblioteca do SharePoint e interage com uma Tabela Dinâmica ou um Gráfico Dinâmico que contêm dados PowerPivot.  

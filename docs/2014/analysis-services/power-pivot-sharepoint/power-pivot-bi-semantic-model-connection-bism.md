@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071379"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Conexão de modelo semântico de BI (.bism) do PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "66071379"
   
  ![Captura de tela do comando de início rápido BISM](../media/ssas-bism-quicklaunch.gif "Captura de tela do comando de início rápido BISM")  
   
-##  <a name="bkmk_prereq"></a>Bancos de dados com suporte  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>Bancos de dados com suporte  
  Um modelo de conexão semântica de BI aponta para dados de modelo de tabela. Há duas fontes para estes dados:  
   
 -   Um banco de dados de modelo de tabela que é executado em uma instância do Analysis Services autônoma em modo de servidor de tabela. Uma implantação de uma instância autônoma do Analysis Services é externa ao farm. O acesso a fontes de dados fora do farm requer permissões adicionais, sobre as quais você pode ler neste tópico: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "66071379"
   
  Todas as conexões com um banco de dados modelo de tabela são estabelecidas com o uso de credenciais do usuário que está solicitando os dados. No entanto, a mecânica dessas conexões variará dependendo se a conexão está dentro do farm, se é do tipo de salto único ou duplo e se o Kerberos está habilitado. Para obter mais informações sobre conexões autenticadas entre o SharePoint e fontes de dados de back-end, consulte [Autenticação de salto duplo: por que o NTLM falha e o Kerberos funciona](https://go.microsoft.com/fwlink/?LinkId=237137).  
   
- **Conectando do Excel a dados tabulares em uma rede**  
+ **Conectando do Excel a dados de tabela em uma rede**  
   
  Quando um usuário do Excel especifica uma conexão de modelo de semântica de BI como a fonte de dados, as informações de conexão dentro do arquivo .bism são baixadas para o aplicativo de cliente, que, em seguida, emite sua própria solicitação direta para o banco de dados modelo de tabela no Analysis Services. Para acessar a conexão .bism, o usuário do Excel deve ser um usuário do SharePoint com permissões de leitura no arquivo de conexão .bism. Quando as informações de conexão são baixadas, todas as conexões subsequentes ignoram o SharePoint, fluindo diretamente do Excel para o banco de dados modelo de tabela de back-end.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071379"
   
  ![Conexões do Excel a um banco de dados modelo em tabelas](../media/ssas-powerpivotbismconnection-1.gif "Conexões do Excel a um banco de dados modelo em tabelas")  
   
- **Conectando de Power View a dados tabulares em uma rede**  
+ **Conectando do Power View a dados de tabela em uma rede**  
   
  Quando um usuário do SharePoint clica em uma conexão semântica de BI em uma biblioteca de documentos, o Power View (se estiver instalado) é iniciado automaticamente e estabelece uma conexão com o banco de dados modelo de tabela.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66071379"
   
  Neste cenário, todas as conexões ocorrem dentro do mesmo farm, assim não há nenhum requisito para Kerberos ou delegação restrita.  
   
-##  <a name="bkmk_rel"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Tarefas relacionadas  
  [Adicione um tipo de conteúdo de conexão de modelo semântico de BI a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070524"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Caixa de diálogo Parâmetros de Consulta (MDX)
@@ -33,9 +33,9 @@ ms.locfileid: "66070524"
  Escolha uma hierarquia da lista, se o parâmetro estiver aplicado a uma hierarquia específica.  
   
  **Vários valores**  
- DESCRIÇÃO  
+ Descrição  
   
- **Default**  
+ **Padrão**  
  Indique o valor padrão do parâmetro, se houver. Por padrão, nenhum valor é atribuído.  
   
  **Outros**  

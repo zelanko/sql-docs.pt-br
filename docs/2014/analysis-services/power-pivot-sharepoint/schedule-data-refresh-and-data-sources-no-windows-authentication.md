@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071163"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Atualização de dados de agendamento e fontes de dados que não oferecem suporte à Autenticação do Windows (PowerPivot para SharePoint)
@@ -28,15 +28,15 @@ ms.locfileid: "66071163"
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** uma ID de aplicativo de destino de repositório seguro que é definida com a autenticação do Windows.  
+-   **(1) PowerPivotDatarefresh:** uma ID de aplicativo de destino de repositório seguro definida com a autenticação do Windows.  
   
--   **(2) OracleAuthentication:** uma ID de aplicativo de destino de repositório seguro que é definida com as credenciais do Oracle.  
+-   **(2) OracleAuthentication:** uma ID de aplicativo de destino de repositório seguro definida com as credenciais do Oracle.  
   
 -   **(3)** o aplicativo de serviço PowerPivot é configurado para usar o aplicativo de destino "PowerPivotDataRefresh" para a **conta de atualização de dados autônoma**.  
   
--   **(4)** a pasta de trabalho PowerPivot usa dados Oracle. As configurações de atualização da pasta de trabalho especificam a conexão da fonte de dados para usar o aplicativo de destino **(2)** para credenciais.  
+-   **(4)** A pasta de trabalho PowerPivot usa dados Oracle. As configurações de atualização da pasta de trabalho especificam a conexão da fonte de dados para usar o aplicativo de destino **(2)** para credenciais.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Existe um aplicativo de serviço PowerPivot.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66071163"
   
 ## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>Para criar uma ID de aplicativo de destino que usa a Autenticação do Windows  
   
-1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço**.  
+1.  Na administração central do SharePoint, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique no nome do aplicativo de Serviço de Repositório Seguro.  
   
@@ -54,21 +54,21 @@ ms.locfileid: "66071163"
   
 4.  Na página **Criar Novo Aplicativo de Destino de Repositório Seguro** , configure os seguintes valores:  
   
-    -   **ID do aplicativo de destino:** PowerPivotDataRefresh.  
+    -   **ID de Aplicativo de Destino:** PowerPivotDataRefresh.  
   
-    -   **Nome para exibição:** PowerPivotDataRefresh.  
+    -   **Nome para Exibição:** PowerPivotDataRefresh.  
   
-    -   **Email de contato:** ?  
+    -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Group.  
+    -   **Tipo de Aplicativo de Destino:** Grupo.  
   
-    -   **URL da página de aplicativo de destino:** None.  
+    -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página Credenciais, deixe os dois nomes de campo padrão e os tipos de campo de **Nome de Usuário do Windows** e **Senha do Windows**.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página **Configurações de Associação** , adicione pelo menos um **Administrador de Aplicativo de Destino** e adicione os membros que precisam acessar o aplicativo de destino.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071163"
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>Para criar uma ID de aplicativo de destino que usa as credenciais do Oracle  
   
-1.  Na Administração Central do SharePoint, clique em **Gerenciar Aplicativos de Serviço**.  
+1.  Na administração central do SharePoint, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique no nome do aplicativo de Serviço de Repositório Seguro.  
   
@@ -88,23 +88,23 @@ ms.locfileid: "66071163"
   
 4.  Na página **Criar Novo Aplicativo de Destino de Repositório Seguro** , configure os seguintes valores:  
   
-    -   **ID do aplicativo de destino:** OracleAuthentication.  
+    -   **ID do Aplicativo de Destino:** OracleAuthentication.  
   
-    -   **Nome para exibição:** OracleAuthentication.  
+    -   **Nome para Exibição:** OracleAuthentication.  
   
-    -   **Email de contato:** ?  
+    -   **Email de Contato:** ?  
   
-    -   **Tipo de aplicativo de destino:** Group.  
+    -   **Tipo de Aplicativo de Destino:** Grupo.  
   
-    -   **URL da página de aplicativo de destino:** None.  
+    -   **URL da Página de Aplicativo de Destino:** Nenhuma.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **credenciais** , altere o nome do primeiro campo para `Oracle User ID` e altere o **tipo** de campo `User Name`para.  
   
      Altere o segundo nome de campo `Oracle Password` para e o **tipo** de `Password`campo para.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página **Configurações de Associação** , adicione pelo menos um **Administrador de Aplicativo de Destino** e adicione os membros que precisam acessar o aplicativo de destino.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66071163"
   
 ## <a name="more-information"></a>Mais informações  
   
--   [Configure o serviço de repositório seguro no SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configurar o Serviço de Repositório Seguro no SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
 -   Consulte a seção "atualização de dados agendada" da [atualização de dados PowerPivot com o SharePoint 2013 e SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   

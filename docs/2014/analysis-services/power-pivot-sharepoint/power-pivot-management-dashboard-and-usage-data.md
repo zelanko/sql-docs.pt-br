@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071117"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Painel de Gerenciamento PowerPivot e dados de uso
@@ -22,23 +22,23 @@ ms.locfileid: "66071117"
   
  [Pré-requisitos](#prereq)  
   
- [Visão geral das seções do painel](#items)  
+ [Visão geral das seções do Painel](#items)  
   
  [Abrir o Painel de Gerenciamento PowerPivot](#open)  
   
- [Dados de origem em painéis](#sourcedata)  
+ [Fontes de dados em painéis](#sourcedata)  
   
  [Editar o Painel do PowerPivot](#edit)  
   
  [Criar relatórios personalizados para o Painel de Gerenciamento do PowerPivot](#reports)  
   
-##  <a name="prereq"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos  
  Você deve ser um administrador de serviço para abrir o Painel de Gerenciamento PowerPivot para um aplicativo do serviço PowerPivot que você gerencia.  
   
-##  <a name="items"></a>Visão geral das seções do painel  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a>Visão geral das seções do painel  
  O Painel de Gerenciamento PowerPivot contém as Web parts e relatórios inseridos que fazem busca detalhada em categorias de informações específicas. A lista a seguir descreve cada parte do painel:  
   
-|Painel|DESCRIÇÃO|  
+|Painel|Descrição|  
 |---------------|-----------------|  
 |Infraestrutura - Integridade do Serviço|Mostra as tendências de uso de CPU, o consumo de memória e os tempos de resposta de consulta ao longo do tempo, para que você possa avaliar se os recursos do sistema estão se aproximando da capacidade máxima ou estão subutilizados.|  
 |Ações|Contém links para outras páginas da Administração Central, incluindo o aplicativo de serviço atual, uma lista dos aplicativos de serviço e o log de uso.|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071117"
 |Atualização de Dados - Falhas Recentes|Lista as pastas de trabalho PowerPivot que não concluíram a atualização de dados com êxito.|  
 |Relatórios|Contém links para relatórios que você pode abrir no Excel.|  
   
-##  <a name="open"></a>Abrir o painel de gerenciamento do PowerPivot  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>Abrir o painel de gerenciamento do PowerPivot  
  O painel mostra as informações de um aplicativo de serviço PowerPivot por vez. Você pode abrir o painel de gerenciamento em dois lugares diferentes.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Abra o painel em Configurações Gerais do Aplicativo  
@@ -59,7 +59,7 @@ ms.locfileid: "66071117"
   
 ### <a name="open-the-dashboard-from-a-powerpivot-service-application"></a>Abra a página em um aplicativo de serviço PowerPivot  
   
-1.  Na administração central, em **Gerenciamento de aplicativos**, clique em **gerenciar aplicativos de serviço**.  
+1.  Na Administração Central, em **Gerenciamento de Aplicativo**, clique em **Gerenciar aplicativos de serviço**.  
   
 2.  Clique no nome do aplicativo de serviço PowerPivot. O Painel de Gerenciamento PowerPivot exibe dados operacionais do aplicativo de serviço atual.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071117"
   
 3.  Clique no nome do aplicativo de serviço PowerPivot cujos relatórios do painel de gerenciamento você deseja ver.  
   
-##  <a name="sourcedata"></a>Dados de origem em painéis  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a>Dados de origem em painéis  
  Os painéis, os relatórios e as web parts mostram dados de um modelo de dados interno que recebe dados do sistema e dos bancos de dados de aplicativo do PowerPivot. O modelo de dados interno é inserido em uma pasta de trabalho PowerPivot hospedada no site da Administração Central. A estrutura do modelo de dados é fixa. Embora você possa usar a pasta de trabalho PowerPivot como fonte de dados para criar novos relatórios, não modifique a estrutura de modo a fragmentar os relatórios predefinidos que a utilizam.  
   
  Para obter mais informações sobre como os dados são coletados, consulte:  
@@ -81,12 +81,12 @@ ms.locfileid: "66071117"
   
 -   [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** Se você desativar os eventos ou o histórico de uso, os relatórios compostos estarão incompletos ou errados.  
+ Para capturar dados sobre o sistema de servidor do PowerPivot, verifique se as mensagens de eventos, o histórico de atualização de dados e outro histórico de uso estão habilitados para cada aplicativo de serviço PowerPivot. Os dados de servidor e de uso coletados durante as operações normais do servidor são os dados de origem resultantes no modelo de dados interno. **Observação:** se você desativar o histórico de eventos ou de uso, os relatórios compostos serão incompletos ou incorretos.  
   
-##  <a name="edit"></a>Editar painel do PowerPivot  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>Editar painel do PowerPivot  
  Se você tiver experiência em desenvolvimento ou personalização de painéis, poderá editar o painel para incluir novas Web parts. Você também poderá editar as propriedades das Web parts incluídas no painel.  
   
-##  <a name="reports"></a>Criar relatórios personalizados para o painel de gerenciamento PowerPivot  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>Criar relatórios personalizados para o painel de gerenciamento PowerPivot  
  Para fins de emissão de relatórios, os dados e o histórico de uso do PowerPivot são mantidos em uma pasta de trabalho interna PowerPivot que é criada e configurada junto com o painel de controle. Se os relatórios padrão não fornecerem as informações necessárias, você poderá criar relatórios personalizados no Excel com base na pasta de trabalho. A pasta de trabalho e todos os relatórios personalizados criados serão preservados se você atualizar ou desinstalar os arquivos de solução PowerPivot posteriormente. A pasta de trabalho e os relatórios ficam armazenados na biblioteca de Gerenciamento do PowerPivot no site da Administração Central. Por padrão, essa biblioteca não fica visível, mas você pode exibi-la usando a ação Exibir Todo o Conteúdo do Site em Ações do Site.  
   
  Para começar a usar o recurso de relatórios personalizados, o Painel de Gerenciamento PowerPivot fornece um arquivo Office Data Connection (.odc) para estabelecer a conexão com a pasta de trabalho de origem. Por exemplo, você pode usar o arquivo .odc no Excel para criar relatórios adicionais.  
@@ -126,7 +126,7 @@ ms.locfileid: "66071117"
   
     8.  Em especificar consulta MDX, clique em **design** para abrir o designer de consulta MDX para montar os dados com os quais você deseja trabalhar **se você vir a mensagem de erro** "o nome da Propriedade do modo de edição não está formatado corretamente.", verifique se você edita o. Arquivo ODC.  
   
-    9. Clique em **OK** e em **concluir**.  
+    9. Clique em **OK** e em **Concluir**.  
   
     10. Crie os relatórios de Tabela Dinâmica ou Gráfico Dinâmico para visualizar os dados no Excel.  
   

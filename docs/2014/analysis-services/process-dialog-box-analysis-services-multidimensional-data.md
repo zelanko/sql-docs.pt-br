@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070752"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Processar (Analysis Services - Dados Multidimensionais)
@@ -36,13 +36,13 @@ ms.locfileid: "66070752"
  **Lista de objetos**  
  Selecione os objetos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a serem processados e as opções e configurações de processamento a serem aplicadas. A grade contém as seguintes colunas:  
   
- **Object Name**  
+ **Nome do objeto**  
  Exibe o nome do objeto a ser processado. O ícone à esquerda do nome indica o tipo do objeto.  
   
  **Tipo**  
  Exibe o tipo do objeto a ser processado.  
   
- **Opções de processo**  
+ **Opções de Processo**  
  Selecione o tipo de processamento a ser executado no objeto selecionado. Para obter mais informações sobre as opções de processamento disponíveis, consulte [processamento de objeto de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Configurações**  
@@ -51,7 +51,7 @@ ms.locfileid: "66070752"
  **Remover**  
  Clique para remover os itens selecionados da **Lista de objetos**.  
   
- **Análise de impacto**  
+ **Análise de Impacto**  
  Clique para abrir a caixa de diálogo **Análise de Impacto** e exibir os objetos que serão afetados pela tarefa de processamento. Para obter mais informações sobre a caixa de diálogo **Análise de Impacto**, consulte [Caixa de diálogo Análise de Impacto &#40;Analysis Services – Dados Multidimensionais&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ms.locfileid: "66070752"
  **Alterar configurações**  
  Clique para abrir a caixa de diálogo **Alterar Configurações** e alterar as configurações que controlam o processamento dos objetos selecionados, incluindo configurações de processamento em lote, configurações de write-back e configurações de erro de chave de dimensão. Para obter mais informações sobre a caixa de diálogo **Alterar Configurações**, consulte [Caixa de diálogo Alterar Configurações &#40;Analysis Services – Dados Multidimensionais&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Executar**  
+ **Funcionam**  
  Clique para processar os objetos.  
   
 ## <a name="see-also"></a>Consulte Também  

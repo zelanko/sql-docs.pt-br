@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070007"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Agendar uma atualização de dados (PowerPivot para SharePoint)
@@ -39,7 +39,7 @@ ms.locfileid: "66070007"
 > [!NOTE]  
 >  A atualização de dados PowerPivot é executada por instâncias de servidor do Analysis Services no farm do SharePoint. Ela não está relacionada ao recurso de atualização de dados fornecido nos Serviços do Excel. O recurso Agendar atualização de dados do PowePivot não atualizará os dados que não sejam do PowerPivot.  
   
-##  <a name="prereq"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos  
  Você precisa ter nível de permissão Colaboração ou superior na pasta de trabalho para criar uma agenda de atualização de dados.  
   
  As fontes de dados externas acessadas durante a atualização de dados devem estar disponíveis e as credenciais especificadas na agenda devem ter permissão para acessar essas fontes de dados. A atualização de dados agendada exige um local da fonte de dados acessível em uma conexão de rede (por exemplo, de um compartilhamento de arquivos de rede e não de uma pasta local em sua estação de trabalho).  
@@ -53,7 +53,7 @@ ms.locfileid: "66070007"
 > [!NOTE]  
 >  O servidor não bloqueia a pasta de trabalho enquanto a atualização de dados está em andamento. Porém, ele bloqueia o arquivo ao término da atualização de dados para fins de verificação do arquivo atualizado. Se, no momento, o check-out do arquivo for outro usuário, os dados atualizados serão descartados. Da mesma forma, se o check-in do arquivo for feito, mas for significativamente diferente da cópia recuperada pelo servidor no início da atualização de dados, os dados atualizados serão descartados.  
   
-##  <a name="intro"></a>Visão geral da atualização de dados  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Visão geral da atualização de dados  
  Dados PowerPivot em uma pasta de trabalho do Excel podem derivar de várias fontes de dados externas, incluindo bancos de dados externos ou arquivos de dados que você acessa de servidores remotos ou de compartilhamentos de arquivos de rede. Para pastas de trabalho PowerPivot que contêm dados importados de fontes de dados conectadas ou externas, você pode configurar a atualização de dados para agendar uma importação automática de dados atualizados dessas fontes originais.  
   
  Uma fonte de dados externa é acessada por uma cadeia de conexão inserida, URL ou caminho UNC que você especificou quando importou os dados originais para a pasta de trabalho usando o aplicativo cliente PowerPivot. As informações de conexão originais que são armazenadas na pasta de trabalho PowerPivot são reutilizadas para operações de atualização de dados subsequentes. Embora você possa substituir as credenciais usadas para conectar-se a fontes de dados, não é possível substituir cadeias de caracteres de conexão para atualizar dados; são utilizadas apenas as informações de conexão.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070007"
   
  A criação de agendas granulares para fontes de dados individuais permite a você coincidir a agenda de atualização com flutuações nas fontes de dados externas. Por exemplo, se uma fonte de dados externa contiver dados transacionais que são gerados ao longo do dia, você poderá criar uma agenda de atualização de dados individual para essa fonte de dados para obter as informações atualizadas toda noite.  
   
-##  <a name="drenablesched"></a>Habilitar e agendar atualização de dados  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Habilitar e agendar atualização de dados  
  Use as instruções a seguir para agendar a atualização de dados para dados do PowerPivot em uma pasta de trabalho do Excel que é publicada em uma biblioteca do SharePoint.  
   
 1.  Na biblioteca que contém a pasta de trabalho, selecione a pasta de trabalho e clique na seta para baixo para exibir uma lista de comandos.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070007"
   
 5.  Em Hora de Início Mais Antiga, escolha uma das seguintes opções:  
   
-    1.  **Após o horário comercial** , especifique um período de processamento fora do horário em que os servidores de banco de dados têm mais probabilidade de ter dados atuais que foram gerados durante o dia útil.  
+    1.  **Depois do horário comercial** especifica um período de processamento fora do expediente, quando é mais provável que os servidores do banco de dados tenham dados atuais que foram gerados no horário comercial.  
   
-    2.  A **hora de início mais antiga específica** é a hora e minutos da primeira hora do dia em que a solicitação de atualização de dados é adicionada a uma fila de processo. Você pode especificar os minutos em intervalos de 15 minutos. A configuração aplica-se tanto ao dia atual quanto a datas futuras. Por exemplo, se você especificar um valor de 6:30. e a hora atual for 16:30, a solicitação de atualização será adicionada à fila no dia corrente porque 16:30 é posterior à 6:30.  
+    2.  **A hora de início mais antiga específica** equivale ao primeiro período de tempo do dia, em hora e minutos, no qual a solicitação de atualização de dados foi adicionada a uma fila de processo. Você pode especificar os minutos em intervalos de 15 minutos. A configuração aplica-se tanto ao dia atual quanto a datas futuras. Por exemplo, se você especificar um valor de 6:30. e a hora atual for 16:30, a solicitação de atualização será adicionada à fila no dia corrente porque 16:30 é posterior à 6:30.  
   
      A hora de início mais antiga define quando uma solicitação é adicionada à fila de processo. O processamento real ocorre quando o servidor tem recursos adequados para começar o processamento de dados. A hora de processamento real será registrada no histórico de atualização de dados quando o processamento for concluído.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070007"
   
 11. Clique em **OK** para salvar sua agenda.  
   
-##  <a name="drverify"></a>Verificar atualização de dados  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Verificar atualização de dados  
  A melhor forma de verificar a atualização de dados é executar logo a atualização de dados e depois analisar a página de histórico para verificar se ela foi concluída com êxito. Quando a caixa de seleção **Também atualizar o mais rápido possível** é marcada na sua agenda, isso permite verificar que a atualização de dados é operacional.  
   
  Você pode exibir o registro atual e anterior de operações de atualização de dados na página Histórico de Atualização de Dados da pasta de trabalho. Essa página só aparecerá se a atualização de dados tiver sido agendada para uma pasta de trabalho. Se não houver agenda de atualização de dados, a página de definição de agenda aparecerá.  

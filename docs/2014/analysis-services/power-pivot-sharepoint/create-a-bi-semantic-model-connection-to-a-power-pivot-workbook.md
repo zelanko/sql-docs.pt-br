@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071641"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Criar uma conexão de modelo semântico de BI para uma pastas de trabalho PowerPivot
@@ -34,7 +34,7 @@ ms.locfileid: "66071641"
   
  [Próximas etapas](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Examinar pré-requisitos  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Examinar pré-requisitos  
  É necessário ter permissões Colaborar ou superior para criar um arquivo de conexão de modelo semântico de BI.  
   
  Você deve ter uma biblioteca que dá suporte ao tipo de conteúdo da conexão de modelo semântico de BI. Para obter mais informações, consulte [Adicionar um tipo de conteúdo de conexão de modelo semântico de bi a uma biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "66071641"
   
  Todos os computadores e usuários que participam da sequência de conexão devem estar no mesmo domínio ou domínio confiável (confiança bidirecional).  
   
-##  <a name="bkmk_create"></a>Criar uma conexão  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>Criar uma conexão  
   
 1.  Na biblioteca que conterá a conexão de modelo semântico de BI, clique em **Documentos** na faixa de opções do SharePoint. Clique na seta para baixo em Novo Documento e selecione **Arquivo de Conexão de BISM** para abrir uma nova página de Conexão de Modelo Semântico de BI.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071641"
   
      Opcionalmente, se você tiver permissões do SharePoint para a pasta de trabalho, uma etapa de validação adicional será executada, garantindo que o local seja válido. Se você não tiver permissão para acessar os dados, terá a opção de salvar a conexão de modelo semântico de BI sem a resposta de validação.  
   
-##  <a name="bkmk_permissions"></a>Configurar permissões do SharePoint na conexão de modelo semântico de BI  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>Configurar permissões do SharePoint na conexão de modelo semântico de BI  
  A capacidade para usar uma conexão de modelo semântico de BI como uma fonte de dados para uma pasta de trabalho do Excel ou relatório do Reporting Services exige permissões de **Leitura** no item de conexão do modelo semântico de BI em uma biblioteca do SharePoint. O nível de permissão de leitura inclui a permissão **Abrir Itens** que habilita o carregamento de informações da conexão de modelo semântico de BI em um aplicativo de área de trabalho do Excel.  
   
  Há várias maneiras de conceder permissões no SharePoint. As instruções a seguir explicam como criar um novo grupo chamado **Usuários do BISM** que tem o nível de permissão de **Leitura** .  
@@ -88,12 +88,12 @@ ms.locfileid: "66071641"
   
 4.  Clique em **Remover Permissões do Usuário**.  
   
-##  <a name="bkmk_userdb"></a>Configurar permissões do SharePoint na pasta de trabalho  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a>Configurar permissões do SharePoint na pasta de trabalho  
  Se você estiver usando um banco de dados PowerPivot dentro de uma pasta de trabalho do Excel, as permissões do SharePoint na pasta de trabalho do Excel determinarão o acesso a dados pela conexão de modelo semântico de BI. Todos os usuários que acessam a pasta de trabalho devem ter permissões de Leitura na pasta de trabalho para usá-la como uma fonte de dados externa.  
   
  Se você tiver criado um grupo de **Usuários de BISM** usando as instruções na seção anterior, as contas de usuário e grupo que são membros de **Usuários de BISM** terão permissões suficientes na pasta de trabalho, assim como o arquivo de conexão do modelo semântico de BI, contanto que a pasta de trabalho use permissões herdadas.  
   
-##  <a name="bkmk_next"></a>Próximas etapas  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Próximas etapas  
  Depois de criar e proteger uma conexão de modelo semântico de BI, você poderá especificá-la como uma fonte de dados. Para obter mais informações, consulte [Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte Também  

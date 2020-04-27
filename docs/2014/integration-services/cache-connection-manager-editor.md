@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061083"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Cache
@@ -29,23 +29,23 @@ ms.locfileid: "66061083"
   
  A caixa de diálogo **Editor do Gerenciador de Conexões de Cache** inclui as seguintes guias:  
   
--   [Guia Geral](#generaltab)  
+-   [Guia geral](#generaltab)  
   
 -   [Guia colunas](#columnstab)  
   
- Para saber mais sobre o Gerenciador de conexões de cache, consulte [cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Para obter mais informações sobre o Gerenciador de Conexões de Cache, consulte [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a>Guia geral  
+##  <a name="general-tab"></a><a name="generaltab"></a>Guia geral  
  Use a guia **Geral** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para indicar se é necessário ler o cache de um arquivo ou salvar o cache em um arquivo.  
   
 ### <a name="options"></a>Opções  
- **Nome do gerenciador de conexões**  
+ **Nome do Gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de cache no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descrição**  
  Descreva a conexão. Como prática recomendável, descreva a conexão de acordo com a sua finalidade para tornar os pacotes autodocumentados e facilitar a sua manutenção.  
   
- **Usar cache de arquivos**  
+ **Usar cache de arquivo.**  
  Indique se precisa usar um arquivo de cache.  
   
 > [!NOTE]  
@@ -66,14 +66,14 @@ ms.locfileid: "66061083"
  **Atualizar metadados**  
  Exclua os metadados de colunas no gerenciador de conexões de Cache e popule novamente o gerenciador de conexões do Cache com matadados de colunas de um arquivo de cache selecionado.  
   
-##  <a name="columnstab"></a>Guia colunas  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Guia colunas  
  Use a guia **Colunas** da caixa de diálogo **Editor do Gerenciador de Conexões de Cache** para configurar as propriedades de cada coluna no cache.  
   
 ### <a name="options"></a>Opções  
  **Coluna**  
  Especifique o nome da coluna.  
   
- **Posição do índice**  
+ **Posição de Índice**  
  Especifique quais colunas são colunas de índice indicando a posição de índice de cada coluna. O índice é uma coleção de uma ou mais colunas.  
   
  Para colunas sem-índice, a posição de índice é 0.  
@@ -99,6 +99,6 @@ ms.locfileid: "66061083"
  Especifica a página de código para o tipo de coluna. Se aplicável ao tipo de dados, você pode atualizar a `Code Page`.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformação Pesquisa](data-flow/transformations/lookup-transformation.md)  
+ [Transformação pesquisa](data-flow/transformations/lookup-transformation.md)  
   
   

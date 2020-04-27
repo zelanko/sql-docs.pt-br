@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070315"
 ---
 # <a name="lesson-3-rename-columns"></a>Lição 3: Renomear colunas
@@ -25,7 +25,7 @@ ms.locfileid: "66070315"
   
  Tempo estimado para conclusão desta lição: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 2: Adicionar dados](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Renomear colunas  
@@ -88,7 +88,7 @@ ms.locfileid: "66070315"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Gráfico**  
+     **Geografia**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070315"
     |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Produto**  
+     **Remessa**  
   
     |Nome de origem|Nome amigável|  
     |-----------------|-------------------|  
@@ -121,7 +121,7 @@ ms.locfileid: "66070315"
     |Preço do Revendedor|Preço do Revendedor|  
     |ModelName|Nome do modelo|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|DESCRIÇÃO|  
+    |EnglishDescription|Descrição|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  
@@ -163,7 +163,7 @@ ms.locfileid: "66070315"
     |ProductStandardCost|Custo Padrão do Produto|  
     |TotalProductCost|Custo Total do Produto|  
     |SalesAmount|Valor das Vendas|  
-    |TaxAmt|Valor dos Imp.|  
+    |TaxAmt|Valor dos Impostos|  
     |CarrierTrackingNumber|Carrier Tracking Number|  
     |CustomerPONumber|Customer PO Number|  
     |OrderDate|Data do Pedido|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070506"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Caixa de diálogo Atualizar Exibição da Fonte de Dados
@@ -32,11 +32,11 @@ ms.locfileid: "66070506"
  **Serão feitas as seguintes alterações**  
  Exibe as alterações (atualizações, adições e exclusões) que serão feitas na exibição da fonte de dados se você clicar em **OK**.  
   
- **Salvar relatório**  
+ **Salvar Relatório**  
  Clique para exibir a caixa de diálogo **Salvar como** e salvar o relatório HTML em um arquivo.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   
