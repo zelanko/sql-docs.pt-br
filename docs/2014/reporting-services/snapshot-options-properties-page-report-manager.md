@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101156"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propriedades Opções de Instantâneo (Gerenciador de Relatórios)
@@ -61,7 +61,7 @@ ms.locfileid: "66101156"
  Clique para salvar as alterações.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Report Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Criar, modificar e excluir instantâneos no histórico de relatório](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

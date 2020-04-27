@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103394"
 ---
 # <a name="report-server-http-log"></a>Log HTTP do Servidor de Relatório
@@ -35,7 +35,7 @@ ms.locfileid: "66103394"
 |**Criação e retenção do arquivo**|O log HTTP é criado quando você o habilita no arquivo de configuração, reinicia o serviço e o servidor de relatório manipula uma solicitação HTTP. Se você definir as configurações, mas o arquivo de log não aparecer, abra um relatório ou inicie um aplicativo do servidor de relatório (como o Gerenciador de Relatórios) para gerar uma solicitação HTTP e criar o arquivo.<br /><br /> Uma nova instância do arquivo de log será criada após cada reinicialização do serviço e o envio subsequente da solicitação HTTP para o servidor de relatório.<br /><br /> Por padrão, os logs de rastreamento são limitados a 32 megabytes e excluídos depois de 14 dias.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Configurações do log HTTP do servidor de relatório  
- Para configurar o log HTTP do servidor de relatório, use o bloco de notas para modificar o arquivo **ReportingServicesService. exe. config** . O arquivo de configuração está localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Para configurar o log HTTP do servidor de relatório, use o bloco de notas para modificar o arquivo **ReportingServicesService.exe.config** . O arquivo de configuração está localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Para habilitar o servidor HTTP, adicione `http:4` à seção RStrace do arquivo ReportingServicesService.exe.config. Todas as outras entradas do arquivo de log HTTP são opcionais. O exemplo a seguir inclui todas as configurações de modo que você pode colar a seção inteira na seção RStrace e, em seguida, excluir as configurações que não são necessárias.  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102156"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
@@ -27,7 +27,7 @@ ms.locfileid: "66102156"
   
  Antes de habilitar a autenticação Básica, verifique se a sua infraestrutura de segurança dá suporte a ela. Na autenticação Básica, o serviço Web Servidor de Relatórios passará credenciais para a autoridade de segurança local. Se as credenciais especificarem uma conta de usuário local, o usuário será autenticado pela autoridade de segurança local no computador do servidor de relatório e o usuário obterá um token de segurança válido para recursos locais. As credenciais de contas de usuário de domínio são encaminhadas para um controlador de domínio e autenticadas por ele. A permissão resultante é válida para recursos de rede.  
   
- A criptografia de canal, como SSL, será necessária se você quiser minimizar o risco de as credenciais serem interceptadas durante o envio para um controlador de domínio da sua rede. Por si só, autenticação Básica transmite o nome do usuário em texto não criptografado e a senha na codificação em base 64. Quando adicionada, a criptografia de canal torna o pacote ilegível. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
+ A criptografia de canal, como SSL, será necessária se você quiser minimizar o risco de as credenciais serem interceptadas durante o envio para um controlador de domínio da sua rede. Por si só, autenticação Básica transmite o nome do usuário em texto não criptografado e a senha na codificação em base 64. Quando adicionada, a criptografia de canal torna o pacote ilegível. Para obter mais informações, consulte [Configurar conexões SSL em um servidor de relatório no modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Depois de habilitar a autenticação Básica, lembre-se que os usuários não podem selecionar a opção **Segurança integrada do Windows** ao definir as propriedades de conexão para uma fonte de dados externa que forneça dados a um relatório. A opção ficará indisponível nas páginas de propriedades da fonte de dados.  
   
@@ -84,11 +84,9 @@ ms.locfileid: "66102156"
 ## <a name="rswindowsbasic-reference"></a>Referência de RSWindowsBasic  
  Os elementos a seguir podem ser especificados na configuração da autenticação Básica.  
   
-|Elemento|Obrigatório|Valores Válidos|  
+|Elemento|Obrigatório|Valores válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|
-  `2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> 
-  `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Default)<br /><br /> Observação: valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Sim<br /><br /> Se você não especificar um valor, será usado 3.|`2` = Logon de rede, indicado para servidores de alto desempenho na autenticação de senhas em texto sem formatação.<br /><br /> `3` = Logon de texto não criptografado, que preserva as credenciais de logon no pacote de autenticação enviado com cada solicitação HTTP, permitindo que o servidor represente o usuário durante a conexão com outros servidores da rede. (Padrão)<br /><br /> Observação: Valores 0 (para logon interativo) e 1 (para logon em lotes) não têm suporte no [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Opcional|Especifica uma partição de recursos que inclui recursos de autorização e autenticação usados para controlar o acesso a recursos protegidos da organização.|  
 |DefaultDomain|Opcional|Especifica o domínio usado pelo servidor para autenticar o usuário. Este valor é opcional, mas, caso seja omitido, o servidor de relatório usará o nome do computador como domínio. Se o computador for um membro de domínio, esse domínio será o padrão. Se você instalou o servidor de relatório em um controlador de domínio, o domínio usado será o que é controlado pelo computador.|  
   
@@ -139,7 +137,7 @@ ms.locfileid: "66102156"
   
      O modo de autenticação deverá ser definido como `Windows` se você incluir um arquivo Web.config.  
   
-     `Identity impersonate`pode ser `True` ou `False`.  
+     `Identity impersonate` pode ser `True` ou `False`.  
   
     -   Defina esse valor como `False` se não quiser que o ASP.NET leia o token de segurança. A solicitação será executada no contexto de segurança do serviço Servidor de Relatórios.  
   
@@ -158,7 +156,7 @@ ms.locfileid: "66102156"
 8.  Reinicie o servidor de relatório.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Domínios de aplicativo para aplicativos do servidor de relatório](../report-server/application-domains-for-report-server-applications.md)   
+ [Domínios do aplicativo para aplicativos do Servidor de Relatório](../report-server/application-domains-for-report-server-applications.md)   
  [Segurança e proteção do Reporting Services](reporting-services-security-and-protection.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100904"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega de compartilhamento de arquivos no Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "66100904"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; modo do SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  Neste tópico:  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66100904"
   
 -   [Opções de arquivo](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a>Características de um relatório que é entregue a uma pasta compartilhada  
+##  <a name="characteristics-of-a-report-that-is-delivered-to-a-shared-folder"></a><a name="bkmk_Characteristics"></a>Características de um relatório que é entregue a uma pasta compartilhada  
  Diferentemente de relatórios hospedados e gerenciados por um servidor de relatório, os relatórios entregues a uma pasta compartilhada são arquivos estáticos. Os recursos interativos definidos para o relatório não funcionam para relatórios armazenados como arquivos no sistema de arquivos. Os recursos de interação são representados como elementos estáticos. Por exemplo, se você entregar um relatório de matriz, o arquivo resultante mostrará a exibição de nível superior do relatório; não será possível expandir as linhas e colunas para exibir os dados com suporte. Se o relatório incluir gráficos, a apresentação padrão será usada. Se o relatório estiver vinculado a outro relatório, o vínculo será renderizado como texto estático. Se você quiser reter recursos interativos em um relatório entregue, use a entrega de emails. Para obter mais informações, consulte [Entrega de email no Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a>Pastas de destino  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a>Pastas de destino  
  Ao definir uma assinatura que usa a entrega de compartilhamento de arquivos, você deve especificar uma pasta existente como a pasta de destino. O servidor de relatório não cria pastas no sistema de arquivos. A pasta especificada deve ser acessível por uma conexão de rede.  
   
  Verifique se os usuários que exibirão os relatórios na pasta compartilhada têm a permissão de leitura.  
@@ -55,12 +55,12 @@ ms.locfileid: "66100904"
   
  Quando você criar a pasta, considere os limites de conexão desejados. O servidor de relatório precisa de duas conexões, mas você deve incluir conexões suficientes para acomodar usuários adicionais que queiram abrir relatórios na pasta compartilhada.  
   
-##  <a name="bkmk_file_formats"></a>Formatos de arquivo  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formatos de arquivo  
  Os relatórios podem ser renderizados em vários formatos de arquivo, como HTML ou Excel. Para salvar o relatório em um formato de arquivo específico, selecione o formato de renderização ao criar sua assinatura. Por exemplo, se escolher **Excel** , salvará o relatório como um arquivo do [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Embora você possa escolher qualquer formato de renderização com suporte, alguns formatos funcionam melhor que outros na renderização em um arquivo.  
   
  Para obter a entrega de compartilhamento de arquivos, escolha um formato que entrega o relatório em um único arquivo, no qual todas as imagens e conteúdo relacionado são incluídos no relatório. Formatos adequados incluem o arquivo da Web, PDF, TIFF e Excel. Evite o HTML4.0. Se seu relatório incluir imagens, os formatos HTML 4.0 não as incluirão no arquivo.  
   
-##  <a name="bkmk_file_options"></a>Opções de arquivo  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opções de arquivo  
  Ao criar uma assinatura, você pode escolher opções que determinam como o nome de arquivo é criado e se ele é substituído por novas versões ao longo do tempo. Um nome de arquivo totalmente qualificado possui três partes: nome, extensão e texto ou número anexado ao arquivo para criar um nome de arquivo exclusivo. As opções de substituição determinam se o texto ou número é adicionado ao nome de arquivo.  
   
  O nome de arquivo é tem base no nome do relatório, mas você pode fornecer um nome personalizado na assinatura. A extensão é opcional, mas se você especificá-la, o servidor de relatório criará uma extensão que corresponda ao formato de renderização.  

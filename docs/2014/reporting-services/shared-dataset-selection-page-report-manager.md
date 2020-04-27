@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101267"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página Seleção de Conjunto de Dados Compartilhado (Gerenciador de Relatórios)
@@ -51,9 +51,9 @@ ms.locfileid: "66101267"
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Página de conteúdo &#40;Report Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)   
+ [Gerenciar conjuntos de itens compartilhados](report-data/manage-shared-datasets.md)   
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
- [Partes de relatório e conjuntos de dados no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
- [Conjuntos de e compartilhados, &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Partes de relatório e conjuntos de valores no Construtor de Relatórios](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

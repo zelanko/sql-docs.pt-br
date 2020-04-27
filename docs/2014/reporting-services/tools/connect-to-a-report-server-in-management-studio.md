@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100439"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar-se a um servidor de relatório no Management Studio
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece o pesquisador de objetos, que permite que você se conecte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qualquer servidor na família e navegue graficamente pelo seu conteúdo. Para o Reporting Services, você pode usar o Pesquisador de Objetos para fazer o seguinte:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece o Pesquisador de Objetos, que permite que você se conecte a qualquer servidor da família do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e navegue graficamente pelo conteúdo dele. Para o Reporting Services, você pode usar o Pesquisador de Objetos para fazer o seguinte:  
   
 -   Habilitar os recursos de servidor de relatório.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66100439"
   
 2.  Clique em **Conectar** para exibir a lista de tipos de servidor e, então, selecione **Reporting Services**.  
   
-3.  Na caixa de diálogo **Conectar-se ao Servidor** , digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: * \<ServerName\\> [\><InstanceName]*.  
+3.  Na caixa de diálogo **Conectar-se ao Servidor** , digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<instancename\>]* .  
   
 4.  Selecione o tipo de autenticação. Se você estiver usando a Autenticação do Windows, deverá se conectar usando suas credenciais. Se selecionar a autenticação Básica ou a autenticação Formulários, digite a conta e a senha.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100439"
   
 4.  Para **Nome do servidor**, digite um valor. O valor que você deve especificar variará, dependendo do modo do servidor:  
   
-    -   Para um servidor de relatório de modo nativo, digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: * \<ServerName\\> [\><InstanceName]*.  
+    -   Para um servidor de relatório de modo nativo, digite o nome da instância do servidor de relatório. Os nomes das instâncias do servidor de relatório baseiam-se nos nomes das instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por padrão, o nome da instância de um servidor de relatório local é apenas o nome do computador. Se você instalou o servidor de relatório como uma instância nomeada, use esta sintaxe para especificar o servidor: *\<servername>[\\<instancename\>]* .  
   
     -   Para um servidor de relatório executado no modo integrado SharePoint, o servidor ao qual se conectar é o site do SharePoint ao qual o servidor está conectado. A conexão com o site do SharePoint é necessária de modo que você possa exibir os níveis de permissão que controlam o acesso às operações e ao conteúdo do servidor de relatório. Você pode especificar qualquer site na coleção de sites. O seguinte exemplo ilustra a sintaxe: http://mysharepointsite.  
   
@@ -102,12 +102,10 @@ ms.locfileid: "66100439"
   
 |Conectar-se a|Tarefas|Permissões|  
 |----------------|-----------|-----------------|  
-|Servidor de relatório de modo nativo, conectado como o padrão ou instância nomeada:<br /><br /> 
-  \<server name>\<_instance><br /><br /> A conexão com o servidor de relatório é feita pelo provedor WMI do servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
+|Servidor de relatório de modo nativo, conectado como o padrão ou instância nomeada:<br /><br /> \<server name>\<_instance><br /><br /> A conexão com o servidor de relatório é feita pelo provedor WMI do servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
 |O servidor de relatório em modo nativo conectado como instância padrão ou nomeada por meio do ponto de extremidade ao serviço Web Servidor de Relatórios:<br /><br /> http://\<servername>/ReportServer<br /><br /> Especificando uma URL para que o servidor de relatório forneça um caminho alternativo de conexão com o servidor de relatório.|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas.<br /><br /> Criar, modificar ou excluir definições de funções.|Atribuído à função Administrador do Sistema.|  
 |Servidor de relatório no modo integrado do SharePoint, conectado por meio do site do SharePoint:<br /><br /> http://\<webserver>/\<SharePointSite>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.<br /><br /> Criar e gerenciar agendas compartilhadas definidas para o site com o qual você está conectado.<br /><br /> Exibir os níveis de permissão definidos para o site ao qual você está conectado.|Nível de permissão de controle total no site do SharePoint ao qual você está conectado.|  
-|O servidor de relatório de modo integrado do SharePoint conectado pelo nome da instância do servidor de relatório:<br /><br /> 
-  \<server name>\<_instance>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.|Nível de permissão de controle total no site do SharePoint integrado ao servidor de relatório.<br /><br /> Observe que, quando você se conecta ao servidor de relatório ao invés do site do SharePoint, o número de tarefas que pode executar é reduzido significativamente. Isso se deve ao fato de o servidor de relatório poder apenas retornar dados de aplicativo armazenados ou gerenciados no banco de dados do servidor de relatório e não na configuração do SharePoint e bancos de dados de conteúdo.|  
+|O servidor de relatório de modo integrado do SharePoint conectado pelo nome da instância do servidor de relatório:<br /><br /> \<server name>\<_instance>|Exibir e definir propriedades e padrões do servidor.<br /><br /> Exibir e cancelar trabalhos.|Nível de permissão de controle total no site do SharePoint integrado ao servidor de relatório.<br /><br /> Observe que, quando você se conecta ao servidor de relatório ao invés do site do SharePoint, o número de tarefas que pode executar é reduzido significativamente. Isso se deve ao fato de o servidor de relatório poder apenas retornar dados de aplicativo armazenados ou gerenciados no banco de dados do servidor de relatório e não na configuração do SharePoint e bancos de dados de conteúdo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar uma conexão de banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

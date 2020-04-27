@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104099"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar um servidor de relatório para administração remota
@@ -116,7 +116,7 @@ ms.locfileid: "66104099"
   
 9. Digite o nome de sua conta de usuário e clique em **OK**.  
   
-10. Em **Permissões para \<Usuário ou Grupo>** , na coluna **Permitir**, selecione **Inicialização Remota** e **Ativação Remota** e, em seguida, clique em **OK**.  
+10. Em **Permissões para \<Usuário ou Grupo>**, na coluna **Permitir**, selecione **Inicialização Remota** e **Ativação Remota** e, em seguida, clique em **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Para definir permissões no namespace WMI do servidor de relatório para não administradores  
   

@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102489"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
@@ -58,7 +58,7 @@ ms.locfileid: "66102489"
  Quando você publica um projeto de Servidor de Relatório, você publica todos os relatórios nesse projeto. Todos os relatórios são implantados usando a mesma configuração de projeto: no mesmo servidor de relatório, na mesma pasta no servidor, e assim por diante. Para publicar relatórios em servidores diferentes, publique-os um por um ou somente inclua os relatórios desejados no projeto do Servidor de Relatório. Uma solução pode incluir vários projetos do Servidor de Relatório. Usar vários projetos pode facilitar o gerenciamento da implantação de relatórios, porque você pode usar uma configuração diferente para implantar projetos diferentes.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caixa de diálogo Páginas de Propriedades do Projeto](../tools/project-property-pages-dialog-box.md)   
+ [Caixa de diálogo páginas de propriedades do projeto](../tools/project-property-pages-dialog-box.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Atualizar relatórios](../install-windows/upgrade-reports.md)  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5ad7e47457aa2d1f1d5e36adec7e988de7b8bbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102350"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Caixa de diálogo Visibilidade da Linha (Construtor de Relatórios)

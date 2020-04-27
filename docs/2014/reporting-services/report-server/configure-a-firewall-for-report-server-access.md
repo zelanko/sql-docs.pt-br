@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104159"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
@@ -45,25 +45,25 @@ ms.locfileid: "66104159"
   
 3.  Clique em **Regras de entrada**.  
   
-4.  Clique em **nova regra** na janela **ações** **.**  
+4.  Clique em **Nova Regra** na janela **Ações****.**  
   
 5.  Clique em **Tipo de Regra** de **porta.**  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
 7.  Na página **Protocolos e Portas** , clique em **TCP**.  
   
 8.  Selecione **Portas Locais Específicas** e digite um valor de **80**.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página **Ação** , clique em **Permitir a conexão**.  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Na página **Perfil** , clique nas opções adequadas para seu ambiente.  
   
-13. Clique em **Próximo**.  
+13. Clique em **Avançar**.  
   
 14. Na página **Nome** , digite o nome do**ReportServer (TCP na porta 80)**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66104159"
 ## <a name="see-also"></a>Consulte Também  
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Criar um banco de dados do servidor de relatório &#40;Configuration Manager SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   

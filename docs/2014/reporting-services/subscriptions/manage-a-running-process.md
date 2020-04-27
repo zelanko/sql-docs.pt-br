@@ -28,14 +28,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100817"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] monitora o status dos trabalhos que estão em execução no servidor de relatório. Em intervalos regulares, o servidor de relatório examina os trabalhos em andamento e grava as informações de status no banco de dados do servidor de relatório ou os bancos de dados de aplicativo de serviço para o modo do SharePoint. Um trabalho está em andamento se algum dos seguintes processos estiver ocorrendo: execução de consulta em um servidor de banco de dados remoto ou local, processamento de relatórios e renderização de relatórios.  
   
  Você pode gerenciar *trabalhos de usuário* e *trabalhos de sistema*.  
   
@@ -60,16 +60,16 @@ ms.locfileid: "66100817"
   
  Neste tópico:  
   
--   [Exibir e Cancelar trabalhos (modo nativo)](#bkmk_native)  
+-   [Exibir e cancelar trabalhos (modo nativo)](#bkmk_native)  
   
--   [Exibir e Cancelar trabalhos (modo do SharePoint)](#bkmk_sharepoint)  
+-   [Exibir e cancelar trabalhos (modo do SharePoint)](#bkmk_sharepoint)  
   
 -   [Gerenciando trabalhos programaticamente](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a>Exibir e Cancelar trabalhos (modo nativo)  
- Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o para exibir ou cancelar um trabalho em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Exibir e cancelar trabalhos (modo nativo)  
+ Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
   
- Você pode usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o para exibir ou cancelar um trabalho em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
+ Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ver ou cancelar um trabalho que está em execução no servidor de relatório. Atualize a página para recuperar uma lista dos trabalhos que estão em execução no momento ou para obter o status atualizado do trabalho do banco de dados do servidor de relatório. Ao se conectar a um servidor de relatório no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode abrir uma pasta Trabalhos para exibir uma lista dos relatórios que estão sendo processados atualmente no computador do servidor de relatório. As informações de status de cada trabalho são exibidas na página Propriedades do Trabalho. Você pode exibir as informações de status de todos os trabalhos abrindo a caixa de diálogo Cancelar Trabalhos do Servidor de Relatório.  
   
  Não é possível usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para listar ou cancelar a geração de modelos, o processamento de modelos ou assinaturas controladas por dados. O Reporting Services não permite cancelar a geração ou o processamento de modelos. Porém, você pode cancelar assinaturas controladas por dados usando as instruções fornecidas neste tópico.  
   
@@ -100,28 +100,28 @@ ms.locfileid: "66100817"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Definindo configurações de frequência para recuperar o status do trabalho  
  Um trabalho em execução é armazenado no banco de dados temporário do servidor de relatório. Você pode modificar as configurações do arquivo RSReportServer.config para controlar a frequência em que o servidor de relatório examina trabalhos em andamento e o intervalo após o qual o status de um trabalho em execução muda de “novo” para “em execução”. A configuração `RunningRequestsDbCycle` especifica com que frequência o servidor de relatório examina processos em execução. Por padrão, as informações de status são registradas a cada 60 segundos. A configuração `RunningRequestsAge` especifica o intervalo em que um trabalho passa de “novo” para “em execução”.  
   
-##  <a name="bkmk_sharepoint"></a>Exibir e Cancelar trabalhos (modo do SharePoint)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Exibir e cancelar trabalhos (modo do SharePoint)  
  O gerenciamento de trabalhos em uma implantação no modo do SharePoint é realizado por meio da Administração Central do SharePoint, para cada aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>Para gerenciar trabalhos no modo do SharePoint  
   
-1.  Na administração central do SharePoint, clique em **gerenciar aplicativos de serviço**.  
+1.  Na Administração Central do SharePoint, clique em **Gerenciar aplicativos de serviço**.  
   
 2.  Localize e clique no nome do seu aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para abrir a página de gerenciamento de aplicativos.  
   
-3.  Clique em **gerenciar trabalhos**  
+3.  Clique em **Gerenciar Trabalhos**.  
   
 4.  Clique na **ID do Trabalho** para ver os detalhes do trabalho.  
   
 5.  Ou clique na caixa do seu trabalho e clique em **Excluir** para cancelar o trabalho. Excluir o trabalho não exclui a assinatura.  
   
-##  <a name="bkmk_programmatically"></a>Gerenciando trabalhos programaticamente  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Gerenciando trabalhos programaticamente  
  Você pode gerenciar trabalhos programaticamente ou usando um script. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ListJobs%2A>e <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cancelar trabalhos do servidor de relatório &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Cancelar Trabalhos do Servidor de Relatório &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [Propriedades do trabalho &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
- [Modifique um arquivo de configuração de Reporting Services &#40;RSreportserver. config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Arquivo de configuração RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Monitorar o desempenho do servidor de relatório](../report-server/monitoring-report-server-performance.md)  

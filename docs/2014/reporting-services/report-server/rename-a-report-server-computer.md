@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c96ae889017eab71378b91eeb1a9ea1881fb25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103495"
 ---
 # <a name="rename-a-report-server-computer"></a>Renomear um computador de servidor de relatório
-  A renomeação de um computador provoca uma alteração de nome correspondente para o servidor Web e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (se estiver no mesmo computador). Em alguns casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o pode não estar acessível após a alteração de um nome de computador. Use as etapas fornecidas neste tópico para reconfigurar um servidor de relatório depois de uma alteração de nome do computador.  
+  A renomeação de um computador provoca uma alteração de nome correspondente para o servidor Web e a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (se estiver no mesmo computador). Em alguns casos, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] talvez não possa ser acessado após uma alteração de nome do computador. Use as etapas fornecidas neste tópico para reconfigurar um servidor de relatório depois de uma alteração de nome do computador.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>Renomeando um Mecanismo de Banco de Dados do SQL Server  
  Se você renomear a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que executa o banco de dados do servidor de relatório, faça o seguinte:  
@@ -48,7 +48,7 @@ ms.locfileid: "66103495"
 ## <a name="see-also"></a>Consulte Também  
  [Arquivo de configuração RSReportServer](rsreportserver-config-configuration-file.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services servidor de relatório &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Iniciar e parar o serviço Servidor de Relatório](start-and-stop-the-report-server-service.md)   
  [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   

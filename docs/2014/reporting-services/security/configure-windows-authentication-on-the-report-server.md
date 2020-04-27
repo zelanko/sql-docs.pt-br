@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102129"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
@@ -45,8 +45,7 @@ ms.locfileid: "66102129"
  As instruções a seguir são válidas para um servidor de relatório no modo nativo. Se o servidor de relatório for implantado no modo integrado do SharePoint, use as configurações de autenticação padrão que especificam a segurança integrada do Windows. O servidor de relatório usa recursos internos na extensão padrão da Autenticação do Windows para dar suporte a servidores de relatório no modo integrado do SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Proteção Estendida para Autenticação  
- A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o suporte para Proteção Estendida para Autenticação está disponível. O recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao uso de associação de canal e associação de serviço para aprimorar a proteção da autenticação. Os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisam ser usados com um sistema operacional que ofereça suporte à Proteção Estendida. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A configuração para proteção estendida é determinada pelas configurações no arquivo RSReportServer.config. O arquivo pode ser atualizado editando o arquivo ou usando APIs do WMI. Para obter mais informações, consulte [proteção estendida para autenticação com Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ A partir do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o suporte para Proteção Estendida para Autenticação está disponível. O recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao uso de associação de canal e associação de serviço para aprimorar a proteção da autenticação. Os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisam ser usados com um sistema operacional que ofereça suporte à Proteção Estendida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A configuração para proteção estendida é determinada pelas configurações no arquivo RSReportServer.config. O arquivo pode ser atualizado editando o arquivo ou usando APIs do WMI. Para obter mais informações, consulte [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Para configurar um servidor de relatório para usar a segurança integrada do Windows  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66102129"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \<>/Authentication  
+     \</Authentication>  
   
      A terceira estrutura XML especifica todos os pacotes de segurança usados na segurança integrada do Windows:  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66102129"
   
 8.  Reinicie o servidor de relatório para terminar as sessões que estão atualmente abertas.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>Resolvendo erros de autenticação Kerberos ao se conectar a um servidor de relatório  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a>Resolvendo erros de autenticação Kerberos ao se conectar a um servidor de relatório  
  Em um servidor de relatório configurado para a autenticação Negotiate ou Kerberos, uma conexão cliente com o servidor de relatório falhará se houver um erro da autenticação Kerberos. Os erros da autenticação Kerberos normalmente ocorrem quando:  
   
 -   O serviço Servidor de Relatório é executado como uma conta de usuário de domínio do Windows e um nome da entidade de serviço (SPN) não tiver sido registrado para a conta.  

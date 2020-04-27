@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103616"
 ---
 # <a name="process-large-reports"></a>Processar relatórios grandes
@@ -71,8 +71,8 @@ ms.locfileid: "66103616"
 ## <a name="see-also"></a>Consulte Também  
  [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
- [Especificar informações de credencial e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Pré-carregar o cache &#40;Report Manager&#41;](preload-the-cache-report-manager.md)  
+ [Pré-carregar o cache &#40;Gerenciador de Relatórios&#41;](preload-the-cache-report-manager.md)  
   
   

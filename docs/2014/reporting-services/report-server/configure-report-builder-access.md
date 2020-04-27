@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104024"
 ---
 # <a name="configure-report-builder-access"></a>Configurar o acesso ao Construtor de Relatórios
-  Construtor de relatórios é uma ferramenta de relatório ad hoc que é instalada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com um servidor de relatório configurado para o modo nativo ou para o modo de integração do SharePoint.  
+  O Construtor de Relatórios é uma ferramenta de criação de relatórios ad hoc que é instalada com um servidor de relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], configurado para o modo nativo ou o modo de integração do SharePoint.  
   
  O acesso ao Construtor de Relatórios depende dos seguintes fatores:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66104024"
   
  Para usar o Construtor de Relatórios, você deve ter um modelo de relatório publicado.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O Construtor de Relatórios não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  O computador cliente deve ter o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2,0 instalado. O [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece a infraestrutura para executar aplicativos [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
@@ -129,7 +129,7 @@ ms.locfileid: "66104024"
   
 7.  Clique na guia **Configurações de Pasta** .  
   
-8.  Clique na guia **Segurança**.  
+8.  Clique na guia **Segurança** .  
   
 9. Se uma atribuição de função já existir para o usuário ou grupo para o qual deseja configurar o acesso do Construtor de Relatórios, clique em **Editar**.  
   

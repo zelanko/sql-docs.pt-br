@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102164"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
@@ -39,7 +39,7 @@ ms.locfileid: "66102164"
   
     -   Clique em **Gerenciar** para abrir a página Propriedades Gerais do item. Em seguida, selecione a guia **Segurança** .  
   
- **Editar segurança de item**  
+ **Editar Segurança de Item**  
  Clique para alterar a maneira como a segurança é definida para o item atual. Se você estiver editando segurança para uma pasta, suas alterações se aplicarão ao conteúdo da pasta atual e de quaisquer subpastas.  
   
  Esse botão não está disponível para a pasta Base.  
@@ -49,7 +49,7 @@ ms.locfileid: "66102164"
  **Delete (excluir)**  
  Marque a caixa de seleção próximo ao grupo ou nome de usuário que você quer excluir e clique em **Excluir**. Você não pode excluir uma atribuição de função se ela for a única ou se for uma atribuição de função interna (por exemplo, "Built-in\Administrators") que define os parâmetros de segurança do servidor de relatório. A exclusão de uma atribuição de função não exclui uma conta de grupo ou usuário, nem as definições da função.  
   
- **Nova atribuição de função**  
+ **Atribuição de Nova Função**  
  Clique para abrir a página Atribuição de Nova Função que é usada para criar atribuições de função adicionais para o item atual. Para obter mais informações, consulte a [página atribuição de nova função: editar atribuição de função &#40;Report Manager&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md).  
   
  **Reverter em Segurança Pai**  
@@ -63,9 +63,9 @@ ms.locfileid: "66102164"
   
 ## <a name="see-also"></a>Consulte Também  
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
- [funções predefinidas](security/role-definitions-predefined-roles.md)   
+ [Funções predefinidas](security/role-definitions-predefined-roles.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Atribuições de função](security/role-assignments.md)   
- [Definições de função](security/role-definitions.md)  
+ [Definições de Funções](security/role-definitions.md)  
   
   

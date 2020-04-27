@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101424"
 ---
 # <a name="select-the-report-type"></a>Selecionar o tipo de relatório
   Use esta página do Assistente de Relatório para selecionar um relatório tabular ou um relatório de matriz.  
   
 ## <a name="options"></a>Opções  
- **Tabular**  
+ **Tabelas**  
  Crie um relatório que contenha uma tabela. Uma tabela é uma região de dados em que os dados são organizados em colunas e linhas. As tabelas têm um conjunto estático de colunas, e o número de linhas na tabela depende dos dados no conjunto de dados.  
   
  Páginas subsequentes no assistente fornecem opções para definir a tabela.  
   
- **Matriz**  
+ **Tabela**  
  Crie um relatório que contenha uma matriz. Uma matriz é uma região de dados em que os dados são organizados em colunas e linhas. As matrizes oferecem funcionalidade semelhante às tabelas de referência cruzada e dinâmicas. Diferentemente de uma tabela, que tem um conjunto estático de colunas, colunas de matriz podem ser dinâmicas.  
   
  Páginas subsequentes no assistente fornecem opções para definir a matriz.  

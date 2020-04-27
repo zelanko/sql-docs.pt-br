@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101152"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Especificar uma imagem como um ponteiro em um medidor (Construtor de Relatórios e SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66101152"
 10. Em **TransparentColor**, escolha um valor de cor que você deseja remover da imagem. Isso criará uma aparência perfeita do ponteiro no medidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Formatando ponteiros de um medidor &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatando ponteiros em um medidor &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Adicionar um medidor a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
  [Formatando linhas, cores e imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  

@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100525"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Caixa de Texto, Alinhamento (Construtor de Relatórios e SSRS)
   Selecione **Alinhamento** na caixa de diálogo **Propriedades da Caixa de Texto** para posicionar os valores dentro de uma célula ou região de dados selecionada.  
   
 ## <a name="options"></a>Opções  
- **Horizontal**  
+ **Na**  
  Especifique o local onde o valor deve ser posicionado horizontalmente dentro de uma célula ou região de dados selecionada. Por padrão, a opção **Padrão** está selecionada. O valor Padrão é **General**. Para obter mais informações sobre como o alinhamento de texto é calculado, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Clique no botão **expressão** (*FX*) para editar a expressão.  
   
  **Vertical**  
@@ -39,7 +39,7 @@ ms.locfileid: "66100525"
  **Início**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda superior de uma célula e o valor exibido dentro dela. O padrão é 2 pontos. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
- **Inferior**  
+ **Resultado**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda inferior de uma célula e o valor exibido dentro dela. O padrão é 2 pontos. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
 ## <a name="see-also"></a>Consulte Também  

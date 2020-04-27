@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100892"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega de email no Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100892"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo do SharePoint &#124; SharePoint 2010 e SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
 ## <a name="e-mail-delivery-options"></a>Opções de entrega de email  
  A entrega de email do servidor de relatório pode entregar emails das seguintes maneiras:  
@@ -47,8 +47,7 @@ ms.locfileid: "66100892"
   
      Se o navegador oferecer suporte a HTML 4.0 e MHTML, e você escolher o formato de renderização de arquivo da Web, o relatório será inserido como parte da mensagem. Todos os outros formatos de renderização (CSV, PDF etc.) entregam os relatórios como anexos. Você pode desabilitar essa funcionalidade no arquivo de configuração de RSReportServer.  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não verifica o tamanho do anexo ou mensagem antes de enviar o relatório. Se o anexo ou a mensagem exceder o limite máximo permitido pelo servidor de email, o relatório não será entregue. Escolha uma das outras opções de entrega (por exemplo, URL ou notificação) para relatórios grandes.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não verifica o tamanho do anexo ou mensagem antes de enviar o relatório. Se o anexo ou a mensagem exceder o limite máximo permitido pelo servidor de email, o relatório não será entregue. Escolha uma das outras opções de entrega (por exemplo, URL ou notificação) para relatórios grandes.  
   
  Você define opções de entrega que determinam como um relatório é entregue ao criar a assinatura. Por exemplo, se você selecionar **Incluir Link** na assinatura, a mensagem de email incluirá um hiperlink para o relatório.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66100892"
   
  Para obter informações sobre como configurar um servidor de relatório do modo do SharePoint, consulte o seguinte:  
   
--   [Configurar o email para um aplicativo de serviço Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   

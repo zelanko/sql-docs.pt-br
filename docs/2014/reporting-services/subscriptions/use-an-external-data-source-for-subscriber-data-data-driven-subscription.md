@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100636"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar uma fonte de dados externa para obter dados de assinante (assinatura controlada por dados)

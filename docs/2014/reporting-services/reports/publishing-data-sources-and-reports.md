@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102506"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publicando fontes de dados e relatórios
@@ -29,7 +29,7 @@ ms.locfileid: "66102506"
  Se você usou uma fonte de dados compartilhada para criar o relatório, será preciso publicá-lo no mesmo local do relatório. Assim como os relatórios, as fontes de dados compartilhadas podem ser gerenciadas separadamente no servidor de relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visualizar relatórios](previewing-reports.md)  
+ [Visualizando relatórios](previewing-reports.md)  
  Descreve como visualizar um relatório antes de publicá-lo.  
   
  [Publicando relatórios em um servidor de relatórios](publishing-reports-to-a-report-server.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "66102506"
  [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Layout de página e renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)  
   

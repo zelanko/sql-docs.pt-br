@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104287"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar a Web Part do Visualizador de Relatórios a uma página da Web (Reporting Services no modo integrado do SharePoint)
@@ -58,7 +58,7 @@ ms.locfileid: "66104287"
 ## <a name="see-also"></a>Consulte Também  
  [Web Part do Visualizador de relatórios em um site do SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizar a Web Part do Visualizador de relatórios](../customize-the-report-viewer-web-part.md)   
- [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concedendo permissões em itens do servidor de relatório em um site do SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar ou desinstalar o suplemento Reporting Services para SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

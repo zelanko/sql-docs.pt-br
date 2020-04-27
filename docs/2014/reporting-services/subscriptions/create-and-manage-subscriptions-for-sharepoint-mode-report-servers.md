@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101006"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101006"
   
  Ao criar uma assinatura, há três modos para especificar sua entrega:  
   
--   **Biblioteca de documentos**: você pode criar uma assinatura que entregue um documento baseado no relatório original para uma biblioteca no mesmo site do SharePoint que o relatório original. Não é possível entregar o documento para uma biblioteca em outro servidor ou outro site na mesma coleção de sites. Para entregar o documento, você deve ter a permissão Adicionar Itens na biblioteca na qual o relatório será entregue.  
+-   **Biblioteca de documentos**: é possível criar uma assinatura que entrega um documento baseado no relatório original para uma biblioteca no mesmo site do SharePoint que o relatório original. Não é possível entregar o documento para uma biblioteca em outro servidor ou outro site na mesma coleção de sites. Para entregar o documento, você deve ter a permissão Adicionar Itens na biblioteca na qual o relatório será entregue.  
   
--   **Pasta de arquivos:** você pode entregar um documento baseado no relatório original para uma pasta compartilhada no sistema de arquivos. Você deve selecionar uma pasta existente que possa ser acessada por uma conexão de rede.  
+-   **Pasta do arquivo:** é possível entregar um documento baseado no relatório original para uma pasta compartilhada no sistema de arquivos. Você deve selecionar uma pasta existente que possa ser acessada por uma conexão de rede.  
   
--   **Email:** se o servidor de relatório estiver configurado para usar a extensão de entrega de Email do Servidor de Relatório, você poderá criar uma assinatura que envia um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
+-   **Email:** se o servidor de relatório estiver configurado para usar a extensão de entrega Email do Servidor de Relatório, você poderá criar uma assinatura que envia um relatório ou um arquivo de relatório exportado (salvo em um formato de saída) para a sua caixa de entrada. Para receber apenas a notificação sem o relatório ou a URL do mesmo, desmarque as caixas de seleção **Incluir um link no relatório** e **Mostrar relatório dentro da mensagem** .  
   
  **Neste tópico:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101006"
   
 -   [Para excluir uma assinatura](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos gerais para assinaturas  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Requisitos gerais para assinaturas  
  Para criar uma assinatura, o relatório deve usar credenciais armazenadas e você deve ter permissão para exibir o relatório e criar alertas.  
   
  Quando você cria uma assinatura, pode selecionar um formato de arquivo de saída. Nem todo relatório funciona bem em qualquer formato. Antes de selecionar o formato de uma assinatura, abra o relatório e exporte-o em formatos diferentes para verificar se ele é exibido como esperado.  
@@ -66,7 +66,7 @@ ms.locfileid: "66101006"
   
  Os formatos de saída selecionados para uma assinatura são baseados nas extensões de renderização instaladas no servidor de relatório. Você só pode selecionar formatos de saída com suporte nas extensões de renderização no servidor de relatório.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Para criar uma assinatura para entregar um relatório a uma biblioteca do SharePoint.  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Para criar uma assinatura para entregar um relatório a uma biblioteca do SharePoint.  
   
 1.  Navegue para uma biblioteca do SharePoint que contém o relatório.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101006"
   
 10. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. A seção de parâmetros não está visível nessa página se o relatório selecionado não contém parâmetros. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Para criar uma assinatura para entrega de pasta compartilhada  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Para criar uma assinatura para entrega de pasta compartilhada  
   
 1.  Navegue para uma biblioteca do SharePoint que contém o relatório.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101006"
   
 12. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Para criar uma assinatura para a entrega de email do servidor de relatório  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Para criar uma assinatura para a entrega de email do servidor de relatório  
   
 1.  Navegue para uma biblioteca do SharePoint que contém o relatório.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101006"
   
 10. Em **Parâmetros**, caso você esteja criando uma assinatura para um relatório com parâmetros, especifique os valores que deseja usar com o relatório quando a assinatura for processada. Para obter mais informações sobre parâmetros, consulte [Definir parâmetros em um relatório publicado &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Para exibir ou modificar uma assinatura  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Para exibir ou modificar uma assinatura  
   
 1.  Navegue para uma biblioteca do SharePoint que contém o relatório.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101006"
   
 3.  Cada assinatura é identificada pelo tipo de entrega. Clique no tipo de assinatura para exibir e alterar as propriedades existentes.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Para excluir uma assinatura  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Para excluir uma assinatura  
   
 1.  Navegue para uma biblioteca do SharePoint que contém o relatório.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102323"
 ---
 # <a name="schedules-page-report-manager"></a>Página Agendas (Gerenciador de Relatórios)
@@ -43,16 +43,16 @@ ms.locfileid: "66102323"
  **Delete (excluir)**  
  Clique para remover uma agenda compartilhada.  
   
- **Temporariamente**  
+ **Pausar**  
  Clique para parar temporariamente a execução de uma agenda compartilhada. Quando uma agenda é pausada, isso impede que a assinatura e outros processos agendados sejam executados.  
   
  **Volte**  
  Clique para reiniciar uma agenda compartilhada. Processos interrompidos agendados para executar enquanto a agenda estava em pausa não são concluídos.  
   
- **Agenda**  
+ **Agendamento**  
  Exibe as agendas compartilhadas atualmente definidas. Clique em uma agenda compartilhada para exibir ou editar informações de frequência.  
   
- **Necessitam**  
+ **Criador**  
  Exibe o nome do usuário que criou a agenda compartilhada.  
   
  **Última Execução, Próxima Execução**  

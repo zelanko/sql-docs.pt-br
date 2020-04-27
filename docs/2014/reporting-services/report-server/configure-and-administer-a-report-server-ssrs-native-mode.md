@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103995"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurar e administrar um servidor de relatório (modo nativo do SSRS)
@@ -60,6 +60,6 @@ ms.locfileid: "66103995"
  [Arquivos de configuração do Reporting Services](reporting-services-configuration-files.md)   
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md)   
- [Servidor de Relatório do Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)  
+ [Servidor de relatório do Reporting Services &#40;Modo Nativo&#41;](reporting-services-report-server-native-mode.md)  
   
   

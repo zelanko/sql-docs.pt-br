@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100787"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -34,12 +34,12 @@ ms.locfileid: "66100787"
   
  Neste tópico:  
   
--   [Pausar e retomar agendas compartilhadas (modo nativo)](#bkmk_native)  
+-   [Pausar e retomar agendas compartilhadas (modo Nativo)](#bkmk_native)  
   
--   [Pausar e retomar agendas compartilhadas (modo do SharePoint)](#bkmk_sharepoint)  
+-   [Pausar e retomar agendas compartilhadas (modo SharePoint)](#bkmk_sharepoint)  
   
-##  <a name="bkmk_native"></a>Pausar e retomar agendas compartilhadas (modo nativo)  
- Para pausar e retomar uma agenda compartilhada, use a página Agendas no Gerenciador de Relatórios. Você não pode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]usar; Ele não fornece opções para pausar e retomar agendamentos. Para obter mais informações, consulte [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
+##  <a name="pause-and-resume-shared-schedules-native-mode"></a><a name="bkmk_native"></a> Pausar e retomar agendas compartilhadas (modo Nativo)  
+ Para pausar e retomar uma agenda compartilhada, use a página Agendas no Gerenciador de Relatórios. Não é possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; ele não oferece opções para pausar e retomar agendas. Para obter mais informações, consulte [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Para pausar ou retomar uma agenda compartilhada  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100787"
   
 3.  Selecione a agenda e clique em **Pausar** ou em **Retomar** na faixa de opções. Se uma Agenda estiver pausada, a coluna **Status** conterá **Pausada**.  
   
-##  <a name="bkmk_sharepoint"></a>Pausar e retomar agendas compartilhadas (modo do SharePoint)  
+##  <a name="pause-and-resume-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Pausar e retomar agendas compartilhadas (modo SharePoint)  
  Para pausar e retomar uma agenda compartilhada, use a página Configurações do Site ou o PowerShell. As agendas são gerenciadas por site do SharePoint.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Para pausar ou retomar uma agenda compartilhada  
@@ -63,7 +63,7 @@ ms.locfileid: "66100787"
 4.  Selecione a agenda e clique em **Pausar Agendas Selecionadas** ou **Executar Agendas Selecionadas**. Se uma Agenda estiver pausada, a coluna **Status** conterá **Pausada**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Agendamento](schedules.md)   
+ [Agendas](schedules.md)   
  [Criar, modificar e excluir agendas](create-modify-and-delete-schedules.md)   
  [Alterar as configurações de fuso horário e relógio em um servidor de relatório](change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Gerenciar um processo em execução](manage-a-running-process.md)  

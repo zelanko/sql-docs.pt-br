@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104383"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página
@@ -39,16 +39,16 @@ ms.locfileid: "66104383"
  **Tamanho do papel**  
  Selecione um tamanho na lista, o que automaticamente insere as dimensões nos controles de Largura e Altura. Alternativamente, selecione **Tamanho Personalizado** e altere os controles de Largura e Altura para que reflitam o tamanho que você deseja usar.  
   
- **Width**  
+ **Largura**  
  Exibe a largura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
- **Height**  
+ **Tamanho**  
  Exibe a altura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
  **Início**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **Inferior**  
+ **Resultado**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
  **Mantida**  
@@ -58,7 +58,7 @@ ms.locfileid: "66104383"
  Define a distância entre a borda direita do relatório e a borda direita das linhas do relatório.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Dicas de design de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

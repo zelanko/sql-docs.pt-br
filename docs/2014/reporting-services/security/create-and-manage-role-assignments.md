@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101994"
 ---
 # <a name="create-and-manage-role-assignments"></a>Criar e gerenciar atribuições de função
@@ -41,7 +41,7 @@ ms.locfileid: "66101994"
   
  Você deve ser membro do grupo de Administradores local no computador do servidor de relatório para criar uma atribuição de função. Você pode delegar essa responsabilidade atribuindo outros usuários à função **Gerenciador de Conteúdo** .  
   
- Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md).  
+ Para obter mais informações, consulte [conceder acesso de usuário a um servidor de relatório &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Criando uma atribuição de função no nível do sistema  
  Para criar ou gerenciar uma atribuição de função no nível do sistema, use o Gerenciador de Relatórios e abra a página Configurações de Site.  
@@ -63,11 +63,11 @@ ms.locfileid: "66101994"
  Você pode excluir atribuições de função marcando a caixa de seleção de cada atribuição que deseja excluir e clicando em **Excluir**. Você também pode excluir atribuições de função clicando em **Reverter em Segurança Pai**. Ao clicar nesse botão, as atribuições de função existentes para o item são excluídas e as atribuições fornecidas por um item pai são usadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceder acesso ao usuário a um servidor de relatório &#40;Gerenciador de Relatórios&#41;](grant-user-access-to-a-report-server.md)   
+ [Conceder acesso de usuário a um servidor de relatório &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Modifique ou exclua uma atribuição de função &#40;Report Manager&#41;](role-assignments-modify-or-delete.md)   
  [Atribuições de função](role-assignments.md)   
  [Definições de função](role-definitions.md)   
- [funções predefinidas](role-definitions-predefined-roles.md)   
+ [Funções predefinidas](role-definitions-predefined-roles.md)   
  [Conceder permissões em um servidor de relatório no Modo Nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   

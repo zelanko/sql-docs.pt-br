@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102908"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Recursos e tarefas do Reporting Services (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66102908"
   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
+ [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
   
  [Segurança e proteção do Reporting Services](security/reporting-services-security-and-protection.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66102908"
   
  [Extensões &#40;SSRS&#41;](extensions-ssrs.md)  
   
- [Ferramentas do Reporting Services](tools/reporting-services-tools.md)  
+ [Ferramentas de Reporting Services](tools/reporting-services-tools.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   

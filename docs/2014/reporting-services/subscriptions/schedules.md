@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100747"
 ---
 # <a name="schedules"></a>Agendas
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece agendas compartilhadas e específicas de relatório para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.  
+  O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece agendas compartilhadas e específicas de relatório para ajudar a controlar o processamento e a distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.  
   
  Neste tópico:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66100747"
 -   [Efeitos da interrupção do serviço servidor de relatório](#bkmk_stoppingservice)  
   
   
-##  <a name="bkmk_whatyoucando"></a> O que você pode fazer com Agendas  
+##  <a name="what-you-can-do-with-schedules"></a><a name="bkmk_whatyoucando"></a> O que você pode fazer com Agendas  
  Você pode usar o Gerenciador de Relatórios em modo Nativo e as páginas de administração do site do SharePoint no modo SharePoint para criar e gerenciar suas agendas. Você pode:  
   
 -   Programar a entrega de relatórios em uma assinatura padrão ou controlada por dados.  
@@ -68,7 +68,7 @@ ms.locfileid: "66100747"
 > [!NOTE]  
 >  As operações de agenda não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
   
-##  <a name="bkmk_compare"></a> Comparando agendas compartilhadas e específicas de relatório  
+##  <a name="comparing-shared-and-report-specific-schedules"></a><a name="bkmk_compare"></a> Comparando agendas compartilhadas e específicas de relatório  
  Os dois tipos de agendas retornam o mesmo resultado:  
   
 -   As**agendas compartilhadas** são itens portáteis e polivalentes que contêm informações de agenda prontas para uso. Como as agendas compartilhadas são itens no nível do sistema, criar uma agenda compartilhada requer permissões no nível do sistema. Por isso, um administrador de servidor de relatório ou gerenciador de conteúdo normalmente cria as agendas compartilhadas que estão disponíveis no seu servidor de relatório. As agendas compartilhadas são armazenadas e administradas no servidor de relatório usando configurações do Gerenciador de Relatórios ou do site do SharePoint.  
@@ -83,14 +83,14 @@ ms.locfileid: "66100747"
   
 -   As**agendas específicas do relatório** são definidas no contexto de um relatório individual, assinatura ou operação de execução de relatório para determinar a expiração de cache ou as atualizações de instantâneo. Essas agendas são criadas embutidas quando ao definir uma assinatura ou as propriedades de execução de relatório. É possível criar uma agenda específica de relatório se uma agenda compartilhada não fornecer o padrão de frequência ou de recorrência de que você precisa. Para impedir que um relatório seja executado, você deve editar uma agenda específica de relatório manualmente. As agendas específicas de relatório podem ser criadas por usuários individuais.  
   
-##  <a name="bkmk_configuredatasources"></a> Configurar as fontes de dados  
+##  <a name="configure-the-data-sources"></a><a name="bkmk_configuredatasources"></a> Configurar as fontes de dados  
  Para agendar o processamento de dados ou assinaturas para um relatório, você deve configurar a fonte de dados do relatório para que use credenciais armazenadas ou a conta de processamento de relatório autônoma. Se você usar credenciais armazenadas, só poderá armazenar um conjunto de credenciais e elas serão usadas por todos os usuários que executarem o relatório. As credenciais podem ser uma conta de usuário do Windows ou uma conta de usuário de banco de dados.  
   
  A conta de processamento de relatório autônoma é uma conta especial configurada no servidor de relatórios, que a usa para conectar-se com computadores remotos quando uma operação agendada requer processamento ou a recuperação de um arquivo externo. Se você configurar a conta, poderá usá-la para conectar-se a fontes de dados externas que fornecem dados para um relatório.  
   
  Para especificar credenciais armazenadas ou a conta de processamento de relatório autônoma, edite as propriedades da fonte de dados do relatório. Se o relatório usar uma fonte de dados compartilhados, edite a fonte de dados compartilhados.  
   
-##  <a name="bkmk_credentials"></a> Armazenar credenciais e contas de processamento  
+##  <a name="store-credentials-and-processing-accounts"></a><a name="bkmk_credentials"></a> Armazenar credenciais e contas de processamento  
  O modo como você trabalha com uma agenda depende das tarefas que fazem parte de sua atribuição de função. Se você estiver usando funções predefinidas, os usuários que são Gerenciadores de Conteúdo e Administradores de Sistema podem criar e gerenciar qualquer agenda. Se atribuições de função personalizadas forem utilizadas, a atribuição de função deve incluir tarefas que ofereçam suporte para as operações agendadas.  
   
 |Para fazer isto|Inclua esta tarefa|Funções predefinidas do modo nativo|Grupos do modo do SharePoint|  
@@ -102,7 +102,7 @@ ms.locfileid: "66100747"
   
  Para obter mais informações sobre a segurança no modo Nativo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Funções predefinidas](../security/role-definitions-predefined-roles.md), [Concedendo permissões em um Servidor de Relatório no modo Nativo](../security/granting-permissions-on-a-native-mode-report-server.md) e [Tarefas e Permissões](../security/tasks-and-permissions.md). Para o modo do SharePoint, consulte [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
-##  <a name="bkmk_how_scheduling_works"></a> Como o Processador de Agendamento e Entrega funciona  
+##  <a name="how-scheduling-and-delivery-processing-works"></a><a name="bkmk_how_scheduling_works"></a> Como o Processador de Agendamento e Entrega funciona  
  O Processador de Agendamento e Entrega fornece as seguintes funcionalidades:  
   
 -   Mantém uma fila de eventos e notificações no banco de dados do servidor de relatório. Em uma implantação em expansão, a fila é compartilhada por todos os servidores de relatório na implantação.  
@@ -127,19 +127,19 @@ ms.locfileid: "66100747"
   
  O Reporting Services mantém uma fila de eventos para todas as operações agendadas. Ele pesquisa a fila em intervalos regulares para verificar novos eventos. Por padrão, a fila é digitalizada em intervalos de 10 segundos. Você pode alterar o intervalo modificando as definições de configuração `PollingInterval`, `IsNotificationService` e `IsEventService` no arquivo RSReportServer.config. O modo do SharePoint também usa o RSreporserver.config para obter estas configurações e os valores se aplicam a todos os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
-##  <a name="bkmk_serverdependencies"></a> Dependências de servidor  
+##  <a name="server-dependencies"></a><a name="bkmk_serverdependencies"></a> Dependências de servidor  
  O Processador de Agendamento e Entrega requer que o serviço Servidor de Relatório e o SQL Server Agent sejam iniciados. O recurso de agendamento e processamento de entrega deve ser habilitado `ScheduleEventsAndReportDeliveryEnabled` por meio da propriedade da **configuração da área de superfície para Reporting Services** faceta no gerenciamento baseado em políticas. O SQL Server Agent e o serviço Servidor de Relatório devem ser executados para que as operações agendadas ocorram.  
   
 > [!NOTE]  
 >  É possível usar a faceta **Configuração da Área da Superfície do Reporting Services** para parar as operações agendadas em uma base temporária ou permanente. Embora você possa criar e implantar extensões de entrega personalizadas, em si, o Processador de Agendamento e Entrega não é extensível. Não é possível alterar a forma como ele gerencia eventos e notificações. Para obter mais informações sobre volta fora recursos, consulte a seção **Eventos e entrega agendados** de [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
   
-###  <a name="bkmk_stoppingagent"></a> Efeitos de parar o SQL Server Agent  
+###  <a name="effects-of-stopping-the-sql-server-agent"></a><a name="bkmk_stoppingagent"></a> Efeitos de parar o SQL Server Agent  
  O processamento de relatórios agendado usa o SQL Server Agent por padrão. Se você parar o serviço, nenhuma nova solicitação de processamento será adicionada à fila, a menos que seja adicionada programaticamente através do método <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Quando você reinicializa o serviço, os trabalhos que criam solicitações de processamento de relatório são reiniciados. O servidor de relatório não tenta recriar os trabalhos de processamento de relatório que possam ter ocorrido anteriormente quando o SQL Server Agent estava offline. Se você parar o SQL Server Agent por uma semana, todas as operações agendadas nessa semana serão perdidas.  
   
 > [!NOTE]  
 >  A funcionalidade que o SQL Server Agent fornece ao Reporting Services pode ser substituída pelo código personalizado que usa o método <xref:ReportService2010.ReportingService2010.FireEvent%2A> para adicionar eventos de agendamento à fila.  
   
-###  <a name="bkmk_stoppingservice"></a> Efeitos de parar o serviço Servidor de Relatório  
+###  <a name="effects-of-stopping-the-report-server-service"></a><a name="bkmk_stoppingservice"></a> Efeitos de parar o serviço Servidor de Relatório  
  Se você parar o serviço Servidor de Relatório, o SQL Server Agent continuará a adicionar solicitações de processamento de relatório à fila. As informações de status do SQL Server Agent indicam que o trabalho teve êxito. Porém, como o serviço Servidor de Relatório foi interrompido, nenhum processamento de relatório realmente ocorre. As solicitações continuarão a acumular na fila até que o serviço Servidor de Relatório seja reiniciado. Quando o serviço Servidor de Relatório é reiniciado, todas as solicitações de processamento de relatório que estão na fila são processadas.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104085"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
@@ -37,13 +37,13 @@ ms.locfileid: "66104085"
 |----------|-----------------|----------------------|  
 |1|Antes de instalar o Reporting Services em nós de servidor em um cluster NLB, verifique os requisitos de implantação em expansão.|[Configurar uma implantação em expansão do servidor de relatório no modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online|  
 |2|Configure o cluster NLB e verifique se ele está funcionando corretamente.<br /><br /> Mapeie um nome de cabeçalho de host para o IP de servidor virtual do cluster NLB. O nome de cabeçalho de host é usado na URL do servidor de relatório e é mais fácil de lembrar e digitar do que um endereço IP.|Para obter mais informações, consulte a documentação do produto do Windows Server para a versão do sistema operacional Windows que você executa.|  
-|3|Adicionar o NetBIOS e um Nome de Domínio Totalmente Qualificado (FQDN) para o cabeçalho do host para a lista de **BackConnectionHostNames** armazenada no Registro do Windows. Use as etapas em **Método 2: Especifique nomes de hosts** em [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), com o ajuste a seguir. A **etapa 7** do artigo da base de conhecimento diz "sair do editor do registro e reiniciar o serviço IISAdmin". Em vez disso, reinicialize o computador para garantir que as alterações entrem em vigor.<br /><br /> Por exemplo, se o nome do cabeçalho do host \<MyServer> for um nome virtual para o nome do computador do Windows "contoso", provavelmente, você poderá referenciar o formato FQDN como "contoso.domain.com". Você precisará adicionar o nome do cabeçalho de host (MyServer) e nome FQDN (contoso.domain.com) à lista em **BackConnectionHostNames**.|Esta etapa é necessária se seu ambiente de servidor envolver autenticação de NTLM no computador local, criando uma conexão de loopback.<br /><br /> Se este for o caso, você verá que as solicitações entre o Gerenciador de Relatórios e Servidor de relatório falharão com 401 (Sem autorização).|  
+|3|Adicionar o NetBIOS e um Nome de Domínio Totalmente Qualificado (FQDN) para o cabeçalho do host para a lista de **BackConnectionHostNames** armazenada no Registro do Windows. Use as etapas em **Método 2: Especifique nomes de hosts** em [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), com o ajuste a seguir. A**Etapa 7** do artigo da base de dados de conhecimento diz "Encerre o Editor do Registro e reinicie o serviço do IISAdmin". Em vez disso, reinicialize o computador para garantir que as alterações entrem em vigor.<br /><br /> Por exemplo, se o nome do cabeçalho do host \<MyServer> for um nome virtual para o nome do computador do Windows "contoso", provavelmente, você poderá referenciar o formato FQDN como "contoso.domain.com". Você precisará adicionar o nome do cabeçalho de host (MyServer) e nome FQDN (contoso.domain.com) à lista em **BackConnectionHostNames**.|Esta etapa é necessária se seu ambiente de servidor envolver autenticação de NTLM no computador local, criando uma conexão de loopback.<br /><br /> Se este for o caso, você verá que as solicitações entre o Gerenciador de Relatórios e Servidor de relatório falharão com 401 (Sem autorização).|  
 |4|Instale o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo somente arquivos nos nós que já fazem parte de um cluster NLB e configure as instâncias do servidor de relatório para a implantação da expansão.<br /><br /> A expansão configurada poderá não responder às solicitações dirigidas ao IP do servidor virtual. A configuração da expansão para usar o IP do servidor virtual ocorre em uma etapa posterior, depois que você configura a validação do estado de exibição.|[Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configure a validação do estado de exibição.<br /><br /> Para obter os melhores resultados, execute esta etapa depois de configurar a implantação em expansão e antes de configurar as instâncias do servidor de relatório que usarão o IP do servidor virtual. Ao configurar primeiro a validação do estado de exibição, você evitará exceções sobre falha na validação do estado quando usuários tentarem acessar relatórios interativos.|[Como configurar a validação do estado de exibição](#ViewState) neste tópico.|  
 |6|Configure o `Hostname` e o `UrlRoot` para usar o IP do servidor virtual do cluster NLB.|[Como configurar Hostname e UrlRoot](#SpecifyingVirtualServerName) neste tópico.|  
 |7|Verifique se é possível acessar os servidores através do nome do host especificado.|[Verificar o acesso ao servidor de relatório](#Verify) neste tópico.|  
   
-##  <a name="ViewState"></a> Como configurar a validação do estado de exibição  
+##  <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a>Como configurar a validação do estado de exibição  
  Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos. Você deve fazer isso para o servidor de relatório e Gerenciador de Relatórios.  
   
  A validação do estado de exibição é controlada pelo ASP .NET. Por padrão, ela fica habilitada e usa a identidade do serviço Web para efetuar a validação. Porém, em um cenário de cluster NLB, existem várias instâncias de serviço e identidades de serviço Web que são executadas em computadores diferentes. Como a identidade do serviço varia para cada nó, não é possível usar uma única identidade de processo para efetuar a validação.  
@@ -66,7 +66,7 @@ ms.locfileid: "66104085"
   
 5.  Verifique se todos os arquivos Web. config nas pastas do \Reporting Services\Report Manager contêm elementos `machineKey` <> idênticos na `system.web` seção <>.  
   
-##  <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot  
+##  <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a>Como configurar o nome do host e o UrlRoot  
  Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome de servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome de servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  
   
  Depois de definir o nome do servidor virtual, você poderá configurar as propriedades  `Hostname` e as   `UrlRoot` no arquivo RSReportServer.config para incluir o nome do servidor virtual na URL do servidor de relatório.  
@@ -95,7 +95,7 @@ ms.locfileid: "66104085"
   
 6.  Repita estas etapas em cada arquivo RSReportServer.config de cada servidor de relatório na implantação em expansão.  
   
-##  <a name="Verify"></a> Verificar o acesso ao servidor de relatório  
+##  <a name="verify-report-server-access"></a><a name="Verify"></a>Verificar o acesso ao servidor de relatório  
  Verifique se você pode acessar a implantação em expansão por meio do nome do servidor virtual (por exemplo https://MyVirtualServerName/reportserver , https://MyVirtualServerName/reports)e.  
   
  Você pode verificar que nó efetivamente processa relatórios examinando os arquivos de log do servidor de relatório ou verificando o log de execução do RS (a tabela do log de execução contém uma coluna denominada **InstanceName** que mostra qual instância processou uma determinada solicitação). Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,8 +113,8 @@ ms.locfileid: "66104085"
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Configurar uma URL &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar uma implantação em expansão do servidor de relatório no modo nativo &#40;Configuration Manager SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101547"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Definir permissões para operações do servidor de relatório em um aplicativo Web do SharePoint
@@ -53,7 +53,7 @@ ms.locfileid: "66101547"
   
  A permissão "Procurar Informações sobre o Usuário" permite que o servidor de relatório retorne informações sobre o criador do item e o último usuário que o modificou. Sem essa permissão, o servidor de relatório retornará os erros a seguir. Para operações de procura, o erro é: "O Report Server encontrou um erro de SharePoint. ---> System.UnauthorizedAccessException: acesso negado." Para operações de publicação, o erro é: "As permissões concedidas ao usuário '\<domínio>\\<usuário\>' não são suficientes para realizar esta operação".  
   
-##  <a name="permissionReports"></a> Permissões para exibir e gerenciar relatórios  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Permissões para exibir e gerenciar relatórios  
  As permissões de definição são estabelecidas através de permissões de Lista na biblioteca que contém o relatório, mas é possível definir permissões em relatórios individuais, se você desejar restringir o acesso. A tabela a seguir fornece uma lista de tarefas e as permissões que oferecem suporte a cada uma.  
   
 |Tarefa|Permissão|  
@@ -71,7 +71,7 @@ ms.locfileid: "66101547"
 |Excluir instantâneos em um histórico de relatórios e excluir versões específicas de definições de relatórios que tenham sofrido check out e sido modificadas com o decorrer do tempo.|**Excluir Versões** para a biblioteca que contém o relatório do qual você está excluindo um histórico de relatórios.|  
 |Exibir instantâneos em um histórico de relatórios e exibir versões específicas de definições de relatórios que tenham sofrido check out e sido modificadas com o decorrer do tempo.|**Exibir Versões** na biblioteca que contém o relatório.|  
   
-##  <a name="permissionReportBuilder"></a> Permissões para criar e gerenciar relatórios com o uso do Construtor de Relatórios  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> Permissões para criar e gerenciar relatórios com o uso do Construtor de Relatórios  
  O Construtor de Relatórios é uma ferramenta de criação de relatórios que você pode usar para criar relatórios ad hoc. O Construtor de Relatórios usa modelos de relatórios como fonte de dados para oferecer suporte à exploração de dados ad hoc. Você pode carregar um modelo no Construtor de Relatórios para criar um relatório, executá-lo, clicar em dados do modelo e, opcionalmente, salvar o relatório em uma biblioteca. Os usuários com permissões suficientes podem, em seguida, abrir o mesmo relatório e também executar exploração de dados ad hoc.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66101547"
   
  As permissões para criar e usar assinaturas, histórico de relatórios e também para definir opções de processamento de relatórios ou de dados em um relatório do Construtor de Relatórios são as mesmas usadas para executar ações idênticas em arquivos de definição de relatório padrão.  
   
-##  <a name="permissionSharedSchedules"></a> Permissões para criar e gerenciar agendas compartilhadas  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> Permissões para criar e gerenciar agendas compartilhadas  
  As agendas compartilhadas não são documentos armazenados em uma biblioteca. Por esse motivo, a criação e o gerenciamento dessas agendas requerem permissões do site. Não é possível restringir o acesso a agendas compartilhadas específicas. Qualquer agenda compartilhada criada por você estará disponível para qualquer usuário com permissão Abrir, em todo o site.  
   
  A tabela a seguir fornece uma lista de tarefas e permissões para criar, gerenciar e usar agendas compartilhadas.  
@@ -102,7 +102,7 @@ ms.locfileid: "66101547"
 |Criar, editar ou excluir uma agenda compartilhada.|**Gerenciar Site** no site.|  
 |Selecione uma agenda compartilhada para processamento de assinaturas ou recuperação de dados.|**Abrir** no site que contém a biblioteca.|  
   
-##  <a name="permissionSubscriptions"></a> Permissões para criar e gerenciar assinaturas  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> Permissões para criar e gerenciar assinaturas  
  O SharePoint impõe uma dependência entre as permissões de assinatura e de exibição. Não é possível fazer assinatura em um relatório que você não tem permissão para exibir. Se você conceder permissões para fazer a assinatura em um relatório, as permissões para exibição serão concedidas automaticamente.  
   
  A tabela a seguir fornece uma lista de tarefas e permissões para criar, gerenciar e usar assinaturas.  
@@ -113,7 +113,7 @@ ms.locfileid: "66101547"
 |Selecione uma agenda compartilhada para usar com a assinatura.|**Abrir** no site que contém a biblioteca.|  
 |Criar, editar ou excluir qualquer assinatura em todo o site.|**Gerenciar Alertas** no site.|  
   
-##  <a name="permissionDataSources"></a> Permissões para criar e gerenciar fontes de dados compartilhadas e modelos de relatórios  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> Permissões para criar e gerenciar fontes de dados compartilhadas e modelos de relatórios  
  Um arquivo de fonte de dados compartilhados (.rsds) contém informações de conexão da fontes de dados que podem ser usadas por vários relatórios e modelos. No caso de relatórios padrão, o uso de um arquivo .rsds para especificar informações de conexão da fonte de dados é opcional. No caso de relatórios controlados por modelos, o uso de um arquivo .rsds é obrigatório. Um modelo de relatório sempre usa um arquivo .rsds para conectar-se a fontes de dados externas.  
   
  Você pode definir propriedades em fontes de dados compartilhados que determinam se os usuários individuais podem exibir ou gerenciar fontes de dados compartilhados. As permissões para exibir ou gerenciar uma fonte de dados compartilhados diferem daquelas para exibição de relatórios; você pode exibir um relatório que use um arquivo .rsds sem possuir permissão para exibição no próprio arquivo .rsds.  

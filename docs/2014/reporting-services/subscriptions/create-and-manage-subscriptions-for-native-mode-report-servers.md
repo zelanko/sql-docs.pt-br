@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100986"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -26,7 +26,7 @@ ms.locfileid: "66100986"
  Um usuário que cria uma assinatura possui essa assinatura. Cada usuário pode modificar ou excluir as assinaturas que possui.  
   
 > [!NOTE]  
->  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A partir do, você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A partir do, você pode transferir a propriedade de uma assinatura programaticamente. Não há nenhuma interface do usuário que você possa usar para transferir propriedade de assinaturas. Para obter mais informações, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
  Dependendo das configurações do arquivo de configuração **RSReportServer. config** , os usuários poderão adicionar mais usuários a uma assinatura (por exemplo, um gerente adicionará os endereços de email de seus subordinados diretos para que cada um receba uma cópia do relatório). O suporte a esse recurso depende da visibilidade do campo Para: durante a definição de assinaturas individuais. Para obter mais informações, consulte [configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100986"
   
 -   [Para excluir uma assinatura](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>Para criar uma assinatura  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>Para criar uma assinatura  
  Para criar uma assinatura, escolha a ferramenta e a abordagem que são válidas para a implantação do servidor de relatório:  
   
 -   O conteúdo neste tópico explica como criar assinaturas em um servidor de relatório do modo nativo usando o Gerenciador de Relatório da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Após definir uma assinatura, você poderá acessá-la no Gerenciador de Relatórios através da página Minhas Assinaturas ou da guia **Assinaturas** de um relatório específico.  
@@ -61,7 +61,7 @@ ms.locfileid: "66100986"
   
  Este tópico não explica como criar uma assinatura controlada por dados. Para obter instruções sobre como criar uma assinatura controlada por dados, consulte [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) ou a Ajuda online da página Criar uma Assinatura Controlada por Dados no Gerenciador de Relatórios.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>Para criar uma assinatura de compartilhamento de arquivos  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>Para criar uma assinatura de compartilhamento de arquivos  
   
 1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100986"
   
 8.  Em Formato de Processamento, selecione um formato de saída de relatório para entrega de arquivo. Escolha um formato que corresponda ao aplicativo de desktop que será usado para abrir o relatório. Evite formatos que não renderizam um relatório em um único fluxo ou que introduzam interatividade não compatível com um arquivo estático (por exemplo, HTML 4.0).  
   
-9. Nas caixas de texto **nome de usuário** e **senha** , especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o domínio de formato * \<>* \\ * \<nome de usuário>* para o nome de usuário.  
+9. Nas caixas de texto **Nome de usuário** e **Senha**, especifique as credenciais necessárias para acessar o compartilhamento de arquivos, usando o formato *\<domain>* \\ *\<user name>* para o nome de usuário.  
   
 10. Especifique opções de substituição. Se você clicar em **Não substituir o arquivo se existir uma versão anterior**, a entrega não ocorrerá caso um arquivo existente seja detectado. Se você clicar em **Incrementar nomes de arquivos quando versões mais recentes são adicionadas**, o servidor de relatório adicionará um número ao nome do arquivo para diferenciá-lo dos arquivos existentes com o mesmo nome.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100986"
   
  O relatório é entregue como um arquivo estático. Se o relatório incluir recursos interativos (por exemplo, links para linhas e colunas adicionais), esses recursos não estarão disponíveis.  
   
-###  <a name="bkmk_create_email_subscription"></a>Para criar uma assinatura de email  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>Para criar uma assinatura de email  
   
 1.  No Gerenciador de Relatórios, na página **Conteúdo** , navegue até o relatório que deseja assinar. Clique no relatório para abri-lo.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100986"
   
 9. Para relatórios parametrizados, especifique os parâmetros a serem usados para o relatório dessa assinatura. Os parâmetros especificados podem ser diferentes dos utilizados para executar o relatório sob demanda ou em outras operações agendadas.  
   
-##  <a name="bkmk_modify_subscription"></a>Para modificar uma assinatura  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>Para modificar uma assinatura  
  Você pode modificar uma assinatura em qualquer momento. Se uma assinatura for modificada enquanto estiver sendo processada, as configurações atualizadas serão usadas se forem salvas no banco de dados do servidor de relatório antes de a extensão de entrega receber os dados da assinatura. Caso contrário, as configurações existentes são usadas.  
   
  Para localizar uma assinatura, use a página **Minhas Assinaturas** ou exiba as definições de assinatura associadas a um relatório. Não é possível procurar as assinaturas diretamente, nem procurar uma assinatura baseada no nome do proprietário, em informações de gatilho, em informações de status, etc.  
@@ -151,7 +151,7 @@ ms.locfileid: "66100986"
 > [!NOTE]  
 >  Um administrador de servidor de relatório não pode gerenciar a partir de um lugar todas as assinaturas individuais que estão sendo usadas em um servidor de relatório específico. No entanto, os administradores de servidor de relatório podem acessar cada assinatura individual para modificá-la ou excluí-la.  
   
-##  <a name="bkmk_delete_subscription"></a>Para excluir uma assinatura  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>Para excluir uma assinatura  
  Para excluir uma assinatura"  
   
 1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md).  
@@ -172,8 +172,8 @@ ms.locfileid: "66100986"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tarefas e permissões](../security/tasks-and-permissions.md)   
- [Criar e gerenciar assinaturas para servidores de relatório no modo do SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Criar e gerenciar assinaturas de servidores de relatório no modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Criar e gerenciar assinaturas de servidores de relatório no modo SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   

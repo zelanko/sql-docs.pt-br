@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100582"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Recursos de relatórios do Access com suporte (SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66100582"
   
 |||||  
 |-|-|-|-|  
-|Imagem|Rótulo|Linha|Retângulo|  
+|Image|Rotular|Linha|Retângulo|  
 |SubForm|SubReport<br /><br /> **Observação** Embora um controle de sub-relatório seja convertido no relatório principal, o sub-relatório é convertido separadamente.|TextBox||  
   
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não dá suporte aos seguintes controles:  
@@ -159,7 +159,7 @@ ms.locfileid: "66100582"
 |Data|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|Dia|  
 |Hora|Minuto|Month|MonthName|  
-|Now|Segundo|Hora|Time$|  
+|Agora|Segundo|Hora|Time$|  
 |Timer|TimeSerial|TimeValue|Weekday|  
 |WeekdayName|Ano|||  
   
@@ -218,7 +218,7 @@ ms.locfileid: "66100582"
   
 |||||  
 |-|-|-|-|  
-|DoEvents|Entrada|Entrada|Input$|  
+|DoEvents|No|Entrada|Input$|  
   
 #### <a name="inspection-functions"></a>Funções de inspeção  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às funções de inspeção a seguir.  
@@ -233,13 +233,13 @@ ms.locfileid: "66100582"
   
 -   IsMissing  
   
-#### <a name="math-functions"></a>Funções matemáticas  
+#### <a name="math-functions"></a>Funções Matemáticas  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às funções matemáticas a seguir.  
   
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Correção|Int|Log|Rnd|  
+|Fix|Int|Log|Rnd|  
 |Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
@@ -255,7 +255,7 @@ ms.locfileid: "66100582"
   
 |||||  
 |-|-|-|-|  
-|Fechar|IIf|Opção||  
+|Choose|IIf|Opção||  
   
 #### <a name="sql-aggregate-functions"></a>Funções de agregação SQL  
  O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dá suporte às funções de agregação SQL a seguir.  
@@ -275,14 +275,14 @@ ms.locfileid: "66100582"
 |LCase|LCase$|Left (à esquerda)|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|Substitua|Right|Right$|  
-|RTrim|Espaço|Space$|StrComp|  
+|RTrim|Space|Space$|StrComp|  
 |StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
 ### <a name="constants"></a>Constantes  
  O Access não dá suporte a constantes especiais do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] (por exemplo, `vbTrue`) em expressões, assim nenhuma conversão é necessária. Porém, há uma exceção: a palavra-chave `Null` é convertida em `System.DbNull.Value`.  
   
-### <a name="parameters"></a>parâmetros  
+### <a name="parameters"></a>Parâmetros  
  Durante o processo de importação, o Designer de Relatórios verifica cada expressão em um relatório à procura de variáveis que não correspondam a controles ou nomes de campos. Essas variáveis são adicionadas a parâmetros de relatório.  
   
  O tipo de dados para parâmetros de procedimento armazenado é sempre importado como cadeia de caracteres. Depois que o relatório é importado, você deve alterar o parâmetro manualmente para usar o tipo de dados correto.  

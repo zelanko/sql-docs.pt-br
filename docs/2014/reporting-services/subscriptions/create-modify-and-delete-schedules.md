@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100877"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -40,7 +40,7 @@ ms.locfileid: "66100877"
   
 -   [Criar e gerenciar agendas compartilhadas (modo nativo)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a>Visão geral do gerenciamento de agendas compartilhadas  
+##  <a name="overview-of-managing-shared-schedules"></a><a name="bkmk_overview"></a>Visão geral do gerenciamento de agendas compartilhadas  
  Para gerenciar agendas programadas para modo nativo, use a página Agendas no Gerenciador de Relatórios ou a pasta Agendas Compartilhadas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para o modo do SharePoint, use as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Você pode exibir todas as agendas programadas definidas para o servidor de relatório, pausar e retomar agendas (apenas no Gerenciador de Relatórios) e selecionar agendas para modificação ou exclusão. A página Agendas Compartilhadas traz as seguintes informações sobre o estado de cada agenda: frequência, proprietário, data de validade e status.  
@@ -51,9 +51,9 @@ ms.locfileid: "66100877"
   
 -   Exibindo a página Relatórios de uma determinada agenda compartilhada. Esta página lista todos os relatórios e todos os conjuntos de dados compartilhados que usam a agenda compartilhada.  
   
--   Exibindo os arquivos de log de execução do relatório ou logs de rastreamento para determinar se os relatórios foram executados nos horários especificados pela agenda. Para obter mais informações, consulte [Reporting Services arquivos de log e fontes](../report-server/reporting-services-log-files-and-sources.md).  
+-   Exibindo os arquivos de log de execução do relatório ou logs de rastreamento para determinar se os relatórios foram executados nos horários especificados pela agenda. Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint"></a>Criar e gerenciar agendas compartilhadas (modo do SharePoint)  
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Criar e gerenciar agendas compartilhadas (modo do SharePoint)  
  Uma agenda compartilhada é uma agenda com vários propósitos que fornece informações de agenda prontas para uso para qualquer quantidade de relatórios ou assinaturas. Crie uma agenda compartilhada uma vez e, depois, faça referências a ela em uma assinatura ou página de propriedade quando precisar especificar informações de agenda. Agendas compartilhadas podem ser gerenciadas, pausadas e reiniciadas a partir de um local central. Em contraste, você deve editar manualmente uma agenda personalizada a fim de impedir a execução de um relatório ou uma assinatura.  
   
  Você deve ser um administrador de site para criar, modificar ou excluir agendamentos compartilhados em um site do SharePoint.  
@@ -102,7 +102,7 @@ ms.locfileid: "66100877"
   
 4.  Selecione a agenda e clique em **Excluir**.  
   
-##  <a name="bkmk_native"></a>Criar e gerenciar agendas compartilhadas (modo nativo)  
+##  <a name="create-and-manage-shared-schedules-native-mode"></a><a name="bkmk_native"></a>Criar e gerenciar agendas compartilhadas (modo nativo)  
  As agendas compartilhadas devem ser excluídas manualmente usando a página Agendas no Gerenciador de Relatórios ou a pasta Agendas Compartilhadas no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Se você excluir uma agenda compartilhada que está em uso, serão substituídas todas as referências a ela por agendas específicas do relatório.  
   
  As agendas específicas do relatório e assinatura são excluídas quando você exclui o relatório ou a assinatura ou quando você opta por uma abordagem diferente para executar o relatório ou a assinatura. Por exemplo, optar por **Sempre executar este relatório com a data mais recente** excluirá uma agenda específica do relatório criada para executar um relatório como um instantâneo de execução do relatório.  
@@ -151,7 +151,7 @@ ms.locfileid: "66100877"
 1.  No Gerenciador de Relatórios, clique em **Configurações de Site**na barra de ferramentas global.  
   
     > [!NOTE]  
-    >  Se **as configurações do site** não estiverem disponíveis, você não terá permissão para acessar as configurações do site.  
+    >   Se **Configurações de Site** não estiver disponível, você não terá permissão para acessar configurações de site.  
   
 2.  Na seção **Outros** da página, clique em **Gerenciar agendamentos compartilhados**.  
   
@@ -159,8 +159,7 @@ ms.locfileid: "66100877"
   
  Se uma agenda compartilhada usada por vários relatórios e assinaturas for excluída, o servidor de relatório criará agendas individuais para cada relatório e assinatura que usou anteriormente a agenda compartilhada. Cada nova agenda individual conterá a data, a hora e o padrão de recorrência que foram especificados na agenda compartilhada. Observe que o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece o gerenciamento central de agendas individuais. Se você excluir uma agenda compartilhada, deverá manter as informações de agenda para cada item individual.  
   
- Se você não tiver certeza de que uma agenda compartilhada será usada, considere a exclusão dela no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece os mesmos recursos de gerenciamento de agenda compartilhada que o Gerenciador de Relatórios, mas fornece uma página Relatórios adicional que mostra o nome de cada relatório que usa a agenda.  
+ Se você não tiver certeza de que uma agenda compartilhada será usada, considere a exclusão dela no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornece os mesmos recursos de gerenciamento de agenda compartilhada que o Gerenciador de Relatórios, mas fornece uma página Relatórios adicional que mostra o nome de cada relatório que usa a agenda.  
   
 ### <a name="create-delete-or-modify-a-shared-schedule-management-studio"></a>Criar, excluir ou modificar uma agenda compartilhada (Management Studio)  
  Uma agenda compartilhada contém informações de agenda e recorrência que podem ser usadas por qualquer número de relatórios e assinaturas publicados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se houver muitos relatórios e assinaturas em execução ao mesmo tempo, você pode criar uma agenda compartilhada para esses trabalhos. Se desejar alternar subsequentemente o padrão de recorrência ou a data de término, faça a alteração em um lugar.  
@@ -200,7 +199,7 @@ ms.locfileid: "66100877"
  Se uma agenda compartilhada usada por vários relatórios e assinaturas for excluída, o servidor de relatório criará agendas individuais para cada relatório e assinatura que usou anteriormente a agenda compartilhada. Cada nova agenda individual conterá a data, a hora e o padrão de recorrência que foram especificados na agenda compartilhada. Observe que o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece o gerenciamento central de agendas individuais. Se você excluir uma agenda compartilhada, deverá manter as informações de agenda para cada item individual. Antes de excluir uma agenda compartilhada, use a [página relatórios](../tools/schedule-properties-reports-page.md) para determinar quais relatórios estão usando a agenda compartilhada no momento.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Agendamento](schedules.md)   
+ [Agendas](schedules.md)   
  [Pausar e retomar agendas compartilhadas](pause-and-resume-shared-schedules.md)   
  [Armazenar um relatório em cache &#40;Report Manager&#41;](../report-server/cache-a-report-report-manager.md)   
  [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  

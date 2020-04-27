@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104365"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página (Construtor de Relatórios)
@@ -38,16 +38,16 @@ ms.locfileid: "66104365"
  **Tamanho do papel**  
  Selecione um tamanho na lista, o que automaticamente insere as dimensões nos controles de Largura e Altura. Alternativamente, selecione **Tamanho Personalizado** e altere os controles de Largura e Altura para que reflitam o tamanho que você deseja usar.  
   
- **Width**  
+ **Largura**  
  Exibe a largura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
- **Height**  
+ **Tamanho**  
  Exibe a altura do tamanho de papel selecionado na lista **Tipo de papel** .  
   
  **Início**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **Inferior**  
+ **Resultado**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
  **Mantida**  
@@ -58,7 +58,7 @@ ms.locfileid: "66104365"
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Caixa de diálogo Propriedades do relatório, &#40;de código Construtor de Relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
  [Caixa de diálogo Propriedades do relatório, faz referência a &#40;Construtor de Relatórios&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   

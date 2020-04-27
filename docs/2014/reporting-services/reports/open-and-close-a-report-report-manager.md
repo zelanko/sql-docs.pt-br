@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102587"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
@@ -32,7 +32,7 @@ ms.locfileid: "66102587"
   
 3.  Para exibir um relatório, clique em um nome ou ícone de relatório. O ícone a seguir indica um relatório:  
   
-     ![Ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")  
+     ![Ícone do relatório](../media/hlp-16doc.gif "Ícone do relatório")  
   
      Alguns relatórios exigem que você forneça um nome de usuário e uma senha ou um valor de parâmetro  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66102587"
 ## <a name="see-also"></a>Consulte Também  
  [Procurando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Página de conteúdo &#40;Report Manager&#41;](../contents-page-report-manager.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Gerenciamento de conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

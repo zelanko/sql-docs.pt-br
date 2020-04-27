@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102878"
 ---
 # <a name="reporting-services-query-designers"></a>Designers de Consulta do Reporting Services
@@ -32,11 +32,11 @@ ms.locfileid: "66102878"
   
 -   **Por variação de linguagem de consulta.** Por exemplo, uma linguagem de consulta, como [!INCLUDE[tsql](../includes/tsql-md.md)] , pode ter sintaxes diferentes dependendo do tipo da fonte de dados. A [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] linguagem e a linguagem SQL Oracle têm alguma variação na sintaxe de um comando de consulta.  
   
--   **Por suporte para a parte de esquema de um nome de objeto de banco de dados.** Quando uma fonte de dados usa esquemas como parte do identificador de objeto do banco de dados, o nome do esquema deve ser fornecido como parte da consulta para todos os nomes que não usam o esquema padrão. Por exemplo, `SELECT FirstName, LastName FROM [Person].[Person]`.  
+-   **Por suporte para parte do esquema de um nome de objeto do banco de dados.** Quando uma fonte de dados usa esquemas como parte do identificador de objeto do banco de dados, o nome do esquema deve ser fornecido como parte da consulta para todos os nomes que não usam o esquema padrão. Por exemplo, `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
 -   **Por suporte para parâmetros de consulta.** Em termos de suporte, os provedores de dados diferem dos parâmetros. Alguns provedores de dados oferecem suporte a parâmetros nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Outros provedores de dados oferecem suporte a parâmetros não nomeados; por exemplo, `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. O identificador de parâmetro pode ser diferente com relação a provedores de dados; por exemplo, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa o símbolo "arroba" (@), o Oracle usa dois-pontos (:). Em alguns provedores de dados, não há suporte para parâmetros.  
   
--   **Por meio da capacidade de importar consultas.** Por exemplo, para uma fonte de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , você pode importar uma consulta de um arquivo de definição de relatório (.rdl) ou de um arquivo .sql.  
+-   **Por capacidade de importar consultas.** Por exemplo, para uma fonte de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , você pode importar uma consulta de um arquivo de definição de relatório (.rdl) ou de um arquivo .sql.  
   
 ## <a name="query-designers"></a>Designers de Consulta  
  Os tópicos a seguir descrevem a interface do usuário para cada designer de consulta.  

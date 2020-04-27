@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102687"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriais de Reporting Services (SSRS)
   Esta seção contém tutoriais para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]o.  
   
- [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece assinaturas controladas por dados para que você possa personalizar a distribuição de um relatório com base em uma lista dinâmica de assinantes que receberão o relatório. As assinaturas controladas por dados normalmente são criadas e mantidas por administradores de servidor de relatórios. A capacidade de criar assinaturas controladas por dados requer experiência em criação de consultas, conhecimento das fontes de dados que contêm dados de assinante e permissões elevadas em um servidor de relatório.  
   
  [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  

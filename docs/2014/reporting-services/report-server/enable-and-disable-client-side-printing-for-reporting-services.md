@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103927"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar e desabilitar a impressão do lado do cliente para Reporting Services
@@ -45,7 +45,7 @@ ms.locfileid: "66103927"
  O controle ActiveX **RSClientPrint** é assinado, o que significa que ele contém um certificado [!INCLUDE[msCoName](../../includes/msconame-md.md)]digital válido do.  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Habilitando e desabilitando a impressão do lado do cliente  
- Os administradores do servidor de relatório têm a opção de desabilitar o recurso de impressão definindo a propriedade do **** sistema do `false`servidor de relatório EnableClientPrinting como. Isso desabilitará a impressão do lado do cliente para todos os relatórios gerenciados por esse servidor. Por padrão, **EnableClientPrinting** é definido como `true`. Você pode desabilitar a impressão do lado do cliente das seguintes formas:  
+ Os administradores do servidor de relatório têm a opção de desabilitar o recurso de impressão definindo a propriedade do **EnableClientPrinting** sistema do `false`servidor de relatório EnableClientPrinting como. Isso desabilitará a impressão do lado do cliente para todos os relatórios gerenciados por esse servidor. Por padrão, **EnableClientPrinting** é definido como `true`. Você pode desabilitar a impressão do lado do cliente das seguintes formas:  
   
 -   Para um **Servidor de relatório no modo nativo**:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66103927"
   
     2.  Clique em **Gerenciar aplicativos de serviço**.  
   
-    3.  Clique no nome do aplicativo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de serviço e, em seguida, clique em **gerenciar** na faixa de faixas do SharePoint.  
+    3.  Clique no nome do aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e clique em **Gerenciar** na faixa de opções do SharePoint.  
   
     4.  Clique em **Configurações do Sistema**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66103927"
   
 -   Gravar script ou código para definir a propriedade do sistema do servidor de relatório **EnableClientPrinting** como`false.`  
   
- O exemplo de script a seguir ilustra uma abordagem para desabilitar a impressão do lado do cliente. Compile e execute o seguinte código [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para definir a propriedade **EnableClientPrinting** como **False**. Depois de executar o código, reinicialize o IIS.  
+ O exemplo de script a seguir ilustra uma abordagem para desabilitar a impressão do lado do cliente. Compile e execute o código a seguir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para definir a propriedade **EnableClientPrinting** como **False**. Depois de executar o código, reinicialize o IIS.  
   
 ### <a name="sample-script"></a>Exemplo de Script  
   

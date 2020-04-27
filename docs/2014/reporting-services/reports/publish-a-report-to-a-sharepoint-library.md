@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102524"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar um relatório em uma biblioteca do SharePoint
@@ -30,9 +30,9 @@ ms.locfileid: "66102524"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra um projeto existente ou novo do Servidor de Relatório.  
   
-2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo _\<project>_ **Páginas de Propriedades do**  será exibida.  
+2.  No menu **Projeto** , clique em **Propriedades**. A caixa de diálogo **páginas de propriedades** do _ \<projeto>_ é aberta.  
   
-3.  Na lista **Configuração** , selecione o nome de uma configuração de build de solução a ser usado para criar e publicar seu relatório. A configuração atual está listada como **Ativa**( *\<configuration>* ).  
+3.  Na lista **Configuração** , selecione o nome de uma configuração de build de solução a ser usado para criar e publicar seu relatório. A configuração atual é listada como **ativa**(*\<>de configuração *).  
   
 4.  Para publicar fontes de dados compartilhadas no seu projeto e substituir as fontes de dados compartilhadas publicadas, defina **OverwriteDataSources** como **True**.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "66102524"
 9. No Gerenciador de Soluções, clique com o botão direito do mouse no relatório que você quer publicar e clique em **Implantar**. O relatório será publicado no local especificado em **TargetReportFolder**. Erros de implantação são exibidos na janela Saída.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caixa de diálogo Páginas de Propriedades do Projeto](../tools/project-property-pages-dialog-box.md)   
+ [Caixa de diálogo páginas de propriedades do projeto](../tools/project-property-pages-dialog-box.md)   
  [Definir propriedades de implantação &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Publicando relatórios em um servidor de relatório](publishing-reports-to-a-report-server.md)   
- [Exemplos de URL para itens de relatório publicados em um Servidor de Relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Exemplos de URL para itens de relatório publicados em um servidor de relatório no modo do SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Usar uma conexão de dados do Office &#40;.odc&#41; com relatórios &#40;Reporting Services no modo integrado do SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

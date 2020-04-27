@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101116"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configurações de Site (Gerenciador de Relatórios)
@@ -69,7 +69,7 @@ ms.locfileid: "66101116"
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Concedendo permissões em um servidor de relatório no modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
- [funções predefinidas](security/role-definitions-predefined-roles.md)   
+ [Funções predefinidas](security/role-definitions-predefined-roles.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

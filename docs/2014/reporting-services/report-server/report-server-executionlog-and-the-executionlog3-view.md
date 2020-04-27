@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103466"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Log de execução do servidor de relatório e a exibição ExecutionLog3
@@ -25,7 +25,7 @@ ms.locfileid: "66103466"
   
  Os servidores de relatório configurados no modo do SharePoint também podem utilizar os logs ULS do SharePoint. Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Exibindo as informações do log  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Exibindo as informações do log  
  A execução do servidor de relatório registra dados sobre execução de relatório em uma tabela de banco de dados interna. As informações da tabela estão disponíveis nas exibições do SQL Server.  
   
  O log de execução de relatório é armazenado no banco de dados do servidor de relatório que, por padrão, é denominado **ReportServer**. As exibições SQL fornecem as informações do log de execução. As exibições "2" e "3" foram adicionadas às versões mais recentes e contêm novos campos ou contêm campos com nomes mais amigáveis que as versões anteriores. As exibições mais antigas permanecem no produto; portanto, os aplicativos que dependem delas não são impactados. Se você não tem uma dependência em uma exibição mais antiga, por exemplo, ExecutionLog, é recomendável que use a exibição mais recente, ExecutionLog**3**.  
@@ -44,7 +44,7 @@ ms.locfileid: "66103466"
   
 -   [Campos de log (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Configurações de um servidor de relatório no modo SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Configurações de um servidor de relatório no modo SharePoint  
  Você pode ativar ou desativar a execução de relatório nas configurações de sistema de um aplicativo de serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Por padrão, as entradas de log são mantidas por 60 dias. Entradas que excedem essa data são removidas às 2h00 diariamente. Em uma instalação madura, somente 60 dias de informações estarão disponíveis em um dado momento.  
@@ -71,7 +71,7 @@ ms.locfileid: "66103466"
   
 2.  Altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
-##  <a name="bkmk_native"></a> Configurações de um servidor de relatório no modo nativo  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Configurações de um servidor de relatório no modo nativo  
  Você pode ativar ou desativar o log de execução de relatório na página de Propriedades do Servidor do SQL Server Management Studio. O **EnableExecutionLogging** é uma propriedade avançada.  
   
  Por padrão, as entradas de log são mantidas por 60 dias. Entradas que excedem essa data são removidas às 2h00 diariamente. Em uma instalação madura, somente 60 dias de informações estarão disponíveis em um dado momento.  
@@ -98,7 +98,7 @@ ms.locfileid: "66103466"
   
 2.  Na seção **Definido pelo usuário** , altere o **ExecutionLogLevel** para **detalhado**. Esse é um campo de entrada de texto, e os dois valores possíveis são **detalhado** e **normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Campos de log (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Campos de log (ExecutionLog3)  
  Esta exibição adicionou o nó de diagnóstico de desempenho adicional à coluna **AdditionalInfo** baseada em XML. A coluna AdditionalInfo contém uma estrutura XML de 1 para muitos campos adicionais de informação. Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog3. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  
@@ -114,22 +114,22 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Caminho onde um relatório ou item de relatório é armazenado.|  
 |UserName|Identificador do usuário.|  
 |ExecutionID|O identificador interno associado a uma solicitação. Solicitações nas mesmas sessões de usuário compartilham a mesma id de execução.|  
-|RequestType|Valores possíveis:<br />**Interativo**<br />**Assinatura**<br /><br /> <br /><br /> A análise dos dados de log filtrados por RequestType=Subscription e classificados por TimeStart pode revelar períodos de uso de assinatura pesados e talvez você queira modificar algumas assinaturas de relatório para um horário diferente.|  
+|RequestType|Valores possíveis:<br />**Interactive (Interativo)**<br />**Assinatura**<br /><br /> <br /><br /> A análise dos dados de log filtrados por RequestType=Subscription e classificados por TimeStart pode revelar períodos de uso de assinatura pesados e talvez você queira modificar algumas assinaturas de relatório para um horário diferente.|  
 |Formatar|Formato de renderização.|  
 |parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
-|ItemAction|Valores possíveis:<br /><br /> **Render**<br /><br /> **Classificar**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Executados**<br /><br /> **RenderEdit**|  
+|ItemAction|Valores possíveis:<br /><br /> **Render**<br /><br /> **Classificar**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Executados**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados.|  
 |TimeProcessing|Número de milissegundos gastos no processamento do relatório.|  
 |TimeRendering|Número de milissegundos gastos na renderização do relatório.|  
-|Fonte|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Live**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, as consultas de conjunto de consulta não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Adhoc** : indica um relatório de detalhamento baseado em modelo de relatório gerado dinamicamente ou um relatório Construtor de relatórios que é visualizado em um cliente que utiliza o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento dentro de uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
+|Fonte|Fonte da execução de relatório. Valores possíveis:<br /><br /> **Ativa**<br /><br /> **Cache**: indica uma execução em cache, por exemplo, as consultas de conjunto de consulta não são executadas ao vivo.<br /><br /> **Instantâneo**<br /><br /> **Histórico**<br /><br /> **Adhoc** : indica um relatório de detalhamento baseado em modelo de relatório gerado dinamicamente ou um relatório Construtor de relatórios que é visualizado em um cliente que utiliza o servidor de relatório para processamento e renderização.<br /><br /> **Sessão**: indica uma solicitação de acompanhamento dentro de uma sessão já estabelecida.  Por exemplo, a solicitação inicial é exibir página 1 e a solicitação de acompanhamento é exportar para o Excel com o estado de sessão atual.<br /><br /> **RDCE**: indica uma extensão de personalização de definição de relatório. Uma extensão personalizada RDCE pode personalizar uma definição de relatório dinamicamente antes de ela ser passada ao mecanismo de processamento mediante a execução do relatório.|  
 |Status|Status (rsSuccess ou um código de erro; se vários erros ocorrerem, só o primeiro erro será registrado).|  
 |ByteCount|Tamanho de relatórios renderizados em bytes.|  
 |RowCount|Número de linhas retornadas pelas consultas.|  
 |AdditionalInfo|Um conjunto de propriedades XML contendo informações adicionais sobre a execução. O conteúdo pode ser diferente para cada linha.|  
   
-##  <a name="bkmk_additionalinfo"></a> O campo AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> O campo AdditionalInfo  
  O campo AdditionalInfo é uma estrutura ou um conjunto de propriedades XML contendo informações adicionais sobre a execução. O conteúdo pode ser diferente para cada linha do log.  
   
  As tabelas a seguir são exemplos de conteúdo do campo AddtionalInfo para registro em log padrão e detalhado:  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Campos de log (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Campos de log (ExecutionLog2)  
  Esta exibição adicionou alguns campos novos e renomeou outros. Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog2. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
 |ReportPath|A estrutura de caminho para o relatório.  Por exemplo, um relatório chamado "test", que está na pasta raiz do Gerenciador de Relatórios, teria um ReportPath "/test".<br /><br /> Um relatório chamado "test", salvo na pasta "samples" do Gerenciador de Relatórios, terá o ReportPath "/Samples/test/"|  
@@ -315,7 +315,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |ExecutionID||  
 |RequestType|Tipo de solicitação (usuário ou sistema).|  
 |Formatar|Formato de renderização.|  
-|parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
+|Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |ReportAction|Valores possíveis: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
@@ -328,7 +328,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Número de linhas retornadas pelas consultas.|  
 |AdditionalInfo|Um conjunto de propriedades XML contendo informações adicionais sobre a execução.|  
   
-##  <a name="bkmk_executionlog"></a> Campos de log (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Campos de log (ExecutionLog)  
  Este é um exemplo de instrução Transact-SQL para recuperar linhas da exibição ExecutionLog. O exemplo presume que o nome do banco de dados do servidor de relatório seja **ReportServer**:  
   
 ```  
@@ -339,14 +339,14 @@ select * from ExecutionLog order by TimeStart DESC
   
  A tabela a seguir descreve os dados capturados no log de execução de relatório  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |InstanceName|Nome da instância de servidor de relatório que manipulou a solicitação.|  
 |ReportID|Identificador do relatório.|  
 |UserName|Identificador do usuário.|  
 |RequestType|Valores possíveis:<br /><br /> True = Uma solicitação de assinatura<br /><br /> False = Uma solicitação interativa|  
 |Formatar|Formato de renderização.|  
-|parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
+|Parâmetros|Valores de parâmetro usados em uma execução de relatório.|  
 |TimeStart|Horas de início e parada que indicam a duração de um processo de relatório.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milissegundos gastos na recuperação dos dados, no processamento do relatório e na renderização do relatório.|  
@@ -358,7 +358,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Número de linhas retornadas pelas consultas.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Ativar Reporting Services eventos para o log de rastreamento do SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Fontes e arquivos de log do Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

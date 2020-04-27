@@ -17,19 +17,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101985"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder acesso ao usuário a um servidor de relatório (Gerenciador de Relatórios)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa a segurança baseada em função para conceder acesso de usuário a um servidor de relatório. Em uma nova instalação do servidor de relatório, somente os usuários que são membros do grupo Administradores local têm permissões no conteúdo e nas operações do servidor de relatório. Para disponibilizar o servidor de relatório a outros usuários, é necessário criar atribuições de função que mapeiem contas de usuário ou grupo para uma função predefinida que especifica uma coleção de tarefas.  
   
- **Servidores de relatório no modo do SharePoint:** Para um servidor de relatório configurado para o modo integrado do SharePoint, você configura o acesso de um site do SharePoint usando permissões do SharePoint. Os níveis de permissão no site do SharePoint determinam o acesso ao conteúdo e às operações de servidor de relatório. Você deve ser um administrador de site para conceder permissões em um site do SharePoint. Para obter mais informações, consulte [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Servidores de relatório do modo do SharePoint:** para um servidor de relatório configurado para o modo integrado do SharePoint, configure o acesso a partir de um site do SharePoint usando permissões do SharePoint. Os níveis de permissão no site do SharePoint determinam o acesso ao conteúdo e às operações de servidor de relatório. Você deve ser um administrador de site para conceder permissões em um site do SharePoint. Para obter mais informações, consulte [Concedendo permissões para itens do servidor de relatório em um site do SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
- **Servidores de relatório no modo nativo:** Este tópico se concentra em um servidor de relatório configurado para o modo nativo e o uso de Report Manager para atribuir usuários a uma função. Existem dois tipos de funções:  
+ **Servidores de relatório do modo nativo:** este tópico destina-se a um servidor de relatório configurado para o modo nativo e o uso do Gerenciador de Relatórios para atribuir usuários a uma função. Existem dois tipos de funções:  
   
 -   As funções do nível de item são usadas para exibir, adicionar e gerenciar o conteúdo do servidor de relatório, as assinaturas, o processamento de relatórios e o histórico de relatórios. As atribuições de função do nível de item são definidas no nó raiz (a pasta Base) ou em pastas ou itens específicos mais distantes da hierarquia.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66101985"
   
 -   Para delegar essa tarefa a outros usuários, crie atribuições de função que mapeiam contas de usuário para as funções Gerenciador de Conteúdo e Administrador do Sistema. Os usuários que têm as permissões Gerenciador de Conteúdo e Administrador do Sistema podem adicionar usuários a um servidor de relatório.  
   
--   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], exiba as funções predefinidas para funções de sistema e funções de usuário para que você esteja familiarizado com os tipos de tarefas em cada função. As descrições de tarefa não são visíveis no Gerenciador de Relatórios, de modo que é recomendado conhecer as funções antes de começar a adicionar usuários.  
+-   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], veja as funções predefinidas para Funções do Sistema e Funções de Usuários para se familiarizar com os tipos de tarefas em cada função. As descrições de tarefa não são visíveis no Gerenciador de Relatórios, de modo que é recomendado conhecer as funções antes de começar a adicionar usuários.  
   
 -   Se preferir, personalize as funções ou defina funções adicionais para incluir a coleção de tarefas necessárias. Por exemplo, se você pretende usar configurações de segurança personalizadas para itens individuais, crie uma nova definição de função que conceda acesso de exibição às pastas.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66101985"
 4.  Clique em **Atribuição de Nova Função**.  
   
     > [!NOTE]  
-    >  Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança. Em seguida, clique em **Atribuição de Nova Função**.  
+    >   Se um item atualmente herda a segurança de um item pai, clique em **Editar Segurança de Item** na barra de ferramentas para alterar as configurações de segurança. Em seguida, clique em **Atribuição de Nova Função**.  
   
 5.  Em **nome de grupo ou de usuário**, insira uma conta de usuário ou grupo de domínio do \<Windows neste \\ formato:\>domínio>conta de<. Se estiver usando a autenticação de formulários ou a segurança personalizada, especifique a conta de usuário ou grupo no formato correto de sua implantação.  
   
