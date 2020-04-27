@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161908"
 ---
 # <a name="index-properties-f1-help"></a>Ajuda de F1 de Propriedades do Índice
@@ -30,17 +30,17 @@ ms.locfileid: "63161908"
   
  **Neste tópico:**  
   
- [Página geral de propriedades do índice](#General)  
+ [Página geral das propriedades do índice](#General)  
   
- [Caixa de diálogo Selecionar colunas (índice)](#Columns)  
+ [Caixa de diálogo Selecionar Colunas (Índice)](#Columns)  
   
- [Página de armazenamento de propriedades do índice](#Storage)  
+ [Página de armazenamento das propriedades do índice](#Storage)  
   
- [Página espacial das propriedades do índice](#Spatial)  
+ [Página Espacial das propriedades do índice](#Spatial)  
   
- [Página de filtro Propriedades do índice](#Filter)  
+ [Página Filtrar das propriedades do índice](#Filter)  
   
-##  <a name="General"></a>Página geral de propriedades do índice  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Página geral das propriedades do índice  
  Use a página Geral para exibir ou modificar propriedades de índice para a tabela ou exibição selecionada. As opções para cada página podem mudar de acordo com o tipo de índice selecionado.  
   
  **Nome da tabela**  
@@ -54,9 +54,9 @@ ms.locfileid: "63161908"
  **Tipo de índice**  
  Indica o tipo de índice. Para novos índices, indica o tipo de índice selecionado ao abrir a caixa de diálogo. Os índices podem ser: **Clusterizado**, **Não Clusterizado**, **XML Primário**, **XML Secundário**, **Espacial**, **Columnstore clusterizado**ou **Columnstore não clusterizado**.  
   
- **Observação** Somente um índice clusterizado é permitido para cada tabela. É permitido somente um índice columnstore xVelocity de memória otimizada para cada tabela.  
+ **Observação** É permitido somente um índice clusterizado para cada tabela. É permitido somente um índice columnstore xVelocity de memória otimizada para cada tabela.  
   
- **Diferente**  
+ **Exclusivo**  
  A marcação desta caixa de seleção torna o índice exclusivo. Não é permitido que duas linhas tenham o mesmo valor de índice. Por padrão, essa caixa de seleção é desmarcada. Ao modificar um índice existente, haverá falha na criação do índice se duas linhas tiverem o mesmo valor. Para colunas onde NULL é permitido, um índice exclusivo permite um valor NULL.  
   
  Se você selecionar **Espacial** no campo **Tipo de índice** , a caixa de seleção **Exclusiva** ficará esmaecida.  
@@ -77,7 +77,7 @@ ms.locfileid: "63161908"
 > [!NOTE]  
 >  Se o tipo de índice for **XML primário** ou **Espacial**, esta coluna não aparecerá na tabela.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  Exibe a informações de tipo de dados.  
   
 > [!NOTE]  
@@ -89,28 +89,28 @@ ms.locfileid: "63161908"
  **Identidade**  
  Exibe se a coluna que participa da chave de índice é uma coluna de identidade.  
   
- **Permitir nulos**  
+ **Permitir Nulos**  
  Exibe se a coluna que participa da chave de índice permite armazenar valores NULL na tabela ou coluna de exibição.  
   
  **Adicionar**  
- Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **selecionar colunas de nome de** * \<tabela>* que aparece quando você clica em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
+ Adiciona uma coluna à chave de índice. Selecione colunas de tabela na caixa de diálogo **Selecionar Colunas de** *\<nome da tabela>* exibida ao clicar em **Adicionar**. No caso de um índice espacial, depois que você seleciona uma coluna, este botão fica esmaecido.  
   
  **Remover**  
  Remove a coluna selecionada da participação na chave de índice.  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Move a coluna selecionada para cima na grade de chave de índice.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Move a coluna selecionada para baixo na grade de chave de índice.  
   
  **Colunas Columnstore**  
  Clique em **Adicionar** para selecionar colunas para o índice columnstore. Para limitações em um índice columnstore, consulte [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  **Colunas incluídas**  
- Inclua colunas não chave no índice não clusterizado. Essa opção permite ignorar os limites de índices atuais no tamanho total de uma chave de índice e o número máximo de colunas que participam de uma chave de índice, adicionando colunas como colunas não chave no nível folha do índice não clusterizado. Para obter mais informações, consulte [criar índices com colunas incluídas](create-indexes-with-included-columns.md)  
+ Inclua colunas não chave no índice não clusterizado. Essa opção permite ignorar os limites de índices atuais no tamanho total de uma chave de índice e o número máximo de colunas que participam de uma chave de índice, adicionando colunas como colunas não chave no nível folha do índice não clusterizado. Para obter mais informações, consulte [Criar índices com colunas incluídas](create-indexes-with-included-columns.md)  
   
-##  <a name="Columns"></a>Caixa de diálogo Selecionar colunas (índice)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Caixa de diálogo Selecionar Colunas (Índice)  
  Use esta página para adicionar colunas à página **Propriedades Gerais do Índice** ao criar ou modificar um índice.  
   
  **Caixa de seleção**  
@@ -119,7 +119,7 @@ ms.locfileid: "63161908"
  **Nome**  
  Nome da coluna.  
   
- **Tipo de dados**  
+ **Tipo de Dados**  
  O tipo de dados da coluna.  
   
  **Bytes**  
@@ -131,10 +131,10 @@ ms.locfileid: "63161908"
  **Permitir Nulos**  
  Exibe **Sim** quando a definição da tabela permitir valores nulos para a coluna. Exibe **Não** quando a definição da tabela não permite nulos para a coluna.  
   
-##  <a name="Storage"></a>Opções de página de armazenamento  
+##  <a name="storage-page-options"></a><a name="Storage"></a>Opções de página de armazenamento  
  Use essa página para exibir ou modificar grupo de arquivos ou propriedades de esquema de partição para o índice selecionado. Mostra apenas opções relacionadas ao tipo de índice.  
   
- **Arquivos**  
+ **Grupo de arquivos**  
  Armazena o índice no grupo de arquivos especificado. A lista exibe apenas grupos de arquivos padrão (linha). A seleção de lista padrão é o grupo de arquivos PRIMARY do banco de dados. Para obter mais informações, consulte [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
  **Grupo de arquivos FILESTREAM**  
@@ -150,17 +150,17 @@ ms.locfileid: "63161908"
   
  Se a tabela não for particionada, o campo fica em branco.  
   
- **Parâmetro de esquema de partição**  
+ **Parâmetro do Esquema de Partição**  
  Exibe o nome da coluna que participa do esquema de partição.  
   
- **Coluna da tabela**  
+ **Coluna de tabela**  
  Selecione a tabela ou exiba para mapear para o esquema de partição.  
   
  **Tipo de dados da coluna**  
  Exibe informações de tipo de dados sobre a coluna.  
   
 > [!NOTE]  
->  Se a coluna de tabela for uma coluna computada, **Tipo de Dados da Coluna** exibirá "coluna computada."  
+>   Se a coluna de tabela for uma coluna computada, **Tipo de Dados da Coluna** exibirá "coluna computada."  
   
  **Permitir o processamento online de instruções DML ao mover o índice**  
  Permite aos usuários acessar a tabela subjacente ou dados de índice clusterizado associados a quaisquer índices não clusterizados durante a operação de índice. Para obter mais informações, consulte [Perform Index Operations Online](perform-index-operations-online.md).  
@@ -168,13 +168,13 @@ ms.locfileid: "63161908"
 > [!NOTE]  
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
- **Definir o grau máximo de paralelismo**  
+ **Definir grau máximo de paralelismo**  
  Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [definir o Max Degree of Parallelism opção para otimizar o desempenho](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
   
-##  <a name="Spatial"></a>Opções de índice da página espacial  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a>Opções de índice da página espacial  
  Use a página **Espacial** para exibir ou especificar os valores das propriedades espaciais. Para obter mais informações, veja [Dados espaciais &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Caixa delimitadora  
@@ -195,30 +195,30 @@ ms.locfileid: "63161908"
  Coordenada Y do canto superior direito da caixa delimitadora.  
   
 ### <a name="general"></a>Geral  
- **Esquema de mosaico**  
+ **Esquema de Mosaico**  
  Indica o esquema de mosaico do índice. Os esquemas de mosaico com suporte são os seguintes:  
   
- **Grade de geometria**  
+ **Grade geométrica**  
  Especifica o esquema de mosaico de grade geométrica, que se aplica a uma coluna do tipo de dados `geometry`.  
   
- **Grade automática de geometria**  
+ **Grade Automática de Geometria**  
  Esta opção é habilitada para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
   
  **Grade geográfica**  
  Especifica o esquema de mosaico de grade de geografia, que se aplica a uma coluna do tipo de dados **geografia** .  
   
- **Grade automática de Geografia**  
+ **Grade Automática de Geografia**  
  Esta opção é habilitada para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
   
  Para obter informações sobre como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa o mosaico, consulte [Dados espaciais &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
- **Células por objeto**  
+ **Células por Objeto**  
  Indica o número de células por objeto do mosaico que pode ser usado para um único objeto espacial no índice. Esse número pode ser qualquer inteiro entre 1 e 8.192, inclusive. O padrão é 16, e 8 para versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando o nível de compatibilidade de banco de dados é definido como 110 ou superior.  
   
  No nível superior, se um objeto abranger mais células que o especificado por *n*, a indexação usará o número de células necessário para fornecer um mosaico de nível superior completo. Nesses casos, um objeto poderia receber mais que o número de células especificado. Nesse caso, o número máximo de células geradas pela grade de nível superior, que depende da densidade **Nível 1** .  
   
 ### <a name="grids"></a>Grades  
- Este painel mostra a densidade da grade a cada nível do esquema de mosaico. A densidade é especificada como **Baixa**, **Média**ou **Alta**. O padrão **Média**. **Low** representa uma grade de 4x4 (16 células), **médio** representa uma grade 8x8 (64 células) e **alto** representa uma grade de 16x16 (256 células). Essas opções não estão disponíveis quando as opções de mosaico **Grade Automática de Geometria** ou **Grade Automática de Geografia** são escolhidas.  
+ Este painel mostra a densidade da grade a cada nível do esquema de mosaico. A densidade é especificada como **Baixa**, **Média**ou **Alta**. O padrão **Média**. **Baixa** representa uma grade de 4x4 (16 células), **Média** representa uma grade de 8x8 (64 células) e **Alta** representa uma grade de 16x16 (256 células). Essas opções não estão disponíveis quando as opções de mosaico **Grade Automática de Geometria** ou **Grade Automática de Geografia** são escolhidas.  
   
  **Nível 1**  
  A densidade da grade de primeiro nível (superior).  
@@ -232,7 +232,7 @@ ms.locfileid: "63161908"
  **Nível 4**  
  A densidade da grade de quarto nível.  
   
-##  <a name="Filter"></a>Página de filtro  
+##  <a name="filter-page"></a><a name="Filter"></a>Página de filtro  
  Use esta página para inserir o predicado do filtro para um índice filtrado. Para saber mais, confira [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expressão de filtro**  

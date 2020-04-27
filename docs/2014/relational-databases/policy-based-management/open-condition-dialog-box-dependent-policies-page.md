@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182932"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Caixa de diálogo Abrir Condição, página Políticas Dependentes
@@ -26,13 +26,13 @@ ms.locfileid: "63182932"
  **Nome**  
  Lista o nome de cada política que referencia esta condição atual.  
   
- **Enabled**  
+ **Habilitada**  
  Uma marca de seleção indica que a política está habilitada atualmente. Estará em branco se a política não estiver habilitada.  
   
  **Histórico**  
  Clique no hiperlink Exibir Histórico para exibir o relatório do histórico de execução.  
   
- **Criado**  
+ **Criação**  
  A data em que a política foi criada.  
   
 ## <a name="see-also"></a>Consulte Também  

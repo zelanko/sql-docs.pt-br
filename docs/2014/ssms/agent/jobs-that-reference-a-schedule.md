@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183473"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Trabalhos que referenciam uma agenda
   Esta caixa de diálogo permite que você exiba informações sobre os trabalhos que referenciam uma agenda específica.  
   
 ## <a name="options"></a>Opções  
- **Agenda**  
+ **Agendamento**  
  Exibe o nome da agenda que você está exibindo.  
   
  **Selecione**  
@@ -35,7 +35,7 @@ ms.locfileid: "63183473"
  **Nome**  
  Nome de um trabalho que usa essa agenda.  
   
- **Enabled**  
+ **Habilitada**  
  Somente leitura. Indica se esse trabalho está habilitado no momento.  
   
  **Categoria**  

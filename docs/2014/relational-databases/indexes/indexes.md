@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161862"
 ---
 # <a name="indexes"></a>Índices
   A tabela a seguir lista os tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece links para informações adicionais.  
   
-|Tipo de índice|DESCRIÇÃO|Informações adicionais|  
+|Tipo de índice|Descrição|Informações adicionais|  
 |----------------|-----------------|----------------------------|  
 |Hash|Com um índice de hash, os dados são acessados por meio de uma tabela de hash na memória. Os índices de hash consomem uma quantidade fixa de memória, que é uma função do número de buckets.|[Diretrizes para usar índices em tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md)|  
 |índices não clusterizados com otimização de memória|Para índices não clusterizados com otimização de memória, o consumo de memória é uma função da contagem de linhas e do tamanho das colunas de chave de índice.|[Diretrizes para usar índices em tabelas com otimização de memória](../in-memory-oltp/memory-optimized-tables.md)|  
@@ -50,11 +50,11 @@ ms.locfileid: "63161862"
   
  [Opções Set Index](set-index-options.md)  
   
- [Requisitos de espaço em disco para operações de DDL de índice](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [Reorganizar e recompilar índices](reorganize-and-rebuild-indexes.md)  
   
- [Especificar o fator de preenchimento para um índice](specify-fill-factor-for-an-index.md)  
+ [Especificar fator de preenchimento para um índice](specify-fill-factor-for-an-index.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Índices clusterizados e não clusterizados descritos](clustered-and-nonclustered-indexes-described.md)  

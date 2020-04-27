@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183084"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
@@ -31,25 +31,24 @@ ms.locfileid: "63183084"
   
  Para obter mais informações sobre parametrização simples e forçada, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Esses são os contadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** .  
+ Esses são os contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Estatísticas do SQL**do**.  
   
 |Contadores do SQL Server SQL Statistics|DESCRIÇÃO|  
 |----------------------------------------|-----------------|  
-|**Tentativas de param auto/s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
-|**Solicitações em lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  
-|**Params automáticos com falha/s**|Número de tentativas de parametrização automática com falhas por segundo. Esse número deve ser pequeno. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Parametrizações forçadas/s**|Número de parametrizações forçadas com êxito por segundo.|  
-|**Execuções do plano guiado/s**|Número de execuções de plano por segundo no qual o plano de consulta foi gerado usando guia de plano.|  
-|**Execuções de plano malorientadas/s**|Número de execuções de plano por segundo no qual uma guia de plano não pôde ser honrada durante geração de plano. A guia de plano foi desconsiderada e a compilação normal foi usada para gerar o plano executado.|  
-|**Params automáticos seguros/s**|Número de tentativas de parametrizações automáticas seguras por segundo. Segura refere-se a uma determinação de que um plano de execução armazenado em cache pode ser compartilhado entre diferentes instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] que parecem ser semelhantes. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz diversas tentativas de parametrização automática, algumas que demonstram ser seguras e outras que apresentam falhas. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso não inclui parametrizações forçadas.|  
-|**Taxa de atenção do SQL**|Número de atenções por segundo. Uma atenção é uma solicitação feita pelo cliente para encerrar a solicitação que está sendo executada no momento.|  
+|**Tentativas de Param. Autom./s**|Número de tentativas de parametrização automática por segundo. O total deve ser a soma das parametrizações automáticas que falharam, seguras e inseguras. A parametrização automática ocorre quando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta parametrizar uma solicitação do [!INCLUDE[tsql](../../../includes/tsql-md.md)] substituindo alguns literais por parâmetros de modo a permitir a reutilização do plano de execução resultante armazenado em cache em várias solicitações que parecem semelhantes. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões mais novas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse contador não inclui parametrizações forçadas.|  
+|**Solicitações em Lote/s**|Número de lotes de comando [!INCLUDE[tsql](../../../includes/tsql-md.md)] recebidos por segundo. Essa estatística é afetada por todas as restrições (tais como E/S, número de usuários, tamanho do cache, complexidade das solicitações etc.). Altas solicitações em lote significam uma boa taxa de transferência.|  
+|**Param Autom. com Falha/s**|Número de tentativas de parametrização automática com falhas por segundo. Esse número deve ser pequeno. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Parametrizações Forçadas/s**|Número de parametrizações forçadas com êxito por segundo.|  
+|**Execuções de Planos Guiados/s**|Número de execuções de plano por segundo no qual o plano de consulta foi gerado usando guia de plano.|  
+|**Execuções de Planos Extraviados/s**|Número de execuções de plano por segundo no qual uma guia de plano não pôde ser honrada durante geração de plano. A guia de plano foi desconsiderada e a compilação normal foi usada para gerar o plano executado.|  
+|**Param. Autom. Seguras/s**|Número de tentativas de parametrizações automáticas seguras por segundo. Segura refere-se a uma determinação de que um plano de execução armazenado em cache pode ser compartilhado entre diferentes instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] que parecem ser semelhantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] faz diversas tentativas de parametrização automática, algumas que demonstram ser seguras e outras que apresentam falhas. Observe que as parametrizações automáticas também são conhecidas como parametrizações simples em versões posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Isso não inclui parametrizações forçadas.|  
+|**Taxa de Atenção do SQL**|Número de atenções por segundo. Uma atenção é uma solicitação feita pelo cliente para encerrar a solicitação que está sendo executada no momento.|  
 |**Compilações de SQL/s**|Número de compilações de SQL por segundo. Indica o número de vezes que o caminho do código de compilação é digitado. Inclui compilações causadas por recompilações do nível de instrução em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Depois que a atividade de usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver estável, esse valor alcança um estado fixo.|  
 |**Recompilações de SQL/s**|Número de recompilações de instruções por segundo. Conta o número de vezes que as recompilações de instrução são acionadas. Geralmente é preferível que as recompilações sejam baixas.|  
-|**Params automáticos não seguros/s**|Número de tentativas de parametrização automática não segura por segundo. Por exemplo, a consulta tem algumas características que impedem o plano armazenado em cache de ser compartilhado. Esses são designados como inseguros. Isso não conta o número de parametrizações forçadas.|  
+|**Param. Autom. sem segurança/s**|Número de tentativas de parametrização automática não segura por segundo. Por exemplo, a consulta tem algumas características que impedem o plano armazenado em cache de ser compartilhado. Esses são designados como inseguros. Isso não conta o número de parametrizações forçadas.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [SQL Server, objeto de cache de plano](sql-server-plan-cache-object.md)   
+ [SQL Server, objeto Cache de planos](sql-server-plan-cache-object.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

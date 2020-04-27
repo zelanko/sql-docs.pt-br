@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183024"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, objeto de estatísticas do pool de recursos
@@ -51,8 +51,8 @@ ms.locfileid: "63183024"
 |Média de E/S de gravação em disco (ms)|Tempo médio, em milissegundos, de uma operação de gravação no disco.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server, objeto de estatísticas de grupo de cargas de trabalho](sql-server-workload-group-stats-object.md)   
+ [Monitorar o uso de recursos &#40;o monitor do sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, objeto de estatísticas do grupo de carga de trabalho](sql-server-workload-group-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164058"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de clustering de sequências (Tutorial de mineração de dados intermediário)
@@ -32,7 +32,7 @@ ms.locfileid: "63164058"
   
 -   [Visualizador de Conteúdo Genérico](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>Guia diagrama de cluster  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>Guia diagrama de cluster  
  A guia **diagrama de cluster** exibe graficamente os clusters que o algoritmo descobriu no banco de dados. O layout do diagrama representa as relações dos clusters, com clusters semelhantes agrupados juntos. Por padrão, a sombra de cada nó nó representa a densidade de todos os casos no cluster: quanto mais escuro o sombreamento do nó, mais casos ele conterá. Você pode alterar o significado do sombreamento dos nós para que ele represente suporte, em cada cluster, a um atributo e a um estado.  
   
  Você também pode renomear os clusters para facilitar a identificação e o trabalho com os clusters de destino. Para este tutorial, você renomeará o cluster com a maior porcentagem de clientes da região do Pacífico e o cluster com mais casos.  
@@ -87,7 +87,7 @@ ms.locfileid: "63164058"
   
  [Voltar ao início](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>Guia perfis de cluster  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>Guia perfis de cluster  
  A guia **perfis de cluster** exibe as sequências que estão em cada cluster. Os clusters são listados em colunas individuais à direita da coluna **Estados** .  
   
  No visualizador, a linha de **modelo** descreve a distribuição geral de itens em um cluster e a linha **Model. Samples** contém sequências dos itens. Cada linha das sequências de cores em cada célula da linha **Model. Samples** representa o comportamento de um usuário selecionado aleatoriamente no cluster.  
@@ -132,7 +132,7 @@ ms.locfileid: "63164058"
   
  [Voltar ao início](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>Guia características do cluster  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>Guia características do cluster  
  A guia **características do cluster** resume as transições entre os Estados em um cluster exibindo barras que representam visualmente a importância do valor do atributo para o cluster selecionado. A coluna **variáveis** informa o que o modelo encontrou para ser importante para o cluster ou população selecionado: um valor específico ou a relação entre valores, conhecida como *transição*. A coluna **valores** fornece mais detalhes sobre o valor ou a transição, e a coluna **probabilidade** representa visualmente o peso desse atributo ou da transição.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>Para exibir os atributos importantes para um cluster  
@@ -169,7 +169,7 @@ ms.locfileid: "63164058"
   
  [Voltar ao início](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>Guia discriminação de cluster  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>Guia discriminação de cluster  
  A guia **discriminação de cluster** ajuda a comparar dois clusters, para determinar quais atributos distinguem um cluster específico de outro cluster. A guia contém quatro colunas: **variáveis**, **valores**, **cluster 1**e **cluster 2**.  Você pode escolher qualquer cluster para usar como **cluster 1** e **cluster 2**.  
   
  A coluna **variáveis** informa o nome do atributo, que pode ser um nome de coluna ou uma combinação de nome de coluna e a palavra **transição**. A coluna **valores** mostra o valor exato do atributo ou a transição. As barras sombreadas nas colunas do **cluster 1** e do **cluster 2** indicam a força do atributo nos clusters que você está comparando. Quanto mais longa for a barra, mais será provável que o cluster inclua casos com esse atributo.  
@@ -188,7 +188,7 @@ ms.locfileid: "63164058"
   
  [Voltar ao início](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>Guia transições de estado  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>Guia transições de estado  
  Na guia **transições de estado** , você pode selecionar um cluster e navegar pelas transições de estado. Se você selecionar **população (tudo)** na lista suspensa cluster, o diagrama mostrará a distribuição de Estados para todo o modelo de mineração.  
   
  Cada nó do gráfico representa um estado, ou um valor possível das sequências que você está tentando analisar. A cor de fundo dos nós representa a frequência do estado. As linhas conectam alguns estados, indicando uma transição entre eles. Você pode mover o controle deslizante para cima ou para baixo para alterar o limite de probabilidade para as transições. Os números são associados a alguns nós, indicando a probabilidade do estado.  
@@ -227,7 +227,7 @@ ms.locfileid: "63164058"
   
  [Voltar ao início](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>Visualizador de árvore de conteúdo genérica  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>Visualizador de árvore de conteúdo genérica  
  Esse visualizador pode ser usado em todos os modelos, independentemente do algoritmo ou do tipo de modelo. O **Visualizador de árvore de conteúdo MicrosoftGeneric** está disponível na lista suspensa **Visualizador** .  
   
  Uma árvore de conteúdo é uma representação de qualquer modelo de mineração como uma série de nós, em que cada nó representa conhecimento adquirido sobre alguns dados de treinamento. O nó pode conter um padrão, um conjunto de regras, um cluster ou a definição de um intervalo de datas que compartilham alguns atributos. O conteúdo exato do nó difere dependendo do algoritmo e do tipo do atributo previsível; no entanto, a representação geral do conteúdo é a mesma.  
