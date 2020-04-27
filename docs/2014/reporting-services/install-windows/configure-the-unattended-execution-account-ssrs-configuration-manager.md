@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108887"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar a conta de execução autônoma (Gerenciador de configurações do SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma conta especial que é usada para o processamento autônomo de relatórios e para enviar solicitações de conexão pela rede. A conta é usada das seguintes maneiras:  
   
 -   Enviar solicitações de conexão pela rede para relatórios que usam autenticação do banco de dados ou conexão a fontes de dados de relatórios externos que não requeiram ou utilizem autenticação. Para obter mais informações, consulte [Especificar informações de credenciais e de conexão para Fontes de Dados de Relatório](../../integration-services/connection-manager/data-sources.md) nos Manuais Online do SQL Server.  
@@ -50,17 +49,17 @@ ms.locfileid: "66108887"
 3.  Digite a conta e a senha, digite novamente a senha e clique em **Aplicar**.  
   
 ### <a name="using-rsconfig-utility"></a>Usando o utilitário RSCONFIG  
- Outra maneira de definir a conta é usar o utilitário **rsconfig** . Para especificar a conta, use o argumento **-e** do **rsconfig**. A especificação do argumento **-e** para **rsconfig** orienta o utilitário a gravar as informações da conta no arquivo de configuração. Você não precisa especificar um caminho para RSreportserver. config. Siga estas etapas para configurar a conta.  
+ Outra maneira de definir a conta é usar o utilitário **rsconfig** . Para especificar a conta, use o argumento **-e** do **rsconfig**. A especificação do argumento **-e** para **rsconfig** orienta o utilitário a gravar as informações da conta no arquivo de configuração. Não é necessário especificar um caminho para RSreportserver.config. Siga estas etapas para configurar a conta.  
   
 1.  Crie ou selecione uma conta de domínio que tenha acesso a computadores e servidores que forneçam dados ou serviços a um servidor de relatório. Você deve usar uma conta que tenha permissões reduzidas (por exemplo, permissões somente leitura).  
   
-2.  Abra um prompt de comando: No menu **Iniciar** , clique em **Executar**, digite **cmd**e clique em **OK**.  
+2.  Abra um prompt de comando: No menu **Iniciar**, clique em **Executar**, digite **cmd** e, em seguida, clique em **OK**.  
   
 3.  Digite o seguinte comando para configurar a conta em uma instância local do servidor de relatório:  
   
-     **rsconfig-e-u\<domínio/nome de usuário>\<-p senha>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
- **rsconfig-e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
+ **rsconfig -e** dá suporte a argumentos adicionais. Para obter mais informações sobre a sintaxe e como exibir exemplos de comandos, consulte [Utilitário rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) nos Manuais Online do SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Como as informações de conta são armazenadas  
  Quando você define a conta, as seguintes configurações são especificadas como valores criptografados no arquivo RSreportserver.config na instância local ou remota do servidor de relatório.  

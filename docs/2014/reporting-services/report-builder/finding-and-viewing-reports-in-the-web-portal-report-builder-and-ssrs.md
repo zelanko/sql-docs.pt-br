@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107873"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Localizando e exibindo relatórios no Gerenciador de Relatórios (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ Faixa de Opções do Gerenciador de Relatórios
   
 -   Para navegar pela hierarquia de pastas, abra uma subpasta da pasta atual. As pastas contêm relatórios, recursos, itens de fonte de dados compartilhados e outras pastas. Clicar em um ícone de pasta abre a pasta, mostrando o conteúdo da hierarquia um nível para baixo.  
   
--   Para navegar na hierarquia de pastas, na linha de links na parte superior da página, clique no nome da pasta cujo conteúdo deseja ver. **(1)** na imagem acima.  
+-   Para navegar na hierarquia de pastas, na linha de links na parte superior da página, clique no nome da pasta cujo conteúdo deseja ver. **(1)** na imagem anterior.  
   
 ## <a name="opening-a-report"></a>Abrindo um relatório  
  Depois que localizar um relatório, clique no nome de relatório para abri-lo. O relatório é renderizado em HTML e é exibido na página Conteúdo no Gerenciador de Relatórios. Os relatórios são sempre armazenados em cache pela sessão do navegador para que você possa geralmente retornar a ele, clicando no botão **Voltar** . Isso é verdade mesmo que você tenha que fornecer um nome de usuário e uma senha para executar o relatório. Você não pode totalmente fechar um relatório renderizado até fechar navegador.  
@@ -48,7 +48,7 @@ Faixa de Opções do Gerenciador de Relatórios
   
 ## <a name="to-search-for-a-items"></a>Para pesquisar itens  
   
--   Para procurar por itens no Gerenciador de Relatórios, digite uma cadeia de caracteres de pesquisa na caixa de texto **Pesquisar** na parte superior da página. **(2)** na imagem acima. As pesquisas começam no nó superior na hierarquia da pasta e continua até cada ramificação. Se você não tiver permissão para acessar uma ramificação específica, essa ramificação será ignorada. Isso se aplica às pastas Meus Relatórios que pertencem a outros usuários e a outras pastas que geralmente não estão disponíveis. Somente os relatórios e itens para os quais você tem permissão para exibir são incluídos nos resultados da pesquisa.  
+-   Para procurar por itens no Gerenciador de Relatórios, digite uma cadeia de caracteres de pesquisa na caixa de texto **Pesquisar** na parte superior da página. **(2)** na imagem anterior. As pesquisas começam no nó superior na hierarquia da pasta e continua até cada ramificação. Se você não tiver permissão para acessar uma ramificação específica, essa ramificação será ignorada. Isso se aplica às pastas Meus Relatórios que pertencem a outros usuários e a outras pastas que geralmente não estão disponíveis. Somente os relatórios e itens para os quais você tem permissão para exibir são incluídos nos resultados da pesquisa.  
   
 -   Para procurar por um item por nome ou descrição, especifique toda ou parte do texto que deseja coincidir. A cadeia de caracteres de pesquisa não faz distinção entre maiúsculas e minúsculas. Você não pode usar os operadores de pesquisa, como símbolos de mais (+) ou menos (-), para exigir ou excluir critérios de pesquisa.  
   

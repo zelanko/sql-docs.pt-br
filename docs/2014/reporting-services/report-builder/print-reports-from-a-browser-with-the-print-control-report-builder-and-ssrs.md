@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107762"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66107762"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>Opções de impressão  
- Para configurar as propriedades de impressão do relatório, na caixa de diálogo **Imprimir** , clique no botão **Propriedades** . O **tamanho do papel** é determinado pela altura e largura padrão do tamanho da página do relatório, conforme definido na definição do relatório. Os valores disponíveis dependem do tipo de impressora e de seus recursos. Largura e altura usam valores padrão, conforme a determinação dos drivers de impressão configurados no computador. Alterar esses valores faz com que o relatório seja impresso usando as novas dimensões. A largura e a altura da página são determinadas pela **Orientação**, que é definida como **Retrato** ou **Paisagem**. A orientação padrão exibida depende da largura e da altura da página do relatório.  
+ Para configurar as propriedades de impressão do relatório, na caixa de diálogo **Imprimir** , clique no botão **Propriedades** . O**tamanho do papel** é determinado pela altura e pela largura padrão do tamanho da página do relatório, conforme estabelecido na definição do relatório. Os valores disponíveis dependem do tipo de impressora e de seus recursos. Largura e altura usam valores padrão, conforme a determinação dos drivers de impressão configurados no computador. Alterar esses valores faz com que o relatório seja impresso usando as novas dimensões. A largura e a altura da página são determinadas pela **Orientação**, que é definida como **Retrato** ou **Paisagem**. A orientação padrão exibida depende da largura e da altura da página do relatório.  
   
 > [!NOTE]  
 >  A caixa de diálogo **Imprimir** e as configurações de impressora padrão para largura, altura e orientação de página são determinadas pela definição do relatório.  
@@ -37,7 +37,7 @@ ms.locfileid: "66107762"
  Para visualizar um relatório, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Clicar na visualização abre a primeira página do relatório em uma janela de visualização separada. Páginas adicionais ficam disponíveis quando o relatório é processado no servidor de relatórios. Um relatório visualizado é processado em formato EMF. É possível navegar até a página anterior ou a próxima chegando até a última, e o botão **Avançar** é desabilitado.  
   
 ### <a name="adjusting-print-margins"></a>Ajustando margens de impressão  
- É possível modificar as margens de impressão no relatório EMF processado antes de imprimi-lo. Para isso, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Na parte superior da página de visualização, clique no botão **Margens** . A caixa de diálogo Margens é exibida. Configure as margens superior, inferior, direita e esquerda conforme desejado. [!INCLUDE[clickOK](../../includes/clickok-md.md)]A caixa de diálogo é fechada e as configurações são armazenadas para renderizar a visualização e a impressão.  
+ É possível modificar as margens de impressão no relatório EMF processado antes de imprimi-lo. Para isso, na caixa de diálogo **Imprimir** , clique no botão **Visualizar** . Na parte superior da página de visualização, clique no botão **Margens** . A caixa de diálogo Margens é exibida. Configure as margens superior, inferior, direita e esquerda conforme desejado. [!INCLUDE[clickOK](../../includes/clickok-md.md)] A caixa de diálogo é fechada, e as configurações são armazenadas para a renderização da visualização e da impressão.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](print-reports-report-builder-and-ssrs.md)   

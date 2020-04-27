@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107296"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107296"
 |**bold**|Texto que deve ser digitado exatamente como mostrado.|  
 |&#124; (barra vertical)|Separa itens de sintaxe. Somente um desses itens poderá ser selecionado.|  
 |`[ ] (brackets)`|Itens de sintaxe opcionais. Não digite os colchetes.|  
-|**{}** (chaves)|Delimita parâmetros de itens de sintaxe.|  
+|**{ }** (chaves)|Delimita parâmetros de itens de sintaxe.|  
 |[**,**... *n*]|Indica que o item anterior pode ser repetido *n* número de vezes. As ocorrências são separadas por vírgulas.|  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,15 +75,13 @@ XMLLocalName :: =
 |Termo|Definição|  
 |----------|----------------|  
 |Caminho do elemento|Define a sequência de nós a serem transpostos dentro do documento XML para recuperar dados do campo para um conjunto de dados com uma fonte de dados XML.|  
-|`ElementNode`|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. 
-  \<Cliente> é um subelemento de \<Clientes>.|  
+|`ElementNode`|O nó XML no documento XML. Os nós são designados por marcas e existem em uma relação hierárquica com outros nós. Por exemplo, \<Clientes> é o nó do elemento raiz. \<Cliente> é um subelemento de \<Clientes>.|  
 |`XMLName`|O nome do nó. Por exemplo, o nome do nó Clientes é Clientes. Um `XMLName` pode ser prefixado com um identificador de namespace para nomear exclusivamente cada nó.|  
 |`Encoding`|Indica que o `Value` deste elemento é XML codificado e precisa ser decodificado e incluído como um subelemento desse elemento.|  
 |`FieldList`|Define o conjunto de elementos e atributos a serem usados para recuperar dados.<br /><br /> Se não estiverem especificados, todos os atributos e subelementos serão usados como campos. Se a lista de campos vazia for especificada**{}**(), nenhum campo desse nó será usado.<br /><br /> Uma `FieldList` pode não conter um `Value` e um `Element` ou `ElementNode`.|  
 |`Field`|Especifica os dados recuperados como um campo do conjunto de dados.|  
 |`Attribute`|Um par de nome-valor dentro do `ElementNode`. Por exemplo, no \<nó do elemento Customer ID = "1" >, `ID` é um atributo e `@ID(Integer)` retorna "1" como um tipo inteiro no campo `ID`de dados correspondente.|  
-|`Value`|O valor do elemento. 
-  `Value` pode ser usado apenas no último `ElementNode` no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se você incluí-lo no final de um caminho de elemento, o valor `Return {@}` de `Chair`é.|  
+|`Value`|O valor do elemento. `Value` pode ser usado apenas no último `ElementNode` no caminho do elemento. Por exemplo, como \<Return> é um nó folha, se você incluí-lo no final de um caminho de elemento, o valor `Return {@}` de `Chair`é.|  
 |`Element`|O valor do subelemento nomeado. Por exemplo, Clientes {}/Cliente {}/Sobrenome recupera valores apenas para o elemento Sobrenome.|  
 |`Type`|O tipo de dados opcional a ser usado para o campo criado desse elemento.|  
 |`NamespacePrefix`|O `NamespacePrefix` é definido no elemento Consulta XML. Se não existir nenhum elemento Consulta XML, os namespaces no `ElementPath` XML serão ignorados. Se existir um elemento Consulta XML, o `ElementPath` XML terá um atributo opcional `IgnoreNamespaces`. Se IgnoreNamespaces for `true`, os namespaces no XML `ElementPath` e no documento XML serão ignorados. Para obter mais informações, consulte [Sintaxe de consulta XML para dados de relatório XML &#40;SSRS&#41;](report-data-ssrs.md).|  
@@ -207,6 +205,6 @@ XMLLocalName :: =
 ## <a name="see-also"></a>Consulte Também  
  [Tipo de conexão XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services tutoriais &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Adicione, edite, atualize campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

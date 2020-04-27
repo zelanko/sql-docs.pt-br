@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105516"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Regiões de dados aninhadas (Construtor de Relatórios e SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105516"
   
  A lista a seguir descreve o escopo de células nas seguintes áreas de tablix:  
   
--   **Canto do Tablix** O escopo são os dados na região de dados vinculada à região de dados Tablix, após a aplicação das expressões de filtro e de classificação para o DataSet e o Tablix externo.  
+-   **Canto de tablix** O escopo são os dados da região de dados vinculada à região de dados tablix, após as expressões de filtro e de classificação do conjunto de dados e do tablix externo serem aplicadas.  
   
--   **Grupo de colunas Tablix** Os dados no grupo de colunas interno, após as expressões de filtro e de classificação para o conjunto de dados, o Tablix externo e os grupos de colunas são aplicados.  
+-   **Grupo de colunas do tablix** Os dados do grupo de colunas interno, após as expressões de filtro e de classificação do conjunto de dados, do tablix externo e dos grupos de colunas serem aplicadas.  
   
--   **Grupo de linhas tablix** Os dados no grupo de linhas interno, após as expressões de filtro e de classificação para o conjunto de dados, o Tablix externo e os grupos de linhas são aplicados.  
+-   **Grupo de linhas do tablix** Os dados do grupo de linhas interno, após as expressões de filtro e classificação do conjunto de dados, do tablix externo e dos grupos de colunas serem aplicadas.  
   
--   **Corpo do Tablix** Os dados no grupo interno representado pela interseção de grupos de linhas e de colunas, após as expressões de filtro e de classificação para o conjunto de dados, o Tablix externo e os grupos de linhas e colunas são aplicados.  
+-   **Corpo do tablix** Os dados do grupo interno representados pela interseção dos grupos de linhas e de colunas, após as expressões de filtro e de classificação do conjunto de dados, do tablix externo e dos grupos de linhas e de colunas serem aplicadas.  
   
  Para obter mais informações, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66105516"
   
 ## <a name="see-also"></a>Consulte Também  
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Lista &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Construtor de Relatórios e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](expressions-report-builder-and-ssrs.md)   

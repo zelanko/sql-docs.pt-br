@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107335"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Caixa de diálogo Propriedades do Conjunto de Dados, Filtros
@@ -36,7 +36,7 @@ ms.locfileid: "66107335"
  **Seta para baixo**  
  Mova o filtro selecionado para baixo na lista.  
   
- **Expression**  
+ **Expressão**  
  Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão expressão (**FX**) para editar a expressão.  
   
  **Tipo de dados**  

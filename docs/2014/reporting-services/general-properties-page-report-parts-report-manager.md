@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109095"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página Propriedades Gerais, Partes do Relatório (Gerenciador de Relatórios)
@@ -70,7 +70,7 @@ ms.locfileid: "66109095"
  **Mover**  
  Clique para abrir a página Mover Itens para mover uma parte do relatório dentro da hierarquia de pastas de servidor de relatório. Para obter mais informações, consulte a [página mover itens &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Baixar**  
+ **Download**  
  Extraia uma cópia da definição de parte do relatório a ser salva como um arquivo .rsc. O arquivo .rsc pode ser carregado em uma pasta do servidor de relatório ou usado para substituir uma parte de relatório existente em uma pasta do servidor de relatório.  
   
  **Substitua**  

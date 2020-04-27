@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106435"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106435"
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de `RenderFormat`.  
   
-|Membro|Type|DESCRIÇÃO|  
+|Membro|Tipo|Descrição|  
 |------------|----------|-----------------|  
 |Nome|`String`|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|`Boolean`|Se a solicitação de renderização atual usa um formato de renderização interativo.|  
@@ -63,9 +63,7 @@ ms.locfileid: "66106435"
   
 -   Esta expressão, colocada na caixa de diálogo **Visibilidade da Coluna** para uma coluna selecionada, exibe a coluna somente quando o relatório é exportado para o Excel. Caso contrário, a coluna fica oculta.  
   
-     
-  `EXCELOPENXML` se refere ao formato do Excel que é incluído no Office 2007. 
-  `EXCEL` se refere ao formato do Excel que é incluído no Office 2003.  
+     `EXCELOPENXML` se refere ao formato do Excel que é incluído no Office 2007. `EXCEL` se refere ao formato do Excel que é incluído no Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   

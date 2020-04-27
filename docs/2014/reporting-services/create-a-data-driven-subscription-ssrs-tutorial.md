@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109688"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
@@ -36,10 +36,10 @@ ms.locfileid: "66109688"
  [Lição 1: Criando um banco de dados do assinante de exemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  Nesta lição, você aprenderá a criar um banco de dados local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém informações de assinante.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lição 2: Modificando as propriedades de fonte de dados de relatório](lesson-2-modifying-the-report-data-source-properties.md)  
  Nesta lição, você aprenderá a modificar propriedades da fonte de dados de relatório de forma que o relatório possa ser executado de forma autônoma. O processamento autônomo exige credenciais armazenadas. Você também modificará o conjunto de dados de relatório para incluir um parâmetro que é fornecido pelos dados do assinante.  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lição 3: Definindo uma assinatura controlada por dados](lesson-3-defining-a-data-driven-subscription.md)  
  Nesta lição, você aprenderá a definir uma assinatura controlada por dados. Esta lição o guia por cada página do Assistente de Assinatura Controlada por Dados.  
   
 ## <a name="requirements"></a>Requisitos  

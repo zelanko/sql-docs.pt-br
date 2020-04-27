@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108534"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
@@ -63,7 +63,7 @@ ms.locfileid: "66108534"
  Você criou com êxito os dados de assinatura que controlarão a distribuição de relatórios e modificarão a saída de relatório para cada assinante. Em seguida, você modificará as propriedades de fonte de dados do relatório que será distribuído aos assinantes. A modificação das propriedades de fonte de dados é feita para preparar o relatório para a entrega da assinatura controlada por dados. Você também modificará o design do relatório para incluir um parâmetro que a assinatura usará com os dados do assinante. [Lição 2: modificando as propriedades da fonte de dados do relatório](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Criar um banco de dados](../relational-databases/databases/create-a-database.md)   
  [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

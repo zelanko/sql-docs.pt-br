@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 540bf8367ba32fbebe4e27ee6e2cd3e1aa01ae0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105198"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Função Previous (Construtor de Relatórios e SSRS)
@@ -52,7 +52,7 @@ Previous(expression, scope)
   
  Se *expression* contiver uma função de agregação que usa um `Previous` escopo padrão, o agregará os dados dentro da instância anterior do escopo especificado na chamada de função de agregação.  
   
- Se *expression* contiver uma função de agregação que especifique um escopo diferente do padrão ** , o parâmetro de `Previous` escopo da função deverá ser um escopo de contenção para o escopo especificado na chamada de função de agregação.  
+ Se *expression* contiver uma função de agregação que especifique um escopo diferente do padrão *scope* , o parâmetro de `Previous` escopo da função deverá ser um escopo de contenção para o escopo especificado na chamada de função de agregação.  
   
  As funções `Level`, `InScope` `Aggregate` e `Previous` não podem ser usadas no parâmetro *expression*. Não há suporte para a especificação do parâmetro *recursive* para qualquer função de agregação.  
   

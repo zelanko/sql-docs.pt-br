@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109154"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Preenchimento (Construtor de Relatórios e SSRS)
@@ -36,11 +36,11 @@ ms.locfileid: "66109154"
  **Selecione a origem da imagem**  
  Indique onde a imagem está armazenada para que, quando o relatório for renderizado, o processador de relatórios possa exibi-la.  
   
--   **Externo** Escolha esta opção quando quiser que a imagem continue a existir como um arquivo em um servidor de relatório ou servidor Web.  
+-   **Externa** Escolha essa opção quando quiser que a imagem continue existindo como um arquivo em um servidor Web ou um servidor de relatórios.  
   
--   **Inserido** Escolha esta opção quando desejar inserir a imagem no relatório.  
+-   **Inserido** Escolha essa opção quando quiser inserir a imagem no relatório.  
   
--   **Banco de dados** Escolha esta opção quando desejar incluir um nome de campo de banco de dados que represente as imagens que você deseja incluir em seu relatório.  
+-   **Banco de Dados** Escolha essa opção quando quiser incluir um nome de campo do banco de dados que representa as imagens que deseja incluir em seu relatório.  
   
  **Usar esta imagem**  
  Essa opção aparece quando você seleciona a opção **Inserido** ou **Externo** .  

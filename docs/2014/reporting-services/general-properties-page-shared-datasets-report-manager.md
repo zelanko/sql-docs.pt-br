@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109073"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página Propriedades Gerais, conjuntos de dados compartilhados (Gerenciador de Relatórios)
@@ -57,7 +57,7 @@ ms.locfileid: "66109073"
  **Mover**  
  Realocar um conjunto de dados compartilhado na hierarquia de pastas do servidor de relatório. O clique nesse botão abre a página Mover Itens, na qual você pode navegar até um novo local de pasta. Para obter mais informações, consulte a [página mover itens &#40;Report Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Baixar**  
+ **Download**  
  Extraia uma cópia da definição do conjunto de dados compartilhado. Dependendo das associações de arquivo definidas no seu computador, o arquivo será aberto no Visual Studio ou em um aplicativo diferente. Na maioria dos casos, o conjunto de dados compartilhado é aberto como um arquivo XML.  
   
  **Substitua**  
@@ -69,7 +69,7 @@ ms.locfileid: "66109073"
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opções de atualização do cache &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Página de cache, conjuntos de armazenamento compartilhados &#40;Report Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Gerenciar conjuntos de dados compartilhados](report-data/manage-shared-datasets.md)   
+ [Gerenciar conjuntos de itens compartilhados](report-data/manage-shared-datasets.md)   
  [Conjuntos de dados compartilhados em cache &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

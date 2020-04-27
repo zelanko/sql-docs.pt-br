@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105473"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105473"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a>Especificar a finalidade do mapa  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Especificar a finalidade do mapa  
  O bom design de relatório fornece informações que ajudam os usuários a executarem ações para resolver problemas. Para criar uma exibição de mapa útil e fácil de entender, decida quais questões você deseja que o mapa ajude a responder. Por exemplo, em um mapa você pode visualizar os seguintes tipos de dados para identificar oportunidades de mercado:  
   
 -   Vendas relativas para cada loja.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105473"
   
  
   
-##  <a name="Data"></a>Especificar os dados espaciais e analíticos  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Especificar os dados espaciais e analíticos  
  Você deve especificar quais dados espaciais e analíticos são necessários.  
   
  Os dados analíticos vêm de um conjunto de dados de relatório, de dados de exemplo incluídos com um mapa da galeria de mapas ou de dados analíticos incluídos com dados espaciais em um arquivo de forma ESRI.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105473"
   
  Os dados espaciais devem conter os seguintes campos:  
   
--   **Dados espaciais.** Um campo de dados espaciais que tem os conjuntos de coordenadas que definem cada ponto, linha ou polígono.  
+-   **Spatial data.** Um campo de dados espaciais que tem os conjuntos de coordenadas que definem cada ponto, linha ou polígono.  
   
 -   **Campos de correspondência.** Um ou mais campos que identificam exclusivamente cada campo de dados espacial. Por exemplo, para um ponto de local de loja, você pode usar o nome da loja. Se o nome da loja não for exclusivo nos dados espaciais, você poderá incluir o nome da cidade e a loja.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105473"
   
 
   
-##  <a name="MapType"></a>Escolher um tipo de mapa  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Escolher um tipo de mapa  
  Quando você executa o assistente de Mapa, adiciona um mapa e a primeira camada do mapa ao relatório. O assistente o permite a você adicionar um dos seguintes tipos de mapas ao relatório:  
   
 -   Um mapa básico que exibe locais sem dados analíticos associados.  
@@ -126,7 +126,7 @@ ms.locfileid: "66105473"
   
  
   
-##  <a name="Legend"></a>Planejar legendas  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planejar as legendas  
  Para ajudar os usuários a interpretarem um mapa, você pode adicionar várias legendas de mapas, uma escala de cores e uma escala de distância. Quando você criar um mapa, planeje o local em que deseja exibir as legendas. Você pode especificar as seguintes informações sobre cada legenda:  
   
 -   **Local da legenda.** Por exemplo, as legendas podem ser exibidas dentro ou fora do visor, e em 12 locais discretos relativo ao visor.  
@@ -135,7 +135,7 @@ ms.locfileid: "66105473"
   
 -   **Título da legenda.** Por exemplo, você pode especificar o texto do título e controlar independentemente se o título de uma legenda de mapa ou a escala de cores deve ser exibido.  
   
--   **Layout da legenda do mapa.** Por exemplo, as legendas de mapa podem ser exibidas como tabelas altas ou tabelas largas.  
+-   **Layout de legenda do mapa.** Por exemplo, as legendas de mapa podem ser exibidas como tabelas altas ou tabelas largas.  
   
  O conteúdo da legenda é criado automaticamente durante o processamento de relatório com base em opções de regra que você define para cada camada.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66105473"
   
 
   
-##  <a name="Embedding"></a>Balancear o tamanho da definição do relatório e o tempo de processamento do relatório  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Equilibrar o tamanho da definição de relatório e o tempo de processamento do relatório  
  O bom design de relatório para mapas requer que você equilibre as opções que controlam o desempenho do relatório e o tamanho da definição do relatório. Os elementos do mapa que se baseiam nos dados espaciais ou em peças de mapas do Bing podem ser estáticos e inseridos na definição de relatório ou dinâmicos e criados toda vez que o relatório é processado. Você deve avaliar as desvantagens de dados de mapa estáticos ou dinâmicos e encontrar o equilíbrio que funciona para suas circunstâncias. Considere as seguintes informações para tomar esta decisão:  
   
 -   Elementos de mapa inseridos podem aumentar significativamente o tamanho da definição do relatório, mas reduzem o tempo necessário para exibir o mapa no relatório. Seu servidor de relatório pode ter limites de tamanho com os quais você precisa trabalhar.  
@@ -161,9 +161,9 @@ ms.locfileid: "66105473"
 
   
 ## <a name="see-also"></a>Consulte Também  
- [Personalizar os dados e a exibição de um mapa ou da camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Construtor de Relatórios de relatório de mapa &#40;&#41;](../tutorial-map-report-report-builder.md)   
+ [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md)   
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solução de problemas de relatórios: relatórios de mapa &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108223"
 ---
 # <a name="move-items-page-report-manager"></a>Página Mover Itens (Gerenciador de Relatórios)
@@ -37,7 +37,7 @@ ms.locfileid: "66108223"
 2.  Na barra de ferramentas, clique em **Exibição de Detalhes**.  
   
     > [!NOTE]  
-    >  Caso você veja apenas **Exibição Lado a Lado**, já estará em **Exibição de Detalhes**.  
+    >   Caso você veja apenas **Exibição Lado a Lado**, já estará em **Exibição de Detalhes**.  
   
 3.  Marque a caixa ao lado de um item e clique em **Mover** na barra de ferramentas. Você poderá selecionar mais de uma caixa se desejar mover vários itens para o mesmo local novo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108223"
 2.  Na barra de ferramentas, clique em **Exibição Lado a Lado**.  
   
     > [!NOTE]  
-    >  Caso você veja apenas **Exibição de Detalhes**, já estará em **Exibição Lado a lado**.  
+    >   Caso você veja apenas **Exibição de Detalhes**, já estará em **Exibição Lado a lado**.  
   
 3.  Focalize um item e clique na seta do menu suspenso.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109442"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Página Seleção de Fonte de Dados (Gerenciador de Relatórios)
@@ -36,7 +36,7 @@ ms.locfileid: "66109442"
 5.  No painel de propriedades, selecione **Uma fonte de dados compartilhados** e clique em **Procurar**.  
   
 ## <a name="options"></a>Opções  
- **Location**  
+ **Local**  
  Especifique o caminho completo para o item de fonte de dados compartilhada, começando pelo nome da pasta raiz. É possível digitar o caminho completo da pasta ou usar a exibição de árvore para navegar até a fonte de dados compartilhada desejada.  
   
  **Exibição de árvore**  
@@ -47,7 +47,7 @@ ms.locfileid: "66109442"
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar fontes de dados de relatório](report-data/manage-report-data-sources.md)   
- [Especificar informações de credencial e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Página Propriedades das fontes de dados &#40;Report Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Nova página de fonte de dados &#40;Report Manager&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

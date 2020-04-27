@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110106"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenando dados em tabela hierárquica por meio de métodos hierárquicos
@@ -123,6 +123,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  Para ver um procedimento armazenado que reorganiza uma seção de uma hierarquia, consulte a seção “Movendo subárvores” de [Movendo subárvores](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Resumo: Gerenciando dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [Resumo: Gerenciar dados em uma tabela hierárquica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107776"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
@@ -32,7 +32,7 @@ ms.locfileid: "66107776"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Atalhos de teclado no Construtor de Relatórios  
   
-|DESCRIÇÃO|Combinação de teclas|  
+|Descrição|Combinação de teclas|  
 |-----------------|---------------------|  
 |Abre o menu Construtor de Relatórios.|ALT + F|  
 |Criar um relatório.|Ctrl+N|  
@@ -59,7 +59,7 @@ ms.locfileid: "66107776"
 |Cópia|CTRL+C, ALT+H+C|  
 |Recortar|CTRL+X, ALT+H+X|  
 |Colar|CTRL+V, ALT+H+V|  
-|Seleciona tudo.|Ctrl+A|  
+|Seleciona tudo.|CTRL+A|  
 |Desfazer|CTRL+Z, ALT+Z|  
 |Refaz|CTRL+Y, ALT+Y|  
 |Amplia.|CTRL+sinal de adição (+)|  
@@ -93,7 +93,7 @@ ms.locfileid: "66107776"
   
 ## <a name="see-also"></a>Consulte Também  
  [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)   
- [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-design-view-report-builder.md)   
+ [Modo de exibição de design de relatório &#40;Construtor de Relatórios&#41;](report-design-view-report-builder.md)   
  [Glossário &#40;Construtor de Relatórios&#41;](glossary-report-builder.md)  
   
   

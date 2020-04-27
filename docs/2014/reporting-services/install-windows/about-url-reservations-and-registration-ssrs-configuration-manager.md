@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108938"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Sobre reservas e registro de URL (Gerenciador de configurações do SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66108938"
 > [!NOTE]  
 >  HTTP.SYS é um componente do sistema operacional que escuta solicitações de rede e as roteia para uma fila de solicitações. Nesta versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS estabelece e mantém a fila de solicitações para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. O IIS (Serviços de Informações da Internet) não mais é usado para hospedar ou acessar aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações sobre a funcionalidade HTTP.SYS, consulte [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) no MSDN.  
   
-##  <a name="ReportingServicesURLs"></a>URLs no Reporting Services  
+##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a>URLs no Reporting Services  
  Em uma instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , você pode acessar as seguintes ferramentas, aplicativos e itens usando URLs:  
   
 -   serviço Web Servidor de Relatórios  
@@ -49,12 +49,12 @@ ms.locfileid: "66108938"
 > [!NOTE]  
 >  Este tópico não descreve o acesso de URL ao Construtor de Relatórios ou a relatórios específicos armazenados no servidor de relatório. Para obter mais informações sobre o acesso à URL a esses itens, veja [Acessar itens do Servidor de Relatório usando o acesso à URL](../access-report-server-items-using-url-access.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="URLreservation"></a>Reserva e registro de URL  
+##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a>Reserva e registro de URL  
  Uma reserva de URL define as URLs que podem ser usadas para acessar um aplicativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará uma ou mais URLs para o serviço Web do Servidor de Relatório e o Gerenciador de Relatórios no HTTP.SYS e, em seguida, os registrará quando o servidor for iniciado. As URLs para o Construtor de Relatórios e os relatórios se baseiam na reserva de URL do serviço Web Servidor de Relatório. Ao anexar parâmetros à URL, você pode abrir o Construtor de Relatórios ou os relatórios usando o serviço Web. As reservas e o registro são fornecidos por HTTP.SYS. Para obter mais informações, consulte [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) no MSDN.  
   
- A *reserva de URL* é um processo pelo qual um ponto de extremidade de URL para um aplicativo Web é criado e armazenado em http. Sistema. HTTP.SYS é o repositório comum de todas as reservas de URL que estão definidas em um computador e define um conjunto de regras comuns que garantem reservas de URL exclusivas.  
+ *Reserva de URL* consiste em um processo através do qual um ponto de extremidade de URL para um aplicativo Web é criado e armazenado em HTTP.SYS. HTTP.SYS é o repositório comum de todas as reservas de URL que estão definidas em um computador e define um conjunto de regras comuns que garantem reservas de URL exclusivas.  
   
- O *registro de URL* ocorre quando o serviço é iniciado. A fila de solicitações é criada, e HTTP.SYS começa a rotear solicitações para essa fila. Um ponto de extremidade de URL deve ser registrado antes que as solicitações direcionadas a ele sejam adicionadas à fila. Quando o serviço Servidor de Relatório for iniciado, ele registrará todas as URLs reservadas para todos os aplicativos habilitados. Isso significa que o serviço Web deve ser habilitado para que o registro ocorra. Se você definir a propriedade **WebServiceAndHTTPAccessEnabled** como **False** na Configuração da Área da Superfície para a faceta Reporting Services do Gerenciamento Baseado em Políticas, a URL do serviço Web não será registrada quando o serviço for iniciado.  
+ O*registro de URL* ocorre quando o serviço é iniciado. A fila de solicitações é criada, e HTTP.SYS começa a rotear solicitações para essa fila. Um ponto de extremidade de URL deve ser registrado antes que as solicitações direcionadas a ele sejam adicionadas à fila. Quando o serviço Servidor de Relatório for iniciado, ele registrará todas as URLs reservadas para todos os aplicativos habilitados. Isso significa que o serviço Web deve ser habilitado para que o registro ocorra. Se você definir a propriedade **WebServiceAndHTTPAccessEnabled** como **False** na Configuração da Área da Superfície para a faceta Reporting Services do Gerenciamento Baseado em Políticas, a URL do serviço Web não será registrada quando o serviço for iniciado.  
   
  As URLs terão o registro cancelado se você interromper o serviço ou reciclar o serviço Web ou o domínio do aplicativo do Gerenciador de Relatórios. Se você modificar uma reserva de URL enquanto o serviço estiver em execução, o servidor de relatório reciclará o domínio do aplicativo imediatamente para que o registro da antiga URL seja cancelado e a nova URL possa ser usada.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66108938"
 |http://+:80/reportserver|http://\<ComputerName>/ReportServer<br /><br /> http://\<IPAddress>/ReportServer<br /><br /> http://localhost/reportserver|A reserva de URL especifica um curinga (+) na porta 80. Esse procedimento coloca na fila do servidor de relatório qualquer solicitação de entrada que especifique um host que seja resolvido para o computador do servidor de relatório na porta 80. Observe que, com essa reserva de URL, pode ser usado qualquer número de URLs para acessar o servidor de relatório.<br /><br /> Essa é a reserva de URL padrão para um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na maioria dos sistemas operacionais.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Essa reserva de URL especifica um endereço IP e é bem mais restritiva do que a reserva de URL curinga. Somente URLs que incluem o endereço IP podem ser usadas para conexão com o servidor de relatório. Dada essa reserva de URL, uma solicitação para um servidor de relatório\<em http://ComputerName>/reportserver http://localhost/reportserver ou falhará.|  
   
-##  <a name="DefaultURLs"></a>URLs padrão  
+##  <a name="default-urls"></a><a name="DefaultURLs"></a>URLs padrão  
  Se você instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão, a instalação reservará URLs para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. Você também pode aceitar esses valores padrão ao definir reservas de URL na ferramenta Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As URLs padrão incluirão um nome de instância se você instalar o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou se instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como uma instância nomeada.  
   
 > [!IMPORTANT]  
@@ -92,23 +92,21 @@ ms.locfileid: "66108938"
 |SQL Server Express|serviço Web Servidor de Relatórios|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
 |SQL Server Express|Gerenciador de Relatórios|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
-##  <a name="URLPermissionsAccounts"></a>Autenticação e identidade de serviço para URLs de Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificam a conta de serviço do Servidor de Relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  
+##  <a name="authentication-and-service-identity-for-reporting-services-urls"></a><a name="URLPermissionsAccounts"></a>Autenticação e identidade de serviço para URLs de Reporting Services  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] especificam a conta de serviço do Servidor de Relatório. A conta com a qual o serviço é executado é usada para todas as URLs criadas para os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] executados na mesma instância. A identidade de serviço da instância do servidor de relatório é armazenada no arquivo RSReportServer.config.  
   
  A conta de serviço não tem valor padrão. Entretanto, é necessário especificar uma conta de serviço durante a instalação em `URLReservation` no arquivo RSReportServer.config, mesmo que você instale o servidor no modo somente arquivos. Os valores válidos para a conta de serviço incluem uma conta de usuário de domínio, `LocalSystem` ou `NetworkService`.  
   
  O acesso anônimo é desabilitado porque a segurança padrão é `RSWindowsNegotiate`. Para acesso de intranet, as URLs do servidor de relatório usam nomes de computadores da rede. Para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conexões com a Internet, você deve usar configurações diferentes. Para obter mais informações sobre autenticação, veja [Autenticação com o Servidor de Relatório](../security/authentication-with-the-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="URLlocalAdmin"></a>URLs para administração local  
+##  <a name="urls-for-local-administration"></a><a name="URLlocalAdmin"></a> URLs para administração local  
  Use http://localhost/reportserver ou http://localhost/reports se tiver especificado um curinga forte ou fraco para a reserva de URL.  
   
  A URL http://localhost é interpretada como http://127.0.0.1. Se você tiver delimitado a reserva de URL para um nome de computador ou endereço IP único, não poderá usar localhost, a menos que crie uma reserva adicional para 127.0.0.1 no computador local. Da mesma forma, se localhost ou 127.0.0.1 for desabilitado no computador, você não poderá usar essa URL.  
   
- 
-  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluem novos recursos de segurança que minimizam o risco da execução acidental de programas com privilégios elevados. Etapas adicionais são necessárias para habilitar a administração local nesses sistemas operacionais. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] e [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] incluem novos recursos de segurança que minimizam o risco da execução acidental de programas com privilégios elevados. Etapas adicionais são necessárias para habilitar a administração local nesses sistemas operacionais. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="URLSharePoint"></a>URLs do servidor de relatório no modo integrado do SharePoint  
+##  <a name="urls-for-report-server-in-sharepoint-integrated-mode"></a><a name="URLSharePoint"></a>URLs do servidor de relatório no modo integrado do SharePoint  
  Se um servidor de relatório autônomo for configurado para ser executado em uma implantação maior de um produto ou tecnologia do SharePoint, a construção da URL e do diretório virtual será afetada das seguintes maneiras:  
   
 -   As URLs de relatórios e outros itens são endereçadas pela URL do aplicativo Web do SharePoint. Para o acesso de URL a relatórios específicos, sempre use uma URL totalmente qualificada que inclua o caminho do site, a biblioteca de documentos, o nome do item e uma extensão de nome de arquivo (como .rdl de um relatório). Você deve especificar URLs totalmente qualificadas quando fizer referência a fontes de dados compartilhadas e modelos em relatórios e quando especificar um servidor de destino e pastas para operações de publicação em um servidor de relatório.  
@@ -124,7 +122,7 @@ ms.locfileid: "66108938"
  Se você tiver integrado uma implantação em expansão do servidor de relatório para ser executada em uma implantação maior de um produto ou tecnologia do SharePoint, balanceie a carga dos nós do servidor de relatório e defina uma única URL do servidor virtual para a implantação em expansão. As configurações de integração do Servidor de Relatório permitem especificar uma única URL do servidor de relatório. No caso de uma implantação em expansão, a URL deve ser o ponto de acesso dos nós do servidor na implantação em expansão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Sintaxe de reserva de URL &#40;Configuration Manager SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configurar uma URL &#40;Configuration Manager SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Sintaxe de reserva de URL &#40;SSRS Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

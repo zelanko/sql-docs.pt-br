@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108317"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Caixa de diálogo Regra de Cor do Mapa, Geral
@@ -26,7 +26,7 @@ ms.locfileid: "66108317"
  Para exibir todos os elementos de mapa de uma camada especificando um gradiente decorativo com diferentes cores primárias e secundárias, use a página **Preenchimento** da caixa de diálogo Mapear Propriedades do Polígono. As regras de cor têm prioridade sobre as propriedades de vídeo de uma camada. Para obter mais informações, consulte [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
- **Aplicar estilo de modelo**  
+ **Aplicar estilo do modelo**  
  Selecione esta opção para usar a cor com base no tema que foi escolhido no assistente ou foi definido nas propriedades da camada do Polígono, da Linha ou do Ponto. Um tema define as opções padrão da cor, da fonte e das bordas do mapa. Nesta opção, nenhuma regra é aplicada para atribuir cores a cada elemento de mapa.  
   
  **Visualizar dados usando a paleta de cores**  

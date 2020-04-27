@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4354461c9f52106d821e376aac4698546538e19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107146"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
@@ -24,27 +24,27 @@ ms.locfileid: "66107146"
   
  Existem dois tipos de conjuntos de dados:  
   
--   **Conjunto de e compartilhado.** Um conjunto de dados compartilhado é definido no servidor de relatório. Você pode procurar no servidor para criar um conjunto de dados compartilhado ou selecionar um predefinido para adicionar ao seu relatório. Use um conjunto de dados compartilhado para fornecer uma consulta que pode ser usada por mais de um relatório. Os conjuntos de dados compartilhados são armazenados no servidor de relatório e gerenciados separadamente dos relatórios ou das fontes de dados compartilhadas. Por exemplo, um administrador de servidor de relatório pode atualizar a consulta para tirar proveito da indexação aprimorada ou de outra otimização de desempenho de consulta.  
+-   **Conjunto de dados compartilhado.** Um conjunto de dados compartilhado é definido no servidor de relatório. Você pode procurar no servidor para criar um conjunto de dados compartilhado ou selecionar um predefinido para adicionar ao seu relatório. Use um conjunto de dados compartilhado para fornecer uma consulta que pode ser usada por mais de um relatório. Os conjuntos de dados compartilhados são armazenados no servidor de relatório e gerenciados separadamente dos relatórios ou das fontes de dados compartilhadas. Por exemplo, um administrador de servidor de relatório pode atualizar a consulta para tirar proveito da indexação aprimorada ou de outra otimização de desempenho de consulta.  
   
--   **Conjunto de e inserido.** Um conjunto de dados inserido é definido no e usado somente pelo relatório em que está inserido. Use um conjunto de dados inserido quando você desejar obter dados de uma fonte de dados externa a ser usada somente em um relatório. Os conjuntos de dados inseridos são úteis quando você deseja criar uma consulta que não tem outras dependências e que não precisa ser usada para vários relatórios.  
+-   **Conjunto de dados incorporado.** Um conjunto de dados inserido é definido no e usado somente pelo relatório em que está inserido. Use um conjunto de dados inserido quando você desejar obter dados de uma fonte de dados externa a ser usada somente em um relatório. Os conjuntos de dados inseridos são úteis quando você deseja criar uma consulta que não tem outras dependências e que não precisa ser usada para vários relatórios.  
   
  Um conjunto de dados também inclui parâmetros, filtros e opções de dados que especificam diferenciação de caracteres, como maiúsculas e minúsculas, tipo kana, largura, acentuação e informações de ordenação.  
   
  ![rs_DatasetStory](../media/rs-datasetstory.gif "rs_DatasetStory")  
   
-1.  **DataSets no painel de dados do relatório** Um DataSet é exibido no painel de dados do relatório depois que você cria um DataSet inserido ou adiciona um DataSet compartilhado. Um conjunto de dados se baseia em uma fonte de dados.  
+1.  **Conjuntos de dados no painel de Dados do Relatório** Um conjunto de dados é exibido no painel de Dados do Relatório depois que você cria um conjunto de dados inserido ou adiciona um conjunto de dados compartilhado. Um conjunto de dados se baseia em uma fonte de dados.  
   
-2.  **Designer de consulta** Quando você cria uma consulta de conjunto de dados, o designer de consulta que está associado com o tipo de fonte é aberto.  
+2.  **Designer de Consultas** Quando você projeta uma consulta de conjunto de dados, o designer de consultas associado ao tipo de fonte de dados é aberto.  
   
-3.  **Comando de consulta** O designer de consulta ajuda a criar um comando de consulta. A sintaxe do comando é determinada pelo provedor de dados.  
+3.  **Comando Query** O designer de consultas ajuda a criar um comando Query. A sintaxe do comando é determinada pelo provedor de dados.  
   
-4.  **Extensão de dados/provedor de dados** Conectar-se aos dados pode ser por meio de várias camadas de acesso a dados.  
+4.  **Extensão de dados/Provedor de Dados** A conexão com os dados pode ser feita por meio de várias camadas de acesso a dados.  
   
-5.  **Fontes de dados externas** Recuperar dados de bancos de dados relacionais, bases de data multidimensionais, listas do SharePoint, serviços Web ou modelos de relatório.  
+5.  **Fontes de dados internas** Recupera dados de bancos de dados relacionais, bancos de dados multidimensionais, listas do SharePoint, serviços Web ou modelos de relatório.  
   
-6.  **Resultados da consulta** Você pode executar a consulta e ver um exemplo de conjunto de resultados. Você deve ter credenciais de tempo de design para executar uma consulta.  
+6.  **Resultados da consulta** Você pode executar a consulta e ver um exemplo do conjunto de resultados. Você deve ter credenciais de tempo de design para executar uma consulta.  
   
-7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar os metadados para a coleção de campos do DataSet. Por exemplo, uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instrução retorna os nomes de coluna para uma tabela de banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
+7.  **Metadados do esquema** O provedor de dados executa um comando de consulta de esquema separado da consulta para recuperar metadados para a coleção de campos do conjunto de dados. Por exemplo, uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT` instrução retorna os nomes de coluna para uma tabela de banco de dados. Use o painel de Dados do Relatório para expandir o conjunto de dados para exibir a coleção de campos do conjunto de dados.  
   
  Também é possível incluir dados em um relatório usando conjuntos de dados compartilhados e partes de relatório predefinidos. Esses itens já têm as informações de conexão de dados necessárias. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e ssrs&#41;](report-datasets-ssrs.md) e [partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66107146"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Overview"></a>Compreendendo os conjuntos de relatórios e as consultas do relatório  
+##  <a name="understanding-report-datasets-and-queries"></a><a name="Overview"></a> Compreendendo os conjuntos de dados de relatório e consultas  
  Um conjunto de dados de relatório contém um comando de consulta que é executado na fonte de dados externa e especifica quais dados serão recuperados. Para criar o comando de consulta, use o designer de consulta que está associado à extensão de dados para a fonte de dados externa. No designer de consulta, é possível executar o comando de consulta e exibir um conjunto de resultados. O conjunto de resultados é um conjunto retangular de linhas com nomes de coluna e linhas com o mesmo número de valores em cada linha. Não há suporte para dados hierárquicos, também conhecidos como *hierarquias imperfeitas*. Os nomes de colunas são salvos na definição de relatório como uma lista de campos do conjunto de dados.  
   
  Depois de adicionar conjuntos de dados a seu relatório, arraste campos de suas coleções de campos no painel de Dados do Relatório para tabelas, gráficos e outros itens de relatório que você usa para criar o layout de relatório. Para obter mais informações sobre como trabalhar com campos, consulte [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "66107146"
   
  Só há suporte para os tipos de arquivo .sql e .rdl. Consultas de Linguagem MDX, consultas de Previsão de Mineração de Dados (DMX) e consultas de modelo (SMQL) somente podem ser geradas pelo designer de consulta associado.  
   
-##  <a name="Compare"></a>Comparando e criando conjuntos de valores compartilhados e conjuntos de valores inseridos  
+##  <a name="comparing-and-creating-shared-datasets-and-embedded-datasets"></a><a name="Compare"></a> Comparando e criando conjuntos de dados compartilhados e conjuntos de dados inseridos  
  Um conjunto de dados inserido é definido em um relatório ou em uma parte de relatório publicada. As alterações feitas em um conjunto de dados inserido afetam somente aquele relatório ou aquela parte de relatório.  
   
  Um conjunto de dados compartilhado é definido em um servidor de relatório ou site do SharePoint, é baseado em uma fonte de dados compartilhada e pode usado por vários relatórios e partes de relatório. As alterações feitas a uma definição de conjunto de dados compartilhada afetam todos os relatórios e todas as partes de relatório que a usam.  
@@ -124,7 +124,7 @@ ms.locfileid: "66107146"
   
  A diferença entre as fontes de dados inseridas e compartilhadas está em como elas são criadas, armazenadas e gerenciadas. A tabela seguinte resume as diferenças entre fontes de dados inseridas e compartilhadas:  
   
-|DESCRIÇÃO|Inserida<br /><br /> Fonte de dados|Compartilhado<br /><br /> Fonte de dados|  
+|DESCRIÇÃO|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
 |-----------------|------------------------------|----------------------------|  
 |A conexão de dados é inserida na definição do relatório.|![Disponível](../media/greencheck.gif "Disponível")||  
 |O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../media/greencheck.gif "Disponível")|  
@@ -147,13 +147,13 @@ ms.locfileid: "66107146"
 |Texto da consulta|Configure a consulta, incluindo a sua definição como expressão.|Não pode alterar a consulta.|  
 |Parâmetros de consulta|Não pode referenciar parâmetros de relatório<br /><br /> Inclui valores padrão<br /><br /> Inclui um sinalizador Somente Leitura|Configure parâmetros que não são marcados como Somente Leitura na definição|  
 |Filtros|Definir filtros|Não é possível exibir ou alterar filtros de conjuntos de dados que fazem parte da definição<br /><br /> Pode criar filtros adicionais|  
-|Fonte de dados|Deve ser uma fonte de dados compartilhada|Não pode alterar a fonte de dados|  
+|fonte de dados|Deve ser uma fonte de dados compartilhada|Não pode alterar a fonte de dados|  
 |Campos|Campos do comando query<br /><br /> Campos calculados não fazem parte da definição do conjunto de dados|Exiba os campos, mas não é possível alterá-los<br /><br /> A coleção de campos é estática com base na consulta no momento em que você adicionou o conjunto de dados compartilhado ao relatório. Para atualizar, clique em **Atualizar Campos** na caixa de diálogo **Propriedades do Conjunto de Dados** . A coleção de campos real é o que quer que seja retornado pela consulta atual na definição.<br /><br /> Adicionar campos calculados|  
 |Dataset|Opções de dados, como a diferenciação de maiúsculas e minúsculas|Substitua as opções de dados na instância|  
   
  Para obter mais informações sobre como criar conjuntos de dados, consulte [Criar um conjunto de dados compartilhado ou inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Ferramentas do Reporting Services](../tools/reporting-services-tools.md) na [Documentação do Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nos Manuais Online do SQL Server.  
   
-##  <a name="SortGroupFilter"></a>Filtrando, classificando e agrupando dados em um DataSet  
+##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> Filtrando, classificando e agrupando dados em um conjunto de dados  
  Os dados em um conjunto de dados são obtidos quando um comando de consultas é executado em uma fonte de dados externa. A sintaxe do comando de consulta para uma extensão de dados determina se os dados podem ser classificados ou agrupados. Classificar e agrupar ocorre na consulta antes de os dados serem recuperados para um relatório. Filtrar ocorre após os dados serem recuperados para um relatório.  
   
  Para obter mais informações, consulte [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -163,19 +163,19 @@ ms.locfileid: "66107146"
   
  Os filtros fazem parte de uma definição de conjuntos de dados compartilhados. Os filtros de conjunto de dados compartilhados afetam todos os relatórios que incluem o conjunto de dados compartilhado. Depois de adicionar um conjunto de dados compartilhado ao relatório, ou depois de adicionar um componente com um conjunto de dados compartilhado dependente, você pode criar filtros de conjunto de dados adicionais. Os filtros que você cria são usados somente no seu relatório, eles não fazem parte da definição de conjunto de dados compartilhada no servidor de relatório.  
   
- É possível definir filtros adicionais em uma região de dados ou grupo de regiões de dados. Você pode usar uma combinação de parâmetros e filtros que permitem que os usuários escolham os dados que eles desejam ver em um relatório. Para obter mais informações, consulte [parâmetros de relatório &#40;Construtor de relatórios e Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ É possível definir filtros adicionais em uma região de dados ou grupo de regiões de dados. Você pode usar uma combinação de parâmetros e filtros que permitem que os usuários escolham os dados que eles desejam ver em um relatório. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="sorting-data-in-a-dataset"></a>Classificando dados em um conjunto de dados  
  Em um conjunto de dados, a ordem dos dados é a ordem em que eles são recuperados da fonte de dados externa. Esta é a mesma ordem que você vê quando executa a consulta no designer de consulta. Se a sintaxe do comando de consulta dá suporte à classificação, você pode editar a consulta para classificar os dados na fonte, antes de eles serem retornados como dados de relatório. Por exemplo, para uma consulta do [!INCLUDE[tsql](../../../includes/tsql-md.md)] , a instrução ORDER BY controla a ordem de classificação.  
   
  Para classificar dados depois que são retornados ao relatório, defina expressões de classificação em regiões de dados e grupos de regiões de dados. Para obter mais informações, consulte o tópico do tipo específico de região de dados, por exemplo, [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Você pode usar uma combinação de parâmetros e expressões de classificação para permitir que os usuários escolham a ordem de classificação para os dados em um relatório. Para obter mais informações, consulte [parâmetros de relatório &#40;Construtor de relatórios e Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Você pode usar uma combinação de parâmetros e expressões de classificação para permitir que os usuários escolham a ordem de classificação para os dados em um relatório. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="grouping-data-in-a-dataset"></a>Agrupando dados em um conjunto de dados  
  Você não pode agrupar dados em um conjunto de dados. Para agregar dados em um conjunto de dados, você pode editar o comando de consulta para calcular agregações antes de os dados serem recuperados para um relatório. Eles são conhecidos como *agregações do servidor*. Em expressões, para identificar estes valores como agregações pré-calculadas, use a função de agregação. Para obter mais informações, consulte [Função Aggregate &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md).  
   
-##  <a name="Parameters"></a>Usando parâmetros e conjuntos de valores  
+##  <a name="using-parameters-and-datasets"></a><a name="Parameters"></a> Usando parâmetros e conjuntos de dados  
  Para uma consulta de banco de dados inserido que contém variáveis de consulta, parâmetros de consulta e os parâmetros de relatório correspondentes são automaticamente criados. Quando o relatório é executado, o valor do parâmetro do relatório é vinculado ao parâmetro de consulta do conjunto de dados. Dessa maneira, o comando de consulta que é executado na fonte de dados externa inclui os valores que são especificados para parâmetros de relatório. Os parâmetros de relatório permitem que um usuário escolha os dados que deseja ver no relatório. Veja como os parâmetros de consulta e de relatório são vinculados na página [Caixa de diálogo Propriedades de Banco de Dados, Parâmetros &#40;Construtor de Relatórios&#41;](../dataset-properties-dialog-box-parameters-report-builder.md).  
   
  Para um conjunto de dados compartilhado, os parâmetros de consulta fazem parte da definição de conjunto de dados compartilhada que pode ser gerenciada no servidor de relatório independentemente de um relatório. A lista seguinte descreve o suporte para valores de parâmetros de consulta:  
@@ -197,26 +197,26 @@ ms.locfileid: "66107146"
 ### <a name="displaying-hidden-datasets"></a>Exibindo conjuntos de dados ocultos  
  Quando você cria uma consulta parametrizada para algumas fontes de dados multidimensionais, os conjuntos de dados que fornecem valores válidos para o parâmetro são automaticamente criados. Em alguns designers de consulta, você faz isto especificando filtros e selecionando a opção para criar parâmetros. Por padrão, esses conjuntos de dados não são exibidos no painel de Dados do Relatório, mas eles podem ser exibidos. Para obter mais informações, consulte [Mostrar conjuntos de dados ocultos para obter valores de parâmetros para dados multidimensionais &#40;Construtor de Relatórios e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
-##  <a name="Maps"></a>Usando mapas e conjuntos de valores  
+##  <a name="using-maps-and-datasets"></a><a name="Maps"></a> Usando mapas e conjuntos de dados  
  Se você incluir um mapa em seu relatório, forneça dados espaciais. Os dados espaciais devem ser obtidos de um conjunto de dados de relatório, de um mapa na galeria de mapas ou dos arquivos de forma ESRI. Os dados espaciais de um relatório ou de um arquivo de forma ESRI não aparecem como um conjunto de dados no painel de Dados do Relatório. Para obter mais informações, consulte [Mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
-##  <a name="Multiple"></a>Exibindo dados a partir de vários DataSets  
+##  <a name="displaying-data-from-multiple-datasets"></a><a name="Multiple"></a> Exibindo dados de vários conjuntos de dados  
  Normalmente, um relatório tem mais de um conjunto de dados. A seguinte lista descreve como é possível usar conjuntos de dados em um relatório:  
   
 -   Você exibe os dados de cada conjunto de dados usando uma região de dados separada. Para obter mais informações, consulte [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
--   Você pode vincular mais de uma região de dados ao conjunto de dados e fornecer várias exibições dos mesmos dados. Para obter mais informações, consulte [vinculando várias regiões de dados ao mesmo conjunto &#40;Construtor de relatórios e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+-   Você pode vincular mais de uma região de dados ao conjunto de dados e fornecer várias exibições dos mesmos dados. Para obter mais informações, consulte [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
--   É possível usar conjuntos de dados para fornecer uma lista suspensa dos valores disponíveis ou padrão de um parâmetro de relatório. Para obter mais informações, consulte [parâmetros de relatório &#40;Construtor de relatórios e Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+-   É possível usar conjuntos de dados para fornecer uma lista suspensa dos valores disponíveis ou padrão de um parâmetro de relatório. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 -   É possível vincular dados relacionados de vários conjuntos de dados usando parâmetros com relatórios detalhados ou sub-relatórios. Por exemplo, um relatório de vendas pode mostrar dados resumidos de todas as lojas, e um link para detalhamento pode especificar o identificador da loja como parâmetro de um relatório com uma consulta de conjunto de dados que recupera as vendas individuais da loja especificada. Para obter mais informações, consulte [Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) e [Sub-relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md).  
   
 -   Não é possível exibir dados detalhados de vários conjuntos de dados em uma única região de dados. No entanto, você pode exibir valores de função de agregação ou interna de vários conjuntos de dados em uma região de dados. Para obter mais informações, consulte [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md). Caso precise integrar dados detalhados de vários conjuntos de dados a uma região, você deve reescrever a consulta para recuperar os dados como um conjunto único.  
   
-##  <a name="NoRows"></a>Exibindo uma mensagem quando não há linhas de dados disponíveis  
+##  <a name="displaying-a-message-when-no-rows-of-data-are-available"></a><a name="NoRows"></a> Exibindo uma mensagem quando nenhuma linha de dados está disponível  
  Durante o processamento do relatório, quando a consulta a um conjunto de dados é executada, o conjunto de resultados pode não conter nenhuma linha. No relatório renderizado, uma região de dados vinculada a um conjunto de dados vazio é exibida como uma região de dados vazia. É possível especificar um texto a ser exibido no relatório renderizado em lugar da região de dados vazia. Também é possível especificar uma mensagem para sub-relatórios quando as consultas a todos os conjuntos de dados não produzem nenhum dado em tempo de execução. Para obter mais informações, consulte [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
-##  <a name="Options"></a>Definindo opções de conjunto de configurações  
+##  <a name="setting-dataset-options"></a><a name="Options"></a> Definindo opções do conjunto de dados  
  Para fontes de dados que oferecem suporte a dados internacionais, você deve ajustar as propriedades para um conjunto de dados que afetam a ordem de classificação, as propriedades de caracteres internacionais e a diferenciação de maiúsculas e minúsculas. Entre essas propriedades estão maiúsculas e minúsculas, tipo kana, largura, acentuação e ordenação. Para obter mais informações, consulte “Considerações internacionais para aplicativos de banco de dados e aplicativos do Mecanismo de Banco de Dados” e “Trabalhando com ordenações” nos [manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335). Para obter mais informações sobre como definir essas propriedades, consulte [Caixa de diálogo Propriedades do Conjunto de Dados, Opções &#40;Construtor de Relatórios&#41;](dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte Também  

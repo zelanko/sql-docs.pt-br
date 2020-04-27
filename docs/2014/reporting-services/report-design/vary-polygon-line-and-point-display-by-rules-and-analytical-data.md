@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104616"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar a exibição de polígono, linha e ponto por regras e dados analíticos (Construtor de Relatórios e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66104616"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> Compreendendo regras  
+##  <a name="understanding-rules"></a><a name="Rules"></a> Compreendendo regras  
  Você pode definir quatro tipos de regras que o processador de relatório ajuste as propriedades de exibição automaticamente para elementos do mapa em uma camada. As regras variam de acordo com o tipo de elemento do mapa: polígonos, linhas ou pontos.  
   
 -   **Polígonos.** Varie a cor do polígono.  
@@ -54,7 +54,7 @@ ms.locfileid: "66104616"
   
 -   **Pontos.** Para marcadores exibidos para cada ponto, varie a cor, o tamanho e o tipo de marcador.  
   
-##  <a name="Color"></a> Compreendendo regras de cor  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> Compreendendo regras de cor  
  As regras de cores se aplicam a cores de preenchimento para polígonos, linhas e marcadores que representam pontos ou pontos centrais de polígono.  
   
  As regras de cores oferecem suporte a quatro opções:  
@@ -76,28 +76,28 @@ ms.locfileid: "66104616"
   
  Para remover os valores que você não deseja na escala de cores, desmarque a opção de escala de cores de cada regra de cor em todas as camadas.  
   
-##  <a name="Width"></a> Compreendendo regras de largura de linha  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> Compreendendo regras de largura de linha  
  As regras de largura se aplicam a linhas. As regras de largura têm suporte para duas opções:  
   
 -   Use uma largura de linha padrão. Especifique a largura da linha em pontos.  
   
 -   Visualize dados usando a largura da linha. Defina as larguras mínima e máxima para a linha, especifique o campo de dados a ser usado para variar a largura e especifique as opções de distribuição a serem aplicadas aos dados.  
   
-##  <a name="Size"></a> Compreendendo regras de tipo de tamanho de marcador  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> Compreendendo regras de tipo de tamanho de marcador  
  As regras de tamanho se aplicam a marcadores que representam pontos ou pontos centrais de polígono. As regras de tamanho têm suporte para duas opções:  
   
 -   Use um tamanho de marcador padrão. Especifique o tamanho em pontos.  
   
 -   Visualize dados usando tamanho. Defina os tamanhos mínimo e máximo para o marcador, especifique o campo de dados a ser usado para variar o tamanho e especifique as opções de distribuição a serem aplicadas aos dados.  
   
-##  <a name="Marker"></a> Compreendendo regras de tipo de marcador  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> Compreendendo regras de tipo de marcador  
  As regras de tipo de marcador se aplicam a marcadores que representam pontos ou pontos centrais de polígono. As regras de tipo de marcador têm suporte para duas opções:  
   
 -   Use um tipo de marcador padrão. Você especifica um dos tipos de marcador disponíveis.  
   
 -   Visualize dados usando marcadores. Você especifica um conjunto de marcadores e especifica a ordem na qual deseja que sejam usados. Os tipos de marcador incluem `Circle`, `Diamond`, `Pentagon`, `PushPin`, `Rectangle`, `Star`, `Triangle`, `Trapezoid` e `Wedge`.  
   
-##  <a name="Distribution"></a> Compreendendo opções de distribuição  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> Compreendendo opções de distribuição  
  Para criar uma distribuição de valores, você pode dividir os dados em intervalos. Especifique o tipo de distribuição, o número de subintervalos e os valores de intervalo mínimo e máximo.  
   
  Na lista a seguir, vamos supor que você tenha três elementos de mapa e seis valores analíticos relacionados que variam de 1 a 9999 com os valores seguintes: 1, 10, 200, 2000, 4777, 8999.  
@@ -112,7 +112,7 @@ ms.locfileid: "66104616"
   
  Os valores de distribuição são usados pelas regras para variar os valores de exibição do elemento do mapa.  
   
-##  <a name="Legends"></a> Compreendendo legendas e itens de legenda  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> Compreendendo legendas e itens de legenda  
  Os itens de legenda são criados automaticamente a partir das regras que você especifica para cada camada. As opções de regras controlam quantos itens são criados e em qual legenda aparecem. Por padrão, todos os itens de todas as regras são adicionados na primeira legenda. Para mover itens para fora da primeira legenda, crie tantas legendas adicionais quanto precisar e, para cada regra, especifique a legenda a ser usada para exibir os itens resultantes da regra. Para ocultar itens com base em uma regra, especifique um nome de legenda em branco.  
   
  Para controlar onde uma legenda aparece, use a caixa de diálogo Propriedades da Legenda para especificar uma posição relativa ao visor do mapa. Para obter mais informações, consulte [Alterar legendas de mapa, escala de cores e regras associadas &#40;Construtor de Relatórios e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  

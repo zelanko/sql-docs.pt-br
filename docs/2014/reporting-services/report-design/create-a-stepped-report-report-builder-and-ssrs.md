@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106127"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Criar um novo relatório de nível (Construtor de Relatórios e SSRS)
   Um relatório de nível mostra as linhas ou grupos filho de detalhes recuados sob um grupo pai na mesma coluna, conforme ilustrado no seguinte exemplo:  
   
- ![Relatório de nível renderizado](../media/steppedreportrendered.gif "Relatório de nível renderizado")  
+ ![Relatório escalonado renderizado](../media/steppedreportrendered.gif "Relatório escalonado renderizado")  
   
  Os relatórios de tabela tradicionais colocam o grupo pai em uma coluna adjacente no relatório. A nova região de dados tablix permite adicionar um grupo e linhas ou grupos filho de detalhe à mesma coluna. Para diferenciar as linhas de grupo de linhas de detalhes ou de grupos filho, você pode aplicar uma formatação, como cor da fonte, ou recuar as linhas de detalhes.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66106127"
   
      A figura a seguir mostra como pode ser a aparência da região de dados renderizada quando você visualizar o relatório.  
   
-     ![Relatório agrupado renderizado.](../media/tablereportrendered.gif "Relatório agrupado renderizado.")  
+     ![Relatório agrupado renderizado](../media/tablereportrendered.gif "Relatório agrupado renderizado")  
   
 3.  Em um relatório de nível, você não precisa da primeira coluna que mostra a instância de grupo. Em vez disso, copie o valor na célula de cabeçalho do grupo, exclua a coluna do grupo e cole na primeira caixa de texto na linha de cabeçalho do grupo. Para remover a coluna de grupo, clique com o botão direito do mouse na coluna de grupo ou na célula e clique em **Excluir Colunas**. A figura a seguir mostra como pode ser a aparência da região de dados na superfície de design.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66106127"
   
      Sua região de dados será semelhante ao exemplo a seguir.  
   
-     ![Região de dados para relatório de nível](../media/steppedreportdataregion.gif "Região de dados para relatório de nível")  
+     ![Região de dados para relatório escalonado](../media/steppedreportdataregion.gif "Região de dados para relatório escalonado")  
   
      **Região de dados para layout de relatório de nível**  
   
-     Na guia **início** , clique em **executar**. O relatório exibe o grupo com os níveis de recuo para os valores do grupo filho.  
+     Na guia **Página Inicial** , clique em **Executar**. O relatório exibe o grupo com os níveis de recuo para os valores do grupo filho.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>Para criar um relatório de nível com vários grupos  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66106127"
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Listas &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lista &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

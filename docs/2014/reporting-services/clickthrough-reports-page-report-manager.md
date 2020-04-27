@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109802"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página Relatórios de Clickthrough (Gerenciador de Relatórios)
@@ -42,7 +42,7 @@ ms.locfileid: "66109802"
   
 2.  Focalize o modelo e clique na seta do menu suspenso.  
   
-3.  No menu suspenso, clique em **Gerenciar**. Esse procedimento abre a página de propriedades **Geral** do modelo.  
+3.  No menu suspenso, clique em **Gerenciar**. Isso abre a página de propriedades **geral** do modelo.  
   
 4.  Selecione a guia **Clickthrough** .  
   

@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107966"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriais (Construtor de Relatórios)
   Use os seguintes tutoriais do Construtor de Relatórios para obter informações sobre como criar relatórios básicos.  
   
  [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](prerequisites-for-tutorials-report-builder.md)  
- Para usar estes tutoriais, você deve ter acesso somente leitura a um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e permissões para acessar um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+ Para usar estes tutoriais, você deve ter acesso somente leitura a um banco de dados [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e permissões para acessar um servidor de relatório do [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Para obter ajuda para esses pré-requisitos, entre em contato com o administrador do servidor de relatório.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "66107966"
  Siga as etapas deste tutorial para aprender como usar expressões para concatenar, calcular e pesquisar valores de campo e mostrá-los em um relatório. Você também aprenderá como exibir condicionalmente diferentes imagens e estados de indicador usando expressões.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md)   
+ [Modo de exibição de design de relatório &#40;Construtor de Relatórios&#41;](report-builder/report-design-view-report-builder.md)   
  [Construtor de Relatórios no SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Tutorial: criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Criar um relatório de gráfico rápido offline &#40;Construtor de Relatórios&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

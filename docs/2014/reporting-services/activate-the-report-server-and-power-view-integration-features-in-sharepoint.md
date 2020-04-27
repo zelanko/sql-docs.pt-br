@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110033"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66110033"
   
  Neste tópico:  
   
--   [Para ativar o servidor de relatório e Power View os recursos do conjunto de sites de integração:](#bkmk_features)  
+-   [Para ativar o Servidor de Relatório e os recursos de coleção de sites do Power View:](#bkmk_features)  
   
--   [Para ativar ou desativar Reporting Services recurso de conjunto de sites de administração central:](#bkmk_centraladmin)  
+-   [Para ativar ou desativar o recurso de coleção de sites da Administração Central do Reporting Services:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>Para ativar o servidor de relatório e Power View os recursos do conjunto de sites de integração:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>Para ativar o servidor de relatório e Power View os recursos do conjunto de sites de integração:  
   
 1.  Abra seu navegador no site em que você deseja que os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] estejam ativos.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110033"
   
  Para desativar os recursos, é possível usar o mesmo procedimento, mas clique em **Desativar** em vez de **Ativar**.  
   
-##  <a name="bkmk_centraladmin"></a>Para ativar ou desativar Reporting Services recurso de conjunto de sites de administração central:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Para ativar ou desativar Reporting Services recurso de conjunto de sites de administração central:  
   
 1.  Abra seu navegador na Administração Central do SharePoint.  
   

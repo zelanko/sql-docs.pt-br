@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107167"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Partes de relatório e conjuntos de dados no Construtor de Relatórios
@@ -28,7 +28,7 @@ ms.locfileid: "66107167"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> Adicionando uma parte de relatório com conjuntos de dados dependentes ao seu relatório  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a>Adicionando uma parte de relatório com conjuntos de associados dependentes ao relatório  
  Quando você adiciona uma parte de relatório a seu relatório, os conjuntos de dados dependentes que ela contém também são adicionados ao seu relatório. Como uma parte de relatório pode incluir um retângulo que contém muitos outros itens de relatório, ela pode adicionar vários conjuntos de dados dependentes ao relatório. Cada conjunto de dados compartilhado é uma referência independente; a fonte de dados compartilhada do qual ele depende não é adicionada ao relatório. Cada conjunto de dados inserido também adiciona a fonte de dados inserida ou compartilhada do qual depende.  
   
  As credenciais de uma fonte de dados inserida não são salvas como parte da parte de relatório. Se uma fonte de dados inserida for adicionada ao relatório, você receberá uma solicitação para fornecer credenciais quando executar o relatório. Para não receber essa solicitação de credenciais, use partes de relatório que se baseiem em fontes de dados compartilhadas com credenciais armazenadas.  
@@ -36,7 +36,7 @@ ms.locfileid: "66107167"
  Após a adição de uma parte de relatório ao relatório, os conjuntos de dados adicionados não serão diferentes dos conjuntos de dados inseridos ou compartilhados criados por você. Você pode exibir conjuntos de dados adicionais no painel de Dados do Relatório. Os conjuntos de dados inseridos aparecem sob a fonte de dados compartilhada correspondente e os conjuntos de dados compartilhados aparecem sob a pasta Conjuntos de Dados Compartilhados.  
   
   
-##  <a name="Customizing"></a> Personalizando conjuntos de dados dependentes  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a>Personalizando conjuntos de itens dependentes  
  Depois que você adicionar partes de relatório ao relatório, poderá visualizá-lo e decidir fazer algumas alterações aos dados. Os itens que poderão ser alterados dependerão do tipo de conjunto de dados com os quais você estiver trabalhando.  
   
  Para alterar dados e opções de dados de um conjunto de dados inserido, você pode editar as propriedades do conjunto de dados, incluindo a consulta, como se você tivesse criado o próprio conjunto de dados.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107167"
  Para obter mais informações sobre como alterar a definição de um conjunto de dados compartilhado ou mostrar as últimas alterações de dados de um conjunto de dados compartilhado em seu relatório, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) e [Adicionar, editar e atualizar campos no painel Dados do Relatório &#40;Construtor de Relatórios e SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
   
-##  <a name="Publishing"></a> Publicando conjuntos de dados dependentes como conjuntos de dados compartilhados  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a>Publicando conjuntos de itens dependentes como conjuntos de valores compartilhados  
  Quando publica um item de relatório que tem conjuntos de dados dependentes, você tem a opção de publicar cada conjunto de dados como um conjunto de dados compartilhado ou inserido que permanece inserido no item de relatório.  
   
  Quando você seleciona a opção de conjunto de dados compartilhado, o conjunto de dados é salvo no servidor de relatório como uma definição de conjunto de dados compartilhado. No seu relatório, cada item de relatório que usa o conjunto de dados é atualizado para apontar para o conjunto de dados compartilhado que agora está no servidor de relatório. Isso tem duas consequências:  
@@ -60,9 +60,9 @@ ms.locfileid: "66107167"
   
   
 ## <a name="see-also"></a>Consulte Também  
- [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
- [Segurança &#40;Construtor de Relatórios&#41;](../report-builder/security-report-builder.md)   
+ [Modo de exibição de design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
+ [Construtor de Relatórios de &#40;de segurança&#41;](../report-builder/security-report-builder.md)   
  [Partes de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Conjuntos de dados inseridos e compartilhados de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de itens de relatório inseridos e conjuntos de &#40;compartilhados Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

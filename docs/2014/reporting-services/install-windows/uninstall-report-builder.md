@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108657"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
@@ -30,7 +30,7 @@ ms.locfileid: "66108657"
   
 2.  No Painel de Controle, clique em **Programas e Recursos**.  
   
-3.  Localize o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Construtor de Relatórios na lista **Nome** e clique nele.  
+3.  Localize o  Construtor de Relatórios na lista Nome e clique nele.  
   
 4.  Clique em **Desinstalar**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66108657"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Para desinstalar o Construtor de Relatórios a partir da linha de comando  
   
-1.  No menu **Iniciar** , clique em **Executar**.  
+1.  No menu **Iniciar**, clique em **Executar**.  
   
 2.  Na caixa de texto **abrir** , digite`cmd.`  
   

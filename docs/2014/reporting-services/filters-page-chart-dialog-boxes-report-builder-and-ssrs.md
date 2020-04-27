@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109138"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Página Filtros, caixas de diálogo de Gráficos (Construtor de Relatórios e SSRS)
   Clique em **filtros** no:  
   
--   Caixa de diálogo **Propriedades do grupo de categorias** para filtrar pontos de dados em uma série que foi agrupada por categoria.  
+-   caixa de diálogo**Propriedades do Grupo de Categorias** para filtrar pontos de dados em uma série agrupada por categoria.  
   
--   Caixa de diálogo **Propriedades do gráfico** para definir as opções de filtragem para o gráfico.  
+-   caixa de diálogo**Propriedades do Gráfico** para definir as opções de filtragem do gráfico.  
   
--   Caixa de diálogo **Propriedades do grupo de séries** para limitar o número de séries no grupo selecionado.  
+-   caixa de diálogo**Propriedades do Grupo de Séries** para limitar o número de séries no grupo selecionado.  
   
 ## <a name="options"></a>Opções  
  **Adicionar**  
@@ -46,7 +46,7 @@ ms.locfileid: "66109138"
  **Seta para baixo**  
  Clique para mover o filtro selecionado para baixo na lista.  
   
- **Expression**  
+ **Expressão**  
  Digite ou escolha a expressão à qual deseja aplicar um filtro. Clique no botão expressão (**FX**) para editar a expressão.  
   
  **Tipo de dados**  
@@ -63,7 +63,7 @@ ms.locfileid: "66109138"
  Digite a expressão ou valor com o qual avaliar a expressão em **Expressão**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Adicionar filtros de conjunto de dados, de região de dados e de grupo &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Adicionar filtros de conjunto de dados, filtros de região e filtros de grupo &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

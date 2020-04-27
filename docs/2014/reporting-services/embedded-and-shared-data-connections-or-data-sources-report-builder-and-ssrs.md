@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109267"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Conexões de dados ou fontes de dados compartilhadas e inseridas (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66109267"
   
 -   **Fonte de dados compartilhada.** Uma fonte de dados disponível em um servidor de relatório ou site do SharePoint a ser usada por vários relatórios.  
   
--   **Fonte de dados inserida.** Também conhecida como uma *Fonte de dados específica de relatório*. Uma fonte de dados que é definida em um relatório e é usada apenas por esse relatório.  
+-   **Fonte de dados inserida** Também conhecida como uma *Fonte de dados específica de relatório*. Uma fonte de dados que é definida em um relatório e é usada apenas por esse relatório.  
   
 -   **Fornecidas.** Credenciais são as informações de autenticação a serem fornecidas para permitir que você acesse dados externos.  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66109267"
   
  No Designer de Relatórios, não é possível navegar até uma fonte de dados compartilhada no servidor de relatório. No Gerenciador de Soluções, você pode criar fontes de dados compartilhados como parte de um projeto e decidir se deve implantá-las em um servidor de relatório. Talvez você opte por usá-las localmente apenas por causa das diferenças em credenciais exigidas pelo seu computador ou pelo servidor de relatório. Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- O ícone a seguir indica um item de fonte de dados compartilhada no ícone hierarquia de pasta do servidor de relatório: ![fonte de dados compartilhada](media/hlp-16datasource.png "Ícone de fonte de dados compartilhada")  
+ O ícone a seguir indica um item de fonte de dados compartilhada no ícone hierarquia de pasta do servidor de relatório: ![fonte de dados compartilhada](media/hlp-16datasource.png "Ícone da fonte de dados compartilhada")  
   
 ## <a name="embedded-data-sources"></a>Fontes de dados inseridas  
  Uma fonte de dados inserida é uma conexão de dados salva na definição de relatório. As informações de conexão de fonte de dados inserida só podem ser usadas pelo relatório no qual a fonte de dados está inserida. Para definir e gerenciar fontes de dados inseridas, use a caixa de diálogo **Propriedades da Fonte de Dados** .  
   
-##  <a name="Comparing"></a>Comparando fontes de dados inseridas e compartilhadas  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>Comparando fontes de dados inseridas e compartilhadas  
  A tabela seguinte resume as diferenças entre fontes de dados inseridas e compartilhadas:  
   
-|DESCRIÇÃO|Inserida<br /><br /> Fonte de dados|Compartilhado<br /><br /> Fonte de dados|  
+|Descrição|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
 |-----------------|------------------------------|----------------------------|  
 |A conexão de dados é inserida na definição do relatório.|![Disponível](media/greencheck.gif "Disponível")||  
 |O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](media/greencheck.gif "Disponível")|  
@@ -72,6 +72,6 @@ ms.locfileid: "66109267"
  [Conceitos de criação de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Fontes de dados com suporte pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Adicionar e verificar uma conexão de dados ou uma fonte de dados &#40;Construtor de Relatórios e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Conjuntos de e compartilhados, &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

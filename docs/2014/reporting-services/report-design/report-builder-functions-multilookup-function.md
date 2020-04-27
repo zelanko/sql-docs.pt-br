@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105207"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Função Multilookup (Construtor de Relatórios e SSRS)
@@ -47,10 +47,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Retorna `VariantArray` ou `Nothing` se não houver correspondência.  
   
 ## <a name="remarks"></a>Comentários  
- Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome/valor em que cada par tem uma relação de 1 para 1. 
-  `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de vários valores que é baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto de uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
+ Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome/valor em que cada par tem uma relação de 1 para 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, para um parâmetro de vários valores que é baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto de uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
   
- `Multilookup`o faz o seguinte:  
+ `Multilookup` faz o seguinte:  
   
 -   Avalia a expressão de origem no escopo atual e gera uma matriz de objetos variantes.  
   
@@ -62,7 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  As restrições a seguir se aplicam:  
   
--   `Multilookup`é avaliado depois que todas as expressões de filtro são aplicadas  
+-   `Multilookup` é avaliado depois que todas as expressões de filtro são aplicadas  
   
 -   Só há suporte para um nível de pesquisa. Uma expressão de origem, destino ou resultado não pode incluir uma referência a uma função de pesquisa.  
   
@@ -70,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Expressões de origem, destino e resultado não podem incluir referências a variáveis de relatório ou grupo.  
   
--   
-  `Multilookup` não pode ser usado como uma expressão para os seguintes itens de relatório:  
+-   `Multilookup` não pode ser usado como uma expressão para os seguintes itens de relatório:  
   
     -   Cadeias de conexão dinâmicas para uma fonte de dados.  
   

@@ -15,17 +15,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110018"
 ---
 # <a name="add-reference-dialog-box"></a>Caixa de diálogo Adicionar Referência
   Use a caixa de diálogo **Adicionar Referência** para adicionar referências a um assembly personalizado ou um componente [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] a um relatório. Depois de adicionar uma referência a um assembly, você pode gravar expressões ou código personalizado inserido que inclua referências totalmente qualificadas a classes ou métodos no assembly ou no componente. Para obter mais informações, consulte [Referências a código personalizado e assemblies em expressões no Designer de Relatórios &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) ou [Adicionar uma referência de assembly a um relatório &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
 ## <a name="options"></a>Opções  
- **Studio.net**  
+ **.NET**  
  Use para selecionar um componente [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] ou um assembly instalado no GAC (cache de assembly global).  
   
  **Procurar**  
@@ -34,7 +34,7 @@ ms.locfileid: "66110018"
 > [!NOTE]  
 >  Quando você publica um relatório que inclui uma referência a um assembly externo, o assembly deve ser instalado no servidor de relatório para que o relatório possa ser processado corretamente.  
   
- **Versões**  
+ **Recente**  
  Use para selecionar o nome de um assembly usado recentemente.  
   
 ## <a name="see-also"></a>Consulte Também  

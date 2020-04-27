@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104475"
 ---
 # <a name="report-history-page-report-manager"></a>Página Histórico de Relatório (Gerenciador de Relatórios)
@@ -45,7 +45,7 @@ Você pode clicar em um instantâneo de histórico de relatórios para exibi-lo.
  **Delete (excluir)**  
  Clique para excluir um ou mais instantâneos. Antes de clicar em **Excluir**, marque a caixa de seleção ao lado do instantâneo que você deseja excluir.  
   
- **Novo instantâneo**  
+ **Novo Instantâneo**  
  Clique para adicionar um instantâneo a um histórico de relatório. Esse botão é disponibilizado quando você escolhe a opção **Permitir que o histórico seja criado manualmente** na página de propriedades do Histórico do relatório.  
   
  **Última Execução**  
@@ -56,7 +56,7 @@ Você pode clicar em um instantâneo de histórico de relatórios para exibi-lo.
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir ou excluir o histórico de relatórios &#40;Report Manager&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Adicionar um instantâneo ao histórico de relatório &#40;Gerenciador de Relatórios&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Adicionar um instantâneo ao histórico de relatório &#40;Report Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página Propriedades gerais, relatórios &#40;Report Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Página Propriedades de opções de instantâneo &#40;Report Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

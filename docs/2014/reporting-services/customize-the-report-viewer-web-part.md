@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109535"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar a Web Part do Visualizador de Relatórios
@@ -58,11 +58,10 @@ ms.locfileid: "66109535"
   
  As propriedades personalizadas da Web Part do Visualizador de Relatórios são listadas a seguir.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |Relatório|Um caminho totalmente qualificado para um relatório que esteja no site do SharePoint atual ou em um site no mesmo aplicativo Web ou farm. Para obter os melhores resultados ao definir propriedades adicionais, clique em Aplicar depois de especificar a URL do relatório.|  
-|Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem `_Top`, `_Blank` e `_Self`. 
-  `_Top` usa a janela atual, `_Blank` carrega o documento em uma nova janela do navegador e `_Self` abre o documento dentro do quadro atual. Embora `_Parent` seja um valor válido para o atributo Target em HTML, ele não deve ser usado para uma Web Part do Visualizador de Relatórios inserida em uma página.|  
+|Destino do Hiperlink|HTML padrão que especifica o quadro de destino para exibir conteúdo vinculado no documento atual. Para relatórios que incluem hiperlinks para sites externos, você pode especificar se um documento de destino substitui o relatório existente dentro da janela atual ou se ele é aberto em uma nova janela do navegador. Os valores válidos incluem `_Top`, `_Blank` e `_Self`. `_Top` usa a janela atual, `_Blank` carrega o documento em uma nova janela do navegador e `_Self` abre o documento dentro do quadro atual. Embora `_Parent` seja um valor válido para o atributo Target em HTML, ele não deve ser usado para uma Web Part do Visualizador de Relatórios inserida em uma página.|  
 |Gerar automaticamente o título da Web Part|Um título gerado que inclui o nome da Web Part do Visualizador de Relatórios e o nome do relatório, separados por um traço. Se o relatório não tiver um título, será usado o nome do arquivo do relatório. O título fica visível quando você adiciona uma Web Part a uma página. Se essa caixa de seleção estiver marcada, o título será gerado sempre que a página for atualizada.|  
 |Gerar automaticamente o link de detalhes da Web Part|Um hiperlink gerado que é exibido acima da Web Part. Você pode clicar no link para abrir o relatório em uma nova página, em modo de página inteira.|  
 |Mostrar item de menu do construtor de relatórios|Mostra ou oculta a opção de menu **Ações** para abrir o Construtor de Relatórios.|  
@@ -76,8 +75,7 @@ ms.locfileid: "66109535"
 |Mostrar controle de zoom|Mostra ou oculta o controle de zoom na barra de ferramentas.|  
 |Mostrar botão feed ATOM|Mostra ou oculta o botão feed ATOM na barra de ferramentas.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Localização da Barra de Ferramentas|Determina o local da barra de ferramentas dentro do visualizador de relatórios. Os valores válidos incluem `Top` e `Bottom`.|  
-|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed` e `Hidden`. 
-  `Displayed` é exibido na área Parâmetros para os relatórios que incluem valores com parâmetros e que exigem a entrada do usuário antes de o relatório ser executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não quiser que a área de parâmetros fique visível para os usuários.|  
+|Área de prompt|Os valores válidos incluem `Displayed`, `Collapsed` e `Hidden`. `Displayed` é exibido na área Parâmetros para os relatórios que incluem valores com parâmetros e que exigem a entrada do usuário antes de o relatório ser executado. Use `Hidden` se todos os parâmetros do relatório estiverem especificados e você não quiser que a área de parâmetros fique visível para os usuários.|  
 |Largura da Área de Parâmetros|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
 |Mapa do documento|Um controle de navegação definido em um relatório e usado para fornecer acesso com um único clique a seções específicas do relatório. Ele está disponível em relatórios HTML. O mapa do documento é exibido em uma área recolhível ao lado da área de exibição do relatório. Os valores válidos incluem `Displayed`, `Collapsed` e `Hidden`. Se um mapa do documento estiver definido para um relatório, a área será expandida por padrão a menos que seja marcada como oculta ou recolhida nas propriedades da Web Part. Se o mapa do documento estiver recolhido, você poderá clicar na seta para expandi-lo.|  
 |Largura da Área de Mapa do Documento|Você pode escolher a medida e o valor. O padrão é 200 pixels. A única exigência desta propriedade é que o valor seja maior do que zero.|  
@@ -86,7 +84,7 @@ ms.locfileid: "66109535"
 ## <a name="customizing-the-toolbar"></a>Personalizando a caixa de ferramentas  
  A barra de ferramentas é exibida abaixo do título e abrange a parte superior do relatório. Ela proporciona o menu **Ações** , a navegação de página para relatórios paginados, atualização e zoom. Também inclui um controle de mapa do documento para relatórios que têm um mapa do documento. O menu **Ações** inclui comandos para exportar o relatório, procurar texto ou números no relatório, imprimir o relatório e abrir o relatório no Construtor de Relatórios.  
   
- Não é possível adicionar novos comandos ao menu  **Ações** , mas é possível personalizá-lo alterando as opções que ficam visíveis para os usuários. Para alterar a visibilidade dos botões e controles da barra de ferramentas, altere as opções na seção **visibilidade de itens da barra** de ferramentas da Web Part. Também é possível remover apenas o comando **Imprimir** ou formatos de exportação específicos tornando esses recursos não disponíveis no servidor de relatório. Os controles de navegação de página estão disponíveis para relatórios que têm quebras de página; caso contrário, o relatório é uma única página de comprimento variável. **Atualizar** processa novamente o relatório usando os parâmetros que são atuais para o relatório. Para exibir todos os controles em uma linha, defina a largura geral da Web Part até pelo menos 400 pixels.  
+ Não é possível adicionar novos comandos ao menu  **Ações** , mas é possível personalizá-lo alterando as opções que ficam visíveis para os usuários. Para alterar a visibilidade dos botões e controles da barra de ferramentas, altere as opções na seção **visibilidade de itens da barra** de ferramentas da Web Part. Também é possível remover apenas o comando **Imprimir** ou formatos de exportação específicos tornando esses recursos não disponíveis no servidor de relatório. Os controles de navegação de página estão disponíveis para relatórios que têm quebras de página; caso contrário, o relatório é uma única página de comprimento variável. **Atualizar** reprocessa o relatório usando os parâmetros atuais. Para exibir todos os controles em uma linha, defina a largura geral da Web Part até pelo menos 400 pixels.  
   
 ## <a name="customizing-the-viewing-area"></a>Personalizando a área de exibição  
  A área de exibição é usada para exibir relatórios. A área de exibição de relatório é compartilhada com as áreas Parâmetros e Credenciais, se elas forem usadas. Se forem necessárias credenciais, a área Credenciais será exibida ao lado de uma área de exibição de relatório em branco. A área Credenciais é fechada depois que o usuário fornecer credenciais e executar o relatório. Para personalizar o texto que pede aos usuários para definir credenciais, modifique as propriedades de conexão da fonte de dados. Para obter mais informações, consulte [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108144"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Novo agendamento: página Editar agenda (Report Manager)
@@ -76,15 +76,15 @@ ms.locfileid: "66108144"
  **Detalhes da agenda**  
  Selecione opções que determinam quando e com que frequência um relatório é executado. As opções de frequência são colocadas em camadas. O primeiro conjunto de opções especifica uma categoria de frequência (a cada hora, diariamente, semanalmente e assim por diante). O segundo conjunto de opções exibido é baseado em sua seleção inicial.  
   
--   **Hora** define uma agenda que é executada em intervalos de hora. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado.  
+-   **Hora** define uma agenda que é executada a intervalos de hora em hora. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado.  
   
--   **Day** define uma agenda que é executada nos dias selecionados em uma hora e minuto específicos. Você pode especificar os dias das seguintes maneiras: todos \<os *dias*>, todos os dias da \<semana e a cada *número*> dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
+-   **Dia** define uma agenda que é executada nos dias que você seleciona, em uma hora e minuto específicos. Você pode especificar os dias das seguintes maneiras: todos \<os *dias*>, todos os dias da \<semana e a cada *número*> dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
--   **Semana** define uma agenda que é executada em intervalos semanais em uma hora e minuto específicos. O intervalo pode ser uma semana completa (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
+-   **Semana** define uma agenda que é executada a intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser uma semana completa (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
   
 -   **Mês** define uma agenda que é executada mensalmente. Dentro de um mês você pode escolher um dia com base em um padrão (por exemplo, o último domingo de cada mês) ou datas de calendário específicas (como 1 e 15, para indicar o primeiro e o décimo quinto dia de cada mês). Usando vírgulas e hífens, você pode especificar vários dias e intervalos, por exemplo, 1, 5, 7-12, 21.  
   
--   **Uma vez** define uma agenda que é executada apenas uma vez. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado. Esta agenda expira assim que é processada.  
+-   **Uma vez** define uma agenda que só executa uma vez. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado. Esta agenda expira assim que é processada.  
   
  **Datas de início e término**  
  Especifique uma data de início que determina quando o agendamento entra em vigor e uma data de término que determina quando a agendamento expira.  

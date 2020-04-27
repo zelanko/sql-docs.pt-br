@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107036"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
@@ -126,7 +126,7 @@ ms.locfileid: "66107036"
   
  Sob essas condições, o servidor de relatório se conecta a uma fonte de dados remota usando a execução autônoma que você deve definir antecipadamente. Como o servidor de relatório não se conecta a um servidor remoto usando suas credenciais de serviço, você deve especificar uma conta que o servidor de relatório possa usar para fazer a conexão. Para obter mais informações sobre como criar essa conta, consulte [Configurar a conta de execução autônoma &#40;Gerenciador de Configuração do SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Configuração da fonte de dados e conexões de rede  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configuração de fontes de dados e conexões de rede  
  A tabela a seguir mostra como são feitas conexões para combinações específicas de tipos de credencial e extensões de processamento de dados. Se você estiver usando uma extensão de processamento de dados personalizada, consulte [Especificar conexões para extensões de processamento de dados personalizados](specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Tipo**|**Contexto para conexão de rede**|**Tipos de fonte de dados**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
@@ -145,6 +145,6 @@ ms.locfileid: "66107036"
  [Gerenciar fontes de dados de relatório](../../integration-services/connection-manager/data-sources.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurar as propriedades da fonte de dados para um relatório &#40;Report Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurar as propriedades de fonte de dados de um relatório &#40;Gerenciador de Relatórios&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

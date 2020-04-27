@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109732"
 ---
 # <a name="contents-page-report-manager"></a>Página Conteúdo (Gerenciador de Relatórios)
@@ -38,7 +38,7 @@ ms.locfileid: "66109732"
  **Carregar arquivo**  
  Clique para abrir a página Carregar Arquivo que é usada para copiar um arquivo do sistema de arquivos para um servidor de relatório. Você pode carregar arquivos para adicionar relatórios e recursos (como gráficos, documentos ou qualquer outro conteúdo relacionado que você queira manter com o relatório). Arquivos carregados são armazenados e gerenciados de um banco de dados de servidor de relatórios. Para carregar um relatório, selecione um arquivo com extensão .rdl.  
   
- **Exibição de Detalhes**  
+ **Exibição de detalhes**  
  Clique para exibir a página Conteúdo em uma lista que contém informações adicionais sobre os itens. Em **Exibição de Detalhes**, é possível usar os botões **Excluir** e **Mover** para remover e realocar itens na pasta.  
   
  Focalize um item e clique na seta do menu suspenso para abri-lo e acessar e configurar as propriedades do item selecionado.  

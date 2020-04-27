@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105227"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Função LookupSet (Construtor de Relatórios e SSRS)
@@ -49,7 +49,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Comentários  
  Use `LookupSet` para recuperar um conjunto de valores do conjunto de dados especificado para um par de nome/valor onde há uma relação de 1 para muitos. Por exemplo, para um identificador de cliente em uma tabela, você pode usar `LookupSet` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
- `LookupSet`o faz o seguinte:  
+ `LookupSet` faz o seguinte:  
   
 -   Avalia a expressão de origem no escopo atual.  
   
@@ -63,8 +63,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  As restrições a seguir se aplicam:  
   
--   
-  `LookupSet` é avaliado depois que todas as expressões de filtro são aplicadas.  
+-   `LookupSet` é avaliado depois que todas as expressões de filtro são aplicadas.  
   
 -   Só um nível de pesquisa tem suporte. Uma expressão de origem, destino ou resultado não pode incluir uma referência a uma função de pesquisa.  
   
@@ -72,8 +71,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Expressões de origem, destino e resultado não podem incluir referências a variáveis de relatório ou grupo.  
   
--   
-  `LookupSet` não pode ser usado como uma expressão para os seguintes itens de relatório:  
+-   `LookupSet` não pode ser usado como uma expressão para os seguintes itens de relatório:  
   
     -   Cadeias de conexão dinâmicas para uma fonte de dados.  
   
@@ -101,7 +99,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Exemplo  
  Como `LookupSet` retorna uma coleção de objetos, você não pode exibir a expressão de resultado diretamente em uma caixa de texto. Você pode concatenar o valor de cada objeto na coleção como uma cadeia de caracteres.  
   
- Use a função [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] do `Join` e crie uma cadeia delimitada a partir de um conjunto de objetos. Use vírgula como separador combinar os objetos em uma única linha. Em alguns renderizadores, você pode usar uma alimentação de linha ( [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ) do`vbCrLF`como um separador para listar cada valor em uma nova linha.  
+ Use a função `Join` do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e crie uma cadeia delimitada a partir de um conjunto de objetos. Use vírgula como separador combinar os objetos em uma única linha. Em alguns renderizadores, você pode usar uma alimentação de linha ( [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ) do`vbCrLF`como um separador para listar cada valor em uma nova linha.  
   
  A expressão a seguir, quando usada como a propriedade Value para uma caixa de texto, usa `Join` para criar uma lista.  
   

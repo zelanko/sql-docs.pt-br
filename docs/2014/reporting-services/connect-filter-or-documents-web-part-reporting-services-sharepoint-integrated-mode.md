@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109722"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Conectar Web Part de filtro ou de documentos (Reporting Services no modo integrado do SharePoint)
@@ -47,7 +47,7 @@ ms.locfileid: "66109722"
   
 8.  Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
-9. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **conexões**, aponte para **enviar valores de filtro para**e selecione **Visualizador** - de relatórios*nome do relatório*.  
+9. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **Conexões**, para **Enviar Valores de Filtro Para**e selecione **Visualizador de Relatórios** - *nome do relatório*.  
   
 10. Verifique suas alterações e salve a página.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66109722"
   
 3.  Clique em **Adicionar uma Web Part**.  
   
-4.  Em **todos os Web Parts**, na seção **listas e biblioteca** , selecione **documentos.**  
+4.  Em **Todas as Web Parts**, na seção **Listas e Biblioteca** , selecione **Documentos**.  
   
 5.  Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "66109722"
   
 7.  Em outra zona na mesma página de Web Part ou no painel, clique em **Adicionar uma Web Part**.  
   
-8.  Em **todos os Web Parts**, na categoria **diversos** , selecione **SQL Server Reporting Services Visualizador de relatórios.**  
+8.  Em **Todas as Web Parts**, na categoria **Diversos** , selecione **Visualizador de Relatórios do SQL Server Reporting Services.**  
   
 9. Clique em **Adicionar**. A Web Part será adicionada à parte superior da zona.  
   
-10. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **conexões**, aponte para **obter definições de relatório de**e, em seguida, selecione **documentos**.  
+10. Na zona que contém a Web Part, clique no menu **Editar** da Web Part, aponte para **Conexões**, para **Obter definições de relatório de**e selecione **Documentos**.  
   
 11. Verifique suas alterações e salve a página.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109917"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opções de Atualização do Cache (Gerenciador de Relatórios)
@@ -80,7 +80,7 @@ ms.locfileid: "66109917"
  **Usar padrão**  
  Selecione essa opção para usar o valor padrão predefinido para este parâmetro.  
   
-##  <a name="Parameters"></a>Especificando parâmetros  
+##  <a name="specifying-parameters"></a><a name="Parameters"></a>Especificando parâmetros  
  Para criar um plano de atualização do cache, cada parâmetro do relatório ou do conjunto de dados compartilhado deve ter um valor. Se o relatório ou o conjunto de dados compartilhado não tiver um valor padrão especificado na definição, você deverá especificar um valor. Se existir um valor padrão já existir, você não precisará fornecê-lo aqui. Se você fornecer um valor, ele substituirá o valor padrão.  
   
  Para especificar várias combinações de valores de parâmetros, crie um plano de atualização do cache separado para cada combinação.  
@@ -90,15 +90,15 @@ ms.locfileid: "66109917"
 ### <a name="shared-dataset-parameters"></a>Parâmetros de conjunto de dados compartilhado  
  Para um conjunto de dados compartilhado, as seguintes informações são derivadas da definição do conjunto de dados compartilhado:  
   
--   **Nome** do Especifica o nome do parâmetro de consulta.  
+-   **Name** Especifica o nome do parâmetro de consulta.  
   
--   **Tipo** de Especifica o tipo de dados do parâmetro de consulta. Como esse tipo de dados é desconhecido até que o provedor de dados processe a consulta do conjunto de dados, a validação do tipo de dados não pode ocorrer até que o conjunto de dados compartilhado seja processado.  
+-   **Type** Especifica o tipo de dados do parâmetro de consulta. Como esse tipo de dados é desconhecido até que o provedor de dados processe a consulta do conjunto de dados, a validação do tipo de dados não pode ocorrer até que o conjunto de dados compartilhado seja processado.  
   
--   **Permite valor nulo** Especifica se NULL é um valor válido.  
+-   **Nullable** Especifica se NULL é um valor válido.  
   
--   **Somente leitura** Especifica se este parâmetro está marcado como somente leitura na definição do conjunto de conjuntos compartilhado. Parâmetros somente leitura não aparecem na lista de parâmetros para opções de atualização do cache e têm um padrão especificado como parte da definição do conjunto de dados compartilhado.  
+-   **ReadOnly** Especifica se este parâmetro está marcado como somente leitura na definição do conjunto de dados compartilhado. Parâmetros somente leitura não aparecem na lista de parâmetros para opções de atualização do cache e têm um padrão especificado como parte da definição do conjunto de dados compartilhado.  
   
--   **Valores** de Valores padrão que foram especificados na definição do conjunto de valores compartilhado. Parâmetros de consulta podem ter múltiplos valores. Para substituir os valores padrão, digite novos valores nas áreas de prompt da caixa de texto.  
+-   **DefaultValues** Valores padrão que foram especificados na definição do conjunto de dados compartilhado. Parâmetros de consulta podem ter múltiplos valores. Para substituir os valores padrão, digite novos valores nas áreas de prompt da caixa de texto.  
   
  Se a definição do conjunto de dados compartilhado especificar a opção **Omitir da consulta** para um parâmetro, você não precisará fornecer um valor padrão. Esse sinalizador indica que o parâmetro do conjunto de dados não é usado na consulta. Por exemplo, o parâmetro aparece na definição do conjunto de dados compartilhado porque é um parâmetro de relatório que é usado apenas no filtro do conjunto de dados.  
   

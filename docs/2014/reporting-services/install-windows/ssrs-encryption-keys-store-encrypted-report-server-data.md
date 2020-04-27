@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108686"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Armazenar dados criptografados do servidor de relatório (Gerenciador de configurações do SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  
   
 ## <a name="encrypted-values"></a>Valores criptografados  
@@ -50,8 +49,7 @@ ms.locfileid: "66108686"
      Esse valor é criado durante a instalação ou configuração do servidor e, em seguida, é armazenado como um valor criptografado no banco de dados do servidor de relatório. O serviço Servidor de Relatório do Windows usa essa chave para criptografar e decifrar dados armazenados no banco de dados do servidor de relatório.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Funcionalidade de criptografia no Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funções criptográficas que fazem parte do sistema operacional Windows. São usadas as criptografias simétrica e assimétrica.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funções criptográficas que fazem parte do sistema operacional Windows. São usadas as criptografias simétrica e assimétrica.  
   
  Dados no banco de dados do servidor de relatório são criptografados por meio de uma chave simétrica. Há uma única chave simétrica para cada banco de dados de servidor de relatório. Essa chave simétrica é criptografada usando a chave pública de um par de chaves assimétricas gerado pelo Windows. A chave privada é mantida pela conta do serviço Servidor de Relatório do Windows.  
   

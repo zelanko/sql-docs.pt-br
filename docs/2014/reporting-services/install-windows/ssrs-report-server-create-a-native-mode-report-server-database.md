@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108682"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Criar um banco de dados de servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66108682"
   
  Se você instalou o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na configuração padrão para o modo nativo, o banco de dados do servidor de relatório foi criado e configurado automaticamente quando a instância do servidor de relatório foi instalada. É possível usar o Gerenciador de Configuração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para exibir ou modificar as configurações que a Instalação configurou para você.  
   
-##  <a name="rsdbrequirements"></a>Antes de começar  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Antes de iniciar  
  Criar ou configurar um banco de dados de servidor de relatório é um processo de várias etapas. Antes de criar o banco de dados do servidor de relatório, considere como você deseja especificar os seguintes itens:  
   
  Selecionar um servidor de banco de dados  
@@ -89,7 +89,7 @@ ms.locfileid: "66108682"
   
     3.  Clique em **Testar Conexão** para validar a conexão com o servidor.  
   
-    4.  Clique em **Próximo**.  
+    4.  Clique em **Avançar**.  
   
 5.  Especifique as propriedades usadas para criar o banco de dados. Para obter mais informações sobre como essas propriedades são usadas, consulte [Antes de iniciar](#rsdbrequirements) neste tópico:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108682"
   
     3.  O Modo de Servidor de Relatório sempre é definido como **Nativo**.  
   
-    4.  Clique em **Próximo**.  
+    4.  Clique em **Avançar**.  
   
 6.  Especifique as credenciais usadas pelo servidor de relatório para conectar-se ao banco de dados do servidor de relatório.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66108682"
   
          Selecione **Credenciais de Serviço** para que o servidor de relatório se conecte usando sua conta de serviço. Com essa opção, o servidor se conecta usando segurança integrada; as credenciais não são criptografadas ou armazenadas.  
   
-    2.  Clique em **Próximo**.  
+    2.  Clique em **Avançar**.  
   
 7.  Revise as informações na página Resumo para verificar se as configurações estão corretas e clique em **Avançar**.  
   

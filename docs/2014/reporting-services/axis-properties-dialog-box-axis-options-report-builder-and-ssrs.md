@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109957"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Eixo, Opções do Eixo (Construtor de Relatórios e SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66109957"
   
  Na caixa, digite a base logarítmica a ser usada quando o eixo é definido para usar uma escala logarítmica. Por padrão, o gráfico usa uma base de 10 para a escala logarítmica de um eixo. Esta opção só estará disponível no eixo y se o eixo for numérico.  
   
- **Mínimo**  
+ **Máximo**  
  Digite uma expressão ou um valor para obter o valor mínimo para o eixo x. Se omitido, o valor mínimo será determinado pelos dados retornados pelo conjunto de dados.  
   
  **Maior**  
@@ -60,10 +60,10 @@ ms.locfileid: "66109957"
  Digite uma expressão ou selecione um valor para adicionar ou remover uma margem entre os elementos do gráfico e as laterais do gráfico. Se essa opção for definida como **Auto**, as margens laterais serão adicionadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando rótulos de eixo em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Especificar um intervalo do eixo &#40;Construtor de Relatórios e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Especifique um intervalo de eixo &#40;Construtor de Relatórios e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Formatar rótulos de eixo como datas ou moedas &#40;Construtor de Relatórios e SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Plotar dados em um eixo secundário &#40;Construtor de Relatórios e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Minigráficos e barras de dados &#40;Construtor de Relatórios e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   

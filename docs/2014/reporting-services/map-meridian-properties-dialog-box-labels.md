@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108265"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Meridiano, Rótulos
@@ -31,7 +31,7 @@ ms.locfileid: "66108265"
   
 ## <a name="options"></a>Opções  
  **Intervalo**  
- Digite um valor de número inteiro em graus que especifique o intervalo entre os meridianos. Por padrão, a opção **Automático** está selecionada. **Automático** indica que o valor é determinado automaticamente pelos dados espaciais.  
+ Digite um valor de número inteiro em graus que especifique o intervalo entre os meridianos. Por padrão, a opção **Automático** está selecionada. **Automático** indica que esse valor é determinado automaticamente pelos dados espaciais.  
   
  **Mostrar rótulos**  
  Selecione esta opção para exibir rótulos para os meridianos.  
@@ -39,15 +39,15 @@ ms.locfileid: "66108265"
  **Posicionamento**  
  Selecione um local para exibir os rótulos em relação à parte superior, central e inferior do visor. O posicionamento padrão é **Próximo**.  
   
--   **Perto** de Exiba os rótulos na borda esquerda.  
+-   **Próximo** Exibe rótulos na borda esquerda.  
   
--   **Um trimestre** Exiba os rótulos na metade do caminho entre a borda esquerda e o centro.  
+-   **Um Quarto** Exibe rótulos na metade do caminho entre a borda esquerda e o centro.  
   
--   **Central** Exibir rótulos no centro.  
+-   **Centro** Exibe rótulos no centro.  
   
--   **Três quartos** Exibir rótulos na metade do caminho entre o centro e a borda direita.  
+-   **Três Quartos** Exibe rótulos na metade do caminho entre o centro e a borda direita.  
   
--   **Longe** Exibir rótulos na borda direita.  
+-   **Distante** Exibe rótulos na borda direita.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  

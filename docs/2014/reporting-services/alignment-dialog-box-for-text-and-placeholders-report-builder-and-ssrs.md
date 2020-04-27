@@ -16,26 +16,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110038"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Caixa de diálogo Alinhamento para texto e espaços reservados (Construtor de Relatórios e SSRS)
   Selecione a guia **Alinhamento** para posicionar os valores dentro de uma célula ou região de dados selecionada. É possível formatar só o alinhamento horizontal de texto individual dentro de uma caixa de texto. Para definir valores de preenchimento na caixa de texto ou como o texto é alinhado verticalmente, use as propriedades correspondentes da caixa de texto. Para obter mais informações, consulte [caixa de diálogo Propriedades da caixa de texto, alinhamento &#40;Construtor de relatórios e&#41;do SSRS ](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opções  
- **Horizontal**  
+ **Na**  
  Especifique um valor ou digite uma expressão que seja avaliada para a posição na qual o texto é posicionado horizontalmente dentro de uma célula ou região de dados selecionada. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
--   **Geral** Exiba o texto conforme calculado por [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre como o alinhamento de texto é calculado, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **Geral** Exibir o texto calculado pelo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obter mais informações sobre como o alinhamento de texto é calculado, consulte [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
--   **À esquerda** Exiba o texto alinhado à esquerda.  
+-   **Esquerda** Exibir o texto alinhado à esquerda.  
   
--   **Central** Exiba o texto alinhado no centro.  
+-   **Centro** Exibir o texto alinhado no centro.  
   
--   **À direita** Exiba o texto alinhado à direita.  
+-   **Direita** Exibir o texto alinhado à direita.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106627"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Adicionar filtros de conjunto de dados, de região de dados e de grupo (Construtor de Relatórios e SSRS)
@@ -27,12 +27,12 @@ ms.locfileid: "66106627"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Escolhendo quando definir um filtro  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Escolhendo quando definir um filtro  
  Especifique os filtros para itens de relatório quando você não puder filtrar dados na origem. Por exemplo, use os filtros de relatório quando a fonte de dados não oferecer suporte a parâmetros de consulta, quando você precisar executar procedimentos armazenados e não puder modificar a consulta ou quando um instantâneo de relatório com parâmetros exibir dados personalizados para usuários diferentes.  
   
  Você pode filtrar os dados do relatório antes ou depois de recuperá-los para gerar um conjunto de dados de relatório. Para filtrar os dados antes de eles serem recuperados, altere a consulta de cada conjunto de dados. Ao filtrar os dados da consulta, você filtra os dados na fonte de dados, reduzindo o volume de dados que precisa ser recuperado e processado em um relatório. Para filtrar os dados depois de recuperados, crie expressões de filtro no relatório. É possível definir expressões de filtro para um conjunto de dados, uma região de dados ou um grupo, incluindo grupos de detalhes. Você também pode incluir parâmetros nas expressões de filtro, sendo essa uma forma de filtrar os dados para valores ou usuários específicos, por exemplo, aplicando o filtro por um valor que identifica o usuário que está exibindo o relatório.  
   
-##  <a name="Where"></a> Escolhendo onde definir um filtro  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Escolhendo onde definir um filtro  
  Determine onde você deseja definir um filtro pelo efeito que deseja obter em seu relatório. No tempo de execução, o processador de relatório aplica filtros na seguinte ordem: no conjunto de dados e na região de dados e nos grupos de cima para baixo em cada hierarquia de grupo. Em uma tabela, matriz e lista, os filtros para grupos de linha, grupos de coluna e grupos adjacentes são aplicados de forma independente. Em um gráfico, os filtros para grupos de categoria e grupos de série são aplicados de forma independente. Quando o processador de relatório aplica o filtro, todas as equações de filtros são aplicadas na ordem em que elas foram definidas na página **Filtro** da caixa de diálogo **Propriedades** para cada item de relatório, que é o equivalente a combiná-los com as operações boolianas AND.  
   
  A lista a seguir compara o efeito de definir filtros em itens de relatório diferentes:  
@@ -47,14 +47,14 @@ ms.locfileid: "66106627"
   
 -   **Nos grupos de categorias ou séries em uma região de dados Gráfico** Defina um valor em um grupo de séries ou categorias quando quiser incluir ou excluir determinados valores para uma expressão de grupo, a fim de controlar quais os valores exibidos no gráfico.  
   
-##  <a name="FilterEquations"></a>Compreendendo uma equação de filtro  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a>Compreendendo uma equação de filtro  
  Em tempo de execução, o processador de relatório converte o valor para o tipo de dados especificado e usa o operador especificado para comparar a expressão e o valor. A lista a seguir descreve cada parte da equação de filtro:  
   
--   **Expressão** de Define o que você está filtrando. Geralmente, isso é um campo de conjunto de dados.  
+-   **Expressão** Define o que você está filtrando. Geralmente, isso é um campo de conjunto de dados.  
   
--   **Tipo de dados** Especifica o tipo de dados a ser usado quando a equação de filtro é avaliada em tempo de execução pelo processador de relatório. O tipo de dados selecionado deve ser um dos tipos de dados com suporte do esquema de definição de relatórios.  
+-   **Tipo de Dados** Especifica o tipo de dados a ser usado quando a equação de filtro é avaliada em tempo de execução pelo processador de relatórios. O tipo de dados selecionado deve ser um dos tipos de dados com suporte do esquema de definição de relatórios.  
   
--   **Operador** Define como comparar as duas partes da equação de filtro.  
+-   **Operador** Define como comparar as duas partes da equação do filtro.  
   
 -   `Value`Define a expressão a ser usada na comparação.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106627"
 ### <a name="data-type"></a>Tipo de Dados  
  Para o processador de relatórios comparar os dois valores, os tipos de dados devem ser iguais. A tabela a seguir lista o mapeamento entre os tipos de dados CLR e os tipos de dados de definição de relatórios. Os dados recuperados de uma fonte de dados podem ser convertidos em um tipo de dados diferente até o momento em que os dados são relatados.  
   
-|**Tipo de dados de esquema de definição de relatório**|**Tipo (s) CLR**|  
+|**Tipo de dados de esquema de definição de relatórios**|**Tipo(s) CLR**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -81,8 +81,8 @@ ms.locfileid: "66106627"
   
 |Operador|Ação|  
 |--------------|------------|  
-|**Igual, like, não igual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
-|**TopN, baixo**|Compara a expressão a um valor `Integer`.|  
+|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara a expressão a um valor.|  
+|**TopN, BottomN**|Compara a expressão a um valor `Integer`.|  
 |**TopPercent, BottomPercent**|Compara a expressão a um valor `Integer` ou `Float`.|  
 |**Entre**|Testa se a expressão está entre dois valores, inclusive.|  
 |**No**|Testa se a expressão está contida em um conjunto de valores.|  
@@ -95,7 +95,7 @@ ms.locfileid: "66106627"
  Esse valor também pode incluir uma referência de parâmetro para permitir que um usuário selecione um valor interativamente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usos de expressões em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Usos de expressão em relatórios &#40;Construtor de Relatórios e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

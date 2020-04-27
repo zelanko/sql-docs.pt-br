@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105489"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos de pizza (Construtor de Relatórios e SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66105489"
   
 -   **Rosca destacada**. Um gráfico de rosca onde todas as fatias são distanciadas do centro da rosca.  
   
--   **pizza 3D**. O gráfico de pizza que tem um estilo 3D aplicado.  
+-   **Pizza em 3D**. O gráfico de pizza que tem um estilo 3D aplicado.  
   
--   **pizza explodida 3D**. Um gráfico de pizza destacada que tem um estilo 3D aplicado.  
+-   **Pizza Destacada em 3D**. Um gráfico de pizza destacada que tem um estilo 3D aplicado.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Considerações de dados para exibição em um gráfico de pizza  
   
@@ -86,10 +86,10 @@ ms.locfileid: "66105489"
 -   Colete fatias pequenas em um gráfico de pizza suplementar. O segundo gráfico de pizza não é exibido no designer. Na verdade, durante o processamento do relatório, o gráfico calcula se um segundo gráfico de pizza deve ser mostrado com base nos valores dos pontos de dados. Nesse caso, os valores são adicionados a outro gráfico de pizza.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir rótulos de ponto de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Exibir rótulos de pontos de dados fora de um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Coletar fatias pequenas em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Exibir valores de porcentagem em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Tutorial: adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Exibir valores percentuais em um gráfico de pizza &#40;Construtor de Relatórios e SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Tutorial: Adicionar um gráfico de pizza ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Pontos de dados vazios e nulos em gráficos &#40;Construtor de Relatórios e SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108116"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Página Propriedades de Parâmetro (Gerenciador de Relatórios)
@@ -43,10 +43,9 @@ ms.locfileid: "66108116"
  Especifica o tipo de dados do parâmetro.  
   
  **Possui Padrão**  
- Marque essa caixa de seleção para especificar se o parâmetro tem um valor padrão. Ao marcar essa caixa de seleção, **Valor Padrão**será habilitado. 
-  **Nulo** também será habilitado se o parâmetro de relatório aceitar valores nulos. Se **Possui Padrão** não for selecionado, será necessário ocultar o valor ou solicitar que o usuário forneça um valor quando o relatório for executado.  
+ Marque essa caixa de seleção para especificar se o parâmetro tem um valor padrão. Ao marcar essa caixa de seleção, **Valor Padrão**será habilitado. **Nulo** também será habilitado se o parâmetro de relatório aceitar valores nulos. Se **Possui Padrão** não for selecionado, será necessário ocultar o valor ou solicitar que o usuário forneça um valor quando o relatório for executado.  
   
- **Valor padrão**  
+ **Valor Padrão**  
  Especifique um valor para o parâmetro. Para especificar um valor padrão, **Possui Padrão** deve ser selecionado e **Nulo** não deve ser selecionado. Um valor padrão pode ser fornecido pela definição de relatório. Se **Valor Padrão** for populado com um ou mais valores estáticos, esses valores se originarão com o relatório. Se **Valor padrão** for **Com Base em Consultas**, o valor do parâmetro será determinado por uma consulta definida no relatório.  
   
  Se **Valor Padrão** aceitar um valor, você pode digitar uma constante ou sintaxe que seja válida para a extensão de processamento de dados usada com o relatório. Por exemplo, se a linguagem da consulta da extensão de processamento de dados suportar curingas, você pode especificar um caractere curinga como valor padrão.  

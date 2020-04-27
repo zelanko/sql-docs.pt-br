@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109588"
 ---
 # <a name="csv-device-information-settings"></a>Configurações das informações do dispositivo CSV
@@ -31,7 +31,7 @@ ms.locfileid: "66109588"
 |`ExcelMode`|Especifica se a saída de destino é para o Excel. O valor padrão é `true`.|  
 |`FieldDelimiter`|A cadeia de caracteres delimitadora para colocar no resultado. O valor padrão é uma vírgula (,). Você deve codificar o valor dessas informações de dispositivo ao transmiti-lo em uma URL. Por exemplo, um caractere de tabulação como um delimitador deve ser "%09".<br /><br /> Você pode alterar o delimitador de campo padrão para qualquer caractere que desejar, inclusive o TAB, alterando as configurações de informações de dispositivo no arquivo de configuração. Por exemplo, para usar TAB, atualize a configuração do FieldDelimiter para \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> No exemplo [TAB] é um caractere de tabulação real, o que significa que aparece espaço em branco no arquivo de configuração. O atributo "xml:space" instrui os analisadores para preservarem o espaço em branco.|  
 |`FileExtension`|A extensão do arquivo a ser colocada no resultado. O valor padrão é `.CSV`. Se `FileExtension` e `Extension` forem especificados, então, o `FileExtension` terá precedência.|  
-|**Noheader**|Indica se a linha do cabeçalho será excluída da saída. O valor padrão é `false`.|  
+|**NoHeader**|Indica se a linha do cabeçalho será excluída da saída. O valor padrão é `false`.|  
 |`Qualifier`|A cadeia de caracteres do qualificador para colocar ao redor de resultados que contêm o delimitador de campo ou delimitador de registro. Se os resultados contiverem o qualificador, ele será repetido. A configuração `Qualifier` deve ser diferente das configurações`FieldDelimiter` e `RecordDelimiter`. O valor padrão é uma aspa (").|  
 |`RecordDelimiter`|O delimitador de registro a ser colocado no término de cada registro. O valor padrão é \<cr>\<lf>.|  
 |**SuppressLineBreaks**|Indica se as quebras de linha serão removidas dos dados incluídos na saída. O valor padrão é `false`. Se o valor for `true`, as configurações `FieldDelimiter`, `RecordDelimiter`e `Qualifier` não poderão ser um caractere de espaço.|  
@@ -39,8 +39,8 @@ ms.locfileid: "66109588"
   
 ## <a name="see-also"></a>Consulte Também  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passando configurações de informações de dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

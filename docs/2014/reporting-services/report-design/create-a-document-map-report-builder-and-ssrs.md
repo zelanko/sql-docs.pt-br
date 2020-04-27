@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106173"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Criar um mapa de documentos (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106173"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Mapas do documento e extensões de renderização  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Mapas do documento e extensões de renderização  
  O mapa do documento é planejado para uso na extensão de renderização HTML, por exemplo, na Versão prévia e no Visualizador de Relatórios. Outras extensões de renderização têm maneiras diferentes de articular um mapa do documento:  
   
 -   O PDF renderiza o mapa do documento como painel de Indicações.  
@@ -119,6 +119,6 @@ ms.locfileid: "66106173"
  
   
 ## <a name="see-also"></a>Consulte Também  
- [Localizando e exibindo relatórios no Report Manager &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Localizando e exibindo relatórios no Gerenciador de Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109934"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014
@@ -41,10 +41,10 @@ ms.locfileid: "66109934"
   
 -   [Alterações no comportamento do SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services alterações de comportamento  
+##  <a name="sssql14-reporting-services-behavior-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services alterações de comportamento  
  Não há nenhuma alteração de comportamento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services alterações de comportamento  
+##  <a name="sssql11-reporting-services-behavior-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services alterações de comportamento  
  Esta seção descreve as alterações no comportamento do modo do SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>A permissão para Exibir Itens não baixará Conjuntos de Dados Compartilhados (Modo do SharePoint)  
@@ -67,15 +67,15 @@ ms.locfileid: "66109934"
 ### <a name="report-server-configuration-and-management-tools"></a>Ferramentas de Configuração e Gerenciamento do Servidor de Relatório  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>O Configuration Manager não é usado para Modo do SharePoint  
- **Novo comportamento:** O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager não dá mais suporte a servidores de relatório no modo do SharePoint. A configuração de modo do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser concluída agora usando a administração Central do SharePoint e, portanto, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager não oferece mais suporte ao modo do SharePoint. O Configuration Manager é usado agora apenas para servidores de relatórios de modo nativo.  
+ **Novo comportamento:** O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager não oferece mais suporte a servidores de relatórios de Modo do SharePoint. A configuração de modo do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode ser concluída agora usando a administração Central do SharePoint e, portanto, o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager não oferece mais suporte ao modo do SharePoint. O Configuration Manager é usado agora apenas para servidores de relatórios de modo nativo.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Você não pode alterar o servidor de um modo para outro  
- **Novo comportamento:** Não é possível alterar os modos de servidor. Se você instalar um servidor de relatório como modo nativo, não poderá alterá-lo ou reconfigurá-lo para ser modo do SharePoint. Se você instalar no modo SharePoint, poderá alterar o servidor de relatório para o modo nativo.  
+ **Novo comportamento:** Você não pode alterar modos de servidor. Se você instalar um servidor de relatório como modo nativo, não poderá alterá-lo ou reconfigurá-lo para ser modo do SharePoint. Se você instalar no modo SharePoint, poderá alterar o servidor de relatório para o modo nativo.  
   
- **Comportamento anterior:** O cliente instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] um servidor de relatório no modo do SharePoint. Se o cliente desejar alternar o servidor de relatório para o modo nativo, ele poderá abrir o gerenciador de configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para alternar para o modo nativo, criando um novo ou se conectando a um banco de dados de modo nativo existente. O cliente também pode usar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager para alternar do modo do SharePoint para o modo nativo.  
+ **Comportamento anterior:** Cliente instala um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em modo do SharePoint. Se o cliente desejar alternar o servidor de relatório para o modo nativo, ele poderá abrir o gerenciador de configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para alternar para o modo nativo, criando um novo ou se conectando a um banco de dados de modo nativo existente. O cliente também pode usar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager para alternar do modo do SharePoint para o modo nativo.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services alterações de comportamento  
- Esta seção descreve as alterações no comportamento do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-behavior-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services alterações de comportamento  
+ Esta seção descreve as alterações de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]comportamento no.  
   
 > [!NOTE]  
 >  Como o SQL Server 2008 R2 é uma atualização de versão secundária do SQL Server 2008, recomendamos que você também revise o conteúdo na seção do SQL Server 2008.  
@@ -83,8 +83,7 @@ ms.locfileid: "66109934"
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Propriedade SecureConnectionLevel na biblioteca do Provedor WMI do Reporting Services  
  Na biblioteca do provedor WMI para [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], a **Propriedade SecureConnectionLevel** permite valores de `0`,`1`,`2`,`3` `0` , indicando que o protocolo SSL não é necessário para nenhum dos métodos de serviço Web `3` , indicando que o SSL é necessário para todos os métodos de serviço Web e `1` `2` indica subconjuntos de métodos de serviço Web que exigem SSL. No [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], esses valores terão apenas dois significados possíveis:  
   
--   
-  `0` indica que o SSL não é exigido para nenhum dos métodos de serviço Web.  
+-   `0` indica que o SSL não é exigido para nenhum dos métodos de serviço Web.  
   
 -   Um inteiro positivo indica que o SSL é exigido para todos os métodos de serviço Web.  
   
@@ -94,6 +93,6 @@ ms.locfileid: "66109934"
  [O que há de novo &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Recursos preteridos do SQL Server Reporting Services no SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
  [Funcionalidade descontinuada para SQL Server Reporting Services no SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
- [Alterações recentes no SQL Server Reporting Services do SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
+ [Alterações recentes no SQL Server Reporting Services no SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
   
   

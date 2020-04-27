@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107926"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportando para um arquivo CSV (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107926"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Renderização de CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Renderização de CSV  
  Quando renderizado usando as configurações padrão, um relatório de CSV tem as seguintes características:  
   
 -   A cadeia de caracteres delimitadora de campo padrão é uma vírgula (,).  
@@ -55,7 +55,7 @@ ms.locfileid: "66107926"
   
 -   Linha  
   
--   Imagem  
+-   Image  
   
 -   Retângulo  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66107926"
   
  
   
-##  <a name="RenderingModes"></a> Modos do renderizador  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modos do renderizador  
  A extensão de renderização CSV pode operar em dois modos: um otimizado para o Excel e o outro otimizado para aplicativos de terceiros que requerem total compatibilidade com a especificação CSV no RFC 4180. Dependendo do modo usado, as regiões de dados semelhantes são controladas de maneira diferente.  
   
 ### <a name="default-mode"></a>Modo Padrão  
@@ -120,7 +120,7 @@ ms.locfileid: "66107926"
 #### <a name="formatting"></a>Formatação  
  Os valores não são formatados.  
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interatividade  
  A interatividade não é suportada por formatos de CSV gerados por este renderizador. Os elementos interativos a seguir não são renderizados:  
   
 -   Hiperlinks  
@@ -139,13 +139,13 @@ ms.locfileid: "66107926"
   
 
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configurações de informações do dispositivo  
  Você pode alterar algumas configurações padrão deste renderizador, incluindo qual o modo de processamento, quais caracteres serão usados como delimitadores e quais caracteres serão usados como a cadeia de caracteres padrão do qualificador de texto, alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

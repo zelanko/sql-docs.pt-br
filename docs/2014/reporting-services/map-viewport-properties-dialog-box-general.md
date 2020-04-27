@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ec0aaa051ba317cd05a9784c80fb997f5fa19e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108241"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Caixa de diálogo Propriedades do Visor do Mapa, Geral
@@ -36,23 +36,23 @@ ms.locfileid: "66108241"
   
  Cada uma das seguintes projeções preserva uma ou mais dessas propriedades espaciais:  
   
--   **Cilíndrica equidistante** Escolha esta opção para usar a longitude e a latitude como coordenadas retangulares.  
+-   **Equirretangular** Escolha esta opção para usar longitude e latitude como coordenadas retangulares.  
   
--   **Mercator** Escolha essa projeção popular para áreas menores, para menos distorção em volta do Equador ou quando você quiser adicionar uma camada do mapa com uma camada de bloco existente que usa a projeção Mercator.  
+-   **Mercator** Escolha esta projeção popular para áreas pequenas, para obter menos distorção ao redor do equador, ou quando você quiser adicionar uma camada do mapa com uma camada lado a lado existente que use a projeção Mercator.  
   
--   **Robinson** Escolha essa opção para menos distorção de áreas grandes que se estendem do Equador até o polos. Desenvolvida por Arthur H. Robinson em 1963.  
+-   **Robinson** Escolha esta opção para obter menos distorção de áreas grandes que vão do equador até os polos. Desenvolvida por Arthur H. Robinson em 1963.  
   
--   **Fahey** Escolha essa opção para menos distorção de áreas grandes que se estendem do Equador até o polos. Desenvolvida por Lawrence Fahey em 1975.  
+-   **Fahey** Escolha esta opção para obter menos distorção de áreas grandes que vão do equador até os polos. Desenvolvida por Lawrence Fahey em 1975.  
   
--   **Eckert1** Escolha esta opção para usar paralelos espaçados igualmente em latitude e linhas retas para meridianos em longitude.  
+-   **Eckert1** Escolha esta opção para usar paralelos com espaçamento uniforme na latitude e linhas retas para os meridianos na longitude.  
   
--   **Eckert3** Escolha esta opção para usar paralelos espaçados igualmente em linhas de latitude e curvas para meridianos em longitude.  
+-   **Eckert3** Escolha esta opção para usar paralelos com espaçamento uniforme na latitude e linhas curvas para os meridianos na longitude.  
   
--   **HammerAitoff** Escolha esta opção para mapas polares ou mapas mundiais.  
+-   **HammerAitoff** Escolha esta opção para mapas polares ou mundiais.  
   
 -   **Wagner3** Escolha esta opção para mapas mundiais.  
   
--   **Bonne** Escolha esta opção para exibir o mundo como ele aparece em um Atlas.  
+-   **Bonne** Escolha esta opção para exibir o mundo da mesma forma que em um atlas.  
   
  **Opções de quebra de página**  
  Selecione as opções para indicar como o conteúdo se ajusta a uma página de relatório.  

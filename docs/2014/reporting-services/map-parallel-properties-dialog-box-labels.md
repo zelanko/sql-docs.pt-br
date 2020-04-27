@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108253"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Caixa de diálogo Mapear Propriedades de Paralelo, Rótulos
@@ -25,7 +25,7 @@ ms.locfileid: "66108253"
   
 -   **Planar.** A coordenada X.  
   
--   **Gráfica.** A latitude da projeção atual.  
+-   **Geográfico.** A latitude da projeção atual.  
   
  Clique no botão **Expressão** (*fx*) para editar uma expressão que define o valor da opção.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "66108253"
  **Posicionamento**  
  Selecione um local para exibir os rótulos em relação à parte superior, central e inferior do visor. O posicionamento padrão é **Próximo**.  
   
--   **Perto** de Exibir rótulos na parte superior.  
+-   **Próximo** Exibe rótulos na parte superior.  
   
--   **Um trimestre** Exibe os rótulos na metade do caminho entre a parte superior e o centro.  
+-   **Um Quarto** Exibe rótulos na metade do caminho entre a parte superior e o centro.  
   
--   **Central** Exibir rótulos no centro.  
+-   **Centro** Exibe rótulos no centro.  
   
--   **Três quartos** Exiba os rótulos na metade do caminho entre o centro e a parte inferior.  
+-   **Três Quartos** Exibe rótulos na metade do caminho entre o centro e a parte inferior.  
   
--   **Longe** Exiba os rótulos na parte inferior.  
+-   **Distante** Exibe os rótulos na parte inferior.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapas &#40;Construtor de Relatórios e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

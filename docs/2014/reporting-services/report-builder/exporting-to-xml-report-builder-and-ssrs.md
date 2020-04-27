@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107898"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107898"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Itens de relatório  
+##  <a name="report-items"></a><a name="ReportItems"></a> Itens de relatório  
  A tabela a seguir descreve como os itens de relatório são renderizados.  
   
 |Item|Comportamento da renderização|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107898"
   
 -   Os itens ocultos que não podem se tornar visíveis pela alternância não são renderizados. Inicialmente, os itens visíveis e os ocultos que podem tornar-se visíveis por meio da alternância são renderizados.  
   
--   
-  `Images, lines, and custom report items` são ignorados.  
+-   `Images, lines, and custom report items` são ignorados.  
   
-##  <a name="DataTypes"></a> Tipos de dados  
+##  <a name="data-types"></a><a name="DataTypes"></a>Tipos de dados  
  Ao elemento ou atributo da caixa de texto é atribuído um tipo de dados XSD baseado nos valores que a caixa de texto exibe.  
   
 |Se todos os valores da caixa de texto forem:|O tipo de dados atribuído será:|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:decimal**|  
-|
-  `Float` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:float**|  
-|
-  `Double` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd: dateTime**|  
-|`Time`|**xsd: String**|  
-|`Boolean`|**xsd: booliano**|  
-|`String`, `Char`|**xsd: String**|  
-|Outros|**xsd: String**|  
+|`Decimal` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:decimal**|  
+|`Float` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:float**|  
+|`Double` (ou `Decimal` e qualquer tipo de dados inteiro ou byte)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|Outros|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>Regras de renderização específicas de XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Regras de renderização específicas de XML  
  As seções a seguir descrevem como as extensões de renderização XML interpretam os itens dentro do relatório.  
   
 ### <a name="report-body"></a>Corpo do relatório  
@@ -80,7 +76,7 @@ ms.locfileid: "66107898"
   
  As definições do namespace XML e os atributos de referência do esquema também estão incluídos no elemento do relatório. As variáveis estão destacadas em negrito:  
   
- \<**Relatório** xmlns = "**SchemaName**" xmlns: xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;RC% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Os valores das variáveis são os seguintes:  
   
@@ -152,20 +148,20 @@ ms.locfileid: "66107898"
   
  Se o valor da propriedade DataElementOutput for igual à Saída, o cabeçalho de um item repetido será renderizado com um filho do elemento de detalhes.  
   
-##  <a name="CustomFormatsXSLTransformations"></a>Formatos personalizados e transformações XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formatos personalizados e transformações XSL  
  Os arquivos XML produzidos pela extensão de renderização XML podem ser transformados em qualquer formato que utiliza as Transformações de XSL (XSLT). Esta funcionalidade pode ser usada para produzir dados em formatos que já não têm suporte pelas extensões de renderização existentes. Considere o uso da extensão de renderização XML e o XSLT antes de tentar criar sua própria extensão de renderização.  
   
-##  <a name="DuplicateName"></a>Nomes duplicados  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nomes duplicados  
  Se houver nomes de elemento de dados duplicados dentro do mesmo escopo, o processador exibirá uma mensagem de erro.  
   
-##  <a name="XSLTTransformations"></a>Transformações XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>Transformações XSLT  
  O processador XML pode aplicar uma transformação XSLT do lado de servidor para os dados de XML originais. Quando um XSLT é aplicado, o processador emite o conteúdo transformado ao invés dos dados XML originais. A transformação ocorre no servidor, não no cliente.  
   
  O XSLT a ser aplicado à saída é definido no arquivo de definição do relatório com a propriedade DataTransform do relatório ou com o parâmetro XSLT *DeviceInfo* . Se nenhum desses valores for definido, a transformação ocorre sempre que o processador XML é usado. Ao usar assinaturas, o XSLT deve ser definido na propriedade RDL DataTransform.  
   
  Se um arquivo XSLT for especificado, tanto pela propriedade de definição DataTransform como pela definição das informações do dispositivo, o XSLT especificado no DataTransform ocorrerá primeiro, seguido do XSLT definido pelas configurações das informações do dispositivo.  
   
-###  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configurações de informações do dispositivo  
  Você pode alterar algumas configurações padrão para este processador alterando as configurações de informações de dispositivo, incluindo:  
   
 -   Uma transformação (XSLT) para aplicar ao XML.  
@@ -185,7 +181,7 @@ ms.locfileid: "66107898"
  Para obter mais informações, consulte [XML Device Information Settings](../xml-device-information-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

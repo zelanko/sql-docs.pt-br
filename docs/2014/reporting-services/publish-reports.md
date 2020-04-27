@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108025"
 ---
 # <a name="publish-reports"></a>Publicar Relatórios
@@ -27,7 +27,7 @@ ms.locfileid: "66108025"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Para publicar todos os relatórios em um projeto  
   
--   No menu **Compilar**, clique em **Implantar \<report project name>** . Como alternativa, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto de relatório e clique em **Implantar**. Você pode visualizar o status do processo de publicação na janela Saída.  
+-   No menu **Compilar**, clique em **Implantar \<report project name>**. Como alternativa, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto de relatório e clique em **Implantar**. Você pode visualizar o status do processo de publicação na janela Saída.  
   
     > [!NOTE]  
     >  Quando você implantar um projeto do Servidor de Relatório, também são implantadas as fontes de dados compartilhadas no projeto de relatório.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108025"
  [Publicando fontes de dados e relatórios](reports/publishing-data-sources-and-reports.md)   
  [Visualizando relatórios](reports/previewing-reports.md)   
  [Publicando relatórios em um servidor de relatório](reports/publishing-reports-to-a-report-server.md)   
- [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Localizando, exibindo e gerenciando relatórios &#40;Construtor de Relatórios e SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

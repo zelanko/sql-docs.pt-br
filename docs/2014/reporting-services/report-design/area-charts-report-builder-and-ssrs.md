@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106479"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Gráficos de área (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106479"
   
 -   **Área empilhada**. Um gráfico de áreas no qual várias séries são empilhadas verticalmente. Se houver apenas uma série em seu gráfico, o gráfico de áreas empilhadas exibirá o mesmo que o gráfico de áreas.  
   
--   **Porcentagem de área empilhada**. Um gráfico de áreas no qual várias séries são empilhadas verticalmente para ajustar toda a área de gráfico. Se houver apenas uma série em seu gráfico, o gráfico de áreas empilhadas exibirá o mesmo que o gráfico de áreas.  
+-   **Porcentual de área empilhada**. Um gráfico de áreas no qual várias séries são empilhadas verticalmente para ajustar toda a área de gráfico. Se houver apenas uma série em seu gráfico, o gráfico de áreas empilhadas exibirá o mesmo que o gráfico de áreas.  
   
 -   **Área suave**. Um gráfico de áreas onde os pontos de dados são conectados por uma linha suave em vez de uma linha regular. Use um gráfico de áreas suaves em vez de um gráfico de áreas quando você estiver mais preocupado com as tendências de exibição do que com a exibição dos valores dos pontos de dados individuais.  
   

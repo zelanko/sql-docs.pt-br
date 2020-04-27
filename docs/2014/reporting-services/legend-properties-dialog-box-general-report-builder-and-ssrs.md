@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108562"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Legenda, Geral (Construtor de Relatórios e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66108562"
   
 -   **Coluna** Exibe o conteúdo da legenda em uma única coluna.  
   
--   **Linha** de Exibe o conteúdo da legenda em uma única linha.  
+-   **Linha** Exibe o conteúdo da legenda em uma única linha.  
   
 -   **Tabela larga** Exibe o conteúdo da legenda em uma tabela. Entradas de legenda serão adicionadas para expandir a legenda horizontalmente.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66108562"
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formatando as cores da série em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatando rótulos de eixo em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definir cores em um gráfico usando uma paleta &#40;Construtor de Relatórios e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Plotar dados em um eixo secundário &#40;Construtor de Relatórios e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Formatando a legenda em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   

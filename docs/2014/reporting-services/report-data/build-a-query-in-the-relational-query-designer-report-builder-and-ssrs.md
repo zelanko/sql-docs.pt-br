@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107443"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Compilar uma consulta no designer de consulta relacional (Construtor de Relatórios e SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107443"
   
 ### <a name="to-view-a-query-result-set"></a>Para exibir um conjunto de resultados da consulta  
   
-1.  Na barra de ferramentas do designer de consultas, clique em **Executar Consulta (!)**.  
+1.  Na barra de ferramentas do designer de consultas, clique em **Executar Consulta (!)** .  
   
     > [!NOTE]  
     >  O designer de consulta usa credenciais do momento do design para executar a consulta e recuperar o conjunto de resultados. Para obter mais informações, consulte [Especificar as credenciais no Construtor de Relatórios](../specify-credentials-in-report-builder.md).  
@@ -94,9 +94,9 @@ ms.locfileid: "66107443"
  [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)   
  [Adicionar dados de fontes de dados externas &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Designers de consulta &#40;Construtor de Relatórios&#41;](../query-designers-report-builder.md)   
- [Criar um conjunto de um DataSet compartilhado ou um conjunto de &#40;inserido Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Modo de exibição de Design de relatório &#40;Construtor de Relatórios&#41;](../report-builder/report-design-view-report-builder.md)   
- [Modo de exibição de design de conjunto de &#40;compartilhado Construtor de Relatórios&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Modo de exibição de Design de conjunto de dados compartilhados &#40;Construtor de Relatórios&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Designers de Consultas do Reporting Services](../reporting-services-query-designers.md)  
   
   

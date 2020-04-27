@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107917"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportando para um arquivo PDF (Construtor de Relatórios e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107917"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Inserção de fonte  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>Incorporação de fontes  
  Quando possível, a extensão de renderização de PDF insere o subconjunto de cada fonte necessária para exibir o relatório no arquivo PDF. As fontes usadas no relatório devem ser instaladas no servidor de relatório. Quando o servidor de relatórios gera um relatório no formato PDF, ele usa as informações armazenadas nas fontes referenciadas no relatório para criar mapeamentos de caracteres no arquivo PDF. Se a fonte usada não estiver instalada no servidor de relatório, o arquivo PDF resultante talvez não contenha os mapeamentos corretos, e não seja exibido corretamente no momento da visualização.  
   
  As fontes são inseridas no arquivo PDF quando as condições seguintes se aplicam:  
@@ -57,7 +57,7 @@ ms.locfileid: "66107917"
   
  As fontes incorporadas no arquivo PDF são incluídas na propriedade Fonts salva com o arquivo, como metadados.  
   
-##  <a name="Metadata"></a> Metadados  
+##  <a name="metadata"></a><a name="Metadata"></a>Los  
  Além do layout do relatório, a extensão de renderização do PDF grava os seguintes metadados no Dicionário de Informações do Documento PDF.  
   
 |Propriedade do PDF|Criado em|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107917"
 |`Title`|O atributo `Name` do elemento RDL `Report`.|  
 |`Author`|O elemento RDL `Author`.|  
 |`Subject`|O elemento RDL `Description`.|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nome e versão da extensão de renderização.|  
 |`CreationDate`|Tempo de execução do relatório no formato PDF `datetime`.|  
   
   
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interatividade  
  Alguns elementos interativos têm suporte em PDF. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -94,7 +93,7 @@ ms.locfileid: "66107917"
   
   
   
-##  <a name="Compression"></a>Çã  
+##  <a name="compression"></a><a name="Compression"></a>Çã  
  A compactação de imagens se baseia no tipo original do arquivo da imagem. A extensão de renderização do PDF compacta os arquivos em PDF por padrão.  
   
  Para preservar a compactação de imagens incluídas no arquivo em PDF, quando possível, as imagens JPEG são armazenadas como JPEG e todos os demais tipos de imagens são armazenados como BMP.  
@@ -104,13 +103,13 @@ ms.locfileid: "66107917"
   
   
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configurações de informações do dispositivo  
  Você pode alterar algumas configurações padrão desse renderizador alterando as configurações de informações de dispositivo. Para obter mais informações, consulte [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

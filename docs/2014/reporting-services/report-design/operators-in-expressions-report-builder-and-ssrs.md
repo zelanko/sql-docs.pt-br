@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105495"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operadores em expressões (Construtor de Relatórios e SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66105495"
 ### <a name="arithmetic"></a>Aritmético  
  Os operadores aritméticos executam operações matemáticas sobre dois termos numéricos em uma expressão.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |^|Eleva um número à potência de outro número.|  
 |*|Multiplica dois números.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66105495"
 ### <a name="comparison"></a>Comparação  
  Os operadores de comparação testam se duas expressões são iguais.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |<|Menor que.|  
 |\<=|Menor que ou igual a.|  
@@ -53,7 +53,7 @@ ms.locfileid: "66105495"
 ### <a name="string-concatenation"></a>Concatenação de cadeias de caracteres  
  A concatenação de cadeias de caracteres anexa a segunda cadeia de caracteres à primeira em uma expressão. Para outras operações de cadeia de caracteres, use funções internas.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |&|Concatena duas cadeias de caracteres|  
 |+|Concatena duas cadeias de caracteres|  
@@ -61,9 +61,9 @@ ms.locfileid: "66105495"
 ### <a name="logical-and-bitwise"></a>Lógico e de bit a bit  
  Os operadores lógicos e de bit a bit executam manipulações lógicas entre dois termos inteiros em uma expressão.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|e|Executa uma conjunção lógica em duas expressões boolianas ou uma conjunção bit a bit em duas expressões numéricas.|  
+|And|Executa uma conjunção lógica em duas expressões boolianas ou uma conjunção bit a bit em duas expressões numéricas.|  
 |Not|Executa uma negação lógica em uma expressão booliana ou uma negação bit a bit em uma expressão numérica.|  
 |Ou|Executa uma disjunção lógica em duas expressões boolianas ou uma disjunção bit a bit em dois valores numéricos.|  
 |Xor|Executa uma operação de exclusão lógica em duas expressões boolianas ou uma exclusão bit a bit em duas expressões numéricas.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66105495"
 ### <a name="bit-shift"></a>Bit Shift  
  Os operadores bit a bit executam manipulações de bit entre dois termos inteiros em uma expressão.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |<\<|Executa um deslocamento aritmético à esquerda em um padrão de bit.|  
 |>>|Executa um deslocamento aritmético à direita em um padrão de bit.|  

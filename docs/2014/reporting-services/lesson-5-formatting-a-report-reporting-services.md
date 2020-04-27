@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108429"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -26,9 +26,9 @@ ms.locfileid: "66108429"
   
 -   [Formatar a moeda](#bkmk_format_currency)  
   
--   [Alterar estilo de texto e larguras de coluna](#bkmk_change_textstyle)  
+-   [Alterar estilo do texto e larguras da coluna](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>Formatar a data  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Formatar a data  
  Por padrão, o campo Data exibe informações de data e hora. É possível formatá-lo para exibir apenas a data.  
   
 #### <a name="to-format-a-date-field"></a>Para formatar um campo de data  
@@ -45,7 +45,7 @@ ms.locfileid: "66108429"
   
 6.  Visualize o relatório para ver a alteração no campo `[Date]` e, em seguida, altere de volta para a exibição de design.  
   
-##  <a name="bkmk_format_currency"></a>Formatar a moeda  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Formatar a moeda  
  O campo LineTotal exibe um número geral. Formate-o para exibir o número como moeda.  
   
 #### <a name="to-format-a-currency-field"></a>Para formatar um campo de conversor de moedas  
@@ -58,9 +58,9 @@ ms.locfileid: "66108429"
   
     -   **Casas decimais: 2**  
   
-    -   **Números negativos: ($12345)**  
+    -   **Números negativos: (R$ 1.2345,00)**  
   
-    -   **Símbolo: $ Inglês (Estados Unidos)**  
+    -   **Símbolo: R$ português (Brasil)**  
   
 4.  Selecione **Usar separador de milhar (.)**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108429"
   
 6.  Visualize o relatório para ver a alteração no campo `[LineTotal]` e, em seguida, altere de volta para a exibição de design.  
   
-##  <a name="bkmk_change_textstyle"></a>Alterar estilo de texto e larguras de coluna  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Alterar estilo de texto e larguras de coluna  
  Também é possível alterar a formatação da linha do cabeçalho para diferenciá-la das linhas de dados no relatório. Por fim, você ajustará as larguras das colunas.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Para formatar as linhas do cabeçalho e as colunas da tabela  

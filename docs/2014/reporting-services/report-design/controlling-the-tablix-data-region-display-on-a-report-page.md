@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106206"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlando a exibição da região de dados Tablix em uma página do relatório (Construtor de Relatórios e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106206"
   
 -   **Controlando a ordem de classificação**. Para controlar a ordem de classificação, você deve definir expressões de classificação na região de dados. Para controlar a ordem de classificação das linhas e das colunas associadas a um grupo, você deve definir expressões de classificação no grupo, inclusive os grupos detalhados. Também é possível adicionar botões de classificação interativos para permitir que o usuário classifique uma região de dados Tablix ou seus grupos. Para obter mais informações, consulte [Classificar dados em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Exibindo uma mensagem quando**não há dados. Quando não há dados de um conjunto de dados de relatório em tempo de execução, é possível escrever uma mensagem própria a ser exibida em lugar da região de dados. Para obter mais informações, consulte [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
+-   **Exibindo uma mensagem quando não há dados**. Quando não há dados de um conjunto de dados de relatório em tempo de execução, é possível escrever uma mensagem própria a ser exibida em lugar da região de dados. Para obter mais informações, consulte [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 -   **Ocultando dados condicionalmente**. Para controlar condicionalmente se deseja mostrar ou ocultar uma região de dados ou partes de uma região de dados, você pode definir a propriedade `True` Hidden como or como uma expressão. Entre as expressões podem estar referências a parâmetros de relatório. Também é possível especificar um item de alternância, para que usuário possa optar por exibir dados detalhados. Para obter mais informações, consulte [Ação de análise detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
@@ -43,19 +43,19 @@ ms.locfileid: "66106206"
   
 -   **Controlando a posição de uma região de dados Tablix em relação a outros itens de relatório**. Uma região de dados Tablix pode ser posicionada acima, próxima a, ou abaixo dos demais itens de relatório na superfície de design de relatório. Em tempo de execução, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] expande a região de dados Tablix conforme necessário para os dados recuperados do conjunto de dados vinculado, movendo itens de relatório semelhantes além do necessário. Para ancorar um Tablix próximo a outro item de relatório, você deve criar os itens de relatório semelhantes e ajustar as posições relativas. Para obter mais informações, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
--   **Alterando a direção da expansão**. Para controlar se uma região de dados tablix se expande na página LTR (da esquerda para direita) ou RTL (da direita para esquerda), use a propriedade Direction, que pode ser acessada na janela Propriedades. Para obter mais informações, consulte [Renderizando regiões de dados &#40;Construtor de Relatórios e SSRS&#41;](rendering-data-regions-report-builder-and-ssrs.md).  
+-   **Alterando a direção de expansão**. Para controlar se uma região de dados tablix se expande na página LTR (da esquerda para direita) ou RTL (da direita para esquerda), use a propriedade Direction, que pode ser acessada na janela Propriedades. Para obter mais informações, consulte [Renderizando regiões de dados &#40;Construtor de Relatórios e SSRS&#41;](rendering-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-how-a-tablix-data-region-renders-on-a-page"></a>Controlando a forma de renderização de uma região de dados Tablix em uma página  
  A lista a seguir descreve modos que podem ajudar a controlar como uma região de dados Tablix aparece em um relatório:  
   
--   **Controle de paginação**. Para controlar a quantidade de dados exibidos em todas as páginas de relatório, é possível definir quebras de página em regiões de dados. Você também pode definir quebras de página em grupos. As quebras de página podem afetar o desempenho da renderização sob demanda reduzindo a quantidade de dados que precisam ser processados em cada página. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md) e [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
+-   **Controlando a paginação**. Para controlar a quantidade de dados exibidos em todas as páginas de relatório, é possível definir quebras de página em regiões de dados. Você também pode definir quebras de página em grupos. As quebras de página podem afetar o desempenho da renderização sob demanda reduzindo a quantidade de dados que precisam ser processados em cada página. Para obter mais informações, consulte [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md) e [Adicionar uma quebra de página &#40;Construtor de Relatórios e SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
   
 -   **Exibindo dados em qualquer lado dos cabeçalhos de linha**. Você não está limitado a exibir cabeçalhos de linha no lado de uma região de dados Tablix. É possível mover os cabeçalhos de linha entre colunas, para que as colunas de dados sejam exibidas antes dos cabeçalhos de linha. Para fazer isso, modifique a propriedade GroupsBeforeRowHeaders para a matriz. É possível acessar essa propriedade usando a janela Propriedades. O valor dessa propriedade é um inteiro. Por exemplo, um valor igual a 2 exibirá duas instâncias de grupos dos dados de coluna da região de dados antes da exibição da coluna que contém os cabeçalhos de linha.  
   
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlando como os grupos de linhas e de colunas Tablix são processados  
  A renderização dos grupos de regiões de dados Tablix depende da estrutura de grupo. Uma região de dados Tablix pode ter quatro áreas, como mostra a figura a seguir:  
   
- ![Áreas de região de dados Tablix](../media/rs-tablixareas.gif "Áreas de região de dados Tablix")  
+ ![Áreas de região de dados Tablix](../media/rs-tablixareas.gif "Áreas da região de dados Tablix")  
   
  A área do grupo de linhas e a área do grupo de colunas contêm cabeçalhos de grupo. Quando uma região de dados Tablix tem cabeçalhos de grupo, você pode controlar a repetição de linhas e colunas definindo as propriedades na página **Geral** da caixa de diálogo **Propriedades do Tablix** .  
   
@@ -65,21 +65,21 @@ ms.locfileid: "66106206"
   
  A lista a seguir descreve modos que podem ajudar a controlar como uma região de dados Tablix aparece em um relatório:  
   
--   **Repetindo cabeçalhos de linha e coluna em várias páginas**. Você pode exibir cabeçalhos de linha e coluna em cada página que uma região de dados Tablix se estende. Para obter informações, consulte [Exibir cabeçalhos de linhas e colunas em várias páginas &#40;Construtor de Relatórios e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+-   **Repetindo cabeçalhos de linha e coluna em várias páginas**.É possível exibir cabeçalhos de linha e coluna em todas as páginas abrangidas em uma região de dados tablix. Para obter informações, consulte [Exibir cabeçalhos de linhas e colunas em várias páginas &#40;Construtor de Relatórios e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
--   **Mantendo os cabeçalhos de linha e coluna na exibição ao rolar**. É possível controlar se você deve manter os cabeçalhos de linha e coluna na exibição ao rolar um relatório usando um navegador. Para obter informações, consulte [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
+-   **Mantendo cabeçalhos de linha e coluna na exibição durante a rolagem**. É possível controlar se você deve manter os cabeçalhos de linha e coluna na exibição ao rolar um relatório usando um navegador. Para obter informações, consulte [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
  Para obter mais informações sobre como a exportação de um relatório de formatos diferentes afeta a maneira como uma região de dados Tablix é renderizada em uma página, consulte [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Vinculando várias regiões de dados ao mesmo conjunto de dados &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Vinculando várias regiões de dados ao mesmo conjunto &#40;Construtor de Relatórios e SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Regiões de dados aninhadas &#40;Construtor de Relatórios e SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Escopo de expressão para totais, agregações e coleções internas &#40;Construtor de Relatórios e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Controlando quebras de página, cabeçalhos, colunas e linhas &#40;Construtor de Relatórios e SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrizes &#40;Construtor de Relatórios e SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Listas &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Lista &#40;Construtor de Relatórios e SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

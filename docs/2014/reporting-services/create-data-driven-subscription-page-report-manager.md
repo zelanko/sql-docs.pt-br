@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109614"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
@@ -153,13 +153,13 @@ ms.locfileid: "66109614"
  **Diário**  
  Define uma agenda que executa nos dias que você seleciona, em uma hora e minuto específico. Você pode especificar os dias das seguintes maneiras: todos * \<os dias>*, todos os dias da semana e a cada * \<número>* dia. A escolha de uma abordagem invalida as outras, mesmo se os outros dias parecem selecionados.  
   
- **Semanalmente**  
+ **Semanal**  
  Define uma agenda que executa em intervalos semanais, em uma hora e minuto específicos. O intervalo pode ser em semanas completas (por exemplo, a cada duas semanas) ou dias dentro de uma semana.  
   
- **Mensais**  
+ **Mensal**  
  Defina uma agenda que executa mensalmente. Dentro de um mês você pode escolher um dia com base em um padrão (por exemplo, o último domingo de cada mês) ou datas de calendário específicas (como 1 e 15, para indicar o primeiro e o décimo quinto dia de cada mês). Usando vírgulas e hífens, você pode especificar vários dias e intervalos, por exemplo, 1, 5, 7-12, 21.  
   
- **Uma vez**  
+ **Mesmo**  
  Defina uma agenda que só executa uma vez. Use a seção **Datas de início e término** para especificar o dia em que o agendamento deve ser executado. Esta agenda expira assim que é processada.  
   
  **Datas de início e término**  
@@ -171,8 +171,8 @@ ms.locfileid: "66109614"
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Especificar informações de credencial e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Especificar informações de credenciais e de conexão para fontes de dados de relatório](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  
   

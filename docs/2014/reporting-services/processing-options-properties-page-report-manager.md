@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108041"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propriedades Opções de Processamento (Gerenciador de Relatórios)
@@ -61,7 +61,7 @@ ms.locfileid: "66108041"
  Esse valor se aplica ao processamento de relatório em um servidor de relatório. Ele não define tempo limite para o processamento de dados no servidor de banco de dados que fornece os dados para o seu relatório. No entanto, o valor especificado deve ser suficiente para concluir o processamento dos dados e do relatório. A contagem do processamento de relatórios começa quando o relatório é selecionado e termina quando o relatório é aberto.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definir as propriedades do processamento de relatórios](report-server/set-report-processing-properties.md)   
+ [Definir propriedades de processamento de relatório](report-server/set-report-processing-properties.md)   
  [Armazenando relatórios em cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Criar, modificar e excluir agendas](subscriptions/create-modify-and-delete-schedules.md)   
  [Ajuda F1 do Gerenciador de Relatórios](../../2014/reporting-services/report-manager-f1-help.md)  

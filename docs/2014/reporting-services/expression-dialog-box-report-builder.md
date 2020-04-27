@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109151"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Caixa de diálogo Expressão (Construtor de Relatórios)
@@ -40,13 +40,13 @@ ms.locfileid: "66109151"
  **Campos internos**  
  Fornece uma lista de itens na coleção global que podem ser usados em uma expressão. Algumas coleções recebem suporte somente após a publicação do relatório no servidor. Para obter mais informações, consulte [Coleções internas em expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Parâmetros**  
+ **Parameters**  
  Fornece uma lista de parâmetros de relatório.  
   
  **Campos (conjunto de** _ \<>selecionado_ **)**  
  Exibe a lista de campos para o conjunto de dados selecionado na categoria Conjuntos de dados. Clique duas vezes em um campo para copiá-lo na caixa **Expressão** .  
   
- **Conjuntos**  
+ **Conjuntos de dados**  
  Fornece uma lista de conjuntos de dados disponíveis e mostra os campos que são membros do conjunto de dados.  
   
  **Variáveis**  
@@ -84,7 +84,7 @@ ms.locfileid: "66109151"
  [Formatando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatando números e datas &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Referências de coleção de parâmetros &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Exemplos de expressões de grupo &#40;Construtor de Relatórios e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Exemplos de expressão de grupo &#40;Construtor de Relatórios e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Exemplos de equações de filtro &#40;Construtor de Relatórios e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [As referências de coleção de campos de conjunto de &#40;Construtor de Relatórios e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
  [Referência de funções de agregação &#40;Construtor de Relatórios e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   

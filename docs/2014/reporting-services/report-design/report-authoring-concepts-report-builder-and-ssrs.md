@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105309"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105309"
  [Conexões de dados ou fontes de dados inseridas e compartilhadas &#40;Construtor de Relatórios e SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  Descreve como definir conexões com as fontes de dados usadas em relatórios, modelos de relatório e assinaturas controladas por dados.  
   
- [Conjuntos de e compartilhados, &#40;Construtor de Relatórios e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de dados inseridos e compartilhados &#40;Construtor de Relatórios e SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica as diferenças existentes na criação, no armazenamento e no gerenciamento de conjuntos de dados inseridos e compartilhados.  
   
  [Regiões de dados e mapas &#40;Construtor de Relatórios e SSRS&#41;](maps-report-builder-and-ssrs.md)  

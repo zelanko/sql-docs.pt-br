@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109662"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Criar uma fonte de dados inserida ou compartilhada (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109662"
 1.  Na barra de ferramentas do painel dados do relatório, clique em **novo** e em **fonte de dados**. A caixa de diálogo **Propriedades da Fonte de Dados** é aberta.  
   
     > [!NOTE]  
-    >  Se o painel Dados do Relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir** .  
+    >   Se o painel de dados do relatório não estiver visível, clique em **Dados do Relatório** no menu **Exibir** .  
   
 2.  Na caixa de texto **Nome** , digite um nome para a fonte de dados ou aceite o padrão. O nome da fonte de dados é usado internamente no relatório. Para fins de esclarecimento, recomendamos que o nome da fonte de dados contenha o nome do banco de dados especificado na cadeia de conexão.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66109662"
   
 4.  Para uma fonte de dados compartilhada, verifique se a **referência usar fonte de dados compartilhada** está selecionada.  
   
-    1.  Clique em **Nova**. Na caixa de diálogo de propriedades **Fonte de Dados Compartilhada** , siga as etapas 2 e 3 para criar uma nova fonte de dados.  
+    1.  Clique em **Novo**. Na caixa de diálogo de propriedades **Fonte de Dados Compartilhada** , siga as etapas 2 e 3 para criar uma nova fonte de dados.  
   
     2.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -90,6 +90,6 @@ ms.locfileid: "66109662"
  [Converter uma fonte de dados de &#40;s incorporados para compartilhados Construtor de Relatórios e SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [Associar um relatório ou modelo a uma fonte de dados compartilhada &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurar as propriedades da fonte de dados para um relatório &#40;Report Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Fontes de dados com suporte pelo Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

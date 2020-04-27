@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108988"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Imagem, Tamanho (Construtor de Relatórios e SSRS)
@@ -45,13 +45,13 @@ ms.locfileid: "66108988"
  **Início**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda direita de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
- **Inferior**  
+ **Resultado**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda direita de uma célula ou caixa de texto e o valor exibido dentro dela.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo Propriedades da imagem, &#40;geral Construtor de Relatórios e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Exemplos de expressões &#40;Construtor de Relatórios e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

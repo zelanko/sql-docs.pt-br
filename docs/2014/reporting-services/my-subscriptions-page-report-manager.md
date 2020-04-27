@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108186"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Página Minhas Assinaturas (Gerenciador de Relatórios)
@@ -53,7 +53,7 @@ ms.locfileid: "66108186"
  **Pasta**  
  Exibe a pasta que contém o relatório especificado na assinatura. Clique no nome de pasta para exibir o conteúdo da pasta.  
   
- **Of**  
+ **Gatilho**  
  Identifica critérios que causam a execução da assinatura. Um gatilho **TimedSubscription** é baseado em uma agenda que define quando a assinatura é executada. Um gatilho **SnapshotUpdated** é baseado em uma atualização de um instantâneo de relatório.  
   
  **Última Execução**  

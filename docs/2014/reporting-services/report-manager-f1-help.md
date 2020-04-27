@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104473"
 ---
 # <a name="report-manager-f1-help"></a>Ajuda F1 do Gerenciador de Relatórios
@@ -80,7 +80,7 @@ ms.locfileid: "66104473"
   
 -   [Página Histórico de Relatórios](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [Página de resultados da pesquisa](../../2014/reporting-services/search-page-report-manager.md)  
+-   [Página Resultados da Pesquisa](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [Página Segurança (Configurações de Site)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   

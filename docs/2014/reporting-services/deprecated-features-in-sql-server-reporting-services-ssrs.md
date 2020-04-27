@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109348"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Recursos preteridos no SQL Server Reporting Services do SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109348"
   
  Neste tópico:  
   
--   [SQL Server 2014 Reporting Services recursos preteridos](#bkmk_2014)  
+-   [Recursos preteridos no SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Recursos preteridos no SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services recursos preteridos](#bkmk_2012)  
+-   [Recursos preteridos no SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Recursos preteridos no SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services recursos preteridos  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services recursos preteridos  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Recursos sem suporte na próxima versão do SQL Server  
- Os recursos [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a seguir não terão suporte na **próxima** versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use esses recursos em novo trabalho de desenvolvimento e, assim que possível, modifique os aplicativos que os utilizam atualmente.  
+ Os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a seguir não terão suporte na **próxima** versão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Não use esses recursos em novo trabalho de desenvolvimento e, assim que possível, modifique os aplicativos que os utilizam atualmente.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Configurações de informações de dispositivos para extensões de renderização HTML  
  As configurações de informações de dispositivos da extensão de renderização HTML a seguir foram preteridas.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109348"
   
  Nenhum recurso do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foi preterido no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services recursos preteridos  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services recursos preteridos  
  Esta seção descreve os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] preteridos no [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a seguir terão suporte na próxima versão do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], mas serão removidos em uma versão posterior. A versão específica do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] não foi determinada.  
   
 ### <a name="sharepoint-web-parts"></a>Web Parts do SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109348"
   
  Para obter mais informações sobre as Web Parts preteridas, consulte [Exibir e explorar relatórios de modo nativo usando o SharePoint Web Parts (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services recursos preteridos  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services recursos preteridos  
  Esta seção descreve os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] preteridos no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Configurações de informações de dispositivos para extensões de renderização HTML  
@@ -159,7 +159,7 @@ ms.locfileid: "66109348"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services recursos preteridos  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services recursos preteridos  
   
 > [!NOTE]  
 >  Como o SQL Server 2008 R2 é uma atualização de versão secundária do SQL Server 2008, recomendamos que você também revise o conteúdo na seção do SQL Server 2008.  

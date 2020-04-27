@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108506"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -41,7 +41,7 @@ ms.locfileid: "66108506"
   
 -   [Etapa 6 - Para agendar uma assinatura](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>Iniciar o assistente de assinatura controlada por dados  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Iniciar o assistente de assinatura controlada por dados  
   
 1.  No Gerenciador de Relatórios, clique em **Página Inicial**e navegue até a pasta que contém o relatório **Pedidos de Vendas** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108506"
   
 3.  Clique em **nova assinatura voltada para dados**. Se este botão não estiver visível, você não tem permissões do Gerenciador de Conteúdo.  
   
-##  <a name="bkmk_definesubscription"></a>Etapa 1 – definir uma descrição  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>Etapa 1 – definir uma descrição  
   
 1.  Digite **Entrega de ordem de venda** na descrição.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108506"
   
 3.  Selecione **Especificar apenas para essa assinatura**e clique em **Avançar**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>Etapa 2 – definir uma conexão com a fonte de dados do assinante  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>Etapa 2 – definir uma conexão com a fonte de dados do assinante  
   
 1.  Selecione **Microsoft SQL Server** como o tipo de fonte de dados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108506"
   
 5.  Selecione **Usar as credenciais do Windows ao conectar-se à fonte de dados**e, em seguida, clique em **Avançar**.  
   
-##  <a name="bkmk_definequery"></a>Etapa 3 – definir uma consulta para recuperar dados do assinante  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>Etapa 3 – definir uma consulta para recuperar dados do assinante  
   
 1.  Na caixa de consulta, digite a seguinte consulta:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108506"
   
 3.  Clique em **Validar**e, em seguida, clique em **Avançar**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a>Etapa 4 – definir opções de entrega  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>Etapa 4 – definir opções de entrega  
   
 1.  Em **Nome de arquivo**, selecione **Obtenha o valor no banco de dados**. Selecione o campo **Pedido**.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66108506"
   
 7.  Em **Senha**, selecione **Especifique um valor estático**. Digite sua senha. Digite a senha com cuidado. O assistente não valida a senha.  
   
-8.  Clique em **Avançar.**  
+8.  Clique em **Avançar**.  
   
-##  <a name="bkmk_configure_parameter"></a>Etapa 5 – configurar um valor de parâmetro para saída de relatório muito  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>Etapa 5 – configurar um valor de parâmetro para saída de relatório muito  
   
-1.  Em **OrderNumber**, selecione **Obtenha o valor no banco de dados**. Em Valor, selecione **Pedido**. Clique em **Avançar.**  
+1.  Em **OrderNumber**, selecione **Obtenha o valor no banco de dados**. Em Valor, selecione **Pedido**. Clique em **Avançar**.  
   
-##  <a name="bkmk_schedule_subscription"></a>Etapa 6 – para agendar uma assinatura  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>Etapa 6 – para agendar uma assinatura  
   
 1.  Clique em **Em um agendamento criado para esta assinatura**e, em seguida, clique em **Avançar**.  
   
@@ -138,10 +138,10 @@ ms.locfileid: "66108506"
  Esta etapa conclui o tutorial “Definindo uma assinatura controlada por dados”. Para saber mais sobre outros [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutoriais, consulte [Reporting Services tutoriais &#40;&#41;do SSRS ](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar uma assinatura controlada por dados &#40;tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Criar uma assinatura controlada por dados &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Criar, modificar e excluir uma assinatura controlada por dados](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Use uma fonte de dados externa para dados do assinante &#40;assinatura controlada por dados&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usar uma fonte de dados externa para obter dados de assinante &#40;Assinatura controlada por dados&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

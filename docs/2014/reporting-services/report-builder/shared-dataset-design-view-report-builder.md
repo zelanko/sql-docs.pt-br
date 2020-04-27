@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107593"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Exibição do design de conjunto de dados compartilhados (Construtor de Relatórios)
@@ -24,7 +24,7 @@ ms.locfileid: "66107593"
   
  Para obter mais informações sobre como trabalhar com dados em um relatório, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a>A faixa de faixas  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>A faixa de faixas  
  A Faixa de Opções o ajuda a localizar os comandos de que você precisa para executar uma tarefa. Os comandos são organizados nos seguintes grupos lógicos: Conexão, Conjunto de Dados e Designer de Consulta.  
   
 ### <a name="connection"></a>Conexão  
@@ -36,7 +36,7 @@ ms.locfileid: "66107593"
  Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
- Use o botão **Definir Opções** para definir propriedades de conjunto de dados compartilhadas. Elas incluem as seguintes:  
+ Use o botão **Definir Opções** para definir propriedades de conjunto de dados compartilhadas. Entre elas estão as seguintes:  
   
 -   Campos. Você pode adicionar ou editar um campo na coleção de campos.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66107593"
   
 
   
-##  <a name="DesignSurface"></a>A superfície do designer de consulta  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>A superfície do designer de consulta  
  Um designer de consulta o ajuda a criar uma consulta na sintaxe exigida pela fonte de dados externa.  
   
  Alguns tipos de fontes de dados fornecem um designer de consultas gráficas que você pode usar para explorar os metadados em uma fonte de dados externa. Você pode arrastar nomes interativamente do painel de metadados para a superfície do design de consulta ou interativamente seleciona os nomes a serem usados.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107593"
   
 
   
-##  <a name="Results"></a>Exibindo resultados da consulta  
+##  <a name="viewing-query-results"></a><a name="Results"></a>Exibindo resultados da consulta  
  No modo de design do conjunto de dados compartilhado, você está criando uma consulta que recupera dados da conexão de dados quando o relatório é processado.  
   
  Execute a consulta para consultar dados de exemplo da conexão de dados e verificar se a consulta retorna o tipo de dados que você espera. As colunas no conjunto de resultados provêm dos metadados para esquemas de dados da conexão de dados. Os nomes de coluna tornam-se a coleção de campos de conjunto de dados. Os valores dos dados exibidos no conjunto de resultados da consulta são dados de tempo de design. Depois que você salva o conjunto de dados compartilhado como uma definição de conjunto de dados compartilhado no servidor de relatório, apenas o texto da consulta é salvo. Os dados no conjunto de resultados da consulta não são salvos.  
@@ -86,11 +86,11 @@ ms.locfileid: "66107593"
   
  Se um relatório contiver parâmetros, todos os parâmetros deverão ter valores padrão para que o relatório possa ser executado automaticamente. Se um parâmetro não tiver um valor padrão, quando o relatório for executado, você deverá escolher um valor para o parâmetro e clicar em **Exibir Relatório** na guia **Executar** .  
   
- Para obter mais informações, consulte [parâmetros de relatório &#40;Construtor de relatórios e Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   
-##  <a name="Save"></a>Salvando o DataSet compartilhado  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Salvando o conjunto de dados compartilhado  
  Para salvar a consulta que você criou, no botão **Construtor de Relatórios** , clique em **Salvar** ou em **Salvar como**. Navegue até a pasta apropriada no servidor de relatório e salve a definição de conjunto de dados compartilhada. O conjunto de dados compartilhado não estará disponível para os outros até que você o salve no servidor de relatório.  
   
 

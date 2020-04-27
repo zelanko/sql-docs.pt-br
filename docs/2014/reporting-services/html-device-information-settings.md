@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109035"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
@@ -30,18 +30,18 @@ ms.locfileid: "66109035"
 |-------------|-----------|  
 |`AccessibleTablix`|Indica se a renderização será realizada com metadados de acessibilidade adicionais para uso com leitores de tela. Este parâmetro só se aplica a relatórios que contenham estruturas simples de tabela ou matriz com agrupamento simples. O valor padrão é `false`. Os metadados de acessibilidade adicionais tornam o relatório renderizado em conformidade com os seguintes padrões técnicos da seção "Informações e Aplicativos de Intranet e Internet na Web" (1194.22) do documento de Normas de Acessibilidade Eletrônica e de Tecnologia da Informação (Seção 508):<br /><br /> (g) Os cabeçalhos de linhas e colunas das tabelas de dados serão identificados.<br /><br /> (h) A marcação será usada para associar células de dados e células de cabeçalho de tabelas de dados que tenham dois ou mais níveis lógicos de cabeçalhos de linha ou coluna.<br /><br /> (i) Os quadros levarão um título cujo texto facilite a identificação e a navegação do quadro.<br /><br /> Esse parâmetro tem suporte no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)], mas não no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
 |**ActionScript (\*)**|Especifica o nome da função JavaScript a usar quando um evento de ação ocorre, como detalhar ou clicar no indicador. Se esse parâmetro for especificado, um evento de ação disparará a função JavaScript nomeada em vez de um postback para o servidor.|  
-|**Indicador de**|A ID de indicador para ir para o relatório.|  
-|**Docmap**|Indica se você deve mostrar ou ocultar o mapa do documento do relatório. O valor padrão desse parâmetro é `true`.|  
+|**BookmarkID**|A ID de indicador para ir para o relatório.|  
+|**DocMap**|Indica se você deve mostrar ou ocultar o mapa do documento do relatório. O valor padrão desse parâmetro é `true`.|  
 |`ExpandContent`|Indica se o relatório deve ser incluído em uma estrutura de tabela que compacta o tamanho horizontal.|  
 |**FindString**|O texto a ser pesquisado no relatório. O valor padrão desse parâmetro é uma cadeia de caracteres vazia.|  
 |**GetImage (\*)**|Obtém um ícone específico para a interface de usuário do Visualizador de HTML.|  
 |`HTMLFragment`|Indica se um fragmento de HTML é criado no lugar de um documento HTML completo. Um fragmento de HTML inclui o conteúdo do relatório em um elemento TABLE e omite os elementos HTML e BODY. O valor padrão é `false`. A renderização usando SOAP com o conjunto de propriedade `HTMLFragment` definido como `true` cria URLs contendo informações da sessão que podem ser usadas para solicitar imagens corretamente. As imagens devem ser recursos carregados no banco de dados do servidor de relatório.|  
 |`ImageConsolidation`|Indica se o gráfico renderizado, mapa, medidor e imagens de medidor serão consolidados em uma única imagem grande. A consolidação de imagens ajuda a melhorar o desempenho do relatório no navegador do cliente quando o relatório contém muitos itens de visualização de dados. O valor padrão é `true` para a maioria dos navegadores modernos.|  
-|**Linguagem**|Indica se JavaScript é compatível com o relatório renderizado. O valor padrão é `true`.|  
+|**JavaScript**|Indica se JavaScript é compatível com o relatório renderizado. O valor padrão é `true`.|  
 |`LinkTarget`|O destino de hiperlinks no relatório. Você pode direcionar uma janela ou quadro fornecendo o nome da janela, como `LinkTarget` = *window_name*, ou pode direcionar uma nova janela usando `LinkTarget`= _blank. Outros nomes de destino válidos incluem _self, _parent e _top.|  
 |**OnlyVisibleStyles (\*)**|Indica se somente os estilos compartilhados são gerados para a página renderizada atualmente.|  
 |`OutlookCompat`|Indica se ocorrerá renderização com metadados extras que melhoram a aparência do relatório no Outlook. Para os demais, o valor padrão é `false`.|  
-|**Parâmetros**|Indica se deve mostrar ou ocultar a área de parâmetros da barra de ferramentas. Se você definir esse parâmetro como um valor `true`, a área de parâmetros da barra de ferramentas será exibida. O valor padrão desse parâmetro é `true`.|  
+|**Parameters**|Indica se deve mostrar ou ocultar a área de parâmetros da barra de ferramentas. Se você definir esse parâmetro como um valor `true`, a área de parâmetros da barra de ferramentas será exibida. O valor padrão desse parâmetro é `true`.|  
 |`PrefixId`|Quando usado com `HTMLFragment`, ele adiciona o prefixo especificado a todos os atributos `ID` no fragmento HTML que é criado.|  
 |**ReplacementRoot (\*)**|A cadeia de caracteres que precede todos os links de detalhamento, alternância e indicadores no relatório quando forem renderizados fora do controle ReportViewer. Por exemplo, este é usado para redirecionar um clique do usuário a uma página personalizada.|  
 |**ResourceStreamRoot (\*)**|A cadeia de caracteres a ser pré-demarcada na URL para todos os recursos de imagem, como imagens para alternância ou classificação.|  
@@ -54,8 +54,8 @@ ms.locfileid: "66109035"
 |**DataVisualizationFitSizing**|Indica comportamento de ajuste de visualização de dados quando dentro de um tablix. Isso inclui gráfico, medidor e mapa.<br /><br /> Os valores possíveis são **Aproximado** e **Exato**.<br /><br /> O valor padrão é **Aproximado**. Se a configuração for removida do arquivo **rsreportserver.config** , o comportamento padrão será **Exato**.<br /><br /> Habilitar **Exato** pode ter impacto de desempenho porque o processamento para determinar o tamanho exato pode levar mais tempo.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Passando configurações de informações de dispositivos para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Passando configurações de informações de dispositivo para extensões de renderização](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personalizar parâmetros de extensão de renderização em RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referência técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

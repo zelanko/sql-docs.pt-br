@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106147"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Construtor de Relatórios e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106147"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>Adicionando uma lista ao relatório  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>Adicionando uma lista ao relatório  
  Adicione uma lista à superfície de design usando a guia Inserir ou a faixa de opções. Por padrão, inicialmente a lista contém uma única célula em uma linha associada ao grupo de detalhes.  
   
  ![Item de relatório de Nova Lista na superfície de design](../media/rs-listtemplatenew.gif "Item de relatório de Nova Lista na superfície de design")  
@@ -43,12 +43,12 @@ ms.locfileid: "66106147"
   
 
   
-##  <a name="DisplayingLayout"></a>Exibindo dados em um layout de forma livre  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> Exibindo dados em um layout de forma livre  
  Para organizar dados de relatório em um layout de forma livre, e não em uma grade, é possível adicionar uma lista à superfície de design. Arraste campos do painel de dados do relatório para a célula. Por padrão, a célula contém um retângulo que funciona como um contêiner. Mova todos os campos do contêiner até obter o design desejado. Use as linhas de ajuste exibidas quando você arrasta caixas de texto no contêiner de retângulo para ajudar você a alinhar as bordas vertical e horizontalmente. Remova o espaço em branco indesejado, ajustando o tamanho da célula. Para obter mais informações, consulte [Alterar a altura da linha ou a largura da coluna &#40;Construtor de Relatórios e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  A seguinte figura mostra uma lista que exibe informações sobre uma ordem, inclusive os campos: Data, Ordem, Quantidade, Produto, LineTotal e uma imagem.  
   
- ![Lista no modo de design, 4 campos e uma imagem](../media/rs-basiclistformdesign.gif "Lista no modo de design, 4 campos e uma imagem")  
+ ![Lista no modo de exibição de Design, 4 campos e uma imagem](../media/rs-basiclistformdesign.gif "Lista no modo de exibição de Design, 4 campos e uma imagem")  
   
  Em Visualização, a lista se repete para exibir os dados de campo no formato sem forma, como mostrado na seguinte figura:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66106147"
   
 
   
-##  <a name="DisplayingGrouping"></a>Exibindo dados com um nível de agrupamento  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> Exibindo dados com um nível de agrupamento  
  Como uma lista fornece um contêiner automaticamente, é possível usar uma lista para exibir dados agrupados com várias exibições. Para alterar a lista padrão e especificar um grupo, edite o grupo Detalhes, especifique um nome novo e uma expressão de grupo.  
   
  Por exemplo, você pode inserir uma tabela e um gráfico que mostram exibições diferentes do mesmo conjunto de dados. É possível adicionar um grupo à lista para que os itens de relatório aninhados se repitam uma vez para todos os valores do grupo. A seguinte figura mostra uma lista agrupada por categoria de produto. Observe que não há nenhuma linha detalhada. Duas tabelas são aninhadas lado a lado na lista. A primeira tabela exibe as subcategorias com vendas totais. A segunda exibe a categoria agrupada por área geográfica, com um gráfico que mostra a distribuição das subcategorias.  

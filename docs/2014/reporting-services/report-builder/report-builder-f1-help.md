@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107728"
 ---
 # <a name="report-builder-f1-help"></a>Ajuda F1 do Construtor de Relatórios
@@ -28,7 +28,7 @@ ms.locfileid: "66107728"
   
 ## <a name="see-also"></a>Consulte Também  
  [Ajuda para caixas de diálogo, painéis e](../report-builder-help-for-dialog-boxes-panes-and-wizards.md) modos de exibição de design de relatório de assistentes (F1) [&#40;Construtor de relatórios&#41;](report-design-view-report-builder.md)   
- [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Assistente de mapa e assistente de camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Solução de problemas do Construtor de Relatórios](../troubleshoot-report-builder.md)  
   
   

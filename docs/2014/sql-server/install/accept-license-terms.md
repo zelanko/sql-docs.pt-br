@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096837"
 ---
 # <a name="accept-license-terms"></a>Aceitar termos de licença
@@ -30,7 +30,7 @@ ms.locfileid: "66096837"
 ## <a name="customer-experience-improvement-program-ceip"></a>Programa de Aperfeiçoamento da Experiência do Usuário (CEIP)  
  Se você habilitar os relatórios CEIP, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será configurado para enviar, periodicamente, um relatório para a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Relatórios incluem informações sobre sua configuração de hardware e como você usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os componentes. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] usará dados de uso de recurso para melhorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitorados por esse recurso incluem:  
   
--   O [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66096837"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instalação  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instalação  
   
  As informações sobre o uso de recursos são enviadas para a [!INCLUDE[msCoName](../../includes/msconame-md.md)], onde são armazenadas com acesso limitado.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66096837"
  Relatório de Erros  
  Se você habilitar o recurso Relatório de Erros, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será configurado para enviar, automaticamente, um relatório para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] caso um erro fatal ocorra em qualquer um dos seguintes componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   O [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   

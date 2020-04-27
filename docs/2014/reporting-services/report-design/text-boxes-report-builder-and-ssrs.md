@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104626"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Caixas de texto (Construtor de Relatórios e SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66104626"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>Aumentando e reduzindo uma caixa de texto  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Ampliando e reduzindo uma caixa de texto  
  Por padrão, as caixas de texto apresentam um tamanho fixo. Você pode permitir a redução ou a expansão vertical de uma caixa de texto com base no seu conteúdo. Para obter mais informações, consulte [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientando uma caixa de texto  
- A orientação de caixas de texto pode ajudar a criar relatórios mais legíveis, dar suporte à orientação de texto específica à localidade, ajustar mais colunas em um relatório impresso com tamanho de página fixo e criar relatórios com mais apelo gráfico. Uma caixa de texto pode ser orientada em direções diferentes: horizontal, vertical ou girada em 270 graus. A opção vertical geralmente é usada para idiomas do Leste Asiático que são escritos de cima para baixo. Na maioria dos renderizadores, a opção vertical trata a propriedade de rotação de glifo de forma que o texto seja escrito de cima para baixo, mas os caracteres não fiquem de lado. Para outros idiomas, nas opções vertical e 270 graus, o texto é escrito lateralmente.  
+ A orientação de caixas de texto pode ajudar a criar relatórios mais legíveis, dar suporte à orientação de texto específica à localidade, ajustar mais colunas em um relatório impresso com tamanho de página fixo e criar relatórios com mais apelo gráfico. Uma caixa de texto pode ser orientada em direções diferentes: horizontal, vertical ou girada em 270 graus. A opção vertical geralmente é usada para idiomas do Leste da Ásia que são escritos de cima para baixo. Na maioria dos renderizadores, a opção vertical trata a propriedade de rotação de glifo de forma que o texto seja escrito de cima para baixo, mas os caracteres não fiquem de lado. Para outros idiomas, nas opções vertical e 270 graus, o texto é escrito lateralmente.  
   
  Você pode aplicar a orientação a caixas de texto que contêm texto literal, campos de um conjunto de dados de relatório, ou dados calculados. A caixa de texto pode ser independente no corpo do relatório, em uma tabela ou matriz, ou em um cabeçalho e rodapé do relatório.  
   
@@ -55,14 +55,14 @@ ms.locfileid: "66104626"
   
  Para começar rapidamente a alterar a orientação do texto, consulte a seção sobre como girar o texto no [tutorial: Formatar o texto &#40;Construtor de Relatórios&#41;](../tutorial-format-text-report-builder.md). Para obter mais informações, consulte [definir a orientação da caixa de texto &#40;Construtor de relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Tópicos de instruções  
  [Adicionar, mover ou excluir uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Formatar o texto em uma caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
  [Definir a orientação da caixa de texto &#40;Construtor de Relatórios e SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Permitir que uma caixa de texto cresça ou reduza &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Permitir que uma caixa de texto seja ampliada ou reduzida &#40;Construtor de Relatórios e SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Formatando texto e espaços reservados &#40;Construtor de Relatórios e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   

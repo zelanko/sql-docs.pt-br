@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106749"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Adicionar uma ação de expandir ou recolher a um item (Construtor de Relatórios e SSRS)
@@ -56,14 +56,14 @@ ms.locfileid: "66106749"
   
      Na imagem a seguir, o grupo de linhas Cor está configurado para permitir que os usuários expandam e recolham linhas associadas.  
   
-     ![Configurando um grupo de linhas a ser expandido](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Configurando um grupo de linhas a ser expandido")  
+     ![Como configurar um grupo de linhas a ser expandido](../media/expandcollapse-confighiddentoggleitemwithnumbers.png "Como configurar um grupo de linhas a ser expandido")  
   
     > [!NOTE]  
     >  A caixa de texto com a imagem de alternância não pode ser o grupo de linhas ou de colunas do qual você deseja ocultar as linhas ou colunas associadas. Ela deve estar no mesmo grupo que o item que está sendo ocultado ou em um grupo ancestral. Por exemplo, para alternar a visibilidade de linhas associadas a um grupo filho, selecione uma caixa de texto em uma linha associada ao grupo pai.  
   
 6.  Para testar a alternância, execute o relatório e clique na caixa de texto com a imagem de alternância. A exibição do relatório é atualizada para mostrar grupos de linhas e de colunas com a visibilidade alternada.  
   
-     ![Executando relatório com grupo de linhas expansível](../media/expandcollapse-runreport-rowgroup.png "Executando relatório com grupo de linhas expansível")  
+     ![Executar relatório com um grupo de linhas expansível](../media/expandcollapse-runreport-rowgroup.png "Executar relatório com um grupo de linhas expansível")  
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para adicionar uma ação de expansão e recolhimento a um item de relatório  
   
@@ -86,14 +86,14 @@ ms.locfileid: "66106749"
   
      Na imagem a seguir, a tabela está configurada para permitir que os usuários expandam e recolham-na. A exibição da tabela é alternada pela caixa de texto Tabela de Produtos.  
   
-     ![Configurar uma tabela de relatório a ser expandida](../media/expandcollapse-reporttable.png "Configurar uma tabela de relatório a ser expandida")  
+     ![Configure uma tabela de relatório a ser expandida](../media/expandcollapse-reporttable.png "Configure uma tabela de relatório a ser expandida")  
   
     > [!NOTE]  
     >  A caixa de texto que você escolher deve estar no escopo atual ou de contenção para esse item de relatório (até e incluindo o corpo do relatório). Por exemplo, para alternar a visibilidade de um gráfico, selecione uma caixa de texto que esteja no mesmo escopo de contenção que o gráfico. Por exemplo, o corpo do relatório ou um retângulo. A caixa de texto deve estar na mesma ou em uma hierarquia de contêiner superior.  
   
 5.  Para testar a alternância, execute o relatório e clique na caixa de texto com a imagem de alternância. A exibição do relatório é atualizada para mostrar itens de relatório com a visibilidade alternada.  
   
-     ![Executando relatório com uma tabela de expansão](../media/expandcollapse-runreport-reporttable.png "Executando relatório com uma tabela de expansão")  
+     ![Executar relatório com uma tabela de expansão](../media/expandcollapse-runreport-reporttable.png "Executar relatório com uma tabela de expansão")  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ação de busca detalhada &#40;Construtor de Relatórios e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107448"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associar um relatório ou modelo a uma fonte de dados compartilhada (SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "66107448"
   
 5.  Na área **Tipo de Conexão** , verifique se a opção **Fonte de dados compartilhada** está selecionada.  
   
-6.  Na área **Vínculo da Fonte de Dados**, clique no botão de reticências (...).  
+6.  Na área **link da fonte de dados** , clique no botão de reticências (...).  
   
 7.  Localize a fonte de dados que deseja usar.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66107448"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-10. Clique em **fechar**  
+10. Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Carregar um &#40;de arquivo ou relatório Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md)   
@@ -70,6 +70,6 @@ ms.locfileid: "66107448"
  [Criar e gerenciar fontes de dados compartilhadas &#40;Reporting Services no modo integrado do SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Criar, excluir ou modificar uma fonte de dados compartilhada &#40;Report Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Fontes de dados com suporte pelo Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Fontes de dados com suporte no Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

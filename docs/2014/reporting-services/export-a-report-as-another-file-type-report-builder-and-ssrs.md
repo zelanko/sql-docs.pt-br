@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109176"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar um relatório como outro tipo de arquivo (Construtor de Relatórios e SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "66109176"
   
      Usando o aplicativo associado ao formato escolhido, o relatório é exibido ou salvo. Se você clicar em **Salvar**, você será solicitado a indicar um local no qual seja possível salvar o relatório.  
   
-     **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, será solicitado que você salve o relatório exportado ou localize um programa online para abrir o relatório.  
+     **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, você será solicitado a salvar o relatório exportado ou a localizar um programa online para abri-lo.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Para exportar um relatório como outro tipo de arquivo em uma biblioteca do SharePoint  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66109176"
   
      Outra opção é alterar o nome do arquivo do relatório exportado.  
   
-     **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, será solicitado que você salve o relatório exportado ou localize um programa online para abrir o relatório.  
+     **Observação** Se o programa não puder abrir o relatório no formato escolhido porque você não tem um programa associado a esse tipo de arquivo, você será solicitado a salvar o relatório exportado ou a localizar um programa online para abri-lo.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

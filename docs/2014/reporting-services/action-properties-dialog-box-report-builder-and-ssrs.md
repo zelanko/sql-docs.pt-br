@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110079"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades de Ação (Construtor de Relatórios e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66110079"
  **Habilitar como uma ação**  
  Selecione uma opção para indicar a ação que será executada quando o usuário clicar no item.  
   
- **Nenhuma**  
+ **Nenhum**  
  Escolha esta opção para indicar que o item não tem nenhuma ação.  
   
  **Ir para o relatório**  
@@ -84,7 +84,7 @@ ms.locfileid: "66110079"
  Digite ou selecione um valor para passar para o parâmetro nomeado no relatório detalhado. Clique no botão **expressão** (*FX*) para editar a expressão.  
   
  **Omitir**  
- Selecione para impedir que o parâmetro execute. Por padrão, esta caixa de seleção é desmarcada e não ativa. Para marcar a caixa de seleção, clique no botão **expressão** (*FX*) e digite **true** ou crie uma expressão. A caixa de seleção é marcada quando você clica em **OK** na caixa de diálogo **expressão** .  
+ Selecione para impedir que o parâmetro execute. Por padrão, esta caixa de seleção é desmarcada e não ativa. Para marcar a caixa de seleção, clique no botão **expressão** (*FX*) e digite **true** ou crie uma expressão. A caixa de seleção é marcada quando você clica em **OK** na caixa de diálogo **Expressão** .  
   
  **Ir para o indicador**  
  Escolha esta opção para definir um link para um indicador no relatório atual. A opção adicional a seguir aparece quando você seleciona **Ir para o indicador**.  
@@ -103,7 +103,7 @@ ms.locfileid: "66110079"
 ## <a name="see-also"></a>Consulte Também  
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Construtor de Relatórios ajuda para caixas de diálogo, painéis e assistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Report Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Adicionar um sub-relatório e parâmetros &#40;Construtor de Relatórios e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Classificação interativa, mapas de documentos e links &#40;Construtor de Relatórios e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   

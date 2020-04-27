@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108126"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Atribuições de nova função do sistema: página Editar atribuições de função do sistema (Gerenciador de Relatórios)
@@ -51,7 +51,7 @@ ms.locfileid: "66108126"
  **Funções**  
  Fornece uma lista de funções no nível de sistema que você pode atribuir a outros usuários. Você pode especificar várias funções para uma única atribuição de função.  
   
- O Gerenciador de Relatórios não exibe as tarefas em cada função nem fornece um modo de adicionar ou modificar as tarefas. Você deve usar as funções como elas são definidas. Para criar, modificar ou excluir funções, use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ O Gerenciador de Relatórios não exibe as tarefas em cada função nem fornece um modo de adicionar ou modificar as tarefas. Você deve usar as funções como elas são definidas. Para criar, modificar ou excluir funções, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para obter mais informações, consulte [Criar, excluir ou modificar uma função &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  Observe que se você estiver usando o [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] com Advanced Services, deve usar as funções padrão fornecidas.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "66108126"
 ## <a name="see-also"></a>Consulte Também  
  [Ajuda F1 Report Manager](../../2014/reporting-services/report-manager-f1-help.md)   
  [Atribuições de função](security/role-assignments.md)   
- [Definições de função](security/role-definitions.md)  
+ [Definições de Funções](security/role-definitions.md)  
   
   

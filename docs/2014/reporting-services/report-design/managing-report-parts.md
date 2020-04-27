@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105585"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
@@ -31,7 +31,7 @@ ms.locfileid: "66105585"
  Quando as partes de relatório são publicadas de um aplicativo de criação de relatório, como o Construtor de Relatórios em um servidor de relatório em modo integrado do SharePoint, o catálogo de servidor de relatório também é atualizado e as pesquisas da galeria refletem com precisão a parte de relatório nova ou atualizada.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Carregando partes de relatório diretamente para uma pasta do SharePoint  
- Se uma parte de relatório for carregada diretamente em uma pasta de documentos do SharePoint, em vez de publicada de um aplicativo de criação de relatório, o catálogo do servidor de relatório também não será atualizado. As pesquisas da galeria de partes de relatório não localizarão a parte de relatório carregada. Para ajudar a manter suas pastas do SharePoint e o catálogo do servidor de relatório sincronizados, você pode ativar o recurso de sincronização de arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor do SharePoint. Para obter mais informações, consulte [Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Se uma parte de relatório for carregada diretamente em uma pasta de documentos do SharePoint, em vez de publicada de um aplicativo de criação de relatório, o catálogo do servidor de relatório também não será atualizado. As pesquisas da galeria de partes de relatório não localizarão a parte de relatório carregada. Para ajudar a manter suas pastas do SharePoint e o catálogo do servidor de relatório sincronizados, você pode ativar o recurso de sincronização de arquivos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no servidor do SharePoint. Para obter mais informações, consulte [ativar o recurso de sincronização de arquivos do servidor de relatório na administração central do SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Os arquivos também podem ser sincronizados usando a chamada de algumas das APIs de gerenciamento de serviços de relatório, como GetProperties e SetProperties.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66105585"
   
  (*) indica que isso é novo para esta versão.  
   
-|Propriedade|DESCRIÇÃO|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
+|Propriedade|Descrição|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
 |--------------|-----------------|---------------------------------------------|  
 |Nome|Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
-|DESCRIÇÃO|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
+|Descrição|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
 |CreatedBy|A ID do usuário que adicionou originalmente a parte de relatório ao banco de dados do servidor de relatório. O formato exato depende do método de autenticação. Por exemplo, alguns métodos de autenticação mostrarão o domínio\nome de usuário completo nos campos CreatedBy e ModifiedBy.|Sim|  
 |CreationDate|As data em que a parte de relatório foi criada originalmente.<br /><br /> Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
 |ModifiedBy|ModifiedBy é a ID do usuário que modificou por último a parte do relatório.|Sim|  
@@ -70,14 +70,14 @@ ms.locfileid: "66105585"
 |Ações|Funções|  
 |-------------|-----------|  
 |Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Gerenciador de Conteúdo<br /><br /> Meus Relatórios|  
-|Adicionar, excluir e baixar partes de relatório|Publicador|  
+|Adicionar, excluir e baixar partes de relatório|Editor|  
 |Pesquisar e reutilizar|Navegador<br /><br /> Construtor de Relatórios|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor em modo integrado do SharePoint  
   
 |Ações|Função|  
 |-------------|----------|  
-|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle Total|  
+|Adicionar, excluir, editar propriedades de item, gerenciar a segurança e baixar partes de relatório|Controle total|  
 |Adicionar, excluir, editar propriedades de item e baixar partes de relatório|Design<br /><br /> Contribuir|  
 |Pesquisar e reutilizar|Ler<br /><br /> Exibir Apenas|  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66105585"
 -   As partes de relatório usam as mesmas políticas de permissão que as existentes no tipo de item "Resource". Dentro de uma pasta, não há nenhuma diferenciação entre itens de recurso tradicionais e partes de relatório a partir de uma perspectiva de herança de segurança. A parte de relatório herdará a mesma política de permissão que as imagens na mesma pasta. Quando esta distinção é necessária, a segurança de nível de item pode ser configurada para as partes de relatório desejadas. Ou você pode colocar partes de relatório que deveriam estar em pastas separadas e que têm as permissões corretas configuradas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Partes de relatório e conjuntos de dados no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Partes de relatório e conjuntos de valores no Construtor de Relatórios](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Página Propriedades gerais, partes de relatório &#40;Report Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
  [&#40;página mover itens Report Manager&#41;](../move-items-page-report-manager.md)   
  [Gerenciamento do conteúdo do Servidor de Relatório &#40;Modo Nativo do SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
