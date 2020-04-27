@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871133"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar o Assistente para Copiar Banco de Dados
@@ -67,11 +67,11 @@ ms.locfileid: "62871133"
   
 -   **Acompanhamento: após a atualização:**  
   
-     [Depois de atualizar um banco de dados SQL Server](#FollowUp)  
+     [Depois de atualizar um banco de dados do SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   O Assistente para Copiar Banco de Dados não está disponível na edição Express.  
   
@@ -91,21 +91,21 @@ ms.locfileid: "62871133"
   
 -   O método desanexar-e-anexar desanexa o banco de dados, migra ou copia os arquivos .mdf, .ndf e .ldf do banco de dados e os reanexa ao banco de dados em um novo local. Ao utilizar o método desanexar-e-anexar, para evitar perda ou inconsistência de dados, as sessões ativas não podem ser anexadas ao banco de dados que está sendo migrado ou copiado. Se houver alguma sessão ativa, o Assistente para Copiar Banco de Dados não executará a operação de migração ou cópia. No método [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object, permitem-se sessões ativas porque o banco de dados nunca é colocado offline.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Verifique se o SQL Server Agent foi iniciado no servidor de destino.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Para garantir o desempenho perfeito de um banco de dados atualizado, execute sp_updatestats (atualização de estatísticas) nele.  
   
--   Ao copiar um banco de dados para outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, pode ser necessário recriar alguns ou todos os metadados do banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Ao copiar um banco de dados para outra instância do servidor, para oferecer uma experiência consistente aos usuários e aplicativos, pode ser necessário recriar alguns ou todos os metadados do banco de dados, como logons e trabalhos, na outra instância de servidor. Para obter mais informações, consulte [gerenciar metadados ao disponibilizar um banco de dados em outra instância de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ser membro da função de servidor fixa **sysadmin** em ambos os servidores, de origem e de destino.  
   
-##  <a name="Copy_Move"></a>Copiar, mover ou atualizar bancos de dados  
+##  <a name="copy-move-or-upgrade-databases"></a><a name="Copy_Move"></a>Copiar, mover ou atualizar bancos de dados  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, expanda **bancos**de dados, clique com o botão direito do mouse em um Database, aponte para **tarefas**e clique em **copiar banco de dados**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62871133"
      **Senha**  
      Digite a senha do logon. Essa opção estará disponível somente se você decidiu conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Última**  
+     **Avançar**  
      Conecta ao servidor e valida o usuário. Esse processo verifica se o usuário é membro da função de servidor fixa **sysadmin** no computador selecionado.  
   
 3.  Na página **Selecione um Servidor de Destino** , especifique o servidor para o qual o banco de dados será movido ou copiado. Se você definiu os servidores de origem e destino com a mesma instância de servidor, fará uma cópia de um banco de dados. Nesse caso, renomeie o banco de dados em um ponto posterior do assistente. O nome do banco de dados de origem poderá ser usado somente para o banco de dados copiado ou migrado se não houver conflitos de nome no servidor de destino. Se houver conflitos de nome, será preciso resolvê-los manualmente no servidor de destino para poder usar o nome do banco de dados de origem nele.  
@@ -149,7 +149,7 @@ ms.locfileid: "62871133"
      **Senha**  
      Digite a senha do logon. Essa opção estará disponível apenas se você selecionou a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Última**  
+     **Avançar**  
      Conecta ao servidor e valida o usuário. Esse processo verifica se o usuário tem as permissões listadas acima nos computadores selecionados.  
   
 4.  Na página **Selecione o Método de Transferência** , selecione o método de transferência.  
@@ -160,7 +160,7 @@ ms.locfileid: "62871133"
     > [!NOTE]  
     >  Esse método torna o banco de dados indisponível para os usuários durante a transferência.  
   
-     **Se ocorrer uma falha, anexe novamente o banco de dados de origem**  
+     **Se ocorrer uma falha, anexar novamente o banco de dados de origem**  
      Quando um banco de dados é copiado, os arquivos do banco de dados original são sempre anexados novamente ao servidor de origem. Use essa caixa para anexar novamente os arquivos originais ao banco de dados de origem se não for possível mover um banco de dados.  
   
      **Usar o método SQL Management Object**  
@@ -174,10 +174,10 @@ ms.locfileid: "62871133"
      **Mover**  
      Mova o banco de dados para o servidor de destino.  
   
-     **Copy**  
+     **Cópia**  
      Copie o banco de dados no servidor de destino.  
   
-     **Origem**  
+     **Fonte**  
      Exibe os bancos de dados existentes no servidor de origem.  
   
      **Status**  
@@ -186,7 +186,7 @@ ms.locfileid: "62871133"
      **Atualizar**  
      Atualize a lista de bancos de dados.  
   
-     **Última**  
+     **Avançar**  
      Inicie o processo de validação e avance para a próxima tela.  
   
 6.  Na página **Configurar Banco de Dados de Destino** , altere o nome do banco de dados, se apropriado, e especifique o local e os nomes dos arquivos de banco de dados. Essa página aparece uma vez para cada banco de dados que é movido ou copiado.  
@@ -202,7 +202,7 @@ ms.locfileid: "62871133"
     > [!NOTE]  
     >  Procedimentos armazenados estendidos e seus DLLs associados não são qualificados para cópia automatizada.  
   
-     **Trabalhos de SQL Server Agent**  
+     **trabalhos do SQL Server Agent**  
      Inclua trabalhos do banco de dados **msdb** na operação de movimentação ou cópia.  
   
      **Mensagens de erro definidas pelo usuário**  
@@ -230,7 +230,7 @@ ms.locfileid: "62871133"
   
      Por exemplo, C:\Arquivos de Programas\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA.  
   
-     **Compartilhamento de arquivos no servidor de origem**  
+     **Compartilhamento de arquivo no servidor de origem**  
      Especifique o local dos arquivos de banco de dados de origem como um caminho de compartilhamento de arquivos.  
   
      Por exemplo: "\\\\*server_name*\c $ \Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
@@ -254,10 +254,10 @@ ms.locfileid: "62871133"
      **Executar imediatamente**  
      Inicie a operação de movimentação ou cópia depois de clicar em **Avançar**.  
   
-     **Agenda**  
+     **Agendamento**  
      Iniciar a operação de mover ou copiar mais tarde. As configurações de agenda atuais aparecem na caixa de descrição. Para alterar a agenda, clique em **Alterar**.  
   
-     **Alterar**  
+     **Alteração**  
      Abra a caixa de diálogo **nova agenda de trabalho** .  
   
      **conta proxy do Integration Services**  
@@ -278,8 +278,8 @@ ms.locfileid: "62871133"
      **Mensagem**  
      Fornece qualquer mensagem que retornou de cada etapa.  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de atualizar um banco de dados SQL Server  
- Após o uso do Assistente para Copiar Banco de Dados para atualizar um banco de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados é disponibilizado imediatamente e é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Lembre-se também de que, quando a opção de atualização estiver definida como **Importar**, se não houver um catálogo de texto completo disponível, os índices de texto completo associados serão recompilados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Acompanhamento: depois de atualizar um banco de dados do SQL Server  
+ Após o uso do Assistente para Copiar Banco de Dados para atualizar um banco de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o banco de dados é disponibilizado imediatamente e é atualizado de forma automática. Se o banco de dados tiver índices de texto completo, o processo de atualização importará, redefinirá ou recriará esses índices dependendo da configuração da propriedade de servidor **Opção de Atualização de Texto Completo** . Se a opção de atualização for definida como **Importar** ou **Recriar**, os índices de texto completo permanecerão indisponíveis durante a atualização. Dependendo da quantidade de dados a serem indexados, a importação pode levar várias horas, e a recriação pode ser até dez vezes mais demorada. Observe também que, quando a opção de atualização for definida como **importar**, se um catálogo de texto completo não estiver disponível, os índices de texto completo associados serão recriados. Para obter informações sobre como exibir ou alterar a configuração da propriedade **Full-Text Upgrade Option** , veja [Gerenciar e monitorar a pesquisa de texto completo para uma instância de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se o nível de compatibilidade de um banco de dados de usuário era 100 ou mais alto antes da atualização, ele permanecerá o mesmo depois da atualização. Se o nível de compatibilidade era 90, no banco de dados atualizado, o nível de compatibilidade será definido como 100, que é o nível de compatibilidade mais baixo com suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações, veja [Nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

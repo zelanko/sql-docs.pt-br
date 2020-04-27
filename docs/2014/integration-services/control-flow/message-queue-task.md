@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831473"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  A tarefa fila de mensagens permite que você use o serviço de enfileiramento de mensagens (também conhecido como MSMQ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ) para enviar e receber mensagens entre pacotes ou para enviar mensagens para uma fila de aplicativo que é processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
+  A Tarefa Fila de Mensagens permite usar o serviço de Enfileiramento de Mensagens (também conhecido como MSMQ) para enviar e receber mensagens entre pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou enviar mensagens a uma fila de aplicativos processada por um aplicativo personalizado. Essas mensagens podem adotar a forma de texto simples, arquivos ou variáveis e seus valores.  
   
  Usando a tarefa Fila de Mensagens, você pode coordenar operações em toda sua empresa. As mensagens podem ser enfileiradas e entregues mais tarde se o destino estiver indisponível ou ocupado; por exemplo, a tarefa pode enfileirar mensagens para o laptop offline de representantes de vendas que recebem suas mensagens quando se conectarem à rede. Você pode usar a tarefa Fila de Mensagens para os seguintes propósitos:  
   
@@ -51,11 +51,9 @@ ms.locfileid: "62831473"
   
 -   A mensagem `String` especifica a mensagem como uma cadeia de caracteres. Ao receber mensagens, você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário e entrar em ação dependendo da comparação. A comparação de cadeias de caracteres pode ser exata, diferenciar maiúsculas e minúsculas ou não diferenciar maiúsculas e minúsculas, ou usar uma subcadeia.  
   
--   
-  `String message to variable` especifica a mensagem de fonte como uma cadeia de caracteres que é enviada a uma variável de destino. Você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário usando uma comparação exata, que não pode diferenciar maiúsculas e minúsculas ou subcadeia. Esse tipo de mensagem só está disponível quando a tarefa estiver recebendo mensagens.  
+-   `String message to variable` especifica a mensagem de fonte como uma cadeia de caracteres que é enviada a uma variável de destino. Você pode configurar a tarefa para comparar a cadeia de caracteres recebida com uma cadeia de caracteres definida pelo usuário usando uma comparação exata, que não pode diferenciar maiúsculas e minúsculas ou subcadeia. Esse tipo de mensagem só está disponível quando a tarefa estiver recebendo mensagens.  
   
--   
-  `Variable` especifica que a mensagem contém uma ou mais variáveis. Você pode configurar a tarefa para especificar os nomes das variáveis incluídas na mensagem. Ao receber mensagens, você pode configurar a tarefa para especificar o pacote do qual ela pode receber mensagens e a variável que será o destino da mensagem.  
+-   `Variable` especifica que a mensagem contém uma ou mais variáveis. Você pode configurar a tarefa para especificar os nomes das variáveis incluídas na mensagem. Ao receber mensagens, você pode configurar a tarefa para especificar o pacote do qual ela pode receber mensagens e a variável que será o destino da mensagem.  
   
 ## <a name="sending-messages"></a>enviando mensagens  
  Ao configurar a tarefa Fila de Mensagens para enviar mensagens, você pode usar um dos algoritmos de criptografia que são atualmente suportados pela tecnologia de Serviço de enfileiramento de mensagens, RC2 e RC4, para criptografar a mensagem. Ambos esses algoritmos de criptografia são agora considerados criptograficamente fracos comparados a algoritmos mais novos que a tecnologia de Serviço de enfileiramento de mensagens ainda não aceita. Então, você deve considerar cuidadosamente suas necessidades de criptografia ao enviar mensagens que usam a tarefa Fila de Mensagens.  
@@ -76,7 +74,7 @@ ms.locfileid: "62831473"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Mensagens de registro personalizadas disponíveis na tarefa Fila de Mensagens  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Fila de Mensagens. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Indica que a tarefa finalizou a abertura da fila de mensagens.|  
 |`MSMQBeforeOpen`|Indica que a tarefa começou a abrir a fila de mensagens.|  
@@ -90,11 +88,11 @@ ms.locfileid: "62831473"
 ## <a name="configuration-of-the-message-queue-task"></a>Configuração da tarefa Fila de Mensagens  
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente. Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da tarefa fila de mensagens &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Fila de Mensagens &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa fila de mensagens &#40;página receber&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor da Tarefa Fila de Mensagens &#40;Página Receber&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor da tarefa fila de mensagens &#40;Enviar página&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor da Tarefa Fila de Mensagens &#40;Página Enviar&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -104,7 +102,7 @@ ms.locfileid: "62831473"
  Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

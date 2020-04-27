@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830188"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
@@ -53,7 +53,7 @@ ms.locfileid: "62830188"
   
 |Para calcular|Qual ajuda identificar|Use este perfil|  
 |----------------|-------------------------|----------------------|  
-|Todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.|**Valores de cadeia de caracteres que não são válidos**– por exemplo, você faz o perfil de uma coluna que deve usar dois caracteres para códigos de estado na Estados Unidos, mas descobre valores que têm mais de dois caracteres.|**Distribuição de comprimento de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
+|Todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.|**Valores de cadeias de caracteres que não são válidos** – por exemplo, você cria o perfil de uma coluna que deve usar dois caracteres para códigos de estados nos Estados Unidos, mas descobre valores maiores que dois caracteres.|**Distribuição de comprimento de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
 |Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores de cadeia de caracteres que não são válidos ou não estão no formato correto-** Por exemplo, um perfil de padrão de uma coluna CEP/código postal pode produzir as expressões regulares: \d{5}-\d{4}, \d{5}e \d{9}. Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil de padrão de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
 |A porcentagem de valores nulos na coluna selecionada.|**Uma taxa alta inesperada de valores nulos em uma coluna-** Por exemplo, você faz o perfil de uma coluna que deve conter Estados Unidos CEPs, mas descobre um percentual alto inaceitável de códigos postais ausentes.|**Razão nula de coluna-** Válido para uma coluna com estes tipos de dados:<br /><br /> Qualquer tipo de dados. Isso inclui `image`, `text`, `xml`, tipos definidos pelo usuário e tipos de variável.|  
 |Estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas `datetime`.|**Valores numéricos e datas que não são válidos**– por exemplo, você faz o profile de uma coluna de datas históricas, mas descobre uma data máxima que está no futuro.|**Perfil de estatísticas de coluna-** Válido para uma coluna com um destes tipos de dados:<br /><br /> Tipos de dados numéricos: tipos Integer (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipos de dados de data e hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`<br />Observação: Para uma coluna que tem um tipo de dados de data e hora, o perfil calcula o mínimo e o máximo apenas.|  
@@ -74,21 +74,21 @@ ms.locfileid: "62830188"
   
  Cada um dos perfis de dados disponíveis tem as próprias opções de configuração. Para obter mais informações sobre essas opções, consulte os tópicos a seguir:  
   
--   [Opções de solicitação de perfil de chave de candidato &#40;tarefa perfil de dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil distribuição de comprimento de coluna &#40;tarefa criação de perfis de dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa criação de perfis de dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Perfil de Padrão de Coluna opções de solicitação &#40;tarefa criação de perfil de dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Padrão de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa criação de perfis de dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil distribuição de valor de coluna &#40;tarefa criação de perfis de dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil Distribuição de Valor de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de dependência funcional &#40;tarefa criação de perfis de dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Dependência Funcional &#40;Tarefa Criação de Perfil de Dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de inclusão de valor &#40;tarefa criação de perfis de dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Execução do pacote que contém a tarefa Criação de Perfil de Dados  
  Depois de configurar a tarefa Criação de Perfil de Dados, você poderá executá-la. A tarefa, então, calculará os perfis de dados e produzirá essa informação em formato XML a um arquivo ou uma variável de pacote. A estrutura desse XML seguirá o esquema DataProfile.xsd. Você pode abrir o esquema no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquema, em um editor de XML ou em um editor de texto como o bloco de notas. Esse esquema de informações de qualidade de dados pode ser útil para as seguintes finalidades:  

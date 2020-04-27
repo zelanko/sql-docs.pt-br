@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871263"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
@@ -33,7 +33,7 @@ ms.locfileid: "62871263"
   
      [Pré-requisitos](#Prerequisites)  
   
--   **Aos**  
+-   **Procedimentos:**  
   
      [Recompilar bancos de dados do sistema](#RebuildProcedure)  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62871263"
   
      [Criar um novo banco de dados msdb](#CreateMSDB)  
   
--   **Acompanhar:**  
+-   **Acompanhamento:**  
   
-     [Solucionar erros de recompilação](#Troubleshoot)  
+     [Solução de problemas de erros de recriação](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Quando os bancos de dados do sistema mestre, modelo, msdb e tempdb são recriados, os bancos de dados são descartados e recriados em seu local original. Se uma ordenação nova for especificada na instrução REBUILD, os bancos de dados do sistema serão criados usando essa configuração de ordenação. Todas as modificações do usuário nesses bancos de dados são perdidas. Por exemplo, você pode ter objetos definidos pelo usuário no banco de dados mestre, trabalhos agendados no msdb ou alterações nas configurações padrão do banco de dados modelo.  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Execute as tarefas a seguir antes de recriar os bancos de dados do sistema para garantir que os bancos de dados possam ser restaurados para suas configurações atuais.  
   
 1.  Registre todos os valores de configuração em todo o servidor.  
@@ -86,7 +86,7 @@ ms.locfileid: "62871263"
   
 7.  Verifique se as cópias dos arquivos de log modelo do mestre, do modelo e do msdb existem no servidor local. O local padrão dos arquivos de modelo é C:\Arquivos de Programas\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Templates. Esses arquivos são usados durante o processo de recriação e devem estar presentes para que a Instalação tenha êxito. Se eles estiverem ausentes, execute o recurso de Instalação Reparar ou copie os arquivos manualmente da mídia de instalação. Para localizar os arquivos na mídia de instalação, navegue até o diretório da plataforma adequada (x86 ou x64) e, em seguida, navegue até setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a>Recompilar bancos de dados do sistema  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Recriar bancos de dados do sistema  
  O procedimento a seguir recria os bancos de dados do sistema mestre, modelo, msdb e tempdb. Você não pode especificar os bancos de dados do sistema que devem ser recriados. Para instâncias clusterizadas, esse procedimento deve ser executado no nó ativo, e o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no grupo de aplicativos de cluster correspondente deve estar offline antes da execução do procedimento.  
   
  Esse procedimento não recria o banco de dados de recursos. Consulte a seção, "Procedimento de recriação do banco de dados de recursos" mais adiante neste tópico.  
@@ -99,12 +99,12 @@ ms.locfileid: "62871263"
   
      `Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]`  
   
-    |Nome do parâmetro|DESCRIÇÃO|  
+    |Nome do parâmetro|Descrição|  
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
     |/INSTANCENAME =*InstanceName*|É o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para a instância padrão, digite MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa `sysadmin`. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, insira: `NT AUTHORITY\SYSTEM`.|  
+    |/SQLSYSADMINACCOUNTS =*contas*|Especifica os grupos ou contas individuais do Windows a serem adicionados à função de servidor fixa `sysadmin`. Ao especificar mais de uma conta, separe as contas com um espaço em branco. Por exemplo, digite **BUILTIN\Administrators MyDomain\MyUser**. Quando você estiver especificando uma conta que contém um espaço em branco dentro do nome de conta, coloque a conta entre aspas duplas. Por exemplo, insira `NT AUTHORITY\SYSTEM`.|  
     |[ /SAPWD=*StrongPassword* ]|Especifica a senha da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` conta. Esse parâmetro será exigido se a instância usar o modo de Autenticação Mista (Autenticação do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows).<br /><br /> Observação de ** \* segurança \* \* ** A `sa` conta é uma conta bem conhecida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e geralmente é direcionada por usuários mal-intencionados. É muito importante que você use uma senha forte para o logon `sa`.<br /><br /> Não especifique esse parâmetro para o modo de Autenticação do Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica uma nova ordenação no nível do servidor. Esse parâmetro é opcional. Quando não está especificado, a ordenação atual do servidor é usada.<br /><br /> ** \* Importante \* \* ** A alteração do agrupamento no nível de servidor não altera o agrupamento de bancos de dados de usuário existentes. Por padrão, todos os bancos de dados do usuário criados recentemente usarão a nova ordenação.<br /><br /> Para obter mais informações, veja [Definir ou alterar a ordenação do servidor](../collations/set-or-change-the-server-collation.md).|  
   
@@ -125,11 +125,11 @@ ms.locfileid: "62871263"
   
 -   Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver configurada como um Distribuidor de replicação, você deverá restaurar o banco de dados de distribuição. Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](../replication/administration/back-up-and-restore-replicated-databases.md).  
   
--   Mova os bancos de dados do sistema para os locais que você registrou anteriormente. Para saber mais, confira [Mover bancos de dados do sistema](system-databases.md).  
+-   Mova os bancos de dados do sistema para os locais que você registrou anteriormente. Para obter mais informações, veja [Mover bancos de dados do sistema](system-databases.md).  
   
 -   Verifique se os valores da configuração de todo o servidor correspondem aos valores registrados anteriormente.  
   
-##  <a name="Resource"></a>Recriar o banco de dados de recursos  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Recriar o banco de dados de recursos  
  O procedimento a seguir recria o banco de dados de recursos do sistema. Quando você recria o banco de dados de recursos, todos os service packs e hot fixes são perdidos, e portanto, devem ser reaplicados.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Para recriar o banco de dados do sistema de recursos:  
@@ -146,7 +146,7 @@ ms.locfileid: "62871263"
   
 6.  Na página **Pronto para Reparar** , clique em **Reparar**. A página Concluído indica que a operação foi concluída.  
   
-##  <a name="CreateMSDB"></a>Criar um novo banco de dados msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Criar um novo banco de dados msdb  
  Se o `msdb` banco de dados estiver danificado e você não tiver um backup do `msdb` banco de dados, você poderá criar `msdb` um novo usando o script **instmsdb** .  
   
 > [!WARNING]  
@@ -156,7 +156,7 @@ ms.locfileid: "62871263"
   
 2.  Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da linha de comando usando o comando: `NET START MSSQLSERVER /T3608`  
   
-     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Em outra janela de linha de comando, `msdb` desanexe o banco de dados executando o comando a seguir, substituindo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] * \<ServerName>* pela instância de:`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -174,9 +174,9 @@ ms.locfileid: "62871263"
   
 9. Recrie o conteúdo do usuário armazenado no `msdb` banco de dados, como trabalhos, alerta, etc.  
   
-10. Faça backup do banco de dados do `msdb`.  
+10. Faça backup do banco de dados do `msdb` .  
   
-##  <a name="Troubleshoot"></a>Solucionar erros de recompilação  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Solução de problemas de erros de recriação  
  Erros de sintaxe e outros erros em tempo de execução são exibidos na janela do prompt de comando. Examine os erros de sintaxe a seguir na instrução da Instalação:  
   
 -   Marca de barra (/) ausente na frente de cada nome de parâmetro.  

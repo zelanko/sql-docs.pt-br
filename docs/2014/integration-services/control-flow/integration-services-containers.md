@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831254"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
-  Contêineres são objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no que fornecem a estrutura para pacotes e serviços para tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  
+  Contêineres são objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que fornecem estrutura a pacotes e serviços a tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  
   
  Os pacotes usam contêineres para os propósitos a seguir:  
   
@@ -35,14 +35,13 @@ ms.locfileid: "62831254"
 -   Agrupar tarefas e contêineres que precisam ter êxito ou falhar como uma unidade. Por exemplo, um pacote pode agrupar tarefas que excluem e somam linhas em uma tabela de banco de dados, e então confirmar ou reverter todas as tarefas quando uma apresentar falha.  
   
 ## <a name="container-types"></a>Tipos de contêineres  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece quatro tipos de contêineres para criar pacotes. A tabela a seguir lista os tipos de contêineres.  
   
 |Contêiner|DESCRIÇÃO|  
 |---------------|-----------------|  
-|[Contêiner Loop Foreach](foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
-|[Contêiner Loop For](for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
-|[Contêiner de sequência](sequence-container.md)|Agrupa tarefas e contêineres em fluxos de controle que são subconjuntos do fluxo de controle de pacote.|  
+|[Contêiner do Loop Foreach](foreach-loop-container.md)|Executa um fluxo de controle repetidamente usando um enumerador.|  
+|[Contêiner do Loop For](for-loop-container.md)|Executa um fluxo de controle repetidamente testando uma condição.|  
+|[Contêiner da Sequência](sequence-container.md)|Agrupa tarefas e contêineres em fluxos de controle que são subconjuntos do fluxo de controle de pacote.|  
 |[Contêiner Host da Tarefa](task-host-container.md)|Fornece serviços a uma única tarefa.|  
   
  Pacotes e manipuladores de eventos também são tipos de contêineres. Para obter informações, consulte [Pacotes do Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md) e [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
@@ -92,7 +91,7 @@ ms.locfileid: "62831254"
 ### <a name="event-handlers"></a>Manipuladores de eventos  
  Os manipuladores de eventos no nível de contêiner respondem a eventos gerados pelo contêiner ou aos objetos nele incluídos. Para obter mais informações, consulte [Manipuladores de Eventos do Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
-### <a name="variables"></a>variáveis  
+### <a name="variables"></a>Variáveis  
  As variáveis usadas em contêineres incluem as variáveis do sistema no nível de contêiner fornecidas pelo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e as variáveis definidas pelo usuário usadas pelo contêiner. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Pontos de interrupção  

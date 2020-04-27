@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832445"
 ---
 # <a name="data-flow-task"></a>Tarefa de Fluxo de Dados
@@ -44,9 +44,7 @@ ms.locfileid: "62832445"
  ![Fluxos de dados](../media/mw-dts-09.gif "Fluxos de dados")  
   
 ## <a name="log-entries"></a>Entradas de log  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece um conjunto de eventos de log que estão disponíveis para todas as tarefas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] também fornece entradas de log personalizadas a muitas tarefas. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md). A tarefa de Fluxo de Dados inclui as seguintes entradas de log personalizadas:  
   
 |Entrada de log|DESCRIÇÃO|  
 |---------------|-----------------|  
@@ -90,13 +88,13 @@ ms.locfileid: "62832445"
   
  Por exemplo, a tabela a seguir contém a mensagem "Foram fornecidas linhas para um componente de fluxo de dados como entrada. :  : 1185: Saída de origem OLE DB: 1180: Classificação: 1181: Classificar entrada: 76", analisado em colunas. A mensagem foi gravada pelo evento `OnPipelineRowsSent` quando foram enviadas linhas da origem OLE DB para a transformação Classificação.  
   
-|Coluna|DESCRIÇÃO|Valor|  
+|Coluna|Descrição|Valor|  
 |------------|-----------------|-----------|  
-|**Caminhoid**|O valor da propriedade `ID` do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
+|**PathID**|O valor da propriedade `ID` do caminho entre a origem OLE DB e a transformação Classificação.|1185|  
 |**PathName**|O valor da propriedade `Name` do caminho.|Saída da origem OLE DB|  
 |**ComponentID**|O valor da `ID` propriedade da transformação classificação.|1180|  
 |**ComponentName**|O valor da propriedade `Name` da transformação Classificação.|Classificar|  
-|**Inputid**|O valor da propriedade `ID` da entrada para a transformação Classificação.|1181|  
+|**InputID**|O valor da propriedade `ID` da entrada para a transformação Classificação.|1181|  
 |**InputName**|O valor da propriedade `Name` da entrada para a transformação Classificação.|Classificar entrada|  
 |**RowsSent**|O número de linhas enviadas para a entrada da transformação Classificação.|76|  
   
@@ -105,15 +103,15 @@ ms.locfileid: "62832445"
   
  Para obter mais informações sobre como definir essas propriedades na janela **Propriedades** , clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuração programática da tarefa Fluxo de Dados  
  Para obter mais informações sobre como adicionar uma tarefa de fluxo de dados programaticamente em um pacote e definir propriedades de fluxo de dados, clique no tópico a seguir:  
   
--   [Adicionar a tarefa de Fluxo de Dados programaticamente](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [Adicionando a tarefa Fluxo de Dados programaticamente](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+ [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  Vídeo, [Distribuidor de Dados Balanceados](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com.  

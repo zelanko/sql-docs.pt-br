@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856160"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de mala direta (Tutorial de mineração de dados básico)
@@ -35,11 +35,11 @@ ms.locfileid: "62856160"
     > [!NOTE]  
     >  Se você receber um aviso de que não é possível encontrar nenhum algoritmo de mineração de dados, as propriedades do projeto talvez não sejam configuradas corretamente. Esse aviso ocorre quando o projeto tenta recuperar uma lista de algoritmos de mineração de dados do servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e não consegue encontrá-lo. Por padrão, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] o usará **localhost** como o servidor. Se você estiver usando uma instância diferente ou uma instância nomeada, altere as propriedades do projeto. Para obter mais informações, consulte [criando um projeto de Analysis Services &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **selecionar exibição da fonte de dados** , no painel **exibições da fonte de dados disponíveis** , selecione **endereçamento direcionado**. Você pode clicar em **procurar** para exibir as tabelas na exibição da fonte de dados e, em seguida, clicar em **fechar** para retornar ao assistente.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página **especificar tipos de tabela** , marque a caixa de seleção na coluna **caso** de vTargetMail para usá-la como a tabela de casos e clique em **Avançar**. Você usará a tabela ProspectiveBuyer posteriormente para testes; ignore-a por enquanto.  
   
@@ -94,19 +94,19 @@ ms.locfileid: "62856160"
   
     -   **AddressLine1**  
   
-    -   **Endereço2**  
+    -   **AddressLine2**  
   
     -   **DateFirstPurchase**  
   
     -   **EmailAddress**  
   
-    -   **Nome**  
+    -   **FirstName**  
   
     -   **LastName**  
   
      Verifique se essas linhas só possuem marcações na coluna à esquerda. Essas colunas serão adicionadas à sua estrutura mas não serão incluídas no modelo. No entanto, depois que o modelo for criado, elas estarão disponíveis para detalhamento e teste. Para obter mais informações sobre detalhamento, consulte [consultas de detalhamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. Clique em **Próximo**.  
+14. Clique em **Avançar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Especificando o tipo de dados e o tipo de conteúdo &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

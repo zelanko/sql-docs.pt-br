@@ -15,22 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831854"
 ---
 # <a name="execute-process-task"></a>Tarefa Executar Processo
-  A tarefa Executar processo executa um aplicativo ou arquivo em lotes como parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] um fluxo de trabalho de pacote. Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
+  A tarefa Executar Processo executa um aplicativo ou arquivo de lote como parte de um fluxo de trabalho do pacote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Embora você possa usar a tarefa Executar Processo para abrir qualquer aplicativo padrão, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou [!INCLUDE[ofprword](../../includes/ofprword-md.md)], você geralmente o utiliza para executar aplicativos de negócios ou arquivos de lote que trabalham em uma fonte de dados. Por exemplo, você pode usar a tarefa Executar Processo para expandir um arquivo de texto compactado. Depois, o pacote pode usar o arquivo de texto como uma fonte de dados para o fluxo de dados no pacote. Como outro exemplo, você pode usar a tarefa Executar Processo para executar um aplicativo [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizado que gera um relatório de vendas diário. Em seguida, você pode anexar o relatório a uma tarefa Enviar Email e encaminhar o relatório para uma lista de distribuição.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui outras tarefas que realizam operações de fluxo de trabalho como executar pacotes. Para obter mais informações, consulte [tarefa Executar Pacote](execute-package-task.md)  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui outras tarefas que realizam operações de fluxo de trabalho como executar pacotes. Para obter mais informações, consulte [Tarefa Executar Pacote](execute-package-task.md)  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Entradas de log personalizadas disponíveis na tarefa Executar Processo  
  A tabela a seguir relaciona as entradas de log personalizadas para a tarefa Executar Processo. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|Fornece informações sobre o processo que a tarefa é configurada para executar.<br /><br /> São gravadas duas entradas de log. Uma contém informações sobre o nome e o local do executável que a tarefa executa e a outra registra a saída do executável.|  
 |`ExecuteProcessVariableRouting`|Fornece informações sobre quais variáveis são encaminhadas para a entrada e as saídas do executável. As entradas de log são gravadas em stdin (a entrada), stdout (a saída) e stderr (a saída do erro).|  
@@ -40,13 +39,13 @@ ms.locfileid: "62831854"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa Executar processo &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Executar Processo &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa Executar processo &#40;página processo&#41;](../execute-process-task-editor-process-page.md)  
+-   [Editor da Tarefa Executar Processo &#40;Página Processo&#41;](../execute-process-task-editor-process-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ### <a name="property-settings"></a>Configurações de propriedades  
  Quando a tarefa Executar Processo executa um aplicativo personalizado, a tarefa fornece entrada para o aplicativo por meio de um ou de ambos estes métodos:  
@@ -61,7 +60,7 @@ ms.locfileid: "62831854"
   
  Você pode usar uma expressão para definir várias propriedades da tarefa Executar Processo.  
   
- Quando você usa a propriedade **StandardInputVariable** para configurar a tarefa Executar processo para fornecer entrada, chame o `Console.ReadLine` método do aplicativo para ler a entrada. Para obter mais informações, consulte o tópico [Método Console.ReadLine](https://go.microsoft.com/fwlink/?LinkId=129201)na Biblioteca de Classes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Quando você usa a propriedade **StandardInputVariable** para configurar a tarefa Executar processo para fornecer entrada, chame o `Console.ReadLine` método do aplicativo para ler a entrada. Para obter mais informações, confira o tópico [Método Console.ReadLine](https://go.microsoft.com/fwlink/?LinkId=129201)na Biblioteca de Classes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Quando você usar a propriedade **Arguments** para configurar a tarefa Executar Processo para fornecer entrada, execute uma destas etapas para obter os argumentos:  
   
@@ -88,7 +87,7 @@ ms.locfileid: "62831854"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

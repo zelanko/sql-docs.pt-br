@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833104"
 ---
 # <a name="odata-connection-manager"></a>Gerenciador de conexões do OData
@@ -48,7 +48,7 @@ ms.locfileid: "62833104"
   
 |||  
 |-|-|  
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |Url|URL do documento de serviço.|  
 |UserName|Nome de usuário para ser usado na autenticação básica.|  
 |Senha|Senha a ser usada na autenticação básica.|  

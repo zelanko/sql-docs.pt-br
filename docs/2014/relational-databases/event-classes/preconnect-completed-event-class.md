@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827077"
 ---
 # <a name="preconnectcompleted-event-class"></a>Classe de evento PreConnect:Completed
@@ -41,12 +41,12 @@ ms.locfileid: "62827077"
 |GroupID|`int`|O ID do grupo de cargas de trabalho classificado.|66|Sim|  
 |Erro|`int`|O último número do erro, caso a função de classificação definida pelo usuário não seja executada.|31|Sim|  
 |Estado|`int`|O estado do último erro.|30|Sim|  
-|TargetUserName|`sysname`|O valor de retorno (nome do grupo de cargas de trabalho) para a função de classificação definida pelo usuário, caso o sistema não consiga encontrar um grupo ativo correspondente. Caso contrário, essa coluna será definida como NULL.|11,8|Sim|  
+|TargetUserName|`sysname`|O valor de retorno (nome do grupo de cargas de trabalho) para a função de classificação definida pelo usuário, caso o sistema não consiga encontrar um grupo ativo correspondente. Caso contrário, essa coluna será definida como NULL.|39|Sim|  
 |ObjectName|`nvarchar(256)`|O nome de duas partes da função de classificador definida pelo usuário. Por exemplo, dbo.classifier.|34|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [Classe de evento PreConnect:Starting](preconnect-starting-event-class.md)   
+ [Classe de evento PreConnect: Starting](preconnect-starting-event-class.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   
   

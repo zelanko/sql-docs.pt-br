@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829489"
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Para obter informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos tópicos a seguir:  
   
--   [Editor da tarefa leitor de dados do WMI &#40;página Opções do WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor da Tarefa Leitor de Dados do WMI &#40;Página Opções do WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -95,10 +95,10 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

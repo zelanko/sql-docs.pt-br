@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830557"
 ---
 # <a name="script-task"></a>Tarefa Script
@@ -66,7 +66,7 @@ ms.locfileid: "62830557"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurando a tarefa Script no Designer  
  A tabela a seguir descreve o evento `ScriptTaskLogEntry` que pode ser registrado para a tarefa Script. O `ScriptTaskLogEntry` evento é selecionado para registro na guia **detalhes** da caixa de diálogo **Configurar Logs do SSIS** . Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Informa os resultados da implementação do registro em log no script. A tarefa grava uma entrada de log para cada chamada ao método `Log` do objeto `Dts`. A tarefa grava essas entradas quando o código é executado. Para obter mais informações, consulte [Registro em log na Tarefa Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62830557"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, consulte o tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configurando a tarefa Script programaticamente  
  Para obter mais informações sobre como definir essas propriedades programaticamente, veja o tópico a seguir:  

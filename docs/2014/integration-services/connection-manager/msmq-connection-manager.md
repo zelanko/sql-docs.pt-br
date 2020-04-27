@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833643"
 ---
 # <a name="msmq-connection-manager"></a>Gerenciador de conexões MSMQ
-  Um gerenciador de conexões MSMQ permite que um pacote se conecte a uma fila de mensagens que usa Serviço de enfileiramento de mensagens (também conhecido como MSMQ). A tarefa fila de mensagens [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que o inclui usa um Gerenciador de conexões MSMQ.  
+  Um gerenciador de conexões MSMQ permite que um pacote se conecte a uma fila de mensagens que usa Serviço de enfileiramento de mensagens (também conhecido como MSMQ). A tarefa Fila de Mensagens que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui, utiliza um gerenciador de conexões MSMQ.  
   
  Ao adicionar um gerenciador de conexões MSMQ a um pacote, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cria um gerenciador de conexões que disponibilizará uma conexão do MSMQ em tempo de execução, define as propriedades do gerenciador de conexões e adiciona o gerenciador de conexões à coleção de `Connections` no pacote. A propriedade `ConnectionManagerType` do gerenciador de conexões é definida como `MSMQ`.  
   
@@ -37,10 +37,8 @@ ms.locfileid: "62833643"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|
-  \<nome do computador>\\<nome da fila\>|  
-|Private|
-  \<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<nome do computador>\\<nome da fila\>|  
+|Privado|\<nome do computador>\Private$\\<nome da fila\>|  
   
  Você pode usar um ponto (.) para representar o computador local.  
   

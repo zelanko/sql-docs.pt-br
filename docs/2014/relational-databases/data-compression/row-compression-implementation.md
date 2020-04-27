@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873007"
 ---
 # <a name="row-compression-implementation"></a>Implementação da compactação de linha
@@ -57,20 +57,20 @@ ms.locfileid: "62873007"
 |`datetime2`|Sim|Usa a representação de dados de inteiro usando de 6 a 9 bytes. Os primeiros 4 bytes representam a data. Os bytes ocupados pela hora dependem da precisão da hora que é especificada.<br /><br /> O valor de inteiro representa o número de dias desde 1/1/0001 com um limite superior de 31/12/9999. Para representar uma data no ano 2005, a compactação utiliza 3 bytes.<br /><br /> Não há aumento de hora porque é permitido de 2 a 4 bytes para várias precisões de hora. Portanto, para precisão de um segundo, a compactação usa 2 bytes para a hora, que ocupa o segundo byte depois de 255 segundos.|  
 |`datetimeoffset`|Sim|Semelhante a `datetime2`, exceto pelo fato de que há 2 bytes de fuso horário do formato (HH:MM).<br /><br /> Como `datetime2`, a compactação pode salvar 2 bytes.<br /><br /> Para valores de fuso horário, o valor MM pode ser 0 na maioria dos casos. Portanto, a compactação pode salvar possivelmente 1 byte.<br /><br /> Não há alteração alguma no armazenamento para compactação de linha.|  
 |`char`|Sim|Caracteres de preenchimento à direita são removidos. Observe que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] insere o mesmo caractere de preenchimento, independentemente da ordenação usada.|  
-|`varchar`|Não|Sem efeito.|  
-|`text`|Não|Sem efeito.|  
+|`varchar`|Não|Nenhum efeito.|  
+|`text`|Não|Nenhum efeito.|  
 |`nchar`|Sim|Caracteres de preenchimento à direita são removidos. Observe que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] insere o mesmo caractere de preenchimento, independentemente da ordenação usada.|  
-|`nvarchar`|Não|Sem efeito.|  
-|`ntext`|Não|Sem efeito.|  
+|`nvarchar`|Não|Nenhum efeito.|  
+|`ntext`|Não|Nenhum efeito.|  
 |`binary`|Sim|Zeros à direita são removidos.|  
-|`varbinary`|Não|Sem efeito.|  
-|`image`|Não|Sem efeito.|  
+|`varbinary`|Não|Nenhum efeito.|  
+|`image`|Não|Nenhum efeito.|  
 |`cursor`|Não|Nenhum efeito.|  
 |`timestamp` / `rowversion`|Sim|Usa a representação de dados inteiros com 8 bytes. Há um contador de carimbo de data/hora mantido para cada banco de dados e seu valor começa em 0. Ele pode ser compactado como qualquer outro valor de inteiro.|  
-|`sql_variant`|Não|Sem efeito.|  
-|`uniqueidentifier`|Não|Sem efeito.|  
+|`sql_variant`|Não|Nenhum efeito.|  
+|`uniqueidentifier`|Não|Nenhum efeito.|  
 |`table`|Não|Nenhum efeito.|  
-|`xml`|Não|Sem efeito.|  
+|`xml`|Não|Nenhum efeito.|  
 |Tipos definidos pelo usuário|Não|É representado internamente como `varbinary`.|  
 |FILESTREAM|Não|É representado internamente como `varbinary`.|  
   

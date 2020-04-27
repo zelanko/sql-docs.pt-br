@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e89c081c1c543c198a827955ab4865709ead391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830420"
 ---
 # <a name="rebuild-index-task"></a>Tarefa Recriar Índice
@@ -59,7 +59,7 @@ ms.locfileid: "62830420"
  Para obter mais informações sobre como definir essas propriedades no Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , consulte [Definir as propriedades de uma tarefa ou um contêiner](../set-the-properties-of-a-task-or-container.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

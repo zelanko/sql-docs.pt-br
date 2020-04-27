@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830118"
 ---
 # <a name="transfer-error-messages-task"></a>Tarefa Transferir Mensagens de Erro
@@ -65,7 +65,7 @@ ms.locfileid: "62830118"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa transferir mensagens de erro &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor da Tarefa Transferir Mensagens de Erro &#40;Página Mensagens&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
@@ -78,10 +78,10 @@ ms.locfileid: "62830118"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

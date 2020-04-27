@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842395"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP in-memory
@@ -22,9 +22,9 @@ ms.locfileid: "62842395"
   
 ### <a name="system-views"></a>Exibições do sistema  
   
-|Exibição do sistema|DESCRIÇÃO|Recurso de OLTP na memória|  
+|Exibição do sistema|Descrição|Recurso de OLTP na memória|  
 |-----------------|-----------------|-----------------------------|  
-|[sys. data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se um grupo de arquivos contém dados com otimização de memória.|As colunas a seguir exibem valores adicionais: **Type** e **type_desc**.|  
+|[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Verifica se um grupo de arquivos contém dados com otimização de memória.|As colunas a seguir exibem valores adicionais: **Type** e **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Verifica se um índice está em uma tabela com otimização de memória.|As colunas a seguir exibem valores adicionais: **Type** e **type_desc**.|  
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Verifique se o parâmetro não é anulável (para uma execução mais eficiente de um procedimento armazenado compilado nativamente).|**IS_NULLABLE** coluna.|  
 |[sys. all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Verifique se algum procedimento armazenado foi originalmente compilado.|**uses_native_compilation** coluna.|  
@@ -35,14 +35,14 @@ ms.locfileid: "62842395"
   
 ### <a name="metadata-functions"></a>Funções de metadados  
   
-|Função de metadados|DESCRIÇÃO|Recurso de OLTP na memória|  
+|Função de metadados|Descrição|Recurso de OLTP na memória|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Verifica se os objetos de banco de dados tem otimização de memória.|Propriedades **ExecIsWithNativeCompilation** e **TableIsMemoryOptimized** .<br /><br /> A propriedade **IsSchemaBound** dá suporte ao tipo de objeto de procedimento (retorna 0 para procedimentos em vez de NULL).|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Verifica se um servidor dá suporte a OLTP na memória.|Propriedade **IsXTPSupported** .|  
   
 ### <a name="system-stored-procedures"></a>Procedimentos armazenados do sistema  
   
-|Procedimento armazenado|DESCRIÇÃO|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Associa um banco de dados de OLTP na memória para um pool de recursos.|  
 |[sys. sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Inicia a coleta de lixo em um banco de dados de OLTP na memória.|  
@@ -63,6 +63,6 @@ ms.locfileid: "62842395"
   
 ## <a name="see-also"></a>Consulte Também  
  [O OLTP na memória &#40;a otimização na memória&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
- [Suporte ao Transact-SQL para OLTP in-memory](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+ [Suporte ao Transact-SQL para OLTP na memória](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

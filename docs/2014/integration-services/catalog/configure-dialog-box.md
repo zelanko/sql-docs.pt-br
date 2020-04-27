@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836089"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
@@ -32,7 +32,7 @@ ms.locfileid: "62836089"
   
 -   [Definir as opções na página Referências](#references)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Configurar  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Abrir a caixa de diálogo Configurar  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se ao servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62836089"
   
 5.  Clique com o botão direito do mouse no pacote ou projeto e clique em **Configurar**.  
   
-##  <a name="parameter"></a> Definir as opções na página Parâmetros  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Definir as opções na página Parâmetros  
  Use a página **Parâmetros** para exibir nomes e valores de parâmetro, e para modificar os valores.  
   
  Selecione o escopo dos parâmetros exibidos nas guias **Parâmetros** e **Gerenciadores de Conexões** , na lista suspensa **Escopo** .  
@@ -76,7 +76,7 @@ ms.locfileid: "62836089"
  **Valor**  
  Lista o valor atribuído à propriedade do gerenciador de conexões. Clique no botão de reticências para alterar o valor na caixa de diálogo **Definir Valor do Parâmetro** . Você pode inserir um valor literal, mapear uma variável de ambiente que contém o valor a ser usado, ou usar o valor padrão do pacote.  
   
-##  <a name="references"></a> Definir as opções na página Referências  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Definir as opções na página Referências  
  Use a página **Referências** para adicionar e remover referências a ambientes, e para acessar propriedades de ambiente.  
   
  Um ambiente especificar valores de runtime para pacotes contidos nos projetos que você implantou no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

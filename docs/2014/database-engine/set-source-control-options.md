@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843699"
 ---
 # <a name="set-source-control-options"></a>Definir opções de controle do código-fonte
@@ -50,7 +50,7 @@ ms.locfileid: "62843699"
      **Descrição da função**  
      Selecionar uma dessas funções faz com que as opções de controle do código-fonte apropriadas sejam automaticamente selecionadas.  
   
-    |Função|DESCRIÇÃO|  
+    |Função|Descrição|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações usadas com mais frequência pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor Independente**|Especifica que você está trabalhando independentemente.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62843699"
      **Executar atualizações de status em plano de fundo**  
      Atualiza automaticamente os ícones de sinalização do controle do código fonte no Gerenciador de Soluções conforme o status de um item é alterado. Se você constatar atrasos ao executar operações que exijam muito do servidor, especialmente ao abrir uma solução ou projeto do controle do código fonte, tente desmarcar essa caixa de seleção, pois isso pode melhorar o desempenho.  
   
-     **ID de logon**  
+     **ID de Logon**  
      Especifica o nome de usuário a usar para fazer o logon no provedor de controle do código-fonte. Se houver suporte do seu provedor de controle do código-fonte, esse nome será preenchido automaticamente na caixa de diálogo de **logon** para acessar o servidor de controle do código-fonte. Para tornar ativa essa opção, desabilite os logons de usuário automáticos usando o programa de administrador do provedor do controle do código fonte e, depois, reinicie o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
      **Avançado**  
@@ -74,7 +74,7 @@ ms.locfileid: "62843699"
      **Configurações de Ambiente de Controle do Código Fonte**  
      Especifica a função que você deseja usar. O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define as seguintes funções.  
   
-    |Função|DESCRIÇÃO|  
+    |Função|Descrição|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Especifica que você deseja usar as configurações usadas com mais frequência pelos [!INCLUDE[msCoName](../includes/msconame-md.md)] usuários do Visual SourceSafe.|  
     |**Desenvolvedor Independente**|Especifica que você está trabalhando independentemente.|  
@@ -90,7 +90,7 @@ ms.locfileid: "62843699"
   
      **Tentando**  
   
-    |Ação|DESCRIÇÃO|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |**Prompt para check out**|Exibe a caixa de diálogo **check-out** .|  
     |**Executar check out automaticamente**|Faz o check-out do item sem exibir a caixa de diálogo **check-out** . Essa é a opção padrão.|  
@@ -98,7 +98,7 @@ ms.locfileid: "62843699"
   
      **Edição**  
   
-    |Ação|DESCRIÇÃO|  
+    |Ação|Descrição|  
     |------------|-----------------|  
     |**Prompt para check out**|Exibe a caixa de diálogo **check-out** .|  
     |**Prompt para check outs exclusivos**|Exibe a caixa de diálogo **check-out** .|  
@@ -108,7 +108,7 @@ ms.locfileid: "62843699"
      **Permita a edição de itens verificados**  
      Especifica que itens cujo check-in é executado podem ser editados na memória. Se você marcar essa caixa de seleção, um botão **Editar** será exibido na caixa de diálogo **check-out** quando você tentar editar um item com check-in. Depois de clicar nesse botão, é possível editar o item. Se tentar salvar o item, você deve fazer o check out ou salvá-lo em um local diferente.  
   
-     **Definido**  
+     **Redefinir**  
      Reajusta caixas de diálogo de confirmação de controle do código-fonte para suas configurações padrão. Por exemplo, se você tiver selecionado a caixa de seleção **não mostrar esta dialogo novamente** em uma caixa de diálogo controle do código-fonte, a seleção da opção **Redefinir** inverterá essa ação.  
   
 ## <a name="see-also"></a>Consulte Também  

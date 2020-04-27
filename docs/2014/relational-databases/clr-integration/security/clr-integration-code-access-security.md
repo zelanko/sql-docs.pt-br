@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873735"
 ---
 # <a name="clr-integration-code-access-security"></a>Segurança de acesso a código da integração CLR
@@ -51,17 +51,14 @@ ms.locfileid: "62873735"
  A parte especificada pelo usuário da política de host do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se baseia na especificação de um dos três recipientes de permissão para cada assembly pelo proprietário do assembly. Para obter mais informações sobre as permissões de segurança listadas abaixo, consulte o SDK do .NET Framework.  
   
 ### <a name="safe"></a>SAFE  
- Somente a computação interna e o acesso a dados local são permitidos. 
-  `SAFE` é o conjunto de permissões mais restritivo. O código executado por um assembly com as permissões `SAFE` não pode acessar recursos externos do sistema, como arquivos, rede, variáveis de ambiente ou Registro.  
+ Somente a computação interna e o acesso a dados local são permitidos. `SAFE` é o conjunto de permissões mais restritivo. O código executado por um assembly com as permissões `SAFE` não pode acessar recursos externos do sistema, como arquivos, rede, variáveis de ambiente ou Registro.  
   
  Os assemblies `SAFE` têm as seguintes permissões e valores:  
   
 |Permissão|Valor(es)/descrição|  
 |----------------|-----------------------------|  
-|`SecurityPermission`|
-  `Execution:` permissão para executar código gerenciado.|  
-|`SqlClientPermission`|
-  `Context connection = true`, `context connection = yes`: apenas a conexão de contexto pode ser usada, e a cadeia de conexão só pode especificar um valor igual a "context connection=true" ou "context connection=yes".<br /><br /> **AllowBlankPassword = false:**  Senhas em branco não são permitidas.|  
+|`SecurityPermission`|`Execution:` permissão para executar código gerenciado.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: apenas a conexão de contexto pode ser usada, e a cadeia de conexão só pode especificar um valor igual a "context connection=true" ou "context connection=yes".<br /><br /> **AllowBlankPassword = false:**  Senhas em branco não são permitidas.|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS assemblies têm as mesmas permissões que `SAFE` os assemblies, com a capacidade adicional de acessar recursos externos do sistema, como arquivos, redes, variáveis ambientais e o registro.  
@@ -72,32 +69,18 @@ ms.locfileid: "62873735"
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:`As transações distribuídas são permitidas.|  
 |`DNSPermission`|`Unrestricted:`Permissão para solicitar informações de servidores de nome de domínio.|  
-|`EnvironmentPermission`|
-  `Unrestricted:` é permitido o acesso completo ao sistema e às variáveis de ambiente do usuário.|  
-|`EventLogPermission`|
-  `Administer:` As seguintes ações são permitidas: criar uma origem do evento, ler logs existentes, excluir origens do evento ou logs, responder a consultas, limpar um log de eventos, escutar eventos e acessar uma coleção de todos os logs de eventos.|  
-|`FileIOPermission`|
-  `Unrestricted:` é permitido o acesso completo a arquivos e pastas.|  
-|`KeyContainerPermission`|
-  `Unrestricted:` é permitido o acesso completo a contêineres de chave.|  
-|`NetworkInformationPermission`|
-  `Access:` é permitida a execução de ping.|  
+|`EnvironmentPermission`|`Unrestricted:` é permitido o acesso completo ao sistema e às variáveis de ambiente do usuário.|  
+|`EventLogPermission`|`Administer:` As seguintes ações são permitidas: criar uma origem do evento, ler logs existentes, excluir origens do evento ou logs, responder a consultas, limpar um log de eventos, escutar eventos e acessar uma coleção de todos os logs de eventos.|  
+|`FileIOPermission`|`Unrestricted:` é permitido o acesso completo a arquivos e pastas.|  
+|`KeyContainerPermission`|`Unrestricted:` é permitido o acesso completo a contêineres de chave.|  
+|`NetworkInformationPermission`|`Access:` é permitida a execução de ping.|  
 |`RegistryPermission`|Ela permite a leitura de direitos para `HKEY_CLASSES_ROOT`, `HKEY_LOCAL_MACHINE`, `HKEY_CURRENT_USER`, `HKEY_CURRENT_CONFIG` e `HKEY_USERS.`|  
-|`SecurityPermission`|
-  `Assertion:` possibilidade de declarar que todos os chamadores do código tenham a permissão necessária à operação.<br /><br /> 
-  `ControlPrincipal:` possibilidade de manipular o objeto principal.<br /><br /> 
-  `Execution:` permissão para executar código gerenciado.<br /><br /> 
-  `SerializationFormatter:` possibilidade de fornecer serviços de serialização.|  
-|**SmtpPermission**|
-  `Access:` são permitidas conexões de saída com a porta de host SMTP 25.|  
-|`SocketPermission`|
-  `Connect:` são permitidas conexões de saída (todas as portas, todos os protocolos) em um endereço de transporte.|  
-|`SqlClientPermission`|
-  `Unrestricted:` é permitido o acesso completo à fonte de dados.|  
-|`StorePermission`|
-  `Unrestricted:` é permitido o acesso completo a repositórios de certificados X.509.|  
-|`WebPermission`|
-  `Connect:` são permitidas conexões de saída com recursos da Web.|  
+|`SecurityPermission`|`Assertion:` possibilidade de declarar que todos os chamadores do código tenham a permissão necessária à operação.<br /><br /> `ControlPrincipal:` possibilidade de manipular o objeto principal.<br /><br /> `Execution:` permissão para executar código gerenciado.<br /><br /> `SerializationFormatter:` possibilidade de fornecer serviços de serialização.|  
+|**SmtpPermission**|`Access:` são permitidas conexões de saída com a porta de host SMTP 25.|  
+|`SocketPermission`|`Connect:` são permitidas conexões de saída (todas as portas, todos os protocolos) em um endereço de transporte.|  
+|`SqlClientPermission`|`Unrestricted:` é permitido o acesso completo à fonte de dados.|  
+|`StorePermission`|`Unrestricted:` é permitido o acesso completo a repositórios de certificados X.509.|  
+|`WebPermission`|`Connect:` são permitidas conexões de saída com recursos da Web.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE permite que os assemblies tenham acesso irrestrito aos recursos, dentro e fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O código em execução em um assembly `UNSAFE` também pode chamar código não gerenciado.  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828574"
 ---
 # <a name="cdc-flow-components"></a>Componentes de fluxo CDC
@@ -79,7 +79,7 @@ ms.locfileid: "62828574"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Guia de Introdução com os componentes do Change Data Capture  
  Um pacote de CDC típico processa as alterações em um grupo de tabelas. A parte básica do fluxo de controle deste tipo de pacote de CDC é mostrada na figura abaixo. Este pacote é chamado de pacote de processamento de trickle feed.  
   
- ![Fluxo de controle de pacote de processamento de trickle feed](../media/tricklefeedprocessing.gif "Fluxo de controle de pacote de processamento de trickle feed")  
+ ![Fluxo de controle de pacote de processamento de feed de fluxo](../media/tricklefeedprocessing.gif "Fluxo de controle de pacote de processamento de feed de fluxo")  
   
  Este Fluxo de Controle do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contém duas tarefas de controle CDC e a tarefa de Fluxo de Dados. A primeira tarefa chamada **Obter Intervalo de Processamento CDC** estabelece o intervalo de LSN para as alterações que são processadas na tarefa de fluxo de dados chamada **Processar Alterações**. Este intervalo é estabelecido com base no que foi processado durante a última execução de pacote e foi salvo em um repositório persistente.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "62828574"
   
  A figura a seguir mostra o fluxo de dados de **Processar Alterações** que conceitualmente mostra como as alterações são processadas.  
   
- ![Fluxo de dados de processamento de alterações](../media/processchangesdataflow.gif "Fluxo de dados de processamento de alterações")  
+ ![Fluxo de dados de alterações no processo](../media/processchangesdataflow.gif "Fluxo de dados de alterações no processo")  
   
  As etapas ilustradas nesta figura são:  
   
--   **As alterações da tabela x** são uma fonte CDC que lê as alterações feitas na tabela x que foram feitas no intervalo de processamento de CDC determinado no fluxo de controle pai.  
+-   **Alterações para a Tabela X** são uma origem de CDC que lê as alterações feitas à tabela X que foram feitas no intervalo de processamento CDC determinado no fluxo de controle pai.  
   
--   O **divisor de CDC X** é usado para dividir as alterações em inserções, exclusões e atualizações. Neste cenário, supõe-se que a Origem CDC esteja configurada para gerar alterações Líquidas de forma que diferentes tipos de alteração possam ser processadas em paralelo.  
+-   **Separador de CDC X** é usado para dividir alterações em inserções, exclusões e atualizações. Neste cenário, supõe-se que a Origem CDC esteja configurada para gerar alterações Líquidas de forma que diferentes tipos de alteração possam ser processadas em paralelo.  
   
 -   As alterações específicas são então processadas posteriormente downstream. Nesta ilustração, as alterações são inseridas em tabelas usando vários Destinos ODBC, mas, em casos reais, o processamento pode ser diferente.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62828574"
   
  Para obter mais informações sobre o Separador de CDC, consulte:  
   
- [Divisor de CDC](cdc-splitter.md)  
+ [Separador de CDC](cdc-splitter.md)  
   
  Um dos problemas básicos que exigem atenção ao criar pacotes de CDC é como o processamento de alterações interage com o carregamento inicial (ou processamento inicial) dos dados.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "62828574"
   
  A figura a seguir mostra um pacote SSIS que poderia tratar os primeiros dois cenários:  
   
- ![Pacote SSIS tratando os dois primeiros cenários](../media/scenarioonetwo.gif "Pacote SSIS tratando os dois primeiros cenários")  
+ ![Pacote SSIS que trata os dois primeiros cenários](../media/scenarioonetwo.gif "Pacote SSIS que trata os dois primeiros cenários")  
   
  A figura a seguir mostra um pacote SSIS que poderia tratar o terceiro cenário:  
   
- ![Pacote SSIS tratando o terceiro cenário](../media/scenario3.gif "Pacote SSIS tratando o terceiro cenário")  
+ ![Pacote SSIS que trata o terceiro cenário](../media/scenario3.gif "Pacote SSIS que trata o terceiro cenário")  
   
  Após um pacote de carga inicial, um pacote de atualização do trickle-feed é executado repetidamente de acordo com uma agenda para processar as alterações à medida que elas ficam disponíveis para consumo.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "62828574"
 ## <a name="cdc-state"></a>Estado CDC  
  Cada grupo de CDC tem um estado associado a ele, que é representado por uma cadeia de caracteres com um formato específico. Para obter mais informações, consulte [CDC Control Task](../control-flow/cdc-control-task.md). A tabela a seguir mostra os valores possíveis de estado de CDC.  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |0-(INITIAL)|O estado que existe antes que qualquer pacote seja executado no grupo de CDC atual. Este também é o estado quando o estado de CDC está vazio.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Este é o estado que existe quando o pacote de carga inicial é iniciado. Isto ocorre depois da chamada da operação **MarkInitialLoadStart** para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Initial-Load-Ended)|Este é o estado que existe quando o pacote de carga inicial é terminado com êxito. Isto ocorre depois da chamada da operação MarkInitialLoadEnd para a tarefa Controle CDC.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|Este é o estado que existe depois da primeira execução do pacote de atualização depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isto ocorre depois da chamada da operação **GetProcessingRange** para a tarefa Controle CDC.<br /><br /> Se estiver usando a coluna **_ $ reprocessando** , ela será definida como 1 para indicar que o pacote pode estar reprocessando as linhas que já estão no destino.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|Este é o estado que existe depois da primeira execução do pacote de atualização depois da carga inicial, enquanto ainda processa o intervalo de processamento inicial. Isto ocorre depois da chamada da operação **GetProcessingRange** para a tarefa Controle CDC.<br /><br /> Se estiver usando a coluna **_$reprocessing** , ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Este é o estado esperado para execuções regulares de CDC. Ele indica que a execução anterior foi concluída com êxito e que uma nova execução com um novo intervalo de processamento pode ser iniciada.|  
 |5-TFSTART (Trickle-Feed-Update-Started)|Este é o estado que existe em execuções subsequentes do pacote de atualização depois da chamada da operação **GetProcessingRange** para a tarefa controle CDC.<br /><br /> Isto indica que uma execução CDC regular foi iniciada, mas não foi concluída ou ainda não foi concluída completamente (**MarkProcessedRange**).<br /><br /> Para obter mais informações sobre operações de tarefa Controle CDC, consulte [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Este é o estado em um **GetProcessingRange** que ocorre depois de TFSTART. Isto indica que a execução anterior não foi concluída com êxito.<br /><br /> Se estiver usando a coluna __$reprocessing, ela será definida como 1 para indicar que o pacote pode estar reprocessando linhas já no destino.|  
@@ -194,7 +194,7 @@ ms.locfileid: "62828574"
   
 -   [Origem CDC](cdc-source.md)  
   
--   [Divisor de CDC](cdc-splitter.md)  
+-   [Separador de CDC](cdc-splitter.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

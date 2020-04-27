@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833804"
 ---
 # <a name="flat-file-connection-manager"></a>Gerenciador de conexões de arquivos simples
@@ -41,7 +41,7 @@ ms.locfileid: "62833804"
   
  Por padrão, o gerenciador de conexões de arquivos simples sempre verifica se há um delimitador de linha em dados sem aspas e inicia uma nova linha quando um delimitador de linha é localizado. Isso permite que o gerenciador de conexões analise corretamente arquivos com linhas que não têm campos de coluna.  
   
- Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desabilitar esse recurso definindo a propriedade do Gerenciador de conexões de arquivo **** simples, AlwaysCheckForRowDelimiters `False`, para.  
+ Em alguns casos, desabilitar esse recurso pode melhorar o desempenho do pacote. Você pode desabilitar esse recurso definindo a propriedade do Gerenciador de conexões de arquivo **AlwaysCheckForRowDelimiters**simples, AlwaysCheckForRowDelimiters `False`, para.  
   
  Você pode configurar um gerenciador de conexões de arquivos simples dos seguintes modos:  
   
@@ -71,13 +71,13 @@ ms.locfileid: "62833804"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor do Gerenciador de conexões de arquivos simples &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor do Gerenciador de conexões de arquivos simples &#40;página colunas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Colunas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Editor do Gerenciador de conexões de arquivos simples &#40;página avançado&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Avançado&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Editor do Gerenciador de conexões de arquivos simples &#40;página Visualização&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Editor do Gerenciador de Conexões de Arquivos Simples &#40;Página Visualização&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   

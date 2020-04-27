@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828124"
 ---
 # <a name="cdc-source"></a>Origem CDC
@@ -75,24 +75,20 @@ use <cdc-enabled-database-name>
   
  onde:  
   
--   
-  \<cdc-enabled-database-name> é o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém as tabelas de alterações.  
+-   \<cdc-enabled-database-name> é o nome do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contém as tabelas de alterações.  
   
--   
-  \<value-from-state-cs> é o valor que aparece na variável de estado CDC como CS/\<value-from-state-cs>/ (CS significa Current-processing-range-Start, início atual do intervalo de processamento).  
+-   \<value-from-state-cs> é o valor que aparece na variável de estado CDC como CS/\<value-from-state-cs>/ (CS significa Current-processing-range-Start, início atual do intervalo de processamento).  
   
--   
-  \<value-from-state-ce> é o valor que aparece na variável de estado CDC, como em CE/\<value-from-state-cs>/ (CE significa Current-processing-range-End).  
+-   \<value-from-state-ce> é o valor que aparece na variável de estado CDC, como em CE/\<value-from-state-cs>/ (CE significa Current-processing-range-End).  
   
--   
-  \<mode> corresponde aos modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
+-   \<mode> corresponde aos modos de processamento CDC. Os modos de processamento têm um dos seguintes valores: **Tudo**, **Tudo com Valores Antigos**, **Rede**, **Rede com Máscara de Atualização**, **Rede com Mesclagem**.  
   
  Este script ajuda a isolar problemas reproduzindo-os no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], onde é fácil reproduzir e identificar erros.  
   
 #### <a name="sql-server-error-message"></a>Mensagem de erro do SQL Server  
  A mensagem seguinte poderá ser retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Um número insuficiente de argumentos foi fornecido para o procedimento ou função cdc.\<fn_cdc_get_net_changes_.. >.**  
+ **Um número insuficiente de argumentos foram fornecidos ao procedimento ou função cdc.fn_cdc_get_net_changes_\<..>.**  
   
  Esse erro não indica que um argumento está faltando. Significa que os valores de LSN de início ou fim na variável de estado CDC são inválidos.  
   

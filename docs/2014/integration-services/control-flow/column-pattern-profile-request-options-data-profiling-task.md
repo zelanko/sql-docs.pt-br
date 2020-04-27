@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832603"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opções da solicitação de perfil Padrão de Coluna (tarefa Criação de Perfil de Dados)
@@ -71,7 +71,7 @@ ms.locfileid: "62832603"
 ## <a name="request-properties-options"></a>Opções de Propriedades da Solicitação  
  Para uma **Solicitação de Perfil de Padrão de Coluna**, o painel **Propriedades da Solicitação** exibe os seguintes grupos de opções:  
   
--   **Dados**, que incluem as opções de **TableOrView** e **coluna**  
+-   **Dados**que incluem as opções **TableOrView** e **Column**  
   
 -   **Geral**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62832603"
  **Esquema**  
  Especifica o esquema ao qual a tabela selecionada pertence. Esta opção é somente leitura.  
   
- **Table**  
+ **Tabela**  
  Exibe o nome da tabela selecionada. Esta opção é somente leitura.  
   
 #### <a name="column-options"></a>Opções de Coluna  
@@ -127,7 +127,7 @@ ms.locfileid: "62832603"
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  
   
- **Symbol**  
+ **Símbolos**  
  Liste os símbolos que deveriam ser retidos como parte de padrões. Exemplos poderiam incluir "/" para datas, ":" para horários e "@" para endereços de email. Por padrão, a lista de **símbolos** contém os seguintes caracteres: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
   
  Para obter mais informações, consulte "Compreendendo o uso de delimitadores e símbolos" anteriormente neste tópico.  

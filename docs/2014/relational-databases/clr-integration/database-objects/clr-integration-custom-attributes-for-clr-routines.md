@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873804"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Atributos personalizados para rotinas de CLR
@@ -70,7 +70,7 @@ ms.locfileid: "62873804"
 ## <a name="see-also"></a>Consulte Também  
  [Agregações CLR definidas pelo usuário](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [Funções CLR definidas pelo usuário](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [Tipos definidos pelo usuário de CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [Tipos CLR definidos pelo usuário](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Procedimentos armazenados CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Gatilhos CLR](../../../database-engine/dev-guide/clr-triggers.md)  
   

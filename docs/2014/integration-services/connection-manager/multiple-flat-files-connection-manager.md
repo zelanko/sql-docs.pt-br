@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833697"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gerenciador de conexões de vários arquivos simples
@@ -47,7 +47,7 @@ ms.locfileid: "62833697"
   
  Quando o gerenciador de conexões de Vários Arquivos Simples se refere a vários arquivos, os caminhos dos arquivos são separados pelo caractere de pipe (|). A propriedade `ConnectionString` do gerenciador de conexões tem o seguinte formato:  
   
- \<**>|\<*caminho* do caminho>  
+ \<*path*>|\<*path*>  
   
  Você também pode especificar vários arquivos usando curingas. Por exemplo, para fazer referência a todos os arquivos de texto na unidade C, o valor `ConnectionString` da propriedade pode ser definido como C\\: *. txt.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62833697"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor do Gerenciador de conexões de vários arquivos simples &#40;página colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Colunas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor do Gerenciador de conexões de vários arquivos simples &#40;página avançado&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Avançado&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Visualização&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Para obter informações sobre como configurar um gerenciador de conexões programaticamente, consulte <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Adicionando conexões programaticamente](../building-packages-programmatically/adding-connections-programmatically.md).  
   

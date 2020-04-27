@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835942"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer para Oracle da Attunity
@@ -34,7 +34,7 @@ ms.locfileid: "62835942"
   
 -   [Tipos de dados de instância Oracle CDC](oracle-cdc-instance-data-types.md)  
   
--   [Tratamento de erros](error-handling.md)  
+-   [Tratamento de erro](error-handling.md)  
   
 -   [A instância Oracle CDC](the-oracle-cdc-instance.md)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62835942"
   
 -   [Guia de instruções do Change Data Capture Designer para Oracle da Attunity](change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [Conexão do SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
+-   [Conexão de SQL Server para a criação de instância](sql-server-connection-for-instance-creation.md)  
   
 -   [Propriedades Avançadas de Conexão](advanced-connection-properties.md)  
   
--   [Credenciais Oracle para executar scripts](oracle-credentials-for-running-script.md)  
+-   [Credenciais Oracle para executar script](oracle-credentials-for-running-script.md)  
   
 -   [Script de log suplementar Oracle](oracle-supplemental-logging-script.md)  
   

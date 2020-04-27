@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827189"
 ---
 # <a name="performance-statistics-event-class"></a>classe de evento Performance Statistics
@@ -48,7 +48,7 @@ ms.locfileid: "62827189"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|`image`|O XML binário do plano compilado.|2|Sim|  
@@ -72,7 +72,7 @@ ms.locfileid: "62827189"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|`image`|O XML binário do plano compilado.|2|Sim|  
@@ -95,7 +95,7 @@ ms.locfileid: "62827189"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|O número cumulativo de vezes que esse plano foi recompilado.|52|Sim|  
 |BinaryData|`image`|NULO|2|Sim|  
@@ -115,7 +115,7 @@ ms.locfileid: "62827189"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULO|52|Sim|  
 |BinaryData|`image`|NULO|2|Sim|  
@@ -135,7 +135,7 @@ ms.locfileid: "62827189"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Nome da coluna de dados|Tipo de dados|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|Tipo de dados|Descrição|ID da coluna|Filtrável|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULO|52|Sim|  
 |BinaryData|`image`|NULO|2|Sim|  
@@ -155,8 +155,8 @@ ms.locfileid: "62827189"
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Classe de evento Showplan XML for Query Compile](showplan-xml-for-query-compile-event-class.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Classe de evento Showplan XML for Query compile](showplan-xml-for-query-compile-event-class.md)   
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](../views/views.md)  
   
   

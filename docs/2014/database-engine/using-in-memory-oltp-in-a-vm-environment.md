@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843050"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Usando OLTP na Memória em um Ambiente de VM
   A virtualização do servidor pode ajudá-lo a diminuir os custos operacionais e de capital com a TI, e atingir uma maior eficiência de TI com processos de provisionamento de aplicativo, manutenção, disponibilidade e backup/recuperação aprimorados. Com os avanços tecnológicos recentes, as cargas de trabalho de banco de dados complexas podem mais ser prontamente consolidadas usando a virtualização. Este tópico sobre as práticas recomendadas para usar o [!INCLUDE[hek_1](../includes/hek-1-md.md)] em um ambiente virtualizado.  
   
-##  <a name="bkmk_memoryPreAllocation"></a>Pré-alocação de memória  
+##  <a name="memory-pre-allocation"></a><a name="bkmk_memoryPreAllocation"></a>Pré-alocação de memória  
  Para a memória em um ambiente virtualizado, o melhor desempenho e o suporte aprimorado são considerações essenciais. Você deve ser capaz de alocar memória rapidamente para máquinas virtuais dependendo de seus requisitos (cargas de pico e fora de pico) e garantir que a memória não seja desperdiçada. O recurso de Memória Dinâmica do Hyper-V aumenta a agilidade sobre como a memória é alocada e gerenciada entre as máquinas virtuais executadas em um host.  
   
  Algumas práticas recomendadas para virtualizar e gerenciar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precisam ser alteradas ao virtualizar um banco de dados com tabelas com otimização de memória. Sem tabelas com otimização de memória, duas das práticas recomendadas são:  

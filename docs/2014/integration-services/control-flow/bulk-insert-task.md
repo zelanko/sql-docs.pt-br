@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832868"
 ---
 # <a name="bulk-insert-task"></a>Tarefa Inserção em Massa
@@ -64,7 +64,7 @@ ms.locfileid: "62832868"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entradas de log personalizado disponíveis na tarefa de inserção em massa  
  A seguinte tabela relaciona as entradas de log personalizadas para a tarefa inserção em massa . Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`BulkInsertTaskBegin`|Indica que a inserção em massa iniciou.|  
 |`BulkInsertTaskEnd`|Indica que a inserção em massa foi concluída.|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832868"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa inserção em massa &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa Inserção em Massa &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa inserção em massa &#40;página conexão&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Editor da Tarefa Inserção em Massa &#40;Página Conexão&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Editor da tarefa inserção em massa &#40;página opções&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Editor da Tarefa Inserção em Massa &#40;Página Opções&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62832868"
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
--   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(Você pode receber o erro “Não é possível preparar a inserção em massa do SSIS para a inserção de dados” em sistemas habilitados para UAC), em support.microsoft.com.  
+-   Artigo técnico, [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693), em support.microsoft.com.  
   
 -   Artigo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), em msdn.microsoft.com.  
   

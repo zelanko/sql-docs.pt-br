@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829892"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
@@ -64,7 +64,7 @@ ms.locfileid: "62829892"
   
 -   [Editor da Tarefa Transferir Trabalhos &#40;Página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor da tarefa Transferir trabalhos &#40;página trabalhos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Editor da Tarefa Transferir Trabalhos &#40;página Trabalhos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Página Expressões](../expressions/expressions-page.md)  
   
@@ -75,10 +75,10 @@ ms.locfileid: "62829892"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](integration-services-tasks.md)   
- [Fluxo de Controle](control-flow.md)  
+ [Tarefas de Integration Services](integration-services-tasks.md)   
+ [Fluxo de controle](control-flow.md)  
   
   

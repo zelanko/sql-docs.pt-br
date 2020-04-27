@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873521"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
@@ -38,7 +38,7 @@ ms.locfileid: "62873521"
   
          **{TS '** yyyy**-**_mm_**-**_DDHH_**:**_mm_**:**_SS_[**.** _FFF_] **'}** Como: **{TS '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{d '** _aaaa_ **-** _mm_ **-** _DD_ **'}** como: **{d '** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** como: **{ d'** 1998**-** 09**-** 24 **'}**  
   
          **{T'** _hh_ **:** _mm_ **:** _SS_ **'}** como: **{T'** 10:02:20 **'}**  
   

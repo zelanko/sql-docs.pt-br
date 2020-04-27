@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831878"
 ---
 # <a name="data-profiling-task"></a>Tarefa Criação de Perfil de Dados
@@ -49,7 +49,7 @@ ms.locfileid: "62831878"
   
  Os cinco perfis a seguir analisam colunas individuais.  
   
-|Perfis que analisam colunas individuais|DESCRIÇÃO|  
+|Perfis que analisam colunas individuais|Descrição|  
 |----------------------------------------------|-----------------|  
 |Perfil Distribuição de Comprimento de Coluna|Reporta todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como valores que não são válidos. Por exemplo, você cria o perfil de uma coluna com códigos de estados dos Estados Unidos que devem ter dois caracteres e descobre valores maiores que dois caracteres.|  
 |Perfil Razão Nula de Coluna|Informa a porcentagem de valores nulos na coluna selecionada.<br /><br /> Este perfil o ajuda a identificar problemas em seus dados, como uma razão alta de valores nulos inesperada em uma coluna. Por exemplo, você cria um perfil de uma coluna de Zip/Código Postal e descobre uma porcentagem alta e inaceitável de códigos ausentes.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62831878"
   
  Os três perfis a seguir analisam diversas colunas ou relações entre colunas e tabelas.  
   
-|Perfis que analisam diversas colunas|DESCRIÇÃO|  
+|Perfis que analisam diversas colunas|Descrição|  
 |--------------------------------------------|-----------------|  
 |Perfil-chave de candidato|Informa se uma coluna ou conjunto de colunas é uma chave, ou uma chave aproximada, para a tabela selecionada.<br /><br /> Este perfil também o ajuda a identificar problemas em seus dados, como valores duplicados em uma possível coluna chave.|  
 |Perfil Dependência Funcional|Informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante).<br /><br /> Este perfil também o ajuda a identificar problemas em seus dados, como valores inválidos. Por exemplo, você cria o perfil da dependência entre uma coluna que contém CEPs dos Estados Unidos e uma coluna que contém estados dos Estados Unidos. O mesmo Código Postal sempre deve ter o mesmo estado, mas o perfil descobre violações desta dependência.|  
@@ -104,19 +104,19 @@ ms.locfileid: "62831878"
 ## <a name="features-of-the-data-profiling-task"></a>Recursos da tarefa de Criação de perfis de dados  
  A tarefa de Criação de perfis de dados tem as seguintes opções de configuração convenientes:  
   
--   **Colunas curinga** Quando você está configurando uma solicitação de perfil, a tarefa aceita o curinga **(\*)** no lugar de um nome de coluna. Isto simplifica a configuração e facilita o descobrimento das características de dados pouco conhecidos. Quando a tarefa executar, ela criará perfis de toda coluna que tiver um tipo de dados apropriado.  
+-   **Colunas curinga** Ao configurar uma solicitação de perfil, a tarefa aceita o caractere curinga **(\*)** no lugar do nome da coluna. Isto simplifica a configuração e facilita o descobrimento das características de dados pouco conhecidos. Quando a tarefa executar, ela criará perfis de toda coluna que tiver um tipo de dados apropriado.  
   
--   **Perfil rápido** Você pode selecionar perfil rápido para configurar a tarefa rapidamente. Um Perfil Rápido cria um perfil de uma tabela ou exibição usando todos os perfis e configurações padrão.  
+-   **Perfil Rápido** You can select Perfil Rápido to configure the task quickly. Um Perfil Rápido cria um perfil de uma tabela ou exibição usando todos os perfis e configurações padrão.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Mensagens de log personalizadas disponíveis na tarefa Criação de Perfil de Dados  
  A tabela a seguir lista as entradas de log personalizadas para a tarefa Criação de Perfil de Dados. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Fornece informações descritivas sobre o status da tarefa. As mensagens incluem as seguintes informações:<br /><br /> Solicitações de processamento inicial<br /><br /> Início da consulta<br /><br /> Término de consulta<br /><br /> Concluir solicitação de computação|  
   
 ## <a name="output-and-its-schema"></a>Saída e seu esquema  
- A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir este esquema online em [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
+ A tarefa Criação de Perfil de Dados produz os perfis selecionados em XML que é estruturado de acordo com o esquema DataProfile.xsd. É possível especificar se a saída deste XML será salva em um arquivo ou em uma variável de pacote. Você pode exibir esse esquema online em [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Na página da Web, você pode salvar uma cópia local do esquema. Em seguida, será possível exibir a cópia local do esquema no Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou em outro editor de esquemas, em um editor XML ou em um editor de texto como o Bloco de Notas.  
   
  Com relação às informações sobre a qualidade de dados, o esquema pode ser útil para:  
   
@@ -135,23 +135,23 @@ ms.locfileid: "62831878"
  [Página Geral](../general-page-of-integration-services-designers-options.md)  
  Na página **Geral** , você especifica o arquivo ou a variável de saída. É possível também selecionar **Perfil Rápido** para configurar rapidamente a tarefa para computar os perfis usando as configurações padrão. Para obter mais informações, consulte [Formulário de Perfil Rápido de Tabela Única &#40;Tarefa Criação de Perfil de Dados&#41;](data-profiling-task.md).  
   
- [Página de solicitações de perfil](data-profiling-task-editor-profile-requests-page.md)  
+ [Página de Solicitações de perfil](data-profiling-task-editor-profile-requests-page.md)  
  Na página **Solicitações de Perfil** , você especifica a fonte de dados e seleciona e configura os perfis de dados que quer computar. Para obter mais informações sobre os vários perfis que podem ser configurados, consulte os tópicos a seguir:  
   
--   [Opções de solicitação de perfil de chave de candidato &#40;tarefa perfil de dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Chave de Candidato &#40;tarefa Criação de Perfil de Dados&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil distribuição de comprimento de coluna &#40;tarefa criação de perfis de dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação de perfil Distribuição de Tamanho de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de razão nula de coluna &#40;tarefa criação de perfis de dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Razão Nula de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Perfil de Padrão de Coluna opções de solicitação &#40;tarefa criação de perfil de dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Padrão de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de estatísticas de coluna &#40;tarefa criação de perfis de dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Estatísticas de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil distribuição de valor de coluna &#40;tarefa criação de perfis de dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opções de solicitação do perfil Distribuição de Valor de Coluna &#40;Tarefa Criação de Perfil de Dados&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de dependência funcional &#40;tarefa criação de perfis de dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Dependência Funcional &#40;Tarefa Criação de Perfil de Dados&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opções de solicitação de perfil de inclusão de valor &#40;tarefa criação de perfis de dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opções da solicitação do perfil Inclusão de Valor &#40;Tarefa Criação de Perfil de Dados&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

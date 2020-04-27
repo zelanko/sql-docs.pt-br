@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871533"
 ---
 # <a name="move-system-databases"></a>Mover bancos de dados do sistema
@@ -50,11 +50,11 @@ ms.locfileid: "62871533"
 > [!IMPORTANT]  
 >  Se você mover um banco de dados do sistema e, posteriormente, recriar o banco de dados mestre, será necessário mover o banco de dados do sistema novamente porque a operação de recriação instala todos os bancos de dados do sistema em seus locais padrão.  
   
-##  <a name="Intro"></a> **Neste tópico**  
+##  <a name="in-this-topic"></a><a name="Intro"></a> **Neste tópico**  
   
--   [Procedimento de manutenção de disco agendado e realocação planejada](#Planned)  
+-   [Realocação planejada e procedimento de manutenção de disco agendado](#Planned)  
   
--   [Procedimento de recuperação de falha](#Failure)  
+-   [Falha no procedimento de recuperação](#Failure)  
   
 -   [Movendo o banco de dados mestre](#master)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62871533"
   
 -   [Exemplos](#Examples)  
   
-##  <a name="Planned"></a>Procedimento de manutenção de disco agendado e realocação planejada  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>Procedimento de manutenção de disco agendado e realocação planejada  
  Para mover um arquivo de dados de um banco de dados do sistema ou arquivo de log como parte de uma realocação planejada ou operação de manutenção, execute as etapas a seguir. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 1.  Para cada arquivo a ser movido, execute a seguinte instrução.  
@@ -73,11 +73,11 @@ ms.locfileid: "62871533"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Pare a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou desligue o sistema para realizar a manutenção. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Pare a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou desligue o sistema para realizar a manutenção. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Mova o arquivo ou os arquivos para o novo local.  
   
-4.  Reinicialize a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Reinicialize a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Execute a consulta a seguir para verificar se houve alteração no arquivo.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62871533"
   
 2.  Verifique se o Database Mail está funcionando, enviando um email de teste.  
   
-##  <a name="Failure"></a>Procedimento de recuperação de falha  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a>Procedimento de recuperação de falha  
  Se um arquivo tiver de ser movido devido à falha de um hardware, siga estas etapas para realocar o arquivo para o novo local. Este procedimento se aplica a todos os bancos de dados do sistema exceto os bancos de dados mestre e Recurso.  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ ms.locfileid: "62871533"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Para cada arquivo a ser movido, use comandos **sqlcmd** ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para executar a instrução a seguir.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62871533"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a>Movendo o banco de dados mestre  
+##  <a name="moving-the-master-database"></a><a name="master"></a>Movendo o banco de dados mestre  
  Para mover o banco de dados mestre, siga estas etapas.  
   
 1.  Pelo menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Microsoft SQL Server**, aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
@@ -158,11 +158,11 @@ ms.locfileid: "62871533"
   
 3.  Na caixa de diálogo **Propriedades do SQL Server (***nome_instância***)** , clique na guia **Parâmetros de Inicialização** .  
   
-4.  Na caixa **Parâmetros existentes**, selecione o parâmetro -d para mover o arquivo de dados mestre. Clique em **Atualizar** para salvar a alteração.  
+4.  Na caixa **parâmetros existentes** , selecione o parâmetro-d para mover o arquivo de dados mestre. Clique em **Atualizar** para salvar a alteração.  
   
      Na caixa **Especificar um parâmetro de inicialização** , altere o parâmetro para o novo caminho do banco de dados mestre.  
   
-5.  Na caixa **Parâmetros existentes**, selecione o parâmetro -l para mover o arquivo de log mestre. Clique em **Atualizar** para salvar a alteração.  
+5.  Na caixa **parâmetros existentes** , selecione o parâmetro-l para mover o arquivo de log mestre. Clique em **Atualizar** para salvar a alteração.  
   
      Na caixa **Especificar um parâmetro de inicialização** , altere o parâmetro para o novo caminho do banco de dados mestre.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871533"
     GO  
     ```  
   
-##  <a name="Resource"></a>Movendo o banco de dados de recursos  
- A localização do banco de dados Resource é \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. O banco de dados não pode ser movido.  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Movendo o banco de dados de recursos  
+ O local do banco de dados de \<recursos é *unidade*>: \Program Files\Microsoft\<SQL Server\MSSQL versão>. \< *instance_name*> \MSSQL\Binn\\. O banco de dados não pode ser movido.  
   
-##  <a name="Follow"></a>Acompanhamento: depois de mover todos os bancos de dados do sistema  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Acompanhamento: depois de mover todos os bancos de dados do sistema  
  Se você moveu todos os bancos de dados do sistema para uma nova unidade ou volume ou para outro servidor com uma letra de unidade diferente, faça as atualizações a seguir.  
   
 -   Altere o caminho do log do SQL Server Agent. Se você não atualizar este caminho, o SQL Server Agent não iniciará.  
@@ -221,7 +221,7 @@ ms.locfileid: "62871533"
   
 4.  Pare e inicie o serviço do SQL Server para concluir a alteração.  
   
-##  <a name="Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="Examples"></a> Exemplos  
   
 ### <a name="a-moving-the-tempdb-database"></a>a. Movendo o banco de dados tempdb  
  O seguinte exemplo move os arquivos de log e de dados `tempdb` para um novo local como parte de uma realocação planejada.  
@@ -273,6 +273,6 @@ ms.locfileid: "62871533"
  [Mover arquivos de banco de dados](move-database-files.md)   
  [Iniciar, parar, pausar, retomar, reiniciar o Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Recompilar bancos de dados do sistema](system-databases.md)  
+ [Recriar bancos de dados do sistema](system-databases.md)  
   
   

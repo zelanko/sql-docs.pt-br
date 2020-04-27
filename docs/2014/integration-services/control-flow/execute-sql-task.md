@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831764"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
@@ -44,9 +44,9 @@ ms.locfileid: "62831764"
   
 |Tipo de conexão|Gerenciador de conexões|  
 |---------------------|------------------------|  
-|EXCEL|[Gerenciador de conexões do Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[gerenciador de conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|ODBCODBC|[gerenciador de conexões ODBC](../connection-manager/odbc-connection-manager.md)|  
+|EXCEL|[Gerenciador de Conexões do Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[Gerenciador de Conexões OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBCODBC|[Gerenciador de Conexões ODBC](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Gerenciador de conexões ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Gerenciador de conexões ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Gerenciador de Conexões do SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -104,7 +104,7 @@ ms.locfileid: "62831764"
 ### <a name="custom-log-entries"></a>Entradas personalizadas do log  
  A tabela a seguir descreve a entrada de log personalizada da tarefa Executar SQL. Para obter mais informações, consulte [Log do SSIS &#40;Integration Services&#41;](../performance/integration-services-ssis-logging.md) e [Mensagens personalizadas para log](../custom-messages-for-logging.md).  
   
-|Entrada de log|DESCRIÇÃO|  
+|Entrada de log|Descrição|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornece informações sobre as fases de execução da instrução SQL. As entradas de log são gravadas quando a tarefa adquire conexão com o banco de dados, quando a tarefa começa a preparar a instrução SQL e depois que a execução da instrução SQL é concluída. A entrada de log da fase de preparação inclui a instrução SQL usada pela tarefa.|  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62831764"
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="configuring-the-execute-sql-task-programmatically"></a>Configurando a tarefa Executar SQL programaticamente  
  Para obter mais informações sobre como definir essas propriedades programaticamente, clique no tópico a seguir:  

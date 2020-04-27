@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869591"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -75,7 +75,7 @@ ms.locfileid: "62869591"
   
  Outros estados de erro existem e significam um erro de processamento interno inesperado.  
   
- **Uma possível causa incomum adicional**  
+ **Outra possível causa incomum**  
   
  O motivo do erro **falha na tentativa de logon usando a autenticação do SQL. O servidor está configurado somente para autenticação do Windows.** pode ser retornado nas situações a seguir.  
   

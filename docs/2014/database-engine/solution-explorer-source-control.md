@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843091"
 ---
 # <a name="solution-explorer-source-control"></a>Controle do código-fonte do Gerenciador de Soluções
@@ -47,7 +47,7 @@ ms.locfileid: "62843091"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Noções básicas de controle do código-fonte](../../2014/database-engine/source-control-basics.md)|Define a terminologia básica de controle do código-fonte e explica como seu projeto pode se beneficiar do uso de controle do código-fonte.|  
 |[Adicionar soluções e projetos ao controle do código-fonte](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|Explica como usar o ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para adicionar soluções e projetos ao controle do código-fonte.|  

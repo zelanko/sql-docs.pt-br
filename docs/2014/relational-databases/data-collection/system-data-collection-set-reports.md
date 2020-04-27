@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873404"
 ---
 # <a name="system-data-collection-set-reports"></a>Relatórios do conjuntos de coleta de dados do sistema
@@ -38,7 +38,7 @@ ms.locfileid: "62873404"
   
  Você pode usar estes relatórios para obter informações para monitorar capacidade de sistema e solucionar problemas de desempenho do sistema.  
   
-##  <a name="Disk"></a> Relatório Resumo de Uso do Disco  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> Relatório Resumo de Uso do Disco  
  O relatório Resumo de Uso do Disco contém dados sobre o uso do espaço em disco para todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os dados fornecidos nos relatórios são obtidos com o uso do conjunto de coleta Uso do Disco, que usa o tipo de coletor de Consultas T-SQL Genérico.  
   
  Você acessa o relatório de Resumo de Uso do Disco no Pesquisador de Objetos. Para exibir o relatório, expanda a pasta **Gerenciamento** , clique com o botão direito do mouse em **Coleção de Dados**, aponte para **Relatórios**, **Data Warehouse de Gerenciamento**e clique em **Resumo de Uso do Disco**. Para obter mais informações, consulte [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "62873404"
   
  O espaço em disco usado por todo arquivo de dados do banco de dados é reportado. O espaço reportado como Espaço Reservado é a quantidade de espaço usado mais o espaço alocado ao arquivo e que ainda não foi utilizado. O espaço relatado por Espaço Usado é o espaço real usado atualmente pelo arquivo, excluindo o espaço alocado.  
   
-##  <a name="Query"></a> Relatório histórico de estatísticas de consulta  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> Relatório histórico de estatísticas de consulta  
  O relatório Histórico de Estatísticas de Consulta contém estatísticas execução. Os dados usados nesse relatório são obtidos com o uso do conjunto de coleta Estatísticas de Consulta, que usa o Tipo de Coletor de Atividades de Consulta.  
   
  É possível acessar o relatório Histórico de Estatísticas da Consulta no Pesquisador de Objetos. Para exibir o relatório, expanda a pasta **Gerenciamento** , clique com o botão direito do mouse em **Coleção de Dados**, aponte para **Relatórios**, **Data Warehouse de Gerenciamento**e clique em **Histórico de Estatísticas de Consulta**. Para obter mais informações, consulte [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "62873404"
   
  Use o botão de calendário para especificar a data e a hora de início e a duração dos dados que servirão de base para o relatório.  
   
-###  <a name="Server"></a> Relatório histórico de atividade do servidor  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> Relatório histórico de atividade do servidor  
  O relatório Histórico de Atividade do Servidor mostra a exibição inicial do relatório de atividade do servidor para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o sistema operacional de host.  
   
  A tabela a seguir descreve os gráficos que plotam a atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do sistema no relatório e os sub-relatórios detalhados que podem ser acessados através desses gráficos.  
@@ -133,7 +133,7 @@ ms.locfileid: "62873404"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atividade|Aspectos diferentes de atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser acessados pelo gráfico Atividade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os relatórios que você pode obter clicando em um ponto na linha de gráfico Compilações do SQL/segundo são como se segue:<br /><br /> Conexões e sessões<br /><br /> Requests<br /><br /> Taxa de acertos do cache de plano<br /><br /> recursos de tempdb|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleta de Dados](data-collection.md)   
+ [Coleta de dados](data-collection.md)   
  [Exibir um relatório de conjuntos de coleta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844262"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Novo registro ou editar registro de servidor (guia Geral) (Reporting Services)
@@ -40,20 +40,20 @@ ms.locfileid: "62844262"
  **Autenticação básica**  
  Conecte-se usando a **Autenticação Básica** se a instalação do Reporting Services estiver configurada para usar a Autenticação Básica.  
   
- **Autenticação de formulários**  
+ **Autenticação de Formulários**  
  Conecte-se usando a **Autenticação de Formulários** se a instalação do Reporting Services estiver configurada para usar uma extensão de autenticação personalizada.  
   
  **Nome de usuário**  
  Digite o nome de logon a ser usado na conexão. Essa opção estará disponível somente se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Senha**  
- Insira a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
+ Digite a senha para o nome de usuário. Essa opção só poderá ser editada se você selecionou **Básica** ou **Autenticação de Formulários**.  
   
  **Lembrar senha**  
  Armazene a senha que você digitou. Essa opção só estará disponível se você clicou em **Básico** ou **Autenticação de Formatos**.  
   
 > [!NOTE]  
->  Se você armazenou a senha e deseja parar de armazená-la, desmarque essa caixa de seleção e clique em **salvar**.  
+>   Caso tenha armazenado a senha e não deseja mais fazê-lo, desmarque essa caixa de seleção e clique em **Salvar**.  
   
  **Nome do servidor registrado**  
  O nome que você deseja exibir em Servidores Registrados. Esse nome não precisa corresponder ao nome na caixa **Nome do servidor** .  
@@ -61,7 +61,7 @@ ms.locfileid: "62844262"
  **Descrição do servidor registrado**  
  Digite uma descrição opcional do servidor.  
   
- **Testar**  
+ **Teste**  
  Clique para testar a conexão com o servidor selecionado em **Nome do servidor**.  
   
  **Salvar**  

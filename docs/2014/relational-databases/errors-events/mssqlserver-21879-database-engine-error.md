@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869173"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869173"
 |Texto da mensagem|Não foi possível consultar o servidor redirecionado '% s' para o publicador original '% s' e o banco de dados publicador '% s' para determinar o nome do servidor remoto; Erro %d, Mensagem de erro '% s.'|  
   
 ## <a name="explanation"></a>Explicação  
- 
-  `sp_validate_redirected_publisher` usa um servidor vinculado temporário criado para se conectar ao publicador redirecionado e descobrir o nome do servidor remoto. O erro 21879 é retornado quando a consulta de servidor vinculado falha. A chamada para solicitar o nome de servidor remoto é normalmente o primeiro uso do servidor vinculado temporário e, portanto, se houver problemas de conectividade, é provável que eles apareçam primeiro com essa chamada. Essa chamada remota simplesmente executa a seleção de `@@servername` no servidor remoto.  
+ `sp_validate_redirected_publisher` usa um servidor vinculado temporário criado para se conectar ao publicador redirecionado e descobrir o nome do servidor remoto. O erro 21879 é retornado quando a consulta de servidor vinculado falha. A chamada para solicitar o nome de servidor remoto é normalmente o primeiro uso do servidor vinculado temporário e, portanto, se houver problemas de conectividade, é provável que eles apareçam primeiro com essa chamada. Essa chamada remota simplesmente executa a seleção de `@@servername` no servidor remoto.  
   
  O servidor vinculado usado para consultar o publicador redirecionado usa o modo de segurança, logon e senha fornecidos quando `sp_adddistpublisher` foi chamado para o publicador original.  
   
