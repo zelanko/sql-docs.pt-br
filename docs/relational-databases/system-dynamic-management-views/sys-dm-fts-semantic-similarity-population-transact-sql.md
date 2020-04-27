@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900880"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "67900880"
 |**document_count**|**int**|Número total de documentos na população.|  
 |**document_processed_count**|**int**|Número de documentos processados desde o início deste ciclo de população|  
 |**completion_type**|**int**|Status de como esta população foi concluída.|  
-|**completion_type_description**|**nvarchar (120)**|Descrição do tipo de conclusão.|  
+|**completion_type_description**|**nvarchar(120)**|Descrição do tipo de conclusão.|  
 |**worker_count**|**int**|Número de threads de trabalho associados com a extração de similaridade|  
-|**Estado**|**int**|Status desta população. Observação: alguns dos estados são transitórios. Um dos seguintes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Processando normalmente<br /><br /> 7 = Parou de processar<br /><br /> 11 = População anulada|  
-|**status_description**|**nvarchar (120)**|Descrição do status da população.|  
+|**status**|**int**|Status desta população. Observação: alguns dos estados são transitórios. Um dos seguintes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Processando normalmente<br /><br /> 7 = Parou de processar<br /><br /> 11 = População anulada|  
+|**status_description**|**nvarchar(120)**|Descrição do status da população.|  
 |**start_time**|**datetime**|Hora em que a população foi iniciada.|  
 |**incremental_timestamp**|**timestamp**|Representa o carimbo de data/hora inicial para uma população completa. Para todos os outros tipos de população, esse valor é o último ponto de verificação confirmado que representa o andamento das populações.|  
   

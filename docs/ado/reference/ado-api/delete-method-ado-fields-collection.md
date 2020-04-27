@@ -17,10 +17,10 @@ ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919129"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Método Delete (Coleção de campos ADO)
@@ -33,7 +33,7 @@ Exclui um objeto da coleção [Fields](../../../ado/reference/ado-api/fields-col
 Fields.Delete Field  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Campo*  
  Uma **variante** que designa o objeto de [campo](../../../ado/reference/ado-api/field-object.md) a ser excluído. Esse parâmetro pode ser o nome do objeto de **campo** ou a posição ordinal do próprio objeto **Field** .  
   

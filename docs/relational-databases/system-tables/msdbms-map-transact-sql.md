@@ -18,10 +18,10 @@ ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907495"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67907495"
 
   A tabela **MSdbms_map** contém informações de tipo de dados de origem, bem como um link para informações de tipo de dados de destino padrão para pares DBMS de origem e de destino. Essa tabela é armazenada no banco de dados **msdb** e é usada para publicação heterogênea.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|Identifica com exclusividade um mapeamento de tipo de dados.|  
 |**src_dbms_id**|**int**|Identifica o DBMS de origem especificando seu **dbms_id** na tabela [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) .|  
@@ -45,7 +45,7 @@ ms.locfileid: "67907495"
 |**default_datatype_mapping_id**|**int**|Identifica o mapeamento de tipo de dados padrão especificando seu **map_id** na tabela [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Especificar mapeamentos de tipo de dados para um Publicador Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

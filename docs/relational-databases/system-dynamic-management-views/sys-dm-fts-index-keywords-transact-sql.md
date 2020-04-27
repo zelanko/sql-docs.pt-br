@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900944"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -53,7 +53,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**chaves**|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada dentro do índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de um DataSet.|  
 |**display_term**|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato hexadecimal.<br /><br /> Observação: o valor de **display_term** para OxFF é "fim de arquivo".|  
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  O **document_count** retornado por **Sys. dm_fts_index_keywords** pode ser menos preciso para um documento específico do que a contagem retornada por **Sys. dm_fts_index_keywords_by_document** ou uma consulta **Contains** . Estima-se que a imprecisão em potencial seja inferior a 1%. Essa inexatidão pode ocorrer porque uma **document_id** pode ser contada duas vezes quando continua em mais de uma linha no fragmento de índice, ou quando ela aparece mais de uma vez na mesma linha. Para obter uma contagem mais precisa de um documento específico, use **Sys. dm_fts_index_keywords_by_document** ou uma consulta **Contains** .  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -91,7 +91,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

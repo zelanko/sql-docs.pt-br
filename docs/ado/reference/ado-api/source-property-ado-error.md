@@ -18,10 +18,10 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916901"
 ---
 # <a name="source-property-ado-error"></a>Propriedade Source (Erro ADO)
@@ -38,7 +38,7 @@ Indica o nome do objeto ou aplicativo que originalmente gerou um erro.
  A propriedade **Source** é somente leitura para objetos de **erro** .  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

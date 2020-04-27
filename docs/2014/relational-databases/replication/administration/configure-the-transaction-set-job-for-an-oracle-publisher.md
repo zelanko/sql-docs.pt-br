@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48282f08df588f54b6f03a0b99c58a2f0cf039ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793536"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher-replication-transact-sql-programming"></a>Configurar o trabalho do conjunto de transações para um Publicador Oracle (programação Transact-SQL de replicação)
@@ -37,15 +37,15 @@ ms.locfileid: "67793536"
   
 ### <a name="to-configure-the-transaction-set-job"></a>Para configurar o trabalho de conjunto de transação  
   
-1.  (opcional) No Distribuidor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Especifique o nome do Publicador Oracle em **\@publisher**. Isso retorna as propriedades do trabalho **Xactset** no Publicador.  
+1.  (opcional) No Distribuidor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Especifique o nome do editor Oracle para ** \@o Publicador**. Isso retorna as propriedades do trabalho **Xactset** no Publicador.  
   
-2.  No Distribuidor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Especifique o nome do Publicador Oracle em **\@publisher**, o nome da propriedade do trabalho Xactset que está sendo definida em **\@propertyname** e a nova configuração em **\@propertyvalue**.  
+2.  No Distribuidor, execute [sp_publisherproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql). Especifique o nome do editor Oracle para ** \@o Publicador**, o nome da Propriedade do trabalho Xactset que está sendo definida para ** \@PropertyName**e a nova configuração para ** \@PropertyValue**.  
   
 3.  (Opcional) Repita a etapa 2 para cada propriedade de trabalho Xactset que estiver sendo definida. Ao alterar a `xactsetjobinterval` Propriedade, você deve reiniciar o trabalho no Publicador Oracle para que o novo intervalo entre em vigor.  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>Para exibir as propriedades do trabalho de conjunto de transação  
   
-1.  No Distributor, execute [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql). Especifique o nome do Publicador Oracle em **\@publisher**.  
+1.  No Distributor, execute [sp_helpxactsetjob](/sql/relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql). Especifique o nome do editor Oracle para ** \@o Publicador**.  
   
 ### <a name="to-disable-the-transaction-set-job"></a>Para desativar o trabalho de conjunto de transação  
   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412978"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Visualizar relatórios no SSRS (SQL Server Reporting Services)
@@ -41,7 +41,7 @@ ms.locfileid: "67412978"
  Se você usar a configuração de projeto que cria um relatório mas não o implanta, o relatório especificado na propriedade `StartItem` da configuração atual será aberto em outra janela de visualização. A janela de visualização exibirá o relatório da mesma forma e terá a mesma funcionalidade do modo de Visualização.  
   
 > [!NOTE]  
-> Antes de depurar um relatório, defina um item inicial. Para definir um item de início, em Gerenciador de Soluções, clique com o botão direito do mouse **** no projeto de relatório, `StartItem`clique em Propriedades e, em, selecione o nome do relatório a ser exibido.  
+> Antes de depurar um relatório, defina um item inicial. Para definir um item de início, em Gerenciador de Soluções, clique com o botão direito do mouse **Properties**no projeto de relatório, `StartItem`clique em Propriedades e, em, selecione o nome do relatório a ser exibido.  
   
  Se quiser visualizar um relatório específico que não é o item inicial do projeto, selecione uma configuração que cria o relatório, mas que não o implanta (por exemplo, a configuração DebugLocal), clique com o botão direito do mouse no relatório e clique em **Executar**. Escolha uma configuração que não implante o relatório, caso contrário, o relatório será publicado no servidor de relatórios em vez de ser exibido localmente na janela de visualização.  
   
@@ -60,4 +60,4 @@ ms.locfileid: "67412978"
  - [Imprimir relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [Imprimir um relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
  - [Publicar Relatórios](../publish-reports.md)
- - [Usar assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md)
+ - [Usando assemblies personalizados com relatórios](../custom-assemblies/using-custom-assemblies-with-reports.md)

@@ -18,10 +18,10 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896591"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
@@ -54,7 +54,7 @@ sp_procoption [ @ProcName = ] 'procedure'
  Os procedimentos de inicialização devem estar no banco de dados **mestre** e não podem conter parâmetros de entrada ou saída. A execução dos procedimentos armazenados inicia quando todos os bancos de dados são recuperados e a mensagem "A recuperação foi concluída" é registrada na inicialização.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define um procedimento para execução automática.  

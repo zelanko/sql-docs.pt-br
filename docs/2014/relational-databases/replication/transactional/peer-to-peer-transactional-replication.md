@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793921"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -61,7 +61,7 @@ ms.locfileid: "67793921"
   
 -   À esquerda, as atualizações são particionadas entre os dois servidores. Se o banco de dados contiver um catálogo de produtos, você poderá, por exemplo, fazer com que um aplicativo personalizado atualize diretamente no nó **A** com relação aos nomes de produto começando de A a M, e que ele atualize diretamente no nó **B** com relação aos nomes de produtos começando de N a Z. As atualizações, em seguida, são replicadas no outro nó.  
   
--   À direita, todas as atualizações são direcionadas para o nó **B**. A partir daí, as atualizações são replicadas para **o nó A**. Se **B** estiver offline (por exemplo, para manutenção), o servidor de aplicativos poderá direcionar todas as atividades para **um**. Quando **B** está online novamente, as atualizações podem fluir para ele e o servidor de aplicativos pode mover todas as atualizações de volta para **B** ou continuar a direcioná-las para **um**.  
+-   À direita, todas as atualizações são direcionadas para o nó **B**. A partir daí, as atualizações são replicadas para o nó **A**. Se **B** estiver offline (por exemplo, para manutenção), o servidor de aplicativos poderá direcionar todas as atividades para **A**. Quando **B** ficar online outra vez, as atualizações poderão fluir para ele e o servidor de aplicativos poderá mover todas as atualizações novamente para **B** ou continuar direcionando-as para **A**.  
   
  A replicação ponto a ponto pode oferecer suporte a ambas as abordagens, mas o exemplo de atualização central à direita é também usado com frequência na replicação transacional padrão.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793921"
   
     -   Os nomes de objeto, de esquema de objeto e de publicação devem ser idênticos.  
   
-    -   As publicações precisam permitir a replicação de alterações de esquema. (Essa é uma configuração de **1** para a propriedade de publicação **replicate_ddl**, que é a configuração padrão.) Para obter mais informações, consulte [fazer alterações de esquema em bancos de dados de publicação](../publish/make-schema-changes-on-publication-databases.md).  
+    -   As publicações precisam permitir a replicação de alterações de esquema. (Essa é uma configuração de **1** da propriedade da publicação **replicate_ddl**, que é a configuração padrão.) Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
   
     -   Não há suporte para filtragens de linha e de coluna.  
   
@@ -169,8 +169,8 @@ ms.locfileid: "67793921"
 -   Você não pode reinicializar assinaturas em uma topologia ponto a ponto. Se for necessário garantir que um nó tenha uma nova cópia dos dados, restaure o backup no nó.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar uma topologia ponto a ponto &#40;programação Transact-SQL de replicação&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrar uma topologia ponto a ponto &#40;Programação Transact-SQL de replicação&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estratégias para fazer backup e restaurar o instantâneo e a replicação transacional](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [Tipos de publicação para replicação transacional](transactional-replication.md)  
+ [Tipos de publicação para a Replicação Transacional](transactional-replication.md)  
   
   

@@ -24,10 +24,10 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120260"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
@@ -55,13 +55,13 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|ID do banco de dados. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.|  
 |objectid|**int**|ID do objeto do banco de dados. É NULL para instruções SQL ad hoc.|  
 |número|**smallint**|Indica o número do grupo e se os procedimentos estão agrupados.<br /><br /> 0 = Entradas não são procedimentos.<br /><br /> NULL = Instruções SQL ad hoc.|  
 |encrypted|**bit**|Indica se o objeto está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = Criptografado|  
-|text|**text**|É o texto da instrução SQL. É NULL para objetos criptografados.|  
+|texto|**text**|É o texto da instrução SQL. É NULL para objetos criptografados.|  
   
 ## <a name="remarks"></a>Comentários  
  Você pode obter um identificador SQL válido na coluna sql_handle da exibição de gerenciamento dinâmico do [Transact-SQL&#41;do &#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  

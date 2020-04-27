@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908806"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menu e outras teclas de atalho (MySQLToSQL)
@@ -87,7 +87,7 @@ Para acessar o menu ferramentas, o atalho de teclado usado é ALT + T. A tabela 
 |Exiba a caixa de diálogo Configurações do projeto.|ALT + T + P|  
 |Exiba a caixa de diálogo Configurações de projeto padrão.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandos do menu ajuda  
+## <a name="help-menu-commands"></a>comandos do menu Ajuda  
 Para acessar o menu ajuda, o atalho de teclado usado é ALT + H. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu ajuda.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  

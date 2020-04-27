@@ -20,10 +20,10 @@ ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917119"
 ---
 # <a name="rowset-property-ado"></a>Propriedade Rowset (ADO)
@@ -38,7 +38,7 @@ HRESULT get_Rowset([out, retval] IUnknown** ppRowset);
 HRESULT put_Rowset([in] IUnknown* pRowset);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *ppRowset*  
  Ponteiro para um objeto de **conjunto de linhas** OLE DB.  
   

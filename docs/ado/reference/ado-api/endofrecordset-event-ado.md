@@ -17,10 +17,10 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918946"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset Event (ADO)
@@ -33,7 +33,7 @@ O evento **EndOfRecordset** é chamado quando há uma tentativa de mover para um
 EndOfRecordset fMoreData, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *fMoreData*  
  Um valor **VARIANT_BOOL** que, se definido como VARIANT_TRUE, indica que mais linhas foram adicionadas ao **conjunto de registros**.  
   
@@ -44,7 +44,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
  Antes de **EndOfRecordset** retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto **Recordset** . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  

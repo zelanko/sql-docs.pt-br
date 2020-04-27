@@ -18,10 +18,10 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907152"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Mapeando bancos de dados de origem e de destino (AccessToSQL)

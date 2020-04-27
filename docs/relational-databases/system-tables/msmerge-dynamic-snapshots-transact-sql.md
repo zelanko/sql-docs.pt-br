@@ -18,10 +18,10 @@ ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a6b0660635812a216525665832b0f16f64538b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67894933"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67894933"
 
   A tabela **MSmerge_dynamic_snapshots** rastreia o local do instantâneo de dados filtrados para cada partição definida para uma publicação de mesclagem com filtros de linha com parâmetros. Essa tabela é armazenada no banco de dados de **publicação** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|A ID da partição de mesclagem.|  
 |**dynamic_snapshot_location**|**nvarchar (255)**|O local do instantâneo de dados filtrado para a partição.|  

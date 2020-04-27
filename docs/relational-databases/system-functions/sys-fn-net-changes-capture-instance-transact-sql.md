@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122566"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Esse parâmetro pode assumir um dos dois significados, dependendo do valor escolhido para @closed_high_end_point quando sys. sp_cdc_generate_wrapper_function é chamado para gerar o script para criar a função de wrapper:  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      Somente as linhas no capture_instance CDC. <>_CT alteram a tabela que têm um \_ \_valor em $Start _lsn e uma hora de confirmação correspondente menor ou igual a **start_time** são incluídas no conjunto de resultados.  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      Somente as linhas no capture_instance CDC. <>_CT alteram a tabela que têm um \_ \_valor em $Start _lsn e uma hora de confirmação correspondente estritamente menor que **start_time** são incluídas no conjunto de resultados.  
   
@@ -75,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* :: = {todos | todos com máscara | tudo com mesclagem}  
  Opção que rege o conteúdo das colunas de metadados, assim como as linhas retornadas no conjunto de resultados. Pode ser uma das seguintes opções:  
   
- tudo  
+ all  
  Retorna o conteúdo final de uma linha alterada nas colunas de conteúdo e a operação que é requerida para aplicar a linha na coluna de metadados __CDC_OPERATION.  
   
  all with mask  
@@ -94,10 +93,10 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de coluna|DESCRIÇÃO|  
+|Nome da coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
-|\<colunas de @column_list>|**varia**|As colunas identificadas no argumento **column_list** para o sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem rastreadas serão exibidas no conjunto de resultados.|  
-|__CDC_OPERATION|**nvarchar (2)**|Um código de operação que indica qual operação é necessária para se aplicar a linha ao ambiente de destino. A operação irá variar com base no valor do argumento *row_filter_option* fornecido na seguinte chamada:<br /><br /> *row_filter_option* = ' all', ' tudo com máscara '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza a operação<br /><br /> *row_filter_option* = ' tudo com mesclagem '<br /><br /> 'D' – exclui a operação<br /><br /> 'M – insere ou atualiza a operação|  
+|\<colunas de @column_list>|**consoante**|As colunas identificadas no argumento **column_list** para o sp_cdc_generate_wrapper_function quando ele é chamado para gerar o script para criar o wrapper. Se *column_list* for NULL, todas as colunas de origem rastreadas serão exibidas no conjunto de resultados.|  
+|__CDC_OPERATION|**nvarchar(2)**|Um código de operação que indica qual operação é necessária para se aplicar a linha ao ambiente de destino. A operação irá variar com base no valor do argumento *row_filter_option* fornecido na seguinte chamada:<br /><br /> *row_filter_option* = ' all', ' tudo com máscara '<br /><br /> 'D' – exclui a operação<br /><br /> 'I' – insere a operação<br /><br /> 'UN' – atualiza a operação<br /><br /> *row_filter_option* = ' tudo com mesclagem '<br /><br /> 'D' – exclui a operação<br /><br /> 'M – insere ou atualiza a operação|  
 |\<colunas de @update_flag_list>|**bit**|Um sinalizador de bit é nomeado acrescentando _uflag ao nome da coluna. O sinalizador assume um valor não nulo somente quando *row_filter_option* **= ' all com mask '** e \__CDC_OPERATION **= ' un '**. Ele é definido como 1 se a coluna correspondente foi modificada dentro da janela de consulta. Caso contrário, será 0.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -121,6 +120,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

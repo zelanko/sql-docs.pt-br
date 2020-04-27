@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899500"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "67899500"
 
   Contém informações sobre todos os trabalhos concluindo as etapas de DMS.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Consulta de que esse trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Consulta de que esse trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Etapa de consulta para a qual este trabalho DMS faz parte.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.|Consulte step_index em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Etapa no plano DMS que esse trabalho está executando.<br /><br /> request_id, step_index e dms_step_index formam a chave para essa exibição.||  
 |pdw_node_id|**int**|Nó no qual o trabalho está sendo executado.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**Inteiro**|A distribuição em que o trabalho está sendo executado, se houver.|Consulte distribution_id em [Sys. pdw_distributions &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar (32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
-|status|**nvarchar (32)**|Status do trabalho do DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|distribution_id|**Int**|A distribuição em que o trabalho está sendo executado, se houver.|Consulte distribution_id em [Sys. pdw_distributions &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
+|tipo|**nvarchar(32)**|Tipo de thread de trabalho do DMS que essa entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' GRAVADOR '|  
+|status|**nvarchar(32)**|Status do trabalho do DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Taxa de transferência de leitura ou gravação no último segundo.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |bytes_processed|**bigint**|Total de bytes processados por este trabalhador.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  
 |rows_processed|**bigint**|Número de linhas lidas ou gravadas para este trabalho.|Maior ou igual a 0. NULL se a consulta foi cancelada ou falhou antes da execução do trabalho.|  

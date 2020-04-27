@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899028"
 ---
 # <a name="functions-on-string-values---contains"></a>Funções em Valores da Cadeia de Caracteres – contains
@@ -58,7 +58,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas do tipo XML no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>a. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Usando a função contains() XQuery para pesquisar uma cadeia de caracteres específica  
  A consulta a seguir localiza produtos que contêm a palavra Aerodynamic nas descrições resumidas. A consulta retorna o ProductID e o <`Summary` elemento> para esses produtos.  
   
 ```  

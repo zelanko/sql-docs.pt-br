@@ -16,10 +16,10 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918276"
 ---
 # <a name="loadfromfile-method-ado"></a>Método LoadFromFile (ADO)
@@ -32,8 +32,8 @@ Carrega o conteúdo de um arquivo existente em um [fluxo](../../../ado/reference
 Stream.LoadFromFileFileName  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Nome do arquivo*  
+#### <a name="parameters"></a>Parâmetros  
+ *FileName*  
  Um valor de **cadeia de caracteres** que contém o nome de um arquivo a ser carregado no **fluxo**. O *nome de arquivo* pode conter qualquer caminho e nome válidos no formato UNC. Se o arquivo especificado não existir, ocorrerá um erro em tempo de execução.  
   
 ## <a name="remarks"></a>Comentários  

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110154"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho
-  Essa tarefa descreve a inicialização do utilitário **dta** , a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-1-1-tuning-a-workload.md)da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados.  
+   Essa tarefa descreve a inicialização do utilitário **dta**, a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho usando o prompt de comando. Ele usa a carga de trabalho, MyScript. SQL, que você criou para a prática de Orientador de Otimização do Mecanismo de Banco de Dados a GUI (interface gráfica do usuário) [ajustar uma carga de trabalho](lesson-1-1-tuning-a-workload.md).  
   
  O tutorial usa o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
   

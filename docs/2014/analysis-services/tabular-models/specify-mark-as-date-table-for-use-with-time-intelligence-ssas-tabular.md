@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284877"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Especifique Marcar como Tabela de Data para uso com Inteligência de Tempo (SSAS tabular)
@@ -36,7 +36,7 @@ ms.locfileid: "67284877"
   
 1.  No designer de modelos, clique na tabela de datas.  
   
-2.  Clique no menu **tabela** , clique em **Data**e, em seguida, clique em **Marcar como tabela de data**  
+2.  Clique no menu **Tabela** , clique em **Data**e em **Mark as Data Tabela**.  
   
 3.  Na caixa de diálogo **Marcar como Tabela de Data** , na caixa de listagem **Data** , selecione uma coluna a ser usada como um identificador exclusivo. Esta coluna deve conter valores exclusivos e deve ser do tipo de dados de data. Por exemplo:  
   

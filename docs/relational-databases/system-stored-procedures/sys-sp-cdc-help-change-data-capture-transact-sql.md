@@ -22,16 +22,16 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905173"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna a configuração de captura dos dados de alteração para cada tabela habilitada para a captura de dados de alteração no banco de dados atual. Podem ser retornadas até duas linhas para cada tabela de origem, uma linha para cada instância de captura. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retorna a configuração de captura dos dados de alteração para cada tabela habilitada para a captura de dados de alteração no banco de dados atual. Podem ser retornadas até duas linhas para cada tabela de origem, uma linha para cada instância de captura. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,15 +64,15 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nome do esquema de tabela de origem.|  
 |source_table|**sysname**|Nome da tabela de origem.|  
 |capture_instance|**sysname**|Nome da instância de captura.|  
 |object_id|**int**|ID da tabela de alteração associada à tabela de origem.|  
 |source_object_id|**int**|ID da tabela de origem.|  
-|start_lsn|**binário (10)**|LSN (Número de Sequência de Log) representando o ponto de extremidade inferior para consulta da tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
-|end_lsn|**binário (10)**|LSN representando o ponto de extremidade superior para consulta da tabela de alteração. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta coluna é sempre NULL.|  
+|start_lsn|**binary(10)**|LSN (Número de Sequência de Log) representando o ponto de extremidade inferior para consulta da tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
+|end_lsn|**binary(10)**|LSN representando o ponto de extremidade superior para consulta da tabela de alteração. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta coluna é sempre NULL.|  
 |supports_net_changes|**bit**|O suporte à alteração de rede está habilitado.|  
 |has_drop_pending|**bit**|Não é usado no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |role_name|**sysname**|Nome da função de banco de dados usada para controlar o acesso aos dados de alteração.<br /><br /> NULL = uma função não é usada.|  

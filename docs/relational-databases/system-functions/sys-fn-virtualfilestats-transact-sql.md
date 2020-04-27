@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059206"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
@@ -51,11 +51,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID do banco de dados.|  
 |**FileId**|**smallint**|ID do arquivo.|  
-|**Estampa**|**bigint**|Carimbo de data/hora do banco de dados do qual os dados foram obtidos. **int** em versões anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**TimeStamp**|**bigint**|Carimbo de data/hora do banco de dados do qual os dados foram obtidos. **int** em versões anteriores [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
 |**NumberReads**|**bigint**|Número de leituras emitidas no arquivo.|  
 |**BytesRead**|**bigint**|Número de bytes lidos emitidos no arquivo.|  
 |**IoStallReadMS**|**bigint**|Período de tempo total, em milissegundos, que os usuários esperaram pela conclusão das E/Ss de leitura no arquivo.|  

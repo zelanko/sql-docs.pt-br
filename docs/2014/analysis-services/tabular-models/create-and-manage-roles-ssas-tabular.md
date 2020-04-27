@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284901"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Criar e Gerenciar Funções (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "67284901"
 ## <a name="tasks"></a>Tarefas  
  Para criar, editar, copiar e excluir funções, você usará a caixa de diálogo **Gerenciador de Funções** . Para exibir a caixa de diálogo **Gerenciador de Funções** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Gerenciador de Funções**.  
   
-###  <a name="bkmk_new_role"></a>Para criar uma nova função  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Para criar uma nova função  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Gerenciador de Funções**.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "67284901"
   
 4.  No campo **Permissões** , clique na seta para baixo e selecione um dos tipos de permissão a seguir:  
   
-    |Permissão|DESCRIÇÃO|  
+    |Permissão|Descrição|  
     |----------------|-----------------|  
-    |**Nenhuma**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
+    |**Nenhum**|Os membros não podem fazer modificações ao esquema modelo e não podem consultar dados.|  
     |**Ler**|Os membros têm permissão de consultar dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
     |**Leitura e processo**|Os membros têm permissão de consultar dados (com base em filtros de nível de linha) e executar operações de Processar e Processar Tudo, mas não podem fazer nenhuma alteração ao esquema modelo.|  
-    |**Processo**|Os membros podem executar as operações Processar e Processar Tudo. Não podem modificar o esquema do modelo e não podem consultar dados.|  
+    |**Processo**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível consultar dados.|  
     |**Administradores**|Os membros podem fazer modificações ao esquema modelo e podem consultar todos os dados.|  
   
 5.  Para inserir uma descrição para a função, clique no campo **Descrição** e digite uma descrição.  
@@ -61,7 +61,7 @@ ms.locfileid: "67284901"
   
 8.  Na caixa de diálogo **Selecionar Usuários ou Grupos** , insira os objetos usuário do Windows ou grupo do Windows como membros.  
   
-9. Clique em **OK**.  
+9. Clique em **Ok**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)   

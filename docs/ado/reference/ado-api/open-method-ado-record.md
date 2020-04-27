@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917921"
 ---
 # <a name="open-method-ado-record"></a>Método Open (Registro do ADO)
@@ -33,14 +33,14 @@ Abre um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md
 Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Uma **variante** que pode representar a URL da entidade a ser representada por este objeto de **registro** , um **comando**, um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) aberto ou outro objeto de **registro** , uma cadeia de caracteres que contém uma instrução SQL SELECT ou um nome de tabela.  
   
  *ActiveConnection*  
  Opcional. Uma **variante** que representa a cadeia de conexão ou o objeto Open [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
- *Mode*  
+ *Modo*  
  Opcional. Um valor de [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) que especifica o modo de acesso para o objeto de **registro** resultante. O valor padrão é **adModeUnknown**.  
   
  *Criaroptions*  

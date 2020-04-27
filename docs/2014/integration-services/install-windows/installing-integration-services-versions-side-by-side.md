@@ -14,14 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67140815"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilidade e coexistência (Integration Services)
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] O SSIS (Integration Services) pode coexistir lado a lado com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services e o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  
   
 ## <a name="features-and-differences"></a>Recursos e diferenças  
@@ -29,17 +28,17 @@ ms.locfileid: "67140815"
   
 |Recurso|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Ambiente de desenvolvimento|[Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools para Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools – Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Ambiente de desenvolvimento|[Versões anteriores do SQL Server Data Tools (SSDT e SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools para Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |Ambiente de gerenciamento|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Principal tabela de sistema do msdb para armazenar pacotes|sysssispackages|sysssispackages|sysssispackages|  
-|Principal utilitário de prompt de comando para executar pacotes|**dtexec** (dtexec. exe), versão 2014|**dtexec** (dtexec. exe), versão 2012|**dtexec** (dtexec. exe), versão 2008|  
+|Principal utilitário de prompt de comando para executar pacotes|**dtexec** (dtexec.exe), versão 2014|**dtexec** (dtexec.exe), versão 2012|**dtexec** (dtexec.exe), versão 2008|  
 |Pasta raiz padrão do sistema de arquivos|C:\Arquivos de Programas\Microsoft SQL Server\120\DTS|C:\Arquivos de Programas\Microsoft SQL Server\110\DTS|C:\Arquivos de Programas\Microsoft SQL Server\100\DTS|  
 |Chave raiz padrão do Registro|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS|  
   
 ## <a name="side-by-side-compatibility-issues"></a>Problemas de compatibilidade lado a lado  
  Com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services instalado lado a lado com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services e o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services, você pode realizar as seguintes tarefas:  
   
--   **Criar pacotes no SQL Server Data Tools**. Use as ferramentas a seguir para desenvolver e manter pacotes baseados nas versões correspondentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Criar pacotes nas Ferramentas de Dados do SQL Server**. Use as ferramentas a seguir para desenvolver e manter pacotes baseados nas versões correspondentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Use a versão do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] do Business Intelligence Development Studio para desenvolver e manter pacotes baseados no [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
   
@@ -49,9 +48,9 @@ ms.locfileid: "67140815"
   
 -   **Carregar e executar pacotes**. Você pode carregar e executar pacotes que foram desenvolvidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], na versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando você adiciona o pacote a um projeto existente, o pacote é permanentemente atualizado para o formato que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services usa. Quando você abre o arquivo de pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o pacote é atualizado temporariamente para o formato que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services usa. Se você salvar a alteração no pacote, o pacote será permanentemente atualizado. Quando você salvar o pacote no formato que o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services usa, os pacotes não poderão mais ser abertos na versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] correspondente do Business Intelligence Development Studio nem gerenciados pelas ferramentas [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services correspondentes.  
   
--   **Gerenciar pacotes no SQL Server Management Studio**. Não é possível se conectar a uma instância da versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Não é possível se conectar a uma instância da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir da versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Você pode usar a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazenados em uma instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. É preciso modificar o arquivo de configuração do serviço para adicionar a instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à lista de locais gerenciados pelo serviço. Para obter mais informações, consulte [Configuring the Integration Services Service &#40;SSIS Service&#41;](../service/integration-services-service-ssis-service.md).  
+-   **Gerenciar pacotes no SQL Server Management Studio**. Não é possível se conectar a uma instância da versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Não é possível se conectar a uma instância da versão [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do serviço [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a partir da versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Você pode usar a versão [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para gerenciar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] armazenados em uma instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. É preciso modificar o arquivo de configuração do serviço para adicionar a instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à lista de locais gerenciados pelo serviço. Para obter mais informações, consulte [Configurando o Serviço Integration Services &#40;Serviço SSIS#41;](../service/integration-services-service-ssis-service.md).  
   
--   **Armazene pacotes no SQL Server**. Você pode armazenar pacotes nos bancos de dados a seguir.  
+-   **Armazenar pacotes no SQL Server**. Você pode armazenar pacotes nos bancos de dados a seguir.  
   
     |Formato do pacote|Banco de dados|  
     |--------------------|--------------|  

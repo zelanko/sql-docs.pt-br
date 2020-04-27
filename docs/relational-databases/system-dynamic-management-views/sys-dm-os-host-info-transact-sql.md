@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900153"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67900153"
 
 Retorna uma linha que exibe informações de versão do sistema operacional.  
   
-|Nome da coluna |Tipo de dados |DESCRIÇÃO |  
+|Nome da coluna |Tipo de dados |Descrição |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |O tipo de sistema operacional: Windows ou Linux |
 |**host_distribution** |**nvarchar(256)** |Descrição do sistema operacional. |
@@ -65,17 +65,17 @@ Veja um exemplo de conjunto de resultados no Windows:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1046 |  
 
 Veja um exemplo de conjunto de resultados no Linux:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Linux |Ubuntu |16.04  |   |NULO   |1033 |  
+ |Linux |Ubuntu |16.04  |   |NULO   |1046 |  
 
   
 ## <a name="see-also"></a>Consulte Também  
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624346"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selecionar atributos de dimensão (Assistente para Dimensões)
@@ -46,7 +46,7 @@ ms.locfileid: "67624346"
  Para alterar o nome de um atributo, clique no nome do atributo e digite um nome novo para o atributo.  
   
  **Habilitar Navegação**  
- Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
+ Selecione para tornar o atributo disponível ao usuário final para navegação e filtragem. **Habilitar Navegação** deve ser selecionado para o atributo de chave. Para atributos não chave, o padrão é que **Habilitar Navegação** não esteja selecionado, o que faz com que os atributos não chave só sejam mostrados como propriedades do membro.  
   
  Na maioria dos casos, o atributo se torna disponível ou não disponível para navegação definindo-se a propriedade `AttributeHierarchyEnabled` como `True` ou `False`, respectivamente. No entanto, nas três caixas a seguir, o assistente usa configurações diferentes.  
   

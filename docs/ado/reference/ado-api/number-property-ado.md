@@ -18,10 +18,10 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917992"
 ---
 # <a name="number-property-ado"></a>Propriedade Number (ADO)
@@ -36,7 +36,7 @@ Indica o número que identifica exclusivamente um objeto de [erro](../../../ado/
  A coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) retorna um HRESULT em formato hexadecimal (por exemplo, 0x80004005) ou um valor longo (por exemplo, 2147467259). Esses HRESULTs podem ser gerados por componentes subjacentes, como OLE DB ou até mesmo OLE. Para obter mais informações sobre esses números, consulte [erros (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) na [referência do programador de OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

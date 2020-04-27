@@ -18,10 +18,10 @@ ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910143"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67910143"
 
   A exibição **sysdatatypemappings** é usada para mostrar o mapeamento entre SQL Server tipos de dados e os tipos de dados de um sistema de gerenciamento de banco (DBMS) não SQL Server. Essa exibição é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|A ID do mapeamento de tipo de dados.|  
 |**source_dbms**|**sysname**|Indica o nome do DBMS do qual os tipos de dados são mapeados, e pode ser um dos seguintes valores:<br /><br /> **MSSQLSERVER** = a origem é um banco de dados SQL Server.<br /><br /> **Oracle** = a origem é um banco de dados Oracle.|  
@@ -55,7 +55,7 @@ ms.locfileid: "67910143"
 |**is_default**|**bit**|Indica se o mapeamento de tipo de dados é usado por padrão.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdatatypemap](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  

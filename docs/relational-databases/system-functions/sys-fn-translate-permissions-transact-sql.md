@@ -22,10 +22,10 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68055367"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
@@ -50,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
  É um bitmask retornado na coluna de permissões. *perms* é **varbinary (16)**.  
   
 ## <a name="returns"></a>Retornos  
- **tabela**  
+ **table**  
   
 ## <a name="remarks"></a>Comentários  
  O valor retornado na coluna **permissões** de um rastreamento do SQL é uma representação de inteiro de um bitmask usado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo para calcular as permissões efetivas. Cada um dos 25 tipos de protegíveis tem seu próprio conjunto de permissões com valores numéricos correspondentes. **Sys. fn_translate_permissions** converte esse bitmask em uma tabela de nomes de permissões.  
@@ -70,7 +70,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
   
 ## <a name="see-also"></a>Consulte Também  
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [sys. server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

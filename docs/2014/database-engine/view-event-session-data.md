@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67131798"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
@@ -63,7 +63,7 @@ ms.locfileid: "67131798"
 ### <a name="watching-live-data"></a>Assistindo dados ao vivo  
  Você pode assistir dados ao vivo à medida que estão sendo capturados.  
   
--   No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
+-   No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
 
 -   Clique com o botão direito do mouse no nome da sessão e clique em **Observar Dados Dinâmicos** para começar a exibir dados de rastreamento.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67131798"
   
  Você pode criar, modificar ou excluir colunas mescladas:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **inspecionar dados dinâmicos**.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.)  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e clique em **Escolher Colunas**.  
   
@@ -110,18 +110,18 @@ ms.locfileid: "67131798"
   
  Para criar um filtro:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **inspecionar dados dinâmicos**.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.)  
   
 2.  Na janela de resultados de rastreamento, selecione os resultados que você deseja filtrar e, na barra de ferramentas **Eventos Estendidos** , clique no botão **Filtros**.  
   
 3.  Na caixa de diálogo **Filtros** , selecione **Definir filtro de hora** para definir o filtro de hora arrastando o controle deslizante ou modificando a hora na caixa de edição.  
   
-4.  Na seção **filtros adicionais** , aplique os critérios de filtro e clique em **aplicar**.  
+4.  Na seção **Filtros adicionais** , aplique seus critérios de filtro e clique em **Aplicar**.  
   
 ### <a name="sort-results"></a>Classificar Resultados  
  Para classificar os resultados em ordem crescente ou decrescente:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito do mouse no cabeçalho da coluna que você quer classificar e clique em **Classificação Crescente** ou **Classificação Decrescente**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131798"
   
  Você pode agrupar os resultados por uma única coluna ou por várias colunas.  
   
- Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
+ Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
   
  Para agrupar resultados por uma única coluna, clique com o botão direito do mouse no cabeçalho da coluna na janela de resultados de rastreamento e clique em **Agrupar por Esta Coluna**. Para desfazer o agrupamento, selecione uma das linhas e clique em **Remover Todo o Agrupamento**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "67131798"
 ### <a name="aggregate-results"></a>Agregar resultados  
  Você pode exibir os resultados de rastreamento e analisar mais profundamente os dados de seu evento agregando colunas em seus resultados. Eventos Estendidos dão suporte a cinco funções de agregação:  
   
--   sum  
+-   Sum  
   
 -   Min  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131798"
   
  A agregação é realizada em um grupo; portanto, você deve agrupar os resultados antes de você executar a agregação. Para agregar resultados:  
   
-1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.)  
+1.  Abra um arquivo .XEL para exibir os resultados do rastreamento. (Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.)  
   
 2.  Na barra de ferramentas **Eventos Estendidos** , clique no botão **Agregação** . A caixa de diálogo Agregação exibirá as colunas disponíveis para agregação.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131798"
   
  Para exibir o deadlock graph:  
   
--   No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
+-   No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
   
 -   Clique com o botão direito do mouse na sessão que contém o evento de deadlock configurado que você deseja exibir e selecione **Observar Dados Dinâmicos**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131798"
   
  Para exibir gráficos de plano de consulta:  
   
-1.  No Pesquisador de objetos, expanda os nós **Gerenciamento**, **eventos estendidos**e **sessões** .  
+1.  No Pesquisador de Objetos, expanda os nós **Gerenciamento**, **Eventos Estendidos**e **Sessões** .  
   
 2.  Clique com o botão direito do mouse na sessão que contém o gráfico de plano de consulta que você deseja exibir (por exemplo, query_post_compilation_showplan) e selecione **Observar Dados Dinâmicos**.  
   

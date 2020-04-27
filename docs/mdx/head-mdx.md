@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906005"
 ---
 # <a name="head-mdx"></a>Head (MDX)
@@ -31,7 +31,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Contar*  
+ *Count*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
 ## <a name="remarks"></a>Comentários  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
  [&#40;de tupla de item&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Membro de &#40;de item&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [Classificação &#40;&#41;MDX](../mdx/rank-mdx.md)   
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

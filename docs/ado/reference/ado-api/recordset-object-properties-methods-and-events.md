@@ -13,10 +13,10 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917329"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Recordset
@@ -112,7 +112,7 @@ ms.locfileid: "67917329"
   
  [Método Save](../../../ado/reference/ado-api/save-method.md)  
   
- [Método Seek](../../../ado/reference/ado-api/seek-method.md)  
+ [Método de busca](../../../ado/reference/ado-api/seek-method.md)  
   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67917329"
  [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
 ## <a name="events"></a>Eventos  
- [Evento EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+ [EndOfRecordset Event](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [Evento FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   

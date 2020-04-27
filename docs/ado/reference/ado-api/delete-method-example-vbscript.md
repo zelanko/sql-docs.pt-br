@@ -15,16 +15,16 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919112"
 ---
 # <a name="delete-method-example-vbscript"></a>Exemplo do método Delete (VBScript)
 Este exemplo usa o método [delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para remover um registro especificado de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Use o exemplo a seguir em uma página de Active Server (ASP). Para exibir esse exemplo totalmente funcional, você deve ter a fonte de dados AdvWorks. mdb (instalada com o SDK) localizada em C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real deste arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
+ Use o exemplo a seguir em uma página de Active Server (ASP). Para exibir esse exemplo totalmente funcional, você deve ter a fonte de dados AdvWorks. mdb (instalada com o SDK) localizada em C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real desse arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
   
  Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **DeleteVBS. asp**. Você pode exibir o resultado em qualquer navegador cliente.  
   

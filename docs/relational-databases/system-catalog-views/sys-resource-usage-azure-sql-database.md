@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904428"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Banco de Dados SQL do Azure)
@@ -42,11 +42,11 @@ ms.locfileid: "67904428"
   
  Para cada banco de dados de usuário, há uma linha para cada hora na forma contínua. Mesmo se o banco de dados estiver ocioso durante aquela hora, há uma linha, e o valor de usage_in_seconds para esse banco de dados será 0. O uso de armazenamento e as informações de SKU são acumuladas para a hora adequadamente.  
   
-|Colunas|Tipo de Dados|DESCRIÇÃO|  
+|Colunas|Tipo de Dados|Descrição|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|A hora (UTC) em incrementos de hora.|  
 |database_name|**nvarchar**|Nome do banco de dados de usuário.|  
-|sku|**nvarchar**|O nome da SKU. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Negócios<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|sku|**nvarchar**|O nome da SKU. O valores possíveis são os seguintes:<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|Soma do tempo de CPU usado na hora.<br /><br /> Observação: esta coluna foi preterida para v11 e não se aplica ao V12. **O valor é sempre definido como 0.**|  
 |storage_in_megabytes|**decimal**|Tamanho máximo de armazenamento para a hora, inclusive dados do banco de dados, índices, procedimentos armazenados e metadados.|  
   

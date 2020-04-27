@@ -19,10 +19,10 @@ ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910160"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67910160"
 
   Contém uma linha para cada grupo de arquivos restaurado. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Número de identificação exclusivo que identifica a operação de restauração correspondente. Faz referência a **RestoreHistory (restore_history_id)**.|  
 |**filegroup_name**|**nvarchar(128)**|Nome do grupo de arquivos sendo restaurado. Pode ser NULL.<br /><br /> Quando um banco de dados é revertido para um instantâneo do banco de dados, esse valor é preenchido da mesma maneira que uma restauração completa.|  
@@ -42,6 +42,6 @@ ms.locfileid: "67910160"
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restaurarfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/restorefile-transact-sql.md)   
  [&#41;RestoreHistory &#40;Transact-SQL](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899387"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys. dm_pdw_hadoop_operations (Transact-SQL)
@@ -24,9 +24,9 @@ ms.locfileid: "67899387"
 
   Contém uma linha para cada trabalho de redução de mapa que é enviado para o Hadoop como parte da execução [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de uma consulta em uma tabela do Hadoop externa. Cada trabalho de redução de mapa representa um dos predicados na consulta. Isso só é usado quando a aplicação de predicado está habilitada para consultas em tabelas externas do Hadoop.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|ID para esta operação externa do Hadoop.|O mesmo que ID em [Sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID para esta operação externa do Hadoop.|O mesmo que ID em [Sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Índice da etapa de consulta que se refere a esta operação do Hadoop.|O mesmo que step_index em [Sys. dm_pdw_request_steps &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |operation_type|**nvarchar (255)**|Descreve o tipo de operação externa.|' Operação do Hadoop externa '|  
 |operation_name|**nvarchar(4000)**|A ID do trabalho para um trabalho de redução de mapa. Isso é retornado pelo Hadoop depois [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] que o envia o trabalho.||  

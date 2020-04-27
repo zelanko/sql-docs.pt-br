@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917831"
 ---
 # <a name="open-method-ado-stream"></a>Método Open (Fluxo do ADO)
@@ -33,14 +33,14 @@ Abre um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) p
 Stream.Open Source, Mode , OpenOptions, UserName, Password  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Um valor de **variante** que especifica a fonte de dados para o **fluxo**. A *origem* pode conter uma cadeia de caracteres de URL absoluta que aponta para um nó existente em uma estrutura de árvore conhecida, como um email ou sistema de arquivos. Uma URL deve ser especificada usando a palavra-chave URL ("URL *= esquema*://*pasta**do servidor*/"). Como alternativa, a *origem* pode conter uma referência a um objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) já aberto, que abre o fluxo padrão associado ao **registro**. Se a *origem* não for especificada, um **fluxo** será instanciado e aberto, associado a nenhuma fonte subjacente por padrão. Para obter mais informações sobre esquemas de URL e seus provedores associados, consulte [URLs absolutas e relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- *Mode*  
+ *Modo*  
  Opcional. Um valor de [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) que especifica o modo de acesso para o **fluxo** resultante (por exemplo, leitura/gravação ou somente leitura). O valor padrão é **adModeUnknown**. Consulte a propriedade [Mode](../../../ado/reference/ado-api/mode-property-ado.md) para obter mais informações sobre modos de acesso. Se o *modo* não for especificado, ele será herdado pelo objeto de origem. Por exemplo, se o **registro** de origem for aberto no modo somente leitura, o **fluxo** também será aberto no modo somente leitura por padrão.  
   
- *Abriroptions*  
+ *OpenOptions*  
  Opcional. Um valor de [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . O valor padrão é **adOpenStreamUnspecified**.  
   
  *Usu*  

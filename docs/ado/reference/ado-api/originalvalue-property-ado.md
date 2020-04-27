@@ -16,10 +16,10 @@ ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917841"
 ---
 # <a name="originalvalue-property-ado"></a>Propriedade OriginalValue (ADO)
@@ -35,7 +35,7 @@ Indica o valor de um [campo](../../../ado/reference/ado-api/field-object.md) que
   
  No *modo de atualização em lotes* (no qual o provedor armazena em cache várias alterações e as grava na fonte de dados subjacente somente quando você chama o método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), a propriedade **OriginalValue** retorna o valor do campo que existia antes de qualquer alteração (ou seja, desde a última chamada do método **UpdateBatch** ). Esse é o mesmo valor que o método [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) usa para substituir a propriedade **Value** . Ao usar essa propriedade com a propriedade [subdependent](../../../ado/reference/ado-api/underlyingvalue-property.md) , você pode resolver conflitos que surgem de atualizações em lotes.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Record  
  Para objetos de [registro](../../../ado/reference/ado-api/record-object-ado.md) , a propriedade **OriginalValue** estará vazia para os campos adicionados antes de a [atualização](../../../ado/reference/ado-api/update-method.md) ser chamada.  
   
 ## <a name="applies-to"></a>Aplica-se A  

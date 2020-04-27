@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 06f905b4750801080c6b645601261bfe96f1ee0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899441"
 ---
 # <a name="sysdm_pdw_errors-transact-sql"></a>sys. dm_pdw_errors (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "67899441"
 
   Contém informações sobre todos os erros encontrados durante a execução de uma solicitação ou consulta.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar (36)**|Chave para esta exibição.<br /><br /> ID numérica exclusiva associada ao erro.|Exclusivo em todos os erros de consulta no sistema.|  
 |source|**nvarchar (64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|type|**nvarchar(4000)**|Tipo do erro ocorrido.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|tipo|**nvarchar(4000)**|Tipo do erro ocorrido.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Hora em que o erro ocorreu.|Menor ou igual à hora atual.|  
 |pwd_node_id|**int**|Identificador do nó específico envolvido, se houver. Para obter informações adicionais sobre IDs de nó, consulte [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
-|session_id|**nvarchar (32)**|Identificador da sessão envolvida, se houver. Para obter informações adicionais sobre IDs de sessão, consulte [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|request_id|**nvarchar (32)**|Identificador da solicitação envolvida, se houver. Para obter informações adicionais sobre IDs de solicitação, consulte [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
+|session_id|**nvarchar(32)**|Identificador da sessão envolvida, se houver. Para obter informações adicionais sobre IDs de sessão, consulte [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|request_id|**nvarchar(32)**|Identificador da solicitação envolvida, se houver. Para obter informações adicionais sobre IDs de solicitação, consulte [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).||  
 |spid|**int**|SPID da sessão de SQL Server envolvida, se houver.||  
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |detalhes|**nvarchar(4000)**|Mantém a descrição do texto de erro completo.||  

@@ -13,17 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463474"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use o **sp_pdw_database_encryption_regenerate_system_keys** para girar o certificado e a chave de criptografia do banco de dados para bancos internos que são criptografados quando o TDE está habilitado no dispositivo. Isso inclui `tempdb`. Isso só terá sucesso se o TDE estiver habilitado.  
+  Use o **sp_pdw_database_encryption_regenerate_system_keys** para girar o certificado e a chave de criptografia do banco de dados para bancos internos que são criptografados quando o TDE está habilitado no dispositivo. Isso inclui o `tempdb`. Isso só terá sucesso se o TDE estiver habilitado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

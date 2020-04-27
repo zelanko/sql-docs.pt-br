@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103280"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68103280"
   
  Para recuperar informações dessas exibições, especifique o nome totalmente qualificado de **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Nome do catálogo da rotina para a qual este é um parâmetro.|  
 |**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nome do esquema da rotina para a qual este é um parâmetro.<br /><br /> <strong> \* Importante \* \* </strong> Não use INFORMATION_SCHEMA exibições para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68103280"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, retorna NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, retorna NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Precisão em segundos fracionários se o tipo de parâmetro for **DateTime** ou **smalldatetime**. Caso contrário, retorna NULL.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULO. Reservado para uso futuro.|  
-|**INTERVAL_PRECISION**|**smallint**|NULO. Reservado para uso futuro.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULO. Reservado para uso futuro.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições do sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

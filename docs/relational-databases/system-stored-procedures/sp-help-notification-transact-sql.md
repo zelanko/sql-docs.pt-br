@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906103"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`As informações de *object_type*retornadas. *enum_type* é real na maioria dos casos. *enum_type*é **Char (10)**, sem padrão, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ACTUAL|Lista somente os *object_types* associados ao *nome*.|  
 |ALL|Lista todos os*object_types* incluindo aqueles que não estão associados ao *nome*.|  
@@ -58,11 +58,11 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Um valor numérico que determina as colunas de método de notificação a serem retornadas. *notification_method* é **tinyint**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Email: retorna apenas a coluna **use_email** .|  
 |**2**|Pager: retorna apenas a coluna **use_pager** .|  
-|**quatro**|Netsend: retorna apenas a coluna **use_netsend** .|  
+|**4**|Netsend: retorna apenas a coluna **use_netsend** .|  
 |**7**|Tudo: retorna todas as colunas.|  
   
 `[ @target_name = ] 'target_name'`Um nome de alerta a ser pesquisado (se *object_type* é alertas) ou um nome de operador para pesquisar (se *object_type* forem operadores). *target_name* será necessário somente se *ENUM_TYPE* for o destino. *target_name* é **sysname**, com um padrão de NULL.  
@@ -73,7 +73,7 @@ sp_help_notification
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *object_type* for **alertas**, o conjunto de resultados listará todos os alertas de um determinado operador.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de alerta.|  
 |**alert_name**|**sysname**|Nome do alerta.|  
@@ -86,7 +86,7 @@ sp_help_notification
   
  Se **object_type** for **Operators**, o conjunto de resultados listará todos os operadores de um determinado alerta.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificação do operador.|  
 |**operator_name**|**sysname**|Nome do operador.|  

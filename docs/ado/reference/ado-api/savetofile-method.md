@@ -17,10 +17,10 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917029"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
@@ -33,8 +33,8 @@ Salva o conteúdo binário de um [fluxo](../../../ado/reference/ado-api/stream-o
 Stream.SaveToFile FileName, SaveOptions  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Nome do arquivo*  
+#### <a name="parameters"></a>Parâmetros  
+ *FileName*  
  Um valor de **cadeia de caracteres** que contém o nome totalmente qualificado do arquivo para o qual o conteúdo do **fluxo** será salvo. Você pode salvar em qualquer local local válido ou em qualquer local ao qual tenha acesso por meio de um valor UNC.  
   
  *Salvaroptions*  

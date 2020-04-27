@@ -10,10 +10,10 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908876"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configurações do projeto (conversão) (MySQLToSQL)
@@ -44,7 +44,7 @@ O painel de conversão está disponível nas caixas de diálogo **configuraçõe
 |**Gerar restrição para colunas de colunas de tipo de dados numéricos não assinados**|Adicione verificação de valor não negativo a colunas de tipos de dados numéricos não ASSINADOs.<br /><br />**Modo padrão**: não<br /><br />**Modo otimista**: não<br /><br />**Modo completo**: Sim|  
 |**Gerar restrição para colunas de tipo de dados YEAR**|Gera a restrição para colunas de tipo de dados YEAR na tabela SQL Server ou SQL Azure, se ela não estiver presente na tabela MySQL. Em caso afirmativo, todas as colunas convertidas do tipo de dados YEAR serão acompanhadas com a restrição CHECK que controla o valor.<br /><br />**Modo padrão**: não<br /><br />**Modo otimista**: não<br /><br />**Modo completo**: Sim|  
   
-### <a name="data-types"></a>Tipos de dados  
+### <a name="data-types"></a>Tipos de Dados  
   
 |||  
 |-|-|  
@@ -86,10 +86,10 @@ O painel de conversão está disponível nas caixas de diálogo **configuraçõe
 |||  
 |-|-|  
 |**Termo**|**Definição**|  
-|**Caixa delimitadora padrão {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para índices espaciais**|Define o valor padrão para o parâmetro {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} da caixa delimitadora usada em índices espaciais.<br /><br />**Modo Padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Densidade de grade padrão para índices espaciais**|Define o valor padrão para LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 da densidade de grade usada em índices espaciais.<br /><br />**Modo Padrão**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo otimista**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo completo**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão|  
+|**Caixa delimitadora padrão {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para índices espaciais**|Define o valor padrão para o parâmetro {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} da caixa delimitadora usada em índices espaciais.<br /><br />**Modo padrão**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo otimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Densidade de grade padrão para índices espaciais**|Define o valor padrão para LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 da densidade de grade usada em índices espaciais.<br /><br />**Modo padrão**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo otimista**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão<br /><br />**Modo completo**<br /><br />LEVEL_1: padrão<br /><br />LEVEL_2: padrão<br /><br />LEVEL_3: padrão<br /><br />LEVEL_4: padrão|  
   
-### <a name="transactions"></a>Transactions  
+### <a name="transactions"></a>Transações  
   
 |||  
 |-|-|  

@@ -10,10 +10,10 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909018"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapear o conjunto de caracteres do SQL Server e MySQL (MySQLToSQL)
@@ -100,7 +100,7 @@ O mapeamento de conjunto de caracteres varia em níveis de nó diferentes, ou se
     |simplificado GBK|Chinês simplificado do simplificado GBK|NCHAR/NVARCHAR (padrão)|  
     |latin5|ISO 8859-9 Turco|CHAR/VARCHAR (padrão)|  
     |armscii8|ARMSCII-8 armênio|CHAR/VARCHAR (padrão)|  
-    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
+    |utf8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
     |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (padrão)|  
     |cp866|DOS russo|CHAR/VARCHAR (padrão)|  
     |keybcs2|DOS Kamenicky tcheco-eslovaco|CHAR/VARCHAR (padrão)|  

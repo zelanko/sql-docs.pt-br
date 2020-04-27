@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826543"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "67826543"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Para começar a usar o mapa imediatamente, consulte [Tutorial: relatório de mapa &#40;Construtor de Relatórios&#41;](../tutorial-map-report-report-builder.md) ou [Exemplos de relatórios (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Para começar a usar um mapa imediatamente, confira [Tutorial: Relatório de mapa &#40;Construtor de Relatórios&#41; ](../tutorial-map-report-report-builder.md) ou [Exemplos de relatório (Construtor de Relatórios e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Você pode salvar mapas separadamente de um relatório como partes de relatório.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "67826543"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Process"></a>Adicionando um mapa ao relatório  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Adicionando um mapa ao relatório  
  Para adicionar um mapa ao relatório, veja aqui uma lista das etapas gerais seguir:  
   
 -   Determine os dados analíticos que você deseja exibir e os tipos de dados espaciais necessários. Por exemplo, para exibir as vendas anuais relativas da loja em um mapa de bolha, você precisa do nome e das vendas da loja para dados analíticos e do nome e do local da loja como latitude e longitude para dados espaciais.  
@@ -56,7 +56,7 @@ ms.locfileid: "67826543"
   
 
   
-##  <a name="AddingData"></a>Adicionando dados a um mapa  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Adicionando dados a um mapa  
  Um mapa usa dois tipos de dados: dados espaciais e dados analíticos. Os dados espaciais definem a aparência do mapa, enquanto os dados analíticos fornecem os valores associados ao mapa. Por exemplo, os dados espaciais definem os locais de cidades em uma área, enquanto os dados analíticos fornecem a população de cada cidade.  
   
  Um mapa deve ter dados espaciais; os dados analíticos são opcionais. Por exemplo, você pode adicionar um mapa que exibe apenas os locais de lojas em uma cidade.  
@@ -68,7 +68,7 @@ ms.locfileid: "67826543"
   
  Os dados espaciais se baseiam em um dos seguintes sistemas de coordenadas:  
   
--   **Geográfico** Especifica as coordenadas poliedt em uma superfície esférica usando longitude e latitude. Quando os dados espaciais são geográficos, uma projeção deve ser especificada. Uma projeção é um conjunto de regras que especifica como desenhar objetos que têm coordenadas esféricas em uma superfície planar. Somente dados geográficos com a mesma projeção podem ser comparados ou combinados.  
+-   **Geográfico** Especifica as coordenadas geodésicas em uma superfície esférica usando a longitude e a latitude. Quando os dados espaciais são geográficos, uma projeção deve ser especificada. Uma projeção é um conjunto de regras que especifica como desenhar objetos que têm coordenadas esféricas em uma superfície planar. Somente dados geográficos com a mesma projeção podem ser comparados ou combinados.  
   
 -   **Planar** Especifica as coordenadas geométricas em uma superfície planar usando X e Y.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "67826543"
 #### <a name="sources-of-spatial-data"></a>Fontes de dados espaciais  
  As seguintes fontes de dados espaciais têm suporte:  
   
--   **Relatórios da Galeria de mapas.** Os dados espaciais são inseridos em relatórios localizados na galeria de mapas. Por padrão, a Galeria de mapas é instalada na * \<unidade>*: \Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
+-   **Relatórios da galeria de mapas.** Os dados espaciais são inseridos em relatórios localizados na galeria de mapas. Por padrão, a Galeria de mapas é instalada na * \<unidade>*: \Program Files\Microsoft SQL Server\Report Builder \MapGallery.  
   
     > [!NOTE]  
     >  Esse [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recurso de mapeamento usa dados de forma de Tiger/line que forneciam cortesia do censo[http://www.census.gov/](http://www.census.gov/)Bureau () dos EUA. Os arquivos de forma TIGER/Line são um extrato das informações geográficas e cartográficas selecionadas do banco de dados Census MAF/TIGER. Esses arquivos de forma podem ser obtidos sem encargos com a Agência de Recenseamento norte-americana. Para saber mais sobre os Shapefiles TIGER/Line, visite a [documentação técnica dos Shapefiles TIGER/Line e dos arquivos TIGER/Line](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). As informações de limites nos arquivos de forma Tiger/Line destinam-se apenas a fins de coleta de dados estatísticos e tabulação; a representação e a designação dessas informações para propósitos estatísticos não constituem uma determinação de autoridade de jurisdição ou direitos de propriedade ou qualificação e elas não são descrições de terra legais. Census TIGER e TIGER/Line são marcas registradas da Agência de Recenseamento norte-americana.  
   
--   **ESRI forma.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. ESRI (Environmental Systems Research Institute, Inc.). Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Arquivos de forma ESRI.** Os arquivos de forma ESRI contêm dados compatíveis com o Environmental Systems Research Institute, Inc. ESRI (Environmental Systems Research Institute, Inc.). Os arquivos de forma ESRI referem-se a um conjunto de arquivos. Dados no arquivo .shp especificam as formas geográficas ou geométricas. Os dados no arquivo .dbf fornecem atributos para as formas. Para exibir um mapa em modo design ou executar um mapa do servidor de relatório, ambos os arquivos devem estar na mesma pasta. Quando você adicionar dados espaciais de um arquivo .shp em seu sistema de arquivos local, os dados espaciais serão incorporados em seu relatório. Para recuperar dados espaciais dinamicamente em tempo de execução, carregue os arquivos de forma no servidor de relatório e especifique-os como a fonte de dados espaciais. Para obter mais informações, consulte [Localizando arquivos de forma ESRI para um mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **SQL Server dados espaciais armazenados em um banco de dado.** É possível usar uma consulta que especifique tipos de dados `SQLGeometry` ou `SQLGeography` de um banco de dados relacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md) nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Dados espaciais do SQL Server armazenados em um banco de dados.** É possível usar uma consulta que especifique tipos de dados `SQLGeometry` ou `SQLGeography` de um banco de dados relacional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Visão geral dos tipos de dados espaciais](../../relational-databases/spatial/spatial-data-types-overview.md) nos [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      No conjunto de resultados que você vê no designer de consulta, cada linha de dados espaciais é tratada como uma unidade e armazenada em um único elemento de mapa. Por exemplo, se houver vários pontos definidos em uma linha no conjunto de resultados, as propriedades de vídeo se aplicarão a todos os pontos naquele elemento de mapa.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "67826543"
 #### <a name="spatial-data-in-design-view"></a>Dados espaciais no modo Design  
  No modo Design, o processador de relatório exibe dados espaciais de exemplo para ajudá-lo a criar a camada do mapa. Os dados exibidos dependem da disponibilidade dos dados espaciais:  
   
--   **Dados inseridos.** Os dados de exemplo são recuperados de elementos do mapa incorporados às camadas do mapa em seu relatório.  
+-   **Dados incorporados.** Os dados de exemplo são recuperados de elementos do mapa incorporados às camadas do mapa em seu relatório.  
   
--   **Link para o formato de forma ESRI.** Se o arquivo de forma (.shp) ESRI e o arquivo de suporte (.dbf) estiverem disponíveis, os dados de exemplo serão carregados a partir do arquivo de forma. Caso contrário, o processador de relatório gerará dados de exemplo e exibirá a mensagem **Nenhum dado espacial disponível**.  
+-   **Link para um arquivo de forma ESRI.** Se o arquivo de forma (.shp) ESRI e o arquivo de suporte (.dbf) estiverem disponíveis, os dados de exemplo serão carregados a partir do arquivo de forma. Caso contrário, o processador de relatório gerará dados de exemplo e exibirá a mensagem **Nenhum dado espacial disponível**.  
   
--   **SQL Server dados espaciais.** Se a fonte de dados estiver disponível e as credenciais forem válidas, os dados de exemplo serão carregados a partir dos dados espaciais no banco de dados. Caso contrário, o processador de relatório gerará dados de exemplo e exibirá a mensagem **Nenhum dado espacial disponível**.  
+-   **Dados espaciais do SQL Server.** Se a fonte de dados estiver disponível e as credenciais forem válidas, os dados de exemplo serão carregados a partir dos dados espaciais no banco de dados. Caso contrário, o processador de relatório gerará dados de exemplo e exibirá a mensagem **Nenhum dado espacial disponível**.  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>Inserindo dados espaciais na definição do relatório  
  Diferentemente dos dados analíticos, você tem a opção de inserir dados espaciais em uma camada do mapa na definição do relatório. Ao inserir dados espaciais, você insere elementos do mapa que são usados na camada do mapa.  
@@ -114,11 +114,11 @@ ms.locfileid: "67826543"
 ### <a name="analytical-data"></a>Dados analíticos  
  Os dados analíticos são os dados que você deseja visualizar no mapa, por exemplo, a população de uma cidade ou o total de vendas de uma loja. Os dados analíticos podem vir de uma das seguintes fontes:  
   
--   **Campo do conjunto de um.** Um campo de um conjunto de dados no painel de Dados do Relatório.  
+-   **Campo de conjunto de dados.** Um campo de um conjunto de dados no painel de Dados do Relatório.  
   
 -   **Campo de fonte de dados espaciais.** Um campo da fonte de dados espaciais incluída nos dados espaciais. Por exemplo, um arquivo de forma ESRI frequentemente inclui dados espaciais e analíticos. Os nomes de campos da fonte de dados espaciais começam com #e aparecem na lista suspensa de campos quando você está especificando o campo de dados para regras de uma camada.  
   
--   **Dados inseridos para um elemento de mapa.** Depois que você inserir polígonos, linhas ou pontos em um relatório, poderá substituir os campos de dados de elementos do mapa individuais e definir valores personalizados.  
+-   **Dados inseridos para um elemento do mapa.** Depois que você inserir polígonos, linhas ou pontos em um relatório, poderá substituir os campos de dados de elementos do mapa individuais e definir valores personalizados.  
   
  Ao especificar regras para uma camada e selecionar o campo de dados analíticos, se o tipo de dados for numérico, o processador de relatório usará automaticamente a função padrão Sum para calcular valores de agregação para o elemento do mapa. Se o campo não for numérico, nenhuma função de agregação será especificada e a função de agregação implícita First será usada. Para alterar a expressão padrão, altere as opções de regras da camada. Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -147,14 +147,14 @@ ms.locfileid: "67826543"
   
 
   
-##  <a name="Viewport"></a>Compreendendo o visor do mapa  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Entendendo o visor do mapa  
  Depois que especificar dados do mapa para um relatório, você poderá limitar a área de exibição do mapa especificando um *visor*do mapa. Por padrão, o visor corresponde à mesma área do mapa inteiro. Para cortar o mapa, você pode especificar o centro, o nível de zoom e as coordenadas máxima e mínima que definem a área que você deseja incluir no relatório. Para aprimorar a exibição do mapa no relatório, você pode mover as legendas, a escala de distância e a escala de cores para fora do visor. A figura seguinte mostra um visor:  
   
  ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
-##  <a name="TileLayer"></a>Adicionando uma camada de blocos do mapa do Bing  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Adicionando uma camada de peças de mapa do Bing  
  Você pode adicionar uma camada para peças de mapa do Bing que fornece um plano de fundo geográfico para a exibição de mapa atual conforme definido pelo visor. Para adicionar uma camada lado a lado, você deve especificar o sistema de coordenadas **geográfico** e o tipo de projeção **Mercator**. Itens lado a lado que correspondem ao centro do visor e ao nível de zoom selecionado são recuperados automaticamente dos Serviços Web Bing Maps.  
   
  Você pode personalizar a camada especificando as opções seguintes:  
@@ -163,7 +163,7 @@ ms.locfileid: "67826543"
   
     -   **Rodoviário.** Exibe um estilo de mapa rodoviário que tem um plano de fundo branco, estradas e texto de rótulo.  
   
-    -   **Aéreas.** Exibe um estilo de imagem aéreo sem texto.  
+    -   **Aéreo.** Exibe um estilo de imagem aéreo sem texto.  
   
     -   **Ti.** Exibe uma combinação de estilos **Rodoviário** e **Aéreo** .  
   
@@ -173,11 +173,11 @@ ms.locfileid: "67826543"
   
  Para obter instruções passo a passo, consulte [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obter mais informações sobre peças, consulte [Sistema de Peças do Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315).  Para obter mais informações sobre o uso de peças de mapa do Bing no seu relatório, consulte [termos de uso adicionais](https://go.microsoft.com/fwlink/?LinkId=151371) e a [Política de Privacidade](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
  
   
-##  <a name="MapLayers"></a>Noções básicas sobre camadas de mapa e elementos de mapa  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a>Noções básicas sobre camadas de mapa e elementos de mapa  
  Um mapa pode ter várias camadas. Há três tipos de camadas: Cada camada exibe um tipo de dados espaciais:  
   
 -   **Camada de polígono.** Exibe contornos das áreas ou marcadores para o ponto central do polígono, que é calculado automaticamente para cada polígono.  
@@ -205,11 +205,11 @@ ms.locfileid: "67826543"
   
 1.  **Propriedades da camada.** As propriedades que se aplicam a toda a camada. Por exemplo, use as propriedades da camada para definir a fonte de dados analíticos ou a visibilidade da camada inteira.  
   
-2.  **Propriedades de polígono, linha, ponto e polígono inserido, linha e ponto.** Propriedades que se aplicam a todos os elementos do mapa em uma camada, quer os elementos sejam de dados espaciais dinâmicos ou dados espaciais inseridos. Por exemplo, use as propriedades de ponto central do polígono para definir a cor de preenchimento para bolhas de uma gradação que preencha áreas de da bolha de azul-escuro a azul-claro e de cima para baixo.  
+2.  **Propriedades de Polígono, Linha e Ponto e propriedades de Polígono, Linha e Ponto Inserido.** Propriedades que se aplicam a todos os elementos do mapa em uma camada, quer os elementos sejam de dados espaciais dinâmicos ou dados espaciais inseridos. Por exemplo, use as propriedades de ponto central do polígono para definir a cor de preenchimento para bolhas de uma gradação que preencha áreas de da bolha de azul-escuro a azul-claro e de cima para baixo.  
   
 3.  **Regras de cores, regras de tamanho, regras de largura, regras de tipo de marcador.** As regras aplicam propriedades a uma camada quando essa camada tem elementos do mapa que possuem uma relação com os dados analíticos. O tipo de regras varia com base no tipo de camada. Por exemplo, use regras de tamanho de ponto para variar o tamanho da bolha com base na população.  
   
-4.  **Substituir pelas propriedades de polígono, linha ou ponto inseridas**. Para elementos de mapas inseridos, você pode selecionar a opção de substituição e alterar qualquer propriedade ou valor de dados. As alterações que você fizer para substituir as regras para elementos individuais são irreversíveis. Por exemplo, você pode realçar uma loja específica usando um marcador de pino.  
+4.  **Substituir as propriedades de Polígono, Linha ou Ponto inserido**. Para elementos de mapas inseridos, você pode selecionar a opção de substituição e alterar qualquer propriedade ou valor de dados. As alterações que você fizer para substituir as regras para elementos individuais são irreversíveis. Por exemplo, você pode realçar uma loja específica usando um marcador de pino.  
   
  Para obter mais informações, consulte [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -225,7 +225,7 @@ ms.locfileid: "67826543"
   
 
   
-##  <a name="Legends"></a>Entendendo legendas de mapa, escala de cores e escala de distância  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Entendendo legendas do mapa, escala de cores e escala de distância  
  Você pode adicionar várias legendas a seu relatório para ajudar os usuários a interpretarem um mapa. Os mapas podem incluir os seguintes itens:  
   
 -   **Legendas.** Você pode criar várias legendas. Os itens que são listados em uma legenda são gerados automaticamente com base nas regras que você especifica para elementos do mapa em cada camada. Para cada regra, você especifica a legenda a ser usada para exibir seus itens relacionados. Dessa maneira, você pode atribuir itens de várias camadas à mesma legenda ou a legendas diferentes.  
@@ -238,7 +238,7 @@ ms.locfileid: "67826543"
   
   
   
-##  <a name="Troubleshooting"></a>Mapeamentos de solução de problemas  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> Solucionando problemas de mapas  
  Os relatórios de mapa usam dados espaciais e analíticos de várias fontes de dados. Cada camada do mapa pode usar fontes de dados diferentes. As propriedades de exibição de cada camada seguem uma precedência específica com base nas propriedades da camada, nas regras e nas propriedades do elemento do mapa.  
   
  Se você não visualizar o resultado desejado quando quiser exibir um relatório de mapa, as causas-raiz poderão vir vários problemas. Para ajudá-lo a isolar e entender cada problema, é útil trabalhar com uma camada de cada vez. Use o painel de Mapa para selecionar uma camada e alternar sua visibilidade facilmente.  
@@ -247,7 +247,7 @@ ms.locfileid: "67826543"
   
 
   
-##  <a name="HowTo"></a> Tópicos de instruções  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Tópicos de instruções  
  Esta seção lista procedimentos que mostram para você, passo a passo, como trabalhar com mapas e camadas do mapa em seus relatórios.  
   
 -   [Adicionar, alterar ou excluir um mapa ou uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -258,12 +258,12 @@ ms.locfileid: "67826543"
   
  
   
-##  <a name="Section"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="Section"></a>Nesta seção  
  [Planejar um relatório de mapa &#40;Construtor de Relatórios e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Assistente de Mapa e Assistente de Camada do Mapa &#40;Construtor de Relatórios e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizar os dados e a exibição de um mapa ou da camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizar os dados e a exibição de um mapa ou de uma camada do mapa &#40;Construtor de Relatórios e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variar a exibição de polígono, linha e ponto por regras e dados analíticos &#40;Construtor de Relatórios e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
@@ -273,6 +273,6 @@ ms.locfileid: "67826543"
   
  [Adicionar locais personalizados a um mapa &#40;Construtor de Relatórios e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Solucionar problemas de relatórios: mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de relatórios: Mapear relatórios &#40;Construtor de Relatórios e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

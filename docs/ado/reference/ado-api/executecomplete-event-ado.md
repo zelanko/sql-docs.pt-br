@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918779"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
@@ -33,7 +33,7 @@ O evento **ExecuteComplete** é chamado após a conclusão da execução de um c
 ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnection  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *RecordsAffected*  
  Um valor **longo** que indica o número de registros afetados pelo comando.  
   
@@ -48,7 +48,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pCommand*  
  O objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que foi executado. Contém um objeto **Command** mesmo ao chamar **Connection. Execute** ou **Recordset. Open** sem criar explicitamente um **comando**, em que casos o objeto **Command** é criado internamente pelo ADO.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que é o resultado do comando executado. Este **conjunto de registros** pode estar vazio. Você nunca deve destruir este objeto Recordset de dentro deste manipulador de eventos. Isso resultará em uma violação de acesso quando o ADO tentar acessar um objeto que não existe mais.  
   
  *pConnection*  

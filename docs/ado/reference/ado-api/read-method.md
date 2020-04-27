@@ -17,10 +17,10 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917412"
 ---
 # <a name="read-method"></a>Método Read
@@ -33,7 +33,7 @@ Lê um número especificado de bytes de um objeto de [fluxo](../../../ado/refere
 Variant = Stream.Read ( NumBytes)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *NumBytes*  
  Opcional. Um valor **longo** que especifica o número de bytes a serem lidos do arquivo ou o valor de [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) **adReadAll**, que é o padrão.  
   

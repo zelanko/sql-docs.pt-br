@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918071"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
@@ -33,8 +33,8 @@ Move a entidade representada por um [registro](../../../ado/reference/ado-api/re
 Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL que identifica o **registro** a ser movido. Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o objeto representado por esse **registro** será movido. Por exemplo, se o **registro** representar um arquivo, o conteúdo do arquivo será movido para o local especificado pelo *destino*.  
   
  *Destino*  
@@ -53,7 +53,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Opcional. Um valor **booliano** que, quando **true**, especifica que essa operação deve ser assíncrona.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um valor de **String**. Normalmente, o valor de *destino* é retornado. No entanto, o valor exato retornado é dependente do provedor.  
+ Um valor de **cadeia de caracteres** . Normalmente, o valor de *destino* é retornado. No entanto, o valor exato retornado é dependente do provedor.  
   
 ## <a name="remarks"></a>Comentários  
  Os valores de *origem* e *destino* não devem ser idênticos; caso contrário, ocorrerá um erro em tempo de execução. Pelo menos os nomes de servidor, caminho e recurso devem ser diferentes.  

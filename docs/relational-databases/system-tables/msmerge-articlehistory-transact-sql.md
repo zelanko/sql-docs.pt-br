@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907248"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "67907248"
 
   A tabela **MSmerge_articlehistory** controla as alterações feitas nos artigos durante uma sessão de sincronização agente de mesclagem, com uma linha para cada artigo para o qual as alterações foram feitas. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|A ID de uma sessão de trabalho Agente de Mesclagem na tabela do sistema [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) .|  
 |**phase_id**|**int**|A fase da sessão de sincronização, que pode ser uma das seguintes:<br /><br /> **1** = carregar.<br /><br /> **2** = baixar.<br /><br /> **4** = limpar.<br /><br /> **5** = desligar.<br /><br /> **6** = alterações de esquema.<br /><br /> **7** = bcp.|  
 |**article_name**|**sysname**|O nome do artigo no qual as alterações foram feitas.|  
 |**start_time**|**datetime**|A hora em que o agente começou a processar o artigo.|  
-|**permanência**|**int**|O período de tempo em que o agente processou um artigo, em segundos.|  
+|**duration**|**int**|O período de tempo em que o agente processou um artigo, em segundos.|  
 |**suplementos**|**int**|O número de inserções aplicadas a um artigo específico durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  
-|**actualiza**|**int**|O número de atualizações aplicadas a um artigo específico durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  
+|**atualizações**|**int**|O número de atualizações aplicadas a um artigo específico durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  
 |**excluído**|**int**|O número de exclusões aplicadas a um artigo específico durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  
 |**entrar**|**int**|O número de conflitos que ocorreu durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  
 |**conflicts_resolved**|**int**|O número de conflitos que ocorreu e foi resolvido durante a sincronização. Esse valor será incrementado durante o processo de sincronização e o valor final representa o número total.|  

@@ -19,10 +19,10 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899587"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67899587"
   
   Aplica-se somente a SQL Server em execução no Windows. Para ver as informações semelhantes para SQL Server em execução em um host não Windows, como o Linux, use [Sys. dm_os_host_info &#40;&#41;do Transact-SQL ](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Para o Windows, retorna o número de versão. Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](/windows/desktop/SysInfo/operating-system-version). Não pode ser NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Para o Windows, retorna o número de service pack. Não pode ser NULL. |  
@@ -63,7 +63,7 @@ FROM sys.dm_os_windows_info;
  `6.0              Service Pack 2                4            1033`  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
   

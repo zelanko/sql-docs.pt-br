@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918455"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
@@ -36,11 +36,11 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="return-value"></a>Valor retornado  
  Retorna uma **variante** cujo valor é uma matriz bidimensional.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Linhas*  
  Opcional. Um valor [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) que indica o número de registros a serem recuperados. O padrão é **adGetRowsRest**.  
   
- *Iniciar*  
+ *Início*  
  Opcional. Um valor de **cadeia de caracteres** ou uma **variante** que é avaliada como o indicador para o registro do qual a operação **GetRows** deve começar. Você também pode usar um valor [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
  *Fields*  

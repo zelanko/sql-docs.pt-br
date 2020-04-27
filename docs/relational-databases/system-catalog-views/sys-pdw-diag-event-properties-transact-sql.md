@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fc14e2f03deb833d18a0d68be05deefe69842cf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915006"
 ---
 # <a name="syspdw_diag_event_properties-transact-sql"></a>sys. pdw_diag_event_properties (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "67915006"
 
   Contém informações sobre quais propriedades estão associadas a eventos de diagnóstico.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |**event_name**|**nvarchar (255)**|Nome do evento de diagnóstico específico.||  
 |**property_name**|**nvarchar (255)**|Nome de uma propriedade do evento.||  

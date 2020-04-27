@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122628"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -42,7 +42,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *securable*  
+ *protegível*  
  É o nome do protegível. Se o protegível for o servidor ou um banco de dados, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. *protegível* pode ser um nome com diversas partes.  
   
  '*securable_class*'  
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que **fn_my_permissions** retorna. Cada linha retornada descreve uma permissão mantida pelo contexto de segurança atual no protegível. Retorna NULL se a consulta falhar.  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Tipo|Descrição|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nome do protegível no qual as permissões listadas são efetivamente concedidas.|  
 |subentity_name|**sysname**|Nome da coluna se o protegível tiver colunas; caso contrário, será NULL.|  
@@ -160,12 +160,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Funções de segurança &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
- [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Protegíveis](../../relational-databases/security/securables.md)   
+ [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys. fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

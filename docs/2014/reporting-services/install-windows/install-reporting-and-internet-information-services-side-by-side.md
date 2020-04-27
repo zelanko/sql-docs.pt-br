@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285052"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar o Reporting Services e os Serviços de Informações da Internet lado a lado (Modo Nativo do SSRS)
@@ -51,16 +51,16 @@ ms.locfileid: "67285052"
   
  Uma indicação de um conflito de porta é que você verá a seguinte mensagem de erro: 'System.IO.FileLoadException: O processo não pode acessar o arquivo porque está sendo usado por outro processo. (Exceção de HRESULT: 0x80070020).'  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>Reservas de URL para o IIS 6.0, 7.0, 8.0, 8.5 com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>Reservas de URL para o IIS 6.0, 7.0, 8.0, 8.5 com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Dadas as regras de precedência na seção anterior, você pode começar a compreender como as reservas de URL definidas para o Reporting Services e o ISS promovem a interoperabilidade. O Reporting Services recebe solicitações que especificam explicitamente os nomes de diretório virtuais para seus aplicativos; o IIS recebe todas as solicitações restantes, que podem ser direcionadas a aplicativos executados no modelo de processo do IIS.  
   
-|Aplicativo|Reserva de URL|DESCRIÇÃO|Recebimento de solicitação|  
+|Aplicativo|Reserva de URL|Descrição|Recebimento de solicitação|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Servidor de relatório|http://+:80/ReportServer|Curinga forte na porta 80, com diretório virtual de servidor de relatório.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de servidor de relatório. O serviço Web Servidor de Relatórios recebe todas as solicitações para http://\<computername>/reportserver.|  
 |Gerenciador de Relatórios|http://+:80/Reports|Curinga forte na porta 80, com o diretório virtual Reports.|Recebe todas as solicitações na porta 80 que especificam o diretório virtual de relatórios. Report Manager recebe todas as solicitações para\<http://ComputerName>/Reports.|  
 |IIS|http://*:80/|Curinga fraco na porta 80.|Recebe todas as solicitações restantes na porta 80 não recebidas por outro aplicativo.|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Implantações lado a lado do Reporting Services do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e do SQL Server 2005 no IIS 6.0, 7.0, 8.0, 8.5  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Implantações lado a lado do Reporting Services do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e do SQL Server 2005 no IIS 6.0, 7.0, 8.0, 8.5  
  Os problemas de interoperabilidade entre o ISS e o Reporting Services ocorrem quando sites do IIS têm nomes de diretório virtual idênticos aos usados pelo Reporting Services. Por exemplo, suponha que você tenha a seguinte configuração:  
   
 -   Um site no IIS atribuído à porta 80 e um diretório virtual chamado "Reports".  
@@ -79,7 +79,7 @@ ms.locfileid: "67285052"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;Configuration Manager SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Instalar o servidor de relatórios de modo nativo do Reporting Services](install-reporting-services-native-mode-report-server.md)  
   
   

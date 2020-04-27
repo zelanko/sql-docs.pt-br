@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918622"
 ---
 # <a name="find-method-ado"></a>Método Find (ADO)
@@ -33,8 +33,8 @@ Pesquisa um [conjunto de registros](../../../ado/reference/ado-api/recordset-obj
 Find (Criteria, SkipRows, SearchDirection, Start)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Critérios*  
+#### <a name="parameters"></a>Parâmetros  
+ *Aos*  
  Um valor de **cadeia de caracteres** que contém uma instrução que especifica o nome da coluna, o operador de comparação e o valor a ser usado na pesquisa.  
   
  *SkipRows*  
@@ -43,7 +43,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  Opcional. Um valor [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) que especifica se a pesquisa deve começar na linha atual ou na próxima linha disponível na direção da pesquisa. Uma pesquisa malsucedida será interrompida no final do conjunto de **registros** se o valor for **adSearchForward**. Uma pesquisa malsucedida será interrompida no início do conjunto de **registros** se o valor for **adSearchBackward**.  
   
- *Iniciar*  
+ *Início*  
  Opcional. Um indicador de **variante** que funciona como a posição inicial da pesquisa.  
   
 ## <a name="remarks"></a>Comentários  
@@ -70,4 +70,4 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  [Exemplo do método Find (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Propriedade index](../../../ado/reference/ado-api/index-property.md)   
  [Otimizar propriedade-dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Método Seek](../../../ado/reference/ado-api/seek-method.md)
+ [Método de busca](../../../ado/reference/ado-api/seek-method.md)

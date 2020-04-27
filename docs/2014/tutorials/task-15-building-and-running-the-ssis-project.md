@@ -10,10 +10,10 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822998"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>Tarefa 15: Criando e executando o projeto SSIS
@@ -28,7 +28,7 @@ ms.locfileid: "66822998"
   
      ![Propriedades do Projeto CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "Propriedades do Projeto CleanseAndCurateSuppliers")  
   
-4.  Clique em **OK** para fechar a caixa de diálogo **Propriedades** .  
+4.  Clique em **OK** para fechar a caixa de diálogo **Propriedades**.  
   
 5.  Clique em **criar** na barra de menus e clique em **criar CleanseAndCurateSuppliers**. Verifique se não há erros de compilação.  
   

@@ -16,16 +16,16 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917340"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Especifica se um **registro** existente deve ser aberto ou um novo **registro** criado para o método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) do objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) . Os valores podem ser combinados com um operador AND.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Cria um novo **registro** no nó especificado pelo parâmetro de *origem* , em vez de abrir um **registro**existente. Se a origem apontar para um nó existente, ocorrerá um erro em tempo de execução, a menos que **adCreateCollection** seja combinado com **adOpenIfExists** ou **adCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Cria um novo **registro** do tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  

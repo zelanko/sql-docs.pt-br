@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413049"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funcionalidade descontinuada no SSRS (SQL Server Reporting Services)
 
-  Este tópico descreve os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Não inclui anúncios sobre suporte descontinuado para versões específicas do sistema operacional ou do IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações sobre os pré-requisitos do sistema, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+  Este tópico descreve os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Não inclui anúncios sobre suporte descontinuado para versões específicas do sistema operacional ou do IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Para obter mais informações sobre os pré-requisitos do sistema, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Neste tópico:  
   
@@ -29,17 +29,17 @@ ms.locfileid: "67413049"
   
 - [Funcionalidade descontinuada do SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services funcionalidade descontinuada
+##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services funcionalidade descontinuada
 
  Nenhum recurso do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foi descontinuado no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services funcionalidade descontinuada
+##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services funcionalidade descontinuada
 
  Esta seção descreve a funcionalidade descontinuada do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
  Nenhum recurso do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foi descontinuado no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funcionalidade descontinuada
+##  <a name="sql-server-2008-r2-reporting-services-discontinued-functionality"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funcionalidade descontinuada
 
  Esta seção descreve o descontinuado [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]no.  
   
@@ -58,4 +58,4 @@ ms.locfileid: "67413049"
 
  - [O que há de novo &#40;Reporting Services&#41;](what-s-new-reporting-services.md)
  - [Alterações de comportamento do SQL Server Reporting Services no SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
- - [Recursos preteridos no SQL Server Reporting Services do SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)
+ - [Recursos preteridos do SQL Server Reporting Services no SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)

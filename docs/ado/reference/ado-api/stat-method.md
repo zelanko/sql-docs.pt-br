@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916876"
 ---
 # <a name="stat-method"></a>Método Stat
@@ -35,7 +35,7 @@ Long stream.Stat(StatStg, StatFlag)
 ## <a name="return-value"></a>Valor retornado  
  Um valor **longo** que indica o status da operação.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *StatStg*  
  Uma estrutura STATSTG que será preenchida com informações sobre o fluxo. A implementação do método **stat** usado pelo objeto de fluxo ADO não preenche todos os campos da estrutura.  
   
@@ -54,16 +54,16 @@ Long stream.Stat(StatStg, StatFlag)
  Uma cadeia de caracteres que contém o nome do fluxo, se houver um disponível e o valor de StatFlag STATFLAG_NONAME não foi especificado.  
   
  *cbSize*  
- Especifica o tamanho em bytes do fluxo ou da matriz de bytes.  
+ Especifica o tamanho em bytes da matriz de bytes ou fluxo.  
   
  *mtime*  
- Indica a hora da última modificação para esse armazenamento, fluxo ou matriz de bytes.  
+ Indica a hora da última modificação desse armazenamento, fluxo ou matriz de bytes.  
   
  *ctime*  
- Indica a hora de criação para este armazenamento, fluxo ou matriz de bytes.  
+ Indica a hora de criação desse armazenamento, fluxo ou matriz de bytes.  
   
  *atime*  
- Indica a hora do último acesso para este armazenamento, fluxo ou matriz de bytes.  
+ Indica a hora do último acesso desse armazenamento, fluxo ou matriz de bytes.  
   
  Se STATFLAG_NONAME for especificado no parâmetro StatFlag, o nome do fluxo não será retornado.  
   

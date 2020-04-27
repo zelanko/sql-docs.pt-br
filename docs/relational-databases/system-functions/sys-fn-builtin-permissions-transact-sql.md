@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046519"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
@@ -68,18 +68,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  Equivalente a DEFAULT.  
   
  **'**<securable_class>**'**  
- Quando chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. <securable_class> é um literal de cadeia de caracteres que requer aspas. **nvarchar (60)**  
+ Quando chamado com o nome de uma classe protegível, sys. fn_builtin_permissions retornará todas as permissões que se aplicam à classe. <securable_class> é um literal de cadeia de caracteres que requer aspas. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|Collation|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Ordenação|Descrição|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|Ordenação do servidor|Descrição da classe de protegível.|  
-|permission_name|**nvarchar (60)**|Ordenação do servidor|Nome de permissão.|  
-|type|**varchar (4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
-|covering_permission_name|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
-|parent_class_desc|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
-|parent_covering_permission_name|**nvarchar (60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
+|class_desc|**nvarchar(60)**|Ordenação do servidor|Descrição da classe de protegível.|  
+|permission_name|**nvarchar(60)**|Ordenação do servidor|Nome de permissão.|  
+|tipo|**varchar(4)**|Ordenação do servidor|Código de tipo de permissão compacto. Consulte a tabela a seguir.|  
+|covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe que indica as outras permissões dela.|  
+|parent_class_desc|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da classe pai que contém a classe atual.|  
+|parent_covering_permission_name|**nvarchar(60)**|Ordenação do servidor|Se não for NULL, será o nome da permissão nessa classe pai que indica todas as outras permissões dela.|  
   
 ### <a name="permission-types"></a>Tipos de permissão  
   
@@ -323,14 +323,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>Comentários  
- 
-  `sys.fn_builtin_permissions` é uma função com valor de tabela que emite uma cópia da hierarquia de permissões predefinidas. Essa hierarquia inclui permissões de cobertura. O `DEFAULT` conjunto de resultados descreve um grafo direcionado acíclico da hierarquia de permissões, da qual a raiz é (Class = Server, PERMISSION = Control Server).  
+ `sys.fn_builtin_permissions` é uma função com valor de tabela que emite uma cópia da hierarquia de permissões predefinidas. Essa hierarquia inclui permissões de cobertura. O `DEFAULT` conjunto de resultados descreve um grafo direcionado acíclico da hierarquia de permissões, da qual a raiz é (Class = Server, PERMISSION = Control Server).  
   
- 
-  `sys.fn_builtin_permissions` não aceita parâmetros correlatos.  
+ `sys.fn_builtin_permissions` não aceita parâmetros correlatos.  
   
- 
-  `sys.fn_builtin_permissions` retornará um conjunto vazio quando for chamado com um nome de classe inválido.  
+ `sys.fn_builtin_permissions` retornará um conjunto vazio quando for chamado com um nome de classe inválido.  
  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
@@ -360,12 +357,12 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [CONCEDER &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
+ [CRIAR esquema &#40;&#41;Transact-SQL](../../t-sql/statements/create-schema-transact-sql.md)   
+ [Descartar esquema &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys. fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185753"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lição 1: Avalie práticas recomendadas sob demanda
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lição 1: Avaliar práticas recomendadas sob demanda
   Usando o método sob demanda (ou "ad hoc") de avaliação de política, você pode avaliar rapidamente as políticas de práticas recomendadas para determinar se uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] corresponde a diretrizes de práticas recomendadas.  
   
  Nesta lição, você executará uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma ou mais instâncias do. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -32,6 +32,6 @@ ms.locfileid: "68185753"
  [Realize uma avaliação sob demanda usando o Pesquisador de Objetos](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Lição 2: Avalie as políticas de práticas recomendadas de forma agendada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lição 2: Avaliar políticas de melhores práticas de forma agendada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

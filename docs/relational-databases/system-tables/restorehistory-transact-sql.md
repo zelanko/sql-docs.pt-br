@@ -18,10 +18,10 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910149"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "67910149"
 
   Contém uma linha para cada operação de restauração. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Número de identificação exclusivo que identifica cada operação de restauração. Identidade, chave primária.|  
 |**restore_date**|**datetime**|Data e hora do início da operação de restauração. Pode ser NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Nome do banco de dados de destino para a operação de restauração. Pode ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nome do usuário que realizou a operação de restauração. Pode ser NULL.|  
 |**backup_set_id**|**int**|Número de identificação exclusivo que identifica o backup que está sendo restaurado. Faz referência a **backupset (backup_set_id)**.|  
-|**restore_type**|**char(1)**|Tipo de operação de restauração:<br /><br /> D = Banco de dados<br /><br /> F = Arquivo<br /><br /> G = Grupos de arquivos<br /><br /> I = Diferencial<br /><br /> L = Log<br /><br /> V = Verifyonly<br /><br /> Pode ser NULL.|  
-|**Substitua**|**bit**|Indica se a operação de restauração especificou a opção REPLACE:<br /><br /> 1 = Especificada<br /><br /> NULL = Não especificada<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, 0 é a única opção.|  
-|**automatiza**|**bit**|Indica se a operação de restauração especificou a opção RECOVERY ou NORECOVERY:<br /><br /> 1 = RECOVERY<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido para um instantâneo de banco de dados, 1 é a única opção.<br /><br /> 0 = NORECOVERY|  
-|**reiniciar**|**bit**|Indica se a operação de restauração especificou a opção RESTART:<br /><br /> 1 = Especificada<br /><br /> NULL = Não especificada<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, 0 é a única opção.|  
+|**restore_type**|**Char (1)**|Tipo de operação de restauração:<br /><br /> D = Banco de dados<br /><br /> F = Arquivo<br /><br /> G = Grupos de arquivos<br /><br /> I = Diferencial<br /><br /> L = Log<br /><br /> V = Verifyonly<br /><br /> Pode ser NULL.|  
+|**replace**|**bit**|Indica se a operação de restauração especificou a opção REPLACE:<br /><br /> 1 = Especificada<br /><br /> NULL = Não especificada<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, 0 é a única opção.|  
+|**recuperação**|**bit**|Indica se a operação de restauração especificou a opção RECOVERY ou NORECOVERY:<br /><br /> 1 = RECOVERY<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido para um instantâneo de banco de dados, 1 é a única opção.<br /><br /> 0 = NORECOVERY|  
+|**restart**|**bit**|Indica se a operação de restauração especificou a opção RESTART:<br /><br /> 1 = Especificada<br /><br /> NULL = Não especificada<br /><br /> Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, 0 é a única opção.|  
 |**stop_at**|**datetime**|Ponto específico em que o banco de dados foi recuperado. Pode ser NULL.|  
 |**device_count**|**tinyint**|Número de dispositivos envolvidos na operação de restauração. Esse número pode ser menor do que o número de famílias de mídia para o backup. Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, o número é sempre 1.|  
 |**stop_at_mark_name**|**nvarchar(128)**|Indica recuperação para a transação que contém a marca nomeada. Pode ser NULL.<br /><br /> Quando um banco de dados é revertido a um instantâneo do banco de dados, esse valor é sempre NULL.|  
@@ -52,6 +52,6 @@ ms.locfileid: "67910149"
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restaurarfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/restorefile-transact-sql.md)   
  [&#41;restorefilegroup &#40;Transact-SQL](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

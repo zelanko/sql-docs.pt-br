@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899172"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
@@ -81,10 +81,10 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o número solicitado de linhas de status de histórico do banco de dados especificado. Cada linha contém as seguintes informações:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome de um banco de dados espelho.|  
-|**cargo**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
+|**role**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
 |**mirroring_state**|**int**|Estado do banco de dados:<br /><br /> 0 = suspenso<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
 |**witness_status**|**int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
 |**log_generation_rate**|**int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  

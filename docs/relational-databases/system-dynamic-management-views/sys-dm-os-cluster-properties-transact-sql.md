@@ -20,10 +20,10 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900219"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67900219"
  Essas propriedades são usadas para definir os valores que afetam a detecção de falha, o tempo de resposta da falha e o log de monitoração o status de integridade da instância do cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
-|Nome da coluna|Propriedade|DESCRIÇÃO|  
+|Nome da coluna|Propriedade|Descrição|  
 |-----------------|--------------|-----------------|  
 |VerboseLogging|BIGINT|O nível de log para o cluster de failover do SQL Server. O log detalhado pode ser ativado para fornecer detalhes adicionais nos logs de erros para solução de problemas. Um dos seguintes valores:<br /><br /> 0 – O log está desativado (padrão)<br /><br /> 1 – Apenas erros<br /><br /> 2 – Erros e avisos<br /><br /> Para obter mais informações, consulte [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|BIGINT|Sinalizadores de despejo do SQLDumper determinam o tipo de arquivos de despejo gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A configuração padrão é 0.|  

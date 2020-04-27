@@ -18,10 +18,10 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910110"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67910110"
 
   A exibição **sysextendedarticlesview** fornece informações sobre artigos publicados. Essa exibição é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|A coluna de identidade que fornece um número de ID exclusivo para o artigo.|  
 |**creation_script**|**nvarchar (255)**|O script de criação de esquema para o artigo.|  
@@ -40,12 +40,12 @@ ms.locfileid: "67910110"
 |**filter_clause**|**ntext**|A cláusula WHERE do artigo, usada para filtragem horizontal.|  
 |**ins_cmd**|**nvarchar (255)**|O comando para executar em INSERT.|  
 |**name**|**nvarchar(128)**|O nome associado ao artigo, exclusivo dentro da publicação.|  
-|**objID**|**int**|A ID do objeto de tabela publicada.|  
+|**objid**|**int**|A ID do objeto de tabela publicada.|  
 |**pubid**|**int**|A ID da publicação à qual o artigo pertence.|  
 |**pre_creation_cmd**|**tinyint**|O comando de pré-criação para DROP TABLE, DELETE TABLE ou TRUNCATE:<br /><br /> **0** = nenhum.<br /><br /> **1** = descartar.<br /><br /> **2** = excluir.<br /><br /> **3** = truncar.|  
-|**Estado**|**int**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = o artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções parametrizadas.<br /><br /> **24** = ambos incluem o nome da coluna em instruções INSERT e usam instruções parametrizadas.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
+|**status**|**int**|O bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = o artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções parametrizadas.<br /><br /> **24** = ambos incluem o nome da coluna em instruções INSERT e usam instruções parametrizadas.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
 |**sync_objid**|**int**|A ID da tabela ou exibição que representa a definição de artigo.|  
-|**tipo**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.<br /><br /> **3** = artigo baseado em log com filtro manual.<br /><br /> **5** = artigo baseado em log com exibição manual.<br /><br /> **7** = artigo baseado em log com filtro manual e exibição manual.|  
+|**type**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo baseado em log.<br /><br /> **3** = artigo baseado em log com filtro manual.<br /><br /> **5** = artigo baseado em log com exibição manual.<br /><br /> **7** = artigo baseado em log com filtro manual e exibição manual.|  
 |**upd_cmd**|**nvarchar (255)**|O comando para executar em UPDATE; caso contrário, construir do log.|  
 |**schema_option**|**binary**|Indica de quais propriedades do objeto publicado foram efetuados scripts no instantâneo. Para obter uma lista de opções de esquema com suporte, consulte [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|O proprietário da tabela no banco de dados de destino.|  

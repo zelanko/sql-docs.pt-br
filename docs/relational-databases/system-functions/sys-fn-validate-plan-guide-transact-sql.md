@@ -21,10 +21,10 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059178"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
@@ -48,12 +48,12 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|A identificação da mensagem de erro.|  
-|severity|**tinyint**|O nível de severidade da mensagem, entre 1 e 25.|  
+|severidade|**tinyint**|O nível de severidade da mensagem, entre 1 e 25.|  
 |state|**smallint**|Número de estado do erro que indica o ponto no código no qual o erro ocorreu.|  
-|message|**nvarchar (2048)**|Texto da mensagem do erro.|  
+|mensagem|**nvarchar(2048)**|Texto da mensagem do erro.|  
   
 ## <a name="permissions"></a>Permissões  
  Os guias de plano com escopo OBJECT exigem a permissão VIEW DEFINITION ou ALTER nas permissões e objetos mencionados para compilar a consulta ou o lote fornecido no guia de plano Por exemplo, se um lote contiver instruções SELECT, serão solicitadas permissões SELECT nos objetos mencionados.  
@@ -94,7 +94,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Guias de plano](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

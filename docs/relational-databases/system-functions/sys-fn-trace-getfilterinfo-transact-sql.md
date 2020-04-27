@@ -21,10 +21,10 @@ ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059256"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
@@ -52,12 +52,12 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>Tabelas retornadas  
  Retorna as informações a seguir. Para obter mais informações sobre as colunas, consulte [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|A identificação da coluna na qual o filtro é aplicado.|  
 |**logical_operator**|**int**|Especifica se o operador AND ou OR é aplicado.|  
 |**comparison_operator**|**int**|Especifica o tipo de comparação feita:<br /><br /> 0 = Igual<br /><br /> 1 = Diferente de<br /><br /> 2 = Maior que<br /><br /> 3 = Menor que<br /><br /> 4 = Maior que ou igual a<br /><br /> 5 = Menor que ou igual a<br /><br /> 6 = Like<br /><br /> 7 = Not like|  
-|**valor**|**sql_variant**|Especifica o valor no qual o filtro é aplicado.|  
+|**value**|**sql_variant**|Especifica o valor no qual o filtro é aplicado.|  
   
 ## <a name="remarks"></a>Comentários  
  O usuário define *trace_id* valor para identificar, modificar e controlar o rastreamento. Quando passado a ID de um rastreamento específico, **fn_trace_getfilterinfo** retorna informações sobre qualquer filtro nesse rastreamento. Se o rastreamento especificado não tiver um filtro, essa função retornará um conjunto de linhas vazio. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio. Para obter informações semelhantes sobre rastreamentos, consulte [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
@@ -75,14 +75,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criar um rastreamento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [Criar um rastreamento &#40;&#41;de Transact-SQL](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setfilter](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_create](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setstatus](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sys. fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

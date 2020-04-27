@@ -23,10 +23,10 @@ ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff2348efe62929bdfbe03b4c92b5d411f57c2b99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900355"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67900355"
 
   Retorna informações sobre todos os discos compartilhados válidos, inclusive volumes compartilhados agrupados, para uma instância de cluster de failover do SQL Server. Se a instância não for clusterizada, um conjunto de linhas vazio será retornado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512)**|Ponto de montagem do volume ou caminho da unidade que pode ser usado como um diretório raiz para o banco de dados e os arquivos de log. Não permite valor nulo.|  
 |**cluster_owner_node**|**Nvarchar (64)**|Proprietário atual da unidade. Para os volumes compartilhados de cluster (CSV), o proprietário é o nó que está hospedando o servidor de metadados. Não permite valor nulo.|  

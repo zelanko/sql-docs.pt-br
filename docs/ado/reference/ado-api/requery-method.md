@@ -17,10 +17,10 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917221"
 ---
 # <a name="requery-method"></a>Método Requery
@@ -33,7 +33,7 @@ Atualiza os dados em um objeto de [conjunto de registros](../../../ado/reference
 recordset.Requery Options  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Opções*  
  Opcional. Um bitmask que contém valores [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) que afetam esta operação.  
   

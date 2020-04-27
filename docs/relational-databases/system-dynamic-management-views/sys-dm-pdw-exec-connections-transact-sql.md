@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899413"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "67899413"
 
   Retorna informações sobre as conexões estabelecidas com essa instância do [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e os detalhes de cada conexão.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifica a sessão associada a esta conexão. Use `SESSION_ID()` para retornar a `session_id` da conexão atual.|  
 |connect_time|**datetime**|Carimbo de data/hora de quando a conexão foi estabelecida. Não permite valor nulo.|  
@@ -40,10 +40,10 @@ ms.locfileid: "67899413"
   
 ||||  
 |-|-|-|  
-|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Um-para-um|  
+|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Um para um|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Muitos para um|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Consulta típica para reunir informações sobre a própria conexão de consultas.  
   
 ```  

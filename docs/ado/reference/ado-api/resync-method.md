@@ -19,10 +19,10 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917167"
 ---
 # <a name="resync-method"></a>Método Resync
@@ -35,7 +35,7 @@ Atualiza os dados no objeto [Recordset](../../../ado/reference/ado-api/recordset
 Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *AffectRecords*  
  Opcional. Um valor [AffectEnum](../../../ado/reference/ado-api/affectenum.md) que determina quantos registros o método de **ressincronização** afetará. O valor padrão é **adAffectAll**. Esse valor não está disponível com o método **Ressync** da coleção **Fields** de um objeto **Record** .  
   

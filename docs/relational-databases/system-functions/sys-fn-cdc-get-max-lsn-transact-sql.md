@@ -21,10 +21,10 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046456"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
@@ -42,7 +42,7 @@ sys.fn_cdc_get_max_lsn ()
 ```  
   
 ## <a name="return-types"></a>Tipos de retorno  
- **binário (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Comentários  
  Essa função retorna o LSN máximo na coluna start_lsn da tabela [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Como tal, ele é o último LSN processado pelo processo de captura quando as alterações são propagadas para as tabelas de alteração do banco de dados. Ele serve como ponto de extremidade superior de todas as linhas do tempo associadas às instâncias de captura definidas para o banco de dados.  

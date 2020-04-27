@@ -21,10 +21,10 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900241"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "67900241"
 > 
 > **Observação** Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_child_instances**.  
   
-|Coluna|Tipo de dados|DESCRIÇÃO|  
+|Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|O nome do usuário para o qual esta instância de usuário foi criada.|  
 |owning_principal_sid|nvarchar(256)|SID (Identificador de Segurança) da entidade que possui esta instância de usuário. Isto corresponde ao SID do Windows.|  
 |owning_principal_sid_binary|varbinary(85)|Versão binária do SID do usuário que possui a Instância de usuário|  
 |**instance_name**|**nvarchar(128)**|O nome desta instância de usuário.|  
 |**instance_pipe_name**|**nvarchar(260)**|Quando uma instância de usuário for criada, um pipe nomeado será criado para que aplicativos se conectem. Esse nome pode ser usado em uma cadeia de caracteres de conexão a fim de conectar a esta instância de usuário.|  
-|**os_process_id**|**Inteiro**|O número do processo do Windows para esta instância de usuário.|  
+|**os_process_id**|**Int**|O número do processo do Windows para esta instância de usuário.|  
 |**os_process_creation_date**|**Horário**|A data e a hora em que este processo de instância de usuário foi iniciado pela última vez.|  
 |**heart_beat**|**nvarchar (5)**|Estado atual desta instância de usuário; ALIVE ou DEAD.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  

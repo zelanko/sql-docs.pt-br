@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792608"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Adicionar uma testemunha de espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "67792608"
   
 3.  Conecte-se ao servidor principal e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* definir testemunha **=** _<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros), e *<server_network_address>* é o endereço de rede de servidor da instância de servidor testemunha.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "67792608"
   
      em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3 (o nome do sistema testemunha) e a porta usada pelo ponto de extremidade de espelhamento do banco de dados da testemunha é `7022`:  
+     Por exemplo, na instância do servidor principal, a seguinte instrução ALTER DATABASE define a testemunha. O nome do banco de dados é **AdventureWorks**, o endereço do sistema é DBSERVER3-o nome do sistema testemunha, e a porta usada pelo ponto de extremidade de espelhamento `7022`de banco de dados da testemunha é:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -128,10 +128,10 @@ ms.locfileid: "67792608"
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
- [Remover a testemunha de uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
+ [Permitir acesso à rede para um ponto de extremidade de espelhamento de banco de dados usando a autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Criar um ponto de extremidade de espelhamento de banco de dados para autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Estabelecer uma sessão de espelhamento de banco de dados usando a autenticação do Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
+ [Remova a testemunha de uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Testemunha de espelhamento de banco de dados](database-mirroring-witness.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046508"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  Valor do LSN. *lsn_value* é **binary (10)**.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- **binário (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Comentários  
  O LSN retornado pela função é sempre inferior ao valor especificado e nenhum valor de LSN pode existir entre os dois valores.  

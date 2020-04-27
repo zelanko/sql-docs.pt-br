@@ -18,10 +18,10 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67902986"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
@@ -49,14 +49,14 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nome do dispositivo lógico.|  
 |**physical_name**|**nvarchar(260)**|Nome do arquivo físico.|  
 |**ndescrição**|**nvarchar (255)**|A descrição do dispositivo.|  
-|**Estado**|**int**|Um número que corresponde à descrição do status na coluna **Descrição** .|  
+|**status**|**int**|Um número que corresponde à descrição do status na coluna **Descrição** .|  
 |**cntrltype**|**smallint**|Tipo de controlador do dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de fita|  
-|**tamanho**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  
+|**size**|**int**|Tamanho do dispositivo em páginas de 2 KB.|  
   
 ## <a name="remarks"></a>Comentários  
  Se *nome* for especificado, **sp_helpdevice** exibirá informações sobre o dispositivo de despejo especificado. Se o *nome* não for especificado, **sp_helpdevice** exibirá informações sobre todos os dispositivos de despejo na exibição do catálogo **Sys. backup_devices** .  
@@ -74,8 +74,8 @@ EXEC sp_helpdevice;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

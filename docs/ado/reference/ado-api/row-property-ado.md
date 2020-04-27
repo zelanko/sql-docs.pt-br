@@ -20,10 +20,10 @@ ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917109"
 ---
 # <a name="row-property-ado"></a>Propriedade Row (ADO)
@@ -36,7 +36,7 @@ HRESULT get_Row([out, retval] IUnknown** ppRow);
 HRESULT put_Row([in] IUnknown* pRow);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *ppRow*  
  Ponteiro para um objeto de **linha** de OLE DB.  
   

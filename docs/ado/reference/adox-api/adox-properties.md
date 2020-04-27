@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910616"
 ---
 # <a name="adox-properties"></a>Propriedades ADOX
@@ -28,7 +28,7 @@ ms.locfileid: "67910616"
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Descreve as características da coluna.|  
 |[Clusterizado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica se o índice está clusterizado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica um objeto de **comando** ADO que pode ser usado para criar ou executar o procedimento.|  
-|[Contar](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica a data em que o objeto foi criado.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica a data em que o objeto foi modificado pela última vez.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica o tamanho máximo declarado da coluna.|  
@@ -42,7 +42,7 @@ ms.locfileid: "67910616"
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica se o índice representa a chave primária na tabela.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indica o nome da coluna relacionada na tabela relacionada (somente colunas de chave).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Indica o nome da tabela relacionada.|  
-|[Ordem](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica a sequência de classificação para a coluna (somente colunas de índice).|  
+|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica a sequência de classificação para a coluna (somente colunas de índice).|  
 |[Tipo (coluna)](../../../ado/reference/adox-api/type-property-column-adox.md)|Indica o tipo de dados de uma coluna.|  
 |[Tipo (chave)](../../../ado/reference/adox-api/type-property-key-adox.md)|Indica o tipo de dados da chave.|  
 |[Tipo (tabela)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica o tipo de uma tabela.|  

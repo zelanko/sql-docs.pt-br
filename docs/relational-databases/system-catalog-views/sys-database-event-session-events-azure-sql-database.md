@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915129"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Banco de Dados SQL do Azure)
@@ -27,13 +27,13 @@ ms.locfileid: "67915129"
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e a todas as versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva dentro de um objeto de sessão de evento. Não permite valor nulo.|  
 |name|**sysname**|O nome do evento. Não permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Não permite valor nulo.|  
-|modulo|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
+|module|**sysname**|O nome do módulo que contém o evento. Não permite valor nulo.|  
 |predicate|**nvarchar (3000)**|A expressão de predicado que é aplicada ao evento. Permite valor nulo.|  
 |predicate_xml|**nvarchar (3000)**|A expressão de predicado XML que é aplicada ao evento. Permite valor nulo.|  
   

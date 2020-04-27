@@ -17,10 +17,10 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919119"
 ---
 # <a name="delete-method-ado-recordset"></a>Método Delete (Conjunto de registros ADO)
@@ -33,7 +33,7 @@ Exclui o registro atual ou um grupo de registros.
 recordset.Delete AffectRecords  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *AffectRecords*  
  Um valor [AffectEnum](../../../ado/reference/ado-api/affectenum.md) que determina quantos registros o método **delete** afetará. O valor padrão é **adAffectCurrent**.  
   

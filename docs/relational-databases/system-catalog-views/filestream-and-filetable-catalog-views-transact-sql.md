@@ -15,10 +15,10 @@ ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04fc26296d7c499982c75296089decfb57bd9ab4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016601"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Exibições de catálogo de fluxo de arquivos e FileTable (Transact-SQL)
@@ -40,6 +40,6 @@ ms.locfileid: "68016601"
 [Fluxo de arquivos](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Exibições de gerenciamento dinâmico de fluxo de arquivos e FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Procedimentos armazenados de fluxo de arquivos e FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+<br>[Procedimentos armazenados do sistema Filetable e FileStream (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   
   

@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900914"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *query_string*  
  A consulta que você deseja analisar. *QUERY_STRING* pode ser uma cadeia de cadeia de caracteres que [contém](../../t-sql/queries/contains-transact-sql.md) suporte à sintaxe. Por exemplo, é possível incluir formas flexionadas, uma dicionário de sinônimo e operadores lógicos.  
   
- *LCID*  
+ *lcid*  
  LCID (identificador de localidade) do separador de palavras a ser usado para a análise de *QUERY_STRING*.  
   
  *stoplist_id*  
@@ -65,7 +65,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |palavra-chave|**varbinary(128)**|A representação hexadecimal de uma determinada palavra-chave retornada por um separador de palavras. Essa representação é usada para armazenar a palavra-chave no índice de texto completo. Esse valor não é legível, mas é útil para relacionar uma determinada palavra-chave à saída retornada por outras exibições de gerenciamento dinâmico que retornam o conteúdo de um índice de texto completo, como [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [Sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Observação:** OxFF representa o caractere especial que indica o fim de um arquivo ou conjunto de um DataSet.|  
 |group_id|**int**|Contém um valor de inteiro que é útil para diferenciar o grupo lógico a partir do qual um determinado termo foi gerado. Por exemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produz os seguintes valores group_id em inglês:<br /><br /> 1: servidor<br />2: BD<br />3: BD|  
@@ -73,12 +73,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |ocorrência|**int**|Indica a ordem de cada termo no resultado da análise. Por exemplo, a ocorrência "`SQL Server query processor`" de frase poderia conter os seguintes valores de ocorrência para os termos da frase em inglês:<br /><br /> 1 para`SQL`<br />2 para`Server`<br />3 para`query`<br />4 para`processor`|  
 |special_term|**nvarchar(4000)**|Contém informações sobre as características do termo que está sendo emitido pelo separador de palavras, um destes:<br /><br /> Correspondência exata<br /><br /> Palavra de ruído<br /><br /> Fim de oração<br /><br /> Fim de parágrafo<br /><br /> Fim de capítulo|  
 |display_term|**nvarchar(4000)**|Contém a forma legível da palavra-chave. Como ocorre com as funções criadas para acessar o conteúdo do índice de texto completo, esse termo exibido pode não ser idêntico ao termo original por motivo de limitação de desnormalização. No entanto, ele precisar ser preciso o suficiente para ajudar você a identificá-lo da entrada original.|  
-|expansion_type|**int**|Contém informações sobre a natureza da expansão de um determinado termo, um destes:<br /><br /> 0 = Palavra única<br /><br /> 2 = Expansão flexional<br /><br /> 4 = Expansão/substituição do dicionário de sinônimos<br /><br /> Por exemplo, considere um caso no qual o dicionário de sinônimos define a execução como uma expansão de `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> O termo `FORMSOF (FREETEXT, run)` gera a seguinte saída:<br /><br /> 
-  `run` com expansion_type=0<br /><br /> 
-  `runs` com expansion_type=2<br /><br /> 
-  `running` com expansion_type=2<br /><br /> 
-  `ran` com expansion_type=2<br /><br /> 
-  `jog` com expansion_type=4|  
+|expansion_type|**int**|Contém informações sobre a natureza da expansão de um determinado termo, um destes:<br /><br /> 0 = Palavra única<br /><br /> 2 = Expansão flexional<br /><br /> 4 = Expansão/substituição do dicionário de sinônimos<br /><br /> Por exemplo, considere um caso no qual o dicionário de sinônimos define a execução como uma expansão de `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> O termo `FORMSOF (FREETEXT, run)` gera a seguinte saída:<br /><br /> `run` com expansion_type=0<br /><br /> `runs` com expansion_type=2<br /><br /> `running` com expansion_type=2<br /><br /> `ran` com expansion_type=2<br /><br /> `jog` com expansion_type=4|  
 |source_term|**nvarchar(4000)**|O termo ou frase a partir do qual um determinado termo foi gerado ou analisado. Por exemplo, uma consulta no "'`word breakers" AND stemmers'` produz os seguintes valores source_term em inglês:<br /><br /> `word breakers`para o display_term`word`<br />`word breakers`para o display_term`breakers`<br />`stemmers`para o display_term`stemmers`|  
   
 ## <a name="remarks"></a>Comentários  
@@ -168,10 +163,10 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições e funções de gerenciamento dinâmico de pesquisa de texto completo e de pesquisa semântica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
  [Configurar e gerenciar separadores de palavras e lematizadores para pesquisa](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar e gerenciar arquivos de dicionário de sinônimos para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar e gerenciar palavras irrelevantes (stop words) e listas de palavras irrelevantes (stoplists) para a pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configurar e gerenciar palavras irrelevantes e palavras irrelevantes para pesquisa de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Protegíveis](../../relational-databases/security/securables.md)  

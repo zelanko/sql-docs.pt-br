@@ -17,10 +17,10 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918857"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (comando ADO)
@@ -36,18 +36,18 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="return-value"></a>Valor retornado  
  Retorna uma referência de objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , um fluxo ou **nada**.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *RecordsAffected*  
  Opcional. Uma variável **longa** para a qual o provedor retorna o número de registros afetados pela operação. O parâmetro *RecordsAffected* aplica-se somente a consultas de ação ou procedimentos armazenados. *RecordsAffected* não retorna o número de registros retornados por uma consulta de retorno de resultado ou procedimento armazenado. Para obter essas informações, use a propriedade [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . O método **Execute** não retornará as informações corretas quando usado com **adAsyncExecute**, simplesmente porque quando um comando é executado de forma assíncrona, o número de registros afetados pode ainda não ser conhecido no momento em que o método retorna.  
   
- *Parâmetros*  
+ *Parameters*  
  Opcional. Uma matriz **variante** de valores de parâmetro usada em conjunto com a cadeia de caracteres de entrada ou o fluxo especificado em **CommandText** ou **CommandStream**. (Os parâmetros de saída não retornarão valores corretos quando passados neste argumento).  
   
  *Opções*  
  Opcional. Um valor **longo** que indica como o provedor deve avaliar a propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) do objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) . Pode ser um valor de bitmask feito usando valores [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) e/ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) . Por exemplo, você pode usar **adCmdText** e **adExecuteNoRecords** em combinação se quiser que o ADO avalie o valor da propriedade **CommandText** como texto e indique que o comando deve descartar e não retornar nenhum registro que possa ser gerado quando o texto do comando for executado.  
   
 > [!NOTE]
->  Use o **** valor ExecuteOptionEnum **adExecuteNoRecords** para melhorar o desempenho, minimizando o processamento interno. Se **adExecuteStream** tiver sido especificado, as opções **adAsyncFetch** e **adAsynchFetchNonBlocking** serão ignoradas. Não use os valores de **CommandTypeEnum** de **adCmdFile** ou **adCmdTableDirect** com **Execute**. Esses valores só podem ser usados como opções com os métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) de um **conjunto de registros**.  
+>  Use o **ExecuteOptionEnum** valor ExecuteOptionEnum **adExecuteNoRecords** para melhorar o desempenho, minimizando o processamento interno. Se **adExecuteStream** tiver sido especificado, as opções **adAsyncFetch** e **adAsynchFetchNonBlocking** serão ignoradas. Não use os valores de **CommandTypeEnum** de **adCmdFile** ou **adCmdTableDirect** com **Execute**. Esses valores só podem ser usados como opções com os métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) de um **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentários  
  O uso do método **Execute** em um objeto **Command** executa a consulta especificada na propriedade **CommandText** ou na propriedade **CommandStream** do objeto.  

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046314"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'chave assimétrica'  
   
- \@a *classe* é **sysname**.  
+ \@*class* é **sysname**.  
   
  { \@ *Thumbprint* }  
  O hash SHA-1 do certificado com o qual a chave é criptografada, ou o GUID da chave assimétrica com a qual a chave é criptografada. \@a *impressão digital* é **varbinary (20)**.  
@@ -60,9 +60,9 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir lista as colunas que **fn_check_object_signatures** retorna.  
   
-|Coluna|Type|DESCRIÇÃO|  
+|Coluna|Tipo|Descrição|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|Retorna a descrição do tipo ou o assembly.|  
+|type|**nvarchar(120)**|Retorna a descrição do tipo ou o assembly.|  
 |entity_id|**int**|Retorna a id de objeto do objeto que está sendo avaliado.|  
 |is_signed|**int**|Retorna 0 quando o objeto não foi assinado pela impressão digital fornecida. Retorna 1 quando o objeto foi assinado pela impressão digital fornecida.|  
 |is_signature_valid|**int**|Quando o valor is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor is_signed é 0, sempre retorna 0.|  
@@ -92,6 +92,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;&#40;Transact-SQL de IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

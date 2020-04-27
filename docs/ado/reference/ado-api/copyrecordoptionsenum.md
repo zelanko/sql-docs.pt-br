@@ -16,16 +16,16 @@ ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919378"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Especifica o comportamento do método [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Indica que o provedor de *origem* tenta simular a cópia usando operações de download e upload se esse método falhar devido ao *destino*estar em um servidor diferente ou for atendido por um provedor diferente da *origem*. Observe que diferentes recursos de provedor podem dificultar o desempenho ou perder dados.|  
 |**adCopyNonRecursive**|2|Copia o diretório atual, mas nenhum de seus subdiretórios, para o destino. A operação de cópia não é recursiva.|  

@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907290"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -29,15 +29,15 @@ ms.locfileid: "67907290"
 
   A tabela **MSlogreader_history** contém linhas de histórico para os agentes de leitor de log associados ao distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|A ID do Log Reader Agent.|  
 |**runstatus**|**int**|O status da execução:<br /><br /> 1 = Iniciar.<br /><br /> 2 = Êxito.<br /><br /> 3 = Em andamento.<br /><br /> 4 = Inativo.<br /><br /> 5 = Repetir.<br /><br /> 6 = Falha.|  
 |**start_time**|**datetime**|A hora inicial de execução do trabalho.|  
 |**time**|**datetime**|A hora de registro da mensagem.|  
-|**permanência**|**int**|A duração, em segundos, da sessão de mensagem.|  
+|**duration**|**int**|A duração, em segundos, da sessão de mensagem.|  
 |**feitos**|**nvarchar (255)**|O texto da mensagem.|  
-|**xact_seqno**|**varbinary (16)**|O último número de sequência da transação processado.|  
+|**xact_seqno**|**varbinary(16)**|O último número de sequência da transação processado.|  
 |**delivery_time**|**int**|A hora de entrega da primeira transação.|  
 |**delivered_transactions**|**int**|O número total de transações entregues na sessão.|  
 |**delivered_commands**|**int**|O número total de comandos entregues na sessão.|  

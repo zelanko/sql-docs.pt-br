@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188539"
 ---
 # <a name="options-environment-help-general-page"></a>Opções (ambiente – ajuda – página Geral)
@@ -26,25 +26,25 @@ ms.locfileid: "68188539"
 >  Alterações feitas às opções nesta página não entram em vigor enquanto o ambiente não é reiniciado.  
   
 ## <a name="settings"></a>Configurações  
- **Mostrar ajuda usando**  
+ **Exibir Ajuda usando**  
  Especifica como a Ajuda é exibida. Selecione o **Visualizador de Ajuda Externo** na lista suspensa para exibir tópicos em uma janela flutuante externa. Selecione o **Visualizador de Ajuda Integrado** para exibir tópicos da Ajuda em uma janela do navegador da Web encaixada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Resultados da pesquisa por página**  
- Especifica o número de tópicos exibidos em uma página de **Resultados da pesquisa**.  
+ Especifica o número de tópicos exibidos em uma página de **Resultados da pesquisa** .  
   
- **Mostrar resumos de tópico**  
- Especifica se é mostrado um resumo para cada tópico na lista de **Resultados da Pesquisa** e na guia **Instruções**.  
+ **Exibir resumo do tópico**  
+ Especifica se é mostrado um resumo para cada tópico na lista **Resultados da Pesquisa** e na guia **Instruções** .  
   
  **Reutilizar janela de tópico**  
  Quando essa caixa de seleção está marcada, indica que os tópicos da ajuda são exibidos na mesma janela, para você poder navegar por eles usando os botões **Voltar** e **Avançar** . Quando ela está desmarcada, indica que uma janela nova é aberta para cada tópico.  
   
  **Realçar termos de pesquisa**  
- Especifica se as cadeias de pesquisa são destacadas nos tópicos de **Resultados da Pesquisa** da Ajuda local.  
+ Especifica se as cadeias de pesquisa são realçadas nos tópicos de **Resultados da Pesquisa** da Ajuda local.  
   
  **Idioma do tópico online**  
  Especifica o idioma com prioridade mais alta na lista de resultados de pesquisas que retornam resultados em vários idiomas.  
   
- **Mostrar também tópicos em inglês**  
+ **Exibir também tópicos em inglês**  
  Especifica que são retornados tópicos em inglês além do idioma selecionado na caixa **Preferência de Idioma do Tópico** .  
   
   

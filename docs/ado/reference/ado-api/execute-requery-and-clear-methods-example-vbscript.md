@@ -17,16 +17,16 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918810"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Exemplo dos métodos Execute, Requery e Clear (VBScript)
 Este exemplo demonstra o método **Execute** quando executado a partir de um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e um objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Ele também usa o método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para limpar o conteúdo da coleção de [erros](../../../ado/reference/ado-api/errors-collection-ado.md) . Os procedimentos ExecuteCommand e MyOutput são necessários para que este procedimento seja executado.  
   
- Use o exemplo a seguir em uma página de Active Server (ASP). Para exibir esse exemplo totalmente funcional, você deve ter a fonte de dados AdvWorks. mdb (instalada com os exemplos de SDK) localizada em C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real deste arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
+ Use o exemplo a seguir em uma página de Active Server (ASP). Para exibir esse exemplo totalmente funcional, você deve ter a fonte de dados AdvWorks. mdb (instalada com os exemplos de SDK) localizada em C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real desse arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
   
  Use **Localizar** para localizar o arquivo Adovbs. Inc e colocá-lo no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **ExecuteVBS. asp**. Você pode exibir o resultado em qualquer navegador cliente.  
   

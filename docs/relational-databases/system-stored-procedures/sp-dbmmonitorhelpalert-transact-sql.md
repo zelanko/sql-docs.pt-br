@@ -19,10 +19,10 @@ ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899184"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
@@ -65,7 +65,7 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para cada alerta retornado, retorna uma fila que contém as colunas seguintes:  
   
-|Coluna|Tipo de dados|DESCRIÇÃO|  
+|Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|A tabela a seguir lista o valor de **alert_id** para cada métrica de desempenho e a unidade de medida da métrica exibida no conjunto de resultados de **sp_dbmmonitorresults** :|  
 |**os**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** Para exibir os valores atuais, execute o procedimento armazenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
@@ -80,7 +80,7 @@ sp_dbmmonitorhelpalert database_name
 |5|Período de retenção|Horas|  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna uma linha que indica se um aviso está habilitado para a métrica de desempenho da transação mais antiga não enviada do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  

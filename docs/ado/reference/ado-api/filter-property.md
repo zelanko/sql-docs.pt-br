@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918637"
 ---
 # <a name="filter-property"></a>Propriedade Filter
@@ -66,7 +66,7 @@ Definir a propriedade **Filter** para uma cadeia de caracteres de comprimento ze
   
 Sempre que a propriedade **Filter** é definida, a posição do registro atual é movida para o primeiro registro no subconjunto filtrado de registros no **conjunto de registros**. Da mesma forma, quando a propriedade **Filter** é desmarcada, a posição do registro atual é movida para o primeiro registro no **conjunto de registros**.
 
-Suponha que um **conjunto de registros** seja filtrado com base em um campo de algum tipo Variant, como o tipo sql_variant. Um erro (DISP_E_TYPEMISMATCH ou 80020005) ocorre quando os subtipos dos valores de campo e filtro usados na cadeia de caracteres de critérios não correspondem. Por exemplo, suponha que:
+Suponha que um **conjunto de registros** seja filtrado com base em um campo de algum tipo Variant, como o tipo sql_variant. Um erro (DISP_E_TYPEMISMATCH ou 80020005) ocorre quando os subtipos dos valores de campo e filtro usados na cadeia de caracteres de critérios não correspondem. Por exemplo, suponha:
 
 - Um objeto **Recordset** (RS) contém uma coluna (C) do tipo sql_variant.
 - E um campo dessa coluna foi atribuído a um valor de 1 do tipo i4. A cadeia de caracteres de critérios `rs.Filter = "C='A'"` é definida como no campo.

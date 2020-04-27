@@ -21,10 +21,10 @@ ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900658"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
@@ -34,21 +34,21 @@ ms.locfileid: "67900658"
  > [!TIP]
  > A partir [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]do, essa exibição de gerenciamento dinâmico dá suporte a Always on instâncias de cluster de failover, além de Always on grupos de disponibilidade.
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|Nome do cluster do WSFC que hospeda as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estão habilitadas para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
 |**quorum_type**|**tinyint**|Tipo de quorum usado por este cluster do WSFC, um dos seguintes:<br /><br /> 0 = Maioria de nós. Esta configuração de quorum pode sustentar falhas da metade dos nós (arredondamento) menos um. Por exemplo, em um cluster de sete nós, esta configuração de quorum pode sustentar três falhas de nó.<br /><br /> 1 = Maioria de nós e discos. Se a testemunha de disco permanecer online, essa configuração de quorum poderá sustentar falhas da metade dos nós (arredondamento). Por exemplo, um cluster de seis nós no qual a testemunha de disco está online pode sustentar três falhas de nó. Se a testemunha de disco ficar offline ou falhar, essa configuração de quorum poderá sustentar falhas da metade dos nós (arredondamento). Por exemplo, um cluster de seis nós com uma testemunha de disco com falha pode sustentar duas (3-1=2) falhas de nó.<br /><br /> 2 = Maioria de compartilhamentos de nós e arquivos. Essa configuração de quorum funciona de maneira semelhante à Maioria de Nós e Discos, mas usa uma testemunha de compartilhamento de arquivo em vez de uma testemunha de disco.<br /><br /> 3 = Nenhuma maioria: somente disco. Se o disco de quorum estiver online, essa configuração de quorum poderá sustentar falhas de todos os nós, exceto um.<br /><br /> 4 = quorum desconhecido. Quorum desconhecido para o cluster.<br /><br /> 5 = testemunha em nuvem. O cluster utiliza Microsoft Azure para arbitragem de quorum. Se a testemunha de nuvem estiver disponível, o cluster poderá sustentar a falha da metade dos nós (arredondando para cima).|  
-|**quorum_type_desc**|**varchar (50)**|Descrição de **quorum_type**, uma das:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
+|**quorum_type_desc**|**varchar(50)**|Descrição de **quorum_type**, uma das:<br /><br /> NODE_MAJORITY<br /><br /> NODE_AND_DISK_MAJORITY<br /><br /> NODE_AND_FILE_SHARE_MAJORITY<br /><br /> NO_MAJORITY:_DISK_ONLY <br /><br /> UNKNOWN_QUORUM <br /><br /> CLOUD_WITNESS|  
 |**quorum_state**|**tinyint**|Estado do quorum do WSFC, um dos seguintes:<br /><br /> 0 = Estado de quorum desconhecido<br /><br /> 1 = Quorum normal<br /><br /> 2 = Quorum forçado|  
-|**quorum_state_desc**|**varchar (50)**|Descrição de **quorum_state**, uma das:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
+|**quorum_state_desc**|**varchar(50)**|Descrição de **quorum_state**, uma das:<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico de Grupos de Disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Exibições de catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [sys. dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
+ [Always On funções e exibições de gerenciamento dinâmico de grupos de disponibilidade &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On exibições de catálogo de grupos de disponibilidade &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Monitorar grupos de disponibilidade &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072660"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
@@ -72,7 +72,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt= ] '*encryption_option*'  
  Especifica se a senha é passada como texto não criptografado ou como o hash da senha de texto não criptografado. Observe que não há nenhuma criptografia. A palavra "criptografia" é usada nesta discussão por causa de compatibilidade com versões anteriores. Se uma senha de texto não criptografado for passada, ocorrerá hash. O hash é armazenado. *encryption_option* é **varchar (20)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |NULO|A senha é passada sem-criptografia. Esse é o padrão.|  
 |**skip_encryption**|A senha já tem hash. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve armazenar o valor sem hash.|  
@@ -96,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  A tabela a seguir mostra vários procedimentos armazenados que são usados com sp_addlogin.  
   
-|Procedimento armazenado|DESCRIÇÃO|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Adiciona um usuário ou grupo do Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Altera a senha de um usuário.|  
@@ -139,7 +139,7 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CRIAR logon &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpuser](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

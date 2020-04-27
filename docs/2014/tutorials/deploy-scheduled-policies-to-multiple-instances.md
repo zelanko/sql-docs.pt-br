@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185816"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implantar diretivas agendadas em várias instâncias
@@ -28,7 +28,7 @@ ms.locfileid: "68185816"
   
  Você executará essas tarefas no computador em que concluiu as tarefas anteriores desta lição.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Esta tarefa tem os seguintes pré-requisitos:  
   
 -   Você deve ter concluído as tarefas anteriores desta lição.  

@@ -19,10 +19,10 @@ ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900261"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67900261"
   
 > **Observação:** Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_cluster_nodes**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Nome de um nó na configuração da instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (servidor virtual).|  
 |status|**int**|Status do nó em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de cluster de failover: 0, 1, 2, 3,-1. Para obter mais informações, consulte [função GetClusterNodeState](https://go.microsoft.com/fwlink/?LinkId=204794).|  

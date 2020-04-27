@@ -10,10 +10,10 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907136"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menu e outras teclas de atalho (AccessToSQL)
@@ -57,7 +57,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Localizar anterior.|ALT + E + F + P ou CTRL + SHIFT + F3|  
 |Localizar próximo|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Comandos do menu Exibir  
+## <a name="view-menu-commands"></a>comandos do menu Exibir  
 Para acessar o menu Exibir, o atalho de teclado usado é ALT + V. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu Exibir.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  
@@ -96,7 +96,7 @@ Para acessar o menu ferramentas, o atalho de teclado usado é ALT + T. A tabela 
 |Exportar esquema.|ALT + T + E|  
 |Excluir localmente.|ALT + T + D|  
   
-## <a name="help-menu-commands"></a>Comandos do menu ajuda  
+## <a name="help-menu-commands"></a>comandos do menu Ajuda  
 Para acessar o menu ajuda, o atalho de teclado usado é ALT + H. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu ajuda.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  

@@ -18,10 +18,10 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903015"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
@@ -46,25 +46,25 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|nome do banco de dados.|  
 |**db_size**|**nvarchar (13)**|Tamanho total do banco de dados.|  
 |**proprietário**|**sysname**|Proprietário do banco de dados, como **SA**.|  
 |**DBID**|**smallint**|ID do banco de dados.|  
-|**criação**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
-|**Estado**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name*=*valor*.<br /><br /> Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**created**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
+|**status**|**nvarchar (600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. As opções não booleanas são listadas com seus valores correspondentes na forma de *option_name*=*valor*.<br /><br /> Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Nível de compatibilidade do banco de dados: 60, 65, 70, 80 ou 90.|  
   
  Se *Name* for especificado, haverá um conjunto de resultados adicional que mostra a alocação de arquivo para o banco de dados especificado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**name**|**nchar (128)**|Nome do arquivo lógico.|  
+|**name**|**nchar(128)**|Nome do arquivo lógico.|  
 |**FileID**|**smallint**|ID do arquivo.|  
 |**nome do arquivo**|**nchar (260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
 |**arquivos**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
-|**tamanho**|**nvarchar (18)**|Tamanho do arquivo em megabytes.|  
+|**size**|**nvarchar (18)**|Tamanho do arquivo em megabytes.|  
 |**MaxSize**|**nvarchar (18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar (18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
 |**usos**|**varchar (9)**|Uso do arquivo Para um arquivo de dados, o valor é **' somente dados '** e, para o arquivo de log, o valor é **' log only '**.|  
@@ -97,7 +97,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [os grupos de sys. File&#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   

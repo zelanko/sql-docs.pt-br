@@ -14,10 +14,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412692"
 ---
 # <a name="glossary"></a>Glossário
@@ -86,9 +86,9 @@ ms.technology:
 |relação de atributo|A hierarquia associada a um atributo que contém um único nível baseado na coluna correspondente em uma tabela de dimensão.|  
 |tipo de atributo|O tipo de informações contidas por um atributo, como trimestres ou meses em uma dimensão de hora, que pode habilitar um tratamento específico pelos aplicativos servidor e cliente.|  
 |auditando|O processo usado por um sistema operacional para detectar e registrar eventos relativos à segurança; por exemplo, uma tentativa de criar, acessar ou excluir objetos como arquivos e diretórios. Os registros destes eventos são armazenados em um arquivo conhecido como um log de segurança, cujo conteúdo é disponibilizado apenas para aqueles com o espaço vazio adequado.|  
-|Autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
+|autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
 |autenticador|Uma estrutura de dados usada por uma parte para comprovar que a outra parte conhece uma chave secreta. No protocolo de autenticação Kerberos, autenticadores incluem carimbos de data/hora para impedir ataques de retomada e são criptografados com a chave de sessão emitida pelo KDC (Centro de distribuição de chaves).|  
-|authorization|O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade. A autorização deriva da identidade da pessoa, processo de computador ou dispositivo que solicita acesso, o que é verificado através da autenticação.|  
+|autorização|O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade. A autorização deriva da identidade da pessoa, processo de computador ou dispositivo que solicita acesso, o que é verificado através da autenticação.|  
 |modo de confirmação automática|O modo de gerenciamento de transações padrão do Mecanismo de Banco de Dados. O Mecanismo de Banco de Dados inicia automaticamente uma transação para cada instrução Transact-SQL individual. Quando a instrução é concluída, a transação é confirmada ou revertida com base no êxito ou fracasso da instrução.|  
 |verificação de consistência automática|Um recurso que automaticamente executa uma verificação de consistência em fontes de dados protegidas quando detecta uma réplica inconsistente.|  
 |failover automático|Um failover que ocorre automaticamente na perda da réplica primária.|  
@@ -121,7 +121,7 @@ ms.technology:
 |pool de buffers|Um bloco de memória reservado para índice e páginas de dados de tabela.|  
 |tamanho do buffer|O tamanho da área de memória reservado para armazenamento temporário de dados.|  
 |funções internas|Um grupo de funções predefinidas fornecido como parte das linguagens Transact-SQL e MDX.|  
-|BUILTIN\Administradores|Conta de usuário (administradores locais)|  
+|BUILTIN\Administrators|Conta de usuário (administradores locais)|  
 |cópia em massa|Uma ação de copiar um conjunto grande de dados.|  
 |exportação em massa|Copiar um conjunto grande de linhas de dados de uma tabela do SQL Server em um arquivo de dados.|  
 |importação em massa|Carregar uma quantidade grande de dados, normalmente em lotes, de um arquivo ou repositório de dados em outro repositório de dados.|  
@@ -441,7 +441,7 @@ ms.technology:
 |Faceta Declarative Management Framework|Um conjunto de propriedades lógicas pré-definidas que modelam o comportamento ou características para certos tipos de destinos gerenciados (como um banco de dados, tabela, logon, exibição etc) em gerenciamento baseado em política.|  
 |integridade referencial declarativa|Restrições de FOREIGN KEY definidas como parte de uma definição de tabela que impõem relacionamentos apropriados entre tabelas.|  
 |conexão de administrador dedicada|Uma conexão dedicada que permite que um administrador conecte-se a um servidor quando o Mecanismo de Banco de Dados não responder a conexões normais.|  
-|padrão|Um valor que é usado automaticamente por um programa quando o usuário não especifica uma alternativa. Padrões são compilados em um programa quando um valor ou opção deve ser assumido para o programa funcionar.|  
+|default|Um valor que é usado automaticamente por um programa quando o usuário não especifica uma alternativa. Padrões são compilados em um programa quando um valor ou opção deve ser assumido para o programa funcionar.|  
 |banco de dados padrão|O banco de dados ao qual o usuário é conectado imediatamente após fazer logon no SQL Server.|  
 |instância padrão|A instância do SQL Server que usa o mesmo nome que o nome do computador no qual está instalada.|  
 |idioma padrão|O idioma humano que o SQL Server usa para erros e mensagens se um usuário não especificar um idioma.|  
@@ -746,7 +746,7 @@ ms.technology:
 |controle|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |dados de validação|Uma porcentagem de dados de treinamento que são reservados para uso na medição da exatidão da estrutura do modelo de mineração de dados.|  
 |repositório de controle|A estrutura de mineração de dados que é usada para armazenar em cache os dados de controle. Ele contém referências aos dados de controle.|  
-|Página inicial|Pasta raiz no namespace de pasta de servidor de relatório.|  
+|Home|Pasta raiz no namespace de pasta de servidor de relatório.|  
 |home page|Um documento que serve como um ponto de partida em um sistema de hipertexto. Na World Wide Web, uma página de entrada para um conjunto de páginas da Web e outros arquivos em um site. A home page é exibida por padrão quando um visitante navega para o site usando um navegador da Web.|  
 |dados homogêneos|Dados que vêm de várias fontes de dados que são todos gerenciados pelo mesmo software.|  
 |salto|Em comunicações de dados, um segmento do caminho entre roteadores em uma rede geograficamente dispersa.|  
@@ -1030,7 +1030,7 @@ ms.technology:
 |Biblioteca de Rede|Um componente de comunicações do SQL Server que isola o software cliente do SQL Server e o Mecanismo de Banco de Dados das APIs de rede.|  
 |software de rede|Software que permite a grupos de computadores se comunicarem, inclusive um componente que facilita a conexão ou participação em uma rede.|  
 |caractere de nova linha|Um caractere de controle que faz o cursor em um vídeo ou o mecanismo de impressão em uma impressora se mover para o início da próxima linha.|  
-|nickname|Quando usado com tabelas do sistema de replicação de mesclagem, um nome para outro Assinante que é conhecido como já tendo uma geração especificada de dados atualizados.|  
+|apelido|Quando usado com tabelas do sistema de replicação de mesclagem, um nome para outro Assinante que é conhecido como já tendo uma geração especificada de dados atualizados.|  
 |funções niladic|Funções que não têm nenhum parâmetro de entrada.|  
 |API NLS|Conjunto de funções do sistema no Windows de 32 bits que contém informações baseadas em convenções culturais e de idiomas.|  
 |nó|Um provedor de sincronização e sua réplica associada.|  
@@ -1046,7 +1046,7 @@ ms.technology:
 |Notification Services|Um suplemento do Microsoft SQL Server que fornece uma estrutura de desenvolvimento e servidor de hospedagem para criar e implantar aplicativos de notificação.|  
 |NSControl|O utilitário de prompt de comando para administrar instâncias e aplicativos do Notification Services.|  
 |NUL|Um 'dispositivo', reconhecido pelo sistema operacional, que pode ser endereçado como um dispositivo de saída físico (como uma impressora), mas que descarta informações enviadas a ele.|  
-|nulo|Pertencente a um valor que indica dados perdidos ou desconhecidos.|  
+|null|Pertencente a um valor que indica dados perdidos ou desconhecidos.|  
 |chave nula|Um valor nulo que é encontrado em uma coluna de chave.|  
 |ponteiro nulo|Um ponteiro para nada: normalmente um endereço de memória padronizado, como 0. Um ponteiro nulo costuma marcar a última de uma sequência linear de ponteiros ou indica que uma operação de pesquisa de dados ficou vazia.|  
 |nulidade|O atributo de uma coluna, de um parâmetro ou de uma variável que especifica se valores de dados nulos são permitidos.|  
@@ -1085,8 +1085,8 @@ ms.technology:
 |pacote|Uma unidade de informações transmitidas de um computador ou dispositivo para outro em uma rede.|  
 |Preenchimento de índice|Uma opção que especifica o espaço a ser deixado aberto em cada página nos níveis intermediários do índice.|  
 |preenchimento|Em armazenamento de dados, a adição de um ou mais bits, normalmente zeros, em um bloco de dados para preenchê-lo, para forçar os bits de dados reais em uma certa posição ou impedir que os dados dupliquem um padrão de bits com um significado estabelecido, como um comando inserido|  
-|Página|Retornar os resultados de uma consulta em subconjuntos menores de dados, possibilitando que o usuário navegue pelo conjunto de resultados, exibindo 'páginas' de dados.|  
-|Página|Em um sistema de armazenamento virtual, um bloco de comprimento fixo de endereços virtuais contíguos copiado como uma unidade da memória para o disco e retornado durante operações de paginação.|  
+|página|Retornar os resultados de uma consulta em subconjuntos menores de dados, possibilitando que o usuário navegue pelo conjunto de resultados, exibindo 'páginas' de dados.|  
+|página|Em um sistema de armazenamento virtual, um bloco de comprimento fixo de endereços virtuais contíguos copiado como uma unidade da memória para o disco e retornado durante operações de paginação.|  
 |falha de página|A interrupção que ocorre quando o software tenta ler ou gravar em um local de memória virtual que está marcado 'não está presente'.|  
 |restauração de página|Uma operação que restaura uma ou mais páginas de dados. A restauração de página é para restaurar páginas danificadas isoladas.|  
 |pager|Um dispositivo eletrônico sem fio, de bolso, que usa sinais de rádio para registrar números de telefone de entrada ou mensagens de texto curto. Alguns pagers também permitem aos usuários enviar mensagens.|  
@@ -1117,7 +1117,7 @@ ms.technology:
 |instrução de passagem|Uma instrução SELECT que é passada diretamente para o banco de dados de origem sem modificação ou atraso.|  
 |política de senha|Uma coleção de configurações de política que definem os requisitos de senha para um Objeto de Política de Grupo (GPO).|  
 |provedor de senha|Componente de geração e validação de senha de uma só vez para a autenticação de usuário.|  
-|caminho|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
+|path|Um elemento do fluxo de dados que conecta a saída de um componente de fluxo de dados à entrada de outro componente de fluxo de dados.|  
 |PBM|Um conjunto de funções internas que retornam informações de estado de servidor sobre valores, objetos e configurações no SQL Server. O Gerenciamento Baseado em Política permite que um administrador de banco de dados declare o estado desejado do sistema e verifique a conformidade do sistema com esse estado.|  
 |replicação ponto a ponto|Um tipo de replicação transacional. Em contraste com a replicação transacional somente leitura e a replicação transacional com atualização de assinaturas, as relações entre nós em uma topologia de replicação ponto a ponto são relações pares, em vez das hierárquicas, com cada nó contendo esquema e dados idênticos.|  
 |ferramentas de desempenho|Ferramentas que você pode usar para avaliar o desempenho de uma solução. Ferramentas de desempenho podem ter propósitos diferentes; algumas são criadas para avaliar o desempenho ponta a ponta e outras focam a avaliação do desempenho de um aspecto específico de uma solução.|  
@@ -1200,7 +1200,7 @@ ms.technology:
 |página de propriedades|Um agrupamento de propriedades apresentado como uma página tabulada de uma folha de propriedade.|  
 |computador protegido|Um computador que contém fontes de dados que são membros do grupo de proteção.|  
 |membro protegido|Uma fonte de dados dentro de um grupo de proteção.|  
-|protocol|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
+|protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
 |provider|Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
 |provider|Um componente de software que permite que uma réplica sincronize seus dados com outras réplicas.|  
 |objeto de provedor|Um objeto que faz parte de um provedor de dados como o Provedor Oracle para o SQL Server.|  
@@ -1212,7 +1212,7 @@ ms.technology:
 |banco de dados de publicação|Um banco de dados no Publicador do qual dados e objetos de banco de dados são marcados para replicação e propagados a Assinantes.|  
 |período de retenção da publicação|Na replicação de mesclagem, o período de tempo que uma assinatura pode permanecer não sincronizada.|  
 |dados publicados|Dados no Publicador que foram replicados.|  
-|Publicador|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
+|Editor|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
 |publisher database|Um servidor que disponibiliza dados para replicação para outros servidores. Um Publicador também detecta dados alterados e mantém informações sobre todas as publicações no site.|  
 |servidor de publicação|Um servidor que executa uma instância do Analysis Services que armazena o cubo de origem para um ou mais cubos vinculados.|  
 |tabela de publicação|A tabela no Publicador na qual os dados foram marcados para replicação e fazem parte de uma publicação.|  
@@ -1227,7 +1227,7 @@ ms.technology:
 |qualificador|Um modificador que contém informações que descrevem uma classe, instância, propriedade, método ou parâmetro. Qualificadores são definidos pelo modelo CIM, pelo Gerenciador de Objetos CIM e por desenvolvedores.|  
 |tipo de qualificador|Um sinalizador que fornece informações adicionais sobre um qualificador; por exemplo, se uma classe derivada ou instância pode substituir o valor original do qualificador.|  
 |quantum|Um período breve de tempo em que determinado thread é executado em um sistema operacional multitarefa. Ele executa a multitarefa antes de ser reagendado em outros threads com a mesma prioridade. Previamente conhecido como um 'fração de tempo'.|  
-|consulta|Uma instância de um modelo de consulta executado continuamente no servidor StreamInsight que processa eventos recebidos de instâncias de adaptadores de entrada aos quais a consulta está associada e que envia eventos processados para instâncias de adaptadores de saída aos quais está associado.|  
+|Consulta|Uma instância de um modelo de consulta executado continuamente no servidor StreamInsight que processa eventos recebidos de instâncias de adaptadores de entrada aos quais a consulta está associada e que envia eventos processados para instâncias de adaptadores de saída aos quais está associado.|  
 |associador de consulta|Um objeto que associa um modelo de consulta de StreamInsight existente a adaptadores de entrada e saída específicos.|  
 |associação de consulta|O processo de associação de instâncias dos adaptadores de entrada e instâncias dos adaptadores de saída a uma instância de um modelo de consulta.|  
 |designer de consulta|Uma ferramenta que ajuda um usuário a criar o comando de consulta que especifica os dados que o usuário deseja em um conjunto de relatórios.|  
@@ -1397,8 +1397,8 @@ ms.technology:
 |conjunto de linhas de esquema|Um conjunto de linhas especialmente definido que retorna metadados sobre objetos ou funcionalidade em uma instância do SQL Server ou do Analysis Services.  Por exemplo, o conjunto de linhas de esquema OLE DB DBSCHEMA_COLUMNS descreve as colunas de uma tabela, enquanto o conjunto de linhas de esquema MDSCHEMA_MEASURES do Analysis Services descreve as medidas de um cubo.|  
 |instantâneo de esquema|Um instantâneo que inclui esquema para tabelas publicadas e objetos necessários para replicação (gatilhos, tabelas de metadados, etc), mas não dados de usuário.|  
 |sensível a esquema|Pertence a um método de processamento baseado em um esquema que define elementos, atributos e tipos que serão usados para validar documentos de entrada e saída.|  
-|scope|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
-|scope|O conjunto de dados que está sendo sincronizado.|  
+|escopo|Até que ponto um identificador, como um objeto ou propriedade, pode ser referenciado em um programa. O escopo pode ser global no aplicativo ou local para o documento ativo.|  
+|escopo|O conjunto de dados que está sendo sincronizado.|  
 |memória de script|A memória local (RAM do cliente) que é usada por um script PHP.|  
 |painel de script|A parte do editor de texto do Designer de Tabela.|  
 |script|Pertence à automação de ações de usuário ou à configuração de um estado padrão em um computador por meio de scripts.|  
@@ -1593,7 +1593,7 @@ ms.technology:
 |Depurador do Fluxo de Eventos do StreamInsight|Uma ferramenta autônoma na plataforma Microsoft StreamInsight que fornece depuração e análise do fluxo de eventos.|  
 |Plataforma StreamInsight|A plataforma que consiste no servidor StreamInsight, ferramenta Depuração do Fluxo de Eventos, Visual Studio IDE e outros componentes para o desenvolvimento de aplicativos de processamento de eventos complexos.|  
 |Servidor StreamInsight|O mecanismo básico e os componentes da estrutura de adaptador do Microsoft StreamInsight. O servidor StreamInsight pode ser usado para processar e analisar os fluxos de eventos associados a um aplicativo de processamento de eventos complexos.|  
-|string|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
+|cadeia de caracteres|Grupo de caracteres ou bytes de caractere tratados como uma única entidade. Programas de computador usam cadeias de caracteres para armazenar e transmitir dados e comandos. A maioria das linguagens de programação considera cadeias de caracteres (como 2674:gstmn) como distintas de valores numéricos (como 470924).|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |faixa|Intervalos horizontais ou verticais que definem o padrão de plano de fundo do gráfico em intervalos regulares ou personalizados. Você pode usar faixas para melhorar a legibilidade para buscar valores individuais no gráfico, realçar datas que ocorrem em intervalos normais ou realçar um intervalo de chave específico.|  
 |conjunto de mídias distribuído|Um conjunto de mídias que usa vários dispositivos, entre os quais cada backup é distribuído.|  

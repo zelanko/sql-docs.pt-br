@@ -10,10 +10,10 @@ ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910699"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Seleção de objeto avançada (AccessToSQL)
@@ -46,6 +46,6 @@ Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exem
   
 Se os itens corresponderem aos critérios de filtro, as categorias ou os itens aparecerão à medida que você digitar a cadeia de caracteres. Para ver os itens correspondentes, recomendamos que você clique no botão **exibido somente itens carregados** .  
   
-**Limpar filtro**  
+**Limpar Filtro**  
 Limpa a caixa de **filtro** .  
   

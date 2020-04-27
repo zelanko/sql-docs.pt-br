@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826332"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticação e autorização PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "67826332"
   
  Clique nos links a seguir para ler seções específicas deste tópico:  
   
- [Autenticação do Windows usando o requisito de logon no modo clássico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Autenticação do Windows usando o requisito de logon do modo clássico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Operações do PowerPivot que exigem autorização do usuário](#UserConnections)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67826332"
   
  [Considerações de segurança dos serviços do Excel para pastas de trabalho PowerPivot](#excel)  
   
-##  <a name="bkmk_auth"></a>Autenticação do Windows usando o requisito de logon no modo clássico  
+##  <a name="windows-authentication-using-classic-mode-sign-in-requirement"></a><a name="bkmk_auth"></a>Autenticação do Windows usando o requisito de logon no modo clássico  
  O PowerPivot para SharePoint dá suporte a um conjunto reduzido das opções de autenticação que estão disponíveis no SharePoint. Das opções de autenticação disponíveis, somente autenticação do Windows tem suporte para uma implantação do PowerPivot para SharePoint. Além disso, o aplicativo Web pelo qual o logon ocorre deve ser configurado para o modo clássico.  
   
  A autenticação do Windows é exigida porque o mecanismo de dados do Analysis Services em uma implantação do PowerPivot para SharePoint só dá suporte à autenticação do Windows. Os serviços do Excel estabelecem conexões com o Analysis Services pelo provedor do OLE DB de MSOLAP usando uma identidade de usuário do Windows que foi autenticada por NTLM ou o protocolo Kerberos.  
@@ -52,7 +52,7 @@ ms.locfileid: "67826332"
   
  Para aplicativos Web existentes, use as instruções a seguir para verificar se o aplicativo Web está configurado para usar autenticação do Windows.  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos Web**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos Web**.  
   
 2.  Selecione o aplicativo Web.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67826332"
   
 4.  Verifique se você tem um provedor para cada zona, e se a zona Padrão é definida como Windows.  
   
-##  <a name="UserConnections"></a>Operações do PowerPivot que exigem autorização do usuário  
+##  <a name="powerpivot-operations-requiring-user-authorization"></a><a name="UserConnections"></a>Operações do PowerPivot que exigem autorização do usuário  
  A autorização do SharePoint é usada exclusivamente para todos os níveis de acesso à consulta do PowerPivot e ao processamento de dados.  
   
  O modelo de autorização baseado em funções do Analysis Services não tem suporte. Não há nenhuma autorização baseada em função para os dados PowerPivot no nível de célula, linha ou tabela. Você não pode proteger partes diferentes da pasta de trabalho para conceder ou negar acesso a dados confidenciais dentro delas para usuários específicos. Os dados PowerPivot inseridos estão totalmente disponíveis para os usuários que têm permissões de Exibição na pasta de trabalho do Excel em uma biblioteca do SharePoint.  
@@ -73,7 +73,7 @@ ms.locfileid: "67826332"
   
 -   Operações de atualização de dados que salvam uma cópia atualizada da fonte de dados na pasta de trabalho em uma biblioteca de conteúdo. Neste caso, um log real em operação é executado usando o nome de usuário e a senha que são recuperados de um aplicativo de destino no Serviço de Repositório Seguro. As credenciais podem ser a conta autônoma de atualização de dados PowerPivot ou credenciais que foram armazenadas com a agenda de atualização de dados quando ela foi criada. Para obter mais informações, consulte [configurar credenciais armazenadas para a atualização de dados PowerPivot &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) e [Configurar a conta de atualização de dados autônoma do PowerPivot &#40;PowerPivot para SharePoint ](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)&#41;.  
   
-##  <a name="Permissions"></a>Permissões do SharePoint para acesso a dados PowerPivot  
+##  <a name="sharepoint-permissions-for-powerpivot-data-access"></a><a name="Permissions"></a>Permissões do SharePoint para acesso a dados PowerPivot  
  A publicação, gerenciamento e proteção de uma pasta de trabalho PowerPivot têm suporte apenas por meio da integração do SharePoint. Os servidores do SharePoint fornecem subsistemas de autenticação e autorização que garantem acesso legítimo aos dados. Não há nenhum cenário com suporte para implantar uma pasta de trabalho PowerPivot de maneira segura fora de um farm do SharePoint.  
   
  O acesso do usuário a dados PowerPivot é somente leitura no servidor por meio de permissões de Exibição ou mais altas. Permissões de colaboração permitem adicionar e editar o arquivo. As alterações aos dados PowerPivot exigem que você baixe a pasta de trabalho para um aplicativo de área de trabalho do Excel que tenha o PowerPivot para Excel instalado. As permissões de colaboração no arquivo determinarão se o usuário pode baixar o arquivo localmente e, em seguida, salvar as alterações novamente no SharePoint.  
@@ -90,7 +90,7 @@ ms.locfileid: "67826332"
 |Ler|Acesse pastas de trabalho PowerPivot como uma fonte de dados externa, em que a URL da pasta de trabalho é inserida explicitamente em uma caixa de diálogo de conexão (por exemplo, no assistente de conexão de dados do Excel).|  
 |Exibir Apenas|Exibir pastas de trabalho PowerPivot.<br /><br /> Exibir o histórico de atualizações de dados.<br /><br /> Conectar uma pasta de trabalho local a uma pasta de trabalho PowerPivot em um site do SharePoint, para adaptar seus dados de outros modos.<br /><br /> Baixar um instantâneo da pasta de trabalho. O instantâneo é uma cópia estática dos dados, sem segmentações de dados, fórmulas ou conexões de dados. O conteúdo do instantâneo é semelhante à cópia de valores de células da janela do navegador.|  
   
-##  <a name="excel"></a>Considerações de segurança dos serviços do Excel para pastas de trabalho PowerPivot  
+##  <a name="excel-services-security-considerations-for-powerpivot-workbooks"></a><a name="excel"></a>Considerações de segurança dos serviços do Excel para pastas de trabalho PowerPivot  
  O processamento de consulta do PowerPivot no servidor é estreitamente ligado aos serviços do Excel. A integração de produto começa no nível do documento, em que pastas de trabalho PowerPivot são arquivos de pasta de trabalho do Excel (.xlsx) que contêm ou referenciam dados PowerPivot. Não há nenhuma extensão de arquivo separada para uma pasta de trabalho PowerPivot.  
   
  Quando uma pasta de trabalho PowerPivot é aberta em um site do SharePoint, os Serviços do Excel leem a cadeia de conexão de dados PowerPivot inserida e encaminham a solicitação ao provedor local de OLE DB do SQL Server Analysis Services. Então, o provedor transmite as informações de conexão a um servidor do PowerPivot no farm. Para que as solicitações fluam diretamente entre os dois servidores, os Serviços do Excel devem ser configurados para usar configurações requeridas pelo PowerPivot para SharePoint.  
@@ -100,7 +100,7 @@ ms.locfileid: "67826332"
 > [!NOTE]  
 >  A maioria das configurações relacionadas à segurança se aplicam a locais confiáveis. Se quiser preservar valores padrão ou usar valores diferentes para sites diferentes, você poderá criar mais um local confiável para sites que contenham dados PowerPivot e, então, configurar os seguintes parâmetros apenas para esse site. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Área|Configuração|DESCRIÇÃO|  
+|Área|Configuração|Descrição|  
 |----------|-------------|-----------------|  
 |Aplicativo Web|Provedor de autenticação do Windows|O PowerPivot converte um token de declaração obtido dos Serviços do Excel em uma identidade de usuário do Windows. Qualquer aplicativo Web que utilize os Serviços do Excel como um recurso deve ser configurado para usar o provedor de autenticação do Windows.|  
 |Local confiável|Tipo de local|Este valor deve ser definido como **Microsoft SharePoint Foundation**. Os servidores do PowerPivot recuperam uma cópia do arquivo .xlsx e o carregam em um servidor de Serviços de Análise no farm. O servidor só pode recuperar arquivos .xlsx de uma biblioteca de conteúdo.|  

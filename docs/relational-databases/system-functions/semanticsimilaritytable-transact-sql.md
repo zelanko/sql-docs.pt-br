@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68140552"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
@@ -44,13 +44,13 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
- **tabela**  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+ **table**  
  É o nome de uma tabela que tem indexação de texto completo e semântica habilitada.  
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
   
- **column**  
+ **pilha**  
  Nome da coluna indexada para a qual os resultados devem ser retornados. A coluna deve ter indexação semântica habilitada.  
   
  **column_list**  
@@ -69,7 +69,7 @@ SEMANTICSIMILARITYTABLE
   
  Documentos correspondidos serão retornados por coluna se os resultados forem solicitados de mais de uma coluna.  
   
-|Column_name|Type|DESCRIÇÃO|  
+|Column_name|Tipo|Descrição|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_column_id**|**int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
