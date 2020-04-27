@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067377"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Fontes de dados com suporte (SSAS tabular)
   Este tópico descreve os tipos de fonte de dados que podem ser usados com modelos tabulares.  
   
- Este artigo contém as seguintes seções:  
+ Este artigo inclui as seções a seguir:  
   
 -   [Fontes de dados com suporte](#bkmk_supported_ds)  
   
--   [Fontes de dados sem suporte](#bkmk_unsupported_ds)  
+-   [Fontes sem suporte](#bkmk_unsupported_ds)  
   
 -   [Dicas para escolher fontes de dados](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>Fontes de dados com suporte  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Fontes de dados com suporte  
  Você pode importar dados das fontes de dados na tabela a seguir: Quando você instalar o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a instalação não instala os provedores listados para cada fonte de dados. Alguns deles podem já estar instalados com outros aplicativos no computador; em outros casos, você precisará baixar e instalar o provedor.  
   
 |||||  
@@ -37,7 +37,7 @@ ms.locfileid: "66067377"
 |Bancos de dados do Access|Microsoft Access 2003, 2007, 2010.|.accdb ou .mdb|Provedor OLE DB ACE 14|  
 |Bancos de dados relacionais do SQL Server|Microsoft SQL Server2005, 2008, 2008 R2; SQL Server 2012, banco de dados SQL Azure da Microsoft <sup>2</sup>|(não se aplica)|Provedor OLE DB para SQL Server<br /><br /> Provedor OLE DB do SQL Server Native Client<br /><br /> Provedor OLE DB do SQL Server Native 10.0 Client<br /><br /> Provedor de dados .NET Framework para SQL Client|  
 |SQL Server Parallel data warehouse (PDW) <sup>3</sup>|2008 R2|(não se aplica)|Provedor OLE DB para SQL Server PDW|  
-|Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de Dados .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bancos de dados relacionais da Oracle|Oracle 9i, 10g, 11g.|(não se aplica)|Provedor OLE DB Oracle<br /><br /> Provedor de Dados .NET Framework para Cliente Oracle<br /><br /> Provedor de dados do .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bancos de dados relacionais do Teradata|Teradata V2R6, V12|(não se aplica)|Provedor OLE DB TDOLEDB<br /><br /> Provedor de .NET Data para Teradata|  
 |Bancos de dados relacionais do Informix||(não se aplica)|Provedor OLE DB para Informix|  
 |Bancos de dados relacionais IBM DB2|8.1|(não se aplica)|DB2OLEDB|  
@@ -45,7 +45,7 @@ ms.locfileid: "66067377"
 |Outros bancos de dados relacionais|(não se aplica)|(não se aplica)|Provedor OLE DB para driver ODBC|  
 |Arquivos de texto|(não se aplica)|.txt, .tab, .csv|Provedor OLE DB ACE 14 para Microsoft Access|  
 |Arquivos do Microsoft Excel|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|Provedor OLE DB ACE 14|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]pasta|Microsoft SQL Server 2008 R2 Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (usado apenas com pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicadas em farms do SharePoint com o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalado)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pasta de trabalho|Microsoft SQL Server 2008 R2 Analysis Services|xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (usado apenas com pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicadas em farms do SharePoint com o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instalado)|  
 |Cubo do Analysis Services|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(não se aplica)|ASOLEDB 10|  
 |Alimentações de dados<br /><br /> (usado para importar dados de relatórios do Reporting Services, documentos do serviço Atom, Microsoft Azure Marketplace DataMarket e feed de dados único)|Formato Atom 1.0<br /><br /> Qualquer banco de dados ou documento exposto como um Serviço de dados do WCF (Windows Communication Foundation) (antes ADO.NET Data Services).|.atomsvc para um documento de serviço que define uma ou mais alimentações<br /><br /> .atom para um documento de feed da Web do Atom|Provedor de Feed de Dados Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Provedor de dados do feed de dados do .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Arquivos de conexão de banco de dados do Office||.odc||  
@@ -58,12 +58,12 @@ ms.locfileid: "66067377"
   
  <sup>4</sup> em alguns casos, usar o provedor de OLE DB MSDAORA pode resultar em erros de conexão, especialmente com versões mais recentes do Oracle. Se você encontrar algum erro, será recomendável usar um dos outros provedores listados para Oracle.  
   
-##  <a name="bkmk_unsupported_ds"></a>Fontes sem suporte  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Fontes sem suporte  
  A seguinte fonte de dados não tem suporte no momento:  
   
 -   Os documentos de servidor, como bancos de dados do Access já publicados no SharePoint, não podem ser importados.  
   
-##  <a name="bkmk_tips"></a>Dicas para escolher fontes de dados  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Dicas para escolher fontes de dados  
   
 1.  A importação de tabelas de bancos de dados relacionais elimina etapas pois são usadas relações de *chave estrangeira* durante a importação para criar relações entre as tabelas no designer de modelos.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "66067377"
   
 ## <a name="see-also"></a>Consulte Também  
  [Fontes de dados &#40;SSAS de tabela&#41;](../data-sources-ssas-tabular.md)   
- [Importar dados &#40;SSAS de tabela&#41;](../import-data-ssas-tabular.md)  
+ [Importar dados &#40;SSAS de Tabela&#41;](../import-data-ssas-tabular.md)  
   
   

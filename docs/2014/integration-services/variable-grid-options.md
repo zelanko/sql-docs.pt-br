@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054683"
 ---
 # <a name="variable-grid-options"></a>Opções de Grade Variáveis
-  Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+  Use a caixa de diálogo **Opções de Grade Variáveis** para selecionar as colunas para serem exibidas na janela **Variáveis** e para selecionar os filtros para serem aplicados na lista de variáveis. Para obter mais informações sobre as propriedades de variáveis correspondentes, consulte [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-filter"></a>Opções para filtrar  
  **Mostrar variáveis de sistema**  
@@ -50,11 +50,11 @@ ms.locfileid: "66054683"
   
 -   **Descrição**  
   
--   **Expression**  
+-   **Expressão**  
   
 ## <a name="see-also"></a>Consulte Também  
  [Janela variáveis](../../2014/integration-services/variables-window.md)   
- [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;as variáveis&#41; SSIS](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
  [Manipuladores de eventos do SSIS &#40;Integration Services&#41;](integration-services-ssis-event-handlers.md)  
   

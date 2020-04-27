@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065855"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Tradução (guia Traduções, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,12 +26,12 @@ ms.locfileid: "66065855"
  **Idioma padrão**  
  Define os nomes dos objetos do cubo no idioma padrão.  
   
- **Tipo de objeto**  
+ **Tipo de Objeto**  
  Exibe a propriedade que será traduzida. As seguintes propriedades podem ser traduzidas:  
   
 -   Grupo de medidas  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
 -   Medida  
   
@@ -39,11 +39,11 @@ ms.locfileid: "66065855"
   
 -   Dimensão  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
 -   Perspectiva  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
 -   KPI (indicador chave de desempenho)  
   
@@ -51,15 +51,15 @@ ms.locfileid: "66065855"
   
 -   Ação  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
 -   Conjunto nomeado  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
 -   membro calculado  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
  **\<>de idiomas**  
  Digite o valor da propriedade do objeto de cubo no idioma selecionado.  

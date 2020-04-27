@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059165"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de Origem do Excel (página Gerenciador de Conexões)
@@ -36,17 +36,17 @@ ms.locfileid: "66059165"
  **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Gerenciador de Conexões do Excel** .  
   
- **Modo de acesso aos dados**  
+ **Modo de acesso a dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Tabela ou exibição|Recupere dados de uma planilha ou intervalo nomeado no arquivo do Excel.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupere os dados do arquivo do Excel usando uma consulta SQL. Para obter mais informações sobre a sintaxe da consulta, consulte [Excel Source](data-flow/excel-source.md).|  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
@@ -63,7 +63,7 @@ ms.locfileid: "66059165"
  **Texto do comando SQL**  
  Insira o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou procure o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
- **Parâmetros**  
+ **Parameters**  
  Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
   
  **Compilar consulta**  
@@ -80,7 +80,7 @@ ms.locfileid: "66059165"
  Selecione a variável que contém o texto da consulta SQL.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origem do Excel &#40;página colunas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Editor de origem do Excel &#40;página saída de erro&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gerenciador de conexões do Excel](connection-manager/excel-connection-manager.md)   

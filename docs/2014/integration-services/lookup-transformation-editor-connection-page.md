@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057947"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
@@ -33,7 +33,7 @@ ms.locfileid: "66057947"
  Selecione um gerenciador de conexões de cache existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Novo**  
- Crie uma nova conexão usando a caixa de diálogo **Editor do Gerenciador de conexões de cache** .  
+ Crie uma nova conexão usando a caixa de diálogo **Editor de Gerenciador de Conexões de Cache** .  
   
  As opções a seguir estarão disponíveis quando você selecionar **Cache cheio**, **Cache parcial**ou **Sem cache**e **Gerenciador de conexões OLE DB**na página Geral da caixa de diálogo **Editor da Transformação Pesquisa** .  
   
@@ -43,8 +43,8 @@ ms.locfileid: "66057947"
  **Novo**  
  Crie uma nova conexão usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
- **Usar uma tabela ou exibição**  
- Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **Nova**.  
+ **Use uma tabela ou exibição**  
+ Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **novo**.  
   
 > [!NOTE]  
 >  Se você especificar uma instrução SQL na página **Avançado** do **Editor da Transformação Pesquisa**, essa instrução SQL vai sobrescrever e substituir o nome da tabela selecionada aqui. Para obter mais informações, consulte [Editor de Transformação Pesquisa &#40;Página Avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "66057947"
  **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
- **Usar os resultados de uma consulta SQL**  
+ **Usar resultados de uma consulta SQL**  
  Escolha esta opção para navegar até uma consulta preexistente, criar uma nova consulta, verificar a sintaxe da consulta e visualizar os resultados da consulta.  
   
  **Compilar consulta**  
@@ -64,7 +64,7 @@ ms.locfileid: "66057947"
  **Analisar consulta**  
  Verifique a sintaxe da consulta.  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . Esta opção exibe até 200 linhas.  
   
 ## <a name="external-resources"></a>Recursos externos  
@@ -72,7 +72,7 @@ ms.locfileid: "66057947"
   
 ## <a name="see-also"></a>Consulte Também  
  [Editor de transformação pesquisa &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de Transformação Pesquisa &#40;Guia Colunas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformação pesquisa &#40;página colunas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor de transformação pesquisa &#40;página avançado&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Editor de transformação pesquisa &#40;página saída de erro&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [transformação Pesquisa Difusa](data-flow/transformations/fuzzy-lookup-transformation.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069107"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -24,7 +24,7 @@ ms.locfileid: "66069107"
   
  Use esta exibição de um modelo de clustering de sequência para analisar em cada cluster para os casos de apoio, se o detalhamento foi habilitado. Você também pode atribuir nomes descritivos aos clusters e alterar a variável de sombreamento para avaliar a distribuição de valores à primeira vista  
   
- **Para obter mais informações:** [algoritmo de clustering de sequência da Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-sequence-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -59,7 +59,7 @@ ms.locfileid: "66069107"
  **Aprimorar Layout**  
  Reordene os clusters no diagrama para aprimorar o layout.  
   
- **Dens**  
+ **Densidade**  
  A aparência do gráfico de barra de densidade e os valores nele dependem do atributo que você selecionou em **Variável de Sombreamento**.  
   
 -   Se nenhum estado de atributo for selecionado como a variável de sombreamento, por padrão o sombreamento de densidade aplicado a cada cluster representará o suporte para o cluster, comparado com a população geral de casos.  
@@ -69,7 +69,7 @@ ms.locfileid: "66069107"
  **Variável de Sombreamento**  
  Selecione um atributo do modelo de mineração para usar no sombreamento do diagrama de cluster.  
   
- **Estado**  
+ **State**  
  Selecione um estado que corresponde à **Variável de Sombreamento**. Por exemplo, se você quiser exibir as sequências que incluem um produto específico, selecione a coluna [Produto] como atributo para **Variável de Sombreamento**e o nome de produto específico como valor de **Estado** .  
   
  **Links**  

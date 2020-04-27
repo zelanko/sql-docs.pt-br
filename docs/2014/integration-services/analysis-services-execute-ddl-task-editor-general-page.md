@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061551"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor da Tarefa Executar DDL do Analysis Services (página Geral)
@@ -37,11 +37,11 @@ ms.locfileid: "66061551"
  Digite uma descrição para a tarefa Executar DDL do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services executar o editor da tarefa DDL &#40;página DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [Fluxo de Controle](control-flow/control-flow.md)   
  [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis &#40;referência de&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Referência de XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

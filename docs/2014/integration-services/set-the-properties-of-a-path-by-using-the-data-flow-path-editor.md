@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055728"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Definir as propriedades de um caminho por meio do Editor de Caminho do Fluxo de Dados
@@ -37,7 +37,7 @@ ms.locfileid: "66055728"
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
+ [Caminhos de Integration Services](data-flow/integration-services-paths.md)   
  [Fluxo de Dados](data-flow/data-flow.md)  
   
   

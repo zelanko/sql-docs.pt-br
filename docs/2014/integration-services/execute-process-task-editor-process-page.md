@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059026"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
@@ -30,25 +30,25 @@ ms.locfileid: "66059026"
  **RequireFullFileName**  
  Indique se a tarefa deve falhar se o executável não for localizado no local especificado.  
   
- **Executá**  
+ **Executável**  
  Digite o nome do executável a utilizar.  
   
  **Argumentos**  
  Forneça argumentos do prompt de comando.  
   
  **WorkingDirectory**  
- Digite o caminho da pasta que contém o executável ou clique no botão Procurar **(…)** e localize a pasta.  
+ Digite o caminho da pasta que contém o executável ou clique no botão procurar **(...)** e localize a pasta.  
   
  **StandardInputVariable**  
- Selecione a variável para fornecer a entrada ao processo ou clique em \<**Nova variável...**> para criar uma nova variável:  
+ Selecione uma variável para fornecer a entrada para o processo ou clique em \< **nova variável...**> para criar uma nova variável:  
   
  **Tópicos relacionados:**  [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
- **As**  
- Selecione uma variável para capturar a saída do processo ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ **StandardOutputVariable**  
+ Selecione uma variável para capturar a saída do processo ou clique em \< **nova variável...**> para criar uma nova variável.  
   
  **StandardErrorVariable**  
- Selecione uma variável para capturar a saída de erro do processador ou clique em \<**Nova variável...**> para criar uma nova variável.  
+ Selecione uma variável para capturar a saída de erro do processador ou clique em \< **nova variável...**> para criar uma nova variável.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indique se a tarefa deve falhar caso o código de saída do processo seja diferente do valor especificado em **SuccessValue**.  
@@ -66,7 +66,7 @@ ms.locfileid: "66059026"
  Especifique o estilo de janela no qual executar o processo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

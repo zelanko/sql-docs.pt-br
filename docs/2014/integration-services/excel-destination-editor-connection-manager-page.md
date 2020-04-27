@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059239"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Editor de Destinos do Excel (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destinos do Excel** para especificar informações da fonte de dados e visualizar os resultados. O destino do Excel carrega dados em uma planilha ou um intervalo nomeado em uma pasta de trabalho do [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  A `CommandTimeout` Propriedade do destino do Excel não está disponível no **Editor de destino do Excel**, mas pode ser definida usando o **Editor avançado**. Além disso, certas opções de carregamento rápido estão disponíveis apenas no **Editor avançado**. Para obter mais informações sobre essas propriedades, consulte a seção Destino do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  A `CommandTimeout` Propriedade do destino do Excel não está disponível no **Editor de destino do Excel**, mas pode ser definida usando o **Editor avançado**. Além disso, determinadas opções de carregamento rápido só estarão disponíveis no **Editor Avançado**. Para obter mais informações sobre essas propriedades, consulte a seção Destino do Excel em [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Para obter mais informações sobre destinos do Excel, consulte [Excel Destination](data-flow/excel-destination.md).  
   
@@ -36,13 +36,13 @@ ms.locfileid: "66059239"
  **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Gerenciador de Conexões do Excel** .  
   
- **Modo de acesso aos dados**  
+ **Modo de acesso a dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Carregue dados em uma planilha ou intervalo nomeado na fonte de dados do Excel.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas**: [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a planilha ou o nome do intervalo em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Carregue dados no destino do Excel usando uma consulta SQL.|  
   
  **Nome da planilha do Excel**  
@@ -55,7 +55,7 @@ ms.locfileid: "66059239"
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . A visualização pode exibir até 200 linhas.  
   
 > [!WARNING]  
->  Se o **Gerenciador de conexões do Excel** que você selecionou apontar para um arquivo do Excel que não existe, você verá uma mensagem de erro ao clicar neste botão.  
+>   Se o **Gerenciador de conexões do Excel** que você selecionou apontar para um arquivo do Excel que não existe, você verá uma mensagem de erro ao clicar neste botão.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66059239"
  **Texto do comando SQL**  
  Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
- **Compilar consulta**  
+ **Construir Consulta**  
  Use a caixa de diálogo **Construtor de Consultas** para construir a consulta SQL visualmente.  
   
  **Procurar**  
@@ -81,7 +81,7 @@ ms.locfileid: "66059239"
  Verifique a sintaxe do texto da consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Mapeamentos &#40;editor de destinos do Excel&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Editor de destinos do Excel &#40;página saída de erro&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach](control-flow/foreach-loop-container.md)  

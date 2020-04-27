@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055106"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor da Tarefa Transferir Banco de Dados (página Bancos de Dados)
@@ -53,10 +53,10 @@ ms.locfileid: "66055106"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Verdadeiro**|Substitui o banco de dados no servidor de destino.|  
-|**Falso**|Não substitui o banco de dados no servidor de destino.|  
+|**True**|Substitui o banco de dados no servidor de destino.|  
+|**For**|Não substitui o banco de dados no servidor de destino.|  
   
 > [!CAUTION]  
 >  Os dados no banco de dados do servidor de destino serão substituídos se você especificar **True** para **DestinationOverwrite**, o que pode resultar na perda de dados. Para evitar isso, faça backup do banco de dados do servidor de destino em outro local antes de executar a tarefa Transferir Banco de Dados.  
@@ -82,16 +82,16 @@ ms.locfileid: "66055106"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Verdadeiro**|Anexa novamente o banco de dados de origem.|  
-|**Falso**|Não anexa novamente o banco de dados de origem.|  
+|**True**|Anexa novamente o banco de dados de origem.|  
+|**For**|Não anexa novamente o banco de dados de origem.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa Transferir Banco de dados &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

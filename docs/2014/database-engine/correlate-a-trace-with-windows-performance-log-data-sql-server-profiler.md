@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065047"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlacionar um rastreamento com dados do log de desempenho do Windows (SQL Server Profiler)
@@ -29,11 +29,11 @@ ms.locfileid: "66065047"
   
 1.  No [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], abra uma tabela ou arquivo de rastreamento salvo. Não é possível correlacionar um rastreamento em execução que ainda está coletando dados de evento. Para correlação precisa com os dados do Monitor do Sistema, o rastreamento deve conter as colunas de dados **StartTime** e **EndTime** .  
   
-2.  No menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **do** , clique em **Importar Dados de Desempenho**.  
+2.  No menu  **Arquivo** do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], clique em **Importar Dados de Desempenho**.  
   
 3.  Na caixa de diálogo **Abrir** , selecione um arquivo que contenha um log de desempenho. Os dados do log de desempenho devem ter sido capturados durante o mesmo período de tempo que os dados do rastreamento.  
   
-4.  Na caixa de diálogo **Limite de Contadores de Desempenho** , marque as caixas de seleção que correspondem aos objetos e contadores do Monitor do Sistema que você deseja exibir junto com o rastreamento. Clique em **OK.**  
+4.  Na caixa de diálogo **Limite de Contadores de Desempenho** , marque as caixas de seleção que correspondem aos objetos e contadores do Monitor do Sistema que você deseja exibir junto com o rastreamento. Clique em **OK**  
   
 5.  Na janela de eventos de rastreamento, selecione um evento ou navegue pelas linhas adjacentes usando as teclas de direção. A barra vertical vermelha na janela **Dados do Monitor do Sistema** indica os dados do log de desempenho correlacionados com o evento de rastreamento selecionado.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66065047"
 11. Clique em **OK** para criar o log de desempenho.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar o SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

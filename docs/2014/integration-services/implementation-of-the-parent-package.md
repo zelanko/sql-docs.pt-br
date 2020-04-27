@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058163"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementação do pacote pai
@@ -27,7 +27,7 @@ ms.locfileid: "66058163"
 ## <a name="listing-child-packages"></a>Listando pacotes filho  
  Se você implantar o projeto que contém o pacote pai e os pacotes filhos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , poderá ver uma lista dos pacotes filho executados pelo pacote pai. Quando você executa o pacote pai, um relatório **Visão geral** do mesmo é gerado automaticamente no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. O relatório lista os pacotes filho que foram executados pela tarefa Executar Pacote contida no pacote pai, como mostrado na imagem a seguir.  
   
- ![Relatório de visão geral com lista de pacotes filho](media/overviewreport-childpackagelisting.png "Relatório de visão geral com lista de pacotes filho")  
+ ![Relatório de visão geral com a lista de pacotes filho](media/overviewreport-childpackagelisting.png "Relatório de visão geral com a lista de pacotes filho")  
   
  Para obter mais informações sobre como acessar o relatório **Visão geral** , confira [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   

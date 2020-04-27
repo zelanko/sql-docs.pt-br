@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061288"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarefa de Upload do SQL DW do Azure
@@ -27,7 +27,7 @@ Para adicionar uma **Tarefa de Upload do SQL DW do Azure**, arraste-a da Caixa d
 
 Na página **Geral** , defina as propriedades a seguir.
 
-Campo|DESCRIÇÃO
+Campo|Descrição
 -----|-----------
 LocalDirectory|Especifica o diretório local que contém os arquivos de dados a serem carregados.
 Recursivamente|Especifica se os subdiretórios devem ser pesquisados recursivamente.
@@ -42,7 +42,7 @@ RetainFiles|Especifica se os arquivos carregados no Armazenamento do Azure serã
 CompressionType|Especifica o formato de compactação a ser usado ao carregar arquivos no Armazenamento do Azure. A origem local não é afetada.
 CompressionLevel|Especifica o nível de compactação a ser usado para o formato de compactação.
 AzureDwConnection|Especifica um Gerenciador de conexões ADO.NET para o SQL DW do Azure.
-TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie uma nova tabela escolhendo **\<Nova Tabela...>** .
+TableName|Especifica o nome da tabela de destino. Escolha um nome de tabela existente ou crie um novo escolhendo ** \<nova tabela... >**.
 TableDistribution|Especifica o método de distribuição para a nova tabela. Aplica-se caso um novo nome de tabela para **TableName**seja especificado.
 HashColumnName|Especifica a coluna usada para a distribuição da tabela de hash. Aplica-se caso **HASH** for especificado para **TableDistribution**.
 

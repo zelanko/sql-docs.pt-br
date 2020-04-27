@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061992"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Adicionar, excluir, alterar o escopo de uma variável definida pelo usuário em um pacote
@@ -42,7 +42,7 @@ ms.locfileid: "66061992"
   
 4.  No menu **SSIS** , clique em **Variáveis**. Além disso, você pode exibir a janela **Variáveis** mapeando o comando View.Variables para uma combinação de teclas de sua escolha na página **Teclado** da caixa de diálogo **Opções** .  
   
-5.  Na janela **Variáveis** , clique no ícone **Adicionar Variável** . A nova variável é adicionada à lista.  
+5.  Na janela **variáveis** , clique no ícone **Adicionar variável** . A nova variável é adicionada à lista.  
   
 6.  Se desejar, clique no ícone **Opções de Grade** , selecione as colunas adicionais a serem exibidas na caixa de diálogo **Opções de Grade Variáveis** e clique em **OK**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66061992"
   
 4.  Selecione a variável a ser excluída e clique em **Excluir Variável**.  
   
-     Se você não vir a variável na janela Variáveis, clique em **Opções de Grade** e selecione **Mostrar variáveis de todos os escopos**.  
+     Se você não vir a variável na janela variáveis, clique em **Opções de grade** e selecione **Mostrar variáveis de todos os escopos**.  
   
 5.  Se a caixa de diálogo **Confirmar Exclusão de Variáveis** abrir, clique em **Sim** para confirmar.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "66061992"
   
 4.  Selecione a variável e clique em **Mover Variável**.  
   
-     Se você não vir a variável na janela Variáveis, clique em **Opções de Grade** e selecione **Mostrar variáveis de todos os escopos**.  
+     Se você não vir a variável na janela variáveis, clique em **Opções de grade** e selecione **Mostrar variáveis de todos os escopos**.  
   
 5.  Na caixa de diálogo **Selecionar Novo Escopo** , selecione o pacote ou um contêiner, tarefa ou manipulador de eventos no pacote, para alterar o escopo variável.  
   
 6.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;as variáveis&#41; SSIS](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
  [Definir as propriedades de uma variável definida pelo usuário](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Usar os valores de variáveis e parâmetros em um pacote filho](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

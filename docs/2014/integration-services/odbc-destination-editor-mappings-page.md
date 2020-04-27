@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057231"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de Destino ODBC (página Mapeamentos)
@@ -33,13 +33,13 @@ ms.locfileid: "66057231"
  A lista de colunas de destino disponíveis. Arraste e solte uma coluna de destino em uma coluna de entrada disponível para mapear as colunas.  
   
 ### <a name="input-column"></a>Coluna de Entrada  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando ** \<ignorar>** para excluir colunas da saída.  
   
 ### <a name="destination-column"></a>Coluna de Destino  
  Exiba todas as colunas de destino disponíveis, mapeadas e não mapeadas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [Editor de destinos ODBC &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor do Destino ODBC &#40;Página Saída de Erro&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066047"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -47,7 +47,7 @@ ms.locfileid: "66066047"
  **Excluir Seleção**  
  Exclui o objeto atualmente selecionado.  
   
- **Mostrar Tabela**  
+ **Mostrar tabela**  
  Exibe a caixa de diálogo **Mostrar Tabela** para mostrar uma tabela no painel **Exibição da Fonte de Dados** .  
   
  **Ocultar Tabela**  
@@ -65,7 +65,7 @@ ms.locfileid: "66066047"
  **Mostrar**  
  Clique para mudar a exibição do painel **Exibição da Fonte de Dados** para os seguintes modos:  
   
--   Exibição de Diagrama  
+-   Exibição de diagrama  
   
      Exibe um diagrama das tabelas e colunas associadas à dimensão atual.  
   

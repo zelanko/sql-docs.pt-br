@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068465"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Especificar tipo de conteúdo e de dados da coluna (Assistente de Mineração de Dados)
@@ -24,7 +24,7 @@ ms.locfileid: "66068465"
   
  O tipo de dados especifica detalhes adicionais sobre o tipo de dados contidos na coluna e como eles serão usados durante o treinamento. Alguns tipos de conteúdo requerem um tipo de dados específico e vice-versa. Você também pode precisar especificar um tipo de dados específico, dependendo do algoritmo usado ao criar um modelo de mineração. Para obter informações sobre tipos de conteúdo e de dados em modelos e estruturas de mineração, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](data-mining/content-types-data-mining.md).  
   
- **Para obter mais informações:** [estruturas de mineração &#40;&#41;de mineração de dados Analysis Services ](data-mining/mining-structures-analysis-services-data-mining.md), [colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de mineração de dados &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de Mineração de dados &#40;Analysis Services – Mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Estrutura do modelo de mineração**  
@@ -36,7 +36,7 @@ ms.locfileid: "66068465"
  **Tipo de conteúdo**  
  Especifique o tipo de conteúdo da coluna Se você especificou que a coluna é uma chave na página anterior do assistente, os seguintes valores estarão disponíveis:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Chave|Especifique que a coluna contém um identificador exclusivo para a série de casos.|  
 |Key Sequence|Especifique que a coluna contém um identificador de sequência.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66068465"
   
  Se você selecionou a coluna como uma coluna que não seja uma coluna de chave, os valores seguintes estarão disponíveis, dependendo do tipo de dados:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Contínuo|Especifique que a coluna contém valores numéricos contínuos.|  
 |Discretizado|Especifique que a coluna contém valores numéricos que foram tornados discretos ou podem ser tratados como valores discretos.|  
@@ -53,7 +53,7 @@ ms.locfileid: "66068465"
  **Tipo de dados**  
  Especifique o tipo de dados da coluna.  
   
- Os valores a seguir estão disponíveis:  
+ Os seguintes valores estão disponíveis:  
   
 -   `Boolean`  
   

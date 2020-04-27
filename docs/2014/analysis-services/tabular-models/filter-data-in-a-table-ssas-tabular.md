@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067124"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar dados em uma tabela (SSAS tabular)
@@ -33,11 +33,11 @@ ms.locfileid: "66067124"
   
 2.  No menu AutoFiltro, siga um destes procedimentos:  
   
-    -   Na lista de valores de coluna, selecione ou limpe um ou mais valores pelos quais filtrar e clique em **OK**.  
+    -   Na lista de valores de coluna, marque ou desmarque um ou mais valores pelos quais filtrar e, em seguida, clique em **OK**.  
   
          Se o número de valores for extremamente grande, os itens individuais poderão não ser mostrados na lista. Em vez disso, você verá a mensagem "Itens demais para mostrar".  
   
-    -   Clique em **Filtros de Número** ou em **Filtros de Texto** (dependendo do tipo de coluna) e clique nos comandos de operador de comparação (como **Igual a**) ou clique em **Filtro Personalizado**. Na caixa de diálogo **Filtro Personalizado** , crie o filtro e clique em **OK**.  
+    -   Clique em **filtros de número** ou filtros de **texto** (dependendo do tipo de coluna) e, em seguida, clique nos comandos do operador de comparação (como **igual**a) ou clique em **filtro personalizado**. Na caixa de diálogo **Filtro Personalizado** , crie o filtro e clique em **OK**.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>Para limpar um filtro de uma coluna  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66067124"
 ## <a name="see-also"></a>Consulte Também  
  [Filtrar e classificar dados &#40;SSAS de tabela&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   
- [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)  
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

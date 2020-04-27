@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065497"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validando modelos e usando modelos para previsão (suplementos de mineração de dados para Excel)
@@ -58,7 +58,7 @@ ms.locfileid: "66065497"
   
  [&#40;de consulta SQL Server suplementos de mineração de dados&#41;](query-sql-server-data-mining-add-ins.md)  
   
-## <a name="advanced-query-editor"></a>Editor avançado de consultas  
+## <a name="advanced-query-editor"></a>Editor Avançado de Consulta  
  O **Editor de consulta avançada** é um conjunto interativo de caixas de diálogo que ajuda você a criar todos os tipos de instruções DMX, tudo, desde a execução de consultas personalizadas até a criação e o treinamento de novos modelos, a exclusão de modelos ou a criação de novos conjuntos de dados.  
   
  [Editor de Consulta Avançada de Mineração de Dados](advanced-data-mining-query-editor.md)  

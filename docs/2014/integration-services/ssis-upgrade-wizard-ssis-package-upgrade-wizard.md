@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055317"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Assistente de Atualização SSIS (Assistente de Atualização de Pacotes SSIS)
   Use o Assistente de Atualização de Pacotes do [!INCLUDE[ssIS](../includes/ssis-md.md)] para migrar pacotes que foram desenvolvidos no [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] e no [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] para o formato de pacote usado pela versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- **Para executar o assistente de atualização de pacote SSIS**  
+ **Para executar o Assistente de Atualização de Pacotes SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   

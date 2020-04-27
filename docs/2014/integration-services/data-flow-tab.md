@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059897"
 ---
 # <a name="data-flow-tab"></a>Guia Fluxo de Dados
@@ -35,8 +35,8 @@ ms.locfileid: "66059897"
  Para adicionar essas funções no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique com o botão direito do mouse na superfície do design e selecione a opção desejada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
- [Tarefa de Fluxo de Dados](control-flow/data-flow-task.md)   
+ [Caminhos de Integration Services](data-flow/integration-services-paths.md)   
+ [Tarefa de fluxo de dados](control-flow/data-flow-task.md)   
  [Designer SSIS](ssis-designer.md)   
  [Fluxo de Dados](data-flow/data-flow.md)  
   

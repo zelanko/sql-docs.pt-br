@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059961"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de Caminho do Fluxo de Dados (página Geral)
@@ -30,7 +30,7 @@ ms.locfileid: "66059961"
  **Nome**  
  Forneça um nome exclusivo para o caminho.  
   
- **SESSÃO**  
+ **ID**  
  O identificador de linhagem exclusivo do caminho. Essa propriedade é somente leitura.  
   
  **IdentificationString**  
@@ -42,7 +42,7 @@ ms.locfileid: "66059961"
  **PathAnnotation**  
  Especifique o tipo de anotação a ser usada. Escolha **Never** para desabilitar anotações, **AsNeeded** para habilitar anotação sob demanda, **SourceName** para anotações automáticas usando o valor da opção **SourceName** , e **PathName** para anotações automáticas usando o valor da propriedade **Name** .  
   
- **Destinoname**  
+ **DestinationName**  
  Exibe a entrada que é o final do caminho.  
   
  **SourceName**  
@@ -51,7 +51,7 @@ ms.locfileid: "66059961"
 ## <a name="see-also"></a>Consulte Também  
  [Editor de caminho de fluxo de dados &#40;página de metadados&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor de caminho de fluxo de dados &#40;página visualizadores de dados&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [Fluxo de Dados](data-flow/data-flow.md)   
+ [Fluxo de dados](data-flow/data-flow.md)   
  [Usar anotações em pacotes](use-annotations-in-packages.md)  
   
   

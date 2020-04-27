@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057638"
 ---
 # <a name="msmq-connection-manager-editor"></a>Editor do Gerenciador de Conexões MSMQ
@@ -41,14 +41,12 @@ ms.locfileid: "66057638"
   
 |Tipo de fila|Exemplo de caminho|  
 |----------------|-----------------|  
-|Público|
-  \<nome do computador>\\<nome da fila\>|  
-|Private|
-  \<nome do computador>\Private$\\<nome da fila\>|  
+|Público|\<nome do computador>\\<nome da fila\>|  
+|Particular|\<nome do computador>\Private$\\<nome da fila\>|  
   
  Você pode usar um "." para representar o computador local.  
   
- **Testar**  
+ **Teste**  
  Depois de configurar o Gerenciador de Conexões MSMQ, confirme se a conexão é viável clicando em **Testar**.  
   
 ## <a name="see-also"></a>Consulte Também  

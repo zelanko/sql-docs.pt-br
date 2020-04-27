@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062135"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Adicionar uma origem com o Assistente de Origem
@@ -28,7 +28,7 @@ ms.locfileid: "66062135"
   
 3.  Selecione o tipo do destino na lista **Tipos**.  
   
-4.  Selecione um gerenciador de conexões na lista **Gerenciadores de Conexões** ou selecione **\<Novo>** para criar um novo gerenciador de conexões.  
+4.  Selecione um Gerenciador de conexões existente na lista **gerenciadores de conexões** ou selecione ** \<novo>** para criar um novo Gerenciador de conexões.  
   
 5.  Se você selecionar um gerenciador de conexões existente, clique em **OK** para fechar a caixa de diálogo **Adicionar Novo Destino**. Você deve ver o destino e os gerenciadores de conexões adicionados ao fluxo de dados.  
   

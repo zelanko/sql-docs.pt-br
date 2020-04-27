@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056024"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Selecionar Opções de Gerenciamento de Pacotes (Assistente de Atualização de Pacotes SSIS)
   Use a página **Selecionar Opções de Gerenciamento de Pacote** para especificar opções para atualizar pacotes.  
   
- **Para executar o assistente de atualização de pacote SSIS**  
+ **Para executar o Assistente de Atualização de Pacotes SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66056024"
  **Criar novas IDs de pacote**  
  Crie novas IDs para os pacotes de atualização.  
   
- **Continuar o processo de atualização quando uma atualização de pacote falhar**  
+ **Continuar o processo de upgrade quando um upgrade de pacote falhar**  
  Especifique que o Assistente de Atualização de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] deve continuar atualizando os pacotes restantes quando não for possível atualizar um pacote.  
   
  **Conflitos de nome de pacote**  
@@ -55,10 +55,10 @@ ms.locfileid: "66056024"
  **Substituir arquivos de pacote existentes**  
  Substitui o pacote existente pelo pacote de atualização do mesmo nome.  
   
- **Adicionar sufixos numéricos para atualizar nomes de pacote**  
+ **Adicionar sufixos numéricos para fazer upgrade de nomes de pacote**  
  Adiciona um sufixo numérico ao nome do pacote de atualização.  
   
- **Não atualizar pacotes**  
+ **Não fazer upgrade de pacotes**  
  Interrompe a atualização dos pacotes e exibe um erro quando o assistente é concluído.  
   
  Essas opções não estão disponíveis quando a opção **Salvar no local de origem** é selecionada na página **Selecionar Local de Destino** do assistente.  
@@ -66,7 +66,7 @@ ms.locfileid: "66056024"
  **Ignorar configurações**  
  Não carrega configurações de pacotes durante a atualização de pacotes. A seleção dessa opção reduz o tempo necessário para atualizar o pacote.  
   
- **Backup de pacotes originais**  
+ **Fazer backup dos pacotes originais**  
  Configure o assistente para fazer backup dos pacotes originais em uma pasta **SSISBackupFolder** . O assistente cria a pasta **SSISBackupFolder** como uma subpasta da pasta que contém os pacotes originais e os pacotes atualizados.  
   
 > [!NOTE]  

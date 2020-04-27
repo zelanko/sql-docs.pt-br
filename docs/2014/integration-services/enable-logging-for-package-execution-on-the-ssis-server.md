@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059367"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Habilitar o log para a execução do pacote no servidor SSIS
@@ -42,12 +42,12 @@ ms.locfileid: "66059367"
   
  Os níveis de log a seguir estão disponíveis.  
   
-|Nível de log|DESCRIÇÃO|  
+|Nível de log|Descrição|  
 |-------------------|-----------------|  
 |Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
-|Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Esse é o valor padrão.|  
+|Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
 |Desempenho|Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.<br /><br /> O relatório **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. Estas informações estão disponíveis quando o nível de log da última execução do pacote foi definido como **desempenho** ou **detalhado**. Para saber mais, confira [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> A exibição [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) mostra as horas de início e de término para os componentes de fluxo de dados, para cada fase de uma execução. Esta exibição mostra essas informações para esses componentes apenas quando o nível de log da execução do pacote é definido como **Desempenho** ou **Detalhado**.|  
-|Verbose|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Um exemplo de um evento de diagnóstico é o evento DiagnosticEx. Sempre que uma tarefa Executar Pacote executa um pacote filho, ela registra esse evento. A mensagem de evento consiste nos valores de parâmetros passados para pacotes filho<br /><br /> O valor da coluna de mensagem para DiagnosticEx é texto XML. . Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Observação: os eventos personalizados incluem os eventos que são registrados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por tarefas. Para saber mais, veja [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> A exibição [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  
+|Detalhado|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Um exemplo de um evento de diagnóstico é o evento DiagnosticEx. Sempre que uma tarefa Executar Pacote executa um pacote filho, ela registra esse evento. A mensagem de evento consiste nos valores de parâmetros passados para pacotes filho<br /><br /> O valor da coluna de mensagem para DiagnosticEx é texto XML. . Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Observação: os eventos personalizados incluem os eventos que são registrados [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] por tarefas. Para obter mais informações, consulte [mensagens personalizadas para registro em log](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> A exibição [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Log de&#41; Integration Services &#40;SSIS](performance/integration-services-ssis-logging.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056868"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -26,7 +26,7 @@ ms.locfileid: "66056868"
  **Propriedade**  
  Selecione a propriedade da tarefa que você deseja associar a um parâmetro. Esta lista é preenchida com todas as propriedades que podem ser parametrizadas.  
   
- **Usar parâmetro existente**  
+ **Usar parâmetros existentes**  
  Selecione esta opção para associar a propriedade da tarefa a um parâmetro existente e, em seguida, selecione o parâmetro na lista suspensa.  
   
  **Não usar parâmetro**  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064487"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Procurar na exibição da fonte de dados (Assistente de Mineração de Dados)
@@ -25,7 +25,7 @@ ms.locfileid: "66064487"
 > [!NOTE]  
 >  Essa página só será exibida se você tiver selecionado a opção **De banco de dados relacional ou data warehouse existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [exibições de fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md), [assistente de mineração de dados &#40;Analysis Services&#41;de mineração de dados ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Exibições de Fonte de Dados nos Modelos Multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistente de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Zoom**  

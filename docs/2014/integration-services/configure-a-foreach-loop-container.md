@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060882"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Para configurar um contêiner Loop Foreach
@@ -65,14 +65,14 @@ ms.locfileid: "66060882"
   
     -   Para usar o enumerador SMO Foreach, selecione uma conexão ADO.NET existente ou clique em **Nova conexão** na lista **Conexão** e então digite a cadeia de caracteres a ser usada ou clique em **Procurar**. Se você clicar em **Procurar**, na caixa de diálogo **Selecionar Enumeração SMO** , selecione o tipo de objeto a ser enumerado e o tipo de enumeração e clique em **OK**.  
   
-6.  Outra opção é clicar no botão Procurar **(…)** na caixa de texto **Expressões** na página **Coleção** para criar expressões que atualizem os valores de propriedade. Para obter mais informações, consulte [Adicionar ou alterar uma expressão de propriedade](expressions/add-or-change-a-property-expression.md).  
+6.  Opcionalmente, clique no botão procurar **(...)** na caixa de texto **expressões** na página **coleção** para criar expressões que atualizam valores de propriedade. Para obter mais informações, consulte [Adicionar ou alterar uma expressão de propriedade](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  As propriedades relacionadas na lista **Propriedade** variam por enumerador.  
+    >   As propriedades relacionadas na lista **Propriedade** variam por enumerador.  
   
 7.  Opcionalmente, clique em **Mapeamentos de Variáveis** para mapear propriedades de objeto do valor da coleção e execute um dos procedimentos a seguir:  
   
-    1.  Na lista **Variáveis**, selecione uma variável ou clique em **\<Nova Variável>** para criar uma nova variável.  
+    1.  Na lista **variáveis** , selecione uma variável ou clique em ** \<nova variável>** para criar uma nova variável.  
   
     2.  Se você adicionar uma variável nova, defina as propriedades da variável na caixa de diálogo **Adicionar Variável** e clique em **OK**.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "66060882"
 9. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)  
+ [Contêiner Loop Foreach](control-flow/foreach-loop-container.md)  
   
   

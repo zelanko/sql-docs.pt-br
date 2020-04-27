@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062513"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Designer de consulta MDX do Analysis Services (SSAS)
@@ -34,7 +34,7 @@ ms.locfileid: "66062513"
   
  A figura a seguir mostra os painéis do modo Design.  
   
- ![Designer de consulta MDX do Analysis Services, exibição de design](media/rsqd-dsawas-mdx-designmode.gif "Designer de consulta MDX do Analysis Services, exibição de design")  
+ ![Designer de consultas MDX do Analysis Services, exibição de design](media/rsqd-dsawas-mdx-designmode.gif "Designer de consultas MDX do Analysis Services, exibição de design")  
   
  A tabela a seguir lista os painéis neste modo:  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66062513"
 |Painel Filtro|Use para escolher dimensões e hierarquias relacionadas para filtrar dados na origem e limitar os dados retornados.|  
 |Painel Dados|Exibe os cabeçalhos de coluna do conjunto de resultados à medida que você arrasta os itens do painel Metadados e do painel Membros Calculados. Atualiza automaticamente o conjunto de resultados se o botão **Executar Automaticamente** for selecionado.|  
   
- Você pode arrastar dimensões, medidas e KPIs do painel Metadados e membros calculados do painel Membro Calculado para o painel Dados. No painel Filtro, é possível selecionar dimensões e hierarquias relacionadas e definir expressões de filtro para limitar os dados disponíveis para consulta. Se o botão de alternância **executar** automaticamente (![executar a consulta](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")automaticamente) na barra de ferramentas estiver selecionado, o designer de consulta executará a consulta toda vez que você soltar um objeto de metadados no painel dados. Você pode executar a consulta manualmente usando o botão **executar** (![executar a consulta](media/rsqdicon-run.gif "Executar a consulta")) na barra de ferramentas.  
+ Você pode arrastar dimensões, medidas e KPIs do painel Metadados e membros calculados do painel Membro Calculado para o painel Dados. No painel Filtro, é possível selecionar dimensões e hierarquias relacionadas e definir expressões de filtro para limitar os dados disponíveis para consulta. Se o botão de alternância **Executar Automaticamente** (![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")) na barra de ferramentas estiver selecionado, o designer de consultas executará a consulta sempre que você soltar um objeto de metadados no painel Dados. Execute a consulta manualmente usando o botão **Executar** (![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")) na barra de ferramentas.  
   
  Quando você cria uma consulta MDX nesse modo, as seguintes propriedades adicionais são incluídas automaticamente na consulta:  
   
- **Propriedades do membro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
+ **Propriedades do Membro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Propriedades da célula** VALOR, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+ **Propriedades da Célula** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Para especificar suas próprias propriedades adicionais, você deve editar manualmente a consulta MDX no modo Consulta.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66062513"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra de ferramentas do Designer de Consultas Gráficas MDX no modo Design  
  A barra de ferramentas do designer de consulta fornece botões para ajudá-lo a criar consultas MDX por meio da interface gráfica. A tabela a seguir lista os botões e as suas funções.  
   
-|Botão|DESCRIÇÃO|  
+|Botão|Descrição|  
 |------------|-----------------|  
-|**Editar como texto**|Não habilitado para esse tipo de fonte de dados.|  
+|**Editar como Texto**|Não habilitado para esse tipo de fonte de dados.|  
 |**Importar**|Importa uma consulta existente de um arquivo de definição de relatório (.rdl) no sistema de arquivos.|  
 |![Alterar para a exibição de consulta MDX](media/rsqdicon-commandtypemdx.gif "Alterar para a exibição de consulta MDX")|Alternar para Tipo de Comando MDX.|  
 |![Atualizar dados de resultado](media/rsqdicon-refresh.gif "Atualizar dados de resultado")|Atualiza metadados na fonte de dados.|  
-|![Adicionar Membro Calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
+|![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado")|Exibe a caixa de diálogo **Construtor de Membro Calculado** .|  
 |![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|  
 |![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado sempre que é feita uma alteração. Os resultados são mostrados no painel Dados.|  
 |![Botão Mostrar Agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações")|Mostra agregações no painel Dados.|  
@@ -79,14 +79,14 @@ ms.locfileid: "66062513"
 |![Botão Preparar Consulta](media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|  
 |![Executar a consulta](media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|  
 |![Cancelar a consulta](media/rsqdicon-cancel.gif "Cancelar a consulta")|Cancela a consulta.|  
-|![Alternar para o modo de design](media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
+|![Alternar para o modo Design](media/rsqdicon-designmode.gif "Alterna para o modo de design")|Alterna entre o modo Design e o modo Consulta.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Designer de Consultas Gráficas MDX no modo Consulta  
  Para alterar o designer de consultas gráficas para o modo **Consulta** , clique no botão de alternância **Modo Design** na barra de ferramentas.  
   
  A figura a seguir mostra os painéis do modo Consulta.  
   
- ![Designer de consulta MDX do Analysis Services, exibição de consulta](media/rsqd-dsawas-mdx-querymode.gif "Designer de consulta MDX do Analysis Services, exibição de consulta")  
+ ![Designer de consultas MDX do Analysis Services, exibição de consulta](media/rsqd-dsawas-mdx-querymode.gif "Designer de consultas MDX do Analysis Services, exibição de consulta")  
   
  A tabela a seguir lista os painéis neste modo:  
   
@@ -106,14 +106,14 @@ ms.locfileid: "66062513"
   
  Os botões da barra de ferramentas são idênticos nos modos Design e Consulta, mas os botões a seguir não estão ativados no modo Consulta:  
   
--   **Editar como texto**  
+-   **Editar como Texto**  
   
 -   **Adicionar membro calculado** (![Adicionar membro calculado](media/rsqdicon-addcalculatedmember.gif "Adicionar Membro Calculado"))  
   
--   **Mostrar células vazias** (![alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
+-   **Mostrar Células Vazias** (![Alternar para mostrar células vazias](media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias"))  
   
--   **Executar** automaticamente (![executar a consulta](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")automaticamente)  
+-   **Executar automaticamente** (![Executar a consulta automaticamente](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente"))  
   
--   **Mostrar agregações** (![botão Mostrar agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações"))  
+-   **Mostrar Agregações** (![Botão Mostrar Agregações](media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações"))  
   
   

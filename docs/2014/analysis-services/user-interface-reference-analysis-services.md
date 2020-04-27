@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065537"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Referência de Interface de Usuário (Analysis Services)
@@ -25,9 +25,9 @@ ms.locfileid: "66065537"
 |Seção|Contém|  
 |-------------|--------------|  
 |[Analysis Services assistentes &#40;dados multidimensionais&#41;](analysis-services-wizards-multidimensional-data.md)|Tópicos de ajuda para assistentes do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional).|  
-|[Designers de Mineração de Dados e Caixas de Diálogo](data-mining-designers-and-dialog-boxes.md)|Tópicos de ajuda para assistentes do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (mineração de dados)|  
+|[Designers de mineração de dados e caixas de diálogo](data-mining-designers-and-dialog-boxes.md)|Tópicos de ajuda para assistentes do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (mineração de dados)|  
 |[Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Tópicos de ajuda para designers e caixas de diálogo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (multidimensional)|  
 |[Analysis Services designers e caixas de diálogo &#40;tabular&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Tópicos de ajuda para designers e caixas de diálogo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e em modelos tabulares do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
-|[Designers de Mineração de Dados e Caixas de Diálogo](data-mining-designers-and-dialog-boxes.md)|Tópicos de ajuda para designers e caixas de diálogo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (mineração de dados)|  
+|[Designers de mineração de dados e caixas de diálogo](data-mining-designers-and-dialog-boxes.md)|Tópicos de ajuda para designers e caixas de diálogo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (mineração de dados)|  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056087"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor de Transformação Scripts (página Colunas de Entrada)
@@ -39,14 +39,14 @@ ms.locfileid: "66056087"
  **Coluna de Entrada**  
  Selecione colunas para cada linha na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis**.  
   
- **Alias de Saída**  
+ **Alias de saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Tipo de uso**  
  Especifique se a Transformação Scripts tratará cada coluna como `ReadOnly` ou `ReadWrite`.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Selecionar tipo de componente de script](../../2014/integration-services/select-script-component-type.md)   
  [Editor de transformação scripts &#40;página entradas e saídas&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Editor de transformação scripts &#40;página script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

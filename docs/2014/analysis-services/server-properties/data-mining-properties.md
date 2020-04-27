@@ -58,14 +58,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069055"
 ---
 # <a name="data-mining-properties"></a>Propriedades de mineração de dados
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de mineração de dados listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Aplica-se a:** Somente modo de servidor multidimensional  
@@ -121,6 +120,6 @@ ms.locfileid: "66069055"
 ## <a name="see-also"></a>Consulte Também  
  [Arquitetura física &#40;Analysis Services&#41;de mineração de dados](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

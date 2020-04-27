@@ -15,20 +15,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064897"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Editar propriedades do modelo de rastreamento (guia Geral)
-  Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para visualizar ou editar modelos de rastreamento existentes usando as seguintes opções. Para acessar essa caixa de diálogo, no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **do** , aponte para **Modelos**e clique em **Editar Modelo**.  
+  Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para visualizar ou editar modelos de rastreamento existentes usando as seguintes opções. Para acessar essa caixa de diálogo, no menu  **Arquivo** do [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], aponte para **Modelos** e clique em **Editar Modelo**.  
   
 ## <a name="options"></a>Opções  
  **Selecionar tipo de servidor**  
  Especifique o tipo de servidor em relação ao qual esse modelo será usado.  
   
- **Selecionar nome do modelo**  
+ **Selecionar Nome do Modelo**  
  Selecione o modelo que você deseja editar.  
   
  **Usar como modelo padrão para o tipo de servidor selecionado**  
@@ -36,7 +36,7 @@ ms.locfileid: "66064897"
   
 ## <a name="see-also"></a>Consulte Também  
  [Modificar um modelo de rastreamento &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
- [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

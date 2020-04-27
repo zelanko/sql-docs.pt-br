@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059493"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de Destino de Processamento de Dimensões (página Avançado)
@@ -27,13 +27,13 @@ ms.locfileid: "66059493"
  Para saber mais sobre o destino de Processamento de Dimensões, consulte [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## <a name="options"></a>Opções  
- **Use a configuração de erro padrão.**  
+ **Usar configuração de erro padrão.**  
  Especifique se a manipulação de erros padrão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve ser usada. Por padrão, esse valor é `True`.  
   
  **Ação de erro de chave**  
  Especifique como manipular registros que possuem valores de chave inaceitáveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Converta o valor de chave inaceitável para o valor `UnknownMember`.|  
 |**DiscardRecord**|Descarte o registro.|  
@@ -50,7 +50,7 @@ ms.locfileid: "66059493"
  **Ação se houver erro**  
  Caso tenha selecionado **Parar se houver erro**, especifique a ação a ser tomada quando o limite de erros for atingido.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**StopProcessing**|Pare o processamento.|  
 |**StopLogging**|Pare de registrar os erros.|  
@@ -58,7 +58,7 @@ ms.locfileid: "66059493"
  **Chave não encontrada**  
  Especifique a ação a ser tomada mediante erro de chave não encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -67,7 +67,7 @@ ms.locfileid: "66059493"
  **Chave duplicada**  
  Especifique a ação a ser tomada mediante erro de chave duplicada. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -76,7 +76,7 @@ ms.locfileid: "66059493"
  **Chave nula convertida em desconhecida**  
  Especifique a ação a ser tomada quando uma chave nula tiver sido convertida no valor `UnknownMember`. Por padrão, esse valor é **IgnoreError**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -85,7 +85,7 @@ ms.locfileid: "66059493"
  **Chave nula não permitida**  
  Especifique a ação a ser tomada quando chaves nulas não forem permitidas, e uma chave nula for encontrada. Por padrão, este valor é **ReportAndContinue**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignore o erro e continue o processamento.|  
 |**ReportAndContinue**|Relate o erro e continue o processamento.|  
@@ -98,8 +98,8 @@ ms.locfileid: "66059493"
  Selecione um caminho para o log de erros.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de processamento de dimensões &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de processamento de dimensões &#40;página Mapeamentos&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [Editor de Destino de Processamento de Dimensões &#40;página Mapeamentos&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

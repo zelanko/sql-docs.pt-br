@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057143"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de Destino OLE DB (página Gerenciador de Conexões)
   Use a página **Gerenciador de Conexões** da caixa de diálogo **Editor de Destino de OLE DB** para selecionar a conexão OLE DB para o destino. Essa página também permite que você selecione uma tabela ou exibição a partir do banco de dados.  
   
 > [!NOTE]  
->  A `CommandTimeout` Propriedade do destino OLE DB não está disponível no editor de **destino OLE DB**, mas pode ser definida usando o **Editor avançado**. Além disso, determinadas opções de carregamento rápido só estarão disponíveis no **Editor Avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Destino OLE DB em [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  A `CommandTimeout` Propriedade do destino OLE DB não está disponível no editor de **destino OLE DB**, mas pode ser definida usando o **Editor avançado**. Além disso, certas opções de carregamento rápido estão disponíveis apenas no **Editor avançado**. Para obter mais informações sobre estas propriedades, consulte a seção Destino OLE DB em [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Para obter mais informações sobre o destino OLE DB, consulte [OLE DB Destination](data-flow/ole-db-destination.md).  
   
@@ -36,32 +36,32 @@ ms.locfileid: "66057143"
  **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
- **Modo de acesso aos dados**  
+ **Modo de acesso a dados**  
  Especifique o método de carregamento de dados no destino. O carregamento de conjunto de caracteres de bytes duplos (DBCS) requer o uso de uma das opções de carregamento rápido. Para obter mais informações sobre os modos de acesso aos dados de carregamento rápido que são otimizados para inserções em massa, consulte [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Carregue dados em uma tabela ou exibição no destino OLE DB.|  
 |Tabela ou exibição - carregamento rápido|Carregue dados em uma tabela ou exibição no destino OLE DB e use a opção de carregamento rápido. Para obter mais informações sobre os modos de acesso aos dados de carregamento rápido que são otimizados para inserções em massa, consulte [OLE DB Destination](data-flow/ole-db-destination.md).|  
-|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas**: [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas**: [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Variável do nome da tabela ou do nome de exibição - carregamento rápido|Especifique o nome da tabela ou exibição em uma variável e use a opção de carregamento rápido para carregar dados. Para obter mais informações sobre os modos de acesso aos dados de carregamento rápido que são otimizados para inserções em massa, consulte [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |Comando SQL|Carregue dados no destino OLE DB usando uma consulta SQL.|  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . A visualização pode exibir até 200 linhas.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
  Cada uma das configurações do **Modo de acesso aos dados** exibe um conjunto de opções dinâmicas específico àquela configuração. As seções a seguir descrevem todas as opções dinâmicas disponíveis de cada configuração de **Modo de acesso aos dados** .  
   
 ### <a name="data-access-mode--table-or-view"></a>Modo de acesso aos dados = Tabela ou exibição  
- **Nome da tabela ou exibição**  
+ **Nome da tabela ou da exibição**  
  Selecione o nome da tabela ou da exibição na lista de tabelas ou exibições disponíveis na fonte de dados.  
   
  **Novo**  
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
->  Quando você clica **** em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando você clica **New**em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>Modo de acesso a dados = tabela ou exibição – carregamento rápido  
  **Nome da tabela ou exibição**  
@@ -71,7 +71,7 @@ ms.locfileid: "66057143"
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
->  Quando você clica **** em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando você clica **New**em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Manter identidade**  
  Especifique se os valores de identidade serão copiados quando os dados forem carregados. Essa propriedade só estará disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é `false`.  
@@ -100,7 +100,7 @@ ms.locfileid: "66057143"
  Se você fornecer um valor para essa propriedade, o destino confirmará as linhas nos lotes que forem menores que (a) o **Tamanho máximo de confirmação de inserção**ou (b) as linhas restantes no buffer que estiverem sendo processadas no momento.  
   
 > [!NOTE]  
->  Qualquer falha de restrição ao destino fará com que todo o lote de linhas definido pelo **Tamanho máximo de confirmação de inserção** falhe.  
+>   Qualquer falha de restrição ao destino fará com que todo o lote de linhas definido pelo **Tamanho máximo de confirmação de inserção** falhe.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acesso aos dados = Variável do nome da tabela ou do nome de exibição  
  **Nome da variável**  
@@ -114,7 +114,7 @@ ms.locfileid: "66057143"
  Crie uma nova tabela usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
->  Quando você clica **** em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando você clica **New**em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Manter identidade**  
  Especifique se os valores de identidade serão copiados quando os dados forem carregados. Essa propriedade só estará disponível com uma das opções de carregamento rápido. O valor padrão dessa propriedade é `false`.  
@@ -157,7 +157,7 @@ ms.locfileid: "66057143"
  Verifique a sintaxe do texto da consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Mapeamentos do OLE DB editor de destino &#40;&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Editor de destino OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Carregar dados por meio do destino OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

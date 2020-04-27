@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060359"
 ---
 # <a name="control-flow-tab"></a>Guia Fluxo de Controle
@@ -43,6 +43,6 @@ ms.locfileid: "66060359"
 ## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
  [Designer SSIS](ssis-designer.md)   
- [Fluxo de Controle](control-flow/control-flow.md)  
+ [Fluxo de controle](control-flow/control-flow.md)  
   
   

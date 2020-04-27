@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062091"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Adicionar um visualizador de dados a um fluxo de dados
@@ -49,14 +49,14 @@ ms.locfileid: "66062091"
 9. Na área Colunas para exibição, selecione as colunas a serem exibidas no visualizador de dados. Por padrão, todas as colunas disponíveis são selecionadas e relacionadas na lista **Colunas Exibidas** . Mova as colunas que não deseja usar para a lista **Coluna Não Usada** selecionando-as e clicando na seta para a esquerda.  
   
     > [!NOTE]  
-    >  Na grade, os valores que representam os tipos de dados DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET aparecem como cadeias de caracteres formatadas conforme o ISO 8601 e um separador de espaço substitui o separador `T`. Os valores que representam os tipos de dados DT_DATE e DT_FILETIME incluem sete dígitos para os segundos fracionários. Como o tipo de dados DT_FILETIME armazena somente três dígitos de segundos fracionários, a grade exibe zeros nos quatro dígitos restantes. Os valores que representam o tipo de dados DT_DBTIMESTAMP incluem três dígitos para os segundos fracionários. Para os valores que representam os tipos de dados DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, o número de dígitos para os segundos fracionários corresponde à escala especificada para o tipo de dados da coluna. Para obter mais informações sobre os formatos ISO 8601, consulte [Formatos de data e hora](../../2014/integration-services/date-and-time-formats.md). Para obter mais informações sobre tipos de dados, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+    >  Na grade, os valores que representam os tipos de dados DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET aparecem como cadeias de caracteres formatadas conforme o ISO 8601 e um separador de espaço substitui o separador `T`. Os valores que representam os tipos de dados DT_DATE e DT_FILETIME incluem sete dígitos para os segundos fracionários. Como o tipo de dados DT_FILETIME armazena somente três dígitos de segundos fracionários, a grade exibe zeros nos quatro dígitos restantes. Os valores que representam o tipo de dados DT_DBTIMESTAMP incluem três dígitos para os segundos fracionários. Para os valores que representam os tipos de dados DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, o número de dígitos para os segundos fracionários corresponde à escala especificada para o tipo de dados da coluna. Para obter mais informações sobre os formatos ISO 8601, consulte [Formatos de data e hora](../../2014/integration-services/date-and-time-formats.md). Para obter mais informações sobre tipos de dados, consulte [Integration Services tipos de dados](data-flow/integration-services-data-types.md).  
   
 10. Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Transformações do Integration Services](data-flow/transformations/integration-services-transformations.md)   
- [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
- [Fluxo de Dados](data-flow/data-flow.md)   
+ [Transformações de Integration Services](data-flow/transformations/integration-services-transformations.md)   
+ [Caminhos de Integration Services](data-flow/integration-services-paths.md)   
+ [Fluxo de dados](data-flow/data-flow.md)   
  [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   

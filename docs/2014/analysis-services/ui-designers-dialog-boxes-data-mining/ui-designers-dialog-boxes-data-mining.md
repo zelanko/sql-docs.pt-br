@@ -10,10 +10,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0ec03cf9cdf8ce0f86d321126fc0bea11efc587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065693"
 ---
 # <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>Designers de interface do usuário e caixas de diálogo para análise de mineração de dados
@@ -22,5 +22,5 @@ Esta seção contém documentação sobre designers de interface do usuário e c
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Designers de Mineração de Dados e Caixas de Diálogo](../data-mining-designers-and-dialog-boxes.md)
+- [Designers de mineração de dados e caixas de diálogo](../data-mining-designers-and-dialog-boxes.md)
 

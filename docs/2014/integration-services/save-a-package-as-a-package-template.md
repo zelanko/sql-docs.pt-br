@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056336"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Salvar um pacote como um modelo de pacote
@@ -41,7 +41,7 @@ ms.locfileid: "66056336"
   
 2.  No Gerenciador de Soluções, clique com o botão direito do mouse no projeto, aponte para **Adicionar** e clique em **Novo Item**.  
   
-3.  Na caixa de diálogo **Adicionar Novo Item – \<nome do projeto**, clique no pacote que deseja usar como modelo.  
+3.  Na caixa de diálogo **Adicionar novo\<item – nome do projeto>** , clique no pacote que você deseja usar como modelo.  
   
      A lista de modelos inclui o modelo padrão do pacote chamado Novo Pacote SSIS. O ícone do pacote identifica os modelos que podem ser usados como modelos de pacote.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "66056336"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar pacotes no SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
- [Pacotes do SSIS &#40;Integration Services&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

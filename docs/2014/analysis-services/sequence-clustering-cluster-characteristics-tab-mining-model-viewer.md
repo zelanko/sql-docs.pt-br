@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069172"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Guia Características de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -24,7 +24,7 @@ ms.locfileid: "66069172"
   
  Use esta exibição de um modelo de clustering de sequências para detalhar o conteúdo do cluster e ver as sequências que são representativas de um cluster.  
   
- **Para obter mais informações:** [algoritmo de clustering de sequência da Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-sequence-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -44,7 +44,7 @@ ms.locfileid: "66069172"
   
  Por exemplo, em um modelo de clustering de sequência baseado em análise da cesta de compras, um cluster pode ter como sua principal característica um cliente escolhendo o item de venda e terminando a transação sem comprar nada mais. Em um modelo de clustering de sequência que procura analisar falhas de servidor, as características principais de um cluster podem ser uma série de eventos de erro de alta frequência.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variável**|Esta coluna indica se a característica é um valor, ou uma transição.<br /><br /> Se a característica for um valor, a coluna **variável** conterá o nome do atributo.<br /><br /> Se a característica representar uma transição de estado, a coluna **variável** conterá o texto "transições".|  
 |**Valores**|O valor desta coluna depende se a característica é um par atributo-valor simples, ou uma transição de estado que representa uma sequência comum de itens ou eventos.<br /><br /> Se a característica for um valor, a coluna **valor** conterá o estado.<br /><br /> Se a característica representar uma transição de estado, a coluna **valor** conterá a descrição da transição de estado.|  

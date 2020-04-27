@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068418"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Especificar Mapeamento de Coluna (gráfico de precisão de mineração)
   Use a guia **Especificar Mapeamento de Coluna** para selecionar tabelas de uma fonte de dados externa e mapear as colunas para um modelo de mineração de dados. É possível usar os dados externos para testar a precisão de um modelo de mineração e mostrar os resultados no gráfico de precisão.  
   
- **Para obter mais informações:** [teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações: ** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **Estrutura de mineração**  
@@ -43,7 +43,7 @@ ms.locfileid: "66068418"
  **Selecionar Tabela de Casos**  
  Clique para abrir a caixa de diálogo **Selecionar Tabela** e selecione uma exibição da fonte de dados.  
   
- **Observação** Esse botão será exibido somente se uma tabela de casos não tiver sido selecionada. Para habilitar o botão de modo que você possa selecionar uma tabela de casos diferente, limpe a lista selecionando todas as tabelas existentes e clicando em **Remover Tabela**.  
+ **Observação** Esse botão só será exibido se uma tabela de casos não tiver sido selecionada. Para habilitar o botão de modo que você possa selecionar uma tabela de casos diferente, limpe a lista selecionando todas as tabelas existentes e clicando em **Remover Tabela**.  
   
  **Selecionar Tabela Aninhada**  
  Abre a caixa de diálogo **Selecionar Tabela** . Esse botão só será exibido se uma tabela do casos tiver sido selecionada. Se a estrutura de mineração associada não contiver uma tabela aninhada, esse botão será desabilitado.  

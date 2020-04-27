@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056684"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de Restrição de Precedência
@@ -32,12 +32,12 @@ ms.locfileid: "66056684"
  Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**.  
   
 > [!NOTE]  
->  A linha de restrição de precedência é verde para **Sucesso**, realçado para **Falha**e azul para **Conclusão**.  
+>   A linha de restrição de precedência é verde para **Success**, realçado para **Failure**e azul para **Completion**.  
   
- **Expression**  
+ **Expressão**  
  Se usar as operações **Expressão**, **Expressão e Restrição**ou **Expressão ou Restrição**, digite uma expressão ou inicie o Construtor de Expressões para criar a expressão. A expressão deve ser avaliada como um booliano.  
   
- **Testar**  
+ **Teste**  
  Valide a expressão.  
   
  **AND lógico**  
@@ -54,8 +54,8 @@ ms.locfileid: "66056684"
   
 ## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Contêineres do Integration Services](control-flow/integration-services-containers.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
+ [Contêineres de Integration Services](control-flow/integration-services-containers.md)   
  [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)  
   
   

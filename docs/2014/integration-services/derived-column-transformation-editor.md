@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059565"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor de Transformação Colunas Derivadas
@@ -27,7 +27,7 @@ ms.locfileid: "66059565"
  Para saber mais sobre a transformação Coluna Derivada, consulte [Transformação Coluna Derivada](data-flow/transformations/derived-column-transformation.md).  
   
 ## <a name="options"></a>Opções  
- **Variáveis e colunas**  
+ **Variáveis e Colunas**  
  Crie uma expressão que use uma variável ou uma coluna de entrada arrastando a variável ou coluna da lista de variáveis e colunas disponíveis para uma linha de tabela existente no painel abaixo, ou para uma linha nova no final da lista.  
   
  **Funções e operadores**  
@@ -36,18 +36,18 @@ ms.locfileid: "66059565"
  **Nome da coluna derivada**  
  Forneça um nome de coluna derivada. O padrão é uma lista numerada de colunas derivadas; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
- **Coluna Derivada**  
+ **Coluna derivada**  
  Selecione uma coluna derivada da lista. Escolha se deseja adicionar a coluna derivada como uma nova coluna de saída ou substituir os dados em uma coluna existente.  
   
- **Expression**  
+ **Expressão**  
  Digite uma expressão ou compile uma arrastando da lista anterior de colunas, variáveis, funções e operadores disponíveis.  
   
  O valor dessa propriedade pode ser especificado com uma expressão de propriedades.  
   
- **Tópicos relacionados**: [Integration Services &#40;&#41; expressões do ssis](expressions/integration-services-ssis-expressions.md), [operadores &#40;expressão do SSIS&#41;](expressions/operators-ssis-expression.md)e [funções &#40;expressão SSIS](expressions/functions-ssis-expression.md)&#41;  
+ **Tópicos relacionados**: [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;Expressão SSIS&#41;](expressions/operators-ssis-expression.md) e [Funções &#40;Expressão SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Tipo de dados**  
- Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services tipos de dados](data-flow/integration-services-data-types.md).  
+ Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá o tipo de dados adequadamente. O valor desta coluna é somente leitura. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Comprimento**  
  Se acrescentar dados a uma nova coluna, a caixa de diálogo **TransformationEditor de Coluna Derivada** avaliará a expressão automaticamente e definirá a largura de coluna para os dados da cadeia de caracteres. O valor desta coluna é somente leitura.  
@@ -65,7 +65,7 @@ ms.locfileid: "66059565"
  Especifique como tratar os erros usando a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Derivar valores de coluna por meio da transformação Coluna Derivada](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

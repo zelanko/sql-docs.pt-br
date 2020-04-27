@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058703"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de Destino de Arquivo Simples (página Gerenciador de Conexões)
@@ -40,14 +40,14 @@ ms.locfileid: "66058703"
  **Substituir dados no arquivo**  
  Indique se irá substituir um arquivo existente ou acrescentar dados a ele.  
   
- **Cabeçalho**  
+ **Verga**  
  Digite um bloco de texto a ser inserido no arquivo antes que qualquer dado seja gravado. Use esta opção para incluir informações adicionais, como cabeçalhos de coluna.  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A visualização pode exibir até 200 linhas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de arquivo simples &#40;página Mapeamentos&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de Destino de Arquivo Simples &#40;Página Mapeamentos&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

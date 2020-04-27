@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065848"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalhes de conversão (guia Conversões, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -32,7 +32,7 @@ ms.locfileid: "66065848"
  **Idioma padrão**  
  Define os nomes dos objetos de dimensão no idioma padrão.  
   
- **Tipo de objeto**  
+ **Tipo de Objeto**  
  Exibe a propriedade que será traduzida. Só podem ser convertidos objetos e propriedades para os quais foram especificados valores. As seguintes propriedades podem ser traduzidas:  
   
 -   Dimensão  
@@ -52,12 +52,12 @@ ms.locfileid: "66065848"
   
 -   Nível  
   
-     `Caption`Propriedade  
+     Propriedade `Caption`  
   
  **\<>de idiomas**  
  Digite ou selecione o valor de propriedade do objeto de dimensão na linguagem selecionada. Clicar no botão de reticências (**...**) abre caixas de diálogo adicionais, dependendo da propriedade que está sendo editada:  
   
--   `NamingTemplate`Propriedade  
+-   Propriedade `NamingTemplate`  
   
      Exibe a [Caixa de diálogo Modelo de Nomeação de Nível &#40;Analysis Services - Dados Multidimensionais&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66065848"
  Selecione para exibir a caixa de diálogo **Conversão de Dados de Atributo** e modificar uma coluna de legendas existente quando você modificar um atributo na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
->  A opção só será habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
+>   A opção só é habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
  **Excluir Coluna de Legendas**  
  Selecione para excluir a coluna de legendas para o atributo selecionado na grade **Detalhes de Conversão** .  

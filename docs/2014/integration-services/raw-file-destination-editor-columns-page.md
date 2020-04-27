@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056575"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor de destino Arquivo Bruto (página Colunas)
@@ -30,13 +30,13 @@ ms.locfileid: "66056575"
   
 -   [Definir opções na guia Colunas](#mapping)  
   
-##  <a name="open"></a> Abra o Editor de destino Arquivo Bruto  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a>Abrir o editor de destino arquivo bruto  
   
 1.  Adicione o destino Arquivo Bruto a um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Clique com o botão direito do mouse no componente e clique em **Editar**.  
   
-##  <a name="connection"></a> Definir as opções na guia de Gerenciador de Conexões  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a>Definir opções na guia Gerenciador de conexões  
  **Modo de acesso**  
  Selecione o modo como o nome de arquivo é especificado. Selecione **Nome de arquivo** para inserir o nome do arquivo e o caminho diretamente de **Nome de arquivo de variável** para especificar uma variável que contenha o nome de arquivo.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "66056575"
   
  Quando você clica no botão, uma lista das colunas é exibida. Você pode clicar em cancelar e modificar as colunas ou pode clicar em OK para continuar a criação do arquivo.  
   
-##  <a name="mapping"></a> Definir opções na guia Colunas  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>Definir opções na guia colunas  
  **Colunas de Entrada Disponíveis**  
  Selecione uma ou mais colunas de entrada para gravar no arquivo bruto.  
   
  **Coluna de Entrada**  
  Uma coluna de entrada é adicionada automaticamente a essa tabela quando você a seleciona em **Colunas de Entrada Disponíveis**; se preferir, selecione a coluna de entrada diretamente nessa tabela.  
   
- **Alias de Saída**  
+ **Alias de saída**  
  Especifique um nome alternativo a ser usado para a coluna de saída.  
   
 ## <a name="see-also"></a>Consulte Também  

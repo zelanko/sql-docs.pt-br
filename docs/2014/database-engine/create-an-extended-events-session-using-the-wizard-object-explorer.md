@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065055"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Criar uma sessão de Eventos Estendidos usando o assistente (Pesquisador de Objetos)
@@ -65,23 +65,23 @@ ms.locfileid: "66065055"
   
 -   [Resumo](#BKMK_Summary)  
   
--   [Criar sessão de evento](#BKMK_CreateEventSession)  
+-   [Criar Sessão de Evento](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a>Apresentações  
+##  <a name="introduction"></a><a name="BKMK_Welcome"></a>Apresentações  
  Na página **Introdução** , faça o seguinte:  
   
 -   Na página **Introdução** do Assistente para Nova Sessão, clique em **Avançar**.  
   
      Marque a caixa de seleção **Não mostrar esta página novamente** caso pretenda usar o assistente mais de uma vez e não queira ler a introdução cada vez que o assistente for iniciado.  
   
-##  <a name="BKMK_SetSessionProperties"></a>Definir propriedades da sessão  
+##  <a name="set-session-properties"></a><a name="BKMK_SetSessionProperties"></a>Definir propriedades da sessão  
  Na página **Definir Propriedades da Sessão** , faça o seguinte:  
   
 -   Na caixa **Nome da sessão** , digite um nome significativo para a sessão de evento.  
   
      Para iniciar a sessão ao inicializar o servidor, marque a caixa de seleção **Iniciar a sessão de evento na inicialização do servidor** e clique em **Avançar**.  
   
-##  <a name="BKMK_ChooseTemplate"></a>Escolher modelo  
+##  <a name="choose-template"></a><a name="BKMK_ChooseTemplate"></a>Escolher modelo  
  Na página **Escolher Modelo** , faça o seguinte:  
   
 -   Selecione a opção **Usar este modelo de sessão de evento** para selecionar um dos modelos de um conjunto de modelos pré-configurados projetados para problemas comuns. Selecione o modelo desejado na lista suspensa e clique em **Avançar**.  
@@ -90,7 +90,7 @@ ms.locfileid: "66065055"
   
 -   Selecione a opção **Não usar um modelo** caso não deseje usar nenhum modelo pré-configurado e clique em **Avançar**.  
   
-##  <a name="BKMK_SelectEventsToCapture"></a>Selecionar eventos a serem capturados  
+##  <a name="select-events-to-capture"></a><a name="BKMK_SelectEventsToCapture"></a>Selecionar eventos a serem capturados  
  Na página **Selecionar Eventos a Serem Capturados** página, faça o seguinte:  
   
 1.  Selecione os eventos que você deseja capturar na **Biblioteca de eventos**e clique na seta para a direita. Você pode selecionar vários eventos na Biblioteca de Eventos usando Shift+Clique ou Ctrl+Clique.  
@@ -104,7 +104,7 @@ ms.locfileid: "66065055"
     > [!NOTE]  
     >  Os eventos do canal de **Depuração** são ocultos por padrão. Para exibir os eventos de depuração, selecione **Depurar** na lista suspensa **Canal** .  
   
-##  <a name="BKMK_CaptureGlobalFields"></a>Capturar campos globais  
+##  <a name="capture-global-fields"></a><a name="BKMK_CaptureGlobalFields"></a>Capturar campos globais  
  Você usa campos globais (também denominados ações) para associar uma ou várias ações a seus eventos selecionados. Se você selecionou um modelo na página **Escolher Modelo** , todos os campos globais definidos no modelo serão exibidos nesta página.  
   
  Na página **Capturar Campos Globais** , faça o seguinte:  
@@ -116,7 +116,7 @@ ms.locfileid: "66065055"
     > [!NOTE]  
     >  As ações selecionadas são classificadas por **Nome** , permitindo que você exiba as ações associadas em ordem alfabética. Você pode realizar a classificação por descrição ou pelo status habilitar/desabilitar clicando no título de coluna ao lado do nome de campo.  
   
-##  <a name="BKMK_SetSessionEventFilters"></a>Definir filtros de eventos de sessão  
+##  <a name="set-session-event-filters"></a><a name="BKMK_SetSessionEventFilters"></a>Definir filtros de eventos de sessão  
  Você pode aplicar filtros (também denominados predicados) para limitar os eventos a serem capturados. Na página **Definir Filtros de Eventos de Sessão** , faça o seguinte:  
   
 1.  Se você não estiver usando um modelo pré-configurado, crie seus critérios de filtro e clique em **Avançar**.  
@@ -130,7 +130,7 @@ ms.locfileid: "66065055"
     > [!NOTE]  
     >  Quando você configurar uma cláusula de grupo para o filtro, serão removidos os parênteses redundantes do filtro depois que o resultado for salvo. Por exemplo, se você criar um agrupamento de filtros **Cláusula 1** e **Cláusula 2**, aparecerão parênteses delimitando as cláusulas. Depois que você salvar o filtro, os parênteses redundantes serão removidos. A remoção dos parênteses não afetará a lógica do filtro.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a>Especificar o armazenamento de dados da sessão  
+##  <a name="specify-session-data-storage"></a><a name="BKMK_SpecifySessionDataOutput"></a>Especificar o armazenamento de dados da sessão  
  Use a página **Especificar Armazenamento de Dados da Sessão** para especificar como coletar os dados para análise. Os Eventos Estendidos do SQL Server usam destinos para saída de dados. Os destinos armazenam dados de evento e podem executar ações como gravar um arquivo e agregar dados de evento. Especifique como coletar os dados para análise e, na página **Especificar Armazenamento de Dados da Sessão** , faça o seguinte:  
   
 1.  Para conjuntos de dados grandes e registros históricos de criação, marque a caixa de seleção **Salvar dados em um arquivo para análise posterior** e faça o seguinte:  
@@ -153,7 +153,7 @@ ms.locfileid: "66065055"
   
     4.  Na caixa **Número de eventos a serem mantidos (por tipo)** , insira ou selecione o número de eventos (por tipo) que deseja manter usando as setas para cima e para baixo.  
   
-##  <a name="BKMK_Summary"></a>Resumo  
+##  <a name="summary"></a><a name="BKMK_Summary"></a> Resumo  
  Na página **Resumo** , faça o seguinte:  
   
 1.  Verifique se suas seleções estão corretas. Expanda os nós de sessão de evento para verificar se todas as seleções serão incluídas na sessão de evento.  
@@ -162,7 +162,7 @@ ms.locfileid: "66065055"
   
 3.  Clique em **Concluir** para criar a sessão de evento.  
   
-##  <a name="BKMK_CreateEventSession"></a>Criar sessão de evento  
+##  <a name="create-event-session"></a><a name="BKMK_CreateEventSession"></a>Criar sessão de evento  
  Na página **Criar Sessão de Evento** , depois que a sessão de evento for criada, faça o seguinte:  
   
 1.  Clique em **Iniciar a sessão de evento imediatamente após a criação da sessão** para iniciar a sessão depois que você fechar o assistente. Você deve iniciar a sessão de evento imediatamente após a criação da sessão para que possa observar os dados dinâmicos.  

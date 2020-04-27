@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056017"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Selecionar Pacotes (Assistente de Atualização de Pacotes SSIS)
   Use a página **Selecionar Pacotes** para selecionar os pacotes a serem atualizados. Essa página lista os pacotes que estão armazenados no local especificado na página **Selecionar Local de Origem** do assistente.  
   
- **Para executar o assistente de atualização de pacote SSIS**  
+ **Para executar o Assistente de Atualização de Pacotes SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058259"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor do Gerenciador de Conexões de HTTP (Página Proxy)
@@ -45,10 +45,10 @@ ms.locfileid: "66058259"
  **Senha**  
  Se o Gerenciador de Conexões de HTTP usar credenciais, será necessário especificar um nome de usuário, senha e domínio.  
   
- **Domínio**  
+ **Controlador**  
  Se o Gerenciador de Conexões de HTTP usar credenciais, será necessário especificar um nome de usuário, senha e domínio.  
   
- **Lista de bypass de proxy**  
+ **Lista proxies ignoráveis**  
  A lista de endereços para os quais você quer ignorar o servidor proxy.  
   
  **Adicionar**  
@@ -58,7 +58,7 @@ ms.locfileid: "66058259"
  Selecione um endereço e remova-o clicando em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor do Gerenciador de conexões HTTP &#40;página do servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor do Gerenciador de Conexões HTTP &#40;Página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

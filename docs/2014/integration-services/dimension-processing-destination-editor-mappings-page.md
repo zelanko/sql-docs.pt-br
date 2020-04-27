@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059404"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de Destino de Processamento de Dimensões (página Mapeamentos)
@@ -36,12 +36,12 @@ ms.locfileid: "66059404"
  **Coluna de Entrada**  
  Exibir colunas de entrada selecionadas na tabela acima. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**.  
   
- **Coluna de Destino**  
+ **Coluna de destino**  
  Exibe cada coluna de destino disponível, e se ela é mapeada ou não.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de processamento de dimensões &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de processamento de dimensões &#40;página avançado&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Editor de Destino de Processamento de Dimensões &#40;Página Avançado&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

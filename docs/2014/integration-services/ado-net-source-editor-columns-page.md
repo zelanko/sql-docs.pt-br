@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061698"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de Origem ADO NET (Página Colunas)
@@ -39,7 +39,7 @@ ms.locfileid: "66061698"
  **Coluna Externa**  
  Exiba as colunas externas (origem) na ordem em que serão exibidas ao configurar os componentes que consomem os dados dessa origem.  
   
- **Coluna de Saída**  
+ **Coluna de saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Consulte Também  

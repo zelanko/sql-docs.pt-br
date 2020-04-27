@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057393"
 ---
 # <a name="numeric-data-formats"></a>Formatos de dados numéricos
   A análise rápida fornece uma análise de dados rápida e simples a um conjunto de rotinas sem diferenciação de localidade. A análise rápida suporta apenas um conjunto limitado de formatos para tipos de dados de números inteiros.  
   
 ## <a name="integer-data-types"></a>Tipos de Dados de Números Inteiros  
- Os tipos de dados de números inteiros que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece são DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Para obter mais informações, consulte [Integration Services tipos de dados](data-flow/integration-services-data-types.md).  
+ Os tipos de dados de números inteiros que o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece são DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  A análise rápida suporta os seguintes formatos para tipos de dados de números inteiros:  
   

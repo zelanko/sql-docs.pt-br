@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064798"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>Obter os parâmetros configuráveis para o argumento ADD TARGET
@@ -33,9 +33,9 @@ ms.locfileid: "66064798"
   
 -   parameter_type  
   
--   obrigatório  
+-   necessárias  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Antes de criar uma sessão de Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , é proveitoso descobrir quais parâmetros podem ser definidos para o uso do argumento ADD TARGET em CREAT EVENT SESSION ou ALTER EVENT SESSION.  
   
 ### <a name="to-get-the-configurable-parameters-for-the-add-target-argument-using-query-editor"></a>Para obter os parâmetros configuráveis para o argumento ADD TARGET usando o Editor de Consultas  
@@ -53,7 +53,7 @@ ms.locfileid: "66064798"
     ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [sys. dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  

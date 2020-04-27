@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060979"
 ---
 # <a name="character-map-transformation-editor"></a>Editor de Transformação Mapas de Caracteres
@@ -36,7 +36,7 @@ ms.locfileid: "66060979"
  **Destino**  
  Especifique entre salvar os resultados das operações de cadeia de caracteres no local, usando a coluna existente, ou salvar os dados modificados como uma nova coluna.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nova coluna|Salve os dados em uma nova coluna. Atribua o nome de coluna em **Alias de Saída**.|  
 |Alteração no local|Salve os dados modificados na coluna existente.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66060979"
  **Operação**  
  Selecione na lista as funções de cadeia de caracteres a aplicar aos dados da coluna.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Letras minúsculas|Converter para letras minúsculas.|  
 |Letras Maiúsculas|Converter para letras maiúsculas.|  
@@ -57,7 +57,7 @@ ms.locfileid: "66060979"
 |Chinês simplificado|Converter caracteres do chinês tradicional em caracteres do chinês simplificado.|  
 |Chinês tradicional|Converter caracteres do chinês simplificado em caracteres do chinês tradicional.|  
   
- **Alias de Saída**  
+ **Alias de saída**  
  Digite um alias para cada coluna de saída. O padrão é **Copiar de** seguido do nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Configurar Saída de Erro**  

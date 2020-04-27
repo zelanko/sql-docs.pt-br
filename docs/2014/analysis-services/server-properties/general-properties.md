@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069027"
 ---
 # <a name="general-properties"></a>Propriedades gerais
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Este tópico documenta essas propriedades de servidor no arquivo msmdsrv.ini que não são incluídas em uma seção específica, como Segurança, Rede ou ThreadPool. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Modo de servidor multidimensional e tabular, a menos que indicado de outra forma  
+ **Aplica-se a:** modo de servidor Multidimensional e de Tabela, a menos que indicado em contrário  
   
 ## <a name="non-specific-category"></a>Categoria não específica  
  `AdminTimeout`  
@@ -77,14 +76,12 @@ ms.locfileid: "66069027"
  `CoordinatorCancelCount`  
  Uma propriedade de inteiro de 32 bits assinada que define com que frequência o servidor deve verificar se um evento de cancelamento ocorreu (com base na contagem de iterações internas). Diminua esse número para verificar cancelamentos frequentemente pelo desempenho geral.  
   
- 
-  `CoordinatorCancelCount` é ignorado no modo de servidor de tabela.  
+ `CoordinatorCancelCount` é ignorado no modo de servidor de tabela.  
   
  `CoordinatorExecutionMode`  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de operações paralelas que o servidor tentará, incluindo operações de processamento e consulta. Zero (0) indica que o servidor decidirá, com base em um algoritmo interno. Um número positivo indica o número máximo de operações no total. Um número negativo, com o sinal invertido, indica o número máximo de operações por processador.  
   
- 
-  `CoordinatorExecutionMode` é ignorado no modo de servidor de tabela.  
+ `CoordinatorExecutionMode` é ignorado no modo de servidor de tabela.  
   
  O valor padrão dessa propriedade é -4, que indica que o servidor está limitado a 4 operações paralelas por processador. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -102,9 +99,9 @@ ms.locfileid: "66069027"
   
  Os valores válidos para essa propriedade incluem os seguintes:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|0|Esse é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
+|0|Este é o valor padrão. Ele especifica o modo multidimensional, usado para atender bancos de dados multidimensionais que usam o armazenamento MOLAP, HOLAP e ROLAP, bem como modelos de mineração de dados.|  
 |1|Especifica instâncias do Analysis Services que foram instaladas como parte de um PowerPivot para implantação do SharePoint. Não altere a propriedade de modo de implantação da instância do Analysis Services que faz parte de uma instalação do PowerPivot para SharePoint. Dados PowerPivot não serão mais executados no servidor se você alterar o modo.|  
 |2|Especifica o modo de Tabela usado para hospedar bancos de dados modelo de tabela que usam o armazenamento na memória ou o armazenamento DirectQuery.|  
   
@@ -134,8 +131,7 @@ ms.locfileid: "66069027"
  Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` é aplicado para comandos de processamento de cubo e para operações de writeback.  
+>  `ForceCommitTimeout` é aplicado para comandos de processamento de cubo e para operações de writeback.  
   
  `IdleConnectionTimeout`  
  Uma propriedade integer que especifica um tempo limite, em segundos, para conexões que estão inativas.  
@@ -182,6 +178,6 @@ ms.locfileid: "66069027"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

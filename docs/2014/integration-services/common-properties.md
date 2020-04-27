@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060956"
 ---
 # <a name="common-properties"></a>Propriedades comuns
@@ -37,7 +37,7 @@ ms.locfileid: "66060956"
   
 -   [Colunas de entrada](#inputcolumns)  
   
--   [Saídas](#outputs)  
+-   [outputs](#outputs)  
   
 -   [Colunas de saída](#outputcolumns)  
   
@@ -61,34 +61,34 @@ ms.locfileid: "66060956"
   
 -   [Propriedades personalizadas de destino ODBC](data-flow/odbc-destination-custom-properties.md)  
   
--   [Propriedades personalizadas da origem ODBC](data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](data-flow/odbc-source-custom-properties.md)  
   
--   [OLE DB Propriedades personalizadas](data-flow/ole-db-custom-properties.md) OLE DB Propriedades personalizadas  
+-   [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)Propriedades personalizadas OLE DB  
   
 -   [Propriedades personalizadas do destino Processamento de Partições](data-flow/partition-processing-destination-custom-properties.md)  
   
 -   [Propriedades personalizadas de arquivo bruto](data-flow/raw-file-custom-properties.md)  
   
--   [Propriedades personalizadas do destino do conjunto de registros](data-flow/recordset-destination-custom-properties.md)  
+-   [Propriedades personalizadas do destino Conjunto de Registros](data-flow/recordset-destination-custom-properties.md)  
   
 -   [Propriedades personalizadas do destino SQL Server Compact Edition](data-flow/sql-server-compact-edition-destination-custom-properties.md)  
   
 -   [Propriedades personalizadas do destino SQL Server](data-flow/sql-server-destination-custom-properties.md)  
   
--   [Propriedades personalizadas de Transformação](data-flow/transformations/transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)  
   
 -   [Propriedades personalizadas da origem XML](data-flow/xml-source-custom-properties.md)  
   
-##  <a name="components"></a>Propriedades do componente  
+##  <a name="component-properties"></a><a name="components"></a>Propriedades do componente  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
  A tabela a seguir descreve as propriedades dos componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|O CLSID do componente.|  
 |ContactInfo|String|Informações de contato para o desenvolvedor de um componente.|  
-|DESCRIÇÃO|String|Descrição do componente de fluxo de dados. O valor padrão dessa propriedade é o nome do componente de fluxo de dados.|  
+|Descrição|String|Descrição do componente de fluxo de dados. O valor padrão dessa propriedade é o nome do componente de fluxo de dados.|  
 |ID|Integer|Valor que identifica essa instância do componente com exclusividade.|  
 |IdentificationString|String|Identifica o componente.|  
 |IsDefaultLocale|Boolean|Indica se o componente usa a localidade da tarefa de Fluxo de Dados à qual pertence.|  
@@ -99,14 +99,14 @@ ms.locfileid: "66060956"
 |ValidateExternalMetadata|Boolean|Indica se os metadados de colunas externas foram validados. O valor padrão dessa propriedade é `True`.|  
 |Versão|Integer|Versão de um componente.|  
   
-##  <a name="inputs"></a>Propriedades de entrada  
+##  <a name="input-properties"></a><a name="inputs"></a>Propriedades de entrada  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , transformações e destinos têm entradas. Uma entrada de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  A tabela a seguir descreve as propriedades das entradas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|DESCRIÇÃO|String|Descrição da entrada.|  
+|Descrição|String|Descrição da entrada.|  
 |ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
 |HasSideEffects|Boolean|Indica se um componente pode ser removido do plano de execução do fluxo de dados quando não está anexado a um componente downstream e quando `RunInOptimizedMode` é. `true`|  
@@ -119,15 +119,15 @@ ms.locfileid: "66060956"
   
  Os destinos e algumas transformações não oferecem suporte a saídas de erro e as propriedades ErrorRowDisposition e TruncationRowDisposition dos componentes são somente leitura.  
   
-###  <a name="inputcolumns"></a>Propriedades da coluna de entrada  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a>Propriedades da coluna de entrada  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , uma entrada contém uma coleção de colunas de entrada. Uma coluna de entrada de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  A tabela a seguir descreve as propriedades das colunas de entrada de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
-|DESCRIÇÃO|String|Descreve a coluna de entrada.|  
+|Descrição|String|Descreve a coluna de entrada.|  
 |ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
@@ -142,15 +142,15 @@ ms.locfileid: "66060956"
   
  As colunas de entrada também têm as propriedades de tipo de dados descritas no item "Propriedades de Tipo de Dados".  
   
-##  <a name="outputs"></a>Propriedades de saída  
+##  <a name="output-properties"></a><a name="outputs"></a>Propriedades de saída  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , origens e transformações têm saídas. Uma saída de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  A tabela a seguir descreve as propriedades das saídas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Valor que determina se o mecanismo de fluxo de dados exclui a saída quando ela é desanexada de um caminho.|  
-|DESCRIÇÃO|String|Descreve a saída.|  
+|Descrição|String|Descreve a saída.|  
 |ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
 |ExclusionGroup|Integer|Valor que identifica um grupo de saídas mutuamente exclusivas.|  
@@ -163,15 +163,15 @@ ms.locfileid: "66060956"
 |SynchronousInputID|Integer|ID de uma entrada que é síncrona à saída.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina como o componente manipula os truncamentos que ocorrem no processamento de linhas. Os valores são `Fail component`, `Ignore failure` e `Redirect row`.|  
   
-###  <a name="outputcolumns"></a>Propriedades da coluna de saída  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a>Propriedades da coluna de saída  
  No modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , uma saída contém uma coleção de colunas de saída. Uma coluna de saída de um componente no fluxo de dados implementa a interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  A tabela a seguir descreve as propriedades das colunas de saída de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Integer|Um conjunto de sinalizadores que especifica a comparação de colunas que têm um tipo de dado de caractere. Para obter mais informações, consulte [Comparing String Data](data-flow/comparing-string-data.md).|  
-|DESCRIÇÃO|String|Descreve a coluna de saída.|  
+|Descrição|String|Descreve a coluna de saída.|  
 |ErrorOrTruncationOperation|String|Cadeia de caracteres opcional que especifica os tipos de erros ou truncamentos que podem ocorrer no processamento de uma linha.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica a manipulação de erros. Os valores são `Fail component`, `Ignore failure` e `Redirect row`. O valor padrão é `Fail component`.|  
 |ExternalMetadataColumnID|Integer|ID da coluna de metadados externa atribuída a uma coluna de entrada.|  
@@ -190,9 +190,9 @@ ms.locfileid: "66060956"
   
  A tabela a seguir descreve as propriedades das colunas de metadados externas de componentes em um fluxo de dados. Algumas propriedades têm valores somente leitura que são atribuídos no tempo de execução pelo mecanismo de fluxo de dados.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
-|DESCRIÇÃO|String|Descreve a coluna externa.|  
+|Descrição|String|Descreve a coluna externa.|  
 |ID|Integer|Valor que identifica a coluna com exclusividade.|  
 |IdentificationString|String|Cadeia de caracteres que identifica a coluna.|  
 |Nome|String|Nome da coluna externa.|  
@@ -204,16 +204,16 @@ ms.locfileid: "66060956"
   
  A tabela a seguir descreve as propriedades de tipo de dados de colunas de saída e de colunas de metadados externas.  
   
-|Propriedade|Tipo de Dados|DESCRIÇÃO|  
+|Propriedade|Tipo de Dados|Descrição|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|Especifica a página de código para dados de cadeia de caracteres que não são Unicode.|  
-|Tipo de dados|Inteiro (enumeração)|Tipo de dados da coluna do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Integration Services tipos de dados](data-flow/integration-services-data-types.md).|  
+|Tipo de dados|Inteiro (enumeração)|Tipo de dados da coluna do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |Comprimento|Integer|Comprimento, medido em caracteres, de uma coluna.|  
 |Precisão|Integer|Precisão de uma coluna numérica.|  
 |Escala|Integer|Escala de uma coluna numérica.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fluxo de Dados](data-flow/data-flow.md)   
+ [Fluxo de dados](data-flow/data-flow.md)   
  [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)   
  [Propriedades do caminho](../../2014/integration-services/path-properties.md)   
  [Propriedades de fluxo de dados que podem ser definidas usando expressões](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  

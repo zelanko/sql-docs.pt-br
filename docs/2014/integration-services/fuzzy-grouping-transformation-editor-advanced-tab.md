@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058365"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de Transformação Agrupamento Difuso (guia Avançado)
@@ -30,13 +30,13 @@ ms.locfileid: "66058365"
  Para saber mais sobre a transformação Agrupamento Difuso, consulte [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## <a name="options"></a>Opções  
- **Nome da coluna de chave de entrada**  
+ **Nome da coluna da chave de entrada**  
  Especifique o nome de uma coluna de saída que contém o identificador exclusivo para cada coluna de entrada. A coluna `_key_in` tem um valor que identifica exclusivamente cada linha.  
   
  **Nome da coluna da chave de saída**  
  Especifique o nome de uma coluna de saída que contém um identificador exclusivo para a linha canônica de um grupo de linhas duplicadas. A coluna `_key_out` corresponde ao valor `_key_in` da linha de dados canônica.  
   
- **Nome da coluna de Pontuação de similaridade**  
+ **Nome da coluna de pontuação de similaridade**  
  Especifique um nome para a coluna que contém a pontuação de similaridade. A pontuação de similaridade é um valor entre 0 e 1 que indica a similaridade da linha de entrada à linha canônica. Quanto mais próxima de 1 for a pontuação, mais próxima será a correspondência da fila com a fila canônica.  
   
  **Limite de similaridade**  
@@ -46,7 +46,7 @@ ms.locfileid: "66058365"
  A transformação fornece um conjunto padrão de delimitadores para criar tokens de dados, mas você pode adicionar ou remover delimitadores, conforme a necessidade, editando a lista.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

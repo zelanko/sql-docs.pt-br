@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068806"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Definir Opções de Agregação (Assistente de Design de Agregação)
@@ -35,13 +35,13 @@ ms.locfileid: "66068806"
  **Não criar agregações (0%)**  
  Especifique que o design de agregação não contém nenhuma agregação. Use essa opção para limpar um design de agregação existente para uma partição, grupo de medidas ou cubo.  
   
- **Iniciar**  
+ **Início**  
  Inicia o processo de design de agregação.  
   
  **Parar**  
  Encerra o processo de design de agregação.  
   
- **Definido**  
+ **Redefinir**  
  Redefine todas as opções de agregação dessa página para os valores padrão.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055225"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de Transformação Extração de Termos (guia Exclusão)
@@ -46,7 +46,7 @@ ms.locfileid: "66055225"
  Use a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) para especificar tratamento de erro em linhas que causam erros.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de transformação Extração de termos &#40;guia extração de termos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Editor de transformação Extração de termos &#40;guia Avançado&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  

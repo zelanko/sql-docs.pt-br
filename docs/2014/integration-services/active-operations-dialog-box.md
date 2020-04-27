@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062216"
 ---
 # <a name="active-operations-dialog-box"></a>Caixa de diálogo Operações Ativas
@@ -27,11 +27,11 @@ ms.locfileid: "66062216"
   
  **O que você deseja fazer?**  
   
-1.  [Abrir a caixa de diálogo operações ativas](#open_dialog)  
+1.  [Abrir a caixa de diálogo Operações Ativas](#open_dialog)  
   
 2.  [Configurar as opções](#options)  
   
-##  <a name="open_dialog"></a> Abrir a caixa de diálogo Operações Ativas  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>Abrir a caixa de diálogo operações ativas  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66062216"
   
 3.  No Pesquisador de Objetos, expanda o nó **Integration Services** , clique com o botão direito do mouse em **SSISDB**e clique em **Operações Ativas**.  
   
-##  <a name="options"></a> Configurar as opções  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar as opções  
   
 ### <a name="options"></a>Opções  
  **Tipo**  

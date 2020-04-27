@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057026"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor de Origem de OLE DB (página Colunas)
@@ -33,11 +33,11 @@ ms.locfileid: "66057026"
  **Coluna Externa**  
  Exiba as colunas externas (origem) na ordem em que serão exibidas ao configurar os componentes que consomem os dados dessa origem. É possível alterar esta ordem desmarcando as colunas selecionadas na tabela e selecionando as colunas externas da lista em uma ordem diferente.  
   
- **Coluna de Saída**  
+ **Coluna de saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome fornecido será exibido no Designer SSIS.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origem OLE DB &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [Editor de origem OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrair dados usando a fonte de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   

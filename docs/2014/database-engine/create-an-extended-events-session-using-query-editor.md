@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065027"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Criar uma sessão de Eventos Estendidos usando o Editor de Consultas
@@ -35,7 +35,7 @@ ms.locfileid: "66065027"
   
  Para obter informações sobre como criar uma sessão dos Eventos Estendidos usando o Assistente de Nova Sessão, veja [Criar uma sessão de Eventos Estendidos usando o assistente &#40;Pesquisador de Objetos&#41;](../ssms/object/object-explorer.md). Para obter informações sobre como criar uma sessão dos Eventos Estendidos usando a interface do usuário de Nova Sessão, veja [Criar uma sessão de Eventos Estendidos usando a caixa de diálogo Nova Sessão](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Permissões  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissões  
  Para criar uma sessão de Eventos Estendidos, você deve ter a permissão ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Criando uma sessão de Eventos Estendidos usando o Editor de Consultas  
@@ -219,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos estendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Pacotes de eventos estendidos do SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

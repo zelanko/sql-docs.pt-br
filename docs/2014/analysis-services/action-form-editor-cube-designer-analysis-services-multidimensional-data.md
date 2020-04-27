@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062955"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66062955"
  **Nome**  
  Digite o nome da ação.  
   
- **Destino da ação**  
+ **Destino da Ação**  
  Expanda para exibir as opções **Tipo de destino** e **Objeto de destino** .  
   
  **Tipo de destino**  
@@ -46,18 +46,18 @@ ms.locfileid: "66062955"
  **Objeto de destino**  
  Selecione o objeto ao qual a ação deve ser associada. A instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retorna ao cliente apenas as ações que se aplicam ao objeto selecionado. A lista de objetos disponíveis é restrita pela escolha de **Tipo de destino**.  
   
- **Condição (opcional)**  
+ **Condição (Opcional)**  
  Digite a expressão MDX que descreve uma condição opcional usada em conjunto com **Objeto de destino**que restringe ainda mais quando a ação está disponível. A expressão deve retornar um valor booliano que, se verdadeiro, indicará que a ação está disponível.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
   
- **Conteúdo da ação**  
+ **Conteúdo da Ação**  
  Expanda para exibir as opções **Tipo** e **Expressão da Ação** .  
   
  **Tipo**  
  Selecione o tipo de ação a ser tomada quando a ação for executada. Os seguintes tipos de ação estão disponíveis:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Dataset|Retorna uma instrução MDX representando um conjunto de dados multidimensional a ser executado e exibido pelo aplicativo cliente.|  
 |Proprietário|Retorna uma cadeia de caracteres proprietária que pode ser interpretada por aplicativos cliente associados à configuração **Aplicativo** para esta ação.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66062955"
  **Expressão da ação**  
  Digite a expressão MDX que retorna a cadeia de caracteres retornada pela ação ao aplicativo cliente para execução.  
   
- **Propriedades adicionais**  
+ **Propriedades Adicionais**  
  Expanda para exibir as opções **Invocação**, **Aplicativo**, **Descrição**, **Legenda**e **A legenda é MDX** .  
   
  **Invocação**  
@@ -81,10 +81,10 @@ ms.locfileid: "66062955"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interativo|A ação é executada quando o usuário a invoca.|  
+|Interactive (Interativo)|A ação é executada quando o usuário a invoca.|  
 |Em Aberto|A ação é executada quando o cubo é aberto pela primeira vez.|  
   
  **Aplicativo**  
@@ -103,7 +103,7 @@ ms.locfileid: "66062955"
   
  Digite a expressão MDX que retornará uma cadeia de caracteres para a legenda se a opção **A legenda é MDX** estiver configurada como **True**.  
   
- **Legenda é MDX**  
+ **A legenda é MDX**  
  Selecione **Falso** para indicar que a **Legenda** contém uma cadeia de caracteres literal que representa uma legenda a ser exibida para a ação no aplicativo cliente.  
   
  Selecione **Verdadeiro** para indicar que a **Legenda** contém uma expressão MDX que retorna uma cadeia de caracteres que representa uma legenda a ser exibida para a ação no aplicativo cliente. A expressão MDX deve ser resolvida antes da ação ser retornada ao aplicativo cliente.  

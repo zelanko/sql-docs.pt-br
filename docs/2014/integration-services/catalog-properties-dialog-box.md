@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061109"
 ---
 # <a name="catalog-properties-dialog-box"></a>Caixa de diálogo Propriedades do Catálogo
@@ -33,7 +33,7 @@ ms.locfileid: "66061109"
   
 -   [Configurar as opções](#options)  
   
-##  <a name="open_dialog"></a>Abrir a caixa de diálogo Propriedades do catálogo  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>Abrir a caixa de diálogo Propriedades do catálogo  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -41,12 +41,12 @@ ms.locfileid: "66061109"
   
 3.  No Pesquisador de Objetos, expanda o nó **Integration Services** , clique com o botão direito do mouse em **SSISDB**e clique em **Propriedades**.  
   
-##  <a name="options"></a> Configurar as opções  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar as opções  
   
 ### <a name="options"></a>Opções  
  A tabela a seguir descreve determinadas propriedades na caixa de diálogo e as propriedades correspondentes na exibição de catalog.catalog_property.  
   
-|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|DESCRIÇÃO|  
+|Nome da Propriedade (caixa de diálogo Propriedades do Catálogo)|Nome da Propriedade (exibição catalog.catalog_property)|Descrição|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Nome do Algoritmo de Criptografia|ENCRYPTION_CLEANUP_ENABLED|Especifica o tipo de criptografia usado para criptografar os valores dos parâmetros confidenciais no catálogo. O valores possíveis são os seguintes:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (padrão)|  
 |Tempo Limite de Validação (segundos)|VALIDATION_TIMEOUT|Especifique o número máximo de segundos que a validação de um projeto ou de um pacote pode ser executada antes de ser parada. O valor padrão é 300 segundos.<br /><br /> A execução da validação é uma operação assíncrona. Quanto maior for o projeto ou o pacote, mais tempo será necessário para a validação.<br /><br /> Para obter informações sobre como validar projetos e pacotes, consulte [Tipos de dados do Integration Services em expressões](expressions/integration-services-data-types-in-expressions.md).|  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056263"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Salvar um pacote no sistema de arquivos
@@ -38,7 +38,7 @@ ms.locfileid: "66056263"
     >  É possível verificar na janela Propriedades o caminho e o nome de arquivo onde o pacote foi salvo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;os pacotes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Salvar uma cópia de um pacote](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

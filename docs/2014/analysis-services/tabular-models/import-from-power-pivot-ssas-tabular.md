@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067022"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar do PowerPivot (SSAS tabular)
@@ -48,6 +48,6 @@ ms.locfileid: "66067022"
   
 ## <a name="see-also"></a>Consulte Também  
  [Banco de dados de espaço de trabalho &#40;SSAS de tabela&#41;](workspace-database-ssas-tabular.md)   
- [Copiar e colar dados &#40;SSAS de tabela&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [Copiar e colar dados &#40;SSAS Tabular&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

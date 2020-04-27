@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057124"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de Origem ODBC (página Saída de Erro)
@@ -47,7 +47,7 @@ ms.locfileid: "66057124"
 ### <a name="truncation"></a>Truncation  
  Selecione como a origem ODBC deve tratar o truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Não usado.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  
@@ -69,7 +69,7 @@ ms.locfileid: "66057124"
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro da origem ODBC. Para obter mais informações, consulte [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de Fonte ODBC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Editor de origem ODBC &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor de Origem ODBC &#40;Página Colunas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

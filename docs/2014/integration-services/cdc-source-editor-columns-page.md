@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061026"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Editor de Origem CDC (página Colunas)
@@ -25,7 +25,7 @@ ms.locfileid: "66061026"
  Para obter mais informações sobre a origem CDC, consulte [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para abrir a página colunas do editor de origem CDC**  
+ **Para abrir a página Colunas do Editor de Origem CDC**  
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] que tem a origem CDC.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "66061026"
  **Coluna Externa**  
  Uma exibição das colunas externas (origem) na ordem em que serão exibidas ao configurar os componentes que consomem os dados da origem CDC. Para alterar essa ordem, primeiro limpe as colunas selecionadas na lista **Colunas Externas Disponíveis** e depois selecione colunas externas na lista em uma ordem diferente. As colunas selecionadas são adicionadas à lista **Coluna Externa** na ordem em que são selecionadas.  
   
- **Coluna de Saída**  
+ **Coluna de saída**  
  Insira um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo. O nome inserido é exibido no Designer SSIS.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de Origem CDC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [Editor de origem CDC &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

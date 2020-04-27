@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059716"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Ajuda de F1 do Visualizador de Perfil de Dados
@@ -31,13 +31,13 @@ ms.locfileid: "66059716"
  **Abrir**  
  Clique para buscar o arquivo salvo que contém a saída da tarefa Criação de Perfil de Dados.  
   
- Painel **perfis**  
+ Painel**Perfis**  
  Expanda a árvore no painel **Perfis** para ver os perfis incluídos na saída. Selecione um perfil para exibir os seus resultados.  
   
  Painel de **mensagens**  
  Exibe mensagens de estado.  
   
- Painel de **busca detalhada**  
+ Painel**Busca Detalhada**  
  Exibe as linhas de dados que correspondem a um valor na saída, se a fonte de dados usada pela tarefa Criação de Perfil de dados estiver disponível.  
   
  Por exemplo, se estiver exibindo a saída de um perfil Distribuição de Valor de Coluna para uma coluna Estado dos Estados Unidos da América, o painel **Distribuição de Valor Detalhado** pode conter uma linha para "WA". Clique duas vezes na linha do painel **Distribuição de Valor Detalhado** para ver as linhas de dados nas quais o valor da coluna de estado é “WA” no painel de busca detalhada.  
@@ -47,16 +47,16 @@ ms.locfileid: "66059716"
 ### <a name="profile-type--column-length-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Comprimento de Coluna  
   
 #### <a name="column-length-distribution-profile---column-pane"></a>Perfil de Distribuição de Tamanho de Coluna – painel \<coluna>  
- **Comprimento mínimo**  
+ **Comprimento Mínimo**  
  Exibe o comprimento mínimo de valores nesta coluna.  
   
- **Comprimento máximo**  
+ **Comprimento Máximo**  
  Exibe o comprimento máximo de valores nesta coluna.  
   
- **Ignorar espaços à esquerda**  
+ **Ignorar Espaços à Esquerda**  
  Exibe se este perfil foi computado com um valor `IgnoreLeadingSpaces` de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
- **Ignorar espaços à direita**  
+ **Ignorar Espaços à Direita**  
  Exibe se este perfil foi computado com um valor `IgnoreTrailingSpaces` de True ou False. Esta propriedade foi definida na página **Solicitações de Perfil** do Editor de Tarefa Criação de Perfil de Dados.  
   
  **Contagem de Linhas**  
@@ -66,16 +66,16 @@ ms.locfileid: "66059716"
  **Comprimento**  
  Exibe os comprimentos de coluna localizados na coluna perfilada.  
   
- **Contar**  
+ **Count**  
  Exibe o número de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho mostrado na coluna **Tamanho** .  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas nas quais o valor da coluna cujo perfil está sendo criado tem o tamanho exibido na coluna **Tamanho** .  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo de Perfil = Perfil de Razão Nula de Coluna  
   
 #### <a name="column-null-ratio-profile---column-pane"></a>Perfil de Razão Nula de Coluna – painel \<coluna>  
- **Contagem nula**  
+ **Contagem Nula**  
  Exibe o número de linhas nas quais a coluna perfilada tem um valor nulo.  
   
  **Porcentagem nula**  
@@ -94,13 +94,13 @@ ms.locfileid: "66059716"
  **Padrão**  
  Exibe os padrões computados para a coluna cujo perfil está sendo criado.  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas cujos valores correspondem ao padrão exibido na coluna **Padrão** .  
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo de Perfil = Perfil de Estatísticas da Coluna  
   
 #### <a name="column-statistics-profile---column-pane"></a>Perfil de Estatísticas da Coluna – painel \<coluna>  
- **Mínimo**  
+ **Máximo**  
  Exibe o valor mínimo localizado na coluna cujo perfil está sendo criado.  
   
  **Maior**  
@@ -115,7 +115,7 @@ ms.locfileid: "66059716"
 ### <a name="profile-type--column-value-distribution-profile"></a>Tipo de Perfil = Perfil de Distribuição de Valor da Coluna  
   
 #### <a name="column-value-distribution-profile---column-pane"></a>Perfil de Distribuição de Valor da Coluna – painel \<coluna>  
- **Número de valores distintos**  
+ **Número de Valores Distintos**  
  Exibe a contagem de valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
  **Contagem de Linhas**  
@@ -125,10 +125,10 @@ ms.locfileid: "66059716"
  **Valor**  
  Exibe os valores distintos encontrados na coluna cujo perfil está sendo criado.  
   
- **Contar**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
- **Porcentagem**  
+ **Percentual**  
  Exibe o percentual de linhas nas quais a coluna cujo perfil está sendo criado tem o valor exibido na coluna **Valor** .  
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo de Perfil = Perfil-Chave de Candidato  
@@ -137,26 +137,26 @@ ms.locfileid: "66059716"
  **Colunas de Chave**  
  Exibe as colunas que foram selecionadas para criação de perfil como chave candidata.  
   
- **Restrição de chave**  
+ **Intensidade de Chave**  
  Exibe a intensidade (em porcentagem) da coluna da chave candidata ou da combinação de colunas. Uma intensidade de chave inferior a 100% indica que existem valores em duplicata.  
   
 #### <a name="key-violations-pane"></a>Painel Violações de Chave  
  **\<Coluna1>, \<Coluna2>, etc.**  
  Exibe os valores em duplicata encontrados na coluna cujo perfil está sendo criado.  
   
- **Contar**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo de Perfil = Perfil de Dependência Funcional  
   
 #### <a name="functional-dependency-profile-pane"></a>Painel do perfil de Dependência Funcional  
- **Colunas determinantes**  
+ **Colunas Determinantes**  
  Exibe a coluna ou colunas selecionadas como coluna ou colunas determinantes. No exemplo no qual o mesmo Código Postal dos Estados Unidos deveria ter sempre o mesmo estado, a coluna Código Postal é a coluna determinante.  
   
- **Colunas dependentes**  
+ **Colunas Dependentes**  
  Exibe a coluna ou colunas selecionadas como coluna ou colunas dependentes. No exemplo no qual o mesmo Código Postal dos Estados Unidos deveria ter sempre o mesmo estado, a coluna Estado é a coluna dependente.  
   
- **Intensidade de dependência funcional**  
+ **Intensidade de Dependência Funcional**  
  Exibe a intensidade (em porcentagem) da dependência funcional entre colunas. Uma intensidade de chave inferior a 100% indica que há casos nos quais o valor determinante não determina o valor dependente. No exemplo no qual o mesmo Código Postal dos Estados Unidos deveria ter sempre o mesmo estado, isso provavelmente indica que alguns valores de estado são inválidos  
   
 #### <a name="functional-dependency-violations-pane"></a>Painel Violações de Dependência Funcional  
@@ -170,10 +170,10 @@ ms.locfileid: "66059716"
  **\<nome de coluna dependente>**  
  Exibe o valor da coluna dependente na instância de uma violação de dependência funcional.  
   
- **Número de Suportes**  
+ **Contagem de Suporte**  
  Exibe o número de linhas nas quais o valor de coluna determinante determina a coluna dependente.  
   
- **Contagem de violações**  
+ **Contagem de Violação**  
  Exibe o número de linhas nas quais o valor de coluna determinante não determina a coluna dependente (Essas são as linhas em que o valor dependente é o valor mostrado no ** \<nome da coluna dependente>** coluna.)  
   
  **Percentual de Suporte**  
@@ -182,20 +182,20 @@ ms.locfileid: "66059716"
 ### <a name="profile-type--value-inclusion-profile"></a>Tipo de Perfil = Perfil de Inclusão de Valor  
   
 #### <a name="value-inclusion-profile-pane"></a>Painel do Perfil de Inclusão de Valor  
- **Colunas laterais do subconjunto**  
+ **Colunas Laterais de Subconjunto**  
  Exibe a coluna ou combinação de colunas cujo perfil foi criado para determinar se elas estão nas colunas do superconjunto.  
   
- **Colunas laterais do superconjunto**  
+ **Colunas Laterais de Superconjunto**  
  Exibe a coluna ou combinação de colunas cujo perfil foi criado para determinar se elas incluem os valores nas colunas do subconjunto.  
   
- **Intensidade de inclusão**  
+ **Intensidade de Inclusão**  
  Exibe a intensidade (em porcentagem) da sobreposição entre colunas. Uma intensidade de chave inferior a 100% indica que há casos nos quais o valor do subconjunto não está localizado entre os valores do superconjunto.  
   
 #### <a name="inclusion-violations-pane"></a>Painel Violações de Inclusão  
  **\<Coluna1>, \<Coluna2>, etc.**  
  Exibe os valores na coluna de subconjunto ou colunas que não foram localizadas na coluna ou colunas do superconjunto.  
   
- **Contar**  
+ **Count**  
  Exibe o número de linhas nas quais a coluna especificada tem o valor exibido na primeira coluna.  
   
 ## <a name="see-also"></a>Consulte Também  

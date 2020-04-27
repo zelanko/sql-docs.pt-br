@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056424"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados na tarefa Executar SQL
@@ -33,7 +33,7 @@ ms.locfileid: "66056424"
   
 -   [Configurando resultados conjuntos de resultados no Editor da Tarefa Executar SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>Especificando um tipo de conjunto de resultados  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>Especificando um tipo de conjunto de resultados  
  O a tarefa Executar SQL dá suporte aos seguintes tipos de conjuntos de resultados:  
   
 -   O conjunto de resultados **Nenhum** é usado quando a consulta não retorna nenhum resultado. Por exemplo, esse conjunto de resultados é usado para consultas que adicionam, alteram e excluem registros em uma tabela.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056424"
   
  Se a tarefa Executar SQL usar o **Conjunto de resultados completo** e a consulta retornar vários conjuntos de linhas, a tarefa retornará apenas o primeiro. Se este conjunto de linhas gerar um erro, a tarefa informará o erro. Se outros conjuntos de linhas gerarem erros, a tarefa não os informará.  
   
-##  <a name="Populate_variable_with_result_set"></a>Populando uma variável com um conjunto de resultados  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>Populando uma variável com um conjunto de resultados  
  Você poderá associar o conjunto de resultados retornado por uma consulta a uma variável definida pelo usuário se o tipo de conjunto de resultados for uma única linha, um conjunto de linhas ou XML.  
   
  Se o tipo de conjunto resultante for **Linha simples**, você poderá associar uma coluna no resultado de retorno a uma variável usando o nome da coluna como o nome do conjunto de resultados ou pode usar a posição ordinal da coluna na lista de colunas como o nome do conjunto de resultados. Por exemplo, o nome do conjunto de resultados da consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` pode ser **Color** ou **0**. Se a consulta retornar várias colunas e você quiser acessar os valores em todas elas, associe cada coluna a uma variável diferente. Se você mapear as colunas para variáveis usando números como nomes do conjunto de resultados, os números refletirão a ordem em que as colunas aparecerão na lista de colunas da consulta. Por exemplo, na consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, você usa 0 para a coluna **Color** e 1 para a coluna **ListPrice** . A capacidade de usar um nome de coluna como o nome do conjunto de resultados depende do provedor que a tarefa está configurada para usar. Nem todos os provedores tornam os nomes das colunas disponíveis.  
@@ -72,7 +72,7 @@ ms.locfileid: "66056424"
   
  A variável pode ser definida no escopo da tarefa Executar SQL ou do pacote. Se a variável tiver escopo de pacote, o conjunto de resultados estará disponível para outras tarefas e contêineres no pacote e para qualquer pacote executado pelas tarefas Executar pacote ou Executar Pacotes do DTS 2000.  
   
- Quando você mapeia uma variável para um conjunto de resultados de **Linha simples**, os valores que não são de cadeia de caracteres retornados pela instrução SQL são convertidos em cadeias de caracteres quando as seguintes condições são atendidas:  
+ Quando você mapeia uma variável para um conjunto de resultados de **Linha simples** , os valores que não são de cadeia de caracteres retornados pela instrução SQL são convertidos em cadeias de caracteres quando as seguintes condições são atendidas:  
   
 -   A propriedade **TypeConversionMode** é definida como verdadeira. Você define o valor da propriedade na janela Propriedades ou por meio do **Editor da Tarefa Executar SQL**.  
   
@@ -80,14 +80,14 @@ ms.locfileid: "66056424"
   
  Para obter informações sobre como carregar um conjunto de resultados em uma variável, consulte [Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a>Configurando conjuntos de resultados na tarefa Executar SQL  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>Configurando conjuntos de resultados na tarefa Executar SQL  
  Para obter mais informações sobre as propriedades dos conjuntos de resultados que podem ser definidas no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique no seguinte tópico:  
   
 -   [Editor da tarefa Executar SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  Para obter mais informações sobre como definir essas propriedades no [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, clique no tópico a seguir:  
   
--   [Definir as propriedades de uma tarefa ou contêiner](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Definir as propriedades de uma tarefa ou de um contêiner](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL](control-flow/execute-sql-task.md)  

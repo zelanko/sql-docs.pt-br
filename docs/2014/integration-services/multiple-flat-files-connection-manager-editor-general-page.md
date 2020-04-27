@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057479"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Geral)
@@ -27,7 +27,7 @@ ms.locfileid: "66057479"
  Para saber mais sobre o gerenciador de conexões de Vários Arquivos Simples, consulte [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
 ## <a name="options"></a>Opções  
- **Nome do gerenciador de conexões**  
+ **Nome do Gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Vários Arquivos Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descrição**  
@@ -51,7 +51,7 @@ ms.locfileid: "66057479"
  **Ao**  
  Indique se será usada formatação delimitada, de largura fixa ou irregular à direita. Todos os arquivos devem ter o mesmo formato de dados.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Delimitado|As colunas são separadas por delimitadores, especificados na página **Colunas** .|  
 |Largura fixa|As colunas têm uma largura fixa, especificada arrastando as linhas do marcador na página **Colunas** .|  
@@ -63,15 +63,15 @@ ms.locfileid: "66057479"
  **Delimitador de linha de cabeçalho**  
  Selecione na lista de delimitadores de linhas de cabeçalho ou digite o texto do delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**CD ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
-|**CD**|A linha do cabeçalho é delimitada por um retorno de carro.|  
-|**ALIMENTAÇÃO**|A linha do cabeçalho é delimitada por um avanço de linha.|  
-|**Ponto e vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
+|**{CR}{LF}**|A linha do cabeçalho é delimitada por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|A linha do cabeçalho é delimitada por um retorno de carro.|  
+|**{LF}**|A linha do cabeçalho é delimitada por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|A linha do cabeçalho é delimitada por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|A linha do cabeçalho é delimitada por dois-pontos.|  
 |**Pontos{,}**|A linha do cabeçalho é delimitada por uma vírgula.|  
-|**Guia {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
+|**Tabulação {t}**|A linha do cabeçalho é delimitada por uma tabulação.|  
 |**Barra vertical {&#124;}**|A linha do cabeçalho é delimitada por uma barra vertical.|  
   
  **Linhas de cabeçalho a ignorar**  
@@ -81,9 +81,9 @@ ms.locfileid: "66057479"
  Indique se deseja esperar ou fornecer nomes de coluna na primeira linha de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor do Gerenciador de conexões de vários arquivos simples &#40;página colunas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Editor do Gerenciador de conexões de vários arquivos simples &#40;página avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

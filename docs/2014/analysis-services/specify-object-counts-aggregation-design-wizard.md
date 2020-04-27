@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d616997d3764aad42691d9ef3c213d553b5f311
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068304"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>Especificar Contagens de Objetos (Assistente de Design de Agregação)
@@ -32,7 +32,7 @@ ms.locfileid: "66068304"
  **Contagem de partições**  
  (Opcional) Digite o número estimado de linhas no grupo de medidas e digite as contagens de membros de atributo estimadas nas partições.  
   
- **Contar**  
+ **Count**  
  Calcula e popula novamente os valores na coluna **Contagem estimada** para todos os campos vazios. Os campos que já exibem uma contagem não são atualizados.  
   
 ## <a name="see-also"></a>Consulte Também  

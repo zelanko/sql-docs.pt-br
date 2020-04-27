@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061069"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor de Transformação Cache (Página Gerenciador de Conexões)
@@ -24,7 +24,7 @@ ms.locfileid: "66061069"
   
  Para obter mais informações sobre transformação Cache, consulte [Cache Transform](data-flow/transformations/cache-transform.md).  
   
- Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Para saber mais sobre o Gerenciador de conexões de cache, consulte [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Opções  
  **Gerenciador de conexões de cache**  
@@ -37,6 +37,6 @@ ms.locfileid: "66061069"
  Modifique uma conexão existente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de transformação cache &#40;página Mapeamentos&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Editor da Transformação Cache &#40;Página Mapeamentos&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

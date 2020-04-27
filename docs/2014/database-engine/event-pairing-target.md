@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064845"
 ---
 # <a name="event-pairing-target"></a>Destino de emparelhamento de evento
@@ -30,7 +30,7 @@ ms.locfileid: "66064845"
   
  A tabela a seguir descreve as opções disponíveis para configurar um emparelhamento de evento.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |begin_event|Qualquer nome de evento presente na sessão atual.|O nome do evento que especifica o evento inicial em uma sequência emparelhada.|  
 |end_event|Qualquer nome de evento presente na sessão atual.|O nome do evento que especifica o evento final em uma sequência emparelhada.|  
@@ -90,9 +90,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos estendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

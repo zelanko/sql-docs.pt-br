@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066006"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -42,13 +42,13 @@ ms.locfileid: "66066006"
 > [!NOTE]  
 >  Esta opção é habilitada apenas na exibição de formulário.  
   
- **Mover para cima**  
+ **Mover para Cima**  
  Clique para mover o KPI selecionado no painel **Organizador de KPIs** uma posição para cima.  
   
 > [!NOTE]  
 >  Esta opção é habilitada apenas na exibição de formulário.  
   
- **Mover para baixo**  
+ **Mover para Baixo**  
  Clique para mover o KPI selecionado no painel **Organizador de KPIs** uma posição para baixo.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ ms.locfileid: "66066006"
  **Exibição de formulário**  
  Selecione para usar a guia **KPIs** em exibição de formulário.  
   
- **Exibição de Navegador**  
+ **Exibição de navegador**  
  Selecione para usar a guia **KPIs** na exibição de navegador.  
   
  **Verificar Sintaxe**  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056711"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor de Destino de Processamento de Partições (página Gerenciador de Conexões)
@@ -30,7 +30,7 @@ ms.locfileid: "66056711"
 >  As tarefas descritas aqui não se aplicam a modelos de tabela do Analysis Services.  Você não pode mapear colunas de entrada para as colunas de partição em modelos de tabela. Você pode usar a tarefa Executar DDL do Analysis Services [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) para processar a partição.  
   
 ## <a name="options"></a>Opções  
- **Connection manager**  
+ **Gerenciador de conexões**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Novo**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056711"
  **Método de processamento**  
  Selecione o método de processamento. O valor padrão desta opção é **Completo**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Adicionar (incremental)|Execute um processamento com incremento da partição.|  
 |Completo|Execute um processamento completo da partição.|  
 |Apenas dados|Execute um processamento de atualização da partição.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de processamento de partições &#40;página Mapeamentos&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Editor de destino de processamento de partições &#40;página avançado&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor de Destino de Processamento de Partições &#40;Página Avançado&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

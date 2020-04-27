@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064696"
 ---
 # <a name="histogram-target"></a>Destino do histograma
@@ -26,7 +26,7 @@ ms.locfileid: "66064696"
   
  A tabela a seguir descreve as opções que podem ser usadas para configurar o destino do histograma.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |slots|Qualquer valor inteiro. Esse valor é opcional.|Um valor especificado pelo usuário que indica o número máximo de agrupamentos a serem retidos. Quando esse valor é atingido, novos eventos que não pertencem aos grupos existentes são ignorados.<br /><br /> Observe que para aprimorar o desempenho, o número de slot é arredondado para a próxima potência de 2.|  
 |filtering_event_name|Qualquer evento presente na sessão de Eventos Estendidos. Esse valor é opcional.|Um valor especificado pelo usuário usado para identificar uma classe de eventos. Apenas instâncias do evento especificado são particionadas. Todos os outros eventos são ignorados.<br /><br /> Se você especificar esse valor, deverá usar o formato: *package_name*.*event_name*, por exemplo, `'sqlserver.checkpoint_end'`. Você pode identificar o nome do pacote usando a seguinte consulta:<br /><br /> Selecione p.name, se. event_name<br />DE sys. dm_xe_session_events se<br />INGRESSAr em sys. dm_xe_packages p<br />EM se_event_package_guid = p. GUID<br />ORDENAr por p.name, se. event_name<br /><br /> <br /><br /> Se você não especificar o valor filtering_event_name, source_type deverá ser definido como 1 (o padrão).|  
@@ -102,9 +102,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos estendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055799"
 ---
 # <a name="set-the-properties-of-a-package"></a>Definir as propriedades de um pacote
@@ -46,7 +46,7 @@ ms.locfileid: "66055799"
 5.  No menu **Arquivo** , clique em **Salvar Itens Selecionados** para salvar o pacote atualizado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;os pacotes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Definir as propriedades do pacote](set-package-properties.md)  
   
   

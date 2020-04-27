@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059463"
 ---
 # <a name="development-of-an-integration-services-project"></a>Implantação de um projeto do Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "66059463"
   
  Quando você cria um novo projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], a caixa de diálogo **Novo Projeto** inclui um modelo do **Integration Services Project** . Este modelo de projeto cria um novo projeto que contém um único pacote.  
   
-## <a name="projects-and-solutions"></a>Projetos e soluções  
+## <a name="projects-and-solutions"></a>Soluções e Projetos  
  Projetos são armazenados em soluções. Você pode primeiro criar uma solução e, então, adicionar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à solução. Se não existir uma solução, ela será criada automaticamente pelo [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] quando o projeto for criado pela primeira vez. Uma solução pode conter vários projetos de tipos diferentes.  
   
 > [!NOTE]  
@@ -35,7 +35,7 @@ ms.locfileid: "66059463"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Criar um novo projeto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+-   [Criar um novo projeto do Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
 -   [Adicionar um item a um projeto do Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   

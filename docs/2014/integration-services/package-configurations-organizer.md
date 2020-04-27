@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056973"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
@@ -32,7 +32,7 @@ ms.locfileid: "66056973"
 > [!NOTE]  
 >  Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, Configurações do Pacote Pai são carregadas depois das configurações de outros tipos.  
   
- Configurações de Pacote atualizam os valores das propriedades de objetos de pacote em tempo de execução. Quando um pacote é carregado, os valores das configurações substituem os valores que foram definidos quando o pacote foi desenvolvido. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]dá suporte a tipos de configuração diferentes. Por exemplo, é possível usar um arquivo XML que pode ter várias configurações, ou uma variável de ambiente que contenha uma única configuração. Para obter mais informações, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
+ Configurações de Pacote atualizam os valores das propriedades de objetos de pacote em tempo de execução. Quando um pacote é carregado, os valores das configurações substituem os valores que foram definidos quando o pacote foi desenvolvido. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dá suporte a diferentes tipos de configuração. Por exemplo, é possível usar um arquivo XML que pode ter várias configurações, ou uma variável de ambiente que contenha uma única configuração. Para obter mais informações, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opções  
  **Habilitar configurações de pacote**  
@@ -41,10 +41,10 @@ ms.locfileid: "66056973"
  **Nome da configuração**  
  Exibe o nome da configuração.  
   
- **Tipo de configuração**  
+ **Tipo de Configuração**  
  Exibe o tipo do local onde as configurações são armazenadas.  
   
- **Cadeia de caracteres de configuração**  
+ **Cadeia de Caracteres de Configuração**  
  Exibe o local no qual os valores de configuração são armazenados. O local pode ser um caminho de um arquivo, o nome de uma variável de ambiente, uma chave do Registro, o nome de uma variável do pacote pai ou o nome de uma tabela do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Objeto de Destino**  

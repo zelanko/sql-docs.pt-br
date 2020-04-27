@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065725"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Conversões (Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -25,7 +25,7 @@ ms.locfileid: "66065725"
 ## <a name="panes"></a>Painéis  
  A guia **Conversões** contém os seguintes painéis:  
   
- [Barra de ferramentas](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Use a barra de ferramentas para executar ações comuns na guia **Conversões** do Designer de Dimensão.  
   
  [Detalhes de Conversão](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

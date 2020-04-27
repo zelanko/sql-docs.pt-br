@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055143"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de Transformação Extração de Termos (guia Extração de Termos)
@@ -33,14 +33,14 @@ ms.locfileid: "66055143"
  **Termo**  
  Forneça um nome para a coluna de saída que conterá os termos extraídos.  
   
- **Placar**  
+ **Pontuação**  
  Forneça um nome para a coluna de saída que conterá a pontuação de cada termo extraído.  
   
  **Configurar Saída de Erro**  
  Use a caixa de diálogo [Configurar Saída de Erro](../../2014/integration-services/configure-error-output.md) para especificar tratamento de erro em linhas que causam erros.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de transformação Extração de termos &#40;guia exclusão&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Editor de transformação Extração de termos &#40;guia Avançado&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [transformação Pesquisa de Termos](data-flow/transformations/lookup-transformation.md)  

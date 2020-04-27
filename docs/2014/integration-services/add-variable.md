@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061791"
 ---
 # <a name="add-variable"></a>Adicionar Variável
@@ -44,8 +44,8 @@ ms.locfileid: "66061791"
  Selecione para que a variável seja do tipo somente leitura.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
- [Tipos de dados do Integration Services](data-flow/integration-services-data-types.md)   
+ [Integration Services &#40;as variáveis&#41; SSIS](integration-services-ssis-variables.md)   
+ [Tipos de dados Integration Services](data-flow/integration-services-data-types.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

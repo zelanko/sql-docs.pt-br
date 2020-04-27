@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055102"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor da Tarefa Transferir Banco de Dados (página Geral)
@@ -35,8 +35,8 @@ ms.locfileid: "66055102"
  Digite uma descrição para a tarefa Transferir Banco de Dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa Transferir Banco de dados &#40;página bancos de dados&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   

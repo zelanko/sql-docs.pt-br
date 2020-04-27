@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069103"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Guia Perfis de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -24,7 +24,7 @@ ms.locfileid: "66069103"
   
  Use esta exibição de um modelo de clustering de sequência para obter uma exibição rápida de como são agrupadas as sequências localizadas pelo modelo. Você pode ver à primeira vista quantas sequências são longas e quantas são curtas. Você pode também clicar em um cluster e exibir a **Legenda de mineração** para ver exatamente quais estados as cores em cada sequência representam.  
   
- **Para obter mais informações:**  [algoritmo de clustering de sequência da Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:**  [Algoritmo MSC](data-mining/microsoft-sequence-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -42,7 +42,7 @@ ms.locfileid: "66069103"
  **Barras de histograma**  
  Use esta opção para alterar o número de barras coloridas que estão incluídas no histograma. Caso haja mais barras do que você optou por exibir, as barras mais importantes serão retidas e as restantes serão agrupadas em **Outro**.  
   
- **Atributos** e **perfis de cluster**  
+ **Atributos** e **Perfis de Cluster**  
  Esta seção do gráfico lista os clusters de sequências que foram localizados no modelo.  
   
  Cada cluster de sequência é exibido usando o número de estados selecionado na opção **Barras de histograma**.  

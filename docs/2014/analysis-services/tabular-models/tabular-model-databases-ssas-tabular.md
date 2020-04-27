@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066416"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bancos de dados modelo de tabela (SSAS tabular)
@@ -33,11 +33,11 @@ ms.locfileid: "66066416"
   
  [Funções de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Partições de modelo de tabela &#40;SSAS de tabela&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Partições de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configure o Acesso Na Memória ou DirectQuery para um banco de dados modelo de tabela](enable-directquery-mode-in-ssms.md)  
   
- [Conectar a um banco de dados modelo de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar a um modelo de banco de dados de tabela &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurar do PowerPivot](restore-from-power-pivot.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66066416"
   
  [Sincronizar bancos de dados do Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Alternar um banco de dados Analysis Services entre os modos ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Modificar ou excluir um banco de dados do Analysis Services](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

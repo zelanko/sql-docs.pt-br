@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055035"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor da Tarefa Transferir Mensagens de Erro (página Mensagens)
@@ -39,10 +39,10 @@ ms.locfileid: "66055035"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Verdadeiro**|Copia todas as mensagens definidas pelo usuário.|  
-|**Falso**|Copia só as mensagens definidas pelo usuário especificadas.|  
+|**True**|Copia todas as mensagens definidas pelo usuário.|  
+|**For**|Copia só as mensagens definidas pelo usuário especificadas.|  
   
  **ErrorMessagesList**  
  Clique no botão Procurar **(...)** para selecionar as mensagens de erro para copiar.  
@@ -57,8 +57,8 @@ ms.locfileid: "66055035"
 >  É necessário especificar o **SourceConnection** antes que seja possível selecionar mensagens de erro para copiar.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa transferir mensagens de erro &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)   
  [Editor da tarefa transferir mensagens de erro &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   

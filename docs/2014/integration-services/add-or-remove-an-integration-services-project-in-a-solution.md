@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061839"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Adicionar ou remover um projeto do Integration Services em uma solução
@@ -70,6 +70,6 @@ ms.locfileid: "66061839"
   
 ## <a name="see-also"></a>Consulte Também  
  [Projetos do Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md)   
- [Criar um novo projeto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
+ [Criar um novo projeto do Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058530"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de Loop Foreach (página Mapeamentos de Variáveis)
@@ -35,22 +35,22 @@ ms.locfileid: "66058530"
   
  **Tópicos relacionados**: [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
- **Index**  
+ **Índice**  
  Se estiver usando o Enumerador de Item Foreach, especifique o índice da coluna no valor da coleção para mapear para a variável. Em outros tipos de enumerador, o índice é somente leitura.  
   
 > [!NOTE]  
 >  O índice é baseado em 0.  
   
- **Tópicos relacionados**: [executar um loop por meio de arquivos e tabelas do Excel usando um contêiner Loop Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Tópicos relacionados**: [Como fazer loop por meio de arquivos e tabelas do Excel usando um contêiner do Loop Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Delete (excluir)**  
  Selecione uma variável e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de loop foreach &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de loop foreach &#40;página de coleção&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [Contêiner Loop For](control-flow/for-loop-container.md)  
   
   

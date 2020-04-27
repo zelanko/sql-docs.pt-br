@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069066"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitário de Configuração de Servidor (Suplementos de Mineração de Dados para Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "66069066"
   
 
   
-##  <a name="bkmk_step1"></a>Etapa 1: conectar-se ao Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>Etapa 1: conectar-se ao Analysis Services  
  Escolha o servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que fornece os algoritmos de mineração de dados e armazena os modelos de mineração de dados.  
   
  Quando você cria uma conexão para permitir a mineração de dados, é necessário escolher um servidor onde seja possível fazer experiências com modelos de mineração de dados. Recomendamos que você crie um novo banco de dados do servidor e dedique o novo banco de dados da mineração de dados ou peça ao administrador para preparar um servidor de mineração de dados. Dessa forma, você pode criar modelos sem afetar o desempenho de outros serviços.  
@@ -35,7 +35,7 @@ ms.locfileid: "66069066"
  **Autenticação**  
  Especifique os métodos de autenticação. A Autenticação do Windows é necessária para conexões com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a menos que o administrador tenha configurado o acesso ao servidor por meio de HTTPPump.  
   
-##  <a name="bkmk_step2"></a>Etapa 2: permitir modelos temporários  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>Etapa 2: permitir modelos temporários  
  Antes de poder usar os suplementos, uma propriedade de servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deve ser alterada para permitir a criação de modelos de mineração temporários.  
   
  Os modelos de mineração temporários também são chamados de *modelos de sessão*. Isso ocorre porque os modelos são armazenados apenas enquanto a sessão atual permanece aberta. Quando você fecha a conexão com o servidor, a sessão é encerrada e os modelos usados durante ela são excluídos.  
@@ -44,7 +44,7 @@ ms.locfileid: "66069066"
   
  O assistente detecta primeiro as configurações no servidor que você especificou. Se o servidor já permitir modelos de mineração temporários, você poderá clicar em **Avançar** para continuar. O assistente também fornece instruções sobre como habilitar modelos de mineração temporários no servidor especificado do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou como fazer uma solicitação ao administrador do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a>Etapa 3: criar um banco de dados para usuários do suplemento  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>Etapa 3: criar um banco de dados para usuários do suplemento  
  Nesta página do assistente de instalação e configuração, você pode criar um novo banco de dados dedicado à mineração de dados ou selecionar um banco de dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069066"
  **Backup de banco de dados**  
  Se você escolher a opção de usar um banco de dados existente, selecione o nome desse banco de dados na lista.  
   
-##  <a name="bkmk_step4"></a>Etapa 4: conceder permissões apropriadas aos usuários do suplemento  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>Etapa 4: conceder permissões apropriadas aos usuários do suplemento  
  Você deve assegurar que você e outros usuários de suplementos tenham as permissões necessárias para procurar, editar, processar ou criar estruturas e modelos de mineração de dados.  
   
  Por padrão, a Autenticação do Windows integrada é necessária para uso dos suplementos.  

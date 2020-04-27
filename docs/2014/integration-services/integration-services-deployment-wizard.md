@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058005"
 ---
 # <a name="integration-services-deployment-wizard"></a>Assistente de Implantação do Integration Services
@@ -44,7 +44,7 @@ ms.locfileid: "66058005"
   
  Se você iniciar o assistente no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], então por padrão o assistente selecionará a instância de servidor conectada e inserirá o caminho para o projeto selecionado. Você pode alterar estes valores para implantar o projeto em um local diferente.  
   
-## <a name="review"></a>Análise  
+## <a name="review"></a>Revisão  
  O assistente permite que você examine as configurações selecionadas antes da implantação do projeto. Você pode alterar suas seleções clicando em **Anterior**ou clicando em qualquer uma das etapas no painel esquerdo.  
   
 ## <a name="deployresults"></a>Implantar/Resultados  

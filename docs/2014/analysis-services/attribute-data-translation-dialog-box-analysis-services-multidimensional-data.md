@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063073"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Tradução de Dados de Atributo (Analysis Services - Dados Multidimensionais)
@@ -29,7 +29,7 @@ ms.locfileid: "66063073"
 -   Clicando com o botão direito do mouse no painel **Detalhes da tradução** ou na guia **Traduções** do **Designer de Dimensão** e selecionando a coluna **Nova coluna de legendas** ou **Editar coluna de legendas**.  
   
 ## <a name="options"></a>Opções  
- **Attribute**  
+ **Atributo**  
  Exibe o atributo selecionado.  
   
  **Idioma**  
@@ -57,7 +57,7 @@ ms.locfileid: "66063073"
   
  Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões em maiúsculas e minúsculas de letras são iguais. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]não define se letras minúsculas devem ser classificadas em uma posição inferior ou superior em relação a letras maiúsculas quando **a diferenciação de maiúsculas** e minúsculas não está selecionada.  
   
- **diferenciam acentos**  
+ **Diferenciar acentos**  
  Selecione esta opção para classificar e comparar dados com base nas regras do dicionário fornecido para o idioma ou alfabeto associado e para distinguir entre letras acentuadas ou não. Por exemplo, 'a' não é igual a 'á'.  
   
  Se esta opção não estiver selecionada, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considerará que as versões acentuadas e não acentuadas de letras são iguais.  

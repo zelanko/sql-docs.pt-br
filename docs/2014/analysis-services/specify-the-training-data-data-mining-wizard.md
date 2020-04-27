@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068072"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar os dados de treinamento (Assistente de Mineração de Dados)
@@ -27,7 +27,7 @@ ms.locfileid: "66068072"
 > [!NOTE]  
 >  Algoritmos de mineração diferentes usam as chaves de maneira diferente. Para saber mais sobre os tipos diferentes de chaves, consulte [Tipos de conteúdo &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Para obter mais informações:** [estruturas de mineração &#40;&#41;de mineração de dados Analysis Services ](data-mining/mining-structures-analysis-services-data-mining.md), [colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de mineração de dados &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Colunas do modelo de mineração](data-mining/mining-model-columns.md), [Assistente de Mineração de dados &#40;Analysis Services – Mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Tabelas/Colunas**  
@@ -56,12 +56,12 @@ ms.locfileid: "66068072"
   
  Se você também marcar uma tabela aninhada como previsível, toda a tabela aninhada se tornará previsível. Se não houver colunas marcadas na tabela aninhada como de entrada ou previsível, a tabela aninhada será exibida na estrutura de mineração, mas será ignorada no modelo.  
   
- **Observação** Essa coluna só estará disponível quando você estiver criando um modelo de mineração junto com a estrutura de mineração.  
+ **Observação** Essa coluna só estará disponível quando você estiver criando um modelo de mineração com a estrutura de mineração.  
   
  **Sugerir**  
  Clique para abrir a caixa de diálogo **Sugerir Colunas Relacionadas** , que faz uma análise de uma amostra de dados para identificar colunas de entrada que mostram a relação maior com a coluna **Previsível** selecionada com base na entropia. Essa análise também se aplica a colunas de tabela aninhadas ou a estruturas de mineração baseadas em fontes OLAP.  
   
- **Observação** Essa coluna só estará disponível quando você estiver criando um modelo de mineração junto com a estrutura de mineração.  
+ **Observação** Essa coluna só estará disponível quando você estiver criando um modelo de mineração com a estrutura de mineração.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ajuda F1 do assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   

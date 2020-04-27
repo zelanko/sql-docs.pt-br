@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058677"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de Destino de Arquivo Simples (Página Mapeamentos)
@@ -36,11 +36,11 @@ ms.locfileid: "66058677"
  **Coluna de Entrada**  
  Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**. Selecione ** \<ignorar>** para excluir a coluna da saída.  
   
- **Coluna de Destino**  
+ **Coluna de destino**  
  Exiba cada coluna de destino disponível, seja ela mapeada ou não.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de arquivo simples &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de Destino de Arquivo Simples &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

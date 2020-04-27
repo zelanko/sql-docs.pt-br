@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062882"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Adicionar modelo à estrutura (Suplementos de Mineração de Dados para Excel)
@@ -44,7 +44,7 @@ ms.locfileid: "66062882"
   
 4.  Recomendamos que você também clique no botão **parâmetros** para abrir a caixa de diálogo **parâmetros de algoritmo** e personalizar parâmetros no algoritmo. Essa opção é a maneira mais fácil de criar modelos de mineração personalizados.  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na caixa de diálogo **selecionar colunas** , examine a lista de colunas e, se necessário, altere o uso das colunas para um destes valores:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66062882"
   
          Para obter mais informações, consulte [detalhamento em modelos de mineração](data-mining/drillthrough-on-mining-models.md).  
   
-10. Clique em **concluir** para salvar as alterações. Quando você faz isso, o novo modelo é implantado no servidor e processado.  
+10. Clique em **Concluir** para salvar suas alterações. Quando você faz isso, o novo modelo é implantado no servidor e processado.  
   
 ### <a name="related-options"></a>Opções relacionadas  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66062882"
 |**Parâmetros de algoritmo** Caixa de diálogo|Nessas configurações, você pode personalizar cada algoritmo usando parâmetros específicos ao método analítico. Você também pode definir uma semente para garantir que os resultados do modelo possam ser reproduzidos nas passagens de treinamento.<br /><br /> Para obter mais informações, consulte [parâmetros de algoritmo &#40;SQL Server suplementos de mineração de dados&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Definir sinalizadores de modelo de coluna** Caixa de diálogo|Os sinalizadores de modelagem podem melhorar seu modelo especificando como os dados ausentes devem ser tratados. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a>Definindo o uso da coluna  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Definindo o uso da coluna  
  Ao adicionar um novo modelo a uma estrutura de mineração existente, você deverá especificar como o modelo usará cada coluna de dados na estrutura de mineração. Você provavelmente observará que as opções neste assistente são muito mais detalhadas do que as opções na estrutura de mineração. Por quê?  
   
  Isso ocorre porque, quando você cria um modelo e uma estrutura juntos usando um assistente, muitas das opções que controlam a forma como os dados são usados pelo algoritmo são definidas automaticamente. No entanto, ao adicionar um novo modelo a um existente, você precisa ver essas opções manualmente e especificar se os dados devem ser usados para análise, se o tipo de dados está correto e assim por diante.  
@@ -118,4 +118,4 @@ ms.locfileid: "66062882"
  Caso você não consiga visualizar a estrutura de mineração de dados desejada, talvez ela tenha sido salva em outra instância ou em outro banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obter informações sobre como alterar para uma conexão de Data Mining diferente, consulte [conectar-se a um servidor de mineração de dados](connect-to-a-data-mining-server.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)   
+ [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)   

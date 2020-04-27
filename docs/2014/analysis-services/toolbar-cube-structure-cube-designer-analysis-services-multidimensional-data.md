@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066025"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -32,9 +32,9 @@ ms.locfileid: "66066025"
 |**Adicionar Dimensão do Cubo**|Clique para exibir a caixa de diálogo **Adicionar Dimensão do Cubo** e adicionar referências a dimensões novas ou existentes do banco de dados ao cubo.|  
 |**Novo Objeto Vinculado**|Clique para exibir o **Assistente para Objetos Vinculados** e vincular grupos de medidas e dimensões de outros cubos, e para importar ações, KPIs e cálculos ao cubo selecionado.|  
 |**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir os objetos selecionados no painel **Medidas** ou **Dimensões** .|  
-|**Mover para cima**|Clique para mover o item selecionado no painel **Medidas** ou **Dimensões** uma posição para cima.<br /><br /> Observação: esta opção estará desabilitada se o item selecionado não puder ser movido para cima.|  
-|**Mover para baixo**|Clique para mover o item selecionado no painel **Medidas** ou **Dimensões** uma posição para baixo.<br /><br /> Observação: esta opção estará desabilitada se o item selecionado não puder ser movido para baixo.|  
-|**Mostrar Tabela**|Clique para exibir a caixa de diálogo **Mostrar Tabela** e exibir uma tabela da exibição da fonte de dados associada ao cubo no painel **Exibição da Fonte de Dados** .|  
+|**Mover para Cima**|Clique para mover o item selecionado no painel **Medidas** ou **Dimensões** uma posição para cima.<br /><br /> Observação: esta opção estará desabilitada se o item selecionado não puder ser movido para cima.|  
+|**Mover para Baixo**|Clique para mover o item selecionado no painel **Medidas** ou **Dimensões** uma posição para baixo.<br /><br /> Observação: esta opção estará desabilitada se o item selecionado não puder ser movido para baixo.|  
+|**Mostrar tabela**|Clique para exibir a caixa de diálogo **Mostrar Tabela** e exibir uma tabela da exibição da fonte de dados associada ao cubo no painel **Exibição da Fonte de Dados** .|  
 |**Ocultar Tabela**|Clique para ocultar a tabela selecionada no painel **Exibição da Fonte de Dados** .<br /><br /> Observação: essa opção será desabilitada se uma tabela não estiver selecionada no painel **Exibição da Fonte de Dados** .|  
 |**Localizar Tabela**|Clique para exibir a caixa de diálogo **Localizar Tabela** e localizar uma tabela no painel **Exibição da Fonte de Dados** .|  
 |**Zoom**|Clique para alternar entre as seguintes opções de percentual de zoom ou para selecionar uma opção de percentual de zoom disponível para o painel **Exibição da Fonte de Dados** .|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056073"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor de Transformação Scripts (página Entradas e Saídas)
@@ -35,22 +35,22 @@ ms.locfileid: "66056073"
   
  [Propriedades comuns](../../2014/integration-services/common-properties.md)  
   
- [Propriedades personalizadas de Transformação](data-flow/transformations/transformation-custom-properties.md)  
+ [Propriedades personalizadas da transformação](data-flow/transformations/transformation-custom-properties.md)  
   
- **Adicionar saída**  
+ **Adicionar Saída**  
  Adicione uma saída adicional à lista.  
   
- **Adicionar coluna**  
+ **Adicionar Coluna**  
  Selecione uma pasta na qual deseja colocar a nova coluna de saída e adicione a coluna clicando em **Adicionar Coluna**.  
   
- **Remover saída**  
+ **Remover Saída**  
  Selecione uma saída e remova-a clicando em **Remover Saída**.  
   
  **Remover coluna**  
  Selecione uma coluna e remova-a clicando em **Remover Coluna**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Selecionar tipo de componente de script](../../2014/integration-services/select-script-component-type.md)   
  [Editor de transformação scripts &#40;página colunas de entrada&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Editor de transformação scripts &#40;página script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

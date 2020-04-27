@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058216"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar uma política de assinatura por meio da configuração de um valor do Registro
@@ -34,7 +34,7 @@ ms.locfileid: "66058216"
   
  A tabela a seguir lista os valores válidos dos dados de DWORD e sua política associada.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Nenhuma restrição administrativa.|  
 |1|Bloquear assinaturas inválidas.<br /><br /> Essa configuração não bloqueia pacotes não assinados.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66058216"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar uma política de assinatura para pacotes  
   
-1.  No menu **Iniciar** , clique em **Executar**.  
+1.  No menu **Iniciar**, clique em **Executar**.  
   
 2.  Na caixa de diálogo Executar, digite `Regedit`e clique em **OK**.  
   

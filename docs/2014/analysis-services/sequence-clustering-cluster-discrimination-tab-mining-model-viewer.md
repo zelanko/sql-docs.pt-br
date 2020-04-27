@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069142"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Guia Discriminação de Cluster do clustering de sequências (Visualizador do Modelo de Mineração)
@@ -24,7 +24,7 @@ ms.locfileid: "66069142"
   
  Use esta exibição de um modelo de clustering de sequência para comparar dois clusters e ver quais estados e transições são diferentes.  
   
- **Para obter mais informações:** [algoritmo de clustering de sequência da Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster de sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-sequence-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -49,7 +49,7 @@ ms.locfileid: "66069142"
   
  Em geral, um determinado cluster pode conter mais de um estado: por exemplo, um estado comum pode ser a compra de uma Garrafa de Água e Suporte de Garrafa de Água na sequência. Porém, a sequência pode estar presente em outros clusters que têm características de definição mais importantes. Por exemplo, outro cluster pode ser caracterizado mais fortemente por tempos de transação muito curtos, e uma análise revelaria que os itens Garrafa de Água e Suporte de Garrafa de Água estão posicionados para geralmente poderem ser agrupados neste cluster, mas não sempre.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Variáveis**|Um atributo no modelo de mineração.|  
 |**Valores**|Um estado do atributo listado em **Variáveis**.|  

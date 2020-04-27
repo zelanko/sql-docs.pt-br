@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061059"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de Origem CDC (página Gerenciador de Conexões)
@@ -25,7 +25,7 @@ ms.locfileid: "66061059"
  Para obter mais informações sobre a origem CDC, consulte [Origem CDC](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para abrir a página do Gerenciador de conexões do editor de origem CDC**  
+ **Para abrir a página do Gerenciador de Conexões do Editor de Origem CDC**  
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra o pacote [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] que tem a origem CDC.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66061059"
  Selecione na lista um gerenciador de conexões existente ou clique em **Novo** para criar uma nova conexão. A conexão deve ser a um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que está habilitado para CDC e onde a tabela de alteração selecionada está localizada.  
   
  **Novo**  
- Clique em **Nova**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
+ Clique em **Novo**. A caixa de diálogo **Configurar Editor do Gerenciador de Conexões ADO.NET** é aberta, na qual você pode criar um novo gerenciador de conexões  
   
  **Tabela CDC**  
  Selecione a tabela de origem CDC que contém as alterações capturadas que você deseja ler e alimente os componentes SSIS downstream para serem processados.  
@@ -46,7 +46,7 @@ ms.locfileid: "66061059"
  **Capturar instância**  
  Selecione ou digite o nome da instância de captura CDC com a tabela CDC que deve ser lida.  
   
- Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome padrão da instância de captura para uma tabela [esquema].[tabela] é \<esquema>_\<tabela>, mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela da qual a leitura é realmente realizada é a tabela CDC **cdc.\<instância-de-captura>_CT**.  
+ Uma tabela de origem capturada pode ter uma ou duas instâncias capturadas para tratar diretamente a transição da definição de tabela por meio de alterações de esquema. Se mais de uma instância de captura for definida para a tabela de origem que está sendo capturada, selecione a instância de captura que você deseja usar aqui. O nome padrão da instância de captura para uma tabela [esquema].[tabela] é \<esquema>_\<tabela>, mas os nomes reais da instância de captura em uso podem ser diferentes. A tabela real da qual é lida é a tabela CDC **CDC.\<>_CT da instância de captura**.  
   
  **Modo de processamento CDC**  
  Selecione o modo de processamento que melhor trata suas necessidades de processamento. As opções possíveis são:  
@@ -75,7 +75,7 @@ ms.locfileid: "66061059"
  Para obter mais informações, consulte [Propriedades personalizadas da origem CDC](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de Origem CDC &#40;página Colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Editor de origem CDC &#40;página colunas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Editor de Origem CDC &#40;Página Saída de Erro&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

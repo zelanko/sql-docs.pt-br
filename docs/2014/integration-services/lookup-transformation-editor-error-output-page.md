@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057848"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Editor da Transformação Pesquisa (página Saída de Erro)
@@ -42,7 +42,7 @@ ms.locfileid: "66057848"
   
  Esta opção não estará disponível ao selecionar **Redirecionar linhas para uma saída sem-correspondência** na lista **Especificar como lidar com linhas com entradas sem-correspondência** . Essa lista está na página **Geral** da caixa de diálogo **Editor da Transformação Pesquisa** .  
   
- **Tópicos relacionados:** [Tratamento de erro em dados](data-flow/error-handling-in-data.md)  
+ **Tópicos Relacionados:** [Tratamento de erros em dados](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Especifique o que deve acontecer quando ocorrer um truncamento de dados:  
@@ -56,7 +56,7 @@ ms.locfileid: "66057848"
  **Descrição**  
  Visualize a descrição da operação.  
   
- **Definir células selecionadas para este valor**  
+ **Definir células selecionadas com esse valor**  
  Especifique o que deve acontecer com todas as células selecionadas quando ocorrer um erro ou truncamento:  
   
 -   Ignorar falha.  

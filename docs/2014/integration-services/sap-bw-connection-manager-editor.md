@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056279"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor do Gerenciador de Conexões de SAP BW
@@ -109,7 +109,7 @@ ms.locfileid: "66056279"
  **Procurar**  
  Procurar para selecionar uma pasta para o diretório de log.  
   
- **Testar Conexão**  
+ **Testar conexão**  
  Teste a conexão usando os valores que você forneceu. Depois de clicar em **Testar Conexão**, uma caixa de mensagem aparecerá e indicará se a conexão foi bem-sucedida ou falhou.  
   
 ## <a name="see-also"></a>Consulte Também  

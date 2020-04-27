@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055738"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Definir as propriedades de uma restrição de precedência
@@ -68,7 +68,7 @@ ms.locfileid: "66055738"
   
     |Propriedade de leitura/gravação|Ação de configuração|  
     |--------------------------|--------------------------|  
-    |DESCRIÇÃO|Forneça uma descrição.|  
+    |Descrição|Forneça uma descrição.|  
     |EvalOp|Selecione uma operação de avaliação. Se a `Expression`operação, **ExpressionAndConstant**ou **ExpressionOrConstant** for selecionada, você poderá especificar uma expressão.|  
     |Expression|Se a operação de avaliação incluir uma expressão, forneça uma expressão. A expressão deve ser avaliada como um booliano. Para obter mais informações sobre a linguagem de expressão, consulte [Expressões do Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Defina `LogicalAnd` para especificar se a restrição de precedência é avaliada em conjunto com outras restrições de precedência, quando vários executáveis precedem e estão vinculados ao executável restrito|  
@@ -82,7 +82,7 @@ ms.locfileid: "66055738"
   
 ## <a name="see-also"></a>Consulte Também  
  [Restrições de precedência](control-flow/precedence-constraints.md)   
- [Como conectar tarefas e contêineres por meio de uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
+ [Conectar tarefas e contêineres usando uma restrição de precedência padrão](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Definir o valor de uma restrição de precedência usando o menu de atalho](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Usar uma expressão em uma restrição de precedência](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   

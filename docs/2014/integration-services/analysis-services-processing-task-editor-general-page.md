@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061447"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor da Tarefa Processamento do Analysis Services (Página Geral)
@@ -37,7 +37,7 @@ ms.locfileid: "66061447"
  Digite uma descrição da tarefa Processamento do Analysis Services.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [&#40;Analysis Services página do editor da tarefa processamento de Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Tarefa Executar DDL do Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   

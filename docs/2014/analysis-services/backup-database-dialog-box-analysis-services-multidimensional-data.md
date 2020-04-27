@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064376"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Banco de Dados de Backup (Analysis Services - Dados multidimensionais)
@@ -58,7 +58,7 @@ ms.locfileid: "66064376"
  Selecione para substituir um arquivo de backup existente ou arquivo de backup remoto, se houver um.  
   
 > [!NOTE]  
->  Se esta opção não for selecionada e existir o arquivo de backup especificado em **Arquivo de backup** ou um arquivo de backup remoto especificado em **Arquivo de backup remoto** , ocorrerá um erro.  
+>   Se esta opção não for selecionada e existir o arquivo de backup especificado em **Arquivo de backup** ou um arquivo de backup remoto especificado em **Arquivo de backup remoto** , ocorre um erro.  
   
  **Aplicar compactação**  
  Selecione para compactar os conteúdos do arquivo de backup e, se especificado, dos arquivos de backup remotos.  
@@ -70,13 +70,13 @@ ms.locfileid: "66064376"
  Digite a senha a ser usada ao criptografar o arquivo de backup e, se especificados, arquivos de backup remotos.  
   
 > [!NOTE]  
->  Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
+>   Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
   
  **Confirmar Senha**  
  Digite a senha que foi utilizada em **Senha** para confirmar a senha para o arquivo de backup e, se especificados, arquivos de backup remotos.  
   
 > [!NOTE]  
->  Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
+>   Esta opção só será habilitada se **Criptografar arquivo de backup** for selecionado.  
   
  **Fazer backup de partição(ões) remota(s)**  
  Selecione para incluir informações de local e dados para partições remotas no arquivo de backup.  
@@ -87,11 +87,11 @@ ms.locfileid: "66064376"
  **Local de backup da partição remota**  
  Exibe o local das partições remotas associadas com o banco de dados selecionado, como também o arquivo de backup remoto usado para fazer backup de dados e metadados para as partições remotas. As seguintes colunas estão disponíveis:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Servidor**|Exibe a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra as partições remotas.|  
 |**Backup de banco de dados**|Exibe o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contém as partições remotas.|  
-|**Lista de partições**|Exibe a lista de partições remotas contidas no banco de dados exibido em **Banco de Dados**.|  
+|**Lista de Partições**|Exibe a lista de partições remotas contidas no banco de dados exibido em **Banco de Dados**.|  
 |**Arquivo de backup remoto**|Digite o caminho completo e o nome de arquivo do arquivo de backup remoto a ser usado, ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Salvar Arquivo Como** e selecionar o caminho e o nome de arquivo do arquivo de backup remoto a ser usado. Para obter mais informações sobre a caixa de diálogo **Salvar Arquivo Como**, consulte [Caixa de diálogo Salvar Arquivo Como &#40;Analysis Services – Dados Multidimensionais&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte Também  

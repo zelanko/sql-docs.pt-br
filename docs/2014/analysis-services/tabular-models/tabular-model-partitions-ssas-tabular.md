@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066392"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partições de modelo tabular (SSAS tabular)
@@ -32,7 +32,7 @@ ms.locfileid: "66066392"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
  O design de modelo eficaz utiliza partições para eliminar processamento desnecessário e carga de processador subsequente em servidores do Analysis Services, enquanto, ao mesmo tempo, faz certos dados que são processados e atualizados com bastante frequência refletirem os dados mais recentes de fontes de dados.  
   
  Por exemplo, um modelo de tabela pode ter uma tabela de Vendas que inclui dados de vendas durante o ano fiscal de 2011 atual e cada um dos anos fiscais anteriores. A tabela de vendas do modelo tem as três partições a seguir:  
@@ -51,7 +51,7 @@ ms.locfileid: "66066392"
   
  A maneira como você implementa uma estratégia de partição para os modelos de tabela de sua organização dependerá em grande parte de suas necessidades de processamento de dados de modelo e dos recursos disponíveis.  
   
-##  <a name="bkmk_permissions"></a> Permissões  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissões  
  Para criar, gerenciar e processar partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], você deverá ter as permissões do Analysis Services apropriadas definidas em uma função de segurança. Cada função de segurança tem uma das seguintes permissões:  
   
 |Permissão|Ações|  
@@ -62,10 +62,10 @@ ms.locfileid: "66066392"
   
  Para saber mais sobre como criar funções durante a criação do modelo usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md). Para saber mais sobre como gerenciar os membros de função para funções de modelo de tabela implantadas usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Funções de modelo de tabela &#40;SSAS de Tabela&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a>Processar partições  
+##  <a name="process-partitions"></a><a name="bkmk_process_partitions"></a>Processar partições  
  As partições podem ser processadas (atualizadas) de forma independente de outras partições com a caixa de diálogo **Partições** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou usando um script. O processamento tem as seguintes opções:  
   
-|Mode|DESCRIÇÃO|  
+|Mode|Descrição|  
 |----------|-----------------|  
 |Processar Padrão|Detecta o estado de processamento de um objeto de partição e realiza o processamento necessário para passar os objetos de partição não processados ou parcialmente processados para um estado completamente processado. Os dados para tabelas vazias e partições são carregados; hierarquias, colunas calculadas e relações são criadas ou recriadas.|  
 |Processar Completo|Processa um objeto de partição e todos os objetos que ele contém. Quando o comando Processar Completo for executado para um objeto que já foi processado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] removerá todos os dados do objeto e processará o objeto. Esse tipo de processamento é necessário quando uma alteração estrutural é feita em um objeto.|  
@@ -73,11 +73,11 @@ ms.locfileid: "66066392"
 |Processar Limpeza|Remove todos os dados de uma partição.|  
 |Processar adição|Atualize a partição incrementalmente com novos dados.|  
   
-##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
-|[Criar e gerenciar partições de modelo de tabela &#40;SSAS de tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Descreve como criar e gerenciar partições em um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Processar partições de modelo de tabela &#40;SSAS de tabela&#41;](process-tabular-model-partitions-ssas-tabular.md)|Descreve como processar partições em um modelo tabular implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Criar e gerenciar partições de modelos de tabela &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Descreve como criar e gerenciar partições em um modelo de tabela implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Processar partições de modelo de tabela &#40;SSAS de Tabela&#41;](process-tabular-model-partitions-ssas-tabular.md)|Descreve como processar partições em um modelo tabular implantado usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057380"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor de Gerenciador de Conexões OData
   Use a caixa de diálogo **Editor de Gerenciador de Conexões OData** para adicionar uma conexão ou editar uma conexão existente com um OData Source.  
   
 ## <a name="options"></a>Opções  
- **Nome do gerenciador de conexões**  
+ **Nome do Gerenciador de conexões**  
  Nome do gerenciador de conexões.  
   
  **Local do documento de serviço**  
@@ -32,10 +32,10 @@ ms.locfileid: "66057380"
  **Autenticação**  
  Selecione **Autenticação do Windows** ou use **este nome de usuário e senha** para **autenticação**. Se você selecionar a segunda opção, insira o **nome de usuário** e a **senha**.  
   
- **Testar Conexão**  
+ **Testar conexão**  
  Clique neste botão para testar a conexão com o OData Source.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
+ [Gerenciador de conexões do OData](connection-manager/odata-connection-manager.md)  
   
   

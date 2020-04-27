@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062985"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de Precisão (Suplementos de Mineração de Dados do SQL Server)
@@ -49,12 +49,12 @@ ms.locfileid: "66062985"
   
 2.  No grupo de **precisão e validação** , clique em **gráfico de precisão**.  
   
-3.  Na caixa de diálogo **selecionar estrutura ou modelo** , escolha o modelo que você deseja avaliar. Clique em **Próximo**.  
+3.  Na caixa de diálogo **selecionar estrutura ou modelo** , escolha o modelo que você deseja avaliar. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Escolha um modelo bem parecido com os dados que você pretende testar.  
   
-4.  Na caixa de diálogo **especificar coluna para prever e valor a prever** , escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Próximo**.  
+4.  Na caixa de diálogo **especificar coluna para prever e valor a prever** , escolha a coluna que você deseja prever e um valor de destino, se apropriado. Clique em **Avançar**.  
   
      No exemplo acima, você pode escolher a coluna que modela a resposta do cliente e especificar o valor de destino como "Probabilidade de compra".  
   

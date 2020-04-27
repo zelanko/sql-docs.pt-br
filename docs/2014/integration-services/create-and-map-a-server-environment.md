@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060145"
 ---
 # <a name="create-and-map-a-server-environment"></a>Criar e mapear um ambiente de servidor
@@ -28,7 +28,7 @@ ms.locfileid: "66060145"
 > [!IMPORTANT]  
 >  Para uma execução específica, um pacote pode ser executado somente com os valores contidos em um único ambiente de servidor.  
   
- Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção ambientes de servidor **, variáveis de servidor e referências de ambiente de servidor** no [catálogo do SSIS](catalog/ssis-catalog.md).  
+ Você pode consultar as exibições para uma lista de ambientes de servidor, referências de ambiente e variáveis de ambiente. Você também pode chamar procedimentos armazenados para adicionar, excluir, alterar e modificar ambientes, referências de ambiente e variáveis de ambiente. Para obter mais informações, consulte a seção **Ambientes de servidor, variáveis de servidor e referências de ambiente de servidor** em [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para criar e usar um ambiente de servidor  
   

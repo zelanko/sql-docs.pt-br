@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061181"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor da Transformação Cache (página Mapeamentos)
@@ -27,7 +27,7 @@ ms.locfileid: "66061181"
   
  Para obter mais informações sobre a Transformação Cache, consulte [Cache Transform](data-flow/transformations/cache-transform.md).  
   
- Para obter mais informações sobre o Gerenciador de conexões de cache, consulte [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Para saber mais sobre o Gerenciador de conexões de cache, consulte [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
 ## <a name="options"></a>Opções  
  **Colunas de Entrada Disponíveis**  
@@ -43,10 +43,10 @@ ms.locfileid: "66061181"
  **Coluna de Entrada**  
  Exiba as colunas de entrada selecionadas anteriormente neste tópico. É possível alterar os mapeamentos usando a lista **Colunas de Entrada Disponíveis**.  
   
- **Coluna de Destino**  
+ **Coluna de destino**  
  Exiba todas as colunas de destino disponíveis.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor de transformação cache &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Editor de Transformação Cache &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

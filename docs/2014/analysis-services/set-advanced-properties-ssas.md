@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068833"
 ---
 # <a name="set-advanced-properties-ssas"></a>Definir propriedades avançadas (SSAS)
   Esta página do **Assistente de Importação de Tabela** o habilita a especificar configurações de propriedades adicionais para uma conexão de fonte de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Fornecedor**  
+ **Provedores**  
  Selecione o provedor a ser usado para a conexão de fonte de dados. Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador.  
   
  **Cadeia de conexão**  
  As configurações que o designer de modelos usa ao estabelecer uma conexão com uma fonte de dados. Essas informações são úteis para a solução de problemas em conexões.  
   
- **Testar Conexão**  
+ **Testar conexão**  
  Tente estabelecer uma conexão com a fonte de dados usando as configurações atuais. Uma mensagem que indica se a conexão foi bem-sucedida é exibida.  
   
   

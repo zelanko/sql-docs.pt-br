@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062595"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parâmetros do Algoritmo (Suplementos de Mineração de Dados do SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "66062595"
   
  A tabela a seguir lista os parâmetros, descreve sua funcionalidade e fornece links para mais informações técnicas.  
   
-|Nome do parâmetro|Usado em|DESCRIÇÃO|  
+|Nome do parâmetro|Usado em|Descrição|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Algoritmo MTS|Especifica um valor numérico entre 0 e 1 usado para detectar periodicidade. Definir esse valor mais próximo a 1 favorece a descoberta de vários padrões quase periódicos e a geração automática de dicas de periodicidade. Lidar com muitas dicas de periodicidade provavelmente resultará em tempo de treinamento de modelos significativamente maior, mas também em modelos mais precisos. Se o valor for mais próximo a 0, a periodicidade será detectada somente para dados fortemente periódicos.<br /><br /> O padrão é 0.6.|  
 |CLUSTER_COUNT|Algoritmo Microsoft Clustering<br /><br /> Microsoft Sequence Clustering Algorithm|Especifica o número aproximado de clusters a serem criados pelo algoritmo. Se o número aproximado de clusters não pode ser criado a partir dos dados, o algoritmo cria o máximo de clusters possível. Quando CLUSTER_COUNT é definido como 0, o algoritmo usa heurísticos para determinar melhor o número de clusters a serem criados.<br /><br /> O padrão é 10.|  

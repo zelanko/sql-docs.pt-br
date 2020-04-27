@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062728"
 ---
 # <a name="advanced-settings-ssas"></a>Configurações avançadas (SSAS)
@@ -27,7 +27,7 @@ ms.locfileid: "66062728"
 |||  
 |-|-|  
 |Termo|Definição|  
-|**Mecanismo**|Especifique o tipo de codificação a ser usado: ANSI ou Unicode.<br /><br /> O valor **Unicode** corresponde à codificação UTF-16.|  
+|**Codificação**|Especifique o tipo de codificação a ser usado: ANSI ou Unicode.<br /><br /> O valor **Unicode** corresponde à codificação UTF-16.|  
 |**Localidade**|Especifique a localidade para fornecer informações de idioma específicas para solicitações e formatos de data e hora.|  
   
   

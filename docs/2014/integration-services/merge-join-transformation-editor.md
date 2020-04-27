@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057706"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de Transformação Mesclagem
@@ -44,14 +44,14 @@ ms.locfileid: "66057706"
  **Coluna de Entrada**  
  Selecione uma coluna a incluir na saída mesclada da lista de colunas disponíveis na entrada selecionada.  
   
- **Alias de Saída**  
+ **Alias de saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Classificar dados para as transformações mesclagem e junção de mesclagem](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Estender um conjunto de um DataSet usando a transformação junção de mesclagem](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformação Mesclar](data-flow/transformations/merge-transformation.md)   
- [Transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
+ [transformação Unir Tudo](data-flow/transformations/union-all-transformation.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068349"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar Convenções de Nomenclatura (Assistente de Geração de Esquema) (Analysis Services - Dados Multidimensionais)
@@ -26,12 +26,12 @@ ms.locfileid: "66068349"
  **Opção**  
  Especifique as convenções de nomenclatura para uso do assistente. A tabela a seguir descreve as opções que podem ser especificadas.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
-|**Caractere**|Especifica o caractere que separa palavras em um nome de objeto. Na coluna **Valor** , selecione **Sublinhado**, **Espaço**ou **Nenhum**. O padrão é **Sublinhado**.|  
+|**Separador**|Especifica o caractere que separa palavras em um nome de objeto. Na coluna **Valor** , selecione **Sublinhado**, **Espaço**ou **Nenhum**. O padrão é **Sublinhado**.|  
 |**Prefixo da coluna de chave primária**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave primária. O padrão é **PK**.|  
 |**Prefixo da coluna de chave estrangeira**|Especifica a cadeia de caracteres a ser usada como prefixo do nome de cada coluna de chave estrangeira. O padrão é **FK**.|  
-|**Sufixo do nome de atributo**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de atributo. O padrão é **nome**.|  
+|**Sufixo do nome de atributo**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de atributo. O padrão é **Nome**.|  
 |**Sufixo de acúmulo personalizado**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de acúmulo. O padrão é **CustomRollup**.|  
 |**Sufixo de propriedades de acúmulo personalizado**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de propriedade de acúmulo. O padrão é **CustomRollupProperties**.|  
 |**Sufixo de operador unário**|Especifica a cadeia de caracteres a ser acrescentada ao nome de cada coluna de operador unário. O padrão é **UnaryOperator**.|  

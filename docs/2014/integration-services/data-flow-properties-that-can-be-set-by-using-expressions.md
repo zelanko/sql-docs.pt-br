@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059937"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriedades de fluxo de dados que podem ser definidas usando expressões
@@ -70,8 +70,8 @@ ms.locfileid: "66059937"
 |----------------------|--------------|  
 |Destino do ADO NET|Propriedade TableOrViewName<br /><br /> Propriedade BatchSize<br /><br /> Propriedade CommandTimeout|  
 |Destino de arquivo simples|Propriedade Header|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Destino do Compact|Propriedade TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]destino|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destino Compact|Propriedade TableName|  
+|Destino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriedade BulkInsertTableName<br /><br /> Propriedade BulkInsertFirstRow<br /><br /> Propriedade BulkInsertLastRow<br /><br /> Propriedade BulkInsertOrder<br /><br /> Propriedade Timeout|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

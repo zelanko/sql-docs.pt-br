@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059618"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Implantar pacotes usando o utilitário de implantação
@@ -52,7 +52,7 @@ ms.locfileid: "66059618"
   
 2.  Clique duas vezes no arquivo de manifesto, \<project name>.SSISDeploymentManifest, para iniciar o Assistente de Instalação de Pacotes.  
   
-3.  Na página **Implantar Pacotes SSIS**, selecione a opção **Implantação no SQL Server**.  
+3.  Na página **Implantar Pacotes SSIS** , selecione a opção **Implantação no SQL Server** .  
   
 4.  Opcionalmente, selecione **Validar pacotes após instalação** para validar os pacotes depois de instalados no servidor de destino.  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058025"
 ---
 # <a name="integration-services-features-and-tasks"></a>Recursos e tarefas do Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "66058025"
 ## <a name="in-this-section"></a>Nesta seção  
  [Ambientes Integration Services &#40;SSIS&#41; e Studio](integration-services-ssis-development-and-management-tools.md)  
   
- [Pacotes do SSIS &#40;Integration Services&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
  [Conexões do SSIS &#40;Integration Services&#41;](connection-manager/integration-services-ssis-connections.md)  
   

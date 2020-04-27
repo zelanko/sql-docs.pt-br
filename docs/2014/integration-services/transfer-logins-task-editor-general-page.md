@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054958"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Editor da Tarefa Transferir Logons (página Geral)
@@ -35,9 +35,9 @@ ms.locfileid: "66054958"
  Digite uma descrição para a tarefa Transferir Logons.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Logons &#40;Página Logons&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
+ [Editor da tarefa Transferir Logons &#40;página Logons&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   
   

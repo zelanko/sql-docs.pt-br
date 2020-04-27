@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057086"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Editor de Destino de OLE DB (página Mapeamentos)
@@ -34,13 +34,13 @@ ms.locfileid: "66057086"
  Exiba a lista de colunas de destino disponíveis. Use uma operação de arrastar e soltar para mapear as colunas de destino disponíveis na tabela para as colunas de entrada.  
   
  **Coluna de Entrada**  
- Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando **\<ignorar>** para excluir colunas da saída.  
+ Exiba as colunas de entrada que você selecionou. Você pode remover mapeamentos selecionando ** \<ignorar>** para excluir colunas da saída.  
   
- **Coluna de Destino**  
+ **Coluna de destino**  
  Visualize cada coluna de destino disponível, esteja ela mapeada ou não.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB editor de destino &#40;página do Gerenciador de conexões&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [Editor de destino OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Carregar dados por meio do destino OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  

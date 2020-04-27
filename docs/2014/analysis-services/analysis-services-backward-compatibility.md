@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c8a1d9023e0bcbb852974f11ebe4b89d36d93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062635"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
@@ -30,7 +30,7 @@ ms.locfileid: "66062635"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópicos|DESCRIÇÃO|  
+|Tópicos|Descrição|  
 |------------|-----------------|  
 |[Recursos do Analysis Services preteridos no SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)|Descreve recursos que foram retidos na versão atual para manter a compatibilidade com versões anteriores, mas que serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |[Funcionalidade descontinuada do Analysis Services no SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)|Descreve recursos que existiam em versões anteriores do  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mas que foram removidos em versões posteriores.|  

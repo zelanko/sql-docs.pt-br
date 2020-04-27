@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060933"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Concluir o Assistente (Assistente de Atualização de Pacotes SSIS)
   Use a página **Concluir o Assistente** para revisar e confirmar as opções de atualização de pacote que você selecionou. Esta é a última página do assistente que permite voltar e alterar as opções dessa sessão do assistente.  
   
- **Para executar o assistente de atualização de pacote SSIS**  
+ **Para executar o Assistente de Atualização de Pacotes SSIS**  
   
 -   [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>Opções  
- **Resumo das opções**  
+ **Resumo de opções**  
  Revise as opções de atualização que você selecionou no assistente. Para alterar qualquer opção, clique em **Voltar** para voltar a páginas anteriores do assistente.  
   
 ## <a name="see-also"></a>Consulte Também  

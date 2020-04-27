@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057495"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor do Gerenciador de Conexões de Vários Arquivos Simples (página Colunas)
@@ -27,7 +27,7 @@ ms.locfileid: "66057495"
  Para saber mais sobre o gerenciador de conexões de Vários Arquivos Simples, consulte [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
 ## <a name="static-options"></a>Opções estáticas  
- **Nome do gerenciador de conexões**  
+ **Nome do Gerenciador de conexões**  
  Forneça um nome exclusivo para a conexão de Vários Arquivos Simples no fluxo de trabalho. O nome fornecido será exibido no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descrição**  
@@ -39,36 +39,36 @@ ms.locfileid: "66057495"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**CD ALIMENTAÇÃO**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
-|**CD**|As linhas são delimitadas por um retorno de carro.|  
-|**ALIMENTAÇÃO**|As linhas são delimitadas por um avanço de linha.|  
-|**Ponto e vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**{LF}**|As linhas são delimitadas por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As linhas são delimitadas por uma vírgula.|  
-|**Guia {t}**|As linhas são delimitadas por uma tabulação.|  
+|**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
 |**Barra vertical {&#124;}**|As linhas são delimitadas por uma barra vertical.|  
   
  **Delimitador de coluna**  
  Selecione na lista de delimitadores de coluna disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**CD ALIMENTAÇÃO**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
-|**CD**|As colunas são delimitadas por um retorno de carro.|  
-|**ALIMENTAÇÃO**|As colunas são delimitadas por uma alimentação de linha.|  
-|**Ponto e vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
+|**{CR}{LF}**|As colunas são delimitadas por uma combinação de retorno de carro e alimentação de linha.|  
+|**{CR}**|As colunas são delimitadas por um retorno de carro.|  
+|**{LF}**|As colunas são delimitadas por uma alimentação de linha.|  
+|**Ponto-e-vírgula {;}**|As colunas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As colunas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As colunas são delimitadas por uma vírgula.|  
-|**Guia {t}**|As colunas são delimitadas por uma tabulação.|  
+|**Tabulação {t}**|As colunas são delimitadas por uma tabulação.|  
 |**Barra vertical {&#124;}**|As colunas são delimitadas por uma barra vertical.|  
   
- **Redefinir colunas**  
+ **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ### <a name="format--fixed-width"></a>Formato = Largura fixa  
- **La**  
+ **Fonte**  
  Selecione a fonte em que os dados de visualização serão exibidos.  
   
  **Colunas de dados de origem**  
@@ -77,7 +77,7 @@ ms.locfileid: "66057495"
  **Largura da linha**  
  Especifique o comprimento da linha antes de adicionar delimitadores para colunas individuais. Você também pode arrastar a linha vertical na janela de visualização para marcar o fim da linha. O valor de largura da linha é atualizado automaticamente.  
   
- **Redefinir colunas**  
+ **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ### <a name="format--ragged-right"></a>Formato = Irregular à direita  
@@ -85,7 +85,7 @@ ms.locfileid: "66057495"
 > [!NOTE]  
 >  Arquivos irregulares à direita são arquivos nos quais toda coluna tem uma largura fixa, à exceção da última coluna. Ela é delimitada pelo delimitador de linha.  
   
- **La**  
+ **Fonte**  
  Selecione a fonte em que os dados de visualização serão exibidos.  
   
  **Colunas de dados de origem**  
@@ -94,24 +94,24 @@ ms.locfileid: "66057495"
  **Delimitador de linha**  
  Selecione na lista de delimitadores de linha disponíveis ou digite o texto delimitador.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**CD ALIMENTAÇÃO**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
-|**CD**|As linhas são delimitadas por um retorno de carro.|  
-|**ALIMENTAÇÃO**|As linhas são delimitadas por um avanço de linha.|  
-|**Ponto e vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
+|**{CR}{LF}**|As linhas são delimitadas por uma combinação de retorno de carro e avanço de linha.|  
+|**{CR}**|As linhas são delimitadas por um retorno de carro.|  
+|**{LF}**|As linhas são delimitadas por um avanço de linha.|  
+|**Ponto-e-vírgula {;}**|As linhas são delimitadas por um ponto-e-vírgula.|  
 |**Dois-pontos {:}**|As linhas são delimitadas por dois-pontos.|  
 |**Pontos{,}**|As linhas são delimitadas por uma vírgula.|  
-|**Guia {t}**|As linhas são delimitadas por uma tabulação.|  
+|**Tabulação {t}**|As linhas são delimitadas por uma tabulação.|  
 |**Barra vertical {&#124;}**|As linhas são delimitadas por uma barra vertical.|  
   
- **Redefinir colunas**  
+ **Redefinir Colunas**  
  Remova todas as colunas, exceto as originais, clicando em **Redefinir Colunas**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor do Gerenciador de conexões de vários arquivos simples &#40;página avançado&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor do Gerenciador de conexões de vários arquivos simples &#40;página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor do Gerenciador de Conexões de Vários Arquivos Simples &#40;Página Visualização&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057196"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Editor de Destinos ADO NET (página Saída de Erro)
@@ -48,7 +48,7 @@ ms.locfileid: "66057196"
 ### <a name="truncation"></a>Truncation  
  Selecione como o destino ODBC deve tratar truncamento em um fluxo: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Exiba uma descrição do erro.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Definir este valor para células selecionadas  
@@ -70,7 +70,7 @@ ms.locfileid: "66057196"
  A linha que está causando o erro ou o truncamento é direcionada para a saída do erro do destino ODBC. Para obter mais informações, consulte Destino ODBC.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Editor do Destino ODBC &#40;Página Gerenciador de Conexões&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [Editor de destinos ODBC &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor de Destinos ODBC &#40;Página Mapeamentos&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

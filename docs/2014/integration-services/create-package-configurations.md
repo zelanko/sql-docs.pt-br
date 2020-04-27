@@ -19,22 +19,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060164"
 ---
 # <a name="create-package-configurations"></a>Criar configurações de pacote
   Você cria as configurações do pacote por meio da caixa de diálogo **Organizador de Configurações do Pacote** e do Assistente de Configuração de Pacote. Para acessar essas ferramentas, clique em **Configurações do Pacote** no menu de **SSIS** em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  Você também pode acessar o **organizador de configurações do pacote**clicando no botão de reticências ao lado da propriedade de **configuração** . A propriedade Configuração aparece na janela de propriedades para o pacote.  
+>  Você também pode acessar o **Organizador de Configurações de Pacote** clicando no botão de reticências ao lado da propriedade **Configuração**. A propriedade Configuração aparece na janela de propriedades para o pacote.  
   
 > [!NOTE]  
 >  As configurações estão disponíveis para o modelo de implantação de pacote. Os parâmetros são usados no lugar das configurações para o modelo de implantação de projeto. O modelo de implantação de projeto permite que você implante projetos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações sobre os modelos de implantação, consulte [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
- Na caixa de diálogo **Organizador de Configurações do Pacote**, você pode habilitar pacotes para usar configurações, adicionar e excluir configurações e definir a ordem de preferência para carregar as configurações.  
+ Na caixa de diálogo **Organizador de Configurações do Pacote** , você pode habilitar pacotes para usar configurações, adicionar e excluir configurações e definir a ordem de preferência para carregar as configurações.  
   
 > [!NOTE]  
 >  Quando as configurações de pacote são carregadas na ordem preferencial, elas são carregadas da parte superior da lista mostrada na caixa de diálogo **Organizador de Configurações do Pacote** até a parte inferior da lista. Porém, no tempo de execução, talvez as configurações do pacote não sejam carregadas na ordem preferencial. Em particular, as configurações do pacote pai são carregadas depois das configurações de outros tipos.  
@@ -42,7 +42,7 @@ ms.locfileid: "66060164"
 > [!NOTE]  
 >  Se várias configurações definirem a mesma propriedade de objeto, o valor carregado por último será usado no tempo de execução.  
   
- Na caixa de diálogo **Organizador de Configurações do Pacote**, você executa o Assistente de Configuração de Pacotes, que o guia através de etapas para criar uma configuração. Para executar o Assistente de Configuração de Pacotes, adicione uma nova configuração na caixa de diálogo **Organizador de Configurações do Pacote** ou edite uma existente. Nas páginas do assistente, você escolhe o tipo de configuração, escolhe se quer acessar a configuração diretamente ou usar variáveis de ambiente, e seleciona as propriedades a serem salvas na configuração.  
+ Na caixa de diálogo **Organizador de Configurações do Pacote** , você executa o Assistente de Configuração de Pacotes, que o guia através de etapas para criar uma configuração. Para executar o Assistente de Configuração de Pacotes, adicione uma nova configuração na caixa de diálogo **Organizador de Configurações do Pacote** ou edite uma existente. Nas páginas do assistente, você escolhe o tipo de configuração, escolhe se quer acessar a configuração diretamente ou usar variáveis de ambiente, e seleciona as propriedades a serem salvas na configuração.  
   
  O exemplo a seguir mostra as propriedades de destino de uma variável e de um pacote, do modo como são mostradas na página Concluindo o Assistente, no Assistente de Configuração de Pacotes:  
   
@@ -71,13 +71,13 @@ ms.locfileid: "66060164"
 > [!NOTE]  
 >  A última página do Assistente de Configuração de Pacote, Concluindo o Assistente, lista as propriedades de destino da configuração. Se quiser atualizar as propriedades enquanto estiver executando pacotes usando o utilitário prompt de comando **dtexec** , você poderá gerar as cadeias de caracteres que representam os caminhos de propriedade executando o Assistente de Configuração de Pacotes e, então, copiá-las e colá-las na janela do prompt de comando para usar com a opção definida de **dtexec.**  
   
- A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote**.  
+ A tabela a seguir descreve as colunas da lista de configurações na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Nome da configuração**|O nome da configuração.|  
-|**Tipo de configuração**|O tipo de configuração.|  
-|**Cadeia de caracteres de configuração**|O local da configuração. O local pode ser um caminho, uma variável de ambiente, uma chave do Registro, um nome de variável do pacote pai ou uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Tipo de Configuração**|O tipo de configuração.|  
+|**Cadeia de Caracteres de Configuração**|O local da configuração. O local pode ser um caminho, uma variável de ambiente, uma chave do Registro, um nome de variável do pacote pai ou uma tabela em um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Objeto de Destino**|O nome do objeto com uma propriedade que tem uma configuração. Se a configuração for um arquivo de configuração XML, a coluna ficará em branco, devido à configuração poder atualizar vários objetos.|  
 |**Propriedade de Destino**|O nome da propriedade. Se a configuração gravar em um arquivo de configuração XML ou em uma tabela do SQL Server, a coluna ficará em branco, pois a configuração pode atualizar vários objetos.|  
   
@@ -87,11 +87,11 @@ ms.locfileid: "66060164"
   
 2.  No Gerenciador de Soluções, clique duas vezes no pacote para abri-lo.  
   
-3.  No Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)], clique na guia **Fluxo de Controle**, **Fluxo de Dados**, **Manipulador de Eventos** ou **Explorador de Pacotes**.  
+3.  No Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] , clique na guia **Fluxo de Controle**, **Fluxo de Dados**, **Manipulador de Eventos**ou **Explorador de Pacotes** .  
   
 4.  No menu **SSIS** , clique em **Configurações do Pacote**.  
   
-5.  Na caixa de diálogo **Organizador de Configurações do Pacote**, selecione **Habilitar configurações do pacote** e clique em **Adicionar**.  
+5.  Na caixa de diálogo **Organizador de Configurações do Pacote** , selecione **Habilitar configurações do pacote**e clique em **Adicionar**.  
   
 6.  Na página inicial da página Assistente de Configuração de Pacotes, clique em **Avançar**.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "66060164"
   
 9. Na página Concluindo o Assistente, digite o nome da configuração e clique em **Concluir**.  
   
-10. Exiba a configuração na caixa de diálogo **Organizador de Configurações do Pacote**.  
+10. Exiba a configuração na caixa de diálogo **Organizador de Configurações do Pacote** .  
   
-11. Clique em **fechar**  
+11. Clique em **Fechar**.  
   
 ## <a name="external-resources"></a>Recursos externos  
   
@@ -119,6 +119,6 @@ ms.locfileid: "66060164"
 ## <a name="see-also"></a>Consulte Também  
  [Configurações do pacote](../../2014/integration-services/package-configurations.md)   
  [Implantação de pacote &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
- [Trabalhar com variáveis programaticamente](building-packages-programmatically/working-with-variables-programmatically.md)  
+ [Trabalhando com variáveis programaticamente](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

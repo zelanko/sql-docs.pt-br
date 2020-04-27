@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055854"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor da Tarefa Enviar Email (página Geral)
@@ -30,13 +30,13 @@ ms.locfileid: "66055854"
  **Nome**  
  Forneça um nome exclusivo para a tarefa Enviar Email. Esse nome é usado como rótulo no ícone de tarefa.  
   
- **Observação** Os nomes de tarefas devem ser exclusivos em um pacote.  
+ **Nota** Nomes de tarefa devem ser exclusivos no pacote.  
   
  **Descrição**  
  Digite uma descrição para a tarefa Enviar Email.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa Enviar email &#40;página de email&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   

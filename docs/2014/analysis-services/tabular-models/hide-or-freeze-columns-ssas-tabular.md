@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067088"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Ocultar ou congelar colunas (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067088"
  Ao ocultar uma coluna, você tem a opção de ocultá-la apenas enquanto trabalha no designer de modelo ou em relatórios. Se você ocultar todas as colunas, a tabela inteira aparecerá em branco no designer de modelo.  
   
 > [!NOTE]  
->  Se você tiver muitas colunas a serem ocultas, poderá criar uma perspectiva em vez de ocultar e reexibir colunas. Uma perspectiva é uma exibição personalizada dos dados que facilitam o trabalho com um subconjunto de dados relacionados. Para obter mais informações, consulte [criar e gerenciar perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)  
+>  Se você tiver muitas colunas a serem ocultas, poderá criar uma perspectiva em vez de ocultar e reexibir colunas. Uma perspectiva é uma exibição personalizada dos dados que facilitam o trabalho com um subconjunto de dados relacionados. Para obter mais informações, consulte [Criar e gerenciar perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
   
 ### <a name="to-hide-an-individual-column"></a>Para ocultar uma coluna individual  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66067088"
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas e colunas &#40;SSAS de tabela&#41;](tables-and-columns-ssas-tabular.md)   
  [Perspectivas &#40;SSAS de tabela&#41;](perspectives-ssas-tabular.md)   
- [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)  
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

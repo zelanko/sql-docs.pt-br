@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057052"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de Origem OLE DB (página Gerenciador de Conexões)
@@ -49,18 +49,18 @@ ms.locfileid: "66057052"
  **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões OLE DB** .  
   
- **Modo de acesso aos dados**  
+ **Modo de acesso a dados**  
  Especifique o método para selecionar os dados da origem.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Tabela ou exibição|Recupere os dados de uma tabela ou exibição na fonte de dados OLE DB.|  
-|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Nome da tabela ou variável do nome de exibição|Especifique a tabela ou nome de exibição em uma variável.<br /><br /> **Informações relacionadas:** [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupere os dados da fonte de dados OLE DB usando uma consulta SQL.|  
 |Comando SQL a partir da variável|Especifique o texto da consulta SQL em uma variável.|  
   
- **Visualização**  
- Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A **Visualização** pode exibir até 200 linhas.  
+ **Visualizar**  
+ Visualize os resultados usando a caixa de diálogo **Exibição de Dados** . A**visualização** pode exibir até 200 linhas.  
   
 > [!NOTE]  
 >  Quando você visualiza os dados, as colunas com um tipo de dado CLR definido pelo usuário não contêm dados. Em vez disso, o valor \<valor muito grande para ser exibido> ou System.Byte[] é exibido. O primeiro é exibido quando a fonte de dados é acessada usando o provedor SQL OLE DB e o segundo, usando o provedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -68,7 +68,7 @@ ms.locfileid: "66057052"
 ## <a name="data-access-mode-dynamic-options"></a>Opções dinâmicas de modo de acesso aos dados  
   
 ### <a name="data-access-mode--table-or-view"></a>Modo de acesso aos dados = Tabela ou exibição  
- **Nome da tabela ou exibição**  
+ **Nome da tabela ou da exibição**  
  Selecione o nome da tabela ou da exibição na lista de tabelas ou exibições disponíveis na fonte de dados.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acesso aos dados = Variável do nome da tabela ou do nome de exibição  
@@ -79,7 +79,7 @@ ms.locfileid: "66057052"
  **Texto do comando SQL**  
  Digite o texto de uma consulta SQL, crie a consulta clicando em **Construir Consulta**ou localize o arquivo que contém o texto da consulta clicando em **Procurar**.  
   
- **Parâmetros**  
+ **Parameters**  
  Se você inseriu uma consulta parametrizada usando ? como um espaço reservado para o parâmetro no texto da consulta, use a caixa de diálogo **Definir Parâmetros da Consulta** para mapear os parâmetros de entrada da consulta para as variáveis do pacote.  
   
  **Compilar consulta**  
@@ -96,7 +96,7 @@ ms.locfileid: "66057052"
  Selecione a variável que contém o texto da consulta SQL.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de fonte de OLE DB &#40;página colunas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Editor de origem OLE DB &#40;página saída de erro&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extrair dados usando a fonte de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   

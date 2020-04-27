@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067042"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gerenciar funções usando SSMS (SSAS tabular)
@@ -36,7 +36,7 @@ ms.locfileid: "66067042"
 > [!CAUTION]  
 >  Usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar um banco de dados de workspace de modelo de tabela enquanto o projeto de modelo está aberto no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pode corromper o arquivo Model.bim. Ao criar e gerenciar funções para um banco de dados de workspace de modelo de tabela, use o Gerenciador de Função no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a>Para criar uma nova função  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Para criar uma nova função  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela para o qual você quer criar uma nova função, clique com o botão direito do mouse em **Funções**e, em seguida, clique em **Nova Função**.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66067042"
   
 4.  Em **Defina as permissões de banco de dados para essa função**, selecione uma das opções de permissão a seguir:  
   
-    |Permissão|DESCRIÇÃO|  
+    |Permissão|Descrição|  
     |----------------|-----------------|  
-    |**Controle total (administrador)**|Os membros podem fazer modificações ao esquema modelo e podem exibir todos os dados.|  
-    |**Processar banco de dados**|Os membros podem executar as operações Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível exibir dados.|  
+    |**Controle total (Administrador)**|Os membros podem fazer modificações ao esquema modelo e podem exibir todos os dados.|  
+    |**Processar Banco de Dados**|Membros podem executar operações de Processar e Processar Tudo. Não é possível modificar o esquema modelo e não é possível exibir dados.|  
     |**Ler**|Os membros têm permissão de exibir dados (com base em filtros de linha) mas não podem fazer nenhuma alteração ao esquema modelo.|  
   
 5.  Na caixa de diálogo **Criar Função** , na janela Selecionar uma página, clique em **Associação**.  
@@ -67,21 +67,21 @@ ms.locfileid: "66067042"
   
 9. Clique em **OK** para salvar a função.  
   
-###  <a name="bkmk_copy_role"></a>Para copiar uma função  
+###  <a name="to-copy-a-role"></a><a name="bkmk_copy_role"></a> Para copiar uma função  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja copiar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Duplicar**.  
   
-###  <a name="bkmk_edit_role"></a>Para editar uma função  
+###  <a name="to-edit-a-role"></a><a name="bkmk_edit_role"></a>Para editar uma função  
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja editar, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Propriedades**.  
   
      Na caixa de diálogo **Propriedades** \<da função roleName>, você pode alterar permissões, adicionar ou remover membros e adicionar/editar filtros de linha.  
   
-###  <a name="bkmk_deletet_role"></a>Para excluir uma função  
+###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>Para excluir uma função  
   
 -   No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda o modelo de banco de dados de tabela que contém a função que você deseja excluir, expanda **Funções**e, em seguida, clique com o botão direito do mouse na função e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções &#40;SSAS de tabela&#41;](roles-ssas-tabular.md)  
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059055"
 ---
 # <a name="execute-package-task-editor"></a>Editor da tarefa Executar Pacote
@@ -30,17 +30,17 @@ ms.locfileid: "66059055"
   
 -   [Definir as opções na página Geral](#general)  
   
--   [Definir as opções na página pacote](#package)  
+-   [Definir as opções na página Pacote](#package)  
   
--   [Definir as opções na página associações de parâmetro](#parameter)  
+-   [Defina as opções na Página Associação de Parâmetros](#parameter)  
   
-##  <a name="open"></a>Abrir o editor da tarefa Executar Pacote  
+##  <a name="open-the-execute-package-task-editor"></a><a name="open"></a>Abrir o editor da tarefa Executar Pacote  
   
 1.  Abra um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] que contém um tarefa Executar Pacote.  
   
 2.  Clique com o botão direito do mouse na tarefa no Designer SSIS e clique em **Editar**.  
   
-##  <a name="general"></a>Definir as opções na página Geral  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a>Definir as opções na página Geral  
  **Nome**  
  Forneça um nome exclusivo para a tarefa Executar Pacote. Esse nome é usado como rótulo no ícone de tarefa.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66059055"
  **Descrição**  
  Digite uma descrição para a tarefa Executar Pacote.  
   
-##  <a name="package"></a>Definir as opções na página pacote  
+##  <a name="set-the-options-on-the-package-page"></a><a name="package"></a>Definir as opções na página pacote  
  **ReferenceType**  
  Selecione **Referência do Projeto** para pacotes filho que estão no projeto. Selecione **Referência Externa** para pacotes filho localizados fora do pacote  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66059055"
 ### <a name="referencetype-dynamic-options"></a>Opções dinâmicas ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = referência externa  
- **Location**  
+ **Local**  
  Selecione o local de armazenamento do pacote filho. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**SQL Server**|Defina o local como uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**Sistema de Arquivos**|Defina o local para o sistema de arquivos.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66059055"
  **Conexão**  
  Selecione um gerenciador de conexões do OLE DB na lista ou clique em \<**Nova conexão…**> para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:** [OLE DB Gerenciador de conexões](connection-manager/ole-db-connection-manager.md), [Configurar OLE DB Gerenciador de conexões](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Tópicos relacionados:** [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar Gerenciador de Conexões OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Digite o nome do pacote filho ou clique nas reticências (...) e localize o pacote.  
@@ -99,12 +99,12 @@ ms.locfileid: "66059055"
  **Conexão**  
  Selecione um Gerenciador de conexões de arquivo na lista ou clique \<em **nova conexão...**> para criar um novo Gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Exibe o nome do pacote.  
   
-##  <a name="parameter"></a>Definir as opções na página associações de parâmetro  
+##  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a>Definir as opções na página associações de parâmetro  
  Você pode passar valores do pacote pai ou do projeto para o pacote filho. O projeto deve usar o modelo de implantação de projeto e o pacote filho deve ser contido no mesmo projeto que contém o pacote pai.  
   
  Para obter mais informações sobre conversão de um projeto para o modelo de implantação de projetos, consulte [Implantar projetos no Servidor do Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  

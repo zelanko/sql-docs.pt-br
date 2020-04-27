@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062256"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analisar os Influenciadores Principais (Ferramentas de Análise de Tabela para Excel)
@@ -117,6 +117,6 @@ ms.locfileid: "66062256"
   
 ## <a name="see-also"></a>Consulte Também  
  [Ferramentas de análise de tabela para Excel](table-analysis-tools-for-excel.md)   
- [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
+ [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

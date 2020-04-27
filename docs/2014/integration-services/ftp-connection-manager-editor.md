@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058485"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor do Gerenciador de Conexões FTP
@@ -48,13 +48,13 @@ ms.locfileid: "66058485"
  **Usar modo passivo**  
  Especifique se o servidor ou o cliente inicia a conexão. No modo ativo, o servidor inicia a conexão e, no modo passivo, o cliente ativa a conexão. O valor padrão dessa propriedade é **active mode**.  
   
- **Tentativas**  
+ **Novas tentativas**  
  Especifique o número de vezes que a tarefa tenta fazer uma conexão. Um valor de **0** indica que não há limite ao número de tentativas.  
   
  **Tamanho da parte (em KB)**  
  Forneça um tamanho de parte em kilobytes para transmissão de dados.  
   
- **Testar Conexão**  
+ **Testar conexão**  
  Depois de configurar o Gerenciador de Conexões FTP, confirme se a conexão é viável clicando em **Testar Conexão**.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066897"
 ---
 # <a name="partitions-ssas-tabular"></a>Partições (SSAS tabular)
@@ -26,7 +26,7 @@ ms.locfileid: "66066897"
   
 -   [Tarefas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Benefícios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Benefícios  
  Partições, em modelos tabulares, dividem uma tabela em objetos de partição lógicos. Cada partição pode ser processada independentemente de outras partições. Por exemplo, uma tabela pode incluir determinados conjuntos de linha que contêm dados que raramente são alterados, mas outros conjuntos de linha têm dados que são alterados frequentemente. Nestes casos, não há necessidade de processar todos os dados quando você realmente só deseja processar uma parte deles. As partições permitem que você divida porções de dados que você deseja processar com frequência dos dados que podem ser processados com menos frequência.  
   
  O design de modelo eficaz utiliza partições para eliminar processamento desnecessário e carga de processador subsequente em servidores do Analysis Services, enquanto, ao mesmo tempo, faz certos dados que são processados e atualizados com bastante frequência refletirem os dados mais recentes de fontes de dados. O modo como você implementa e utiliza partições durante a criação de modelo pode ser muito diferente de como partições são implementadas e utilizadas para modelos implantados. Mantenha em mente que, durante a fase de criação modelo, você pode estar trabalhando com somente um subconjunto dos dados que estarão, no final das contas, em seu modelo implantado.  
@@ -44,15 +44,15 @@ ms.locfileid: "66066897"
 ### <a name="partitions-in-a-deployed-model-database"></a>As partições em um banco de dados modelo implantado  
  Quando você implanta um modelo, as partições para o banco de dados modelo implantado são exibidas como objetos de banco de dados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode criar, editar, mesclar e excluir partições para um modelo implantado usando a caixa de diálogo Partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Gerenciar partições para um modelo implantado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] está fora do escopo deste tópico. Para saber sobre gerenciamento de partições no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Criar e gerenciar partições de modelos tabulares &#40;SSAS de Tabela&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tarefas relacionadas  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Criar e gerenciar partições no banco de dados de espaço de trabalho &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md)|Descreve como criar e gerenciar partições no banco de dados de workspace modelo usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|[Criar e gerenciar partições no banco de dados de workspace &#40;SSAS de Tabela&#41;](workspace-database-ssas-tabular.md)|Descreve como criar e gerenciar partições no banco de dados de workspace modelo usando o Gerenciador de Partições no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |[Processar partições no banco de dados de espaço de trabalho &#40;SSAS tabular&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Descreve como processar (atualizar) partições no banco de dados de workspace modelo.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modo DirectQuery &#40;SSAS de tabela&#41;](directquery-mode-ssas-tabular.md)   
- [Processar dados &#40;SSAS de tabela&#41;](../process-data-ssas-tabular.md)  
+ [Processar dados &#40;SSAS de Tabela&#41;](../process-data-ssas-tabular.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057754"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapear conjuntos de resultados para variáveis em uma tarefa Executar SQL
@@ -30,7 +30,7 @@ ms.locfileid: "66057754"
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contém o pacote desejado.  
   
-2.  No **Gerenciador de Soluções**, clique duas vezes no pacote para abri-lo.  
+2.  Em **Gerenciador de soluções**, clique duas vezes no pacote para abri-lo.  
   
 3.  Clique na guia **Fluxo de Controle** .  
   

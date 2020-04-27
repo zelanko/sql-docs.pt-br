@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068062"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Exibição padrão (guia Agregações, Designer de Cubo)
@@ -24,10 +24,10 @@ ms.locfileid: "66068062"
   
 ## <a name="options"></a>Opções  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Criar Agregações**|Clique para exibir o **Assistente de Design de Agregação**.|  
-|**Otimização baseada no uso**|Clique para exibir o assistente de **otimização com base no uso** .|  
+|**Otimização baseada no uso**|Clique para exibir o **Assitente de Otimização com Base no Uso** .|  
 |**Atribuir Design de Agregação**|Clique para exibir a caixa de diálogo **Atribuir Design de Agregação** .|  
 |**Delete (excluir)**|Clique para excluir o design de agregação selecionado.|  
 |**Propriedades**|Clique para exibir as propriedades da agregação.|  

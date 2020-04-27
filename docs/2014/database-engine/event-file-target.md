@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064858"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -26,7 +26,7 @@ ms.locfileid: "66064858"
   
  A tabela a seguir descreve as opções disponíveis para configurar o destino de arquivo de evento.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |nome do arquivo|Qualquer cadeia de caracteres até 260 caracteres. Esse valor é necessário.|O local e nome do arquivo.<br /><br /> É possível usar qualquer extensão de nome de arquivo.|  
 |max_file_size|Qualquer inteiro de 64 bits. Esse valor é opcional.|O tamanho máximo de arquivo em megabytes (MB). Se max_file_size não for especificado, o arquivo aumentará até que o disco fique cheio. O tamanho de arquivo padrão é 1 GB.<br /><br /> max_file_size deve ser maior que o tamanho atual dos buffers de sessão. Se não for, o destino de arquivo não inicializará, reportando que max_file_size é inválido. Para exibir o tamanho atual dos buffers, examine a coluna buffer_size na exibição de gerenciamento dinâmico [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) .<br /><br /> Se o tamanho do arquivo padrão for menor do que o tamanho do buffer de sessão, é recomendável definir max_file_size com o valor especificado na coluna max_memory na exibição do catálogo [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .<br /><br /> Quando max_file_size é definido com um tamanho maior que o tamanho dos buffers de sessão, ele pode ser arredondado para baixo, para o múltiplo mais próximo do tamanho do buffer de sessão. Isso pode criar um arquivo de destino menor do que o valor especificado de max_file_size. Por exemplo, se o tamanho do buffer é 100 MB e max_file_size está definido como 150 MB, o tamanho de arquivo resultante é arredondado para baixo para 100 MB, porque um segundo buffer não caberia nos 50 MB restantes de espaço.<br /><br /> Se o tamanho do arquivo padrão for menor do que o tamanho do buffer de sessão, é recomendável definir max_file_size com o valor da coluna max_memory na exibição do catálogo [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .|  
@@ -58,9 +58,9 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Destinos de eventos estendidos do SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [SQL Server destinos de eventos estendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys. fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [CRIAR sessão de evento &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

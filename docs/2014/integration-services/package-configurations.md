@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056889"
 ---
 # <a name="package-configurations"></a>Configurações do Pacote
@@ -44,7 +44,7 @@ ms.locfileid: "66056889"
   
 -   As configurações tornam os pacotes mais flexíveis. Por exemplo, uma configuração pode atualizar o valor de uma variável usada em uma expressão de propriedade.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]dá suporte a vários métodos diferentes de armazenamento de configurações de pacote, como arquivos XML, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabelas em um banco de dados e variáveis de ambiente e pacote.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oferece suporte a vários métodos diferentes de armazenamento de configurações de pacote, como arquivos XML, tabelas em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e variáveis de ambiente e pacote.  
   
  Cada configuração é um par propriedade/valor. O arquivo de configuração XML e os tipos de configuração [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem incluir várias configurações.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66056889"
 ## <a name="package-configuration-types"></a>Tipos de configuração de pacotes  
  A tabela a seguir descreve os tipos de configuração de pacotes.  
   
-|Type|DESCRIÇÃO|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Arquivo de configuração XML|Um arquivo XML contém as configurações. O arquivo XML pode incluir várias configurações.|  
 |Variável de ambiente|Uma variável de ambiente contém a configuração.|  
-|Entrada de Registro|Uma entrada de Registro contém a configuração.|  
+|Entrada de registro|Uma entrada de Registro contém a configuração.|  
 |Variável de pacote pai|Uma variável no pacote contém a configuração. Normalmente, esse tipo de configuração é usado para atualizar as propriedades em pacotes filho.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tabela|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
+|Tabela [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Uma tabela em um banco de dados [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que contém a configuração. A tabela pode incluir várias configurações.|  
   
 ### <a name="xml-configuration-files"></a>Arquivos de configuração XML  
  Se você selecionar o tipo de configuração **arquivo de configuração XML** , poderá criar um novo arquivo de configuração, reutilizar um arquivo existente e adicionar configurações novas ou reutilizar um arquivo existente, mas substituir o conteúdo do arquivo.  
@@ -120,7 +120,7 @@ ms.locfileid: "66056889"
   
 ```  
   
-### <a name="registry-entry"></a>Entrada de Registro  
+### <a name="registry-entry"></a>Entrada do Registro  
  Se você desejar usar uma entrada de Registro para armazenar a configuração, poderá usar uma chave existente ou criar uma nova chave em HKEY_CURRENT_USER. A chave do Registro que você usa deve ter um valor denominado `Value`. O valor pode ser um DWORD ou uma cadeia de caracteres.  
   
  Se você selecionar o tipo de configuração **Entrada de Registro** , digitará o nome da chave do Registro na caixa de entrada de Registro. O formato é \<registry key>. Se desejar usar uma chave do Registro que não está na raiz de HKEY_CURRENT_USER, use o formato \<Registry key\registry key\\...> para identificar a chave. Por exemplo, para usar a chave MyPackage localizada em SSISPackages, digite `SSISPackages\MyPackage`.  
@@ -144,7 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  O nome fornecido para a configuração é o valor armazenado na coluna **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Configurações diretas e indiretas  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornece configurações diretas e indiretas. Se você especificar as configurações diretamente, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] criará um vínculo direto entre o item de configuração e a propriedade de objeto do pacote. As configurações diretas são a melhor escolha quando o local da origem não é alterado. Por exemplo, se você tiver certeza de que todas as implantações no pacote usam o mesmo caminho de arquivo, poderá especificar um arquivo de configuração XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece configurações diretas e indiretas. Se você especificar as configurações diretamente, o [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] criará um vínculo direto entre o item de configuração e a propriedade de objeto do pacote. As configurações diretas são a melhor escolha quando o local da origem não é alterado. Por exemplo, se você tiver certeza de que todas as implantações no pacote usam o mesmo caminho de arquivo, poderá especificar um arquivo de configuração XML.  
   
  As configurações indiretas usam variáveis de ambiente. Em vez de especificar os parâmetros de configuração diretamente, a configuração aponta para uma variável de ambiente que, por sua vez, contém o valor da configuração. O uso de configurações indiretas é a escolha mais adequada quando o local da configuração pode ser alterado em cada implantação de um pacote.  
   

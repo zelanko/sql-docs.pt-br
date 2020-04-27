@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065764"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas de dados de processo (SSAS tabular)
@@ -34,19 +34,19 @@ ms.locfileid: "66065764"
   
 -   [Restrições quanto a alterações feitas em uma fonte de dados](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a>Como funciona o processamento de dados  
+##  <a name="how-data-processing-works"></a><a name="bkmk_how_df_works"></a>Como funciona o processamento de dados  
  Quando você processa os dados, os dados no designer de modelo são substituídos por novos dados. Não é possível importar apenas linhas de dados novas ou só de dados alterados. O designer de modelo não acompanha quais linhas foram adicionadas anteriormente.  
   
  O processamento dos dados ocorre como uma transação. Isso significa que, uma vez iniciada a atualização dos dados, toda a atualização falhará ou será bem-sucedida; você jamais terá dados parcialmente corretos.  
   
  O processo de dados manual, iniciada no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], é tratado pela instância de memória local do Analysis Services. Portanto, a operação de processamento dos dados pode afetar o desempenho de outras tarefas no computador. Porém, se você agendar o processo automático de dados em um modelo implantado usando um script, a instância do Analysis Services gerenciará o processo de importação e seu controle de tempo.  
   
-##  <a name="bkmk_impact_of_df"></a>Impacto do processamento de dados  
+##  <a name="impact-of-data-processing"></a><a name="bkmk_impact_of_df"></a>Impacto do processamento de dados  
  Um processo de dados normalmente dispara recálculo de dados.  O processamento de dados significa a obtenção dos mais recentes das origens externas; recalculando significa a atualização do resultado de todas as fórmulas que usam dados que foram alterados. Uma operação de processamento normalmente dispara o recálculo.  
   
  Portanto, você deve estar sempre atento ao impacto potencial antes de alterar as fontes de dados ou processar os dados obtidos na fonte de dados, além de considerar estas consequências em potencial:  
   
--   Algumas partes dos dados do modelo podem ser corrompidas devido a alterações feitas na fonte de dados. Se nem todas as colunas puderem ser recuperadas na fonte de dados (por exemplo, se elas foram excluídas ou alteradas), haverá falha no processo e você deverá atualizar os mapeamentos entre os dados de origem e os dados do modelo. Para obter mais informações, consulte [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
+-   Algumas partes dos dados do modelo podem ser corrompidas devido a alterações feitas na fonte de dados. Se nem todas as colunas puderem ser recuperadas na fonte de dados (por exemplo, se elas foram excluídas ou alteradas), haverá falha no processo e você deverá atualizar os mapeamentos entre os dados de origem e os dados do modelo. Para obter mais informações, consulte [Editar uma conexão de fonte de dados existente &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
   
 -   Após o processamento, algumas colunas podem ser sinalizadas por conterem um erro. Isso pode acontecer porque a fórmula da DAX na coluna usa dados que ficaram indisponíveis quando você os processou, o tipo de coluna foi alterado ou um valor inválido foi adicionado aos dados externos. Para resolver o problema, você poderá editar a fórmula ou excluir a coluna se for baseada em dados que não estão mais disponíveis.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66065764"
   
 -   Quando você altera um filtro, todo o modelo deve ser recalculado.  
   
-##  <a name="bkmk_det_source"></a>Determinando a fonte de dados  
+##  <a name="determining-the-source-of-data"></a><a name="bkmk_det_source"></a>Determinando a fonte de dados  
  Se você não tiver certeza da origem dos dados do modelo, poderá usar as ferramentas no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para obter os detalhes, inclusive o nome do arquivo de origem e o caminho.  
   
 #### <a name="to-find-the-source-of-existing-data"></a>Para localizar a fonte de dados existente  
@@ -73,7 +73,7 @@ ms.locfileid: "66065764"
   
 6.  Na caixa de diálogo **Editar Conexões** , exiba as informações da conexão, como o nome do banco de dados, o caminho do arquivo ou o caminho do relatório.  
   
-##  <a name="bkmk_det_last_ref"></a>Determinando quando os dados foram atualizados pela última vez  
+##  <a name="determining-when-data-was-last-refreshed"></a><a name="bkmk_det_last_ref"></a>Determinando quando os dados foram atualizados pela última vez  
  É possível usar as Propriedades da Tabela para determinar quando os dados foram atualizados pela última vez.  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>Para localizar a data e a hora do último processamento de uma tabela  
@@ -84,7 +84,7 @@ ms.locfileid: "66065764"
   
 3.  Na caixa de diálogo **Editar Propriedades da Tabela** , **Última Atualização** mostra a última data em que a tabela foi atualizada.  
   
-##  <a name="bkmk_restrictions"></a>Restrições em fontes de dados atualizáveis  
+##  <a name="restrictions-on-refreshable-data-sources"></a><a name="bkmk_restrictions"></a>Restrições em fontes de dados atualizáveis  
  Algumas restrições aplicam-se às fontes de dados que podem ser processadas automaticamente de um modelo implantado em uma instância do Analysis Services. Selecione apenas as fontes de dados que atendam aos seguintes critérios:  
   
 -   A fonte de dados deve estar disponível no momento em que ocorre o processo de dados e disponível no local indicado. Se a fonte de dados original estiver em uma unidade de disco local do usuário que criou o modelo, você deverá excluir essa fonte de dados da operação de processo de dados ou encontrar uma forma de publicar essa fonte de dados em um local acessível por uma conexão de rede. Se você mover uma fonte de dados para um local de rede, abra o modelo no designer de modelo e repita as etapas de recuperação de dados. Isso é necessário para restabelecer as informações da conexão armazenadas nas propriedades de conexão da fonte de dados.  
@@ -97,7 +97,7 @@ ms.locfileid: "66065764"
   
      Uma fonte de dados externa é acessada através de uma cadeia de conexão inserida, uma URL ou um caminho UNC que você especificou quando importou os dados originais para o modelo usando o Assistente de Importação de Tabela. As informações de conexão originais armazenadas na conexão de fonte de dados são reutilizadas nas operações de atualização de dados subsequentes. Não há informações de conexão separadas que sejam criadas e gerenciadas para fins de processo de dados; apenas as informações de conexão existentes são usadas.  
   
-##  <a name="bkmk_rest_changes"></a>Restrições de alterações em uma fonte de dados  
+##  <a name="restrictions-on-changes-to-a-data-source"></a><a name="bkmk_rest_changes"></a>Restrições de alterações em uma fonte de dados  
  Há algumas restrições nas alterações que você pode fazer a uma fonte de dados:  
   
 -   Os tipos de dados de uma coluna somente podem ser alterados para um tipo de dados compatível. Por exemplo, se os dados da coluna contiverem números decimais, você não poderá alterar o tipo de dados para inteiro. No entanto, você pode alterar os dados numéricos para texto. Para obter mais informações sobre tipos de dados, consulte [Tipos de dados com suporte &#40;SSAS de Tabela&#41;](tabular-models/data-types-supported-ssas-tabular.md).  
@@ -106,6 +106,6 @@ ms.locfileid: "66065764"
   
 ## <a name="see-also"></a>Consulte Também  
  [Processar manualmente os dados &#40;SSAS de tabela&#41;](manually-process-data-ssas-tabular.md)   
- [Editar uma conexão de fonte de dados existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Editar uma conexão de fonte de dados existente &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

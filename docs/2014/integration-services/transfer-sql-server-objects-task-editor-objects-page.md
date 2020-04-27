@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054873"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor da Tarefa Transferir Objetos do SQL Server (página Objetos)
@@ -52,10 +52,10 @@ ms.locfileid: "66054873"
  **ExistingData**  
  Especifique como os dados serão copiados para o servidor de destino. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Substitua**|Os dados no servidor de destino serão substituídos.|  
-|**Acrescentar**|Os dados copiados do servidor de origem serão anexados aos dados existentes no servidor de destino.|  
+|**Anexar**|Os dados copiados do servidor de origem serão anexados aos dados existentes no servidor de destino.|  
   
 > [!NOTE]  
 >  A opção **ExistingData** só ficará disponível quando **CopyData** for definido como **True**.  
@@ -64,7 +64,7 @@ ms.locfileid: "66054873"
  Selecione se o esquema deve ser copiado durante a tarefa Transferir Objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  **CopySchema** está disponível somente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+>  **CopySchema** só está disponível para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **UseCollation**  
  Selecione se a transferência de objetos deve incluir a ordenação especificada no servidor de origem.  
@@ -79,7 +79,7 @@ ms.locfileid: "66054873"
  Expanda **ObjectsToCopy** para especificar quais objetos devem ser copiados do banco de dados de origem para o banco de dados de destino.  
   
 > [!NOTE]  
->  **ObjectsToCopy** só estará disponível quando **CopyAllObjects** for definido como **false**.  
+>  **ObjectsToCopy** só ficará disponível quando **CopyAllObjects** for definido como **False**.  
   
  As opções para copiar os seguintes tipos de objeto têm suporte apenas no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66054873"
  **CopyAllViews**  
  Selecione se a tarefa deve copiar todas as exibições no banco de dados de origem especificado ou apenas as exibições selecionadas.  
   
- **Viewlist**  
+ **ViewsList**  
  Clique para abrir a caixa de diálogo **Selecionar Exibições** .  
   
  **CopyAllStoredProcedures**  
@@ -187,7 +187,7 @@ ms.locfileid: "66054873"
  **CopyAllSqlAssemblies**  
  Selecione se a tarefa deve copiar todos os assemblies do SQL no banco de dados de origem especificado ou apenas os assemblies do SQL selecionados. Com suporte apenas no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Sqlassemblylist**  
+ **SqlAssembliesList**  
  Clique para abrir a caixa de diálogo **Selecionar Assemblies do SQL** .  
   
  **CopyAllUserDefinedAggregates**  
@@ -209,10 +209,10 @@ ms.locfileid: "66054873"
  Clique para abrir a caixa de diálogo **Selecionar Coleções de Esquemas XML** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor da tarefa transferir objetos do SQL Server &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerações sobre segurança para uma instalação do SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

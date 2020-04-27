@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058428"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor da Tarefa FTP (página Geral)
@@ -28,12 +28,12 @@ ms.locfileid: "66058428"
   
 ## <a name="options"></a>Opções  
  **FtpConnection**  
- Selecione um gerenciador de conexões FTP existente ou clique em \<**Nova conexão…**> para criar um gerenciador de conexões.  
+ Selecione um Gerenciador de conexões de FTP existente ou \<clique em **nova conexão...**> para criar um Gerenciador de conexões.  
   
 > [!IMPORTANT]  
 >  O gerenciador de conexões de FTP dá suporte apenas para autenticação anônima e autenticação básica. Ele não suporta a Autenticação do Windows.  
   
- **Tópicos relacionados**: [Gerenciador de conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor de Gerenciador de conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Tópicos relacionados**: [Gerenciador de Conexões de FTP](connection-manager/ftp-connection-manager.md), [Editor do Gerenciador de Conexões de FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Indique se a tarefa FTP deve ser encerrada se a operação FTP falhar.  
@@ -48,7 +48,7 @@ ms.locfileid: "66058428"
  Digite uma descrição para a tarefa FTP.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa FTP &#40;página transferência de arquivos&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Página Expressões](expressions/expressions-page.md)  
   

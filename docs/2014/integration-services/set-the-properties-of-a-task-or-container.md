@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055666"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Definir as propriedades de uma tarefa ou de um contêiner
@@ -55,7 +55,7 @@ ms.locfileid: "66055666"
   
      Para obter informações sobre como configurar um contêiner Loop For, consulte [Para configurar um contêiner Loop For](control-flow/for-loop-container.md).  
   
-     Para obter informações sobre como configurar um contêiner Loop Foreach, consulte [Para configurar um contêiner Loop Foreach](control-flow/foreach-loop-container.md).  
+     Para obter informações sobre como configurar o contêiner Loop Foreach, consulte [configurar um contêiner Loop Foreach](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  O contêiner Sequência não tem um editor personalizado.  
@@ -69,7 +69,7 @@ ms.locfileid: "66055666"
 8.  Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
  [Contêineres do Integration Services](control-flow/integration-services-containers.md)  
   
   

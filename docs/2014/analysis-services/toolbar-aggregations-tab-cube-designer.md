@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066187"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Barra de Ferramentas (guia Agregações, Designer de Cubo)
@@ -22,13 +22,13 @@ ms.locfileid: "66066187"
   
 ## <a name="options"></a>Opções  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Criar Agregações**|Clique para exibir o **Assistente de Design de Agregação**.<br /><br /> Observação: esta opção só é exibida na exibição padrão do designer de agregação.|  
-|**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso**.<br /><br /> Observação: esta opção só é exibida na exibição padrão do designer de agregação.|  
+|**Otimização baseada no uso**|Clique para exibir o **Assistente de otimização com base no uso**.<br /><br /> Observação: esta opção só é exibida na exibição padrão do designer de agregação.|  
 |**Atribuir Design de Agregação**|Clique para exibir a caixa de diálogo **Atribuir Design de Agregação** .|  
 |**Exibição Padrão**|Clique para exibir a **Exibição Padrão** do designer de agregação em que você pode criar e modificar designs de agregações usando o **Assistente de Design de Agregação** ou o **Assistente de Otimização com Base no Uso**.|  
-|**Exibição Avançada**|Clique para exibir a **Exibição Avançada** do designer de agregação em que você pode criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.<br /><br /> Observação: o **Assistente de Design de Agregação** e o **Assistente de Otimização com Base no Uso** não estão disponíveis nessa exibição.|  
+|**Exibição Avançada**|Clique para exibir a **Exibição Avançada** do designer de agregação em que você pode criar e modificar manualmente designs de agregação e agregações individuais. Essa exibição só deverá ser usada por usuários avançados.<br /><br /> Observação: o **Assistente de design de agregação** e o **Assistente de otimização com base no uso** não estão disponíveis nesta exibição.|  
 |**Novo Design de Agregação**|Clique para exibir a caixa de diálogo **Novo Design de Agregação** . Você pode criar um design de agregação vazio ou pode criar uma cópia de um design de agregação existente.<br /><br /> Observação: esta opção só é exibida na exibição avançada do designer de agregação.|  
 |**Delete (excluir)**|Clique para excluir um design de agregação selecionado.  Na exibição avançada do designer de agregação também pode ser usada para excluir uma agregação de um design de agregação.|  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061613"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor da Tarefa Executar DDL do Analysis Services (Página DDL)
@@ -28,14 +28,14 @@ ms.locfileid: "66061613"
   
 ## <a name="static-options"></a>Opções estáticas  
  **Conexão**  
- Selecione um projeto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou um gerenciador de conexões [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões do Analysis Services** para criar uma nova conexão.  
+ Selecione um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projeto ou um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gerenciador de conexões na lista ou clique em \< **nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de conexões Analysis Services** para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Adicionar Analysis Services caixa de diálogo Gerenciador de conexões referência de interface do usuário](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Gerenciador de conexões](connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Gerenciador de Conexão do Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  Especifique a origem da instrução DDL. As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Entrada direta**|Define a origem da instrução DDL armazenada na caixa de texto **SourceDirect** . A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
 |**Conexão de arquivo**|Define a origem para um arquivo que contém a instrução DDL. A seleção deste valor exibe as opções dinâmicas na seção a seguir.|  
@@ -44,27 +44,27 @@ ms.locfileid: "66061613"
 ## <a name="dynamic-options"></a>Opções dinâmicas  
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrada Direta  
- **Origem**  
- Digite as instruções DDL ou clique nas reticências **(...)** e digite as instruções na caixa de diálogo **Instruções DDL**.  
+ **Fonte**  
+ Digite as instruções DDL ou clique nas reticências **(...)** e, em seguida, digite as instruções na caixa de diálogo **instruções DDL** .  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
- **Origem**  
- Selecione uma conexão de Arquivo na lista ou clique em \<**Nova conexão...**> e use a caixa de diálogo **Adicionar Gerenciador de Conexões de Arquivos** para criar uma nova conexão.  
+ **Fonte**  
+ Selecione uma conexão de arquivo na lista ou clique em \< **nova conexão...**> e use a caixa de diálogo **Gerenciador de conexões de arquivos** para criar uma nova conexão.  
   
- **Tópicos relacionados:** [Gerenciador de conexões de arquivos](connection-manager/file-connection-manager.md)  
+ **Tópicos relacionados:** [Adicionar Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Variable  
- **Origem**  
- Selecione uma variável na lista ou clique em \<**Nova variável...**> e use a caixa de diálogo **Adicionar Variável** para criar uma nova variável.  
+ **Fonte**  
+ Selecione uma variável na lista ou clique em \< **nova variável...**> e use a caixa de diálogo **Adicionar variável** para criar uma nova variável.  
   
- **Tópicos relacionados:** [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md)  
+ **Tópicos relacionados:** [Variáveis do Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services executar o editor da tarefa DDL &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [Fluxo de Controle](control-flow/control-flow.md)   
  [Analysis Services linguagem de script &#40;referência de&#41; do ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis &#40;referência de&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Referência de XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

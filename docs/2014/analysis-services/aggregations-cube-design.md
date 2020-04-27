@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062663"
 ---
 # <a name="aggregations-cube-design"></a>Agregações (Design de Cubo)
@@ -23,7 +23,7 @@ ms.locfileid: "66062663"
  A guia **Agregações** contém os seguintes painéis:  
   
 ## <a name="panes"></a>Painéis  
- **Barra de ferramentas**  
+ **Barra**  
  Use a barra de ferramentas para executar ações comuns na guia.  
   
  **Exibição Padrão**  

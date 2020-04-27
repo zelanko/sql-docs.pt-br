@@ -16,29 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064677"
 ---
 # <a name="browsing-a-clustering-model"></a>Procurando um modelo de clustering
   Quando você abre um modelo de clustering usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de clustering [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no. O visualizador ajuda a explorar os clusters que foram criados e compreender características do cluster. Você também pode comparar e contrastar segmentos individuais com outros segmentos ou com a população.  
   
-##  <a name="BKMK_Tabs"></a>Explorar o modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar o modelo  
  A janela **procurar** inclui as ferramentas a seguir para ajudá-lo a entender seu modelo de clustering e explorar os atributos dos grupos de dados subjacentes:  
   
--   [Diagrama de cluster](#BKMK_ClusterDiagram)  
+-   [Diagrama de Cluster](#BKMK_ClusterDiagram)  
   
 -   [Perfis de cluster](#BKMK_ClusterProfiles)  
   
 -   [Características do cluster](#BKMK_ClusterCharacteristics)  
   
--   [Discriminação de cluster](#BKMK_ClusterDiscrimination)  
+-   [Discriminação do Cluster](#BKMK_ClusterDiscrimination)  
   
  Para experimentar um modelo de clustering, você pode usar os dados de exemplo na guia treinamento da pasta de trabalho de dados de exemplo e criar um modelo de clustering usando o [Assistente de cluster &#40;suplementos de mineração de dados para o Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) e todos os padrões.  
   
-###  <a name="BKMK_ClusterDiagram"></a>Diagrama de cluster  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>Diagrama de cluster  
  A guia **diagrama de cluster** exibe todos os clusters que estão em um modelo de mineração. Aqui você pode ver quantos agrupamentos diferentes foram encontrados no conjunto de dados e a distância entre eles.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Explorar o diagrama de cluster  
@@ -85,7 +85,7 @@ ms.locfileid: "66064677"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>Perfis de cluster  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a> Perfis de Cluster  
  A guia **perfis de cluster** permite que você compare a composição de todos os clusters em um relance. Este é um bom local para iniciar quando você estiver se familiarizado com o modelo. Esta exibição também será útil posteriormente, se você explorou um cluster específico e decidir que precisa localizar os relacionados.  
   
  Os **perfis de cluster** também fornecem uma boa visão geral de como os clusters são diferentes uns dos outros. Consequentemente, pode ser conveniente usar essa exibição para dar a cada cluster um nome descritivo.  
@@ -148,7 +148,7 @@ ms.locfileid: "66064677"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>Características do cluster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> Características do Cluster  
  A exibição Características do Cluster permite que você realmente explore um único cluster, para localizar os atributos que caracterizam mais fortemente esse grupo de dados.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Explorar as características do cluster  
@@ -185,7 +185,7 @@ ms.locfileid: "66064677"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>Discriminação de cluster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>Discriminação de cluster  
  Use a guia **discriminação de cluster** para comparar atributos entre dois clusters ou entre um cluster e todos os outros casos no conjunto de dados.  
   
  Para destacar os recursos desse visualizador, vamos compará-lo com as tabelas lado a lado no Excel que você criou com base na exibição de **características do cluster** .  

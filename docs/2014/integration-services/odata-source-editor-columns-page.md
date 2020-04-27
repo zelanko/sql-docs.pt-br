@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057336"
 ---
 # <a name="odata-source-editor-columns-page"></a>Editor de Origem do OData (página Colunas)
@@ -29,13 +29,13 @@ ms.locfileid: "66057336"
  **Coluna Externa**  
  Exiba as colunas de origem que você escolheu para serem incluídas na saída.  
   
- **Coluna de Saída**  
+ **Coluna de saída**  
  Forneça um nome exclusivo para cada coluna de saída. O padrão é o nome da coluna externa (origem) selecionada; porém, é possível escolher qualquer nome descritivo exclusivo.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Editor de origem OData &#40;página conexão&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Editor de origem OData &#40;página saída de erro&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Origem do OData](data-flow/odata-source.md)   
- [Gerenciador de Conexões OData](connection-manager/odata-connection-manager.md)  
+ [Gerenciador de conexões do OData](connection-manager/odata-connection-manager.md)  
   
   

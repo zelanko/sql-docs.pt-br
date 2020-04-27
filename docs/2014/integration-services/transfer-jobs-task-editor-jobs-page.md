@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054985"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor da Tarefa Transferir Trabalhos (página Trabalhos)
@@ -39,13 +39,13 @@ ms.locfileid: "66054985"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Verdadeiro**|Copia todas as tarefas.|  
-|**Falso**|Copia apenas os trabalhos especificados.|  
+|**True**|Copia todas as tarefas.|  
+|**For**|Copia apenas os trabalhos especificados.|  
   
- **Trabalhos**  
- Clique no botão Procurar **(...)** para selecionar os trabalhos a serem copiados. Pelo menos um trabalho deve ser selecionado.  
+ **JobsList**  
+ Clique no botão procurar **(...)** para selecionar os trabalhos a serem copiados. Pelo menos um trabalho deve ser selecionado.  
   
 > [!NOTE]  
 >  Especifique a **SourceConnection** antes de selecionar trabalhos para copiar.  
@@ -57,27 +57,27 @@ ms.locfileid: "66054985"
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**FailTask**|A tarefa irá falhar se já existirem trabalhos com o mesmo nome no servidor de destino.|  
-|**Overwrite**|A tarefa irá substituir trabalhos de mesmo nome no servidor de destino.|  
-|**Skip**|A tarefa irá ignorar os trabalhos de mesmo nome que existem no servidor de destino.|  
+|**Gravado**|A tarefa irá substituir trabalhos de mesmo nome no servidor de destino.|  
+|**Saltar**|A tarefa irá ignorar os trabalhos de mesmo nome que existem no servidor de destino.|  
   
  **EnableJobsAtDestination**  
  Selecione se os trabalhos copiados para o servidor de destino devem ser habilitados.  
   
  As opções desta propriedade estão listadas na seguinte tabela:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Verdadeiro**|Habilita trabalhos no servidor de destino.|  
-|**Falso**|Desabilita trabalhos no servidor de destino.|  
+|**True**|Habilita trabalhos no servidor de destino.|  
+|**For**|Desabilita trabalhos no servidor de destino.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Tarefas do Integration Services](control-flow/integration-services-tasks.md)   
- [Editor da Tarefa Transferir Trabalhos &#40;Página Geral&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expressões](expressions/expressions-page.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Tarefas de Integration Services](control-flow/integration-services-tasks.md)   
+ [Editor da tarefa Transferir trabalhos &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página de expressões](expressions/expressions-page.md)   
  [gerenciador de conexões SMO](connection-manager/smo-connection-manager.md)  
   
   

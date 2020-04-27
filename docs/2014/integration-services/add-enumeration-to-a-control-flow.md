@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061905"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Adicionar enumeração a um fluxo de controle
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner do Loop Foreach, um elemento de fluxo de controle que torna simples a inclusão de um constructo de loop que enumera arquivos e objetos no fluxo de controle de um pacote. Para obter mais informações, consulte [Contêiner Loop Foreach](control-flow/foreach-loop-container.md).  
   
  O contêiner Loop Foreach não fornece nenhuma funcionalidade, ele só fornece a estrutura na qual você cria o fluxo de controle repetível, especifica o tipo do enumerados e configura o enumerador. Para fornecer funcionalidade de contêiner, você deve incluir no mínimo uma tarefa no contêiner Loop Foreach. Para obter mais informações, consulte [Tarefas do Integration Services](control-flow/integration-services-tasks.md).  
@@ -48,6 +47,6 @@ ms.locfileid: "66061905"
  [Agrupar ou desagrupar componentes](group-or-ungroup-components.md)   
  [Restrições de precedência](control-flow/precedence-constraints.md)   
  [Adicionar iteração a um fluxo de controle](add-iteration-to-a-control-flow.md)   
- [Fluxo de Controle](control-flow/control-flow.md)  
+ [Fluxo de controle](control-flow/control-flow.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063185"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relações de Atributo (Designer de Dimensão) (Analysis Services - Dados multidimensionais)
@@ -25,7 +25,7 @@ ms.locfileid: "66063185"
 ## <a name="panes"></a>Painéis  
  A página **Relações de Atributo** contém os seguintes painéis:  
   
- [Barra de ferramentas](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Use a barra de ferramentas para executar operações na guia **Relações de Atributo** do Designer de Dimensão.  
   
  [diagrama de Relações de Atributo](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

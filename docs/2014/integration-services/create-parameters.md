@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060137"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -33,18 +33,18 @@ ms.locfileid: "66060137"
   
 2.  Clique no botão **Adicionar Parâmetro** na barra de ferramentas.  
   
-     ![Adicionar botão da barra de ferramentas](media/denali-parameter-add.gif "Botão Adicionar Barra de Ferramentas")  
+     ![Botão de barra de ferramentas Adicionar](media/denali-parameter-add.gif "Botão de barra de ferramentas Adicionar")  
   
 3.  Insira valores para as propriedades **Nome**, **Tipo de Dados**, **Valor**, **Diferencia**e **Obrigatório** na própria lista ou na janela **Propriedades** . A tabela a seguir descreve essas propriedades.  
   
-    |Propriedade|DESCRIÇÃO|  
+    |Propriedade|Descrição|  
     |--------------|-----------------|  
     |Nome|O nome do parâmetro.|  
     |Tipo de dados|O tipo de dados do parâmetro.|  
     |Valor padrão|O valor padrão do parâmetro atribuído em tempo de design. Também conhecido como o padrão de design.|  
     |Sigiloso|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
-    |Obrigatório|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
-    |DESCRIÇÃO|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
+    |Necessária|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
+    |Descrição|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
   
     > [!NOTE]  
     >  Quando você implanta um projeto no catálogo, várias propriedades adicionais são associadas ao projeto. Para ver todas as propriedades de todos os parâmetros no catálogo, use a exibição [catalog.object_parameters &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database).  
@@ -67,18 +67,18 @@ ms.locfileid: "66060137"
   
 3.  Clique no botão **Adicionar Parâmetro** na barra de ferramentas.  
   
-     ![Adicionar botão da barra de ferramentas](media/denali-parameter-add.gif "Botão Adicionar Barra de Ferramentas")  
+     ![Botão de barra de ferramentas Adicionar](media/denali-parameter-add.gif "Botão de barra de ferramentas Adicionar")  
   
 4.  Insira valores para as propriedades **Nome**, **Tipo de Dados**, **Valor**, **Diferencia**e **Obrigatório** .  
   
-    |Propriedade|DESCRIÇÃO|  
+    |Propriedade|Descrição|  
     |--------------|-----------------|  
     |Nome|O nome do parâmetro.|  
     |Tipo de dados|O tipo de dados do parâmetro.|  
     |Valor padrão|O valor padrão do parâmetro atribuído em tempo de design. Também conhecido como o padrão de design.|  
     |Sigiloso|Valores de parâmetros confidenciais são criptografados no catálogo e aparecem como um valor NULL quando exibidos com o Transact-SQL ou o SQL Server Management Studio.|  
-    |Obrigatório|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
-    |DESCRIÇÃO|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
+    |Necessária|Exige que um valor diferente do padrão de design seja especificado para que o pacote possa ser executado.|  
+    |Descrição|Para fins de manutenção, a descrição do parâmetro. No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], defina a descrição do parâmetro na janela Propriedades do Visual Studio quando o parâmetro for selecionado na janela de parâmetros aplicável.|  
   
 5.  Salve o projeto para salvar as alterações nos parâmetros. O valores de parâmetros são armazenados em configurações no arquivo de projeto. Salve o arquivo de projeto para confirmar em disco as alterações nos valores de parâmetros.  
   

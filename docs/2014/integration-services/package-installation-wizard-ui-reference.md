@@ -22,16 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056825"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referência da interface do usuário do Assistente de Instalação de Pacotes
   Use o **Assistente de Instalação de Pacotes** para implantar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , inclusive os pacotes e arquivos diversos contidos nele, bem como todas as dependências do pacote.  
   
- Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
+ Antes de implantar pacotes, você pode criar configurações e implantá-las com os pacotes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa configurações para atualizar dinamicamente as propriedades de pacotes e objetos de pacote em tempo de execução. Por exemplo, a cadeia de conexão de uma conexão OLE DB pode ser definida dinamicamente em tempo de execução fornecendo-se uma configuração que mapeie um valor para uma propriedade que contenha a cadeia de conexão.  
   
  Você não pode executar o Assistente de Instalação de Pacotes enquanto não criar um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e um utilitário de implantação. Para obter mais informações, consulte [Implantar pacotes por meio do utilitário de implantação](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66056825"
  **Não mostrar esta página inicial novamente**  
  Selecione para ignorar a página inicial ao executar o assistente novamente.  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -56,7 +56,7 @@ ms.locfileid: "66056825"
  **Arquivo de configuração**  
  Edite o conteúdo de um arquivo de configuração selecionando o arquivo na lista.  
   
- **Tópicos relacionados:** [criar configurações de pacote](../../2014/integration-services/create-package-configurations.md)  
+ **Related Topics:** [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
  **Caminho**  
  Exiba o caminho da propriedade a ser configurada.  
@@ -67,7 +67,7 @@ ms.locfileid: "66056825"
  **Valor**  
  Especifique o valor da configuração.  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056825"
 ## <a name="confirm-installation-page"></a>Página Confirmar Instalação  
  Use a página **Confirmar Instalação** para iniciar a instalação de pacotes, para exibir o status e para exibir as informações que serão usadas pelo assistente para instalar os arquivos a partir do projeto especificado.  
   
- **Última**  
+ **Avançar**  
  Instale os pacotes e suas dependências e vá para a próxima página do assistente quando instalação for concluída.  
   
  **Status**  
@@ -98,7 +98,7 @@ ms.locfileid: "66056825"
  **Validar pacotes após a instalação**  
  Indique se é preciso validar os pacotes após a instalação.  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -107,7 +107,7 @@ ms.locfileid: "66056825"
 ## <a name="packages-validation-page"></a>Página Validação de Pacotes  
  Use a página **Validação de Pacotes** para exibir o progresso e os resultados da validação do pacote.  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
 ## <a name="select-installation-folder-page"></a>Página Selecionar Pasta de Instalação  
@@ -120,7 +120,7 @@ ms.locfileid: "66056825"
  **Procurar**  
  Procure a pasta de destino usando a caixa de diálogo **Procurar Pasta** .  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  
@@ -156,7 +156,7 @@ ms.locfileid: "66056825"
  **Depender do armazenamento do servidor para criptografia**  
  Selecione esta opção para usar os recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)] para ajudar a manter a segurança dos pacotes.  
   
- **Última**  
+ **Avançar**  
  Vá para a próxima página do assistente.  
   
  **Concluir**  

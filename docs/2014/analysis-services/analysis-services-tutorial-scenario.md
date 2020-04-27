@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062440"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
-  Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
+  Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  
   
  Nos últimos anos, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquiriu uma fábrica pequena, a Importadores Neptuno, situada no México. A Importadores Neptuno fabrica vários subcomponentes importantes para a linha de produtos da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Esses subcomponentes são transportados para as instalações de Bothell para o assembly de produto final. Em 2005, a Importadores Neptuno se tornou o fabricante e o distribuidor exclusivo do grupo de produtos de bicicleta de passeio.  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66062440"
  As lições no tutorial do Analysis Services fornecem orientação sobre como criar um banco de dados de cubo que atende a todas estas metas. Para começar, continue na primeira lição: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelagem multidimensional &#40;tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Modelagem multidimensional &#40;Tutorial do Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

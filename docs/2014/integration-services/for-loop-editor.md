@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058572"
 ---
 # <a name="for-loop-editor"></a>Editor do Loop For
@@ -44,9 +44,9 @@ ms.locfileid: "66058572"
  Forneça uma descrição do contêiner do Loop For.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página Expressões](expressions/expressions-page.md)   
- [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Página de expressões](expressions/expressions-page.md)   
+ [Contêiner Loop Foreach](control-flow/foreach-loop-container.md)   
  [Configurar um contêiner Loop For](../../2014/integration-services/configure-a-for-loop-container.md)  
   
   

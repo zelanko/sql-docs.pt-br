@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069220"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Seleção (caixa de diálogo Propriedades da Partição) (SSMS)
@@ -30,10 +30,10 @@ ms.locfileid: "66069220"
   
  A grade contém as seguintes colunas:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Nome**|Exibe o nome da partição.|  
-|**Origem**|Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.|  
+|**Fonte**|Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.|  
 |**Agregações**|Exibe uma cadeia de caracteres que descreve o design de agregação usado pela partição.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058517"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de Loop Foreach (página Geral)
@@ -35,11 +35,11 @@ ms.locfileid: "66058517"
  Digite uma descrição do contêiner Loop Foreach.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de loop foreach &#40;página de coleção&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor de loop foreach &#40;página Mapeamentos de variáveis&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Página Expressões](expressions/expressions-page.md)   
- [Contêiner do Loop Foreach](control-flow/foreach-loop-container.md)   
+ [Página de expressões](expressions/expressions-page.md)   
+ [Contêiner Loop Foreach](control-flow/foreach-loop-container.md)   
  [Contêiner Loop For](control-flow/for-loop-container.md)  
   
   

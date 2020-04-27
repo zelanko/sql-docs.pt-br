@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065295"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Opções de execução da consulta do Analysis Services (página Geral)
@@ -25,7 +25,7 @@ ms.locfileid: "66065295"
  **Tempo limite de execução**  
  Indica o número de segundos para aguardar antes de cancelar a consulta. Um valor 0 indica uma espera infinita ou nenhum tempo limite.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefina todos os valores desta página com os valores padrão originais.  
   
   

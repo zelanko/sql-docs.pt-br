@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061764"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor de Destino ADO NET (Página Saída de Erro)
@@ -42,7 +42,7 @@ ms.locfileid: "66061764"
  **Erro**  
  Especifique o que deve acontecer quando ocorre um erro: ignorar a falha, redirecionar a linha ou causar falha no componente.  
   
- **Tópicos relacionados:** [Tratamento de erro em dados](data-flow/error-handling-in-data.md)  
+ **Tópicos Relacionados:** [Tratamento de erros em dados](data-flow/error-handling-in-data.md)  
   
  **Truncation**  
  Não usado.  
@@ -58,6 +58,6 @@ ms.locfileid: "66061764"
   
 ## <a name="see-also"></a>Consulte Também  
  [Editor de destino ADO NET &#40;página Gerenciador de conexões&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor de destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Editor de Destino ADO NET &#40;página Mapeamentos&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

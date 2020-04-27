@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066162"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -38,10 +38,10 @@ ms.locfileid: "66066162"
  **Filtrar Membros**  
  Clique para exibir a caixa de diálogo **Filtrar Membros** e filtrar os membros exibidos em **Nível e Membros** na hierarquia selecionada.  
   
- **-**  
+ **Write-back**  
  Selecione para definir o painel **Nível e Membros** em modo de write-back de dimensão.  
   
- **Diminuir recuo**  
+ **Diminuir Recuo**  
  Clique para tornar o membro selecionado em **Nível e Membros** um irmão de seu membro pai.  
   
 > [!NOTE]  

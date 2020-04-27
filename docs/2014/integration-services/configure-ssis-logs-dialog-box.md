@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060593"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>caixa de diálogo Configurar Logs do SSIS
@@ -36,12 +36,12 @@ ms.locfileid: "66060593"
   
 4.  [Configurar as opções na guia Detalhes](#detail)  
   
-##  <a name="open_dialog"></a>Abrir a caixa de diálogo Configurar Logs do SSIS  
+##  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a>Abrir a caixa de diálogo Configurar Logs do SSIS  
  **Para abrir a caixa de diálogo Configurar Logs de SSIS**  
   
 -   No [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, clique em **Log** no menu **SSIS** .  
   
-##  <a name="container"></a>Configurar as opções no painel contêineres  
+##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>Configurar as opções no painel contêineres  
  Use o painel **Contêineres** da caixa de diálogo **Configurar Logs do SSIS** para habilitar o pacote e seus contêineres para logs.  
   
 ### <a name="options"></a>Opções  
@@ -56,7 +56,7 @@ ms.locfileid: "66060593"
   
  Se um contêiner estiver esmaecido e você quiser definir as opções de log no contêiner, clique duas vezes em sua caixa de seleção. O primeiro clique apaga a caixa de seleção e o segundo clique a seleciona, permitindo escolher os provedores de log que serão usados e selecionar as informações que serão registradas.  
   
-##  <a name="provider"></a>Configurar as opções na guia provedores e logs  
+##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>Configurar as opções na guia provedores e logs  
  Use a guia **Provedores e Logs** da caixa de diálogo **Configurar Logs do SSIS** para criar e configurar logs para a captura de eventos do tempo de execução.  
   
 ### <a name="options"></a>Opções  
@@ -73,14 +73,14 @@ ms.locfileid: "66060593"
  O campo de descrição é editável. Clique e modifique a descrição padrão do log.  
   
  **Configuração**  
- Selecione um gerenciador de conexões existente na lista ou clique em \<**Nova conexão...**> para criar um novo gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
+ Selecione um Gerenciador de conexões existente na lista ou clique em \< **nova conexão...**> para criar um novo Gerenciador de conexões. Dependendo do tipo de provedor de log, você poderá configurar um gerenciador de conexões OLE DB ou um gerenciador de conexões Arquivo. O provedor de log do [!INCLUDE[msCoName](../includes/msconame-md.md)] Log de Eventos do Windows não requer conexão.  
   
  Tópicos relacionados: [Gerenciador de conexões OLE DB](connection-manager/ole-db-connection-manager.md) , [Gerenciador de Conexões de Arquivos](connection-manager/file-connection-manager.md)  
   
  **Delete (excluir)**  
  Selecione um provedor de log e clique em **Excluir**.  
   
-##  <a name="detail"></a>Configurar as opções na guia detalhes  
+##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a>Configurar as opções na guia detalhes  
  Use a guia **Detalhes** da caixa de diálogo **Configurar Logs do SSIS** para especificar eventos e detalhes informativos a serem habilitados para log. As informações selecionadas se aplicam a todos os provedores de logs no pacote. Por exemplo, você não pode gravar determinadas informações na instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e informações diferentes em um arquivo de texto.  
   
 ### <a name="options"></a>Opções  
@@ -93,7 +93,7 @@ ms.locfileid: "66060593"
  **Avançado**  
  Marque ou desmarque os eventos para log e marque ou desmarque informações que serão usadas no log de cada evento. Clique em **Básico** para ocultar todos os detalhes de log, exceto a lista de eventos. As informações a seguir estão disponíveis para log:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Ele**|O nome do computador no qual o evento de log ocorreu.|  
 |**Operador**|O nome de usuário da pessoa que iniciou o pacote.|  

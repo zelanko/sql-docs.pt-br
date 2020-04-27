@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066090"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Partições, Designer de Cubo) (Analysis Services - Dados multidimensionais)
@@ -22,12 +22,12 @@ ms.locfileid: "66066090"
   
 ## <a name="options"></a>Opções  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo.|  
 |**Processo**|Clique para exibir a caixa de diálogo **Processar** e processar o grupo de medidas ou a partição selecionada.|  
 |**Nova partição**|Clique para exibir o **Assistente para Partições** e criar uma nova partição no grupo de medidas selecionado.|  
-|**Nome**|Clique para renomear a partição selecionada.<br /><br /> Observação: esta opção será habilitada apenas se uma célula de uma partição estiver selecionada na grade **Partições** de um grupo de medidas no painel **Grupos de Medidas** .|  
+|**Renomear**|Clique para renomear a partição selecionada.<br /><br /> Observação: esta opção será habilitada apenas se uma célula de uma partição estiver selecionada na grade **Partições** de um grupo de medidas no painel **Grupos de Medidas** .|  
 |**Delete (excluir)**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a ação selecionada.<br /><br /> Observação: esta opção será habilitada apenas se toda a linha de uma partição estiver selecionada na grade **Partições** de um grupo de medidas no painel **Grupos de Medidas** .<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Criar Agregações**|Clique para exibir o **Assistente de Design de Agregação** e criar um design de agregação para a partição selecionada.<br /><br /> Observação: esta opção será habilitada apenas se uma célula de uma partição estiver selecionada na grade **Partições** de um grupo de medidas no painel **Grupos de Medidas** .<br /><br /> Observação: esta opção será desabilitada se uma partição de write-back for selecionada.|  
 |**Otimização baseada no uso**|Clique para exibir o **Assistente de Otimização com Base no Uso** e criar um design de agregação baseado em padrões de uso existentes para a partição selecionada.<br /><br /> Observação: esta opção será habilitada apenas se uma célula de uma partição estiver selecionada na grade **Partições** de um grupo de medidas no painel **Grupos de Medidas** .<br /><br /> Observe também que essa opção estará desabilitada se uma partição de write-back for selecionada.|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058816"
 ---
 # <a name="file-connection-manager-editor"></a>Editor do Gerenciador de Conexões de Arquivos
@@ -33,14 +33,14 @@ ms.locfileid: "66058816"
  **Tipo de uso**  
  Especifique se o **Gerenciador de Conexões de Arquivos** conecta a um arquivo ou pasta existente ou crie um novo arquivo ou pasta.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Criar arquivo|Crie um novo arquivo em tempo de execução.|  
 |Arquivo existente|Use um arquivo existente.|  
 |Criar pasta|Crie uma nova pasta em tempo de execução.|  
 |Pasta existente|Use uma pasta existente.|  
   
- **Arquivo/pasta**  
+ **Arquivo / Pasta**  
  Se **Arquivo**, especifique o arquivo a usar.  
   
  Se **Pasta**, especifique a pasta a usar.  

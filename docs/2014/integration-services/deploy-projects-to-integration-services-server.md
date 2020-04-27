@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059575"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
@@ -36,7 +36,7 @@ ms.locfileid: "66059575"
     -   Se você criou o projeto em uma versão anterior do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], depois que abrir o arquivo de projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], converta o projeto no modelo de implantação de projeto.  
   
         > [!NOTE]  
-        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
          Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66059575"
   
      Para obter mais informações sobre a atualização de pacotes, consulte [Atualizar pacotes do Integration Services](install-windows/upgrade-integration-services-packages.md) e [Atualizar pacotes do Integration Services usando o Assistente de Atualização de Pacote SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte as instruções abaixo: [Para implantar um projeto no Servidor do Integration Services](#deploy).  
+3.  Implante o projeto no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obter mais informações, consulte as instruções abaixo: [para implantar um projeto no Integration Services Server](#deploy).  
   
 4.  (Opcional) Crie um ambiente para o projeto implantado. Para obter mais informações, consulte [Criar e mapear um ambiente de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a>Para converter um projeto para o modelo de implantação de projeto  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>Para converter um projeto para o modelo de implantação de projeto  
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]e, no Gerenciador de Soluções, clique com o botão direito do mouse no projeto e clique em **Converter em Modelo de Implantação de Projeto**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66059575"
   
 2.  Conclua o assistente. Para obter mais informações, consulte [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a>Para implantar um projeto no Integration Services Server  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>Para implantar um projeto no Integration Services Server  
   
 1.  Abra o projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]e, em seguida, no menu **Projeto** , selecione **Implantar** para implantar o **Assistente de Implantação do Integration Services**.  
   

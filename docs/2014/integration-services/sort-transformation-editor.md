@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055488"
 ---
 # <a name="sort-transformation-editor"></a>Editor de Transformação Classificação
@@ -39,13 +39,13 @@ ms.locfileid: "66055488"
  **Coluna de Entrada**  
  Selecione colunas para cada linha na lista de colunas de entrada disponíveis. As seleções se refletem naquelas da caixa de seleção da tabela **Colunas de Entrada Disponíveis** .  
   
- **Alias de Saída**  
+ **Alias de saída**  
  Digite um alias para cada coluna de saída. O padrão é o nome da coluna de entrada; no entanto, é possível escolher qualquer nome descritivo exclusivo.  
   
  **Tipo de Classificação**  
  Indique se a classificação deve ser feita em ordem ascendente ou descendente.  
   
- **Sort Order**  
+ **Ordem de classificação**  
  Indique a ordem na qual classificar as colunas. Deve ser definido manualmente para cada coluna.  
   
  **Sinalizadores de Comparação**  

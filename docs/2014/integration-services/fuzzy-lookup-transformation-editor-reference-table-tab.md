@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058311"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa Difusa (guia Tabela de Referência)
@@ -48,7 +48,7 @@ ms.locfileid: "66058311"
  **Armazenar novo índice**  
  Selecione esta opção para salvar o novo índice de pesquisa.  
   
- **Nome do novo índice**  
+ **Novo nome de índice**  
  Se você optou por salvar o novo índice de pesquisa, digite um nome descritivo para o índice.  
   
  **Manter índice armazenado**  
@@ -59,15 +59,15 @@ ms.locfileid: "66058311"
 >   
 >  Como a opção **Manter índice armazenado** requer a integração CLR, esse recurso funciona apenas quando você seleciona uma tabela de referência em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em que a integração CLR está habilitada.  
   
- **Usar índice existente**  
+ **Usar índice já existente**  
  Especifique que a transformação deve usar um índice existente na pesquisa.  
   
- **Nome de um índice existente**  
+ **Nome de um índice já existente**  
  Selecione um índice de pesquisa criado anteriormente na lista.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de Transformação Pesquisa Difusa &#40;guia Colunas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor de transformação pesquisa difusa &#40;guia Avançado&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de transformação pesquisa difusa &#40;guia colunas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Editor de Transformação Pesquisa Difusa &#40;Guia Avançado&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060706"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configurar o visualizador de dados (Guia Histograma)
@@ -33,7 +33,7 @@ ms.locfileid: "66060706"
  [Configurar o Visualizador de dados &#40;guia gráfico de colunas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar o Visualizador de dados &#40;guia grade&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurar o Visualizador de dados &#40;guia plotagem de dispersão&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
- [Fluxo de Dados](data-flow/data-flow.md)   
+ [Fluxo de dados](data-flow/data-flow.md)   
  [Depurar o fluxo de dados](troubleshooting/debugging-data-flow.md)  
   
   

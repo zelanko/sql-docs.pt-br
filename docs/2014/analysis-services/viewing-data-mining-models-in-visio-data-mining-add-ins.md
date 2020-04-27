@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065515"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Exibindo modelos de mineração de dados no Visio (suplementos de mineração de dados)
@@ -67,7 +67,7 @@ ms.locfileid: "66065515"
   
      Amplie o zoom em seções específicas, pesquise os nós que contenham um determinado atributo, ou filtre um grafo de dependência por suas extremidades (probabilidade).  
   
-## <a name="walkthroughs"></a>Instruções passo a passo  
+## <a name="walkthroughs"></a>Passo a passo  
  Por obter exemplos de como trabalhar com um diagrama preenchido e interpretá-lo, consulte estes tópicos:  
   
  [Passo a passo do diagrama de cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  

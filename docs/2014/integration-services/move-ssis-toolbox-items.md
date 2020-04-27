@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057554"
 ---
 # <a name="move-ssis-toolbox-items"></a>Mover itens da caixa de ferramentas do SSIS
@@ -24,17 +24,17 @@ ms.locfileid: "66057554"
   
 1.  Clique com o botão direito no item na Caixa de Ferramentas do SSIS e clique em uma das seguintes opções:  
   
-    -   **Mover para favoritos**  
+    -   **Mover para Favoritos**  
   
-    -   **Mover para Common**  
+    -   **Mover para Comum**  
   
-    -   **Mover para outras fontes**  
+    -   **Mover para Outras Origens**  
   
-    -   **Mover para outros destinos**  
+    -   **Mover para Outros Destinos**  
   
-    -   **Mover para outras transformações**  
+    -   **Mover para Outras Transformações**  
   
-    -   **Mover para outras tarefas**  
+    -   **Mover para Outras Tarefas**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>Para atualizar a caixa de ferramentas do SSIS  
   

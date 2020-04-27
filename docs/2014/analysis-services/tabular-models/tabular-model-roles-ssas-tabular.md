@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066447"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Funções de modelo de tabela (SSAS tabular)
@@ -24,8 +24,8 @@ ms.locfileid: "66066447"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
-|[Gerenciar funções usando o SSMS &#40;SSAS tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Descreve como criar funções, adicionar e remover membros de uma função, alterar as permissões para uma função, e adicionar, editar ou remover filtros em nível de linha usando o DAX.|  
+|[Gerenciar funções usando o SSMS &#40;SSAS de Tabela&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Descreve como criar funções, adicionar e remover membros de uma função, alterar as permissões para uma função, e adicionar, editar ou remover filtros em nível de linha usando o DAX.|  
   
   
