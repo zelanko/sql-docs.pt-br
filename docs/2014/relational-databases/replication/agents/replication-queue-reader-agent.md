@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191667"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de Leitor de Fila de Replicação
-  O Queue Reader Agent de replicação é um executável que lê as mensagens armazenadas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma fila [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ou uma fila de mensagens e, em seguida, aplica essas mensagens ao Publicador. O Queue Reader Agent é usado com publicações de instantâneo e transacionais que permitem atualização em fila.  
+  O Queue Reader Agent de Replicação é um executável que lê mensagens armazenadas em uma fila do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou uma Fila de Mensagens da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] e, em seguida, aplica essas mensagens ao Publicador. O Queue Reader Agent é usado com publicações de instantâneo e transacionais que permitem atualização em fila.  
   
 > [!NOTE]  
 >  Os parâmetros podem ser especificados em qualquer ordem. Quando não são especificados parâmetros opcionais, são usados valores predefinidos com base no perfil de agente padrão.  
@@ -56,14 +56,14 @@ ms.locfileid: "63191667"
  **-?**  
  Exibe informações de uso.  
   
- **-Contínuo**  
+ **-Continuous**  
  Especifica se o agente tenta processar transações em fila continuamente. Se especificado, o agente continua a execução, mesmo que não haja transações na fila pendentes de nenhum dos assinantes.  
   
- **-Definitionfile** _def_path_and_file_name_  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-** _Server_name_do distribuidor**\\**[_instance_name_]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name*\\*instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Se não for especificado, o nome assumirá o padrão do nome da instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique *server_name*\\*instance_name* para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Se não for especificado, o nome assumirá o padrão do nome da instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador local.  
   
  **-DistributionDB** _distribution_database_  
  É o banco de dados de distribuição.  
@@ -75,12 +75,12 @@ ms.locfileid: "63191667"
  É a senha do Distribuidor.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Especifica o modo de segurança do Distribuidor. Um valor de **0** indica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o modo de autenticação (padrão) e um valor de **1** indica o modo de autenticação do Windows.  
+ Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Queue Reader Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|DESCRIÇÃO|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -94,17 +94,17 @@ ms.locfileid: "63191667"
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de fila. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|DESCRIÇÃO|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Nenhum log de histórico (não recomendado).|  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
 |**2**|Insira novos registros de histórico, incluindo mensagens ociosas ou mensagens de trabalho de execução longa.|  
-|**Beta**|Insira novos registros de histórico que incluam detalhes adicionais que podem ser úteis na solução de problemas.|  
+|**3**|Insira novos registros de histórico que incluam detalhes adicionais que podem ser úteis na solução de problemas.|  
   
  **-LoginTimeOut** _login_time_out_seconds_  
  É o número de segundos antes que o logon expire. O padrão é 15 segundos.  
   
- **-Saída** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
@@ -113,16 +113,16 @@ ms.locfileid: "63191667"
  **-PollingInterval** _polling_interval_  
  É relevante apenas para assinaturas de atualização que usam filas com base no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Especifica com que frequência, em segundos, a fila do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é sondada para transações em fila pendentes. O valor pode ser entre 0 e 240 segundos. O padrão é 5 segundos.  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-Profilename** _agent_profile_name_  
+ **-ProfileName** _agent_profile_name_  
  É o nome de um perfil de agente usado para fornecer um conjunto de valores padrão ao agente. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
  **-QueryTimeOut** _query_time_out_seconds_  
  É o número de segundos antes que a consulta expire. O padrão é 1800 segundos.  
   
- **-Resolvedor** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**| **2**| **3**]  
  Especifica como conflitos de atualização na fila são resolvidos. Um valor **1** indica que o Publicador ganha o conflito, a transação na fila conflitante será revertida no Publicador e no Assinante de atualização de origem e o processo de transações subsequentes em fila continuará. Um valor **2** indica que o Assinante ganha o conflito e a transação na fila substituirá os valores no Publicador. Um valor **3** indica que qualquer conflito resultará na reinicialização do Assinante; o Publicador ganha o conflito, o processamento de transações subsequentes na fila será interrompido e a assinatura será reiniciada. A configuração padrão é **1** para publicações transacionais e **3** para publicações de instantâneo.  
   
 ## <a name="remarks"></a>Comentários  

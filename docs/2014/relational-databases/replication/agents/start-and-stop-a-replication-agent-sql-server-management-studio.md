@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192468"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar e interromper um Agente de Replicação (SQL Server Management Studio)
@@ -55,7 +55,7 @@ ms.locfileid: "63192468"
   
 2.  Expanda a pasta **SQL Server Agent** e, em seguida, a pasta **Trabalhos** .  
   
-3.  Clique com o botão direito no trabalho para o agente e, então, clique em **Iniciar Trabalho** ou **Parar Trabalho**. O nome do trabalho para o Queue Reader Agent está no formato **[\<Distribuidor>].\<inteiro>** .  
+3.  Clique com o botão direito no trabalho para o agente e, então, clique em **Iniciar Trabalho** ou **Parar Trabalho**. O nome do trabalho para o Queue Reader Agent está no formato **[\<distribuidor>].\<>inteiro **.  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Para iniciar e parar um Agente de Instantâneo, Agente de Leitor de Log ou Agente de Leitor de Fila a partir do Replication Monitor  
   
@@ -66,8 +66,8 @@ ms.locfileid: "63192468"
 3.  Clique com o botão direito em um agente e, então, clique em **Iniciar Agente** ou **Parar Agente**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorando a Replicação](../monitoring-replication.md)   
- [Conceitos dos executáveis do Agente de Replicação](../concepts/replication-agent-executables-concepts.md)   
+ [Monitorando a replicação](../monitoring-replication.md)   
+ [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md)   
  [Visão geral dos agentes de replicação](replication-agents-overview.md)  
   
   

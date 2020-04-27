@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224603"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorando os modelos de cesta de compras (Tutorial de mineração de dados intermediário)
@@ -32,7 +32,7 @@ ms.locfileid: "63224603"
   
  Para este tutorial, você começará na guia **rede de dependências** e usará a guia **regras** e a guia **conjuntos** de itens para aprofundar sua compreensão das relações reveladas no visualizador. Você também usará o **Visualizador de árvore de conteúdo genérica da Microsoft** para recuperar estatísticas detalhadas para regras ou conjuntos de itens individuais.  
   
-##  <a name="bkmk_DepNet"></a>Guia rede de dependências  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>Guia rede de dependências  
  Com a guia **rede de dependências** , você pode investigar a interação dos diferentes itens no modelo. Cada nó do visualizador representa um item, enquanto que as linhas entre eles representam as regras. Selecionando um nó, você pode ver quais outros nós preveem o item selecionado ou quais itens o item atual prevê. Em alguns casos, há uma associação bidirecional entre itens, significando que eles geralmente aparecem na mesma transação. Você pode fazer referência à legenda de cores na parte inferior da guia para determinar a direção da associação.  
   
  Uma linha conectando dois itens significa que é provável que esses itens apareçam em uma transação juntos. Em outras palavras, é provável que os clientes comprem esses itens juntos. O controle deslizante está associado à probabilidade da regra. Mova o controle deslizante para cima ou para baixo para filtrar associações fracas, o que significa regras com probabilidade baixa.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224603"
   
  [Voltar ao início](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>Guia conjuntos de itens  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>Guia conjuntos de itens  
  Em seguida, você aprenderá mais sobre as regras e conjuntos de itens gerados pelo modelo para os produtos Pneu de Passeio e Tubo de Pneu de Passeio. A guia **conjuntos** de itens exibe três partes importantes de informações relacionadas aos conjuntos de elementos que o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de associação descobre:  
   
 -   **Suporte:** O número de transações nas quais o conjunto ocorre.  
@@ -134,7 +134,7 @@ ms.locfileid: "63224603"
   
  [Voltar ao início](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>Guia regras  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>Guia regras  
  A guia **regras** exibe as informações a seguir relacionadas às regras que o algoritmo encontra.  
   
 -   **Probabilidade:** A *probabilidade* de uma regra, definida como a probabilidade do item à direita, dado o item do lado esquerdo.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224603"
   
  [Voltar ao início](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>Visualizador de árvore de conteúdo genérica  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>Visualizador de árvore de conteúdo genérica  
  Esse visualizador pode ser usado em todos os modelos, independentemente do algoritmo ou do tipo de modelo. O **Visualizador de árvore de conteúdo genérica da Microsoft** está disponível na lista suspensa **Visualizador** .  
   
  Uma árvore de conteúdo é uma representação de um modelo de mineração como uma série de nós, em que cada nó representa conhecimento adquirido sobre alguns subconjuntos de dados. O nó pode conter um padrão, um conjunto de regras, um cluster ou a definição de um intervalo de datas que compartilham características semelhantes. O conteúdo exato do nó difere segundo o algoritmo e o tipo do atributo previsível; no entanto, a representação geral do conteúdo é a mesma. É possível expandir os nós para consultar um maior número de detalhes, assim como copiar o conteúdo de qualquer um deles para a Área de Transferência.  

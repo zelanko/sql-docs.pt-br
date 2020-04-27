@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217882"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Criando previsões para modelos de call center (Tutorial de mineração de dados intermediário)
@@ -150,7 +150,7 @@ ms.locfileid: "63217882"
   
  A tabela a seguir mostra exemplos de resultados para cada turno.  
   
-|Shift|WageType|Classificação de Serviço Prevista|Probabilidade|  
+|Turno|WageType|Classificação de Serviço Prevista|Probabilidade|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|feriado|0,165|0,377520666|  
 |meia-noite|feriado|0,105|0,364105573|  
@@ -181,7 +181,7 @@ ms.locfileid: "63217882"
  Há várias consultas de previsão que podem ser criadas com base nesse modelo. Por exemplo, você pode prever quantos operadores são obrigatórios para atender a um determinado nível de serviço ou um certo número de chamadas de entrada. Como é possível incluir várias saídas em um modelo de regressão logística, é fácil testar variáveis independentes diferentes e resultados, sem a necessidade de criar muitos modelos separados.  
   
 ## <a name="remarks"></a>Comentários  
- Os Suplementos de Mineração de Dados para Excel 2007 fornecem assistentes de regressão logística que facilitam a resposta de perguntas complexas, como quantos Operadores de Nível Dois seriam obrigatórios para melhorar a classificação do serviço visando um nível de destino para um turno específico. Os suplementos de mineração de dados são um download gratuito e incluem assistentes baseados nos algoritmos de rede neural ou regressão logística. Para obter mais informações, consulte os links a seguir:  
+ Os Suplementos de Mineração de Dados para Excel 2007 fornecem assistentes de regressão logística que facilitam a resposta de perguntas complexas, como quantos Operadores de Nível Dois seriam obrigatórios para melhorar a classificação do serviço visando um nível de destino para um turno específico. Os suplementos de mineração de dados são um download gratuito e incluem assistentes baseados nos algoritmos de rede neural ou regressão logística. Para obter mais informações, consulte os seguintes links:  
   
 -   [Suplementos de mineração de dados do SQL Server 2005 para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): meta Seek e análise de cenário de What If  
   

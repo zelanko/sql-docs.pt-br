@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187972"
 ---
 # <a name="password-policy"></a>Política de senha
@@ -75,7 +75,7 @@ ms.locfileid: "63187972"
   
     -   O histórico de senhas é inicializado com o valor do hash da senha atual.  
   
-    -   **Duração do bloqueio de conta**, **limite de bloqueio de conta**e contador de bloqueio de conta de **redefinição após** também estão habilitados.  
+    -   As opções**duração do bloqueio de conta**, **limite de bloqueio de conta**e **zerar contador de bloqueios de conta após** também estão habilitadas.  
   
 -   Quando CHECK_POLICY é alterado para OFF, o seguinte comportamento ocorre:  
   

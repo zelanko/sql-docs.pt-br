@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184410"
 ---
 # <a name="sequence-numbers"></a>Números de sequência
@@ -81,7 +81,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="examples"></a>Exemplos  
  Há outros exemplos nos tópicos [CREATE SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-sequence-transact-sql), [NEXT VALUE FOR &#40;Transact-SQL&#41;](/sql/t-sql/functions/next-value-for-transact-sql) e [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql).  
   
-### <a name="a-using-a-sequence-number-in-a-single-table"></a>a. Usando um número de sequência em uma única tabela  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. Usando um número de sequência em uma única tabela  
  O exemplo a seguir cria um esquema denominado Test, uma tabela denominada Orders e uma sequência denominada CountBy1 e insere linhas na tabela usando a função NEXT VALUE FOR.  
   
 ```  

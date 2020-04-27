@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204622"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Usar o Designer de Consulta e Exibição com dados internacionais (Visual Database Tools)
-  Você pode usar o [Designer de consulta e exibição](visual-database-tools.md) com dados em qualquer idioma e em qualquer versão do sistema operacional Windows. As diretrizes a seguir mostram as diferenças existentes e fornecem informações sobre como gerenciar dados em aplicativos internacionais.  
+  Você pode usar o [Designer de Consulta e Exibição](visual-database-tools.md) com dados de qualquer idioma e em qualquer versão do sistema operacional Windows. As diretrizes a seguir mostram as diferenças existentes e fornecem informações sobre como gerenciar dados em aplicativos internacionais.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Informações localizadas nos painéis Critérios e SQL  
  Ao usar o painel Critérios para criar uma consulta, você poderá inserir informações no formato que corresponda às Configurações regionais do Windows do seu computador. Por exemplo, ao pesquisar dados, você poderá inserir os dados nas colunas de critérios, usando qualquer formato que esteja acostumado a usar, com as seguintes exceções:  

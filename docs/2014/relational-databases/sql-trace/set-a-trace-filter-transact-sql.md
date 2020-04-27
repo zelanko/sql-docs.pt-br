@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226138"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (classe SqlServiceAdvancedProperty)
@@ -40,9 +40,9 @@ object
  *objeto*  
  Um objeto da [classe SqlServiceAdvancedProperty](../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*BoolValue*|Um valor booliano que especifica o valor da propriedade avançada.|  
   

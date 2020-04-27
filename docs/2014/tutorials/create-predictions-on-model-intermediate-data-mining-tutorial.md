@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217739"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Criando previsões em um modelo de cluster de sequências (Tutorial de mineração de dados intermediário)
@@ -65,13 +65,13 @@ ms.locfileid: "63217739"
   
 1.  Clique no botão **design** no canto superior esquerdo do construtor de consultas de previsão para voltar para a grade de construção da consulta.  
   
-2.  Na caixa de diálogo **entrada de consulta singleton** , clique **** na caixa valor `Region`para e selecione **Europa**.  
+2.  Na caixa de diálogo **entrada de consulta singleton** , clique **Value** na caixa valor `Region`para e selecione **Europa**.  
   
 3.  Clique no botão **resultado** para exibir previsões para clientes na Europa.  
   
 4.  Clique no botão **design** no canto superior esquerdo do construtor de consultas de previsão para voltar para a grade de construção da consulta.  
   
-5.  Na caixa de diálogo **entrada de consulta singleton** , clique **** na caixa valor `Region`para e selecione **América do Norte**.  
+5.  Na caixa de diálogo **entrada de consulta singleton** , clique **Value** na caixa valor `Region`para e selecione **América do Norte**.  
   
 6.  Clique no botão **resultado** para exibir previsões para clientes em América do Norte.  
   
@@ -145,9 +145,9 @@ NATURAL PREDICTION JOIN
   
 1.  Clique no botão **design** no canto superior esquerdo do construtor de consultas de previsão para voltar para a grade de construção da consulta.  
   
-2.  Na caixa de diálogo **entrada de consulta singleton** , clique **** na caixa valor `Region`para e selecione a linha vazia para limpar a entrada desse campo.  
+2.  Na caixa de diálogo **entrada de consulta singleton** , clique **Value** na caixa valor `Region`para e selecione a linha vazia para limpar a entrada desse campo.  
   
-3.  Na caixa de diálogo **entrada de consulta singleton** , clique **** na caixa valor `vAssocSeqLineItems`para e, em seguida, clique no botão (...).  
+3.  Na caixa de diálogo **entrada de consulta singleton** , clique **Value** na caixa valor `vAssocSeqLineItems`para e, em seguida, clique no botão (...).  
   
 4.  Na caixa de diálogo **entrada de tabela aninhada** , clique em **Adicionar**.  
   
@@ -201,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplos de consulta de modelo de clustering de sequência](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

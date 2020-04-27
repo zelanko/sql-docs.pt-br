@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200288"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Tópicos de instruções sobre a criação de perfil de desempenho do driver ODBC (ODBC)

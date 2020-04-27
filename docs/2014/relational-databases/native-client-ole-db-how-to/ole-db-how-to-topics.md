@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e1e195cf27e6d961bc7d53dac6439554022761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209884"
 ---
 # <a name="ole-db-how-to-topics"></a>Tópicos de instruções do OLE DB
@@ -26,33 +26,33 @@ ms.locfileid: "63209884"
   
 -   [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](results/processing-results-how-to-topics-ole-db.md)  
   
--   [Definir &#40;de dados grandes OLE DB&#41;](set-large-data-ole-db.md)  
+-   [Definir Dados Grandes &#40;OLE DB&#41;](set-large-data-ole-db.md)  
   
--   [Enumerar OLE DB fontes de dados &#40;OLE DB&#41;](enumerate-ole-db-data-sources-ole-db.md)  
+-   [Enumerar fontes de dados OLE DB &#40;OLE DB&#41;](enumerate-ole-db-data-sources-ole-db.md)  
   
--   [Copiar Dados em massa usando o IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+-   [Copiar dados em massa usando IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
 -   [Obter um cursor FAST_FORWARD](obtain-a-fast-forward-cursor.md)  
   
 -   [Recuperar linhas usando indicadores &#40;OLE DB&#41;](retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Buscar colunas usando IRow:: GetColumns &#40;ou IRow:: Open&#41; e ISequentialStream](fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Buscar colunas usando IRow::GetColumns &#40;ou IRow::Open&#41; e ISequentialStream](fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Buscar colunas usando IRow:: GetColumns &#40;OLE DB&#41;](fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Buscar colunas usando IRow::GetColumns &#40;OLE DB&#41;](fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [Alterar uma senha de usuário de autenticação SQL Server &#40;OLE DB&#41;](change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [Alterar uma senha de usuário de autenticação do SQL Server &#40;OLE DB&#41;](change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Use os recursos de data e hora aprimorados &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
+-   [Usar recursos avançados de data e hora &#40;OLE DB&#41;](use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream e BD OLE](filestream/filestream-and-ole-db.md)  
   
--   [Enviar dados de BLOB para o SQL SERVER usando o IROWSETFASTLOAD e o ISEQUENTIALSTREAM &#40;OLE DB&#41;](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Usar UDTs CLR grandes &#40;OLE DB&#41;](use-large-clr-udts-ole-db.md)  
+-   [Usar UDTs Grandes do CLR &#40;OLE DB&#41;](use-large-clr-udts-ole-db.md)  
   
--   [Exibir metadados de coluna e catálogo para colunas esparsas &#40;OLE DB&#41;](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [Exibir metadados de colunas e catálogos para colunas esparsas &#40;OLE DB&#41;](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [&#40;de autenticação Kerberos integrada OLE DB&#41;](integrated-kerberos-authentication-ole-db.md)  
+-   [Autenticação Kerberos integrada &#40;OLE DB&#41;](integrated-kerberos-authentication-ole-db.md)  
   
 -   [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   

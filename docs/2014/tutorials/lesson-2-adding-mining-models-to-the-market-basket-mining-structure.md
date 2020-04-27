@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204724"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração do Market Basket 
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de cesta de mercado criada na [lição 1: criando a estrutura de mineração de cesta de compras](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estes modelos de mineração permitirão criar previsões.  
   
  Para prever os tipos de produtos que os clientes tendem a comprar ao mesmo tempo, você criará dois modelos de mineração usando o [algoritmo de associação da Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e dois valores diferentes para o parâmetro *MINIMUM_PROBABILTY* .  

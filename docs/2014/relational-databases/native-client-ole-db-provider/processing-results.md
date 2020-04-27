@@ -1,5 +1,5 @@
 ---
-title: Processando resultados | Microsoft Docs
+title: Processar resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209670"
 ---
 # <a name="processing-results"></a>Processando resultados
@@ -43,6 +43,6 @@ ms.locfileid: "63209670"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando um aplicativo de provedor de OLE DB de SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Tópicos de instruções do OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Tópicos de instruções sobre OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

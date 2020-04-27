@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63218102"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (classe SqlService)
@@ -43,7 +43,7 @@ ServiceStartName , ServiceStartPassword
  *objeto*  
  Um objeto da [classe SqlService](sqlservice-class.md) que representa o serviço.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Instart*  
  Um valor da cadeia de caracteres que especifica o nome de conta com a qual o serviço é executado. Dependendo do tipo de serviço, o nome da conta pode estar no formulário de DomainName\Username. Quando for executado, o processo de serviço será registrado usando-se um dos dois formulários:  
   

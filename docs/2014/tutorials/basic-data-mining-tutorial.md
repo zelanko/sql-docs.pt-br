@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185578"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial de mineração de dados básico
@@ -34,11 +34,11 @@ ms.locfileid: "63185578"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] A mineração de dados inclui os seguintes recursos que ajudam você a desenvolver e comparar facilmente vários modelos de previsão e, em seguida, executar ações nos resultados:  
   
--   *Conjuntos de testes de controle-* Ao criar uma estrutura de mineração, agora você pode dividir os dados na estrutura de mineração em conjuntos de treinamento e teste. Isso permite testar modelos em conjuntos de dados semelhantes e comparar a exatidão de modelos relacionados.  
+-   *Conjuntos de Testes de Controle -* ao criar uma estrutura de mineração, você poderá dividir os dados na estrutura de mineração em conjuntos de treinamento e teste. Isso permite testar modelos em conjuntos de dados semelhantes e comparar a exatidão de modelos relacionados.  
   
--   *Filtros do modelo de mineração-* Agora você pode anexar filtros a um modelo de mineração e aplicar o filtro durante o treinamento e o teste. Isso permite criar facilmente modelos relacionados em diferentes subconjuntos dos dados.  
+-   *Filtros de modelo de mineração -* agora é possível anexar filtros a um modelo de mineração e aplicá-lo durante o treinamento e o teste. Isso permite criar facilmente modelos relacionados em diferentes subconjuntos dos dados.  
   
--   *Detalhamento para casos de estrutura e colunas de estrutura-* Agora você pode facilmente mover de padrões gerais no modelo de mineração para detalhes acionáveis na fonte de dados.  
+-   *Detalhamento para casos de estrutura e colunas de estrutura -* agora você pode se mover facilmente dos padrões gerais do modelo de mineração para detalhes acionáveis na fonte de dados.  
   
  Ele se divide nas lições a seguir:  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63185578"
  [Lição 3: Adicionando e processando modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  Nesta lição, você aprenderá a adicionar modelos a uma estrutura. Os modelos criados por você serão desenvolvidos com os seguintes algoritmos:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Árvores de decisão  
+-   Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   Naive Bayes da [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
  [Lição 4: explorando os modelos de mala direta direcionados &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  Nesta lição, você aprenderá a explorar e a interpretar as descobertas de cada modelo usando os Visualizadores.  
@@ -63,7 +63,7 @@ ms.locfileid: "63185578"
  [Lição 5: testando modelos &#40;o tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  Nesta lição, você fará uma cópia de um dos modelos de mala direta, adicionará um filtro de modelo de mineração para restringir os dados de treinamento a um determinado conjunto de clientes e avaliará a viabilidade do modelo.  
   
- [Lição 6: Criando e trabalhando com previsões &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lição 6: Criando e trabalhando com previsões &#40;Tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  Na última lição do Tutorial de mineração de dados básico, você usará o modelo para prever que clientes têm mais probabilidade de comprar uma bicicleta. Em seguida, você detalhará os casos subjacentes para obter informações de contato.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -83,6 +83,6 @@ ms.locfileid: "63185578"
 ## <a name="see-also"></a>Consulte Também  
  [Soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Tarefas e instruções do modelo de mineração](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services&#41;de mineração de dados](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services – Mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

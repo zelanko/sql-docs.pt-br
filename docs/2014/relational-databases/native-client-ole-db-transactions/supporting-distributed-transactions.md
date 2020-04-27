@@ -1,5 +1,5 @@
 ---
-title: Oferecendo suporte a transações distribuídas | Microsoft Docs
+title: Dando suporte a transações distribuídas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213503"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
@@ -34,7 +34,7 @@ ms.locfileid: "63213503"
   
  Para transações distribuídas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo implementa os parâmetros **ITransactionJoin:: JoinTransaction** da seguinte maneira.  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
 |*IsoLevel*|Ignorado pelo provedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  

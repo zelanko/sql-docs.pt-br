@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204693"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriedades da tabela (Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "63204693"
  Mostra o nome da fonte dos dados para a tabela selecionada.  
   
  **Descrição**  
- Mostra uma descrição da tabela selecionada. Para ver a descrição inteira ou editá-la, clique na descrição e, em seguida, clique nas reticências **(...)** à direita da propriedade.  
+ Mostra uma descrição da tabela selecionada. Para ver a descrição inteira ou editá-la, clique nela e, em seguida, clique nas reticências **(…)** à direita da propriedade.  
   
  **Esquema**  
  Mostra o nome do esquema ao qual essa tabela pertence. (Aplica-se somente ao Microsoft SQL Server)  
@@ -58,28 +58,28 @@ ms.locfileid: "63204693"
  **Coluna de identidade**  
  Mostra a coluna usada como a coluna de identidade da tabela. Para alterar a coluna de identidade, escolha a partir da lista suspensa. Apenas colunas de um tipo de dados numérico serão exibidas na lista.  
   
- **É indexável**  
+ **É Indexável**  
  Mostra se a tabela pode ser indexada. Se a tabela não for indexável pode ser porque você não é o proprietário da tabela ou porque a tabela contém colunas com tipos de dados de texto, ntext ou imagem.  
   
- **É replicado**  
+ **É Replicável**  
  Mostra se a tabela é replicada em outro local.  
   
- **Categoria de especificação de espaço de dados regular**  
- Expande para mostrar propriedades para **(Tipo de Espaço de Dados)**, **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
+ **Categoria de especificação espaço de dados regular**  
+ Expande para mostrar propriedades para **(Tipo de Espaço de Dados)** , **Grupo de Arquivos ou Nome do Esquema de Partição**e **Lista de Colunas de Partição**.  
   
- **(Tipo de espaço de dados)**  
+ **(Tipo de Espaço de Dados)**  
  Mostra se essa tabela é armazenada usando um grupo de arquivos ou esquema de partição.  
   
- **Nome do esquema de partição ou grupo de arquivos**  
+ **Grupo de arquivos ou Nome de esquema de partição**  
  Mostra o nome do grupo de arquivos ou esquema de partição.  
   
- **Lista de colunas de partição**  
+ **Lista de Colunas da Partição**  
  Fornece acesso à caixa de diálogo **Lista de Colunas de Partição** .  
   
- **Coluna de GUID de linha**  
+ **Coluna GUID de Linha**  
  Mostra a coluna usada pelo Microsoft SQL Server como a coluna ROWGUID da tabela. Para alterar a coluna ROWGUID , escolha a partir da lista suspensa. (Aplica-se apenas ao SQL Server 7.0 ou superior.)  
   
- **Grupo de arquivos de texto/imagem**  
+ **Grupo de arquivos de Texto/Imagem**  
  Fornece uma lista suspensa da qual você pode escolher o grupo de arquivos para colunas que têm tipos de dados de texto ou de imagem. Se a tabela é armazenada usando-se um esquema de partição, deixe esse espaço em branco.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209718"
 ---
 # <a name="disable-resource-governor"></a>Desabilitar Administrador de Recursos
@@ -26,7 +26,7 @@ ms.locfileid: "63209718"
   
 -   **Para desabilitar o Administrador de Recursos usando:**  [Pesquisador de Objetos](#RGOffObjEx), [Propriedades do Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  A desabilitação do Administrador de Recursos gera os seguintes resultados:  
   
 -   A função de classificação não é executada.  
@@ -43,20 +43,20 @@ ms.locfileid: "63209718"
   
 -   Depois que o SQL Server for reiniciado, o Administrador de Recursos não carregará sua configuração, mas em vez disso terá apenas os grupos de cargas de trabalho e pools de recursos padrão e internos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode usar a instrução `ALTER RESOURCE GOVERNOR` para desabilitar o Administrador de Recursos quando estiver em uma transação de usuário.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Desabilitar o Administrador de Recursos exige permissão CONTROL SERVER.  
   
-##  <a name="RGOffObjEx"></a> Desabilitar o Administrador de Recursos usando o Pesquisador de Objetos  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> Desabilitar o Administrador de Recursos usando o Pesquisador de Objetos  
  **Para desabilitar o Administrador de Recursos usando o Pesquisador de Objetos**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
 2.  Clique com o botão direito do mouse em **Administrador de Recursos**e, então, clique em **Desabilitar**.  
   
-##  <a name="RGOffProp"></a> Desabilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Desabilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
  **Para desabilitar o Administrador de Recursos usando a página de propriedades do Administrador de Recursos**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
@@ -65,7 +65,7 @@ ms.locfileid: "63209718"
   
 3.  Clique na caixa de seleção **Habilitar Administrador de Recursos** , verifique se a caixa não está selecionada e clique em **OK**.  
   
-##  <a name="RGOffTSQL"></a> Desabilitar o Administrador de Recursos usando Transact-SQL  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> Desabilitar o Administrador de Recursos usando Transact-SQL  
  **Para desabilitar o Administrador de Recursos usando Transact-SQL**  
   
 1.  Execute a instrução **ALTER RESOURCE GOVERNOR DISABLE** .  

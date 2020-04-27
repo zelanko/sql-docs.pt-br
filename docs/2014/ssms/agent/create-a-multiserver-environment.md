@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192965"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
@@ -58,7 +58,7 @@ ms.locfileid: "63192965"
 ## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir documentam tarefas comuns de criação de um ambiente multisservidor.  
   
-|DESCRIÇÃO|Tópico|  
+|Descrição|Tópico|  
 |-----------------|-----------|  
 |Descreve como criar um servidor mestre.|[Make a Master Server](make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](make-a-target-server.md)|  

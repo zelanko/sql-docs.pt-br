@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187932"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuração de visibilidade de metadados
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Exibições do catálogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help** procedimentos armazenados|  
+|Exibições do catálogo|Procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help**|  
 |Metadados com exposição de funções internas|Exibições do esquema de informações|  
 |Exibições de compatibilidade|Propriedades estendidas|  
   
@@ -51,8 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Tabelas do sistema de envio de logs|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent|  
+|Tabelas do sistema de envio de logs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelas do sistema do Agent|  
 |Tabelas do sistema de plano de manutenção do banco de dados|Tabelas do sistema de backup|  
 |Tabelas do sistema de replicação|Replicação e procedimento armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help**|  
   
@@ -64,7 +63,7 @@ GO
   
 -   Funções internas, que emitem metadados como em OBJECTPROPERTYEX podem retornar NULO.  
   
--   Os procedimentos armazenados de [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** podem retornar apenas um subconjunto de linhas ou NULL.  
+-   Os procedimentos armazenados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** podem retornar apenas um subconjunto de linhas ou NULL.  
   
  Os módulos SQL, como os procedimentos armazenados e os gatilhos, são executados no contexto de segurança do chamador e, em consequência, têm acessibilidade limitada aos metadados. Por exemplo, no código a seguir, quando o procedimento armazenado tentar acessar os metadados para a tabela `myTable` na qual o visitante não tem nenhum direito, há retorno de um conjunto de resultados vazio. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], é retornada uma linha.  
   
@@ -183,8 +182,8 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys. messages**|  
-|**sys. schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys.messages**|  
+|**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
@@ -194,6 +193,6 @@ GO
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Exibições de compatibilidade &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Exibições de compatibilidade &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

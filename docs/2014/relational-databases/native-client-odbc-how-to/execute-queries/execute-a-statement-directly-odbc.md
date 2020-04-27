@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200407"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Executar diretamente uma instrução (ODBC)
@@ -83,7 +83,7 @@ ms.locfileid: "63200407"
   
 6.  Se forem usados parâmetros de entrada de dados em execução, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retornará SQL_NEED_DATA. Envie os dados em partes useo [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Observação** A associação de coluna e linha é mais normalmente usada em conjunto com a [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) do que com [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Observação** As associações por coluna e por linha geralmente são mais usadas em conjunto com [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) do que com [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  

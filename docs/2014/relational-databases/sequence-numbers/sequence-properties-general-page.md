@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184443"
 ---
 # <a name="sequence-properties-general-page"></a>Propriedades da Sequência (página Geral)
@@ -45,8 +45,7 @@ ms.locfileid: "63184443"
 |`int`|-2.147.483.648 a 2.147.483.647|  
 |`bigint`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
   
--   
-  `decimal` ou `numeric` com uma escala de 0.  
+-   `decimal` ou `numeric` com uma escala de 0.  
   
 -   Qualquer tipo de dados definido pelo usuário (tipo de alias) que seja baseado em um destes tipos.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63184443"
  **Valor máximo**  
  Especifica os limites do objeto de sequência. O valor máximo padrão para um novo objeto de sequência é o valor máximo do tipo de dados do objeto de sequência.  
   
- **A sequência de ciclo será reiniciada ao atingir o limite**  
+ **A sequência do ciclo será reiniciada ao atingir o limite**  
  Selecione para permitir que o objeto de sequência reinicie a partir do valor mínimo (ou do valor máximo para objetos de sequência decrescente) quando o valor mínimo ou máximo for excedido.  
   
 > [!NOTE]  
@@ -74,13 +73,11 @@ ms.locfileid: "63184443"
  **Opções de cache**  
  A criação de um cache de valores de sequência pode aumentar o desempenho de aplicativos que usam objetos de sequência por meio da minimização do número de E/S de disco necessárias para criar números de sequência.  
   
--   Tamanho do cache padrão: o [!INCLUDE[ssDE](../../includes/ssde-md.md)] selecionará um tamanho, porém, os usuários não devem confiar que essa seleção seja consistente. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar o método de cálculo do tamanho do cache sem aviso prévio.  
+-   Tamanho do cache padrão: o [!INCLUDE[ssDE](../../includes/ssde-md.md)] selecionará um tamanho, porém, os usuários não devem confiar que essa seleção seja consistente. [!INCLUDE[msCoName](../../includes/msconame-md.md)] pode alterar o método de cálculo do tamanho do cache sem aviso prévio.  
   
 -   Sem cache: o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não armazenará os números de sequência em cache.  
   
--   Cache com tamanho - O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazenará valores de sequência em cache. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controla o valor atual e o número de valores deixados no cache. Portanto, a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência  
+-   Cache com tamanho - O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] armazenará valores de sequência em cache. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controla o valor atual e o número de valores deixados no cache. Portanto, a quantidade de memória necessária para armazenar o cache sempre é duas instâncias do tipo de dados do objeto de sequência  
   
  Quando criado com a opção CACHE, um desligamento inesperado, como uma deficiência de energia, pode perder os números de sequência no cache.  
   
@@ -90,6 +87,6 @@ ms.locfileid: "63184443"
  Requer a permissão **CREATE SEQUENCE**, **ALTER**ou **CONTROL** no SCHEMA.  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+ [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

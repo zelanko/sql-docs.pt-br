@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63215796"
 ---
 # <a name="delete-a-workload-group"></a>Excluir um grupo de carga de trabalho
@@ -27,10 +27,10 @@ ms.locfileid: "63215796"
   
 -   **Para excluir um grupo de carga de trabalho usando:**  [Pesquisador de Objetos](#DelWGObjEx), [Propriedades do Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Não é possível excluir um grupo de carga de trabalho se ele contiver sessões ativas.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Se um grupo de cargas de trabalho contiver sessões ativas, a exclusão ou movimentação do grupo de cargas de trabalho para um pool de recursos diferente não terá êxito quando a instrução ALTER RESOURCE GOVERNOR RECONFIGURE for chamada para aplicar a alteração. Para evitar esse problema, é possível executar uma das seguintes ações:  
   
 -   Aguardar até que todas as sessões do grupo afetado sejam desconectadas e depois executar novamente a instrução ALTER RESOURCE GOVERNOR RECONFIGURE.  
@@ -39,10 +39,10 @@ ms.locfileid: "63215796"
   
 -   Reinicie o servidor. Depois que o processo de reinicialização estiver concluído, o grupo excluído não será criado e um grupo movido usará a atribuição do novo pool de recursos.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Excluir um grupo de cargas de trabalho exige permissão CONTROL SERVER.  
   
-##  <a name="DelWGObjEx"></a> Excluir um grupo de cargas de trabalho usando o Pesquisador de Objetos  
+##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Excluir um grupo de cargas de trabalho usando o Pesquisador de Objetos  
  **Para excluir um grupo de cargas de trabalho usando o Pesquisador de Objetos**  
   
 1.  No[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e inclua o **Pools de Recursos**.  
@@ -53,7 +53,7 @@ ms.locfileid: "63215796"
   
 4.  Na janela **Excluir Objeto** , o grupo de carga de trabalho é listado em **Objeto a ser excluído** . Para excluir o grupo de cargas de trabalho, clique em **OK**.  
   
-##  <a name="DelWGRGProp"></a> Excluir um grupo de cargas de trabalho usando propriedades do administrador de recursos  
+##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Excluir um grupo de cargas de trabalho usando propriedades do administrador de recursos  
  **Para excluir um grupo de cargas de trabalho usando a página de propriedades do administrador de recursos**  
   
 1.  No Pesquisador de Objetos, expanda recursivamente o nó **Gerenciamento** para baixo e incluindo **Pools de Recursos**.  
@@ -64,7 +64,7 @@ ms.locfileid: "63215796"
   
 4.  Para excluir o grupo de cargas de trabalho, clique em **OK**.  
   
-##  <a name="DelWGTSQL"></a> Excluir grupo de cargas de trabalho usando Transact-SQL  
+##  <a name="delete-a-workload-group-using-transact-sql"></a><a name="DelWGTSQL"></a> Excluir grupo de cargas de trabalho usando Transact-SQL  
  **Para mover um grupo de cargas de trabalho usando Transact-SQL**  
   
 1.  Execute a instrução `DROP WORKLOAD GROUP` especificando o nome do grupo de cargas de trabalho a ser excluído.  

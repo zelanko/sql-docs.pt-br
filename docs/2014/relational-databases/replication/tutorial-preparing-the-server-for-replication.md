@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199075"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Preparando o servidor para replicação
   É importante planejar a segurança antes de configurar a topologia de replicação. Este tutorial mostra a melhor forma de garantir a segurança de uma topologia de replicação e também como configurar a distribuição, que é a primeira etapa na replicação de dados. É preciso concluir este tutorial antes de qualquer outro.  
   
 > [!NOTE]  
->  Para replicar dados com segurança entre servidores, você deve implementar todas as recomendações nas [práticas recomendadas de segurança de replicação](security/replication-security-best-practices.md).  
+>  Para replicar dados com segurança entre servidores, é necessário implementar todas as recomendações em [Práticas recomendadas em relação à segurança de replicação](security/replication-security-best-practices.md).  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Neste tutorial, você aprenderá como preparar um servidor para que a replicação possa ser executada de modo seguro com um mínimo de privilégios. A primeira lição mostra como criar as contas de serviço do Windows usadas para executar os agentes de replicação. A segunda lição mostra como configurar a pasta usada para gerar e armazenar instantâneos de publicação. A terceira lição mostra como configurar a distribuição e definir permissões.  
@@ -33,8 +33,7 @@ ms.locfileid: "63199075"
   
  Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
   
--   
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com o banco de dados do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão.  
   
  **Tempo estimado para concluir este tutorial: 30 minutos.**  
   
@@ -42,14 +41,14 @@ ms.locfileid: "63199075"
   
 -   [Lição 1: Criando contas do Windows para replicação](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Lição 2: preparando a pasta de instantâneos](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Lição 2: Preparando a pasta do instantâneo](lesson-2-preparing-the-snapshot-folder.md)  
   
 -   [Lição 3: Configurando a distribuição](lesson-3-configuring-distribution.md)  
   
- [Inicie o tutorial](lesson-1-creating-windows-accounts-for-replication.md)  
+ [Iniciar o tutorial](lesson-1-creating-windows-accounts-for-replication.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar Distribuição](configure-distribution.md)   
+ [Configurar a distribuição](configure-distribution.md)   
  [Segurança de Replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

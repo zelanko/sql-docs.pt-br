@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204614"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir ou agregar valores para todas as linhas em uma tabela (Visual Database Tools)
@@ -51,7 +51,7 @@ FROM titles
   
 1.  Verifique se a tabela que você quer agregar já está presente no painel Diagrama.  
   
-2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Agrupar por** no menu de atalho. O [Designer de Consulta e Exibição](query-and-view-designer-tools-visual-database-tools.md) adicionará a coluna **Agrupar por** à grade do painel Critérios.  
+2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Agrupar por** no menu de atalho. O [Designer de consulta e exibição](query-and-view-designer-tools-visual-database-tools.md) adiciona uma coluna **Agrupar por** à grade no painel critérios.  
   
 3.  Some a coluna que você quer agregar ao painel Critérios. Verifique se a coluna esteja marcada para saída.  
   

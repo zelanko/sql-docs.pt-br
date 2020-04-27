@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187086"
 ---
 # <a name="enhance-general-replication-performance"></a>Aprimorar o desempenho geral da replicação
@@ -33,7 +33,7 @@ ms.locfileid: "63187086"
   
 ## <a name="server-and-network"></a>Servidor e rede  
   
--   Defina a quantidade mínima e máxima de memória alocada [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]para.  
+-   Defina a quantidade mínima e máxima de memória alocada para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      Por padrão, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] altera seus requisitos de memória dinamicamente com base nos recursos do sistema disponíveis. Para evitar baixa disponibilidade de memória durante as atividades de replicação, use a opção **min server memory** para definir a mínima memória disponível. Para evitar que o sistema operacional busque memória no disco, você também pode definir a quantidade máxima de memória com a opção **max server memory** . Para mais informações, consulte [Opções de configuração do servidor da memória do servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63187086"
   
      Quando grandes quantidades de alterações precisarem ser enviadas aos Assinantes, reinicializá-los com um novo instantâneo pode ser mais rápido que usar a replicação para mover as alterações individuais. Para obter mais informações, consulte [Reinicializar as assinaturas](../reinitialize-subscriptions.md).  
   
-     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Para replicação transacional, o Replication Monitor exibe na guia **Comandos Não Distribuídos** as informações sobre: o número de transações no banco de dados de distribuição que ainda não foi distribuídas ao Assinante e o tempo estimado para distribuir essas transações. Para obter mais informações, consulte [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Considerações de instantâneo  
   
@@ -164,6 +164,6 @@ ms.locfileid: "63187086"
   
 -   [Exibir e modificar parâmetros do prompt de comando de agentes de replicação &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Conceitos dos executáveis do agente de replicação](../concepts/replication-agent-executables-concepts.md).  
+-   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md).  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207058"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Perguntas frequentes para os administradores de replicação
@@ -42,7 +42,7 @@ ms.locfileid: "63207058"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quando uma assinatura estará disponível e quando o banco de dados de assinatura poderá ser usado?  
  Uma assinatura está disponível após o instantâneo ter sido aplicado ao banco de dados de assinatura. Apesar do banco de dados de assinatura estar acessível antes disso, o banco de dados não deve ser utilizado até o instantâneo ter sido aplicado. Use o Replication Monitor para verificar o estado da geração e a aplicação do instantâneo:  
   
--   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   O instantâneo é gerado pelo Agente de Instantâneo. Exiba o estado da geração do instantâneo na guia **Agentes** para uma publicação no Replication Monitor. Para obter mais informações, consulte [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   O instantâneo é aplicado pelo Agente de Distribuição ou pelo Agente de Mesclagem. Exiba o estado da aplicação do instantâneo na página **Agente de Distribuição** ou **Agente de Mesclagem** do Replication Monitor. 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63207058"
   
 -   Opção de sincronização da Web para replicação de mesclagem. Para obter mais informações, consulte [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Todos os tipos de replicação de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem replicar dados por uma VPN, no entanto, recomenda-se a sincronização da Web quando a replicação de mesclagem for utilizada.  
+ Todos os tipos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de replicação podem replicar dados por uma VPN, mas você deve considerar a sincronização da Web se estiver usando a replicação de mesclagem.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>A replicação será retomada se uma conexão for cancelada  
  Sim. O processamento de replicação é retomado no ponto em que ele foi interrompido quando a conexão foi cancelada. Se estiver usando uma replicação de mesclagem em uma rede não confiável, tente usar os registros lógicos, isto garantirá que as alterações sejam processadas como uma unidade. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "63207058"
   
 -   A definição de um objeto, como uma instrução CREATE TABLE. Por padrão, a replicação copia as definições de todos os objetos replicados para o Assinante.  
   
--   O namespace no qual um objeto é criado: \<Banco de Dados>.\<Esquema>.\<Objeto>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
+-   O namespace dentro do qual um objeto é criado: \<Database>.\<Schema>.\<Object>. Os esquemas são definidos usando a instrução CREATE SCHEMA.  
   
 -   A replicação tem o seguinte comportamento padrão no Assistente para Nova Publicação em relação à propriedade de esquemas e objetos:  
   
@@ -151,9 +151,9 @@ ms.locfileid: "63207058"
   
 -   Especifique que os objetos não devem ser descartados quando a assinatura for reinicializada. Antes da reinicialização, você deve:  
   
-    -   Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ou [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de ' pre_creation_cmd ' (**sp_changearticle**) ou ' pre_creation_command ' (**sp_changemergearticle**) para o parâmetro **@property** e um valor de ' nenhum ', ' excluir ' ou ' truncar ' para o parâmetro **@value**.  
+    -   Execute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) ou [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique um valor de 'pre_creation_cmd' (**sp_changearticle**) ou 'pre_creation_command' (**sp_changemergearticle**) para o parâmetro **@property** e um valor de 'nenhum', 'excluir' ou 'truncar' para o parâmetro **@value**.  
   
-    -   Na caixa de diálogo **Propriedades do Artigo – \<Artigo>** na seção **Objeto de Destino**, selecione um valor **Manter objeto existente inalterado**, **Excluir dados. Se o artigo tiver um filtro de linha, exclua somente os dados correspondentes ao filtro.** ou **Truncar todos os dados no objeto existente** para a opção **Ação se o nome estiver em uso**. Para mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
+    -   Na caixa de diálogo **Propriedades \<do artigo – artigo>** na seção **objeto de destino** , selecione um valor de **manter objeto existente inalterado**, **excluir dados. Se o artigo tiver um filtro de linha, exclua somente os dados que correspondem ao filtro.** ou **Truncar todos os dados no objeto existente** para a opção **Ação se o nome estiver em uso**. Para mais informações sobre como acessar essa caixa de diálogo, consulte [Exibir e modificar propriedades de publicação](../publish/view-and-modify-publication-properties.md).  
   
 ## <a name="database-maintenance"></a>Manutenção do banco de dados  
   
@@ -181,7 +181,7 @@ ms.locfileid: "63207058"
  Em versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], para mover ou renomear arquivos de banco de dados era necessário desanexar e tornar a anexar o banco de dados. Como um banco de dados replicado não pode ser desanexado, a replicação devia ser removida antes que os bancos de dados. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é possível mover ou renomear arquivos sem desanexar e anexar novamente o banco de dados, e não produzir efeito sobre a replicação. Para mais informações sobre as operações de renomeação e movimentação, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Como posso descartar uma tabela que está sendo replicada?  
- Primeiro, remova o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>** , em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Primeiro, remova o artigo da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**, em seguida, remova-o do banco de dados usando `DROP <Object>`. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Como posso adicionar ou descartar colunas em uma tabela publicada?  
  O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma grande variedade de alterações de esquema em objetos publicados, inclusive a adição e o descarte de colunas. Por exemplo, execute ALTER TABLE... Solte a coluna no Publicador, e a instrução é replicada para os assinantes e, em seguida, executada para descartar a coluna. Os Assinantes executando versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] possuem suporte para a adição e descarte de colunas por meio dos procedimentos armazenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  
@@ -195,7 +195,7 @@ ms.locfileid: "63207058"
  Não é necessário interromper a atividade no banco de dados de publicação ou de assinatura para adicionar uma tabela (ou qualquer outro objeto). Adicione uma tabela a uma publicação com a caixa de diálogo **Propriedades de Publicação – \<Publicação>** ou os procedimentos armazenados [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) e [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Como posso remover uma tabela de uma publicação?  
- Remova a tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
+ Remova a tabela da publicação usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) ou a caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Não é possível descartar artigos de publicações transacionais ou de instantâneos após as assinaturas terem sido adicionadas; antes é preciso descartar as assinaturas. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](../publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Que ações exigem que as assinaturas sejam reinicializadas?  
  Há várias alterações em artigos e publicações que exigem a reinicialização das assinaturas. Para obter mais informações, consulte [Alterar propriedade da publicação e do artigo](../publish/change-publication-and-article-properties.md).  
@@ -229,7 +229,7 @@ ms.locfileid: "63207058"
  Sim. Nenhuma consideração especial é exigida porque todos os dados são armazenados em um conjunto de discos no cluster.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Perguntas Frequentes sobre Administração de Replicação](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [Perguntas frequentes sobre administração de replicação](frequently-asked-questions-for-replication-administrators.md)   
+ [Práticas recomendadas para a administração de replicação](best-practices-for-replication-administration.md)  
   
   

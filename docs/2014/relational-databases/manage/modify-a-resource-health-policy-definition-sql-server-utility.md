@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188881"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modificar uma definição de política de integridade de recursos (Utilitário do SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "63188881"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] As políticas de utilização de recursos do Utilitário podem ser configuradas para aplicativos da camada de dados e instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As políticas de utilização de recursos podem ser definidas globalmente para todos os aplicativos da camada de dados e instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou podem ser definidas individualmente para cada aplicativo da camada de dados e para cada instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Também é possível implementar políticas globais e fazer com que os aplicativos da camada de dados individuais ou as instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sejam configuradas com suas próprias definições de políticas.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="modify-global-resource-utilization-policies-in-a-sql-server-utility"></a>Modifique políticas de utilização de recursos globais em um Utilitário do SQL Server.  
   

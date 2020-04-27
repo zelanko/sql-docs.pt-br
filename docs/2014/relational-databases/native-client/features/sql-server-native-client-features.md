@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225559"
 ---
 # <a name="sql-server-native-client-features"></a>Recursos do SQL Server Native Client
@@ -89,7 +89,7 @@ ms.locfileid: "63225559"
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Aborda como seu aplicativo pode ser configurado para aproveitar os recursos de alta disponibilidade e de recuperação de desastre adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Acessar informações de diagnóstico nos logs de eventos estendidos](accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Acessando informações de diagnóstico no log de eventos estendidos](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Discute os aprimoramentos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento de dados que fornece acesso a informações de diagnóstico no buffer de anel e no log de XEvents.  
   
  [Suporte do SQL Server Native Client para LocalDB](sql-server-native-client-support-for-localdb.md)  

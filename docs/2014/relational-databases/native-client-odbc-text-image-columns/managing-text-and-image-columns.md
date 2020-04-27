@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195321"
 ---
 # <a name="managing-text-and-image-columns"></a>Gerenciando colunas de texto e imagem
@@ -34,9 +34,9 @@ ms.locfileid: "63195321"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Colunas image e text associadas e não associadas](bound-vs-unbound-text-and-image-columns.md)  
+-   [Colunas de texto e imagem associadas vs. não associadas](bound-vs-unbound-text-and-image-columns.md)  
   
--   [Modificações não registradas e registradas](logged-vs-unlogged-modifications.md)  
+-   [Modificações registradas vs. não registradas](logged-vs-unlogged-modifications.md)  
   
 -   [Dados em execução e colunas Text, ntext ou Image](data-at-execution-and-text-ntext-or-image-columns.md)  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184272"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Criar relações entre tabelas em um diagrama (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63184272"
   
 3.  São exibidas duas caixas de diálogo: **Relação de Chaves Estrangeiras** e **Tabelas e Colunas**sendo a última aparecendo no primeiro plano.  
   
-4.  O **nome da relação** tem um nome fornecido pelo sistema no formato FK_*localtable*_*ForeignTable*. Você pode alterar esse valor.  
+4.  **Nome da relação** tem um nome fornecido pelo sistema no formato FK_*localtable*_*foreigntable*. Você pode alterar esse valor.  
   
 5.  Verifique se a **Tabela de chaves primárias** especifica a tabela correta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63184272"
   
 7.  Escolha **OK**.  
   
-     A caixa de diálogo **Relação de Chaves Estrangeiras** é exibida. A **relação selecionada** mostra a relação que você criou.  
+     A caixa de diálogo **Relação de Chaves Estrangeiras** é exibida. **Relação Selecionada** mostra a relação que você criou.  
   
 8.  Altere as propriedades da relação na grade.  
   

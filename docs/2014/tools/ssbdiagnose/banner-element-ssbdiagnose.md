@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186873"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
@@ -44,11 +44,11 @@ ms.locfileid: "63186873"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhum.|  
+|**Tipo de dados e comprimento**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Ocorre uma vez por arquivo XML de saída **ssbdiagnose** .|  
+|**C'**|Ocorre uma vez por arquivo XML de saída **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

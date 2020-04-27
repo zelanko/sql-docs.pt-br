@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204671"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Caixa de dialogo Tabelas e Colunas (Visual Database Tools)
@@ -26,19 +26,19 @@ ms.locfileid: "63204671"
 >  Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 ## <a name="options"></a>Opções  
- **Nome da relação**  
+ **Nome da Relação**  
  Mostra o nome da relação.  
   
- **Tabela de chave primária**  
+ **Tabela de Chaves Primárias**  
  Lista as tabelas no banco de dados Selecione a tabela que estará no lado da chave primária da relação.  
   
- **Tabela de chave estrangeira**  
+ **Tabela de Chaves Estrangeiras**  
  Mostra a tabela no lado da chave estrangeira da relação. Essa é a tabela selecionada atualmente no Designer de Tabela.  
   
- **Grade abaixo da tabela de chave primária**  
+ **Grade abaixo da Tabela de Chaves Primárias**  
  Lista as colunas da tabela selecionada na lista da **Tabela de Chaves Primárias** . Insira as colunas que contribuam para a chave primária daquela tabela.  
   
- **Grade abaixo da tabela de chaves estrangeiras**  
+ **Grade abaixo da Tabela de Chaves Estrangeiras**  
  Lista as colunas da tabela selecionada na lista da **Tabela de Chaves Estrangeiras** . Insira a coluna das chaves estrangeiras da tabela das chaves estrangeiras que corresponde à coluna das chaves primárias.  
   
 > [!NOTE]  

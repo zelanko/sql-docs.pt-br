@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188148"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Processando o modelo de clustering de sequências
@@ -42,6 +42,6 @@ ms.locfileid: "63188148"
 ## <a name="see-also"></a>Consulte Também  
  [Designer de mineração de dados](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo de clustering de sequência da Microsoft](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

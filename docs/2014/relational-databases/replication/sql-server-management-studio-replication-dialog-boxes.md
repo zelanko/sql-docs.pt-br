@@ -11,24 +11,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199138"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Caixas de diálogo de replicação do SQL Server Management Studio
-  Esta seção inclui informações sobre o número de caixas de diálogo de replicação disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  Esta seção inclui informações sobre várias caixas de diálogo de replicação que estão disponíveis no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Segurança do Snapshot Agent](snapshot-agent-security.md)  
   
--   [Segurança do Agente de Leitor de Log](log-reader-agent-security.md)  
+-   [Segurança do Log Reader Agent](log-reader-agent-security.md)  
   
--   [Segurança do Agente de Distribuição](distribution-agent-security.md)  
+-   [Segurança do Distribution Agent](distribution-agent-security.md)  
   
--   [Segurança do Agente de Mesclagem](merge-agent-security.md)  
+-   [Segurança do Merge Agent](merge-agent-security.md)  
   
--   [Segurança do Queue Reader Agent](queue-reader-agent-security.md)  
+-   [Segurança do Agente de Leitor de Fila](queue-reader-agent-security.md)  
   
 -   [Perfis de Agente &#40;agente único&#41;](agent-profiles-single-agent.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187265"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicação predefinidos (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "63187265"
 -   **Replicação: assinatura expirada cancelada**    
 -   **Replicação: assinatura reinicializada após falha de validação**    
 -   **Replicação: falha na validação de dados do assinante**    
--   **Replicação: o assinante foi aprovado na validação de dados**    
+-   **Replicação: êxito na validação de dados do assinante**    
 -   **Replicação: desligamento personalizado do agente**  
   
  Configure esses alertas na pasta **Alertas** no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou na guia **Avisos** no Replication Monitor. Para obter mais informações sobre como acessar essa guia, consulte [Exibir informações e executar tarefas usando o Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -41,11 +41,11 @@ ms.locfileid: "63187265"
 1.  Conecte-se ao Distribuidor no [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e, em seguida, expanda o nó de servidor.    
 2.  Expanda a pasta **SQL Server Agent** e então, expanda a pasta **Alertas** .    
 3.  Clique com o botão direito do mouse em um alerta de replicação e então clique em **Propriedades**.    
-4.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :    
+4.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:    
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.    
     -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.  
   
-         Se o alerta for **Replicação: o assinante foi reprovado na validação de dados**, você poderá especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **Executar trabalho** e clique no botão Procurar ( **...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
+         Se o alerta for **replicação: falha na validação de dados do assinante**, você pode especificar o trabalho de resposta que a replicação fornece para este alerta: selecione **Executar trabalho**e, em seguida, clique no botão procurar (**...**). Na caixa de diálogo **Localizar trabalho** , clique em **procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
     -   Na página **Opções** , personalize o texto da resposta.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -53,13 +53,13 @@ ms.locfileid: "63187265"
   
 1.  Na guia **Avisos** clique em **Configurar Alertas**.    
 2.  Na caixa de diálogo **Configurar Alertas de Replicação** , selecione um alerta e então clique em **Configurar**.    
-3.  Defina opções na caixa de diálogo **Propriedades do alerta \<AlertName>** :    
+3.  Defina as opções na caixa de diálogo ** \<Propriedades** do alerta de alerta do>:    
     -   Na página **Geral** , clique em **Habilitar**; especifique em qual banco de dados deverá ser aplicado o alerta.    
     -   Na página **Resposta** , especifique se deve ser enviado um e-mail e/ou se deverá ser executado um trabalho.    
-         Se o alerta for **Replicação: o assinante foi reprovado na validação de dados**, você poderá especificar o trabalho de resposta que a replicação fornecerá para este alerta: Selecione **Executar trabalho** e clique no botão Procurar ( **...** ). Na caixa de diálogo **Localizar trabalho** , clique em **Procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
+         Se o alerta for **replicação: falha na validação de dados do assinante**, você pode especificar o trabalho de resposta que a replicação fornece para este alerta: selecione **Executar trabalho**e, em seguida, clique no botão procurar (**...**). Na caixa de diálogo **Localizar trabalho** , clique em **procurar**. Na caixa de diálogo **Procurar Objetos** , selecione **Reinicializar as assinaturas com falha na validação de dados**. Clique em **OK** em ambas as caixas de diálogo abertas. Quando o trabalho executar, usará um RPC (Remote Procedure Call) para um procedimento armazenado que reinicializará a assinatura. Se o Publicador selecionar um Distribuidor remoto, você deverá definir um logon de servidor remoto no Publicador, para que o RPC do Distribuidor ao Publicador possa ser realizado.   
     -   Na página **Opções** , personalize o texto da resposta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Usar Alertas para eventos do Agente de Replicação](../agents/use-alerts-for-replication-agent-events.md)  

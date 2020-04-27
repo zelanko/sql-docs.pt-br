@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191330"
 ---
 # <a name="clientnetlibinfo-class"></a>Classe ClientNetLibInfo
@@ -31,6 +31,6 @@ ms.locfileid: "63191330"
  O arquivo de biblioteca de rede do cliente permite que a instância do cliente se comunique através [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de uma rede com uma instância do usando um protocolo de rede específico.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

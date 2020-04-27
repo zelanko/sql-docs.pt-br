@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190431"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63190431"
 ## <a name="benefits-of-the-sql-server-utility"></a>Benefícios do Utilitário do SQL Server  
  O Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modela as entidades relacionadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de uma organização em uma exibição unificada. O Gerenciador do Utilitário e os pontos de vista do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no SSMS ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ) fornecem aos administradores uma visão holística da integridade dos recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que funciona como um UCP (ponto de controle do utilitário). A combinação de dados resumidos e detalhados apresentada no UCP para políticas de subutilização e de superutilização, e para uma variedade de parâmetros chave, permite que oportunidades de consolidação de recursos e de superutilização de recursos sejam identificadas facilmente. As políticas de integridade são configuráveis e podem ser ajustadas para alterar os limites inferior e superior da utilização de recursos. É possível alterar as políticas de monitoramento globais ou configurar políticas de monitoramento individuais para cada entidade gerenciada no Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Introdução ao Utilitário do SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Introdução ao Utilitário do SQL Server  
  O cenário do usuário típico começa com a criação de um ponto de controle de utilitário que estabelece o ponto de raciocínio central para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. O UCP fornece uma exibição consolidada da integridade de recurso coletada de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Depois que o UCP é criado, você inscreve as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que elas possam ser gerenciadas pelo UCP.  
   
  Cada instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aplicativo da camada de dados gerenciado pelo Utilitário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser monitorado com base nas definições da política global ou com base nas definições de políticas individuais.  

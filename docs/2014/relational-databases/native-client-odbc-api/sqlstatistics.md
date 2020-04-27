@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188611"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  **SQLStatistics** pode ser executado em um cursor estático. Uma tentativa de executar o **SQLStatistics** em um atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO indicando que o tipo de cursor foi alterado.  
+  O**SQLStatistics** pode ser executado em um cursor estático. Uma tentativa de executar o **SQLStatistics** em um atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO indicando que o tipo de cursor foi alterado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216021"
 ---
 # <a name="enable-resource-governor"></a>Habilitar Administrador de Recursos
@@ -26,7 +26,7 @@ ms.locfileid: "63216021"
   
 -   **Para habilitar o Administrador de Recursos usando:**  [Pesquisador de Objetos](#RGOnObjEx), [Propriedades do Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  A habilitação do administrador de recursos gera os seguintes resultados:  
   
 -   A função de classificação é executada para conexões novas, de forma que as cargas de trabalho possam ser atribuídas a grupos de carga de trabalho.  
@@ -35,20 +35,20 @@ ms.locfileid: "63216021"
   
 -   As solicitações existentes antes da habilitação do Administrador de Recursos são afetadas por todas as alterações feitas na configuração quando o Administrador de Recursos foi desabilitado.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode usar a instrução `ALTER RESOURCE GOVERNOR` para habilitar o Administrador de Recursos quando estiver em uma transação de usuário.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Habilitar o Administrador de Recursos exige permissão CONTROL SERVER.  
   
-##  <a name="RGOnObjEx"></a> Habilitar o Administrador de Recursos usando o Pesquisador de Objetos  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> Habilitar o Administrador de Recursos usando o Pesquisador de Objetos  
  **Para habilitar o Administrador de Recursos usando o Pesquisador de Objetos**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
   
 2.  Clique com o botão direito do mouse em **Resource Governor**e clique em **Habilitar**.  
   
-##  <a name="RGOnProp"></a> Habilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> Habilitar o Administrador de Recursos usando as Propriedades do Administrador de Recursos  
  **Para habilitar o Administrador de Recursos usando a página de propriedades do Administrador de Recursos**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e incluindo o **Administrador de Recursos**.  
@@ -57,7 +57,7 @@ ms.locfileid: "63216021"
   
 3.  Clique na caixa de seleção **Habilitar Administrador de Recursos** e, em seguida, clique em **OK**.  
   
-##  <a name="RGOnTSQL"></a> Habilitar o Administrador de Recursos usando Transact-SQL  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Habilitar o Administrador de Recursos usando Transact-SQL  
  **Para habilitar o Administrador de Recursos usando Transact-SQL**  
   
 1.  Execute a instrução **ALTER RESOURCE GOVERNOR RECONFIGURE** .  

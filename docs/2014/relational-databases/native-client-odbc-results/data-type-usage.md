@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200187"
 ---
 # <a name="data-type-usage"></a>Uso do tipo de dados
@@ -43,8 +43,7 @@ ms.locfileid: "63200187"
 |Tipos de dados de alias|Quando conectado a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4,2*x*, o driver ODBC adiciona NULL a uma definição de coluna que não declara explicitamente a nulidade de uma coluna. Portanto, a nulidade armazenada na definição de um tipo de dados de alias é ignorada.<br /><br /> Quando conectado a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4,2*x*, as colunas com um tipo de dados de alias que tem um tipo de dados base de **Char** ou **Binary** e para a qual nenhuma nulidade é declarada são criadas como tipo de dados **varchar** ou **varbinary**. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md)e [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) retornam SQL_VARCHAR ou SQL_VARBINARY como o tipo de dados para essas colunas. Os dados recuperados dessas colunas não são preenchidos. **Observação:**  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão com o 6,5 e anterior.|  
 |Tipos de dados LONG|os parâmetros de *dados em execução* são restritos para os tipos de dados SQL_LONGVARBINARY e SQL_LONGVARCHAR.|  
 |Tipos de valor grande|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client irá expor os tipos **varchar (max)**, **varbinary (max)** e **nvarchar (max)** como SQL_VARCHAR, SQL_VARBINARY e SQL_WVARCHAR (respectivamente) em APIs que aceitam ou retornam tipos de dados ODBC SQL.|  
-|UDT (tipo definido pelo usuário)|As colunas UDT são mapeadas como SQL_SS_UDT. Se você mapear uma coluna UDT explicitamente para outro tipo na instrução SQL usando os métodos ToString() ou ToXMLString() do UDT, ou as funções CAST/CONVERT, o tipo de coluna no conjunto de resultados refletirá o tipo para o qual a coluna foi convertida.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client só pode ser associado a uma coluna UDT como Binary. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte somente à conversão entre os tipos de dados SQL_SS_UDT e SQL_C_BINARY.|  
+|UDT (tipo definido pelo usuário)|As colunas UDT são mapeadas como SQL_SS_UDT. Se você mapear uma coluna UDT explicitamente para outro tipo na instrução SQL usando os métodos ToString() ou ToXMLString() do UDT, ou as funções CAST/CONVERT, o tipo de coluna no conjunto de resultados refletirá o tipo para o qual a coluna foi convertida.<br /><br /> O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client só pode ser associado a uma coluna UDT como Binary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte somente à conversão entre os tipos de dados SQL_SS_UDT e SQL_C_BINARY.|  
 |XML|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converterá automaticamente XML em um texto Unicode. O tipo XML é mapeado como SQL_SS_XML.|  
   
 ## <a name="see-also"></a>Consulte Também  

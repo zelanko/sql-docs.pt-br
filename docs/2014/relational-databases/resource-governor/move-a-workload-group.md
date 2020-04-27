@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209744"
 ---
 # <a name="move-a-workload-group"></a>Mover um Grupo de Cargas de Trabalho
@@ -29,16 +29,16 @@ ms.locfileid: "63209744"
   
 -   **Para mover um grupo de cargas de trabalho usando:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Você não pode mover um grupo de cargas de trabalho se houver uma operação de configuração do Administrador de Recursos pendente.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode mover um grupo de cargas de trabalho se houver uma operação de configuração do Administrador de Recursos pendente. É possível determinar se há uma configuração pendente consultando a exibição de gerenciamento dinâmico de [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) para obter o status atual de is_configuration_pending.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Mover um grupo de cargas de trabalho exige permissão CONTROL SERVER.  
   
-##  <a name="MoveWGSSMS"></a> Mover um grupo de cargas de trabalho usando o SQL Server Management Studio  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> Mover um grupo de cargas de trabalho usando o SQL Server Management Studio  
  **Para mover um grupo de cargas de trabalho usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  No Pesquisador de Objetos, expanda recursivamente o nó **Gerenciamento** para baixo para o **Administrador de Recursos**.  
@@ -55,7 +55,7 @@ ms.locfileid: "63209744"
   
 7.  Se a operação de criação ou reconfiguração falhar para o pool de recursos ou grupo de cargas de trabalho, um resumo de uma mensagem de erro será exibido abaixo do título da página de propriedades. Para visualizar uma mensagem de erro detalhada, clique na seta para baixo na mensagem de erro.  
   
-##  <a name="MoveWGTSQL"></a> Mover grupo de cargas de trabalho usando Transact-SQL  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> Mover grupo de cargas de trabalho usando Transact-SQL  
  **Para mover um grupo de cargas de trabalho usando Transact-SQL**  
   
 1.  Execute a instrução `ALTER WORKLOAD GROUP` que especifica o nome do grupo de cargas de trabalho a ser movido e o pool de recursos para o qual ele deve ser movido.  

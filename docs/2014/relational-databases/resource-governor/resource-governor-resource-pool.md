@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209871"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de recursos do Administrador de Recursos
@@ -65,8 +65,8 @@ ms.locfileid: "63209871"
   
 |Nome do pool|Configuração de % MIN|Configuração de % MAX|% MAX efetivo calculado|% compartilhado calculado|Comentário|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|internal|0|100|100|0|O % MAX efetivo e o % compartilhado não são aplicáveis ao pool interno.|  
-|padrão|0|100|30|30|O valor MAX efetivo é calculado como: min(100,100-(20+50)) = 30. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
+|interno|0|100|100|0|O % MAX efetivo e o % compartilhado não são aplicáveis ao pool interno.|  
+|default|0|100|30|30|O valor MAX efetivo é calculado como: min(100,100-(20+50)) = 30. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
 |Pool 1|20|100|50|30|O valor MAX efetivo é calculado como: min(100,100-50) = 50. O % compartilhado calculado é o MAX efetivo - MIN = 30.|  
 |Pool 2|50|70|70|20|O valor MAX efetivo é calculado como: min(70,100-20) = 70. O % compartilhado calculado é o MAX efetivo - MIN = 20.|  
   
@@ -117,10 +117,10 @@ ms.locfileid: "63209871"
 |Descreve como excluir um pool de recursos.|[Excluir um pool de recursos](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrador de Recursos](resource-governor.md)   
- [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
- [Função de classificação do Administrador de Recursos](resource-governor-classifier-function.md)   
- [Configurar o administrador de recursos usando um modelo](configure-resource-governor-using-a-template.md)   
- [Exibir Propriedades do Administrador de Recursos](view-resource-governor-properties.md)  
+ [Resource Governor](resource-governor.md)   
+ [Grupo de carga de trabalho Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governor função de classificação](resource-governor-classifier-function.md)   
+ [Configurar Resource Governor usando um modelo](configure-resource-governor-using-a-template.md)   
+ [View Resource Governor Properties](view-resource-governor-properties.md)  
   
   

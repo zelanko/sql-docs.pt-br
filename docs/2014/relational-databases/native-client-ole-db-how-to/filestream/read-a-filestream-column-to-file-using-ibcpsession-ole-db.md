@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233141"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "63233141"
   
 -   [Enviar dados para uma coluna FILESTREAM usando ISequentialStream associado ao parâmetro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Enviar dados para uma coluna FILESTREAM usando o IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copie a primeira listagem de código e cole-a em um arquivo denominado ISSHelper.h.  
   

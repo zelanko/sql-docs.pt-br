@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205840"
 ---
 # <a name="delete-a-resource-pool"></a>Excluir um pool de recursos
@@ -27,16 +27,16 @@ ms.locfileid: "63205840"
   
 -   **Para excluir um pool de recursos usando:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  Não é possível excluir um pool de recursos se ele contiver grupos de cargas de trabalho.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Você não pode excluir os pools internos ou padrão do Administrador de recursos. Não é possível excluir um pool de recursos se ele contiver grupos de cargas de trabalho. Para obter mais informações, consulte [Delete a Workload Group](delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Excluir um pool de recursos exige permissão CONTROL SERVER.  
   
-##  <a name="DelRPSSMS"></a> Excluir um pool de recursos usando o Pesquisador de Objetos  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Excluir um pool de recursos usando o Pesquisador de Objetos  
  **Para excluir um pool de recursos, usando SQL Server Management Studio**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e inclua o **Administrador de Recursos**.  
@@ -48,7 +48,7 @@ ms.locfileid: "63205840"
     > [!NOTE]  
     >  Haverá falha ao tentar excluir um pool de recursos que contém um grupo de carga de trabalho.  
   
-##  <a name="DelRPTSQL"></a> Excluir um pool de recursos usando o Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Excluir um pool de recursos usando o Transact-SQL  
  **Para excluir um pool de recursos usando o Transact-SQL**  
   
 1.  Execute a instrução `DROP RESOURCE POOL` especificando o nome do pool de recursos a ser excluído.  

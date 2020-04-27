@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231288"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
-  Conforme descrito no tópico [criando XML usando for XML](../xml/for-xml-sql-server.md), o modo RAW e auto não fornecem muito controle sobre a forma do XML gerado a partir de um resultado de consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
+  Conforme descrito no tópico [Construindo XML usando FOR XML](../xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  
   
  A consulta em modo EXPLICIT deve ser escrita de uma maneira específica para que as informações adicionais sobre o XML necessário, como aninhamento esperado no XML, sejam especificadas explicitamente como parte da consulta. Dependendo do XML solicitado, pode ser trabalhoso escrever consultas em modo EXPLICIT. Você pode descobrir que [Usando o modo PATH](../xml/use-path-mode-with-for-xml.md) com aninhamento é uma alternativa mais simples para escrever consultas em modo EXPLICIT.  
   
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se você especificar a *Directive*, o *AttributeName* poderá estar vazio. Por exemplo, ElementName!TagNumber!!Directive. Nesse caso, o valor da coluna será contido diretamente pelo *ElementName*.  
   
- *Diretiva*  
- A *diretiva* é opcional e você pode usá-la para fornecer informações adicionais para a construção do XML. A *diretiva* tem duas finalidades.  
+ *Directive*  
+ *Directive* é opcional e você pode usá-la para fornecer informações adicionais para construção do XML. *Directive* tem dois propósitos.  
   
  Um dos propósitos é codificar valores como ID, IDREF e IDREFS. É possível especificar as palavras-chave **ID**, **IDREF**e **IDREFS** como *Directives*. Essas diretivas substituem os tipos de atributo. Isso permite criar vínculos intradocumento.  
   
  Também é possível usar *Directive* para indicar como mapear os dados de cadeia de caracteres para XML. É possível usar as palavras-chave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** como a *Directive*. A diretiva **hide** oculta o nó. Isso é útil para recuperar valores apenas para fins de classificação, mas não para tê-los no XML resultante.  
   
- A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o **<** caractere se &lt;torna. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil** . Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
+ A diretiva **element** gera um elemento contido em vez de um atributo. Os dados contidos são codificados como uma entidade. Por exemplo, o caractere **<** se torna &lt;. Nenhum elemento é gerado para valores NULL da coluna. Se você quiser um elemento gerado para obter valores de coluna nulos, poderá especificar a diretiva **elementxsinil** . Isso gerará um elemento que tem o atributo xsi:nil=TRUE.  
   
  A diretiva **xml** é igual a uma diretiva **element** , exceto que não ocorre nenhuma codificação de entidade. Observe que a diretiva **element** pode ser combinada com **ID**, **IDREF**ou **IDREFS**, enquanto que a diretiva **xml** não é permitida com nenhuma outra diretiva, exceto **hide**.  
   
@@ -147,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Nesta seção  
  Os exemplos a seguir ilustram o uso do modo EXPLICIT.  
   
--   [Exemplo: Recuperando informações de funcionários](../xml/example-retrieving-employee-information.md)  
+-   [Exemplo: recuperando informações de funcionários](../xml/example-retrieving-employee-information.md)  
   
 -   [Exemplo: Especificando a diretiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
