@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011164"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
@@ -29,7 +29,7 @@ ms.locfileid: "66011164"
   
 -   Configurar um banco de dados de usuário para pesquisa de texto completo. Isto envolve criar um ou mais catálogos de texto completo para o banco de dados e definir um índice de texto completo em cada tabela ou exibição indexada em que você deseja executar consultas de texto completo.  
   
-##  <a name="props"></a> Exibindo ou alterando as propriedades do servidor referentes à pesquisa de texto completo  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Exibindo ou alterando as propriedades do servidor referentes à pesquisa de texto completo  
  Você pode exibir as propriedades de texto completo de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Para exibir e alterar as propriedades do servidor de alterações para pesquisa de texto completo  
@@ -67,7 +67,7 @@ ms.locfileid: "66011164"
         > [!NOTE]  
         >  A opção de atualização de texto completo também pode ser definida com o uso da ação [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
   
-##  <a name="metadata"></a> Exibindo propriedades de servidor de texto completo adicionais  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Exibindo propriedades de servidor de texto completo adicionais  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] as funções podem ser utilizadas para obter o valor de diversas propriedades da pesquisa de texto completo no nível do servidor. Essas informações são úteis para administrar e solucionar problemas de pesquisa de texto completo.  
   
  A tabela a seguir lista propriedades de texto completo de uma instância de servidor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e suas funções [!INCLUDE[tsql](../../../includes/tsql-md.md)] relacionadas.  
@@ -78,7 +78,7 @@ ms.locfileid: "66011164"
 |`LoadOSResources`|Se os separadores de palavras e os filtros do sistema operacional estão registrados e são usados com essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Especifica se apenas binários assinados são carregados pelo Mecanismo de Texto Completo.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a>Monitorando a atividade de pesquisa de texto completo  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Monitorando a atividade de pesquisa de texto completo  
  Existem diversas exibições e funções de gerenciamento dinâmico que são úteis para monitorar a atividade de pesquisa de texto completo em uma instância do servidor.  
   
  **Para exibir informações sobre os catálogos de texto completo com atividade de população em andamento**  
@@ -93,11 +93,11 @@ ms.locfileid: "66011164"
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Para exibir os buffers de memória em um pool de memória que são usados como parte de um rastreamento ou intervalo de rastreamento.**  
+ **Para exibir buffers de memória de um pool de memórias que são usados como parte de um rastreamento ou de um intervalo de rastreamento.**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Para exibir os pools de memória compartilhada disponíveis para o componente gatherer de texto completo para um rastreamento de texto completo ou um intervalo de rastreamento de texto completo**  
+ **Para exibir os pools de memórias compartilhadas disponíveis para o componente gatherer de texto completo em um rastreamento de texto completo ou em um intervalo de rastreamento de texto completo**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

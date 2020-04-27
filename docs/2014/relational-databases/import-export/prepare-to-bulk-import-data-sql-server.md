@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011853"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Preparar para importar dados em massa (SQL Server)
@@ -34,11 +34,11 @@ ms.locfileid: "66011853"
 > [!NOTE]  
 >  A importação de dados em massa em uma tabela remota não é suportada.  
   
- Use as seguintes diretrizes ao importar dados em massa de um arquivo de dados para uma instância [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do:  
+ Use as seguintes diretrizes ao exportar dados em massa de um arquivo de dados para uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Obtenha as permissões exigidas para sua conta do usuário.  
   
-     A conta do usuário na qual você usa o utilitário **bcp** , a instrução BULK INSERT ou a instrução INSERT... SELECT * FROM OPENROWSET(BULK...) deve ter as permissões exigidas na tabela, que são atribuídas pelo proprietário de tabela. Para obter mais informações sobre as permissões necessárias para cada método, veja [Utilitário bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
+     A conta do usuário na qual você usa o utilitário **bcp**, a instrução BULK INSERT ou a instrução INSERT... SELECT * FROM OPENROWSET(BULK...) deve ter as permissões exigidas na tabela, que são atribuídas pelo proprietário de tabela. Para obter mais informações sobre as permissões necessárias para cada método, veja [Utilitário bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 -   Use o modelo de recuperação bulk-logged  
   
@@ -67,8 +67,8 @@ ms.locfileid: "66011853"
      Muitos utilitários e editores de textos exibem caracteres ocultos que normalmente estão no final do arquivo de dados. Durante uma operação de importação em massa, os caracteres ocultos em um arquivo de dados ASCII podem causar problemas que provocam erro de "unexpected null found" Encontrar e remover todos os caracteres ocultos deve ajudar a evitar este problema.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Importe e exporte dados em massa usando o utilitário bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [Importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [Importar dados em massa usando BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Formatos de dados para importação ou exportação em massa &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   

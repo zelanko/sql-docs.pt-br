@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012083"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formatos de dados para importar ou exportar em massa (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66012083"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="ComponentsAndConcepts"></a> Formatos de dados para importar ou exportar em massa  
+##  <a name="data-formats-for-bulk-import-or-export"></a><a name="ComponentsAndConcepts"></a> Formatos de dados para importar ou exportar em massa  
  A tabela a seguir indica o formato de dados que costuma ser adequado ao uso, dependendo de como os dados estão representados e da origem ou destino da operação.  
   
 |Operação|Nativo|Unicode nativo|Caractere|Caractere unicode|  
@@ -43,7 +43,7 @@ ms.locfileid: "66012083"
   
  <sup>1</sup> método mais rápido para a exportação de dados em massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do ao usar o **bcp**.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar o formato nativo para importar ou exportar dados &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   

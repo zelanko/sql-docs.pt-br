@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054467"
 ---
 # <a name="web-service-task-editor-output-page"></a>Editor da Tarefa Serviço da Web (página Saída)
@@ -30,7 +30,7 @@ ms.locfileid: "66054467"
  **OutputType**  
  Selecione o tipo de armazenamento a usar para os resultados. As opções dessa propriedade são listadas na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Conexão de arquivo**|Armazene os resultados em um arquivo. A seleção deste valor exibe a opção dinâmica **File**.|  
 |**Variável**|Armazene os resultados em uma variável. A seleção deste valor exibe a opção dinâmica **Variable**.|  
@@ -41,7 +41,7 @@ ms.locfileid: "66054467"
  **Arquivo**  
  Selecione um Gerenciador de conexões de arquivo na lista ou \<clique em **nova conexão...**> para criar um novo Gerenciador de conexões.  
   
- **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Tópicos relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variável**  
@@ -50,7 +50,7 @@ ms.locfileid: "66054467"
  **Tópicos relacionados:**  [Integration Services &#40;&#41; as variáveis do SSIS](integration-services-ssis-variables.md), [Adicionar variável](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa serviço da Web &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor da tarefa serviço Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Página Expressões](expressions/expressions-page.md)  

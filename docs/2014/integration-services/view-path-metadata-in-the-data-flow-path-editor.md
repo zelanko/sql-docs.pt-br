@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054493"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Exibir metadados do caminho no Editor de Caminho do Fluxo de Dados
@@ -40,7 +40,7 @@ ms.locfileid: "66054493"
 7.  Clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Caminhos do Integration Services](data-flow/integration-services-paths.md)   
+ [Caminhos de Integration Services](data-flow/integration-services-paths.md)   
  [Fluxo de Dados](data-flow/data-flow.md)  
   
   

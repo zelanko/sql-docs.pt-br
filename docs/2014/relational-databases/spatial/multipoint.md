@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014173"
 ---
 # <a name="multipoint"></a>MultiPoint
@@ -43,7 +43,7 @@ SELECT @g.STGeometryN(1).STAsText();
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ponto](point.md)   
+ [Empresas](point.md)   
  [Dados espaciais &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

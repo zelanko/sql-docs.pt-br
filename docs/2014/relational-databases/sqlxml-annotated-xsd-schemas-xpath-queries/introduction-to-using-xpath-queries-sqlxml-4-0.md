@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012710"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
@@ -61,7 +61,7 @@ ms.locfileid: "66012710"
   
      A especificação XPath do W3C não define nenhuma condição de erro. As consultas XPath que deixam de selecionar algum nó retornam um conjunto de nós vazio. No SQLXML 4.0, uma consulta pode retornar muitos tipos de mensagens de erro.  
   
--   **Ordem de documentos**  
+-   **Ordem do documento**  
   
      No SQLXML 4.0, a ordem de documentos nem sempre é determinada. Por isso, predicados numéricos e eixos que usam a ordem de documentos (como, por exemplo, `following`) não são implementados.  
   

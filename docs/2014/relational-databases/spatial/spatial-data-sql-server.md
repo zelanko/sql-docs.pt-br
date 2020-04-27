@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014055"
 ---
 # <a name="spatial-data-sql-server"></a>Dados espaciais (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "66014055"
 > [!IMPORTANT]  
 >  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], baixe o white paper [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
-##  <a name="reltasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tarefas relacionadas  
  [Criar, construir e consultar instâncias de geometria](create-construct-and-query-geometry-instances.md)  
  Descreve os métodos que você pode usar com instâncias do tipo de dados de geometria.  
   
  [Criar, construir e consultar instâncias de geografia](create-construct-and-query-geography-instances.md)  
  Descreve os métodos que você pode usar com instâncias do tipo de dados de geografia.  
   
- [Consultar vizinho mais próximo de dados espaciais](query-spatial-data-for-nearest-neighbor.md)  
+ [Consultar dados espaciais de vizinho mais próximo](query-spatial-data-for-nearest-neighbor.md)  
  Descreve o padrão de consulta comum usado para localizar os objetos espaciais mais próximos a um objeto espacial específico.  
   
  [Criar, modificar e remover índices espaciais](create-modify-and-drop-spatial-indexes.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "66014055"
  [Visão geral de tipos de dados espaciais](spatial-data-types-overview.md)  
  Introduz os tipos de dados espaciais.  
   
--   [Ponto](point.md)  
+-   [Point](point.md)  
   
 -   [LineString](linestring.md)  
   

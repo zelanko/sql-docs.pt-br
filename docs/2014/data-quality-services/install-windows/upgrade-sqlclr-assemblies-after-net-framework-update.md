@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aa4cd8349846a5c00f62f6cbf115b4cc3a1614ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480470"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Atualizar assemblies SQLCLR após atualizar o .NET Framework
-  
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] O DQS é uma coleção de rotinas SQLCR (SQL Common Language Runtime) que fazem referência aos assemblies do Microsoft .NET Framework 4. Quando você instala qualquer atualização do .NET Framework em seu computador que afete qualquer assembly do .NET Framework referenciado, isso leva a uma alteração na MVID (ID da Versão do Módulo) do assembly no GAC (Cache de Assembly Global). Isso causa uma incompatibilidade entre as MVIDs do assembly referenciado no GAC e o assembly no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Se a atualização do .NET Framework exigir que você reinicie o computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , os assemblies do SQLCLR afetados serão atualizados automaticamente para corrigir o problema de incompatibilidade do MVID ao reiniciar o computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Porém, para as atualizações do .NET Framework que não exigem que você reinicie seu computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , um erro ocorre devido à incompatibilidade nos MVIDs dos assemblies quando você tenta se conectar a um [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando um [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]:  
@@ -29,7 +28,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  Para corrigir este problema, os assemblies SQLCLR afetados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] devem ser atualizados. Você pode fazer isso executando o arquivo DQSInstaller.exe com o parâmetro de linha de comando **upgradedlls** para ignorar a recriação dos bancos de dados DQS e atualizar apenas os assemblies afetados. Isso garante que sua base de conhecimento, projetos de qualidade de dados e quaisquer outros dados no DQS sejam preservados.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 -   Você deve estar conectado como um membro do grupo Administradores no computador do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   

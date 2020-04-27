@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011957"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabela de exemplo HumanResources.myTeam (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "66011957"
   
  A tabela **myTeam** contém as seguintes colunas.  
   
-|Coluna|Tipo de dados|Nulidade|DESCRIÇÃO|  
+|Coluna|Tipo de dados|Nulidade|Descrição|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Não nulo|Chave primária para as linhas. A ID de funcionário de um membro da minha equipe.|  
 |**Nome**|`nvarchar(50)`|Não nulo|Nome de um membro de myTeam.|  
-|**Title**|`nvarchar(50)`|Nullable|O cargo que o funcionário exerce na minha equipe.|  
-|**Segundo plano**|`nvarchar(50)`|Não nulo|Data e hora da última atualização da linha. (Default)|  
+|**Título**|`nvarchar(50)`|Nullable|O cargo que o funcionário exerce na minha equipe.|  
+|**Informações**|`nvarchar(50)`|Não nulo|Data e hora da última atualização da linha. (Padrão)|  
   
- **Para criar HumanResources. myTeam**  
+ **Para criar HumanResources.myTeam**  
   
 -   Use as seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66011957"
     GO  
     ```  
   
- **Para popular HumanResources. myTeam**  
+ **Para popular HumanResources.myTeam**  
   
 -   Execute as seguintes instruções `INSERT` para popular a tabela com duas linhas:  
   

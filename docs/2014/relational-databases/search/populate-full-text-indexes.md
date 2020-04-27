@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011175"
 ---
 # <a name="populate-full-text-indexes"></a>Popular índices de texto completo
   A criação e a manutenção de um índice de texto completo envolvem popular o índice usando um processo chamado *população* (também conhecido como *rastreamento*).  
   
-##  <a name="types"></a>Tipos de população  
+##  <a name="types-of-population"></a><a name="types"></a>Tipos de população  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o dá suporte aos seguintes tipos de população: população completa, população automática baseada em controle de alterações ou preenchimento manual e população incremental baseada em carimbo de data/hora.  
   
 ### <a name="full-population"></a>População completa  
@@ -70,7 +70,7 @@ ms.locfileid: "66011175"
   
      Se você especificar CHANGE_TRACKING MANUAL, o Mecanismo de Texto Completo usará população manual no índice de texto completo. Depois que a população completa inicial é concluída, as alterações são controladas à medida que os dados são modificados na tabela base. No entanto, eles não são propagados para o índice de texto completo até que você execute um ALTER FULLTEXT INDEX... Instrução START UPDATE population. É possível usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para chamar essa instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] periodicamente.  
   
-     **Para iniciar o controle de alterações com a população manual**  
+     **Para começar a controlar alterações com população manual**  
   
     -   [criar índice de texto completo](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... COM CHANGE_TRACKING MANUAL  
   
@@ -99,12 +99,12 @@ ms.locfileid: "66011175"
   
 
   
-##  <a name="examples"></a>Exemplos de preenchimento de índices de texto completo  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>Exemplos de preenchimento de índices de texto completo  
   
 > [!NOTE]  
 >  Os exemplos desta seção usam a tabela `Production.Document` ou `HumanResources.JobCandidate` do banco de dados de exemplo `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>a. Criando um índice de texto completo sem executar uma população completa  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Criando um índice de texto completo sem executar uma população completa  
  O exemplo a seguir cria um índice de texto completo na tabela `Production.Document` do banco de dados de exemplo `AdventureWorks` . Este exemplo usa WITH CHANGE_TRACKING OFF, NO POPULATION para atrasar a população completa inicial.  
   
 ```  
@@ -167,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>Criando ou alterando uma agenda para população incremental  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>Criando ou alterando uma agenda para população incremental  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Para criar ou alterar uma agenda para população incremental no Management Studio  
   
@@ -208,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>Solucionando problemas de erros em uma população de texto completo (rastreamento)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Solucionando problemas de erros em uma população de texto completo (rastreamento)  
  Quando um erro ocorrer durante um rastreamento, o recurso de registro de rastreamento de pesquisa de texto completo cria e mantém um log de rastreamento, que é um texto sem-formatação. Cada log de rastreamento corresponde a um catálogo de texto completo específico. Por padrão, os logs de rastreamento para uma determinada instância, neste caso, a primeira instância, estão localizados na pasta %Arquivos de programas%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. O arquivo de log de rastreamento segue o seguinte esquema de nomeação:  
   
  SQLFT\<databaseid>\<FullTextCatalogID>. LOG [\<n>]  
@@ -228,7 +228,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Introdução à pesquisa de texto completo](get-started-with-full-text-search.md)   
+ [Iniciar a pesquisa de texto completo](get-started-with-full-text-search.md)   
  [Criar e gerenciar índices de texto completo](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  

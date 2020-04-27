@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010944"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Definir a conta de serviço do Iniciador do Daemon de Filtro de Texto Completo
@@ -26,7 +26,7 @@ ms.locfileid: "66010944"
  O Iniciador do Daemon de Filtro de Texto Completo do SQL é um serviço de reconhecimento de instâncias associado a uma instância específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O serviço Iniciador do Daemon de Filtro de Texto Completo do SQL propaga as informações da conta de serviço para cada processo do host do daemon de filtro.  
   
   
-##  <a name="setting"></a>Configurando a conta de serviço  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>Configurando a conta de serviço  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>Para definir a conta do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL para pesquisa de texto completo  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66010944"
 4.  Depois que você fechar a caixa de diálogo, clique em **Reiniciar** para reiniciar o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL.  
   
   
-##  <a name="error"></a>Se o serviço de Iniciador do Daemon de Filtro de Texto Completo do SQL não iniciar  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>Se o serviço de Iniciador do Daemon de Filtro de Texto Completo do SQL não iniciar  
  Se o serviço Iniciador do Daemon de Filtro de Texto Completo do SQL não for iniciado, o motivo poderá ser uma ou mais das seguintes condições:  
   
 -   A senha associada à conta do serviço Iniciador do Daemon de Filtro de Texto Completo do SQL expirou.  

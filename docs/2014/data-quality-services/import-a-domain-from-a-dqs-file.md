@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484266"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar um domínio de um arquivo .dqs
@@ -24,17 +24,17 @@ ms.locfileid: "65484266"
   
  Quando você importa um domínio, o nome do domínio permanece igual ao nome do domínio que foi exportado originalmente, a menos que o nome de domínio já exista, nesse caso, o DQS acrescentará "_1" ao nome. Isso também será verdade se você importar um domínio composto com um domínio individual com o mesmo nome de um domínio existente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para importar um domínio de um arquivo .dqs, você já deverá ter exportado um domínio único ou um domínio composto (com vários domínios únicos) para o arquivo .dqs. O arquivo .dqs só deve conter um domínio. Você também deverá ter criado e aberto uma base de dados de conhecimento para onde o domínio será importado.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para poder importar um domínio de um arquivo de dados .dqs.  
   
-##  <a name="Import"></a>Importar um domínio de um arquivo. DQS  
+##  <a name="import-a-domain-from-a-dqs-file"></a><a name="Import"></a>Importar um domínio de um arquivo. DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65484266"
   
 6.  Verifique se o domínio que você importou é exibido na lista **Domínio** . Se você importou um domínio composto, verifique se o domínio composto e os domínios únicos contidos nele estão na lista **Domínio** .  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de importar um domínio de um arquivo. DQS  
+##  <a name="follow-up-after-importing-a-domain-from-a-dqs-file"></a><a name="FollowUp"></a> Acompanhamento: depois de importar um domínio de um arquivo .dqs  
  Depois que você importar um domínio de um arquivo .dqs, poderá adicionar conhecimento ao domínio ou usar o domínio em um projeto de limpeza ou de correspondência, dependendo do conteúdo do domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../../2014/data-quality-services/managing-a-domain.md), [Gerenciando um domínio de composição](../../2014/data-quality-services/managing-a-composite-domain.md), [Criar uma política de conciliação](../../2014/data-quality-services/create-a-matching-policy.md), [Limpeza de dados](../../2014/data-quality-services/data-cleansing.md) ou [Correspondência de dados](../../2014/data-quality-services/data-matching.md).  
   
   

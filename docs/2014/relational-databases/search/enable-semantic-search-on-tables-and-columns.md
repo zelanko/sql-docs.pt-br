@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011379"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar a pesquisa semântica em tabelas e colunas
@@ -24,9 +24,9 @@ ms.locfileid: "66011379"
   
  A pesquisa semântica estatística usa os índices que são criados pela Pesquisa de Texto Completo e cria índices adicionais. Como resultado dessa dependência na pesquisa de texto completo, você cria um novo índice semântico ao definir um novo índice de texto completo ou ao alterar um índice de texto completo existente. Você pode criar um novo índice semântico usando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , ou usando o Assistente para Indexação de Texto Completo e outras caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conforme descrito neste tópico.  
   
-##  <a name="BasicEnabling"></a>Criando um índice semântico  
+##  <a name="creating-a-semantic-index"></a><a name="BasicEnabling"></a>Criando um índice semântico  
   
-###  <a name="reqenable"></a>Requisitos e restrições para a criação de um índice semântico  
+###  <a name="requirements-and-restrictions-for-creating-a-semantic-index"></a><a name="reqenable"></a>Requisitos e restrições para a criação de um índice semântico  
   
 -   Você pode criar um índice em qualquer um dos objetos de banco de dados com suporte para indexação de texto completo, inclusive tabelas e exibições indexadas.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011379"
   
 -   Se você criar um idioma para uma coluna para a qual o modelo de idioma não está disponível, a criação do índice falhará e retornará uma mensagem de erro.  
   
-###  <a name="HowToEnableCreate"></a>Como: criar um índice semântico quando não há nenhum índice de texto completo  
+###  <a name="how-to-create-a-semantic-index-when-there-is-no-full-text-index"></a><a name="HowToEnableCreate"></a>Como: criar um índice semântico quando não há nenhum índice de texto completo  
  Quando você criar um novo índice de texto completo com a instrução **CREATE FULLTEXT INDEX** , poderá habilitar a indexação semântica no nível de coluna especificando a palavra-chave **STATISTICAL_SEMANTICS** como parte da definição de coluna. Você também poderá habilitar a indexação semântica ao usar o Assistente para Indexação de Texto Completo para criar um novo índice de texto completo.  
   
  **Criar um novo índice semântico usando Transact-SQL**  
@@ -115,7 +115,7 @@ GO
  **Criar um novo índice semântico usando o SQL Server Management Studio**  
  Execute o Assistente para Indexação de Texto Completo e habilite **Semântica Estatística** na página **Selecionar Colunas da Tabela** para cada coluna na qual você queira criar um índice semântico. Para obter mais informações, inclusive sobre como iniciar o Assistente de Indexação de Texto Completo, veja [Usar o Assistente de Indexação de Texto Completo](use-the-full-text-indexing-wizard.md).  
   
-###  <a name="HowToEnableAlter"></a>Como: criar um índice semântico quando há um índice de texto completo existente  
+###  <a name="how-to-create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a>Como: criar um índice semântico quando há um índice de texto completo existente  
  Você pode adicionar a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode adicionar indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Adicionar um novo índice semântico usando Transact-SQL**  
@@ -144,19 +144,19 @@ GO
  **Adicionar um índice semântico usando o SQL Server Management Studio**  
  Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](../../database-engine/manage-full-text-indexes.md).  
   
-###  <a name="addreq"></a>Requisitos e restrições para alterar um índice existente  
+###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a>Requisitos e restrições para alterar um índice existente  
   
 -   Você não pode alterar um índice existente enquanto a população do índice está em andamento. Para obter mais informações sobre como monitorar o progresso da população de índice, veja [Gerenciar e monitorar a pesquisa semântica](manage-and-monitor-semantic-search.md).  
   
 -   Você não pode adicionar indexação a uma coluna, nem alterar ou remover a indexação para a mesma coluna, em uma única chamada à instrução **ALTER FULLTEXT INDEX** .  
   
-##  <a name="dropping"></a>Descartando um índice semântico  
+##  <a name="dropping-a-semantic-index"></a><a name="dropping"></a>Descartando um índice semântico  
   
-###  <a name="drophow"></a>Como: descartar um índice semântico  
+###  <a name="how-to-drop-a-semantic-index"></a><a name="drophow"></a>Como: descartar um índice semântico  
  Você pode remover a indexação semântica ao alterar um índice de texto completo existente com a instrução **ALTER FULLTEXT INDEX** . Você também pode descartar a indexação semântica usando várias caixas de diálogo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Descartar um novo índice semântico usando Transact-SQL**  
- -   Para descartar a indexação semântica somente de uma coluna ou colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER column***column_name***drop STATISTICAL_SEMANTICS** . Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
+ -   Para remover apenas a indexação semântica de uma ou mais colunas, chame a instrução **ALTER FULLTEXT INDEX** com a opção **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . Você pode remover a indexação de várias colunas em uma única instrução **ALTER** .  
   
     ```sql  
     USE database_name  
@@ -183,7 +183,7 @@ GO
  **Descartar um índice semântico usando o SQL Server Management Studio**  
  Você pode alterar as colunas que são habilitadas para indexação semântica e de texto completo na página **Colunas de Índice de Texto Completo** da caixa de diálogo **Propriedades do Índice de Texto Completo** . Para obter mais informações, veja [Gerenciar índices de texto completo](../../database-engine/manage-full-text-indexes.md).  
   
-###  <a name="dropreq"></a>Requisitos e restrições para descartar um índice semântico  
+###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a>Requisitos e restrições para descartar um índice semântico  
   
 -   Você não pode remover a indexação de texto completo de uma coluna enquanto retém a indexação semântica. A indexação semântica depende da indexação de texto completo para resultados de similaridade de documento.  
   
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Verificando se a pesquisa semântica está habilitada em objetos de banco de dados  
   
-###  <a name="HowToCheckEnabled"></a>Como verificar se a pesquisa semântica está habilitada em objetos de banco de dados  
+###  <a name="how-to-check-whether-semantic-search-is-enabled-on-database-objects"></a><a name="HowToCheckEnabled"></a>Como verificar se a pesquisa semântica está habilitada em objetos de banco de dados  
  **A pesquisa semântica está habilitada para um banco de dados?**  
  Consulte a propriedade **IsFullTextEnabled** da função de metadados [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql).  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Determinando o que pode ser indexado para Pesquisa Semântica  
   
-###  <a name="HowToCheckLanguages"></a>Como: verificar quais idiomas têm suporte para pesquisa semântica  
+###  <a name="how-to-check-which-languages-are-supported-for-semantic-search"></a><a name="HowToCheckLanguages"></a>Como: verificar quais idiomas têm suporte para pesquisa semântica  
   
 > [!IMPORTANT]  
 >  Há suporte para menos idiomas na indexação semântica do que na indexação de texto completo. Como resultado, pode haver colunas que permitam a indexação para pesquisa de texto completo, mas não para pesquisa semântica.  
@@ -256,7 +256,7 @@ GO
 |Linguagem|LCID|  
 |--------------|----------|  
 |Alemão|1031|  
-|Inglês (EUA)|1033|  
+|Inglês (EUA)|1046|  
 |Francês|1036|  
 |Italiano|1040|  
 |Português (Brasil)|1046|  
@@ -266,16 +266,16 @@ GO
 |Português (Portugal)|2070|  
 |Espanhol|3082|  
   
-###  <a name="doctypes"></a>Como determinar quais tipos de documento podem ser indexados  
+###  <a name="how-to-determine-which-document-types-can-be-indexed"></a><a name="doctypes"></a>Como determinar quais tipos de documento podem ser indexados  
  Consulte a exibição de catálogo [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Se o tipo de documento que você deseja indexar não estiver na lista de tipos com suporte, talvez seja preciso localizar, baixar e instalar filtros adicionais. Para obter mais informações, consulte [Exibir ou alterar filtros registrados e separadores de palavras](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a>Prática recomendada: considere criar um grupo de arquivos separado para os índices de texto completo e semântico  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a>Prática recomendada: considere criar um grupo de arquivos separado para os índices de texto completo e semântico  
  Considere criar um grupo de arquivos separado para os índices de texto completo e semântico se a alocação de espaço em disco for um problema. Os índices semânticos são criados no mesmo grupo de arquivos que o índice de texto completo. Um índice semântico totalmente populado pode conter uma grande quantidade de dados.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a>Problema: a pesquisa em uma coluna específica não retorna nenhum resultado  
+##  <a name="problem-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a>Problema: a pesquisa em uma coluna específica não retorna nenhum resultado  
  **Um LCID não Unicode foi especificado para um idioma Unicode?**  
  É possível habilitar a indexação semântica em um tipo de coluna não Unicode com um LCID para um idioma que tenha apenas palavras Unicode, como o LCID 1049 para russo. Neste caso, nenhum resultado será retornado dos índices semânticos nesta coluna.  
   

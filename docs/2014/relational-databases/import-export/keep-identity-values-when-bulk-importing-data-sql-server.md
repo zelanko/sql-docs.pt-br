@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011912"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Manter valores de identidade ao importar dados em massa (SQL Server)
@@ -55,7 +55,7 @@ GO
 SELECT * FROM HumanResources.myDepartment;  
 ```  
   
- A tabela **Departamento** na qual o`myDepartment` é baseado tem IDENTITY_INSERT definido como OFF. Portanto, para importar dados para uma coluna de identidade, você deve especificar KEEPIDENTITY ou **-E**.  
+ A tabela **Departamento`myDepartment` na qual o** é baseado tem IDENTITY_INSERT definido como OFF. Portanto, para importar dados para uma coluna de identidade, você deve especificar KEEPIDENTITY ou **-E**.  
   
 ### <a name="sample-data-file"></a>Arquivo de dados de exemplo  
  O arquivo de dados usado nos exemplos da importação em massa contém massa de dados exportada da tabela `HumanResources.Department` em formato nativo. Para criar esse arquivo de dados, no prompt de comando do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, digite:  
@@ -73,10 +73,10 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Para obter mais informações sobre como criar um arquivo de formato, consulte [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>a. Usando bcp e mantendo valores de identidade  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Usando bcp e mantendo valores de identidade  
  O exemplo a seguir demonstra como manter valores de identidade ao usar o `bcp` para realizar a importação em massa dos dados. O comando `bcp` usa o arquivo de formato `myDepartment-f-n-x.Xml` e contém as seguintes opções:  
   
-|Qualificadores|DESCRIÇÃO|  
+|Qualificadores|Descrição|  
 |----------------|-----------------|  
 |**-E**|Especifica que o valor ou valores de identidade no arquivo de dados serão usados para a coluna de identidade.|  
 |**-T**|Especifica que o `bcp` utilitário se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao com uma conexão confiável.|  
@@ -130,7 +130,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Manter valores nulos ou use os valores padrão durante a importação em massa &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
@@ -160,19 +160,19 @@ GO
   
 -   [Usar o formato nativo Unicode para importar ou exportar dados &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Para especificar formatos de dados para compatibilidade ao usar bcp**  
+ **Para especificar formatos de dados para compatibilidade usando bcp**  
   
 1.  [Especificar terminadores de campo e linha &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Especifique o tamanho do prefixo em arquivos de dados usando o bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Especificar o tamanho de prefixo em arquivos de dados usando bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Especifique o tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Utilitário bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Dicas de tabela &#40;&#41;Transact-SQL](/sql/t-sql/queries/hints-transact-sql-table)  
+ [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
   

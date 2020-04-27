@@ -10,10 +10,10 @@ ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
 ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261297"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar uma instalação do Reporting Services (Modo Nativo)
@@ -42,7 +42,7 @@ ms.locfileid: "63261297"
   
 -   Você detecta um problema que impede a atualização.  
   
-##  <a name="bkmk_nativemode_migration_overview"></a>Visão geral da migração do modo nativo  
+##  <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Visão geral da migração de modo nativo  
  O processo de migração para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui etapas manuais e automatizadas. As seguintes tarefas fazem parte de uma migração de servidor de relatório:  
   
 -   Fazer backup de arquivos de banco de dados, de aplicativos e de configuração.  
@@ -70,7 +70,7 @@ ms.locfileid: "63261297"
   
 -   [Criar um banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
-##  <a name="bkmk_fixed_database_name"></a>Nome de banco de dados fixo  
+##  <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Nome fixo do banco de dados  
  Você não pode renomear o banco de dados de servidor de relatório. A identidade do banco de dados é registrada em procedimentos armazenados do servidor de relatório quando o banco de dados é criado. A renomeação dos bancos de dados primário ou temporário do servidor de relatório ocasiona erros quando os procedimentos são executados, invalidando a instalação do servidor de relatório.  
   
  Se o nome do banco de dados da instalação existente não for adequado para a nova instalação, avalie a possibilidade de criar um novo banco de dados com o nome desejado e, em seguida, carregue os dados de aplicativo existentes usando as técnicas descritas na lista a seguir:  
@@ -81,7 +81,7 @@ ms.locfileid: "63261297"
   
 -   Se houver poucos itens, você poderá republicar relatórios, modelos de relatório e fontes de dados compartilhadas do Designer de Relatórios, do Designer de Modelo e do Construtor de Relatórios no novo servidor de relatório. Você deve recriar atribuições de função, assinaturas, agendas compartilhadas, agendas de instantâneo de relatório, propriedades personalizadas definidas em relatórios ou outros itens, segurança de item de modelo e propriedades definidas no servidor de relatório. Você perderá os dados do histórico de relatório e do log de execução de relatório.  
   
-##  <a name="bkmk_before_you_start"></a>Antes de começar  
+##  <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Antes de iniciar  
  Embora você esteja migrando e não atualizando a instalação, considere a possibilidade de executar o Supervisor de Atualização na instalação existente para identificar problemas que poderiam afetar a migração. Esta etapa será especialmente útil se você estiver migrando um servidor de relatório que não instalou ou configurou. Executando o Supervisor de Atualização, você poderá obter informações sobre configurações personalizadas que podem não ter suporte em uma nova instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Além disso, você deve estar ciente de várias alterações importantes feitas no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que afetarão a maneira como a instalação será migrada:  
@@ -92,19 +92,19 @@ ms.locfileid: "63261297"
   
 -   O Gerenciador de Relatórios e o SQL Server Management Studio foram reformulados para remover recursos sobrepostos. Cada ferramenta é compatível com um conjunto distinto de tarefas; as ferramentas não são mais intercambiáveis.  
   
--   Não há suporte para filtros ISAPI [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no e em versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
+-   Os filtros ISAPI não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores. Se você usa filtros ISAPI, deve remodelar sua solução de relatório antes de migração.  
   
--   Não há suporte para restrições de endereço [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] IP no e em versões posteriores. Se você usa restrições de endereço IP, deve remodelar sua solução de relatório antes da migração ou usar uma tecnologia, como um firewall, um roteador ou a conversão de endereço de rede (NAT), para configurar endereços que tem restrições de acesso ao servidor de relatório.  
+-   As restrições de endereço IP não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores. Se você usa restrições de endereço IP, deve remodelar sua solução de relatório antes da migração ou usar uma tecnologia, como um firewall, um roteador ou a conversão de endereço de rede (NAT), para configurar endereços que tem restrições de acesso ao servidor de relatório.  
   
 -   Não há suporte para certificados de protocolo SSL de cliente ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SSL) no e em versões posteriores. Se você usa certificados SSL de cliente, deve remodelar sua solução de relatório antes de migração.  
   
--   Se você usar um tipo de autenticação diferente da autenticação integrada do Windows, atualize o elemento `<AuthenticationTypes>` no arquivo **RSReportServer.config** com um tipo de autenticação com suporte. Os tipos de autenticação que têm suporte são NTLM, Kerberos, Negotiate e Básica. Não há suporte para autenticação anônima, .NET Passport e Digest no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e em versões posteriores.  
+-   Se você usar um tipo de autenticação diferente da autenticação integrada do Windows, atualize o elemento `<AuthenticationTypes>` no arquivo **RSReportServer.config** com um tipo de autenticação com suporte. Os tipos de autenticação que têm suporte são NTLM, Kerberos, Negotiate e Básica. Os tipos de autenticação Anônima, .NET Passport e Digest não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores.  
   
 -   Se você usar folhas de estilos em cascata personalizadas no ambiente de relatório, elas não serão migradas. Você deverá movê-las manualmente após a migração.  
   
  Para obter mais informações sobre as [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]alterações no, consulte a documentação do supervisor de atualização e as novidades [&#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
-##  <a name="bkmk_backup"></a>Arquivos e dados de backup  
+##  <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Arquivos e dados para backup  
  Antes de instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], faça backup de todos os arquivos da instalação atual.  
   
 1.  Faça backup da chave de criptografia do banco de dados do servidor de relatório. Esta etapa é fundamental para o sucesso da migração. Mais adiante no processo de migração, você deverá restaurar a chave de criptografia para que o servidor de relatório tenha novamente acesso aos dados criptografados. Para fazer backup da chave, use o Gerenciador de Configurações do Reporting Services.  
@@ -127,7 +127,7 @@ ms.locfileid: "63261297"
   
     7.  Machine.config de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] caso ele tenha sido modificado para operações do servidor de relatório.  
   
-##  <a name="bkmk_install_ssrs"></a>Instalar SQL Server Reporting Services  
+##  <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Instale o SQL Server Reporting Services  
  Instale uma nova instância do servidor de relatório no modo somente arquivos para que você possa configurá-la para usar valores diferentes do padrão. Para fazer a instalação pela linha de comando, use o argumento `FilesOnly`. No Assistente de Instalação, selecione a **opção Instalar, mas não configurar**.  
   
  Clique em um destes links para exibir instruções sobre como instalar uma nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
@@ -136,7 +136,7 @@ ms.locfileid: "63261297"
   
 -   [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
-##  <a name="bkmk_move_database"></a>Mover o banco de dados do servidor de relatório  
+##  <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Mover o banco de dados do servidor de relatório  
  O banco de dados do servidor de relatório contém relatórios publicados, modelos, fontes de dados compartilhadas, agendas, recursos, assinaturas e pastas. Ele também contém propriedades do sistema e de itens e permissões para acessar conteúdo do servidor de relatório.  
   
  Se a migração envolve o uso de uma outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , você deverá mover o banco de dados do servidor de relatório para a nova instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se você estiver usando a mesma instância [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vá para a seção [Mover assemblies ou extensões personalizadas](#bkmk_move_custom).  
@@ -161,7 +161,7 @@ ms.locfileid: "63261297"
   
  Lembre-se de que o banco de dados do servidor de relatório e o banco de dados temporário são interdependentes e devem ser movidos juntos. Não copie os bancos de dados; a cópia não transfere todas as configurações de segurança para a nova instalação. Não mova trabalhos do SQL Server Agent para operações de servidor de relatório agendadas. O servidor de relatório recriará esses trabalhos automaticamente.  
   
-##  <a name="bkmk_move_custom"></a>Mover assemblies ou extensões personalizadas  
+##  <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Mover assemblies ou extensões personalizadas  
  Se a instalação inclui extensões, itens de relatório ou assemblies personalizados, reimplante os componentes personalizados. Se você não estiver usando componentes personalizados, vá para a seção [Configurar o servidor de relatório](#bkmk_configure_reportserver).  
   
  Para reimplantar os componentes personalizados, faça o seguinte:  
@@ -170,9 +170,9 @@ ms.locfileid: "63261297"
   
     -   As extensões de autenticação personalizadas que foram criadas para a versão [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] devem ser recompiladas.  
   
-    -   Extensões de renderização personalizadas [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para devem ser reescritas usando o modelo de objeto de renderização (ROM).  
+    -   As extensões de renderização personalizadas para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devem ser reescritas usando o ROM (Modelo de Objeto de Renderização).  
   
-    -   O HTML 3,2 e os renderizadores do OWC em HTML [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não têm suporte no e em versões posteriores.  
+    -   Os renderizadores HTML 3.2 e HTML OWC não são compatíveis com o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versões posteriores.  
   
     -   Outros assemblies personalizados não devem exigir recompilação.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63261297"
   
     1.  [Implantando um assembly personalizado](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [Como implantar um item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [Como: implantar um Item de relatório personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [Implantando uma extensão de processamento de dados](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -194,7 +194,7 @@ ms.locfileid: "63261297"
   
     6.  [Implementando uma extensão de segurança](../extensions/security-extension/implementing-a-security-extension.md)  
   
-##  <a name="bkmk_configure_reportserver"></a>Configurar o servidor de relatório  
+##  <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Configurar o servidor de relatório  
  Configure as URLs do serviço Web Servidor de Relatórios e do Gerenciador de Relatórios e configure a conexão com o banco de dados do servidor de relatório.  
   
  Se você estiver migrando uma implantação em expansão, coloque todos os nós do servidor de relatório offline e migre um servidor de cada vez. Depois que o primeiro servidor de relatório for migrado e se conectar ao banco de dados de servidor de relatório, a versão desse banco de dados será automaticamente atualizada para a versão do banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -217,29 +217,29 @@ ms.locfileid: "63261297"
   
 4.  Restaure as chaves de criptografia. Esta etapa é necessária para permitir a criptografia reversível em credenciais e cadeias de conexão pré-existentes que já estão no banco de dados do servidor de relatório. Para saber mais, confira [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
-5.  Se você instalou o servidor de relatório em um novo computador e está usando o Firewall do Windows, verifique se a porta TCP em que o servidor de relatório escuta está aberta. Por padrão, essa porta é a 80. Para obter mais informações, consulte [configurar um firewall para acesso ao servidor de relatório](../report-server/configure-a-firewall-for-report-server-access.md).  
+5.  Se você instalou o servidor de relatório em um novo computador e está usando o Firewall do Windows, verifique se a porta TCP em que o servidor de relatório escuta está aberta. Por padrão, essa porta é a 80. Para obter instruções, veja [Configurar um firewall para acesso ao servidor de relatório](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Se você desejar administrar localmente seu servidor de relatório de modo nativo, configure o sistema operacional para permitir a administração local com o Gerenciador de Relatórios. Para obter mais informações, consulte [Configurar um servidor de relatório no modo nativo para a Administração Local &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="bkmk_copy_custom_config"></a>Copiar definições de configuração personalizadas para o arquivo RSReportServer. config  
+##  <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Copiar parâmetros de configuração personalizados para o arquivo RSReportServer.config  
  Se você modificou os arquivos RSReportServer.config ou RSWebApplication.config na instalação anterior, deverá fazer as mesmas modificações no novo arquivo RSReportServer.config. A lista a seguir resume alguns dos motivos pelos quais você pode ter modificado o arquivo de configuração anterior e apresenta links para informações adicionais sobre como definir as mesmas configurações no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Personalização|Informações|  
 |-------------------|-----------------|  
 |Entrega de email do Servidor de Relatório com configurações personalizadas|[Configurar um servidor de relatório para entrega de email &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [configurações de email-Configuration Manager &#40;modo nativo do SSRS&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Configurações de informações de dispositivo|[Personalizar parâmetros de extensão de renderização em RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
-|Gerenciador de Relatórios em uma instância remota|[Configurar Report Manager &#40;modo nativo&#41;](../report-server/configure-web-portal.md)|  
+|Gerenciador de Relatórios em uma instância remota|[Configurar o Gerenciador de Relatórios &#40;modo nativo&#41;](../report-server/configure-web-portal.md)|  
   
-##  <a name="bkmk_windowsservice_group"></a>Grupo de serviços do Windows e ACLs de segurança  
- No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupo de serviços do Windows, que é usado para criar ACLs de segurança para todas as chaves, arquivos e pastas do registro instalados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]com o. Esse nome de grupo do Windows aparece no formato SQLServerReportServerUser\<$*computer_name*>$\<*instance_name*>. Esse grupo substitui os dois grupos de serviços do Windows no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você tiver ACLs personalizadas associadas a qualquer um dos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos do Windows, será necessário aplicar essas ACLs ao novo grupo para a nova instância do servidor de relatório no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+##  <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Grupo de Serviços do Windows e ACLs de segurança  
+ No [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], há um grupo de serviços, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupo de serviços do Windows, que é usado para criar ACLs de segurança para todas as chaves, arquivos e pastas do registro instalados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]com o. Este nome de grupo do Windows aparece no formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>. Esse grupo substitui os dois grupos de serviços do Windows no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você tiver ACLs personalizadas associadas a qualquer um dos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] grupos do Windows, será necessário aplicar essas ACLs ao novo grupo para a nova instância do servidor de relatório no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-##  <a name="bkmk_verify"></a>Verificar sua implantação  
+##  <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Verificar a implantação  
   
 1.  Teste os diretórios virtuais do servidor de relatório e do Gerenciador de Relatórios abrindo um navegador e digitando a URL. Para obter mais informações, veja [Verificar uma instalação do Reporting Services](verify-a-reporting-services-installation.md).  
   
 2.  Teste os relatórios e verifique se eles contêm os dados esperados. Revise as informações de fonte de dados para detectar se as informações de conexão de fonte de dados ainda estão especificadas. O servidor de relatório usa o modelo de objeto de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] quando processa e renderiza relatórios, mas não substitui construções do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] por novos elementos RDL. Para obter mais informações sobre como os relatórios existentes são executados em um servidor de relatório do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , veja [Atualizar relatórios](upgrade-reports.md).  
   
-##  <a name="bkmk_remove_unused"></a>Remover programas e arquivos não utilizados  
+##  <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Remover programas e arquivos que não são usados  
  Depois de migrar com êxito o servidor de relatório para uma [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instância do, talvez você queira executar as etapas a seguir para remover programas e arquivos que não são mais necessários.  
   
 1.  Desinstale a versão anterior do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] caso não precise mais dela. Esta etapa não exclui os seguintes itens, mas você poderá removê-los manualmente se não precisar mais deles:  

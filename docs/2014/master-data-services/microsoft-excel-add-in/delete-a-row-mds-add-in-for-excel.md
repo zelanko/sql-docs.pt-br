@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482686"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Excluir uma linha (suplemento MDS para Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482686"
 > [!NOTE]  
 >  Administradores podem reativar membros excluídos. Para obter mais informações, consulte [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para a área funcional **Explorer** .  

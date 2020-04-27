@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012729"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Escolher um idioma ao criar um índice de texto completo
@@ -32,7 +32,7 @@ ms.locfileid: "66012729"
 > [!NOTE]  
 >  Para especificar um idioma no nível de coluna para uma coluna de índice de texto completo, use a cláusula LANGUAGE *language_term* ao especificar a coluna. Para obter mais informações, veja [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql) e [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
-##  <a name="langsupp"></a> Suporte de idioma na pesquisa de texto completo  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> Suporte de idioma na pesquisa de texto completo  
  Esta seção apresenta uma introdução aos separadores de palavras e lematizadores e discute como a pesquisa de texto completo usa o LCID do idioma no nível de coluna.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introdução aos separadores de palavras e lematizadores  
@@ -73,7 +73,7 @@ ms.locfileid: "66012729"
   
 
   
-##  <a name="breaking"></a> Quebra de palavras  
+##  <a name="word-breaking"></a><a name="breaking"></a> Quebra de palavras  
  Um separador de palavras cria tokens do texto que está sendo indexado em limites de palavra, que são específicos de idioma. Por isso, o comportamento da separação de palavras é diferente entre diferentes idiomas. Se você usar o idioma x para indexar vários idiomas {x, y e ,z}, o comportamento de alguns deles poderá gerar resultados inesperados. Por exemplo, um traço (-) ou uma vírgula (,) pode ser um elemento de separação de palavras que será acionado em um idioma, mas não em outro. Além disso, pode ocorrer um comportamento de lematização raramente inesperado porque uma dada palavra pode ter um comportamento de lematização diferente em outro idioma. Por exemplo, no idioma inglês, os limites de palavras normalmente são espaços em branco ou alguma forma de pontuação. Em outros idiomas, como no alemão, palavras ou caracteres podem ser combinados. Portanto, o idioma no nível de coluna escolhido deve representar o idioma que você espera que será armazenado em linhas dessa coluna.  
   
 ### <a name="western-languages"></a>Idiomas ocidentais  
@@ -100,12 +100,12 @@ ms.locfileid: "66012729"
   
 
   
-##  <a name="stemming"></a> Lematização  
+##  <a name="stemming"></a><a name="stemming"></a> Lematização  
  Outro aspecto que você deve levar em consideração quando escolher o idioma no nível de coluna é a lematização. Em consultas de texto completo,*lematização* é o processo de procurar todas as formas lematizadas (flexivas) de uma palavra em determinado idioma. Quando você usa um separador de palavras genérico para processar vários idiomas, o processo de lematização só funcionará para o idioma especificado para a coluna, e não para os outros idiomas da coluna. Por exemplo, os lematizados de alemão não funcionam para inglês ou espanhol (e assim por diante). Isso poderia afetar a recuperação, dependendo do idioma escolhido no momento da consulta.  
   
 
   
-##  <a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Efeito do tipo de coluna na pesquisa de texto completo  
  Outro aspecto a ser considerado na escolha do idioma está relacionada a como os dados são representados. Para dados que não são armazenados na coluna `varbinary(max)`, nenhuma filtragem especial é executada. Em vez disso, o texto geralmente é passado pelo separador de palavras assim como é.  
   
  Além disso, os separadores de palavra foram criados principalmente para processar texto escrito. Então, se você tiver algum tipo de formatação em seu texto (como HTML), não será possível obter grande precisão linguística durante a indexação e procura. Nesse caso, você tem duas opções: o método preferencial é simplesmente armazenar os dados de texto na `varbinary(max)` coluna e indicar seu tipo de documento para que ele possa ser filtrado. Se não houver essa opção, você poderá considerar a possibilidade de usar o separador de palavras neutro e, se possível, adicionar dados de marcação (como ‘br’ em HTML) à lista de palavras de ruído.  
@@ -115,7 +115,7 @@ ms.locfileid: "66012729"
   
 
   
-##  <a name="nondef"></a> Especificando um idioma em nível de coluna não padrão em uma consulta de texto completo  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> Especificando um idioma em nível de coluna não padrão em uma consulta de texto completo  
  Por padrão, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a pesquisa de texto completo analisará os termos da consulta usando o idioma especificado para cada coluna incluída na cláusula de texto completo. Para ignorar esse comportamento, especifique um idioma não padrão no momento da consulta. Para os idiomas com suporte cujos recursos estão instalados, a cláusula *language_term* de LANGUAGE de uma consulta [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)ou [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) pode ser usada para especificar o idioma utilizado para separação de palavras, lematização, dicionário de sinônimos e processamento de palavra irrelevante (stop word) dos termos da consulta.  
   
 

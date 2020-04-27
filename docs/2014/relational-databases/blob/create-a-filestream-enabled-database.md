@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010322"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Criar um banco de dados habilitado para FILESTREAM
@@ -36,9 +36,7 @@ ms.locfileid: "66010322"
 3.  Para construir o banco de dados, clique em **Executar**.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir cria um banco de dados chamado `Archive`. O banco de dados contém três grupos de arquivos: `PRIMARY`, `Arch1`e `FileStreamGroup1`. 
-  `PRIMARY` e `Arch1` são grupos de arquivos normais que não podem conter dados FILESTREAM. 
-  `FileStreamGroup1` é o grupo de arquivos `FILESTREAM` .  
+ O exemplo de código a seguir cria um banco de dados chamado `Archive`. O banco de dados contém três grupos de arquivos: `PRIMARY`, `Arch1`e `FileStreamGroup1`. `PRIMARY` e `Arch1` são grupos de arquivos normais que não podem conter dados FILESTREAM. `FileStreamGroup1` é o grupo de arquivos `FILESTREAM` .  
   
 ```sql  
 CREATE DATABASE Archive   
@@ -62,7 +60,7 @@ GO
  Em bancos de dados existentes, você pode usar a instrução [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) para adicionar um grupo de arquivos FILESTREAM.  
   
 ## <a name="see-also"></a>Consulte Também  
- [CRIAR &#40;de banco de dados SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

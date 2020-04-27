@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011271"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Melhorar o desempenho de consultas de texto completo
@@ -26,8 +26,7 @@ ms.locfileid: "66011271"
   
 -   Reorganize o catálogo de texto completo usando [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Faça isso antes de testar o desempenho, pois a execução dessa instrução provoca uma mesclagem mestra dos índices de texto completo desse catálogo.  
   
--   Restrinja suas opções de colunas de chave de texto completo a uma coluna pequena. Embora haja suporte para uma coluna de 900 bytes, é recomendável usar uma coluna de chave menor em um índice de texto completo. 
-  `int` e `bigint` fornecem o melhor desempenho.  
+-   Restrinja suas opções de colunas de chave de texto completo a uma coluna pequena. Embora haja suporte para uma coluna de 900 bytes, é recomendável usar uma coluna de chave menor em um índice de texto completo. `int` e `bigint` fornecem o melhor desempenho.  
   
 -   O uso de uma chave de texto completo de inteiro evita uma junção com a tabela de mapeamento **docid** . Portanto, uma chave de texto completo de inteiro melhora o desempenho de consultas consideravelmente e aprimora o desempenho de rastreamento. Outros benefícios de desempenho poderão ser obtidos se a chave de texto completo também for a chave de índice clusterizado.  
   

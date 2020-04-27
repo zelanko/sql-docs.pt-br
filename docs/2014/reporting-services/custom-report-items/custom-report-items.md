@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264783"
 ---
 # <a name="custom-report-items"></a>Itens de Relatório Personalizados
@@ -38,13 +38,13 @@ ms.locfileid: "63264783"
  [Requisitos de implementação de item de relatório personalizado](custom-report-item-implementation-requirements.md)  
  Descreve os pré-requisitos para a criação de um item de relatório personalizado.  
   
- [Criar um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)  
+ [Criando um componente de item de relatório personalizado em tempo de execução](creating-a-custom-report-item-run-time-component.md)  
  Descreve como criar um componente de tempo de execução de item de relatório personalizado.  
   
- [Criar um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
+ [Criando um componente de tempo de design de item de relatório personalizado](creating-a-custom-report-item-design-time-component.md)  
  Descreve como criar um componente de tempo de design de item de relatório personalizado.  
   
- [Como implantar um item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Como: implantar um Item de relatório personalizado](how-to-deploy-a-custom-report-item.md)  
  Descreve como implantar um item de relatório personalizado.  
   
  [Bibliotecas de classes de itens de relatório personalizados](custom-report-item-class-libraries.md)  

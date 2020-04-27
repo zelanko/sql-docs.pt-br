@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012644"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012644"
     child::Customer  
     ```  
   
-     Na consulta XPath a seguir, `child` é o eixo. 
-  `Customer` é o teste de nó.  
+     Na consulta XPath a seguir, `child` é o eixo. `Customer` é o teste de nó.  
   
 -   `parent`  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66012644"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. 
-  `Customer` e `Order` são os testes de nó.  
+     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. `Customer` e `Order` são os testes de nó.  
   
 -   `attribute`  
   

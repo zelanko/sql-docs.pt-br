@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011073"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Procurar palavras perto de outra palavra com NEAR
   Você pode usar uma condição de proximidade (NEAR) em um predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou uma função [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para procurar palavras ou frases próximas umas das outras. Você também pode especificar o número máximo de condições não relacionadas à pesquisa que separam a primeira e a última condição da pesquisa. Além disso, você pode pesquisar palavras ou frases em qualquer ordem, ou pode pesquisar palavras ou frases na ordem em que especificá-las. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]dá suporte à [condição de proximidade genérica](#Generic_NEAR)anterior, que agora é preterida e a [condição de proximidade personalizada](#Custom_NEAR), que é [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]nova no.  
   
-##  <a name="Custom_NEAR"></a>A condição de proximidade personalizada  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>A condição de proximidade personalizada  
  A condição de proximidade personalizada introduz os novos recursos a seguir:  
   
 -   Você pode especificar o número máximo de condições não relacionadas à pesquisa ou *distância máxima*que separa a primeira e o último critério de pesquisa para constituir uma correspondência.  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>Considerações adicionais para pesquisas de proximidade  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>Considerações adicionais para pesquisas de proximidade  
  Esta seção discute considerações que afetam pesquisas de proximidade genéricas e personalizadas:  
   
 -   Sobrepondo ocorrências de condições de pesquisa  
@@ -153,7 +153,7 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a>O termo de proximidade genérico preterido  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>O termo de proximidade genérico preterido  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Recomendamos que você use a [condição de proximidade personalizada](#Custom_NEAR).  

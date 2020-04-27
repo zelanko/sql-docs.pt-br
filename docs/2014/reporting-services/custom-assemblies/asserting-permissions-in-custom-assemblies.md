@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265377"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Declarando permissões em assemblies personalizados
@@ -90,6 +90,6 @@ try
  Para obter mais informações, consulte "Segurança do .NET Framework" no Guia do desenvolvedor do .NET Framework.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)  
+ [Usando assemblies personalizados com relatórios](using-custom-assemblies-with-reports.md)  
   
   

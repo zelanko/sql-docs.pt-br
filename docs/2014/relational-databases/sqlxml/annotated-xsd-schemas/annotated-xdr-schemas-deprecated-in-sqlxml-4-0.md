@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b19deb48073462ce26c86afdd586e2b9e5426ecb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014620"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Esquemas XDR anotados (Substituídos no SQLXML 4.0)

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250519"
 ---
 # <a name="scripting-replication"></a>Replicação de script
-  Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema Transact-SQL necessários para implementar os componentes de replicação incluídos no script, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o assistente para nova publicação) ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no após a criação de um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada.  
+  Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema Transact-SQL necessários para implementar os componentes de replicação incluídos no script, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o Assistente para Nova Publicação) ou no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] depois de você criar um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada.  
   
  O script de um componente deve ser refeito caso alguma propriedade seja alterada. Se você usar procedimentos armazenados com replicação transacional, uma cópia de cada procedimento deve ser armazenada com os scripts; a cópia deve ser atualizada se o procedimento for alterado (os procedimentos são normalmente alterados devido a mudanças no esquema ou nos requisitos de aplicativo). Para mais informações sobre procedimentos personalizados, consulte [Especificar como as alterações são propagadas para artigos transacionais](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -58,17 +58,17 @@ ms.locfileid: "63250519"
   
 -   [Criar uma Assinatura Push](create-a-push-subscription.md)  
   
--   [Create a Pull Subscription](create-a-pull-subscription.md)  
+-   [Criar uma assinatura pull](create-a-pull-subscription.md)  
   
 #### <a name="to-script-an-object-from-a-replication-wizard"></a>Para executar um script de um objeto a partir de um assistente de replicação  
   
 1.  Na página **Ações do Assistente** de um assistente, marque a caixa de seleção apropriada para o assistente:  
   
-    -   **Gerar um arquivo de script com etapas para criar uma publicação**  
+    -   **Gere um arquivo de script com etapas para criar uma publicação**  
   
-    -   **Gerar um arquivo de script com etapas para criar as assinaturas**  
+    -   **Gere um arquivo de script com etapas criar a assinatura(s)**  
   
-    -   **Gerar um arquivo de script com etapas para configurar a distribuição**  
+    -   **Gere um arquivo de script com etapas para configurar a distribuição**  
   
 2.  Especifique opções na página **Propriedades do Arquivo de Script** .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63250519"
   
 3.  Clique com o botão direito do mouse em uma publicação ou assinatura e então clique em **Gerar Scripts**.  
   
-4.  Especifique as opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>**.  
+4.  Especifique as opções na caixa de diálogo **Gerar Script SQL – \<ReplicationObject>** .  
   
 5.  Clique em **Script para Arquivo**.  
   
@@ -102,6 +102,6 @@ ms.locfileid: "63250519"
   
 5.  Insira um nome de arquivo na caixa de diálogo **Local do Arquivo de Script** e então clique em **Salvar**. Será exibida uma mensagem de status.  
   
-6.  Clique em **OK e** em **fechar**.  
+6.  Clique em **OK** e então clique em **Fechar**.  
   
   

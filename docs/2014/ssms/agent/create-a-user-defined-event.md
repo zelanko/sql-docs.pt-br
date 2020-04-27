@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260945"
 ---
 # <a name="create-a-user-defined-event"></a>Criar um evento definido pelo usuário
@@ -48,7 +48,7 @@ ms.locfileid: "63260945"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **Para criar um alerta com base nos níveis de severidade**  
+ **Para criar um alerta com base em níveis de severidade**  
   
 -   [SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63260945"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Para criar uma mensagem de erro de evento definido pelo usuário**  
+ **Para criar uma mensagem de erro de evento definida pelo usuário**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63260945"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Para excluir uma mensagem de erro de evento definido pelo usuário**  
+ **Para excluir uma mensagem de erro de evento definida pelo usuário**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

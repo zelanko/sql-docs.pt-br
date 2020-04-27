@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011316"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Localizar documentos semelhantes e relacionados com a pesquisa semântica
   Descreve como localizar documentos ou valores de texto semelhantes ou relacionados, e informações sobre como eles são semelhantes ou relacionados, em colunas configuradas para indexação semântica estatística.  
   
-##  <a name="BasicsQuerySimilar"></a>Localizando documentos semelhantes ou relacionados  
+##  <a name="finding-similar-or-related-documents"></a><a name="BasicsQuerySimilar"></a>Localizando documentos semelhantes ou relacionados  
   
-###  <a name="HowToQuerySimilar"></a>Como localizar documentos semelhantes ou relacionados com o SEMANTICSIMILARITYTABLE  
+###  <a name="how-to-find-similar-or-related-documents-with-semanticsimilaritytable"></a><a name="HowToQuerySimilar"></a>Como localizar documentos semelhantes ou relacionados com o SEMANTICSIMILARITYTABLE  
  Para identificar documentos semelhantes ou relacionados em uma coluna específica, consulte a função [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  **SEMANTICSIMILARITYTABLE** retorna uma tabela de zero, uma ou mais linhas cujo conteúdo na coluna especificada é semanticamente semelhante ao documento especificado. Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
@@ -36,7 +36,7 @@ ms.locfileid: "66011316"
 > [!IMPORTANT]  
 >  As colunas de destino devem ter a indexação de texto completo e semântica habilitada.  
   
-###  <a name="HowToIdentifySimilar"></a>Exemplo: localizar os principais documentos semelhantes a outro documento  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Exemplo: localizar os principais documentos semelhantes a outro documento  
  O exemplo a seguir recupera os 10 principais candidatos que são semelhantes ao candidato especificado pelo *@CandidateID* da tabela HumanResources. JobCandidate no banco de dados de exemplo AdventureWorks2012.  
   
 ```scr  
@@ -51,9 +51,9 @@ ORDER BY KEY_TBL.score DESC;
 GO  
 ```  
   
-##  <a name="BasicsQuerySimilarity"></a>Localizando informações sobre como os documentos são semelhantes ou relacionados  
+##  <a name="finding-information-about-how-documents-are-similar-or-related"></a><a name="BasicsQuerySimilarity"></a>Localizando informações sobre como os documentos são semelhantes ou relacionados  
   
-###  <a name="HowToQuerySimilarity"></a>Como encontrar informações sobre como os documentos são semelhantes ou relacionados ao SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="how-to-find-information-about-how-documents-are-similar-or-related-with-semanticsimilaritydetailstable"></a><a name="HowToQuerySimilarity"></a>Como encontrar informações sobre como os documentos são semelhantes ou relacionados ao SEMANTICSIMILARITYDETAILSTABLE  
  Para obter informações sobre as frases-chave que tornam documentos semelhantes ou relacionados, consulte a função [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** retorna uma tabela de zero, uma ou mais linhas de frases-chave comuns entre dois documentos (um documento de origem e um documento correspondente) cujo conteúdo é semanticamente semelhante. Essa função de conjunto de linhas pode ser referenciada na cláusula FROM de uma instrução SELECT como um nome de tabela normal.  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  As colunas de destino devem ter a indexação de texto completo e semântica habilitada.  
   
-###  <a name="HowToSimilarPhrases"></a>Exemplo: localizar as principais frases-chave que são semelhantes entre os documentos  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a>Exemplo: localizar as principais frases-chave que são semelhantes entre os documentos  
  O exemplo a seguir recupera as cinco frases-chave com a pontuação de similaridade mais alta entre os candidatos especificados na tabela **HumanResources.JobCandidate** do banco de dados de exemplo AdventureWorks2012.  
   
 ```sql  

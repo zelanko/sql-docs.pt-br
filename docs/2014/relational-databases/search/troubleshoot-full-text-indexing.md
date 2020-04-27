@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015087"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas na indexação de texto completo
      
-##  <a name="failure"></a> Solucionar problemas de falhas na indexação de texto completo  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Solucionar problemas de falhas na indexação de texto completo  
  Ao popular ou manter um índice de texto completo, o indexador de texto completo, pelas razões descritas a seguir, talvez falhe ao indexar uma ou mais linhas. Esses erros em nível de linha não impedem a conclusão da população. O indexador ignora essas linhas, o que significa que não é possível consultar seu conteúdo.  
   
  As falhas de indexação podem ocorrer quando:  
@@ -54,7 +54,7 @@ ms.locfileid: "66015087"
   
 
   
-##  <a name="state"></a> Índice de texto completo em estado inconsistente após o log de transações ser restaurado  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Índice de texto completo em estado inconsistente após o log de transações ser restaurado  
  Ao restaurar o log de transações de um banco de dados, é possível que apareça um aviso indicando que o índice de texto completo não está em um estado consistente. O motivo pelo qual isso ocorre é que o índice de texto completo de uma tabela foi modificado após ter sido feito o backup do banco de dados. Para trazer o índice de texto completo a um estado consistente, você deve executar uma população completa (rastreamento) na tabela. Para obter mais informações, veja [Popular índices de texto completo](../indexes/indexes.md).  
   
 

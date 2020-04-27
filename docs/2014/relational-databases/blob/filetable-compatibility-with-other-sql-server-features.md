@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010150"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidade do FileTable com outros recursos do SQL Server
   Descreve como as FileTables funcionam com outros recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="alwayson"></a> Grupos de disponibilidade AlwaysOn e FileTables  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a>Grupos de Disponibilidade AlwaysOn e filetables  
  Quando o banco de dados que contém dados FILESTREAM ou FileTable pertence a um grupo de disponibilidade AlwaysOn:  
   
 -   A funcionalidade FileTable tem suporte parcial pelo [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Depois de um failover, os dados de FileTable estarão acessíveis na réplica primária, mas os dados de FileTable não estarão acessíveis em réplicas secundárias legíveis.  
@@ -34,26 +34,26 @@ ms.locfileid: "66010150"
   
 -   Todo o acesso aos dados FILESTREAM ou FileTable pelas APIs do sistema de arquivos deve usar VNNs em vez de nomes de computadores. Para obter mais informações, veja [FILESTREAM e FileTable com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-##  <a name="OtherPartitioning"></a> Particionamento e FileTables  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a>Particionamento e filetables  
  Não há suporte para particionamento em FileTables. Com o suporte para vários grupos de arquivos FILESTREAM, problemas simples de expansão podem ser resolvidos sem o uso do recurso de particionamento na maioria dos cenários (ao contrário de FILESTREAMs do SQL 2008).  
   
-##  <a name="OtherRepl"></a> Replicação e FileTables  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a>Replicações e metatabelas  
  Não há suporte para replicação e recursos relacionados (inclusive replicação transacional, replicação de mesclagem, change data capture e controle de alterações) com FileTables.  
   
-##  <a name="OtherIsolation"></a> Semântica de transação e FileTables  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a>Semântica de transação e filetables  
  **Aplicativos do Windows**  
  Os aplicativos do Windows não entendem transações de banco de dados; então as operações de gravação do Windows não fornecem as propriedades ACID de uma transação de banco de dados. Portanto, as reversões e a recuperação transacionais não são possíveis com operações de atualização do Windows.  
   
  **Aplicativos Transact-SQL**  
  Para os aplicativos TSQL que funcionam na coluna FILESTREAM (file_stream) em uma FileTable, as semânticas de isolamento são iguais às do tipo de dados FILESTREAM em uma tabela de usuário normal.  
   
-##  <a name="OtherQueryNot"></a> Notificações de consulta e FileTables  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a>Notificações de consulta e filetables  
  A consulta não pode conter referência à coluna FILESTREAM na FileTable, na cláusula WHERE ou em qualquer outra parte da consulta.  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO e FileTables  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a>SELECIONAR INTO e filetables  
  As instruções SELECT INTO de uma FileTable não propagarão a semântica da FileTable na tabela de destino criada (da mesma forma que as colunas FILESTREAM em uma tabela normal). Todas as colunas da tabela de destino se comportarão como colunas normais. Elas não terão nenhuma semântica de FileTable associada.  
   
-##  <a name="OtherTriggers"></a> Gatilhos e FileTables  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a>Gatilhos e filetables  
  **Gatilhos DDL (linguagem de definição de dados)**  
  Não há nenhuma consideração especial para gatilhos DDL com FileTables. Gatilhos DDL normais acionarão as operações Create/Alter database, além das operações CREATE/ALTER TABLE para FileTables. Os gatilhos podem recuperar os dados de eventos reais, que incluem o texto do comando DDL e outras informações por meio da chamada da função EVENTDATA(). Não há nenhum novo evento ou alteração do esquema Eventdata existente.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66010150"
   
 -   O encerramento anormal de identificadores Win32, como a eliminação explícita de identificadores Win32 por um administrador OU uma pane do banco de dados, não executará gatilhos de usuário durante as operações de recuperação, embora o conteúdo FILESTREAM possa ter sido alterado pelo aplicativo Win32 encerrado de forma anormal.  
   
-##  <a name="OtherViews"></a> Exibições e FileTables  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a> Exibições e FileTables  
  **Exibições**  
  Uma exibição pode ser criada em um FileTable como em qualquer outra tabela. Entretanto, as considerações a seguir se aplicam a uma exibição criada em uma FileTable:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66010150"
  **Exibições indexadas**  
  Atualmente, as exibições indexadas não podem incluir colunas FILESTREAM ou colunas computadas/computadas persistentes que dependem das colunas FILESTREAM. Esse comportamento permanece inalterado com as exibições também definidas na FileTable.  
   
-##  <a name="OtherSnapshots"></a> Isolamento de instantâneo e FileTables  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> Isolamento de instantâneo e FileTables  
  O RCSI (isolamento de instantâneo de leitura confirmada) e o SI (isolamento de instantâneo) dependem da capacidade de ter um instantâneo dos dados disponível para leitores quando operações de atualização estão ocorrendo nos dados. Entretanto, as FileTables permitem o acesso de gravação não transacional aos dados do fluxo de dados. Como resultado, as restrições a seguir se aplicam ao uso desses recursos em bancos de dados que contêm FileTables:  
   
 -   Um banco de dados que contém FileTables pode ser alterado para habilitar o RCSI/SI.  
@@ -111,10 +111,10 @@ ms.locfileid: "66010150"
   
     -   A indexação de texto completo sempre terá êxito, não importa quais sejam as opções de banco de dados (READ_COMMITTED_SNAPSHOT ou ALLOW_SNAPSHOT_ISOLATION).  
   
-##  <a name="readsec"></a> Bancos de dados secundários legíveis  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a>Bancos de dados secundários legíveis  
  As mesmas considerações se aplicam a bancos de dados secundários legíveis sobre instantâneos, como descrito na seção acima, [Isolamento de instantâneo e FileTables](#OtherSnapshots).  
   
-##  <a name="CDB"></a> Bancos de dados independentes e FileTables  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a>Bancos de dados independentes e filetables  
  O recurso FILESTREAM do qual o recurso FileTable depende exige alguma configuração fora do banco de dados. Portanto, um banco de dados que usa FILESTREAM ou FileTable não é contido completamente.  
   
  Você poderá definir a retenção de banco de dados como PARTIAL se desejar usar determinados recursos de bancos de dados contidos, como usuários contidos. Neste caso, no entanto, você deve estar atento que algumas das configurações de banco de dados não estão contidas no banco de dados e não são movidos automaticamente quando o banco de dados é movido.  

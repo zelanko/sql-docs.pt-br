@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee3473ba16ad3a03a95065aea94888654db53187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479343"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilando um modelo (Suplemento do MDS para Excel)
@@ -33,26 +33,16 @@ ms.locfileid: "65479343"
   
 |Descrição da tarefa|Ferramenta|Tópico|  
 |----------------------|----------|-----------|  
-|Criar modelos.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um modelo &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
-|Criar uma entidade.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar uma entidade &#40;Suplemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
-|Criar um atributo baseado em domínio.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar um atributo baseado em domínio &#40;Suplemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
-|Criar grupos de atributos.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um grupo de atributos &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
-|Criar novas regras de negócio.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
-|Criar exibições de assinatura.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma exibição de assinatura &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
-|Criar hierarquias.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
-|Criar coleções.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma coleção &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
-|Criar versões de dados.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Bloquear uma versão &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
-|Implantar modelos.|
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Aplicativo Web ou serviço Web ou ferramenta MDSModelDeploy.|[Criar um pacote de implantação de modelo usando o MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Criar modelos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um modelo &#40;Master Data Services&#41;](../create-a-model-master-data-services.md)|  
+|Criar uma entidade.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar uma entidade &#40;Suplemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
+|Criar um atributo baseado em domínio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web ou [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Criar um atributo baseado em domínio &#40;Suplemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
+|Criar grupos de atributos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar um grupo de atributos &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
+|Criar novas regras de negócio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar e publicar uma regra de negócio &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
+|Criar exibições de assinatura.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma exibição de assinatura &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
+|Criar hierarquias.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Criar uma hierarquia explícita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
+|Criar coleções.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Criar uma coleção &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
+|Criar versões de dados.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo ou serviço Web|[Bloquear uma versão &#40;Master Data Services&#41;](../lock-a-version-master-data-services.md)|  
+|Implantar modelos.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Aplicativo Web ou serviço Web ou ferramenta MDSModelDeploy.|[Criar um pacote de implantação de modelo usando o MDSModelDeploy](../create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
   
@@ -76,7 +66,7 @@ ms.locfileid: "65479343"
   
 -   [Versões &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
--   [Master Data Services de &#40;de segurança&#41;](../security-master-data-services.md)  
+-   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
 -   [Implantando modelos &#40;Master Data Services&#41;](../deploying-models-master-data-services.md)  
   

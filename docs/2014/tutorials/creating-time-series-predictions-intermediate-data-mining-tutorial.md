@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313885"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Criando previsões de série temporal (Tutorial de mineração de dados intermediário)
@@ -172,7 +172,7 @@ ms.locfileid: "63313885"
   
 3.  Na coluna **nome da tabela** , digite um novo nome de tabela temporária, como **previsões de teste**.  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
     > [!NOTE]  
     >  Para exibir a tabela criada, crie uma conexão ao mecanismo de banco de dados da instância onde os dados foram salvos e crie uma consulta.  
@@ -186,6 +186,6 @@ ms.locfileid: "63313885"
  [Previsões de série temporal avançada &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exemplos de consulta de um modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
+ [Exemplos de consulta de modelos de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

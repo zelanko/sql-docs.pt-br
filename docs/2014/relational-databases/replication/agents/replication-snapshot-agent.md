@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250585"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
@@ -78,28 +78,28 @@ ms.locfileid: "63250585"
  **-?**  
  Imprime todos os parâmetros disponíveis.  
   
- **-** _Server_name_do Publicador [**\\**_instance_name_]  
- É o nome do Publicador. Especifique server_name para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ É o nome do Publicador. Especifica server_name para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-Publicação de publicação** __  
+ **-Publication** _publication_  
  É o nome da publicação. Esse parâmetro só é válido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.  
   
  **-70Subscribers**  
  Deve ser usado se qualquer Assinante estiver executando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versão 7.0.  
   
- **-** *Tamanho* do *lote* \_ _bcp_ \_ BcpBatchSize  
- É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação, e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote 1000 é usado. Um valor de 0 indica que não houve registro de mensagem.  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ É o número de linhas a ser enviado em uma operação de cópia em massa. Ao executar uma operação **bcp in** , o tamanho do lote é o número de linhas a ser enviado ao servidor como uma transação e também o número de linhas que deve ser enviado antes que o Agente de Distribuição registre uma mensagem de progresso **bcp** . Ao executar uma operação **bcp out** , um tamanho fixo de lote de 1000 é usado. Um valor de 0 indica que não houve registro de mensagem.  
   
- **-Definitionfile** _def_path_and_file_name_  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar valores de argumentos que contêm caracteres arbitrários.  
   
- **-** _Server_name_do distribuidor**\\**[_instance_name_]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  É a prioridade da conexão do Snapshot Agent com o Distribuidor quando um deadlock ocorre. Esse parâmetro é especificado para resolver deadlocks que possam ocorrer entre o Snapshot Agent e aplicativos de usuário durante a geração de instantâneo.  
   
-|Valor DistributorDeadlockPriority|DESCRIÇÃO|  
+|Valor DistributorDeadlockPriority|Descrição|  
 |---------------------------------------|-----------------|  
 |**-1**|Aplicativos diferentes do Snapshot Agent têm prioridade quando ocorre um deadlock no Distribuidor.|  
 |**0** (padrão)|A prioridade não é atribuída.|  
@@ -112,7 +112,7 @@ ms.locfileid: "63250585"
  É a senha usada ao se conectar ao Distribuidor usando a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- Especifica o modo de segurança do Distribuidor. Um valor de **0** indica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o modo de autenticação (padrão) e um valor de **1** indica o modo de autenticação do Windows.  
+ Especifica o modo de segurança do Distribuidor. Um valor de **0** indica Modo (padrão) de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e um valor de **1** indica Modo de Autenticação do Windows.  
   
  **-DynamicFilterHostName** _dynamic_filter_host_name_  
  É usado para definir um valor para [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) na filtragem quando um instantâneo dinâmico é criado. Por exemplo, se a cláusula de filtro de subconjunto `rep_id = HOST_NAME()` for especificada para um artigo e você definir a propriedade **DynamicFilterHostName** como "FBJones" antes de chamar o Merge Agent, somente linhas com "FBJones" na coluna **rep_id** serão replicadas.  
@@ -126,7 +126,7 @@ ms.locfileid: "63250585"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Snapshot Agent ao fazer conexões.  
   
-|Valor EncryptionLevel|DESCRIÇÃO|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -143,27 +143,27 @@ ms.locfileid: "63250585"
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Especifica a quantidade de histórico registrada durante uma operação de instantâneo. Você pode minimizar o efeito de registro de histórico no desempenho selecionando **1**.  
   
-|Valor HistoryVerboseLevel|DESCRIÇÃO|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**|Mensagens de Progresso são gravadas no console ou em um arquivo de saída. Registros de histórico não são registrados no banco de dados de distribuição.|  
 |**1**|Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
 |**2** (padrão)|Insira novos registros de histórico, a menos que o registro seja para coisas como mensagens ociosas ou mensagens de trabalho de execução longa; em tal caso, atualize os registros anteriores.|  
-|**Beta**|Sempre insira novos registros, a menos que seja para mensagens ociosas.|  
+|**3**|Sempre insira novos registros, a menos que seja para mensagens ociosas.|  
   
  **-HRBcpBlocks** _number_of_blocks_  
- É o número de blocos de dados **bcp** enfileirados entre os threads de leitura e gravação. O valor padrão é 50. **HRBcpBlocks** é usado apenas com publicações Oracle.  
+ É o número de blocos de dados **bcp** enfileirados entre os threads de leitura e gravação. O valor padrão é 50. **HRBcpBlocks** só é usado com publicações Oracle.  
   
 > [!NOTE]  
 >  Esse parâmetro é usado para ajuste de desempenho do desempenho de **bcp** de um Publicador Oracle.  
   
- -****_Block_size_ HRBcpBlockSize  
- É o tamanho, em kilobyte (KB), de cada bloco de dados **bcp** . O valor padrão é 64 KB. **HRBcpBlocks** é usado apenas com publicações Oracle.  
+ -**HRBcpBlockSize**_Block_size_ HRBcpBlockSize  
+ É o tamanho, em kilobyte (KB), de cada bloco de dados **bcp** . O valor padrão é 64 KB. **HRBcpBlocks** só é usado com publicações Oracle.  
   
 > [!NOTE]  
 >  Esse parâmetro é usado para ajuste de desempenho do desempenho de **bcp** de um Publicador Oracle.  
   
  **-HRBcpDynamicBlocks**  
- Se o tamanho de cada bloco de dados **bcp** pode ou não crescer dinamicamente. **HRBcpBlocks** é usado apenas com publicações Oracle.  
+ Se o tamanho de cada bloco de dados **bcp** pode ou não crescer dinamicamente. **HRBcpBlocks** só é usado com publicações Oracle.  
   
 > [!NOTE]  
 >  Esse parâmetro é usado para ajuste de desempenho do desempenho de **bcp** de um Publicador Oracle.  
@@ -177,19 +177,19 @@ ms.locfileid: "63250585"
  **-MaxBcpThreads** _number_of_threads_  
  Especifica o número de operações de cópia em massa que podem ser executadas em paralelo. O número máximo de threads e conexões ODBC que existe simultaneamente no menor dos **MaxBcpThreads** ou o número de solicitações de cópia em massa que aparece na transação sincronizada no banco de dados de distribuição. **MaxBcpThreads** deve ter um valor maior que **0** e não tem um limite superior embutido em código. O padrão é **1**.  
   
- \-**MaxNetworkOptimization** [ **0**| **1**]  
+ \- **MaxNetworkOptimization** [ **0**| **1**]  
  Se exclusões irrelevantes forem enviadas ao Assinante. Exclusões irrelevantes são comandos DELETE enviados aos Assinantes por linhas que não pertencem à partição do Assinante. Exclusões irrelevantes não afetam a integridade ou convergência dos dados, mas podem resultar em tráfego de rede desnecessário. O valor padrão de **MaxNetworkOptimization** é **0**. Definindo **MaxNetworkOptimization** como **1** minimiza as chances de exclusões irrelevantes, reduzindo o tráfego de rede e maximizando a otimização da rede. A definição desse parâmetro como **1** também aumenta o armazenamento de metadados e causa degradação de desempenho no Publicador se vários níveis de filtro de junção e filtros de subconjuntos complexos estiverem presentes. Você deve avaliar com cuidado a topologia da replicação e definir **MaxNetworkOptimization** como **1** somente se o tráfego de rede de exclusões irrelevantes estiver inaceitavelmente alto.  
   
 > [!NOTE]
->  Definir esse parâmetro como **1** é útil somente quando a opção de otimização de sincronização da publicação de mesclagem **** é definida como **@keep_partition_changes** true (o parâmetro de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
+>  Definir esse parâmetro como **1** é útil somente quando a opção de otimização de sincronização da publicação de mesclagem **true** é definida como **@keep_partition_changes** true (o parâmetro de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
- **-Saída** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica se a saída deve ser detalhada.  
   
-|Valor OutputVerboseLevel|DESCRIÇÃO|  
+|Valor OutputVerboseLevel|Descrição|  
 |------------------------------|-----------------|  
 |**0**|Somente mensagens de erro são impressas.|  
 |**1** (padrão)|Todas as mensagens de relatório de progresso são impressas (padrão).|  
@@ -198,33 +198,33 @@ ms.locfileid: "63250585"
  **-PrefetchTables** [ **0**| **1**]  
  Parâmetro opcional que especifica se será feita a pré-busca de objetos de tabela e se eles serão armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que a operação de pré-busca de SMO leva um tempo consideravelmente maior para ser executada. Se esse parâmetro não for usado, essa decisão será tomada no runtime com base na porcentagem de tabelas adicionadas como artigos na publicação.  
   
-|Valor OutputVerboseLevel|DESCRIÇÃO|  
+|Valor OutputVerboseLevel|Descrição|  
 |------------------------------|-----------------|  
 |**0**|A chamada ao método Pré-busca do componente de SMO está desativada.|  
 |**1**|O Agente de Instantâneo chamará o método Pré-busca para armazenar em cache algumas propriedades de tabela usando SMO|  
   
- **-Pacotes de** _packet_size_  
+ **-PacketSize** _packet_size_  
  É o tamanho de pacote (em bytes) usado pelo Snapshot Agent na conexão com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O valor padrão é 8192 bytes.  
   
 > [!NOTE]  
 >  Não altere o tamanho do pacote a menos que você tenha certeza que melhorará o desempenho. Para a maioria dos aplicativos, o tamanho do pacote padrão é o melhor.  
   
- **-Profilename** _profile_name_  
+ **-ProfileName** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
  **-PublisherDB** _publisher_database_  
- É o nome do banco de dados de publicação. *Não há suporte para esse parâmetro em Publicadores Oracle*.  
+ É o nome do banco de dados de publicação. *Esse parâmetro não tem suporte para Editores Oracle*.  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  É a prioridade da conexão do Snapshot Agent com o Publicador quando um deadlock ocorre. Esse parâmetro é especificado para resolver deadlocks que possam ocorrer entre o Snapshot Agent e aplicativos de usuário durante a geração de instantâneo.  
   
-|Valor PublisherDeadlockPriority|DESCRIÇÃO|  
+|Valor PublisherDeadlockPriority|Descrição|  
 |-------------------------------------|-----------------|  
 |**-1**|Aplicativos diferentes do Snapshot Agent têm prioridade quando ocorre um deadlock no Publicador.|  
 |**0** (padrão)|A prioridade não é atribuída.|  
 |**1**|O Snapshot Agent tem prioridade quando um deadlock ocorre no Publicador.|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  
@@ -242,13 +242,13 @@ ms.locfileid: "63250585"
  **-ReplicationType** [ **1**| **2**]  
  Especifica o tipo de replicação. Um valor de **1** indica replicação transacional e um valor de **2** indica replicação de mesclagem.  
   
- **-Objectdelimiter** _row_delimiter_  
+ **-RowDelimiter** _row_delimiter_  
  É o caractere ou cadeia de caracteres que marca o fim de uma linha no arquivo de dados de cópia em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O padrão é \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
  É o número máximo de segundos que o Agente de Instantâneo aguarda quando o número de processos de instantâneo dinâmico simultâneos em execução está no limite definido pela **@max_concurrent_dynamic_snapshots** propriedade de [sp_addmergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Se o número máximo de segundos for alcançado e o Snapshot Agent ainda estiver esperando, será fechado. Um valor de 0 significa que o agente espera indefinidamente, embora possa ser cancelado.  
   
- \-**** _Use_per_article_contents_view_ UsePerArticleContentsView  
+ \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Esse parâmetro foi preterido e só tem suporte para compatibilidade com versões anteriores.  
   
 ## <a name="remarks"></a>Comentários  

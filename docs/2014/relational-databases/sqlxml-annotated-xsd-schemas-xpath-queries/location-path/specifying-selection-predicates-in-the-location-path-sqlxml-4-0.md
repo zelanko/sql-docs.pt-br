@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012578"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012578"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<nó de elemento>**, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). 
-  `attribute::CustomerID="ALFKI"` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque ** \<o atributo>** é o tipo `attribute` de nó principal do eixo).  
+ Nesta consulta XPath, `child` e `attribute` são nomes de eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<nó de elemento>**, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). `attribute::CustomerID="ALFKI"` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o teste de nó (true se **CustomerID** é um atributo do nó de contexto, porque ** \<o atributo>** é o tipo `attribute` de nó principal do eixo).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -55,9 +54,7 @@ ms.locfileid: "66012578"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- Nesta expressão XPath, `child` e `attribute` são os nomes de eixo. 
-  `Customer`, `Order` e `SalesOrderID` são os testes de nó. 
-  `attribute::OrderID="1"` é o predicado.  
+ Nesta expressão XPath, `child` e `attribute` são os nomes de eixo. `Customer`, `Order` e `SalesOrderID` são os testes de nó. `attribute::OrderID="1"` é o predicado.  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -74,8 +71,7 @@ child::Customer[child::ContactName]
   
  Este exemplo pressupõe que o ** \<ContactName>** é um elemento filho do elemento ** \<Customer>** no documento XML, que é conhecido como *mapeamento centrado em elemento* em um esquema XSD anotado.  
   
- Nesta expressão XPath, `child` é o nome do eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<elemento>** nó, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). 
-  `child::ContactName` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se for um ** \<elemento>** nó).  
+ Nesta expressão XPath, `child` é o nome do eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for um ** \<elemento>** nó, porque ** \<o elemento>** é o tipo de `child` nó principal para o eixo). `child::ContactName` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se for um ** \<elemento>** nó).  
   
  Essa expressão retorna somente os ** \<** filhos do elemento de>do cliente do nó de contexto que tem ** \<o elemento ContactName>** filhos.  
   
@@ -94,8 +90,7 @@ child::Customer[not(child::ContactName)]
   
  Este exemplo supõe que ** \<ContactName>** é um elemento filho do elemento ** \<Customer>** no documento XML, e o campo ContactName não é necessário no banco de dados.  
   
- Neste exemplo, `child` é o eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). 
-  `not(child::ContactName)` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se \<for um elemento> nó).  
+ Neste exemplo, `child` é o eixo. `Customer`é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). `not(child::ContactName)` é o predicado. No predicado `child` , é o eixo `ContactName` e é o teste de nó ( `ContactName` verdadeiro se \<for um elemento> nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   
@@ -110,8 +105,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- Neste `child` exemplo, é o eixo `Customer` e é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). 
-  `attribute::CustomerID` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o predicado `CustomerID` (true se for um ** \<atributo>** nó).  
+ Neste `child` exemplo, é o eixo `Customer` e é o teste de nó (verdadeiro `Customer` se for \<um elemento> nó). `attribute::CustomerID` é o predicado. No predicado `attribute` , é o eixo `CustomerID` e é o predicado `CustomerID` (true se for um ** \<atributo>** nó).  
   
  Usando a sintaxe abreviada, a consulta XPath também pode ser especificada como:  
   

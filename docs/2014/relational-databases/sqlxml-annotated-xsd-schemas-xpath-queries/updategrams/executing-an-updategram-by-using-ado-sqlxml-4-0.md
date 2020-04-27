@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014842"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Executando um diagrama de atualização usando o ADO (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014842"
   
 -   Por fim, o comando (diagrama de atualização) é executado.  
   
- Veja o código de exemplo:  
+ Segue o código de exemplo:  
   
 ```vb  
 Private Sub Form_Load()  
@@ -181,7 +181,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
-## <a name="passing-parameters"></a>Passando parâmetros  
+## <a name="passing-parameters"></a>Passar parâmetros  
  Nos aplicativos do Visual Basic fornecidos anteriormente, os parâmetros não são passados. Neste aplicativo, os valores **ContactID** e **MiddleName** são passados como entrada parametrizada para o updategram.  
   
 ```vb  

@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011257"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Melhorar o desempenho de índices de texto completo
   O desempenho da indexação de texto completo e das consultas de texto completo é influenciado por recursos de hardware, como memória, velocidade de disco, velocidade da CPU, e pela arquitetura do computador.  
   
-##  <a name="causes"></a>Causas comuns de problemas de desempenho  
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a>Causas comuns de problemas de desempenho  
  A principal causa da diminuição do desempenho da indexação de texto completo são os limites em termos de recursos de hardware:  
   
 -   Se o uso da CPU pelo processo de host do daemon de filtro (fdhost.exe) ou o processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlservr.exe) está próximo de 100%, a CPU é o gargalo.  
@@ -55,10 +55,10 @@ ms.locfileid: "66011257"
   
   
   
-##  <a name="tuning"></a>Ajustando o desempenho de índices de texto completo  
+##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Ajustando o desempenho de índices de texto completo  
  Para maximizar o desempenho de seus índices de texto completo, implemente as seguintes práticas recomendadas:  
   
--   Para usar todos os processadores ou núcleos até o máximo, [](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)defina sp_configure`max full-text crawl ranges`' ' como o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Para usar todos os processadores ou núcleos até o máximo, [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)defina sp_configure`max full-text crawl ranges`' ' como o número de CPUs no sistema. Para obter informações sobre essa opção de configuração, veja [Opção max full-text crawl range de configuração de servidor](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Verifique se a tabela base tem um índice clusterizado. Use um tipo de dados integer para a primeira coluna do índice clusterizado. Evite usar GUIDs na primeira coluna do índice clusterizado. Uma população de vários intervalos em um índice clusterizado pode gerar a maior velocidade de população. É recomendável que a coluna que funciona como chave de texto completo tenha um tipo de dados integer.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66011257"
   
   
   
-##  <a name="full"></a>Solucionando problemas de desempenho de populações completas  
+##  <a name="troubleshooting-the-performance-of-full-populations"></a><a name="full"></a>Solucionando problemas de desempenho de populações completas  
  Para diagnosticar problemas de desempenho, examine os logs de rastreamento de texto completo. Para obter informações sobre logs de rastreamento, veja [Popular índices de texto completo](../indexes/indexes.md).  
   
  É recomendável seguir a ordem de solução de problemas especificada abaixo se o desempenho das populações completas não for satisfatório.  
@@ -117,9 +117,9 @@ ms.locfileid: "66011257"
   
  A tabela a seguir apresenta diretrizes sobre como estimar as necessidades de memória do fdhost.exe. As fórmulas desta tabela usam os seguintes valores:  
   
--   *F*, que é uma estimativa de memória necessária para fdhost. exe (em MB).  
+-   *F*, que é uma estimativa da memória necessária para fdhost.exe (em MB).  
   
--   *T*, que é a memória física total disponível no sistema (em MB).  
+-   *T*, que é o total de memória física disponível no sistema (em MB).  
   
 -   *M*, que é a configuração `max server memory` ideal.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66011257"
 |Plataforma|Estimando os requisitos de memória do fdhost. exe em MB-*F*<sup>1</sup>|Fórmula para calcular a memória máxima do servidor-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|_F_ **=** _número de intervalos de rastreamento_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_Número F_ **=** _de intervalos de rastreamento_ **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
+|x64|_Número F_ **=** _de intervalos de rastreamento_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
   
  <sup>1</sup> se várias populações completas estiverem em andamento, calcule os requisitos de memória fdhost. exe de cada um separadamente, como *F1*, *F2*e assim por diante. Em seguida, calcule *M* como _T_**-** sigma **(**_F_i **)**.  
   
@@ -179,7 +179,7 @@ GO
   
      A tabela a seguir descreve os tipos de espera de interesse aqui mencionados.  
   
-    |Tipo de espera|DESCRIÇÃO|Solução possível|  
+    |Tipo de espera|Descrição|Solução possível|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX ou _UP)|Isso pode indicar um gargalo de E/S, caso em que normalmente você também observa um comprimento médio da fila de disco alto.|Mover o índice de texto completo para outro grupo de arquivos em outro disco pode ajudar a reduzir o gargalo de E/S.|  
     |PAGELATCH_EX (ou _UP)|Isso pode indicar muita contenção entre os threads que estão tentando para gravar no mesmo arquivo de banco de dados.|Adicionar arquivos ao grupo de arquivos em que reside o índice de texto completo pode ajudar a aliviar essa contenção.|  
@@ -198,7 +198,7 @@ GO
   
   
   
-##  <a name="filters"></a>Solucionando problemas de desempenho de indexação lento devido a filtros  
+##  <a name="troubleshooting-slow-indexing-performance-due-to-filters"></a><a name="filters"></a>Solucionando problemas de desempenho de indexação lento devido a filtros  
  Ao popular um índice de texto completo, o Mecanismo de Texto Completo usa dois tipos de filtros: multithread (vários threads) e single-thread (thread único). Alguns documentos, como os documento do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, são filtrados com um filtro multithread. Outros documentos, como documentos em PDF (Adobe Acrobat Portable Document Format), são filtrados com um filtro de thread único.  
   
  Por razões de segurança, os filtros são carregados por processos de host do daemon de filtro. Uma instância de servidor usa um processo multi-threaded para todos os filtros multi-threaded e um processo single-threaded para todos os filtros single-threaded. Quando um documento que usa um filtro multithread contém um documento incorporado que usa um filtro de thread único, o Mecanismo de Texto Completo inicia um processo de thread único para o documento incorporado. Por exemplo, ao encontrar um documento do Word que contém um documento em PDF, o Mecanismo de Texto Completo usa o processo multithread para o conteúdo do Word e inicia um processo de thread único para o conteúdo do PDF. Um filtro de thread único pode não funcionar bem neste ambiente e pode desestabilizar o processo de filtragem. Em determinadas circunstâncias em que o processo de incorporação é comum, a desestabilização pode causar o travamento do processo de filtragem. Quando isso ocorrer, o Mecanismo de Texto Completo refaz a rota do documento que falhou (por exemplo, um documento do Word que contém um conteúdo em PDF incorporado) para o processo de filtragem em thread único. Se isso acontecer com frequência, ocorrerá uma degradação de desempenho do processo de indexação de texto completo.  
@@ -212,7 +212,7 @@ GO
  [Opção máxima de configuração de servidor de intervalo de rastreamento de texto completo](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Popular índices de texto completo](populate-full-text-indexes.md)   
  [Criar e gerenciar índices de texto completo](create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [sys. dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys. dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [Solucionar problemas na indexação de texto completo](troubleshoot-full-text-indexing.md)  
   

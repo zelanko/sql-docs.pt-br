@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010722"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
@@ -246,7 +246,7 @@ ms.locfileid: "66010722"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar o eixo de atributo  
- A consulta XPath a seguir seleciona todos os **** ** \<** elementos filho do cliente>do nó de contexto com um valor de atributo CustomerId de 1:  
+ A consulta XPath a seguir seleciona todos os **CustomerID** ** \<** elementos filho do cliente>do nó de contexto com um valor de atributo CustomerId de 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  

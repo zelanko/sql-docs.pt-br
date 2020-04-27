@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010164"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar e configurar FILESTREAM
@@ -25,7 +25,7 @@ ms.locfileid: "66010164"
 > [!NOTE]  
 >  Você não pode habilitar o FILESTREAM em uma versão de 32 bits do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sendo executada em um sistema operacional de 64 bits.  
   
-##  <a name="enabling"></a> Habilitando FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Habilitando FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar e alterar configurações de FILESTREAM  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66010164"
   
 
   
-##  <a name="best"></a>Práticas recomendadas  
+##  <a name="best-practices"></a><a name="best"></a>Práticas recomendadas  
   
-###  <a name="config"></a>Configuração física e manutenção  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configuração e manutenção física  
  Ao configurar volumes de armazenamento de FILESTREAM, considere as seguintes diretrizes:  
   
 -   Desative nomes de arquivos curtos em sistemas de computador FILESTREAM. Nomes de arquivos curtos precisam de significativamente mais tempo para serem criados. Para desabilitar nomes de arquivos curtos, use o utilitário **fsutil** do Windows.  
@@ -88,7 +88,7 @@ ms.locfileid: "66010164"
   
 
   
-###  <a name="database"></a>Design de banco de dados físico  
+###  <a name="physical-database-design"></a><a name="database"></a>Design de banco de dados físico  
  Ao criar um banco de dados de FILESTREAM, considere as seguintes diretrizes:  
   
 -   As colunas FILESTREAM devem ser acompanhadas por `uniqueidentifier`uma coluna rowguid correspondente. Esses tipos de tabelas também devem ser acompanhados por um índice exclusivo. Normalmente esse índice não é um índice clusterizado. Se a lógica corporativa do bancos de dados exigir um índice clusterizado, você precisará verificar se os valores armazenados no índice não são aleatórios. Valores aleatórios farão com que o índice seja reorganizado toda vez que uma linha for adicionada ou removida da tabela.  

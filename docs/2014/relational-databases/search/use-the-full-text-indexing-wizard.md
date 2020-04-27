@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010896"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
@@ -44,15 +44,14 @@ ms.locfileid: "66010896"
      Para incluir uma coluna no índice, marque a caixa de seleção do lado do nome da coluna. As colunas que não são qualificadas para indexação de texto completo aparecem em cinza com suas caixas de seleção desabilitadas.  
   
      **Idioma do separador de palavras**  
-     Selecione um idioma da lista suspensa. Essa seleção será usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para indicar os separadores de palavras corretos para o índice. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palavras para identificar limites das palavras nos dados de indexação de texto completo.  
+     Selecione um idioma da lista suspensa. Essa seleção será usada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para indicar os separadores de palavras corretos para o índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palavras para identificar limites das palavras nos dados de indexação de texto completo.  
   
      **Coluna de tipo**  
      Selecione o nome da coluna que possui o tipo de documento de coluna que está sendo indexado com texto completo.  
   
      A **coluna tipo** só é habilitada quando a coluna denominada na coluna **colunas disponíveis** é do `varbinary(max)` tipo `image`ou.  
   
-     **Semântica estatística**  
+     **Semântica Estatística**  
      Especifique se habilitará a indexação semântica da coluna selecionada. Para obter mais informações, veja [Pesquisa semântica &#40;SQL Server&#41;](semantic-search-sql-server.md).  
   
      Se você selecionar um **Idioma** antes de selecionar **Semântica Estatística**, e o idioma selecionado não tiver um Modelo de Idioma Semântico associado, a caixa de seleção **Semântica Estatística** será desabilitada. Se você selecionar **Semântica Estatística** antes de selecionar um **Idioma**, os idiomas disponíveis na caixa de combinação suspensa serão restringidos a esses para os quais o Modelo de Idioma Semântico dá suporte.  
@@ -65,7 +64,7 @@ ms.locfileid: "66010896"
      **Manualmente**  
      Selecione esse botão de opção se não deseja que o índice de texto completo seja atualizado automaticamente à medida que ocorrem alterações nos dados subjacentes. São mantidas as alterações nos dados subjacentes. Porém, para aplicar as alterações no índice de texto completo você deve iniciar ou agendar esse processo manualmente.  
   
-     **Não controlar alterações**  
+     **Não rastrear alterações**  
      Selecione esse botão de opção se não deseja que o índice de texto completo seja atualizado com as alterações nos dados subjacentes.  
   
      **Iniciar população completa quando o índice é criado**  
@@ -73,7 +72,7 @@ ms.locfileid: "66010896"
   
 3.  Selecione o catálogo, o grupo de arquivos de índice e a lista de palavras irrelevantes (stoplist).  
   
-     **Selecionar catálogo de texto completo**  
+     **Selecione o catálogo de texto completo**  
      Selecione um catálogo de texto completo na lista. O catálogo padrão para o banco de dados será o item selecionado por padrão na lista. Se não houver catálogos disponíveis, a lista permanecerá desabilitada e a caixa de seleção **Criar um novo catálogo** estará marcada e desabilitada.  
   
     |||  
@@ -94,31 +93,31 @@ ms.locfileid: "66010896"
   
      Selecione um destes valores:  
   
-    |Valor|DESCRIÇÃO|  
+    |Valor|Descrição|  
     |-----------|-----------------|  
     |**\<>padrão**|Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou exibição for particionada, o grupo de arquivos primário será utilizado.|  
     |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|  
     |*grupo de arquivos padrão especificado pelo usuário*|Se existir uma lista de palavras irrelevantes padrão definida pelo usuário, selecione seu nome na lista para usar esse grupo de arquivos para o novo índice de texto completo.|  
   
-     **Selecionar alist de palavras irrelevantes de texto completo**  
+     **Selecionar lista de palavras irrelevantes de texto completo**  
      Especifique uma lista de palavras irrelevantes para usar no índice de texto completo ou desabilitar seu uso.  
   
      No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e nas versões posteriores, as palavras irrelevantes (stopwords) são gerenciadas em bancos de dados por meio de objetos chamados listas de palavras irrelevantes. Uma *lista de palavras irrelevantes (stoplist)* é uma lista que, quando associada a um índice de texto completo, é aplicada às consultas de texto completo desse índice. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
      Selecione um destes valores:  
   
-    |Valor|DESCRIÇÃO|  
+    |Valor|Descrição|  
     |-----------|-----------------|  
     |**\<>do sistema**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
     |**\<desativar>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  
-    |*definido pelo usuário-STOPLIST-Name*|A lista exibe o nome de cada lista de palavras irrelevantes definida pelo usuário, se houver alguma, que foi criada no banco de dados. Selecione qualquer lista de palavras irrelevantes definida pelo usuário para usar no novo índice de texto completo.|  
+    |*user-defined-stoplist-name*|A lista exibe o nome de cada lista de palavras irrelevantes definida pelo usuário, se houver alguma, que foi criada no banco de dados. Selecione qualquer lista de palavras irrelevantes definida pelo usuário para usar no novo índice de texto completo.|  
   
 4.  Opcionalmente, defina a agenda de população. As operações de indexação começarão imediatamente, a menos que tenham sido agendadas para execução futura. Serão criadas agendas imediatamente, embora elas sejam executadas somente na hora agendada.  
   
-     **Nova agenda de tabela**  
+     **Nova Agenda de Tabela**  
      Defina uma agenda de população para uma tabela.  
   
-     **Nova agenda do catálogo**  
+     **Nova Agenda do Catálogo**  
      Defina uma agenda de população para um catálogo de texto completo.  
   
      **Editar**  

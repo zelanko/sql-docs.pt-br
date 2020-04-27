@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478881"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Sobrepondo permissões de usuário e grupo (Serviços de Dados Mestre)
@@ -30,7 +30,7 @@ ms.locfileid: "65478881"
   
  Se um usuário for um membro de vários grupos, e esses grupos tiverem acesso ao Master Data Manager, as seguinte regras se aplicarão:  
   
--   **Deny** substitui todas as outras permissões.  
+-   **Negar** substitui todas as outras permissões.  
   
 -   A **atualização** substitui **somente leitura**.  
   

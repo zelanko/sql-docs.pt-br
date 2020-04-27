@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013666"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificando relações usando sql:relationship (SQLXML 4.0)
@@ -65,7 +65,7 @@ ms.locfileid: "66013666"
  **child-key**  
  Especifica a chave filha no filho que se refere à parent-key no pai. Se a chave filha for composta por vários atributos (colunas), os valores de child-key serão especificados com um espaço entre eles. Há um mapeamento posicional entre os valores que são especificados para a chave de várias colunas e para a chave pai correspondente.  
   
- **Inverse**  
+ **Inverso**  
  Este atributo especificado em ** \<SQL: a relação>** é usada por Updategrams. Para obter mais informações, consulte [especificando o atributo SQL: inverso em SQL: relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  A `sql:key-fields` anotação deve ser especificada em um elemento que contenha um elemento filho, que tenha uma ** \<relação de SQL:>** definida entre o elemento e o filho, e que não forneça a chave primária da tabela especificada no elemento pai. Mesmo que o esquema não especifique ** \<SQL: relationship>**, você deve especificar `sql:key-fields` para produzir a hierarquia apropriada. Para obter mais informações, consulte [identificando colunas de chave usando SQL: key-fields](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "66013666"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>a. Especificando uma anotação sql:relationship em um elemento  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Especificando uma anotação sql:relationship em um elemento  
  O seguinte esquema XSD anotado inclui ** \<** os elementos de>do cliente e de ** \<ordem>** . O ** \<elemento Order>** é um elemento filho do elemento ** \<Customer>** .  
   
  No esquema, a `sql:relationship` anotação é especificada na ** \<ordem>** elemento filho. A relação em si é definida no elemento ** \<xsd: appinfo>** .  

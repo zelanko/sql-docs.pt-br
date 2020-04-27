@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014660"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Especificando um esquema de mapeamento anotado em um diagrama de atualização (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66014660"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de trabalho usando os exemplos a seguir, você deve atender aos requisitos especificados em [requisitos para executar exemplos do SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>a. Criando um diagrama de atualização com um esquema de mapeamento simples  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Criando um diagrama de atualização com um esquema de mapeamento simples  
  O esquema XSD a seguir (SampleSchema. xml) é um esquema de mapeamento que mapeia o elemento de ** \<>do cliente** para a tabela Sales. Customer:  
   
 ```  
@@ -234,11 +234,9 @@ ms.locfileid: "66014660"
   
  Este exemplo pressupõe que as tabelas a seguir estão no banco de dados **tempdb** :  
   
--   
-  `Cust (CustomerID, CompanyName)`, onde `CustomerID` é a chave primária  
+-   `Cust (CustomerID, CompanyName)`, onde `CustomerID` é a chave primária  
   
--   
-  `Ord (OrderID, CustomerID)`, onde `CustomerID` é uma chave estrangeira que recorre à chave primária `CustomerID` na tabela `Cust`.  
+-   `Ord (OrderID, CustomerID)`, onde `CustomerID` é uma chave estrangeira que recorre à chave primária `CustomerID` na tabela `Cust`.  
   
  O diagrama de atualização usa o seguinte esquema XSD para inserir registros nas tabelas Cust e Ord:  
   

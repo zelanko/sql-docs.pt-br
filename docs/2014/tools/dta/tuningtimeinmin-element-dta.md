@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63268154"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "63268154"
   
 |Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|
-  `unsignedInt`, comprimento ilimitado.|  
+|**Comprimento e tipo de dados**|`unsignedInt`, comprimento ilimitado.|  
 |**Valor padrão**|480 minutos (8 horas).|  
 |**Ocorrência**|Exigido, exceto se houver valor especificado para o elemento `NumberOfEvents`.|  
   

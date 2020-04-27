@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013014"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introdução a DiffGrams em SQLXML 4.0
@@ -59,7 +59,7 @@ ms.locfileid: "66013014"
 ## <a name="diffgram-annotations"></a>Anotações de DiffGram  
  Essas anotações são definidas no namespace DiffGram **"urn: schemas-microsoft-com: XML-DiffGram-01"**:  
   
- **sessão**  
+ **id**  
  Esse atributo é usado para emparelhar os elementos nos blocos ** \<antes>** e ** \<DataInstance>** .  
   
  **hasChanges**  
@@ -71,9 +71,9 @@ ms.locfileid: "66013014"
 ## <a name="understanding-the-diffgram-processing-logic"></a>Compreendendo a lógica de processamento de DiffGram  
  A lógica de processamento de DiffGram usa regras específicas para determinar se uma operação é de inserção, atualização ou exclusão. Essas regras são descritas na tabela a seguir.  
   
-|Operação|DESCRIÇÃO|  
+|Operação|Descrição|  
 |---------------|-----------------|  
-|Insert|Um DiffGram indica uma operação de inserção quando um elemento é exibido no bloco de ** \<>de DataInstance** , mas não no bloco correspondente ** \<antes>** e o atributo **diffgr: hasChanges** é especificado (**diffgr: hasChanges = inserted**) no elemento. Nesse caso, o DiffGram insere a instância de registro que é especificada no bloco de ** \<>de DataInstance** no banco de dados.<br /><br /> Se o atributo **diffgr: hasChanges** não for especificado, o elemento será ignorado pela lógica de processamento e nenhuma inserção será executada. Para obter exemplos de trabalho, consulte [exemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
+|Inserir|Um DiffGram indica uma operação de inserção quando um elemento é exibido no bloco de ** \<>de DataInstance** , mas não no bloco correspondente ** \<antes>** e o atributo **diffgr: hasChanges** é especificado (**diffgr: hasChanges = inserted**) no elemento. Nesse caso, o DiffGram insere a instância de registro que é especificada no bloco de ** \<>de DataInstance** no banco de dados.<br /><br /> Se o atributo **diffgr: hasChanges** não for especificado, o elemento será ignorado pela lógica de processamento e nenhuma inserção será executada. Para obter exemplos de trabalho, consulte [exemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
 |Atualizar|O DiffGram indica uma operação de atualização quando há um elemento no bloco \<before> para o qual há um elemento correspondente no ** \<bloco de>de DataInstance** (ou seja, ambos os elementos têm um atributo **diffgr: ID** com o mesmo valor) e o atributo **diffgr: hasChanges** é especificado com o valor **modificado** no elemento no ** \<bloco de>DataInstance** .<br /><br /> Se o atributo **diffgr: hasChanges** não for especificado no elemento no ** \<bloco de>DataInstance** , um erro será retornado pela lógica de processamento. Para obter exemplos de trabalho, consulte [exemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentID** for especificado no bloco ** \<before>** , a relação pai-filho dos elementos especificados por **parentID** será usada para determinar a ordem na qual os registros são atualizados.|  
 |Excluir|Um DiffGram indica uma operação de exclusão quando um elemento é exibido no bloco ** \<anterior>** , mas não no bloco de ** \<>de DataInstance** correspondente. Nesse caso, o DiffGram exclui a instância de registro especificada no bloco ** \<before>** do banco de dados. Para obter exemplos de trabalho, consulte [exemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentID** for especificado no bloco ** \<before>** , a relação pai-filho dos elementos especificados por **parentID** será usada para determinar a ordem na qual os registros são excluídos.|  
   

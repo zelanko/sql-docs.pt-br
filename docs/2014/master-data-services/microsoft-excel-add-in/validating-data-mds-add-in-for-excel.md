@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478816"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validando dados (Suplemento do MDS para Excel)
@@ -34,16 +34,16 @@ ms.locfileid: "65478816"
 ## <a name="validation-statuses"></a>Status da validação  
  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os status de validação a seguir são possíveis.  
   
-|Status|DESCRIÇÃO|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Erro|Um ou mais valores na linha validação falharam na validação em relação a regras de negócio definidas por um administrador do MDS.|  
 |Não Validado|Os valores na linha ainda não foram validados em relação a regras de negócio.|  
-|Sucesso|Todos os valores na linha passaram na validação quanto a regras de negócio.|  
+|Êxito|Todos os valores na linha passaram na validação quanto a regras de negócio.|  
   
 ## <a name="input-statuses"></a>Status de Entrada  
  No [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], os status de entrada a seguir são possíveis  
   
-|Status|DESCRIÇÃO|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Erro|Um ou mais valores na linha não atendem aos requisitos de sistema, como comprimento ou tipo de dados. O valor não é atualizado no repositório do MDS.|  
 |Nova Linha|Os valores na linha ainda não foram publicados no repositório do MDS.|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054522"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor da Tarefa Serviço da Web (página Entrada)
@@ -52,7 +52,7 @@ ms.locfileid: "66054522"
  Se as caixas de seleção Variável forem marcadas, selecione as variáveis na lista para fornecer as entradas; caso contrário, digite os valores a serem usados nas entradas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa serviço da Web &#40;página Geral&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor da tarefa serviço da Web &#40;página saída&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expressões](expressions/expressions-page.md)  

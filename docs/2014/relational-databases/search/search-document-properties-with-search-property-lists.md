@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011076"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Pesquisar propriedades de documento com listas de propriedades de pesquisa
@@ -30,7 +30,7 @@ ms.locfileid: "66011076"
   
  O [filtro](configure-and-manage-filters-for-search.md) associado (IFilter) determina se a pesquisa de propriedade é possível em um tipo de documento específico. Em alguns tipos de documento, o IFilter associado extrai algumas ou todas as propriedades definidas para esse tipo de documento, bem como o conteúdo do corpo do documento. É possível configurar um índice de texto completo para oferecer suporte à pesquisa de propriedade somente em propriedades que são extraídas por um IFilter durante a indexação de texto completo. Entre os IFilters que extraem várias propriedades de documento estão os IFilters para tipos de documento do Microsoft Office (como .docx, .xlsx e .pptx). Por outro lado, o IFilter de XML não emite propriedades.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Como a pesquisa de texto completo funciona com as propriedades de pesquisa  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Como a pesquisa de texto completo funciona com as propriedades de pesquisa  
   
 ### <a name="internal-property-ids"></a>IDs de propriedade interna  
  O Mecanismo de Texto Completo arbitrariamente atribui a cada propriedade registrada uma ID de propriedade interna, que identifica exclusivamente a propriedade nessa lista de pesquisa específica e que é específica a essa lista de propriedades de pesquisa. Assim, se uma propriedade for adicionada a várias listas de propriedades de pesquisa, sua ID de propriedade interna provavelmente será diferente entre as várias listas.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011076"
   
   
   
-##  <a name="impact"></a> Impacto de habilitar a pesquisa de propriedade  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Impacto de habilitar a pesquisa de propriedade  
  Configurar um índice de texto completo para oferecer suporte à pesquisa em uma ou mais propriedades aumenta um pouco o tamanho do índice, dependendo do número de propriedades que você especifica na sua lista de propriedades de pesquisa e do conteúdo de cada propriedade.  
   
  No teste do documentos típico do Microsoft Word<sup>??</sup>, Excel<sup>??</sup>e PowerPoint<sup>??</sup> documentos, configuramos um índice de texto completo para indexar Propriedades de pesquisa típicas. Indexar essas propriedades aumentou o tamanho do índice de texto completo em, aproximadamente, 5%. Estimamos que esse aumento aproximado de tamanho será típico para a maioria dos arquivos de documentos. No entanto, o aumento de tamanho dependerá, basicamente, da quantidade de dados de propriedade de um determinado documento em relação à quantidade de dados geral.  
   
   
   
-##  <a name="creating"></a> Criando uma lista de propriedades de pesquisa e habilitando a pesquisa de propriedade  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a>Criando uma lista de propriedades de pesquisa e habilitando a pesquisa de propriedade  
   
-###  <a name="creating_sub"></a> Criando uma lista de propriedades de pesquisa  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> Criando uma lista de propriedades de pesquisa  
  **Para criar uma lista de propriedades de pesquisa com Transact-SQL**  
   
  Use a instrução [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) e forneça, pelo menos, um nome na lista.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011076"
   
  
   
-###  <a name="adding"></a> Adicionando propriedades a uma lista de propriedades de pesquisa  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>Adicionando propriedades a uma lista de propriedades de pesquisa  
  A pesquisa de propriedade exige a criação de uma *lista de propriedades de pesquisa* e a especificação de uma ou mais propriedades que você deseja tornar pesquisáveis. Quando você adiciona uma propriedade a uma lista de propriedades de pesquisa, a propriedade é registrada para essa lista específica. Para adicionar uma propriedade a uma lista de propriedades de pesquisa, são necessários os seguintes valores:  
   
 -   GUID do conjunto de propriedades  
@@ -145,11 +145,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Para adicionar uma propriedade a uma lista de propriedades de pesquisa no Management Studio**  
   
- Use a caixa de diálogo **Propriedades da Lista de Propriedades de Pesquisa** para adicionar e remover propriedades de pesquisa. Você pode encontrar **Listas de Propriedades de Pesquisa** no Pesquisador de Objetos, no nó **Armazenamento** do banco de dados associado.  
+ Use a caixa de diálogo **Propriedades da Lista de Propriedades de Pesquisa** para adicionar e remover propriedades de pesquisa. Você pode localizar **Listas de Propriedades de Pesquisa** no Pesquisador de Objetos no nó **Armazenamento** do banco de dados associado.  
   
   
   
-###  <a name="associating"></a> Associando uma lista de propriedades de pesquisa a um índice de texto completo  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a>Associando uma lista de propriedades de pesquisa a um índice de texto completo  
  Para que um índice de texto completo ofereça suporte à pesquisa de propriedade nas propriedades registradas para uma lista de propriedades de pesquisa, você precisa associar a lista a um índice e popular novamente o índice. Popular novamente o índice de texto completo cria entradas de índice específico da propriedade para pesquisar termos em cada uma das propriedades registradas.  
   
  Uma vez que o índice de texto completo permanece associado a essa lista de propriedades de pesquisa, a consulta de texto completo pode usar a opção PROPERTY do predicado CONTAINS para fazer pesquisas nas propriedades que estão registradas para essa lista de propriedades de pesquisa.  
@@ -162,11 +162,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Para associar uma lista de propriedades de pesquisa a um índice de texto completo com o Management Studio**  
   
- Especifique um valor para **Lista de Propriedades de Pesquisa** na página **Geral** da caixa de diálogo **Propriedades do Índice de Texto Completo** .  
+ Especifique um valor para **Lista de Propriedades de Pesquisa** na página **Geral** da caixa de diálogo **Propriedades do Índice de Texto Completo**.  
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Consultando propriedades de pesquisa com CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Consultando propriedades de pesquisa com CONTAINS  
  A sintaxe básica de [CONTAINS](/sql/t-sql/queries/contains-transact-sql) de uma consulta de texto completo com escopo de propriedade é a seguinte:  
   
 ```sql  
@@ -188,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> Gerenciando listas de propriedades de pesquisa  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a>Gerenciando listas de propriedades de pesquisa  
   
-###  <a name="viewing"></a> Exibindo e alterando uma lista de propriedades de pesquisa  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a>Exibindo e alterando uma lista de propriedades de pesquisa  
  **Para alterar uma lista de propriedades de pesquisa com Transact-SQL**  
   
  Use a instrução [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) para adicionar ou remover propriedades de pesquisa.  
@@ -207,19 +207,19 @@ GO
   
 5.  Clique com o botão direito do mouse na lista de propriedades e selecione **Propriedades**.  
   
-6.  Na caixa de diálogo **Editor da Lista de Pesquisa de Propriedades** , use a grade Propriedades para adicionar ou remover propriedades de pesquisa:  
+6.  Na caixa de diálogo **Editor da Lista de Pesquisa de Propriedades**, use a grade Propriedades para adicionar ou remover propriedades de pesquisa:  
   
     1.  Para remover uma propriedade do documento, clique no cabeçalho da linha à esquerda da propriedade e pressione DEL.  
   
-    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\*** , e insira os valores para a nova propriedade.  
+    2.  Para adicionar uma propriedade de documento, clique na linha vazia na parte inferior da lista, à direita do **\*** e insira os valores para a nova propriedade.  
   
-         Para obter informações sobre esses valores, veja [Editor da Lista de Pesquisa de Propriedades](../../database-engine/search-property-list-editor.md). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
+         Para obter informações sobre esses valores, consulte [Editor da Lista de Pesquisa de Propriedades](../../database-engine/search-property-list-editor.md). Para obter informações sobre como obter esses valores de propriedades definidos pela Microsoft, veja [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obter informações sobre propriedades definidas por um ISV (fornecedor independente de software), consulte a documentação daquele fornecedor.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
   
-###  <a name="deleting"></a> Excluindo uma lista de propriedades de pesquisa  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a>Excluindo uma lista de propriedades de pesquisa  
  Não é possível cancelar uma lista de propriedades de um banco de dados enquanto a lista está associada a um índice de texto completo.  
   
  **Para excluir uma lista de propriedades de pesquisa com Transact-SQL**  
@@ -241,6 +241,6 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Localizar GUIDs do conjunto de propriedades e IDs de inteiro de propriedade para propriedades de pesquisa](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurar e gerenciar filtros de pesquisa](configure-and-manage-filters-for-search.md)  
+ [Configurar e gerenciar filtros para pesquisa](configure-and-manage-filters-for-search.md)  
   
   

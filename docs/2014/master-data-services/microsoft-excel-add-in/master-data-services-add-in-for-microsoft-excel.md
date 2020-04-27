@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482620"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Suplemento do Master Data Services para Microsoft Excel
@@ -34,7 +34,7 @@ ms.locfileid: "65482620"
   
 -   O *MDS repository* é onde são armazenados todos os dados mestre. É um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que é configurado para armazenar dados do MDS. Para trabalhar com os dados do repositório, você carrega os dados no Excel, ao terminar o trabalho, você publica as alterações no repositório novamente. Os administradores podem adicionar novas entidades e atributos ao repositório.  
   
--   Os *dados gerenciados no MDS* são dados armazenados no repositório do MDS e carregados no Excel, onde os dados são exibidos como linhas realçadas. Você pode adicionar dados que não sejam gerenciados no MDS à sua planilha, e eles não serão afetados quando você atualizar os dados gerenciados no MDS.  
+-   *Dados gerenciados no MDS* são dados armazenados no repositório do MDS e que são carregados no Excel, em que os dados são exibidos como linhas realçadas. Você pode adicionar dados que não sejam gerenciados no MDS à sua planilha, e eles não serão afetados quando você atualizar os dados gerenciados no MDS.  
   
 -   Um *model* é um contêiner de dados. As versões desses contêineres podem ser criadas, e normalmente a última versão é o mais recente. Para obter mais informações, consulte [Modelos &#40;Master Data Services&#41;](../models-master-data-services.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65482620"
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Crie uma conexão com um repositório do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Conecte-se a um repositório do MDS &#40;Suplemento MDS para Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Crie uma conexão com um repositório do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Conectar-se a um repositório do MDS &#40;Suplemento MDS para Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Carregue os dados gerenciados no MDS no Excel.|[Carregar dados do MDS no Excel](export-data-to-excel-from-master-data-services.md)|  
 |Salve um arquivo de consulta de atalho que você possa usar para abrir os dados gerenciados no MDS exibidos atualmente no futuro.|[Salvar um arquivo de consulta de atalho &#40;Suplemento MDS para Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Compartilhe atalhos com outros usuários.|[Enviar um arquivo de consulta de atalho por email &#40;Suplemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
@@ -67,12 +67,12 @@ ms.locfileid: "65482620"
   
 -   [Arquivos de consulta de atalho &#40;Suplemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Correspondência de qualidade de dados no Suplemento MDS para Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
+-   [Correspondência de qualidade de dados no Suplemento do MDS para Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
 -   [Publicando dados &#40;Suplemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Criando um modelo &#40;Suplemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
--   [Master Data Services de &#40;de segurança&#41;](../security-master-data-services.md)  
+-   [Segurança &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010336"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Dados de objeto binário grande (Blob) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece soluções para armazenar arquivos e documentos no banco de dados ou em dispositivos de armazenamento remotos.  
   
-##  <a name="section"></a> Nesta seção  
- [Compare as opções de armazenamento de BLOBs &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
+##  <a name="in-this-section"></a><a name="section"></a>Nesta seção  
+ [Comparar opções de armazenamento de blobs &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  Compare as vantagens de FILESTREAM, FileTables e Remote Blob Store.  
   
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

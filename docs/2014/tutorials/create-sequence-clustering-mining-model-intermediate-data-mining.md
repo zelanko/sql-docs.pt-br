@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273475"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Criando uma estrutura de modelo de mineração de clustering de sequências (Tutorial de mineração de dados intermediário)
@@ -32,15 +32,15 @@ ms.locfileid: "63273475"
   
 3.  Na página **selecionar o método de definição** , verifique se a **partir de banco de dados relacional existente ou data warehouse** está selecionada e clique em **Avançar**.  
   
-4.  Na página **criar a estrutura de mineração de dados** , verifique se a opção **criar estrutura de mineração com um modelo de mineração** está selecionada. Em seguida, clique na lista suspensa da opção, **que data mining técnica deseja usar?** e selecione **clustering de sequências da Microsoft**. Clique em **Próximo**.  
+4.  Na página **criar a estrutura de mineração de dados** , verifique se a opção **criar estrutura de mineração com um modelo de mineração** está selecionada. Em seguida, clique na lista suspensa da opção, **que data mining técnica deseja usar?** e selecione **clustering de sequências da Microsoft**. Clique em **Avançar**.  
   
      A página **selecionar exibição da fonte de dados** é exibida. Em **exibições da fonte de dados disponíveis**, selecione `Orders`.  
   
      Pedidos é a mesma exibição da fonte de dados utilizada para a análise do cenário de cesta de compras. Se você não tiver criado essa exibição da fonte de dados, consulte [o tutorial adicionar uma exibição da fonte de dados com tabelas aninhadas &#40;&#41;de mineração de dados intermediários ](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
-6.  Na página **especificar tipos de tabela** , marque a caixa de seleção **caso** ao lado da tabela **vAssocSeqOrders** e marque a caixa de seleção **aninhada** ao lado da tabela **vAssocSeqLineItems** . Clique em **Próximo**.  
+6.  Na página **especificar tipos de tabela** , marque a caixa de seleção **caso** ao lado da tabela **vAssocSeqOrders** e marque a caixa de seleção **aninhada** ao lado da tabela **vAssocSeqLineItems** . Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se ocorrer um erro quando você marcar as caixas de seleção **caso** ou **aninhado** , pode ser que a junção na exibição da fonte de dados não esteja correta. A tabela aninhada, **vAssocSeqLineItems**, deve estar conectada à tabela de casos, **vAssocSeqOrders,** por uma junção de muitos para um. Você pode editar a relação clicando com o botão direito do mouse na linha de junção e invertendo a direção da junção. Para obter mais informações, consulte [a caixa de diálogo criar ou editar relação &#40;Analysis Services-&#41;de dados multidimensionais ](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011875"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Arquivos de formato não XML (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011875"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios de arquivos de formato não XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Benefícios de arquivos de formato não XML  
   
 -   Você pode criar um arquivo de formato não XML automaticamente especificando a opção **format** em um comando **bcp** .  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011875"
 > [!NOTE]  
 >  Arquivos de formato XML oferecem várias vantagens em relação aos arquivos de formato não XML. Para obter mais informações, veja [Arquivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Estrutura de arquivos de formato não XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Estrutura de arquivos de formato não XML  
  Um arquivo de formato não XML é um arquivo de texto que tem uma estrutura específica. O arquivo de formato não XML contém informações sobre o tipo de armazenamento do arquivo, o comprimento do prefixo, tamanho do campo e terminador de campo de cada coluna da tabela.  
   
  A ilustração a seguir exemplifica os campos do arquivo de formato para um exemplo de arquivo de formato não XML.  
@@ -56,14 +56,14 @@ ms.locfileid: "66011875"
   
  Os campos **Versão** e **Número de Colunas** só ocorrem uma vez. Seus significados são descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|DESCRIÇÃO|  
+|Campo de arquivo de formato|Descrição|  
 |------------------------|-----------------|  
 |Versão|O número de versão é reconhecido somente pelo **bcp**, não pelo [!INCLUDE[tsql](../../includes/tsql-md.md)]. Número de versão do utilitário **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Observação: a versão do utilitário **bcp** (Bcp.exe) usada para ler um arquivo de formato deve ser igual ou posterior à versão usada para criar o arquivo de formato. Por exemplo, o [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** pode ler um arquivo de formato da versão 10.0, que é gerado pelo [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mas o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** não pode ler um arquivo de formato da versão 12.0, que é gerado pelo [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Número de Colunas|Número de campos no arquivo de dados. Esse número deve ser o mesmo em todas as linhas.|  
   
  Os outros campos de arquivo de formato descrevem os campos de dados que devem ser importados ou exportados em massa. Cada campo de dados requer uma linha separada no arquivo de formato. Cada linha do arquivo de formato contém valores para os campos de arquivo de formato descritos na tabela a seguir.  
   
-|Campo de arquivo de formato|DESCRIÇÃO|  
+|Campo de arquivo de formato|Descrição|  
 |------------------------|-----------------|  
 |**Ordem de campo do arquivo host**|Um número que indica a posição de cada campo no arquivo de dados. O primeiro campo na linha é 1, e assim por diante.|  
 |**Tipo de dados do arquivo host**|Indica o tipo de dados que é armazenado em um determinado campo do arquivo de dados. Com arquivos de dados ASCII, use SQLCHAR; para arquivos de dados de formato nativo, use tipos de dados padrão. Para obter mais informações, veja [Especificar tipo de armazenamento de arquivo usando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -77,7 +77,7 @@ ms.locfileid: "66011875"
 > [!NOTE]  
 >  Você pode modificar um arquivo de formato para importar em massa de um arquivo de dados no qual o número ou a ordem dos campos difere do número ou da ordem das colunas na tabela. Para obter mais informações, consulte a lista de [Tarefas relacionadas](#RelatedTasks) , mais adiante neste tópico.  
   
-##  <a name="Examples"></a> Exemplo de um arquivo de formato não XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Exemplo de um arquivo de formato não XML  
  O exemplo a seguir mostra um arquivo de formato não XML previamente criado (`myDepartmentIdentical-f-c.fmt`). Esse arquivo descreve um campo dos dados de caracteres para cada coluna da tabela `HumanResources.Department` no banco de dados de exemplo `AdventureWorks2012` .  
   
  O arquivo de formato gerado, `myDepartmentIdentical-f-c.fmt`, contém as seguintes informações:  
@@ -94,7 +94,7 @@ ms.locfileid: "66011875"
 > [!NOTE]  
 >  Para obter uma ilustração que mostra os campos de arquivo de formato em relação a esse arquivo de formato não XML, veja [Estrutura de arquivos de formato não XML](#Structure), acima neste tópico.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um arquivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

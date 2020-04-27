@@ -11,21 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479434"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Recursos do Master Data Services descontinuados no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que não estão mais disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Recursos descontinuados  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Recursos descontinuados  
  Não há recursos descontinuados nesta versão.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Recursos descontinuados  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Recursos descontinuados  
   
 ### <a name="security"></a>Segurança  
  Para tornar a atribuição de segurança mais fácil, você não pode mais atribuir permissões de objeto de modelo a objetos da Hierarquia Derivada, da Hierarquia Explícita e do Grupo de Atributos.  
@@ -55,7 +53,7 @@ ms.locfileid: "65479434"
  Além disso, os pacotes podem ser implantados somente na edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] na qual eles foram criados. Isso significa que os pacotes criados no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] não podem ser implantados no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Você deve implantar o pacote em um ambiente do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e, em seguida, atualizar o banco de dados para o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Regras de negócio de geração de código  
- Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para uma ação de valor gerado** na área funcional **Administração do sistema** em **regras de negócio**. Agora, na **Administração do sistema**, você deve editar a entidade para habilitar valores de código gerados automaticamente. Para obter mais informações, consulte [Criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Regras de negócio que geram valores automaticamente para o atributo Code agora são administradas de maneira diferente. Anteriormente, para gerar valores para o atributo de código, você usou o **atributo padrão para uma ação de valor gerado** na área funcional **Administração do sistema** em **regras de negócio**. Agora, na **Administração do sistema**, você deve editar a entidade para habilitar valores de código gerados automaticamente. Para obter mais informações, consulte [criação automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Se você tiver um pacote de implantação de modelo do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que contém uma regra deste tipo, quando atualizar o banco de dados para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], a regra de negócios será excluída.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "65479434"
   
  No aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], você não pode mais exportar membros para o Excel. Para trabalhar com membros no Excel, use o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
-### <a name="transactions"></a>Transactions  
+### <a name="transactions"></a>Transações  
  Na área funcional **Gerenciador** , os usuários não podem mais reverter suas próprias transações. Anteriormente, os usuários podiam reverter as alterações feitas nos dados no **Explorer**. Os administradores ainda podem reverter transações para todos os usuários na área funcional **Gerenciamento de versões** .  
   
  Agora, as anotações são permanentes e não podem ser excluídas. Anteriormente, as anotações eram consideradas transações e podiam ser excluídas com a reversão da transação.  

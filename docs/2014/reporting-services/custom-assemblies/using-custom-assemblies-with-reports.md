@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265663"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usando assemblies personalizados com relatórios
@@ -43,7 +43,7 @@ ms.locfileid: "63265663"
  [Inicializando objetos assembly personalizados](initializing-custom-assembly-objects.md)  
  Descreve como inicializar valores para objetos de assembly personalizados chamados de um relatório.  
   
- [Como depurar assemblies personalizados](how-to-debug-custom-assemblies.md)  
+ [Como fazer: Depurar assemblies personalizados](how-to-debug-custom-assemblies.md)  
  Descreve como depurar seu código de assembly personalizado.  
   
 ## <a name="see-also"></a>Consulte Também  

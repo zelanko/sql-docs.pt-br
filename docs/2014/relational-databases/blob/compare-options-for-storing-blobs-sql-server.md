@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010346"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opções de armazenamento de Blobs (SQL Server)
   Discute e compara as opções disponíveis para armazenar arquivos e documentos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Armazenando arquivos no banco de dados – Benefícios e expectativas  
+##  <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Armazenando arquivos no banco de dados – Benefícios e expectativas  
  Um grande percentual de dados corporativos é não estruturado por natureza, e é normalmente armazenado como arquivos e documentos em sistemas de arquivos. A maioria desses dados é produzida, gerenciada e consumida por aplicativos que acessam os arquivos por meio de APIs do Windows. As empresas geralmente mantêm esses dados no sistema de arquivos, enquanto armazenam os metadados relacionados dos arquivos em um banco de dados relacional.  
   
  A integração de dados não estruturados no banco de dados relacional oferece benefícios significativos. Esses benefícios incluem o seguinte:  
@@ -37,14 +37,13 @@ ms.locfileid: "66010346"
   
 -   Aplicativos do Windows requerem compatibilidade com APIs do sistema de arquivos para dados de arquivos e diretórios.  
   
-##  <a name="Filestream"></a> FILESTREAM  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já inclui o recurso de FILESTREAM, que fornece armazenamento eficiente, gerenciamento e streaming de dados não estruturados armazenados como arquivos no sistema de arquivos. Entretanto, uma solução FILESTREAM exige a programação personalizada e não satisfaz o requisito de compatibilidade total de aplicativos do Windows, descrito anteriormente.  
+##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] já inclui o recurso de FILESTREAM, que fornece armazenamento eficiente, gerenciamento e streaming de dados não estruturados armazenados como arquivos no sistema de arquivos. Entretanto, uma solução FILESTREAM exige a programação personalizada e não satisfaz o requisito de compatibilidade total de aplicativos do Windows, descrito anteriormente.  
   
-##  <a name="FileTables"></a> Tabelas de arquivos  
+##  <a name="filetables"></a><a name="FileTables"></a>FileTables  
  O recurso FileTable se baseia nos recursos de FILESTREAM existentes para permitir que os clientes corporativos armazenem dados de arquivos não estruturados e hierarquias de diretório em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , atendendo aos requisitos de acesso não transacional e compatibilidade de aplicativos do Windows para obter dados baseados em arquivos.  
   
-##  <a name="CompareFileTable"></a> Comparando FILESTREAM e FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Comparando FILESTREAM e Filetable  
   
 |Recurso|Servidor de arquivos e solução de banco de dados|Solução FILESTREAM|Solução FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
@@ -56,10 +55,10 @@ ms.locfileid: "66010346"
 |**Compatibilidade de aplicativos do Windows**|Sim|Não|**Sim**|  
 |**Acesso relacional a atributos de arquivo**|Não|Não|**Sim**|  
   
-##  <a name="CompareRBS"></a> Comparando FILESTREAM e repositório de BLOB remoto (RBS)  
+##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Comparando FILESTREAM e repositório de BLOB remoto (RBS)  
  Para uma comparação destes dois recursos, consulte esta postagem de blog da equipe de RBS: [Comparação de recursos do Repositório de BLOB Remoto do SQL Server e do FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
-##  <a name="more"></a> Mais informações  
+##  <a name="more-information"></a><a name="more"></a> Mais informações  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
  [Remote Blob Store &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013440"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Diretrizes e limitações de Carregamento em Massa de XML (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013440"
   
 -   Se você estiver inserindo valores de data usando o XML Bulk Load, eles deverão ser especificados no formato (-)CCYY-MM-DD((+-)TZ). Esse é o formato de XSD padrão para a data.  
   
--   Alguns sinalizadores de propriedade não são compatíveis com outros. Por exemplo, o carregamento em massa não aceita `Ignoreduplicatekeys=true` junto com `Keepidentity=false`. Quando `Keepidentity=false`, o carregamento em massa espera o servidor gerar os valores de chave. As tabelas devem ter uma restrição `IDENTITY` na chave. O servidor não gerará chaves duplicadas, o que significa que não há necessidade de `Ignoreduplicatekeys` ser definido como `true`. 
-  `Ignoreduplicatekeys` deve ser definido como `true` somente ao enviar valores de chave primária dos dados de entrada para uma tabela que tem linhas e se houver um possível conflito dos valores de chave primária.  
+-   Alguns sinalizadores de propriedade não são compatíveis com outros. Por exemplo, o carregamento em massa não aceita `Ignoreduplicatekeys=true` junto com `Keepidentity=false`. Quando `Keepidentity=false`, o carregamento em massa espera o servidor gerar os valores de chave. As tabelas devem ter uma restrição `IDENTITY` na chave. O servidor não gerará chaves duplicadas, o que significa que não há necessidade de `Ignoreduplicatekeys` ser definido como `true`. `Ignoreduplicatekeys` deve ser definido como `true` somente ao enviar valores de chave primária dos dados de entrada para uma tabela que tem linhas e se houver um possível conflito dos valores de chave primária.  
   
   
