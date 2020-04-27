@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069686"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selecionar Calendários (Assistente para Dimensões)
   Use a página **Selecionar Calendários** para criar hierarquias adicionais representando calendários fiscais, de relatório, de fabricação ou ISO 8601 para a dimensão de tempo.  
   
 > [!NOTE]  
->  Essa página será exibida apenas se você tiver selecionado **Dimensão de tempo de servidor** na página **Selecionar o Tipo de Dimensão** ou se você tiver selecionado **Criar a dimensão sem usar uma fonte de dados** na página **Definição de Dimensão** e **Dimensão de tempo** na página **Selecionar o tipo de dimensão** .  
+>   Essa página será exibida apenas se você tiver selecionado **Dimensão de tempo de servidor** na página **Selecionar o Tipo de Dimensão** ou se você tiver selecionado **Criar a dimensão sem usar uma fonte de dados** na página **Definição de Dimensão** e **Dimensão de tempo** na página **Selecionar o tipo de dimensão** .  
   
 ## <a name="options"></a>Opções  
  **Calendário fiscal**  
@@ -33,13 +33,13 @@ ms.locfileid: "66069686"
  Selecione o dia e o mês em que o calendário fiscal é iniciado.  
   
 > [!NOTE]  
->  Essa opção está disponível apenas quando **Calendário fiscal** está selecionado.  
+>   Essa opção está disponível apenas quando **Calendário fiscal** está selecionado.  
   
  **Convenção de nomenclatura do calendário fiscal**  
  Selecione a convenção de nomenclatura usada pelo calendário fiscal. Selecione **Nome do ano civil** ou **Nome do ano civil +1**.  
   
 > [!NOTE]  
->  Essa opção está disponível apenas quando **Calendário fiscal** está selecionado.  
+>   Essa opção está disponível apenas quando **Calendário fiscal** está selecionado.  
   
  **Calendário de relatório (ou marketing)**  
  Selecione para criar uma hierarquia de tempo baseada em um calendário de relatório.  
@@ -58,7 +58,7 @@ ms.locfileid: "66069686"
   
  A tabela a seguir lista as opções disponíveis para a semana por padrão mensal.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Semana 445**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 4 semanas e o terceiro mês do trimestre tem 5 semanas.|  
 |**Semana 454**|O primeiro mês do trimestre tem 4 semanas, o segundo mês do trimestre tem 5 semanas e o terceiro mês do trimestre tem 4 semanas.|  
@@ -71,13 +71,13 @@ ms.locfileid: "66069686"
  Selecione a semana e o mês em que o calendário de produção é iniciado.  
   
 > [!NOTE]  
->  Essa opção está disponível apenas quando **Calendário de produção** está selecionado.  
+>   Essa opção está disponível apenas quando **Calendário de produção** está selecionado.  
   
  **Trimestre com períodos extras**  
  Selecione ou digite o trimestre que conterá os períodos extras.  
   
 > [!NOTE]  
->  Essa opção está disponível apenas quando **Calendário de produção** está selecionado.  
+>   Essa opção está disponível apenas quando **Calendário de produção** está selecionado.  
   
  **Calendário ISO 8601**  
  Selecione para criar uma hierarquia de tempo baseada no calendário ISO 8601.  

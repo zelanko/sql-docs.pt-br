@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069427"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Selecionar Membros (Assistente de Business Intelligence)
@@ -31,7 +31,7 @@ ms.locfileid: "66069427"
   
  Se selecionada, a grade exibirá as opções listadas na tabela a seguir.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Tipos de Medidas Internas**|Selecione para incluir funcionalidade de conversão de moeda para a medida especificada.|  
 |**medidas**|Selecione a medida do grupo de medidas de taxa que contém a taxa de câmbio a ser usada ao converter a medida selecionada em **Tipos de Medidas Internas** .|  
@@ -41,7 +41,7 @@ ms.locfileid: "66069427"
   
  Se selecionada, a grade exibirá as opções listadas na tabela a seguir.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Membro da Conta**|Selecione para incluir funcionalidade de conversão de moeda para o membro especificado da hierarquia de contas.|  
 |**medidas**|Selecione a medida do grupo de medidas de taxa que contém a taxa de câmbio a ser usada quando as medidas do membro selecionado em **Membro da Conta** forem convertidas.|  
@@ -51,9 +51,9 @@ ms.locfileid: "66069427"
   
  Se selecionada, a grade exibirá as opções listadas na tabela a seguir.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
-|**Tipo de conta**|Selecione para incluir funcionalidade de conversão de moeda para o tipo de conta especificado.|  
+|**Tipo de Conta**|Selecione para incluir funcionalidade de conversão de moeda para o tipo de conta especificado.|  
 |**medidas**|Selecione a medida do grupo de medidas de taxa que contém a taxa de câmbio a ser usada ao converter medidas para os membros de atributos usando o tipo de conta selecionado em **Tipo de Conta** .|  
   
 ## <a name="see-also"></a>Consulte Também  

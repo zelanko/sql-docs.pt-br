@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069602"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Selecionar Método de Criação (Assistente para Dimensões)
@@ -55,7 +55,7 @@ ms.locfileid: "66069602"
   
  Para obter mais informações, consulte [Criar uma dimensão gerando uma tabela que não seja de tempo na fonte de dados](multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md).  
   
- **Modelos**  
+ **Modelo**  
  Selecione o modelo que deseja usar para criar a dimensão. Os modelos oferecem um conjunto completo de atributos e definições de hierarquia orientado a um propósito empresarial específico.  
   
 > [!NOTE]  
