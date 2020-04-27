@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083354"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Mineração de dados)
@@ -52,7 +52,7 @@ ms.locfileid: "66083354"
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
-|Missing|0|  
+|Ausente|0|  
   
  Essa distribuição mostra que cerca de metade dos clientes comprou uma bicicleta e metade não. Esse conjunto de dados em particular é bem simples; portanto, cada caso tem um valor na coluna [Bike Buyer] e a contagem de valores `Missing` é 0. No entanto, se qualquer caso tiver um valor nulo no campo [comprador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bicicletas], o contaria essa linha como `Missing` um caso com um Value.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66083354"
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
-|Missing|0|0.03%|  
+|Ausente|0|0.03%|  
   
  Pode parecer estanho que a probabilidade do valor `Missing` tenha sido calculada como 0,03% quando o número de casos é 0. Na realidade, esse é o comportamento padrão e representa um ajuste que permite ao modelo lidar bem com valores desconhecidos.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "66083354"
   
 |Tarefas|Links|  
 |-----------|-----------|  
-|Adicione sinalizadores a colunas de modelo individuais para controlar o tratamento de valores ausentes|[Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)|  
+|Adicione sinalizadores a colunas de modelo individuais para controlar o tratamento de valores ausentes|[Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)|  
 |Defina as propriedades em um modelo de mineração para controlar o tratamento de valores ausentes|[Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)|  
-|Saiba como especificar sinalizadores de modelagem no DMX|[Sinalizadores de modelagem &#40;&#41;DMX](/sql/dmx/modeling-flags-dmx)|  
+|Saiba como especificar sinalizadores de modelagem no DMX|[Sinalizadores de modelagem &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Altere o modo como a estrutura de mineração trata valores ausentes|[Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conteúdo do modelo de mineração &#40;Analysis Services Mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
+ [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
   
   

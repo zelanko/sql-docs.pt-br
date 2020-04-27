@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088246"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Alterar Configurações (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Alterar Configurações** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para alterar as configurações que governam o processamento de objetos listados na caixa de diálogo **Processo** . É possível exibir a caixa de diálogo **Alterar Configurações** clicando em **Alterar Configurações** na caixa de diálogo **Processar** .  
   
 > [!NOTE]  
->  As configurações especificadas nessa caixa de diálogo substituem as configurações herdadas do banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dos objetos listados na caixa de diálogo **Processar** .  
+>   As configurações especificadas nessa caixa de diálogo substituem as configurações herdadas do banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dos objetos listados na caixa de diálogo **Processar** .  
   
 ## <a name="options"></a>Opções  
  **Opções de processamento**  
  Use essa guia para modificar configurações relacionadas à ordem de processamento, à tabela de write-back e aos objetos afetados para a operação de processamento. A guia contém as seguintes opções:  
   
- **Parallel**  
+ **Completa**  
  Clique para processar os objetos em paralelo.  
   
  **Máximo de tarefas paralelas**  
@@ -41,21 +41,21 @@ ms.locfileid: "66088246"
  **Modo de transação**  
  Escolha o modo de transação usado quando os objetos são processados em ordem sequencial:  
   
--   **Uma transação** processa todos os objetos na mesma transação.  
+-   **Uma Transação** processa todos os objetos na mesma transação.  
   
--   **Transações separadas** processam todos os objetos, incluindo objetos dependentes, em transações separadas.  
+-   **Separar Transações** processa todos os objetos, inclusive objetos dependentes, em transações separadas.  
   
 > [!NOTE]  
->  Essa opção estará habilitada apenas se a opção **Sequencial** estiver selecionada.  
+>   Essa opção estará habilitada apenas se a opção **Sequencial** estiver selecionada.  
   
  **Opção de tabela de write-back**  
  Escolha a opção usada para gerenciar uma tabela de write-back:  
   
--   **Criar** cria uma tabela de write-back se ela não existir. Ocorrerá um erro se uma tabela write-back já existir.  
+-   **Criar** criará uma tabela de write-back se ela não existir. Ocorrerá um erro se uma tabela write-back já existir.  
   
--   **Criar sempre** criará uma tabela de write-back se ela não existir ou substituirá a tabela de write-back existente se ela existir.  
+-   **Criar sempre** cria uma tabela write-back se ela não existir ou substitui a tabela write-back existente se ela já existir.  
   
--   **Usar existente** usa a tabela de write-back existente se ela existir. Ocorrerá um erro se uma tabela write-back não existir.  
+-   **Usar existente** usará a tabela de write-back existente se ela já existir. Ocorrerá um erro se uma tabela write-back não existir.  
   
  **Objetos afetados pelo processo**  
  Selecione para incluir e processar objetos que dependem de objetos incluídos na operação de processamento.  
@@ -72,9 +72,9 @@ ms.locfileid: "66088246"
  **Ação de erro de chave**  
  Escolha uma das seguintes ações que ocorrem quando uma nova chave é encontrada durante processamento que não pode ser pesquisado:  
   
--   **Converter em desconhecido** agrega as informações para o registro no membro desconhecido.  
+-   **Converter em desconhecido** agrega as informações do registro ao membro desconhecido.  
   
--   **Descartar registro** exclui as informações para que o registro seja processado com o objeto.  
+-   **Descartar registro** exclui a informações do registro para que não sejam processadas com o objeto.  
   
  **Ignorar contagem de erros**  
  Clique para ignorar quaisquer erros ocorridos durante o processamento.  
@@ -88,9 +88,9 @@ ms.locfileid: "66088246"
  **Ação se houver erro**  
  Escolha uma das seguintes ações a serem executadas quando o número de erros exceder o valor em **Número de erros**:  
   
--   **Parar o processamento** encerra a operação de processamento.  
+-   **Parar processamento** encerra a operação de processamento.  
   
--   **Parar o log** interrompe os erros de log, mas continua a operação de processamento.  
+-   **Parar log** para o log de erros, mas continua a operação de processamento.  
   
  **Chave não encontrada**  
  Especifique uma das seguintes ações a ser executada quando uma chave não for localizada quando um objeto for processado:  
@@ -99,7 +99,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
+-   **Relatar e parar** relata o erro e para a operação de processamento.  
   
  **Chave duplicada**  
  Especifique uma das seguintes ações a ser executada se uma chave duplicada for localizada quando um objeto for processado:  
@@ -108,7 +108,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
+-   **Relatar e parar** relata o erro e para a operação de processamento.  
   
  **Chave nula convertida em desconhecida**  
  Especifique uma das seguintes ações a ser executada quando uma chave de membro nula for adicionada ao membro desconhecido quando um objeto for processado:  
@@ -117,7 +117,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
+-   **Relatar e parar** relata o erro e para a operação de processamento.  
   
  **Chave nula não permitida**  
  Especifique uma das seguintes ações a ser executada quando uma chave nula for localizada, mas não for permitida, quando um objeto for processado:  
@@ -126,7 +126,7 @@ ms.locfileid: "66088246"
   
 -   **Relatar e continuar** relata o erro e continua a operação de processamento.  
   
--   **Relate e Stop** relata o erro e interrompe a operação de processamento.  
+-   **Relatar e parar** relata o erro e para a operação de processamento.  
   
  **Caminho do log de erros**  
  Digite o caminho completo e nome do arquivo de log de erros.  

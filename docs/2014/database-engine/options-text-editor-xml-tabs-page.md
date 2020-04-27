@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089127"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opções (página Editor de Texto/XML/Guias)
   Essa caixa de diálogo permite alterar o comportamento de tabulação do Editor de XML, que é usado para editar documentos XML. Para exibir essas configurações, clique em **Opções** no menu **Ferramentas** , expanda a pasta **Editor de Texto** , expanda a subpasta **XML** e, então, clique em **Tabulações**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
- As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Se você usar as caixas de diálogo **todos os idiomas** para definir opções diferentes para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] os outros editores, como os editores DMX ou MDX, você deverá redefinir as opções do editor de XML usando essa caixa de diálogo.  
+ As opções do Editor de XML também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de XML usando essa caixa de diálogo.  
   
 ## <a name="indenting"></a>Recuo  
- **Nenhuma**  
+ **Nenhum**  
  Quando essa opção estiver selecionada, a nova linha criada ao se pressionar ENTER não ficará recuada. O cursor é colocado na primeira coluna da nova linha.  
   
  **Impeça**  

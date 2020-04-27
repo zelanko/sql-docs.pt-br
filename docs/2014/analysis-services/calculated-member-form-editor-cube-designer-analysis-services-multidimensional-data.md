@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088366"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Membro Calculado (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Editor de Formulário de Membro Calculado** na guia **Cálculos** do Designer de Cubo para criar ou modificar um membro calculado.  
   
- **Observação** Esse painel é exibido apenas na exibição de formulário.  
+ **Observação** este painel é exibido apenas na exibição de formulário.  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -37,12 +37,12 @@ ms.locfileid: "66088366"
  **Membro pai**  
  Selecione o membro abaixo do qual o membro calculado deve ser exibido.  
   
- **Observação** Essa opção estará disponível se **hierarquia pai** especificar uma hierarquia diferente de medidas.  
+ **Observação** esta opção estará disponível se **Hierarquia pai** especificar uma hierarquia diferente de MEASURES.  
   
- **Alterar**  
+ **Alteração**  
  Selecione para exibir a caixa de diálogo **Selecionar Membro Pai** e escolher um membro para **Membro pai**. Para obter mais informações sobre a caixa de diálogo **Selecionar Membro Pai**, consulte [Caixa de diálogo Selecionar Membro Pai &#40;Analysis Services – Dados Multidimensionais&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Expression**  
+ **Expressão**  
  Expanda para exibir ou editar a expressão MDX do membro calculado.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
@@ -50,7 +50,7 @@ ms.locfileid: "66088366"
 > [!NOTE]  
 >  É recomendável que essa expressão avalie para uma cadeia de caracteres ou para um valor numérico.  
   
- **Propriedades adicionais**  
+ **Propriedades Adicionais**  
  Expanda para exibir as opções **Cadeia de formato**, **Visível**, **Comportamento não vazio**, **Expressões de Cores**e **Expressões de Fonte** .  
   
  **Cadeia de formato**  

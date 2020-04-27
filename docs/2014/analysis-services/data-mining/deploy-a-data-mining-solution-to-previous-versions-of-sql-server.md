@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084685"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implantar uma solução de mineração de dados em versões anteriores do SQL Server
@@ -40,7 +40,7 @@ ms.locfileid: "66084685"
   
  [Usando a sincronização de banco de dados](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a>Implantando modelos de série Times  
+##  <a name="deploying-times-series-models"></a><a name="bkmk_TimeSeries"></a>Implantando modelos de série Times  
  O algoritmo MTS foi aprimorado no SQL Server 2008 com a adição de um segundo algoritmo complementar, o ARIMA. Para obter mais informações sobre as alterações no algoritmo de série temporal, consulte [Algoritmo MTS](microsoft-time-series-algorithm.md).  
   
  Portanto, os modelos de mineração de série temporal que usam o novo algoritmo ARIMA podem apresentar um comportamento diferente quando implantados em uma instância do SQL Server 2005 Analysis Services.  
@@ -55,24 +55,24 @@ ms.locfileid: "66084685"
   
  Se o provedor usado para a fonte de dados do modelo for SQL Client Data Provider 10, você também deve modificar a definição de fonte de dados para especificar a versão anterior do SQL Server Native Client. Caso contrário, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro que declara que o provedor não é registrado.  
   
-##  <a name="bkmk_Holdout"></a>Implantando modelos com controle  
+##  <a name="deploying-models-with-holdout"></a><a name="bkmk_Holdout"></a> Implantando modelos com controle  
  Se o [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] for usado para criar uma estrutura de mineração que contém uma partição de controle usada para testar modelos de mineração de dados, a estrutura de mineração poderá ser implantada em uma instância do SQL Server 2005, mas as informações de partição serão perdidas.  
   
  Ao abrir a estrutura de mineração no SQL Server 2005 Analysis Services, o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] gera um erro e, em seguida, gera novamente a estrutura para remover a partição de controle.  
   
  Depois que a estrutura tiver sido recriada, o tamanho da partição de controle não estará mais disponível no janela Propriedades; no entanto, \<o valor Ddl100_100: HoldoutMaxPercent\<>30/ddl100_100: HoldoutMaxPercent>) ainda pode estar presente no arquivo de script ASSL.  
   
-##  <a name="bkmk_Filter"></a>Implantando modelos com filtros  
+##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> Implantando modelos com filtros  
  Se o [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] for usado para aplicar um filtro em um modelo de mineração, o modelo poderá ser implantado em uma instância do SQL Server 2005, mas o filtro não será aplicado.  
   
  Quando você abre o modelo de mineração, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera um erro e, em seguida, gera novamente o modelo para remover o filtro.  
   
-##  <a name="bkmk_Backup"></a>Restaurando de backups de banco de dados  
+##  <a name="restoring-from-database-backups"></a><a name="bkmk_Backup"></a>Restaurando de backups de banco de dados  
  Você não pode restaurar um backup de banco de dados que foi criado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para uma instância do SQL Server 2005. Se fizer isso, o SQL Server Management Studio gerará um erro.  
   
  Se você criar um backup de um banco de dados do SQL Server 2005 Analysis Services e restaurar esse backup em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], todos os modelos de série temporal serão modificados conforme descrito na seção anterior.  
   
-##  <a name="bkmk_Synch"></a>Usando a sincronização de banco de dados  
+##  <a name="using-database-synchronization"></a><a name="bkmk_Synch"></a>Usando a sincronização de banco de dados  
  A sincronização do banco de dados não tem suporte do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para o SQL Server 2005.  
   
  Se você tentar sincronizar um banco de dados [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o servidor retornará um erro e a sincronização do banco de dados falhará.  

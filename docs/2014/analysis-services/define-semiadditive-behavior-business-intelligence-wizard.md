@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081998"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir Comportamento Semiaditivo (Assistente de Business Intelligence)
@@ -40,10 +40,10 @@ ms.locfileid: "66081998"
  **medidas**  
  Exibe o nome de uma medida contida pelo cubo.  
   
- **Função semiaditiva**  
+ **Função Semiaditiva**  
  Selecione a função de agregação da medida selecionada. A tabela a seguir lista as funções de agregação disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Agregada retornando a média dos filhos da medida.|  
 |`ByAccount`|Agregada pela função de agregação associada ao tipo de conta especificado de um atributo em uma dimensão de conta.|  
@@ -55,7 +55,7 @@ ms.locfileid: "66081998"
 |**LastNonEmpty**|Agregado ao retornar o último membro não vazio da medida em uma dimensão de tempo.|  
 |`Max`|Agregada com a função `Max`.|  
 |`Min`|Agregada com a função `Min`.|  
-|**Nenhuma**|Nenhuma agregação executada.|  
+|**Nenhum**|Nenhuma agregação executada.|  
 |`Sum`|Agregada com a função `Sum`.|  
   
 > [!NOTE]  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084735"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Assistente de Mineração de Dados (Analysis Services - Mineração de dados)
@@ -40,7 +40,7 @@ ms.locfileid: "66084735"
   
 -   Você precisa ser capaz de testar seus modelos em um conjunto de dados unificado? Nesse caso, use a opção para separar alguns dados para teste. Você pode escolher um percentual e limitar um número especificado de linhas, se desejar.  
   
-##  <a name="BKMK_Using_DM_Wizard"></a>Iniciando o assistente de mineração de dados  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a>Iniciando o assistente de mineração de dados  
  Para usar o Assistente de Data Mining, você deverá ter aberto uma solução no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] que contém pelo menos um projeto de mineração de dados ou OLAP.  
   
 -   Se sua solução estiver pronta para mineração de dados, basta clicar com o botão direito do mouse no nó **Estruturas de Mineração** no Gerenciador de Soluções e selecionar **Nova Estrutura de Mineração** para iniciar o assistente.  
@@ -51,7 +51,7 @@ ms.locfileid: "66084735"
   
  Em seguida, você criará a estrutura de mineração e um modelo de mineração de dados associado. Você também pode criar apenas a estrutura de mineração e adicionar modelos posteriormente, mas é geralmente mais fácil criar um modelo de teste primeiro.  
   
-###  <a name="BKMK_Relational"></a>Relacional versus modelos de mineração OLAP  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a>Relacional versus modelos de mineração OLAP  
  A próxima opção importante que você tem é se deseja usar uma fonte de dados relacional ou basear seu modelo em dados multidimensionais (OLAP).  
   
  O Assistente de Mineração de Dados é ramificado em dois caminhos nesse momento, dependendo se sua fonte de dados é relacional ou em um cubo. Tudo o mais, exceto o processo de seleção de dados, é o mesmo que a escolha do algoritmo, a capacidade de adicionar um conjunto de dados de controle, etc.-mas a seleção de dados de cubo é um pouco mais complexa do que o uso de dados relacionais. (Você também obterá algumas opções adicionais no final se criar um modelo baseado em um cubo.)  
@@ -70,7 +70,7 @@ ms.locfileid: "66084735"
 ### <a name="choosing-an-algorithm"></a>Escolhendo um algoritmo  
  Em seguida, você deve decidir sobre qual algoritmo deve ser usado ao processar seus dados. Esta decisão pode ser difícil de tomar. Cada algoritmo fornecido no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tem recursos diferentes e gera resultados diferentes, de modo que você pode experimentar vários modelos diferentes antes de determinar qual é o mais apropriado para seus dados e seu problema comercial. Consulte o tópico a seguir para obter uma explicação das tarefas para as quais cada algoritmo é mais apropriado:  
   
- [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
  Novamente, é possível criar vários modelos usando algoritmos diferentes ou modificar parâmetros para que os algoritmos criem modelos diferentes. Você não está bloqueado em sua escolha de algoritmo, e é prática recomendada criar vários modelos diferentes nos mesmos dados.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "66084735"
 ### <a name="additional-features"></a>Recursos Adicionais  
  Para ajudá-lo a escolher os dados certos, e configurar as fontes de dados corretamente, o Assistente de Mineração de Dados fornece estes recursos adicionais:  
   
--   **Detecção automática de tipos de dados**: o assistente irá examinar a exclusividade e a distribuição de valores de coluna e, em seguida, recomendar o melhor tipo de dados e sugerir um tipo de uso para os dados. Você pode substituir estas sugestões selecionando valores de uma lista.  
+-   **Automático – detecção de tipos de dados**: o assistente examinará a exclusividade e a distribuição de valores de coluna, recomendará o melhor tipo de dados e sugerirá um tipo de uso para obter os dados. Você pode substituir estas sugestões selecionando valores de uma lista.  
   
--   **Sugestões para variáveis**: você pode clicar em uma caixa de diálogo e iniciar um analisador que calcula as correlações entre as colunas incluídas no modelo e determina se as colunas provavelmente são previsões do atributo de resultado, considerando a configuração do modelo até o momento. Você pode substituir estas sugestões digitando valores diferentes.  
+-   **Sugestões para variáveis**: você pode clicar em uma caixa de diálogo e iniciar um analisador que calcula as correlações nas colunas incluídas no modelo e determina se alguma coluna é uma previsão provável do atributo de resultado, considerando a configuração do modelo até então. Você pode substituir estas sugestões digitando valores diferentes.  
   
 -   **Seleção de recursos**: a maioria dos algoritmos detectará automaticamente as colunas que são boas previsões e as usará preferencialmente. Nas colunas que contêm muitos valores, a *seleção de recursos* será aplicada para reduzir a cardinalidade dos dados e melhorar as chances de localizar um padrão significativo. Você pode afetar o comportamento da seleção de recursos usando parâmetros modelo.  
   
--   **Divisão automática de cubos**: se o modelo de mineração for baseado em uma fonte de dados OLAP, a capacidade de segmentar o modelo usando atributos de cubo será fornecida automaticamente. Isto é útil para criar modelos com base em subconjuntos de dados de cubo.  
+-   **Divisão automática do cubo**: se seu modelo de mineração for baseado em uma fonte de dados OLAP, a capacidade de segmentar o modelo usando atributos de cubo será fornecida automaticamente. Isto é útil para criar modelos com base em subconjuntos de dados de cubo.  
   
 ### <a name="completing-the-wizard"></a>Concluindo o assistente  
  A última etapa no assistente é nomear a estrutura de mineração e o modelo de mineração associado. Dependendo do tipo de modelo que você criou, também poderá ter as opções importantes a seguir:  
@@ -104,15 +104,15 @@ ms.locfileid: "66084735"
 ## <a name="related-content"></a>Conteúdo relacionado  
  Para saber mais sobre as decisões que você precisa tomar ao criar um modelo de mineração de dados, consulte os links a seguir:  
   
- [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Tipos de conteúdo &#40;mineração de dados&#41;](content-types-data-mining.md)  
+ [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md)  
   
- [Tipos de dados &#40;mineração de dados&#41;](data-types-data-mining.md)  
+ [Tipos de dados &#40;Mineração de dados&#41;](data-types-data-mining.md)  
   
  [Seleção de recursos &#40;mineração de dados&#41;](feature-selection-data-mining.md)  
   
- [Valores ausentes &#40;Analysis Services de mineração de dados&#41;](missing-values-analysis-services-data-mining.md)  
+ [Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)  
   
  [Detalhamento em modelos de mineração](drillthrough-on-mining-models.md)  
   

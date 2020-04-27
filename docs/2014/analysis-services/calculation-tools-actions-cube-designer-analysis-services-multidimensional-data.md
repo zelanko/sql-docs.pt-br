@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088342"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Ferramentas de Cálculo (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -36,7 +36,7 @@ ms.locfileid: "66088342"
 > [!NOTE]  
 >  No modo de projeto, a caixa de diálogo **Ferramentas de Cálculo** lê as informações desta opção em um arquivo XML denominado MDXFunctions.xml fornecido com o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Em modo online, informações para esta opção são recuperadas do conjunto de linhas de esquema de MDSCHEMA_FUNCTIONS da instância.  
   
- **Modelo**  
+ **Modelos**  
  Exibe os modelos predefinidos disponíveis para ações.  
   
  Arraste um elemento selecionado para o painel **Editor de Formulário de Ação**, **Editor de Formulário de Ação de Extração de Detalhes**ou **Editor de Formulário de Ação de Relatório** para incluir a sintaxe MDX daquele elemento no local selecionado no painel.  
@@ -46,7 +46,7 @@ ms.locfileid: "66088342"
   
 |Opção|Definição|  
 |------------|----------------|  
-|**Copy**|Selecione para copiar o elemento selecionado em **Metadados** ou **Funções** na Área de Transferência.<br /><br /> Observe que essa opção não será exibida se **modelos** estiver selecionado. Observe também que essa opção estará desabilitada se o membro selecionado não puder ser copiado, como a pasta **sets** de uma dimensão exibida em **metadados** ou a pasta do grupo de funções para uma função exibida em **funções**.|  
+|**Cópia**|Selecione para copiar o elemento selecionado em **Metadados** ou **Funções** na Área de Transferência.<br /><br /> Observe que essa opção não será exibida se **modelos** estiver selecionado. Observe também que essa opção estará desabilitada se o membro selecionado não puder ser copiado, como a pasta **sets** de uma dimensão exibida em **metadados** ou a pasta do grupo de funções para uma função exibida em **funções**.|  
 |**Filtrar Membros**|Clique para exibir a caixa de diálogo **Filtrar Membros** e filtrar os membros exibidos para o elemento selecionado em **Metadados**. Para obter mais informações sobre a caixa de diálogo **Filtrar Membros**, consulte [Caixa de diálogo Filtrar Membros &#40;Analysis Services – Dados Multidimensionais&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observe que essa opção será exibida somente se os **metadados** estiverem selecionados. Observe também que essa opção será habilitada somente se um nível para um atributo for selecionado em **metadados**.|  
 |**Adicionar Modelo**|Selecione para adicionar uma nova ação, ação de extração de detalhes ou ação de relatório com base no modelo selecionado ao cubo e exibir, respectivamente, o **Editor de Formulário de Ação**, **Editor de Formulário de Ação de Extração de Detalhes**ou **Editor de Formulário de Ação de Relatório**.<br /><br /> Observação: essa opção será exibida somente se os **metadados** estiverem selecionados.|  
   

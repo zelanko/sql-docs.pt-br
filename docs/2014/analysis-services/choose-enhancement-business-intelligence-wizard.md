@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088122"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Escolher Aprimoramento (Assistente de Business Intelligence)
@@ -26,7 +26,7 @@ ms.locfileid: "66088122"
  **Aprimoramentos disponíveis**  
  Selecione o aprimoramento de business intelligence a ser adicionado. A tabela a seguir lista os aprimoramentos disponíveis.  
   
-|Aprimoramento|DESCRIÇÃO|  
+|Aprimoramento|Descrição|  
 |-----------------|-----------------|  
 |**Definir inteligência de tempo**|Adicione exibições de tempo adicionais para uma hierarquia selecionada. Esses incluem exibições do período até esta data, exibições de média móvel e exibições de período a período.<br /><br /> Observação: essa opção está disponível apenas para cubos.|  
 |**Definir inteligência de conta**|Atribua classificações padrão de contabilidade, como receita e despesa, para membros de um atributo de conta.<br /><br /> Se a função de agregação da medida for configurada como *ByAccount*, a instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará as classificações de contabilidade para agregar uma medida entre os membros de um atributo de conta ao longo do tempo.|  

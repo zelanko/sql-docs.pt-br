@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087506"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar o processamento dedicado de atualização de dados ou de somente consulta (PowerPivot para SharePoint)
@@ -31,9 +31,9 @@ ms.locfileid: "66087506"
   
  [Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo](#change)  
   
-##  <a name="config"></a>Configurar um modo de processamento  
+##  <a name="configure-a-processing-mode"></a><a name="config"></a>Configurar um modo de processamento  
   
-1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar serviços no servidor**.  
+1.  Na administração central, em configurações do sistema, clique em **gerenciar serviços no servidor**.  
   
 2.  Na parte superior da página, em Servidor, clique na seta para baixo e, em seguida, em **Alterar Servidor**.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "66087506"
   
 7.  Salve suas alterações. O servidor não validará suas entradas até que um evento de processamento ocorra. Se você inserir um número inválido para trabalhos simultâneos, o erro será detectado e registrado em log quando a próxima solicitação for processada.  
   
-##  <a name="change"></a>Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo  
+##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>Alterar o número de trabalhos de atualização de dados que podem ser executados em paralelo  
  Um trabalho de atualização de dados é uma tarefa agendada que é adicionada a uma fila de processamento mantida e monitorada por um aplicativo de serviço PowerPivot. Um trabalho consiste em informações de agenda para uma ou mais fontes de dados em uma pasta de trabalho PowerPivot. Um trabalho separado é criado para cada agenda definida. Se um proprietário de pasta de trabalho definir uma agenda para todas as fontes de dados, apenas um trabalho será criado para toda a operação de atualização de dados. Se um proprietário de pasta de trabalho criar agendas individuais para fontes de dados externas, vários trabalhos serão criados e executados para concluir uma atualização de dados completa daquela pasta de trabalho.  
   
  Você poderá aumentar o número de trabalhos de atualização de dados que podem ser executados ao mesmo tempo se o sistema tiver a capacidade para dar suporte à carga adicional.  
   
-|Configuração|Valores válidos|DESCRIÇÃO|  
+|Configuração|Valores válidos|Descrição|  
 |-------------|------------------|-----------------|  
 |Valor padrão|Calculado com base na RAM.|O valor padrão é baseado na quantidade de memória disponível dividida por 4 gigabytes. O padrão é calculado por uma fórmula de maneira que as configurações possam ser ajustadas de acordo com as funcionalidades do sistema.<br /><br /> Observação: o divisor de 4 gigabytes foi selecionado com base no uso de RAM para uma grande amostragem de fontes de dados PowerPivot reais. Não se baseia na arquitetura física ou lógica do PowerPivot.|  
 |Valor máximo|Calculado com base no número de CPUs.|O número máximo de trabalhos simultâneos que podem ser especificados tem como base o número de processadores no computador. Por exemplo, em um computador quad core de 4 soquetes, o número máximo de trabalhos que podem ser executados simultaneamente é 16.|  

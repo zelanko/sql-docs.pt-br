@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086407"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Designer do Modelo de Mineração de Dados (Analysis Services – Mineração de Dados)
@@ -28,9 +28,9 @@ ms.locfileid: "66086407"
   
 -   [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services&#41;de mineração de dados](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Criando e consultando modelos de mineração de dados com DMX: Tutoriais &#40;Analysis Services – Mineração de dados&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Assistente de mineração de dados &#40;Analysis Services Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Assistente de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [Conceitos de mineração de dados](data-mining/data-mining-concepts.md)  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66086407"
  [Exibição de modelos de mineração &#40;designer de modelo de mineração de dados&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
+ [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](prediction-query-builder-data-mining.md)  
   
   

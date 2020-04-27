@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084819"
 ---
 # <a name="data-mining-ssas"></a>Mineração de dados (SSAS)
@@ -51,13 +51,13 @@ ms.locfileid: "66084819"
   
 -   [Conceitos de mineração de dados](data-mining-concepts.md)  
   
--   [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Modelos de mineração &#40;Analysis Services de mineração de dados&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Modelos de mineração &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
+-   [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
 -   [Consultas de mineração de dados](data-mining-queries.md)  
   
@@ -67,6 +67,6 @@ ms.locfileid: "66084819"
   
 -   [Arquitetura de mineração de dados](data-mining-architecture.md)  
   
--   [Visão geral de segurança &#40;mineração de dados&#41;](security-overview-data-mining.md)  
+-   [Visão geral de segurança &#40;Mineração de dados&#41;](security-overview-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087603"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Concluindo o Assistente (Assistente para Dimensões)
@@ -36,7 +36,7 @@ ms.locfileid: "66087603"
  **Nome**  
  Digite o nome da nova dimensão.  
   
- **Visualização**  
+ **Visualizar**  
  Exibe os atributos de dimensão e hierarquias a serem criados para a nova dimensão.  
   
  **Gerar esquema agora**  

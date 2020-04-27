@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093992"
 ---
 # <a name="migrate-scripts-to-vsta"></a>Migrar scripts para o VSTA
@@ -45,6 +45,6 @@ ms.locfileid: "66093992"
  Você não pode converter um script VSA que [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] usa o para um script do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]VSTA que usa o. No entanto, você pode criar um novo script do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]VSTA que usa o. Para obter mais informações, consulte [Codificando e depurando a tarefa Script](../../integration-services/control-flow/script-task.md) e [Codificando e depurando o componente Script](../../integration-services/data-flow/transformations/script-component.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Estender pacotes com scripts](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  
+ [Estendendo pacotes com scripts](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  
   
   

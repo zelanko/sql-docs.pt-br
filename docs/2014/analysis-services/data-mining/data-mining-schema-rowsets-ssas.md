@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084904"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultando os conjuntos de linhas de esquema de mineração de dados (Analysis Services - Mineração de Dados)
@@ -33,7 +33,7 @@ ms.locfileid: "66084904"
 ## <a name="list-of-data-mining-schema-rowsets"></a>Lista de conjuntos de linhas de esquema de mineração de dados  
  A tabela a seguir lista os conjuntos de linhas de esquema de mineração de dados que podem ser úteis para consultas e monitoramentos.  
   
-|Nome do conjunto de linhas|DESCRIÇÃO|  
+|Nome do conjunto de linhas|Descrição|  
 |-----------------|-----------------|  
 |DMSCHEMA_MINING_MODELS|Lista todos os modelos de mineração no contexto atual.<br /><br /> As informações incluem a data de criação, os parâmetros usados para criar o modelo e o tamanho do treinamento definido.|  
 |DMSCHEMA_MINING_COLUMNS|Lista todas as colunas usadas nos modelos de mineração no contexto atual.<br /><br /> As informações incluem o mapeamento para a coluna de origem de estrutura de mineração, o tipo de dados, a precisão e as funções de previsão que podem ser usadas com a coluna.|  

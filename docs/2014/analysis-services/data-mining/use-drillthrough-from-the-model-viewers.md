@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082834"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
@@ -24,7 +24,7 @@ ms.locfileid: "66082834"
   
 ### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>Usar o detalhamento no Visualizador de Árvores da Microsoft  
   
-1.  No Designer de Mineração de Dados, selecione o modelo de árvores de decisão e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Árvores da Microsoft**. Em SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **procurar**  
+1.  No Designer de Mineração de Dados, selecione o modelo de árvores de decisão e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Árvores da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**  
   
 2.  Clique com o botão direito do mouse em qualquer nó no gráfico de árvore e selecione **Detalhar**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66082834"
   
 ### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>Usar o detalhamento no Visualizador de Cluster da Microsoft  
   
-1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**.  
+1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. Em SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **procurar**.  
   
 2.  Na guia **Cluster** , clique com o botão direito do mouse em qualquer nó.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66082834"
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Usar o detalhamento no Visualizador de Regras de Associação da Microsoft  
   
-1.  No Designer de Mineração de Dados, selecione um modelo de associação e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Regras de Associação da Microsoft**. Em SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **procurar**  
+1.  No Designer de Mineração de Dados, selecione um modelo de associação e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Regras de Associação da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**  
   
 2.  Na guia **Regras** , clique com o botão direito do mouse em qualquer linha que represente uma regra. Na guia **Conjuntos de itens** , clique em qualquer linha que contenha um conjunto de itens.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66082834"
   
 ### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>Usar o detalhamento no Visualizador de Cluster de Sequência da Microsoft  
   
-1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. No SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **Procurar**.  
+1.  No Designer de Mineração de Dados, selecione um modelo de clustering e selecione **Procurar Modelo** para abrir o modelo no **Visualizador de Cluster da Microsoft**. Em SQL Server Management Studio, clique com o botão direito do mouse no modelo e selecione **procurar**.  
   
 2.  Na **guia Diagrama de Cluster**, clique com o botão direito do mouse em qualquer nó que represente um cluster. Na guia **Perfis de Cluster** , clique em qualquer ponto em um perfil de cluster ou no cluster que representa a população modelo total.  
   

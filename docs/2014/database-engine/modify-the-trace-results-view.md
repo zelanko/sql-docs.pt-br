@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089436"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
@@ -36,12 +36,12 @@ ms.locfileid: "66089436"
   
 8.  [Alterar as configurações de exibição](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a>Adicionar ou remover colunas  
+##  <a name="add-or-remove-columns"></a><a name="AddRemoveColumns"></a>Adicionar ou remover colunas  
   
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e selecione **Escolher Colunas**.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66089436"
   
 5.  Clique em **OK**.  
   
-##  <a name="ChangeColumns"></a>Criar, editar ou excluir colunas mescladas  
+##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>Criar, editar ou excluir colunas mescladas  
   
 #### <a name="to-create-merged-columns"></a>Para criar colunas mescladas  
   
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e clique em **Escolher Colunas**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e clique em **Escolher Colunas**.  
   
@@ -98,26 +98,26 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, clique com o botão direito no cabeçalho de coluna e clique em **Escolher Colunas**.  
   
 3.  Na caixa de diálogo **Escolher Colunas** , marque o nome da coluna mesclada que você quer excluir e clique em **Excluir**.  
   
-##  <a name="SortResults"></a>Classificar os resultados  
+##  <a name="sort-the-results"></a><a name="SortResults"></a>Classificar os resultados  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>Para classificar os resultados em ordem crescente ou decrescente  
   
 -   Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.  
   
 -   Na janela dos resultados de rastreamento, clique com o botão direito em um cabeçalho de coluna que você deseja classificar. Clique em **Classificação Crescente** ou em **Classificação Decrescente** para classificar a coluna em ordem crescente ou decrescente respectivamente.  
   
      Se você agrupou colunas, classificar a coluna só classificará os dados dentro do grupo.  
   
-##  <a name="GroupResults"></a>Resultados do grupo  
+##  <a name="group-results"></a><a name="GroupResults"></a>Resultados do grupo  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Para agrupar os resultados por uma única coluna  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.  
   
 2.  Clique no botão **Agrupamento** na barra de ferramentas Eventos Estendidos.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66089436"
   
 4.  Clique em **OK**.  
   
-##  <a name="AggregateResults"></a>Agregar resultados  
+##  <a name="aggregate-results"></a><a name="AggregateResults"></a>Agregar resultados  
  Eventos Estendidos dão suporte a cinco funções de agregação:  
   
 -   SUM  
@@ -165,7 +165,7 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito no nome da sessão, **Observar Dados Dinâmicos**e em seguida clicar no botão **Parar Feed de Dados** na barra de ferramentas.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão, selecionar **observar dados dinâmicos**e clicar no botão **parar feed de dados** na barra de ferramentas.  
   
     > [!NOTE]  
     >  A agregação é executada em um grupo; portanto, você deve agrupar os resultados antes de você executar a agregação.  
@@ -184,7 +184,7 @@ ms.locfileid: "66089436"
   
 7.  Clique em **OK**.  
   
-##  <a name="Filter"></a>Filtrar resultados  
+##  <a name="filter-results"></a><a name="Filter"></a>Filtrar resultados  
  Você pode aplicar filtros para refinar os resultados do rastreamento que são exibidos na janela de rastreamento. O filtro de exibição inclui um filtro de hora e um filtro avançado. Use o filtro de hora para filtrar os resultados de rastreamento por carimbo de data/hora de evento e use o filtro avançado para construir condições de filtro usando os campos de eventos e ações. Há uma relação AND lógica entre os filtros Hora e Avançado.  
   
 #### <a name="to-create-a-filter"></a>Para criar um filtro  
@@ -192,13 +192,13 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, selecione os resultados que você deseja filtrar e, na barra de ferramentas Eventos Estendidos, clique no botão **Filtros** .  
   
 3.  Na caixa de diálogo **Filtros** , selecione **Definir filtro de hora** para definir o filtro de hora arrastando o controle deslizante tranca para definir a linha de tempo. Observe que, quando você move as barras de controle deslizante, a caixa de hora exibe o valor de tempo de acordo. Você também pode inserir a hora nas caixas de hora ou selecioná-la na lista suspensa. Observe que, quando você inserir a hora, o controle deslizante do tempo restante moverá de acordo.  
   
-4.  Na seção **Filtros Adicionais** , aplique seus critérios de filtro e clique em **Aplicar**. Quando acabar de criar o filtro, clique em **OK**.  
+4.  Na seção **filtros adicionais** , aplique os critérios de filtro e clique em **aplicar**. Quando acabar de criar o filtro, clique em **OK**.  
   
  Uma situação especial ocorre quando um campo de evento tem o mesmo nome de uma ação. Um exemplo disso seria session_id. Há vários eventos que incluem um campo session_id e você também pode adicionar a ação session_id. Ambas as informações são coletadas, mas a grade de exibição do profiler Eventos Estendidos usa a lógica a seguir.  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089436"
   
 -   Se não houver nem o campo nem a ação, NULL será exibido.  
   
-##  <a name="Search"></a>Pesquisar texto em colunas  
+##  <a name="search-for-text-in-columns"></a><a name="Search"></a>Pesquisar texto em colunas  
   
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na barra de ferramentas Eventos Estendidos, clique no botão **Localizar** .  
   
@@ -233,17 +233,17 @@ ms.locfileid: "66089436"
   
 5.  Use as opções a seguir para especificar como você quer definir a pesquisa:  
   
-    1.  **Diferenciar maiúsculas de minúsculas**. Use esta opção para exibir os resultados da pesquisa para o texto que você inseriu na caixa **Localizar** que corresponde conteúdo e caso.  
+    1.  **Diferenciar maiúsculas de minúsculas**. Use esta opção para exibir os resultados da pesquisa para o texto que você inseriu na caixa **Localizar** que corresponde tanto ao conteúdo quanto ao caso.  
   
     2.  **Coincidir palavra inteira**. Use esta opção para exibir somente os resultados da pesquisa para o texto que você inseriu que corresponde palavras completas.  
   
-    3.  **Pesquisar**. Use esta opção para pesquisar do local do seu cursor para o início dos resultados.  
+    3.  **Pesquisar para cima**. Use esta opção para pesquisar do local do seu cursor para o início dos resultados.  
   
     4.  **Use**o. Use esta opção para interpretar os caracteres especiais e as expressões regulares que você inseriu na caixa **Localizar** . Caracteres especiais incluem os caracteres curinga (*) e (?) para representar um ou mais caracteres. Expressões regulares são notações especiais usadas para definir padrões de texto de pesquisa.  
   
 6.  Clique em **Localizar Próximo** para procurar o próximo texto que você inseriu na caixa **Localizar** .  
   
-##  <a name="ChangeDisplay"></a>Alterar as configurações de exibição  
+##  <a name="change-the-display-settings"></a><a name="ChangeDisplay"></a>Alterar as configurações de exibição  
  Você pode salvar informações de coluna (ordem de coluna, coluna de mesclagem e largura de coluna) e informações de filtro de um resultado de rastreamento em um arquivo de configuração de exibição de Eventos Estendidos (arquivo .viewsetting). Após salvar o arquivo, você pode aplicá-lo aos seus resultados de rastreamento para alterar a exibição.  
   
 #### <a name="to-change-the-display-settings"></a>Para alterar as configurações de exibição  
@@ -251,7 +251,7 @@ ms.locfileid: "66089436"
 1.  Abra um arquivo .XEL para exibir os resultados do rastreamento.  
   
     > [!NOTE]  
-    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **Observar Dados Dinâmicos**.  
+    >  Você também pode clicar com o botão direito do mouse no nome da sessão e selecionar **observar dados dinâmicos**.  
   
 2.  Na janela de resultados de rastreamento, na barra de ferramentas ou no menu Eventos Estendidos, selecione **Configurações de Vídeo**.  
   

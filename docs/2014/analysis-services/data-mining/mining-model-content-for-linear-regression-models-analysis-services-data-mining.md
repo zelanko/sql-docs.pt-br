@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083636"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão linear (Analysis Services – Mineração de Dados)
@@ -45,9 +45,9 @@ ms.locfileid: "66083636"
  Nome do modelo.  
   
  ATTRIBUTE_NAME  
- **Nó raiz:** Ficará  
+ **Nó raiz:** em branco  
   
- **Nó de regressão:** O nome do atributo previsível.  
+ **Nó de regressão** O nome do atributo previsível.  
   
  NODE_NAME  
  Sempre igual a NODE_UNIQUE_NAME.  
@@ -58,16 +58,16 @@ ms.locfileid: "66083636"
  NODE_TYPE  
  Um modelo de regressão linear gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|Type|DESCRIÇÃO|  
+|ID do tipo de nó|Tipo|Descrição|  
 |------------------|----------|-----------------|  
 |25|Raiz da árvore de regressão|Contém a fórmula que descreve a relação entre a variável de entrada e saída.|  
   
  NODE_CAPTION  
  Um rótulo ou uma legenda associada ao nó. Essa propriedade é usada principalmente para exibição.  
   
- **Nó raiz:** Ficará  
+ **Nó raiz:** em branco  
   
- **Nó de regressão:** Os.  
+ **Nó de regressão:** Tudo.  
   
  CHILDREN_CARDINALITY  
  Uma estimativa do número de filhos do nó.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083636"
  NODE_DESCRIPTION  
  Uma descrição do nó.  
   
- **Nó raiz:** Ficará  
+ **Nó raiz:** em branco  
   
- **Nó de regressão:** Os.  
+ **Nó de regressão:** Tudo.  
   
  NODE_RULE  
  Não é usado em modelos de regressão linear.  
@@ -127,7 +127,7 @@ ms.locfileid: "66083636"
   
  **Nó raiz:** 0  
   
- **Nó de regressão:** Contagem de casos de treinamento.  
+ **Nó de regressão:** Contagem dos casos de treinamento.  
   
  MSOLAP_MODEL_COLUMN  
  Nome do atributo previsível.  
@@ -145,12 +145,12 @@ ms.locfileid: "66083636"
   
  Além disso, ao criar um modelo de árvores de decisão que inclui um atributo previsível contínuo, a árvore, algumas vezes, tem nós de regressão que compartilham as propriedades dos nós da árvore de regressão.  
   
-##  <a name="NodeDist_Regression"></a>Distribuição de nó para atributos contínuos  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a> Distribuição de nó em atributos contínuos  
  A maioria da informações importantes em um nó de regressão está localizada na tabela NODE_DISTRIBUTION. O exemplo a seguir ilustra o layout da tabela NODE_DISTRIBUTION. Nesse exemplo, a estrutura de mineração Correspondência Destinada é usada para criar um modelo de regressão linear que prevê a renda do cliente com base na idade. Esse modelo é apenas ilustrativo, pois pode ser criado facilmente com o uso da estrutura de mineração e dos dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPORTE|PROBABILITY|variance|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Renda Anual|Missing|0|0.000457142857142857|0|1|  
+|Renda Anual|Ausente|0|0.000457142857142857|0|1|  
 |Renda Anual|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Idade|471.687717702463|0|0|126.969442359327|7|  
 |Idade|234.680904692439|0|0|0|8|  
@@ -162,8 +162,7 @@ ms.locfileid: "66083636"
 ### <a name="elements-of-the-regression-formula"></a>Elementos da fórmula de regressão  
  A tabela NODE_DISTRIBUTION aninhada contém cada elemento da fórmula de regressão em uma linha separada. As duas primeiras linhas de dados nos resultados do exemplo contêm informações sobre o atributo previsível, **Renda anual**, que modela a variável dependente. A coluna SUPPORT exibe o número de casos para os dois estados desse atributo: ou um valor de **Renda anual** disponível ou o valor de **Renda anual** ausente.  
   
- A coluna VARIANCE indica a variância computada do atributo previsível. A *variação* é uma medida de quão dispersão os valores estão em um exemplo, dada uma distribuição esperada. Aqui, a variância é calculada ao considerar a média do desvio quadrado da média. A raiz quadrada de uma variância também é conhecida como desvio padrão. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece um desvio padrão, mas você poderá calculá-lo facilmente.  
+ A coluna VARIANCE indica a variância computada do atributo previsível. A*variância* é uma medida de quão disperso são os valores em um exemplo de acordo com uma determinada distribuição. Aqui, a variância é calculada ao considerar a média do desvio quadrado da média. A raiz quadrada de uma variância também é conhecida como desvio padrão. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não fornece um desvio padrão, mas você poderá calculá-lo facilmente.  
   
  Para cada regressor, são produzidas três linhas. Elas contêm o coeficiente, o ganho de contagem e a estatísticas de regressor.  
   

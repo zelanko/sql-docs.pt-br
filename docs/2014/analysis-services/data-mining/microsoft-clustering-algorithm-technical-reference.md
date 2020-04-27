@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084027"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Clustering
@@ -35,7 +35,7 @@ ms.locfileid: "66084027"
   
  Para obter informações adicionais sobre como usar modelos de clustering, consulte os seguintes tópicos:  
   
--   [Conteúdo do modelo de mineração para modelos de clustering &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66084027"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo dá suporte aos seguintes sinalizadores de modelagem. Você define sinalizadores de modelagem ao criar a estrutura de mineração ou o modelo de mineração. Os sinalizadores de modelagem especificam como os valores de cada coluna são controlados durante a análise.  
   
-|Sinalizador de modelagem|DESCRIÇÃO|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|A coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|A coluna não pode conter um valor nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
@@ -181,6 +181,6 @@ ms.locfileid: "66084027"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

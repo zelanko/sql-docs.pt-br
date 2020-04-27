@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083477"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tarefas e instruções do visualizador do modelo de mineração
@@ -41,12 +41,12 @@ ms.locfileid: "66083477"
   
 -   [Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Exibir a fórmula de um modelo de série temporal &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Exibir a fórmula para um modelo de série temporal &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Alterar as cores usadas no Visualizador de Mineração de Dados](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md)   
- [Visualizadores de modelo de mineração &#40;designer de modelo de mineração de dados&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Visualizadores do Modelo de Mineração &#40;Designer do Modelo de Mineração de Dados&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

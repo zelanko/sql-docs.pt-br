@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089715"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler – Configuração de repetição (Opções de repetição básicas)
@@ -34,12 +34,10 @@ ms.locfileid: "66089715"
  Inicia a caixa de diálogo **Conectar ao Servidor** para conectar a outro servidor.  
   
  **Salvar no arquivo**  
- Salva os resultados da repetição para um arquivo. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe o diálogo de arquivo padrão, permitindo que se especifique o local para salvar o arquivo.  
+ Salva os resultados da repetição para um arquivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe o diálogo de arquivo padrão, permitindo que se especifique o local para salvar o arquivo.  
   
  **Salvar na tabela**  
- Salva os resultados da repetição em uma tabela. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
+ Salva os resultados da repetição em uma tabela. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] exibe a caixa de diálogo de seleção da tabela, permitindo que se especifique o local para salvar a tabela.  
   
  **Número de threads de repetição**  
  Especifica o número de threads de repetição a usar simultaneamente. Um número maior consome mais recursos durante a repetição, porém esta será mais rápida e simultânea.  

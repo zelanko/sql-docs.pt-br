@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093556"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Visão geral da documentação de instalação do SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "66093556"
 ## <a name="documentation-available-during-setup"></a>Documentação disponível durante a Instalação  
  Durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], clique no botão **Ajuda** na página Assistente de Instalação ou pressione F1 no teclado para obter informações imediatas necessárias para concluir a operação.  
   
-## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>Visão geral dos tópicos da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="overview-of-ssnoversion-installation-topics"></a>Visão geral dos tópicos da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Quer você esteja usando o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o prompt de comando para instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderá preparar-se para a instalação lendo as seguintes seções:  
   
 -   [Planejando uma instalação do SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  

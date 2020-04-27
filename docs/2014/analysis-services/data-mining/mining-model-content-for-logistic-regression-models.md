@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083618"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services – Mineração de Dados)
@@ -72,7 +72,7 @@ ms.locfileid: "66083618"
  NODE_TYPE  
  Um modelo de regressão logística gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|DESCRIÇÃO|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nó do organizador para a sub-rede.|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083618"
  MSOLAP_NODE_SHORT_CAPTION  
  Em modelos de regressão logística, sempre em branco.  
   
-##  <a name="bkmk_NodeIDs"></a>Usando nomes e IDs de nós  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
  A nomenclatura dos nós em um modelo de regressão logística fornece mais informações sobre os tipos de relações entre os nós no modelo. A tabela a seguir mostra as convenções para as IDs atribuídas aos nós em cada camada.  
   
 |Tipo de nó|Convenção da ID de nó|  

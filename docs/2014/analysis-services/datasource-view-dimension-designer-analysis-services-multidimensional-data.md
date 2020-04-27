@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082351"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura da Dimensão, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -44,7 +44,7 @@ ms.locfileid: "66082351"
  **Mostrar nomes amigáveis**  
  Selecione para mostrar nomes amigáveis dos objetos no painel.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Seleciona todos os objetos no painel.  
   
  **Localizar Tabela**  
@@ -57,13 +57,13 @@ ms.locfileid: "66082351"
  Selecione para organizar objetos em um padrão diagonal.  
   
 > [!NOTE]  
->  Esta opção será exibida somente se a opção **Alternar para Layout Retangular** estiver selecionada.  
+>   Esta opção será exibida somente se a opção **Alternar para Layout Retangular** estiver selecionada.  
   
  **Alternar para Layout Retangular**  
  Selecione para organizar objetos em um padrão retangular.  
   
 > [!NOTE]  
->  Esta opção será exibida somente se a opção **Alternar para Layout Diagonal** estiver selecionada.  
+>   Esta opção será exibida somente se a opção **Alternar para Layout Diagonal** estiver selecionada.  
   
  **Editar Exibição da Fonte de Dados**  
  Exibe o **Designer da Exibição da Fonte de Dados** da exibição da fonte de dados associada à dimensão. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "66082351"
  **Ocultar Tabela**  
  Remove a tabela do painel.  
   
- **Explorar Dados**  
+ **Explorar dados**  
  Exibe a caixa de diálogo **Explorar Dados** para a tabela selecionada.  
   
  **Editar Exibição da Fonte de Dados**  
- Exibe o **Designer da Exibição da Fonte de Dados** da exibição da fonte de dados que contém a tabela selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Exibe o **Designer de exibição da fonte** de dados da exibição da fonte de dados que contém a tabela selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriedades**  
  Exibe a janela **Propriedades** no **SQL Server Data Tools** da tabela selecionada.  
@@ -112,11 +112,11 @@ ms.locfileid: "66082351"
  **Novo Atributo da Coluna**  
  Exibe no painel as tabelas relacionadas à tabela selecionada na exibição da fonte de dados.  
   
- **Explorar Dados**  
+ **Explorar dados**  
  Exiba a caixa de diálogo **Explorar Dados** da tabela que contém a coluna selecionada.  
   
  **Editar Exibição da Fonte de Dados**  
- Exibe o **Designer de Exibição da Fonte de Dados** da exibição da fonte de dados que contém a coluna selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Exibe o **Designer de exibição da fonte** de dados da exibição da fonte de dados que contém a coluna selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriedades**  
  Exibe a janela **Propriedades** no **SQL Server Data Tools** da coluna selecionada.  
@@ -125,7 +125,7 @@ ms.locfileid: "66082351"
  As opções listadas na tabela a seguir são disponíveis no menu de contexto que é exibido quando você clica com o botão direito do mouse em uma relação no painel **Exibição da Fonte de Dados** .  
   
  **Editar Exibição da Fonte de Dados**  
- Exibe o **Designer de Exibição da Fonte de Dados** que contém a relação selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Exibe o **Designer de exibição da fonte** de dados da exibição da fonte de dados que contém a relação selecionada. Para obter mais informações sobre o **Designer de Exibição da Fonte de Dados**, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propriedades**  
  Exibe a janela **Propriedades** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da relação selecionada.  

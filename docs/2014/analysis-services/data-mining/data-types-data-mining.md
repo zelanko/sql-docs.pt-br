@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084800"
 ---
 # <a name="data-types-data-mining"></a>Tipos de dados (Mineração de Dados)
@@ -28,8 +28,7 @@ ms.locfileid: "66084800"
   
  Por exemplo, se houver dados numéricos em uma coluna, você poderá optar por tratá-los como um tipo de dados numérico ou de texto. Se você escolher o tipo de dados numérico, poderá definir vários tipos de conteúdo diferentes: é possível discretizar os números ou tratá-los como valores contínuos. Para obter uma lista de todos os tipos de conteúdo, consulte [Tipos de conteúdo &#40;Data Mining&#41;](content-types-data-mining.md).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte aos seguintes tipos de dados para colunas de estrutura de mineração:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte aos seguintes tipos de dados para colunas de estrutura de mineração:  
   
 |Tipo de Dados|Tipos de conteúdo com suporte|  
 |---------------|-----------------------------|  

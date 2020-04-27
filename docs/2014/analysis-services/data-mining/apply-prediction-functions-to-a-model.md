@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086137"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funções de previsão a um modelo
@@ -68,7 +68,7 @@ ms.locfileid: "66086137"
     |||  
     |-|-|  
     |**\<nome do modelo>**|Selecione esta opção para incluir os valores do modelo de mineração na saída. Somente é possível adicionar colunas previsíveis.<br /><br /> Quando você adicionar uma coluna do modelo, o resultado retornado é a lista não distinta de valores nessa coluna.<br /><br /> As colunas que você adiciona com esta opção são incluídas na parte de SELECT da instrução DMX resultante.|  
-    |**Função de previsão**|Selecione esta opção para procurar uma lista de funções de previsão.<br /><br /> Os valores ou funções que você seleciona são adicionados à parte SELECT da instrução DMX resultante.<br /><br /> A lista de funções de previsão não é filtrada ou restringida pelo tipo de modelo que você selecionou. Portanto, se você tiver alguma dúvida sobre se a função tem suporte para o tipo modelo atual, bastará adicionar a função à lista e ver se há erro.<br /><br /> Os itens de lista que são precedidos por $ (como $AdjustedProbability) representam colunas da tabela aninhada que são produzidas quando você usa a função `PredictHistogram`. Estes são atalhos que você pode usar para retornar uma única coluna e não uma tabela aninhada.|  
+    |**Prediction Function**|Selecione esta opção para procurar uma lista de funções de previsão.<br /><br /> Os valores ou funções que você seleciona são adicionados à parte SELECT da instrução DMX resultante.<br /><br /> A lista de funções de previsão não é filtrada ou restringida pelo tipo de modelo que você selecionou. Portanto, se você tiver alguma dúvida sobre se a função tem suporte para o tipo modelo atual, bastará adicionar a função à lista e ver se há erro.<br /><br /> Os itens de lista que são precedidos por $ (como $AdjustedProbability) representam colunas da tabela aninhada que são produzidas quando você usa a função `PredictHistogram`. Estes são atalhos que você pode usar para retornar uma única coluna e não uma tabela aninhada.|  
     |**Expressão personalizada**|Selecione essa opção para digitar uma expressão personalizada e atribuir um alias à saída.<br /><br /> A expressão personalizada é adicionada à parte SELECT da consulta de previsão DMX resultante.<br /><br /> Esta opção será útil se você desejar adicionar texto para saída com cada linha, chamar funções VB ou chamar procedimentos armazenados personalizados.<br /><br /> Para obter mais informações sobre como usar funções VBA e Excel no DMX, consulte [Funções VBA no MDX e no DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Depois de adicionar cada função ou expressão, alterne para a exibição do DMX para ver como a função é adicionada dentro da instrução DMX.  
@@ -118,7 +118,7 @@ ms.locfileid: "66086137"
   
      A tabela a seguir mostra os resultados esperados:  
   
-    |Bike Buyer|$Cluster|SUPORTE|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   

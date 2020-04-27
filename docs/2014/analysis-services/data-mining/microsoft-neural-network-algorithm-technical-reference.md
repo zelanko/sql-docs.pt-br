@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083857"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
@@ -88,13 +88,13 @@ ms.locfileid: "66083857"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Rede Neural|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais pode usar ambos os métodos de pontuação Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Padrão.|  
-|Regressão Logística|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Como não é possível indicar um parâmetro para esse algoritmo controlar o comportamento de seleção de recursos, os padrões são usados. Sendo assim, se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.|  
+|Rede Neural|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais pode usar ambos os métodos de pontuação Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Padrão.|  
+|Regressão Logística|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Como não é possível indicar um parâmetro para esse algoritmo controlar o comportamento de seleção de recursos, os padrões são usados. Sendo assim, se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.|  
   
  Os parâmetros de algoritmo que controlam a seleção de recursos para um modelo de rede neural são MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES e MAXIMUM_STATES. Você também pode controlar o número de camadas ocultas definindo o parâmetro HIDDEN_NODE_RATIO.  
   
 ### <a name="scoring-methods"></a>Métodos de pontuação  
- A *Pontuação* é um tipo de normalização, que, no contexto de treinamento de um modelo de rede neural, significa o processo de conversão de um valor, como um rótulo de texto discreto, em um valor que pode ser comparado com outros tipos de entradas e ponderado na rede. Por exemplo, se um atributo de entrada for Sexo e os valores possíveis forem Masculino e Feminino, e outro atributo de entrada for Renda, com um intervalo variável de valores, os valores de cada atributo não serão diretamente comparáveis e, portanto, deverão ser codificados para uma escala comum para que os pesos possam ser calculados. A pontuação é o processo de normalizar essas entradas para valores numéricos: especificamente para um intervalo de probabilidade. As funções usadas para normalização também ajudam a distribuir o valor de entrada mais uniformemente em uma escala uniforme, para que valores extremos não distorçam os resultados da análise.  
+ A*Pontuação* é um tipo de normalização que, no contexto de treinamento de um modelo de rede neural, significa o processo de converter um valor, como uma etiqueta de texto discreta, em um valor que possa ser comparado com outros tipos de entradas e ponderado na rede. Por exemplo, se um atributo de entrada for Sexo e os valores possíveis forem Masculino e Feminino, e outro atributo de entrada for Renda, com um intervalo variável de valores, os valores de cada atributo não serão diretamente comparáveis e, portanto, deverão ser codificados para uma escala comum para que os pesos possam ser calculados. A pontuação é o processo de normalizar essas entradas para valores numéricos: especificamente para um intervalo de probabilidade. As funções usadas para normalização também ajudam a distribuir o valor de entrada mais uniformemente em uma escala uniforme, para que valores extremos não distorçam os resultados da análise.  
   
  As saídas da rede neural também são codificadas. Quando há um único destino para a saída (isto é, previsão), ou vários destinos que são usados apenas para previsão e não para entrada, o modelo cria uma única rede e talvez não seja necessário para normalizar os valores. No entanto, se vários atributos forem usados para entrada e previsão, o modelo deverá criar várias redes; portanto, todos os valores deverão ser normalizados e as saídas também deverão ser codificadas, à medida que deixarem a rede.  
   

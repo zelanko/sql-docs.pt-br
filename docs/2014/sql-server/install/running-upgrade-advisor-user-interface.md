@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092452"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Executando o Supervisor de Atualização (Interface do usuário)
@@ -68,11 +68,11 @@ ms.locfileid: "66092452"
   
  Para verificar as instruções passo a passo de como usar o Visualizador de Relatórios, consulte os seguintes tópicos:  
   
--   [Como exibir um relatório do Supervisor de Atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Como fazer: Para exibir um relatório do Supervisor de Atualização](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Como filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Como fazer: Para filtrar relatórios](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Como exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Como fazer: Exportar relatórios](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Como executar o assistente de análise do supervisor de atualização](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   

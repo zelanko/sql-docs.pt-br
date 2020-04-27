@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090963"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabalhando com o Supervisor de Atualização
@@ -39,7 +39,7 @@ ms.locfileid: "66090963"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Visão geral do Assistente de Atualização](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Fornece uma visão geral do processo de atualização, do Assistente para Análise do Supervisor de Atualização e do Visualizador de Relatórios do Supervisor de Atualização.|  
 |[Tópicos de informações práticas do Supervisor de Atualização](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Fornece instruções para executar procedimentos comuns do Supervisor de Atualização.|  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088954"
 ---
 # <a name="ring-buffer-target"></a>Destino de buffer de anel
@@ -29,7 +29,7 @@ ms.locfileid: "66088954"
   
  A tabela a seguir descreve as opções disponíveis para configurar o destino de buffer de anel.  
   
-|Opção|Valores permitidos|DESCRIÇÃO|  
+|Opção|Valores permitidos|Descrição|  
 |------------|--------------------|-----------------|  
 |max_memory|Qualquer inteiro de 32 bits. Esse valor é opcional.|A quantidade máxima de memória, em kilobytes (KB), para usar. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. O valor máximo é 4194303 KB. Uma consideração cuidadosa deve ser feita antes de definir o tamanho do buffer de anéis para limites no intervalo de GB, pois ele pode afetar outros consumidores de memória no SQL Server|  
 |max_event_limit|Qualquer inteiro de 32 bits. Esse valor é opcional.|O número máximo de eventos mantidos no ring_buffer. Os eventos existentes são descartados com base no limite atingido primeiro: max_event_limit ou max_memory. Padrão = 1000.|  

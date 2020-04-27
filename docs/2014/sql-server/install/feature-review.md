@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095326"
 ---
 # <a name="feature-review"></a>Revisão dos recursos
@@ -26,8 +26,7 @@ ms.locfileid: "66095326"
   
 |Grupo de componentes|Componentes e recursos|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclui os seguintes componentes:<br /><br /> Replicação: (opcional) a replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.<br /><br /> Pesquisa de Texto Completo: (opcional) a Pesquisa de Texto Completo fornece funcionalidade para realizar consultas de texto completo em dados baseados em caracteres não criptografados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) é uma solução de limpeza de dados que permite descobrir dados inconsistentes e incorretos na fonte de dados. Essa solução fornece modos automatizados e interativos de limpar os dados.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é o serviço principal para armazenamento, processamento e segurança de dados. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclui os seguintes componentes:<br /><br /> Replicação: (opcional) a replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência.<br /><br /> Pesquisa de Texto Completo: (opcional) a Pesquisa de Texto Completo fornece funcionalidade para realizar consultas de texto completo em dados baseados em caracteres não criptografados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): o [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) é uma solução de limpeza de dados que permite descobrir dados inconsistentes e incorretos na fonte de dados. Essa solução fornece modos automatizados e interativos de limpar os dados.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|O[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui componentes de servidor e cliente por criar, gerenciar e implantar relatórios tabulares, de matriz, gráficos e de forma livre. O[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também é uma plataforma extensível que você pode usar para desenvolver aplicativos de relatório.|  
   
 ## <a name="see-also"></a>Consulte Também  

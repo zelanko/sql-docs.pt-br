@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086026"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Procurar um modelo usando o Visualizador do Microsoft Naive Bayes
@@ -37,10 +37,10 @@ ms.locfileid: "66086026"
 > [!NOTE]  
 >  Se desejar exibir informações detalhadas sobre as equações usadas no modelo e os padrões descobertos, você poderá alternar para o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador Naive Bayes da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece as seguintes guias para explorar dados:  
   
--   [Rede de dependências](#BKMK_Dependency)  
+-   [Rede de Dependências](#BKMK_Dependency)  
   
 -   [Perfis de atributo](#BKMK_Profiles)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66086026"
   
 -   [Discriminação de atributo](#BKMK_Discrimination)  
   
-##  <a name="BKMK_Dependency"></a>Rede de dependências  
+##  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Rede de dependências  
  A guia **Rede de Dependências** exibe as dependências entre os atributos de entrada e os atributos previsíveis em um modelo. O controle deslizante à esquerda do visualizador funciona como um filtro vinculado aos pontos fortes das dependências. Diminuindo o controle deslizante, somente os links mais fortes serão exibidos.  
   
  Quando você selecionar um nó, o visualizador destacará as dependências específicas ao nó. Por exemplo, se você escolher um nó previsível, o visualizador também realçará cada nó que ajuda a prever o nó previsível.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086026"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Profiles"></a>Perfis de atributo  
+##  <a name="attribute-profiles"></a><a name="BKMK_Profiles"></a> Perfis de Atributo  
  A guia **Perfis de Atributos** exibe histogramas em uma grade. Você pode usar essa grade para comparar o atributo previsível selecionado na caixa **Previsível** com todos os outros atributos que estão no modelo. Cada coluna na guia representa um estado do atributo previsível. Se o atributo previsível tiver muitos estados, você poderá alterar o número de estados exibidos no histograma ajustando as **Barras de histograma**. Se o número que você escolher for menor do que o número total de estados no atributo, os estados estarão listados na ordem de suporte, com os outros estados coletados em um único recipiente cinza.  
   
  Para exibir uma Legenda de Mineração que relaciona as cores do histograma aos estados de um atributo, clique na caixa de seleção **Mostrar Legenda** . A Legenda de Mineração também exibe a distribuição de casos para cada par atributo-valor selecionado.  
@@ -66,15 +66,15 @@ ms.locfileid: "66086026"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Characteristics"></a>Características do atributo  
+##  <a name="attribute-characteristics"></a><a name="BKMK_Characteristics"></a> Características do Atributo  
  Para usar a guia **Características do Atributo** , selecione um atributo previsível na lista **Atributo** e selecione um estado do atributo selecionado na lista **Valor** . Quando você define essas variáveis, a guia **Características do Atributo** exibe os estados dos atributos associados ao caso selecionado do atributo selecionado. Os atributos são classificados por importância.  
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-##  <a name="BKMK_Discrimination"></a>Discriminação de atributo  
+##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a> Distinção de Atributo  
  Para usar a guia **Discriminação de Atributo** , selecione um atributo previsível e dois de seus estados nas listas **Atributo**, **Valor 1**e **Valor 2** . A grade da guia **Discriminação de Atributo** exibe as seguintes informações nas colunas:  
   
- **Attribute**  
+ **Atributo**  
  Lista outros atributos do conjunto de dados que contêm um estado que altamente favorece um estado do atributo previsível.  
   
  **Valores**  

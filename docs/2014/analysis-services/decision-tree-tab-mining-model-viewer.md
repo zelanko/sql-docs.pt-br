@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082296"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Guia Árvore de Decisão (Visualizador do Modelo de Mineração)
   O painel **DecisionTree** exibe uma representação visual das regras de decisão criadas em um modelo de árvore de decisão. As regras de decisão descrevem caminhos para um determinado resultado.  
   
- **Para obter mais informações:** [algoritmo árvores de decisão da Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [procurar um modelo usando o Visualizador de árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Para obter mais informações:** [Algoritmo Árvores de Decisão da Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [Procurar um modelo usando o Visualizador de Árvore da Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -55,7 +55,7 @@ ms.locfileid: "66082296"
  **Três**  
  Escolha uma árvore para ser exibida no visualizador. Se você criar um modelo que tem vários atributos previsíveis, o algoritmo criará uma árvore separada para cada atributo previsível.  
   
- **Segundo plano**  
+ **Informações**  
  Escolha um valor do atributo previsível para ser usado na representação da cor de fundo de cada nó. Por exemplo, nos modelos de exemplo da AdventureWorks, se você definir **Segundo plano** como 1 ([Comprador de Bicicleta] = Sim), os nós serão escurecidos se tiverem uma proporção maior proporção de compradores de bicicleta. Esta opção fornece uma sugestão visual adicional sobre o significado das ramificações e nós na árvore.  
   
  **Expansão padrão**  

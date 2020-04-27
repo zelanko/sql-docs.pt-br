@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084206"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Editar manualmente uma consulta de previsão
@@ -45,6 +45,6 @@ ms.locfileid: "66084206"
 ## <a name="see-also"></a>Consulte Também  
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](../prediction-query-builder-data-mining.md)   
- [Lição 6: Criando e trabalhando com previsões &#40;tutorial de mineração de dados básico&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lição 6: Criando e trabalhando com previsões &#40;Tutorial de mineração de dados básico&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

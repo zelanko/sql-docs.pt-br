@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087337"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectar com uma fonte de dados (SSAS)
@@ -24,8 +24,7 @@ ms.locfileid: "66087337"
   
  Para conectar uma fonte de dados, você deve ter o provedor apropriado instalado no computador. Você também deve ter o provedor apropriado instalado no servidor de banco de dados de workspace. Para servidores de 32 bits (x86), provedores de 32 bits devem ser instalados. Para servidores de 64 bits (x64), provedores de 64 bits devem ser instalados.  
   
- 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] é sempre executado em um processo de 32 bits, independentemente da arquitetura. Ao executar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] em um computador de 64 bits, você deve estar consciente do seguinte ao instalar provedores de dados:  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] é sempre executado em um processo de 32 bits, independentemente da arquitetura. Ao executar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] em um computador de 64 bits, você deve estar consciente do seguinte ao instalar provedores de dados:  
   
 -   Para provedores que dão suporte à instalação lado a lado de provedores de 32 bits e de 64 bits, você deve instalar ambos os provedores.  
   

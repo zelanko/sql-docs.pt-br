@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092286"
 ---
 # <a name="server-configuration---collation"></a>Configuração do SQL Server – ordenação
@@ -32,11 +32,11 @@ ms.locfileid: "66092286"
   
  As configurações padrão devem ser alteradas apenas se a configuração de ordenação dessa instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corresponder às configurações de ordenação usadas por outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou se ela corresponder à localidade do sistema Windows de outro computador.  
   
- **Observação** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa somente agrupamentos do Windows. Se você planeja instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], selecione uma ordenação do Windows durante o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para garantir a consistência dos resultados entre o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ **Observação** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa apenas ordenações do Windows. Se você planeja instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], selecione uma ordenação do Windows durante o processo de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para garantir a consistência dos resultados entre o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Para obter mais informações, veja [Configurações de ordenação na Instalação](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Práticas Recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  Para obter mais informações sobre uma tabela de localidades de Sistema do Windows e as ordenações padrão correspondentes usadas pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Configurações de ordenação na Instalação](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Se possível, use uma ordenação exclusiva para sua organização. Dessa forma, não será preciso especificar explicitamente a ordenação para cada banco de dados, coluna, expressão ou identificador. Se você precisar trabalhar com várias ordenações e configurações de página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, confira o tópico [Precedência de ordenação &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql) nos Manuais Online.  

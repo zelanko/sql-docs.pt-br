@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086646"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validação cruzada (Suplementos de Mineração de Dados do SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "66086646"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>Classificação: verdadeiro ou falsos positivos e negativos  
  Este teste é usado para todos os modelos de classificação que têm um destino especificado. A medida indica como cada caso é classificado em resposta a essas questões: o que o modelo prevê e qual foi o resultado real.  
   
-|Medida|DESCRIÇÃO|  
+|Medida|Descrição|  
 |-------------|-----------------|  
 |Verdadeiro positivo|Contagem de casos que atendem estas condições:<br /><br /> Casos que contém o valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  
 |Falso positivo|Contagem de casos que atendem estas condições:<br /><br /> O valor atual é igual ao valor de destino.<br /><br /> O modelo previu que o caso contém o valor de destino.|  
@@ -125,7 +125,7 @@ ms.locfileid: "66086646"
   
  RMSE representa o erro médio do valor previsto quando comparado ao valor real. Ele é calculado como a raiz quadrada do erro médio para todos os casos de partição, dividida pelo número de casos na partição, excluindo as linhas com valores ausentes para os atributos de destino.  
   
-#### <a name="mean-absolute-error"></a>Erro Absoluto Médio  
+#### <a name="mean-absolute-error"></a>Erro de Média Absoluta  
  O *erro* de média absoluta é o erro médio do valor previsto para o valor real. Ele é calculado pela obtenção da soma absoluta dos erros e descoberta da média desses erros.  
   
  Esse valor o ajuda a entender o quanto as pontuações variam da média.  

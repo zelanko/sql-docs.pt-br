@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082157"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definir Inteligência de Conta (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Conta** para mapear tipos de conta definidos na instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para tipos de conta definidos no atributo de dimensão associado ao atributo **Tipo de Conta** na dimensão.  
   
 > [!NOTE]  
->  Essa página será exibida apenas se você tiver selecionado **Dimensão padrão** na página **Selecionar o Tipo de Dimensão** e se tiver mapeado um atributo de dimensão para o tipo de atributo **Tipo de Conta** na página **Especificar Tipo de Dimensão** .  
+>   Essa página é exibida apenas de você tiver selecionado **Dimensão padrão** na página **Selecionar o Tipo de Dimensão** e se tiver mapeado um atributo de dimensão para o tipo de atributo **Tipo de Conta** na página **Especificar Tipo de Dimensão** .  
   
 ## <a name="options"></a>Opções  
  **Tipos de Conta de Tabela de Origem**  
@@ -34,14 +34,14 @@ ms.locfileid: "66082157"
   
  A tabela a seguir lista os tipos de conta que estão definidos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Ativo**|Valor de itens possuídos em um momento específico.|  
 |**Saldo**|Contagem de algo em um momento específico.|  
-|**Custos**|Valor de despesas efetuadas.|  
-|**Fluxo**|Contagem incremental de itens.|  
+|**Despesa**|Valor de despesas efetuadas.|  
+|**Flow**|Contagem incremental de itens.|  
 |**Líqui**|Valor de itens recebidos.|  
-|**Obrigação**|Valor de itens devidos em um momento específico.|  
+|**Dívida**|Valor de itens devidos em um momento específico.|  
 |**Estatística**|Taxa calculada de algo ou contagem de algo que não agrega.|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084602"
 ---
 # <a name="drillthrough-on-mining-models"></a>Detalhamento em modelos de mineração
-  *Detalhamento* significa a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados que não são expostos no modelo.  
+  *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar os casos que foram utilizados para criar dados ou os casos na estrutura de mineração.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar os casos que foram utilizados para criar dados ou os casos na estrutura de mineração.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Detalhar para casos do modelo vs. Detalhar para estrutura  
  O detalhamento para **casos do modelo** é útil para localizar detalhes adicionais sobre regras, padrões ou clusters em um modelo. Por exemplo, você não usará informações de contato do cliente para análise em um modelo de clustering, mesmo que os dados estejam disponíveis, usando o detalhamento, você pode obter acesso a essas informações do modelo.  
@@ -61,7 +60,7 @@ ms.locfileid: "66084602"
 |Recuperar dados de caso para um modelo usando detalhamento|[Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)|  
 |Habilitar o detalhamento em um modelo de mineração existente|[Habilitar o detalhamento para um modelo de mineração](enable-drillthrough-for-a-mining-model.md)|  
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](data-mining-queries.md)|  
-|Habilitar detalhamento no assistente do modelo de mineração|[Concluindo o assistente &#40;assistente de mineração de dados&#41;](../completing-the-wizard-data-mining-wizard.md).|  
+|Habilitar detalhamento no assistente do modelo de mineração|[Concluindo o assistente &#40;Assistente de Data Mining&#41;](../completing-the-wizard-data-mining-wizard.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Detalhamento em estruturas de mineração](drillthrough-on-mining-structures.md)  

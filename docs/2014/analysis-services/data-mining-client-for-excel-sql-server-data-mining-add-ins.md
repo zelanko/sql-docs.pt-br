@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086425"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de Mineração de Dados para Excel (Suplementos de Mineração de Dados do SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "66086425"
   
      O Cliente de Mineração de Dados para Excel mantém uma conexão ativa com o servidor, para que você possa salvar o modelo de mineração de dados no servidor, para usar em mais testes ou para implantar em um servidor de produção para maior escalabilidade.  
   
-##  <a name="bkmk_Data"></a>Trabalhar com dados  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>Trabalhar com dados  
  O grupo de **preparação de dados** contém os assistentes a seguir que ajudam você a examinar e limpar dados em preparação para tarefas de data mining. A maioria dos assistentes também permite que você separe dados em conjuntos de treinamento e de testes.  
   
  [Explorar dados &#40;SQL Server suplementos de mineração de dados&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "66086425"
  [Cálculo de Previsão &#40;ferramentas de análise de tabela para Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  O assistente de **rerotulação** ajuda a criar novos rótulos para dados para facilitar a compreensão dos resultados da análise. Por exemplo, você pode renomear um intervalo de dados com um nome mais descritivo ou pode escolher um valor representativo na lista.  
   
-##  <a name="bkmk_Model"></a>Criar modelos e analisar  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>Criar modelos e analisar  
  As opções na seção **modelagem de dados** da barra de ferramentas permitem que você derive padrões de dados; Agrupe linhas de dados com base em atributos ou explore associações. Os assistentes na faixa de opções da ferramenta se baseiam nos algoritmos de mineração de dados avançados disponíveis no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Diferentemente de ferramentas semelhantes nas Ferramentas de Análise de Tabela para Excel, esses assistentes lhe permitem personalizar o comportamento do algoritmo e usar várias fontes de dados.  
   
  [Assistente de classificação &#40;suplementos de mineração de dados para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086425"
  [Modelagem avançada &#40;suplementos de mineração de dados para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  Já conhece a mineração de dados? Você pode usar as opções de modelagem de dados **avançadas** para criar estruturas de dados personalizadas e criar modelos usando personalizações não incluídas nas outras ferramentas e assistentes.  
   
-##  <a name="bkmk_Validate"></a>Testar, consultar e validar modelos  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>Testar, consultar e validar modelos  
  Use os assistentes na barra de ferramentas de **precisão e validação** para usar testes padrão do setor para validar a precisão de seus modelos e para avaliar a viabilidade do conjunto de dados para a criação de modelos.  
   
  [Analisar os influenciadores principais &#40;ferramentas de análise de tabela para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086425"
  [Editor de Consulta Avançada de Mineração de Dados](advanced-data-mining-query-editor.md)  
  Para usuários avançados, essa ferramenta oferece uma interface arrastar e soltar ao DMX. Você pode criar consultas de previsão ou novos modelos com facilidade, sem precisar se preocupar com a sintaxe.  
   
-##  <a name="bkmk_ViewModels"></a>Exibir modelos  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>Exibir modelos  
  Os modelos que você cria são abertos automaticamente para procurar. No entanto, você também pode procurar modelos no servidor e gerar novas visualizações. Use as [formas do Visio](viewing-data-mining-models-in-visio-data-mining-add-ins.md) para exportar diagramas de modelo para uma tela personalizável.  
   
  [Pesquisando modelos no Excel &#40;SQL Server suplementos de mineração de dados&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086425"
  [Documentando modelos de mineração &#40;suplementos de mineração de dados para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  Esse assistente cria relatórios que oferecem um resumo estatístico do conjunto de dados e dos metadados sobre o modelo, para auxiliar na investigação e na interpretação.  
   
-##  <a name="bkmk_UsageMgmt"></a>Gerenciar, documentar e implantar  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>Gerenciar, documentar e implantar  
  Essas ferramentas ajudam você a se conectar a um servidor de mineração de dados, além de gerenciar e exportar modelos e monitorar a atividade de mineração de dados.  
   
  [Gerenciar modelos &#40;SQL Server suplementos de mineração de dados&#41;](manage-models-sql-server-data-mining-add-ins.md)  

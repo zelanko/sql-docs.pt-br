@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088030"
 ---
 # <a name="choosing-data-for-data-mining"></a>Escolhendo os dados para a mineração de dados
@@ -38,7 +38,7 @@ ms.locfileid: "66088030"
   
  [Outros requisitos de dados](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>Escolhendo dados  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Escolhendo dados  
  A seleção dos dados usados para a análise é talvez a parte mais importante do processo de mineração de dados, mais importante até mesmo que a seleção de um algoritmo. A razão é que a mineração de dados não é, em geral, controlada por hipóteses, e sim por dados. Em vez de selecionar e testar variáveis com antecedência, assim como você faria no modelo estatístico tradicional, a mineração de dados pode usar dados e descobrir novas correlações (ou não descobrir padrão nenhum). A qualidade e a quantidade de dados pode ter um efeito significativo nos resultados.  
   
  Em geral, observe as seguintes regras:  
@@ -81,11 +81,11 @@ ms.locfileid: "66088030"
   
  Você também pode optar por tratar os números como sendo discretos quando os valores estiverem claramente separados e não houver nenhuma possibilidade de valores fracionários, ou os valores fracionários não forem úteis.  
   
- Os dados numéricos *contínuos* podem conter um número infinito de valores fracionários. Uma coluna de renda é um exemplo de uma coluna de atributo contínua. Se você especificar que uma coluna é numérica, todos os valores dessa coluna deverão ser números, exceto os nulos. Observe que, no Excel, carimbos de data/hora e qualquer outra representação de data e hora que possa ser convertida em um tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem ser considerados.  
+ Dados numéricos*contínuos* podem conter um número infinito de valores fracionários. Uma coluna de renda é um exemplo de uma coluna de atributo contínua. Se você especificar que uma coluna é numérica, todos os valores dessa coluna deverão ser números, exceto os nulos. Observe que, no Excel, carimbos de data/hora e qualquer outra representação de data e hora que possa ser convertida em um tipo de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podem ser considerados.  
   
  **Convertendo números em variáveis categóricas**  
   
- Só porque uma coluna contém números, isso não significa que você deverá tratá-los como números contínuos. O *discretização* fornece muitas vantagens para a análise. Uma delas é a redução do problema de espaço. Outra vantagem é que às vezes os números não são o modo apropriado de expressar um resultado.  
+ Só porque uma coluna contém números, isso não significa que você deverá tratá-los como números contínuos. A*discretização* oferece várias vantagens para análise. Uma delas é a redução do problema de espaço. Outra vantagem é que às vezes os números não são o modo apropriado de expressar um resultado.  
   
  Por exemplo, o número de filhos por domicílio pode ser tratado como um valor contínuo ou discreto. Como não é possível ter 2,5 filhos em casa, e residências com 3 filhos ou mais podem se comportar de forma muito diferente de residências com 2 filhos, você pode obter resultados melhores tratando esse número como uma categoria. Entretanto, se estiver criando um modelo de regressão ou de outra forma precisar de uma média (como 1,357 filhos por domicílio), você deverá usar um tipo de dados numérico contínuo.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66088030"
   
 -   Aproximando valores a um meio central ou a um valor representativo.  
   
-##  <a name="bkmk_CommonDataProblems"></a>Problemas comuns de dados  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Problemas comuns de dados  
   
 ### <a name="excel-number-formats"></a>Formatos numéricos do Excel  
  O Excel é uma ferramenta fácil de usar porque é tolerante-você pode colocar praticamente qualquer tipo de dados em qualquer lugar! Entretanto, antes de começar a procurar por padrões e por correlações de análise, será preciso impor estrutura ou limites a seus dados.  
@@ -145,7 +145,7 @@ ms.locfileid: "66088030"
   
  Se você tiver dificuldade em trabalhar com datas e quiser analisar datas usando agrupamentos de senso comum como mês ou dia, use as funções DATE no Excel para extrair o ano, o mês ou o dia em uma coluna separada e use essa coluna para classificação.  
   
-##  <a name="bkmk_OtherRequirements"></a>Outros requisitos de dados  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Outros requisitos de dados  
   
 ### <a name="requirements-by-algorithm-type"></a>Requisitos por tipo de algoritmo  
  Alguns algoritmos usados nos suplementos requerem tipos de dados ou tipos de conteúdo específicos para criar um modelo.  
@@ -205,7 +205,7 @@ ms.locfileid: "66088030"
   
  Tipicamente, a coluna de chave é um identificador numérico ou de texto que não deve ser usada para análise, somente para rastrear registros. As exceções são séries temporais e chaves sequenciais.  
   
- **As chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que foi [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definida como uma exibição da fonte de dados. Para obter mais informações sobre tabelas aninhadas [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consulte:  
+ As**chaves de tabela aninhadas** são usadas somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obter mais informações sobre tabelas aninhadas [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx), consulte:  
   
  Esse tipo de conteúdo pode ser usado com os seguintes tipos de dados: `Date`, `Double`, `Long` e `Text`.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "66088030"
   
  Esse tipo de conteúdo é suportado pelos seguintes tipos de dados: `Double`, `Long` e `Date`.  
   
- **Table**  
+ **Tabela**  
  Esse tipo de conteúdo também é usado somente quando você obtém dados de uma fonte de dados externa que tenha sido definida como uma exibição da fonte de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  O que isso significa é que cada linha de dados realmente contém uma tabela de dados aninhada, com uma ou mais colunas e uma ou mais linhas.  

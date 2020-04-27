@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088266"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Ferramentas de Cálculo (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -39,7 +39,7 @@ ms.locfileid: "66088266"
 > [!NOTE]  
 >  No modo de projeto, a caixa de diálogo **Ferramentas de Cálculo** lê as informações desta opção em um arquivo XML denominado MDXFunctions.xml fornecido com o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Em modo online, informações para esta opção são recuperadas do conjunto de linhas de esquema de MDSCHEMA_FUNCTIONS da instância.  
   
- **Modelo**  
+ **Modelos**  
  Exibe os modelos predefinidos disponíveis para KPIs.  
   
  Arraste um elemento selecionado para o painel **Editor de Formulário de KPI** para incluir a sintaxe MDX daquele elemento no local selecionado no painel.  
@@ -47,29 +47,29 @@ ms.locfileid: "66088266"
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em um elemento exibido no painel **Ferramentas de Cálculo** :  
   
- **Copy**  
+ **Cópia**  
  Selecione para copiar o elemento selecionado em **Metadados** ou **Funções** na Área de Transferência.  
   
 > [!NOTE]  
->  Esta opção não será exibida se a opção **Modelos** estiver selecionada.  
+>   Esta opção não será exibida se a opção **Modelos** estiver selecionada.  
   
 > [!NOTE]  
->  Esta opção será desabilitada se o membro selecionado não puder ser copiado, como a pasta **Conjuntos** de uma dimensão exibida em **Metadados** ou a pasta de grupo de funções de uma função exibida em **Funções**.  
+>   Esta opção será desabilitada se o membro selecionado não puder ser copiado, como a pasta **Conjuntos** de uma dimensão exibida em **Metadados** ou a pasta de grupo de funções de uma função exibida em **Funções**.  
   
  **Filtrar Membros**  
  Clique para exibir a caixa de diálogo **Filtrar Membros** e filtrar os membros exibidos para o elemento selecionado em **Metadados**. Para obter mais informações sobre a caixa de diálogo **Filtrar Membros**, consulte [Caixa de diálogo Filtrar Membros &#40;Analysis Services – Dados Multidimensionais&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Esta opção será exibida apenas se a opção **Metadados** estiver selecionada.  
+>   Esta opção será exibida apenas se a opção **Metadados** estiver selecionada.  
   
 > [!NOTE]  
->  Esta opção estará habilitada apenas se um nível de um atributo estiver selecionado em **Metadados**.  
+>   Esta opção estará habilitada apenas se um nível de um atributo estiver selecionado em **Metadados**.  
   
  **Adicionar Modelo**  
  Selecione para adicionar um novo membro calculado, conjunto nomeado ou comando de script baseado no modelo selecionado ao script do cubo e exibir a exibição de formulário no **Editor de Formulário de KPI** .  
   
 > [!NOTE]  
->  Esta opção será exibida apenas se a opção **Metadados** estiver selecionada.  
+>   Esta opção será exibida apenas se a opção **Metadados** estiver selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [O designer de cubo &#40;Analysis Services-dados multidimensionais&#41;](cube-designer-analysis-services-multidimensional-data.md)   

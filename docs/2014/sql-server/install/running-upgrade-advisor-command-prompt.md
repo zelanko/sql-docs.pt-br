@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092436"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Executando o Supervisor de Atualização (Prompt de Comando)
@@ -54,13 +54,13 @@ where <server_info> is any combination of the following:
  Especifica o nome do computador que será analisado. Esse computador pode ser o computador local, que é o valor padrão, ou um computador remoto.  
   
  **-Instância** _instance_name_  
- Especifica o nome da instância que será analisada. Não há um valor padrão. Se você não especificar esse parâmetro, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MSSQLSERVER. Para uma instância nomeada, use o nome da instância.  
+ Especifica o nome da instância que será analisada. Não há nenhum valor padrão. Se você não especificar esse parâmetro, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MSSQLSERVER. Para uma instância nomeada, use o nome da instância.  
   
- **-AS_instance_name de instância**__    
- Especifica o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será analisada. Não há um valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService. Para uma instância nomeada, use o nome da instância.  
+ **-AS_instance_name de instância**_AS_instance_name_    
+ Especifica o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será analisada. Não há nenhum valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService. Para uma instância nomeada, use o nome da instância.  
   
  **-RSInstance**  _RS_instance_name_  
- Especifica o nome da instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que será analisada. Não há um valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é ReportServer. Para uma instância nomeada, use o nome da instância.  
+ Especifica o nome da instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que será analisada. Não há nenhum valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é ReportServer. Para uma instância nomeada, use o nome da instância.  
   
  **-Sqluser** _login_id_  
  Se você estiver usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esse valor será o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o Supervisor de Atualização usará para conectar-se na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se você não especificar um logon, a Autenticação do Windows será usada para conectar-se na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -74,7 +74,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Valores de retorno  
  A tabela a seguir mostra os valores que **UpgradeAdvisorWizardCmd** retorna.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|A análise foi bem-sucedida e nenhum problema de atualização foi encontrado.|  
 |número inteiro positivo|A análise foi bem-sucedida e foram encontrados problemas de atualização.|  
@@ -128,25 +128,21 @@ where <server_info> is any combination of the following:
 |`Instance`|Nome da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que será analisada.|Opcional uma vez por arquivo de configuração. O valor padrão é a instância padrão.<br /><br /> Obrigatório uma vez por arquivo de configuração, se um elemento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou `IntegrationServices` estiver presente no servidor.|  
 |`Components`|Contém elementos que especificam quais componentes serão analisados.|Obrigatório uma vez por arquivo de configuração.|  
 |`SQLServer`|Contém as configurações de análise para uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, os bancos de dados do [!INCLUDE[ssDE](../../includes/ssde-md.md)] não serão analisados.|  
-|
-  `Databases` para o elemento `SQLServer`|Contém uma lista dos bancos de dados que serão analisados.|Opcional uma vez `SQLServer` por elemento. Se esse elemento não estiver presente, serão analisados todos os bancos de dados na instância.|  
-|
-  `Database` para o elemento `SQLServer`|Especifica o nome do banco de dados que será analisado.|Obrigatório uma vez ou mais se o elemento `Databases` estiver presente. Se um elemento `Database` contiver o valor "*", serão analisados todos os bancos de dados na instância. Não há um valor padrão.|  
+|`Databases` para o elemento `SQLServer`|Contém uma lista dos bancos de dados que serão analisados.|Opcional uma vez `SQLServer` por elemento. Se esse elemento não estiver presente, serão analisados todos os bancos de dados na instância.|  
+|`Database` para o elemento `SQLServer`|Especifica o nome do banco de dados que será analisado.|Obrigatório uma vez ou mais se o elemento `Databases` estiver presente. Se um elemento `Database` contiver o valor "*", serão analisados todos os bancos de dados na instância. Não há nenhum valor padrão.|  
 |`TraceFiles`|Contém uma lista dos arquivos de rastreamento que serão analisados.|Opcional uma vez `SQLServer` por elemento.|  
-|`TraceFile`|Especifica o caminho e o nome de um arquivo de rastreamento que será analisado.|Obrigatório uma vez ou mais se o elemento `TraceFiles` estiver presente. Não há um valor padrão.|  
+|`TraceFile`|Especifica o caminho e o nome de um arquivo de rastreamento que será analisado.|Obrigatório uma vez ou mais se o elemento `TraceFiles` estiver presente. Não há nenhum valor padrão.|  
 |`BatchFiles`|Contém uma lista dos arquivos em lotes que serão analisados.|Opcional uma vez `SQLServer` por elemento.|  
-|`BatchFile`|Especifica um arquivo em lote que será analisado. Podem ser vários.|Obrigatório uma vez ou mais se o elemento `BatchFiles` estiver presente. Não há um valor padrão.|  
+|`BatchFile`|Especifica um arquivo em lote que será analisado. Podem ser vários.|Obrigatório uma vez ou mais se o elemento `BatchFiles` estiver presente. Não há nenhum valor padrão.|  
 |`BatchSeparator`|Especifica o separador de lote usado em seus arquivos em lotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Opcional uma vez `SQLServer` por elemento. O valor padrão é GO.|  
 |`AnalysisServices`|Contém configurações de análise do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, os bancos de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não serão analisados.|  
-|`ASInstance`|Especifica o nome de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obrigatório uma vez por elemento `AnalysisServices`. Não há um valor padrão.|  
-|
-  `Databases` para o elemento `Analysis Services`|Contém uma lista dos bancos de dados que serão analisados.|Opcional uma vez `AnalysisServices` por elemento. Se esse elemento não estiver presente, serão analisados todos os bancos de dados na instância.|  
-|
-  `Database` para o elemento `AnalysisServices`|Especifica o nome do banco de dados que será analisado.|Obrigatório uma vez ou mais se o elemento `Databases` estiver presente. Se um elemento `Database` contiver o valor "*", serão analisados todos os bancos de dados na instância. Não há um valor padrão.|  
+|`ASInstance`|Especifica o nome de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Obrigatório uma vez por elemento `AnalysisServices`. Não há nenhum valor padrão.|  
+|`Databases` para o elemento `Analysis Services`|Contém uma lista dos bancos de dados que serão analisados.|Opcional uma vez `AnalysisServices` por elemento. Se esse elemento não estiver presente, serão analisados todos os bancos de dados na instância.|  
+|`Database` para o elemento `AnalysisServices`|Especifica o nome do banco de dados que será analisado.|Obrigatório uma vez ou mais se o elemento `Databases` estiver presente. Se um elemento `Database` contiver o valor "*", serão analisados todos os bancos de dados na instância. Não há nenhum valor padrão.|  
 |`ReportingServices`|Especifica que a análise será executada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será analisado.|  
-|`RSInstance`|Especifica o nome de uma instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obrigatório uma vez por elemento `ReportingServices`. Não há um valor padrão.|  
+|`RSInstance`|Especifica o nome de uma instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Obrigatório uma vez por elemento `ReportingServices`. Não há nenhum valor padrão.|  
 |`IntegrationServices`|Contém configurações de análise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez por arquivo de configuração. Se não for especificado, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não será analisado.|  
-|`PackagePath`|Especifica o caminho de um conjunto de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez `IntegrationServices` por elemento. Se esse elemento não estiver presente, a análise ocorrerá na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nenhum pacote armazenado externamente será analisado. Não há um valor padrão.|  
+|`PackagePath`|Especifica o caminho de um conjunto de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Opcional uma vez `IntegrationServices` por elemento. Se esse elemento não estiver presente, a análise ocorrerá na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nenhum pacote armazenado externamente será analisado. Não há nenhum valor padrão.|  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -164,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. Executar o Supervisor de Atualização usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. Executar o Supervisor de Atualização usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  O exemplo a seguir mostra como executar o Supervisor de Atualização a partir do prompt de comando usando um arquivo de configuração. Este exemplo especifica um nome de usuário e uma senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectar-se à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  

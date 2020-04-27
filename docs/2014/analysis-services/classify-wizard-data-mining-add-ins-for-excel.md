@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087927"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistente de Classificação (Suplementos de Mineração de Dados para Excel)
@@ -82,6 +82,6 @@ ms.locfileid: "66087927"
  Para usar o assistente de **classificação** , você deve estar conectado a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] um banco de dados. Para obter informações sobre como criar uma conexão, consulte [conectar-se a dados de origem &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
+ [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

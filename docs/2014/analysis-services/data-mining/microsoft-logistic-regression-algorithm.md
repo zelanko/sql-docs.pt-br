@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083962"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Regressão Logística da Microsoft
@@ -46,11 +46,11 @@ ms.locfileid: "66083962"
   
  Os requisitos de um modelo de regressão logística são os seguintes:  
   
- **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Chaves compostas não são permitidas.  
+ **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Chaves compostas não são permitidas.  
   
- **Colunas de entrada** Cada modelo deve conter pelo menos uma coluna de entrada que contenha os valores que são usados como fatores na análise. Você pode ter quantas colunas de entrada desejar, mas, dependendo do número de valores em cada coluna, a inclusão de colunas extras pode aumentar o tempo que leva para treinar o modelo.  
+ **Colunas de entrada** Cada modelo deve conter pelo menos uma coluna de entrada que tenha os valores que serão usados como fatores na análise. Você pode ter quantas colunas de entrada desejar, mas, dependendo do número de valores em cada coluna, a inclusão de colunas extras pode aumentar o tempo que leva para treinar o modelo.  
   
- **Pelo menos uma coluna previsível** O modelo deve conter pelo menos uma coluna previsível de qualquer tipo de dados, incluindo dados numéricos contínuos. Os valores da coluna previsível também podem ser tratados como entradas no modelo ou você pode especificar que eles devem ser usados apenas para previsão. Não são permitidas tabelas aninhadas em colunas previsíveis, mas elas podem ser usadas como entradas.  
+ **Pelo menos uma coluna previsível** O modelo deve conter pelo menos uma coluna previsível de qualquer tipo, incluindo dados numéricos contínuos. Os valores da coluna previsível também podem ser tratados como entradas no modelo ou você pode especificar que eles devem ser usados apenas para previsão. Não são permitidas tabelas aninhadas em colunas previsíveis, mas elas podem ser usadas como entradas.  
   
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados aceitos por modelos de regressão logística, consulte a seção Requisitos de [Referência técnica do algoritmo Regressão Logística da Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md).  
   

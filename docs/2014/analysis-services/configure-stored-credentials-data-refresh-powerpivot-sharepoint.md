@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087455"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurar credenciais armazenadas para a atualização de dados PowerPivot (PowerPivot para SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087455"
   
  Se você tiver problemas ao configurar ou usar a atualização de dados, consulte a página [solução de problemas de atualização de dados PowerPivot](https://go.microsoft.com/fwlink/?LinkID=223279) no wiki do TechNet para obter possíveis soluções.  
   
-##  <a name="configAny"></a>Configurar qualquer conta do Windows para atualização de dados  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>Configurar qualquer conta do Windows para atualização de dados  
  Quando um usuário do SharePoint define uma agenda de atualização de dados, ele deve especificar a identidade do usuário com a qual a atualização de dados é executada. Entre as opções estão a seleção da conta autônoma de atualização de dados PowerPivot, a inserção de sua conta de usuário de domínio Windows ou a inserção de alguma outra conta de usuário do Windows que seja válida para fins de atualização de dados. As etapas desta seção destinam-se à última opção: especificar alguma outra conta do Windows.  
   
  Você pode escolher essa abordagem se desejar uma alternativa ao uso da conta autônoma de atualização de dados do PowerPivot (disponível para todos os usuários do PowerPivot no SharePoint) ou as credenciais do proprietário da pasta de trabalho. Por exemplo, você pode querer disponibilizar uma série de contas de atualização de dados para diferentes grupos de trabalho, com o objetivo de ajudar a acompanhar e gerenciar a atividade de atualização de dados no nível organizacional.  
@@ -56,7 +56,7 @@ ms.locfileid: "66087455"
   
 ### <a name="step-1-create-a-target-application"></a>Etapa 1: criar um aplicativo de destino  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique em **serviço de repositório seguro**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66087455"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão. Os nomes e tipos de campo devem ser Nome de Usuário do Windows e Senha do Windows.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66087455"
   
 17. Clique em **OK**.  
   
-###  <a name="bkmk_grant"></a>Etapa 2: conceder permissões de colaboração para a conta  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Etapa 2: conceder permissões de colaboração para a conta  
  Para que você possa usar as credenciais armazenadas, a conta deve ter permissões de colaboração em qualquer pasta de trabalho PowerPivot para a qual seja usada. Esse nível de permissão é necessário para abrir a pasta de trabalho de uma biblioteca e, em seguida, salvá-la novamente na biblioteca após os dados serem atualizados.  
   
  Atribuir permissões é uma etapa executada pelo administrador da coleção de sites. Podem ser atribuídas permissões do SharePoint na coleção de sites raiz ou em qualquer nível abaixo desse, inclusive em documentos e itens individuais. A forma como você define permissões irá variar dependendo do quanto elas precisam ser granulares. As etapas a seguir mostram uma abordagem para conceder permissões.  
@@ -116,7 +116,7 @@ ms.locfileid: "66087455"
   
 5.  Selecione **Contribute**e clique em **OK**.  
   
-###  <a name="bkmk_dbread"></a>Etapa 3: conceder permissões de leitura para acessar fontes de dados externas usadas na atualização de dados  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Etapa 3: conceder permissões de leitura para acessar fontes de dados externas usadas na atualização de dados  
  Ao importar dados para uma pasta de trabalho PowerPivot, as conexões com dados externos são frequentemente baseadas em conexões confiáveis ou em conexões representadas que usam a identidade do usuário atual para conectar-se à fonte de dados. Estes tipos de conexões funcionam apenas quando o usuário atual tem permissão para ler os dados que está importando.  
   
  Em um cenário de atualização de dados, a mesma cadeia de conexão que foi usada para importar os dados é agora reutilizada para atualizar os dados. Se a cadeia de conexão assumir o usuário atual (por exemplo, uma cadeia de caracteres que inclua Integrated_Security=SSPI), o Serviço do Sistema PowerPivot passará a identidade do usuário especificada no aplicativo de destino como o usuário atual. Essa conexão terá êxito apenas se a conta tiver permissões de leitura na fonte de dados externa.  
@@ -125,7 +125,7 @@ ms.locfileid: "66087455"
   
  Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que é mapeada para o aplicativo de destino. Esta é a conta que você especificou em "etapa 1: criar um aplicativo de destino" neste tópico.  
   
-###  <a name="bkmk_verify"></a>Etapa 4: verificar a disponibilidade da conta nas páginas de configuração de atualização de dados  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Etapa 4: verificar a disponibilidade da conta nas páginas de configuração de atualização de dados  
   
 1.  Abra uma página de configuração de atualização de dados para uma pasta de trabalho publicada que contém dados do PowerPivot. Para obter instruções sobre como abrir a página, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -139,14 +139,14 @@ ms.locfileid: "66087455"
   
  Para obter mais informações sobre solução de problemas, consulte [solução de problemas de atualização de dados PowerPivot](https://go.microsoft.com/fwlink/p/?LinkID=223279) no wiki do TechNet.  
   
-##  <a name="config3rd"></a>Configurar uma conta predefinida para acessar fontes de dados externas ou de terceiros  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>Configurar uma conta predefinida para acessar fontes de dados externas ou de terceiros  
  Servidores de banco de dados costumam conter os próprios métodos de autenticação. Se você tiver uma pasta de trabalho do PowerPivot que exige credenciais de banco de dados para acessar uma fonte de dados externa durante a atualização de dados, poderá criar uma ID de aplicativo de destino para as credenciais e, depois, especificar o aplicativo de destino na seção Fontes de dados da página de atualização de dados programada.  
   
  Esta etapa somente será necessária se você quiser proporcionar aos usuários uma opção de substituir as credenciais de banco de dados que já estão inseridas na pasta de trabalho PowerPivot.  
   
  Esta etapa só funciona quando a cadeia de conexão já inclui um nome de usuário e uma senha. Note que a existência de credenciais na cadeia de conexão é relativamente incomum; portanto, sua capacidade de fazer uso desta opção é limitada. Na maioria dos casos, você terá apenas uma ID de usuário e uma senha na cadeia de conexão se estiver usando a autenticação de banco de dados para se conectar à fonte de dados. Para obter mais informações sobre como verificar a cadeia de conexão para ver se ela inclui uma ID de usuário e uma senha, consulte a seção "conceder permissões para criar agendas e acessar dados externos" na [atualização de dados PowerPivot com o SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique em **serviço de repositório seguro**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66087455"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão somente se a fonte de dados usar a autenticação do Windows. Caso contrário, escolha os tipos de campo que são válidos para a sua fonte de dados e edite os nomes de campo para corresponder ao tipo.  
   

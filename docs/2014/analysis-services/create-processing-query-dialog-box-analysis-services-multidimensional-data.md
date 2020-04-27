@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086772"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Criar Consulta de Processamento (Analysis Services - Dados Multidimensionais)
@@ -53,27 +53,27 @@ ms.locfileid: "66086772"
  **Fonte de Dados**  
  Especifica a fonte de dados para a consulta.  
   
- **Definição de consulta**  
+ **Definição da consulta**  
  A definição da consulta fornece uma barra de ferramentas e painéis onde definir e testar a consulta, dependendo da exibição selecionada.  
   
- **Barra de ferramentas**  
+ **Barra**  
  Use a barra de ferramentas para gerenciar conjuntos de dados, selecionar painéis para exibição e controlar várias funções de consulta.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Alternar para Construtor de Consultas Genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br /><br /> **Painel SQL**<br /><br /> **Painel de resultados**<br /><br /> **Barra de ferramentas**, contendo apenas o **Switch para VDT Construtor de consultas** e **executar**<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Alternar para Construtor de Consultas Genérico**|Selecione para exibir apenas as opções disponíveis para a exibição Construtor de Consultas Genérico. Apenas as seguintes opções são exibidas:<br /><br /> **Painel SQL**<br /><br /> **Painel de resultados**<br /><br /> **Barra de Ferramentas**, contendo apenas **Alternar para o Construtor de Consultas VDT** e **Executar**<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Alternar para o Construtor de Consultas VDT**|Selecione para exibir todas as opções disponíveis para a exibição Construtor de Consultas VDT (Visual Database Tools).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas Genérico** estiver selecionado.|  
-|**Mostrar/Ocultar Painel de diagrama**|Mostra ou oculta o painel **Diagrama**.<br /><br /> **Observação** Essa opção só será exibida se **a opção Alternar para VDT Construtor de consultas** estiver selecionada.|  
-|**Mostrar/Ocultar Painel de grade**|Mostra ou oculta o painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Mostrar/Ocultar Painel SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Painel Mostrar/Ocultar Diagrama**|Mostra ou oculta o **painel de diagrama**.<br /><br /> **Observação** Essa opção só será exibida se **a opção Alternar para VDT Construtor de consultas** estiver selecionada.|  
+|**Mostrar/Ocultar Painel Grade**|Mostra ou oculta o **painel de grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Painel Mostrar/Ocultar SQL**|Mostra ou oculta o painel **SQL**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Mostrar/Ocultar Painel Resultado**|Mostra ou oculta o painel **Resultado**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Executar**|Executa a consulta. Os resultados são exibidos no painel **Resultado**.|  
+|**Funcionam**|Executa a consulta. Os resultados são exibidos no **painel de resultados**.|  
 |**Verificar SQL**|Verifica a instrução SQL na consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação crescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem crescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Classificação decrescente**|Classifica as linhas de saída na coluna selecionada no painel **Grade**, em ordem decrescente.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
 |**Remover filtro**|Remove critérios de classificação, se aplicável, para a linha selecionada no painel **Grade**.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Usar agrupar por**|Adiciona a funcionalidade de agrupamento à consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
-|**Adicionar tabela**|Exibe a caixa de diálogo **Adicionar Tabela** para adicionar uma nova tabela ou exibição à consulta. Para obter mais informações sobre a caixa de diálogo **Adicionar Tabela**, consulte [Caixa de diálogo Adicionar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Usar Agrupar Por**|Adiciona a funcionalidade de agrupamento à consulta.<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
+|**Adicionar Tabela**|Exibe a caixa de diálogo **Adicionar Tabela** para adicionar uma nova tabela ou exibição à consulta. Para obter mais informações sobre a caixa de diálogo **Adicionar Tabela**, consulte [Caixa de diálogo Adicionar Tabela &#40;Analysis Services – Dados Multidimensionais&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Observação: essa opção apenas será exibida se **Alternar para Construtor de Consultas VDT** estiver selecionado.|  
   
  **Painel de diagrama**  
  Exibe os objetos referenciados pela consulta como um diagrama. O diagrama mostra as tabelas incluídas na consulta e como elas estão unidas. Marque ou desmarque a caixa de seleção próxima a uma coluna em uma tabela para adicioná-la ou removê-la da saída da consulta.  
@@ -83,7 +83,7 @@ ms.locfileid: "66086772"
  Clique com o botão direito do mouse no **painel Diagrama** para adicionar ou remover tabelas, selecionar todas as tabelas e mostrar ou ocultar painéis.  
   
 > [!NOTE]  
->  O conteúdo do **painel de Diagrama**, **painel de Grade**e **painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
+>   O conteúdo do **Painel Diagrama**, **Painel Grade**e **Painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
   
 > [!IMPORTANT]  
 >  A caixa de diálogo não oferece suporte para alteração de tipos de consulta.  
@@ -92,13 +92,13 @@ ms.locfileid: "66086772"
  Exibe os objetos referenciados pela consulta em uma grade. Você pode usar este painel para adicionar e remover colunas da consulta e alterar as configurações de cada coluna.  
   
 > [!NOTE]  
->  O conteúdo do **painel de Diagrama**, **painel de Grade**e **painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
+>   O conteúdo do **Painel Diagrama**, **Painel Grade**e **Painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
   
  **Painel SQL**  
  Exibe a consulta como uma instrução SQL. Digite para alterar a instrução SQL da consulta.  
   
 > [!NOTE]  
->  O conteúdo do **painel de Diagrama**, **painel de Grade**e **painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
+>   O conteúdo do **Painel Diagrama**, **Painel Grade**e **Painel SQL** é sincronizado, de forma que as alterações feitas em um painel são refletidas nos outros dois.  
   
  **Painel de resultados**  
  Exibe os resultados da consulta quando você clica em **Executar** no painel **Barra de Ferramentas** .  

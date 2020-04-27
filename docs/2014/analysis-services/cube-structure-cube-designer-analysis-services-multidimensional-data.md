@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086575"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estrutura do Cubo (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -28,7 +28,7 @@ ms.locfileid: "66086575"
   
 |Painel|Definição|  
 |----------|----------------|  
-|**Barra de ferramentas**|Use a barra de ferramentas para executar ações comuns nesta guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra**|Use a barra de ferramentas para executar ações comuns nesta guia. Para obter mais informações sobre esse painel, consulte [barra de ferramentas &#40;guia estrutura do cubo, designer de cubo&#41; &#40;Analysis Services-&#41;de dados multidimensionais ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**medidas**|Use o painel **Medidas** para criar e modificar medidas e grupos de medidas para o cubo selecionado. Para obter mais informações sobre esse painel, consulte [Medidas &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensões**|Use o painel **Dimensões** para incluir e modificar dimensões do cubo selecionado. Para obter mais informações sobre esse painel, consulte [Dimensões &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Exibição da Fonte de Dados**|Use o painel **Exibição da Fonte de Dados** para exibir e editar a exibição da fonte de dados associada ao cubo selecionado. Para obter mais informações sobre esse painel, consulte [Exibição da fonte de dados &#40;guia Estrutura do Cubo, Designer de Cubo&#41; &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  

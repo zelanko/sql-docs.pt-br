@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085305"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Criar uma consulta Singleton no Designer de Mineração de Dados
@@ -80,6 +80,6 @@ AS [t]
      Uma tela nova se abre para mostrar o resultado da consulta. Para exibir a instrução DMX que você acabou de criar, clique em **SQL**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Consultas de previsão &#40;mineração de dados&#41;](prediction-queries-data-mining.md)  
+ [Consultas de previsão &#40;Mineração de dados&#41;](prediction-queries-data-mining.md)  
   
   

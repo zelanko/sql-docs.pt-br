@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083827"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
@@ -48,11 +48,11 @@ ms.locfileid: "66083827"
   
  Os requisitos de um modelo de clustering de sequência são os seguintes:  
   
--   **Uma única coluna de chave** Um modelo de clustering de sequência requer uma chave que identifica os registros.  
+-   **Uma única coluna chave** Um modelo de clustering de sequência requer uma chave que identifique registros.  
   
 -   **Uma coluna de sequência** Para dados de sequência, o modelo deve ter uma tabela aninhada que contém uma coluna de ID de sequência. A ID de sequência pode ser qualquer tipo de dados classificável. Por exemplo, você pode usar um identificador de página da Web, um número inteiro ou uma cadeia de caracteres de texto, desde que a coluna identifique os eventos em uma sequência. Só é permitido um identificador de sequência para cada sequência, e cada modelo pode ter apenas um tipo de sequência.  
   
--   **Atributos não sequenciais opcionais** O algoritmo dá suporte à adição de outros atributos que não estão relacionados ao sequenciamento. Esses atributos podem incluir colunas aninhadas.  
+-   **Atributos não sequenciais opcionais** O algoritmo dá suporte à adição de outros atributos não relacionados a sequenciamento. Esses atributos podem incluir colunas aninhadas.  
   
  No exemplo do site do [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] , citado anteriormente, um modelo de clustering de sequências pode incluir informações de pedidos como a tabela de casos, dados demográficos do cliente específico de cada pedido como atributos não sequenciais e uma tabela aninhada contendo a sequência em que o cliente navegou pelo site ou colocou itens em um carrinho de compras como as informações de sequência.  
   

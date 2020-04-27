@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085756"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Escolher e mapear dados de testes modelo
@@ -43,13 +43,13 @@ ms.locfileid: "66085756"
   
  Este tópico descreve como escolher e mapear dados de testes:  
   
- [Selecionar tabelas de entrada para testar a precisão de um modelo de mineração](#bkmk_SelectInputs)  
+ [Selecione tabelas de entrada para testar a precisão de um modelo de mineração](#bkmk_SelectInputs)  
   
- [Mapear colunas de modelo para as colunas nos dados de teste](#bkmk_MapColumns)  
+ [Mapeie colunas modelo para as colunas nos dados de testes](#bkmk_MapColumns)  
   
- [Alterar a forma como as colunas nos dados de teste são mapeadas para o modelo](#bkmk_ChangeMappings)  
+ [Altere a forma como colunas nos dados de testes são mapeadas para o modelo](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a>Para selecionar tabelas de entrada para testar a precisão de um modelo de mineração  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> Para selecionar tabelas de entrada para testar a exatidão de um modelo de mineração  
   
 1.  No Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], clique duas vezes na estrutura de mineração que contém os modelos com os quais deseja fazer o gráfico.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085756"
   
 5.  Clique na guia **Gráfico de Comparação de Precisão** ou na guia **Matriz de Classificação** para criar automaticamente o gráfico usando os dados de teste recém-especificados.  
   
-##  <a name="bkmk_MapColumns"></a>Para mapear colunas de modelo para as colunas nos dados de teste  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> Para mapear colunas modelo para as colunas nos dados de testes  
   
 1.  Clique duas vezes na estrutura de mineração que contém os modelos que você deseja incluir no gráfico, para abrir a estrutura e seus modelos no Designer de Mineração de Dados.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085756"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a>Para modificar a maneira como os dados de entrada são mapeados para o modelo  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>Para modificar a maneira como os dados de entrada são mapeados para o modelo  
   
 1.  No Designer do Data Mining, clique duas vezes na estrutura que contém os modelos com os quais deseja criar o gráfico.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66085756"
   
 3.  Clique na guia **Seleção de Entrada** .  
   
-4.  Em **Selecionar conjunto de dados a ser usado para o Gráfico de Precisão**, selecione a opção **Especificar um conjunto de dados diferente**.  
+4.  Em **selecionar conjunto de dados a ser usado para o gráfico de precisão**, selecione a opção **especificar um conjunto de dados diferente**.  
   
 5.  Clique no botão procurar **(...)** para abrir uma caixa de diálogo e criar a definição da fonte de dados externa.  
   
@@ -120,6 +120,6 @@ ms.locfileid: "66085756"
      Os mapeamentos das novas colunas são exibidos na caixa de diálogo **Especificar Mapeamento de Coluna** . Você pode remover um mapeamento selecionando a linha entre as colunas e pressionando a tecla DELETE. Você também pode criar uma nova conexão selecionando uma coluna na tabela **Estrutura de Mineração** e arrastando-a para a coluna correspondente na tabela **Tabelas SelectInput** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tarefas de teste e validação e instruções &#40;Mineração de dados&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082317"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Caixa de diálogo Propriedades do Banco de Dados (SSAS – Multidimensional)
@@ -27,12 +27,12 @@ ms.locfileid: "66082317"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Digite para alterar o nome do banco de dados.|  
-|**SESSÃO**|Exibe o identificador do banco de dados.|  
+|**ID**|Exibe o identificador do banco de dados.|  
 |**Descrição**|Digite para alterar a descrição do banco de dados.|  
-|**Criar carimbo de data/hora**|Exibe a data e a hora de criação do banco de dados.|  
-|**Última atualização de esquema**|Exibe a data e a hora da última atualização dos metadados do banco de dados.|  
+|**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação do banco de dados.|  
+|**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados do banco de dados.|  
 |**Última Atualização**|Exibe a data e a hora da última atualização dos dados do banco de dados.|  
-|**Informações sobre Representação da Fonte de Dados**|Selecione as informações de representação usadas pelo banco de dados ao conectar-se e interagir com as fontes de dados contidas pelo banco de dados. Os valores válidos incluem os seguintes:<br /><br /> **ImpersonateAccount** (use um nome de usuário e senha específicos do Windows).<br /><br /> **ImpersonateService** (use a conta de serviço).<br /><br /> **ImpersonateCurrentUser** (use as credenciais do usuário atual).<br /><br /> **Padrão** (use a conta de serviço para operações MOLAP e o usuário atual para Data Mining).<br /><br /> Embora você possa definir as configurações de representação de fonte de dados no nível do banco de dados, fazer isso afetará apenas as fontes de dados que especificarem **Herdar** para suas configurações de representação. As configurações de representação especificadas diretamente na fonte de dados sempre substituirão as configurações especificadas no nível do banco de dados.<br /><br /> Ao escolher uma opção de representação, considere os tipos de operações que precisarão de suporte. Algumas operações, como processar, não podem ser executadas por|  
+|**Informações sobre Representação da Fonte de Dados**|Selecione as informações de representação usadas pelo banco de dados ao conectar-se e interagir com as fontes de dados contidas pelo banco de dados. Os valores válidos incluem os seguintes:<br /><br /> **ImpersonateAccount** (use uma senha e um nome de usuário específicos do Windows).<br /><br /> **ImpersonateService** (use a conta de serviço).<br /><br /> **ImpersonateCurrentUser** (use as credenciais do usuário atual).<br /><br /> **Default** (use a conta de serviço para operações MOLAP e o usuário atual para mineração de dados).<br /><br /> Embora você possa definir as configurações de representação de fonte de dados no nível do banco de dados, fazer isso afetará apenas as fontes de dados que especificarem **Herdar** para suas configurações de representação. As configurações de representação especificadas diretamente na fonte de dados sempre substituirão as configurações especificadas no nível do banco de dados.<br /><br /> Ao escolher uma opção de representação, considere os tipos de operações que precisarão de suporte. Algumas operações, como processar, não podem ser executadas por|  
 |**Último Processamento**|Exibe a data e a hora do último processamento do banco de dados.|  
 |**Tamanho Estimado**|Exibe o tamanho estimado do banco de dados.|  
 |**Local de armazenamento**|Especifica o local do banco de dados. Se o banco de dados for localizado no diretório de Dados padrão, esse valor será vazio.|  

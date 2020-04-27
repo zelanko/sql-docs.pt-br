@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085485"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Criar uma consulta de previsão singleton a partir de um modelo
@@ -93,6 +93,6 @@ AS [t]
 11. Clique em **Executar**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando previsões &#40;tutorial de mineração de dados básico&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Criando previsões &#40;Tutorial básico de Data Mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

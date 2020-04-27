@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095093"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opções de Atualização da Pesquisa de Texto Completo
@@ -41,7 +41,7 @@ ms.locfileid: "66095093"
  **Constitui**  
  Os catálogos de texto completo são recompilados usando-se os separadores de palavras novos e aprimorados. A recompilação de índices pode demorar bastante tempo, e uma quantidade significativa de memória e CPU pode ser necessária após a atualização.  
   
- **Definido**  
+ **Redefinir**  
  Os catálogos de texto completo são redefinidos. Quando atualizados do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], os arquivos de catálogo de texto completo são removidos, mas os metadados dos catálogos e dos índices de texto completo são preservados. Depois de serem atualizados, todos os índices de texto completo são desabilitados para o controle de alteração e os rastreamentos não são iniciados automaticamente. O catálogo permanecerá vazio até você executar uma população completa manualmente, depois que a atualização for concluída.  
   
  Todas essas opções de atualização asseguram que os bancos de dados atualizados se beneficiem totalmente dos aprimoramentos de desempenho de texto completo.  

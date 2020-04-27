@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086848"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Create-Edit Named Calculation Dialog Box (Analysis Services)
@@ -37,7 +37,7 @@ ms.locfileid: "66086848"
  **Descrição**  
  Digite a descrição opcional do cálculo nomeado.  
   
- **Expression**  
+ **Expressão**  
  Digite uma expressão SQL válida que retorne um valor escalar. A expressão é enviada ao provedor e validada na expressão seguinte:  
   
 ```  
@@ -48,6 +48,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>Consulte Também  
  [Analysis Services designers e caixas de diálogo &#40;dados multidimensionais&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [O designer de exibição da fonte de dados &#40;Analysis Services-dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083842"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referência técnica do algoritmo MSC
@@ -145,6 +145,6 @@ ms.locfileid: "66083842"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo de clustering de sequência da Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Exemplos de consulta de modelo de clustering de sequência](clustering-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

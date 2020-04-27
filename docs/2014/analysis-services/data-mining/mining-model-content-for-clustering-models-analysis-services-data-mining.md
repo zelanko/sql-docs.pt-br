@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083675"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
@@ -37,11 +37,11 @@ ms.locfileid: "66083675"
   
  O nó pai contém estatísticas úteis que descrevem a distribuição real de todos os casos em treinamento. Essas estatísticas são encontradas na coluna da tabela aninhada, NODE_DISTRIBUTION. Por exemplo, a tabela a seguir mostra várias linhas da tabela NODE_DISTRIBUTION que descrevem a distribuição dos dados demográficos dos clientes do modelo de clustering `TM_Clustering`que você cria no [Tutorial Básico de Data Mining](../../tutorials/basic-data-mining-tutorial.md):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPORTE|PROBABILITY|variance|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|Idade|Missing|0|0|0|1 (Ausente)|  
+|Idade|Ausente|0|0|0|1 (Ausente)|  
 |Idade|44.9016152716593|12939|1|125.663453102554|3 (Contínuo)|  
-|Gênero|Missing|0|0|0|1 (Ausente)|  
+|Gênero|Ausente|0|0|0|1 (Ausente)|  
 |Gênero|F|6350|0.490764355823479|0|4 (Discreto)|  
 |Gênero|M|6589|0.509235644176521|0|4 (Discreto)|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66083675"
  NODE_TYPE  
  Um modelo de clustering gera os seguintes tipos de nó:  
   
-|ID e nome do nó|DESCRIÇÃO|  
+|ID e nome do nó|Descrição|  
 |----------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de casos do cluster, as características dos casos do cluster e estatísticas que descrevem os valores do cluster.|  
@@ -96,16 +96,16 @@ ms.locfileid: "66083675"
  PARENT_UNIQUE_NAME  
  O nome exclusivo do nó pai.  
   
- **Nó pai** Sempre nulo  
+ **Nó pai** Sempre NULL  
   
- **Nós de cluster** Geralmente 000.  
+ **Nós de cluster** Normalmente, 000.  
   
  NODE_DESCRIPTION  
  Uma descrição do nó.  
   
- **Nó pai** Sempre **(todos)**.  
+ **Nó pai** Sempre **(Tudo)**.  
   
- **Nós de cluster** Uma lista separada por vírgulas dos atributos primários que distinguem o cluster de outros clusters.  
+ **Nós de cluster** Uma lista separada por vírgula dos principais atributos que distinguem cada cluster.  
   
  NODE_RULE  
  Não é usado para modelos de clustering.  
@@ -116,7 +116,7 @@ ms.locfileid: "66083675"
  NODE_PROBABILITY  
  A probabilidade associada a este nó. **Nó pai** Sempre 1.  
   
- **Nós de cluster** A probabilidade representa a probabilidade composta dos atributos, com alguns ajustes, dependendo do algoritmo usado para criar o modelo de clustering.  
+ **Nós de cluster** A probabilidade representa a probabilidade composta dos atributos, com alguns ajustes de acordo com o algoritmo usado na criação do modelo de clustering.  
   
  MARGINAL_PROBABILITY  
  A probabilidade de que o nó seja alcançado a partir do nó pai. Em um modelo de clustering, a probabilidade marginal é sempre igual à probabilidade de nó.  
@@ -124,16 +124,16 @@ ms.locfileid: "66083675"
  NODE_DISTRIBUTION  
  Um tabela que contém o histograma de probabilidade do nó.  
   
- **Nó pai** Consulte a introdução a este tópico.  
+ **Nó pai** Consulte a Introdução deste tópico.  
   
- **Nós de cluster** Representa a distribuição de atributos e valores para casos incluídos neste cluster.  
+ **Nós de cluster** Representa a distribuição de atributos e valores para casos incluídos no cluster.  
   
  NODE_SUPPORT  
- O número de casos com suporte para este nó. **Nó pai** Indica o número de casos de treinamento para todo o modelo.  
+ O número de casos com suporte para este nó. **Nó pai** Indica o número de casos em treinamento do modelo inteiro.  
   
- **Nós de cluster** Indica o tamanho do cluster como um número de casos.  
+ **Nós de cluster** Indica o tamanho do cluster como o número de casos.  
   
- **Observação** Se o modelo usa clustering K-means, cada caso pode pertencer a apenas um cluster. No entanto, se o modelo usar clustering EM, cada são pode pertencer a clusters diferentes e ao caso é atribuída uma distância ponderada para cada cluster a que ele pertence. Portanto, para modelos EM, a soma de suporte para um cluster individual é maior que o suporte para o modelo inteiro.  
+ **Observação** Se o modelo usar clustering K-Means, cada caso poderá pertencer somente a um cluster. No entanto, se o modelo usar clustering EM, cada são pode pertencer a clusters diferentes e ao caso é atribuída uma distância ponderada para cada cluster a que ele pertence. Portanto, para modelos EM, a soma de suporte para um cluster individual é maior que o suporte para o modelo inteiro.  
   
  MSOLAP_MODEL_COLUMN  
  Não é usado para modelos de clustering.  
@@ -141,20 +141,19 @@ ms.locfileid: "66083675"
  MSOLAP_NODE_SCORE  
  Exibe uma pontuação associada ao nó.  
   
- **Nó pai** A Pontuação do BIC (Bayesiana Information critério) para o modelo de clustering.  
+ **Nó pai** A pontuação BIC (Bayesian Information Criterion) para o modelo de clustering.  
   
  **Nós de cluster** Sempre 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Um rótulo usado para exibição. Não é possível alterar essa legenda.  
   
- **Nó pai** O tipo de modelo: modelo de cluster  
+ **Nó pai** O tipo de modelo: modelo de clustering  
   
  **Nós de cluster** O nome do cluster. Exemplo: Cluster 1.  
   
 ## <a name="remarks"></a>Comentários  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece vários métodos para a criação de um modelo de clustering. Se você não souber qual método foi usado para criar o modelo com que você está trabalhando, pode recuperar os metadados do modelo programaticamente, usando um cliente ADOMD ou AMO ou consultando o conjunto de linhas do esquema de mineração de dados. Para obter mais informações, consulte [Como consultar os parâmetros usados para criar um modelo de mineração](query-the-parameters-used-to-create-a-mining-model.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece vários métodos para a criação de um modelo de clustering. Se você não souber qual método foi usado para criar o modelo com que você está trabalhando, pode recuperar os metadados do modelo programaticamente, usando um cliente ADOMD ou AMO ou consultando o conjunto de linhas do esquema de mineração de dados. Para obter mais informações, consulte [Como consultar os parâmetros usados para criar um modelo de mineração](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  A estrutura e o conteúdo do modelo permanecem inalterados, independentemente do método ou dos parâmetros de clustering usados.  

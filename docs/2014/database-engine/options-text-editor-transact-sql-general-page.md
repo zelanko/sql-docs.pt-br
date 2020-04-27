@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089165"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opções (página Editor de texto – Transact-SQL – geral)
   Use a caixa de diálogo de opções **Geral** para alterar o comportamento de edição geral do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] , que é usado para editar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] . Para exibir essas configurações, clique em **Opções** no menu **Ferramentas**, expanda a subpasta **Transact-SQL** e clique em **Geral**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Definindo as opções em vários locais  
- As opções para [!INCLUDE[ssDE](../includes/ssde-md.md)] o editor de consultas também podem ser definidas na caixa de diálogo **todos os idiomas geral** . Se você usar as caixas de diálogo **todos os idiomas** para definir opções diferentes para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] os outros editores, como os editores DMX ou MDX, você deverá redefinir [!INCLUDE[ssDE](../includes/ssde-md.md)] as opções do editor de consultas usando essa caixa de diálogo.  
+ As opções do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] também podem ser definidas na caixa de diálogo **Todos os Idiomas - Geral** . Ao usar as caixas de diálogo **Todos os Idiomas** para definir diferentes opções para os outros editores do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como o DMX ou MDX, você deverá redefinir as opções do Editor de Consultas do [!INCLUDE[ssDE](../includes/ssde-md.md)] usando essa caixa de diálogo.  
   
 ## <a name="statement-completion"></a>Conclusão de instrução  
  **Listar membros automaticamente**  
@@ -34,7 +34,7 @@ ms.locfileid: "66089165"
  **Ocultar membros avançados**  
  Esta caixa de seleção não está disponível.  
   
- **Informações de parâmetro**  
+ **Informações sobre parâmetros**  
  Quando essa caixa de seleção está marcada, as informações de parâmetros são exibidas para um procedimento armazenado ou função que está imediatamente à esquerda do ponto de inserção (cursor). As informações incluem uma lista dos parâmetros disponíveis com os nomes e tipos de dados.  
   
 ## <a name="settings"></a>Configurações  

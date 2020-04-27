@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087178"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Conectar a um banco de dados Sybase (SSAS)
@@ -45,13 +45,13 @@ ms.locfileid: "66087178"
  **Salvar minha senha**  
  Especifique se a senha que você inseriu na caixa **Senha** deve ser armazenada.  
   
- **Database Name**  
+ **Nome do banco de dados**  
  Selecione um banco de dados da lista de bancos de dados.  
   
  **Avançado**  
  Defina as propriedades de conexão adicionais usando a caixa de diálogo **Definir Propriedades Avançadas** . Para obter mais informações, consulte [Definir propriedades avançadas &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
- **Testar Conexão**  
+ **Testar conexão**  
  Tente estabelecer uma conexão com a fonte de dados usando as configurações atuais. Uma mensagem que indica se a conexão foi bem-sucedida é exibida.  
   
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086133"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Procurar um modelo usando o Visualizador de Cluster de Sequência da Microsoft
@@ -36,20 +36,20 @@ ms.locfileid: "66086133"
 > [!NOTE]  
 >  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster Viewer oferece funcionalidade e opções similares aos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Cluster da Microsoft](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador de Cluster de Sequência da [!INCLUDE[msCoName](../../includes/msconame-md.md)] fornece as seguintes guias para uso na exploração de modelos de mineração de sequência de agrupamento:  
   
--   [Diagrama de cluster](#BKMK_Diagram)  
+-   [Diagrama de Cluster](#BKMK_Diagram)  
   
 -   [Perfis de cluster](#BKMK_Profile)  
   
 -   [Características do cluster](#BKMK_Characteristics)  
   
--   [Discriminação de cluster](#BKMK_Discrimination)  
+-   [Discriminação do Cluster](#BKMK_Discrimination)  
   
--   [Transições de cluster](#BKMK_Transitions)  
+-   [Transições do cluster](#BKMK_Transitions)  
   
-###  <a name="BKMK_Diagram"></a>Diagrama de cluster  
+###  <a name="cluster-diagram"></a><a name="BKMK_Diagram"></a>Diagrama de cluster  
  A guia **Diagrama do Cluster** do Visualizador de Cluster de Sequência da [!INCLUDE[msCoName](../../includes/msconame-md.md)] exibe todos os clusters de um modelo de mineração. O sombreamento da linha que conecta um cluster a outro expressa o grau de semelhança entre os clusters. Um sombreamento claro ou a ausência dele indica que os clusters não são muito parecidos. Quanto mais escura a linha, maior a semelhança entre os links. É possível selecionar o número de linhas exibido no visualizador, ajustando-se o controle deslizante à direita dos clusters. Diminuindo o controle deslizante, somente os links mais fortes serão exibidos.  
   
  Por padrão, a sombra representa a população do cluster. Usando as opções de **ShadingVariable** e **estado** , você pode selecionar o atributo e o par de estado que o sombreamento representa. Quanto mais escuro o sombreamento, maior a distribuição de atributo para um estado específico. A distribuição diminui conforme o sombreamento clareia.  
@@ -60,7 +60,7 @@ ms.locfileid: "66086133"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Profile"></a>Perfis de cluster  
+###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a> Perfis de Cluster  
  A guia **Perfil de Cluster** oferece uma exibição geral dos clusters criados pelo algoritmo em seu modelo. Cada coluna após a coluna **População** na grade representa um cluster descoberto pelo modelo. A \<linha do atributo>. Samples representa diferentes sequências de dados existentes no cluster e o \<atributo> linha descreve todos os itens que o cluster contém e sua distribuição geral.  
   
  A opção **Barras de histograma** controla o número de barras visíveis no histograma. Caso haja mais barras do que você optou por exibir, as barras mais altas serão retidas e as restantes, agrupadas em um recipiente cinza.  
@@ -71,17 +71,17 @@ ms.locfileid: "66086133"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Características do cluster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_Characteristics"></a> Características do Cluster  
  Para usar a guia **Características do Cluster** , selecione um cluster da lista **Cluster** . Depois de selecionado um cluster, é possível examinar as características particulares daquele cluster específico. Os atributos contidos no cluster são listados nas colunas **Variáveis** , e o estado do atributo listado é relacionado na coluna **Valores** . Os estados de atributo são listados em ordem de importância, descritos segundo a probabilidade com que aparecerão no cluster. A probabilidade é exibida na coluna **Probabilidade** .  
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Discrimination"></a>Discriminação de cluster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_Discrimination"></a>Discriminação de cluster  
  Você pode usar a guia **Discriminação do Cluster** para comparar atributos entre dois clusters, e determinar como os itens de uma sequência favorecem um cluster em detrimento de outro. Use as listas **Cluster 1** e **Cluster 2** para selecionar os clusters a serem comparados. O visualizador determina as diferenças mais importantes entre os clusters e exibe os estados de atributo relativos às diferenças, por ordem de importância. Uma barra à direita do atributo mostra que cluster o estado favorece, e o tamanho da barra indica a intensidade desse favorecimento.  
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Transitions"></a>Transições de cluster  
+###  <a name="cluster-transitions"></a><a name="BKMK_Transitions"></a>Transições de cluster  
  Ao selecionar um cluster na guia **Transições do Cluster** , você pode procurar as transições entre estados de sequência no cluster selecionado. Cada nó exibido representa um estado da coluna de sequência. Uma seta representa uma transição entre dois estados e a probabilidade associada a ela. Se uma transição voltar ao nó de origem, uma seta poderá apontar de volta ao nó de origem.  
   
  Uma seta originada em um ponto representa a probabilidade de o nó ser o início de uma sequência. Uma extremidade final que conduz ao nulo representa a probabilidade de o nó vir a ser o término da sequência.  

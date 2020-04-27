@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081974"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definir Períodos de Tempo (Assistente para Dimensões)
   Use a página **Definir Períodos de Tempo** para definir as informações do ano civil e as frequências de tempo a serem incluídas na dimensão de tempo ou na dimensão de tempo do servidor.  
   
 > [!NOTE]  
->  Essa página será exibida apenas se você tiver selecionado **Dimensão de tempo de servidor** na página **Selecionar o Tipo de Dimensão** ou se você tiver selecionado **Criar a dimensão sem usar uma fonte de dados** na página **Selecionar Método de Criação** e **Dimensão de tempo** na página **Selecionar o tipo de dimensão** .  
+>   Essa página será exibida apenas se você tiver selecionado **Dimensão de tempo de servidor** na página **Selecionar o Tipo de Dimensão** ou se você tiver selecionado **Criar a dimensão sem usar uma fonte de dados** na página **Selecionar Método de Criação** e **Dimensão de tempo** na página **Selecionar o tipo de dimensão** .  
   
 > [!IMPORTANT]  
 >  Nessa página é possível definir o ano civil de uma dimensão de tempo. Para definir um ano fiscal, de fabricação, de relatório, ou ISO 8601 para a dimensão de tempo, use a página **Selecionar Calendários** .  

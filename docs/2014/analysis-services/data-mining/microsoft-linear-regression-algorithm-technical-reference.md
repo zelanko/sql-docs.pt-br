@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084058"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referência Técnica do Algoritmo de Regressão Linear da Microsoft
@@ -37,7 +37,7 @@ ms.locfileid: "66084058"
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
 |Regressão Linear|Pontuação de interesse|Padrão.<br /><br /> Outros métodos de seleção de recursos disponíveis com o algoritmo Árvores de Decisão se aplicam às variáveis discretas apenas e, portanto, não são aplicáveis aos modelos de regressão linear.|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
   
  Os parâmetros de algoritmo que controlam seleção de recursos para um modelo de árvores de decisão são MAXIMUM_INPUT_ATTRIBUTES e MAXIMUM_OUTPUT.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66084058"
 ### <a name="setting-algorithm-parameters"></a>Definindo parâmetros de algoritmo  
  A tabela a seguir lista os parâmetros fornecidos para o algoritmo de Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Define o número de atributos de entrada que o algoritmo pode manipular antes de invocar a seleção de recurso. Defina este valor como 0 para desativar a seleção de recursos.<br /><br /> O padrão é 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Define o número de atributos de saída que o algoritmo pode manipular antes de invocar a seleção de recurso. Defina este valor como 0 para desativar a seleção de recursos.<br /><br /> O padrão é 255.|  
@@ -56,7 +56,7 @@ ms.locfileid: "66084058"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|DESCRIÇÃO|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
 |REGRESSOR|Indica que a coluna contém valores numéricos contínuos que devem ser tratados como variáveis independentes potenciais durante a análise.<br /><br /> Observação: sinalizar uma coluna como um regressor não assegura que ela será usada como tal no modelo final.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
@@ -87,6 +87,6 @@ ms.locfileid: "66084058"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo de regressão linear da Microsoft](microsoft-linear-regression-algorithm.md)   
  [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de regressão linear &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

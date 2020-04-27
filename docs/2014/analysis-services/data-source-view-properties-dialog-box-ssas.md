@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082498"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades da Exibição da Fonte de Dados (SSAS)
@@ -27,10 +27,10 @@ ms.locfileid: "66082498"
 |Termo|Definição|  
 |----------|----------------|  
 |**Nome**|Exibe o nome da exibição da fonte de dados.|  
-|**SESSÃO**|Exibe o identificador da exibição da fonte de dados.|  
+|**ID**|Exibe o identificador da exibição da fonte de dados.|  
 |**Descrição**|Exibe a descrição da exibição da fonte de dados.|  
-|**Criar carimbo de data/hora**|Exibe a data e a hora de criação da exibição da fonte de dados.|  
-|**Última atualização de esquema**|Exibe a data e a hora da última atualização dos metadados da exibição da fonte de dados.|  
-|**Fonte de dados primária**|Exibe o nome da fonte de dados primária associada à exibição da fonte de dados.|  
+|**Criar Carimbo de Data/Hora**|Exibe a data e a hora de criação da exibição da fonte de dados.|  
+|**Última Atualização de Esquema**|Exibe a data e a hora da última atualização dos metadados da exibição da fonte de dados.|  
+|**Fonte de Dados Primária**|Exibe o nome da fonte de dados primária associada à exibição da fonte de dados.|  
   
   

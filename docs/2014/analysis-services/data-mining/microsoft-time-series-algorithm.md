@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083764"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
@@ -80,11 +80,11 @@ ms.locfileid: "66083764"
   
  Os requisitos para um modelo de série temporal são os seguintes:  
   
--   **Uma única coluna Key Time** Cada modelo deve conter uma coluna numérica ou de data que é usada como a série de casos, que define as frações de tempo que o modelo usará. O tipo de dados para a coluna Key Time pode ser do tipo de data e hora ou numérico. Entretanto, a coluna deve conter valores contínuos e os valores devem ser exclusivos para cada série. A série temporal para o modelo de série temporal não pode ser armazenada em duas colunas, como uma coluna de Ano e uma coluna de Mês.  
+-   **Uma única coluna key time** Cada modelo deve conter uma coluna numérica ou de data que é usada como a série de casos, que define as frações de tempo que o modelo usará. O tipo de dados para a coluna Key Time pode ser do tipo de data e hora ou numérico. Entretanto, a coluna deve conter valores contínuos e os valores devem ser exclusivos para cada série. A série temporal para o modelo de série temporal não pode ser armazenada em duas colunas, como uma coluna de Ano e uma coluna de Mês.  
   
--   **Uma coluna previsível** Cada modelo deve conter pelo menos uma coluna previsível em volta da qual o algoritmo criará o modelo de série temporal. O tipo de dados na coluna previsível deve ter valores contínuos. Por exemplo, você pode prever como atributos numéricos, como renda, vendas ou tempo, mudam com o decorrer do tempo. Entretanto, não é possível usar uma coluna que contenha valores discretos, como status de compra ou nível de educação, como a coluna previsível.  
+-   **Uma coluna previsível** Cada modelo deve conter pelo menos uma coluna previsível em torno da qual o algoritmo criará o modelo de série temporal. O tipo de dados na coluna previsível deve ter valores contínuos. Por exemplo, você pode prever como atributos numéricos, como renda, vendas ou tempo, mudam com o decorrer do tempo. Entretanto, não é possível usar uma coluna que contenha valores discretos, como status de compra ou nível de educação, como a coluna previsível.  
   
--   **Uma coluna de chave da série opcional** Cada modelo pode ter uma coluna de chave adicional que contém valores exclusivos que identificam uma série. A coluna da chave da série opcional deve conter valores exclusivos. Por exemplo, um único modelo pode conter vendas para muitos modelos de produto, contanto que haja somente um registro para cada nome de produto para cada fração de tempo.  
+-   **Uma coluna da chave da série opcional** Cada modelo pode ter uma coluna da chave adicional que contém valores exclusivos que identificam uma série. A coluna da chave da série opcional deve conter valores exclusivos. Por exemplo, um único modelo pode conter vendas para muitos modelos de produto, contanto que haja somente um registro para cada nome de produto para cada fração de tempo.  
   
  Você pode definir dados de entrada para o modelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series de várias maneiras diferentes. Entretanto, como o formato dos casos de entrada afeta a definição do modelo de mineração, você deverá considerar suas necessidades comerciais e preparar os dados devidamente. Os dois exemplos a seguir ilustram como os dados de entrada afetam o modelo. Nos dois exemplos, o modelo de mineração concluído contém padrões para quatro séries distintas:  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66083764"
  [Procurar um modelo usando o Visualizador do Microsoft Time Series](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Referência técnica do algoritmo do Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemplos de consulta de modelo de série temporal](time-series-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de série temporal &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

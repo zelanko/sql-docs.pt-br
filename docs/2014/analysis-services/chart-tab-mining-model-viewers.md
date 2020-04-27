@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088183"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Guia Gráficos (Visualizadores do Modelo de Mineração)
   Use o painel **Gráfico** para exibir os dados históricos usados ao treinar um modelo de série temporal, junto com os valores previstos. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo. Previsões futuras serão representadas por uma linha pontilhada.  
   
- **Para obter mais informações:** [algoritmo do Microsoft Time Series](data-mining/microsoft-time-series-algorithm.md), [procurar um modelo usando o Visualizador do Microsoft Time Series](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Para obter mais informações:** [Algoritmo MTS](data-mining/microsoft-time-series-algorithm.md)e [Procurar um modelo usando o visualizador MTS](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  

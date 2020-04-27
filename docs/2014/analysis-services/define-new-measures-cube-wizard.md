@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082107"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir Novas Medidas (Assistente para Cubos)
@@ -40,7 +40,7 @@ ms.locfileid: "66082107"
   
  Para incluir todas as medidas do modelo no cubo, marque a caixa de seleção no cabeçalho.  
   
- **Nome da medida**  
+ **Nome da Medida**  
  Lista as medidas disponíveis no modelo.  
   
  Para renomear uma medida, clique nela e digite um novo nome.  
@@ -55,7 +55,7 @@ ms.locfileid: "66082107"
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Aggregation**  
+ **Agregação**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  
@@ -68,7 +68,7 @@ ms.locfileid: "66082107"
  **Adicionar novas medidas**  
  Exibe e permite que você defina medidas adicionais a serem incluídas no cubo.  
   
- **Nome da medida**  
+ **Nome da Medida**  
  Lista as novas medidas a serem incluídas no cubo.  
   
  Para adicionar uma nova medida, clique em **Adicionar nova medida**e digite o nome da nova medida.  
@@ -83,7 +83,7 @@ ms.locfileid: "66082107"
   
  Para alterar o tipo de dados, clique no tipo de dados e selecione um tipo na lista.  
   
- **Aggregation**  
+ **Agregação**  
  Lista a agregação da medida.  
   
  Para alterar a agregação, clique na agregação e selecione um tipo de dados na lista.  

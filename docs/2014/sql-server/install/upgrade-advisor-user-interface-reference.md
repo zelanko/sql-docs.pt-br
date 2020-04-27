@@ -20,16 +20,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57edb1b92459b2e66f53895c20ead6f3e95cea59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091486"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Referência da interface de usuário do Supervisor de Atualização
   Esta seção inclui tópicos de ajuda [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para o supervisor de atualização. Esses tópicos estão disponíveis no assistente do supervisor de atualização pressionando a tecla F1 ou clicando em **ajuda** nas páginas do assistente e nas caixas de diálogo.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Componentes do SQL Server](../../../2014/sql-server/install/sql-server-components.md)|Identifique o servidor e o conjunto apropriado de tipos de servidor e componentes para fazer uma análise de atualização.|  
 |[Parâmetros de conexão](../../../2014/sql-server/install/connection-parameters.md)|Para analisar certos tipos de servidor, como o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], você deve selecionar uma instância específica do servidor para análise. Nesta página, digite as informações para habilitar o Supervisor de Atualização para conectar-se à instância do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você deseja analisar.|  

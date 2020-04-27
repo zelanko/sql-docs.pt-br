@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088695"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propriedades do modelo de rastreamento (guia Geral)
@@ -31,7 +31,7 @@ ms.locfileid: "66088695"
  **Novo nome do modelo**  
  Forneça um nome descritivo para o modelo.  
   
- **Basear novo modelo em um existente**  
+ **Basear novo modelo no existente**  
  Use um modelo da lista como base para esse modelo. Todos os eventos selecionados, colunas de dados e filtros inicialmente correspondem aos do modelo existente e podem, depois, ser modificados conforme necessário.  
   
  **Usar como modelo padrão para o tipo de servidor selecionado**  
@@ -39,7 +39,7 @@ ms.locfileid: "66088695"
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

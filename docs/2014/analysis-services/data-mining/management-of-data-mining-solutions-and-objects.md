@@ -14,14 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084199"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gerenciamento de soluções de mineração de dados e objetos
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece ferramentas de cliente que você pode usar para gerenciar estruturas de mineração e modelos de mineração existentes. Esta seção descreve as operações de gerenciamento que você pode executar usando cada ambiente.  
   
  Além dessas ferramentas, você pode gerenciar objetos de mineração de dados programaticamente, usando AMO, ou usar outros clientes que se conectam a um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
@@ -29,9 +28,9 @@ ms.locfileid: "66084199"
 ## <a name="in-this-section"></a>Nesta seção  
  [Movendo objetos de mineração de dados](moving-data-mining-objects.md)  
   
- [Requisitos e considerações de processamento &#40;mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos e considerações de processamento &#40;Mineração de dados&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usando SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services de mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Usando o SQL Server Profiler para monitorar a mineração de dados &#40;Analysis Services – Mineração de dados&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Localização de objetos de mineração de dados  
  As estruturas e os modelos de mineração que foram processados são armazenados em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -42,18 +41,17 @@ ms.locfileid: "66084199"
 >  Alguns clientes, como os Suplementos de Mineração de Dados para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, também permitem criar modelos e estruturas de mineração de sessão que usam uma conexão com uma instância, mas armazenam a estrutura e os modelos de mineração no servidor somente durante a sessão. Também é possível gerenciar esses modelos através do cliente, da mesma forma que estruturas e modelos armazenados no banco de dados [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , porém os objetos não persistem depois de desconectar da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>Gerenciando objetos de mineração de dados em Ferramentas de Dados do SQL Server  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oferece recursos que permitem criar, navegar e editar objetos de mineração de dados com facilidade.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oferece recursos que permitem criar, navegar e editar objetos de mineração de dados com facilidade.  
   
  Os links a seguir fornecem informações sobre como modificar objetos de mineração de dados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar a exibição da fonte de dados usada para a Estrutura de Mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar a exibição da fonte de dados usada para a estrutura de mineração](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Alterar as propriedades de uma estrutura de mineração](change-the-properties-of-a-mining-structure.md)  
   
 -   [Alterar as propriedades de um modelo de mineração](change-the-properties-of-a-mining-model.md)  
   
--   [Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)  
+-   [Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)  
   
 -   [Exibir ou alterar parâmetros do algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -81,19 +79,19 @@ ms.locfileid: "66084199"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrições:** None.  
+ **Restrições:** nenhuma.  
   
 ### <a name="data-mining-extensions-dmx"></a>Extensões DMX  
  Extensões DMX podem ser usadas com outras interfaces de comando como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.Net para criar, excluir e consultar estruturas e modelos de mineração.  
   
--   [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](/sql/dmx/dmx-statements-data-definition)  
+-   [Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restrições:** Algumas propriedades não podem ser alteradas usando DMX.  
+ **Restrições:** algumas propriedades não podem ser alteradas usando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) é a linguagem de definição de dados para todos os Analysis Services. O XMLA dá a você o controle sobre a maioria dos objetos de mineração de dados e operações de servidor. Todas as operações de gerenciamento entre o cliente e o servidor podem ser executadas com o uso de XMLA. Para sua conveniência, é possível usar a ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Linguagem) para encapsular o XML.  
   
- **Restrições:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera algumas instruções XMLA que têm suporte somente para uso interno e não podem ser usadas em scripts DDL XML.  
+ **Restrições:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gera algumas instruções XMLA que têm suporte apenas para uso interno e não podem ser usadas em scripts XML DDL.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Guia do desenvolvedor &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  

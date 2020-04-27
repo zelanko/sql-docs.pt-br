@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085935"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Procurar um modelo usando a Exibição de Árvore da Microsoft
@@ -36,16 +36,16 @@ ms.locfileid: "66085935"
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a>Guias do Visualizador  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador de Árvores [!INCLUDE[msCoName](../../includes/msconame-md.md)] inclui as seguintes guias e painéis:  
   
--   [Árvore de decisão](#BKMK_DecisionTree)  
+-   [Árvore de Decisão](#BKMK_DecisionTree)  
   
--   [Rede de dependências](#BKMK_DependencyNetwork)  
+-   [Rede de Dependências](#BKMK_DependencyNetwork)  
   
--   [Legenda de mineração](#BKMK_MiningLegend)  
+-   [Legenda de Mineração](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a>Árvore de decisão  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Árvore de decisão  
  Quando você criar um modelo de árvore de decisão, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada atributo previsível. Você pode ver uma árvore individual selecionando-a na lista **Árvore** da guia **Árvore de Decisão** do visualizador.  
   
  Uma árvore de decisão é composta por várias divisões, com a divisão mais importante, conforme determinado pelo algoritmo, à esquerda do visualizador no nó **Todas** . Divisões adicionais ocorrem à direita. A divisão do nó **Todas** é o mais importante porque contém a divisão mais importante, gerando condições no conjunto de dados, gerando, portanto, a primeira divisão.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085935"
   
  [Voltar ao início](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a>Rede de dependências  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>Rede de dependências  
  A **Rede de Dependências** exibe as dependências entre os atributos de entrada e os atributos previsíveis no modelo. O controle deslizante à esquerda do visualizador funciona como um filtro vinculado aos pontos fortes das dependências. Se você abaixar o controle deslizante, apenas os links mais importantes serão mostrados no visualizador.  
   
  Quando você selecionar um nó, o visualizador destacará as dependências específicas ao nó. Por exemplo, se você escolher um nó previsível, o visualizador também realçará cada nó que ajuda a prever o nó previsível.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085935"
   
  [Voltar ao início](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a>Legenda de mineração  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>Legenda de mineração  
  A **Legenda de Mineração** exibe as informações a seguir quando você seleciona um nó no modelo de árvore de decisão:  
   
 -   O número de casos no nó, divididos em estados do atributo previsível.  

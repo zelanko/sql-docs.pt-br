@@ -11,21 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082887"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Suplementos de Mineração de Dados do SQL Server para Office
-  
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.  
   
  Os assistentes e as ferramentas de gerenciamento de dados nos suplementos fornecem instruções passo a passo para essas tarefas de mineração de dados comuns:  
   
--   **Organize e limpe seus dados antes de modelar.** Use dados armazenados no Excel ou em qualquer fonte de dados do Excel. Você pode criar e salvar conexões para reutilizar fontes de dados, repetir experimentos ou treinar modelos novamente.  
+-   **Organizar e limpar seus dados antes da modelagem.** Use dados armazenados no Excel ou em qualquer fonte de dados do Excel. Você pode criar e salvar conexões para reutilizar fontes de dados, repetir experimentos ou treinar modelos novamente.  
   
--   **Perfil, exemplo e preparação.** Muitos mineradores de dados experientes indicam que 70 a 90% de um projeto de mineração de dados é gasto na preparação dos dados. Os suplementos podem tornar essa tarefa mais rápida, fornecendo visualizações no Excel e nos assistentes que ajudarão você com essas tarefas comuns:  
+-   **Gere perfis, amostras e prepare.** Muitos mineradores de dados experientes indicam que 70 a 90% de um projeto de mineração de dados é gasto na preparação dos dados. Os suplementos podem tornar essa tarefa mais rápida, fornecendo visualizações no Excel e nos assistentes que ajudarão você com essas tarefas comuns:  
   
     -   Crie o perfil dos dados e entenda suas características e distribuição.  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66082887"
   
      Usuários avançados podem criar consultas DMX personalizadas com o **Editor de Consulta Avançada**do tipo "arrastar e soltar", ou automatizar previsões usando o VBA do Excel.  
   
--   **Documentar e gerenciar.** Depois de criar um conjunto de dados e criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatístico dos parâmetros de dados e modelo.  
+-   **Documente e gerencie.** Depois de criar um conjunto de dados e criar alguns modelos, documente seu trabalho e suas ideias gerando um resumo estatístico dos parâmetros de dados e modelo.  
   
--   **Explore e visualize.** A mineração de dados não é uma atividade que pode ser totalmente automatizada. você precisa explorar e entender os resultados para tomar uma medida significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
+-   **Explorar e visualizar.** A mineração de dados não é uma atividade que pode ser totalmente automatizada. você precisa explorar e entender os resultados para tomar uma medida significativa. Os suplementos ajudam você na exploração, fornecendo visualizadores interativos no Excel, modelos do Visio que permitem personalizar os diagramas e a capacidade de exportar gráficos e tabelas para o Excel para filtragem ou modificação adicionais.  
   
--   **Implantar e integrar.** Quando você tiver criado um modelo útil, coloque seu modelo em produção usando as ferramentas de gerenciamento para exportar o modelo de seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implante e integre.** Quando você tiver criado um modelo útil, coloque seu modelo em produção usando as ferramentas de gerenciamento para exportar o modelo de seu servidor experimental para outra instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      Você também pode deixar o modelo no servidor onde o criou, mas atualize os dados de treinamento e execute previsões usando o Integration Services ou scripts DMX.  
   

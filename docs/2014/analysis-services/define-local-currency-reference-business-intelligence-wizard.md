@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082175"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definir Referência de Moeda Local (Assistente de Business Intelligence)
@@ -35,7 +35,7 @@ ms.locfileid: "66082175"
  Selecione o atributo de moeda dentro de uma dimensão de moedas cujos membros representam identificadores de moedas locais. (Um atributo de moeda é aquele `Type` cuja propriedade é definida como *Currency*.)  
   
 > [!NOTE]  
->  Esta opção não estará disponível se a opção **Identificadores da tabela de fatos** não estiver selecionada.  
+>   Esta opção não estará disponível se a opção **Identificadores da tabela de fatos** não estiver selecionada.  
   
  **Atributos da tabela de dimensões**  
  Selecione para especificar um atributo de uma dimensão relacionada ao grupo de medidas que contém identificadores de moedas locais.  
@@ -46,7 +46,7 @@ ms.locfileid: "66082175"
  Selecione o atributo dentro de uma dimensão cujos membros fazem referência a identificadores de moeda local.  
   
 > [!NOTE]  
->  Esta opção não estará disponível se a opção **Atributos da tabela de dimensões** não estiver selecionada.  
+>   Esta opção não estará disponível se a opção **Atributos da tabela de dimensões** não estiver selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ajuda F1 do assistente de Business Intelligence](business-intelligence-wizard-f1-help.md)   

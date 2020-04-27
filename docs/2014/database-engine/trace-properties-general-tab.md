@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089529"
 ---
 # <a name="trace-properties-general-tab"></a>Propriedades do Rastreamento (guia Geral)
@@ -34,7 +34,7 @@ ms.locfileid: "66089529"
  **Tipo de provedor de rastreamento**  
  Exibe o tipo de servidor que está fornecendo o rastreamento. O arquivo de definição de rastreamento popula o campo **Tipo de provedor de rastreamento** automaticamente. Não é possível modificar esse campo.  
   
- **Versão**  
+ **version**  
  Exibe a versão do servidor que está fornecendo o rastreamento. O arquivo de definição de rastreamento popula o campo **Versão** automaticamente. Não é possível modificar esse campo.  
   
  **Usar o modelo**  
@@ -64,7 +64,7 @@ ms.locfileid: "66089529"
  **Definir máximo de linhas (em milhares)**  
  Especifique o número maior de linhas nas quais salvar dados. O padrão é 1000 linhas.  
   
- **Habilitar hora de parada do rastreamento**  
+ **Habilitar horário de parada do rastreamento**  
  Defina a data e hora para o rastreamento ser concluído e se fechar.  
   
 ## <a name="see-also"></a>Consulte Também  

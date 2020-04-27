@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091084"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Aviso sobre uso no lado do cliente de GEOMETRY, GEOGRAPHY e HIERARCHYID
@@ -23,7 +23,7 @@ ms.locfileid: "66091084"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  O assembly **Microsoft. SqlServer. Types. dll**, que contém os tipos de dados espaciais, foi atualizado da versão 10,0 para a versão 11,0. Aplicativos personalizados que referenciam esse assembly poderão falhar quando as condições a seguir forem verdadeiras.  
   
 -   Quando você move um aplicativo personalizado de um computador no qual [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o foi instalado em um computador no qual [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o só está instalado, o aplicativo falhará porque a versão referenciada 10,0 do assembly **SqlTypes** não está presente. Talvez você receba esta mensagem de erro: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  

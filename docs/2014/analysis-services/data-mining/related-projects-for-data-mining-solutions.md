@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082985"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
@@ -34,15 +34,14 @@ ms.locfileid: "66082985"
   
  [Reporting Services](#bkmk_SSRS)  
   
- [Serviço de qualidade de dados](#bkmk_DQSetc)  
+ [Data Quality Services](#bkmk_DQSetc)  
   
  [Pesquisa de texto completo](#bkmk_FTSetc)  
   
  [Indexação semântica](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a> SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece componentes e recursos que são necessários para a preparação de dados e o treinamento de fases de um projeto de mineração de dados. Embora você possa executar muitas limpezas de dados ou tarefas de preparação usando outras ferramentas, como scripts, o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tem numerosas vantagens para a mineração de dados:  
   
 -   Representa tarefas como parte de um fluxo de trabalho que pode ser repetido, automatizado, ramificado e estendido.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66082985"
   
 -   [Transformação Consulta de Mineração de Dados](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Transformação Coluna Derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Transformação coluna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [transformação Amostragem Percentual](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082985"
   
 -   [transformação Pesquisa de Termos](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Embora o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não seja visto normalmente como um componente crítico de soluções de mineração de dados, ele fornece os recursos a seguir que são úteis para a apresentação de soluções de mineração de dados.  
   
 -   Integração de dados de várias origens em relatórios complexos. Crie consultas em relação ao conteúdo do modelo para analistas, e relatórios que mostram previsões e tendências para usuários finais.  
@@ -103,22 +102,22 @@ ms.locfileid: "66082985"
   
  Para obter informações sobre como usar o Reporting Services com consultas DMX como fonte de dados, consulte esses links:  
   
- [Recuperar dados de um modelo de mineração de dados &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar dados de um modelo de Data Mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interface de usuário do Designer de Consulta DMX do Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services tipo de conexão para o DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexão Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Porém, não é necessário usar DMX como a fonte de dados. Os componentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mineração de dados também dão suporte a gravar os resultados de uma consulta de previsão em um banco de dados relacional. Se você tiver um fluxo de trabalho estabelecido para atualizar modelos usando o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persistir previsões e outros resultados da consulta de mineração de dados para o SQL Server permitirá que você use o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para relatório, assim como outras ferramentas que não fazem interface com DMX.  
   
  Para obter mais informações sobre como usar o Reporting Services como a camada de apresentação para fontes de dados, consulte [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  O DQS (Data Quality Services) é novidade no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Como os problemas de dados podem tornar a mineração de dados impossível, os mineradores de dados que executam análises repetidas ou que trabalham em organizações grandes com fontes de dados complexas podem descobrir que um projeto de dados bem planejado usando DQS é uma solução mais confiável para dar suporte à mineração de dados do que limpar dados ad hoc usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outros scripts.  
   
  Os recursos de DQS a seguir devem ser considerados para preparação de dados e integridade de dados em uma solução de mineração de dados.  
   
- **Um processo de limpeza de dados assistido por computador que analisa dados de origem e propõe alterações.**  
+ **O processo de limpeza de dados assistido por computador que analisa dados de origem e propõe alterações.**  
  O DQS pode comparar dados de origem com dados de referência baseados em nuvem mantidos e garantidos por provedores de qualidade de dados.  
   
  O DQS também pode analisar dados de origem brutos e criar uma base de conhecimento usando os dados de usuário. Os dados processados são categorizados e então exibidos para o usuário para processamento posterior. O processo de limpeza é interativo, ou seja, o administrador de dados pode aprovar, rejeitar ou modificar os dados propostos pelo processo de limpeza de dados assistido por computador.  
@@ -127,7 +126,7 @@ ms.locfileid: "66082985"
   
  Para obter mais informações, consulte [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
- **Um processo de correspondência assistido por computador que analisa dados de origem e propõe alterações.**  
+ **O processo de correspondência assistido por computador que analisa dados de origem e propõe alterações.**  
  Para impedir a duplicação de dados, você pode realizar limpeza adicional da fonte de dados, para identificar correspondências exatas e aproximadas. Estes componentes permitem especificar as regras compatíveis e os limites aos quais aplicá-los.  
   
  Ao localizar correspondência de dados, você pode remover duplicatas que podem ser um problema para a mineração de dados. A eliminação de duplicação de dados não é automática; o administrador de dados ou profissional de TI deve verificar o conhecimento na base de conhecimento e as alterações a serem feitas nos dados.  
@@ -138,7 +137,7 @@ ms.locfileid: "66082985"
   
  Ao executar atividades de limpeza e correspondência em um projeto de qualidade de dados, você pode obter estatísticas em tempo real e informações sobre os dados que estão sendo processados por DQS. A criação de perfil de dados ajuda a avaliar até que ponto a limpeza ou a correspondência de dados ajudaram a melhorar a qualidade dos dados, e entender as alterações que foram feitas. Para obter mais informações sobre criação de perfil de dados e notificações, consulte [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- **Uma base de dados de conhecimento que representa três tipos de conhecimento: conhecimento pronto para uso, conhecimento gerado pelo servidor DQS e conhecimento gerado pelo usuário.**  
+ **Uma base de conhecimento que representa três tipos de conhecimento: conhecimento pronto para uso, conhecimento gerado pelo servidor DQS e conhecimento gerado pelo usuário.**  
  Depois de criar a base de conhecimento, você pode usá-la iterativamente para limpar e verificar outros dados.  
   
  Você pode importar novos dados nos dados da base de conhecimento de várias origens, sejam dados limpos conhecidos de provedores de referência ou dados brutos que são correspondentes a dados existentes na base de conhecimento.  
@@ -149,7 +148,7 @@ ms.locfileid: "66082985"
   
  Para obter mais informações, consulte [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a>Pesquisa de texto completo  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>Pesquisa de texto completo  
  A Pesquisa de Texto Completo no SQL Server permite que aplicativos e usuários executem consultas de texto completo em dados baseados em caracteres nas tabelas do SQL Server. Quando a pesquisa de texto completo está habilitada, você pode realizar pesquisas em dados de texto que são aprimorados por regras específicas de idioma sobre as várias formas de uma palavra ou frase. Você também pode configurar os critérios da pesquisa, como a distância entre vários termos e usar funções para restringir os resultados que são retornados em ordem de probabilidade.  
   
  Como as consultas de texto completo são um recurso fornecido pelo mecanismo de SQL Server, você pode criar consultas parametrizadas, gerar conjuntos de dados personalizados ou vetores de termos usando recursos de pesquisa de texto completo em uma fonte de dados de texto, e usar estas fontes em mineração de dados.  
@@ -176,7 +175,7 @@ ms.locfileid: "66082985"
   
 -   A indexação de texto completo tem suporte somente para colunas com esses tipos de dados: char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary e varbinary(max). Se a coluna for varbinary, varbinary(max), image ou xml, você deve especificar a extensão de arquivo do documento indexável (.doc, .pdf, .xls, e assim sucessivamente), em uma coluna de tipo separada.  
   
-##  <a name="bkmk_SemSearch"></a>Indexação semântica  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>Indexação semântica  
  A pesquisa semântica é criada com os recursos de pesquisa de texto completo existentes no SQL Server, mas usa recursos e estatísticas adicionais para habilitar cenários como extração de palavra-chave automática e descoberta de documentos relacionados. Por exemplo, você pode usar pesquisa semântica para criar uma taxonomia de base para uma organização ou classificar um corpus de documentos. Ou você pode usar a combinação de termos extraídos e pontuações de similaridade de documentos em modelos de clustering ou de árvore de decisão.  
   
  Depois de habilitar a pesquisa semântica com êxito e de ter indexado suas colunas de dados, você pode usar as funções que são fornecidas nativamente com indexação semântica para fazer o seguinte:  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089419"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Opções (página execução da consulta-Analysis Server-geral)
@@ -26,7 +26,7 @@ ms.locfileid: "66089419"
  **Tempo limite de execução**  
  Define o valor padrão na caixa de diálogo **Nova Conexão** . Essa caixa indica o número de segundos de espera antes de cancelar a consulta. Um valor de 0 indica uma espera infinita ou nenhum tempo limite. Esse valor é 0 em uma nova instalação.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086815"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Criar estrutura de mineração (Suplementos de Mineração de Dados do SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "66086815"
   
 2.  Na caixa de diálogo **selecionar dados de origem** , especifique o intervalo do Excel, a tabela de dados do Excel ou a fonte de dados externa que contém os dados que você deseja usar para análise.  
   
-     Clique em **Próximo**.  
+     Clique em **Avançar**.  
   
 3.  Na caixa de diálogo **selecionar colunas** , examine a lista de colunas disponíveis na fonte de dados selecionada.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66086815"
   
      Clique em **OK** para fechar a caixa de diálogo.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
      Dependendo do tipo de dados utilizado, você poderá concluir o assistente após essa etapa. Nesse caso, vá em frente para a página **concluir** para nomear sua estrutura de mineração.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66086815"
   
      Se desejar, digite o número máximo de linhas a serem usadas para teste.  
   
-     Clique em **Próximo**.  
+     Clique em **Avançar**.  
   
 8.  Na caixa de diálogo **concluir** , digite um nome e uma descrição para a nova estrutura de mineração.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "66086815"
 |**Dividir dados em conjuntos de treinamento e de teste**|Um valor recomendado para treinamento e conjuntos de teste é de 70% para treinamento e 30% para teste; no entanto, se você tiver muitos dados, poderá especificar um número máximo de linhas para teste.|  
 |Caixa de diálogo Concluir|As opções para detalhamento estão disponíveis em alguns tipos de modelo e são muito úteis se você incluiu colunas de detalhes na estrutura de mineração. Por exemplo, se você criar um modelo de clustering, poderá incluir detalhes como o nome ou o endereço de email para o detalhamento, mas não a análise, para facilitar o contato com clientes em um cluster específico.|  
   
-###  <a name="Bkmk_strctcolumn"></a>Configurando o uso de colunas no Assistente para criar estrutura de mineração  
+###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Configurando o uso de colunas no Assistente para criar estrutura de mineração  
  Ao criar uma nova estrutura de mineração, você pode especificar quais colunas da fonte de dados deverão ser incluídas na estrutura de mineração e como essas colunas deverão ser usadas. Lembre-se de que uma estrutura de mineração pode oferecer suporte a vários modelos de mineração.  
   
-|Valores|DESCRIÇÃO|  
+|Valores|Descrição|  
 |------------|-----------------|  
 |**Incluir**|Especifica que a coluna contém dados que podem ser usados para análise ou previsão.|  
 |**Chave**|Especifica que a coluna contém uma ID de transação, uma ID de série ou outra chave necessária para processamento.<br /><br /> Todos os algoritmos requerem uma coluna Key. Porém, alguns algoritmos permitem apenas uma única chave, enquanto outros permitem várias chaves.<br /><br /> Se a coluna contiver uma chave, mas não for necessária para o processamento, selecione não **usar**.|  
@@ -115,6 +115,6 @@ ms.locfileid: "66086815"
  Para criar uma estrutura de mineração de dados, você deve ter uma conexão com uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Uma conexão será necessária mesmo que você esteja trabalhando com estruturas temporárias. Para obter mais informações sobre como criar ou alterar uma conexão, consulte [conectar-se a dados de origem &#40;cliente de mineração de dados para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
+ [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

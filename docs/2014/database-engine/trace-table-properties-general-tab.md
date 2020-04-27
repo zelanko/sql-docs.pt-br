@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088737"
 ---
 # <a name="trace-table-properties-general-tab"></a>Propriedades da tabela de rastreamento (guia Geral)
@@ -36,7 +36,7 @@ ms.locfileid: "66088737"
  **Tipo de provedor de rastreamento**  
  Mostra o tipo de servidor que forneceu o rastreamento.  
   
- **Versão**  
+ **version**  
  Exibe a versão do servidor que forneceu o rastreamento.  
   
  **Linhas**  

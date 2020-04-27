@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089237"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (Editor de Texto: página Guia Editor e Barra de Status)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (página Editor de Texto: Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
   
 ## <a name="option-settings-by-editor"></a>Configurações de opção por editor  
@@ -34,7 +34,7 @@ ms.locfileid: "66089237"
  **Exibe o tempo de execução**  
  Inclui a hora de execução do script. As configurações são as seguintes:  
   
- **Nenhuma**  
+ **Nenhum**  
  A barra de status não exibe nenhuma informação de hora.  
   
  **Completo**  
@@ -70,7 +70,7 @@ ms.locfileid: "66089237"
  **Início**  
  A barra de status aparece na parte superior do Editor de Consultas.  
   
- **Inferior**  
+ **Resultado**  
  A barra de status aparece na parte inferior da janela do Editor de Consultas.  
   
 ## <a name="tab-text"></a>Texto da Guia  
@@ -93,6 +93,6 @@ ms.locfileid: "66089237"
   
 ## <a name="see-also"></a>Consulte Também  
  [Opções &#40;ambiente: página fontes e cores&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
- [Codificação por cores nos Editores de Consulta](../relational-databases/scripting/color-coding-in-query-editors.md)  
+ [Codificação por cores no Editor de Consultas](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

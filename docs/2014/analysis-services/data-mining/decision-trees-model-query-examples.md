@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084763"
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemplos de consulta de modelo de árvores de decisão
@@ -28,9 +28,9 @@ ms.locfileid: "66084763"
   
  **Consultas de conteúdo**  
   
- [Recuperando parâmetros do modelo do conjunto de linhas do esquema de mineração de dados](#bkmk_Query1)  
+ [Recuperando parâmetros de modelo do conjunto de linhas do esquema de mineração de dados](#bkmk_Query1)  
   
- [Obtendo detalhes sobre árvores no modelo usando DMX](#bkmk_Query2)  
+ [Obtendo detalhes sobre árvores no modelo através do DMX](#bkmk_Query2)  
   
  [Recuperando subárvores do modelo](#bkmk_Query3)  
   
@@ -42,10 +42,10 @@ ms.locfileid: "66084763"
   
  [Recuperando uma fórmula de regressão de um modelo de árvores de decisão](#bkmk_Query6)  
   
-##  <a name="bkmk_top2"></a>Localizando informações sobre um modelo de árvores de decisão  
+##  <a name="finding-information-about-a-decision-trees-model"></a><a name="bkmk_top2"></a> Localizando informações sobre o modelo de árvores de decisão  
  Para criar consultas significativas no conteúdo de um modelo de árvores de decisão, você deve compreender a estrutura do conteúdo do modelo e quais tipos de nós armazenam quais tipos de informações. Para obter mais informações, consulte [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query1"></a>Exemplo de consulta 1: Recuperando parâmetros de modelo do conjunto de linhas de esquema de mineração de dados  
+###  <a name="sample-query-1-retrieving-model-parameters-from-the-data-mining-schema-rowset"></a><a name="bkmk_Query1"></a> Exemplo de consulta 1: recuperando parâmetros do conjunto de linhas do esquema de mineração de dados  
  Ao consultar um conjunto de linhas de esquema de mineração de dados, você pode encontrar metadados sobre o modelo, tais como quando ele foi criado, última vez em que foi processado, o nome da estrutura de mineração na qual o modelo é baseado e o nome da coluna usada como atributo previsível. Você também pode retornar os parâmetros que foram usados quando o modelo foi criado.  
   
 ```  
@@ -60,7 +60,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a>Exemplo de consulta 2: retornando detalhes sobre o conteúdo do modelo usando DMX  
+###  <a name="sample-query-2-returning-details-about-the-model-content-by-using-dmx"></a><a name="bkmk_Query2"></a> Consulta de exemplo 2: retornando detalhes sobre o conteúdo do modelo com o uso do DMX  
  A consulta a seguir retorna algumas informações básicas sobre as árvores de decisão que foram criadas quando o modelo foi construído no [Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md). Cada estrutura de árvore é armazenada em seu próprio nó. Como esse modelo contém um único atributo previsível, há só um nó de árvore. Entretanto, se você criar um modelo de associação usando o algoritmo Árvores de Decisão, pode haver centenas de árvores, uma para cada produto.  
   
  Essa consulta retorna todos os nós de tipo 2, que são os nós superiores de uma árvore que representa um atributo previsível particular.  
@@ -75,7 +75,7 @@ FROM TM_DecisionTrees.CONTENT
 WHERE NODE_TYPE = 2  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
@@ -96,20 +96,20 @@ FROM TM_DecisionTree.CONTENT
 WHERE [PARENT_UNIQUE_NAME] = '000000001'  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPORTE|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
-|00000000100|Número de Carros = 0|Bike Buyer|Missing|0|  
+|00000000100|Número de Carros = 0|Bike Buyer|Ausente|0|  
 |00000000100|Número de Carros = 0|Bike Buyer|0|1067|  
 |00000000100|Número de Carros = 0|Bike Buyer|1|1875|  
-|00000000101|Número de Carros = 3|Bike Buyer|Missing|0|  
+|00000000101|Número de Carros = 3|Bike Buyer|Ausente|0|  
 |00000000101|Número de Carros = 3|Bike Buyer|0|678|  
 |00000000101|Número de Carros = 3|Bike Buyer|1|473|  
   
  A partir desses resultados, você pode dizer que os clientes que compraram uma bicicleta`[Bike Buyer]` (= 1), 1067 clientes tinham 0 carros e 473 clientes tinham 3 carros.  
   
-###  <a name="bkmk_Query3"></a>Exemplo de consulta 3: Recuperando subárvores do modelo  
+###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a> Exemplo de consulta 3: recuperando subárvores do modelo  
  Suponha que você queira saber mais sobre os clientes que compraram uma bicicleta. É possível exibir detalhes adicionais para qualquer subárvore usando a função [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) na consulta, como mostra o exemplo a seguir. A consulta retorna o cálculo dos compradores de bicicletas recuperando os nós folha (NODE_TYPE = 4) da árvore que contém os clientes acima de 42 anos de idade. A consulta restringe linhas da tabela aninhada para aquelas onde Comprador de Bicicleta = 1.  
   
 ```  
@@ -122,7 +122,7 @@ WHERE ISDESCENDANT('0000000010001')
 AND NODE_TYPE = 4  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |NODE_NAME|NODE_CAPTION|t.SUPPORT|  
 |----------------|-------------------|---------------|  
@@ -139,7 +139,7 @@ AND NODE_TYPE = 4
   
 -   Recuperar a fórmula de regressão para parte de uma árvore de decisão onde a relação entre a entrada e a saída é linear.  
   
-###  <a name="bkmk_Query4"></a>Exemplo de consulta 4: retornando previsões com probabilidades  
+###  <a name="sample-query-4-returning-predictions-with-probabilities"></a><a name="bkmk_Query4"></a> Exemplo de consulta 4: retornando previsões com probabilidades  
  O exemplo de consulta a seguir usa o modelo de árvore de decisão criado no [Tutorial de mineração de dados básico](../../tutorials/basic-data-mining-tutorial.md). A consulta passa por um novo conjunto de dados de exemplo, da tabela dbo.ProspectiveBuyers em [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, para prever qual dos clientes do novo conjunto de dados comprará uma bicicleta.  
   
  A consulta usa a função de previsão [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx), que retorna uma tabela aninhada que contém informações úteis sobre as probabilidades encontradas pelo modelo. A cláusula WHERE final da consulta filtra os resultados para retornar apenas os clientes que foram previstos como prováveis compradores de uma bicicleta, com uma probabilidade maior que 0%.  
@@ -191,7 +191,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Se o seu provedor não der suporte a conjuntos de linhas hierárquicos, como os resultados exibidos aqui, você poderá utilizar a palavra-chave FLATTENED na consulta para retornar os resultados em uma tabela que contenha nulos em vez de valores de coluna repetidos. Para obter mais informações, consulte [Tabelas aninhadas &#40;Analysis Services – Data Mining&#41;](nested-tables-analysis-services-data-mining.md) ou [Noções básicas sobre o instrução Select do MDX](/sql/dmx/understanding-the-dmx-select-statement).  
   
-###  <a name="bkmk_Query5"></a>Exemplo de consulta 5: prevendo associações de um modelo de árvores de decisão  
+###  <a name="sample-query-5-predicting-associations-from-a-decision-trees-model"></a><a name="bkmk_Query5"></a> Exemplo de consulta 5: prevendo associações de um modelo de árvore de decisão  
  O exemplo de consulta a seguir é baseado na estrutura de mineração Associação. Para continuar com este exemplo, você pode adicionar um novo modelo a essa estrutura de mineração e selecionar Árvores de Decisão da Microsoft como o algoritmo. Para obter mais informações sobre como criar a estrutura de mineração Associação, consulte [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de Data Mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
  O exemplo de consulta a seguir é uma consulta singleton que pode ser criada facilmente no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] selecionando os campos e depois os valores para esses campos na lista suspensa.  
@@ -231,7 +231,7 @@ NATURAL PREDICTION JOIN
 |Mountain-400-W|  
 |Colete clássico|  
   
-###  <a name="bkmk_Query6"></a>Exemplo de consulta 6: Recuperando uma fórmula de regressão de um modelo de árvores de decisão  
+###  <a name="sample-query-6-retrieving-a-regression-formula-from-a-decision-trees-model"></a><a name="bkmk_Query6"></a> Exemplo de consulta 6: recuperando uma fórmula de regressão de um modelo de árvores de decisão  
  Ao criar um modelo de árvore de decisão que contém uma regressão em um atributo contínuo, você pode usar a fórmula de regressão para fazer previsões ou pode extrair informações precisas sobre a fórmula. Para obter mais informações sobre consultas em modelos de regressão, consulte [Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md).  
   
  Se um modelo de árvores de decisão contiver uma mistura de nós de regressão e esses nós se dividirem em atributos discretos ou intervalos, você poderá criar uma consulta que retorne apenas o nó de regressão. A tabela NODE_DISTRIBUTION contém os detalhes da fórmula de regressão. Neste exemplo, as colunas são combinadas e a tabela NODE_DISTRIBUTION recebe um alias para facilitar a exibição. Porém, neste modelo, nenhum regressor foi localizado para relacionar Renda com outros atributos contínuos. Nesses casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] retorna o valor médio do atributo e a variância total no modelo para aquele atributo.  
@@ -242,11 +242,11 @@ FROM DT_Predict. CONTENT
 WHERE NODE_TYPE = 25  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Renda Anual|Missing|0|0.000457142857142857|0|1|  
+|Renda Anual|Ausente|0|0.000457142857142857|0|1|  
 |Renda Anual|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -258,16 +258,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |Função de previsão|Uso|  
-|[&#40;DMX IsDescendant&#41;](/sql/dmx/isdescendant-dmx)|Determina se um nó é um filho de outro nó no modelo.|  
-|[&#41;&#40;DMX IsInNode](/sql/dmx/isinnode-dmx)|Indica se o nó especificado contém o caso atual.|  
-|[&#41;&#40;DMX PredictAdjustedProbability](/sql/dmx/predictadjustedprobability-dmx)|Retorna a probabilidade ponderada.|  
-|[&#41;&#40;DMX PredictAssociation](/sql/dmx/predictassociation-dmx)|Prevê associação de membro em um conjunto de dados associativo.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determina se um nó é um filho de outro nó no modelo.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se o nó especificado contém o caso atual.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Retorna a probabilidade ponderada.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Prevê associação de membro em um conjunto de dados associativo.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Retorna uma tabela de valores relacionados ao valor previsto atual.|  
-|[&#41;&#40;DMX PredictNodeId](/sql/dmx/predictnodeid-dmx)|Retorna Node_ID para cada caso.|  
-|[&#41;&#40;DMX PredictProbability](/sql/dmx/predictprobability-dmx)|Retorna a probabilidade para o valor previsto.|  
-|[&#41;&#40;DMX PredictStdev](/sql/dmx/predictstdev-dmx)|Retorna o desvio padrão previsto para a coluna especificada.|  
-|[&#41;&#40;DMX PredictSupport](/sql/dmx/predictsupport-dmx)|Retorna o valor de suporte para um estado especificado.|  
-|[&#41;&#40;DMX PredictVariance](/sql/dmx/predictvariance-dmx)|Retorna a variação de uma coluna especificada.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Retorna Node_ID para cada caso.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Retorna a probabilidade para o valor previsto.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Retorna o desvio padrão previsto para a coluna especificada.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Retorna o valor de suporte para um estado especificado.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Retorna a variação de uma coluna especificada.|  
   
  Para obter uma lista das funções comuns a todos os algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)], consulte [Funções de previsão gerais &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para obter a sintaxe de funções específicas, consulte [Referência de função de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -275,6 +275,6 @@ WHERE NODE_TYPE = 25
  [Consultas de mineração de dados](data-mining-queries.md)   
  [Algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Referência técnica do algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085821"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Escolher um tipo de gráfico de precisão e definir opções de gráfico
@@ -33,7 +33,7 @@ ms.locfileid: "66085821"
   
  Este tópico fornece uma visão geral dos diferentes gráficos de precisão.  
   
- **Observação** Os gráficos e suas definições não são salvos. Se você fechar a janela que contém um gráfico, terá que criá-lo novamente.  
+ **Observação** os gráficos e suas definição não são salvos. Se você fechar a janela que contém um gráfico, terá que criá-lo novamente.  
   
 ## <a name="accuracy-chart-types"></a>Tipos de gráfico de precisão  
  Dependendo do tipo de gráfico escolhido, você tem a possibilidade de configurar mais as opções, navegar pelo gráfico, copiar o gráfico na área de transferência e trabalhar com os dados no Excel.  

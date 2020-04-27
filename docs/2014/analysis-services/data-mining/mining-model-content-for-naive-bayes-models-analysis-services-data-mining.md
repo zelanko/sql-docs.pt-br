@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083645"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos Naive Bayes (Analysis Services – Mineração de Dados)
@@ -57,7 +57,7 @@ ms.locfileid: "66083645"
   
  **Atributo de entrada** O nome do atributo de entrada.  
   
- **Estado do atributo de entrada** O nome do atributo de entrada somente. Para obter o estado, use MSOLAP_NODE_SHORT_CAPTION.  
+ **Estado do atributo de entrada** O nome apenas do atributo de entrada. Para obter o estado, use MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
  O nome do nó.  
@@ -72,7 +72,7 @@ ms.locfileid: "66083645"
  NODE_TYPE  
  Um modelo Naive Bayes gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|DESCRIÇÃO|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Contém estatísticas que descrevem todo o conjunto de casos de treinamento do modelo.|  
 |9 (Atributo previsível)|Contém o nome do atributo previsível.|  
@@ -88,26 +88,26 @@ ms.locfileid: "66083645"
   
  **Atributo previsível** O nome do atributo previsível.  
   
- **Atributo de entrada** O nome do atributo previsível e o atributo de entrada atual. Por exemplo:  
+ **Atributo de entrada** O nome do atributo previsível e do atributo de entrada atual. Por exemplo:  
   
  Bike Buyer -> Idade  
   
- **Estado do atributo de entrada** O nome do atributo previsível e o atributo de entrada atual, mais o valor da entrada. Por exemplo:  
+ **Estado do atributo de entrada** O nome do atributo previsível e do atributo de entrada atual, mais o valor da entrada. Por exemplo:  
   
  Bike Buyer -> Idade = Missing  
   
  CHILDREN_CARDINALITY  
  Número de filhos do nó.  
   
- **Raiz do modelo** Contagem de atributos previsíveis no modelo mais 1 para o nó de estatísticas marginais.  
+ **Raiz do modelo** Contagem dos atributos previsíveis no modelo, mais 1 para nós de estatísticas marginais.  
   
- **Estatísticas marginais** Por definição não tem filhos.  
+ **Estatísticas marginais** Por definição, não têm filho.  
   
- **Atributo previsível**  Contagem dos atributos de entrada que estavam relacionados ao atributo previsível atual.  
+ **Atributo previsível**  Contagem dos atributos de entrada relacionados ao atributo previsível atual.  
   
- **Atributo de entrada** Contagem dos valores discretos ou discretizado para o atributo de entrada atual.  
+ **Atributo de entrada** Contagem dos valores discretos ou diferenciados do atributo de entrada atual.  
   
- **Estado do atributo de entrada** Sempre 0.  
+ **Estado do atributo da entrada** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  O nome exclusivo do nó pai. Para obter mais informações sobre como relacionar nós pai e filho, consulte [Usado nomes e IDs de nós](#bkmk_nodenames).  
@@ -143,15 +143,15 @@ ms.locfileid: "66083645"
  NODE_SUPPORT  
  O número de casos com suporte para este nó.  
   
- **Raiz do modelo** Contagem de todos os casos em dados de treinamento.  
+ **Raiz do modelo** Contagem de todos os casos nos dados de treinamento.  
   
  **Estatísticas marginais** Sempre 0.  
   
- **Atributo previsível** Contagem de todos os casos em dados de treinamento.  
+ **Atributo previsível** Contagem de todos os casos nos dados de treinamento.  
   
- **Atributo de entrada** Contagem de todos os casos em dados de treinamento.  
+ **Atributo de entrada** Contagem de todos os casos nos dados de treinamento.  
   
- **Estado do atributo de entrada** Contagem de casos em dados de treinamento que contêm apenas esse valor específico.  
+ **Estado do atributo de entrada** Contagem dos casos nos dados de treinamento que contêm apenas este valor específico.  
   
  MSOLAP_MODEL_COLUMN  
  Um rótulo usado para exibição. Normalmente, o mesmo que ATTRIBUTE_NAME.  
@@ -165,24 +165,24 @@ ms.locfileid: "66083645"
   
  **Atributo previsível**  Sempre 0.  
   
- **Atributo de entrada** A pontuação de interesse do atributo de entrada atual em relação ao atributo previsível atual.  
+ **Atributo de entrada** Pontuação de interesse do atributo de entrada atual com relação ao atributo previsível atual.  
   
- **Estado do atributo de entrada** Sempre 0.  
+ **Estado do atributo da entrada** Sempre 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Uma cadeia de texto que representa o nome ou o valor de uma coluna.  
   
  **Raiz do modelo** Ficará  
   
- **Estatísticas marginais** Ficará  
+ **Estatísticas marginais** em branco  
   
  **Atributo previsível**  O nome do atributo previsível.  
   
  **Atributo de entrada** O nome do atributo de entrada.  
   
- **Estado do atributo de entrada** O valor ou valor discretizado do atributo de entrada.  
+ **Estado do atributo de entrada** O valor ou valor diferenciado do atributo de entrada.  
   
-##  <a name="bkmk_nodenames"></a>Usando nomes e IDs de nós  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a> Usando nomes e IDs de nós  
  A nomenclatura dos nós em um modelo Naive Bayes fornece mais informações sobre o tipo de nó para facilitar a compreensão das relações entre as informações no modelo. A tabela a seguir mostra a convenção para as IDs que são atribuídas a tipos de nós diferentes.  
   
 |Tipo de nó|Convenção da ID de nó|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Estado Civil = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Estado Civil = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>Tabela de NODE_DISTRIBUTION  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>Tabela de NODE_DISTRIBUTION  
  Normalmente, a coluna de tabela aninhada, NODE_DISTRIBUTION, contém estatísticas sobre a distribuição de valores no nó. Em um modelo Naive Bayes, essa tabela é populada apenas para os seguintes nós:  
   
 |Tipo de nó|Conteúdo da tabela aninhada|  
@@ -259,24 +259,24 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Estado Civil = S|Bike Buyer|Missing|0|0|1|  
+|Bike Buyer -> Estado Civil = S|Bike Buyer|Ausente|0|0|1|  
 |Bike Buyer -> Estado Civil = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Estado Civil = S|Bike Buyer|1|4216|0.527065883|4|  
   
  Nesses resultados, o valor da coluna SUPPORT indica a você o número de clientes com o estado civil especificado que compraram uma bicicleta. A coluna PROBABILITY contém a probabilidade de cada valor de atributo, conforme calculado apenas para este nó. Para obter definições gerais dos termos usados na tabela NODE_DISTRIBUTION, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a>Informações no nó de estatísticas marginais  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> Informações no nó de estatísticas marginais  
  Em um modelo Naive Bayes, a tabela aninhada para nós de estatísticas marginais contém a distribuição dos valores para todo o conjunto de dados de treinamento. Por exemplo, a tabela a seguir contém uma lista parcial das estatísticas na tabela NODE_DISTRIBUTION aninhada para o modelo `TM_NaiveBayes`.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPORTE|PROBABILITY|variance|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|1|  
+|Bike Buyer|Ausente|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
 |Bike Buyer|1|8615|0.492736216|0|4|  
-|Estado Civil|Missing|0|0|0|1|  
+|Estado Civil|Ausente|0|0|0|1|  
 |Estado Civil|S|7999|0.457504004|0|4|  
 |Estado Civil|M|9485|0.542495996|0|4|  
-|Total de Filhos|Missing|0|0|0|1|  
+|Total de Filhos|Ausente|0|0|0|1|  
 |Total de Filhos|0|4865|0.278254404|0|4|  
 |Total de Filhos|3|2093|0.119709449|0|4|  
 |Total de Filhos|1|3406|0.19480668|0|4|  
@@ -291,6 +291,6 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  [Conteúdo do modelo de mineração &#40;Analysis Services Mineração de dados&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visualizadores de modelo de mineração de dados](data-mining-model-viewers.md)   
  [Consultas de mineração de dados](data-mining-queries.md)   
- [Algoritmo Naïve Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)  
+ [Referência técnica do algoritmo Naive Bayes da Microsoft](microsoft-naive-bayes-algorithm.md)  
   
   

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089275"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
@@ -30,7 +30,7 @@ ms.locfileid: "66089275"
  **Ocultar membros avançados**  
  O editor de texto sem-formatação não oferece suporte para esse recurso.  
   
- **Informações de parâmetro**  
+ **Informações sobre parâmetros**  
  O editor de texto sem-formatação não oferece suporte para esse recurso.  
   
 ## <a name="settings"></a>Configurações  

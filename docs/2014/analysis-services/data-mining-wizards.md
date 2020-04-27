@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086313"
 ---
 # <a name="data-mining-wizards"></a>Assistentes de mineração de dados
@@ -25,7 +25,7 @@ ms.locfileid: "66086313"
   
  A tabela seguinte descreve os assistentes que você pode usar para criar fontes de mineração de dados, exibições e objetos.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Ajuda F1 do assistente de fonte de dados &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)|Use o Assistente para Fontes de Dados para definir uma nova fonte de dados.|  
 |[Ajuda F1 do assistente de exibição da fonte de dados &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|Use o Assistente de Exibição da Fonte de Dados para definir uma nova exibição da fonte de dados.|  

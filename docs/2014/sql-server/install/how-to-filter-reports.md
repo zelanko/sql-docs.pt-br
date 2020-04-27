@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094893"
 ---
-# <a name="how-to-filter-reports"></a>Como filtrar relatórios
+# <a name="how-to-filter-reports"></a>Como fazer: Para filtrar relatórios
   Este tópico descreve como você pode usar o Visualizador de relatórios do supervisor de atualização para aplicar filtros a um relatório.  
   
 ### <a name="to-filter-reports"></a>Para filtrar relatórios  

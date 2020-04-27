@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085646"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de conteúdo (mineração de dados)
@@ -34,9 +34,9 @@ ms.locfileid: "66085646"
   
 -   [Consulta de conteúdo em um modelo de árvores de decisão](#bkmk_DecTree)  
   
- [Trabalhando com os resultados da consulta](#bkmk_Results)  
+ [Trabalhando com resultados de consulta](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a>Consultas básicas de conteúdo  
+##  <a name="basic-content-queries"></a><a name="bkmk_ContentQuery"></a>Consultas básicas de conteúdo  
  Você pode criar consultas de conteúdo usando o Construtor de consulta de previsão, usar os modelos de consulta de conteúdo DMX fornecidos no SQL Server Management Studio ou escrever consultas diretamente no DMX. Ao contrário das consultas de previsão, você não precisa unir dados externos e, dessa maneira, as consultas de conteúdo são fáceis escrever.  
   
  Esta seção fornece uma visão geral dos tipos de consultas de conteúdo que você pode criar.  
@@ -45,7 +45,7 @@ ms.locfileid: "66085646"
   
 -   As consultas no modelo podem retornar padrões, listas de atributos, fórmulas e assim por diante.  
   
-###  <a name="bkmk_Structure"></a>Consultas sobre estrutura e dados de caso  
+###  <a name="queries-on-structure-and-case-data"></a><a name="bkmk_Structure"></a> Consultas sobre estrutura e dados do caso  
  O DMX dá suporte a consultas nos dados armazenados em cache que são usados para criar estruturas de mineração e modelos. Por padrão, este cache é criado quando você define a estrutura de mineração, e é populado quando você processa a estrutura ou modelo.  
   
 > [!WARNING]  
@@ -53,12 +53,12 @@ ms.locfileid: "66085646"
   
  Os exemplos a seguir mostram os padrões comuns para criar consultas nos dados de caso ou consultas nos dados na estrutura de mineração:  
   
- **Obter todos os casos para um modelo**  
+ **Obtenha todos os casos para um modelo**  
  `SELECT FROM <model>.CASES`  
   
  Use esta instrução para recuperar colunas especificadas nos dados do caso usados para criar um modelo. Você deve ter permissões de detalhamento no modelo para executar esta consulta.  
   
- **Exibir todos os dados incluídos na estrutura**  
+ **Exibir todos os dados que estão incluídos na estrutura**  
  `SELECT FROM <structure>.CASES`  
   
  Use essa instrução para exibir todos os dados incluídos na estrutura, incluindo as colunas que não foram adicionadas a um modelo de mineração específico. Você deve ter permissões de detalhamento no modelo, assim como na estrutura, para recuperar dados da estrutura de mineração.  
@@ -73,22 +73,22 @@ ms.locfileid: "66085646"
   
  Use esta instrução para recuperar todos os valores de uma coluna DISCRETE.  Não use esta instrução para colunas DISCRETIZED; use as funções `RangeMin` e `RangeMax`.  
   
- **Localizar os casos que foram usados para treinar um modelo ou estrutura**  
+ **Localizar os casos usados para treinar um modelo ou estrutura**  
  `SELECT  FROM <mining structure.CASES WHERE IsTrainingCase()`  
   
  Use esta instrução para obter o conjunto completo de dados que foram usados um modelo de treinamento.  
   
- **Localizar os casos que são usados para testar um modelo ou estrutura**  
+ **Localizar os casos que foram usados para testar um modelo ou estrutura**  
  `SELECT  FROM <mining structure.CASES WHERE IsTestingCase()`  
   
  Use esta instrução para obter os dados que foram colocados de lado para testar modelos de mineração relacionados a uma estrutura específica.  
   
- **Detalhamento de um padrão de modelo específico para dados de caso subjacentes**  
+ **Detalhar de um padrão de modelo específico para dados de caso subjacentes**  
  `SELECT FROM <model>.CASESWHERE IsTrainingCase() AND IsInNode(<node>)`  
   
  Use esta instrução para recuperar dados de caso detalhado de um modelo treinado. Você deve especificar um nó específico: por exemplo, você deve saber a ID do nó do cluster, a ramificação específica da árvore de decisão etc. Além disso, você deve ter permissões de detalhamento no modelo para executar esta consulta.  
   
-###  <a name="bkmk_Patterns"></a>Consultas em padrões de modelo, estatísticas e atributos  
+###  <a name="queries-on-model-patterns-statistics-and-attributes"></a><a name="bkmk_Patterns"></a>Consultas em padrões de modelo, estatísticas e atributos  
  O conteúdo de um modelo de mineração de dados é útil para muitos propósitos. Com uma consulta de conteúdo modelo, você pode:  
   
 -   Extrair fórmulas ou probabilidades para fazer seus próprios cálculos.  
@@ -115,7 +115,7 @@ ms.locfileid: "66085646"
   
  Use este procedimento armazenado para recuperar a lista de atributos que foram usados por um modelo. Estas informações são úteis para determinar atributos que foram eliminados como resultado de seleção de recursos, por exemplo.  
   
- **Recuperar conteúdo armazenado em uma dimensão de Data Mining**  
+ **Recuperar conteúdo armazenado em uma dimensão de mineração de dados**  
  `SELECT FROM <model>.DIMENSIONCONTENT`  
   
  Use esta instrução para recuperar os dados de uma dimensão de mineração de dados.  
@@ -124,17 +124,17 @@ ms.locfileid: "66085646"
   
  Se você desenvolver seu próprio algoritmo de plug-in, pode usar esta instrução para verificar o conteúdo de seu modelo para testar.  
   
- **Obter a representação PMML de um modelo**  
+ **Obtenha a representação PMML de um modelo.**  
  `SELECT * FROM <model>.PMML`  
   
  Obtém um documento XML que representa o modelo em formato de PMML. Não há suporte para todos os tipos de modelo.  
   
-##  <a name="bkmk_Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="bkmk_Examples"></a> Exemplos  
  Embora algum conteúdo de modelo seja padrão entre algoritmos, algumas partes do conteúdo variam enormemente dependendo do algoritmo usado para criar o modelo. Desse modo, ao criar uma consulta de conteúdo, você precisa saber quais as informações do modelo mais úteis para seu modelo específico.  
   
  Alguns exemplos são fornecidos nesta seção para ilustrar como a escolha de algoritmo afeta o tipo de informação que é armazenada no modelo. Para obter mais informações sobre o conteúdo do modelo de mineração e o conteúdo específico para cada tipo de modelo, consulte [Conteúdo do modelo de mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a>Exemplo 1: consulta de conteúdo em um modelo de associação  
+###  <a name="example-1-content-query-on-an-association-model"></a><a name="bkmk_Assoc"></a> Exemplo 1: Consulta de conteúdo em um modelo de associação  
  A instrução `SELECT FROM <model>.CONTENT`retorna tipos diferentes de informações, dependendo do tipo de modelo que você está consultando. Para um modelo de associação, uma informação importante é o *tipo de nó*. Os nós são como contêineres para informações no conteúdo do modelo. Em um modelo de associação, os nós que representam regras têm o valor de NODE_TYPE igual a 8, enquanto os nós que representam conjuntos de itens têm um valor de NODE_TYPE igual a 7.  
   
  Assim, a consulta a seguir retorna os 10 principais conjuntos de itens, classificados por suporte (a ordem padrão).  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Para ver mais exemplos, consulte [Exemplos de consulta de um modelo associação](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a>Exemplo 2: consulta de conteúdo em um modelo de árvores de decisão  
+###  <a name="example-2-content-query-on-a-decision-trees-model"></a><a name="bkmk_DecTree"></a> Exemplo 2: Consulta de conteúdo em um modelo de árvores de decisão  
  Um modelo de árvore de decisão pode ser usado para previsão e também para classificação.  Este exemplo presume que você esteja usando o modelo para prever um resultado, mas você também quer descobrir quais fatores ou regras podem ser usados para classificar o resultado.  
   
  Em um modelo de árvore de decisão, os nós são usados para representar árvores e nós folha. A legenda para cada nó contém a descrição do caminho ao resultado. Portanto, para rastrear o caminho para qualquer resultado específico, você precisa identificar o nó que o contém e obter os detalhes para aquele nó.  
@@ -190,7 +190,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Para obter mais exemplos, consulte [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md).  
   
-##  <a name="bkmk_Results"></a>Trabalhando com os resultados da consulta  
+##  <a name="working-with-the-query-results"></a><a name="bkmk_Results"></a>Trabalhando com os resultados da consulta  
  Como demonstram os exemplos, as consultas de conteúdo retornam principalmente conjuntos de linhas tabulares, mas também podem incluir informações de colunas aninhadas. Você pode aplainar o conjunto de linhas que é retornado, mas isto pode tornar mais complexo o trabalho com resultados. O conteúdo do nó NODE_DISTRIBUTION em particular está aninhado, mas contém muitas informações interessantes sobre o modelo.  
   
  Para obter mais informações sobre como trabalhar com conjuntos de linhas hierárquicas, consulte a especificação OLEDB no MSDN.  

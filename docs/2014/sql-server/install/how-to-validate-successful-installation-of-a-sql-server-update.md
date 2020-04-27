@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59aa87a0b4df519d6fcc1caab00a8484b43ebe89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094837"
 ---
-# <a name="how-to-validate-successful-installation-of-a-sql-server-update"></a>Como validar a instalação bem-sucedida de uma atualização do SQL Server
+# <a name="how-to-validate-successful-installation-of-a-sql-server-update"></a>Como fazer: Para validar a instalação bem-sucedida de uma atualização do SQL Server
   Para validar a instalação bem-sucedida de uma atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Verifique se os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão online.  

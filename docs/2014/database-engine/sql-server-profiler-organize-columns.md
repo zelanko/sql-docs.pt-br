@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089762"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler – Organizar Colunas
@@ -28,7 +28,7 @@ ms.locfileid: "66089762"
   
  Quando você agrupa ou agrega eventos em uma janela de rastreamento, as colunas selecionadas para agrupamento ou agregação permanecem fixas na janela de exibição, mas é possível rolar para a direita ou esquerda a fim de exibir todas as outras colunas de dados.  
   
- Para acessar essa caixa de diálogo, abra um arquivo ou tabela de rastreamento existente e clique em **Propriedades** no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **do** . Na caixa de diálogo **Propriedades do Rastreamento** , clique na guia **Seleção de Eventos** e em **Organizar Colunas**. Você também pode clicar em **Organizar Colunas** na guia **Seleção de Eventos** ao criar um rastreamento novo.  
+ Para acessar essa caixa de diálogo, abra um arquivo ou tabela de rastreamento existente e clique em **Propriedades** no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Arquivo** do . Na caixa de diálogo **Propriedades do Rastreamento** , clique na guia **Seleção de Eventos** e em **Organizar Colunas**. Você também pode clicar em **Organizar Colunas** na guia **Seleção de Eventos** ao criar um rastreamento novo.  
   
 ## <a name="options"></a>Opções  
  **Grupos**  
@@ -41,15 +41,15 @@ ms.locfileid: "66089762"
  **Colunas**  
  Lista de colunas de dados disponíveis para serem movidas para **Grupos**. Clique no sinal de adição**+**() à esquerda das **colunas** para expandir a lista.  
   
- **Operante**  
+ **Para cima**  
  Depois de selecionar uma coluna de dados, clique em **Para Cima** para mover colunas de dados para **Grupos**. Você também pode clicar em **Acima** para reorganizar a exibição de colunas na janela de rastreamento.  
   
- **Ligou**  
+ **Para baixo**  
  Depois de selecionar uma coluna de dados, clique em **Para Baixo** para mover as colunas de dados para fora de **Grupos**. Você também pode clicar em **Abaixo** para reorganizar a exibição de colunas na janela de rastreamento.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Organizar colunas exibidas em um &#40;de rastreamento SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Criar um rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Criar um &#40;de rastreamento SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Abrir um arquivo de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Abrir uma tabela de rastreamento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  

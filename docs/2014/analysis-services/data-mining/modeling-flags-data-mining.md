@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083308"
 ---
 # <a name="modeling-flags-data-mining"></a>Sinalizadores de modelagem (Mineração de Dados)
-  Use sinalizadores de modelagem no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para fornecer informações adicionais para um algoritmo de mineração de dados sobre os dados definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
+  Você pode usar sinalizadores de modelagem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no para fornecer informações adicionais a um algoritmo Data Mining sobre os dados que são definidos em uma tabela de casos. O algoritmo pode usar essas informações para criar um modelo de mineração de dados mais preciso.  
   
  Alguns sinalizadores de modelagem são definidos no nível da estrutura de mineração, enquanto outros são definidos no nível de coluna do modelo de mineração. Por exemplo, o sinalizador de modelagem `NOT NULL` é usado com colunas da estrutura de mineração. Você pode definir sinalizadores de modelagem adicionais nas colunas de modelo de mineração, dependendo do algoritmo usado para criar o modelo.  
   
@@ -71,7 +71,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Você pode especificar os sinalizadores de modelagem em uma nova estrutura de mineração ou modelo de mineração usando DMX, ou usando AMO ou scripts XMLA. No entanto, não é possível alterar os sinalizadores de modelagem usados em um modelo e em uma estrutura de mineração existentes com o uso de DMX. Você deve criar um novo modelo de mineração usando a sintaxe `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
-##  <a name="bkmk_UseRegressors"></a>Usos do sinalizador de modelagem REGRESSOr  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a>Usos do sinalizador de modelagem REGRESSOr  
  Ao definir o sinalizador de modelagem REGRESSOR em uma coluna, você está indicando ao algoritmo que essa coluna contém possíveis regressores. Os regressores reais usados no modelo são determinados pelo algoritmo. Um regressor potencial poderá ser descartado se não modelar o atributo previsível.  
   
  Quando você construir um modelo usando o Assistente de Mineração de Dados, todas as colunas de entrada contínuas serão sinalizadas como possíveis regressores. Portanto, mesmo que você não defina explicitamente um sinalizador REGRESSOR em uma coluna, ela poderá ser usada como um regressor no modelo.  
@@ -84,7 +84,7 @@ FROM $system.DMSCHEMA_MINING_COLUMNS
 WHERE MODEL_NAME = '<model name>'  
 ```  
   
- **Observação** Se você modificar um modelo de mineração e alterar o tipo de conteúdo de uma coluna de contínuo para discreto, será necessário alterar manualmente o sinalizador na coluna de mineração e reprocessar o modelo.  
+ **Observação** Se você modificar um modelo de mineração e alterar o tipo de conteúdo de uma coluna de contínuo para discreto, terá que alterar manualmente o sinalizador da coluna de mineração e, em seguida, processar novamente o modelo.  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressor em modelos de regressão lineares  
  Os modelos de regressão lineares baseiam-se no algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Mesmo que você não use o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , todo modelo de árvore de decisão poderá conter uma árvore ou nós que representam uma regressão em um atributo contínuo.  
@@ -104,13 +104,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Tarefa|Tópico|  
 |----------|-----------|  
-|Editar sinalizadores de modelagem usando o Designer de Mineração de Dados|[Exibir ou alterar sinalizadores de modelagem &#40;mineração de dados&#41;](modeling-flags-data-mining.md)|  
+|Editar sinalizadores de modelagem usando o Designer de Mineração de Dados|[Exibir ou alterar sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md)|  
 |Especifique uma dica para o algoritmo recomendar regressores prováveis|[Especificar uma coluna para usar como regressor em um modelo](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Veja os sinalizadores de modelagem que têm suporte por algoritmos específicos (na seção Sinalizadores de Modelagem para cada tópico de referência de algoritmo).|[Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Saiba mais sobre as colunas da estrutura de mineração e as propriedades que você pode definir nelas|[Colunas da estrutura de mineração](mining-structure-columns.md)|  
 |Saiba sobre as colunas do modelo de mineração e sinalizadores de modelagem que podem ser aplicados no nível do modelo|[Colunas do modelo de mineração](mining-model-columns.md)|  
-|Consulte a sintaxe para trabalhar com sinalizadores de modelagem em instruções DMX|[Sinalizadores de modelagem &#40;&#41;DMX](/sql/dmx/modeling-flags-dmx)|  
-|Entender valores ausentes e como trabalhar com eles|[Valores ausentes &#40;Analysis Services de mineração de dados&#41;](missing-values-analysis-services-data-mining.md)|  
+|Consulte a sintaxe para trabalhar com sinalizadores de modelagem em instruções DMX|[Sinalizadores de modelagem &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Entender valores ausentes e como trabalhar com eles|[Valores ausentes &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)|  
 |Saiba sobre como gerenciar modelos e estruturas e definir propriedades de uso|[Movendo objetos de mineração de dados](moving-data-mining-objects.md)|  
   
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094624"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar o Distributed Replay (instalação)
@@ -52,19 +52,17 @@ ms.locfileid: "66094624"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Ferramentas  
   
-     \-OR  
+     \- OU -  
   
-     
-  \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
+     \<Diretório de Recursos Compartilhados>\Tools\\(diretório de recursos compartilhados alternativo fornecido pelo usuário)  
   
 -   Em um sistema de 64 bits:  
   
      \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] C:\Arquivos[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de programas (x86) \120\Tools  
   
-     \-OR  
+     \- OU -  
   
-     
-  \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
+     \<Diretório de Recursos Compartilhados (x86)>\Tools\\(diretório de recursos compartilhados [x86] alternativo fornecido pelo usuário)  
   
 ### <a name="to-install-distributed-replay-features"></a>Para instalar recursos do Distributed Replay  
   
@@ -88,7 +86,7 @@ ms.locfileid: "66094624"
   
     -   Para instalar o serviço do cliente, selecione **Distributed Replay Client**.  
   
-     **Importante**: ao configurar o controlador de Distributed Replay, você pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
+     **Importante**: Quando você configura o controlador Distributed Replay, pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
   
     -   Conta de usuário do domínio  
   
@@ -108,7 +106,7 @@ ms.locfileid: "66094624"
   
     2.  Em computadores de 64 bits, o caminho de instalação padrão é **C:\Program Files (\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] x86)**  
   
-9. Ao concluir, clique em **Avançar**.  
+9. Quando tiver terminado, clique em **Avançar**.  
   
 10. Na página **Regras de Instalação** , a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida sua configuração de computador. Quando o processo de validação for concluído, clique em **Avançar**.  
   
@@ -125,9 +123,9 @@ ms.locfileid: "66094624"
   
  Estes tópicos adicionais documentam outras maneiras de instalar o Distributed Replay:  
   
--   [Instalar o Distributed Replay a partir do prompt de comando](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+-   [Instalar Distributed Replay no prompt de comando](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
--   [Instalar o Distributed Replay usando um arquivo de configuração](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
+-   [Instalar Distributed Replay usando um arquivo de configuração](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Você deve ter permissões administrativas para instalar qualquer recurso do Distributed Replay. Apenas um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenha permissões sysadmin pode adicionar as contas de serviço de cliente à função de servidor sysadmin do servidor de teste. Para obter mais informações sobre as considerações de segurança do Distributed Replay, veja [Segurança do Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md).  

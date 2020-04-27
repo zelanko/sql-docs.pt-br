@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094287"
 ---
 # <a name="installation-type"></a>Tipo de Instalação
@@ -31,6 +31,6 @@ ms.locfileid: "66094287"
   
  Você só pode adicionar os recursos com suporte do[!INCLUDE[ssDE](../../includes/ssde-md.md)] Sysprep [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-e-para uma imagem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]preparada do. Outros recursos aos quais o SysPrep não oferece suporte só poderão ser adicionados depois que a instância preparada for concluída.  
   
- **Observação** Você não pode adicionar recursos a uma instância de cluster de failover depois que ele é instalado. Para adicionar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um cluster de failover existente, você deve executar uma nova instalação para instalar uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Observação** Você não poderá adicionar recursos a uma instância de cluster de failover depois que ela for instalada. Para adicionar recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a um cluster de failover existente, você deve executar uma nova instalação para instalar uma instância separada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

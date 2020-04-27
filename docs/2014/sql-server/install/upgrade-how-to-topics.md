@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091477"
 ---
 # <a name="upgrade-how-to-topics"></a>Tópicos de informações práticas sobre atualização
   Os tópicos desta seção descrevem como atualizar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Atualize para o SQL Server 2014 usando o assistente de instalação &#40;a instalação&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|O tópico de procedimento para atualizar uma instância autônoma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|O tópico de procedimento para atualizar uma instância de um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083572"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering de sequências (Analysis Services – Mineração de Dados)
@@ -53,7 +53,7 @@ ms.locfileid: "66083572"
  NODE_TYPE  
  Um modelo de clustering de sequência gera os seguintes tipos de nó:  
   
-|ID do tipo de nó|DESCRIÇÃO|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1 (Modelo)|Nó raiz do modelo.|  
 |5 (Cluster)|Contém a contagem de transições no cluster, uma lista dos atributos e estatísticas que descrevem os valores no cluster.|  
@@ -71,11 +71,11 @@ ms.locfileid: "66083572"
  CHILDREN_CARDINALITY  
  Uma estimativa do número de filhos do nó.  
   
- **Raiz do modelo** O valor de cardinalidade é igual ao número de clusters mais um. Para obter mais informações, consulte [Cardinalidade](#bkmk_cardinality).  
+ **Raiz do modelo** O valor da cardinalidade é igual ao número de clusters, mais um. Para obter mais informações, consulte [Cardinalidade](#bkmk_cardinality).  
   
- **Nós de cluster** A cardinalidade é sempre 1, porque cada cluster tem um único nó filho, que contém a lista de sequências no cluster.  
+ **Nós de cluster** A cardinalidade é sempre 1, pois cada cluster tem um único nó filho, que contém a lista de sequências no cluster.  
   
- **Nós de sequência** A cardinalidade indica o número de transições que são incluídas nesse cluster. Por exemplo, a cardinalidade do nó de sequência para a raiz do modelo indica quantas transições foram encontradas em todo o modelo.  
+ **Nós de sequência** A cardinalidade indica o número de transições que são incluídas naquele cluster. Por exemplo, a cardinalidade do nó de sequência para a raiz do modelo indica quantas transições foram encontradas em todo o modelo.  
   
  PARENT_UNIQUE_NAME  
  O nome exclusivo do nó pai.  
@@ -103,7 +103,7 @@ ms.locfileid: "66083572"
  MARGINAL_PROBABILITY  
  **Raiz do modelo** Sempre 0.  
   
- **Nós de cluster** O mesmo valor que NODE_PROBABILITY.  
+ **Nós de cluster** O mesmo valor de NODE_PROBABILITY.  
   
  **Nós de sequência** Sempre 0.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "66083572"
   
  **Raiz do modelo** Número total de transições no modelo.  
   
- **Nós de cluster** Suporte bruto para o cluster, o que significa o número de casos de treinamento que contribuem com casos para esse cluster.  
+ **Nós de cluster** Suporte bruto para o cluster, o que indica o número de casos de treinamento que contribuíram com casos para esse cluster.  
   
  **Nós de sequência** Sempre 0.  
   
- **Nós de transição** Porcentagem de casos no cluster que representam uma transição específica. Pode ser 0 ou pode ter um valor positivo. Calculado a obter o suporte bruto para o nó do cluster e multiplicá-lo pela probabilidade do cluster.  
+ **Nós de transição** A porcentagem de casos no cluster que representa uma transição específica. Pode ser 0 ou pode ter um valor positivo. Calculado a obter o suporte bruto para o nó do cluster e multiplicá-lo pela probabilidade do cluster.  
   
  No caso desse valor, você pode saber quantos casos de treinamento contribuíram com a transição.  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66083572"
 |Nós de sequência para clusters individuais|Vários nós com transições para sequências apenas naquele cluster|Exatamente a mesma informação de nós de cluster individuais.|  
 |Transições|Nenhum filho|Lista transições para o primeiro estado relacionado.<br /><br /> O suporte é um valor de suporte ajustado que indica os casos que fazem parte de cada transição. A probabilidade é a probabilidade ajustada, representada como uma porcentagem.|  
   
-###  <a name="bkmk_NODEDIST"></a>Tabela de NODE_DISTRIBUTION  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>Tabela de NODE_DISTRIBUTION  
  A tabela NODE_DISTRIBUTION fornece informações detalhadas de suporte e probabilidade para transições e sequências de um cluster específico.  
   
  Uma linha sempre é adicionada à tabela de transição para representar possíveis valores `Missing`. Para obter informações sobre o `Missing` valor que significa e como ele afeta cálculos, consulte [valores ausentes &#40;Analysis Services&#41;de mineração de dados ](missing-values-analysis-services-data-mining.md).  
   
  Os cálculos para suporte e probabilidade diferem de acordo com os cálculos aplicados aos casos de treinamento ou de acordo com o modelo finalizado. Isso porque o método de clustering padrão, Maximização da Expectativa (ME), pressupõe que qualquer caso pode pertencer a mais de um cluster. Ao calcular suporte para os casos no modelo, é possível usar contas e probabilidades brutas. Entretanto, as probabilidades de qualquer sequência específica em um cluster devem ser ponderadas pela soma de todas as sequências possíveis e combinações de cluster.  
   
-###  <a name="bkmk_cardinality"></a>Cardinalidade  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>Cardinalidade  
  Em um modelo de clustering, a cardinalidade de um nó pai geralmente indica quantos clusters há no modelo. Entretanto, um modelo de clustering de sequência tem dois tipos de nós no nível de cluster: um tipo de nó contém clusters e o outro tipo de nó contém uma lista de sequências para o modelo.  
   
  Sendo assim, para saber o número de clusters no modelo, você pode pegar o valor de NODE_CARDINALITY do nó (All) e subtrair um. Por exemplo, se o modelo criou 9 clusters, a cardinalidade da raiz do modelo será 10. Isso porque o modelo contém 9 nós do cluster, cada um com seu próprio nó de sequência, mais um nó de sequência adicional rotulado cluster 10, que representa as sequências do modelo.  
@@ -232,7 +232,7 @@ ORDER BY Count(*) DESC
   
 |Produto|Suporte (tabela NODE_DISTRIBUTION)|Probabilidade (tabela NODE_DISTRIBUTION))|Probabilidade (do gráfico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
-|Missing|48.447887|0.138028169|(não exibido)|  
+|Ausente|48.447887|0.138028169|(não exibido)|  
 |Capacete para Ciclismo|10.876056|0.030985915|0.03|  
 |Fender Set - Mountain|80.087324|0.228169014|0,23|  
 |Luvas de meio dedo|0.9887324|0.002816901|0,00|  

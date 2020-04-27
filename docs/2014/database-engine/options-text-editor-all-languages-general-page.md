@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089245"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opções (página Editor de texto – Todos os idiomas – Geral)
@@ -35,7 +35,7 @@ ms.locfileid: "66089245"
  **Ocultar membros avançados**  
  Reduz as listas pop-up de instrução de conclusão exibindo apenas os itens mais usados. Os outros itens são filtrados da lista. Essa opção não estará disponível se nenhum membro for marcado como membros avançados.  
   
- **Informações de parâmetro**  
+ **Informações sobre parâmetros**  
  Exibe a sintaxe completa da declaração ou procedimento atual à esquerda do ponto de inserção no editor com todos os seus parâmetros disponíveis. O próximo parâmetro que você pode atribuir é exibido em negrito.  
   
 ## <a name="settings"></a>Configurações  

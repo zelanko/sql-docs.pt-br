@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083373"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxe de filtro de modelo e exemplos (Analysis Services - Mineração de dados)
@@ -27,7 +27,7 @@ ms.locfileid: "66083373"
   
  
   
-##  <a name="bkmk_Syntax"></a>Sintaxe de filtro  
+##  <a name="filter-syntax"></a><a name="bkmk_Syntax"></a>Sintaxe de filtro  
  As expressões de filtro geralmente são equivalentes ao conteúdo de uma cláusula WHERE. Você pode conectar várias condições usando os operadores lógicos `AND`, `OR` e `NOT`.  
   
  Em tabelas aninhadas, você também pode usar os operadores `EXISTS` e `NOT EXISTS`. Uma condição `EXISTS` será avaliada como `true` se a subconsulta retornar pelo menos uma linha. Isso é útil nos casos em que você deseja restringir o modelo para os casos que contêm um determinado valor na tabela aninhada: por exemplo, os clientes que compraram pelo menos um item uma vez.  
@@ -111,7 +111,7 @@ ms.locfileid: "66083373"
 ## <a name="examples-of-filters"></a>Exemplos de filtros  
  Os exemplos a seguir demonstram o uso de filtros aplicados a um modelo de mineração. Se você criar a expressão de filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], na janela **Propriedade** e o painel **Expressão** da caixa de diálogo de filtro, você verá somente a cadeia exibida depois das palavras-chave WITH FILTER. A seguir, a definição da estrutura de mineração incluída para facilitar o entendimento do tipo de coluna e uso.  
   
-###  <a name="bkmk_Ex1"></a>Exemplo 1: filtragem de nível de caso típica  
+###  <a name="example-1-typical-case-level-filtering"></a><a name="bkmk_Ex1"></a>Exemplo 1: filtragem de nível de caso típica  
  Esse exemplo mostra um simples filtro que restringe os casos usados no modelo para clientes cuja ocupação seja arquiteto e cuja idade seja mais de 30 anos.  
   
 ```  
@@ -127,7 +127,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a>Exemplo 2: filtragem de nível de caso usando atributos de tabela aninhada  
+###  <a name="example-2-case-level-filtering-using-nested-table-attributes"></a><a name="bkmk_Ex2"></a>Exemplo 2: filtragem de nível de caso usando atributos de tabela aninhada  
  Se sua estrutura de mineração contiver tabelas aninhadas, você poderá filtrar pela existência de um valor em uma tabela aninhada ou filtrar pelas linhas da tabela aninhada que contêm um valor específico. Esse exemplo restringe os casos usados para o modelo para clientes com mais de 30 anos que fizeram pelo menos uma compra que incluísse leite.  
   
  Como esse exemplo mostra, não é necessário que o filtro use somente colunas incluídas no modelo. A tabela aninhada **Produtos** faz parte da estrutura de mineração, mas não está incluída no modelo de mineração. No entanto, você ainda pode filtrar por valores e atributos na tabela aninhada. Para exibir os detalhes desses casos, o detalhamento deve ser habilitado.  
@@ -147,7 +147,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
   
  
   
-###  <a name="bkmk_Ex3"></a>Exemplo 3: filtragem de nível de caso em vários atributos de tabela aninhada  
+###  <a name="example-3-case-level-filtering-on-multiple-nested-table-attributes"></a><a name="bkmk_Ex3"></a>Exemplo 3: filtragem de nível de caso em vários atributos de tabela aninhada  
  Esse exemplo mostra um filtro de três partes: uma condição aplicada à tabela de casos, outra condição para um atributo na tabela aninhada e outra condição em um valor específico em uma das colunas da tabela aninhada.  
   
  A primeira condição no filtro, `Age > 30`, é aplicada a uma coluna na tabela de casos. As outras condições são aplicadas à tabela aninhada.  
@@ -173,7 +173,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
   
 
   
-###  <a name="bkmk_Ex4"></a>Exemplo 4: filtragem de nível de caso na ausência de atributos de tabela aninhada  
+###  <a name="example-4-case-level-filtering-on-absence-of-nested-table-attributes"></a><a name="bkmk_Ex4"></a>Exemplo 4: filtragem de nível de caso na ausência de atributos de tabela aninhada  
  Esse exemplo mostra como limitar os casos para o cliente que não comprou um item específico, filtrando pela ausência de um atributo na tabela aninhada. Nesse exemplo, o modelo é treinado usando clientes com mais de 30 anos que nunca compraram leite.  
   
 ```  
@@ -193,7 +193,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
   
 
   
-###  <a name="bkmk_Ex5"></a>Exemplo 5: filtragem em vários valores de tabela aninhada  
+###  <a name="example-5-filtering-on-multiple-nested-table-values"></a><a name="bkmk_Ex5"></a>Exemplo 5: filtragem em vários valores de tabela aninhada  
  O objetivo do exemplo é mostrar a filtragem de tabela aninhada. O filtro da tabela aninhada é aplicado depois do filtro de caso e só restringe as linhas da tabela aninhada.  
   
  Esse modelo pode conter vários casos com tabelas aninhadas vazias porque EXISTS não está especificado.  
@@ -216,7 +216,7 @@ WITH DRILLTHROUGH
   
 
   
-###  <a name="bkmk_Ex6"></a>Exemplo 6: filtragem em atributos de tabela aninhada e existe  
+###  <a name="example-6-filtering-on-nested-table-attributes-and-exists"></a><a name="bkmk_Ex6"></a>Exemplo 6: filtragem em atributos de tabela aninhada e existe  
  Nesse exemplo, o filtro na tabela aninhada restringe as linhas para aquelas que contêm leite ou garrafa de água. Em seguida, os casos no modelo são restringidos usando uma instrução `EXISTS`. Isso garante que a tabela aninhada não está vazia.  
   
 ```  
@@ -237,7 +237,7 @@ FILTER (EXISTS (Products))
   
 
   
-###  <a name="bkmk_Ex7"></a>Exemplo 7: combinações de filtros complexos  
+###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a>Exemplo 7: combinações de filtros complexos  
  O cenário desse modelo se assemelha a do Exemplo 4, mas é muito mais complexo. A tabela aninhada **, ProductsOnSale**, tem a condição `(OnSale)` de filtro, o que significa que o valor `true` de **onsale** deve ser para o produto listado em **ProductName**. Aqui, **OnSale** é uma coluna de estrutura.  
   
  A segunda parte do filtro, para **ProductsNotOnSale**, repete essa sintaxe, mas filtra em produtos para os quais o valor de **onsale** é `not true``(!OnSale)`.  
@@ -280,7 +280,7 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a>Exemplo 8: filtrando em datas  
+###  <a name="example-8-filtering-on-dates"></a><a name="bkmk_Ex8"></a>Exemplo 8: filtrando em datas  
  É possível filtrar colunas de entrada por datas, como você faria com qualquer outro dado. As datas contidas em uma coluna de tipo de data/hora são valores contínuos; por isso, é possível especificar um intervalo de datas usando-se operadores como maior que (>) ou menos que (<). Se a fonte de dados não representar datas por um tipo de dados Contínuo, mas como valores discretos ou de texto, não será possível filtrar por um intervalo de datas, e você deverá especificar valores discretos individuais.  
   
  No entanto, não será possível criar um filtro na coluna de data em um modelo de série temporal se a coluna de data usada para o filtro também for a coluna de chave do modelo. Isso porque, em modelos de série temporal e modelos MSC, a coluna de data pode ser manipulada como o tipo `KeyTime` ou `KeySequence`.  
@@ -305,6 +305,6 @@ FILTER (EXISTS (Products))
   
 ## <a name="see-also"></a>Consulte Também  
  [Filtros para modelos de mineração &#40;mineração de dados Analysis Services&#41;](mining-models-analysis-services-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

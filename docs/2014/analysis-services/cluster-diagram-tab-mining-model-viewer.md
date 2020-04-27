@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088012"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Guia Diagrama de Cluster (Visualizador do Modelo de Mineração)
   A guia **Diagrama de Cluster** fornece uma exibição gráfica de todos os clusters que o modelo de clustering contém.  
   
- **Para obter mais informações:** [algoritmo de clustering da Microsoft](data-mining/microsoft-clustering-algorithm.md), [procurar um modelo usando o Visualizador de cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obter mais informações:** [Algoritmo MSC](data-mining/microsoft-clustering-algorithm.md), [Procurar um modelo usando o Visualizador de Cluster da Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  
@@ -55,7 +55,7 @@ ms.locfileid: "66088012"
  **Aprimorar Layout**  
  Reordene os clusters no diagrama para aprimorar o layout.  
   
- **Dens**  
+ **Densidade**  
  Use esta opção para alterar quais pares atributo-valor são exibidos no diagrama de cluster. Você usa a opção **Variável de Sombreamento** para selecionar um atributo e usa **Estado** para escolher um valor. O sombreamento no gráfico indica a densidade do par atributo-valor dentro do cluster.  
   
  Se **População** estiver selecionada, o diagrama mostrará a quantidade de suporte para cada cluster, ou seja, o número de casos já que nenhum atributo foi selecionado.  
@@ -63,7 +63,7 @@ ms.locfileid: "66088012"
  **Variável de Sombreamento**  
  Selecione um atributo para representar no diagrama de cluster.  
   
- **Estado**  
+ **State**  
  Selecione um único estado da **Variável de Sombreamento** para usar no diagrama de cluster.  
   
  **Links**  

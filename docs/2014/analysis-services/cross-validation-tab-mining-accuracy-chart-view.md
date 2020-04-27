@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086616"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Guia da validação cruzada (Exibição do gráfico de precisão de mineração)
@@ -52,12 +52,12 @@ ms.locfileid: "66086616"
 > [!NOTE]  
 >  À medida que você aumenta o número de partições, o tempo necessário para realizar a validação cruzada também aumenta em n. Você poderá enfrentar problemas de desempenho se o número de casos for grande e o valor de **Número de Partições** também for alto.  
   
- **Máximo de casos**  
+ **Máx. Casos**  
  Especificar o número máximo de casos para usar para validação cruzada. O número de casos em qualquer dobra em particular é igual ao valor de **Máx. de Casos** dividido pelo valor de **Número de Partições** .  
   
  Se você usar **0**, todas os casos nos dados de origem serão usados para validação cruzada.  
   
- Não há um valor padrão.  
+ Não há nenhum valor padrão.  
   
 > [!NOTE]  
 >  Ao aumentar o número de casos, o tempo de processamento também aumentara.  
@@ -74,7 +74,7 @@ ms.locfileid: "66086616"
   
  Desabilitado para modelos de clustering.  
   
- ******Limite** de destino    
+ **Target****Limite** de destino    
  Especifique um valor entre 0 e 1 que indica a condição acima do estado previsível em que a probabilidade da previsão é considerada para estar correta. O valor pode ser definido em acréscimos de 0,1.  
   
  O padrão é `null`, indicando que a previsão mais provável é contada como correta.  
@@ -102,6 +102,6 @@ ms.locfileid: "66086616"
  [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)   
  [&#40;de validação cruzada Analysis Services&#41;de mineração de dados](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas no relatório de validação cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimentos armazenados de mineração de dados &#40;Analysis Services&#41;de mineração de dados](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

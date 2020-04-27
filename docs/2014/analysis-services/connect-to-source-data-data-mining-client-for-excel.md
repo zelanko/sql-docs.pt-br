@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087095"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar a dados de origem (Cliente de Mineração de Dados para Excel)
@@ -28,12 +28,12 @@ ms.locfileid: "66087095"
   
  **Conexões para fontes de dados externas.** Você também pode criar conexões com dados externos quando estiver criando modelos ou salvando os resultados. Por exemplo, você pode criar um modelo de mineração de dados em um servidor e, em seguida, executar uma consulta de previsão em relação ao modelo de mineração de dados usando dados armazenados em outra instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], em uma tabela de dados do Excel ou em uma fonte de dados externa, como o [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Cada vez que você acessar uma nova fonte de dados, receberá uma solicitação para criar uma conexão usando uma caixa de diálogo.  
   
-##  <a name="bkmk_prereq2"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> Pré-requisitos  
  Esta versão dos suplementos requer que sua instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seja SQL Server 2012. Uma versão separada dos suplementos estará disponível se você quiser se conectar a uma versão anterior do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Há versões dos suplementos que oferecem suporte ao SQL Server 2005, ao SQL Server 2008 e ao SQL Server 2008 R2.  
   
  Para se conectar a um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você deve ter permissões para acessar o servidor do banco de dados. Além disso, as sessões de mineração de dados devem ser habilitadas e você deve ter permissões de leitura ou leitura/gravação nos objetos de banco de dados armazenados no servidor.  
   
-##  <a name="bkmk_connect"></a>Criando conexões do servidor de mineração de dados  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Criando conexões do servidor de mineração de dados  
  O grupo de **conexões** no cliente de mineração de dados para Excel e as ferramentas de análise de tabela para Excel fornecem ferramentas para gerenciar conexões [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]com uma instância do.  
   
 -   Você pode criar a conexão quando instala o suplemento ou pode adicionar uma conexão depois.  
@@ -66,7 +66,7 @@ ms.locfileid: "66087095"
   
 7.  Clique em **testar conexão** para verificar se o servidor e o banco de dados estão disponíveis.  
   
-8.  Clique em **OK**e então clique em **Fechar**.  
+8.  Clique em **OK** e em **Fechar**.  
   
 ### <a name="connections-using-a-web-service"></a>Conexões usando um serviço Web  
  Se você estiver usando uma arquitetura de cliente fino para habilitar a procura de cubos e dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], também poderá configurar uma conexão com um servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] por meio de serviços Web. Para obter informações sobre como definir um cliente com base na Web, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -96,7 +96,7 @@ ms.locfileid: "66087095"
   
 4.  Se você selecionar **novo**, siga o procedimento descrito anteriormente para especificar um nome de servidor e catálogo, ou para se conectar por meio de um serviço Web.  
   
-##  <a name="bkmk_change"></a>Alterando conexões  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>Alterando conexões  
  Você pode criar várias conexões na mesma planilha, mas somente uma conexão pode ficar ativa de cada vez. O nome da conexão atual é exibido no botão **conexão** .  
   
  No cliente de mineração de dados para Excel, você também pode verificar a cadeia de conexão e o status da conexão atual clicando em **rastrear** e, em seguida, clicando em **conexão atual**.  
@@ -119,7 +119,7 @@ ms.locfileid: "66087095"
   
      \<unidade: > \Users\\<myusername\>\AppData\Local\Microsoft\Data Mining Add-in  
   
-##  <a name="bkmk_extconnections"></a>Conectando-se a fontes de dados externas  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Conectando-se a fontes de dados externas  
  Enquanto as ferramentas na faixa de medida de **análise** funcionam exclusivamente com dados no Excel, as ferramentas na faixa de informações de **mineração de dados** permitem que você se conecte diretamente a fontes de dados externas para usar como entradas para seu modelo ou para amostragem.  
   
  As ferramentas a seguir nesses suplementos dão suporte ao uso de dados externos para mineração de dados:  

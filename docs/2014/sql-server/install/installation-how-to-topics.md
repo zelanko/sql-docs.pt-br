@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094356"
 ---
 # <a name="installation-how-to-topics"></a>Tópicos de instruções sobre a instalação
@@ -25,14 +25,14 @@ ms.locfileid: "66094356"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instale o SQL Server 2014 do assistente de instalação &#40;a instalação&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Tópico de procedimento para uma instalação típica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Assistente de Instalação.|  
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Tópico de procedimento que fornece sintaxe de exemplo e parâmetros de instalação para Instalação autônoma.|  
 |[Instalar o SQL Server 2014 usando um arquivo de configuração](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)|Tópico de procedimento que fornece sintaxe de exemplo e parâmetros de instalação para execução da Instalação por meio de um arquivo de configuração.|  
-|[Instale o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|Tópico de procedimento que fornece links a procedimentos adicionais para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em configurações de servidor do SharePoint diferentes.|  
+|[Instalar o PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)|Tópico de procedimento que fornece links a procedimentos adicionais para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] em configurações de servidor do SharePoint diferentes.|  
 |[Adicione recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|Tópico de procedimento para atualização de componentes de uma instância existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Descartar uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Tópico de procedimento para reparar uma instalação corrompida do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
+|[Remover uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Tópico de procedimento para reparar uma instalação corrompida do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |[Renomear um computador que hospeda uma instância autônoma do SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Tópico de procedimento para atualizar metadados do sistema armazenados no sys.servers.|  
 |[Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Tópico de procedimento para verificar erros em arquivos de log da instalação.|  
 |[Desinstalar uma instância existente do SQL Server &#40;instalação&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Tópico de procedimento para desinstalar manualmente uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

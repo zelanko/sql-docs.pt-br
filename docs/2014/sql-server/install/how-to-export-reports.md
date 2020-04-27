@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094896"
 ---
-# <a name="how-to-export-reports"></a>Como exportar relatórios
+# <a name="how-to-export-reports"></a>Como fazer: Exportar relatórios
   O Visualizador de Relatórios do Supervisor de Atualização permite que você exporte uma versão de arquivos simples do relatório. Isso permite que você visualize as informações em uma planilha ou em um documento de processamento de texto, ou ainda envie as informações por email para outras pessoas.  
   
 ### <a name="to-export-a-report"></a>Para exportar um relatório  

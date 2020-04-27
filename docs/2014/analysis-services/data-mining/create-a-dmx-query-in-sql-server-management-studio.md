@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085466"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Criar uma consulta DMX no SQL Server Management Studio
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece um conjunto de recursos para ajudar a criar consultas de previsão, consultas de conteúdo e consultas de definição de dados em modelos de mineração e estruturas de mineração.  
   
 -   O Construtor de consulta de previsão gráfico está disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para simplificar o processo de escrever consultas de previsão e conjuntos de dados de mapeamento em um modelo.  
@@ -37,10 +36,10 @@ ms.locfileid: "66085466"
   
  Este tópico descreve como criar uma consulta DMX usando o Gerenciador de Metadados e o editor de consultas DMX.  
   
-##  <a name="BKMK_Templates"></a>Modelos de consulta DMX  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a>Modelos de consulta DMX  
  Modelos para criar consultas DMX básicas estão disponíveis no Explorador de Modelos. A pasta **DMX** contém modelos de mineração de dados que estão divididos nestas categorias:  
   
--   **model content**  
+-   **Conteúdo do modelo**  
   
 -   **Gerenciamento de Modelos**  
   
@@ -51,14 +50,13 @@ ms.locfileid: "66085466"
  Você também pode criar modelos personalizados, para consultas ou comandos que você executa com frequência.  
   
 ## <a name="xmla-query-templates"></a>Modelos de consulta XMLA  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também fornece modelos para consultas XMLA.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] também fornece modelos para consultas XMLA.  
   
  Há alguma sobreposição entre os tipos de consultas que você pode executar usando XMLA e DMX. Por exemplo, você pode criar algumas consultas de conteúdo de modelo usando DMX ou os conjuntos de linhas de esquema de mineração de dados, mas os conjuntos de linhas de esquema às vezes contêm informações que não são expostas em consultas de conteúdo DMX.  
   
  Também há algumas diferenças principais no modo como as operações são tratadas no DMX e no XMLA. Por exemplo, você pode usar XMLA para executar operações administrativas como backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inteiro, mas, se você deseja fazer backup de um único modelo de mineração, o DMX fornece um comando simples, [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx) que é mais adequado a esse propósito.  
   
-##  <a name="BKMK_Building_Queries"></a>Compilar e executar uma consulta DMX  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a>Compilar e executar uma consulta DMX  
   
 #### <a name="open-a-new-dmx-query-window"></a>Abrir nova janela de consulta DMX  
   
@@ -88,6 +86,6 @@ ms.locfileid: "66085466"
   
 ## <a name="see-also"></a>Consulte Também  
  [Interfaces de consulta de mineração de dados](data-mining-query-tools.md)   
- [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

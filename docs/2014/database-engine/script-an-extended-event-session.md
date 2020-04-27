@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088911"
 ---
 # <a name="script-an-extended-event-session"></a>Criar script de uma sessão de evento estendido
@@ -24,7 +24,7 @@ ms.locfileid: "66088911"
   
 -   **Arquivo**  
   
--   **La**  
+-   **Área de transferência**  
   
 -   **Trabalho do Agente**  
   

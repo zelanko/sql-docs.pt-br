@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083783"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
@@ -46,14 +46,14 @@ ms.locfileid: "66083783"
   
  [Ferramentas para consultar o conteúdo do modelo de mineração](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>Estrutura do conteúdo do modelo de mineração  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>Estrutura do conteúdo do modelo de mineração  
  O conteúdo de cada modelo é apresentado como uma série de *nós*. Um nó é um objeto dentro de um modelo de mineração que contém metadados e informações sobre uma parte do modelo. Os nós são organizados em uma hierarquia. A organização exata de nós na hierarquia e o significado da hierarquia dependem do algoritmo utilizado. Por exemplo, se você criar um modelo de árvores de decisão, esse modelo pode conter várias árvores, todas conectadas à raiz do modelo; se você criar um modelo de rede neural, esse modelo pode conter uma ou mais redes, além de um nó de estatísticas.  
   
  O primeiro nó de cada modelo é chamado de *nó raiz*ou nó *pai do modelo* . Todo modelo tem um nó raiz (NODE_TYPE = 1). O nó raiz normalmente contém alguns metadados sobre o modelo e o número de nós filho, além de algumas outras informações sobre os padrões identificadas pelo modelo.  
   
  Dependendo do algoritmo usado para criar o modelo, o nó raiz tem um número variado de nós filho. Nós filho têm significados diferentes e contêm conteúdo diferente, dependendo do algoritmo e da profundidade e complexidade dos dados.  
   
-##  <a name="bkmk_Nodes"></a>Nós no conteúdo do modelo de mineração  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a>Nós no conteúdo do modelo de mineração  
  Em um modelo de mineração, um nó é um contêiner de uso general que armazena algumas informações sobre todo ou parte do modelo. A estrutura de cada nó sempre é a mesma e contém as colunas definidas pelo conjunto de linhas de esquema de mineração de dados. Para obter mais informações, consulte [Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Cada nó inclui metadados sobre o nó, incluindo um identificador que é exclusivo de cada modelo, a ID do nó pai e o número de nós filho que o nó tem. Os metadados identificam o modelo ao qual o nó pertence e o catálogo de banco de dados onde aquele modelo específico é armazenado. O conteúdo adicional fornecido no nó é diferente, dependendo do tipo de algoritmo usado para criar o modelo e poderia incluir o seguinte:  
@@ -81,7 +81,7 @@ ms.locfileid: "66083783"
 |3|Interior|Nó interno dividido em uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |4|Distribuição|Nó terminal de uma árvore. Aplica-se a modelos de árvore de decisão.|  
 |5|Cluster|Cluster detectado pelo algoritmo. Aplica-se a modelos de clustering e a modelos de clustering de sequências.|  
-|6|Unknown (desconhecido)|Tipo de nó desconhecido.|  
+|6|Unknown|Tipo de nó desconhecido.|  
 |7|Conjunto de itens|Conjunto de itens detectado pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |8|AssociationRule|Regra de associação detectada pelo algoritmo. Aplica-se a modelos de associação ou a modelos de clustering de sequências.|  
 |9|PredictableAttribute|Atributo previsível. Aplica-se a todos os tipos de modelo.|  
@@ -131,7 +131,7 @@ ms.locfileid: "66083783"
   
 -   Você pode usar funções em uma consulta DMX para localizar descendentes ou pais de um nó específico. Para obter mais informações sobre como usar funções em consultas, consulte [Consultas de Data Mining](data-mining-queries.md).  
   
- A *cardinalidade* refere-se ao número de itens em um conjunto. No contexto de um modelo de mineração processado, a cardinalidade informa o número de filhos em um nó específico. Por exemplo, se um modelo de árvore de decisão tiver um nó para [Renda Anual] e esse nó tiver dois filhos, um para a condição [Renda Anual] = Alta e outro para a condição [Renda Anual] = Baixa, o valor de CHILDREN_CARDINALITY para o nó [Renda Anual] seria 2.  
+ *Cardinalidade* refere-se ao número de itens em um conjunto. No contexto de um modelo de mineração processado, a cardinalidade informa o número de filhos em um nó específico. Por exemplo, se um modelo de árvore de decisão tiver um nó para [Renda Anual] e esse nó tiver dois filhos, um para a condição [Renda Anual] = Alta e outro para a condição [Renda Anual] = Baixa, o valor de CHILDREN_CARDINALITY para o nó [Renda Anual] seria 2.  
   
 > [!NOTE]  
 >  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], somente os nós filho imediatos são contados ao calcular a cardinalidade de um nó. Porém, se você criar um algoritmo de plug-in personalizado, poderá sobrecarregar CHILDREN_CARDINALITY para contar a cardinalidade de modo diferente. Por exemplo, isto pode ser útil se você desejar contar o número total de descendentes, não apenas os filhos imediatos.  
@@ -163,7 +163,7 @@ ms.locfileid: "66083783"
   
  Por exemplo, se o seu modelo estiver configurado para encontrar clientes que adquiriram um item específico pelo menos uma vez, a coluna ATTRIBUTE_NAME poderá conter o par de valores de atributo que define o item de interesse, como `Model = 'Water bottle'`, e a coluna ATTRIBUTE_VALUE conterá somente a palavra-chave `Existing` ou `Missing`.  
   
- SUPORTE  
+ SUPPORT  
  Contagem dos casos que têm este par de valores de atributo ou este conjunto de itens ou regra.  
   
  Em geral, para cada nó, o valor de suporte informa quantos casos no conjunto de treinamento estão incluídos no nó atual. Na maioria dos tipos de modelo, o suporte representa uma contagem exata de casos. Valores de suporte são úteis porque você pode exibir a distribuição de dados dentro dos casos de treinamento sem precisar consultar os dados de treinamento. O servidor do Analysis Services também usa estes valores armazenados para calcular a probabilidade armazenada versus a probabilidade anterior e determinar se a inferência é forte ou fraca.  
@@ -174,7 +174,7 @@ ms.locfileid: "66083783"
   
 |ID e atributos de nó|Contagem de suporte|  
 |---------------------------------|-------------------|  
-|(1) Raiz do modelo|1.200|  
+|(1) Raiz do modelo|1200|  
 |(2) Sexo = Masculino<br /><br /> (3) Sexo = Feminino|600<br /><br /> 600|  
 |(4) Sexo = Masculino e Renda = Alta<br /><br /> (5) Sexo = Masculino e Renda = Média<br /><br /> (6) Sexo = Masculino e Renda = Baixo|200<br /><br /> 200<br /><br /> 200|  
 |(7) Sexo = Feminino e Renda = Alta<br /><br /> (8) Sexo = Feminino e Renda = Média<br /><br /> (9) Sexo = Feminino e Renda = Baixo|200<br /><br /> 200<br /><br /> 200|  
@@ -213,10 +213,10 @@ ms.locfileid: "66083783"
   
 |ID de VALUE_TYPE|Rótulo do valor|Nome do tipo de valor|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|Indica que os dados do caso não tinham um valor para este atributo. O estado `Missing` é calculado separadamente dos atributos que têm valores.|  
+|1|Ausente|Indica que os dados do caso não tinham um valor para este atributo. O estado `Missing` é calculado separadamente dos atributos que têm valores.|  
 |2|Existente|Indica que os dados do caso contêm um valor para este atributo.|  
 |3|Contínuo|Indica que o valor do atributo é um valor numérico contínuo e, portanto, pode ser representado por uma média, juntamente com a variância e o desvio padrão.|  
-|4|Discreto|Indica um valor, numérico ou texto, que é tratado como discreto.<br /><br /> **Observação** Valores discretos também podem estar ausentes; no entanto, elas são tratadas de forma diferente ao fazer cálculos. Para obter mais informações, consulte [Valores ausentes&#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).|  
+|4|Discreto|Indica um valor, numérico ou texto, que é tratado como discreto.<br /><br /> **Observação** Os valores discretos também podem ser ausentes; no entanto, eles são tratados de modo diferente durante os cálculos. Para obter mais informações, consulte [Valores ausentes&#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretizado|Indica que o atributo contém valores numéricos que foram diferenciados. O valor será uma cadeia de caracteres formatada que descreve os recipientes de diferenciação.|  
 |6|Existente|Indica que o atributo tem valores numéricos contínuos e que os valores foram fornecidos nos dados, em comparação com os valores ausentes ou inferidos.|  
 |7|Coeficiente|Indica um valor numérico que representa um coeficiente.<br /><br /> Um coeficiente é um valor que é aplicado ao calcular o valor da variável dependente. Por exemplo, se o seu modelo cria uma fórmula de regressão que prevê a renda com base na idade, o coeficiente é usado na fórmula que relaciona idade e renda.|  
@@ -242,11 +242,11 @@ ms.locfileid: "66083783"
   
  Nesses nós que fornecem pontuações de probabilidade, a probabilidade de nó e as probabilidades marginais representam cálculos diferentes.  
   
--   **Probabilidade marginal** é a probabilidade de atingir o nó de seu pai.  
+-   **Probabilidade marginal** é a probabilidade de alcançar o nó a partir de seu pai.  
   
--   **Probabilidade de nó** é a probabilidade de atingir o nó a partir da raiz.  
+-   **Probabilidade de nó** é a probabilidade de alcançar o nó a partir da raiz.  
   
--   A **probabilidade do nó** é sempre menor ou igual à **probabilidade marginal**.  
+-   A**probabilidade de nó** sempre é menor ou igual à **probabilidade marginal**.  
   
  Por exemplo, se a população de todos os clientes em uma árvore de decisão for dividida igualmente por sexo (e nenhum valor estiver ausente) a probabilidade dos nós filho deve ser 0,5. No entanto, suponha que cada um dos nós para gênero seja dividido igualmente pelos níveis de renda-alto, médio e baixo. Nesse caso, a pontuação de MARGINAL_PROBABILITY para cada nó filho sempre deve ser 0,33, mas o valor de NODE_PROBABILTY será o produto de todas as probabilidades que levam a esse nó e, assim, sempre será menor que o valor de MARGINAL_PROBABILITY.  
   
@@ -261,33 +261,33 @@ ms.locfileid: "66083783"
   
  São fornecidos dois tipos de regras XML, similares aos dois tipos de valores de probabilidade. O fragmento XML em MARGINAL_RULE define o atributo e o valor para o nó atual, enquanto o fragmento XML em NODE_RULE descreve o caminho para o nó atual da raiz do modelo.  
   
-##  <a name="bkmk_AlgoType"></a>Conteúdo do modelo de mineração por tipo de algoritmo  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a>Conteúdo do modelo de mineração por tipo de algoritmo  
  Cada algoritmo armazena tipos diferentes de informações como parte de seu esquema de conteúdo. Por exemplo, o algoritmo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering gera muitos nós filho, cada um representando um possível cluster. Cada nó do cluster contém regras que descrevem características compartilhadas por itens no cluster. Em contraste, o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] não contém nenhum nó filho; em vez disso, o nó pai do modelo contém a equação que descreve a relação linear identificada pela análise.  
   
  A tabela a seguir fornece links para tópicos de cada tipo de algoritmo.  
   
--   **Tópicos de conteúdo do modelo:** Explique o significado de cada tipo de nó para cada tipo de algoritmo e forneça orientações sobre quais nós são mais interessantes em um determinado tipo de modelo.  
+-   **Tópicos de conteúdo de modelo:** explicam o significado de cada tipo de nó para cada tipo de algoritmo e fornece orientações sobre quais nós são mais adequados em um determinado tipo de modelo.  
   
--   **Tópicos de consulta:** Forneça exemplos de consultas em um tipo de modelo específico e diretrizes sobre como interpretar os resultados.  
+-   **Tópicos de consulta:** fornecem exemplos de consultas de um tipo de modelo específico e orientação para interpretar os resultados.  
   
 |Algoritmo ou tipo de modelo|model content|Consultando modelos de mineração|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelos de regras de associação|[Conteúdo do modelo de mineração para modelos de associação &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de associação](association-model-query-examples.md)|  
-|Modelos de clustering|[Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)|  
-|Modelo de árvores de decisão|[Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)|  
-|Modelos de regressão linear|[Conteúdo do modelo de mineração para modelos de regressão linear &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
-|Modelos de regressão logística|[Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services&#41;de mineração de dados](mining-model-content-for-logistic-regression-models.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
-|Modelos Naïve Bayes|[Conteúdo do modelo de mineração para modelos Naive Bayes &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
-|Modelos de rede neural|[Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services&#41;de mineração de dados](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
-|Clustering de sequências|[Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
-|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de série temporal](time-series-model-query-examples.md)|  
+|Modelos de regras de associação|[Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Exemplos de consulta de um modelo de associação](association-model-query-examples.md)|  
+|Modelos de clustering|[Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de clustering](clustering-model-query-examples.md)|  
+|Modelo de árvores de decisão|[Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)|  
+|Modelos de regressão linear|[Conteúdo do modelo de mineração para modelos de regressão linear &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
+|Modelos de regressão logística|[Conteúdo do modelo de mineração para modelos de regressão logística &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Exemplos de consulta de modelo de regressão linear](linear-regression-model-query-examples.md)|  
+|Modelos Naïve Bayes|[Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Exemplos de consulta do modelo Naive Bayes](naive-bayes-model-query-examples.md)|  
+|Modelos de rede neural|[Conteúdo do modelo de mineração para modelos de rede neural &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
+|Clustering de sequências|[Conteúdo do modelo de mineração para modelos de clustering de sequência &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
+|Modelos de série temporal|[Conteúdo do modelo de mineração para modelos de série temporal &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Exemplos de consulta de modelos de série temporal](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>Ferramentas para exibir o conteúdo do modelo de mineração  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>Ferramentas para exibir o conteúdo do modelo de mineração  
  Ao procurar ou explorar um modelo no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você poderá exibir as informações no **Visualizador de Árvore de Conteúdo Genérica da Microsoft**, disponível no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  O Visualizador de Conteúdo Genérico da [!INCLUDE[msCoName](../../includes/msconame-md.md)] exibe colunas, regras, propriedades, atributos, nós e outros conteúdos do modelo usando as mesmas informações que estão disponíveis no conjunto de linhas de esquema de conteúdo do modelo de mineração. O conjunto de linhas de esquema de conteúdo é uma estrutura genérica de apresentação de informações detalhadas sobre o conteúdo de um modelo de mineração de dados. Você pode exibir o conteúdo do modelo em qualquer cliente que dê suporte a conjuntos de linhas hierárquicos. O visualizador no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] apresenta essas informações em um visualizador de tabela HTML que representa todos os modelos em um formato consistente, facilitando a compreensão da estrutura dos modelos criados. Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérico da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
-##  <a name="bkmk_Querying"></a>Ferramentas para consultar o conteúdo do modelo de mineração  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>Ferramentas para consultar o conteúdo do modelo de mineração  
  Para recuperar o conteúdo do modelo de mineração, você deve criar uma consulta do modelo de mineração de dados.  
   
  O modo mais fácil de criar uma consulta de conteúdo é executar seguinte instrução DMX no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -304,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>Consulte Também  
  [Visualizador de árvore de conteúdo genérica da Microsoft &#40;mineração de dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmos de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de mineração de dados &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

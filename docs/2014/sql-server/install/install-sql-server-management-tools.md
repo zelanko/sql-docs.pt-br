@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094426"
 ---
 # <a name="install-sql-server-management-tools"></a>Instalar Ferramentas de Gerenciamento do SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "66094426"
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Orientador de otimização de banco de dados  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Tuning Advisor  
   
 -   Ferramentas de prompt de comando, como sqlcmd.exe e osql.exe.  
   

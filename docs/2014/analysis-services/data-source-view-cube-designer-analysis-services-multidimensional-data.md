@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082525"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -44,7 +44,7 @@ ms.locfileid: "66082525"
  **Mostrar nomes amigáveis**  
  Seleciona mostrar nomes amigáveis dos objetos no painel.  
   
- **Selecionar tudo**  
+ **Selecionar Tudo**  
  Seleciona todos os objetos no painel.  
   
  **Localizar Tabela**  
@@ -57,13 +57,13 @@ ms.locfileid: "66082525"
  Selecione para organizar objetos em um padrão diagonal.  
   
 > [!NOTE]  
->  Esta opção será exibida somente se a opção **Alternar para Layout Retangular** estiver selecionada.  
+>   Esta opção será exibida somente se a opção **Alternar para Layout Retangular** estiver selecionada.  
   
  **Alternar para Layout Retangular**  
  Selecione para organizar objetos em um padrão retangular.  
   
 > [!NOTE]  
->  Esta opção será exibida somente se a opção **Alternar para Layout Diagonal** estiver selecionada.  
+>   Esta opção será exibida somente se a opção **Alternar para Layout Diagonal** estiver selecionada.  
   
  **Editar Exibição da Fonte de Dados**  
  Exibe o Designer da Exibição da Fonte de Dados associada ao objeto. Para obter mais informações sobre o Designer de Exibição da Fonte de Dados, consulte [Designer de Exibição da Fonte de Dados &#40;Analysis Services – Dados Multidimensionais&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "66082525"
  **Ocultar Tabela**  
  Remove a tabela do painel.  
   
- **Explorar Dados**  
+ **Explorar dados**  
  Exibe a caixa de diálogo **Explorar Dados** da tabela selecionada.  
   
  **Editar Exibição da Fonte de Dados**  
@@ -118,7 +118,7 @@ ms.locfileid: "66082525"
  **Nova Medida da Coluna**  
  Define uma nova medida no painel **Medidas** baseado na coluna selecionada.  
   
- **Explorar Dados**  
+ **Explorar dados**  
  Exiba a caixa de diálogo **Explorar Dados** da tabela que contém a coluna selecionada.  
   
  **Editar Exibição da Fonte de Dados**  

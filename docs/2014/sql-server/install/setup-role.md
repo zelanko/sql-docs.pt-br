@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092229"
 ---
 # <a name="setup-role"></a>Função de instalação
@@ -38,7 +38,7 @@ ms.locfileid: "66092229"
  **Todos os Recursos com Padrões**  
  Escolha esta função de instalação para instalar todos os recursos que estão disponíveis para esta versão. Observe que o PowerPivot para SharePoint está excluído dessa função. Você deve usar a função de instalação do PowerPivot para SharePoint para instalar esse recurso.  
   
- O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é configurado para iniciar usando a conta **NT AUTHORITY\NETWORK SERVICE**. O usuário atual será provisionado como membro da função [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin** do **. Os valores definidos por esta opção podem ser substituídos especificando-se parâmetros de linha de comando adicionais.  
+ O [!INCLUDE[ssDE](../../includes/ssde-md.md)] é configurado para iniciar usando a conta **NT AUTHORITY\NETWORK SERVICE**. O usuário atual será provisionado como membro da função **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os valores definidos por esta opção podem ser substituídos especificando-se parâmetros de linha de comando adicionais.  
   
  Quando o sistema operacional não for um controlador de domínio, por padrão o Mecanismo de Banco de Dados e o Reporting Services usarão a conta NTAUTHORITY\NETWORK SERVICE, o Integration Services usará a conta NTAUTHORITY\NETWORK SERVICE e o Iniciador do Daemon de Filtro de Texto Completo do SQL usará a conta NTAUTHORITY\LOCAL SERVICE.  
   

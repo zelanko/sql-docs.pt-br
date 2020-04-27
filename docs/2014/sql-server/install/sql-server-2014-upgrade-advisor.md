@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092045"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>Supervisor de Atualização do SQL Server 2014
@@ -22,7 +22,7 @@ ms.locfileid: "66092045"
   
  Obtenha o arquivo de instalação do Supervisor de atualização (sqlua.msi) na pasta redist da mídia de instalação, ou como parte do download do [SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instalando o Supervisor de Atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md)|Descreve os diferentes modos para instalar o Supervisor de Atualização.|  
 |[Trabalhando com o Supervisor de Atualização](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|Fornece uma visão geral da funcionalidade do Supervisor de Atualização e informações sobre como instalar e usar o Supervisor de Atualização e como usar os relatórios gerados.|  

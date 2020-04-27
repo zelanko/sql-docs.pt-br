@@ -13,23 +13,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089369"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opções (página Execução da consulta/SQL Server/Avançado)
   Várias opções estão disponíveis usando o comando SET. Use essa página para especificar uma opção **set** para executar consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Editor de Consultas do SQL Server. Elas não têm nenhum efeito em outros editores de códigos. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções para as consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou no menu de atalho da janela de Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Em **Execução**, clique em **Avançado**. Para obter informações sobre cada um, consulte os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opções  
- **DEFINIR NOCOUNT**  
+ **SET NOCOUNT**  
  Não retorna a contagem do número de linhas, como uma mensagem com o conjunto de resultados. Essa caixa de seleção é desmarcada por padrão.  
   
- **DEFINIR NOEXEC**  
+ **SET NOEXEC**  
  Não executa a consulta. Essa caixa de seleção é desmarcada por padrão.  
   
- **DEFINIR PARSEONLY**  
+ **SET PARSEONLY**  
  Verifica a sintaxe de cada consulta mas não executa as consultas. Essa caixa de seleção é desmarcada por padrão.  
   
  **SET CONCAT_NULL_YIELDS_NULL**  
@@ -38,13 +38,13 @@ ms.locfileid: "66089369"
  **SET ARITHABORT**  
  Quando essa caixa de seleção é marcada, quando uma instrução INSERT, DELETE ou UPDATE encontra um erro aritmético (estouro, divisão por zero ou um erro de domínio) durante a avaliação da expressão, a consulta ou lote é finalizado. Quando essa caixa de seleção estiver desmarcada, se possível, será fornecido um NULL para esse valor, a consulta continuará e será incluída uma mensagem com o resultado. Para obter mais informações, veja [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Esta caixa de seleção fica marcada por padrão.  
   
- **DEFINIR SHOWPLAN_TEXT**  
+ **SET SHOWPLAN_TEXT**  
  Quando essa caixa de seleção está marcada, o plano de consulta é retornado em formato de texto com cada consulta. Essa caixa de seleção está desmarcada por padrão.  
   
- **DEFINIR TEMPO DE ESTATÍSTICAS**  
+ **SET STATISTICS TIME**  
  Quando essa caixa de seleção é marcada, as estatísticas de tempo são retornadas com cada consulta. Essa caixa de seleção é desmarcada por padrão.  
   
- **DEFINIR ESTATÍSTICAS DE E/S**  
+ **SET STATISTICS IO**  
  Quando essa caixa de seleção está marcada, as estatísticas relacionadas com a entrada e saída são retornadas com cada consulta. Essa caixa de seleção é desmarcada por padrão.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
@@ -70,7 +70,7 @@ GO
  **Desconectar depois que a consulta for executada**  
  Quando essa caixa de seleção está marcada, a conexão com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é finalizada após a conclusão da consulta. Essa caixa de seleção é desmarcada por padrão.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

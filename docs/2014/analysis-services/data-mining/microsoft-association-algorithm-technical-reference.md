@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084126"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referência técnica do algoritmo de associação da Microsoft
@@ -42,11 +42,11 @@ ms.locfileid: "66084126"
  Também é possível criar modelos de associação para atributos numéricos. Se os atributos forem contínuos, os números poderão ser *discretizados ou* agrupados em buckets. Os valores diferenciados podem ser tratados como Boolianos ou como pares atributo-valor.  
   
 ### <a name="support-probability-and-importance"></a>Suporte, probabilidade e importância  
- *Suporte*, que, às vezes, é referido como *frequência*, significa o número de casos que contêm o item de destino ou a combinação de itens. Somente os itens que têm, no mínimo, a quantia especificada de suporte podem ser incluídos no modelo.  
+ *Suporte*, que às vezes é conhecido como *frequência*, significa o número de casos que contém o item de destino ou a combinação de itens. Somente os itens que têm, no mínimo, a quantia especificada de suporte podem ser incluídos no modelo.  
   
  Um *conjunto de itens frequente* refere-se a uma coleção de itens na qual a combinação de itens também dá suporte além do limite definido pelo parâmetro MINIMUM_SUPPORT. Por exemplo, se o conjunto de itens for {A,B,C} e o valor de MINIMUM_SUPPORT for 10, cada item A, B e C deve ser encontrado pelo menos em 10 casos para ser incluído no modelo, e a combinação de itens {A,B,C} também deve ser encontrada, no mínimo, em 10 casos.  
   
- **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o comprimento máximo de um conjunto, em que Length significa o número de itens.  
+ **Observação** Você também pode controlar o número de conjuntos de itens em um modelo de mineração especificando o tamanho máximo de um conjunto de itens, sendo que tamanho significa o número de itens.  
   
  Por padrão, o suporte para qualquer item ou conjunto de itens em particular representa uma contagem dos casos que contêm esse item (ou itens). No entanto, também é possível expressar MINIMUM_SUPPORT como uma porcentagem do total de casos no conjunto de dados, basta digitar o número como um valor decimal menor que 1. Por exemplo, se você especificar MINIMUM_SUPPORT com um valor de 0,03, significa que pelo menos 3% do total de casos do conjunto de dados deve conter esse item ou conjunto de itens para inclusão no modelo. Faça testes com seu modelo para determinar se faz mais sentido usar a contagem ou a porcentagem.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66084126"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo de associação da Microsoft](microsoft-association-algorithm.md)   
  [Exemplos de consulta de modelo de associação](association-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de associação &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de associação &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

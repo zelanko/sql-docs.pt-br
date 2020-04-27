@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083034"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Consultar os parâmetros usados para criar um modelo de mineração
@@ -31,7 +31,7 @@ ms.locfileid: "66083034"
 2.  Clique com o botão direito do mouse no nome da instância, selecione **Nova Consulta**e selecione **DMX**.  
   
     > [!NOTE]  
-    >  Você também pode criar uma consulta para um modelo de mineração de dados usando o modelo **MDX** .  
+    >   Você também pode criar uma consulta para um modelo de mineração de dados usando o modelo **MDX** .  
   
 3.  Se a instância tiver vários bancos de dados, selecione o banco de dados que contém o modelo que deseja consultar na lista **Banco de Dados Disponíveis** da barra de ferramentas.  
   

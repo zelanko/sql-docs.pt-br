@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091216"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Verificar se o crescimento automático está ativado em todos os arquivos de dados e de log durante o processo de atualização
@@ -30,7 +30,7 @@ ms.locfileid: "66091216"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  **Arquivos de dados**  
   
  A tabela a seguir lista as alterações em recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que resultam em requisitos de espaço em disco adicionais para arquivos de dados definidos pelo usuário.  
@@ -87,7 +87,7 @@ MODIFY FILE
   
  O incremento de crescimento padrão para arquivos de dados é 1 MB. O arquivo de log padrão é 10%. Nós recomendamos as seguintes políticas gerais para definir o incremento FILEGROWTH:  
   
-|Tamanho do arquivo|Incremento FILEGROWTH|  
+|Tamanho de arquivo|Incremento FILEGROWTH|  
 |---------------|--------------------------|  
 |0 a 50 MB|10MB|  
 |100 a 200 MB|20|  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085533"
 ---
 # <a name="create-a-cross-validation-report"></a>Criar um relatório de validação cruzada
@@ -66,7 +66,7 @@ ms.locfileid: "66085533"
 4.  Como opção, para **Estado de Destino**, digite o valor do atributo previsível que você quer modelar. Por exemplo, se a coluna [Bike Buyer] tiver dois valores possíveis, 1 (Sim) e 2 (Não), você poderá inserir o valor 1 para avaliar a precisão do modelo para apenas o resultado desejado.  
   
     > [!NOTE]  
-    >  Se você não digitar um valor, a opção **Limite de Destino** não estará disponível e o modelo será avaliado por todos os valores possível do atributo previsível.  
+    >   Se você não digitar um valor, a opção **Limite de Destino** não estará disponível e o modelo será avaliado por todos os valores possível do atributo previsível.  
   
 5.  Como opção, em **Limite de Destino**, digite um número decimal entre 0 e 1 para especificar a probabilidade mínima que uma previsão deve ter para ser considerada precisa.  
   

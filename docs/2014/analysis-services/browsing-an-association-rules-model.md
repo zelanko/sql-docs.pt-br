@@ -16,29 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088465"
 ---
 # <a name="browsing-an-association-rules-model"></a>Procurando um modelo de regras de associação
   Quando você abre um modelo de associação usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de regras de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]associação no.  O visualizador permite observar rapidamente quais itens foram correlacionados entre si e exibir as regras que você pode usar para previsão ou fazer recomendações.  
   
-##  <a name="BKMK_ViewerTabs"></a>Explorar o modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorar o modelo  
  Quando você abre um modelo de mineração criado usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo regras de associação, a janela **procurar** inclui as seguintes exibições, cada uma projetada para permitir que você explore um aspecto diferente do modelo:  
   
--   [Conjuntos](#BKMK_Itemsets)  
+-   [Conjuntos de Itens](#BKMK_Itemsets)  
   
 -   [Regras](#BKMK_Rules)  
   
--   [Rede de dependências](#BKMK_Dependency)  
+-   [Rede de Dependência](#BKMK_Dependency)  
   
  Anote a opção em cada guia, **Mostrar nome longo** . Ao selecionar esta opção, você poderá mostrar ou ocultar a tabela da qual o conjunto de itens se origina e reduzir ou alongar o nome da regra ou do conjunto de itens. Essa opção é particularmente útil quando os dados de caso e de atributo vêm de fontes de dados diferentes.  
   
  Para fazer experiências com um modelo de associação, você pode usar os dados de exemplo na guia Associar da pasta de trabalho de dados de exemplo e criar um modelo de associação usando todos os padrões. Você também pode criar um modelo de análise de cesta de compras e abri-lo usando **procurar**.  
   
-###  <a name="BKMK_Itemsets"></a>Conjuntos  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Conjuntos  
  A guia **conjuntos** de itens é um bom lugar para começar a explorar um modelo de associação. Essa guia mostra uma lista de itens que o modelo frequentemente encontra juntos.  
   
  ![Lista de itens em um modelo de associação](media/dm13-association-itemsets.gif "Lista de itens em um modelo de associação")  
@@ -69,9 +69,9 @@ ms.locfileid: "66088465"
   
 4.  Clique na lista suspensa da opção **Mostrar**para controlar como os atributos são exibidos:  
   
-    -   **Mostrar nome e valor do atributo**  
+    -   **Mostrar o nome e valor de atributo**  
   
-    -   **Mostrar somente o valor do atributo**  
+    -   **Mostrar apenas o valor de atributo**  
   
     -   **Mostrar apenas o nome do atributo**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66088465"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Regras  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Regras  
  A guia **regras** combina informações sobre os conjuntos de itens e seu valor relativo.  
   
  ![Lista de regras criadas por um modelo de associação](media/dm13-association-rules.gif "Lista de regras criadas por um modelo de associação")  
@@ -114,7 +114,7 @@ ms.locfileid: "66088465"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Rede de dependências  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Rede de dependências  
  A guia **rede de dependências** é um mapa visual das correlações entre os itens. Cada oval no grafo (chamada de *nó*) representa um par atributo-valor, como "comparações = existente" ou "idade = 1-30".  Cada linha conectando as ovais (chamadas de *borda*) representa um tipo de correlação.  
   
  ![Gráfico da rede de dependências para um modelo de associação](media/dm13-association-dependencynetwork.gif "Gráfico da rede de dependências para um modelo de associação")  

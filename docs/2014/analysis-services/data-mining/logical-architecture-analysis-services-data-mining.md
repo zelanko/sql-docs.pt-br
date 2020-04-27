@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084273"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitetura lógica (Analysis Services – Mineração de Dados)
@@ -38,7 +38,7 @@ ms.locfileid: "66084273"
   
 
   
-##  <a name="bkmk_SourceData"></a>Dados de origem de mineração de dados  
+##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a> Dados de origem da mineração de dados  
  Os dados usados na mineração de dados não são armazenados na solução de mineração de dados. Apenas as associações são armazenadas. Além disso, os dados podem residir em um banco de dados criado em uma versão anterior do SQL Server, sistema CRM ou mesmo em um arquivo simples. Quando você treina a estrutura ou modelo por processamento, um resumo estatístico dos dados é criado e armazenado em um cache que pode ser persistido para uso em operações subsequentes ou excluídas depois do processamento. Para obter mais informações, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-structures-analysis-services-data-mining.md).  
   
  Você combina dados discrepantes dentro do objeto de DSV (exibição da fonte de dados) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que fornece uma camada de abstração sobre sua fonte de dados. Você pode especificar junções entre tabelas ou adicionar as tabelas que têm uma relação muitos para um para criar colunas de tabelas aninhadas. A definição destes objetos, a fonte de dados e a exibição da fonte de dados, é armazenada dentro da solução com as extensões de nome de arquivo *.ds e \*.dsv. Para obter mais informações sobre como criar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e usar fontes de dados e exibições da fonte de dados, consulte [fontes de dados com suporte &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
@@ -47,12 +47,12 @@ ms.locfileid: "66084273"
   
 
   
-##  <a name="bkmk_Structures"></a>Estruturas de mineração  
+##  <a name="mining-structures"></a><a name="bkmk_Structures"></a>Estruturas de mineração  
  Uma estrutura de mineração de dados é um contêiner de dados lógicos que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode dar suporte a diversos modelos de mineração.  
   
  Quando precisar usar os dados na solução de mineração de dados, o Analysis Services lerá os dados da origem e gerará um cache com agregações e outras informações. Por padrão, este cache é persistido para que os dados de treinamento possam ser reutilizado para dar suporte a modelos adicionais. Se você precisar excluir o cache, altere a propriedade `CacheMode` no objeto da estrutura de mineração para o valor `ClearAfterProcessing`. Para obter mais informações, consulte [Classes de mineração de dados AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]também fornece a capacidade de separar seus dados em conjuntos de dados de treinamento e teste, para que você possa testar seus modelos de mineração em um conjunto de dados representativo e selecionado aleatoriamente. Os dados não são de fato armazenados separadamente; em vez disso, os dados de caso no cache da estrutura são marcados com uma propriedade que indica se esse caso em particular é usado para treinamento ou teste. Se o cache for excluído, essas informações não poderão ser recuperadas.  
+ [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] também fornece a capacidade de separar seus dados em conjuntos de dados treinamento e de teste. Com isso, você pode testar seus modelos de mineração em um conjunto de dados representativo, selecionado aleatoriamente. Os dados não são de fato armazenados separadamente; em vez disso, os dados de caso no cache da estrutura são marcados com uma propriedade que indica se esse caso em particular é usado para treinamento ou teste. Se o cache for excluído, essas informações não poderão ser recuperadas.  
   
  Para obter mais informações, consulte [Estruturas de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-structures-analysis-services-data-mining.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66084273"
   
  
   
-##  <a name="bkmk_Models"></a>Modelos de mineração  
+##  <a name="mining-models"></a><a name="bkmk_Models"></a>Modelos de mineração  
  Antes de processar, um modelo de mineração de dados é somente uma combinação de propriedades de metadados. Essas propriedades especificam uma estrutura de mineração, especificam um algoritmo de mineração de dados e definem uma coleção de configurações de parâmetros e filtros que afetam o modo como os dados são processados. Para obter mais informações, consulte [Modelos de mineração &#40;Analysis Services – Mineração de dados&#41;](mining-models-analysis-services-data-mining.md).  
   
  Quando você processar o modelo, os dados de treinamento que foram armazenados no cache da estrutura de mineração serão usados para gerar padrões, com base nas propriedades estatísticas dos dados e na heurística definida pelo algoritmo e seus parâmetros. Isso é conhecido como *training* do modelo.  
@@ -71,7 +71,7 @@ ms.locfileid: "66084273"
   
 
   
-##  <a name="bkmk_CustomObjects"></a>Objetos de mineração de dados personalizados  
+##  <a name="custom-data-mining-objects"></a><a name="bkmk_CustomObjects"></a>Objetos de mineração de dados personalizados  
  Outros objetos que você usa no contexto de um projeto de mineração de dados, como gráficos de exatidão ou consultas de previsão, não são persistidos dentro da solução, mas podem ter o script criado usando ASSL ou criados usando AMO.  
   
  Além disso, você pode estender os serviços e os recursos disponíveis em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adicionando estes objetos personalizados:  
@@ -82,20 +82,18 @@ ms.locfileid: "66084273"
  Para obter mais informações, consulte [Gerenciamento de assemblies de modelo multidimensional](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimentos armazenados personalizados**  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] A mineração de dados dá suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] A mineração de dados dá suporte ao uso de procedimentos armazenados para trabalhar com objetos de mineração de dados. Você pode criar seus próprios procedimentos armazenados para estender a funcionalidade e trabalhar mais facilmente com dados retornados por consultas de previsão e consultas de conteúdo.  
   
  [Definindo procedimentos armazenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Os procedimentos armazenados a seguir têm suporte para uso ao realizar validação cruzada.  
   
- [Procedimentos armazenados de mineração de dados &#40;Analysis Services&#41;de mineração de dados](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Além disso, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contém muitos procedimentos armazenados do sistema que são usados internamente para mineração de dados. Embora os procedimentos armazenados do sistema sejam para uso interno, você pode achá-los atalhos úteis. A Microsoft reserva-se o direito de alterar estes procedimentos armazenados conforme o necessário; portanto, para uso de produção, nós recomendamos que você crie consultas usando DMX, AMO ou XMLA.  
   
- **Algoritmos de plug-in personalizados**  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados à instância de servidor.  
+ **Algoritmos de plug-in personalizado**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um mecanismo para criar seus próprios algoritmos e, em seguida, adicioná-los como um novo serviço de mineração de dados à instância de servidor.  
   
  O Analysis Services usa interfaces COM para se comunicar com algoritmos de plugin. Para saber mais sobre como implementar novos algoritmos, consulte [Algoritmos de plug-in](plugin-algorithms.md).  
   
@@ -105,6 +103,6 @@ ms.locfileid: "66084273"
   
 ## <a name="see-also"></a>Consulte Também  
  [Processamento de objeto de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referência de DMX &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

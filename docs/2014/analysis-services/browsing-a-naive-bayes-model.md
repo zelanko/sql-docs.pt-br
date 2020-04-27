@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088477"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Procurando um modelo Naive Bayes
   Quando você abre um modelo Bayes simples usando **procurar**, o modelo é exibido em um visualizador interativo com quatro painéis diferentes. Use o visualizador para explorar correlações e obter informações sobre o modelo e os dados subjacentes.  
   
--   [Rede de dependências](#bkmk_DepNet)  
+-   [Rede de Dependências](#bkmk_DepNet)  
   
 -   [Perfis de atributo](#bkmk_AttProf)  
   
@@ -28,14 +28,14 @@ ms.locfileid: "66088477"
   
 -   [Discriminação de atributo](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>Explorar o modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar o modelo  
  A finalidade do visualizador é ajudar a explorar a interação entre os atributos de entrada e saída (entradas e variáveis dependentes) que foram descobertos pelo modelo Naïve Bayes da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
  Se você quiser experimentar o Bayes Viewer do ingênua, use o [Assistente para classificar &#40;suplementos de mineração de dados para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) na faixa de opções mineração de dados, clique na opção **avançado** e altere o algoritmo para usar o algoritmo de Bayes ingênua  
   
  Para esses exemplos, usamos os dados de origem na pasta de trabalho de exemplo e agrupamos a coluna, **renda anual**, em cinco grupos de renda, de **muito baixo** para **muito alto**. O modelo Naïve Bayes analisou os fatores correlacionadas com cada categoria de renda.  
   
-###  <a name="bkmk_DepNet"></a>Rede de dependências  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>Rede de dependências  
  A primeira janela que você usará é a **rede de dependência**. Ela mostra uma visão geral cujas entradas estão estreitamente correlacionadas ao resultado selecionado.  
   
  ![rede de dependências no Visualizador Naive Bayes](media/dm13-nb.gif "rede de dependências no Visualizador Naive Bayes")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088477"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>Perfis de atributo  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> Perfis de Atributo  
  As janelas de **perfis de atributo** proporcionam a você uma indicação visual de como todas as outras variáveis estão relacionadas aos resultados individuais.  
   
 ##### <a name="explore-the-profiles"></a>Explorar os perfis  
@@ -73,7 +73,7 @@ ms.locfileid: "66088477"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>Características do atributo  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a> Características do Atributo  
  A exibição de **características de atributo** é útil para o exame detalhado de uma variável de resultado específica e os fatores de contribuição.  
   
  ![características de atributos no Visualizador Naive Bayes](media/dm13-nb-viewer.gif "características de atributos no Visualizador Naive Bayes")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088477"
   
  [Voltar ao início](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>Discriminação de atributo  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a> Distinção de Atributo  
  A exibição de **discriminação de atributo** ajuda a comparar dois resultados, ou um resultado versus todos os outros resultados.  
   
  ![discriminação de atributos no Visualizador Naive Bayes](media/dm13-nb-attdisc.gif "discriminação de atributos no Visualizador Naive Bayes")  

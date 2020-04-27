@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091673"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Atualizar sintaxe de token em etapas de trabalho do SQL Server Agent
@@ -26,7 +26,7 @@ ms.locfileid: "66091673"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Agent usa parênteses, como $ (Date), em vez de colchetes, como [data].  
   
  Para obter mais informações, consulte "Usando tokens em etapas de trabalho” nos Manuais Online do  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

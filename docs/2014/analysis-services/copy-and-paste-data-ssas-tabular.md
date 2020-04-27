@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086964"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar e colar dados (SSAS tabular)
@@ -32,9 +32,9 @@ ms.locfileid: "66086964"
   
 -   [Colar dados](#bkmk_paste_data)  
   
--   [Caixa de diálogo colar visualização](#bkmk_paste_preview)  
+-   [Caixa de diálogo Colar Visualização](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Pré-requisitos  
  Há algumas restrições para colar dados:  
   
 -   As tabelas coladas não podem ter mais de 10.000 linhas.  
@@ -47,7 +47,7 @@ ms.locfileid: "66086964"
   
 -   Quando você usar **Colar Acréscimo** ou **Colar Substituição**, os novos dados deverão conter exatamente o mesmo número de colunas dos dados originais. De preferência, as colunas de dados coladas ou anexadas também deverão ser dos mesmos tipos de dados ou compatíveis com os da tabela de destino. Em alguns casos, você pode usar um tipo de dados diferente, mas um erro **Tipos incompatíveis** poderá ser exibido.  
   
-##  <a name="bkmk_paste_data"></a>Colar dados  
+##  <a name="paste-data"></a><a name="bkmk_paste_data"></a> Colar dados  
   
 #### <a name="to-paste-data-into-the-designer"></a>Para colar dados na janela do designer  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66086964"
   
     -   Clique em **Colar Substituição** para substituir a tabela selecionada pelo conteúdo da Área de Transferência. Todos os nomes de cabeçalho de coluna existentes permanecerão na tabela e as relações serão preservadas.  
   
-##  <a name="bkmk_paste_preview"></a>Caixa de diálogo colar visualização  
+##  <a name="paste-preview-dialog-box"></a><a name="bkmk_paste_preview"></a>Caixa de diálogo colar visualização  
  A caixa de diálogo **Visualização de Colagem** o habilita a visualizar os dados copiados na janela do designer e a verificar se os dados foram copiados corretamente. Para acessar essa caixa de diálogo, copie os dados baseados em tabela no formato HTML para a área de transferência e, no designer, clique no menu **Editar** , clique em **Colar**, **Colar Acréscimo**ou **Colar Substituição**. As opções **Colar Acréscimo** e **Colar Substituição** só estarão disponíveis quando você adicionar ou substituir dados em uma tabela criada por meio de cópia e colagem da Área de Transferência. Não é possível usar **Colar Acréscimo** ou **Colar Substituição** para adicionar dados em uma tabela de dados importados.  
   
  As opções desta caixa de diálogo são diferentes, dependendo de você colar os dados em uma tabela completamente nova, colar os dados em uma tabela existente e, em seguida, substituir os dados existentes pelos novos, ou anexar os dados a uma tabela existente.  
@@ -68,26 +68,26 @@ ms.locfileid: "66086964"
  **Nome da tabela**  
  Especifique o nome da tabela que será criada no designer.  
   
- **Dados a serem colados**  
+ **Dados a Serem Colados**  
  Mostra um exemplo do conteúdo da Área de Transferência que será adicionado à tabela de destino.  
   
 ### <a name="paste-append"></a>Colar Acréscimo  
  **Dados existentes na tabela**  
  Mostra um exemplo dos dados existentes na tabela, para que você possa verificar as colunas, os tipos de dados etc.  
   
- **Dados a serem colados**  
+ **Dados a Serem Colados**  
  Mostra um exemplo do conteúdo da Área de Transferência. Os dados existentes serão adicionados por estes dados.  
   
 ### <a name="paste-replace"></a>Colar Substituição  
  **Dados existentes na tabela**  
  Mostra um exemplo dos dados existentes na tabela, para que você possa verificar as colunas, os tipos de dados etc.  
   
- **Dados a serem colados**  
+ **Dados a Serem Colados**  
  Mostra um exemplo do conteúdo da Área de Transferência. Os dados existentes na tabela de destino serão excluídos e as novas linhas serão inseridas na tabela.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Importar dados &#40;SSAS de tabela&#41;](import-data-ssas-tabular.md)   
  [Fontes de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Definir o tipo de dados de uma coluna &#40;SSAS de tabela&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Definir o tipo de dados de uma coluna &#40;SSAS de Tabela&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088322"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Propriedades de Cálculo (Analysis Services - Dados Multidimensionais)
@@ -34,7 +34,7 @@ ms.locfileid: "66088322"
  **Pasta de exibição**  
  Digite o nome da pasta de exibição na qual o cálculo deve ser exibido nos aplicativos cliente, incluindo o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- **Grupo de Medidas Associadas**  
+ **Grupo de medidas associado**  
  Selecione o grupo de medidas no qual o membro calculado ou conjunto nomeado deve ser exibido nos aplicativos cliente, incluindo o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  

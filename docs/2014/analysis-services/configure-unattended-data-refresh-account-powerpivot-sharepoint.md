@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087417"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurar a conta autônoma de atualização de dados PowerPivot (PowerPivot para SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66087417"
   
  [Atualizar as credenciais usadas por uma conta existente de atualização de dados autônoma do PowerPivot](#bkmk_editUA)  
   
-##  <a name="bkmk_prereq"></a> Pré-requisitos  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Pré-requisitos  
  O Serviço de Repositório Seguro deve estar habilitado e configurado, e uma chave mestra deve ser gerada. Para obter instruções sobre como fazer isso, consulte [atualização de dados PowerPivot com o SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
  Você deve decidir com antecedência qual conta de usuário do domínio Windows usar como a conta autônoma de atualização de dados PowerPivot. Essa deve ser uma conta especificamente criada para essa finalidade, para que você possa monitorar como ela é usada.  
@@ -71,9 +71,9 @@ ms.locfileid: "66087417"
   
 -   Verificar se a conta está disponível na página de agenda Gerenciar Atualização de Dados para uma pasta de trabalho PowerPivot publicada.  
   
-###  <a name="bkmk_create"></a>Etapa 1: criar um aplicativo de destino e definir as credenciais  
+###  <a name="step-1-create-a-target-application-and-set-the-credentials"></a><a name="bkmk_create"></a>Etapa 1: criar um aplicativo de destino e definir as credenciais  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique em **serviço de repositório seguro**.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66087417"
   
 8.  Ignore a URL da página do aplicativo de destino. A atualização de dados PowerPivot não usa essa URL.  
   
-9. Clique em **Próximo**.  
+9. Clique em **Avançar**.  
   
 10. Na página **especificar os campos de credenciais para seu aplicativo de destino de repositório seguro** , aceite os valores padrão. Os nomes e tipos de campo devem ser Nome de Usuário do Windows e Senha do Windows  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Em Administradores de Aplicativos de Destino, especifique a identidade do pool de aplicativos do aplicativo de serviço PowerPivot. O serviço requer permissões de **controle total** para que possa recuperar informações de conta de atualização de dados autônoma em tempo de execução. Além disso, especifique as contas de usuário de domínio do Windows de qualquer outro usuário do SharePoint que precise ter acesso administrativo às configurações do aplicativo.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66087417"
   
 16. Clique em **OK**.  
   
-###  <a name="bkmk_specifyUA"></a>Etapa 2: especificar a conta autônoma nas páginas de configuração do servidor PowerPivot  
+###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>Etapa 2: especificar a conta autônoma nas páginas de configuração do servidor PowerPivot  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Localize o aplicativo do Serviço PowerPivot. Você pode identificar um aplicativo de serviço por seu tipo. Um tipo de aplicativo de serviço PowerPivot é **Aplicativo de Serviço PowerPivot**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66087417"
   
 6.  Clique em **OK**.  
   
-###  <a name="bkmk_grant"></a>Etapa 3: conceder permissões de colaboração para a conta  
+###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Etapa 3: conceder permissões de colaboração para a conta  
  Para que você possa usar a conta autônoma de atualização de dados PowerPivot, ela deve ter permissões de colaboração em qualquer pasta de trabalho PowerPivot para a qual é usada. Esse nível de permissão é necessário para abrir a pasta de trabalho de uma biblioteca e, em seguida, salvá-la novamente na biblioteca após os dados serem atualizados.  
   
  Atribuir permissões é uma etapa executada pelo administrador da coleção de sites. Podem ser atribuídas permissões do SharePoint na coleção de sites raiz ou em qualquer nível abaixo desse, inclusive em documentos e itens individuais. A forma como você define permissões irá variar dependendo do quanto elas precisam ser granulares. As etapas a seguir mostram uma abordagem para conceder permissões.  
@@ -137,7 +137,7 @@ ms.locfileid: "66087417"
   
 5.  Selecione **Contribute**e clique em **OK**.  
   
-###  <a name="bkmk_dbread"></a>Etapa 4: conceder permissões de leitura para acessar fontes de dados externas usadas na atualização de dados  
+###  <a name="step-4-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Etapa 4: conceder permissões de leitura para acessar fontes de dados externas usadas na atualização de dados  
  Ao importar dados para uma pasta de trabalho PowerPivot, as conexões com dados externos são frequentemente baseadas em conexões confiáveis ou em conexões representadas que usam a identidade do usuário atual para conectar-se à fonte de dados. Estes tipos de conexões funcionam apenas quando o usuário atual tem permissão para ler os dados que está importando.  
   
  Em um cenário de atualização de dados, a mesma cadeia de conexão que foi usada para importar os dados é agora reutilizada para atualizar os dados. Se a cadeia de conexão assumir o usuário atual (por exemplo, uma cadeia de caracteres que inclua Integrated_Security=SSPI), o Serviço do Sistema PowerPivot passará a identidade do usuário da conta de atualização de dados autônoma do PowerPivot como o usuário atual. Essa conexão terá êxito apenas se a conta de atualização de dados autônoma do PowerPivot tiver permissões de leitura na fonte de dados externa.  
@@ -146,7 +146,7 @@ ms.locfileid: "66087417"
   
  Se você for administrador das fontes de dados usadas em sua organização, poderá criar um logon e atribuir as permissões necessárias. Caso contrário, você deverá entrar em contato com os proprietários dos dados e fornecer as informações da conta. Especifique a conta de usuário do domínio Windows que mapeia para a conta de atualização de dados autônoma do PowerPivot. Essa é a conta que você especificou em "(etapa 1): criar um aplicativo de destino e definir as credenciais" neste tópico.  
   
-###  <a name="bkmk_verify"></a>Etapa 5: verificar a disponibilidade da conta nas páginas de configuração de atualização de dados  
+###  <a name="step-5-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Etapa 5: verificar a disponibilidade da conta nas páginas de configuração de atualização de dados  
   
 1.  Abra uma página de configuração de atualização de dados para uma pasta de trabalho publicada que contém dados do PowerPivot. Para obter instruções sobre como abrir a página, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -160,17 +160,17 @@ ms.locfileid: "66087417"
   
  Para obter mais informações sobre solução de problemas, consulte [solução de problemas de atualização de dados PowerPivot](https://go.microsoft.com/fwlink/p/?LinkID=223279) no wiki do TechNet.  
   
-##  <a name="bkmk_use"></a>Usando a conta autônoma de atualização de dados PowerPivot  
+##  <a name="using-the-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_use"></a>Usando a conta autônoma de atualização de dados PowerPivot  
  Entre as três opções de credenciais na página de agendamento de atualização de dados PowerPivot, apenas a primeira corresponde à conta autônoma de atualização de dados. Selecione essa opção ao configurar a agenda de atualização de dados.  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  Não use a terceira opção de credencial (aquela que exige que você informe a ID do aplicativo de destino) para acessar a conta autônoma de atualização de dados PowerPivot. Há uma verificação de representação adicional que é executada com essa opção que resultará em um erro de validação se você tentar usá-la com a conta autônoma de atualização de dados PowerPivot (ou qualquer aplicativo de destino baseado no tipo de conta Individual). Para obter mais informações sobre como usar a terceira opção, consulte [configurar credenciais armazenadas para a atualização de dados PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_editUA"></a>Atualizar as credenciais usadas por uma conta de atualização de dados autônoma PowerPivot existente  
+##  <a name="update-the-credentials-used-by-an-existing-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_editUA"></a>Atualizar as credenciais usadas por uma conta de atualização de dados autônoma PowerPivot existente  
  Se a conta autônoma de atualização de dados já estiver configurada pela instalação ou por um administrador, você poderá atualizar o nome do usuário ou a senha editando o aplicativo de destino que armazena as credenciais. Note que a identidade original do Windows que foi associada antes à conta autônoma de atualização de dados PowerPivot não ficará visível quando você editar as credenciais no Serviço de Repositório Seguro. Esteja você atualizando uma senha expirada ou especificando outra conta, sempre digite novamente o nome de usuário e a senha para esse aplicativo de destino no Serviço de Repositório Seguro.  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique em **serviço de repositório seguro**.  
   

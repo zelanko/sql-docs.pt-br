@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086787"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Criar Conjunto de Testes (Assistente de Mineração de Dados)
@@ -34,7 +34,7 @@ ms.locfileid: "66086787"
   
 -   Você não pode particionar dados se estiver tentando prever um valor armazenado em uma tabela aninhada.  
   
- **Para obter mais informações:** [testes e validação &#40;&#41;de mineração de dados ](data-mining/testing-and-validation-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Para obter mais informações:** [Teste e validação &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial básico de Data Mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opções  
  **Percentual de dados para teste**  

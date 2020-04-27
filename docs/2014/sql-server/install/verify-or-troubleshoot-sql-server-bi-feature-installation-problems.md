@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4aaa5f7169ee38a23f04140f86fe43fd903cd7f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091199"
 ---
 # <a name="verify-or-troubleshoot-sql-server-bi-feature-installation-problems"></a>Verificar ou solucionar problemas de instalação do recurso de BI do SQL Server

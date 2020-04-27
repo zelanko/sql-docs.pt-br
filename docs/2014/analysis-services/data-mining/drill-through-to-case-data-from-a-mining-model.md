@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084607"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Detalhar dados do caso a partir do modelo de mineração
@@ -31,13 +31,13 @@ ms.locfileid: "66084607"
   
 |Nome do visualizador|Painel ou nome da guia|Selecionar nó|  
 |-----------------|----------------------|-----------------|  
-|**Visualizador de árvore da Microsoft**|Guia **árvore de decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o `All` detalhamento no nó, pois pode levar muito tempo para retornar resultados.|  
-|**Visualizador de cluster da Microsoft**|**Diagrama de cluster**|Clique em um nó de cluster.|  
+|**Visualizador de árvores da Microsoft**|Guia **árvore de decisão**|Clique em um nó de árvore.<br /><br /> **Observação** Evite usar o `All` detalhamento no nó, pois pode levar muito tempo para retornar resultados.|  
+|**Visualizador de cluster da Microsoft**|**Diagrama de Cluster**|Clique em um nó de cluster.|  
 |**Visualizador de cluster da Microsoft**|**Perfis de cluster**|Clique em qualquer parte da coluna de cluster.|  
-|**Visualizador de associação da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de associação da Microsoft**|Guia **conjuntos** de itens|Clique em uma linha que contém um conjunto de itens.|  
-|**Visualizador de clustering de sequência da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
-|**Visualizador de clustering de sequência da Microsoft**|Guia **conjuntos** de itens|Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de Associação da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de Associação da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
+|**Visualizador de Cluster de Sequência da Microsoft**|Guia **regras**|Clique em uma linha que contém um conjunto de regras.|  
+|**Visualizador de Cluster de Sequência da Microsoft**|Guia**Conjuntos de Itens**|Clique em uma linha que contém um conjunto de itens.|  
   
 > [!NOTE]  
 >  Alguns modelos não podem usar detalhamento. A capacidade de usar detalhamento depende do algoritmo utilizado para criar o modelo. Para obter uma lista dos tipos de modelo de mineração que dão suporte ao drillthrough, consulte [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "66084607"
 6.  Para copiar os dados para a Área de Transferência, clique com o botão direito do mouse na tabela e selecione **Copiar Tudo**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Consultas de detalhamento &#40;mineração de dados&#41;](drillthrough-queries-data-mining.md)  
+ [Consultas de detalhamento &#40;Mineração de dados&#41;](drillthrough-queries-data-mining.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088089"
 ---
 # <a name="choosing-a-model"></a>Escolhendo um modelo
@@ -104,7 +104,7 @@ ms.locfileid: "66088089"
 ## <a name="list-of-supported-algorithms"></a>Lista de algoritmos com suporte  
  Os seguintes algoritmos são fornecidos por padrão.  
   
-|Nome do algoritmo|DESCRIÇÃO|Usado em|  
+|Nome do algoritmo|Descrição|Usado em|  
 |--------------------|-----------------|-------------|  
 |Regras de Associação da Microsoft|Cria regras que descrevem quais itens provavelmente aparecem juntos em uma transação.|[Assistente para associar &#40;cliente de mineração de dados para Excel&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Análise de cesta de compras &#40;tabela AnalysisTools para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Identifica relações em um conjunto de dados que talvez não sejam derivadas de forma lógica por meio de observação casual. Usa técnicas iterativas para agrupar registros em clusters que contenham características semelhantes.|[Detectar categorias &#40;ferramentas de análise de tabela para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Assistente de cluster &#40;suplementos de mineração de dados para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e560ec0fd617d4da46235803da8cbd69ef4f80d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091285"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>Usar caminho completo para registrar nomes de DLL de procedimentos armazenados estendidos
@@ -28,7 +28,7 @@ ms.locfileid: "66091285"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Procedimentos armazenados estendidos que foram registrados anteriormente sem um caminho completo para o nome de DLL podem não funcionar depois da atualização. Isso é porque o diretório BINN antigo não é adicionado ao novo caminho durante o processo de atualização. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode não conseguir localizar os procedimentos armazenados estendidos.  
   
 ## <a name="corrective-action"></a>Ação corretiva  

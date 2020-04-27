@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084832"
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
@@ -29,12 +29,11 @@ ms.locfileid: "66084832"
   
      No assistente, você escolhe dados para usar e em seguida aplica técnicas específicas de mineração de dados como clustering, redes neurais ou modelagem de série temporal.  
   
--   Os [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **visualizadores de modelo** são fornecidos [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]no e no, para explorar seus modelos de mineração depois que eles são criados.  Você pode procurar modelos usando visualizadores feitos especialmente para cada algoritmo ou se aprofundar mais na análise usando o visualizador de conteúdo do modelo.  
+-   Os**visualizadores de modelos** são fornecidos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], para explorar seus modelos de mineração depois que são criados.  Você pode procurar modelos usando visualizadores feitos especialmente para cada algoritmo ou se aprofundar mais na análise usando o visualizador de conteúdo do modelo.  
   
 -   O **Construtor de Consultas de Previsão** é fornecido no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para ajudá-lo a criar consultas de previsão. Você também pode testar a precisão de modelos em um conjunto de dados de validação ou dados externos, ou usar validação cruzada para avaliar a qualidade de seu conjunto de dados.  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é a interface onde você gerencia as soluções de mineração de dados existentes que foram implantadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode reprocessar estruturas e modelos para atualizar os dados neles.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] é a interface onde você gerencia as soluções de mineração de dados existentes que foram implantadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode reprocessar estruturas e modelos para atualizar os dados neles.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contém ferramentas que você pode usar para limpar dados, automatizar tarefas como criar previsões e atualizar modelos e criar soluções de mineração de texto.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66084832"
 ## <a name="data-mining-wizard"></a>Assistente de Mineração de Dados  
  Use o Assistente de Mineração de Dados para começar a criar soluções de mineração de dados. O assistente é fácil e rápido, e foi criado para guiá-lo no processo de criação de uma estrutura de mineração de dados e um modelo de mineração inicial relacionado; além disso, inclui as tarefas de seleção de um tipo de algoritmo e uma fonte de dados, bem como de definição dos dados de caso usados para a análise.  
   
- **Para obter mais informações:** [Assistente de mineração de dados &#40;mineração de dados Analysis Services&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  Após ter criado uma estrutura de mineração e um modelo de mineração usando o Assistente de Mineração de Dados, você pode utilizar o Designer de Mineração de Dados do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabalhar com modelos e estruturas existentes.  
@@ -62,13 +61,12 @@ ms.locfileid: "66084832"
   
 -   Crie previsões e consultas de conteúdo em modelos de mineração existentes. Crie consultas únicas ou configure consultas para gerar previsões para tabelas inteiras de dados externos.  
   
- **Para obter mais informações: designer de mineração de** [dados](data-mining-designer.md)  
+ **Para obter mais informações:** [Designer de Mineração de Dados](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Depois que você criar e implantar modelos de mineração em um servidor, pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar o banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda os objetos de mineração de dados. Você também pode continuar executando tarefas que usam o modelo, como explorar os modelos, processar novos dados e criar previsões.  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] também contém editores de consulta que você pode usar para criar e executar consultas de extensões DMX ou para trabalhar com objetos de mineração de dados usando XMLA.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] também contém editores de consulta que você pode usar para criar e executar consultas de extensões DMX ou para trabalhar com objetos de mineração de dados usando XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tarefas e transformações de serviços de mineração de dados de integração  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece muitos componentes que dão suporte a data mining.  
@@ -89,7 +87,7 @@ ms.locfileid: "66084832"
   
 -   Usando regressão logística para segmentar clientes de entrada por risco.  
   
- **Para obter mais informações:** [projetos relacionados para soluções de mineração de dados](data-mining-solutions.md)  
+ **Para obter mais informações:** [Projetos relacionados a soluções de mineração de dados](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-reference)   

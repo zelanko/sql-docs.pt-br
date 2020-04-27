@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089596"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Tópicos de informações práticas sobre sqlcmd
-  O [utilitário sqlcmd](../tools/sqlcmd-utility.md) permite inserir [!INCLUDE[tsql](../includes/tsql-md.md)] instruções, procedimentos do sistema e arquivos de script no prompt de comando, no editor de consultas no modo sqlcmd, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (cmd [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . exe) de um trabalho do Agent.  
+   O utilitário [SQLCMD](../tools/sqlcmd-utility.md) permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)], procedimentos do sistema e arquivos de script no prompt de comando, no Editor de Consultas em modo SQLCMD, em um arquivo de script do Windows ou em uma etapa de trabalho do sistema operacional (Cmd.exe) de um trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Os tópicos a seguir descrevem como usar o [sqlcmd Utility](../tools/sqlcmd-utility.md):  

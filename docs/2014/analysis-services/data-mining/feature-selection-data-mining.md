@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084422"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
@@ -62,7 +62,7 @@ ms.locfileid: "66084422"
   
  A pontuação de *interesse* é usada para classificar e ordenar atributos em colunas que contêm dados numéricos contínuos não binários.  
   
- A *entropia de Shannon* e duas pontuações de *Bayesiana* estão disponíveis para colunas que contêm dados discretos e discretizado. No entanto, se o modelo contiver colunas contínuas, a pontuação de interesse será usada para avaliar todas as colunas de entrada para garantir a consistência.  
+ A*entropia de Shannon* e duas pontuações *Bayesiana* estão disponíveis para colunas que contêm dados discretos e diferenciados. No entanto, se o modelo contiver colunas contínuas, a pontuação de interesse será usada para avaliar todas as colunas de entrada para garantir a consistência.  
   
  A seção a seguir descreve cada método de seleção de recursos.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66084422"
   
  Por padrão, essa pontuação será usada sempre que a coluna contiver dados numéricos contínuos não binários.  
   
-#### <a name="shannons-entropy"></a>entropia de Shannon  
+#### <a name="shannons-entropy"></a>Entropia de Shannon  
  A entropia de Shannon mede a incerteza de uma variável aleatória para um resultado em particular. Por exemplo, a entropia do lançamento de uma moeda pode ser representada como uma função da probabilidade de o resultado ser cara.  
   
  O Analysis Services usa a seguinte fórmula para calcular a entropia de Shannon:  
@@ -105,10 +105,10 @@ ms.locfileid: "66084422"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md).|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método de seleção de recursos padrão ou o método que você especificou quando criou o modelo.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).|  
-|Rede neural|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais da Microsoft pode usar ambos os métodos Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md).|  
-|Regressão logística|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Embora o algoritmo de Regressão Logística da Microsoft se baseie no algoritmo Rede Neural da Microsoft, você não pode personalizar modelos de regressão logística para controlar o comportamento de seleção de recursos; portanto, a seleção de recursos sempre usa o método mais apropriado para o atributo por padrão.<br /><br /> Se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
+|Naive Bayes|Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Microsoft Naïve Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método de seleção de recursos padrão ou o método que você especificou quando criou o modelo.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).|  
+|Rede neural|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|O algoritmo Redes Neurais da Microsoft pode usar ambos os métodos Bayesiano e baseado em entropia, desde que os dados contenham colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md).|  
+|Regressão logística|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Embora o algoritmo de Regressão Logística da Microsoft se baseie no algoritmo Rede Neural da Microsoft, você não pode personalizar modelos de regressão logística para controlar o comportamento de seleção de recursos; portanto, a seleção de recursos sempre usa o método mais apropriado para o atributo por padrão.<br /><br /> Se todos os atributos forem discretos ou diferenciados, o padrão será BDEU.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Pontuação de interesse|O algoritmo Microsoft Clustering pode usar dados discretos ou diferenciados. No entanto, como a pontuação de cada atributo é calculada como uma distância e representada como um número contínuo, a pontuação de interesse deve ser usada.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
 |Regressão linear|Pontuação de interesse|O algoritmo de Regressão Linear da Microsoft pode usar somente a pontuação de interesse, pois suporta apenas colunas contínuas.<br /><br /> Para obter mais informações sobre esse algoritmo, consulte [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md).|  
 |Regras da associação<br /><br /> Clustering de sequências|Não usado|A seleção de recursos não é invocada com esses algoritmos.<br /><br /> No entanto, você poderá controlar o comportamento do algoritmo e reduzir o tamanho dos dados de entrada se necessário, configurando o valor dos parâmetros MINIMUM_SUPPORT e MINIMUM_PROBABILIITY.<br /><br /> Para obter mais informações, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) e [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  

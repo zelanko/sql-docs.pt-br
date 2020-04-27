@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083592"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
@@ -88,7 +88,7 @@ ms.locfileid: "66083592"
  NODE_TYPE  
  Um modelo de rede neural produz apenas os seguintes tipos de nó:  
   
-|ID do tipo de nó|DESCRIÇÃO|  
+|ID do tipo de nó|Descrição|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nó do organizador para a sub-rede.|  
@@ -191,7 +191,7 @@ ms.locfileid: "66083592"
 ## <a name="remarks"></a>Comentários  
  O objetivo do treinamento de um modelo de rede neural é determinar os pesos associados a cada transição de uma entrada para um ponto médio, e de um ponto médio para um ponto de extremidade. Assim, a camada de entrada do modelo existe principalmente para armazenar os valores reais usados para criar o modelo. A camada oculta armazena os pesos que foram computados e fornece ponteiros para os atributos de entrada. A camada de saída armazena os valores previsíveis e também fornece ponteiros para os pontos médios na camada oculta.  
   
-##  <a name="bkmk_NodeIDs"></a>Usando nomes e IDs de nós  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a> Usando nomes e IDs de nós  
  A nomenclatura dos nós em um modelo de rede neural fornece mais informações sobre o tipo de nó, para tornar mais fácil relacionar a camada oculta à camada de entrada, e a camada de saída à camada oculta. A tabela a seguir mostra a convenção para as IDs atribuídas aos nós em cada camada.  
   
 |Tipo de nó|Convenção da ID de nó|  
@@ -210,7 +210,7 @@ ms.locfileid: "66083592"
   
  De modo semelhante, você pode determinar quais camadas ocultas estão relacionadas a um atributo de saída exibindo a tabela NODE_DISTRIBUTION no nó de saída (NODE_TYPE = 23). Cada linha da tabela NODE_DISTRIBUTION contém a ID de um nó da camada oculta, junto com o coeficiente relacionado.  
   
-##  <a name="bkmk_NodeDistTable"></a>Interpretando as informações na tabela NODE_DISTRIBUTION  
+##  <a name="interpreting-the-information-in-the-node_distribution-table"></a><a name="bkmk_NodeDistTable"></a> Interpretando as informações na tabela NODE_DISTRIBUTION  
  A tabela NODE_DISTRIBUTION pode estar vazia em alguns nós. No entanto, para nós de entrada, nós da camada oculta e nós de saída, a tabela NODE_DISTRIBUTION armazena informações importantes e interessantes sobre o modelo. Para ajudá-lo a interpretar essas informações, a tabela NODE_DISTRIBUTION contém uma coluna VALUETYPE para cada linha que informa se o valor na coluna ATTRIBUTE_VALUE é Discreto (4), Diferenciado (5) ou Contínuo (3).  
   
 ### <a name="input-nodes"></a>Nós de entrada  
@@ -218,7 +218,7 @@ ms.locfileid: "66083592"
   
  **Atributo discreto:** O nó de entrada armazena apenas o nome do atributo e seu valor nas colunas ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Por exemplo, se [Turno de Trabalho] for a coluna, um nó separado será criado para cada valor dessa coluna que foi usado no modelo, como AM e PM. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
- **Atributo numérico discretizado:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou um valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
+ **Atributo numérico discreto:** O nó de entrada armazena o nome do atributo e o valor, que pode ser um intervalo ou valor específico. Todos os valores são representados por expressões, como '77.4 - 87.4' ou ' < 64.0' para o valor de [Tempo por Emissão]. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
  **Atributo contínuo:** O nó de entrada armazena o valor médio do atributo. A tabela NODE_DISTRIBUTION para cada nó lista apenas o valor atual do atributo.  
   
@@ -230,11 +230,11 @@ ms.locfileid: "66083592"
   
  A tabela NODE_DISTRIBUTION tem as seguintes informações adicionais, dependendo do tipo de atributo:  
   
- **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente para o nó como um todo e o valor atual do atributo.  
+ **Atributo discreto:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm um coeficiente para os nós como um todo, e o valor atual do atributo.  
   
- **Atributo numérico discretizado:** Idêntico a atributos discretos, exceto pelo fato de que o valor do atributo é um intervalo de valores.  
+ **Atributo numérico discreto:** Idêntico aos atributos discretos, exceto pelo fato de o valor do atributo ser um intervalo de valores.  
   
- **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente para o nó como um todo e a variação do coeficiente.  
+ **Atributo contínuo:** As duas linhas finais da tabela NODE_DISTRIBUTION contêm a média do atributo, o coeficiente do nó como um todo e a variação do coeficiente.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo rede neural da Microsoft](microsoft-neural-network-algorithm.md)   

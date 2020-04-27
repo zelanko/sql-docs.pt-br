@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085657"
 ---
 # <a name="content-types-data-mining"></a>Tipos de conteúdo (mineração de dados)
@@ -45,7 +45,7 @@ ms.locfileid: "66085657"
  A lista a seguir descreve os tipos de conteúdo usados na mineração de dados e identifica os tipos de dados que oferecem suporte para cada tipo.  
   
 ## <a name="discrete"></a>Discreto  
- *Discreto* significa que a coluna contém um número finito de valores sem continuidade entre valores. Por exemplo, uma coluna de gênero é uma coluna típica do atributo discreto, pois os dados representam um número específico de categorias.  
+ *Discreto* significa que a coluna contém um número finito de valores sem continuidade entre eles. Por exemplo, uma coluna de gênero é uma coluna típica do atributo discreto, pois os dados representam um número específico de categorias.  
   
  Os valores em uma coluna de atributo discreto não podem envolver ordenação, mesmo que os valores sejam numéricos. Além disso, mesmo que os valores usados na coluna discreta sejam numéricos, não será possível calcular valores fracionários. Os códigos de área de telefone são um bom exemplo de dados numéricos discretos.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66085657"
  O tipo de conteúdo `Continuous` é suportado pelos seguintes tipos de dados: `Date`, `Double` e `Long`.  
   
 ## <a name="discretized"></a>Discretizado  
- *Discretização* é o processo de colocar valores de um conjunto contínuo de dados em buckets para que haja um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
+ *Discretização* é o processo que coloca valores de um conjunto contínuo de dados em buckets de modo a ter um número limitado de valores possíveis. É possível discretizar apenas dados numéricos.  
   
  Assim, o tipo de conteúdo *discretized* indica que a coluna contém valores que representam grupos ou recipientes de valores que são derivados de uma coluna contínua. Os blocos são tratados como valores ordenados e discretos.  
   

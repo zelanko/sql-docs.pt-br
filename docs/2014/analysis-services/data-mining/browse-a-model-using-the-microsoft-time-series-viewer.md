@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085978"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Procurar um modelo usando o Visualizador MTS
@@ -39,18 +39,17 @@ ms.locfileid: "66085978"
 > [!NOTE]  
 >  Para exibir informações detalhadas sobre as equações usadas no modelo e os padrões identificados, use o Visualizador de Árvore de Conteúdo Genérica da [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obter mais informações, consulte [Procurar um modelo usando o Visualizador de Árvore de Conteúdo Genérica da Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visualizador de Árvore de Conteúdo Genérica da Microsoft &#40;Mineração de Dados&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Guias do Visualizador  
  Quando você navega em um modelo de mineração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ele é exibido na guia **Visualizador do Modelo de Mineração** do Designer de Mineração de Dados no visualizador adequado ao modelo. O Visualizador MTS da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece as seguintes guias:  
   
 -   [Deprecia](#BKMK_Tree)  
   
 -   [Gráficos](#BKMK_Charts)  
   
- **Observação** As informações mostradas para o conteúdo do modelo e na legenda de mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
+ **Observação** As informações indicadas para o conteúdo do modelo e na Legenda de Mineração dependem do algoritmo usado pelo modelo. Porém, as guias **Modelo** e **Gráficos** são as mesmas, independentemente da combinação de algoritmos.  
   
-###  <a name="BKMK_Tree"></a>Deprecia  
- Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
+###  <a name="model"></a><a name="BKMK_Tree"></a>Deprecia  
+ Quando um modelo de série temporal é criado, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] apresenta o modelo concluído como uma árvore. Se seus dados tiverem várias séries de casos, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criará uma árvore separada para cada série. Por exemplo, você está prevendo vendas para o Pacífico, América do Norte e regiões da Europa. As previsões para cada uma destas regiões são série de caso. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cria uma árvore separada para cada uma destas séries. Para exibir uma série específica, selecione-a na lista **Árvore** .  
   
  Para cada árvore, o modelo de série temporal contém um nó **Todos** e, depois, se divide em vários nós que representam estruturas periódicas identificadas pelo algoritmo. Você pode clicar em cada nó para exibir estatísticas tais como o número de casos e a equação.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66085978"
   
  [Voltar ao início](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a>Spersão  
+###  <a name="charts"></a><a name="BKMK_Charts"></a>Spersão  
  A guia **Gráficos** exibe o gráfico que mostra o comportamento do atributo previsto ao longo do tempo, junto com cinco valores de previsão futuros. O eixo vertical do gráfico representa o valor da série e o eixo horizontal representa o tempo.  
   
 > [!NOTE]  

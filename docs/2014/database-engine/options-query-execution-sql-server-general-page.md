@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089989"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opções (página execução da consulta-SQL Server-geral)
@@ -26,7 +26,7 @@ ms.locfileid: "66089989"
  **SET ROWCOUNT**  
  O valor padrão 0 indica que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esperará por resultados até que todos os resultados tenham sido recebidos. Forneça um valor maior que 0 se desejar que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pare a consulta após obter o número especificado de linhas. Para desligar essa opção (de forma que todas as linhas sejam retornadas), especifique SET ROWCOUNT 0.  
   
- **DEFINIR TEXTSIZE**  
+ **SET TEXTSIZE**  
  O valor padrão de 2.147.483.647 bytes, indica que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornecerá campos de dados completos até o limite dos campos de dados `text` e `ntext`. Forneça um número menor para limitar os resultados no caso de valores grandes. Colunas maiores que o número fornecido serão truncadas.  
   
  **Tempo limite de execução**  
@@ -35,8 +35,8 @@ ms.locfileid: "66089989"
  **Separador de lotes**  
  Digite uma palavra que você usa para separar instruções [!INCLUDE[tsql](../includes/tsql-md.md)] em lotes. O padrão é GO.  
   
- **Por padrão, abra novas consultas no modo SQLCMD**  
- Marque esta caixa de seleção para abrir novas consultas no modo SQLCMD. Para obter mais informações sobre o modo SQLCMD, consulte [editar scripts SQLCMD com o editor de consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
+ **Por padrão, abra consultas novas no Modo SQLCMD**  
+ Marque esta caixa de seleção para abrir novas consultas no modo SQLCMD. Para obter mais informações sobre o modo SQLCMD, consulte [Editar scripts SQLCMD com o Editor de Consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Ao selecionar essa opção, esteja atento às seguintes limitações:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66089989"
   
 -   Como o Editor de Consultas não pode responder a prompts do sistema operacional, você deve ter cuidado para não executar instruções interativas.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Clique para restaurar todos os valores dessa página aos seus valores padrão originais.  
   
 ## <a name="see-also"></a>Consulte Também  

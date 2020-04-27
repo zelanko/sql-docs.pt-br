@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094916"
 ---
-# <a name="how-to-install-upgrade-advisor"></a>Como instalar o Supervisor de Atualização
+# <a name="how-to-install-upgrade-advisor"></a>Como fazer: Para instalar o Supervisor de Atualização
   O Supervisor de Atualização dá suporte à análise remota de todos os componentes com suporte, exceto o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se você não estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode instalar o Supervisor de Atualização em qualquer computador que pode se conectar às suas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O computador também deve atender aos pré-requisitos do Supervisor de Atualização. Se você estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será necessário instalar o Supervisor de Atualização no servidor de relatório.  
   
  Para obter mais informações, consulte [instalando o supervisor de atualização](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66094916"
   
 4.  Na página **informações de registro** , insira seu nome e empresa.  
   
-5.  Na página **seleção de recursos** , examine o valor do **caminho de instalação** . Se necessário, use o botão **procurar** para alterar o local. Clique em **Próximo**.  
+5.  Na página **seleção de recursos** , examine o valor do **caminho de instalação** . Se necessário, use o botão **procurar** para alterar o local. Clique em **Avançar**.  
   
 6.  Na página **pronto para instalar o programa** , clique em **instalar** para instalar o supervisor de atualização.  
   

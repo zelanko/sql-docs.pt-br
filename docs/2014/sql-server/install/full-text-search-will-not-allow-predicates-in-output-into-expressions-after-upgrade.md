@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095004"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Depois da atualização, a Pesquisa de Texto Completo não permitirá predicados na expressão OUTPUT INTO
   Predicados de texto completo não são permitidos na cláusula OUTPUT quando o nível de compatibilidade do banco de dados está definido como 100 ou superior.  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  Para obter mais informações sobre a cláusula OUTPUT, consulte a [cláusula output &#40;&#41;Transact-SQL ](/sql/t-sql/queries/output-clause-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  

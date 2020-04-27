@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088627"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Sobre os termos de licença do SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "66088627"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Idioma|Abreviação do idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
-|Inglês|ENU|1033|  
+|Inglês|ENU|1046|  
 |Japonês|JPN|1041|  
 |Francês|FRA|1036|  
 |Italiano|ITA|1040|  
@@ -63,7 +63,7 @@ ms.locfileid: "66088627"
 |Português (Brasil)|PTB|1046|  
 |Russo|RUS|1049|  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Opções de licenciamento  
+## <a name="ssnoversion-licensing-options"></a>Opções de licenciamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Para obter mais informações [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sobre preços e opções de licenciamento, consultehttps://www.microsoft.com/sqlserver/sql-server-2014.aspx) o [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (site da Web.  
   
 ## <a name="see-also"></a>Consulte Também  

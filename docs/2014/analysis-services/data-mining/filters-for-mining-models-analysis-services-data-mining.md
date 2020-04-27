@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084424"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
@@ -62,8 +62,7 @@ ms.locfileid: "66084424"
   
  Por exemplo, se a tabela de casos estiver relacionada a clientes e a tabela aninhada mostrar os produtos que um cliente comprou, você poderá criar um filtro para os clientes que compraram determinados itens usando a seguinte sintaxe no filtro de tabela aninhada: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- Você também pode filtrar a existência de um determinado valor na tabela aninhada, usando as palavras-chave `EXISTS` ou `NOT EXISTS` e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. 
-  `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
+ Você também pode filtrar a existência de um determinado valor na tabela aninhada, usando as palavras-chave `EXISTS` ou `NOT EXISTS` e uma subconsulta. Isso permite que você crie condições como `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` retornará `true` se a tabela aninhada contiver pelo menos uma linha que inclua o valor `Water Bottle`.  
   
  Você pode combinar condições na tabela de casos com as condições da tabela aninhada. Por exemplo, a sintaxe a seguir inclui uma condição na tabela de casos (`Age > 30` ), uma subconsulta na tabela aninhada (`EXISTS (SELECT * FROM Products)`) e várias condições na tabela aninhada (`WHERE ProductName='Milk'  AND Quantity>2`) ).  
   
@@ -123,6 +122,6 @@ ms.locfileid: "66084424"
   
 ## <a name="see-also"></a>Consulte Também  
  [Sintaxe de filtro de modelo e exemplos &#40;mineração de dados Analysis Services&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](testing-and-validation-data-mining.md)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094342"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Instalando o Supervisor de Atualização do prompt de comando
@@ -32,7 +32,7 @@ ms.locfileid: "66094342"
   
  A tabela a seguir mostra as opções mais comuns.  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Define nível de interface do usuário:<br /><br /> n = nenhuma interface do usuário<br /><br /> b = interface do usuário básica (apenas progresso, nenhum prompt)<br /><br /> r = interface do usuário reduzida (caixa de diálogo ao término da instalação)<br /><br /> f = interface do usuário completa|  
 |/L|Especifica as opções do arquivo de log. Para registrar todas as mensagens no *log_file_name*, use **-\*L v**_log_file_name_. Para registrar somente mensagens de erro, `-Le`use *log_file_name*.|  

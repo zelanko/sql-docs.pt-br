@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085844"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Escolher e mapear dados de entrada para uma consulta de previsão
@@ -118,6 +118,6 @@ ms.locfileid: "66085844"
      Se já existir uma relação, as colunas no modelo de mineração serão mapeados automaticamente para as colunas que possuem o mesmo nome na tabela de entrada. É possível modificar a relação entre a tabela aninhada e a tabela de casos clicando em **Modificar Junção**, que abre a caixa de diálogo **Criar Relação** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Consultas de previsão &#40;mineração de dados&#41;](prediction-queries-data-mining.md)  
+ [Consultas de previsão &#40;Mineração de dados&#41;](prediction-queries-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084945"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de Data Mining
@@ -54,11 +54,11 @@ ms.locfileid: "66084945"
  [Criar uma consulta de conteúdo em um modelo de mineração](create-a-content-query-on-a-mining-model.md)  
  Descreve como criar consultas que retornam informações detalhadas armazenadas no modelo de mineração, usando conjuntos de linhas do esquema de mineração de dados.  
   
- [Criar uma consulta de mineração de dados usando XMLA](create-a-data-mining-query-by-using-xmla.md)  
+ [Create a Mineração de dados Query by Using XMLA](create-a-data-mining-query-by-using-xmla.md)  
  Descreve como criar uma consulta no conteúdo do modelo de mineração usando os modelos XMLA do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de linguagem de consulta e expressão &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Procedimentos armazenados de mineração de dados &#40;Analysis Services&#41;de mineração de dados](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimentos armazenados da mineração de dados &#40;Analysis Services – Mineração de dados&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

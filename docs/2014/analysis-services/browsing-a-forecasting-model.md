@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088487"
 ---
 # <a name="browsing-a-forecasting-model"></a>Procurando um modelo de previsão
   Quando você abre um modelo de previsão usando **procurar**, o modelo é exibido em um visualizador interativo, semelhante ao Visualizador de modelos de série temporal [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no. O visualizador ajuda a explorar tendências, comparar séries, criar previsões e obter informações sobre o modelo e os dados subjacentes.  
   
-##  <a name="bkmk_Top"></a>Explorar o modelo  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar o modelo  
  O Visualizador de **navegação** para modelos de previsão fornece uma exibição de gráfico, que mostra as tendências ao longo do tempo e permite que você crie previsões e uma exibição de modelo, que representa a série temporal como uma árvore de decisão ou uma árvore de regressão.  
   
 -   [Modo de exibição de Gráfico](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088487"
   
  Para fazer experiências com um modelo de previsão, você pode usar os dados de exemplo na guia Previsão da pasta de trabalho de dados de exemplo e criar um modelo de série temporal usando o [Assistente de previsão &#40;suplementos de mineração de dados para excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) na faixa de bits de **mineração de dados** ou [prever &#40;ferramentas de análise de tabela para o&#41;do Excel](forecast-table-analysis-tools-for-excel.md) na faixa de guia **analisar** .  
   
-###  <a name="bkmk_charts"></a>Tipo  
+###  <a name="chart"></a><a name="bkmk_charts"></a>Tipo  
  A guia **gráfico** exibe a tendência em sua série de dados ao longo do tempo, junto com os valores previstos. O eixo vertical do gráfico representa os valores da série e o eixo horizontal representa o tempo.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Explorar o gráfico de previsão  
@@ -86,7 +86,7 @@ ms.locfileid: "66088487"
   
  [Explorar o modelo](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>Deprecia  
+###  <a name="model"></a><a name="bkmk_Model"></a>Deprecia  
  Um modelo de previsão também pode ser representado como uma árvore de decisão ou, se a série for predominantemente linear, um modelo de regressão.  
   
  Por exemplo, neste modelo, há uma diferença na fórmula de regressão com base em uma determinada condição, para que a árvore seja dividida em duas ramificações, cada uma com uma fórmula de regressão diferente.  

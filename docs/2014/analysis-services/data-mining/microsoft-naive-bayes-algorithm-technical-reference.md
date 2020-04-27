@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083896"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Referência técnica do algoritmo Microsoft Naive Bayes
@@ -40,7 +40,7 @@ ms.locfileid: "66083896"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Naive Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.|  
+|Naive Bayes|Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Naive Bayes aceita somente atributos discretos ou diferenciados; portanto, não pode usar a pontuação de interesse.|  
   
  O algoritmo foi projetado para minimizar o tempo de processamento e selecionar com eficiência os atributos que têm a maior importância; no entanto, você pode controlar os dados usados pelo algoritmo definindo parâmetros da seguinte forma:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66083896"
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|DESCRIÇÃO|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Significa que a  coluna será tratada como tendo dois estados possíveis: Ausente e Existente. Nulo é um valor ausente.<br /><br /> Aplica-se à coluna de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se à coluna de estrutura de mineração.|  
@@ -101,6 +101,6 @@ ms.locfileid: "66083896"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo do Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
  [Exemplos de consulta de modelo do Naive Bayes](naive-bayes-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;mineração de dados Analysis Services&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos Naive Bayes &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

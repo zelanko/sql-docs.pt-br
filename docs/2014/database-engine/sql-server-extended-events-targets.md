@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088864"
 ---
-# <a name="sql-server-extended-events-targets"></a>Destinos de eventos estendidos do SQL Server
+# <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   Os destinos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] são consumidores de evento. Os destinos podem gravar em um arquivo, armazenar dados de evento em um buffer de memória ou agregar dados de evento. Os destinos podem processar dados de forma síncrona ou assíncrona.  
   
  O design de Eventos Estendidos assegura que os destinos tenham a garantia de receber eventos somente uma vez por sessão.  
@@ -54,7 +54,7 @@ ms.locfileid: "66088864"
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../relational-databases/extended-events/extended-events.md)   
  [SQL Server pacotes de eventos estendidos](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [Sessões de eventos estendidos do SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server sessões de eventos estendidos](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Mecanismo de eventos estendidos do SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   
