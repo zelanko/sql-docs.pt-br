@@ -16,16 +16,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211982"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Criar uma especificação de auditoria de banco de dados e de servidor
   Este tópico descreve como criar uma especificação de auditoria de servidor e de banco de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto *SQL Server Audit* coleta uma instância única de ações no nível do servidor e/ou do banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação de Auditoria de Banco de Dados* pertence a uma auditoria. É possível criar uma especificação da auditoria de banco de dados por banco de dados do SQL Server por auditoria. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
+ *Auditar* uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] envolve eventos de rastreamento e de log que ocorrem no sistema. O objeto de *auditoria SQL Server* coleta uma única instância de ações no nível de servidor ou banco de dados e grupos de ações a serem monitoradas. A auditoria está no nível de instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Você pode ter várias auditorias por instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . O objeto *Especificação de Auditoria de Banco de Dados* pertence a uma auditoria. É possível criar uma especificação da auditoria de banco de dados por banco de dados do SQL Server por auditoria. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  
   
  **Neste tópico**  
   
@@ -41,30 +41,30 @@ ms.locfileid: "68211982"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  As especificações de auditoria de banco de dados são objetos não protegidos que residem em um determinado banco de dados. Quando uma especificação de auditoria de banco de dados é criada, ela fica em um estado desabilitado.  
   
  Quando você estiver criando ou modificando uma especificação de auditoria de banco de dados em um banco de dados de usuário, não inclua ações de auditoria em objetos do escopo de servidor, como as exibições do sistema. Se forem incluídos objetos de escopo do servidor, a auditoria será criada. No entanto, os objetos de escopo do servidor não serão incluídos e nenhum erro será retornado. Para auditar objetos de escopo do servidor, use uma especificação de auditoria de banco de dados no banco de dados mestre.  
   
  As especificações de auditoria de banco de dados residem no banco de dados onde são criadas, com exceção do banco de dados de sistema `tempdb`.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
   
 -   Os usuários com a permissão ALTER ANY DATABASE AUDIT podem criar especificações de auditoria de banco de dados e associá-las a qualquer auditoria.  
   
 -   Depois que uma especificação de auditoria de banco de dados é criada, ela pode ser exibida por entidades que tenham a permissão CONTROL SERVER, ALTER ANY DATABASE AUDIT ou com a conta sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   
-1.  No Pesquisador de Objetos, expanda a pasta **Segurança** .  
+1.  No Pesquisador de objetos, expanda a pasta **segurança** .  
   
-2.  Clique com o botão direito do mouse na pasta **Auditorias** e selecione **Nova Auditoria...** . Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md).  
+2.  Clique com o botão direito do mouse na pasta **auditorias** e selecione **nova auditoria...**. Para obter mais informações, consulte [criar uma auditoria de servidor e uma especificação de auditoria de servidor](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Quando terminar de selecionar as opções, clique em **OK**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211982"
   
 2.  Expanda a pasta **Segurança** .  
   
-3.  Clique com o botão direito do mouse na pasta **Especificações de Auditoria do Banco de Dados** e selecione **Nova Especificação de Auditoria do Banco de Dados...** .  
+3.  Clique com o botão direito do mouse na pasta **especificações de auditoria** e selecione **nova especificação de auditoria de banco de dados...**.  
   
      As opções a seguir estão disponíveis na caixa de diálogo **Criar Especificação de Auditoria de Banco de Dados** .  
   
@@ -90,13 +90,13 @@ ms.locfileid: "68211982"
      **Esquema de Objeto**  
      Exibe o esquema para **Object Name**especificado.  
   
-     **Object Name**  
+     **Nome do objeto**  
      Nome do objeto a ser auditado. Isso só está disponível para ações de auditoria e não se aplica a grupos de auditoria.  
   
      **Reticências (...)**  
      Abre a caixa de diálogo **Selecionar Objetos** para procurar e selecionar um objeto disponível, com base no **Tipo de Ação de Auditoria**especificado.  
   
-     **Nome Principal**  
+     **Nome da entidade**  
      A conta para filtrar a auditoria para o objeto que está sendo auditado.  
   
      **Reticências (...)**  
@@ -104,7 +104,7 @@ ms.locfileid: "68211982"
   
 4.  Quando terminar de selecionar as opções, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Para criar uma auditoria de servidor  
   

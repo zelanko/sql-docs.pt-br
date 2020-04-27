@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042568"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Testando a precisão com gráficos de comparação de precisão (Tutorial de mineração de dados básico)
@@ -26,7 +26,7 @@ ms.locfileid: "63042568"
   
 -   [Configurar parâmetros do gráfico de precisão](#BKMK_Selecting)  
   
-##  <a name="BKMK_InputData"></a>Escolhendo os dados de entrada  
+##  <a name="choosing-the-input-data"></a><a name="BKMK_InputData"></a>Escolhendo os dados de entrada  
  A primeira etapa para testar a precisão dos modelos de mineração é selecionar a fonte de dados que será usada para teste. Você testará o desempenho dos modelos com os dados de teste e os usará com dados externos.  
   
 #### <a name="to-select-the-data-set"></a>Para selecionar o conjunto de dados  
@@ -37,7 +37,7 @@ ms.locfileid: "63042568"
   
      Para obter mais informações sobre as outras opções, consulte [escolher um tipo de gráfico de precisão e definir opções de gráfico](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-##  <a name="BKMK_Selecting"></a>Definindo parâmetros de gráfico de precisão  
+##  <a name="setting-accuracy-chart-parameters"></a><a name="BKMK_Selecting"></a>Definindo parâmetros de gráfico de precisão  
  Para criar um gráfico de precisão, você deve definir três parâmetros:  
   
 -   Que modelos você deve incluir no gráfico de precisão?  

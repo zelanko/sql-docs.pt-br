@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211090"
 ---
 # <a name="profiler-utility"></a>Utilitário Profiler
@@ -56,7 +56,7 @@ ms.locfileid: "68211090"
  **/?**  
  Exibe o resumo da sintaxe dos argumentos de **profiler** .  
   
- **/U** *login_id*  
+ **/U** *id_de_login*  
  ID de logon do usuário para autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . IDs de logon diferenciam maiúsculas de minúsculas.  
   
 > [!NOTE]  
@@ -68,35 +68,35 @@ ms.locfileid: "68211090"
  **/E**  
  Especifica a conexão com a autenticação do Windows com as credenciais do usuário atual.  
   
- **/S**  *SQL_SERVER_NAME*  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ **/S**  *nome_servidor_sql*  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *nome_servidor_sql*\\*nome_da_instância*.  
   
- **/A**  *analysis_services_server_name*  
- Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
+ **/A**  *nome_do_servidor_de_analysis_services*  
+ Especifica uma instância do Analysis Services. O Profiler vai se conectar automaticamente ao servidor especificado usando as informações de autenticação especificadas nas opções **/U** e **/P** ou na opção **/E** . Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *nome_do_servidor_de_analysis_services\nome_da_instância*.  
   
- **/D** *banco de dados*  
+ **/D** *banco_de_dados*  
  Especifica o nome do banco de dados a ser usado com a conexão. Essa opção selecionará o banco de dados padrão para o usuário especificado se nenhum banco de dados for especificado.  
   
- **/B "** *trace_table_name* **"**  
+ **/B "** *nome_da_tabela_de_rastreamento* **"**  
  Especifica uma tabela de rastreamento a ser carregada quando o profiler for iniciado. Você deve especificar o banco de dados, o usuário ou esquema e a tabela.  
   
- **/T "** *template_name* **"**  
+ **/T "** *nome_do_modelo* **"**  
  Especifica o modelo que será carregado para configurar o rastreamento. O nome do modelo deve estar entre aspas. O nome do modelo deve estar no diretório de modelos de sistema ou no diretório de modelos de usuário. Se existirem dois modelos com mesmo nome em ambos os diretórios, o modelo do diretório do sistema será carregado. Se nenhum modelo com o nome especificado existir, o modelo padrão será carregado. Observe que a extensão de arquivo do modelo (.tdf) não deve ser especificada como parte do *template_name*. Por exemplo:  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *nome do arquivo* **"**  
+ **/F"** *nome_do_arquivo* **"**  
  Especifica o caminho e o nome de um arquivo de rastreamento a ser carregado quando o profiler for iniciado. O caminho e o nome de arquivo completos devem estar entre aspas. Essa opção não pode ser usada com **/O**.  
   
- **/O "** *filename*  **"**  
+ **/O "** *nome_do_arquivo*  **"**  
  Especifica o caminho e o nome de um arquivo no qual devem ser gravados os resultados de rastreamento. O caminho e o nome de arquivo completos devem estar entre aspas. Essa opção não pode ser usada com **/F.**  
   
- **/L** *locale_ID*  
+ **/L** *ID_do_local*  
  Não disponível.  
   
- **/M "** *mm-dd-aa hh: mm: SS* **"**  
+ **/M "** *MM-DD-AA hh:mm:ss* **"**  
  Especifica a data e a hora para o rastreamento parar. A hora de parada deve estar entre aspas. Especifique a hora de parada de acordo com os parâmetros na tabela abaixo:  
   
 |Parâmetro|Definição|  
@@ -114,7 +114,7 @@ ms.locfileid: "68211090"
  **/R**  
  Habilita a substituição do arquivo de rastreamento.  
   
- **/Z**  *file_size*  
+ **/Z**  *tamanho_do_arquivo*  
  Especifica o tamanho do arquivo de rastreamento em megabytes (MB). O tamanho padrão é 5 MB. Se a substituição estiver habilitada, todos os arquivos de substituição serão limitados ao valor especificado neste argumento.  
   
 ## <a name="remarks"></a>Comentários  
@@ -125,6 +125,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência do utilitário de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](command-prompt-utility-reference-database-engine.md)  
+ [Referência de utilitários de prompt de comando &#40;Mecanismo de Banco de Dados&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032000"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir o Monitor de Atividade (SQL Server Management Studio)
@@ -37,21 +37,21 @@ ms.locfileid: "63032000"
   
 -   **Para definir o intervalo de atualização usando:**  [SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
  O Monitor de Atividade executa consultas na instância monitorada a fim de obter informações para os painéis de exibição do Monitor de Atividade. Quando o intervalo de atualização for definido para menos de 10 segundos, o tempo usado para executar essas consultas poderá afetar o desempenho do servidor.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para exibir o Monitor de Atividade, um usuário deve ter a permissão VIEW SERVER STATE. Para exibir a seção E/S de Arquivo de Dados do Monitor de Atividade, você deve ter a permissão CREATE DATABASE, ALTER ANY DATABASE ou VIEW ANY DEFINITION além da permissão VIEW SERVER STATE.  
   
  Para executar KILL em um processo, o usuário deve ser um membro das funções de servidor fixas sysadmin ou processadmin.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Para abrir o Monitor de Atividade no SQL Server Management Studio  
   
-1.  Na barra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de ferramentas padrão, clique em **Monitor de atividade**.  
+1.  Na barra de ferramentas padrão do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , clique em **Monitor de Atividade**.  
   
 2.  Na caixa de diálogo **Conectar ao Servidor** , selecione o nome do servidor e o modo de autenticação e clique em **Conectar**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032000"
   
 4.  Para ativar as alterações, feche e reabra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a>Para definir o intervalo de atualização do monitor de atividade  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>Para definir o intervalo de atualização do monitor de atividade  
   
 -   Abra o Monitor de Atividade.  
   

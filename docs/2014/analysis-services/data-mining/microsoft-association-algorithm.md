@@ -31,10 +31,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174716"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo Associação da Microsoft
@@ -59,7 +59,7 @@ ms.locfileid: "78174716"
 
  Os requisitos de um modelo de regras de associação são:
 
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.
 
 -   **Uma única coluna previsível** Um modelo de associação pode ter apenas uma coluna previsível. Geralmente, é a coluna de chave da tabela aninhada, como aquela arquivada, que lista os produtos que foram comprados. Os valores devem ser discretos ou diferenciados.
 

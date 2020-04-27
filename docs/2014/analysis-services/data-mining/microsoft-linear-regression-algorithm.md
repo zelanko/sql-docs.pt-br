@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174415"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
@@ -44,11 +44,11 @@ ms.locfileid: "78174415"
 ## <a name="data-required-for-linear-regression-models"></a>Dados requeridos para modelos de regressão linear
  Ao preparar dados para usar em um modelo de regressão linear, você deve entender os requisitos para o algoritmo específico. Isso inclui a quantidade de dados necessária e a forma como os dados são usados. Os requisitos para este tipo de modelos são os seguintes:
 
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.
 
--   **Uma coluna previsível** Requer pelo menos uma coluna previsível. Você pode incluir diversos atributos previsíveis em um modelo, mas eles devem ser tipos de dados numéricos contínuos. Não é possível usar um tipo de dados datetime como um atributo previsível, mesmo que o armazenamento nativo dos dados seja numérico.
+-   **Uma coluna previsível** Requer, pelo menos, uma coluna previsível. Você pode incluir diversos atributos previsíveis em um modelo, mas eles devem ser tipos de dados numéricos contínuos. Não é possível usar um tipo de dados datetime como um atributo previsível, mesmo que o armazenamento nativo dos dados seja numérico.
 
--   **Colunas de entrada** As colunas de entrada devem conter dados numéricos contínuos e receber o tipo de dados apropriado.
+-   **Colunas de entrada** Colunas de entrada devem conter dados numéricos contínuos e devem ser atribuídas ao tipo de dados apropriado.
 
  Para obter mais informações sobre esse algoritmo, consulte [Referência técnica do algoritmo Regressão Linear da Microsoft](microsoft-linear-regression-algorithm-technical-reference.md).
 

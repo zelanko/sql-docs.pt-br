@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211203"
 ---
 # <a name="creating-a-login"></a>criando um logon
@@ -54,7 +54,7 @@ ms.locfileid: "68211203"
  [concedendo acesso a um banco de dados](lesson-2-2-granting-access-to-a-database.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CRIAR logon &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)   
  [Escolher um modo de autenticação](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar recursos de data e hora aprimorados (OLE DB) | Microsoft Docs
+title: Usar recursos avançados de data e hora (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207018"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usar recursos avançados de data e hora (OLE DB)
-  Este exemplo mostra como usar os recursos de data/hora introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. O exemplo usa os quatro novos tipos de data e hora`date`( ****, hora `datetime2`, e `datetimeoffset`) para executar comandos com parâmetros e recuperar os resultados do conjunto de linhas.  
+  Este exemplo mostra como usar os recursos de data/hora introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. O exemplo usa os quatro novos tipos de data e hora`date`( **time**, hora `datetime2`, e `datetimeoffset`) para executar comandos com parâmetros e recuperar os resultados do conjunto de linhas.  
   
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria um procedimento armazenado usado por este exemplo.  

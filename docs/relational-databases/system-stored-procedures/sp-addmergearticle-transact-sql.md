@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174001"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`É o tipo de artigo. o *tipo* é **sysname**, com um padrão de **Table**, e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**tabela** (padrão)|Tabela com esquema e dados. A replicação monitora a tabela para determinar os dados a serem replicados.|  
 |**func schema only**|Função somente com esquema.|  
@@ -101,10 +101,10 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Especifica o que o sistema deve fazer se a tabela existir no Assinante ao aplicar o instantâneo. *pre_creation_cmd* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**None**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
-|**apagar**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
+|**nenhum**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
+|**delete**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
 |**descartar** (padrão)|Cancela a tabela antes de recriá-la. Necessário para dar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suporte a assinantes.|  
 |**truncar**|Trunca a tabela de destino.|  
   
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`É um bitmap da opção de geração de esquema para o artigo fornecido. *schema_option* é **binary (8)** e pode ser [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0x00**|Desabilita o script pelo Agente de Instantâneo e usa o script de precriação de esquema fornecido definido em *creation_script*.|  
 |**0x01**|Gera a criação do objeto (CREATE TABLE, CREATE PROCEDURE, e assim por diante). Esse valor é o padrão para artigos de procedimento armazenado.|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`É um bitmap das permissões em nível de tabela que são verificadas quando o Agente de Mesclagem aplica alterações ao Publicador. Se o logon/conta de usuário do Publicador usado pelo processo de mesclagem não possuir as permissões corretas de tabela, as alterações inválidas serão registradas como conflitos. *check_permissions* é **int**e pode ser [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0x00** (padrão)|As permissões não são verificadas.|  
 |**0x10**|Verifica as permissões no Editor antes que as operações de inserção realizadas em um Assinante possam ser carregadas.|  
@@ -253,12 +253,12 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options`Define a maneira como os dados no artigo são particionados, o que permite otimizações de desempenho quando todas as linhas pertencem a apenas uma partição ou em apenas uma assinatura. *partition_options* é **tinyint**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|A filtragem para o artigo ou é estática ou não gera um único subconjunto de dados para cada partição, ou seja, uma partição "sobreposta".|  
 |**1**|As partições são sobrepostas e as atualizações de linguagem de manipulação de dados (DML) feitas ao Assinante não podem alterar a partição à qual uma linha pertence.|  
 |**2**|A filtragem do artigo gera partições não sobrepostas, mas vários Assinantes podem receber a mesma partição.|  
-|**Beta**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.|  
+|**3**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.|  
   
 > [!NOTE]  
 >  Se a tabela de origem de um artigo já estiver publicada em outra publicação, o valor de *partition_options* deverá ser o mesmo para ambos os artigos.  
@@ -267,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`Define restrições em atualizações feitas em um assinante com uma assinatura de cliente. Para obter mais informações, consulte [Otimizar o desempenho da replicação de mesclagem com artigos somente para download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* é **tinyint**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Sem restrições. As alterações feitas no Assinante são carregadas no Publicador.|  
 |**1**|As alterações são permitidas no Assinante, mas não são carregadas no Publicador.|  
@@ -280,9 +280,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Especifica como o gerenciamento de intervalo de identidade é tratado para o artigo. *identityrangemanagementoption* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**None**|Desabilita o gerenciamento de intervalo de identidade.|  
+|**nenhum**|Desabilita o gerenciamento de intervalo de identidade.|  
 |**Manual**|Marca a coluna de identidade usando NOT FOR REPLICATION para ativar tratamento de intervalo de identidade manual.|  
 |**Automático**|Especifica o gerenciamento automático de intervalos de identidade.|  
 |NULL (padrão)|O padrão é **nenhum**quando o valor de *auto_identity_range* não é **verdadeiro**.|  
@@ -334,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**tabela**|**** -  0x0C034FD1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e publicações mais recentes compatíveis com um instantâneo de modo nativo.<br /><br /> **** -  0x08034FF1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e publicações mais recentes compatíveis com um instantâneo de modo de caractere.|  
+|**table**|**0x0C034FD1** -  0x0C034FD1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e publicações mais recentes compatíveis com um instantâneo de modo nativo.<br /><br /> **0x08034FF1** -  0x08034FF1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e publicações mais recentes compatíveis com um instantâneo de modo de caractere.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -348,18 +348,18 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** e **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
 |**proc schema only**|**0x01** e **0x2000**|  
-|**tabela**|Todas as opções.|  
+|**table**|Todas as opções.|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** ou à função de banco de dados fixa **db_owner** .  
+ Requer associação na função de servidor fixa **sysadmin** ou na função de banco de dados fixa **db_owner** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Publicar objetos de banco de dados e](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [&#41;&#40;Transact-SQL de sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropmergearticle](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   

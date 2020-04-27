@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021785"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informações da Publicação, Agentes (publicação de instantâneo)
@@ -47,12 +47,12 @@ ms.locfileid: "63021785"
 -   Concluído  
   
  **Agente**  
- O Snapshot Agent. Essa é a única publicação associada a uma publicação de instantâneo. O Distribution Agent é associado com assinaturas para essa publicação. Para obter mais informações, confira [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ O Snapshot Agent. Essa é a única publicação associada a uma publicação de instantâneo. O Distribution Agent é associado com assinaturas para essa publicação. Para obter mais informações, consulte [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
- **Última Hora de Início**  
+ **Hora da última inicialização**  
  A última vez que o agente foi iniciado.  
   
- **Duration**  
+ **Permanência**  
  O tempo durante o qual o agente foi executado. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total, se o agente foi executado anteriormente.  
   
  **Última Ação**  
@@ -61,6 +61,6 @@ ms.locfileid: "63021785"
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)  
+ [Monitorando a replicação](monitoring-replication.md)  
   
   

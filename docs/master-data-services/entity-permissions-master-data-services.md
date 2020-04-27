@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728174"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permissões de entidade (Master Data Services)
@@ -37,13 +37,13 @@ ms.locfileid: "73728174"
 > [!NOTE]  
 >  Essas permissões se aplicam apenas à área funcional **Explorer** da interface do usuário.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
-|**Criada**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
-|**Cumulativo**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
+|**Atualização**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Delete (excluir)**|O usuário pode excluir membros.|  
-|**Deny**|Nega todo o acesso à entidade.|  
+|**Negar**|Nega todo o acesso à entidade.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas entre si. Ao atribuir permissões Criar, Atualizar e Excluir, a permissão Ler será atribuída automaticamente.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625558"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728380"
 ---
 # <a name="using-basic-data-types"></a>Como usar tipos de dados básicos
 
@@ -101,20 +101,20 @@ Se você tiver que atualizar o valor de um campo em uma fonte de dados, use um d
 
 Se você tiver que atualizar dados em uma fonte de dados usando uma consulta parametrizada, poderá definir o tipo de dados dos parâmetros usando um dos métodos set\<Type> da classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), também conhecida como *métodos setter*. No exemplo a seguir, o método [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) é usado para pré-compilar a consulta parametrizada e o método [setString](reference/setstring-method-sqlserverpreparedstatement.md) é usado para definir o valor da cadeia de caracteres do parâmetro antes de o método [executeUpdate](reference/executeupdate-method.md) ser chamado.  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-Confira mais informações sobre consultas parametrizadas em [Como usar uma instrução SQL com parâmetros](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Confira mais informações sobre consultas parametrizadas em [Como usar uma instrução SQL com parâmetros](using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Passando parâmetros para um procedimento armazenado
 
 Se você tiver que passar parâmetros de tipo em um procedimento armazenado, poderá definir os parâmetros através de índice ou pode nomear usando um dos métodos set\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). No exemplo a seguir, o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) é usado para configurar a chamada ao procedimento armazenado e o método [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) é usado para definir o parâmetro para a chamada antes de o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) ser chamado.  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > Neste exemplo, um conjunto de resultados é retornado com os resultados da execução do procedimento armazenado.
 
-Confira mais informações sobre como usar o JDBC Driver com procedimentos armazenados e parâmetros de entrada em [Como usar um procedimento armazenado com parâmetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Confira mais informações sobre como usar o JDBC Driver com procedimentos armazenados e parâmetros de entrada em [Como usar um procedimento armazenado com parâmetros de entrada](using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recuperando parâmetros de um procedimento armazenado
 

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025657"
 ---
 # <a name="complete-the-post-installation-steps"></a>Concluir as etapas de pós-instalação
@@ -22,7 +22,7 @@ ms.locfileid: "63025657"
   
 ### <a name="to-complete-the-post-installation-steps"></a>Para concluir as etapas de pós-instalação  
   
-1.  **Criar regras de firewall**: no controlador e nos computadores cliente, você deve permitir o tráfego de entrada por meio do firewall para o serviço correspondente. Especifique as regras de firewall para os executáveis de serviço, localizados nas pastas de instalação.  
+1.  **Crie regras de firewall**: no controlador e nos computadores cliente, você deve permitir tráfego de entrada pelo firewall para o serviço correspondente. Especifique as regras de firewall para os executáveis de serviço, localizados nas pastas de instalação.  
   
     1.  Para o serviço de controlador, crie uma regra para **DReplayController.exe**, localizado na pasta de instalação. Por exemplo, o comando a seguir habilita essa regra, onde `%InstallPath%` é a pasta de instalação do serviço:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63025657"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **Conceder permissões de cada cliente no servidor de destino**: depois de concluir a instalação do serviço de cliente nos computadores cliente, você deve adicionar manualmente as contas de serviço de cliente à função sysadmin na instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destino do.  
+2.  **Conceda permissões a cada cliente no servidor de destino**: Depois de concluir a instalação do serviço de cliente nos computadores cliente, adicione manualmente as contas de serviço de cliente à função sysadmin na instância de destino do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Você deve ter permissões administrativas para instalar qualquer recurso do Distributed Replay. Apenas um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenha permissões sysadmin pode adicionar as contas de serviço de cliente à função de servidor sysadmin do servidor de teste. Para obter mais informações sobre as considerações de segurança do Distributed Replay, veja [Segurança do Distributed Replay](distributed-replay-security.md).  

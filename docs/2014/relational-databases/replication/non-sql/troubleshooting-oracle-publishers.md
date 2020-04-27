@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021904"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionando problemas de Publicadores Oracle
   Este tópico lista diversos problemas que poderiam surgir ao configurar e usar um Publicador Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>É gerado um erro relativo ao software de rede e de cliente Oracle  
- A conta sob a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qual o é executado no distribuidor deve receber permissões de leitura e execução para o diretório (e todos os subdiretórios) nos quais o software de rede cliente Oracle está instalado. Se as permissões não forem concedidas ou os componentes de cliente Oracle não estiverem adequadamente instalados, você receberá a seguinte mensagem de erro:  
+ A conta sob a qual o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é executado no Distribuidor deve receber permissões de leitura e execução para o diretório (e todos os subdiretórios) em que o software de rede cliente Oracle está instalado. Se as permissões não forem concedidas ou os componentes de cliente Oracle não estiverem adequadamente instalados, você receberá a seguinte mensagem de erro:  
   
  "Falha na conexão ao servidor com [Microsoft OLE DB Provider for Oracle]. Cliente Oracle e componentes de rede não foram localizados. Esses componentes são fornecidos pela Oracle Corporation e são parte da instalação de software de cliente Oracle Versão 7.3.3 ou posterior. O provedor está incapaz de funcionar até que esses componentes estejam instalados."  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021904"
   
 -   “Instância do servidor Oracle ' \<*OraclePublisherName*>' foi configurado anteriormente para usar '\<*SQLServerDistributorName*>' como Distribuidor. Para começar a usar '\<*NewSQLServerDistributorName*>' como Distribuidor, você deve remover a configuração de replicação atual na instância de servidor Oracle, o que excluirá todas as publicações nessa instância de servidor."  
   
--   “Servidor Oracle '\<*OracleServerName*>' já está definido como publicador '\<*OraclePublisherName*>' no distribuidor '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*'. Descarte o Publicador ou remova o sinônimo público '*\<synonymname>*' para recriar. "  
+-   “Servidor Oracle '\<*OracleServerName*>' já está definido como publicador '\<*OraclePublisherName*>' no distribuidor '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '. Remova o publicador ou o sinônimo público ' *\<SynonymName>* ' para recriar.”  
   
  Quando um Publicador Oracle é descartado, os objetos de replicação no banco de dados Oracle são automaticamente limpos. No entanto, a limpeza manual dos objetos de replicação Oracle é necessária em alguns casos. Para limpar manualmente objetos de replicação Oracle criados por replicação:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021904"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>É gerado o erro SQL Server 21642, relativo a um logon de servidor vinculado duplicado  
  Quando um Publicador Oracle é configurado inicialmente, uma entrada de servidor vinculado é criada para a conexão entre o Publicador e o Distribuidor. O servidor vinculado tem o mesmo nome que o serviço TNS Oracle. Se você tentar criar um servidor vinculado com o mesmo nome, a seguinte mensagem de erro será mostrada:  
   
- "Os publicadores heterogêneos exigem um servidor vinculado. Um servidor vinculado chamado '*\<LinkedServerName>*' já existe. Remova o servidor vinculado ou escolha um nome de publicador diferente."  
+ "Os publicadores heterogêneos exigem um servidor vinculado. Um servidor vinculado chamado ' *\<LinkedServerName>* ' já existe. Remova o servidor vinculado ou escolha um nome de publicador diferente."  
   
  Esse erro pode ocorrer se você tentar criar o servidor vinculado diretamente ou se tiver previamente descartado a relação entre o Publicador Oracle e o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e estiver agora tentando reconfigurá-lo. Se receber esse erro ao tentar reconfigurar o Publicador, remova o servidor vinculado com [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63021904"
   
  Se o provedor OLEDB Oracle estiver instalado, certifique-se de que esteja registrado. Para registrar o provedor DLL, execute o seguinte comando a partir do diretório em que o DLL está instalado e, então, pare e reinicie a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  `regsvr32 OraOLEDB10.dll`ou `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` ou `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>É gerado o erro SQL Server 21626 ou 21627  
  Para verificar se o ambiente de publicação Oracle está adequadamente configurado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenta conectar o Publicador Oracle com as credenciais de logon que você especificou durante a configuração. Se o Distribuidor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não puder conectar-se ao Publicador Oracle, a seguinte mensagem de erro será mostrada:  
@@ -151,11 +151,11 @@ ms.locfileid: "63021904"
   
  Para exibir e modificar a configuração de registro:  
   
-1.  Clique em **Iniciar** e em **Executar**.  
+1.  Clique em **Iniciar**e em **Executar**.  
   
 2.  Na caixa de diálogo **Executar** , digite **regedit**e, então, clique em **OK**.  
   
-3.  Navegue até HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\*\<InstanceName>* \Providers.  
+3.  Navegue até HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
   
      Incluída em Provedores deve haver uma pasta nomeada OraOLEDB.Oracle. Dentro dessa pasta deve haver o nome do valor DWORD **AllowInProcess**, com valor **1**.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "63021904"
   
  "As permissões associadas com o logon de administrador para o publicador Oracle '% s' não é suficiente."  
   
- Para verificar as permissões concedidas ao usuário, execute a seguinte consulta: `SELECT * from session_privs`. A saída deverá ser semelhante a esta:  
+ Para verificar as permissões concedidas ao usuário, execute a seguinte consulta: `SELECT * from session_privs`. A saída deve ser semelhante ao seguinte:  
   
  `PRIVILEGE`  
   

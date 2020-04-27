@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247118"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Visão geral do Assistente para Experimentos de Banco de Dados
@@ -113,6 +113,6 @@ A coleta e o envio de dados de telemetria são opcionais. Para especificar quais
 
 O DEA é regido pela [política de privacidade da Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - O artigo [visão geral do processo de comparação de carga de trabalho](database-experimentation-assistant-get-started.md), que explica o processo envolvido na comparação de cargas de trabalho em dois ambientes.

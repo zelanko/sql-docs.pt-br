@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044243"
 ---
 # <a name="rpcstarting-event-class"></a>classe de evento RPC:Starting
@@ -26,7 +26,7 @@ ms.locfileid: "63044243"
   
 ## <a name="rpcstarting-event-class-data-columns"></a>Colunas de dados da classe de evento do RPC:Starting  
   
-|Nome da coluna de dados|`Data type`|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|`Data type`|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |BinaryData|`image`|Valor binário dependente da classe de evento capturada no rastreamento.|2|Sim|  

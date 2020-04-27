@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021724"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriedades da Publicação, Opções de Assinatura
-  A página **Opções de assinatura** da caixa de diálogo Propriedades de **publicação** permite exibir e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
+  A página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação** permite visualizar e definir propriedades de nível de publicação associadas a assinaturas. As propriedades são agrupadas nas categorias seguintes:  
   
 -   Propriedades que se aplicam a todas as publicações.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "63021724"
   
 ### <a name="creation-and-synchronization"></a>Criação e sincronização  
  **Permitir assinaturas anônimas**  
- Determina se as assinaturas pull anônimas devem ser permitidas. Há suporte para assinaturas anônimas para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows CE. Para usar essa opção para publicações de instantâneo e transacional, a opção **Instantâneo sempre disponível** deve ser definida como **True**.  
+ Determina se as assinaturas pull anônimas devem ser permitidas. Há suporte para assinaturas anônimas para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows CE. Para usar essa opção para publicações de instantâneo e transacional, a opção **Instantâneo sempre disponível** deve ser definida como **True**.  
   
- **Banco de dados de assinatura anexável**  
+ **Banco de dados de assinaturas anexável**  
  Para usar essa opção para publicações de instantâneo e transacional, a opção **Instantâneo sempre disponível** deve ser definida como **Verdadeiro** .  
   
 > [!IMPORTANT]  
@@ -53,16 +53,16 @@ ms.locfileid: "63021724"
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Opções para publicações transacionais e de instantâneo  
   
 ### <a name="creation-and-synchronization"></a>Criação e sincronização  
- **Agente de Distribuição independentes**  
+ **Independent Agente de Distribuição**  
  Determina se um agente independente de outras publicações deste banco de dados deve ser usado. Essa opção é somente leitura; Ela é definida como **Verdadeiro** por padrão, para publicações criadas com o Assistente para Nova Publicação e não pode ser alterada depois que a publicação é criada. Para obter mais informações, consulte [Replication Agent Administration](agents/replication-agent-administration.md) (Administração do agente de replicação).  
   
  **Instantâneo sempre disponível**  
  Determina se são criados arquivos de instantâneo cada vez que o Agente de Instantâneo é executado (requer **Agente de Distribuição Independente**). Essa opção é somente leitura; ela será definida como **Verdadeiro** se você selecionar **Criar um instantâneo imediatamente e mantê-lo disponível para inicializar assinaturas** na página **Agente de Instantâneo** do Assistente para Nova Publicação (o padrão). Para obter mais informações, consulte [Create and Apply the Snapshot](create-and-apply-the-snapshot.md) (Criar e aplicar o instantâneo).  
   
- **Permitir inicialização por meio de arquivos de backup**  
+ **Permitir inicialização com base nos arquivos de backup**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se deve haver permissão para que os arquivos de backup sejam usados para inicializar assinaturas. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
- **Permitir assinantes não SQL Server**  
+ **Permitir Assinantes não SQL Server**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a Assinantes não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Definir essa opção como **true** define outras propriedades de publicação para dar suporte[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a assinantes não. Se houver assinaturas, essa opção será somente leitura; ela não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata**, **Permitir assinaturas de atualização enfileirada**ou **Permitir assinaturas ponto a ponto** forem definidas como **Verdadeiro**. Para obter mais informações, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformação de dados  
@@ -77,9 +77,9 @@ ms.locfileid: "63021724"
  Aplica-se apenas ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a publicação oferece suporte a replicação ponto a ponto. Definir essa opção como **Verdadeiro** define outras propriedades de publicação para dar suporte a replicação ponto a ponto. Essa opção será somente leitura se existirem assinaturas. Essa opção não poderá ser definida como **Verdadeiro** se **Permitir assinaturas de atualização imediata** , **Permitir assinaturas de atualização enfileirada**ou **Permitir Assinantes não SQL Server** for definida como **Verdadeiro**. Para obter mais informações, consulte [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir a detecção de conflitos ponto a ponto**  
- Aplica-se apenas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores. Especifica se a detecção de conflito está habilitada para esta publicação. Para usar detecção de conflito, todos os nós devem ser executados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou uma versão posterior, e a detecção deve estar habilitada para todos os nós. Para usar a detecção de conflitos, você também deve especificar um valor para a **ID do originador par**. Para obter mais informações, consulte [detecção de conflitos na replicação ponto a ponto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Aplica-se apenas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores. Especifica se a detecção de conflito está habilitada para esta publicação. Para usar detecção de conflito, todos os nós devem ser executados no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou uma versão posterior, e a detecção deve estar habilitada para todos os nós. Para usar a detecção de conflitos, você também deve especificar um valor para **Identificação do originador do par**. Para obter mais informações, consulte [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- **ID do originador par**  
+ **Identificação do originador do par**  
  Aplica-se apenas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores. Especifica uma ID para um nó em uma topologia ponto a ponto. Essa ID será usada para detecção de conflito se **Permitir a detecção de conflitos ponto a ponto** for definido como **Verdadeiro**. Especifique uma ID positiva, diferente de zero, que nunca foi usada na topologia. Para uma lista de IDs que já foram usadas, consulte a tabela do sistema [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) .  
   
 ### <a name="updatable-subscriptions"></a>Assinaturas Atualizáveis  
@@ -89,7 +89,7 @@ ms.locfileid: "63021724"
  **Permitir assinaturas de atualização enfileirada**  
  Determina se as alterações de dados do Assinante podem ser enfileiradas e replicadas posteriormente para o Publicador. Essa opção é somente leitura; a atualização de assinaturas só pode ser habilitada quando uma publicação é criada. Para obter mais informações, consulte [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- **Relatar conflitos centralmente**  
+ **Reportar conflitos centralmente**  
  Determina se as alterações de dados conflitantes devem ser informadas somente no Publicador ou no Publicador e no Assinante (requer a opção **Permitir assinaturas de atualização enfileirada**). Essa opção é somente leitura; Ela é definida como **Verdadeiro** por padrão, para publicações criadas com o Assistente para Nova Publicação e não pode ser alterada depois que a publicação é criada. Um valor de **Verdadeiro** significa que os conflitos só são informados no Publicador. Os conflitos só podem ser exibidos quando são informados.  
   
  **Política de resolução de conflito**  
@@ -101,17 +101,17 @@ ms.locfileid: "63021724"
 ## <a name="options-for-merge-publications"></a>Opções para publicações de mesclagem  
   
 ### <a name="conflict-reporting"></a>Relatório de conflito  
- **Relatar conflitos centralmente**  
+ **Reportar conflitos centralmente**  
  Determina se as alterações de dados conflitantes devem ser informadas somente ao Publicador ou ao Publicador e ao Assinante. Essa opção é somente leitura; Ela é definida como **Verdadeiro** por padrão, para publicações criadas com o Assistente para Nova Publicação e não pode ser alterada depois que a publicação é criada. Um valor de **Verdadeiro** significa que os conflitos só são informados no Publicador. Os conflitos só podem ser exibidos quando são informados. Para obter mais informações, consulte a seção "Exibindo conflitos" em [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ### <a name="filtering"></a>Filtragem  
  **Permitir filtros com parâmetros**  
  Defina com base no uso ou não de filtros com parâmetros na publicação. Essa opção é sempre somente leitura. Para obter mais informações, consulte [Filtros de linha com parâmetros](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Validar assinantes**  
+ **Validar Assinantes**  
  Determina quais funções usar ao validar que um Assinante tem a partição correta de dados. Separe valores múltiplos por vírgulas. Para obter mais informações, consulte [Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md) (Validar informações de partição para um assinante de mesclagem).  
   
- **Partições pré-calcular**  
+ **Pré-calcular partições**  
  Somente o[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. Determina se a sincronização deve ser otimizada calculando com antecedência quais linhas de dados pertencem a quais partições. Essa configuração assumira **Verdadeiro** como padrão, se a publicação atender aos critérios de partições pré-calculadas. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
  **Otimizar sincronização**  

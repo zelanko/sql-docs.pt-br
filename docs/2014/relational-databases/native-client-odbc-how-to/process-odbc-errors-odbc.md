@@ -13,26 +13,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206794"
 ---
 # <a name="process-odbc-errors-odbc"></a>Processar erros ODBC (ODBC)
   É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando `SQLGetDiagField`.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) são processados pelo Gerenciador de Driver ODBC, não por um driver individual. O Gerenciador de Driver ODBC não armazena em cache campos de diagnóstico específicos do driver até que seja feita uma conexão bem-sucedida. Não é possível chamar [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) para campos de diagnóstico específicos do driver antes de obter uma conexão bem-sucedida. Isso inclui os comandos de conexão ODBC, mesmo se eles retornarem SQL_SUCCESS_WITH_INFO. Os campos de diagnóstico específicos do driver não estarão disponíveis até a próxima chamada de função ODBC.  
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo mostra um manipulador de erros simples que chama [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para as informações ODBC padrão. Em seguida, ele testa uma conexão válida e, se houver, chama `SQLGetDiagField` para os campos de diagnósticos específicos do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este exemplo não tem suporte em IA64.  
   
  Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
  Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   

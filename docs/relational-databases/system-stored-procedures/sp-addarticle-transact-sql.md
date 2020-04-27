@@ -16,10 +16,10 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68811389"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @source_table = ] 'source_table'`Este parâmetro foi preterido; em vez disso, use *source_object* .  
   
- *Não há suporte para esse parâmetro em Publicadores Oracle.*  
+ *Esse parâmetro não tem suporte para Publicadores Oracle.*  
   
 `[ @destination_table = ] 'destination_table'`É o nome da tabela de destino (assinatura), se for diferente do *source_table*ou do procedimento armazenado. *destination_table* é **sysname**, com um padrão de NULL, o que significa que *source_table* é igual a *destination_table * *.*  
   
@@ -86,7 +86,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`É o tipo de artigo. o *tipo* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**aggregate schema only**|Função de agregação apenas com esquema.|  
 |**func schema only**|Função somente com esquema.|  
@@ -110,7 +110,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`É o tipo de comando de replicação usado ao replicar inserções para este artigo. *ins_cmd* é **nvarchar (255)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
 |**CALL sp_MSins_**<br /> **_tabela_** (padrão)<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado ou crie o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_MSins_*tabela* </strong> contém o nome da tabela de destino no lugar da *_table* parte do parâmetro. Quando *destination_owner* é especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para a tabela **ProductCategory** de Propriedade do esquema de **produção** no Assinante, o parâmetro seria `CALL sp_MSins_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto, *_table* é acrescentado com um valor de GUID. Não há suporte para a especificação de *custom_stored_procedure* para assinantes de atualização.|  
@@ -120,7 +120,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @del_cmd = ] 'del_cmd'`É o tipo de comando de replicação usado ao replicar exclusões para este artigo. *del_cmd* é **nvarchar (255)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
 |**CALLsp_MSdel_**<br /> **_tabela_** (padrão)<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado ou crie o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo. *custom_stored_procedure* é o nome de um procedimento armazenado criado pelo usuário. <strong>sp_MSdel_*tabela* </strong> contém o nome da tabela de destino no lugar da *_table* parte do parâmetro. Quando *destination_owner* é especificado, ele é anexado ao nome da tabela de destino. Por exemplo, para a tabela **ProductCategory** de Propriedade do esquema de **produção** no Assinante, o parâmetro seria `CALL sp_MSdel_ProductionProductCategory`. Para um artigo em uma topologia de replicação ponto a ponto, *_table* é acrescentado com um valor de GUID. Não há suporte para a especificação de *custom_stored_procedure* para assinantes de atualização.|  
@@ -131,7 +131,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @upd_cmd = ] 'upd_cmd'`É o tipo de comando de replicação usado ao replicar atualizações para este artigo. *upd_cmd* é **nvarchar (255)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**NONE**|Nenhuma ação é tomada.|  
 |**CALL sp_MSupd_**<br /> **_tabela_**<br /><br /> -ou-<br /><br /> **CALL custom_stored_procedure_name**|Chama um procedimento armazenado a ser executado no Assinante. Para usar esse método de replicação, use *schema_option* para especificar a criação automática do procedimento armazenado ou crie o procedimento armazenado especificado no banco de dados de destino de cada assinante do artigo.|  
@@ -149,10 +149,10 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Especifica o que o sistema deve fazer se detectar um objeto existente de mesmo nome no Assinante ao aplicar o instantâneo deste artigo. *pre_creation_cmd* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**None**|Não usa um comando.|  
-|**apagar**|Exclui dados da tabela de destino antes de aplicar o instantâneo. Quando o artigo é filtrado horizontalmente, apenas dados em colunas especificadas pela cláusula de filtro são excluídos. Não há suporte para Publicadores Oracle quando um filtro horizontal está definido.|  
+|**nenhum**|Não usa um comando.|  
+|**delete**|Exclui dados da tabela de destino antes de aplicar o instantâneo. Quando o artigo é filtrado horizontalmente, apenas dados em colunas especificadas pela cláusula de filtro são excluídos. Não há suporte para Publicadores Oracle quando um filtro horizontal está definido.|  
 |**descartar** (padrão)|Descarta a tabela de destino.|  
 |**truncar**|Trunca a tabela de destino. Não é válido para assinantes ODBC ou OLE DB.|  
   
@@ -163,7 +163,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Se esse valor for NULL, o sistema gerará automaticamente uma opção de esquema válida para o artigo dependendo de outras propriedades do artigo. A tabela de **Opções de esquema padrão** fornecida nos comentários mostra o valor que será escolhido com base na combinação do tipo de artigo e do tipo de replicação.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0x00**|Desabilita o script pelo Agente de Instantâneo e usa *creation_script*.|  
 |**0x01**|Gera o script de criação de objeto (CREATE TABLE, CREATE PROCEDURE e assim por diante). Esse valor é o padrão para artigos de procedimento armazenado.|  
@@ -228,7 +228,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @status = ] status`Especifica se o artigo está ativo e opções adicionais de como as alterações são propagadas. o *status* é **tinyint**e pode ser [| (OR-bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produto de um ou mais desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|O artigo está ativo.|  
 |**8**|Inclui o nome da coluna nas instruções INSERT.|  
@@ -250,10 +250,10 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`Habilita e desabilita o tratamento automático de intervalo de identidade em uma publicação no momento da criação. *auto_identity_range* é **nvarchar (5)** e pode ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**true**|Ativa a manipulação de intervalo de identidade automática.|  
-|**for**|Desabilita a manipulação de intervalo de identidade automática.|  
+|**false**|Desabilita a manipulação de intervalo de identidade automática.|  
 |NULL (padrão)|O tratamento de intervalo de identidade é definido por *identityrangemanagementoption*.|  
   
 > [!NOTE]  
@@ -284,9 +284,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Especifica como o gerenciamento de intervalo de identidade é tratado para o artigo. *identityrangemanagementoption* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**None**|A replicação não faz nenhum gerenciamento de intervalo de identidade explícito. Essa opção só é recomendada para compatibilidade com versões anteriores do SQL Server. Não permitido para replicação hierárquica.|  
+|**nenhum**|A replicação não faz nenhum gerenciamento de intervalo de identidade explícito. Essa opção só é recomendada para compatibilidade com versões anteriores do SQL Server. Não permitido para replicação hierárquica.|  
 |**Manual**|Marca a coluna de identidade usando NOT FOR REPLICATION para ativar tratamento de intervalo de identidade manual.|  
 |**Automático**|Especifica o gerenciamento automático de intervalos de identidade.|  
 |NULL (padrão)|O padrão é **nenhum** quando o valor de *auto_identity_range* não é **verdadeiro**. O padrão é **manual** em um padrão de topologia ponto a ponto (*auto_identity_range* é ignorado).|  
@@ -392,7 +392,7 @@ sp_addarticle [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addarticle**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
  [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   

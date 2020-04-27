@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144592"
 ---
 # <a name="view-offline-log-files"></a>Exibir arquivos de log offline
@@ -45,7 +45,7 @@ ms.locfileid: "63144592"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (Este tópico mostra como recuperar informações sobre todos os arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-##  <a name="BeforeYouBegin"></a> Permissões  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissões  
  Para conectar-se a um arquivo de log offline, você deve ter as permissões a seguir nos computadores local e remoto:  
   
 -   Acesso de leitura ao namespace WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta. Para obter mais informações, consulte o procedimento "Para verificar permissões de WMI" posteriormente nesta seção.  
@@ -74,7 +74,7 @@ ms.locfileid: "63144592"
   
     3.  Insira o novo nome do computador remoto e clique em **OK**.  
   
-3.  Clique com o botão direito do mouse em **controle WMI (local)** ou **controle WMI (***RemoteComputerName***)** e clique em **Propriedades**.  
+3.  Clique com o botão direito do mouse em **Controle WMI (Local)** ou **Controle WMI (***RemoteComputerName***)** e clique em **Propriedades**.  
   
 4.  Na caixa de diálogo **Propriedades do Controle WMI** , clique na guia **Segurança** .  
   

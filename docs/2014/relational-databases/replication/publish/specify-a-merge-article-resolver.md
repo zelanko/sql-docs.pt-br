@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212090"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar um resolvedor de artigo de mesclagem
@@ -30,21 +30,21 @@ ms.locfileid: "68212090"
   
      [Recomendações](#Recommendations)  
   
--   **Para especificar um resolvedor de artigo de mesclagem, usando:**  
+-   **Para especificar um resolvedor de artigo de mesclagem usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   A replicação de mesclagem permite os seguintes tipos de resolvedores de artigo:  
   
     -   O resolvedor padrão. O comportamento do resolvedor padrão depende se a assinatura é uma assinatura de cliente ou uma assinatura de servidor. Para obter mais informações sobre como especificar o tipo de assinatura, consulte [Especificar um tipo de assinatura de mesclagem e prioridade de resolução de conflitos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Você gravou um resolvedor personalizado, que pode ser um manipulador de lógica comercial (gravado em código gerenciado) ou um resolvedor personalizado baseado em COM. Para obter mais informações, consulte [Replicação de mesclagem avançada – detecção e resolução de conflito](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se precisar implementar uma lógica personalizada que é executada para cada linha replicada, não apenas para as linhas conflitantes, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Você gravou um resolvedor personalizado, que pode ser um manipulador de lógica comercial (gravado em código gerenciado) ou um resolvedor personalizado baseado em COM. Para obter mais informações, consulte [detecção e resolução de conflitos de replicação de mesclagem avançada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Se precisar implementar uma lógica personalizada que é executada para cada linha replicada, não apenas para as linhas conflitantes, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Um resolvedor padrão baseado em COM, que está incluído [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]no.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "68212090"
   
     -   O servidor IIS (Serviços de informações da Internet) da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para uma assinatura pull que usa sincronização da Web  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Depois que o resolvedor estiver registrado, especifique se um artigo deverá usar o resolvedor na guia **Resolvedor** da caixa de diálogo **Propriedades do Artigo – \<Artigo>**, disponível no Assistente para Nova Publicação e na caixa de diálogo **Propriedades de Publicação –\<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Para especificar um resolvedor  
   
-1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione uma tabela.  
+1.  Na página **Artigos** do Assistente para Nova Publicação ou na caixa de diálogo **Propriedades de Publicação – \<Publicação>**, selecione uma tabela.  
   
 2.  Clique em **Propriedades do Artigo**e clique em **Definir Propriedades do Artigo Realçado da Tabela**.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "68212090"
   
 7.  Repita este processo para cada artigo que requer um resolvedor.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Para registrar um resolvedor de conflitos personalizado  
   
 1.  Se planejar registrar seu próprio resolvedor de conflitos personalizado, crie um dos tipos a seguir:  
   
-    -   Resolvedor gerenciado baseado em códigos como um manipulador de lógica de negócios. Para obter mais informações, consulte [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Resolvedor gerenciado baseado em códigos como um manipulador de lógica de negócios. Para obter mais informações, consulte [implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Resolvedor baseado em procedimento armazenado e resolvedor baseado em COM. Para obter mais informações, consulte [Implementar um resolvedor de conflitos personalizado para um artigo de mesclagem](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68212090"
   
 2.  Execute [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) no Distribuidor. Especifique o nome completo do resolvedor personalizado da etapa 1 para **@article_resolver**.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemplos (Transact-SQL)  
  Esse exemplo cria um novo artigo e especifica que o Resolvedor de Conflitos de Cálculo de Média [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser usado para calcular a média da coluna **UnitPrice** quando os conflitos ocorrerem.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -144,7 +144,7 @@ ms.locfileid: "68212090"
  [!code-sql[HowTo#sp_changemerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detecção e resolução de conflito de replicação de mesclagem avançada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflitos de replicação de mesclagem avançada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

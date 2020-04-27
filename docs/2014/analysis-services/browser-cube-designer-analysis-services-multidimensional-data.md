@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174231"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -28,7 +28,7 @@ ms.locfileid: "78174231"
 
  A figura a seguir mostra a interface do **Navegador** no **Modo de design**gráfico.
 
- ![Designer de consultas MDX do Analysis Services, modo de exibição de Design](media/rsqd-dsawas-mdx-designmode.gif "Designer de consultas MDX do Analysis Services, modo de exibição de Design")
+ ![Designer de consultas MDX do Analysis Services, exibição de design](media/rsqd-dsawas-mdx-designmode.gif "Designer de consultas MDX do Analysis Services, exibição de design")
 
  Enquanto você estiver trabalhando no modo de design gráfico, se o botão de alternância **executar** automaticamente (![executar a consulta](media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")automaticamente) na barra de ferramentas estiver selecionado, o **navegador** executará uma consulta cada vez que você soltar um objeto de metadados no painel dados. Você também pode executar manualmente a consulta usando o botão **Executar consulta** (![executar a consulta](media/rsqdicon-run.gif "Executar a consulta")) na barra de ferramentas.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78174231"
 
  A figura a seguir mostra a interface do **Navegador** no modo de Consulta.
 
- ![Designer de consulta MDX do Analysis Services, exibição de consulta](media/rsqd-dsawas-mdx-querymode.gif "Designer de consulta MDX do Analysis Services, exibição de consulta")
+ ![Designer de consultas MDX do Analysis Services, exibição de consulta](media/rsqd-dsawas-mdx-querymode.gif "Designer de consultas MDX do Analysis Services, exibição de consulta")
 
  Você pode começar a trabalhar no modo de Design gráfico, adicionar os objetos necessários, adicionar filtros para fatiar o cubo e depois alternar para o modo de texto a fim de ampliar a consulta MDX padrão que foi gerada, e incluir propriedades de membro e propriedades de célula adicionais.
 

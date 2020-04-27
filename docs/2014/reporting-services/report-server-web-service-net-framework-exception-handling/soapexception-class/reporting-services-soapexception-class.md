@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046022"
 ---
 # <a name="reporting-services-soapexception-class"></a>Classe SoapException do Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "63046022"
   
  A tabela a seguir lista as propriedades públicas da classe **SoapException**.  
   
-|Propriedade pública|DESCRIÇÃO|  
+|Propriedade pública|Descrição|  
 |---------------------|-----------------|  
 |**Ator**|O código que causou a exceção. O valor é a URL para o método do serviço Web.|  
 |**Detalhes**|Informações de erro específicas do aplicativo. O valor é definido pelo servidor de relatório e está em formato XML. Para obter mais informações, consulte [Propriedade Detail](detail-property.md) e [Usando a propriedade Detail para tratar erros específicos](../best-practices/using-the-detail-property-to-handle-specific-errors.md).|  
@@ -35,7 +35,7 @@ ms.locfileid: "63046022"
 |**Mensagem**|Uma mensagem descritiva e localizada que descreve o erro. Esse texto poderia aparecer na interface do usuário do aplicativo.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Introdução ao tratamento de exceção no Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Introdução à manipulação de exceção no Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Tabela de erros SoapException](soapexception-errors-table.md)  
   
   

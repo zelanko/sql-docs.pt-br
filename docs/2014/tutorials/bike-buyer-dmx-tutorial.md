@@ -17,17 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140537"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX Comprador de bicicleta
   Nesse tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados com o uso da linguagem de consulta DMX (Extensões de Mineração de Dados). Você então utilizará esses modelos de mineração de dados para criar previsões que determinem se um cliente comprará uma bicicleta.  
   
- Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
+ Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
  A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu estender a análise de dados, criando um aplicativo personalizado que usa a funcionalidade de data mining. Sua meta para o aplicativo personalizado é ser capaz de:  

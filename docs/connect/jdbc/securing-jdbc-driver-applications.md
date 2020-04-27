@@ -1,5 +1,6 @@
 ---
-title: Proteger aplicativos do JDBC Driver | Microsoft Docs
+title: Protegendo aplicativos do JDBC Driver
+description: Os tópicos nesta seção descrevem algumas preocupações comuns de segurança inclusive cadeias de caracteres de conexão, validação de entrada do usuário e segurança geral de aplicativo.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e542328d80cabce0c0c5e923c1f150a86d9765d6
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219425"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728305"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protegendo aplicativos do JDBC Driver
 

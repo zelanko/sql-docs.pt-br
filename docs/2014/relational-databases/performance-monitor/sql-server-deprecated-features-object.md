@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206959"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
@@ -27,7 +27,7 @@ ms.locfileid: "68206959"
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
-|Instâncias do contador de Recursos Preteridos do SQL Server|DESCRIÇÃO|  
+|Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
 |sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substituir por `SELECT column_list FROM` * \<>* `()`function_name. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)`por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68206959"
 |Híndi|Evento que ocorre uma vez por inicialização de banco de dados e uma vez por uso de ordenação. Planeje a modificação de aplicativos que usam esta ordenação. Use Indic_General_90.|  
 |Dica da tabela HOLDLOCK sem parênteses||  
 |IDENTITYCOL|A sintaxe de INDENTITYCOL foi encontrada. Reescreva instruções para usar a sintaxe de identidade $. Ocorre uma vez por compilação.|  
-|Lista de seleção de exibição indexada sem COUNT_BIG (\*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
+|Lista de seleção de exibição indexada sem COUNT_BIG (*)|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (\*).|  
 |INDEX_OPTION|As sintaxes CREATE TABLE, ALTER TABLE ou CREATE INDEX sem parênteses delimitando as opções foram encontradas. Reescreva a instrução para usar a sintaxe atual. Ocorre uma vez por consulta.|  
 |INDEXKEY_PROPERTY|A sintaxe INDEXKEY_PROPERTY foi encontrada. Reescreva instruções para consultar sys.index_columns. Ocorre uma vez por compilação.|  
 |Dicas TVF indiretas|A aplicação indireta de dicas de tabela à invocação de uma TVF (função com valor de tabela) com várias instruções através de uma exibição será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

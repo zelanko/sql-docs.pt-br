@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212007"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
@@ -263,16 +263,16 @@ ms.locfileid: "68212007"
         >  É altamente recomendável seguir essas práticas recomendadas. Se houver problemas que o impeçam de seguir as práticas recomendadas, sugerimos que você contate o Suporte da Microsoft para evitar proativamente qualquer problema futuro.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrador de Recursos](resource-governor.md)   
- [Habilitar Administrador de Recursos](enable-resource-governor.md)   
- [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   
- [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
- [Configurar o administrador de recursos usando um modelo](configure-resource-governor-using-a-template.md)   
- [Exibir Propriedades do Administrador de Recursos](view-resource-governor-properties.md)   
+ [Resource Governor](resource-governor.md)   
+ [Habilitar Resource Governor](enable-resource-governor.md)   
+ [Resource Governor pool de recursos](resource-governor-resource-pool.md)   
+ [Grupo de carga de trabalho Resource Governor](resource-governor-workload-group.md)   
+ [Configurar Resource Governor usando um modelo](configure-resource-governor-using-a-template.md)   
+ [Exibir Propriedades de Resource Governor](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [CRIAR POOL de recursos &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Criar grupo de carga de trabalho &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CRIAR função &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

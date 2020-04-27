@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501902"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087416"
 ---
 # <a name="power-query-source-preview"></a>Fonte do Power Query (versão prévia)
 
@@ -70,7 +70,7 @@ No **Editor do Gerenciador de Conexões do Power Query**, você precisa especifi
 
 ![Tipo de Editor do Gerenciador de Conexões da Fonte do PQ](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Algumas dessas fontes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) requerem instalações adicionais de drivers do ADO.NET que podem ser obtidas no artigo [Pré-requisitos do Power Query](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Você pode usar a interface de configuração personalizada para instalá-los em seu Azure-SSIS IR, confira o artigo [Personalizar o Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Algumas dessas fontes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) requerem instalações adicionais de drivers do ADO.NET que podem ser obtidas no artigo [Pré-requisitos do Power Query](/power-bi/desktop-data-source-prerequisites). Você pode usar a interface de configuração personalizada para instalá-los em seu Azure-SSIS IR, confira o artigo [Personalizar o Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Para **Caminho da Fonte de Dados** , você pode inserir propriedades específicas da fonte de dados formando uma cadeia de conexão sem as informações de autenticação. Por exemplo, o caminho para a fonte de dados **SQL** é formado como `<Server>;<Database>`. Você pode selecionar o botão **Editar** para atribuir valores a propriedades específicas da fonte de dados que formam o caminho.
 

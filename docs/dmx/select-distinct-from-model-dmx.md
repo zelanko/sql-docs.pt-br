@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892535"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECIONAR DISTINCT do &lt;modelo &gt; (DMX)
@@ -69,7 +69,7 @@ SELECT DISTINCT [Gender]
 FROM [TM Decision Tree]  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Gênero|  
 |------------|  
@@ -89,7 +89,7 @@ SELECT DISTINCT [Age] AS [Midpoint Age],
 FROM [TM Decision Tree]  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Idade de ponto médio|Idade mínima|Idade máxima|  
 |------------------|-----------------|-----------------|  
@@ -111,7 +111,7 @@ SELECT DISTINCT [Yearly Income] AS [Bucket Average],
 FROM [TM Decision Tree]  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Média de bucket|Mínimo de bucket|Máximo de bucket|  
 |--------------------|--------------------|--------------------|  
@@ -136,6 +136,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>Consulte Também  
  [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174455"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algoritmo Naïve Bayes da Microsoft
@@ -55,7 +55,7 @@ ms.locfileid: "78174455"
 
  Os requisitos para um modelo Naive Bayes são os seguintes:
 
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Chaves compostas não são permitidas.
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Chaves compostas não são permitidas.
 
 -   **Colunas de entrada** Em um modelo Naive Bayes, todas as colunas devem ser de colunas discretas ou discretizado. Para obter informações sobre colunas discretização, consulte [métodos de discretização &#40;mineração de dados&#41;](discretization-methods-data-mining.md).
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174455"
 
      De maneira recíproca, a capacidade de o algoritmo identificar correlações entre variáveis é útil quando você está explorando um modelo ou conjunto de dados, para identificar relações entre entradas.
 
--   **Pelo menos uma coluna previsível** O atributo previsível deve conter valores discretos ou discretizados.
+-   **Pelo menos uma coluna previsível** O atributo previsível deve conter valores discretos ou diferenciados.
 
      Os valores da coluna previsível podem ser tratados como entradas. Esta prática pode ser útil quando você está explorando um novo conjunto de dados, para localizar relações entre as colunas.
 

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207010"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
@@ -30,10 +30,10 @@ ms.locfileid: "68207010"
   
  Como DBTYPE_IUNKNOWN é especificado como o tipo de dados na associação, ele deve corresponder ao tipo da coluna ou parâmetro de destino. As conversões não são possíveis durante o envio de dados por meio de ISequentialStream a partir de interfaces de conjunto de linhas. Para parâmetros, evite usar ICommandWithParameters::SetParameterInfo e especifique um tipo diferente para forçar uma conversão; isso exigirá que o provedor armazene em cache todos os dados BLOB localmente, para convertê-los antes do envio ao SQL Server. Armazenar em cache um BLOB grande e convertê-lo localmente não fornece um bom desempenho.  
   
- Para obter mais informações, consulte [BLOBs e objetos OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obter mais informações, confira [BLOBs e objetos OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ## <a name="example"></a>Exemplo  
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo aplicativo.  

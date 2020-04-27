@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211187"
 ---
 # <a name="creating-views-and-stored-procedures"></a>criando exibições e procedimentos armazenados
-  Agora que Mary pode acessar o banco de dados **TestData** , talvez você queira criar alguns objetos de banco de dados, como uma exibição e um procedimento armazenado, e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
+   Agora que a Marina pode acessar o banco de dados **TestData**, talvez convenha criar alguns objetos de banco de dados, como uma exibição e um procedimento armazenado, e conceder a Mary acesso a eles. Uma exibição é uma instrução SELECT armazenada e um procedimento armazenado é uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
   
  Exibições são tabelas do tipo para consultas e não aceitam parâmetros. Procedimentos armazenados são mais complexos que exibições. Procedimentos armazenados podem ter parâmetros de entrada e saída e conter instruções para controlar o fluxo do código, como instruções IF e WHILE. É uma boa prática de programação usar procedimentos armazenados para todas as ações repetitivas no banco de dados.  
   

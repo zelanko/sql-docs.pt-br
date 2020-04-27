@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015278"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problemas de migração para procedimentos armazenados compilados nativamente
@@ -22,7 +22,7 @@ ms.locfileid: "63015278"
   
  Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
--   [Criando e acessando tabelas no TempDB de procedimentos armazenados compilados nativamente](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
+-   [Criando e acessando tabelas em TempDB de procedimentos armazenados nativamente compilados](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   
 -   [Simulando a cláusula EXISTS em um procedimento armazenado compilado de modo nativo](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
   

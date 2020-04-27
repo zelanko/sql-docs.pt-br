@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022398"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossário de termos para publicações Oracle
   Você deve estar familiarizado com os seguintes termos da Oracle ao configurar e administrar publicações Oracle. Para uma lista completa de termos da Oracle, consulte a documentação online da Oracle.  
   
  Tabelas organizadas por índice (IOT)  
- Uma tabela cujos dados estão fisicamente classificados em disco na ordem de índice; é semelhante a uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela com um índice clusterizado. Uma IOT é reproduzida a um Assinante como uma tabela com um índice cluster.  
+ Uma tabela cujos dados estão classificados fisicamente em disco por ordem de índice; é semelhante a uma tabela com um índice clusterizado do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Uma IOT é reproduzida a um Assinante como uma tabela com um índice cluster.  
   
  Instância  
  Um banco de dados Oracle é associado a uma instância. A instância inclui os processos de memória e plano de fundo que fornecem suporte ao banco de dados. Uma instância Oracle sempre mapeia em um único banco de dados, enquanto uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode conter muitos bancos de dados. Há circunstâncias nas quais um banco de dados Oracle pode ter várias instâncias.  
@@ -38,7 +38,7 @@ ms.locfileid: "63022398"
  Um objeto de banco de dados usado para gerar números exclusivos. A replicação usa sequências para ordenar alterações feitas a tabelas publicadas.  
   
  SQL\*Plus  
- Um aplicativo usado para acessar e consultar bancos de dados Oracle. É semelhante ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**.  
+ Um aplicativo usado para acessar e consultar bancos de dados Oracle. É semelhante ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sqlcmd**do**.  
   
  Sinônimo  
  Um alias para um objeto. O sinônimo público especial **MSSQLSERVERDISTRIBUTOR** é criado automaticamente quando um Editor Oracle é configurado. O sinônimo usa como referência a tabela **HREPL_Distributor** e fornece um ponteiro lógico ao Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que serve ao Editor.  

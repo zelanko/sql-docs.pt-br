@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010087"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66010087"
   
  O recurso FileTable se baseia na tecnologia FILESTREAM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para saber mais sobre o FILESTREAM, veja [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md).  
   
-##  <a name="Goals"></a> Benefícios do recurso FileTable  
+##  <a name="benefits-of-the-filetable-feature"></a><a name="Goals"></a> Benefícios do recurso FileTable  
  Os objetivos do recurso FileTable incluem o seguinte:  
   
 -   Compatibilidade com APIs do Windows para dados de arquivos armazenados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A compatibilidade com APIs do Windows inclui o seguinte:  
@@ -46,7 +46,7 @@ ms.locfileid: "66010087"
   
  Com isso, as FileTables removem uma barreira significativa ao uso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o armazenamento e gerenciamento de dados não estruturados que residem atualmente como arquivos em servidores de arquivos. As empresas podem mover esses dados de servidores de arquivos para FileTables para aproveitar a administração integrada e os serviços fornecidos pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao mesmo tempo, podem manter a compatibilidade de aplicativos do Windows para seus aplicativos do Windows existentes que consultam esses dados como arquivos no sistema de arquivos.  
     
-##  <a name="Description"></a> O que é uma FileTable?  
+##  <a name="what-is-a-filetable"></a><a name="Description"></a> O que é uma FileTable?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma **tabela de arquivos**especial, também chamada de **FileTable**, para aplicativos que exigem o armazenamento de arquivos e diretório no banco de dados, com a compatibilidade de API do Windows e o acesso não transacional. Uma FileTable é uma tabela de usuário especializada com um esquema predefinido que armazena dados FILESTREAM, além de informações de hierarquias de arquivos e diretórios e atributos de arquivos.  
   
  Uma FileTable fornece a seguinte funcionalidade:  
@@ -82,9 +82,9 @@ ms.locfileid: "66010087"
 -   FileTables também podem ser consultadas e atualizadas através do acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] normal. Elas também são integradas a ferramentas de gerenciamento e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como o backup.  
   
   
-##  <a name="additional"></a> Considerações adicionais para usar FileTables  
+##  <a name="additional-considerations-for-using-filetables"></a><a name="additional"></a>Considerações adicionais para usar filetables  
   
-###  <a name="DBA"></a> Considerações administrativas  
+###  <a name="administrative-considerations"></a><a name="DBA"></a>Considerações administrativas  
  **Sobre FILESTREAM e FileTables**  
   
 -   Você configura FileTables separadamente de FILESTREAM. Portanto, você pode continuar a usar o recurso FILESTREAM sem habilitar o acesso não transacional ou criar FileTables.  
@@ -98,12 +98,12 @@ ms.locfileid: "66010087"
 -   Você pode configurar ou ajustar o acesso não transacional no nível de banco de dados desativando-o, ou habilitando o acesso somente leitura ou leitura/gravação completa.  
   
   
-###  <a name="memory"></a> FileTables não dão suporte a arquivos mapeados por memória  
+###  <a name="filetables-do-not-support-memory-mapped-files"></a><a name="memory"></a> FileTables não dão suporte a arquivos mapeados por memória  
  FileTables não dão suporte a arquivos mapeados por memória. Bloco de Notas e Paint são dois exemplos comuns de aplicativos que usam arquivos mapeados por memória. Você não pode usar estes aplicativos no mesmo computador que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para abrir arquivos que estão armazenados em um FileTable. Porém, você pode usar estes aplicativos de um computador remoto para abrir arquivos que estão armazenados em um FileTable, porque, nestes circunstâncias, o recurso do mapeamento de memória não é usado.  
   
   
-##  <a name="reltasks"></a> Tarefas relacionadas  
- [Habilitar os pré-requisitos para o FileTable](enable-the-prerequisites-for-filetable.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tarefas relacionadas  
+ [Habilitar os pré-requisitos para FileTable](enable-the-prerequisites-for-filetable.md)  
  Descreve como habilitar os pré-requisitos para criar e usar FileTables.  
   
  [Criar, alterar e remover FileTables](create-alter-and-drop-filetables.md)  
@@ -125,8 +125,8 @@ ms.locfileid: "66010087"
  Descreve tarefas administrativas comuns para gerenciar FileTables.  
   
   
-##  <a name="relcontent"></a> Conteúdo relacionado  
- [Esquema de FileTable](filetable-schema.md)  
+##  <a name="related-content"></a><a name="relcontent"></a> Conteúdo relacionado  
+ [Esquema da FileTable](filetable-schema.md)  
  Descreve o esquema predefinido e fixo de uma FileTable.  
   
  [Compatibilidade do FileTable com outros recursos do SQL Server](filetable-compatibility-with-other-sql-server-features.md)  

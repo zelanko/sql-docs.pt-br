@@ -1,5 +1,5 @@
 ---
-title: Adicionando uma coluna a uma tabela de SQL Server | Microsoft Docs
+title: Adicionar uma coluna a uma tabela do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32e78feae791788e0aad87079546ea8c7d49e734
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046491"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Adicionando uma coluna a uma tabela do SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "63046491"
   
 -   Caso DBPROP_COL_AUTOINCREMENT seja VARIANT_TRUE, DBPROP_COL_NULLABLE deve ser VARIANT_FALSE.  
   
--   Caso a coluna seja definida usando o tipo de dados timestamp[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** do **, DBPROP_COL_NULLABLE precisará ser VARIANT_FALSE.  
+-   Caso a coluna seja definida usando o tipo de dados  **timestamp** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], DBPROP_COL_NULLABLE precisará ser VARIANT_FALSE.  
   
 -   Para qualquer outra definição de coluna, DBPROP_COL_NULLABLE deve ser VARIANT_TRUE.  
   

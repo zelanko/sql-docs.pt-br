@@ -11,10 +11,10 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e204b5021cb2928988331c73750821225a4192d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728436"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Criar classes proxy do serviço Web do Master Data Manager
@@ -28,10 +28,10 @@ ms.locfileid: "81728436"
   
 1.  Abra o arquivo Web.config do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] em um editor de texto. Esse arquivo está na pasta WebApplication, no caminho de instalação do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Localize a seção **mdsWsHttpBehavior** em **\<serviceBehaviors>**. Para o ** \<elemento serviceMetadata>,** defina **httpGetEnabled** to **true**.  
+2.  Localize a seção **mdsWsHttpBehavior** em **\<serviceBehaviors>**. Para o elemento de ** \<>de metadados** , defina **HttpGetEnabled** como **true**.  
   
     > [!NOTE]  
-    >  Se você quiser ativar serviços da Web sobre o TLS (Transport Layer Security, segurança de camada de transporte), anteriormente conhecido como Secure Sockets Layer (SSL), defina **httpsGetEnabled** para **true** na seção **mdsWsHttpBehavior** do arquivo Web.config. Você também precisa alterar **mdsWsHTTPBinding** para que ele seja configurado para TLS, também, e comentar a seção não-TLS.  
+    >  Se você quiser habilitar os serviços Web via TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL), defina **HttpsGetEnabled** como **true** na seção **mdsWsHttpBehavior** do arquivo Web. config. Você também precisa alterar **mdsWsHTTPBinding** para que ele seja configurado para TLS também e comentar a seção não TLS.  
   
 3.  Salve as alterações no arquivo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81728436"
  Se você tiver o Visual Studio 2010 instalado, o modo mais simples de gerar classes proxy será adicionar uma **Referência de Serviço** ao seu projeto. O endereço da referência do serviço é a URL do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], com /service/service.svc. Por exemplo: `https://yourserver/MDS/service/service.svc`. Para obter mais informações, consulte [Como adicionar, atualizar ou remover uma referência de serviço](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Criando classes proxy usando Svcutil.exe  
- Você deve [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ter [!INCLUDE[msCoName](../../includes/msconame-md.md)] o Windows SDK instalado para ter o Svcutil.exe no seu computador. Se você usar o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], deverá usar o prompt de comando do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para executar o comando. Para obter mais informações, consulte [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027)[Gerando um cliente WCF de metadados do serviço](https://go.microsoft.com/fwlink/?LinkId=164821).  
+ Você deve ter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK do Windows instalado para ter o SvcUtil. exe em seu computador. Se você usar o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], deverá usar o prompt de comando do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] para executar o comando. Para obter mais informações, consulte [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027)[Gerando um cliente WCF de metadados do serviço](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Para criar um conjunto de classes proxy C# usando Svcutil.exe, utilize um comando como o seguinte:  
   

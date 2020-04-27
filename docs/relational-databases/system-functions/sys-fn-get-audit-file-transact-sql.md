@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0702848a6fce3255e9bb54597dc20b518b50c7
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "77507516"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
@@ -83,15 +83,15 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelas retornadas  
  A tabela a seguir descreve o conteúdo do arquivo de auditoria que pode ser retornado por essa função.  
   
-| Nome da coluna | Type | DESCRIÇÃO |  
+| Nome da coluna | Tipo | Descrição |  
 |-------------|------|-------------|  
-| action_id | **varchar (4)** | A identificação da ação. Não permite valor nulo. |  
+| action_id | **varchar(4)** | A identificação da ação. Não permite valor nulo. |  
 | additional_information | **nvarchar(4000)** | Informações exclusivas que se aplicam somente a um evento são retornadas como XML. Um número pequeno de ações auditável contém esse tipo de informação.<br /><br /> Um nível de pilha TSQL será exibido em formato XML para ações que tenham pilha TSQL associada a elas. O formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> O nest_level do quadro indica o nível de aninhamento atual do quadro. O nome do Módulo é representado em formato de três partes (database_name, schema_name e object_name).  O nome do módulo será analisado para escapar caracteres XML inválidos `'>'`como `'/'` `'\<'`, `'_x'`,,. Eles serão ignorados como `_xHHHH\_`. O HHHH representa o código UCS-2 hexadecimal de quatro dígitos do caractere<br /><br /> Permite valor nulo. Retornará NULL quando o evento não reportar informações adicionais. |
 | affected_rows | **bigint** | **Aplica-se a**: somente BD SQL do Azure<br /><br /> Número de linhas afetadas pela instrução executada. |  
 | application_name | **nvarchar(128)** | **Aplica-se a**: BD SQL do Azure + SQL Server (a partir de 2017)<br /><br /> Nome do aplicativo cliente que executou a instrução que causou o evento de auditoria |  
 | audit_file_offset | **bigint** | **Aplica-se a**: somente SQL Server<br /><br /> O deslocamento de buffer no arquivo que contém o registro de auditoria. Não permite valor nulo. |  
 | audit_schema_version | **int** | Sempre 1 |  
-| class_type | **varchar (2)** | O tipo de entidade auditável no qual a auditoria ocorre. Não permite valor nulo. |  
+| class_type | **varchar(2)** | O tipo de entidade auditável no qual a auditoria ocorre. Não permite valor nulo. |  
 | client_ip | **nvarchar(128)** | **Aplica-se a**: BD SQL do Azure + SQL Server (a partir de 2017)<br /><br />    IP de origem do aplicativo cliente |  
 | connection_id | GUID | **Aplica-se a**: banco de BD SQL do Azure e instância gerenciada<br /><br /> ID da conexão no servidor |
 | data_sensitivity_information | nvarchar(4000) | **Aplica-se a**: somente BD SQL do Azure<br /><br /> Tipos de informações e rótulos de sensibilidade retornados pela consulta auditada, com base nas colunas classificadas no banco de dados. Saiba mais sobre a [descoberta e a classificação de dados do banco SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
@@ -100,11 +100,11 @@ fn_get_audit_file ( file_pattern,
 | database_principal_name | **sysname** | Usuário atual. Permite valor nulo. Retorna NULL se não disponível. |  
 | duration_milliseconds | **bigint** | **Aplica-se a**: banco de BD SQL do Azure e instância gerenciada<br /><br /> Duração da execução da consulta em milissegundos |
 | event_time | **datetime2** | Data e hora em que a ação auditável é acionada. Não permite valor nulo. |  
-| file_name | **varchar (260)** | O caminho e nome do arquivo de log de auditoria que deu origem ao registro. Não permite valor nulo. |
+| file_name | **varchar(260)** | O caminho e nome do arquivo de log de auditoria que deu origem ao registro. Não permite valor nulo. |
 | is_column_permission | **bit** | Sinalizador que indica se esta é uma permissão no nível de coluna. Não permite valor nulo. Retorna 0 quando permission_bitmask = 0.<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | A ID da entidade na qual a auditoria ocorreu. Isso inclui o seguinte:<br /> Objetos do servidor<br /> Bancos de dados<br /> Objetos de banco de dados<br /> Objetos de esquema<br /> Não permite valor nulo. Retornará 0 se a entidade for o próprio Servidor ou se a auditoria não for realizada no nível de um objeto. Por exemplo, Autenticação. |  
 | object_name | **sysname** | O nome da entidade na qual a auditoria ocorreu. Isso inclui o seguinte:<br /> Objetos do servidor<br /> Bancos de dados<br /> Objetos de banco de dados<br /> Objetos de esquema<br /> Permite valor nulo. Retornará NULL se a entidade for o próprio Servidor ou se a auditoria não for realizada no nível de um objeto. Por exemplo, Autenticação. |
-| permission_bitmask | **varbinary (16)** | Em algumas ações, são as permissões que foram concedidas, negadas ou revogadas. |
+| permission_bitmask | **varbinary(16)** | Em algumas ações, são as permissões que foram concedidas, negadas ou revogadas. |
 | response_rows | **bigint** | **Aplica-se a**: banco de BD SQL do Azure e instância gerenciada<br /><br /> Número de linhas retornadas no conjunto de resultados. |  
 | schema_name | **sysname** | O contexto do esquema no qual a ação aconteceu. Permite valor nulo. Retorna NULL para auditorias que ocorrem fora de um esquema. |  
 | sequence_group_id | **varbinary** | **Aplica-se a**: somente SQL Server (começando com 2016)<br /><br />  Identificador exclusivo |  
@@ -179,25 +179,25 @@ Para obter um exemplo completo de como criar uma auditoria, consulte [Auditoria 
 Para obter informações sobre como configurar a auditoria do banco de dados SQL do Azure, consulte Introdução [à auditoria do banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CRIAR auditoria de servidor &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [Descartar auditoria de servidor &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CRIAR especificação de auditoria de servidor &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ESPECIFICAÇÃO de alteração de auditoria de servidor &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [ESPECIFICAÇÃO de auditoria DROP SERVER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CRIAR especificação de auditoria de banco de dados &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ESPECIFICAÇÃO de auditoria ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [ESPECIFICAÇÃO de auditoria DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys. server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys. server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys. server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys. database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys. database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys. dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys. dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

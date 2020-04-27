@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211010"
 ---
 # <a name="sqlservr-application"></a>Aplicativo sqlservr
-  O aplicativo **sqlservr** inicia, encerra, pausa e continua uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] por meio de um prompt de comando.  
+  O aplicativo **sqlservr** inicia, interrompe, pausa e continua uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando um prompt de comando.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -67,13 +67,13 @@ ms.locfileid: "68211010"
  Indica o caminho totalmente qualificado para o arquivo de log de transações do banco de dados **master** . Não há espaços entre **-l** e *master_log_path*.  
   
  **-m**  
- Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates** . Por padrão, **permitir atualizações** está desabilitado.  
+ Indica para iniciar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em modo de usuário único. Somente um único usuário pode conectar quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado em modo de usuário único. O mecanismo de CHECKPOINT, que garante que transações concluídas sejam gravadas regularmente do cache de disco para o dispositivo de banco de dados, não foi iniciado. (Normalmente, esta opção será usada se você experimentar problemas com bancos de dados do sistema que devem ser corrigidos.) Habilita a opção **sp_configure allow updates** . Por padrão, a opção **allow updates** está desabilitada.  
   
  **-n**  
  Permite iniciar uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sem o parâmetro **-s** definido, a instância padrão tenta a inicialização. Você deve passar para o diretório BINN apropriado da instância em um prompt de comando antes de iniciar o **sqlservr.exe**. Por exemplo, se Instance1 tiver de usar \mssql$Instance1 para seus binários, o usuário deverá estar no diretório \mssql$Instance1\binn para iniciar **sqlservr.exe -s instance1**. Caso você inicie uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com a opção **-n** , recomendamos usar também a opção **-e** ou os eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não serão registrados.  
   
  **-T** _trace #_  
- Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#* ) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Indica que uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deve ser iniciada com um sinalizador de rastreamento especificado (*trace#*) em vigor. São usados sinalizadores de rastreamento para iniciar o servidor com comportamento fora do padrão. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
 >  Ao especificar um sinalizador de rastreamento, use **-T** para passar o número do sinalizador de rastreamento. Um t minúsculo (**-t**) é aceito por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; entretanto, **-t** define outros sinalizadores de rastreamento internos que são exigidos pelos engenheiros de suporte do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -100,8 +100,7 @@ ms.locfileid: "68211010"
  Usando um valor menor que o padrão aumentará a quantidade de memória disponível para o pool do buffer e pilhas de thread; isso pode, por sua vez, fornecer algum benefício de desempenho a cargas de trabalho de memória intensiva em sistemas que não usam muitos procedimentos armazenados estendidos, consultas distribuídas ou objetos de automação.  
   
 ## <a name="remarks"></a>Comentários  
- Na maioria dos casos, o programa sqlservr.exe é usado somente para solução de problemas ou manutenção importante. Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado do prompt de comando sqlservr.exe, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não inicia como um serviço e, desse modo, você pode interromper o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando comandos **net** . Os usuários podem conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostram o status do serviço, para que o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique corretamente que o serviço está interrompido. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode se conectar ao servidor, mas ele também indica que o serviço está interrompido.  
+ Na maioria dos casos, o programa sqlservr.exe é usado somente para solução de problemas ou manutenção importante. Quando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é iniciado do prompt de comando sqlservr.exe, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não inicia como um serviço e, desse modo, você pode interromper o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando comandos **net** . Os usuários podem conectar-se ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mostram o status do serviço, para que o Gerenciador de Configuração do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique corretamente que o serviço está interrompido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pode se conectar ao servidor, mas ele também indica que o serviço está interrompido.  
   
 ## <a name="compatibility-support"></a>Suporte de compatibilidade  
  Não há suporte para o parâmetro **-h**  no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Este parâmetro foi usado em versões anteriores de instâncias de 32 bits do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espaço de endereço de memória virtual para metadados de inclusão de memória a quente quando AWE é habilitado. Para obter mais informações, consulte [Recursos do SQL Server descontinuados no SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  

@@ -14,31 +14,31 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211996"
 ---
 # <a name="create-a-resource-pool"></a>Criar um pool de recursos
   É possível criar um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de começar:**  [limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Para criar um pool de recursos usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Para criar um pool de recursos, usando:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O percentual máximo de CPU deve ser igual a ou maior que o percentual mínimo de CPU. O percentual máximo de memória deve ser igual a ou maior que o percentual mínimo de memória.  
   
  A soma dos percentuais mínimos de CPU e dos percentuais mínimos de memória de todos os pools de recursos não deve exceder 100.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Criar um pool de recursos exige permissão CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a>Criar um pool de recursos usando SQL Server Management Studio  
- **Para criar um pool de recursos usando o[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Criar um pool de recursos usando o SQL Server Management Studio  
+ **Para criar um pool de recursos usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra o Pesquisador de Objetos e expanda recursivamente o nó **Gerenciamento** para baixo e inclua o **Administrador de Recursos**.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211996"
   
 6.  Para salvar as alterações, clique em **OK**  
   
-##  <a name="CreRPTSQL"></a>Criar um pool de recursos usando o Transact-SQL  
- **Para criar um pool de recursos usando o[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Criar um pool de recursos usando o Transact-SQL  
+ **Para criar um pool de recursos usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Execute a instrução `CREATE RESOURCE POOL` especificando os valores de propriedade a serem definidos.  
   
@@ -71,15 +71,15 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrador de Recursos](resource-governor.md)   
- [Habilitar Administrador de Recursos](enable-resource-governor.md)   
- [Pool de recursos do Administrador de Recursos](resource-governor-resource-pool.md)   
+ [Resource Governor](resource-governor.md)   
+ [Habilitar Resource Governor](enable-resource-governor.md)   
+ [Resource Governor pool de recursos](resource-governor-resource-pool.md)   
  [Alterar configurações do pool de recursos](change-resource-pool-settings.md)   
  [Excluir um pool de recursos](delete-a-resource-pool.md)   
- [Configurar o administrador de recursos usando um modelo](configure-resource-governor-using-a-template.md)   
- [Grupos de carga de trabalho do Administrador de Recursos](resource-governor-workload-group.md)   
- [Função de classificação do Administrador de Recursos](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Configurar Resource Governor usando um modelo](configure-resource-governor-using-a-template.md)   
+ [Grupo de carga de trabalho Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governor função de classificação](resource-governor-classifier-function.md)   
+ [CRIAR POOL de recursos &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

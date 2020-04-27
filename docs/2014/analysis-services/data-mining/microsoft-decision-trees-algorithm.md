@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174570"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Árvores de Decisão da Microsoft
@@ -72,11 +72,11 @@ ms.locfileid: "78174570"
 
  Os requisitos para um modelo de árvore de decisão são os seguintes:
 
--   **Uma única coluna de chave** Cada modelo deve conter uma coluna numérica ou de texto que identifique exclusivamente cada registro. Não são permitidas chaves compostas.
+-   **Uma única coluna de chave** Cada modelo deve conter uma coluna de texto ou numérica que identifique unicamente cada registro. Não são permitidas chaves compostas.
 
--   **Uma coluna previsível** Requer pelo menos uma coluna previsível. Você pode incluir vários atributos previsíveis em um modelo, e o atributo previsível pode ser de diferentes tipos, tanto numérico como discreto. Porém, o aumento no número de atributos previsíveis pode aumentar o tempo de processamento.
+-   **Uma coluna previsível** Requer, pelo menos, uma coluna previsível. Você pode incluir vários atributos previsíveis em um modelo, e o atributo previsível pode ser de diferentes tipos, tanto numérico como discreto. Porém, o aumento no número de atributos previsíveis pode aumentar o tempo de processamento.
 
--   **Colunas de entrada** Requer colunas de entrada, que podem ser discretas ou contínuas. O aumento no número de atributos de entrada afeta o tempo de processamento.
+-   **Colunas de entrada** Requer colunas de entrada que podem ser discretas ou contínuas. O aumento no número de atributos de entrada afeta o tempo de processamento.
 
  Para obter informações mais detalhadas sobre os tipos de conteúdo e de dados com suporte pelos modelos de árvore de decisão, consulte a seção Requisitos de [Referência técnica do algoritmo de árvore de decisão da Microsoft](microsoft-decision-trees-algorithm-technical-reference.md).
 

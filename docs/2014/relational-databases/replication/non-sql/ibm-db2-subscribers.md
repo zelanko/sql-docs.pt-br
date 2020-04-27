@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022185"
 ---
 # <a name="ibm-db2-subscribers"></a>Assinantes do IBM DB2
@@ -89,8 +89,7 @@ ms.locfileid: "63022185"
   
 -   Se você quer pré-criar tabelas no Assinante, em vez da replicação criá-las, use a opção somente suporte para replicação. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite nomes de tabela e nomes de coluna mais longos que DB2:  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite nomes de tabela e nomes de coluna mais longos que DB2:  
   
     -   Se o banco de dados da publicação incluir tabelas com nomes mais longos daqueles suportados na versão DB2 do Assinante, especifique um nome alternativo para a propriedade de artigo destination_table. Para mais informações sobre como configurar propriedades ao criar uma publicação, consulte [Criar uma publicação](../publish/create-a-publication.md) e [Definir um artigo](../publish/define-an-article.md).  
   
@@ -168,6 +167,6 @@ ms.locfileid: "63022185"
   
 ## <a name="see-also"></a>Consulte Também  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [Assinar publicações](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

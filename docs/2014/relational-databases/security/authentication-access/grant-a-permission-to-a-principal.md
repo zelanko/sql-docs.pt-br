@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011953"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
@@ -36,21 +36,21 @@ ms.locfileid: "63011953"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Considere as práticas recomendadas a seguir que podem facilitar o gerenciamento de permissões.  
   
 -   Conceda permissão para funções, em vez de logons individuais ou usuários. Quando um indivíduo for substituído por outro, remova o indivíduo que está deixando a função e adicione o novo indivíduo a ela. As muitas permissões que podem ser associadas à função estarão automaticamente disponíveis para o novo indivíduo. Se várias pessoas em uma organização precisarem das mesmas permissões, adicionar cada uma dessas pessoas à função concederá as mesmas permissões.  
   
 -   Configure protegíveis semelhantes (tabelas, exibições e procedimentos) para pertencer a um esquema e conceder permissões ao esquema. Por exemplo, o esquema de folha de pagamento pode possuir várias tabelas, exibições e procedimentos armazenados. Quando o acesso é concedido ao esquema, todas as permissões necessárias para executar a função de folha de pagamento podem ser concedidas ao mesmo tempo. Para obter mais informações sobre quais protegíveis podem receber permissões, consulte [Securables](../securables.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O concessor (ou o principal especificado com a opção AS) deve ter a permissão em si com GRANT OPTION ou uma permissão superior que implique na concessão da permissão. Membros da função de servidor fixa **sysadmin** podem conceder qualquer permissão.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63011953"
   
 6.  Quando terminar, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder permissão a uma entidade de segurança  
   

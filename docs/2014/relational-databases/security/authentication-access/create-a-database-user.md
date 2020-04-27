@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211963"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
@@ -37,7 +37,7 @@ ms.locfileid: "68211963"
   
 -   **Antes de começar:**  
   
-     [Segundo plano](#Restrictions)  
+     [Informações](#Restrictions)  
   
      [Segurança](#Security)  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68211963"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Plano de fundo  
+###  <a name="background"></a><a name="Restrictions"></a> Segundo Plano  
  Um usuário é uma entidade de segurança no nível de banco de dados. Logons devem ser mapeados para um usuário de banco de dados para ser conectados a um banco de dados. Um logon pode ser mapeado para bancos de dados diferentes como usuários diferentes, mas pode ser mapeado somente como um usuário em cada banco de dados. Em um banco de dados parcialmente independente, um usuário pode ser criado sem logon. Para obter mais informações sobre os usuários de banco de dados independente, veja [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Se o usuário convidado em um banco de dados estiver habilitado, um logon que não estiver mapeado para um usuário de banco de dados poderá acessar o banco de dados como um usuário convidado.  
   
 > [!IMPORTANT]  
@@ -57,12 +57,12 @@ ms.locfileid: "68211963"
   
  Como uma entidade de segurança, permissões podem ser concedidas a usuários. O escopo de um usuário é o banco de dados. Para se conectar a um banco de dados específico na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um logon deve ser mapeado para um usuário de banco de dados. Permissões, e não o logon, são concedidas dentro do banco de dados e são negadas ao usuário de banco de dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão `ALTER ANY USER` no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Para criar um usuário de banco de dados  
   
@@ -74,15 +74,15 @@ ms.locfileid: "68211963"
   
 4.  Na caixa de diálogo **usuário do banco de dados – novo** , na página **geral** , selecione um dos seguintes tipos de usuário na lista **tipo de usuário** : **usuário do SQL com logon**, usuário do **SQL sem logon**, **usuário mapeado para um certificado**, **usuário mapeado para uma chave assimétrica**ou **usuário do Windows**.  
   
-5.  Na caixa **Nome do usuário** , digite um nome para o novo usuário. Se você tiver escolhido **Usuário do Windows** na lista **Tipo de usuário**, também poderá clicar nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Usuário ou Grupo**.  
+5.  Na caixa **Nome do usuário** , digite um nome para o novo usuário. Se você tiver escolhido **usuário do Windows** na **lista tipo de usuário** , também poderá clicar nas reticências **(...)** para abrir a caixa de diálogo **Selecionar usuário ou grupo** .  
   
-6.  Na caixa **Nome de logon** , digite o logon do usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon**. O **nome de logon** estará disponível se você selecionar usuário do **SQL com logon** ou **usuário do Windows** na lista tipo de **usuário** .  
+6.  Na caixa **Nome de logon** , digite o logon do usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Logon**. **Nome de logon** estará disponível se você ou selecionar **Usuário do SQL com logon** ou **Usuário do Windows** na lista **Tipo de usuário** .  
   
-7.  Na caixa **Esquema padrão** , especifica o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. O **esquema padrão** estará disponível se você selecionar **usuário do SQL com logon**, **usuário do SQL sem logon**ou **usuário do Windows** na lista **tipo de usuário** .  
+7.  Na caixa **Esquema padrão** , especifica o esquema que terá a propriedade dos objetos criados por esse usuário. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Esquema**. **Esquema padrão** estará disponível se você ou selecionar **Usuário do SQL com logon**, **Usuário do SQL sem logon**ou **Usuário do Windows** na lista **Tipo de usuário** .  
   
-8.  Na caixa **Nome do certificado** , digite o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Certificado**. O **nome do certificado** estará disponível se você selecionar **usuário mapeado para um certificado** na lista **tipo de usuário** .  
+8.  Na caixa **Nome do certificado** , digite o certificado a ser usado para o usuário de banco de dados. Opcionalmente, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Certificado**. **Nome de certificado** estará disponível se você selecionar **Usuário mapeado para um certificado** na lista **Tipo de Usuário** .  
   
-9. Na caixa **Nome da chave assimétrica**  , digite a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica**. O **nome da chave assimétrica** estará disponível se você selecionar **usuário mapeado para uma chave assimétrica** na lista **tipo de usuário** .  
+9. Na caixa **Nome da chave assimétrica**  , digite a chave a ser usada para o usuário de banco de dados. Como alternativa, clique nas reticências **(...)** para abrir a caixa de diálogo **Selecionar Chave Assimétrica**. **Nome da chave assimétrica** estará disponível se você selecionar **Usuário mapeado para uma chave assimétrica** na lista **Tipo de usuário** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -107,12 +107,12 @@ ms.locfileid: "68211963"
      Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
   
      **Reticências (...)**  
-     Clique nas reticências **(...)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida**. Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](../../databases/value-for-extended-property-dialog-box.md).  
+     Clique no botão de reticências **(...)** após o **valor** para abrir o **valor da caixa de diálogo propriedade estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Para criar um usuário de banco de dados  
   

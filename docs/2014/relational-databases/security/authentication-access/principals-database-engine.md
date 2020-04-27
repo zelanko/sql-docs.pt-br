@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011913"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
-  Os *principais* são entidades que podem solicitar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos. Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
+  *Entidades* são entidades que podem solicitar recursos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Como outros componentes do modelo de autorização do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , as entidades podem ser organizadas em uma hierarquia. O escopo de influência de uma entidade depende do escopo de sua definição: Windows, servidor, banco de dados e, se a entidade é indivisível ou uma coleção. Um logon do Windows é um exemplo de um principal indivisível, enquanto um Grupo do Windows é um exemplo de um principal que é uma coleção. Todas as entidades têm um SID (identificador de segurança).  
   
  **Entidades no nível do Windows**  
   
@@ -44,15 +44,15 @@ ms.locfileid: "63011913"
   
 -   Logon local do Windows  
   
- ****-**** **Entidades** de nível de SQL Server  
+ **SQL Server**-**level** **Entidades** de nível de SQL Server  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Entrar  
+-   Logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   Função do servidor  
+-   Função de servidor  
   
  **Entidades no nível do banco de dados**  
   
--   Usuário do banco de dados  
+-   Usuário de banco de dados  
   
 -   Função de banco de dados  
   
@@ -70,26 +70,19 @@ ms.locfileid: "63011913"
 ## <a name="certificate-based-sql-server-logins"></a>Logons do SQL Server com base em certificado  
  Entidades de servidor com nomes entre duas marcas hash (##) são somente para uso interno do sistema. As entidades a seguir são criadas com base em certificados quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é instalado e não devem ser excluídas.  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>O Usuário convidado  
  Cada banco de dados inclui um **convidado**. As permissões concedidas ao usuário **convidado** são herdadas pelos usuários que têm acesso ao banco de dados, mas que não têm uma conta de usuário no banco de dados. O usuário **convidado** não pode ser removido, mas pode ser desabilitado por meio da revogação de `CONNECT` sua permissão. A `CONNECT` permissão pode ser revogada executando `REVOKE CONNECT FROM GUEST` em qualquer banco de dados que não seja o mestre ou o tempdb.  
@@ -110,10 +103,10 @@ ms.locfileid: "63011913"
   
 ## <a name="see-also"></a>Consulte Também  
  [Protegendo o SQL Server](../securing-sql-server.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
+ [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Funções de nível de servidor](server-level-roles.md)   
  [Funções de nível de banco de dados](database-level-roles.md)  
   

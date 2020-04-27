@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211645"
 ---
 # <a name="get-information-about-a-view"></a>Obter informações sobre uma exibição
@@ -46,14 +46,14 @@ ms.locfileid: "68211645"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Usar `sp_helptext` para retornar a definição de uma exibição exige associação à função **pública** . Usar `sys.sql_expression_dependencies` para localizar todas as dependências em uma exibição exige a permissão VIEW DEFINITION no banco de dados e a permissão SELECT em `sys.sql_expression_dependencies` para o banco de dados. As definições de objeto de sistema, como as retornadas em SELECT OBJECT_DEFINITION, são publicamente visíveis.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obter as propriedades da exibição usando o Pesquisador de Objetos  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68211645"
   
 4.  Selecione **Objetos dos quais [nome da exibição] depende** para ver os objetos que são referenciados pela exibição.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obter a definição e as propriedades de uma exibição  
   

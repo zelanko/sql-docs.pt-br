@@ -17,17 +17,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211579"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Provedor WMI para conceitos de eventos de servidor
   O Provedor WMI para eventos de servidor permite usar o Windows Management Instrumentation (WMI) para monitorar eventos em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Compreendendo o Provedor WMI para eventos do servidor](understanding-the-wmi-provider-for-server-events.md)  
+ [Compreender o Provedor WMI para eventos do servidor](understanding-the-wmi-provider-for-server-events.md)  
  Fornece uma visão geral da arquitetura do provedor e como o SQL Server Agent pode ser programado para trabalhar com ela.  
   
  [Trabalhando com o Provedor WMI para Eventos de Servidor](working-with-the-wmi-provider-for-server-events.md)  

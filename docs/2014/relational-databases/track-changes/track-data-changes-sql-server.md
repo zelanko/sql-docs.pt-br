@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63073869"
 ---
 # <a name="track-data-changes-sql-server"></a>Controle de alterações de dados (SQL Server)
@@ -74,7 +74,7 @@ ms.locfileid: "63073869"
 |Se a coluna foi alterada|Sim|Sim|  
 |Tipo de DML|Sim|Sim|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a>Captura de dados de alterações  
  A captura de dados de alteração fornece informações de alteração de histórico para uma tabela de usuário, capturando o motivo pelo qual as alterações de DML foram feitas e os dados reais que foram alterados. As alterações são capturadas por meio de um processo assíncrono que lê o log de transações e tem baixo impacto no sistema.  
   
  Como mostrado na ilustração a seguir, as alterações feitas para tabelas de usuários são capturadas nas tabelas de alteração correspondentes. Essas tabelas de alteração fornecem uma exibição histórica das alterações com o passar do tempo. As funções da [captura de dados de alterações](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece habilita o consumo fácil e sistemático dos dados de alteração.  
@@ -150,7 +150,7 @@ ms.locfileid: "63073869"
  Você pode usar [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) para remover a captura de dados de alterações de um banco de dados restaurado ou anexado.  
  
 
-  ##  <a name="Tracking"></a> Controle de alterações  
+  ##  <a name="change-tracking"></a><a name="Tracking"></a>Controle de Alterações  
  O controle de alteração captura o motivo pelo qual as linhas em uma tabela foram alteradas, mas não captura o que foi alterado. Isso permite que os aplicativos determinem as linhas que foram alteradas com os últimos dados de linha obtidos diretamente das tabelas de usuários. Então, o controle de alterações é mais limitado nas perguntas de histórico do que pode responder comparado à captura de dados de alterações. Entretanto, para aqueles aplicativos que não exigem informações de histórico, há menos sobrecarga de armazenamento pois os dados alterados não são capturados. Um mecanismo de controle síncrono é usado para controlar as alterações. Isso foi projetado para ter o mínimo de sobrecarga nas operações de DML.  
   
  A ilustração a seguir mostra um cenário de sincronização que se beneficiaria com o uso do controle de alterações. No cenário, um aplicativo requer as seguintes informações: todas as linhas na tabela que foram alteradas desde a última sincronização da tabela e apenas os dados da linha atual. Como um mecanismo síncrono é usado para controlar as alterações, um aplicativo pode executar a sincronização de duas vias e detectar de modo confiável qualquer conflito que possa ocorrer.  
@@ -186,10 +186,10 @@ ms.locfileid: "63073869"
 |Descreve como os aplicativos que usam o controle de alterações podem obter as alterações controladas, aplicá-las a outro repositório de dados e atualizar o banco de dados de origem. Este tópico também descreve a função que o controle de alterações desempenha quando ocorre um failover e um banco de dados precisa ser restaurado de um backup.|[Trabalhar com o controle de alterações &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções da captura de dados de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
- [Funções do controle de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
+ [Funções de captura de dados de alteração &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
+ [Funções de Controle de Alterações &#40;&#41;de Transact-SQL](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
- [Tabelas da captura de dados de alterações &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
+ [Tabelas de captura de dados de alterações &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
  [Exibições de gerenciamento dinâmico relacionadas à captura de dados de alterações &#40;Transact-SQL&#41;](../views/views.md)  
   
   

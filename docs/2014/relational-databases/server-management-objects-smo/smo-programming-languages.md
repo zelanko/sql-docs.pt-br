@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211924"
 ---
 # <a name="programming-languages"></a>Linguagens de Programação
   Esta seção descreve como programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Management Objects (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) em Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual C# .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] e Visual C++.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Guia de Introdução ao Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Fornece informações sobre como começar a escrever um programa de SMO em Visual Basic .NET|  
+|[Introdução ao Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Fornece informações sobre como começar a escrever um programa de SMO em Visual Basic .NET|  
 |[Introdução no Visual C&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Fornece informações sobre como começar a escrever um programa de SMO em Visual C# .NET|  
   
  O SMO é um assembly do .NET. Para programar usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, você deve escolher uma linguagem que tenha suporte pelo Common Language Runtime. Na referência de SMO, há sintaxe para linguagens gerenciadas, como Visual Basic .NET e Visual C# .NET.  

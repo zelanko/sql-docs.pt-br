@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210737"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar Alertas para eventos do agente de replicação
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Agent fornecem uma maneira de monitorar eventos, como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
+  O [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent proporcionam um modo de monitorar eventos, tais como eventos do agente de replicação, usando alertas. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent monitora o log do aplicativo do Windows para eventos que são associados com alertas. Se esse evento ocorrer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent responderá automaticamente, executando uma tarefa que você definiu e/ou enviando uma mensagem de email ou pager a um operador especificado. O[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui um conjunto de alertas predefinidos para agentes de replicação que você pode configurar para executar uma tarefa e/ou notificar um operador. Para obter mais informações sobre como definir uma tarefa a executar, consulte a seção “Automatizando uma resposta para um alerta” neste tópico.  
   
  Os alertas a seguir são instalados quando um computador é configurado como um Distribuidor:  
   
-|ID da Mensagem|Alerta predefinido|Condição que aciona o alerta|Insere informações adicionais em msdb..sysreplicationalerts|  
+|ID da mensagem|Alerta predefinido|Condição que aciona o alerta|Insere informações adicionais em msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
 |14150|**Replicação: êxito do agente**|Agente é encerrado com êxito.|Sim|  
 |14151|**Replicação: falha do agente**|Agente é desligado com um erro.|Sim|  
@@ -41,15 +41,15 @@ ms.locfileid: "68210737"
 |14157|**Replicação: assinatura expirada cancelada**|A assinatura expirada foi descartada.|Não|  
 |20572|**Replicação: assinatura reinicializada após falha de validação**|Trabalho de resposta 'Reinicializar assinatura em falha de validação de dados' reinicializa uma assinatura com êxito.|Não|  
 |20574|**Replicação: falha na validação de dados do assinante**|O Agente de Distribuição ou Mesclagem falha na validação de dados.|Sim|  
-|20575|**Replicação: o assinante foi aprovado na validação de dados**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
+|20575|**Replicação: êxito na validação de dados do assinante**|Distribution ou Merge Agent passa na validação de dados.|Sim|  
 |20578|**Replicação: desligamento personalizado do agente**|||  
 |22815|**Alerta de detecção de conflito ponto a ponto**|O Agente de Distribuição detectou um conflito ao tentar aplicar uma alteração a um nó ponto a ponto.|Sim|  
   
  Além desses alertas, o Replication Monitor fornece um conjunto de avisos e alertas relacionado ao status e ao desempenho. Para obter mais informações, consulte [definir limites e avisos na infraestrutura de alertas do Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) . Para obter mais informações, consulte [Criar um evento definido pelo usuário](../../../ssms/agent/create-a-user-defined-event.md).  
   
- **Para configurar alertas de replicação predefinidos**  
+ **Para configurar os alertas de replicação predefinidos**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação Predefinidos &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicação predefinidos – &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Exibindo o log do aplicativo diretamente  
  Para visualizar o log do aplicativo do Windows, use o recurso Visualizador de Eventos do Windows do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . O log do aplicativo contém mensagens de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , assim como mensagens para muitas outras atividades no computador. Ao contrário do log de erros do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um novo aplicativo não é criado a cada vez que se inicia o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (cada sessão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grava novos eventos a um log de aplicativos existente); entretanto, é possível especificar quanto tempo os eventos registrados serão retidos. Ao exibir o log do aplicativo do Windows, é possível filtrar o log para eventos específicos. Para obter mais informações, consulte a documentação do Windows.  
@@ -88,7 +88,7 @@ deallocate hc
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](replication-agent-administration.md)   
- [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
- [Monitorando &#40;replicação&#41;](../monitoring-replication.md)  
+ [Práticas recomendadas para a administração de replicação](../administration/best-practices-for-replication-administration.md)   
+ [Monitoramento &#40;Replicação&#41;](../monitoring-replication.md)  
   
   

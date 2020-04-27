@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217127"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
@@ -61,9 +61,9 @@ ms.locfileid: "79217127"
   
 -   Como a mineração de dados é um serviço fornecido por um servidor, a instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve receber acesso à fonte de dados.  Há dois aspectos para acessar: local e identidade.  
   
-     **Local** significa que, se você criar um modelo usando dados que são armazenados somente em seu computador e, em seguida, implantar o modelo em um servidor, o modelo não poderá ser processado, pois a fonte de dados não pode ser encontrada. Para resolver este problema, você pode precisar transferir dados para a mesma instância do SQL Server onde o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está sendo executado, ou mover os arquivos para um local compartilhado.  
+     **Local** significa que, se você criar um modelo usando dados que estão armazenados somente em seu computador e, em seguida, implantar o modelo em um servidor, o modelo não será processado porque a fonte de dados não poderá ser localizada. Para resolver este problema, você pode precisar transferir dados para a mesma instância do SQL Server onde o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está sendo executado, ou mover os arquivos para um local compartilhado.  
   
-     **Identidade** significa que os serviços no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devem ser capazes de abrir o arquivo de dados ou a fonte de dados com as credenciais apropriadas. Por exemplo, quando você criou o modelo, pode ter tido permissões ilimitadas para exibir os dados, mas o usuário que está processando e atualizando os modelos no servidor pode ter acesso limitado ou nenhum aos dados, o que pode causar falha ao processar ou afetar o conteúdo de um modelo. No mínimo, a conta usada para conectar-se à fonte de dados remotos deve ter permissões de leitura dos dados.  
+     **Identidade** significa que os serviços no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] podem abrir o arquivo de dados ou fonte de dados com as credenciais apropriadas. Por exemplo, quando você criou o modelo, pode ter tido permissões ilimitadas para exibir os dados, mas o usuário que está processando e atualizando os modelos no servidor pode ter acesso limitado ou nenhum aos dados, o que pode causar falha ao processar ou afetar o conteúdo de um modelo. No mínimo, a conta usada para conectar-se à fonte de dados remotos deve ter permissões de leitura dos dados.  
   
 -   Quando você move um modelo, os mesmos requisitos se aplicam: você deve configurar o acesso apropriado ao local da fonte de dados antiga, copiar as fontes de dados ou configurar uma nova fonte de dados. Além disso, você deve transferir logons e funções ou configurar permissões para permitir que os objetos de mineração de dados sejam processados e atualizados no novo local.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "79217127"
     > [!IMPORTANT]  
     >  Para melhorar a segurança, é recomendável definir esta propriedade como `false`. O valor padrão é `false`. No entanto, ainda que esta propriedade seja definida como `false`, os usuários podem continuar criando consultas singleton e usar OPENQUERY em fontes de dados permitidas.  
   
--   **AllowedProvidersInOpenRowset** Especifica o provedor, se o acesso ad hoc estiver habilitado. Para especificar vários provedores, digite uma lista de ProgIDs separados por vírgula.  
+-   **AllowedProvidersInOpenRowset** Especificará o provedor se ad hoc acesso estiver habilitado. Para especificar vários provedores, digite uma lista de ProgIDs separados por vírgula.  
   
--   **MaxConcurrentPredictionQueries** Controla a carga no servidor causado por previsões. O valor padrão de 0 permite consultas ilimitadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise e no máximo cinco consultas simultâneas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. As consultas que ultrapassam o limite são serializadas e podem expirar.  
+-   **MaxConcurrentPredictionQueries** Controla a carga no servidor gerada por previsões. O valor padrão de 0 permite consultas ilimitadas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise e no máximo cinco consultas simultâneas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. As consultas que ultrapassam o limite são serializadas e podem expirar.  
   
  O servidor oferece outras propriedades que controlam quais algoritmos de mineração de dados ficam disponíveis, inclusive todas as restrições sobre algoritmos, e os padrões para serviços de mineração de dados. Porém, não há configurações que permitem controlar especificamente o acesso a procedimentos armazenados de mineração de dados. Para obter mais informações, consulte [Propriedades de Data Mining](../server-properties/data-mining-properties.md).  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217127"
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acesso programático a objetos de mineração de dados  
  Você pode usar os seguintes modelos de objeto para criar uma conexão com um banco de dados do Analysis Services e trabalhar com objetos de mineração de dados:  
   
- **ADO** Usa OLE DB para se conectar a um servidor Analysis Services. Quando você usa ADO, o cliente fica limitado a consultas de conjunto de linhas de esquema e instruções DMX.  
+ **ADO** Usa OLE DB para se conectar a um servidor do Analysis Services. Quando você usa ADO, o cliente fica limitado a consultas de conjunto de linhas de esquema e instruções DMX.  
   
- **ADO.net** Interage com provedores de SQL Server melhor do que outros provedores. Usa adaptadores de dados para armazenar conjuntos de linhas dinâmicos. Usa o objeto de conjunto de dados, que consiste em um cache dos dados de servidor armazenados como tabelas de dados que podem ser atualizadas e salvas como XML.  
+ **ADO.NET** Interage com provedores SQL Server melhor do que outros provedores. Usa adaptadores de dados para armazenar conjuntos de linhas dinâmicos. Usa o objeto de conjunto de dados, que consiste em um cache dos dados de servidor armazenados como tabelas de dados que podem ser atualizadas e salvas como XML.  
   
- **ADOMD.net** Um provedor de dados gerenciado que é otimizado para trabalhar com Data Mining e OLAP. O ADOMD.NET é mais rápido e faz uso mais eficiente da memória do que o ADO.NET. O ADOMD.NET também permite recuperar metadados sobre objetos de servidor. Recomendado para aplicativos cliente, exceto quando .NET não está disponível.  
+ **ADOMD.NET** Um provedor de dados gerenciado que é otimizado para funcionar com mineração de dados e OLAP. O ADOMD.NET é mais rápido e faz uso mais eficiente da memória do que o ADO.NET. O ADOMD.NET também permite recuperar metadados sobre objetos de servidor. Recomendado para aplicativos cliente, exceto quando .NET não está disponível.  
   
- **ADOMD do servidor** Modelo de objeto para acessar objetos Analysis Services diretamente no servidor. É utilizado por procedimentos armazenados do Analysis Services; não indicado para uso de cliente.  
+ **ADOMD de servidor** Modelo de objeto usado para acessar objetos do Analysis Services diretamente no servidor. É utilizado por procedimentos armazenados do Analysis Services; não indicado para uso de cliente.  
   
- **Amo** Interface de gerenciamento para Analysis Services que substitui o DSO (Decision Support Objects). Quando se usa o AMO, operações como iteração de objetos requerem permissões mais elevadas do que as necessárias para utilizar outras interfaces. Isso ocorre porque o AMO acessa metadados diretamente, enquanto o ADOMD.NET e outras interfaces acessam apenas os esquemas de banco de dados.  
+ **AMO** Interface de gerenciamento para o Analysis Services que substitui o DSO (Decision Support Objects). Quando se usa o AMO, operações como iteração de objetos requerem permissões mais elevadas do que as necessárias para utilizar outras interfaces. Isso ocorre porque o AMO acessa metadados diretamente, enquanto o ADOMD.NET e outras interfaces acessam apenas os esquemas de banco de dados.  
   
 ### <a name="browse-and-query-access-to-servers"></a>Navegue e consulte o acesso a servidores  
  Você pode executar todos os tipos de previsões usando uma instância do Analysis Services no OLAP/Mineração de Dados, com as restrições a seguir:  
@@ -125,6 +125,6 @@ ms.locfileid: "79217127"
 ## <a name="see-also"></a>Consulte Também  
  [Arquitetura física &#40;Analysis Services de dados multidimensionais&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Arquitetura física &#40;Analysis Services&#41;de mineração de dados](physical-architecture-analysis-services-data-mining.md)   
- [Gerenciamento de soluções de mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
+ [Gerenciamento de soluções de Mineração de dados e objetos](management-of-data-mining-solutions-and-objects.md)  
   
   

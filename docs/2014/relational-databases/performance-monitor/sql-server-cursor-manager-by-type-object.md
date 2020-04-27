@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206974"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, objeto Cursor Manager by Type
@@ -38,7 +38,7 @@ ms.locfileid: "68206974"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Gerenciador de Cursor|DESCRIÇÃO|  
+|Instância do Gerenciador de Cursor|Descrição|  
 |-----------------------------|-----------------|  
 |**_Total**|Informações de todos os cursores.|  
 |**Cursor API**|Apenas informações de cursor de API.|  

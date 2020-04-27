@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637522"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referência técnica do algoritmo Árvores de Decisão da Microsoft
@@ -66,7 +66,7 @@ ms.locfileid: "73637522"
   
 |Algoritmo|Método de análise|Comentários|  
 |---------------|------------------------|--------------|  
-|Árvores de decisão|Pontuação de interesse<br /><br /> entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
+|Árvores de decisão|Pontuação de interesse<br /><br /> Entropia de Shannon<br /><br /> Bayesian com K2 a priori<br /><br /> Bayesian Dirichlet com uniforme a priori (padrão)|Se qualquer coluna contiver valores contínuos não binários, a pontuação de interesse será usada em todas as colunas para garantir a consistência. Caso contrário, será usado o método padrão ou o especificado.|  
 |Regressão Linear|Pontuação de interesse|A Regressão Linear usa apenas o interesse, pois suporta apenas colunas contínuas.|  
   
 ### <a name="scalability-and-performance"></a>Desempenho e escalabilidade  
@@ -164,16 +164,16 @@ ms.locfileid: "73637522"
   
 |ID|Nome|  
 |--------|----------|  
-|1|**Binário:** Indica que, independentemente do número real de valores para o atributo, a árvore deve ser dividida em duas ramificações.|  
-|2|**Concluir:** Indica que a árvore pode criar tantas divisões quanto houver valores de atributo.|  
-|3|**Ambos:** Especifica que Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
+|1|**Binary:** Indica que, independentemente do número real de valores do atributo, a árvore deverá ser dividida em duas ramificações.|  
+|2|**Complete:** Indica que a árvore pode criar tantas divisões quanto há valores de atributo.|  
+|3|**Both:** Especifica que o Analysis Services pode determinar se uma divisão binária ou completa deve ser usada para produzir os melhores resultados.|  
   
  O padrão é 3.  
   
 ### <a name="modeling-flags"></a>Sinalizadores de modelagem  
  O algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] oferece suporte aos seguintes sinalizadores de modelagem. Ao criar um modelo ou uma estrutura de mineração, você define sinalizadores de modelagem para especificar como os valores em cada coluna são manipulados durante a análise. Para obter mais informações, consulte [Sinalizadores de modelagem &#40;Mineração de dados&#41;](modeling-flags-data-mining.md).  
   
-|Sinalizador de modelagem|DESCRIÇÃO|  
+|Sinalizador de modelagem|Descrição|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Significa que a coluna será tratada como se tivesse dois estados possíveis: `Missing` e `Existing`. Nulo é um valor ausente.<br /><br /> Aplica-se às colunas de modelo de mineração.|  
 |NOT NULL|Indica que a coluna não pode conter um nulo. Um erro ocorrerá se o Analysis Services encontrar um valor nulo durante o treinamento do modelo.<br /><br /> Aplica-se às colunas de estrutura de mineração.|  
@@ -204,6 +204,6 @@ ms.locfileid: "73637522"
 ## <a name="see-also"></a>Consulte Também  
  [Algoritmo árvores de decisão da Microsoft](microsoft-decision-trees-algorithm.md)   
  [Exemplos de consulta de modelo de árvores de decisão](decision-trees-model-query-examples.md)   
- [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services de mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Conteúdo do modelo de mineração para modelos de árvore de decisão &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

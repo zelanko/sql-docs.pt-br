@@ -23,27 +23,25 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011921"
 ---
 # <a name="server-level-roles"></a>Funções de nível de servidor
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece funções do nível de servidor para ajudar a gerenciar as permissões em um servidor. Estas funções são entidades de segurança que agrupam outras entidades de segurança. Essas funções abrangem todo o servidor em seus escopos de permissões. (As*funções* são como *grupos* no sistema operacional Windows.)  
   
  As funções de servidor fixas são fornecidas para conveniência e compatibilidade com versões anteriores. Atribua mais permissões específicas sempre que possível.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece nove funções de servidor fixas. A permissões que são concedidas às funções de servidor fixas não podem ser alteradas. A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], você pode criar funções de servidor definidas pelo usuário e adicionar permissões do nível de servidor às funções de servidor definidas pelo usuário.  
   
  Você pode adicionar entidades de segurança no nível do servidor (logons do[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , contas do Windows e grupos do Windows) em funções de nível de servidor. Cada membro de uma função de servidor fixa pode adicionar outros logons a essa mesma função. Os membros de funções de servidor definidas pelo usuário não podem acrescentar outras entidades de segurança de servidor à função.  
   
 ## <a name="fixed-server-level-roles"></a>Funções fixas de nível de servidor  
  A tabela a seguir mostra as funções fixas de nível de servidor e seus recursos.  
   
-|Função fixa de nível de servidor|DESCRIÇÃO|  
+|Função fixa de nível de servidor|Descrição|  
 |------------------------------|-----------------|  
 |sysadmin|Os membros da função de servidor fixa sysadmin podem executar qualquer atividade no servidor.|  
 |serveradmin|Os membros da função de servidor fixa serveradmin podem alterar as opções de configuração de todo o servidor e fechar o servidor.|  
@@ -53,7 +51,7 @@ ms.locfileid: "63011921"
 |bulkadmin|Os membros da função de servidor fixa bulkadmin podem executar a instrução BULK INSERT.|  
 |diskadmin|A função de servidor fixa diskadmin é usada para gerenciar arquivos em disco.|  
 |dbcreator|Os membros da função de servidor fixa dbcreator podem criar, alterar, descartar e restaurar qualquer banco de dados.|  
-|público|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor pública. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> Observação: public é implementado de modo diferente de outras funções. No entanto, as permissões podem ser concedidas, negadas ou revogadas e negadas por meio de public.|  
+|públicos|Todo logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertence à função de servidor pública. Quando permissões específicas não são concedidas ou são negadas a uma entidade de servidor em um objeto seguro, o usuário herda as permissões concedidas como públicas naquele objeto. Somente atribua permissões públicas em qualquer objeto quando você quiser que ele esteja disponível para todos os usuários. Não é possível alterar associação em public.<br /><br /> Observação: public é implementado de modo diferente de outras funções. No entanto, as permissões podem ser concedidas, negadas ou revogadas e negadas por meio de public.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permissões de funções de servidor fixas  
  Cada função de servidor fixa tem certas permissões atribuídas a ela. Para um gráfico das permissões atribuídas às funções de servidor, consulte [Funções fixas de servidor e de banco de dados do Mecanismo de Banco de Dados](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
@@ -73,28 +71,28 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Trabalhando com funções de nível de servidor  
  A tabela a seguir explica os comandos, exibições e funções que você pode usar para trabalhar com funções de nível de servidor.  
   
-|Recurso|Type|DESCRIÇÃO|  
+|Recurso|Type|Descrição|  
 |-------------|----------|-----------------|  
-|[&#41;&#40;Transact-SQL de sp_helpsrvrole](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadados|Retorna uma lista de funções de nível de servidor.|  
-|[&#41;&#40;Transact-SQL de sp_helpsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadados|Retorna informações sobre os membros de uma função de nível de servidor.|  
-|[&#41;&#40;Transact-SQL de sp_srvrolepermission](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadados|Exibe as permissões de uma função de nível de servidor.|  
-|[&#41;&#40;Transact-SQL de IS_SRVROLEMEMBER](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadados|Indica se um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é membro da função de nível de servidor especificada.|  
+|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadados|Retorna uma lista de funções de nível de servidor.|  
+|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadados|Retorna informações sobre os membros de uma função de nível de servidor.|  
+|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadados|Exibe as permissões de uma função de nível de servidor.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadados|Indica se um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é membro da função de nível de servidor especificada.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadados|Retorna uma linha para cada membro de cada função de nível de servidor.|  
-|[&#41;&#40;Transact-SQL de sp_addsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Comando|Adiciona um logon como um membro de uma função de nível de servidor. Preterido. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) em vez disso.|  
-|[&#41;&#40;Transact-SQL de sp_dropsrvrolemember](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Comando|Remove um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um usuário ou grupo do Windows de uma função de nível de servidor. Preterido. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) em vez disso.|  
-|[CRIAR função de servidor &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-server-role-transact-sql)|Comando|Cria uma função de servidor definida pelo usuário.|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Comando|Adiciona um logon como um membro de uma função de nível de servidor. Preterido. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) em vez disso.|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Comando|Remove um logon do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um usuário ou grupo do Windows de uma função de nível de servidor. Preterido. Use [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) em vez disso.|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Comando|Cria uma função de servidor definida pelo usuário.|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Comando|Altera a associação de uma função de servidor ou altera nome de uma função de servidor definida pelo usuário.|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Comando|Remove uma função de servidor definida pelo usuário.|  
-|[&#41;&#40;Transact-SQL de IS_SRVROLEMEMBER](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Função|Determina associação de função de servidor.|  
+|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Função|Determina associação de função de servidor.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções de nível de banco de dados](../authentication-access/database-level-roles.md)   
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
- [Funções de segurança &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
+ [Funções de segurança &#40;&#41;Transact-SQL](/sql/t-sql/functions/security-functions-transact-sql)   
  [Protegendo o SQL Server](../securing-sql-server.md)   
- [Permissões GRANT de entidade do servidor &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
+ [CONCEDER permissões de entidade de segurança de servidor &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
  [Permissões REVOKE de entidade de segurança do servidor &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
- [Permissões DENY de entidade do servidor &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
+ [Permissões DENY de entidade de segurança do servidor &#40;&#41;Transact-SQL](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
  [Criar uma função de servidor](../authentication-access/create-a-server-role.md)  
   
   

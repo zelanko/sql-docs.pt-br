@@ -11,10 +11,10 @@ ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729471"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional Gerenciador (Master Data Manager)
@@ -23,10 +23,10 @@ ms.locfileid: "73729471"
 
   Na área funcional Gerenciador, você pode atualizar dados e trabalhar com hierarquias e coleções.  
   
-## <a name="data-management"></a>Gerenciamento de Dados  
+## <a name="data-management"></a>Gerenciamento de dados  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
- [Altere o tipo de atributo &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [Alterar o tipo de atributo &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [Membros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
@@ -36,17 +36,17 @@ ms.locfileid: "73729471"
   
  [Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
- [&#40;de anotações Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+ [Anotações &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
  [Transações &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
  [Anotar uma transação &#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)  
   
- [Inverter uma &#40;de transação Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+ [Inverter uma transação &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
- [Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 ## <a name="hierarchies-and-collections"></a>Hierarquias e coleções  
  [Hierarquias &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  

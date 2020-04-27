@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528710"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727925"
 ---
 # <a name="using-advanced-data-types"></a>Como usar tipos de dados avançados
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-Você também pode usar o método [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md) para ler os dados como uma matriz de bytes, da seguinte maneira:  
+Você também pode usar o método [getBytes](reference/getbytes-method-sqlserverresultset.md) para ler os dados como uma matriz de bytes, da seguinte maneira:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Modificando tipos de valor grande em um banco de dados
 
-Na maioria dos casos, o método recomendado para atualizar ou modificar valores grandes no banco de dados é passar parâmetros pelas classes [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) usando comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] como `UPDATE`, `WRITE` e `SUBSTRING`.  
+Na maioria dos casos, o método recomendado para atualizar ou modificar valores grandes no banco de dados é passar parâmetros pelas classes [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) usando comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] como `UPDATE`, `WRITE` e `SUBSTRING`.  
 
 Se você precisar substituir a instância de uma palavra em um arquivo de texto grande, como um arquivo HTML arquivado, use um objeto Clob, da seguinte maneira:  
 
@@ -173,12 +173,12 @@ Para obter mais informações sobre tipos de dados definidos pelo usuário, conf
   
 ## <a name="sql_variant-data-type"></a>Tipo de dados Sql_variant
 
-Para obter informações sobre o tipo de dados sql_variant, confira [Usar o tipo de dados Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Para obter informações sobre o tipo de dados sql_variant, confira [Usar o tipo de dados Sql_variant](using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Tipos de dados espaciais
 
-Para obter informações sobre tipos de dados espaciais, confira [Usar tipos de dados espaciais](../../connect/jdbc/use-spatial-datatypes.md).  
+Para obter informações sobre tipos de dados espaciais, confira [Usar tipos de dados espaciais](use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Confira também
 
-[Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Noções básicas sobre os tipos de dados do JDBC Driver](understanding-the-jdbc-driver-data-types.md)  

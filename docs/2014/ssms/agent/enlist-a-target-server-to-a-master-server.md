@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211391"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Inscrever um servidor de destino em um servidor mestre
@@ -32,7 +32,7 @@ ms.locfileid: "68211391"
   
  **Neste tópico**  
   
--   **Para inscrever um servidor de destino usando:**  
+-   **Para inscrever um servidor de destino, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211391"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Para inscrever um servidor de destino  
   
@@ -50,13 +50,13 @@ ms.locfileid: "68211391"
   
 3.  Complete o Assistente de Servidor de Destino, que o guia nesse processo.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Para inscrever um servidor de destino  
   
 1.  Use o procedimento armazenado `sp_msx_enlist`.  Para obter mais informações, consulte [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](automated-administration-across-an-enterprise.md)  

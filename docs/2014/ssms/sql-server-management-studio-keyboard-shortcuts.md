@@ -21,15 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127043"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] esquema, com atalhos de teclado com [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] base em 2010. 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
+  O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] com atalhos de teclado baseados no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
   
 > [!NOTE]  
 >  Para exibir somente os cabeçalhos, clique em **Recolher Tudo** na parte superior dessa página.  
@@ -57,7 +56,7 @@ ms.locfileid: "63127043"
 |Fechar a janela filho MDI atual|CTRL+F4|CTRL+F4|  
 |Fecha um menu ou caixa de diálogo, cancela uma operação em andamento ou enfatiza a janela do documento atual|ESC|ESC|  
 |Imprimir|CTRL+P|CTRL+P|  
-|Sair|Alt+F4|Alt+F4|  
+|Sair|ALT+F4|ALT+F4|  
 |Alternar para o modo de tela inteira|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Fechar a janela da ferramenta atual|SHIFT+ESC|SHIFT+ESC|  
 |Alternar as próximas janelas filho MDI|CTRL+F6|CTRL+TAB|  
@@ -137,7 +136,7 @@ ms.locfileid: "63127043"
 |Estender a seleção uma página para cima|SHIFT+ PAGE UP|SHIFT+ PAGE UP|  
 |Estender a seleção uma página abaixo|SHIFT+ PAGE DOWN|SHIFT+ PAGE DOWN|  
 |Selecionar todo o documento atual|Ctrl+A|Ctrl+A|  
-|Selecionar a palavra que contém o cursor ou a palavra mais próxima|Ctrl+W|Ctrl+W|  
+|Selecionar a palavra que contém o cursor ou a palavra mais próxima|CTRL+W|CTRL+W|  
 |Selecionar o local atual no editor, de volta ao local anterior no editor|CTRL+=|CTRL+=|  
 |Estender a seleção até a parte superior da janela atual|CTRL+SHIFT+ PAGE UP|CTRL+SHIFT+ PAGE UP|  
 |Mover o cursor até a última linha da exibição, estendendo a seleção|CTRL+SHIFT+ PAGE DOWN|CTRL+SHIFT+ PAGE DOWN|  
@@ -182,12 +181,12 @@ ms.locfileid: "63127043"
 |Rolar texto uma linha para cima|CTRL+SETA PARA CIMA|CTRL+SETA PARA CIMA|  
 |Rolar texto uma linha para baixo|CTRL+SETA PARA BAIXO|CTRL+ SETA PARA BAIXO|  
 |Reverter a última ação de edição|Ctrl+Z<br /><br /> ou<br /><br /> ALT+BACKSPACE|Ctrl+Z|  
-|Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> Ctrl+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> Ctrl+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|  
+|Restaurar a edição desfeita anteriormente|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|CTRL+SHIFT+Z<br /><br /> ou<br /><br /> CTRL+Y<br /><br /> ou<br /><br /> ALT+SHIFT+BACKSPACE|  
 |Salvar o item selecionado|Ctrl+S|Ctrl+S|  
 |Salvar tudo|CTRL+SHIFT+S|CTRL+SHIFT+S|  
 |Feche|CTRL+F4|CTRL+F4|  
 |Imprimir|CTRL+P|CTRL+P|  
-|Sair|Alt+F4|Alt+F4|  
+|Sair|ALT+F4|ALT+F4|  
 |Abrir o arquivo atual em um navegador|CTRL+SHIFT+W|Sem equivalente|  
 |Excluir todo o texto do arquivo atual|CTRL+SHIFT+DEL|CTRL+SHIFT+DEL|  
 |Exibir a caixa de diálogo **Ir Para Linha**|CTRL+G|CTRL+G|  
@@ -205,11 +204,11 @@ ms.locfileid: "63127043"
 |Analisar a parte selecionada do editor de consultas ou todo o editor de consultas se nada estiver selecionado|CTRL+F5|CTRL+F5|  
 |Exibir o plano de execução estimado|CTRL+SHIFT+ALT+L|CTRL+L|  
 |Cancelar a consulta em execução|ALT+BREAK|ALT+BREAK|  
-|Incluir o plano de execução real no resultado da consulta|CTRL+SHIFT+ALT+M|Ctrl+M|  
-|Produzir resultados em uma grade|Ctrl+Shift+D|Ctrl+D|  
+|Incluir o plano de execução real no resultado da consulta|CTRL+SHIFT+ALT+M|CTRL+M|  
+|Produzir resultados em uma grade|CTRL+SHIFT+D|CTRL+D|  
 |Produzir resultados no formato de texto|Ctrl+T|Ctrl+T|  
 |Produzir resultados em um arquivo|CTRL+SHIFT+T|CTRL+SHIFT+F|  
-|Mostrar ou ocultar o painel de resultados da consulta|Ctrl+R|Ctrl+R|  
+|Mostrar ou ocultar o painel de resultados da consulta|CTRL+R|CTRL+R|  
 |Mostrar o painel de resultados da consulta|CTRL+SHIFT+ALT+R||  
 |Alternar entre o painel de consulta e de resultados|F6|F6|  
 |Copiar a grade de resultados e os cabeçalhos para a área de transferência|CTRL+SHIFT+C|Sem equivalente|  
@@ -218,7 +217,7 @@ ms.locfileid: "63127043"
 |Exibir a caixa de diálogo Designer de Consulta na janela do editor de consulta|CTRL+SHIFT+Q|Sem equivalente|  
 |Executar o procedimento armazenado do sistema `sp_help`|ALT+F1|ALT+F1|  
 |Executar o procedimento armazenado do sistema `sp_who`|Ctrl+1|Ctrl+1|  
-|Executar o procedimento armazenado do sistema `sp_lock`|Ctrl+2|Ctrl+2|  
+|Executar o procedimento armazenado do sistema `sp_lock`|CTRL+2|CTRL+2|  
 |Executar o procedimento armazenado configurado para esse atalho nas caixas de diálogo **Ferramentas**, **Opções**, **Teclado**, **Atalhos de Consulta**|Ctrl+3|Ctrl+3|  
 |Executar o procedimento armazenado configurado para esse atalho nas caixas de diálogo **Ferramentas**, **Opções**, **Teclado**, **Atalhos de Consulta**|CTRL+4|CTRL+4|  
 |Executar o procedimento armazenado configurado para esse atalho nas caixas de diálogo **Ferramentas**, **Opções**, **Teclado**, **Atalhos de Consulta**|CTRL+5|CTRL+5|  
@@ -271,7 +270,7 @@ ms.locfileid: "63127043"
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Iniciar ou continuar a depuração|ALT+F5|ALT+F5|  
-|Parar a depuração|Shift+F5|Shift+F5|  
+|Parar a depuração|SHIFT+F5|SHIFT+F5|  
 |Avançar|F11|F11|  
 |Passar por|F10|F10|  
 |Sair|Shift+F11|Shift+F11|  
@@ -304,7 +303,7 @@ ms.locfileid: "63127043"
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Listar os membros|Ctrl+J|CTRL+SPACE<br /><br /> ou<br /><br /> Ctrl+J|  
+|Listar os membros|CTRL+J|CTRL+SPACE<br /><br /> ou<br /><br /> CTRL+J|  
 |Completar a palavra|CTRL+SPACE<br /><br /> ou<br /><br /> ALT+SETA PARA A DIREITA|ALT+SETA PARA A DIREITA|  
 |Exibir informações rápidas|CTRL+K, CTRL+I|Sem equivalente|  
 |Exibir informações de parâmetro|CTRL+SHIFT+ESPAÇO|CTRL+SHIFT+ESPAÇO|  
@@ -364,7 +363,7 @@ ms.locfileid: "63127043"
 |Exibir a guia **Em Arquivos** da caixa de diálogo **Localizar** .|||  
 |Exibe a definição do símbolo selecionado.|F12|Sem equivalente|  
 |Exibe a lista de referências do símbolo selecionado.|SHIFT+F12|Sem equivalente|  
-|Exibir a caixa de diálogo **Substituir**|Ctrl+H|Ctrl+H|  
+|Exibir a caixa de diálogo **Substituir**|CTRL+H|CTRL+H|  
 |Iniciar pesquisa incremental. Digite os caracteres a serem pesquisados ou pressione CTRL+I para procurar caracteres da pesquisa anterior|Ctrl+I|Ctrl+I|  
 |Localizar a próxima ocorrência do texto de pesquisa anterior|F3|F3|  
 |Localizar a ocorrência anterior do texto de pesquisa|Shift+F3|Shift+F3|  
@@ -382,9 +381,9 @@ ms.locfileid: "63127043"
   
 |Ação|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Recortar (exclui o item selecionado e o coloca na área de transferência)|Ctrl+X<br /><br /> ou<br /><br /> SHIFTRLT+DELETE|Ctrl+X<br /><br /> ou<br /><br /> SHIFT+DELETE|  
+|Recortar (exclui o item selecionado e o coloca na área de transferência)|CTRL+X<br /><br /> ou<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> ou<br /><br /> SHIFT+DELETE|  
 |Recorta todas as linhas selecionadas ou a linha atual se nada for selecionada.|CTRL+L<br /><br /> ou<br /><br /> Ctrl+Shift+L|Sem equivalente|  
-|Copiar na área de transferência|Ctrl+C<br /><br /> ou<br /><br /> CTRL+INSERT|Ctrl+C<br /><br /> ou<br /><br /> CTRL+INSERT|  
+|Copiar na área de transferência|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> ou<br /><br /> CTRL+INSERT|  
 |Colar da área de transferência no ponto de inserção|Ctrl+V<br /><br /> ou<br /><br /> SHIFT+INSERT|Ctrl+V<br /><br /> ou<br /><br /> SHIFT+INSERT|  
 |Cola um item do Anel da Área de Transferência no ponto de inserção e automaticamente seleciona o item colado|CTRL+SHIFT+V<br /><br /> ou<br /><br /> CTRL+enseSHIFT+INSERT|Sem equivalente|  
   
@@ -411,7 +410,7 @@ ms.locfileid: "63127043"
 |Alternar entre os painéis|F6|F6|  
 |Expandir ou recolher o painel selecionado|CTRL e + ou -|CTRL e + ou -|  
 |Expandir ou recolher todos os painéis|+ ou -|+ ou -|  
-|Copia a linha selecionada inteira na grade|Ctrl+C|Ctrl+C|  
+|Copia a linha selecionada inteira na grade|CTRL+C|CTRL+C|  
 |Copiar célula|CTRL+SHIFT+C|CTRL+SHIFT+C|  
 |Suspenso para filtrar na grade|ALT+DOWN|ALT+DOWN|  
 |Role para cima ou para baixo no Monitor de Atividade|CTRL+ALT+UP/DOWN|CTRL+ALT+UP/DOWN|  
@@ -437,10 +436,10 @@ ms.locfileid: "63127043"
 |------------|-----------------------------|---------------------------------|  
 |Cancela ou interrompe a consulta em execução no momento.|Ctrl+T|Ctrl+T|  
 |Exibe o painel de diagrama do **Designer de Consulta**|Ctrl+1|Ctrl+1|  
-|Exibe o painel de critérios do **Designer de Consulta**|Ctrl+2|Ctrl+2|  
+|Exibe o painel de critérios do **Designer de Consulta**|CTRL+2|CTRL+2|  
 |Exibe o painel SQL do **Designer de Consulta**|Ctrl+3|Ctrl+3|  
 |Exibe o painel de resultados do **Designer de Consulta**|CTRL+4|CTRL+4|  
-|Executar a consulta especificada no **Designer de Consulta**|Ctrl+R|Ctrl+R|  
+|Executar a consulta especificada no **Designer de Consulta**|CTRL+R|CTRL+R|  
 |Quando no painel de resultados, move o foco para a faixa de ferramenta encaixada na parte inferior do designer|CTRL+G|CTRL+G|  
 |Habilita o modo JOIN no **Designer de Consulta**|CTRL+SHIFT+J|CTRL+SHIFT+J|  
   
