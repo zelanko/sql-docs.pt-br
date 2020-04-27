@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912540"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
@@ -30,7 +30,7 @@ ms.locfileid: "62912540"
 |Origem do Evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbólico|DBCC3_CHECK_CATALOG|  
-|Texto da mensagem|Verifique a mensagem do catálogo ERROR nível LEVEL Estado STATE: MESSAGE.|  
+|Texto da mensagem|Verifique a mensagem do catálogo ERROR Nível LEVEL Estado STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Explicação  
  DBCC CHECKCATALOG ou DBCC CHECKDB localizou uma inconsistência nas tabelas de metadados do sistema para o objeto especificado. Isto é, há uma inconsistência entre a ID do objeto registrado e o objeto especificado na mensagem de erro.  

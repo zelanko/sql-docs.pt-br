@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149756"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -103,11 +103,11 @@ ms.locfileid: "63149756"
   
 -   HostName  
   
--   Dados binários  
+-   Binary Data  
   
 -   SPID  
   
--   Hora de Início  
+-   Start Time  
   
 -   EndTime  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63149756"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-## <a name="operating-system-requirements"></a>Requisitos de sistema operacional  
+## <a name="operating-system-requirements"></a>Requisitos do Sistema Operacional  
  Os sistemas operacionais com suporte para a execução da ferramenta de administração e o controlador e os serviços cliente são os mesmos que sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre quais sistemas operacionais têm suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sua instância do, consulte [requisitos de hardware e software para a instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Os recursos do Distributed Replay têm suporte em sistemas operacionais x86 e x64. Para sistemas operacionais x64, somente há suporte para Windows no modo Windows (WOW).  
@@ -134,10 +134,8 @@ ms.locfileid: "63149756"
   
 |Recurso Distributed Replay|Máximo de instalações por ambiente de repetição|  
 |--------------------------------|--------------------------------------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|16 (computadores físicos ou virtuais)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|16 (computadores físicos ou virtuais)|  
 |Ferramenta de administração|Ilimitado|  
   
 > [!NOTE]  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479609"
 ---
 # <a name="master-data-services-database"></a>Banco de dados do Master Data Services
@@ -35,17 +35,17 @@ ms.locfileid: "65479609"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Tabela de preparo de membro folha &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
+-   [Tabela de preparo de membros folha &#40;Master Data Services&#41;](leaf-member-staging-table-master-data-services.md)  
   
 -   [Tabela de preparo de membros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabela de preparação de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabela de preparo de relações &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
 -   [Erros de processo de preparo &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um banco de dados Master Data Services](install-windows/create-a-master-data-services-database.md)   
  [&#40;de segurança de objeto de banco de dados Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
- [Logons, usuários e funções do banco de dados &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
+ [Logons, usuários e funções de banco de dados &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

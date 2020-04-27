@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017187"
 ---
 # <a name="osql-utility"></a>Utilitário osql
@@ -70,11 +70,11 @@ ms.locfileid: "63017187"
  **-U** _login_id_  
  É a identificação de logon do usuário. IDs de logon diferenciam maiúsculas de minúsculas.  
   
- **-P** _senha_  
+ **-P** _password_  
  É uma senha especificada pelo usuário. Se a opção **-P** não for usada, o **osql** solicitará a senha. Se a opção **-P** for usada ao término do prompt de comando sem uma senha, **osql** usará a senha padrão (NULL).  
   
 > [!IMPORTANT]  
->  Não use uma senha em branco. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes (a página pode estar em inglês)](../relational-databases/security/strong-passwords.md).  
+>  Não use uma senha em branco. Use uma senha forte. Para saber mais, confira [Strong Passwords](../relational-databases/security/strong-passwords.md).  
   
  As senhas diferenciam maiúsculas de minúsculas.  
   
@@ -93,7 +93,7 @@ C:\>osql
  **-E**  
  Usa uma conexão confiável em vez de pedir uma senha.  
   
- **-S** _server_name_[ **\\** _instance_name_]  
+ **-S** _server_name_[ **\\**_instance_name_]  
  Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_**\\**_instance_name_ para se conectar a uma instância nomeada [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
   
  **-H** _wksta_name_  
@@ -103,13 +103,13 @@ C:\>osql
  Emite uma instrução USE *db_name* quando **osql**é iniciado.  
   
  **-l** _time_out_  
- Especifica o número de segundos antes que um logon do **osql** expire. O tempo limite padrão para fazer logon no **osql** é de oito segundos.  
+ Especifica o número de segundos antes de um logon do **osql** expirar. O tempo limite padrão de logon do **osql** é de oito segundos.  
   
  **-t** _time_out_  
- Especifica o número de segundos antes que um comando expire. Se um valor de *time_out* não for especificado, os comandos não atingirão o tempo limite.  
+ Especifica o número de segundos antes de um comando expirar. Se não for especificado um valor de *time_out* , os comandos não vão atingir o tempo limite.  
   
- **-h** _cabeçalhos_  
- Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deverá haver nenhum espaço entre o parâmetro e a configuração (**-h-1**, não **-h -1**).  
+ **-h** _headers_  
+ Especifica o número de linhas a imprimir entre cabeçalhos de coluna. O padrão é imprimir títulos uma vez para cada conjunto de resultados de consulta. Use -1 para especificar que nenhum cabeçalho será impresso. Se -1 for usado, não deverá haver nenhum espaço entre o parâmetro e a configuração ( **-h-1**, não **-h -1**).  
   
  **-s** _col_separator_  
  Especifica o caractere do separador de colunas que, por padrão, é um espaço em branco. Para usar caracteres que têm significado especial para o sistema operacional (por exemplo, |; & \< >), coloque o caractere entre aspas duplas (").  
@@ -117,9 +117,8 @@ C:\>osql
  **-w** _column_width_  
  Permite ao usuário definir a largura da tela de saída. O padrão é 80 caracteres. Quando uma linha de saída alcança sua largura de tela máxima, ela é quebrada em várias linhas.  
   
- **-um** _packet_size_  
- Permite solicitar um pacote de tamanho diferente. Os valores válidos para *packet_size* são 512 a 65.535. O valor padrão **osql** é o padrão do servidor. Um tamanho de pacote maior pode aumentar o desempenho na execução de scripts maiores, em que a quantidade de instruções SQL entre comandos GO é substancial. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] indicam que 8192 geralmente é a configuração mais rápida para operações de cópia em massa. Um tamanho de pacote maior pode ser solicitado, mas o **osql** assumirá como padrão o padrão do servidor se a solicitação não puder ser atendida.  
+ **-a** _packet_size_  
+ Permite solicitar um pacote de tamanho diferente. Os valores válidos para *packet_size* são 512 a 65.535. O valor padrão **osql** é o padrão do servidor. Um tamanho de pacote maior pode aumentar o desempenho na execução de scripts maiores, em que a quantidade de instruções SQL entre comandos GO é substancial. [!INCLUDE[msCoName](../includes/msconame-md.md)] indicam que 8192 geralmente é a configuração mais rápida para operações de cópia em massa. Um tamanho de pacote maior pode ser solicitado, mas o **osql** assumirá como padrão o padrão do servidor se a solicitação não puder ser atendida.  
   
  **-e**  
  Duplica a entrada.  
@@ -136,7 +135,7 @@ C:\>osql
  **-c** _cmd_end_  
  Especifica o terminador de comando. Por padrão, comandos são encerrados e enviados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se GO for inserido sozinho em uma linha. Quando você redefinir o terminador de comando, não use palavras reservadas do [!INCLUDE[tsql](../includes/tsql-md.md)] nem caracteres que tenham significado especial para o sistema operacional, sejam ou não precedidos por uma barra invertida.  
   
- **-q "** _consulta_ **"**  
+ **-q "** _query_ **"**  
  Executa uma consulta quando o **osql** é iniciado, mas não encerra o **osql** quando a consulta é concluída. (Observe que a instrução de consulta não deve incluir a instrução GO). Se você emitir uma consulta de um arquivo em lote, use %variáveis ou %variáveis% de ambiente. Por exemplo:  
   
 ```  
@@ -146,23 +145,23 @@ osql -E -q "select name, object_id from %table%"
   
  Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples.  
   
- **-Q "** _consulta_ **"**  
+ **-Q"** _query_ **"**  
  Executa uma consulta e imediatamente encerra o **osql**. Coloque a consulta entre aspas duplas e qualquer coisa incorporada na consulta entre aspas simples.  
   
  **-n**  
  Remove a numeração e o símbolo de prompt (>) das linhas de entrada.  
   
  **-m** _error_level_  
- Personaliza a exibição de mensagens de erro. São exibidos o número da mensagem, o estado e o nível de erros com o nível de severidade especificado ou superior. Nada é exibido para erros de níveis abaixo do nível especificado. Use **-1** para especificar que todos os cabeçalhos retornem com mensagens, até mesmo mensagens informativas. Se **-1**for usado, não deverá haver espaço entre o parâmetro e a configuração (**-m-1**, não **-m -1**).  
+ Personaliza a exibição de mensagens de erro. São exibidos o número da mensagem, o estado e o nível de erros com o nível de severidade especificado ou superior. Nada é exibido para erros de níveis abaixo do nível especificado. Use **-1** para especificar que todos os cabeçalhos retornem com mensagens, até mesmo mensagens informativas. Se **-1**for usado, não deverá haver espaço entre o parâmetro e a configuração ( **-m-1**, não **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redireciona a saída da mensagem para a tela (**stderr**). Se você não especificar um parâmetro ou especificar **0**, serão redirecionadas somente mensagens de erro com nível de severidade 11 ou superior. Se você especificar **1**, serão redirecionadas todas as saídas da mensagem, incluindo “print”.  
   
  **-i** _input_file_  
- Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. O operador de comparação**\<** menor que () pode ser usado no lugar de **-i**.  
+ Identifica o arquivo que contém um lote de instruções SQL ou procedimentos armazenados. O operador de comparação menor que ( **\<** ) pode ser usado no lugar de **-i**.  
   
  **-o** _output_file_  
- Identifica o arquivo que recebe a saída do **osql**. O operador de comparação**>** maior que () pode ser usado no lugar de **-o**.  
+ Identifica o arquivo que recebe a saída do **osql**. O operador de comparação maior que ( **>** ) pode ser usado no lugar de **-o**.  
   
  Se *input_file* não for Unicode e **-u** não for especificado, *output_file* será armazenado no formato OEM. Se *input_file* for Unicode ou **-u** for especificado, *output_file* será armazenado em formato Unicode.  
   
@@ -170,8 +169,7 @@ osql -E -q "select name, object_id from %table%"
  Imprime estatísticas de desempenho.  
   
  **-b**  
- Especifica que o **osql** é encerrado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será 1 quando a mensagem de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um nível de severidade de 11 ou superior, caso contrário, o valor retornado será 0. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Arquivos em lote do MS-DOS podem testar o valor de DOS ERRORLEVEL e tratar o erro adequadamente.  
+ Especifica que o **osql** é encerrado e retorna um valor DOS ERRORLEVEL em caso de erro. O valor retornado à variável DOS ERRORLEVEL será 1 quando a mensagem de erro do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiver um nível de severidade de 11 ou superior, caso contrário, o valor retornado será 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] Arquivos em lote do MS-DOS podem testar o valor de DOS ERRORLEVEL e tratar o erro adequadamente.  
   
  **-u**  
  Especificar que *output_file* será armazenado em formato Unicode, independentemente do formato de *input_file*.  
@@ -208,12 +206,12 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Além das instruções [!INCLUDE[tsql](../includes/tsql-md.md)] dentro do **osql**, os comandos a seguir também estão disponíveis.  
   
-|Comando|DESCRIÇÃO|  
+|Comando|Descrição|  
 |-------------|-----------------|  
 |GO|Executa todas as instruções inseridas depois do último GO.|  
 |RESET|Apaga as instruções inseridas.|  
 |QUIT ou EXIT( )|Sai do **osql**.|  
-|Ctrl+C|Finaliza uma consulta sem sair do **osql**.|  
+|CTRL+C|Finaliza uma consulta sem sair do **osql**.|  
   
 > [!NOTE]  
 >  Os comandos !! e ED não têm mais suporte no **osql**.  
@@ -231,7 +229,7 @@ SELECT x = 1
 GO 100  
 ```  
   
- Os resultados são impressos após o término de execução. o **osql** não aceita mais de 1.000 caracteres por linha. Instruções grandes devem ser divididas em várias linhas.  
+ Os resultados são impressos após o término de execução. O**osql** não aceita mais de 1.000 caracteres por linha. Instruções grandes devem ser divididas em várias linhas.  
   
  Os recursos de recall de comando do Windows podem ser usados para chamar novamente e modificar instruções **osql** . O buffer de consulta existente pode ser desmarcado digitando RESET.  
   
@@ -255,10 +253,10 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  Quando possível, use a opção **-E**(conexão de confiança).  
   
- Ao usar o **osql** interativamente, você pode ler um arquivo do sistema operacional no buffer de comandos com o **:r**_file_name_. Isso envia o script SQL no *file_name* diretamente para o servidor como um único lote.  
+ Ao usar o **osql** interativamente, você pode ler um arquivo do sistema operacional no buffer de comando com **: r**_file_name_. Isso envia o script SQL no *file_name* diretamente para o servidor como um único lote.  
   
 > [!NOTE]  
->  Ao usar **** o osql [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o trata o separador de lotes Go, se ele aparecer em um arquivo de script SQL, como um erro de sintaxe.  
+>  Ao usar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata o separador em lote GO, se ele for exibido em um arquivo de script SQL, como um erro de sintaxe.  
   
 ## <a name="inserting-comments"></a>Inserindo comentários  
  Você pode incluir comentários em uma instrução Transact-SQL enviada ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pelo **osql**. São permitidos dois tipos de estilos de comentário: -- e /*...\*/.  
@@ -291,7 +289,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Não executa o lote; sai imediatamente e não retorna valor algum.  
   
--   SAIR **()**  
+-   EXIT **()**  
   
 > [!NOTE]  
 >  Executa o lote e então sai imediatamente e não retorna valor algum.  
@@ -337,9 +335,9 @@ GO
  Essa instrução produz um resultado de `10.3496`, que indica que o valor é armazenado com todas as casas decimais intactas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Comentário &#40;&#41;MDX](/sql/mdx/comment-mdx)   
- [--Comentário de &#40;&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
- [CONVERSÃO e conversão &#40;&#41;Transact-SQL](/sql/t-sql/functions/cast-and-convert-transact-sql)   
+ [Comentário &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070964"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Esta pasta de trabalho contém uma ou mais consultas que atualizam dados externos.
@@ -39,7 +39,7 @@ ms.locfileid: "66070964"
   
  Você também pode alterar os parâmetros de configuração para que o aviso na atualização não ocorra mais:  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique em **Aplicativo dos Serviços do Excel**.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081847"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Painel Design (Exibição da Previsão do Modelo de Mineração)
@@ -29,7 +29,7 @@ ms.locfileid: "66081847"
 > [!NOTE]  
 >  Se você fizer alguma alteração manual na consulta, suas alterações serão perdidas ao voltar para a exibição Design. Se desejar salvar a consulta DMX, copie-a na área de transferência do Windows e cole-a em um arquivo de texto.  
   
- **Para obter mais informações:** [consultas de mineração de dados](data-mining/data-mining-queries.md)  
+ **Para obter mais informações:** [Consulta de mineração de dados](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opções  
  **Alternar para a exibição de resultado da consulta**  
@@ -47,7 +47,7 @@ ms.locfileid: "66081847"
  **Modelo de mineração**  
  Exibe o modelo de mineração selecionado no qual você deseja basear as previsões.  
   
- **Selecionar modelo**  
+ **Selecionar Modelo**  
  Abre a caixa de diálogo **Selecionar Modelo de Mineração** .  
   
  **Selecionar Tabela(s) de Entrada**  
@@ -68,12 +68,12 @@ ms.locfileid: "66081847"
  **Entrada de Consultas Singleton**  
  Habilitado quando você seleciona o botão **Consulta Singleton** . Contém as seguintes colunas:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Coluna do Modelo de Mineração**|Lista as colunas de modelo de mineração contidas no modelo de mineração que for selecionado na tabela **Modelo de Mineração** .|  
 |**Valor**|Selecione um valor da lista que contém cada estado possível da coluna de modelos de mineração selecionada.<br /><br /> Se a coluna for uma coluna de tabela aninhada, clicar na célula de valor abrirá a caixa de diálogo **Entrada de Tabela Aninhada** .|  
   
- **Origem**  
+ **Fonte**  
  Selecione a origem que contém o campo que você utilizará para a coluna. Você pode usar o modelo de mineração selecionado na tabela **Modelo de Mineração** , a tabela ou as tabelas selecionadas na tabela **Selecionar Tabela(s) de Entrada** , uma função de previsão ou uma expressão personalizada.  
   
  As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e as tabelas de entrada até a célula.  
@@ -87,12 +87,12 @@ ms.locfileid: "66081847"
  **E/ou**  
  Use para criar uma consulta lógica. Por exemplo, `(expr1 Or expr2) And expr3`.  
   
- **Critério/argumento**  
+ **Critérios/Argumento**  
  Especifique uma condição ou expressão de usuário que se aplica à coluna. As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e as tabelas de entrada até a célula.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de consulta de mineração de dados](data-mining/data-mining-query-tools.md)   
- [Construtor de Consultas de &#40;de mineração de dados de previsão&#41;](prediction-query-builder-data-mining.md)  
+ [Construtor de Consultas de previsão &#40;Mineração de Dados&#41;](prediction-query-builder-data-mining.md)  
   
   

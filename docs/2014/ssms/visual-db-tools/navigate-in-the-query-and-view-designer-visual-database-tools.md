@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066254"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navegar no Designer de Consulta e Exibição (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066254"
   
 ## <a name="any-pane"></a>Qualquer painel  
   
-|**Para**|**Pressione**|**Selecione**|  
+|**Para**|**Pressione**|**Clique**|  
 |------------|---------------|---------------|  
 |Mover entre os painéis do Designer de Consulta e Exibição|F6, SHIFT+F6|Em qualquer lugar no painel de destino|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63066254"
   
 ## <a name="diagram-pane"></a>Painel Diagrama  
   
-|**Para**|**Pressione**|**Selecione**|  
+|**Para**|**Pressione**|**Clique**|  
 |------------|---------------|---------------|  
 |Mover entre tabelas, outros objetos estruturados em tabelas (e para linhas de junção, se disponíveis)|TAB ou SHIFT+TAB|Na tabela, no objeto estruturado por tabela ou na linha de junção a ser movida|  
 |Mover entre as colunas de uma tabela ou objeto estruturado por tabela|Teclas de direção|Na coluna para a qual ir|  
@@ -51,7 +51,7 @@ ms.locfileid: "63066254"
   
 ## <a name="criteria-pane"></a>Painel de Critérios  
   
-|Para|Pressione|Clique em |  
+|Para|Pressione|Clique em|  
 |--------|-----------|-----------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a última linha em uma coluna selecionada|CTRL+SETA PARA BAIXO||  
@@ -61,8 +61,8 @@ ms.locfileid: "63066254"
 |Mover em uma lista suspensa|SETA PARA CIMA ou SETA PARA BAIXO|No botão da célula|  
 |Selecionar uma coluna inteira de grade|CTRL+BARA DE ESPAÇOS|O cabeçalho da coluna|  
 |Alternar entre o modo de edição e o modo de seleção de célula|F2||  
-|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+C||  
-|Cortar o texto selecionado em uma célula e colocá-lo na Área de Transferência (no modo de edição)|Ctrl+X||  
+|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
+|Cortar o texto selecionado em uma célula e colocá-lo na Área de Transferência (no modo de edição)|CTRL+X||  
 |Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
 |Alternar entre os modos de inserção e sobreposição ao editar uma célula|INS||  
 |Alternar a caixa de seleção na coluna Saída|BARRA DE ESPAÇOS|Na caixa de seleção|  
@@ -86,7 +86,7 @@ ms.locfileid: "63066254"
   
 ## <a name="results-pane"></a>Painel de Resultados  
   
-|**Para**|**Pressione**|**Selecione**|  
+|**Para**|**Pressione**|**Clique**|  
 |------------|---------------|---------------|  
 |Mover entre células|Teclas de direção, TAB ou SHIFT+TAB|Na célula de destino|  
 |Mover para a primeira ou para a última célula na fila atual|HOME ou END||  
@@ -101,9 +101,9 @@ ms.locfileid: "63066254"
 |Desfazer alterações na célula atual|ESC em célula alterada||  
 |Desfazer alterações na linha atual|ESC em qualquer célula não alterada||  
 |Inserir null em uma célula|CTRL+0||  
-|Copiar colunas ou linhas selecionadas para a Área de Transferência|Ctrl+C||  
-|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+C||  
-|Cortar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|Ctrl+X||  
+|Copiar colunas ou linhas selecionadas para a Área de Transferência|CTRL+C||  
+|Copiar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+C||  
+|Cortar o texto selecionado em uma célula para a Área de Transferência (no modo de edição)|CTRL+X||  
 |Colar o texto da Área de Transferência (no modo de edição)|Ctrl+V||  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080493"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Atualização Incremental (Analysis Services - Dados Multidimensionais)
@@ -27,8 +27,8 @@ ms.locfileid: "66080493"
 |Termo|Definição|  
 |----------|----------------|  
 |**Grupo de medidas**|Selecione o grupo de medidas a ser atualizado incrementalmente.<br /><br /> Observação: esta opção apenas estará habilitada se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
-|**Partição**|Selecione a partição a ser atualizada.<br /><br /> Observação: esta opção apenas estará habilitada se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
-|**Table**|Clique para atualizar o objeto de uma tabela.|  
+|**Particion**|Selecione a partição a ser atualizada.<br /><br /> Observação: esta opção apenas estará habilitada se você estiver atualizando um cubo incrementalmente. Se você estiver atualizando um grupo de medidas ou partição incrementalmente, esta opção será desabilitada.|  
+|**Tabela**|Clique para atualizar o objeto de uma tabela.|  
 |**Fonte de dados ou exibição**|Selecione a fonte de dados ou exibição da fonte de dados na qual a tabela de origem está localizada.<br /><br /> Observação: esta opção apenas estará habilitada se **Tabela** estiver selecionada.|  
 |**Nome e esquema da tabela**|Selecione a tabela de origem usada para recuperar dados para atualização incremental do cubo, grupo de medidas ou partição.<br /><br /> Observação: esta opção apenas estará habilitada se **Tabela** estiver selecionada.|  
 |**Consulta**|Clique para atualizar o objeto de uma consulta.|  

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128747"
 ---
 # <a name="localdbformatmessage-function"></a>Função LocalDBFormatMessage
   Retorna a descrição textual localizada para o erro de LocalDB do SQL Server Express especificado.  
   
- **Arquivo de cabeçalho:** sqlncli. h  
+ **Arquivo de cabeçalho:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT LocalDBFormatMessage(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *hrLocalDB*  
  [Entrada] O código de erro de LocalDB.  
   

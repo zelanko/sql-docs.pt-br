@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032414"
 ---
 # <a name="object-dependencies"></a>Dependências de objeto
@@ -33,7 +33,7 @@ ms.locfileid: "63032414"
  **Objetos dos quais o**_\<objeto selecionado>_ **depende**      
  Clicando neste botão, você exibe uma lista dos objetos que são rastreados por dependência e dos quais depende o objeto selecionado.  
   
- **Depend**  
+ **Dependências**  
  Se os **objetos que dependem do** _ \<objeto selecionado>_ for clicado, isso exibirá uma exibição hierárquica dos objetos que dependem do objeto selecionado. Se os **objetos dos quais** _ \<o objeto selecionado>_ **depende** for clicado, isso exibirá uma exibição hierárquica dos objetos dos quais o objeto selecionado depende.  
   
  **Nome**  
@@ -42,7 +42,7 @@ ms.locfileid: "63032414"
  **Tipo**  
  Exibe o tipo do objeto selecionado no modo de exibição de árvore **Dependências** acima.  
   
- **Hora da última sincronização**  
+ **Hora da Última Sincronização**  
  > [!NOTE]  
 >  Esta opção só está disponível na página **Avançado** .  
   

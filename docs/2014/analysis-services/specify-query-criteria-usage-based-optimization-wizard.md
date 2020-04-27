@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068219"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar Critérios de Consulta (Assistente de Otimização com Base no Uso)
@@ -40,15 +40,15 @@ ms.locfileid: "66068219"
  Filtra consultas no log de consultas com base em uma data e hora de início. Escolha ou digite uma data na lista suspensa.  
   
 > [!NOTE]  
->  Se a **Data de término date** não for selecionada, todas as consultas no log de consultas na data e hora especificadas ou para essa opção ou posteriores serão consideradas.  
+>   Se a **Data de término** não for selecionada, todas as consultas no log de consultas na data e hora especificadas ou para essa opção ou posteriores serão consideradas.  
   
  **Data de término date**  
  Filtra consultas no log de consultas com base em uma data e hora de término. Escolha ou digite uma data na lista suspensa.  
   
 > [!NOTE]  
->  Se a **Data de início** não for selecionada, todas as consultas no log de consultas antes ou na data e hora especificadas para essa opção serão consideradas.  
+>   Se a **Data de início** não for selecionada, todas as consultas no log de consultas antes ou na data e hora especificadas para essa opção serão consideradas.  
   
- **Podem**  
+ **Usuários**  
  Filtra consultas no log de consultas com base em um conjunto de usuários especificado. Clique no botão de reticências (**...**) para exibir a caixa de diálogo **Seleção de Usuários** e escolher os usuários nos quais filtrar consultas. Para obter mais informações sobre a caixa de diálogo **Seleção de Usuários**, consulte [Caixa de diálogo Seleção de Usuários &#40;Analysis Services – Dados Multidimensionais&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas mais frequentes**  

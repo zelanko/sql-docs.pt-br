@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069615"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selecionar Tipo de Conversão (Assistente de Business Intelligence)
@@ -39,7 +39,7 @@ ms.locfileid: "66069615"
   
  Por exemplo, a moeda corrente pode estar definida como USD (dólares dos EUA) e a tabela de fatos armazenar transações em EUR (euros), AUD (dólares australianos) e MXN (pesos mexicanos). A seleção dessa opção converte as transações das moedas locais especificadas na moeda corrente. O resultado é que as transações podem ser armazenadas nas moedas locais especificadas e exibidas na moeda corrente especificada.  
   
- **Um-para-muitos**  
+ **Um para muitos**  
  Armazene transações usando a moeda corrente especificada na página **Definir Opções de Conversão de Moeda** e, em seguida, converta-a em uma ou mais moedas de relatório.  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066337"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Projetos de modelo tabular (SSAS tabular)
@@ -22,10 +22,10 @@ ms.locfileid: "66066337"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Criar um projeto de modelo NewTabular &#40;SSAS tabular&#41;](create-a-new-tabular-model-project-analysis-services.md)|Este tópico descreve como criar um novo projeto de modelo tabular e em branco.|  
-|[Importar do Analysis Services &#40;SSAS tabular&#41;](import-from-analysis-services-ssas-tabular.md)|Este tópico descreve como criar um novo projeto de modelo tabelar baseado em um modelo existente no Analysis Services. Os metadados do modelo existente são extraídos e usados para criar o novo modelo.|  
+|[Importar do Analysis Services &#40;SSAS de Tabela&#41;](import-from-analysis-services-ssas-tabular.md)|Este tópico descreve como criar um novo projeto de modelo tabelar baseado em um modelo existente no Analysis Services. Os metadados do modelo existente são extraídos e usados para criar o novo modelo.|  
 |[Importar do PowerPivot &#40;SSAS de tabela&#41;](import-from-power-pivot-ssas-tabular.md)|Este tópico descreve como criar um novo projeto de modelo tabular extraindo os metadados e dados de um arquivo do PowerPivot para Excel (.xlsx).|  
   
   

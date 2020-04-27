@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127276"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Altera dados de um tipo de dados para outro.  
   
@@ -70,7 +70,7 @@ destlen
  *srctype*  
  Especifica o tipo de dados dos dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
- *orig*  
+ *src*  
  Trata-se de um ponteiro para os dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
  *srclen*  
@@ -116,6 +116,6 @@ destlen
   
 ## <a name="see-also"></a>Consulte Também  
  [srv_setutype &#40;API de procedimento armazenado estendido&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;API de procedimento armazenado estendido&#41;](srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert &#40;API de Procedimento Armazenado Estendido&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

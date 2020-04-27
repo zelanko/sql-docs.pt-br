@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877869"
 ---
 # <a name="variables-window"></a>Janela Variáveis
@@ -66,21 +66,21 @@ ms.locfileid: "62877869"
  `Namespace`  
  Exiba o nome do namespace. As variáveis definidas pelo usuário são inicialmente criadas no namespace do **usuário** , mas você pode alterar o nome do namespace `Namespace` no campo. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Gerar evento de alteração**  
+ **Elevar Evento de Alteração**  
  Indique se precisa gerar um evento `OnVariableValueChanged` quando o valor é alterado. Você pode atualizar o valor para as variáveis do sistema e as definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
  **Descrição**  
  Exiba a descrição da variável. Você pode alterar a descrição para as variáveis definidas pelo usuário. Por padrão, a janela **Variáveis** não lista esta coluna. Para exibir esta coluna, clique em **Opções de Grade**.  
   
- **Expression**  
+ **Expressão**  
  Exiba a expressão atribuída à variável. Para atribuir uma expressão, clique botão de reticências.  
   
  Se você atribui uma expressão a uma variável, um marcador de ícone especial é exibido ao lado da variável. Esse marcador de ícone especial também é exibido ao lado de gerenciadores de conexões e tarefas que têm expressões definidas neles.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Variáveis do SSIS &#40;Integration Services&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;as variáveis&#41; SSIS](integration-services-ssis-variables.md)   
  [Usar variáveis em pacotes](../../2014/integration-services/use-variables-in-packages.md)   
- [Expressões do SSIS &#40;Integration Services&#41;](expressions/integration-services-ssis-expressions.md)   
- [Gerar arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Integration Services &#40;expressões&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Gerando arquivos de despejo para execução de pacote](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

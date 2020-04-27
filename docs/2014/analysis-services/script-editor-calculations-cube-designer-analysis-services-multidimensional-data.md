@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069972"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Scripts (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66069972"
   
 |Termo|Definição|  
 |----------|----------------|  
-|**Expression**|Digite as expressões e instruções MDX para o comando de script selecionado no painel **Metadados** (na exibição de formulário) ou todo o script de cubo (na exibição de script).<br /><br /> Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.|  
+|**Expressão**|Digite as expressões e instruções MDX para o comando de script selecionado no painel **Metadados** (na exibição de formulário) ou todo o script de cubo (na exibição de script).<br /><br /> Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Expressões multidimensionais &#40;referência de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   

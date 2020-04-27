@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079906"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Instalar o Analysis Services em modo Tabular
@@ -45,19 +45,17 @@ ms.locfileid: "66079906"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- 
-  `INSTANCENAME` deve ter menos de 17 caracteres.  
+ `INSTANCENAME` deve ter menos de 17 caracteres.  
   
  Todos os valores de conta de espaço reservado devem ser substituídos por contas e senhas válidas.  
   
  Ferramentas como o SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] não são instaladas usando a sintaxe de linha de comando de exemplo que é fornecida. Para obter mais informações sobre como adicionar recursos, consulte [instalar SQL Server 2014 no prompt de comando](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- 
-  `ASSERVERMODE` diferencia maiúsculas e minúsculas.  Todos os valores devem ser expressos em maiúsculas. A tabela a seguir descreve os valores válidos para `ASSERVERMODE`.  
+ `ASSERVERMODE` diferencia maiúsculas e minúsculas.  Todos os valores devem ser expressos em maiúsculas. A tabela a seguir descreve os valores válidos para `ASSERVERMODE`.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Esse é o valor padrão. Se você não configurar o `ASSERVERMODE`, o servidor será instalado no modo de servidor Multidimensional.|  
+|MULTIDIMENSIONAL|Este é o valor padrão. Se você não configurar o `ASSERVERMODE`, o servidor será instalado no modo de servidor Multidimensional.|  
 |POWERPIVOT|Esse valor é opcional. Na prática, se você configura o parâmetro `ROLE`, o modo de servidor é automaticamente definido como 1, tornando `ASSERVERMODE` opcional para uma instalação do PowerPivot para SharePoint. Para obter mais informações, consulte [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Esse valor é obrigatório se você estiver instalando o Analysis Services no modo Tabular usando a instalação de linha de comando.|  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070534"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta e filtro (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -37,9 +37,9 @@ ms.locfileid: "66070534"
  **Operador**  
  Selecione o operador que define como a expressão na **Expressão de Filtro** é aplicada à hierarquia selecionada. A tabela a seguir descreve os operadores disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Iguais**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
+|**Igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Diferente de**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**No**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  

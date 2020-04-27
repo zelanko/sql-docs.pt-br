@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068897"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar propriedades de servidor no Analysis Services
@@ -34,9 +34,9 @@ ms.locfileid: "66068897"
   
  [Configurar propriedades do servidor (instância)](#bkmk_config)  
   
- [Referência de propriedade de servidor](#bkmk_ref)  
+ [Referência à propriedade de servidor](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>Configurar propriedades de servidor (instância)  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>Configurar propriedades de servidor (instância)  
  As páginas de propriedades no SQL Server Management Studio contêm um subconjunto das propriedades disponíveis, enquanto mostrando só essas propriedades que são ser modificadas mais provável. O conjunto cheio de propriedades pode ser localizado no arquivo msmdsrv.ini.  
   
 > [!NOTE]  
@@ -72,12 +72,12 @@ ms.locfileid: "66068897"
   
 4.  Após salvar o arquivo, reinicie o serviço.  
   
-##  <a name="bkmk_ref"></a>Referência de propriedade de servidor  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a>Referência de propriedade de servidor  
  As propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] são importantes para o ajuste refinado do sistema. Por exemplo, para tornar o comportamento das consultas consistente com seus requisitos, você pode definir as propriedades pertinentes.  
   
  Os tópicos seguintes explicam as várias propriedades de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Propriedades gerais](general-properties.md)|As propriedades gerais são básicas e avançadas e, incluem propriedades que definem o diretório de dados, diretório de backup e outros comportamentos do servidor.|  
 |[Propriedades de mineração de dados](data-mining-properties.md)|As propriedades de mineração de dados que controlam quais algoritmos são habilitados e quais são desabilitados. Por padrão, todos os algoritmos são habilitados.|  

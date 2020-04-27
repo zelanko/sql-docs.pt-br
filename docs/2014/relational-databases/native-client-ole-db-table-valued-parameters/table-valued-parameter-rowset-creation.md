@@ -1,5 +1,5 @@
 ---
-title: Criação de conjunto de linhas de parâmetro com valor de tabela | Microsoft Docs
+title: Criação do conjunto de linhas do parâmetro com valor de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046496"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Criação do conjunto de linhas do parâmetro com valor de tabela
@@ -25,11 +25,11 @@ ms.locfileid: "63046496"
  Os objetos do conjunto de linhas do parâmetro com valor de tabela são criados explicitamente pelo consumidor para parâmetros de entrada por meio de várias interfaces no nível da sessão. Há uma instância de um objeto do conjunto de linhas do parâmetro com valor de tabela por parâmetro com valor de tabela. O consumidor pode criar os objetos do conjunto de linhas do parâmetro com valor de tabela fornecendo informações de metadados já conhecidas (cenário estático) ou descobrindo-as por meio das interfaces do provedor (cenário dinâmico). As seções a seguir descrevem estes dois cenários.  
   
 ## <a name="static-scenario"></a>Cenário estático  
- Quando as informações de tipo são conhecidas, o consumidor usa ITableDefinitionWithConstraints:: CreateTableWithConstraints para criar uma instância de um objeto de conjunto de linhas de parâmetro com valor de tabela que corresponde a um parâmetro com valor de tabela.  
+ Quando as informações de tipo são conhecidas, o consumidor usa ITableDefinitionWithConstraints::CreateTableWithConstraints para criar uma instância de um conjunto de linhas do parâmetro com valor de tabela que corresponda a um parâmetro com valor de tabela.  
   
- O campo *GUID* (parâmetro*pTableID* ) contém o GUID especial (CLSID_ROWSET_TVP). O membro *pwszName* contém o nome do tipo de parâmetro com valor de tabela para o qual o consumidor deseja criar uma instância. O campo *eKind* será definido como DBKIND_GUID_NAME. Esse nome é necessário quando a instrução for ad hoc SQL; o nome é opcional, se for uma chamada de procedimento.  
+ O campo *guid* (parâmetro *pTableID*) contém a GUID especial (CLSID_ROWSET_TVP). O membro *pwszName* contém o nome do tipo de parâmetro com valor de tabela para o qual o consumidor deseja criar uma instância. O campo *eKind* será definido como DBKIND_GUID_NAME. Esse nome é necessário quando a instrução for ad hoc SQL; o nome é opcional, se for uma chamada de procedimento.  
   
- Para agregação, o consumidor passa o parâmetro *pUnkOuter* com o IUnknown de controle.  
+ Para agregação, o consumidor transmite o parâmetro *pUnkOuter* com o controlador IUnknown.  
   
  As propriedades do objeto conjunto de linhas de parâmetro com valor de tabela são somente leitura, portanto, não se espera que o consumidor defina as propriedades em *rgPropertySets*.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63046496"
  Os parâmetros *pTableID* e *pUnkOuter* devem ser definidos como no cenário estático. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo obtém as informações de tipo (restrições e informações de coluna) do servidor e retorna um objeto de conjunto de linhas de parâmetro com valor de tabela por meio do parâmetro *ppRowset* . Essa operação requer comunicação com o servidor e, portanto, não tem desempenho tão bom quanto no cenário estático. O cenário dinâmico só funciona com chamadas de procedimento com parâmetros.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Parâmetros com valor de tabela &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [Os parâmetros com valor de tabela &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

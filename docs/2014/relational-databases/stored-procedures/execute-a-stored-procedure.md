@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63016063"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
@@ -47,9 +47,9 @@ ms.locfileid: "63016063"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A ordenação de banco de dados de chamada é usada durante a correspondência de nomes dos procedimentos do sistema. Portanto, em seu aplicativo, você deve sempre fazer a diferenciação exata entre maiúsculas e minúsculas nos nomes em chamadas de procedimento. Por exemplo, este código falhará se for executado no contexto de um banco de dados que tenha uma ordenação com diferenciação de maiúsculas e minúsculas:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63016063"
   
 -   Se um procedimento definido pelo usuário tiver o mesmo nome de um procedimento de sistema, o procedimento definido pelo usuário talvez nunca seja executado.  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Executando procedimentos armazenados do sistema  
   
@@ -119,13 +119,13 @@ ms.locfileid: "63016063"
   
     2.  Interromper a execução de um procedimento na inicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para obter mais informações, veja [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) e [Cláusula EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para obter mais informações, confira a seção “Permissões” em [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para executar um procedimento armazenado  
   
@@ -154,7 +154,7 @@ ms.locfileid: "63016063"
   
 5.  Para executar o procedimento armazenado, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para executar um procedimento armazenado  
   
@@ -202,7 +202,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Exemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Exemplo (Transact-SQL)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Especificar parâmetros](specify-parameters.md)   

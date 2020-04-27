@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068538"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Assistente de Business Intelligence)
   Use a página **Especificar a ordenação de atributos** para especificar a ordenação de atributos e de critérios de ordenação de atributos na dimensão selecionada.  
   
 ## <a name="options"></a>Opções  
- **Attribute**  
+ **Atributo**  
  Exibe os atributos disponíveis para a dimensão.  
   
  **Atributo de Ordenação**  
@@ -31,10 +31,10 @@ ms.locfileid: "66068538"
   
  Para criar um novo atributo de ordenação, selecione ** \<novo atributo>** e, na caixa de diálogo **selecionar uma coluna** , selecione a coluna na qual o novo atributo deve ser baseado.  
   
- **Critérios**  
+ **Aos**  
  Especifique os critérios do **Atributo de Ordenação** a serem usados para ordenar os membros no **Atributo**correspondente. A tabela a seguir lista os critérios disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Nome**|Ordenar o **Atributo** pelos nomes dos membros do atributo em **Atributo de Ordenação**.|  
 |**Chave**|Ordenar o **Atributo** pelas chaves dos membros do atributo em **Atributo de Ordenação**.|  

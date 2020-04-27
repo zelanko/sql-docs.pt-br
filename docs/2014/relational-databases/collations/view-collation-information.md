@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918697"
 ---
 # <a name="view-collation-information"></a>Exibir informações de ordenação
     
-##  <a name="Top"></a> Você pode exibir a ordenação de um servidor, banco de dados ou coluna no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando as opções de menu do Pesquisador de Objetos ou usando o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="you-can-view-the-collation-of-a-server-database-or-column-in-ssmanstudiofull-using-object-explorer-menu-options-or-by-using-tsql"></a><a name="Top"></a> Você pode exibir a ordenação de um servidor, banco de dados ou coluna no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando as opções de menu do Pesquisador de Objetos ou usando o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="Procedures"></a> Como exibir uma configuração de ordenação  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> Como exibir uma configuração de ordenação  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para exibir uma configuração de ordenação para um servidor (instância do SQL Server) no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "62918697"
   
 4.  Clique com o botão direito do mouse na coluna e selecione **Propriedades**. Se a propriedade de ordenação estiver vazia, a coluna não será um tipo de dados de caractere.  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para exibir a configuração de ordenação de um servidor**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e, na barra de ferramentas, clique em **Nova Consulta**.  
@@ -108,10 +108,10 @@ ms.locfileid: "62918697"
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;SERVERPROPERTY &#40;Transact-SQL](/sql/t-sql/functions/serverproperty-transact-sql)   
- [sys. fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [&#41;sys. Columns &#40;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
- [Precedência de agrupamento &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [&#41;&#40;Transact-SQL de sp_helpsort](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [Precedência de ordenação &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

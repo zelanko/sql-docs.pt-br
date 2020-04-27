@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144718"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solução de problemas em um log de transação completa (SQL Server Erro 9002)
   Este tópico aborda as respostas possíveis a um log de transações completo e sugere como evitar isso no futuro. Quando o log de transações fica completo, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] emite um erro 9002. O log pode ficar completo quando o banco de dados estiver online ou em recuperação. Se o log ficar cheio enquanto o banco de dados estiver online, o banco de dados permanecerá online, mas só poderá ser lido, não atualizado. Se o log ficar completo durante uma recuperação, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] marcará o banco de dados como RESOURCE PENDING. Em qualquer caso, é necessária a ação do usuário para liberar espaço no log.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Respondendo a um log de transações completo  
- A resposta apropriada a um log de transações completo depende em parte das condições que o fizeram ficar completo. Para descobrir o que está impedindo o truncamento de log em um determinado caso, use as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição de catálogo do **sys.database** . Para obter mais informações, veja [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Para descrições de fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
+ A resposta apropriada a um log de transações completo depende em parte das condições que o fizeram ficar completo. Para descobrir o que está impedindo o truncamento de log em um determinado caso, use as colunas **log_reuse_wait** e **log_reuse_wait_desc** da exibição de catálogo do **sys.database**. Para obter mais informações, veja [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Para descrições de fatores que podem adiar o truncamento de log, consulte [O log de transações &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Se o banco de dados estava em recuperação quando o erro 9002 aconteceu, depois de resolver o problema, recupere o banco de dados usando ALTER DATABASE *database_name* SET ONLINE.  
@@ -100,6 +100,6 @@ ms.locfileid: "63144718"
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Gerenciar o tamanho do arquivo de log de transações](manage-the-size-of-the-transaction-log-file.md)   
  [Backups de log de transações &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [&#41;&#40;Transact-SQL de sp_add_log_file_recover_suspect_db](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

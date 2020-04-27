@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077659"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Caixa de diálogo Propriedades da Estrutura de Mineração (Analysis Services – Mineração de Dados)
@@ -28,12 +28,12 @@ ms.locfileid: "66077659"
   
 ## <a name="pages"></a>Pages (Páginas)  
   
-|Página|DESCRIÇÃO|  
+|Página|Descrição|  
 |----------|-----------------|  
 |**Geral**|Utilize a página **Geral** para exibir e modificar as propriedades gerais da estrutura de mineração. Para obter mais informações sobre essa página, consulte [Geral &#40;caixa de diálogo Estrutura de mineração&#41; &#40;Analysis Services – Mineração de dados&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
 |**Configuração de Erro**|Utilize a página **Configuração de Erros** para exibir e modificar os parâmetros de configuração de erros da estrutura de mineração. Para obter mais informações sobre essa página, consulte [Configuração de erro &#40;caixa de diálogo Estrutura de mineração&#41; &#40;Analysis Services – Dados multidimensionais&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Estruturas de mineração &#40;Analysis Services de mineração de dados&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estruturas de Mineração &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

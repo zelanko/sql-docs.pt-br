@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050076"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Política de failover para instâncias de cluster de failover
-  Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
+  Em uma FCI (instância de cluster de failover) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , somente um nó pode ter o grupo de recursos de cluster do WSFC (Windows Server Failover Cluster) em um determinado momento. As solicitações do cliente são atendidas por esse nó na FCI. Em caso de falha e uma reinicialização malsucedida, a propriedade de grupo é movida para outro nó do WSFC na FCI. Esse processo é chamado de failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta a confiabilidade de detecção de falha e fornece uma política de failover flexível.  
   
  Uma FCI do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende do serviço do WSFC subjacente para detecção de failover. Assim, dois mecanismos determinam o comportamento de failover para FCI: a primeira é a funcionalidade nativa do WSFC e a última é a funcionalidade adicionada pela instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -34,7 +33,7 @@ ms.locfileid: "63050076"
 > [!IMPORTANT]  
 >  Failovers automáticos de e para uma FCI não são permitidos em um grupo de disponibilidade AlwaysOn. No entanto, failovers manuais de e para uma FCI são permitidos em um grupo de disponibilidade AlwaysOn.  
   
-##  <a name="Concepts"></a>Visão geral da política de failover  
+##  <a name="failover-policy-overview"></a><a name="Concepts"></a> Visão geral da política de failover  
  O processo de failover pode ser dividido nas etapas seguintes:  
   
 1.  [Monitorar o status de integridade](failover-policy-for-failover-cluster-instances.md#monitor)  
@@ -43,19 +42,19 @@ ms.locfileid: "63050076"
   
 3.  [Respondendo a falhas](failover-policy-for-failover-cluster-instances.md#respond)  
   
-###  <a name="monitor"></a>Monitorar o status de integridade  
+###  <a name="monitor-the-health-status"></a><a name="monitor"></a>Monitorar o status de integridade  
  Há três tipos de status de integridade que são monitorados para a FCI:  
   
 -   [Estado do serviço de SQL Server](failover-policy-for-failover-cluster-instances.md#service)  
   
--   [Capacidade de resposta da instância de SQL Server](failover-policy-for-failover-cluster-instances.md#instance)  
+-   [Capacidade de resposta da instância do SQL Server](failover-policy-for-failover-cluster-instances.md#instance)  
   
 -   [Diagnóstico de componente do SQL Server](failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="service"></a>Estado do serviço de SQL Server  
+####  <a name="state-of-the-sql-server-service"></a><a name="service"></a> Estado do serviço SQL Server  
  O serviço do WSFC monitora o estado inicial do serviço SQL Server no nó de FCI ativo para detectar quando o serviço SQL Server é interrompido.  
   
-####  <a name="instance"></a>Capacidade de resposta da instância de SQL Server  
+####  <a name="responsiveness-of-the-sql-server-instance"></a><a name="instance"></a>Capacidade de resposta da instância de SQL Server  
  Durante a inicialização do SQL Server, o serviço do WSFC usa a DLL do recurso de Mecanismo de Banco de Dados do SQL Server para criar uma nova conexão com um thread separado que é usado exclusivamente para monitorar o status de integridade. Isso assegura que a instância do SQL tenha os recursos necessários para relatar seu status de integridade durante o carregamento. Com o uso dessa conexão dedicada, o SQL Server executa o procedimento armazenado de sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) no modo de repetição para relatar periodicamente o status de integridade dos componentes do SQL Server para a DLL de recurso.  
   
  A DLL do recurso determina a capacidade de resposta da instância do SQL que usa um tempo limite de verificação de integridade. A propriedade HealthCheckTimeout define por quanto tempo a DLL do recurso deve esperar o procedimento armazenado sp_server_diagnostics antes de relatar a instância do SQL como sem resposta para o serviço do WSFC. Essa propriedade pode ser configurada com o uso de T-SQL, bem como no snap-in Gerenciador de Cluster de Failover. Para obter mais informações, consulte [Configure HealthCheckTimeout Property Settings](configure-healthchecktimeout-property-settings.md). Os itens a seguir descrevem como essa propriedade afeta as configurações de tempo limite e intervalo de repetição:  
@@ -66,7 +65,7 @@ ms.locfileid: "63050076"
   
 -   Se a conexão dedicada for perdida, a DLL do recurso tentará estabelecer novamente a conexão com a instância SQL do intervalo especificado por HealthCheckTimeout antes de relatar para o serviço do WSFC que a instância do SQL não está respondendo.  
   
-####  <a name="component"></a>Diagnóstico de componente do SQL Server  
+####  <a name="sql-server-component-diagnostics"></a><a name="component"></a>Diagnóstico de componente do SQL Server  
  O procedimento armazenado de sistema sp_server_diagnostics coleta periodicamente o diagnóstico de componente na instância do SQL. As informações de diagnóstico coletadas são apresentadas como uma linha para cada um dos seguintes componentes e passados para o thread de chamada.  
   
 1.  sistema  
@@ -86,14 +85,14 @@ ms.locfileid: "63050076"
 > [!TIP]  
 >  Embora o procedimento armazenado sp_server_diagnostic seja usado pela tecnologia AlwaysOn do SQL Server, ele está disponível para utilização em qualquer instância do SQL Server para ajudar a detectar e solucionar problemas.  
   
-####  <a name="determine"></a>Determinando falhas  
+####  <a name="determining-failures"></a><a name="determine"></a> Determinando falhas  
  A DLL do recurso do Mecanismo de Banco de Dados do SQL Server determina se o status de integridade detectado é uma condição para falha usando a propriedade FailureConditionLevel. A propriedade FailureConditionLevel define quais status de integridade detectados causam reinicializações ou failovers. Há vários níveis de opções disponíveis, variando desde nenhuma reinicialização automática ou failover a todas as condições de falha possíveis resultantes em uma reinicialização automática ou failover. Para obter mais informações sobre como configurar essa propriedade, consulte [Configure FailureConditionLevel Property Settings](configure-failureconditionlevel-property-settings.md).  
   
  As condições de falha são definidas em uma escala crescente. Para os níveis 1-5, cada um deles deve incluir todas as condições dos níveis anteriores, além de suas próprias condições. Isso significa que, a cada nível, há uma probabilidade crescente de failover ou reinicialização. Os níveis de condição de falha são descritos na tabela a seguir.  
   
  Examine [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql), pois esse procedimento armazenado de sistema desempenha uma função importante nos níveis de condição de falha.  
   
-|Nível|Condição|DESCRIÇÃO|  
+|Nível|Condição|Descrição|  
 |-----------|---------------|-----------------|  
 |0|Nenhum failover ou reinicialização automática|Indica que nenhum failover ou reinicialização será disparado automaticamente em nenhuma condição de falha. Esse nível destina-se apenas a fins de manutenção do sistema.|  
 |1|Failover ou reinicialização quando o servidor estiver inativo|Indica que uma reinicialização ou failover de servidor será disparado se a seguinte condição for gerada:<br /><br /> O serviço SQL Server está inativo.|  
@@ -104,7 +103,7 @@ ms.locfileid: "63050076"
   
  *Valor padrão  
   
-####  <a name="respond"></a>Respondendo a falhas  
+####  <a name="responding-to-failures"></a><a name="respond"></a> Respondendo a falhas  
  Após a detecção de uma ou mais condições de falha, como o serviço do WSFC responderá às falhas dependerá do estado do quorum do WSFC e das configurações de reinicialização e failover do grupo de recursos de FCI. Se a FCI tiver perdido seu quorum do WSFC, toda a FCI é colocada offline e a FCI perdeu sua alta disponibilidade. Se a FCI ainda tiver seu quorum do WSFC, o serviço do WSFC poderá responder primeiro tentando reiniciar o nó com falha e depois executando failover se as tentativas de reinicialização não forem bem-sucedidas. As configurações de reinicialização e failover são definidas no snap-in Gerenciador de Cluster de Failover. Para obter mais informações sobre essas configurações, consulte [ \<Propriedades de> de recursos: guia políticas](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Para obter mais informações sobre como manter a integridade do quórum, veja [Configuração de modos de quorum e votação do WSFC &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  

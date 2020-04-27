@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050945"
 ---
 # <a name="spstmtcompleted-event-class"></a>classe de evento SP:StmtCompleted
@@ -26,7 +26,7 @@ ms.locfileid: "63050945"
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>Colunas de dados da classe de evento SP:StmtCompleted  
   
-|Nome da coluna de dados|`Data type`|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|`Data type`|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  

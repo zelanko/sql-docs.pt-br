@@ -54,14 +54,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068914"
 ---
 # <a name="log-properties"></a>Propriedades do log
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor de log listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="general"></a>Geral  
@@ -88,11 +87,9 @@ ms.locfileid: "66068914"
  **ErrorLog\KeyErrorAction**  
  Especifica a ação executada pelo servidor quando um erro `KeyNotFound` ocorre. As respostas válidas para esse erro incluem:  
   
--   
-  `ConvertToUnknown` informa ao servidor para alocar o valor de chave de erro para o membro desconhecido.  
+-   `ConvertToUnknown` informa ao servidor para alocar o valor de chave de erro para o membro desconhecido.  
   
--   
-  `DiscardRecord` informa ao servidor para excluir o registro.  
+-   `DiscardRecord` informa ao servidor para excluir o registro.  
   
  **ErrorLog\KeyErrorLogFile**  
  Esse é um nome de arquivo definido pelo usuário que deve ter uma extensão de arquivo .log, localizado em uma pasta na qual a conta de serviço tem permissões de leitura/gravação. Este arquivo de log conterá somente os erros gerados durante o processamento. Use o Flight Recorder se precisar de informações mais detalhadas.  
@@ -103,34 +100,29 @@ ms.locfileid: "66068914"
  **ErrorLog\KeyErrorLimitAction**  
  Especifica a ação executada pelo servidor quando o número de erros de chave atingiu o limite superior. As respostas válidas para essa ação incluem:  
   
--   
-  `StopProcessing` informa ao servidor para parar o processamento quando o limite de erros for atingido.  
+-   `StopProcessing` informa ao servidor para parar o processamento quando o limite de erros for atingido.  
   
--   
-  `StopLogging` informa ao servidor para parar o log de erros quando o limite de erros for atingido, mas permitir que o processamento continue.  
+-   `StopLogging` informa ao servidor para parar o log de erros quando o limite de erros for atingido, mas permitir que o processamento continue.  
   
- **Log de erros \ LogErrorTypes\KeyNotFound**  
+ **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica a ação executada pelo servidor quando um erro `KeyNotFound` ocorre. As respostas válidas para esse erro incluem:  
   
--   
-  `IgnoreError` informa ao servidor para continuar o processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
+-   `IgnoreError` informa ao servidor para continuar o processamento sem registrar em log o erros ou contá-lo até o limite de erros de chave. Ao ignorar o erro, você simplesmente permite que o processamento continue sem adicioná-lo à contagem de erros ou registrá-lo em log na tela ou no arquivo de log. O registro em questão tem um problema de integridade de dados e não pode ser adicionado ao banco de dados. O registro será descartado ou agregado ao Membro desconhecido, conforme determinado pela propriedade `KeyErrorAction`.  
   
--   
-  `ReportAndContinue` informa ao servidor para registrar em log o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndContinue` informa ao servidor para registrar em log o erro, contá-lo até o limite de erros de chave e continuar o processamento. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
--   
-  `ReportAndStop` informa ao servidor para registrar em log o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
+-   `ReportAndStop` informa ao servidor para registrar em log o erro e parar o processamento imediatamente, independentemente do limite de erros de chave. O registro que aciona o erro é descartado ou convertido no Membro Desconhecido.  
   
- **Log de erros \ LogErrorTypes\KeyDuplicate**  
+ **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Especifica a ação executada pelo servidor quando uma chave duplicada é encontrada. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar em log o erro e continuar o processamento, e `ReportAndStop` para registrar em log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erros.  
   
- **Log de erros \ LogErrorTypes\NullKeyConvertedToUnknown**  
+ **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
  Especifica a ação executada pelo servidor quando uma chave nula tiver sido convertida em Membro Desconhecido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar em log o erro e continuar o processamento, e `ReportAndStop` para registrar em log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erros.  
   
- **Log de erros \ LogErrorTypes\NullKeyNotAllowed**  
+ **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
  Especifica a ação executada pelo servidor quando `NullProcessing` estiver definido como `Error` para um atributo de dimensão. Um erro é gerado quando um valor nulo não é permitido em um determinado atributo. Esta propriedade de configuração de erro informa a próxima etapa, que é relatar o erro e continuar o processamento até que o limite de erros seja atingido. Os valores válidos incluem `IgnoreError` para continuar o processamento como se o erro não tivesse ocorrido, `ReportAndContinue` para registrar em log o erro e continuar o processamento, e `ReportAndStop` para registrar em log o erro e parar o processamento imediatamente, mesmo se a contagem de erro estiver abaixo do limite de erros.  
   
- **Log de erros \ LogErrorTypes\CalculationError**  
+ **ErrorLog\ LogErrorTypes\CalculationError**  
  Uma propriedade usada como padrão durante a operação de processamento executada pelo servidor.  
   
  **ErrorLog\IgnoreDataTruncation**  
@@ -241,6 +233,6 @@ ms.locfileid: "66068914"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

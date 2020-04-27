@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073124"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Substituir uma tabela ou uma consulta nomeada em uma exibição da fonte de dados (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073124"
 > [!IMPORTANT]  
 >  Se você renomear uma tabela de uma fonte de dados, siga os passos de substituição de tabela e especifique a tabela renomeada como a fonte da tabela correspondente na DSV antes de atualizá-la. A conclusão do processo de substituir e renomear preservará a tabela, suas referências e relações na DSV. Caso contrário, quando você atualizar a DSV, uma tabela renomeada na fonte de dados será interpretada como se tivesse sido excluída. Para obter mais informações, consulte [Atualizar o esquema em uma exibição da fonte de dados &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_nq"></a>Substituir uma tabela por uma consulta nomeada  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> Substituir uma tabela com uma consulta nomeada  
   
 1.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto ou conecte-se ao banco de dados que contém a exibição da fonte de dados na qual existe uma tabela ou consulta nomeada que você deseja substituir.  
   

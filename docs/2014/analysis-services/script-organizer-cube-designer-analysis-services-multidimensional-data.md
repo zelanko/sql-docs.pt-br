@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069930"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de Script (guia Cálculos, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -47,8 +47,8 @@ ms.locfileid: "66069930"
 |**Novo Membro Calculado**|Selecione para exibir o **Editor de Formulário de Membro Calculado** e criar um novo membro calculado. Para obter mais informações sobre o **Editor de Formulário de Membro Calculado**, consulte [Editor de Formulário de Membro Calculado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Novo Conjunto Nomeado**|Selecione para exibir o painel **Editor de Formulário de Conjunto Nomeado** e criar um novo conjunto nomeado. Para obter mais informações sobre o **Editor de Formulário de Conjunto Nomeado**, consulte [Editor de Formulário de Conjunto Nomeado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Novo Comando de Script**|Selecione para exibir o **Editor de Scripts** e criar um novo comando de script. Para obter mais informações sobre o **Editor de Scripts**, consulte [Editor de Scripts &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Mover para cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
-|**Mover para baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
+|**Mover para Cima**|Selecione para mover o cálculo selecionado uma posição acima.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
+|**Mover para Baixo**|Selecione para mover o cálculo selecionado uma posição abaixo.<br /><br /> Observação: esta opção será desabilitada se o cálculo selecionado não puder mais ser movido.|  
 |**Delete (excluir)**|Selecione para excluir o cálculo selecionado.|  
   
 ## <a name="see-also"></a>Consulte Também  

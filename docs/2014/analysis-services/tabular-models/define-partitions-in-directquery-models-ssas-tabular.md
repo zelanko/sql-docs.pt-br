@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067306"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partições e modo DirectQuery (SSAS tabular)
@@ -42,12 +42,12 @@ ms.locfileid: "66067306"
   
  Há duas opções de processamento para a partição DirectQuery. Para definir essa propriedade, use o **Gerenciador de Partições** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e selecione a propriedade **Opção de Processamento** . A tabela a seguir lista os valores desta propriedade e descreve os efeitos de cada valor quando combinados com a propriedade DirectQueryUsage na cadeia de conexão:  
   
-|Propriedade **DirectQueryUsage**|Propriedade de **opção de processamento**|Observações|  
+|Propriedade **DirectQueryUsage**|Propriedade**Opção de Processamento**|Observações|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Nunca processar esta partição|Quando o modelo só estiver usando o DirectQuery, o processamento nunca será necessário.<br /><br /> Em modelos híbridos, você pode configurar a partição DirectQuery para nunca ser processada. Por exemplo, se você estiver operando em um conjunto de dados muito grande e não desejar adicionar os resultados completos ao cache, poderá especificar que a partição DirectQuery inclua a união de resultados para todas as outras partições na tabela e que nunca processe a união. As consultas destinadas à fonte relacional não serão afetadas e as consultas em dados armazenados em cache combinarão dados das outras partições|  
 |Inmemory com DirectQuery|Permitir que a partição seja processada|Se o modelo estiver usando o modo híbrido, você deve usar a mesma partição para consultas na memória e consultas na fonte de dados DirectQuery.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Partições &#40;SSAS de tabela&#41;](partitions-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
   
   

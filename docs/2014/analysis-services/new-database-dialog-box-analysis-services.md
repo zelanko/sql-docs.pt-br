@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072311"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>Caixa de diálogo Novo Banco de Dados (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66072311"
 |**Senha**|Digite a senha da conta de usuário especificada em **Nome de usuário**.|  
 |**Usar a conta de serviço**|Selecione para fazer com que o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use as credenciais de segurança associadas ao serviço do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que gerencia o banco de dados. As credenciais da conta de serviço são usadas para processamento, consultas ROLAP, partições remotas, objetos vinculados e sincronização do destino para a origem. Para instruções OPENQUERY DMX, cubos locais e modelos de mineração as credenciais do usuário atual são usadas. Essa opção não tem suporte para associações fora de linha.|  
 |**Usar as credenciais do usuário atual**|Selecione para fazer com que o banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use as credenciais de segurança do usuário atual para associações fora de linha, instruções OPENQUERY DMX, cubos locais e modelos de mineração. A opção não tem suporte para processamento, consultas ROLAP, partições remotas, objetos vinculados e sincronização do destino para a origem.|  
-|**Default**|Selecione para usar as credenciais da conta do usuário padrão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Essa opção usa a configuração padrão do banco de dados para objetos de processamento, servidores de sincronização e execução de instruções de mineração de dados do **Open Query** . Para obter mais informações sobre como especificar as configurações padrão no nível do banco de dados, consulte [Definir propriedades do Banco de Dados Multidimensional &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Por padrão, `DataSourceImpersonationInfo` a propriedade de banco de dados é definida para **usar a conta de serviço**. Independentemente do valor da propriedade `DataSourceImpersonationInfo`, as credenciais do usuário atual são usadas para associações fora de linha, consultas ROLAP, cubos locais e modelos de mineração de dados.|  
+|**Padrão**|Selecione para usar as credenciais da conta do usuário padrão do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Essa opção usa a configuração padrão do banco de dados para objetos de processamento, servidores de sincronização e execução de instruções de mineração de dados do **Open Query** . Para obter mais informações sobre como especificar as configurações padrão no nível do banco de dados, consulte [Definir propriedades do Banco de Dados Multidimensional &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Por padrão, `DataSourceImpersonationInfo` a propriedade de banco de dados é definida para **usar a conta de serviço**. Independentemente do valor da propriedade `DataSourceImpersonationInfo`, as credenciais do usuário atual são usadas para associações fora de linha, consultas ROLAP, cubos locais e modelos de mineração de dados.|  
 |**Descrição**|Digite a descrição do novo banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte Também  

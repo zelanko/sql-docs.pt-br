@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899939"
 ---
 # <a name="xml-source"></a>Origem XML
@@ -54,13 +54,13 @@ ms.locfileid: "62899939"
   
  Se o arquivo de dados XML tiver elementos que não estão no XSD, esses elementos serão ignorados e nenhuma saída será gerada para eles. Por outro lado, se o arquivo de dados XML tiver elementos ausentes que estão representados no XSD, a saída vai conter colunas com valores nulos.  
   
- Quando os dados são extraídos do arquivo de dados XML, eles são convertidos em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . No entanto, a origem XML não pode converter os dados XML para os tipos de dados DT_TIME2 ou DT_DBTIMESTAMP2 porque ela não tem suporte a esses tipos de dados. Para obter mais informações, consulte [Integration Services tipos de dados](integration-services-data-types.md).  
+ Quando os dados são extraídos do arquivo de dados XML, eles são convertidos em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . No entanto, a origem XML não pode converter os dados XML para os tipos de dados DT_TIME2 ou DT_DBTIMESTAMP2 porque ela não tem suporte a esses tipos de dados. Para obter mais informações, consulte [Integration Services Data Types](integration-services-data-types.md).  
   
  O XSD ou o esquema embutido pode especificar o tipo de dados para os elementos, mas, se não fizerem isso, a caixa de diálogo **Editor de Origem XML** atribuirá o tipo de dados String Unicode (DT_WSTR) à coluna na saída que contém o elemento e definirá o comprimento da coluna como 255 caracteres.  
   
  Se o esquema especificar o comprimento máximo de um elemento, o comprimento da coluna de saída será definido para esse valor. Se o comprimento máximo for maior do que o comprimento suportado pelo tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no qual o elemento foi convertido, os dados serão truncados no comprimento máximo do tipo de dados. Por exemplo, se o comprimento de uma cadeia de caracteres for 5000, ela será truncada em 4000 caracteres porque o comprimento máximo do tipo de dados DT_WSTR é 4000 caracteres; do mesmo modo, os dados de byte são truncados em 8000 caracteres, que é o comprimento máximo do tipo de dados DT_BYTES. Se o esquema não especificar nenhum comprimento máximo, o comprimento padrão das colunas com qualquer tipo de dados será definido como 255. O truncamento dos dados na origem XML é tratada do mesmo modo que seria em outros componentes de fluxo de dados. Para obter mais informações, consulte [Tratamento de erros em dados](error-handling-in-data.md).  
   
- Você pode modificar o tipo de dados e o comprimento da coluna. Para obter mais informações, consulte [Integration Services tipos de dados](integration-services-data-types.md).  
+ Você pode modificar o tipo de dados e o comprimento da coluna. Para obter mais informações, consulte [Integration Services Data Types](integration-services-data-types.md).  
   
 ## <a name="configuration-of-the-xml-source"></a>Configuração da origem XML  
  A origem XML dá suporte a três modos diferentes de acesso aos dados. Você pode especificar o local do arquivo de dados XML, a variável que contém o local do arquivo ou a variável que contém os dados XML.  
@@ -69,17 +69,17 @@ ms.locfileid: "62899939"
   
  A origem XML dá suporte a várias saídas regulares e saídas de erro.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui a caixa de diálogo **XML Source edito**r para configurar a origem XML. Esta caixa de diálogo está disponível no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui a caixa de diálogo **Editor de Origem XML** para configurar a origem XML. Esta caixa de diálogo está disponível no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Origem XML** , clique em um dos seguintes tópicos:  
   
--   [Editor de origem XML &#40;página do Gerenciador de conexões&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [Editor de Origem XML &#40;Página Gerenciador de Conexões&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [Editor de origem XML &#40;página colunas&#41;](../xml-source-editor-columns-page.md)  
+-   [Editor de Origem XML &#40;Página Colunas&#41;](../xml-source-editor-columns-page.md)  
   
--   [Editor de origem XML &#40;página saída de erro&#41;](../xml-source-editor-error-output-page.md)  
+-   [Editor de Origem XML &#40;Página Saída de Erro&#41;](../xml-source-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

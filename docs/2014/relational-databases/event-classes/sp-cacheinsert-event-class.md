@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63055686"
 ---
 # <a name="spcacheinsert-event-class"></a>classe de evento SP:CacheInsert
@@ -53,7 +53,7 @@ ms.locfileid: "63055686"
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Classe de evento SP:CacheMiss](sp-cachemiss-event-class.md)  
   
   

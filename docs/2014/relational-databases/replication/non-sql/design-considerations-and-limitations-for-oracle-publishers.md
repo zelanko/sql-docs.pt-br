@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022519"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerações de design e limitações para Publicadores Oracle
-  A publicação de um banco de dados Oracle foi projetada para funcionar de maneira praticamente idêntica à publicação de um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, deve-se estar atento às seguintes limitações e problemas:  
+  A publicação de um banco de dados Oracle foi projetada para funcionar de forma quase idêntica [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à publicação de um banco de dados. Porém, deve-se estar atento às seguintes limitações e problemas:  
   
 -   A opção Oracle Gateway fornece desempenho melhorado em relação à opção Oracle Complete; entretanto, essa opção não pode ser usada para publicar a mesma tabela em várias publicações transacionais. Uma tabela pode aparecer no máximo em uma publicação transacional e em qualquer número de publicações de instantâneo. Se você precisa publicar a mesma tabela em várias publicações transacionais, escolha a opção Oracle Complete.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "63022519"
  Para obter mais informações sobre segurança de replicação, consulte [replicação do SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Considerações administrativas sobre Publicadores Oracle](administrative-considerations-for-oracle-publishers.md)   
+ [Considerações administrativas para Publicadores Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurar um Publicador Oracle](configure-an-oracle-publisher.md)   
  [Visão geral da publicação do Oracle](oracle-publishing-overview.md)  
   

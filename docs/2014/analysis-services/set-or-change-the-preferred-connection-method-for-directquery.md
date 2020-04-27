@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068695"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Definir ou alterar o método de conexão preferencial para DirectQuery
@@ -38,11 +38,11 @@ ms.locfileid: "66068695"
   
 3.  No painel **Propriedades** , altere a propriedade, **DirectQueryMode**, para um dos valores que oferecem suporte ao uso do DirectQuery:  
   
-    -   **Inmemory com DirectQuery**: se você usar essa opção, o modelo será implantado, mas você deverá processar o cache antes de poder executar consultas no modelo.  
+    -   **InMemory com DirectQuery**: Se você usar esta opção, o modelo será implantado mas você deverá processar o cache antes de poder executar consultas no modelo.  
   
-    -   **DirectQuery com inmemory**: se você usar essa opção, o cache estará disponível para uso pelos clientes se ele já tiver sido processado. Se você implantar o modelo com esta configuração e não processar o cache, alguns clientes obterão um erro ao tentar se conectar ao modelo.  
+    -   **DirectQuery com InMemory**: Se você usar esta opção, o cache estará disponível para uso por clientes se ele já tiver sido processado. Se você implantar o modelo com esta configuração e não processar o cache, alguns clientes obterão um erro ao tentar se conectar ao modelo.  
   
-    -   **Somente DirectQuery**: se você usar essa opção, os metadados serão implantados, mas o modelo não terá dados nele. Clientes que tentam se conectar usando o modo Na memória obterão um erro, indicando que o modelo não existe ou não foi processado.  
+    -   **somente DirectQuery**: Se você usar esta opção, os metadados serão implantados mas o modelo não conterá dados. Clientes que tentam se conectar usando o modo Na memória obterão um erro, indicando que o modelo não existe ou não foi processado.  
   
 4.  Se houver erros no Visual Studio, abra a **Lista de Erros** e resolva os problemas que possam impedir a implantação do modelo no modo DirectQuery.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66068695"
   
     -   **InMemory com DirectQuery**  
   
-    -   **DirectQuery com InMemory**  
+    -   **DirectQuery com inmemory**  
   
  Observe que estas propriedades são iguais às propriedades que você define no projeto antes da implantação no Visual Studio. Você pode alterar o modo de conexão preferencial a qualquer momento para o modo DirectQuery, desde que o modelo esteja configurado para oferecer suporte ao uso do DirectQuery.  
   

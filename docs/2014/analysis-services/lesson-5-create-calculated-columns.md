@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078559"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lição 6: Criar colunas calculadas
-  Nesta lição, você criará novos dados em seu modelo adicionando colunas calculadas. Uma coluna calculada se baseia nos dados que já existem no modelo. Para saber mais, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns.md).  
+  Nesta lição, você criará novos dados no modelo adicionando colunas calculadas. Uma coluna calculada se baseia nos dados que já existem no modelo. Para saber mais, consulte [Colunas calculadas &#40;SSAS Tabular&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Você criará cinco novas colunas calculadas em três tabelas diferentes. As etapas são ligeiramente diferentes para cada tarefa. Isso é para mostrar que há várias maneiras de criar novas colunas, renomeá-las e colocá-las em vários localizações em uma tabela.  
+ Você criará cinco novas colunas calculadas em três tabelas diferentes. As etapas são ligeiramente diferentes para cada tarefa. O objetivo disso é mostrar que há vários modos de criar novas colunas, renomeá-las e colocá-las em vários locais em uma tabela.  
   
  Tempo estimado para conclusão desta lição: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de realizar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 5: Criar relações](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Criar colunas calculadas  
@@ -33,7 +33,7 @@ ms.locfileid: "66078559"
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique no menu **Modelo** , aponte para **Exibição de Modelo**e clique em **Exibição de Dados**.  
   
-     Colunas calculadas só podem ser criadas usando o designer de modelo na Exibição de Dados.  
+     Colunas calculadas só podem ser criadas usando o designer de modelos na exibição de dados.  
   
 2.  No designer de modelos, clique na tabela **Data** (guia).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078559"
 4.  Clique no título de coluna e arraste a coluna entre as colunas **Day Name** e **Day of Month** .  
   
     > [!TIP]  
-    >  Mover as colunas na tabela facilita a navegação.  
+    >  A movimentação das colunas na tabela facilita a navegação.  
   
  A coluna calculada Day of Week fornece um nome classificável para o dia de semana.  
   

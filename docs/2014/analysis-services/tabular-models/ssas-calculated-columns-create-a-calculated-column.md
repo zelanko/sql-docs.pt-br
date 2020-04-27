@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066517"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Criar uma coluna calculada (SSAS tabular)
@@ -26,7 +26,7 @@ ms.locfileid: "66066517"
   
 1.  No designer de modelo, na Exibição de Dados, selecione a tabela à qual você quer adicionar uma coluna calculada, clique no menu **Coluna** e clique em **Adicionar Coluna**.  
   
-     **Adicionar coluna** é realçado na coluna vazia da extrema direita e o cursor se move para a barra de fórmulas.  
+     **Adicionar Coluna** é realçado na coluna vazia mais à direita, e o cursor se move para a barra de fórmulas.  
   
      Para criar uma nova coluna entre duas colunas existentes, clique com o botão direito do mouse em uma coluna existente e clique em **Inserir Coluna**.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066517"
   
 ## <a name="see-also"></a>Consulte Também  
  [Colunas calculadas &#40;SSAS de tabela&#41;](ssas-calculated-columns.md)   
- [Medidas &#40;&#41;de tabela do SSAS](measures-ssas-tabular.md)  
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)  
   
   

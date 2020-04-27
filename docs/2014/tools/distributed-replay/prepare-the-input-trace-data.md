@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149983"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar os dados de rastreamento de entrada
-  Antes de poder iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recurso Distributed Replay, você deve preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento da ferramenta de administração do Distributed Replay. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
+  Antes de iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay, é necessário preparar os dados de rastreamento de entrada iniciando o estágio de pré-processamento com a ferramenta de administração do Distributed Replay. No estágio de pré-processamento, o controlador de reprodução distribuída processa os dados de rastreamento e gera um arquivo intermediário:  
   
- ![Estágio de pré-processamento de reprodução distribuída](../../database-engine/media/preprocess.gif "Estágio de pré-processamento de reprodução distribuída")  
+ ![Fase de pré-processamento de reprodução distribuída](../../database-engine/media/preprocess.gif "Fase de pré-processamento de reprodução distribuída")  
   
  Para obter mais informações sobre o estágio de pré-processamento, consulte [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149983"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar os dados de rastreamento de entrada  
   
-1.  **(Opcional) modificar definições de configuração de pré-processamento**: se você quiser modificar as definições de configuração de pré-processamento, por exemplo, se deseja filtrar sessões de sistema ou configurar o tempo ocioso máximo, modifique o `<PreprocessModifiers>` elemento do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modifique as definições de configuração de pré-processamento**: se desejar modificar as definições de configuração de pré-processamento, como a opção de filtrar sessões do sistema ou configurar o tempo ocioso máximo, modifique o elemento `<PreprocessModifiers>` do arquivo de configuração de pré-processamento baseado em XML, `DReplay.exe.preprocess.config`. Se você modificar o arquivo de configuração de pré-processamento, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de pré-processamento padrão, `DReplay.exe.preprocess.config`, e renomeie o novo arquivo. O arquivo de configuração de pré-processamento padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63149983"
   
      Para obter mais informações sobre o arquivo de configuração de pré-processo, veja [Configurar o Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Iniciar o estágio de pré-processamento**: para preparar os dados de rastreamento de entrada, você deve executar a ferramenta de administração com a opção de **pré-processamento** . Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Inicie o estágio de pré-processamento**: para preparar os dados de rastreamento de entrada, execute a ferramenta de administração com a opção **preprocess** . Para obter mais informações, veja [Opção de Pré-processamento &#40;Ferramenta de administração do Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Abra o utilitário Prompt de Comando do Windows (`CMD.exe`) e navegue até o local de instalação da ferramenta de administração Distributed Replay (`DReplay.exe`).  
   
@@ -59,8 +59,8 @@ ms.locfileid: "63149983"
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;utilitário de Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](configure-distributed-replay.md)  
   
   

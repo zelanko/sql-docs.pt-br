@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075607"
 ---
 # <a name="define-database-dimensions"></a>Definir as dimensões do banco de dados
@@ -40,9 +40,9 @@ ms.locfileid: "66075607"
   
  O Designer de Dimensão tem três guias diferentes que são descritas na tabela a seguir.  
   
-|Tab|DESCRIÇÃO|  
+|Tab|Descrição|  
 |---------|-----------------|  
-|**Estrutura da dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão-para examinar ou criar o esquema de exibição da fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
+|**Estrutura da Dimensão**|Use esta guia para trabalhar com a estrutura de uma dimensão-para examinar ou criar o esquema de exibição da fonte de dados para uma dimensão, para trabalhar com atributos e para organizar atributos em hierarquias definidas pelo usuário.|  
 |**Relações de Atributo**|Use essa guia para criar, modificar ou excluir as relações de atributo de uma dimensão.|  
 |**Translations**|Use essa guia para adicionar e editar conversões de metadados de dimensão em linguagens diferentes.|  
 |**Navegador**|Use essa guia para examinar os membros de uma dimensão processada e para revisar as conversões de metadados de dimensão.|  

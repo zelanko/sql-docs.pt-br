@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075032"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
@@ -60,7 +60,7 @@ ms.locfileid: "66075032"
   
 1.  No painel **cubos** , selecione um cubo e, em seguida `Read` , clique em acesso de **leitura/gravação** .  
   
-     `Read`o acesso é suficiente para a maioria das operações. A **leitura/gravação** é usada somente para Write-back, não processamento. Consulte [Set Partition Writeback](set-partition-writeback.md) para obter mais informações sobre esse recurso.  
+     `Read`o acesso é suficiente para a maioria das operações. **Leitura/Gravação** é usado apenas para cenários de write-back, e não de processamento. Consulte [Set Partition Writeback](set-partition-writeback.md) para obter mais informações sobre esse recurso.  
   
      Observe que você pode escolher vários cubos, bem como outros objetos disponíveis na caixa de diálogo Criar Função. Conceder permissões a um cubo autoriza o acesso às dimensões e perspectivas associadas ao cubo. Não é necessário adicionar manualmente objetos já representados no cubo.  
   

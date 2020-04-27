@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050912"
 ---
 # <a name="sprecompile-event-class"></a>classe de evento SP:Recompile
@@ -28,7 +28,7 @@ ms.locfileid: "63050912"
   
 ## <a name="sprecompile-event-class-data-columns"></a>Colunas de dados da classe de evento SP:Recompile  
   
-|Nome da coluna de dados|`Data type`|DESCRIÇÃO|ID da coluna|Filtrável|  
+|Nome da coluna de dados|`Data type`|Descrição|ID da coluna|Filtrável|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|10|Sim|  
 |ClientProcessID|`int`|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo.|9|Sim|  
@@ -61,7 +61,7 @@ ms.locfileid: "63050912"
 |XactSequence|`bigint`|Token usado para descrever a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Classe de evento SQL:StmtRecompile](sql-stmtrecompile-event-class.md)  
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [classe de evento SQL:StmtRecompile](sql-stmtrecompile-event-class.md)  
   
   

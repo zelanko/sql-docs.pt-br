@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065986"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Perspectivas, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -22,11 +22,11 @@ ms.locfileid: "66065986"
   
 ## <a name="options"></a>Opções  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Adicionar Business Intelligence**|Clique para exibir o **Assistente de Business Intelligence** e adicionar recursos de Business Intelligence ao cubo.|  
 |**Processo**|Clique para exibir a caixa de diálogo **Processar** e processar o cubo selecionado.|  
 |**Nova Perspectiva**|Clique para criar uma nova perspectiva no cubo selecionado.|  
-|**Excluir Perspectiva**|Clique para exibir a caixa de diálogo **excluir objetos** e excluir a perspectiva selecionada.<br /><br /> Observação: essa opção estará habilitada apenas se uma perspectiva estiver selecionada no painel **Detalhes da Perspectiva** .|  
+|**Excluir Perspectiva**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a perspectiva selecionada.<br /><br /> Observação: essa opção estará habilitada apenas se uma perspectiva estiver selecionada no painel **Detalhes da Perspectiva** .|  
   
   

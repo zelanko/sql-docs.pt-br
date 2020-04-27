@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067268"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Excluir uma coluna (SSAS tabular)
@@ -39,6 +39,6 @@ ms.locfileid: "66067268"
   
 ## <a name="see-also"></a>Consulte Também  
  [Adicionar colunas a uma tabela &#40;SSAS tabular&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partições &#40;SSAS de tabela&#41;](partitions-ssas-tabular.md)  
+ [Partições &#40;SSAS de Tabela&#41;](partitions-ssas-tabular.md)  
   
   

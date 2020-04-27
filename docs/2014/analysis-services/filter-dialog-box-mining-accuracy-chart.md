@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081169"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo Filtro (gráfico de precisão de mineração)
@@ -32,13 +32,13 @@ ms.locfileid: "66081169"
   
  Se você aplicar o filtro ao novo conjunto de dados, o modelo de mineração de dados existente será usado para avaliar somente os casos do conjunto de dados que satisfaçam as condições. No entanto, se você aplicar o filtro ao próprio modelo de mineração, a precisão do modelo será avaliada apenas para os casos do modelo de mineração que satisfazem esses critérios.  
   
- **Para obter mais informações:** [teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obter mais informações: ** [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opções  
- **Situações**  
+ **Condições**  
  Uma grade que contém colunas nas quais são especificadas condições para as colunas da tabela selecionada na caixa de diálogo **Filtro de Conjunto de Dados** .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**E/ou**|Clique para especificar se o operador AND ou OR deve ser aplicado à condição desta linha. Esses valores só ficam disponíveis depois que você seleciona uma coluna da lista **Coluna da Estrutura de Mineração** .|  
 |**Coluna de Estrutura de Mineração**|Clique para selecionar uma coluna na lista de colunas contidas na tabela selecionada na fonte de dados na caixa de diálogo **Filtro de Conjunto de Dados** .|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069294"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Selecionar partições a modificar (Assistente de Design de Agregação)
@@ -28,10 +28,10 @@ ms.locfileid: "66069294"
   
  Marque a caixa de seleção para uma partição criar agregações apenas para a partição selecionada.  
   
- **Nome da partição**  
+ **Nome da Partição**  
  Exibe o nome da partição.  
   
- **Origem**  
+ **Fonte**  
  Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.  
   
  **Agregações**  

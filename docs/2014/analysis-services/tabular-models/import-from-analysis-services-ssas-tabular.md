@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067053"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importar do Analysis Services (SSAS tabular)
@@ -36,6 +36,6 @@ ms.locfileid: "66067053"
 5.  Em **Nome do Banco de Dados**, selecione o banco de dados modelo de tabela que contém os metadados de modelo que você deseja importar e clique em **OK**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades do projeto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
+ [Propriedades de projeto &#40;SSAS de Tabela&#41;](properties-ssas-tabular.md)  
   
   

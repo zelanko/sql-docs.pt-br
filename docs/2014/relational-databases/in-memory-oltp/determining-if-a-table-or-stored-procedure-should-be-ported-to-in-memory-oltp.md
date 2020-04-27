@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072358"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
@@ -31,7 +31,7 @@ ms.locfileid: "63072358"
   
 -   Gerar relatórios de análise de desempenho de transação para identificar tabelas críticas de desempenho e procedimentos armazenados.  
   
- Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre metodologias de migração, consulte [padrões de carga de trabalho de OLTP em memória e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  O coletor de desempenho da transação e os relatórios de análise de desempenho da transação o ajudam a realizar as seguintes tarefas:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63072358"
   
  O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho de transação são instalados quando você seleciona **ferramentas de gerenciamento-ferramentas básicas** ou [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] **de gerenciamento-avançadas** quando você instala o.  
   
-## <a name="best-practices"></a>Práticas Recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  O fluxo de trabalho recomendado é ilustrado no fluxograma a seguir. Os nós amarelos representam os procedimentos opcionais:  
   
  ![Fluxo de trabalho da AMR](../../database-engine/media/amr-1.gif "Fluxo de trabalho da AMR")  
@@ -99,7 +99,7 @@ ms.locfileid: "63072358"
   
 7.  Na próxima tela, clique em **concluir** para sair do assistente.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurar a coleta de dados em uma instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurar a coleta de dados em uma instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  A coleta de dados exige que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente seja iniciado. Você só precisará configurar um coletor de dados em um servidor.  
   
  Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
@@ -118,7 +118,7 @@ ms.locfileid: "63072358"
   
 6.  Verifique as seleções. Clique em **voltar** para modificar as configurações. Clique em **Concluir** quando tiver terminado.  
   
-###  <a name="xxx"></a>Configurar a coleta de dados em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância remota  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar a coleta de dados em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância remota  
  A coleta de dados exige que o Agente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja iniciado na instância que coletará os dados.  
   
  Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  

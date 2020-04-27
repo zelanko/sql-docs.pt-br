@@ -1,5 +1,5 @@
 ---
-title: Definindo dados grandes | Microsoft Docs
+title: Como configurar dados grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140623"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
@@ -41,7 +41,7 @@ ms.locfileid: "63140623"
 ## <a name="how-to-set-large-data"></a>Como definir dados grandes  
  Para transmitir um ponteiro para seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna BLOB e chama os métodos **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Para definir dados de BLOB:  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento *dwFlag* da estrutura DBOBJECT como STGM_READ e defina o elemento *iid* como IID_ISequentialStream (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento *dwFlag* da estrutura DBOBJECT como STGM_READ e defina o elemento *IID* como IID_ISequentialStream (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   

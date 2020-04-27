@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922887"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Executar etapas do Windows PowerShell no SQL Server Agent
   Use o SQL Server Agent para executar scripts do SQL Server PowerShell nas horas agendadas.  
   
-1.  **Antes de começar:**  [limitações e restrições](#LimitationsRestrictions)  
+1.  **Antes de começar:**  [Limitações e restrições](#LimitationsRestrictions)  
   
-2.  **Para executar o PowerShell de SQL Server Agent, usando:**  [etapa de trabalho do PowerShell](#PShellJob), [etapa de trabalho de prompt de comando](#CmdExecJob)  
+2.  **Para executar o PowerShell no SQL Server Agent, usando:**  [Etapa de trabalho do PowerShell](#PShellJob), [Etapa de trabalho de prompt de comando](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  Existem vários tipos de etapas de trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. Cada tipo está associado a um subsistema que implementa um ambiente específico, como um agente de replicação ou ambiente de prompt de comando. Você pode codificar os scripts do Windows PowerShell e usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent para incluir os scripts em trabalhos que são executados em horários programados ou em resposta a eventos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Scripts do Windows PowerShell podem ser executados usando uma etapa de trabalho de prompt de comando ou uma etapa de trabalho do PowerShell.  
@@ -31,12 +31,12 @@ ms.locfileid: "62922887"
   
 2.  Use uma etapa de trabalho de prompt de comando para executar o PowerShell.exe e especifique um script que importa o módulo `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
   
 > [!CAUTION]  
 >  Cada etapa de trabalho do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent que executa o PowerShell com o módulo `sqlps` inicia um processo que consome aproximadamente 20 MB de memória. A execução de um grande número de etapas de trabalho concorrentes do Windows PowerShell pode afetar o desempenho de forma negativa.  
   
-##  <a name="PShellJob"></a>Criar uma etapa de trabalho do PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>Criar uma etapa de trabalho do PowerShell  
  **Para criar uma etapa de trabalho do PowerShell**  
   
 1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../ssms/agent/create-jobs.md).  
@@ -53,8 +53,8 @@ ms.locfileid: "62922887"
   
 7.  Clique na página **Avançado** para definir as seguintes opções de etapa de trabalho: a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e com que frequência.  
   
-##  <a name="CmdExecJob"></a>Criar uma etapa de trabalho de prompt de comando  
- **Para criar uma etapa de trabalho de CmdExec**  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>Criar uma etapa de trabalho de prompt de comando  
+ **Para criar uma etapa de trabalho CmdExec**  
   
 1.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](../ssms/agent/create-jobs.md).  
   

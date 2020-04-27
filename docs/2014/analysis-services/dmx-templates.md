@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081557"
 ---
 # <a name="dmx-templates"></a>Modelos DMX
@@ -72,7 +72,7 @@ ms.locfileid: "66081557"
   
 -   Consulta de previsão TOP em tabela aninhada  
   
- **Criada**  
+ **Criar**  
   
  Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos suportados pelos assistentes-você pode usar qualquer Data Mining algoritmo com suporte na instância do à qual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] você está conectado, incluindo algoritmos de plug-in.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66081557"
  Dependendo do modelo usado, talvez você precise de permissões administrativas para acessar o servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e executar a consulta.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Criando um modelo de mineração de dados](creating-a-data-mining-model.md)  
+ [Criar um modelo de mineração de dados](creating-a-data-mining-model.md)  
   
   

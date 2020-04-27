@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479529"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permissões de entidade (Master Data Services)
@@ -34,11 +34,11 @@ ms.locfileid: "65479529"
 > [!NOTE]  
 >  Essas permissões se aplicam apenas à área funcional **Explorer** da interface do usuário.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Somente leitura**|A entidade é exibida, mas o usuário não pode adicionar, remover ou alterar membros.|  
-|**Cumulativo**|A entidade é exibida e o usuário pode adicionar, remover e alterar membros.|  
-|**Deny**|A entidade não é exibida.|  
+|**Atualização**|A entidade é exibida e o usuário pode adicionar, remover e alterar membros.|  
+|**Negar**|A entidade não é exibida.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atribuir permissões de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

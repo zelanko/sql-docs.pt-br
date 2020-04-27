@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031930"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opções (página de Pesquisador de Objetos do SQL Server de scripts)
@@ -63,7 +63,7 @@ ms.locfileid: "63031930"
  **Gerar script para objetos dependentes**  
  Gera um script para objetos adicionais que são necessários quando o script para o objeto selecionado é executado. O padrão é Falso.  
   
- **Incluir cláusula IF NOT EXISTs**  
+ **Incluir cláusula If NOT EXISTS**  
  Inclui uma instrução para verificar se cada objeto não existe no banco de dados antes de tentar criar o objeto. O padrão é Falso. Para obter mais informações, consulte [If... Caso contrário &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) e [exista &#40;&#41;do TRANSACT-SQL ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Qualificar nomes de objetos do esquema**  

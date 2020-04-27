@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150426"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Salvar eventos de Plano de Execução XML separadamente (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63150426"
      A caixa de diálogo **Propriedades do Rastreamento**é exibida.  
   
     > [!NOTE]  
-    >  Se **Iniciar rastreamento imediatamente após estabelecer a conexão**for selecionado, a caixa de diálogo **Propriedades do rastreamento**não será exibida e o rastreamento será iniciado em vez disso. Para desativar essa configuração, no menu **ferramentas**, clique em **Opções**e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
+    >  Se **Iniciar rastreamento imediatamente após estabelecer a conexão**for selecionado, a caixa de diálogo **Propriedades do rastreamento**não será exibida e o rastreamento será iniciado em vez disso. Para desabilitar essa configuração, no menu **Ferramentas**, clique em **Opções**e desmarque a caixa de seleção **Iniciar rastreamento imediatamente após estabelecer a conexão** .  
   
 2.  Na caixa de diálogo **Propriedades do Rastreamento** , digite um nome para o rastreamento na caixa **Nome do rastreamento** .  
   
@@ -60,6 +60,6 @@ ms.locfileid: "63150426"
 11. Para visualizar o arquivo do evento **Showplan XML** no SQL Server Management Studio, no menu **Arquivo** , aponte para **Abrir**e clique em **Arquivo**. Navegue até o diretório em que você salvou o arquivo (ou arquivos) de evento **Showplan XML** para selecioná-lo e abri-lo. Os arquivos de evento**Showplan XML** têm a extensão .SQLPlan.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Analisar consultas com resultados de SHOWPLAN em SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+ [Analisar consultas com resultados do Plano de Execução no SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

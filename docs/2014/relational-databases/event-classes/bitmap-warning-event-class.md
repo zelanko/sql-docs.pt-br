@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023437"
 ---
 # <a name="bitmap-warning-event-class"></a>classe de evento Bitmap Warning
@@ -38,13 +38,13 @@ ms.locfileid: "63023437"
 |**HostName**|`nvarchar`|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o nome do host for fornecido pelo cliente. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|`int`|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|`nvarchar`|Nome do logon do usuário (logon de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] segurança do ou as credenciais de logon do Windows na forma de *domínio \ nomedeusuário*).|11|Sim|  
-|**LoginSid**|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição do catálogo **Sys. server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|`image`|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|`nvarchar`|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|`nvarchar`|Nome do usuário do Windows.|6|Sim|  
 |**ObjectID**|`int`|ID do nó da raiz da equipe hash envolvida na repartição. Corresponde ao ID do nó no plano de execução.|22|Sim|  
 |**RequestID**|`int`|O ID da solicitação que contém a instrução.|49|Sim|  
 |**ServerName**|`nvarchar`|Nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|**SessionLoginName**|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
+|**SessionLoginName**|`nvarchar`|Nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando Login1 e executar uma instrução como Login2, **SessionLoginName** mostrará Login1 e **LoginName** mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|`int`|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|`datetime`|Hora em que o evento foi iniciado, se disponível.|14|Sim|  
 |**TransactionID**|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  

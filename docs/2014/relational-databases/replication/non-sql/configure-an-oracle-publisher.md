@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022599"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar um publicador Oracle
@@ -26,7 +26,7 @@ ms.locfileid: "63022599"
   
 2.  Para as tabelas que você publicará, conceda a permissão SELECT diretamente em cada uma delas (não através de uma função) ao usuário administrativo Oracle que você criou na etapa 1.  
   
-3.  Instale o software cliente Oracle e o provedor de OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no distribuidor e, em seguida, pare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e reinicie a instância. Se o Distribuidor estiver executando em uma plataforma de 64-bit, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
+3.  Instale o software cliente Oracle e o provedor OLE DV no Distribuidor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, pare e reinicie a instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o Distribuidor estiver executando em uma plataforma de 64-bit, você deverá usar a versão de 64 bits do provedor OLE DB do Oracle.  
   
 4.  Configure o banco de dados Oracle como um Publicador no Distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022599"
   
  No Instalador Universal Oracle, você deverá fornecer as seguintes informações:  
   
-|Informações|DESCRIÇÃO|  
+|Informações|Descrição|  
 |-----------------|-----------------|  
 |Oracle Home|Esse é o caminho para diretório de instalação do software Oracle. Aceite o padrão (C:\oracle\ora90 ou semelhante) ou digite outro caminho. Para obter mais informações sobre o Oracle Home, consulte a seção "Considerações sobre o Oracle Home" mais adiante neste tópico.|  
 |Nome do Oracle home|Um alias para o caminho do Oracle home.|  
@@ -97,11 +97,11 @@ ms.locfileid: "63022599"
   
  Após você ter feito uma conexão bem sucedida com o Publicador Oracle tente fazer logon no banco de dados, usando a conta e senha associadas com o esquema de usuário administrativo de replicação que você criou. Enquanto estiver executando na mesma conta do Windows que o serviço [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa, realize o seguinte:  
   
-1.  Clique em **Iniciar** e em **Executar**.  
+1.  Clique em **Iniciar**e em **Executar**.  
   
 2.  Digite `cmd` e clique em **OK**.  
   
-3.  Em um prompt de comando, digite:  
+3.  No prompt de comando, digite:  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -129,9 +129,9 @@ ms.locfileid: "63022599"
  Para configurar um Publicador Oracle e criar uma publicação, consulte [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Considerações administrativas sobre Publicadores Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
- [Glossário de termos para publicações Oracle](glossary-of-terms-for-oracle-publishing.md)   
+ [Considerações administrativas para Publicadores Oracle](administrative-considerations-for-oracle-publishers.md)   
+ [Mapeamento de tipo de dados para Publicadores Oracle](data-type-mapping-for-oracle-publishers.md)   
+ [Glossário de termos da publicação Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Visão geral da publicação do Oracle](oracle-publishing-overview.md)  
   
   

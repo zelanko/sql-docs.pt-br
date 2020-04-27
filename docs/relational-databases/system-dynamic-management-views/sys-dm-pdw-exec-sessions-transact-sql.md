@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899405"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
@@ -24,12 +24,12 @@ ms.locfileid: "67899405"
 
   Contém informações sobre todas as sessões no momento ou recentemente abertas no dispositivo. Ele lista uma linha por sessão.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|A ID da consulta atual ou a última execução de consulta (se a sessão for ENCERRAda e a consulta estiver sendo executada no momento do encerramento). Chave para esta exibição.|Exclusivo em todas as sessões no sistema.|  
+|session_id|**nvarchar(32)**|A ID da consulta atual ou a última execução de consulta (se a sessão for ENCERRAda e a consulta estiver sendo executada no momento do encerramento). Chave para esta exibição.|Exclusivo em todas as sessões no sistema.|  
 |status|**nvarchar (10)**|Para sessões atuais, identifica se a sessão está ativa ou ociosa no momento. Para as sessões anteriores, o status da sessão pode mostrar fechado ou encerrado (se a sessão foi fechada de modo forçado).|' ATIVO ', ' FECHADO ', ' OCIOSO ', ' ENCERRADO '|  
-|request_id|**nvarchar (32)**|A ID da consulta atual ou da última execução de consulta.|Exclusivo em todas as solicitações no sistema. NULL se nenhum tiver sido executado.|  
-|security_id|**varbinary(85)**|A ID de segurança do principal que está executando a sessão.||  
+|request_id|**nvarchar(32)**|A ID da consulta atual ou da última execução de consulta.|Exclusivo em todas as solicitações no sistema. NULL se nenhum tiver sido executado.|  
+|security_id|**varbinary (85)**|A ID de segurança do principal que está executando a sessão.||  
 |login_name|**nvarchar(128)**|O nome de logon da entidade de segurança que está executando a sessão.|Qualquer cadeia de caracteres que esteja de acordo com as convenções de nomenclatura de usuário.|  
 |login_time|**datetime**|Data e hora em que o usuário fez logon e esta sessão foi criada.|**Data** e hora válidas antes da hora atual.|  
 |query_count|**int**|Captura o número de consultas/a sessão requeststhis foi executada desde a criação.|Maior ou igual a 0.|  

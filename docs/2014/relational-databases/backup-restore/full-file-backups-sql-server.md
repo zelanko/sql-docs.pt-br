@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876127"
 ---
 # <a name="full-file-backups-sql-server"></a>Backups completos de arquivos (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62876127"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Benefícios de backups de arquivos  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Benefícios de backups de arquivos  
  Backups de arquivo oferecem as seguintes vantagens sobre backups de banco de dados:  
   
 -   O uso de backups de arquivos pode aumentar a velocidade de recuperação permitindo restaurar somente arquivos danificados, sem restaurar o restante do banco de dados.  
@@ -57,13 +57,13 @@ ms.locfileid: "62876127"
   
 -   Backups de arquivo aumentam a flexibilidade no cronograma e tratamento de mídia em relação aos backups de banco de dados completos, os quais para os casos de bancos de dados muito grandes podem tornar-se difíceis de gerenciar. A maior flexibilidade de arquivo ou backups de grupo de arquivos também é útil para bancos de dados grandes que contêm dados com características variadas de atualização.  
   
-##  <a name="Disadvantages"></a> Desvantagens de backups de arquivos  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Desvantagens de backups de arquivos  
   
 -   A desvantagem básica de backups de arquivo comparada a backups de banco de dados completos está na complexidade administrativa adicional. Manter e rastrear um conjunto completo destes backups pode ser uma tarefa demorada que pode sobrecarregar as exigências de espaço de backups de banco de dados completos.  
   
 -   Uma falha de mídia poderá tornar um banco de dados completo irrecuperável se um arquivo danificado não tiver um backup. Você deve manter um conjunto completo de backups de arquivo, e, para o modelo de recuperação completa/bulk-logged, um ou mais backups de log que abrangem o intervalo entre o primeiro backup de arquivo completo e último backup de arquivo completo.  
   
-##  <a name="Overview"></a> Visão geral de backups de arquivos  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Visão geral de backups de arquivos  
  Um backup completo de arquivo faz o backup de todos os dados em um ou mais arquivos ou grupos de arquivos. Por padrão, backups de arquivos contêm registros de log suficientes para efetuar roll-forward do arquivo até o final da operação de backup.  
   
  Fazer backup de um arquivo ou grupo de arquivos do tipo somente leitura é o mesmo para todo modelo de recuperação. No o modelo de recuperação completa, um conjunto inteiro de backups de arquivo completos junto com backups de log suficientes para abranger todos os backups de arquivos, é equivalente ao backup de banco de dados completo.  
@@ -81,12 +81,12 @@ ms.locfileid: "62876127"
   
  A restauração de um banco de dados com o uso de apenas um arquivo e backups de log pode ser complexa. Por isso, se for possível, é uma prática recomendada executar um backup de banco de dados completo e iniciar os backups de log antes do primeiro backup de arquivo. A ilustração a seguir mostra uma estratégia na qual um backup de banco de dados completo é feito (em t1) logo após o banco de dados ser criado (em t0). Este primeiro backup de banco de dados permite backups de log de transações no início. Os backups de log de transações são programados para ocorrer em intervalos definidos. Os backups de arquivos ocorrem no intervalo que melhor corresponder às necessidades empresariais do banco de dados. Esta ilustração exibe cada um dos quatro grupos de arquivos com backup feito um de cada vez. A ordem na qual é feito backup (A, C, B, A) reflete as necessidades empresariais do banco de dados.  
   
- ![Estratégia que combina backups de banco de dados, arquivo e log](../../database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estratégia que combina backups de banco de dados, arquivo e log")  
+ ![Estratégia que combina backups de banco de dados, de arquivo e de log](../../database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estratégia que combina backups de banco de dados, de arquivo e de log")  
   
 > [!NOTE]  
 >  No modelo de recuperação completa, você deve efetuar roll-forward do log de transações ao restaurar um backup de arquivo de leitura/gravação para verificar se o arquivo está consistente com o restante do banco de dados. Para evitar que o roll forward seja efetuado em muitos backups de log de transações, considere o uso de backups de arquivo diferenciais. Para obter mais informações, veja [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar backup de um arquivo ou de um grupo de arquivos**  
   
 -   [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  

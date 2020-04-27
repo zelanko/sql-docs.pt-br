@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889686"
 ---
 # <a name="integration-services-ssis-logging"></a>Log do SSIS (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar o log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui provedores de log que você pode usar para implementar o log em pacotes, contêineres e tarefas. Com o log, você pode capturar informações de tempo de execução sobre um pacote, que o ajudem a auditar e solucionar problemas de um pacote sempre que ele for executado. Por exemplo, um log pode capturar o nome do operador que executou o pacote e a hora em que o pacote começou e foi concluído.  
   
  Você pode configurar o escopo de log que ocorre durante a execução de um pacote no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para saber mais, veja [Habilitar o log para a execução do pacote no servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
@@ -43,8 +43,7 @@ ms.locfileid: "62889686"
   
  Ao adicionar o log a um pacote, você escolhe o provedor de log e o local do log. O provedor de log especifica o formato para obter os dados de log: por exemplo, um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou arquivo de texto.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os seguintes provedores de log:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclui os seguintes provedores de log:  
   
 -   O provedor de log Arquivo de texto que grava entradas de log em arquivos de texto de ASCII em formato CSV (valores separados por vírgula). A extensão de nome de arquivo padrão deste provedor é .log.  
   
@@ -110,8 +109,7 @@ ms.locfileid: "62889686"
 |DataCode|Um valor inteiro opcional que geralmente contém um valor da enumeração <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> que indica o resultado da execução do contêiner ou da tarefa:<br /><br /> 0 - Êxito<br /><br /> 1 - Falha<br /><br /> 2 - Concluído<br /><br /> 3 - Cancelado|  
   
 ##### <a name="log-entries"></a>Entradas de log  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a entradas de log em eventos predefinidos e fornece entradas de log personalizadas para muitos objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A caixa de diálogo **Configurar Logs de SSIS** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] lista esses eventos e entradas de log personalizadas.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dá suporte a entradas de log em eventos predefinidos e fornece entradas de log personalizadas para muitos objetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A caixa de diálogo **Configurar Logs de SSIS** no Designer [!INCLUDE[ssIS](../../includes/ssis-md.md)] lista esses eventos e entradas de log personalizadas.  
   
  A tabela a seguir descreve os eventos predefinidos que podem ser habilitados a gravar entradas de log quando eventos de tempo de execução ocorrem. Essas entradas de log se aplicam a executáveis, ao pacote e às tarefas e contêineres que o pacote inclui. O nome da entrada de log é igual ao nome do evento de tempo de execução que foi gerado e fez com que a entrada de log fosse gravada.  
   
@@ -130,9 +128,9 @@ ms.locfileid: "62889686"
 |**OnVariableValueChanged**|Grava uma entrada de log quando o valor de uma variável é alterado.|  
 |**OnWarning**|Grava uma entrada de log quando ocorre um aviso.|  
 |**PipelineComponentTime**|Para cada componente de fluxo de dados, grava uma entrada de log para cada fase de validação e execução. A entrada de log especifica o tempo de processamento de cada fase.|  
-|**Diagnóstico**|Grava uma entrada de log que fornece informações de diagnóstico.<br /><br /> Por exemplo, você pode registrar uma mensagem antes e depois de cada chamada para um provedor de dados externo. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
+|**Diagnostic**|Grava uma entrada de log que fornece informações de diagnóstico.<br /><br /> Por exemplo, você pode registrar uma mensagem antes e depois de cada chamada para um provedor de dados externo. Para obter mais informações, consulte [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
   
- O pacote e muitas tarefas têm entradas de log personalizadas que podem ser habilitadas para registro. Por exemplo, a tarefa Enviar Email fornece a entrada de log personalizada **SendMailTaskBegin** , que registra informações quando a tarefa Enviar Email começa a ser executada, mas antes de a tarefa enviar uma mensagem de email. Para saber mais, veja [Custom Messages for Logging](../custom-messages-for-logging.md).  
+ O pacote e muitas tarefas têm entradas de log personalizadas que podem ser habilitadas para registro. Por exemplo, a tarefa Enviar Email fornece a entrada de log personalizada **SendMailTaskBegin** , que registra informações quando a tarefa Enviar Email começa a ser executada, mas antes de a tarefa enviar uma mensagem de email. Para obter mais informações, consulte [mensagens personalizadas para registro em log](../custom-messages-for-logging.md).  
   
 ### <a name="differentiating-package-copies"></a>Diferenciando cópias de pacotes  
  Os dados de log incluem o nome e o GUID do pacote ao qual as entradas de log pertencem. Se você criar um novo pacote copiando um pacote existente, o nome e o GUID do pacote existente também serão copiados. Como resultado, você pode ter dois pacotes com o mesmo GUID e nome, dificultando a diferenciação entre eles nos dados de log.  
@@ -145,7 +143,7 @@ ms.locfileid: "62889686"
 ### <a name="logging-templates"></a>Modelos de log  
  Na caixa de diálogo **Configurar Logs de SSIS** , você também pode criar e salvar configurações de log usadas com frequência como modelos e depois usar esses modelos em vários pacotes. Isso facilita a aplicação de uma estratégia de log consistente entre vários pacotes e a modificação de definições de log nos pacotes atualizando e depois aplicando os modelos. Os modelos são armazenados em arquivos XML.  
   
- **Para configurar o registro em log usando a caixa de diálogo Configurar Logs de SSIS**  
+ **Para configurar o registro usando a caixa de diálogo Configurar Logs de SSIS**  
   
 1.  Habilite o pacote e suas tarefas para registrar. O registro pode ocorrer no nível de pacote, contêiner e tarefa. Você pode especificar logs diferentes para pacotes, contêineres e tarefas.  
   
@@ -166,10 +164,9 @@ ms.locfileid: "62889686"
  A tarefa Fluxo de Dados fornece muitas entradas de log personalizadas que podem ser usadas para monitorar e ajustar o desempenho. Por exemplo, você pode monitorar os componentes que podem causar vazamentos de memória ou controlar quanto tempo leva para executar um determinado componente. Para obter uma lista dessas entradas de log personalizadas e saída de exemplo de log, consulte [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>Usar o evento PipelineComponentTime  
- Talvez a entrada de log personalizada mais útil seja o evento PipelineComponentTime. Essa entrada de log reporta o número de milissegundos que cada componente do fluxo de dados leva em cada uma das cinco principais etapas de processamento. A tabela a seguir descreve essas etapas de processamento. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os desenvolvedores reconhecerão essas etapas como os principais métodos de um <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
+ Talvez a entrada de log personalizada mais útil seja o evento PipelineComponentTime. Essa entrada de log reporta o número de milissegundos que cada componente do fluxo de dados leva em cada uma das cinco principais etapas de processamento. A tabela a seguir descreve essas etapas de processamento. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Os desenvolvedores reconhecerão essas etapas como os principais métodos de um <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Etapa|DESCRIÇÃO|  
+|Etapa|Descrição|  
 |----------|-----------------|  
 |Validar|O componente verifica se há valores de propriedade válidos e os parâmetros de configuração.|  
 |PreExecute|O componente executa processamento único antes de começar a processar linhas de dados.|  
@@ -215,7 +212,7 @@ ms.locfileid: "62889686"
 -   [Exibir entradas de log na janela Eventos de Log](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Ferramenta DTLoggedExec para registro em log completo e Detalhado (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Ferramenta DTLoggedExec para log completo e detalhado (Projeto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibir entradas de log na janela Eventos de Log](../view-log-entries-in-the-log-events-window.md)  

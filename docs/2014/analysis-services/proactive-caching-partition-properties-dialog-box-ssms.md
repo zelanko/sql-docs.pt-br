@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070709"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Cache Pró-ativo (caixa de diálogo Propriedades da Partição) (SSMS)
@@ -29,7 +29,7 @@ ms.locfileid: "66070709"
  **controle deslizante Configuração padrão**  
  Defina como uma das configurações predefinidas listadas na tabela a seguir.  
   
-|Configuração|DESCRIÇÃO|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**ROLAP em tempo real**|Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:<br /><br /> Modo de armazenamento ROLAP.<br /><br /> Habilita o cache pró-ativo.<br /><br /> Descarta o cache desatualizado com um período de latência de 0 segundos.<br /><br /> Coloca o objeto online imediatamente.|  
 |**HOLAP em tempo real**|Selecione para usar as seguintes configurações de armazenamento e cache pró-ativo:<br /><br /> Modo de armazenamento HOLAP.<br /><br /> Habilita o cache pró-ativo.<br /><br /> Descarta o cache desatualizado com um período de latência de 0 segundos.<br /><br /> Atualiza o cache quando os dados são alterados, com um intervalo de silêncio de 0 segundos e sem intervalo de anulação de silêncio.<br /><br /> Coloca o objeto online imediatamente.|  

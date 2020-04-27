@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062140"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Propriedades do alerta – novo alerta (página Geral)
@@ -32,11 +32,11 @@ ms.locfileid: "63062140"
  **Tipo**  
  Selecione o tipo de alerta:  
   
--   **SQL Server alerta de evento** responde às mensagens no [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de eventos do Windows.  
+-   O**Alerta de evento do SQL Server** responde às mensagens no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   **SQL Server alerta de condição de desempenho** responde a uma condição específica em um contador de desempenho.  
+-   O**Alerta de condição de desempenho do SQL Server** responde a uma condição específica em um contador de desempenho.  
   
--   **Alerta de evento WMI** responde a um evento Instrumentação de gerenciamento do Windows (WMI).  
+-   O**Alerta de evento do WMI** responde a um evento WMI (Instrumentação de Gerenciamento do Windows).  
   
 ## <a name="sql-server-event-alert-options"></a>Opções de alerta de evento do SQL Server  
  **Nome do banco de dados**  
@@ -45,10 +45,10 @@ ms.locfileid: "63062140"
  **Número do erro**  
  Especifique que este evento responda a um erro e o número do erro.  
   
- **Severity**  
+ **Severidade**  
  Especifique que este evento responda a qualquer mensagem com um nível de severidade específico e o nível de severidade.  
   
- **Gerar alerta quando a mensagem contiver**  
+ **Gerar alertas quando a mensagem contiver**  
  Filtre os eventos por uma cadeia de caracteres específica. Quando esta opção é selecionada, o alerta só responde a eventos que contenham uma cadeia de caracteres específica.  
   
  **Texto da mensagem**  
@@ -78,7 +78,7 @@ ms.locfileid: "63062140"
  Especifique a instrução WQL que identifica o evento ao qual o alerta responde.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Alerts](alerts.md)   
+ [Alertas](alerts.md)   
  [Usando o WQL com o provedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Criar um alerta usando um número de erro](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  

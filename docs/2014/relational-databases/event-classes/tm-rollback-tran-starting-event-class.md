@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061244"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>classe de evento TM: Rollback Tran Starting
@@ -52,7 +52,7 @@ ms.locfileid: "63061244"
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/rollback-transaction-transact-sql)   
+ [Reverter transação &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/rollback-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

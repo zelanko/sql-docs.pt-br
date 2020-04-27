@@ -21,18 +21,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3c89eb2e6f810902e28e01c7e5ffbcdcc0375c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127183"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (API de procedimento armazenado estendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
- Retorna informações sobre um parâmetro. Essa função substitui as seguintes funções: [srv_paramtype](srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](srv-parammaxlen-extended-stored-procedure-api.md) e [srv_paramdata](srv-paramdata-extended-stored-procedure-api.md). o **srv_paraminfo** dá suporte aos tipos de dados em [tipos de dados](data-types-extended-stored-procedure-api.md) e dados de comprimento zero.  
+ Retorna informações sobre um parâmetro. Essa função substitui as seguintes funções: [srv_paramtype](srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](srv-parammaxlen-extended-stored-procedure-api.md) e [srv_paramdata](srv-paramdata-extended-stored-procedure-api.md). **srv_paraminfo** dá suporte aos tipos de dados em [Tipos de Dados](data-types-extended-stored-procedure-api.md) e dados de comprimento zero.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,13 +83,13 @@ pfNull
  Ponteiro para o buffer para obter dados de parâmetro. Se *pbData* não for NULL, a API de Procedimento Armazenado Estendido gravará \**pcbActualLen* bytes de dados em \**pbData*. Se *pbData* for NULL, nenhum dado será gravado em \**pbData*, mas a função retorna \**pbType*, \**pcbMaxLen*, \**pcbActualLen* e **pfNull*. A memória para este buffer deve ser gerenciada pelo aplicativo.  
   
  *pfNull*  
- Ponteiro para um sinalizador nulo. **pfNull* será definido como true se o valor do parâmetro for NULL.  
+ Ponteiro para um sinalizador nulo. **pfNull* será definido como TRUE se o valor do parâmetro for NULL.  
   
 ## <a name="returns"></a>Retornos  
  Se a informações de parâmetro tiverem sido obtidas com êxito, SUCCEED será retornado. Caso contrário, o retorno será FAIL. FAIL será retornado quando não houver procedimento armazenado remoto atual e quando não houver parâmetro para o *n*-ésimo procedimento armazenado remoto.  
   
 ## <a name="remarks"></a>Comentários  
- **Observação de segurança** Você deve examinar detalhadamente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+ **Observação de segurança** Você deve examinar detalhadamente o código-fonte de procedimentos armazenados estendidos e testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência do programador de procedimentos armazenados estendidos](database-engine-extended-stored-procedures-reference.md)  

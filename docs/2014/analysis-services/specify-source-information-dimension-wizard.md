@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068176"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Especificar Informações sobre a Origem (Assistente de Dimensão)
@@ -39,7 +39,7 @@ ms.locfileid: "66068176"
 > [!NOTE]  
 >  Mais de uma coluna pode ser selecionada. Se a tabela contiver uma chave primária composta, selecione todas as colunas incluídas na chave primária composta. A ordem das colunas de chave é importante.  
   
- **Coluna de nome**  
+ **Coluna de Nome**  
  Selecione a coluna da tabela especificada na **Tabela Principal** que oferece os nomes de membros para a dimensão. Uma coluna de nomes deve ser especificada quando uma chave composta for usada. Para criar uma coluna de nomes para uma chave composta, recomendamos criar um cálculo nomeado na exibição da fonte de dados que concatene as colunas de chave especificadas. Quando uma única chave for usada, a coluna de nome é opcional.  
   
 ## <a name="see-also"></a>Consulte Também  

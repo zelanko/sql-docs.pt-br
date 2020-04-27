@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069213"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Selecionar o método de definição (Assistente de Mineração de Dados)
   Use a página **Selecionar o Método de Definição** para selecionar a fonte para criar o modelo de mineração novo. O seu caminho pelo assistente mudará dependendo do que você selecionar, pois uma estrutura de mineração baseada em um cubo requer etapas diferentes para ser criada do que uma estrutura de mineração baseada em uma fonte de dados relacional.  
   
- **Para obter mais informações:** [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), o [assistente de mineração de dados &#40;Analysis Services-Mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Para obter mais informações:** [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md), [Assistente de Mineração de Dados &#40;Analysis Services – Mineração de dados&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>Opções  
  **De banco de dados relacional ou data warehouse existente**  

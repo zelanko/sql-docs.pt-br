@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061329"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>Classe de evento TM: Commit Tran Starting
@@ -52,7 +52,7 @@ ms.locfileid: "63061329"
 |XactSequence|`bigint`|Token que descreve a transação atual.|50|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql)   
+ [CONFIRMAR transação &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/commit-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

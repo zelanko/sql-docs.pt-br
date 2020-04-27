@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081966"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Passo a passo do diagrama de rede de dependências (Suplementos de Mineração de Dados)
@@ -45,7 +45,7 @@ ms.locfileid: "66081966"
   
      \<unidade>: \Program Files (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
-2.  Arraste a forma **rede de dependências** até a página para iniciar o assistente. Clique em **Próximo**.  
+2.  Arraste a forma **rede de dependências** até a página para iniciar o assistente. Clique em **Avançar**.  
   
 3.  Na página Bem-vindo do **Assistente de forma da rede de dependência do Visio**, clique em **Avançar**.  
   

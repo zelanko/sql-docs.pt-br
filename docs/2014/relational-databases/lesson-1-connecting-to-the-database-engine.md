@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63145475"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
@@ -22,13 +22,12 @@ ms.locfileid: "63145475"
   
   
   
-##  <a name="tools"></a>Ferramentas para Introdução  
+##  <a name="tools-for-getting-started"></a><a name="tools"></a>Ferramentas para Introdução  
  O [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] transporta com uma variedade de ferramentas. Este tópico descreve as primeiras ferramentas das que você precisará e o ajuda a selecionar a ferramenta certa para o trabalho. Todas as ferramentas podem ser acessadas no menu **Iniciar** . Algumas ferramentas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], não são instaladas por padrão. Você deve selecionar as ferramentas como parte dos componentes de cliente durante a instalação. Para obter uma descrição completa das ferramentas descritas abaixo, pesquise-as nos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contém somente um subconjunto das ferramentas.  
   
 ### <a name="basic-tools"></a>Ferramentas básicas  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é a ferramenta principal para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ele não é incluído no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mas está disponível como um download separado do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é a ferramenta principal para administrar o [!INCLUDE[ssDE](../includes/ssde-md.md)] e gravar o código [!INCLUDE[tsql](../includes/tsql-md.md)]. Fica hospedado no shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ele não é incluído no [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mas está disponível como um download separado do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é instalado com [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as ferramentas de cliente. Ela permite que você habilite protocolos de servidor, configure opções de protocolo como portas de TCP, configure serviços de servidor para iniciar automaticamente e configure computadores de cliente para conectar de sua maneira preferida. Esta ferramenta configura os mais avançados elementos de conectividade mas não habilita recursos.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63145475"
   
 -   No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
-##  <a name="connect"></a>Conectando com Management Studio  
+##  <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectando com Management Studio  
  É fácil de se conectar ao [!INCLUDE[ssDE](../includes/ssde-md.md)] a partir de ferramentas que estão sendo executadas no mesmo computador se você souber o nome da instância e estiver se conectando como um membro do grupo de Administradores no computador. Os procedimentos seguintes devem ser executados no mesmo computador que hospeda o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Para determinar o nome da instância do Mecanismo de Banco de Dados.  
@@ -77,7 +76,7 @@ ms.locfileid: "63145475"
   
 4.  Clique em **Conectar**.  
   
-##  <a name="additional"></a>Autorizando conexões adicionais  
+##  <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorizando conexões adicionais  
  Agora que você se conectou ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um administrador, uma de suas primeiras tarefas é autorizar que outros usuários se conectem. Você faz isso criando um logon e autorizando esse logon para acessar um banco de dados como um usuário. Logons podem ser de autenticação do Windows, que usam credenciais do Windows ou logons de autenticação do SQL Server, que armazenam informações de autenticação no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e são independentes de suas credenciais do Windows. Use a autenticação do Windows sempre que possível.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Crie um logon de autenticação do Windows  
@@ -102,6 +101,6 @@ ms.locfileid: "63145475"
 >  Essas são as informações básicas para começar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um ambiente de segurança avançado e a segurança é obviamente um aspecto importante das operações de banco de dados.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 2: Conectando de outro computador](lesson-2-connecting-from-another-computer.md)  
+ [Lição 2: conexão usando outro computador](lesson-2-connecting-from-another-computer.md)  
   
   

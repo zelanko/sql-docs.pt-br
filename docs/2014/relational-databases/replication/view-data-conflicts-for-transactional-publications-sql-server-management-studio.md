@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144399"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Exibir conflitos de dados para publicações transacionais (SQL Server Management Studio)
@@ -56,14 +56,14 @@ ms.locfileid: "63144399"
   
     -   Selecione uma ou mais linhas na grade superior e, então, clique em **Remover**para remover as linhas da tabela de metadados de conflito.  
   
-    -   Clique no botão propriedades ( **...** ) para exibir mais informações sobre uma coluna envolvida em um conflito.  
+    -   Clique no botão de Propriedades (**...**) para exibir mais informações sobre uma coluna envolvida em um conflito.  
   
-    -   Selecione **Registrar os detalhes deste conflito** para registrar dados de conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e então clique em **Opções**. Insira um valor ou clique no botão procurar ( **...** ) e então navegue até o arquivo apropriado. Clique em **OK** para fechar a caixa de diálogo **Opções** .  
+    -   Selecione **Registrar os detalhes deste conflito** para registrar dados de conflito em um arquivo. Para especificar um local para o arquivo, aponte para o menu **Exibir** e então clique em **Opções**. Insira um valor ou clique no botão procurar (**...**) e então navegue até o arquivo apropriado. Clique em **OK** para fechar a caixa de diálogo **Opções** .  
   
 6.  Feche o Visualizador de Conflitos de Replicação.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+ [Replicação transacional ponto a ponto](transactional/peer-to-peer-transactional-replication.md)   
+ [Detecção e resolução de conflitos na atualização na fila](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

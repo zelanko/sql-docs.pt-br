@@ -36,17 +36,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068881"
 ---
 # <a name="network-properties"></a>Propriedades de rede
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Aplica-se a:** Modo de servidor multidimensional e tabular  
+ **Aplica-se a:** modo de servidor multidimensional e tabular  
   
 ## <a name="general"></a>Geral  
  `ListenOnlyOnLocalConnections`  
@@ -56,7 +55,7 @@ ms.locfileid: "66068881"
  `IPV4Support`  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv4. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*0*|IPv4 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv4 necessário; servidor não será iniciado se não puder escutar IPv4.|  
@@ -65,7 +64,7 @@ ms.locfileid: "66068881"
  `IPV6Support`  
  Uma propriedade de inteiro de 32 bits assinada que define o suporte ao protocolo IPv6. Essa propriedade tem um dos valores listados na tabela a seguir:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*0*|IPv6 desabilitado; os clientes não podem se conectar.|  
 |*1*|(Padrão) IPv6 necessário; servidor não será iniciado se não for possível escutar IPv6|  
@@ -145,6 +144,6 @@ ms.locfileid: "66068881"
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar propriedades do servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determinar o modo de servidor de uma instância de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

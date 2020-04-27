@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075581"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensões vinculadas
@@ -30,7 +30,7 @@ ms.locfileid: "66075581"
 > [!NOTE]  
 >  Como a atualização não está disponível, a maioria dos desenvolvedores do Analysis Services copiam as dimensões em vez de vinculá-las. Você pode copiar dimensões entre projetos dentro da mesma solução. Para obter mais informações, consulte [Atualização de uma dimensão vinculada no SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O banco de dados de origem que fornece a dimensão e o banco de dados atual que o usam deve estar na mesma versão e nível de compatibilidade. Para obter mais informações, consulte [definir o nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  O banco de dados de origem deve estar implantado e online. Os servidores que publicam ou consomem objetos vinculados devem ser configurados para permitir a operação (consulte abaixo).  
@@ -55,7 +55,7 @@ ms.locfileid: "66075581"
   
 4.  Na página **Concluindo o Assistente** , você pode visualizar os objetos vinculados. Se você vincular uma dimensão e já existir outra com o mesmo nome, será adicionado um número ordinal (começando com "1" para o primeiro nome duplicado). Quando você concluir o assistente, a dimensão será adicionada à pasta **Dimensões** .  
   
-##  <a name="bkmk_CreateNew"></a>Criar uma nova conexão de fonte de dados para um Analysis Services  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a>Criar uma nova conexão de fonte de dados para um Analysis Services  
  Use o assistente Nova Fonte de Dados para adicionar as informações de conexão do seu projeto sobre o banco de dados do Analysis Services que fornece a dimensão. Você pode iniciar o assistente clicando em **Nova Fonte de Dados** , na página Selecionar Fonte de Dados do assistente Objetos Vinculados.  
   
 1.  No Assistente para Fonte de Dados, na página Selecione como definir a conexão, clique em **Novo**.  

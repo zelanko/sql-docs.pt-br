@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079497"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navegador KPI (guia KPIs, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -38,9 +38,9 @@ ms.locfileid: "66079497"
  **Operador**  
  Selecione o operador que define como a expressão na **Expressão de Filtro** é aplicada à hierarquia selecionada. A tabela a seguir descreve os operadores disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**Iguais**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
+|**Igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Diferente de**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**No**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  
@@ -71,10 +71,10 @@ ms.locfileid: "66079497"
  **Status**  
  Exibe o gráfico de status do KPI.  
   
- **Tendência**  
+ **Trend**  
  Exibe o gráfico de tendências do KPI.  
   
- **Weight**  
+ **Peso**  
  Exibe o fator de peso do KPI.  
   
  **Ndescrição**  

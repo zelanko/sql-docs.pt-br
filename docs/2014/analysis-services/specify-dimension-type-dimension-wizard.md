@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068371"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar Tipo de Dimensão (Assistente para Dimensões)
@@ -29,20 +29,20 @@ ms.locfileid: "66068371"
  **Tipo de dimensão**  
  Selecione o tipo de dimensão para a dimensão. A tabela a seguir lista os tipos de dimensão disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Contas**|As dimensões de conta contêm dados e metadados que representam uma lista de contas.<br /><br /> Para obter mais informações sobre dimensões de conta, consulte [Criar uma Conta de Finanças de dimensão de tipo pai-filho](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Dimensões de lista de materiais (ou dimensões BOM) são dimensões regulares nas quais os dados e metadados representam inventário ou informações de produção, como listas de peças para produtos.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Canal**|Dimensões de canal são dimensões regulares nas quais os dados e metadados representam informações de canal.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Moeda**|Dimensões de moeda contêm dados e metadados que representam informações de moeda.<br /><br /> Para obter mais informações sobre dimensões de moeda, consulte [Criar uma dimensão de tipo de moeda](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
+|**Currency**|Dimensões de moeda contêm dados e metadados que representam informações de moeda.<br /><br /> Para obter mais informações sobre dimensões de moeda, consulte [Criar uma dimensão de tipo de moeda](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
 |**Utilizam**|Dimensões de cliente são dimensões regulares nas quais os dados e metadados representam informações de cliente.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Gráfico**|Dimensões de geografia são dimensões regulares nas quais os dados e metadados representam informações geográficas, como cidades ou códigos postais.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Organizações**|Dimensões de organização são dimensões regulares nas quais os dados e metadados representam informações de organização, como empregados ou subsidiárias.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Produto**|Dimensões de produto são dimensões regulares nas quais os dados e metadados representam informações de produto.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Promocionais**|Dimensões de promoção são dimensões regulares nas quais os dados e metadados representam informações de promoção de marketing.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Quantifica**|Dimensões quantitativas são dimensões regulares nas quais os dados e metadados representam informações quantitativas.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Geografia**|Dimensões de geografia são dimensões regulares nas quais os dados e metadados representam informações geográficas, como cidades ou códigos postais.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Organização**|Dimensões de organização são dimensões regulares nas quais os dados e metadados representam informações de organização, como empregados ou subsidiárias.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Produtos**|Dimensões de produto são dimensões regulares nas quais os dados e metadados representam informações de produto.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Promoção**|Dimensões de promoção são dimensões regulares nas quais os dados e metadados representam informações de promoção de marketing.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Quantitative**|Dimensões quantitativas são dimensões regulares nas quais os dados e metadados representam informações quantitativas.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Rates**|Dimensões de taxa contêm dados e metadados que representam informações de taxa de câmbio e conversão de moeda.|  
-|**Regularmente**|As dimensões regulares são o tipo de dimensão mais comum [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]usado no.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Regular**|As dimensões regulares são o tipo de dimensão mais comum [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]usado no.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Cenário**|Dimensões de cenário são dimensões regulares nas quais os dados e metadados representam informações de planejamento ou de análise estratégica.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Hora**|Dimensões de tempo contêm dados e metadados orientados ao tempo.<br /><br /> Para obter mais informações sobre dimensões de tempo, consulte [Criar uma dimensão de tipo de data](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
 |**Utilitário**|Dimensões de utilitário são dimensões regulares nas quais os dados e metadados representam informações que não correspondem prontamente a outro tipo de dimensão.<br /><br /> Para obter mais informações sobre dimensões regulares, consulte [Tipos de dimensão](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  

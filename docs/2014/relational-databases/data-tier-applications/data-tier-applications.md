@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873097"
 ---
 # <a name="data-tier-applications"></a>Aplicativos da camada de Dados
@@ -119,7 +119,7 @@ ms.locfileid: "62873097"
 |----------------------|-----------|  
 |Descreve como usar um arquivo de pacote de DAC para criar uma nova instância do DAC.|[Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)|  
 |Descreve como usar um novo arquivo do pacote de DAC para atualizar uma instância para uma nova versão do DAC.|[Atualizar um aplicativo da camada de dados](upgrade-a-data-tier-application.md)|  
-|Descreve como remover uma instância do DAC. Você pode escolher também desanexar ou remover o banco de dados associado ou deixar o banco de dados intacto.|[Excluir um aplicativo da camada de dados](delete-a-data-tier-application.md)|  
+|Descreve como remover uma instância do DAC. Você pode escolher também desanexar ou remover o banco de dados associado ou deixar o banco de dados intacto.|[Excluir um Aplicativo da Camada de Dados](delete-a-data-tier-application.md)|  
 |Descreve como exibir a integridade de DACs atualmente implantado usando o Utilitário do SQL Server.|[Monitorar aplicativos da camada de dados](data-tier-applications.md)|  
 |Descreve como criar um arquivo .bacpac que contém um arquivo morto dos dados e metadados em um DAC.|[Exportar um aplicativo da camada de dados](export-a-data-tier-application.md)|  
 |Descreve como usar um arquivo morto de DAC (.bacpac) para executar uma restauração lógica de um DAC ou para migrar o DAC para outra instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importar um arquivo BACPAC para criar um novo banco de dados de usuário](import-a-bacpac-file-to-create-a-new-user-database.md)|  

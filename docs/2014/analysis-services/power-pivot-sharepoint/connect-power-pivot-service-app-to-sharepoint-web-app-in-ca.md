@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071675"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar um aplicativo de serviço PowerPivot a um aplicativo Web do SharePoint na Administração Central
@@ -29,7 +29,7 @@ ms.locfileid: "66071675"
   
  [Adicionar um aplicativo de serviço PowerPivot a uma lista de associações de serviço personalizada](#custom)  
   
-##  <a name="default"></a>Adicionar aplicativo de serviços PowerPivot ao grupo padrão  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Adicionar aplicativo de serviços PowerPivot ao grupo padrão  
  Uma lista de associações de serviço é uma lista de serviços compartilhados que fornece recursos a outros aplicativos Web do SharePoint no farm. Há um grupo padrão de associações de serviço para o farm.  
   
  Para constar na lista, um aplicativo de serviço PowerPivot pode ser adicionado quando você cria o aplicativo, ou posteriormente, usando as etapas a seguir.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071675"
   
 4.  Clique em **OK**.  
   
-##  <a name="custom"></a>Adicionar um aplicativo de serviços PowerPivot a uma lista de associação de serviço personalizada  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Adicionar um aplicativo de serviços PowerPivot a uma lista de associação de serviço personalizada  
  O grupo padrão pode ser substituído por uma lista personalizada. Uma lista personalizada é criada especificamente para um único aplicativo Web do SharePoint. Ela substitui o grupo padrão e o substitui por apenas uma dessas associações de serviço que um administrador de farm ou serviço especifica. Se você criou vários aplicativos de serviço PowerPivot, deverá usar uma lista personalizada para especificar o que será usado. Uma lista personalizada não pode ser reutilizada por outros aplicativos Web. Ela só se aplica ao aplicativo Web para o qual foi criada.  
   
-1.  Na administração central, em **Gerenciamento de aplicativos**, clique em **gerenciar aplicativos Web**.  
+1.  Na Administração Central, em **Gerenciamento de Aplicativo**, clique em **Gerenciar aplicativos Web**.  
   
 2.  Selecione o aplicativo (por exemplo, SharePoint -80).  
   

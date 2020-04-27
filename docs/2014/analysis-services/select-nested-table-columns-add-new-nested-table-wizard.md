@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069362"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Selecionar colunas de tabela aninhada (Assistente para Adicionar Nova Tabela Aninhada)
   Use a página **Selecionar Colunas de Tabela Aninhada** para selecionar os atributos e medidas a serem incluídos na tabela aninhada e definir como o modelo de mineração usará os atributos e medidas.  
   
- **Para obter mais informações:** [colunas do modelo de mineração](data-mining/mining-model-columns.md), [assistente de mineração de dados &#40;Analysis Services&#41;de mineração de dados ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Colunas do Modelo de Mineração](data-mining/mining-model-columns.md), [Assistente de Data Mining &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Colunas**  

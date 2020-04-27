@@ -15,26 +15,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999548"
 ---
 # <a name="name-not-found-dialog-box"></a>caixa de diálogo Nome Não Encontrado
   Um ou mais nomes de objeto não pôde ser encontrado na caixa de diálogo. Selecione uma opção para continuar.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
- **Corrigir essas informações e Pesquisar novamente**  
+ **Corrija essa informação e pesquise novamente**  
  Selecione para permitir o uso das áreas **Selecionar este tipo de objeto**, **Tipo de objeto**e **Inserir o nome do objeto** .  
   
  **Selecionar este tipo de objeto**  
  Exibe os tipos de objeto selecionados usando o botão **Tipos de Objeto** .  
   
- **Tipos de objeto**  
+ **Tipos de Objeto**  
  Clique para abrir a caixa de diálogo **Selecionar Tipos de Objeto** e selecione os tipos de objeto de uma lista.  
   
- **Insira o nome do objeto**  
+ **Inserir o nome do objeto**  
  Contém o nome do objeto que não foi encontrado. Corrija o nome do objeto ou digite um nome de objeto novo.  
   
  **Remover o nome** **do** *objeto>\< *da seleção      

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069259"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Selecionar a chave do caso (Assistente de Mineração de Dados)
@@ -25,7 +25,7 @@ ms.locfileid: "66069259"
 > [!NOTE]  
 >  Essa página será exibida apenas se você tiver selecionado **De cubo existente** na página **Selecionar o Método de Definição** do assistente.  
   
- **Para obter mais informações:** [Assistente de mineração de dados &#40;Analysis Services&#41;de mineração de dados ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obter mais informações:** [Assistente de Mineração de Dados &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Criar uma estrutura de mineração relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opções  
  **Atributos**  

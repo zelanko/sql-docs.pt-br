@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072054"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Perspectiva (guia Perspectivas, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -26,7 +26,7 @@ ms.locfileid: "66072054"
  **Objetos de Cubo**  
  Exibe uma lista hierárquica de objetos e propriedades contidas no cubo que podem ser incluídos na perspectiva.  
   
- **Tipo de objeto**  
+ **Tipo de Objeto**  
  Exibe o tipo de objeto ou nome de propriedade do cubo que pode ser incluído na perspectiva.  
   
  **Nome da Perspectiva**  
@@ -41,9 +41,9 @@ ms.locfileid: "66072054"
 ## <a name="context-menu"></a>Menu de contexto  
  As seguintes opções estão disponíveis no menu de contexto exibido ao clicar com o botão direito do mouse em qualquer célula em uma perspectiva exibida no painel **Detalhes da Perspectiva** :  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Nova Perspectiva**|Clique para criar uma nova perspectiva no cubo selecionado.|  
-|**Excluir Perspectiva**|Clique para exibir a caixa de diálogo **Excluir Objetos** e excluir a perspectiva selecionada|  
+|**Excluir Perspectiva**|Clique para exibir a caixa de diálogo **excluir objetos** e excluir a perspectiva selecionada|  
   
   

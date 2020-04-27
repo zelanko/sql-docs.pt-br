@@ -11,19 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891584"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testando o pacote de tutorial da Lição 3
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Etapa 3: Testar o pacote de tutorial da Lição 3
   Nesta tarefa, você executará o pacote Lesson 3.dtsx. Quando o pacote for executado, a janela Eventos de Log listará as entradas de log gravadas no arquivo de log. Após a execução do pacote ser concluída, você verificará o conteúdo do arquivo de log gerado pelo provedor do log.  
   
 ## <a name="checking-the-package-layout"></a>Verificando o layout do pacote  
  Antes de testar o pacote, é recomendável verificar se os fluxos de controle e de dados do pacote da Lição 3 contêm os objetos mostrados nos diagramas a seguir. O fluxo de controle deve ser idêntico ao fluxo de controle da Lição 2. O fluxo de dados deve ser idêntico ao fluxo de dados das lições 1 e 2.  
   
- **Fluxo de Controle**  
+ **Fluxo de controle**  
   
  ![Fluxo de controle no pacote](../../2014/tutorials/media/task4lesson2control.gif "Fluxo de controle no pacote")  
   
@@ -46,6 +46,6 @@ ms.locfileid: "62891584"
 -   Embora a `PipelineExecutionPlan` semântica das informações geradas para os eventos e `PipelineExecutionTrees` esteja além do escopo deste tutorial, você pode ver que a primeira linha lista os campos de informações especificados na guia **detalhes** da caixa de diálogo **Configurar Logs do SSIS** . Além disso, é possível verificar se os dois eventos selecionados, PipelineExecutionPlan e PipelineExecutionTrees, foram conectados para cada iteração do Loop Foreach.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 4: Adicionando redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lição 4: Adicionar redirecionamento de fluxo de erro](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

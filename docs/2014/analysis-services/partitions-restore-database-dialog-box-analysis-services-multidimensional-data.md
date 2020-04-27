@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072113"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partições (caixa de diálogo Restaurar Banco de Dados) (Analysis Services - Dados multidimensionais)
@@ -59,11 +59,11 @@ ms.locfileid: "66072113"
   
  A grade a seguir, habilitada quando se seleciona esta opção, é usada para especificar uma pasta de restauração para cada partição local:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Simples**|Exibe o nome do cubo que contém a partição local.|  
 |**MeasureGroup**|Exibe o nome do grupo de medidas que contém a partição local.|  
-|**Partição**|Exibe o nome da partição local.|  
+|**Particion**|Exibe o nome da partição local.|  
 |**Tamanho (MB)**|Exibe o tamanho, em megabytes, da partição local.|  
 |**Pasta original**|Exibe o nome da pasta original na qual a partição local foi armazenada.|  
 |**Pasta de Restauração**|Digite o nome da pasta de restauração da partição local ou clique no botão de reticências (**...**) para exibir a caixa de diálogo **Procurar Pasta Remota** e selecione o caminho da pasta a ser usado. Para obter mais informações sobre a caixa de diálogo **Procurar Pasta Remota**, consulte [Caixa de diálogo Procurar Pasta Remota &#40;Analysis Services – Dados Multidimensionais&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
@@ -76,7 +76,7 @@ ms.locfileid: "66072113"
   
  A grade a seguir, habilitada quando se seleciona esta opção, é usada para especificar uma pasta de restauração para cada partição local:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Servidor**|Exibe o nome da instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra a partição remota.|  
 |**Fonte de Dados**|Exibe o nome da fonte de dados no arquivo de backup que representa o banco de dados que contém a partição remota.|  

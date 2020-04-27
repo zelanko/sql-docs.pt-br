@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149845"
 ---
 # <a name="column-element-for-index-dta"></a>Elemento de coluna para índice (DTA)
@@ -38,18 +38,18 @@ ms.locfileid: "63149845"
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo da coluna|DESCRIÇÃO|  
+|Atributo da coluna|Descrição|  
 |----------------------|-----------------|  
 |`Type`|Opcional. Especifica o tipo de coluna de índice. Use um tipo de dados de **cadeia de caracteres** para especificar esse atributo com um dos seguintes valores permitidos:<br /><br /> `KeyColumn`:<br />                  Especifica que a coluna é referenciada por uma chave de índice. Use a sintaxe a seguir para definir esse atributo:<br />`<Column Type="KeyColumn">`<br />Para obter mais informações sobre colunas de chave, veja [Índices clusterizados e não clusterizados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Especifica que a coluna é uma coluna incluída (em vez de uma coluna de chave). Use a sintaxe a seguir para definir esse atributo:<br />`<Column Type="IncludedColumn">`<br />Para obter mais informações sobre colunas incluídas, veja [Criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |`SortOrder`|Opcional. Especifica a ordem de escolha da coluna. Use um tipo de dados **de cadeia de caracteres** para especificar uma ordem **"Crescente"** ou **"Decrescente"** como segue:<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhum.|  
+|**Tipo de dados e comprimento**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Pode especificar até 1024 colunas para o elemento `Index`.|  
+|**C'**|Pode especificar até 1024 colunas para o elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

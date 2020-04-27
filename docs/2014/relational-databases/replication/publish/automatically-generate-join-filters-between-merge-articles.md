@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020972"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Gerar automaticamente um conjunto de filtros de junção entre artigos de mesclagem (SQL Server Management Studio)
-  Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela** no Assistente para Nova Publicação ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md).  
+   Gere automaticamente um conjunto de filtros de junção na página **Filtrar Linhas da Tabela no Assistente para Nova Publicação** ou na página **Filtrar Linhas** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Para obter mais informações sobre como usar o assistente e acessar a caixa de diálogo, consulte [Criar uma publicação](create-a-publication.md) e [Exibir e modificar as propriedades da publicação](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Se você gerar automaticamente um conjunto de filtros de junção na caixa de diálogo **Propriedades de Publicação – \<Publicação>** após assinaturas à publicação terem sido inicializadas, deverá gerar um novo instantâneo e reinicializar todas as assinaturas após a alteração. Para obter mais informações sobre os requisitos para alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](change-publication-and-article-properties.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "63020972"
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Para automaticamente gerar um conjunto de filtros de junção entre artigos de mesclagem  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades de Publicação – \<Publicação>** , clique em **Adicionar** e, em seguida, clique em **Gerar Filtros Automaticamente**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades de Publicação – \<Publicação>**, clique em **Adicionar** e, em seguida, clique em **Gerar Filtros Automaticamente**.  
   
     > [!NOTE]  
     >  Gerando filtros automaticamente exclui quaisquer filtros de linha ou filtros de junção existentes na publicação. Você pode adicionar filtros depois de gerar um conjunto de filtros automaticamente.  
@@ -69,7 +69,7 @@ ms.locfileid: "63020972"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Para modificar um filtro que foi gerado automaticamente  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Editar**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e clique em **Editar**.  
   
 2.  Na caixa de diálogo do **Editar Filtro** ou **Editar Junção** , modifique o filtro.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "63020972"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Para excluir um filtro que foi gerado automaticamente  
   
-1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>** , selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
+1.  Na página **Filtrar Linhas da Tabela** do Assistente para Nova Publicação ou na página **Filtrar Linhas** de **Propriedades da Publicação – \<Publicação>**, selecione um filtro no painel **Tabelas Filtradas** e clique em **Excluir**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Join Filters](../merge/join-filters.md)   
+ [Filtros de junção](../merge/join-filters.md)   
  [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

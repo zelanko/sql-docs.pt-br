@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075409"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>Compreendendo os arquivos de entrada usados para criar o script de implantação
   Quando você cria um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projeto do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , o gera arquivos XML para o projeto. O [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] coloca esses arquivos XML na pasta de saída do projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por padrão, a saída está fora na pasta \Lixeira. A tabela a seguir lista os arquivos XML criados pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
-|Arquivo XMLA|DESCRIÇÃO|  
+|Arquivo XMLA|Descrição|  
 |---------------|-----------------|  
 |\<*nome do projeto*>. asdatabase|Contém as definições declarativas para todos os objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no projeto.|  
 |\<*nome do projeto*>. deploymenttargets|Contém o nome da instância e do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em que os objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] serão criados.|  
@@ -36,8 +36,7 @@ ms.locfileid: "66075409"
 |\<*nome do projeto*>. deploymentoptions|Contém opções de implantação como se a implantação é transacional e se objetos implantados deveriam ser processados depois da implantação.|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nunca armazena senhas em seus arquivos de projeto.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nunca armazena senhas em seus arquivos de projeto.  
   
 ## <a name="modifying-the-input-files"></a>Modificando os arquivos de entrada  
  Modificar os valores nos arquivos de entrada ou os valores recuperados dos arquivos de entrada torna possível alterar o destino da implantação, as definições de configuração e as opções de implantação sem editar todo \<o nome do *projeto*> arquivo. asdatabase (ou um arquivo de script XMLA inteiro se você gerar um script a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] partir de um banco de dados existente). A possibilidade de modificar arquivos individuais permite que você crie com facilidade scripts de implantação para diferentes finalidades.  

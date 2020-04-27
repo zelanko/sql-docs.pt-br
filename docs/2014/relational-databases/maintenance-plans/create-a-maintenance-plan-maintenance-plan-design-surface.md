@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144337"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
@@ -30,22 +30,22 @@ ms.locfileid: "63144337"
   
      [Segurança](#Security)  
   
--   [Criando um plano de manutenção usando o plano de manutenção Design Surface](#SSMSProcedure)  
+-   [Criando um plano de manutenção usando a Superfície de Design do Plano de Manutenção](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Para criar um plano de manutenção multisservidor, é necessário configurar um ambiente multisservidor contendo um servidor mestre e um ou mais servidores de destino. Devem ser criados e mantidos planos de manutenção multisservidor no servidor mestre. Os planos podem ser exibidos, mas não mantidos, nos servidores de destino.  
   
--   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coleta de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dados e outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pacotes, configure os trabalhos do Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou somente adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
+-   Os membros das funções **db_ssisadmin** e **dc_admin** podem elevar seus privilégios para **sysadmin**. Essa elevação de privilégios pode ocorrer porque essas funções podem modificar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; esses pacotes podem ser executados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o contexto de segurança **sysadmin** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para se proteger contra essa elevação de privilégio ao executar planos de manutenção, conjuntos de coletas de dados e outros pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure os trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executam pacotes para usar uma conta proxy com privilégios limitados ou apenas adicione membros **sysadmin** às funções **db_ssisadmin** e **dc_admin** .  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para criar ou gerenciar planos de manutenção, é necessário ser membro da função de servidor fixa **sysadmin** . O Pesquisador de Objetos só exibe o nó **Planos de Manutenção** para usuários que são membros da função de servidor fixa **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a>Usando o plano de manutenção Design Surface  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> Usando a Superfície de Design do Plano de Manutenção  
   
 #### <a name="to-create-a-maintenance-plan"></a>Para criar um plano de manutenção  
   
@@ -65,19 +65,19 @@ ms.locfileid: "63144337"
      **Propriedades do Subplano**  
      Exibe a caixa de diálogo **Propriedades do Subplano** do subplano selecionado na grade principal. Alternativamente, clique duas vezes no subplano na grade para exibir a caixa de diálogo **Propriedades do Subplano** . Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
-     **Excluir subplano selecionado**  
+     **Exclua o Subplano Selecionado**  
      Exclui o subplano selecionado.  
   
      **Agenda do Subplano**  
      Exibe a caixa de diálogo **Nova Agenda de Trabalho** para o subplano selecionado.  
   
-     **Remover agendamento**  
+     **Remover Agenda**  
      Remove uma agenda do subplano selecionado.  
   
-     **Gerenciar conexões**  
+     **Gerenciar Conexões**  
      Exibe a caixa de diálogo **Gerenciar Conexões** . Usado para adicionar conexões de instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionais ao plano de manutenção. Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
-     **Relatório e registro em log**  
+     **Relatório e Registro em Log**  
      Exibe a caixa de diálogo **Relatório e Registro em Log** . Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
      **Servidores**  
@@ -89,7 +89,7 @@ ms.locfileid: "63144337"
      **Descrição**  
      Exiba ou especifique uma descrição para o plano de manutenção. O comprimento máximo para uma descrição é 512 caracteres.  
   
-     **Superfície do designer**  
+     **Superfície do Designer**  
      Executa design e mantém os planos de manutenção. Use a superfície de designer para adicionar tarefas de manutenção a um plano, remover tarefas de um plano, especificar os links com precedência entre tarefas e para indicar a ramificação ou paralelismo de uma tarefa.  
   
      Um link de precedência entre duas tarefas estabelece uma relação entre elas. A segunda tarefa (a *tarefa dependente*) é executada somente se o resultado da execução da primeira tarefa (a *tarefa precedente*) corresponde aos critérios especificados. Normalmente o resultado da execução especificado é **Êxito**, **Falha**ou **Conclusão**. Para obter mais informações, consulte a etapa **8** abaixo.  
@@ -107,7 +107,7 @@ ms.locfileid: "63144337"
      **Agenda**  
      Indica em qual agendamento o subplano será executado. Clique em **Agenda do Subplano** para abrir a caixa de diálogo **Nova Agenda de Trabalho** . Clique em **Remover Agenda** para excluir a agenda do subplano.  
   
-     Lista **Executar como**  
+     Lista**Executar como**  
      Selecione a conta a ser usada para executar esta subtarefa.  
   
 6.  Clique no ícone **Agenda do Subplano** para inserir detalhes de agenda na caixa de diálogo **Nova Agenda de Trabalho** .  
@@ -116,7 +116,7 @@ ms.locfileid: "63144337"
   
      As seguintes tarefas de plano de manutenção estão disponíveis na **Caixa de Ferramentas**:  
   
-    -   **Tarefa backup de banco de dados**  
+    -   **Tarefa Backup de Banco de Dados**  
   
     -   **Tarefa Verificar Integridade do Banco de Dados**  
   
@@ -159,10 +159,10 @@ ms.locfileid: "63144337"
          **Opção de restrição**  
          Define como uma restrição funciona entre duas tarefas.  
   
-         Lista de **operações de avaliação**  
+         Lista**Operação de avaliação**  
          Especifica a operação de avaliação usada pela restrição de precedência. As operações são: **Constraint**, **Expression**, **Expression and Constraint**e **Expression or Constraint**.  
   
-         Lista de **valores**  
+         Lista**Valor**  
          Especifique o valor de restrição: **Êxito**, **Falha**ou **Conclusão**. **Êxito** é o padrão.  
   
         > [!NOTE]  
@@ -171,7 +171,7 @@ ms.locfileid: "63144337"
          **Expression**  
          Se usar as operações **Expression**, **Expression and Constraint**ou **Expression or Constraint**, digite uma expressão. A expressão deve ser avaliada como um booliano.  
   
-         **Testar**  
+         **Test**  
          Valide a expressão.  
   
          **Várias restrições**  
@@ -220,7 +220,7 @@ ms.locfileid: "63144337"
         3.  Se você selecionar **Enviar relatório para um destinatário de email**, na lista **Operador do agente** , selecione o destinatário do relatório enviado por e-mail.  
   
             > [!NOTE]  
-            >  O SQL Server Agent deve ser configurado para usar o Database Mail para o envio de email. Para obter mais informações, consulte [Configurar o SQL Server Agent email para usar Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+            >  O SQL Server Agent deve ser configurado para usar o Database Mail para o envio de email. Para obter mais informações, consulte [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
     3.  Para salvar informações mais detalhadas, em **Log**, selecione **Registrar informações estendidas em log**.  
   
@@ -232,10 +232,10 @@ ms.locfileid: "63144337"
   
      As opções a seguir estão disponíveis na caixa de diálogo **Visualizador do arquivo de log-**_server_name_ .  
   
-     **Carregar log**  
+     **Carregar Log**  
      Abra uma caixa de diálogo onde seja possível especificar um arquivo de log a ser carregado.  
   
-     **Exportação**  
+     **Exportar**  
      Abra uma caixa de diálogo que permita exportar as informações mostradas na grade **Resumo do arquivo de log** para um arquivo de texto.  
   
      **Atualizar**  
@@ -251,7 +251,7 @@ ms.locfileid: "63144337"
      Interrompe o carregamento das entradas do arquivo de log. Por exemplo, você poderá usar essa opção se um arquivo de log remoto ou offline demorar muito tempo para ser carregado e você desejar exibir apenas as entradas mais recentes.  
   
      **Resumo do arquivo de log**  
-     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o seguinte texto **Filtrar entradas do log, em que: ** \<filter criteria>.  
+     Esse painel de informações exibe um resumo da filtragem do arquivo de log. Se o arquivo não for filtrado, você verá o seguinte texto, **Nenhum filtro aplicado**. Se um filtro for aplicado ao log, você verá o texto **Filtrar entradas do log, em que:**  \<critérios do filtro>.  
   
      **Data**  
      Exibe a data do evento.  
@@ -262,16 +262,16 @@ ms.locfileid: "63144337"
      **Mensagem**  
      Exibe todas as mensagens associadas ao evento.  
   
-     **Tipo de log**  
+     **Tipo de Log**  
      Exibe o tipo de log ao qual o evento pertence. Todos os logs selecionados são exibidos na janela de resumo de arquivo de log.  
   
-     **Origem do log**  
+     **Origem do Log**  
      Exibe uma descrição do log de origem no qual o evento é capturado.  
   
      **Detalhes da linha selecionada**  
      Selecione uma linha para exibir detalhes adicionais sobre a linha de evento selecionada na parte inferior da página. As colunas podem ser reordenadas arrastando-as para locais novos na grade. As colunas podem ser redimensionadas arrastando para a esquerda ou direta as barras separadoras de coluna no cabeçalho de grade. Clique duas vezes nas barras separadoras de coluna no cabeçalho da grade para dimensionar automaticamente a coluna para a largura do conteúdo.  
   
      **Instância**  
-     O nome da instância do na qual ocorreu o evento. Isso é exibido como nome da*instância*do *nome*\\do computador.  
+     O nome da instância do na qual ocorreu o evento. Esse nome é exibido como *nome do computador*\\*nome da instância*.  
   
   

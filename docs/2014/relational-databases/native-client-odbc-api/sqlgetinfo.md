@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128648"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   A tabela mostra os valores retornados por **SQLGetInfo**. Estes valores podem variar com base no número de versão do servidor conectado.  
   
- **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo difere de **SQLGETINFO** no driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC (SQLSRV32. DLL) quando **SQLGetInfo** é chamado com SQL_KEYWORDS e um comprimento de buffer 0.  O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS, mas o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna SQL_SUCCESS_WITH_INFO.  No entanto, quando chamado com um comprimento de buffer diferente de zero que é menor que **** a cadeia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de caracteres de palavra-chave output, SQLGetInfo no Native Client retorna SQL_SUCCESS_WITH_INFO e um SQLSTATE de 01004.  
+ **SQLGetInfo** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente nativo difere de **SQLGETINFO** no driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC (SQLSRV32. DLL) quando **SQLGetInfo** é chamado com SQL_KEYWORDS e um comprimento de buffer 0.  O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retorna SQL_SUCCESS, mas o driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna SQL_SUCCESS_WITH_INFO.  No entanto, quando chamado com um comprimento de buffer diferente de zero que é menor que **SQLGetInfo** a cadeia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de caracteres de palavra-chave output, SQLGetInfo no Native Client retorna SQL_SUCCESS_WITH_INFO e um SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "63128648"
 |SQL_FETCH_DIRECTION|SQL_FD_FETCH_ABSOLUTE SQL_FD_FETCH_BOOKMARK SQL_FD_FETCH_FIRST SQL_FD_FETCH_LAST SQL_FD_FETCH_NEXT SQL_FD_FETCH_PRIOR SQL_FD_FETCH_RELATIVE|  
 |SQL_FILE_USAGE|SQL_FILE_NOT_SUPPORTED|  
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_SELECT_FOR_UPDATE|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_ CORRENTE|  
+|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED se conectado a um servidor que executa uma ordem de classificação que não faz distinção entre maiúsculas e minúsculas.<br /><br /> SQL_IC_SENSITIVE se conectado a um servidor que executa ordem de classificação com diferenciação de maiúsculas e minúsculas.|  

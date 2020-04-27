@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074903"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Conceder permissões para ler definição em metadados de objetos (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074903"
   
  Sugerimos que você inclua a `Read Definition` permissão no nível do banco de dados sempre que estiver configurando funções para processamento dedicado. Ter `Read Definition` permite que não administradores exibam a hierarquia de objetos de um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] modelo no e naveguem para objetos individuais para processamento posterior.  
   
-1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Funções** para o banco de dados adequado no Pesquisador de Objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
+1.  No [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte-se à instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]do, expanda **funções** para o banco de dados apropriado no Pesquisador de objetos e clique em uma função de banco de dados (ou crie uma nova função de banco de dados).  
   
 2.  Na guia **geral** , selecione a `Read Definition` opção.  
   

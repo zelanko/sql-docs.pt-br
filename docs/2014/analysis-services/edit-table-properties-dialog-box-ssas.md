@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081441"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Caixa de diálogo Editar Propriedades da Tabela (SSAS)
@@ -35,7 +35,7 @@ ms.locfileid: "66081441"
  **Nome da conexão**  
  Exibe o nome da conexão que está em uso no momento.  
   
- **Nome da origem**  
+ **Nome de origem**  
  Exiba ou altere a tabela a partir da qual os dados são obtidos.  
   
  Se você alterar a origem para uma tabela que tenha colunas diferentes das da tabela atual, uma mensagem será exibida, avisando que as colunas são diferentes. Em seguida, você deve selecionar as colunas que deseja colocar na tabela atual e clicar em **Salvar**. Você pode substituir toda a tabela marcando a caixa de seleção no lado esquerdo da tabela.  
@@ -46,7 +46,7 @@ ms.locfileid: "66081441"
  **Nomes das colunas de**  
  |||  
 |-|-|  
-|**Origem**|Selecione esta opção para substituir os nomes de colunas atuais pelos nomes das colunas da tabela de origem selecionada.|  
+|**Fonte**|Selecione esta opção para substituir os nomes de colunas atuais pelos nomes das colunas da tabela de origem selecionada.|  
 |**Deprecia**|Selecione esta opção para usar os nomes de colunas atuais como existem no modelo.|  
   
  **Atualizar visualização**  
@@ -86,7 +86,7 @@ ms.locfileid: "66081441"
 |**Visualização de tabela**|Selecione esta opção para visualizar a tabela selecionada e algumas linhas de dados.|  
 |**Editor de consultas**|Selecione esta opção para visualizar a consulta que será emitida em relação à fonte de dados selecionada.|  
   
- **Instrução SQL**  
+ **Instrução Sql**  
  Exibe a instrução SQL emitida em relação à fonte de dados atual para recuperar linhas. Por padrão, todas as linhas são recuperadas, mas é possível recuperar um subconjunto de linhas, criando um filtro ou editando manualmente a instrução SQL.  
   
  **Validar**  
@@ -99,6 +99,6 @@ ms.locfileid: "66081441"
  Clique para aplicar todas as alterações feitas, incluindo a substituição de colunas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas e colunas &#40;SSAS de tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tabelas e colunas &#40;SSAS de Tabela&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

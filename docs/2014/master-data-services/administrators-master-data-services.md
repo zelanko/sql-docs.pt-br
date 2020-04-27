@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480013"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
@@ -48,15 +48,15 @@ ms.locfileid: "65480013"
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|DESCRIÇÃO|  
+|Tipo de administrador|Descrição|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]administrador do sistema|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente a permissão **Atualizar** para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> No MDM. tblUser, o valor na coluna **ID** é **1**.|  
+|Administrador do sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Tem automaticamente a permissão **Atualizar** para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.<br /><br /> No MDM. tblUser, o valor na coluna **ID** é **1**.|  
 |Administrador de modelo|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinam se o usuário é um administrador de modelo.<br /><br /> Pode ser um administrador de modelo com base nas permissões atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> É um administrador somente para modelos que têm permissão de **atualização** atribuída ao objeto de modelo de nível superior e nenhuma outra permissão.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> No MDM. tblUser, o valor na coluna **ID** não é **1**.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
  [Altere a conta de administrador do sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [Criar um banco de dados Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Master Data Services de notificações &#40;&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+ [Notificações &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

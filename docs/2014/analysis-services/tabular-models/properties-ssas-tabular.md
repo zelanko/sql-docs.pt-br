@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066711"
 ---
 # <a name="properties-ssas-tabular"></a>Propriedades (SSAS tabular)
@@ -22,13 +22,13 @@ ms.locfileid: "66066711"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Power View Propriedades de relatório &#40;SSAS tabular&#41;](power-view-reporting-properties-ssas-tabular.md)|Os tópicos nesta seção fornecem descrições e opções de configuração para modelos de tabela que serão conectados e navegados pelo [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
-|[Propriedades do projeto &#40;SSAS tabular&#41;](project-properties-ssas-tabular.md)|Fornece descrições para propriedades do projeto. As propriedades do projeto incluem arquivo de projeto e configurações de opções de implantação.|  
-|[Propriedades de modelo &#40;SSAS de tabela&#41;](model-properties-ssas-tabular.md)|Fornece descrições para propriedades do modelo. As propriedades modelo afetam as ações de construção do projeto do modelo, o backup e o banco de dados de workspace durante a criação do modelo.|  
+|[Propriedades de relatório do Power View &#40;SSAS de Tabela&#41;](power-view-reporting-properties-ssas-tabular.md)|Os tópicos nesta seção fornecem descrições e opções de configuração para modelos de tabela que serão conectados e navegados pelo [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
+|[Propriedades de projeto &#40;SSAS de Tabela&#41;](project-properties-ssas-tabular.md)|Fornece descrições para propriedades do projeto. As propriedades do projeto incluem arquivo de projeto e configurações de opções de implantação.|  
+|[Propriedades de modelo &#40;SSAS de Tabela&#41;](model-properties-ssas-tabular.md)|Fornece descrições para propriedades do modelo. As propriedades modelo afetam as ações de construção do projeto do modelo, o backup e o banco de dados de workspace durante a criação do modelo.|  
 |[Propriedades da tabela &#40;SSAS tabular&#41;](table-properties-ssas-tabular.md)|Fornece descrições para propriedades básicas de tabela. As propriedades de tabela descritas aqui são diferentes das na caixa de diálogo Editar Propriedades de Tabela, que mostram e permitem a seleção e filtragem de colunas da origem|  
-|[Propriedades de coluna &#40;SSAS de tabela&#41;](column-properties-ssas-tabular.md)|Fornece descrições para propriedades de coluna. As propriedades de coluna definem o tipo de dados de uma coluna, o formato e ocultam as configurações.|  
-|[Configurar propriedades de implantação e modelagem de dados padrão &#40;SSAS tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para um modelo padrão e propriedades de implantação. As propriedades padrão se aplicam a novos projetos de modelo tabular. Depois que um novo projeto é criado, estas propriedades ainda podem ser alteradas para um projeto de modelo específico dependendo dos seus requisitos.|  
+|[Propriedades da coluna &#40;SSAS tabular&#41;](column-properties-ssas-tabular.md)|Fornece descrições para propriedades de coluna. As propriedades de coluna definem o tipo de dados de uma coluna, o formato e ocultam as configurações.|  
+|[Configurar propriedades padrão de implantação e modelagem de dados &#40;SSAS de Tabela&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Fornece descrições e etapas de configuração para um modelo padrão e propriedades de implantação. As propriedades padrão se aplicam a novos projetos de modelo tabular. Depois que um novo projeto é criado, estas propriedades ainda podem ser alteradas para um projeto de modelo específico dependendo dos seus requisitos.|  
   
   

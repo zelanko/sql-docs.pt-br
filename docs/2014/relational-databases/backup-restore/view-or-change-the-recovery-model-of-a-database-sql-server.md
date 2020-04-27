@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875077"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
@@ -42,13 +42,13 @@ ms.locfileid: "62875077"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Recomendações de acompanhamento:**  [depois de alterar o modelo de recuperação](#FollowUp)  
+-   **Recomendações de acompanhamento:**  [depois que você alterar o modelo de recuperação](#FollowUp)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Antes de mudar de modelo de recuperação completa ou de recuperação bulk-logged, faça o backup do log de transações.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62875077"
 > [!NOTE]  
 >  Se você alternar para o modelo de recuperação completa durante uma operação em massa, o registro em log da operação em massa passará de registro em log mínimo para registro em log completo, e vice-versa.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Para exibir ou alterar o modelo de recuperação  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62875077"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Para exibir o modelo de recuperação  
   
@@ -117,7 +117,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>Recomendações de acompanhamento: depois de alterar o modelo de recuperação  
+##  <a name="follow-up-recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a>Recomendações de acompanhamento: depois de alterar o modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -146,7 +146,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
     -   Verifique se os backups periódicos de banco de dados estão agendados. Fazer backup de seu banco de dados é essencial para proteger seus dados e truncar a porção inativa do log de transações.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um backup completo de banco de dados &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -156,7 +156,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Planos de manutenção de banco de dados](../maintenance-plans/maintenance-plans.md) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081463"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação de Extração de Detalhes (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
@@ -29,18 +29,18 @@ ms.locfileid: "66081463"
  **name**  
  Digite o nome da ação.  
   
- **Destino da ação**  
+ **Destino da Ação**  
  Expanda para exibir a opção **Membros de grupos de medidas** .  
   
  **Membros de grupos de medidas**  
  Selecione o grupo de medidas ao qual a ação de extração de detalhes deve ser associada.  
   
- **Condição (opcional)**  
+ **Condição (Opcional)**  
  Digite a expressão MDX que descreve uma condição opcional usada em conjunto com **Membros de grupos de medidas**que restringe ainda mais quando a ação está disponível. A expressão deve retornar um valor booliano que, se verdadeiro, indicará que a ação está disponível.  
   
  Arraste elementos selecionados do painel **Ferramentas de Cálculo** para esta opção para incluir a sintaxe MDX para o elemento selecionado.  
   
- **Colunas de detalhamento**  
+ **Colunas de Extração de Detalhes**  
  Expanda para exibir uma grade na qual indicar os atributos retornados quando o usuário executar esta ação.  
   
 > [!NOTE]  
@@ -48,15 +48,15 @@ ms.locfileid: "66081463"
   
  A grade contém as seguintes colunas:  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**Dimensões**|Selecione a dimensão da qual o atributo retornado é derivado. Selecione MEDIDAS para extração de detalhes em medidas.|  
 |**Colunas de Retorno**|Selecione o atributo ou medida da dimensão selecionada a ser retornada quando a ação for executada.|  
   
- **Propriedades adicionais**  
+ **Propriedades Adicionais**  
  Expanda para exibir as opções **Padrão**, **Máximo de linhas**, **Invocação**, **Aplicativo**, **Descrição**, **Legenda**e **A legenda é MDX** .  
   
- **Default**  
+ **Padrão**  
  Selecione **True** para incluir esta como uma ação de detalhamento padrão; caso contrário, selecione **False**.  
   
  Se a `RETURN` cláusula for omitida de uma `DRILLTHROUGH` instrução MDX executada por um aplicativo cliente, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a instância avaliará todas as ações de detalhamento padrão e executará a primeira ação de detalhamento padrão que retorna um conjunto não vazio. Para obter mais informações sobre a `DRILLTHROUGH` instrução MDX, consulte [instrução de detalhamento &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -75,10 +75,10 @@ ms.locfileid: "66081463"
   
  A tabela a seguir descreve as configurações disponíveis.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Lote|A ação deve ser executada como parte de uma operação em lote ou de uma tarefa do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interativo|A ação é executada quando o usuário a invoca.|  
+|Interactive (Interativo)|A ação é executada quando o usuário a invoca.|  
 |Em Aberto|A ação é executada quando o cubo é aberto pela primeira vez.|  
   
  **Aplicativo**  

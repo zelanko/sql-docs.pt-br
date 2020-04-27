@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078924"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificando a dimensão Cliente
@@ -122,11 +122,11 @@ ms.locfileid: "66078924"
   
 2.  No painel **Atributos** , selecione os seguintes atributos pressionando e mantendo a tecla CTRL pressionada enquanto clica em cada um deles:  
   
-    -   **City**  
+    -   **Cidade**  
   
     -   `Country-Region`  
   
-    -   **CEP**  
+    -   **Postal Code**  
   
     -   `State-Province`  
   
@@ -142,11 +142,11 @@ ms.locfileid: "66078924"
   
     -   **Sexo**  
   
-    -   **Sinalizador de proprietário da casa**  
+    -   **Sinalizador do Proprietário da Casa**  
   
     -   **Estado Civil**  
   
-    -   **Número de carros**  
+    -   **Número de Carros**  
   
     -   **Número de filhos em casa**  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078924"
   
     -   **Endereço de email**  
   
-    -   **Telemóvel**  
+    -   **Telefone**  
   
 8.  Na janela Propriedades, clique no campo de propriedade **AttributeHierarchyDisplayFolder** e digite `Contacts`.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66078924"
   
      O navegador exibe os clientes nesta cidade.  
   
-4.  Mude para o **Designer de Cubo** do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para fazer isso, clique duas vezes no cubo **Analysis Services tutorial** no nó **cubos** de **Gerenciador de soluções**.  
+4.  Mude para o **Designer de Cubo** do cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para fazer isso, clique duas vezes no cubo **Tutorial do Analysis Services** no nó **Cubos** do **Gerenciador de Soluções**.  
   
 5.  Clique na guia **Navegador** e no ícone Reconectar da barra de ferramentas do designer.  
   

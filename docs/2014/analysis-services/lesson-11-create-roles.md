@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079265"
 ---
-# <a name="lesson-12-create-roles"></a>Lição 12: Criar funções
+# <a name="lesson-12-create-roles"></a>Lição 12: Criar Funções
   Nesta lição, você criará funções. As funções fornecem objeto de banco de dados modelo e segurança de dados, limitando o acesso somente a esses usuários do Windows, que são os membros da função. Cada função é definida com uma única permissão: Nenhum, Leitura, Leitura e Processo, Processo ou Administrador. As funções podem ser definidas durante a criação do modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Depois que um modelo foi implantado, você pode gerenciar funções usando o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Funções &#40;SSAS Tabular&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
->  Não é necessário criar funções para concluir este tutorial. Por padrão, a conta com a qual você está conectado terá privilégios de Administrador no modelo. No entanto, para que outros usuários da organização procurem o modelo usando um aplicativo cliente de relatório, você deve criar pelo menos uma função com permissões Leitura e adicionar esses usuários como membros.  
+>  A criação de funções não é necessária para concluir este tutorial. Por padrão, a conta com a qual você está conectado terá privilégios de Administrador no modelo. No entanto, para que outros usuários da organização procurem o modelo usando um aplicativo cliente de relatório, você deve criar pelo menos uma função com permissões Leitura e adicionar esses usuários como membros.  
   
  Você criará três funções:  
   
 -   Gerente de vendas-essa função pode incluir usuários em sua organização para os quais você deseja ter permissão de leitura para todos os objetos de modelo e dados.  
   
--   Analista de vendas dos EUA-essa função pode incluir usuários em sua organização para os quais você deseja apenas procurar dados relacionados a vendas nos EUA (Estados Unidos). Para essa função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros para procurar dados apenas para os Estados Unidos.  
+-   Analista de vendas dos EUA-essa função pode incluir usuários em sua organização para os quais você deseja apenas procurar dados relacionados a vendas nos EUA (Estados Unidos). Para esta função, você usará uma fórmula DAX para definir um *Filtro de Linha*, que restringe os membros procurar somente dados dos Estados Unidos.  
   
 -   Administrador – essa função pode incluir os usuários para os quais você deseja ter permissão de administrador, o que permite acesso ilimitado e permissões para executar tarefas administrativas no banco de dados modelo.  
   
- Já que as contas de usuário e de grupo do Windows em sua organização são exclusivas, você pode adicionar contas da sua organização privada para membros. No entanto, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na Lição 12: Analisar no Excel.  
+ Como o usuário e as contas de grupo do Windows da sua organização são exclusivas, você pode adicionar contas da sua organização específica a membros. Porém, para este tutorial, você também pode deixar os membros em branco. Você ainda poderá testar o efeito de cada função posteriormente na Lição 12: Analisar no Excel.  
   
  Tempo estimado para conclusão desta lição: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas desta lição, você deverá ter concluído a lição anterior: [Lição 11: Criar partições](lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Criar Funções  
@@ -58,7 +58,7 @@ ms.locfileid: "66079265"
   
 7.  Verifique suas seleções e clique em **OK**  
   
-#### <a name="to-create-a-sales-analyst-us-user-role"></a>Para criar uma função de usuário de Analista de Vendas dos EUA  
+#### <a name="to-create-a-sales-analyst-us-user-role"></a>Para criar a função de usuário Analista de Vendas dos EUA  
   
 1.  No [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Funções**.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068711"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Definir Opções de Inteligência de Dimensão (Assistente de Business Intelligence)

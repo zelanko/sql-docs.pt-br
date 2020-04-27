@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077678"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Caixa de diálogo modificar mapeamento (Gráfico de precisão de mineração)
@@ -26,12 +26,12 @@ ms.locfileid: "66077678"
  **Coluna de Estrutura de Mineração**  
  Uma lista das colunas de estrutura de mineração que estão definidas na estrutura de mineração selecionada.  
   
- **Coluna da tabela**  
+ **Coluna de tabela**  
  Uma lista das colunas de entrada que estão associadas com cada coluna da estrutura de mineração. Para alterar a coluna de entrada, clique em uma célula e selecione uma nova coluna de entrada da lista de colunas que a tabela de entrada contém.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Designer de gráfico de precisão de mineração &#40;mineração de dados&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Tarefas de teste e validação e instruções &#40;mineração de dados&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Teste e validação &#40;mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Teste e validação &#40;Mineração de dados&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

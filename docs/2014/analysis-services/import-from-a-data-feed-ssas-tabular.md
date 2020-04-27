@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080568"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar de um feed de dados (SSAS tabular)
@@ -24,21 +24,21 @@ ms.locfileid: "66080568"
   
 -   [Compreendendo a importação de um feed de dados](#prereq)  
   
--   [Importar dados de um DataSet do Azure DataMarket](#azure)  
+-   [Importe os dados de um conjunto de dados do Azure DataMarket](#azure)  
   
 -   [Importar feeds de dados de fontes de dados públicas ou corporativas](#importdata)  
   
 -   [Importar feeds de dados de listas do SharePoint](#importlist)  
   
--   [Importar feeds de dados de relatórios Reporting Services](#importreport)  
+-   [Importar feeds de dados de Relatórios do Reporting Services](#importreport)  
   
-##  <a name="prereq"></a>Compreendendo a importação de um feed de dados  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>Compreendendo a importação de um feed de dados  
  Você pode importar dados em um Modelo Tabular dos seguintes tipos de feeds de dados:  
   
- **Relatório de Reporting Services**  
+ **Relatório do Reporting Services**  
  É possível usar um relatório do Reporting Services que foi publicado em um site do SharePoint ou em um servidor de relatório como uma fonte de dados em um modelo. Ao importar dados de uma Relatório do Reporting Services, você deve especificar um arquivo de definição de relatório (.rdl) como uma fonte de dados.  
   
- **Conjunto de conjuntos do Azure DataMarket**  
+ **Conjunto de dados do Azure DataMarket**  
  O Azure DataMarket é um serviço que fornece uma único mercado e canal de entrega para informações como serviços em nuvem. Os conjuntos de dados do Azure DataMarket exigem uma chave de conta em vez de uma conta de usuário do Windows.  
   
  **Feeds Atom**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080568"
   
  Os dados de um feed de dados são adicionados em um modelo uma vez durante a importação. Para obter dados atualizados do feed, você poderá atualizar os dados do designer de modelo ou configurar uma agenda de atualização de dados para o modelo depois que for implantado em uma instância de produção do Analysis Services. Para obter mais informações, consulte [Processar dados &#40;SSAS de Tabela&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a>Importar dados de um DataSet do Azure DataMarket  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Importar dados de um DataSet do Azure DataMarket  
  Você pode importar dados de um Azure DataMarket como uma tabela em seu modelo.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Para importar os dados de um conjunto de dados do Azure DataMarket  
@@ -73,7 +73,7 @@ ms.locfileid: "66080568"
   
 11. Na página **Selecionar Tabelas e Exibições** , clique em **Concluir**.  
   
-##  <a name="importdata"></a>Importar feeds de dados de fontes de dados públicas ou corporativas  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>Importar feeds de dados de fontes de dados públicas ou corporativas  
  Você pode acessar feeds públicos ou criar serviços de dados personalizados que geram feeds Atom a partir de sistemas de banco de dados proprietários ou herdados.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>Para importar dados de feeds de dados públicos ou corporativos  
@@ -111,7 +111,7 @@ ms.locfileid: "66080568"
   
 10. Na página **Selecionar Tabelas e Exibições** , clique em **Concluir**.  
   
-##  <a name="importlist"></a>Importar feeds de dados de listas do SharePoint  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>Importar feeds de dados de listas do SharePoint  
  Você pode importar qualquer lista do SharePoint que tenha um botão **Exportar como Feed de Dados** na faixa de opções (SharePoint). Você pode clicar nesse botão para exportar a lista como um feed.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>Para importar feeds de dados de uma lista do SharePoint  
@@ -143,7 +143,7 @@ ms.locfileid: "66080568"
   
 10. Na página **Selecionar Tabelas e Exibições** , clique em **Concluir**.  
   
-##  <a name="importreport"></a>Importar feeds de dados de relatórios Reporting Services  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Importar feeds de dados de relatórios Reporting Services  
  Se você tiver uma implantação do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services, poderá usar a extensão de renderização Atom para gerar um feed de dados a partir de um relatório existente.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>Para importar dados de relatórios de um relatório publicado do Reporting Services  
@@ -194,6 +194,6 @@ ms.locfileid: "66080568"
  [Tipos de dados com suporte &#40;SSAS de tabela&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [Representação &#40;SSAS de tabela&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [Processar dados &#40;SSAS de tabela&#41;](process-data-ssas-tabular.md)   
- [Importar dados &#40;SSAS de tabela&#41;](import-data-ssas-tabular.md)  
+ [Importar dados &#40;SSAS de Tabela&#41;](import-data-ssas-tabular.md)  
   
   

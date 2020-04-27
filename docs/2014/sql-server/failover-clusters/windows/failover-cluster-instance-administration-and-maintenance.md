@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049431"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administração e manutenção da instância de cluster de failover
@@ -37,8 +37,7 @@ ms.locfileid: "63049431"
  Depois que você instalar uma FCI, poderá alterá-la ou repará-la usando o programa de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por exemplo, você também pode adicionar mais nós a uma FCI, executar uma FCI como uma instância autônoma ou remover um nó de uma configuração de FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Adicionando um nó a uma instância de cluster de failover existente  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação lhe dá a opção de manter uma FCI existente. Se você escolher esta opção, poderá adicionar outros nós à sua FCI executando a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador que você deseja adicionar à FCI. Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;instalação&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) e [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] A Instalação lhe dá a opção de manter uma FCI existente. Se você escolher esta opção, poderá adicionar outros nós à sua FCI executando a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador que você deseja adicionar à FCI. Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;instalação&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) e [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Removendo um nó de uma instância de cluster de failover existente  
  Você pode remover um nó de uma FCI executando a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no computador que deseja remover da FCI. Cada nó em uma FCI é considerado um par sem dependências nos outros nós no FCI e você poderá remover qualquer nó. Um nó danificado não tem que estar disponível para ser removido, e o processo de remoção não desinstalará os binários do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do nó não disponível. Um nó removido poderá ser adicionado novamente a uma FCI a qualquer momento. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de Failover SQL Server &#40;instalação&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  

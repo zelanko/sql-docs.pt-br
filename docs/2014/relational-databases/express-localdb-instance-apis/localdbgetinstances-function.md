@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032250"
 ---
 # <a name="localdbgetinstances-function"></a>Função LocalDBGetInstances
   Retorna todas as instâncias de LocalDB do SQL Server Express com a versão especificada.  
   
- **Arquivo de cabeçalho:** sqlncli. h  
+ **Arquivo de cabeçalho:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ HRESULT LocalDBGetInstances(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *pInstanceNames*  
  Der Quando essa função retorna, contém os nomes das instâncias de LocalDB nomeadas e padrão na estação de trabalho do usuário.  
   

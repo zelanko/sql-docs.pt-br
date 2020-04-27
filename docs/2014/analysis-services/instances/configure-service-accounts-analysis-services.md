@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080185"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
@@ -27,11 +27,11 @@ ms.locfileid: "66080185"
   
  Este tópico fornece informações complementares para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluindo as permissões adicionais necessárias para instalações em tabela e em cluster. Abrange também as permissões necessárias para oferecer suporte às operações do servidor. Por exemplo, você pode configurar operações de processamento e de consulta para serem executadas na conta d serviço, caso no qual você terá de conceder permissões adicionais para funcionar.  
   
--   [Privilégios do Windows atribuídos a Analysis Services](#bkmk_winpriv)  
+-   [Privilégios do Windows atribuídos ao Analysis Services](#bkmk_winpriv)  
   
--   [Permissões do sistema de arquivos atribuídas a Analysis Services](#bkmk_FilePermissions)  
+-   [Permissões do sistema de arquivos atribuídos ao Analysis Services](#bkmk_FilePermissions)  
   
--   [Concedendo permissões adicionais para operações de servidor específicas](#bkmk_tasks)  
+-   [Concedendo permissões adicionais para operações de servidor específico](#bkmk_tasks)  
   
  Uma etapa de configuração adicional, e não documentada aqui, é registrar um SPN (nome da entidade de serviço) para a instância e a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Essa etapa habilita a autenticação de passagem de aplicativos cliente a fontes de dados back-end em cenários de salto duplo. Essa etapa somente se aplica aos serviços configurados para delegação restrita de Kerberos. Consulte [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) para obter mais instruções.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66080185"
   
  O único membro do grupo é o SID por serviço. Ao lado dele fica a conta de logon. O nome da conta de logon é apenas uma ilustração, a fim de fornecer contexto para o SID por serviço. Se você alterar posteriormente a conta de logon e retornar a esta página, observará que o grupo de segurança e o SID por serviço não serão alterados, mas o rótulo da conta de logon será diferente.  
   
-##  <a name="bkmk_winpriv"></a>Privilégios do Windows atribuídos à conta de serviço Analysis Services  
+##  <a name="windows-privileges-assigned-to-the-analysis-services-service-account"></a><a name="bkmk_winpriv"></a>Privilégios do Windows atribuídos à conta de serviço Analysis Services  
  O Analysis Services precisa de permissões do sistema operacional para iniciar o serviço e para solicitar recursos do sistema. Os requisitos variam de acordo com o modo do servidor e se a instância está agrupada. Se não estiver familiarizado com os privilégios do Windows, consulte [Privilégios](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) e [Constantes de privilégio (Windows)](/windows/desktop/SecAuthZ/privilege-constants) para obter detalhes.  
   
  Todas as instâncias do Analysis Services exigem o privilégio **Fazer logon como um serviço** (SeServiceLogonRight). A Instalação do SQL Server atribui o privilégio a você na conta de serviço especificada durante a instalação. Para servidores executados nos modos multidimensional e mineração de dados, esse é o único privilégio do Windows exigido pela conta de serviço do Analysis Services para instalações autônomas de servidores, bem como é o único privilégio que a Instalação configura para o Analysis Services. Para instâncias em cluster e de tabela, privilégios adicionais do Windows devem ser adicionados manualmente.  
@@ -66,10 +66,9 @@ ms.locfileid: "66080185"
   
 |||  
 |-|-|  
-|**Aumentar um conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)|Este privilégio está disponível para todos os usuários por padrão por meio do grupo de segurança **Usuários** . Se você bloquear um servidor ao remover um privilégio desse grupo, o Analysis Services pode falhar ao iniciar o serviço, registrando o seguinte o log: "O cliente não possui o privilégio exigido." Quando esse erro ocorre, restaure o privilégio ao Analysis Services, concedendo-o ao grupo de segurança do Analysis Services apropriado.|  
+|**Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)|Este privilégio está disponível para todos os usuários por padrão por meio do grupo de segurança **Usuários** . Se você bloquear um servidor ao remover um privilégio desse grupo, o Analysis Services pode falhar ao iniciar o serviço, registrando o seguinte o log: "O cliente não possui o privilégio exigido." Quando esse erro ocorre, restaure o privilégio ao Analysis Services, concedendo-o ao grupo de segurança do Analysis Services apropriado.|  
 |**Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)|Este privilégio é usado para solicitar mais memória se um processo tiver recursos insuficientes para concluir a sua execução, sujeito aos limites estabelecidos de memória para a instância.|  
-|**Bloquear páginas na memória** (SeLockMemoryPrivilege)|Este privilégio somente é necessário quando a paginação está totalmente desativada. Por padrão, uma instância de servidor de tabela usa o arquivo de paginação do Windows, mas é possível configurá-lo para não usar a paginação do Windows ao definir `VertiPaqPagingPolicy` como 0.<br /><br /> 
-  `VertiPaqPagingPolicy` como 1 (padrão) instrui a instância do servidor de tabela a usar o arquivo de paginação do Windows. Alocações não são bloqueadas, permitindo que o Windows realize a paginação conforme necessário. Como a paginação está em uso, não é necessário bloquear páginas na memória. Portanto, para a configuração padrão (onde `VertiPaqPagingPolicy` = 1), você não precisa conceder o privilégio **bloquear páginas na memória** a uma instância tabular.<br /><br /> `VertiPaqPagingPolicy`para 0. Se você desligar a paginação para o Analysis Services, as alocações são bloqueadas, assumindo que o privilégio **Bloquear páginas na memória** seja concedido à instância de tabela. Com essa configuração e o privilégio **Bloquear páginas na memória** , o Windows não pode realizar a paginação das alocações de memória feitas no Analysis Services quando o sistema está sob pressão de memória. Analysis Services se baseia na permissão **bloquear páginas na memória** como a imposição por `VertiPaqPagingPolicy` trás = 0. Observe que não recomendamos desativar a paginação do Windows. Ela aumentará a taxa de erros de falta de memória para operações que poderiam ser bem-sucedidas se a paginação fosse permitida. Consulte [Propriedades de memória](../server-properties/memory-properties.md) para obter mais `VertiPaqPagingPolicy`informações sobre o.|  
+|**Bloquear páginas na memória** (SeLockMemoryPrivilege)|Este privilégio somente é necessário quando a paginação está totalmente desativada. Por padrão, uma instância de servidor de tabela usa o arquivo de paginação do Windows, mas é possível configurá-lo para não usar a paginação do Windows ao definir `VertiPaqPagingPolicy` como 0.<br /><br /> `VertiPaqPagingPolicy` como 1 (padrão) instrui a instância do servidor de tabela a usar o arquivo de paginação do Windows. Alocações não são bloqueadas, permitindo que o Windows realize a paginação conforme necessário. Como a paginação está em uso, não é necessário bloquear páginas na memória. Portanto, para a configuração padrão (onde `VertiPaqPagingPolicy` = 1), você não precisa conceder o privilégio **bloquear páginas na memória** a uma instância tabular.<br /><br /> `VertiPaqPagingPolicy`para 0. Se você desligar a paginação para o Analysis Services, as alocações são bloqueadas, assumindo que o privilégio **Bloquear páginas na memória** seja concedido à instância de tabela. Com essa configuração e o privilégio **Bloquear páginas na memória** , o Windows não pode realizar a paginação das alocações de memória feitas no Analysis Services quando o sistema está sob pressão de memória. Analysis Services se baseia na permissão **bloquear páginas na memória** como a imposição por `VertiPaqPagingPolicy` trás = 0. Observe que não recomendamos desativar a paginação do Windows. Ela aumentará a taxa de erros de falta de memória para operações que poderiam ser bem-sucedidas se a paginação fosse permitida. Consulte [Propriedades de memória](../server-properties/memory-properties.md) para obter mais `VertiPaqPagingPolicy`informações sobre o.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>Para exibir ou adicionar privilégios do Windows na conta de serviço  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66080185"
 > [!NOTE]  
 >  Versões anteriores da Instalação adicionaram inadvertidamente a conta de serviço do Analysis Services ao grupo **Usuários de Log de Desempenho** . Embora essa falha tenha sido corrigida, talvez instalações existentes tenham essa associação de grupo desnecessária. Como a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não requer associação no grupo **Usuários de Log de Desempenho** , você pode removê-la do grupo.  
   
-##  <a name="bkmk_FilePermissions"></a>Permissões do sistema de arquivos atribuídas à conta de serviço Analysis Services  
+##  <a name="file-system-permissions-assigned-to-the-analysis-services-service-account"></a><a name="bkmk_FilePermissions"></a> Permissões do sistema de arquivos atribuídas à conta de serviço do Analysis Services  
   
 > [!NOTE]  
 >  Consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) para obter uma lista de permissões associadas a cada pasta de programa.  
@@ -123,12 +122,12 @@ ms.locfileid: "66080185"
   
      O SID do membro deve corresponder ao SID por serviço a partir da etapa 1.  
   
-3.  Usar | **** arquivos | de programas do **Windows Explorer****Microsoft SQL Server** | MSASxx. MSSQLServer | O**compartimento** **OLAP** | para verificar se as propriedades de segurança da pasta são concedidas ao grupo de segurança na etapa 2.  
+3.  Usar | **Program Files**arquivos | de programas do **Windows Explorer****Microsoft SQL Server** | MSASxx. MSSQLServer | O**compartimento** **OLAP** | para verificar se as propriedades de segurança da pasta são concedidas ao grupo de segurança na etapa 2.  
   
 > [!NOTE]  
 >  Nunca remova nem modifique um SID. Para restaurar um SID por serviço que foi excluído inadvertidamente, consulte [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201).  
   
- **Mais sobre os SIDs por serviço**  
+ **Mais informações sobre os SIDs por serviço**  
   
  Toda conta do Windows tem um [SID](http://en.wikipedia.org/wiki/Security_Identifier)associado, mas os serviços também podem ter SIDs, que serão chamados daqui em diante de SIDs por serviço. Um SID por serviço é criado quando a instância do serviço é instalada, como um acessório exclusivo e permanente do serviço. O SID por serviço é um local, o SID de computador gerado por meio do nome do serviço. Em uma instância padrão, seu nome de usuário amigável é NT SERVICE\MSSQLServerOLAPService.  
   
@@ -136,9 +135,8 @@ ms.locfileid: "66080185"
   
  Como o SID é imutável, as ACLs do sistema de arquivos criadas durante a instalação do serviço podem ser usadas por tempo indeterminado, independente de quantas vezes você alterar a conta de serviço. Como medida adicional de segurança, as ACLs que especificam permissões via um SID garantem que os executáveis do programa e as pastas de dados sejam acessados somente por uma única instância de um serviço, mesmo que outros serviços sejam executados na mesma conta.  
   
-##  <a name="bkmk_tasks"></a>Concedendo permissões de Analysis Services adicionais para operações de servidor específicas  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa algumas tarefas no contexto de segurança da conta de serviço (ou conta de logon) que é usada para iniciar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e executa outras tarefas no contexto de segurança do usuário que está solicitando a tarefa.  
+##  <a name="granting-additional-analysis-services-permissions-for-specific-server-operations"></a><a name="bkmk_tasks"></a>Concedendo permissões de Analysis Services adicionais para operações de servidor específicas  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa algumas tarefas no contexto de segurança da conta de serviço (ou conta de logon) que é usada para iniciar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e executa outras tarefas no contexto de segurança do usuário que está solicitando a tarefa.  
   
  A tabela a seguir descreve as permissões adicionais necessárias para oferecer suporte a tarefas executadas como a conta de serviço.  
   
@@ -157,6 +155,6 @@ ms.locfileid: "66080185"
  [Token de acesso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [Identificadores de segurança (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Access token (Wikipédia)](http://en.wikipedia.org/wiki/Access_token)   
- [Listas de controle de acesso (Wikipédia)](http://en.wikipedia.org/wiki/Access_control_list)  
+ [Listas de Controle de Acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   

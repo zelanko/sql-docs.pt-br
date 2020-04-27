@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069327"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Selecionar Partições a Modificar (Assistente de Otimização com Base no Uso)
@@ -28,13 +28,13 @@ ms.locfileid: "66069327"
   
  Marque a caixa de seleção para uma partição criar agregações apenas para a partição selecionada.  
   
- **Nome da partição**  
+ **Nome da Partição**  
  Exibe o nome da partição.  
   
- **Origem**  
+ **Fonte**  
  Exibe a tabela ou consulta usada para fornecer dados de origem para a partição.  
   
- **Agregação de designs**  
+ **Designs de agregação**  
  Exibe uma cadeia de caracteres que descreve o design de agregação usado pela partição.  
   
 ## <a name="see-also"></a>Consulte Também  

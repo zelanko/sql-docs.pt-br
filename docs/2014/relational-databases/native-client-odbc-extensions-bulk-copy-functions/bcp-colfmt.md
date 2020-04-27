@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065454"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -78,9 +78,9 @@ idxServerCol
   
  Para uma cópia em massa fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo, quando *eUserDataType* for SQLDECIMAL ou SQLNUMERIC:  
   
--   Se a coluna de origem não for **decimal** ou **numeric**, serão usadas a precisão e escala padrão.  
+-   Se a coluna de origem não for **decimal** ou **numeric**, a precisão e a escala padrão serão usadas.  
   
--   Se a coluna de origem não for **decimal** ou **numeric**, serão usadas a precisão e escala da coluna de origem.  
+-   Se a coluna de origem for **decimal** ou **numeric**, a precisão e a escala da coluna de origem serão usadas.  
   
  *cbIndicator*  
  É o comprimento, em bytes, de um indicador de comprimento/nulo nos dados de coluna. Os valores de comprimento de indicador válidos são 0 (quando nenhum indicador é usado), 1, 2, 4 ou 8.  
@@ -151,7 +151,7 @@ idxServerCol
   
  Chamar **bcp_colfmt** mais de uma vez para qualquer coluna do arquivo de usuário gera um erro.  
   
- Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados da coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
+ Você não precisa copiar todos os dados de um arquivo de usuário para a tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ignorar uma coluna, especifique o formato dos dados para a coluna, definindo o parâmetro *idxServerCol* como 0. Se desejar ignorar uma coluna, especifique seu tipo.  
   
  A função [bcp_writefmt](bcp-writefmt.md) pode ser usada para persistir a especificação de formato.  
   

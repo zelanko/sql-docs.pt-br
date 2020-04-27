@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065995"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Conversões, Designer de Dimensão) (Analysis Services - Dados Multidimensionais)
@@ -34,25 +34,25 @@ ms.locfileid: "66065995"
  Clique para excluir a conversão selecionada.  
   
 > [!NOTE]  
->  A opção será habilitada apenas se uma célula da conversão a ser excluída tiver que ser selecionada na grade **Detalhes de Conversão** .  
+>   A opção é habilitada apenas se uma célula da conversão a ser excluída tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
  **Nova coluna de legendas**  
  Clique para exibir a caixa de diálogo **Conversão de Dados de Atributo** e definir uma nova coluna de legendas quando você editar um atributo na grade **Detalhes de Conversão** . Para habilitar esta opção, é preciso selecionar uma célula na coluna de conversão de um atributo na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
->  A opção será habilitada apenas se uma célula da coluna de conversão de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
+>   A opção é habilitada apenas se uma célula da coluna de conversão de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
  **Editar coluna de legendas**  
  Clique para exibir a caixa de diálogo **Conversão de Dados de Atributo** e editar uma coluna de legendas existente quando você editar um atributo na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
->  A opção só será habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
+>   A opção só é habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
  **Excluir coluna de legendas**  
  Clique para excluir a coluna de legendas do atributo selecionado na grade **Detalhes de Conversão** .  
   
 > [!NOTE]  
->  A opção só será habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
+>   A opção só é habilitada se uma célula em uma coluna de conversão que contém a coluna de legendas de um atributo tiver que ser selecionada na grade **Detalhes de Conversão** .  
   
  **Mostrar todos os atributos**  
  Clique para alternar a exibição de todos os atributos definidos para a dimensão selecionada, inclusive atributos para os quais as hierarquias de atributo estão desabilitadas.  

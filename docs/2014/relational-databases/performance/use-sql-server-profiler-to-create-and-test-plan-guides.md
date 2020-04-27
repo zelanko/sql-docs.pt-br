@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150485"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
-  Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide** . Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  
+   Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide**. Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Capturando texto de consulta usando o SQL Server Profiler  
  Se você executar uma consulta e capturar o texto exatamente como foi submetido ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], será possível criar um guia de plano do tipo SQL ou TEMPLATE que corresponderá exatamente ao texto de consulta. Isto certifica que o guia de plano seja usado pelo otimizador de consulta.  
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra o arquivo de texto em lote no Bloco de Notas e copie o texto no buffer copiar e colar.  
   
-8.  Crie o guia de plano e cole o texto copiado dentro das aspas (**''**) especificadas para o argumento **@stmt** . Você deve escapar entre aspas simples no **@stmt** argumento, precedendo-as com outra aspa simples. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**" **.**  
+8.  Crie o guia de plano e cole o texto copiado dentro das aspas (**''**) especificadas para o argumento **@stmt** . Você deve escapar entre aspas simples no **@stmt** argumento, precedendo-as com outra aspa simples. Tenha cuidado para não adicionar ou remover nenhum outro caractere quando você inserir essas aspas individuais. Por exemplo, a literal de data **'** 20000101 **'** deve ser delimitada como **20000101**"**.**  
   
  Aqui está o guia de plano:  
   
@@ -94,7 +94,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  O evento **Showplan XML for Query Compile** não pode ser usado. **PlanGuideDB** não existe nesse evento.  
   
-5.  Se o guia de plano for do tipo OBJECT ou SQL, verifique se o evento **Plano de Execução XML** contém os atributos **PlanGuideDB** e **PlanGuideName** para o guia de plano que você espera que corresponda à consulta. Ou, no caso de um guia de plano de TEMPLATE, verifique se o evento **Plano de Execução XML** contém os atributos **TemplatePlanGuideDB** e **TemplatePlanGuideName** para o guia de plano esperada. Isto verifica se o guia de plano está funcionando. Esses atributos estão contidos no elemento do plano **\<StmtSimple>** .  
+5.  Se o guia de plano for do tipo OBJECT ou SQL, verifique se o evento **Plano de Execução XML** contém os atributos **PlanGuideDB** e **PlanGuideName** para o guia de plano que você espera que corresponda à consulta. Ou, no caso de um guia de plano de TEMPLATE, verifique se o evento **Plano de Execução XML** contém os atributos **TemplatePlanGuideDB** e **TemplatePlanGuideName** para o guia de plano esperada. Isto verifica se o guia de plano está funcionando. Esses atributos estão contidos no elemento ** \<StmtSimple>** do plano.  
   
 ## <a name="see-also"></a>Consulte Também  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  

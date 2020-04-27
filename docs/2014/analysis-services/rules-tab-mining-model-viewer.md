@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070097"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Guia Regras (Visualizador do Modelo de Mineração)
@@ -27,7 +27,7 @@ ms.locfileid: "66070097"
 > [!WARNING]  
 >  Por padrão, somente as regras que estão acima do limite de probabilidade definidas em **Probabilidade mínima** são exibidas no visualizador. Você não pode diminuir este valor usando o visualizador, porque o limite de probabilidade para saída de regra é determinado quando o modelo é criado. Para obter mais informações, consulte [Referência técnica do algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Para obter mais informações:** [algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [procurar um modelo usando o Visualizador de regras de associação da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obter mais informações:** [Algoritmo de associação da Microsoft](data-mining/microsoft-association-algorithm.md), [Procurar um modelo usando o Visualizador de regras da Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opções  
  **Atualizar conteúdo do visualizador**  

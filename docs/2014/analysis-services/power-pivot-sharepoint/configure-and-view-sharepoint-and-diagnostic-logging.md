@@ -11,32 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071851"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar e exibir arquivos de log do SharePoint e log de diagnóstico (PowerPivot para SharePoint)
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em arquivos de log do SharePoint. Use as informações deste tópico para configurar informações de níveis de log e do arquivo de log de exibição. Você pode controlar quais eventos de servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] são registrados em log no arquivo. Você também pode controlar a severidade de mensagens que são registradas em log. Para obter mais informações, consulte [Configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Neste tópico:  
   
--   [Local do arquivo de log](#bkmk_filelocation)  
+-   [Local do Arquivo de Log](#bkmk_filelocation)  
   
--   [Modificar níveis de log de diagnóstico para categorias de evento individuais](#bkmk_modifyloglevels)  
+-   [Modifique os níveis de registro em log de diagnóstico para categorias de evento individuais](#bkmk_modifyloglevels)  
   
 -   [Como exibir arquivos de log do SharePoint](#bkmk_how2viewlogfiles)  
   
-##  <a name="bkmk_filelocation"></a>Local do arquivo de log  
+##  <a name="log-file-location"></a><a name="bkmk_filelocation"></a>Local do arquivo de log  
  Por padrão, os arquivos de log do SharePoint são salvos no seguinte local:  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  A pasta LOGS contém arquivos de log (`.log`), arquivos de dados (`.txt`) e arquivos de uso (`.usage`). A convenção de nomenclatura de arquivo para um log de rastreamento do SharePoint é o nome de servidor seguido por um carimbo de data/hora. São criados logs de rastreamento de SharePoint em intervalos normais e sempre que há um IISRESET. É comum que haja muitos logs de rastreamento dentro de um período de 24 horas.  
   
-##  <a name="bkmk_modifyloglevels"></a>Modificar níveis de log de diagnóstico para categorias de evento individuais  
+##  <a name="modify-diagnostic-logging-levels-for-individual-event-categories"></a><a name="bkmk_modifyloglevels"></a>Modificar níveis de log de diagnóstico para categorias de evento individuais  
  Por padrão, o log ULS dos eventos do PowerPivot é definido em *Meio*. Esta configuração é nova para o SQL Server 2012. Se você atualizou um servidor da versão anterior, o nível de log ainda poderia ser definido como *Detalhado*, o nível padrão no SQL Server 2008 R2. Se você estiver acostumado a revisar os logs ULS para obter informações de uso do servidor do PowerPivot, notará que, como resultado desta alteração, há menos informações sobre operações de servidor do PowerPivot.  
   
  Tirando as exceções, que são do tipo *Alta*, todas as mensagens de PowerPivot entram na categoria Detalhado. Se você quiser entradas de log para operações de servidor rotineiras como conexões, solicitações ou relatório de consulta, deverá alterar o nível de log para Detalhado.  
@@ -51,11 +50,11 @@ ms.locfileid: "66071851"
   
 4.  Expanda a categoria e selecione categorias individuais.  
   
-     **Solicitação de página de aplicativo** Especifica eventos disparados pelo aplicativo de serviço ao [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] localizar um para carregar uma fonte de dados PowerPivot e se comunicar com outros servidores no farm.  
+     A**Solicitação de página de aplicativos** especifica eventos disparados pelo aplicativo de serviço ao localizar um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para carregar uma fonte de dados PowerPivot e comunicar-se com outros servidores no farm.  
   
-     O **processamento de solicitações** Especifica eventos disparados por solicitações de consulta em um banco de dados PowerPivot que é carregado em um servidor no farm.  
+     O**Processamento de solicitação** especifica eventos disparados por solicitações de consulta em relação a um banco de dados do PowerPivot que é carregado em um servidor no farm.  
   
-     O **uso** especifica um evento relacionado à coleta de dados de uso do PowerPivot.  
+     O**Uso** especifica um evento relacionado à coleta de dados de uso do PowerPivot.  
   
 5.  Em Evento menos crítico a ser relatado no log de eventos, selecione **Nenhum** para desabilitar o log de evento para a categoria, ou **Erro** para limitar o log para apenas erros.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66071851"
   
 9. Clique em **OK**.  
   
-##  <a name="bkmk_how2viewlogfiles"></a>Como exibir arquivos de log do SharePoint  
+##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>Como exibir arquivos de log do SharePoint  
  Arquivos de log são arquivos de texto. Você pode abri-los em qualquer editor de texto. Você também pode usar aplicativos de visualizador de log de terceiros.  
   
 #### <a name="use-a-text-editor"></a>Use o editor de textos  
@@ -88,7 +87,7 @@ ms.locfileid: "66071851"
   
 1.  Vá para [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) ou [Visualizador de log do ULS do SharePoint](https://go.microsoft.com/fwlink/?LinkId=150052) no site da Codeplex.  
   
-2.  Clique na guia **downloads** .  
+2.  Clique na guia **Downloads** .  
   
 3.  Clique no arquivo executável. Será **SharePointLogViewer.exe** ou **Visualizador de ULS 2.0 binário**.  
   
@@ -119,11 +118,11 @@ ms.locfileid: "66071851"
   
 |Processo|Área|Categoria|Nível|Mensagem|Detalhes|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Serviço PowerPivot|Uso|Verbose|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
-|w3wp.exe|Serviço PowerPivot|Front-end da Web|Verbose|Começando a localizar um servidor de aplicativos para a fonte\<de dados =*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
-|w3wp.exe|Serviço PowerPivot|Front-end da Web|Verbose|Localizando o servidor de aplicativos bem-sucedido.|A solicitação foi alocada para um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Serviço PowerPivot|Front-end da Web|Verbose|Solicitação de redirecionamento para \<o> de *origem* do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]PowerPivotdata para o.|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Serviço PowerPivot|Processamento de solicitação|Verbose|Solicitação de redirecionamento para\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
+|w3wp.exe|Serviço PowerPivot|Uso|Detalhado|Não há nenhuma estatística de solicitação atual, nada para registrar em log.|A intervalos predefinidos, o serviço reporta estatísticas de resposta de consulta como um evento de uso para o sistema de coleta de dados de uso. Esta mensagem indica que não havia nenhuma estatística de consulta para reportar.|  
+|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Começando a localizar um servidor de aplicativos para a fonte\<de dados =*caminho*>|Quando ele receber uma solicitação de conexão, o serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifica um [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponível para gerenciar a solicitação. Se houver somente um servidor no farm, o servidor local aceitará a solicitação em todos os casos.|  
+|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Localizando o servidor de aplicativos bem-sucedido.|A solicitação foi alocada para um aplicativo de serviço do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|w3wp.exe|Serviço PowerPivot|Front-end da Web|Detalhado|Solicitação de redirecionamento para \<o> de *origem* do [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]PowerPivotdata para o.|A solicitação foi encaminhada para o [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Serviço PowerPivot|Processamento de solicitação|Detalhado|Solicitação de redirecionamento para\<*usuário do SharePoint*> para o banco de dados|Uma conexão representada para a fonte de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] foi criada em nome do usuário do SharePoint.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Coleta de dados de uso do PowerPivot](power-pivot-usage-data-collection.md)   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9284073781a91b21d588684b9071e6179a815613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075122"
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Documentar e gerar scripts de um banco de dados do Analysis Services
@@ -40,6 +40,6 @@ ms.locfileid: "66075122"
 ## <a name="see-also"></a>Consulte Também  
  [Modificar ou excluir um banco de dados Analysis Services](modify-or-delete-an-analysis-services-database.md)   
  [ALTER Element &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)   
- [Criar elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)  
+ [Elemento Create &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)  
   
   

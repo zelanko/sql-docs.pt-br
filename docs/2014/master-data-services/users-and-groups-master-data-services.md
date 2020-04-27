@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478622"
 ---
 # <a name="users-and-groups-master-data-services"></a>Usuários e grupos (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65478622"
   
  Para executar qualquer ação na área funcional **Explorer** da interface do usuário, o grupo ou usuário deverá ter recebido acesso à área funcional **Explorer** e permissão aos objetos de modelo.  
   
- Se um usuário ou grupo precisar de acesso a outras áreas funcionais, o usuário ou grupo deverá ser um administrador. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Se um usuário ou grupo precisar de acesso a outras áreas funcionais, o usuário ou grupo deverá ser um administrador. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ## <a name="best-practice"></a>Melhor prática  
  Para simplificar a administração, crie grupos e atribua cada permissão de grupo para áreas funcionais e objetos modelo. Em seguida, você pode adicionar e remover usuários dos grupos sem acessar a interface do usuário do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
@@ -45,6 +45,6 @@ ms.locfileid: "65478622"
  [Adicionar um usuário &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [Adicionar um grupo &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [Excluir usuários ou grupos &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [Testar as permissões de um usuário &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [Testar permissões de um usuário &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

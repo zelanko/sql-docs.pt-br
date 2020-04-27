@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891669"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiando o pacote da Lição 1
+# <a name="step-1-copying-the-lesson-1-package"></a>Etapa 1: Copiar o pacote da Lição 1
   Nesta tarefa, você criará uma cópia do pacote Lesson 1.dtsx criado na Lição 1. Se você não completou a lição 1, poderá adicionar o pacote completo da lição 1 incluído com o tutorial do projeto e, então, copiar esse pacote. Você usará essa cópia nova durante toda a Lição 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para criar o pacote da lição 2  
@@ -28,7 +28,7 @@ ms.locfileid: "62891669"
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Lesson 1.dtsx**e clique em **Copiar**.  
   
-4.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS**e clique em **Colar**.  
+4.  Em Gerenciador de Soluções, clique com o botão direito do mouse em **pacotes SSIS**e clique em **colar**.  
   
      Por padrão, o pacote copiado receberá o nome de Lesson 2.dtsx.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62891669"
   
 1.  Abra as Ferramentas de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e abra o projeto do Tutorial do SSIS.  
   
-2.  No Gerenciador de Soluções, clique com o botão direito do mouse em **Pacotes SSIS**e clique em **Adicionar Pacote Existente**.  
+2.  Em Gerenciador de Soluções, clique com o botão direito do mouse em **pacotes SSIS**e clique em **Adicionar pacote existente**.  
   
-3.  Na caixa de diálogo **Adicionar Cópia do Pacote Existente** , em **Local do pacote**, selecione **Sistema de arquivos**.  
+3.  Na caixa de diálogo **Adicionar cópia do pacote existente** , em **local do pacote**, selecione **sistema de arquivos**.  
   
 4.  Clique no botão Procurar **(…)**, navegue até **Lesson 1.dtsx** no computador e clique em **Abrir**.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "62891669"
   
     1.  Navegue para os [Exemplos de Produtos do Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Clique na guia **DOWNLOADS** .  
+    2.  Clique na guia **downloads** .  
   
     3.  Clique no arquivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
 5.  Copie e cole o pacote da Lição 1, conforme descrito nas etapas 3 a 8 do procedimento anterior.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
- [Etapa 2: adicionando e configurando o contêiner Loop Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [Etapa 2: Adicionar e configurar o contêiner Loop Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

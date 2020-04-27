@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891398"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionando redirecionamento de fluxo de erro
+# <a name="step-3-adding-error-flow-redirection"></a>Etapa 3: Adicionar redirecionamento de fluxo de erro
   Conforme mostrado na tarefa anterior, a transformação Pesquisa de Códigos de Moeda não pode gerar uma correspondência quando a transformação tenta processar o arquivo simples de amostra corrompido que produziu um erro. Como a transformação usa as configurações padrão da saída de erro, qualquer erro faz a transformação falhar. Quando a transformação falha, o resto do pacote também falha.  
   
  Em vez de permitir a falha da transformação, você pode configurar o componente para redirecionar a linha com falha para outro caminho de processamento usando a saída de erro. O uso de um caminho de tratamento separado de erro permite que você faça várias coisas. Por exemplo, você pode tentar limpar os dados e depois reprocessar a linha com falha. Também é possível salvar a linha com falha junto com informações de erro adicionais para verificação e reprocessamento posteriores.  
   
  Nesta tarefa, você configurará a transformação Pesquisa de Códigos de Moeda para redirecionar linhas com falha para a saída de erro. Na ramificação de erro do fluxo de dados, essas filas serão gravadas em um arquivo.  
   
- Por padrão, as duas colunas extras em [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uma saída de erro, **ErrorCode** e **ErrorColumn**, contêm apenas códigos numéricos que representam um número de erro e a ID da coluna na qual o erro ocorreu. Esses valores numéricos podem ter uso limitado sem a descrição de erro correspondente.  
+ Por padrão as duas colunas extras em uma saída de erro do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , **ErrorCode** e **ErrorColumn**, só contêm códigos numéricos que representam um número de erro e a ID da coluna na qual o erro aconteceu. Esses valores numéricos podem ter uso limitado sem a descrição de erro correspondente.  
   
  Para aumentar a utilidade da saída de erro, antes de o pacote gravar as linhas com falha no arquivo, você usará um componente Script para acessar a API do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e obter uma descrição do erro.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62891398"
   
 10. Na página **script** , verifique se a `LocaleID` Propriedade está definida como **Inglês (Estados Unidos.**  
   
-11. Clique em **Editar Script** para abrir o VSTA ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications). No método `Input0_ProcessInputRow`, digite ou cole o código a seguir.  
+11. Clique em **Editar Script** para abrir o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA (Tools for Applications). No método `Input0_ProcessInputRow`, digite ou cole o código a seguir.  
   
      [Visual Basic]  
   

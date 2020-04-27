@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050922"
 ---
 # <a name="spcachemiss-event-class"></a>Classe de evento SP:CacheMiss
-  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP: CacheMiss ocorrer com frequência, ela poderá indicar que mais memória deve ser disponibilizada para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o, aumentando assim o tamanho do cache de procedimento.  
+  A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP:CacheMiss ocorrer com muita frequência, isso poderá indicar que mais memória deverá ser disponibilizada para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aumentando o tamanho do cache de procedimento.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Colunas de dados da classe de evento SP:CacheMiss  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63050922"
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Classe de evento SP:CacheInsert](sp-cacheinsert-event-class.md)  
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [classe de evento SP:CacheInsert](sp-cacheinsert-event-class.md)  
   
   

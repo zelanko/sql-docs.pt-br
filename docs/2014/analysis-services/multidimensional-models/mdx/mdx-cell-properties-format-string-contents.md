@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074472"
 ---
 # <a name="format_string-contents-mdx"></a>Conteúdo de FORMAT_STRING (MDX)
@@ -36,7 +36,7 @@ ms.locfileid: "66074472"
   
  Os caracteres descritos na tabela a seguir podem aparecer na cadeia de caracteres de formato das cadeias de caracteres.  
   
-|Character|DESCRIÇÃO|  
+|Caractere|Descrição|  
 |---------------|-----------------|  
 |@|Representa um espaço reservado de caractere que exibe um caractere ou um espaço. Se a cadeia de caracteres tiver um caractere na posição onde aparece um sinal arroba (@) na cadeia de caracteres de formato, a cadeia de caracteres formatada exibirá o caractere. Caso contrário, a cadeia de caracteres formatada exibirá um espaço naquela posição. Os espaços reservados são preenchidos da direita para a esquerda, a menos que haja um ponto de exclamação (!) na cadeia de caracteres de formato.|  
 |&|Representa um espaço reservado de caractere que exibe um caractere ou nada. Se a cadeia de caracteres tiver um caractere na posição onde aparece um sinal E comercial (&), a cadeia de caracteres formatada exibirá o caractere. Caso contrário, a cadeia de caracteres formatada não exibirá nada. Os espaços reservados são preenchidos da direita para a esquerda, a menos que haja um ponto de exclamação (!) na cadeia de caracteres de formato.|  
@@ -68,17 +68,17 @@ ms.locfileid: "66074472"
   
  A tabela a seguir identifica os caracteres que podem aparecer na cadeia de caracteres de formato para formatos numéricos.  
   
-|Character|DESCRIÇÃO|  
+|Caractere|Descrição|  
 |---------------|-----------------|  
 |Nenhum|Exibe o número sem qualquer formatação.|  
 |**0**|Representa um espaço reservado de dígito que exibe um dígito ou um zero (0).<br /><br /> Se o número tiver um dígito na posição onde aparece um zero na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado exibirá um zero nessa posição.<br /><br /> Se o número tiver menos dígitos que zeros (em qualquer lado da divisão decimal) na cadeia de caracteres de formato, o valor formatado exibirá zeros à esquerda e à direita.<br /><br /> Se o número tiver mais dígitos à direita do separador decimal que zeros à direita do separador decimal na expressão de formato, o valor formatado arredondará o número para o mesmo número de casas decimais que a quantidade de zeros.<br /><br /> Se o número tiver mais dígitos à esquerda do separador decimal que zeros à esquerda do separador decimal na expressão de formato, o valor formatado exibirá os dígitos adicionais sem alteração.|  
 |**#**|Representa um espaço reservado de dígito que exibe um dígito ou nada.<br /><br /> Se a expressão tiver um dígito na posição em que o sinal numérico (**#**) aparece na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado não exibirá nada naquela posição.<br /><br /> O espaço reservado de**#** sinal numérico () funciona como o espaço reservado zero (**0**) dígito, exceto que os zeros à esquerda e à direita não serão exibidos se o número tiver o mesmo **#** ou menos dígitos do que caracteres em ambos os lados do separador decimal na expressão de formato.|  
 |**.**|Representa um espaço reservado decimal que determina quantos dígitos serão exibidos à esquerda e à direita do separador decimal.<br /><br /> Se a expressão de formato contiver apenas caracteres**#** de sinal numérico () à esquerda do ponto (**.**), os números menores que 1 começarão com um separador decimal. Para exibir um zero à esquerda no caso de números fracionais, use zero (0) como o primeiro espaço reservado para dígito à esquerda do separador decimal.<br /><br /> O caractere real usado como espaço reservado decimal na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, a vírgula é usada como o separador decimal.|  
 |**%**|Representa um espaço reservado de porcentagem. A expressão é multiplicada por 100. O caractere de porcentagem**%**() é inserido na posição em que a porcentagem aparece na cadeia de caracteres de formato.|  
-|**,**|Representa um separador de milhar que separa os milhares das centenas em um número com quatro ou mais casas à esquerda do separador decimal.<br /><br /> O uso padrão do separador de milhar será especificado se o formato contiver um separador de milhar encerrado em espaços reservados para dígitos (**0** ou **#**).<br /><br /> Dois separadores de milhar adjacentes, ou um separador de milhar imediatamente à esquerda do separador decimal (independentemente de um decimal ter sido especificado), significa "escalar o número dividindo-o por 1000, arredondando se necessário". Por exemplo, você pode usar a cadeia de caracteres de formato "**##0**", para representar 100 milhões como 100. Números menores que 1 milhão são exibido como 0. Dois separadores de milhar adjacentes em uma posição que não seja imediatamente à esquerda do separador decimal são tratados como se estivessem especificando o uso de um separador de milhar.<br /><br /> O caractere real usado como separador de milhar na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, um ponto é usado como separador de milhar.|  
+|**,**|Representa um separador de milhar que separa os milhares das centenas em um número com quatro ou mais casas à esquerda do separador decimal.<br /><br /> O uso padrão do separador de milhar será especificado se o formato contiver um separador de milhar encerrado em espaços reservados para dígitos (**0** ou **#**).<br /><br /> Dois separadores de milhar adjacentes, ou um separador de milhar imediatamente à esquerda do separador decimal (independentemente de um decimal ter sido especificado), significa "escalar o número dividindo-o por 1000, arredondando se necessário". Por exemplo, você pode usar a cadeia de caracteres de formato "**# #0**," para representar 100 milhões como 100. Números menores que 1 milhão são exibido como 0. Dois separadores de milhar adjacentes em uma posição que não seja imediatamente à esquerda do separador decimal são tratados como se estivessem especificando o uso de um separador de milhar.<br /><br /> O caractere real usado como separador de milhar na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, um ponto é usado como separador de milhar.|  
 |**:**|Representa um separador de tempo que separa horas, minutos e segundos quando são formatados valores de tempo.<br /><br /> Observação: em algumas localidades, podem ser usados outros caracteres como separador de tempo.<br /><br /> O caractere real usado como separador de tempo na saída formatada é determinado pelas configurações do sistema do computador.|  
 |**/**|Representa um separador de data que separa dia, mês e ano quando são formatados valores de data.<br /><br /> O caractere real usado como separador de data na saída formatada é determinado pelas configurações do sistema do computador.<br /><br /> Observação: em algumas localidades, podem ser usados outros caracteres como separador de data.|  
-|**E-E + E-e +**|Representa formato científico.<br /><br /> Se a expressão de formato contiver pelo menos um espaço reservado para dígito (**0** ou **#**) à direita de **E-**, **E+**, **e-** ou **e+**, o valor formatado será exibo em formato científico e E ou e será inserido entre o número e seu exponente. O número de espaços reservados para dígito determina o número de dígitos do exponente. Use **E-** ou **e-** para incluir um sinal de menos junto a exponentes negativos. Use **E+** ou **e+** para incluir um sinal de menos junto a exponentes negativos e um sinal de mais junto a exponentes positivos.|  
+|**E - E+ e - e+**|Representa formato científico.<br /><br /> Se a expressão de formato contiver pelo menos um espaço reservado para dígito (**0** ou **#**) à direita de **E-**, **E+**, **e-** ou **e+**, o valor formatado será exibo em formato científico e E ou e será inserido entre o número e seu exponente. O número de espaços reservados para dígito determina o número de dígitos do exponente. Use **e-** ou **e-** para incluir um sinal de menos ao lado de expoentes negativos. Use **e +** ou **e +** para incluir um sinal de menos ao lado dos expoentes negativos e um sinal de adição ao lado dos expoentes positivos.|  
 |**- + $ ( )**|Exibe um caractere literal.<br /><br /> Para exibir um caractere diferente de um daqueles listados, coloque uma barra invertida (**\\**) antes do caractere ou coloque o caractere entre aspas duplas (**""**).|  
 |**\\**|Exibe o próximo caractere da cadeia de caracteres de formato.<br /><br /> Para exibir um caractere que tenha um significado especial como um caractere literal, coloque uma barra invertida (**\\**) antes do caractere. A barra invertida não é exibida. Usar uma barra invertida é o mesmo que colocar o próximo caractere entre aspas duplas. Para exibir uma barra invertida, use duas barras invertidas (**\\**). Estes são exemplos de caracteres que não podem ser exibidos como caracteres literais:<br /><br /> Os caracteres de formatação de data e**hora-a,** **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/** e **:**<br /><br /> Os caracteres de formatação numérica-**#**, **0**, **%**, **e**, **e**, **vírgula**e **ponto**<br /><br /> Os caracteres de formatação de cadeia**@** de **&** caracteres **\<**- **>**,,, e **!**|  
 |**ABC**|Exibe a cadeia de caracteres entre aspas duplas (**" "**).<br /><br /> Para incluir uma cadeia de caracteres em formato de um código, use Chr (**34**) para incluir o texto. (O código de caractere para aspas duplas é **34**.)|  
@@ -86,7 +86,7 @@ ms.locfileid: "66074472"
 ### <a name="named-numeric-formats"></a>Formatos numéricos nomeados  
  A tabela a seguir identifica os nomes de formatos numéricos predefinidos:  
   
-|Nome do formato|DESCRIÇÃO|  
+|Nome do formato|Descrição|  
 |-----------------|-----------------|  
 |`General Number`|Exibe o número sem nenhum separador de milhar.|  
 |`Currency`|Exibe o número com um separador de milhar, se apropriado. Exibe dois dígitos à direita do separador decimal. A saída é baseada nas configurações de localidade do sistema.|  
@@ -101,44 +101,44 @@ ms.locfileid: "66074472"
 ## <a name="date-values"></a>Valores de data  
  A tabela a seguir identifica os caracteres que podem aparecer na cadeia de caracteres de formatos de data/hora.  
   
-|Character|DESCRIÇÃO|  
+|Caractere|Descrição|  
 |---------------|-----------------|  
 |**:**|Representa um separador de tempo que separa horas, minutos e segundos quando são formatados valores de tempo.<br /><br /> O caractere real usado como separador de tempo na saída formatada é determinado pelas configurações do sistema do computador.<br /><br /> Observação: em algumas localidades, podem ser usados outros caracteres como separador de tempo.|  
 |**/**|Representa um separador de data que separa dia, mês e ano quando são formatados valores de data.<br /><br /> O caractere real usado como separador de data na saída formatada é determinado pelas configurações do sistema do computador.<br /><br /> Observação: em algumas localidades, outros caracteres podem ser usados para representar o separador de data|  
-|**&**|Exibe a data como **ddddd** e a hora como **ttttt**, nessa ordem.<br /><br /> Exibe as informações da data somente se não houver nenhuma parte fracionária no número de série de data. Exibe as informações da data somente se não houver nenhuma parte com número inteiro.|  
+|**C**|Exibe a data como **ddddd** e a hora como **ttttt**, nessa ordem.<br /><br /> Exibe as informações da data somente se não houver nenhuma parte fracionária no número de série de data. Exibe as informações da data somente se não houver nenhuma parte com número inteiro.|  
 |**3D**|Exibe o dia como um número sem um zero à esquerda (1-31).|  
 |**dd**|Exibe o dia como um número com um zero à esquerda (01-31).|  
-|**DDD**|Exibe o dia como uma abreviação (Sun-SAT).|  
-|**dia**|Exibe o dia como um nome completo (domingo-sábado).|  
+|**ddd**|Exibe o dia como uma abreviação (Sun-SAT).|  
+|**dddd**|Exibe o dia como um nome completo (domingo-sábado).|  
 |**ddddd**|Exibe a data completa (incluindo dia, mês e ano), formatada de acordo com a configuração de formato de data abreviada do seu sistema.<br /><br /> No Microsoft Windows, o formato de data abreviada padrão é **d/m/aa**.|  
 |**dddddd**|Exibe o número sequencial de data (incluindo dia, mês e ano), formatado de acordo com a configuração de formato de data por extenso reconhecida pelo sistema do computador.<br /><br /> No Windows, o formato de data por extenso padrão é **mmm dd, yyyy**.|  
 |**w**|Exibe o dia da semana como um número (de 1 para domingo a 7 para sábado).|  
-|**WW**|Exibe a semana do ano como um número (1-54).|  
+|**ww**|Exibe a semana do ano como um número (1-54).|  
 |**d**|Exibe o mês como um número sem um zero à esquerda (1-12).<br /><br /> Se **m** vier imediatamente após **h** ou **hh**, será exibido o minuto em vez do mês.|  
-|**MM**|Exibe o mês como um número com um zero à esquerda (01-12).<br /><br /> Se **m** vier imediatamente após **h** ou **hh**, será exibido o minuto em vez do mês.|  
+|**mm**|Exibe o mês como um número com um zero à esquerda (01-12).<br /><br /> Se **m** vier imediatamente após **h** ou **hh**, será exibido o minuto em vez do mês.|  
 |**mmm**|Exibe o mês como uma abreviação (Jan-DEC).|  
-|**Mmmm**|Exibe o mês como um nome de mês inteiro (janeiro a dezembro).|  
+|**mmmm**|Exibe o mês como um nome de mês inteiro (janeiro a dezembro).|  
 |**perguntas**|Exibe o trimestre do ano como um número (1-4).|  
 |**Iar**|Exibe o dia do ano como um número (1-366).|  
-|**AA**|Exibe o ano como um número de dois dígitos (00-99).|  
+|**yy**|Exibe o ano como um número de dois dígitos (00-99).|  
 |**yyyy**|Exibe o ano como um número de quatro dígitos (100-9999).|  
 |**t**|Exibe a hora como um número sem zeros à esquerda (0-23).|  
 |**hh**|Exibe a hora como um número com zeros à esquerda (00-23).|  
 |**n**|Exibe o minuto como um número sem zeros à esquerda (0-59).|  
-|**NN**|Exibe o minuto como um número com zeros à esquerda (00-59).|  
+|**nn**|Exibe o minuto como um número com zeros à esquerda (00-59).|  
 |**&**|Exibe o segundo como um número sem zeros à esquerda (0-59).|  
 |**ss**|Exibe o segundo como um número com zeros à esquerda (00-59).|  
-|**t t t**|Exibe a hora como uma hora completa (incluindo hora, minuto e segundo), formatada usando o separador de hora definido pelo formato de tempo por reconhecido pelo sistema do computador.<br /><br /> Um zero à esquerda será exibido se a opção de zero à esquerda estiver selecionada e a hora for anterior a 10:00 no ciclo A.M. ou P.M. ciclo. Por exemplo, 09:59.<br /><br /> No Windows, o formato de hora padrão é **h:mm:ss**.|  
+|**t t t t t**|Exibe a hora como uma hora completa (incluindo hora, minuto e segundo), formatada usando o separador de hora definido pelo formato de tempo por reconhecido pelo sistema do computador.<br /><br /> Um zero à esquerda será exibido se a opção de zero à esquerda estiver selecionada e a hora for anterior a 10:00 no ciclo A.M. ou P.M. ciclo. Por exemplo, 09:59.<br /><br /> No Windows, o formato de hora padrão é **h:mm:ss**.|  
 |**AM/PM**|Exibe **AM** em letras maiúsculas com todas as horas entre meia-noite e meio-dia; exibe **PM** em letras maiúsculas com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.|  
 |**AM/PM**|Exibe **am** em letras minúsculas com todas as horas entre meia-noite e meio-dia; exibe **pm** em letras minúsculas com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.|  
 |**A/P**|Exibe **A** em letras maiúsculas com todas as horas entre meia-noite e meio-dia; exibe **P** em letras maiúsculas com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.|  
 |**a/p**|Exibe **a** em letras minúsculas com todas as horas entre meia-noite e meio-dia; exibe **p** em letras minúsculas com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.|  
-|**AMPM**|Exibe o texto da cadeia de caracteres AM conforme definido pelo sistema do computador com todas as horas entre meia-noite e meio-dia; Exibe o texto da cadeia de caracteres PM conforme definido pelo sistema do computador com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.<br /><br /> **AMPM** pode ser em letras maiúsculas ou minúsculas, mas o caso da cadeia de caracteres exibida corresponde à cadeia de caracteres conforme definido pelas configurações do sistema do computador.<br /><br /> No Windows, o formato padrão é **AM/PM**.|  
+|**AMPM**|Exibe o texto da cadeia de caracteres AM conforme definido pelo sistema do computador com todas as horas entre meia-noite e meio-dia; Exibe o texto da cadeia de caracteres PM conforme definido pelo sistema do computador com todas as horas entre meio-dia e meia-noite.<br /><br /> Observação: usa o relógio de 12 horas.<br /><br /> **AMPM** pode ser em letras maiúsculas ou minúsculas, mas o formato da cadeia de caracteres exibida corresponde à cadeia de caracteres conforme definida pelas configurações do sistema do computador.<br /><br /> No Windows, o formato padrão é **AM/PM**.|  
   
 ### <a name="named-date-formats"></a>Formatos de data nomeados  
  A tabela a seguir identifica os nomes de formato de data e hora predefinidos:  
   
-|Nome do formato|DESCRIÇÃO|  
+|Nome do formato|Descrição|  
 |-----------------|-----------------|  
 |`General Date`|Exibe uma data e/ou hora. Para números reais, exibe uma data e hora, por exemplo, 4/3/93 05:34 PM. Se não houver nenhuma parte fracionária, exibirá só uma data, por exemplo, 4/3/93. Se não houver nenhuma parte inteira, só exibirá uma hora, por exemplo, 05:34 PM. O formato da exibição de data é determinado pelas configurações de sistema.|  
 |`Long Date`|Exibe uma data de acordo com o formato de data por extenso de seu sistema.|  

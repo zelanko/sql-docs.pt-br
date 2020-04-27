@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075535"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
@@ -66,7 +66,7 @@ ms.locfileid: "66075535"
   
  Para cada medida, você pode selecionar um dos tipos de funcionalidade semiaditiva descritos na tabela a seguir.  
   
-|Função semiaditiva|DESCRIÇÃO|  
+|Função semiaditiva|Descrição|  
 |---------------------------|-----------------|  
 |Average of Children|A agregação de um membro é a média de seus filhos.|  
 |ByAccount|O sistema lê o comportamento de semiaditivo especificado para o tipo de conta.|  

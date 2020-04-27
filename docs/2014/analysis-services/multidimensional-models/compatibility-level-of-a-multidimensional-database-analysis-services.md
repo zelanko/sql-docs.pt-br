@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076685"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Definir o nível de compatibilidade de um banco de dados multidimensional (Analysis Services)
@@ -31,7 +31,7 @@ ms.locfileid: "66076685"
   
  Para um banco de dados multidimensional, os valores válidos para a propriedade `CompatibilityLevel` incluem o seguinte:  
   
-|Configuração|DESCRIÇÃO|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |`1050`|Este valor não é visível em script ou em ferramentas, mas ele corresponde a bancos de dados criados no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ou no [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Qualquer banco de dados que não tenha `CompatibilityLevel` definido explicitamente será executado implicitamente no nível `1050`.|  
 |`1100`|Este é o valor padrão para novos bancos de dados criados no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Você também pode especificá-lo para bancos de dados criados em versões anteriores do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para habilitar o uso de recursos com suporte apenas neste nível de compatibilidade (isto é, aumento no armazenamento de cadeia de caracteres para atributos de dimensão ou medidas de contagens distintas que contêm dados de cadeia de caracteres).<br /><br /> Bancos de dados que têm um `CompatibilityLevel` conjunto para `1100` obter uma propriedade adicional, `StringStoresCompatibilityLevel`,, que permite que você escolha o armazenamento de cadeia de caracteres alternativo para partições e dimensões.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66076685"
 > [!WARNING]  
 >  A definição da compatibilidade do banco de dados como um nível mais alto é irreversível. Depois de aumentar o nível de compatibilidade `1100`para o, você deve continuar a executar o banco de dados em servidores mais recentes. Não é possível reverter `1050`para. Você não pode anexar ou restaurar `1100` um banco de dados em uma versão de servidor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]seja anterior a ou.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Os níveis de compatibilidade do banco de dados são apresentados no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Você precisa ter um [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou superior para exibir ou definir o nível de compatibilidade do banco de dados.  
   
  O banco de dados não pode ser um cubo local. Os cubos locais não dão suporte à propriedade `CompatibilityLevel`.  

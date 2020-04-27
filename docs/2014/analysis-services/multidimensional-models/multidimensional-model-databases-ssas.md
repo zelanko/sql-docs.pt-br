@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073517"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
@@ -36,8 +36,7 @@ ms.locfileid: "66073517"
   
 -   Crie um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vazio em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], e se conectar diretamente a esse banco de dados usando o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e criar objetos nele (em vez de fazê-lo em um projeto). Ao trabalhar dessa forma com um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , as alterações feitas nos objetos entrarão em vigor no banco de dados ao qual você está se conectando quando o objeto alterado for salvo.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza a integração com o software de controle do código-fonte para que vários desenvolvedores possam trabalhar ao mesmo tempo com objetos diferentes em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O desenvolvedor também pode interagir diretamente com um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , em vez de fazê-lo através de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas corre o risco de os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ficarem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação. Depois da implantação, use o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para administrar o banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Também é possível fazer determinadas alterações no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como em partições e funções, que também podem fazer com os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fiquem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza a integração com o software de controle do código-fonte para que vários desenvolvedores possam trabalhar ao mesmo tempo com objetos diferentes em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O desenvolvedor também pode interagir diretamente com um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , em vez de fazê-lo através de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas corre o risco de os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ficarem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação. Depois da implantação, use o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para administrar o banco de dados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Também é possível fazer determinadas alterações no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como em partições e funções, que também podem fazer com os objetos do banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fiquem fora de sincronia com o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que foi usado nessa implantação.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Anexar e desanexar Bancos de Dados do Analysis Services](attach-and-detach-analysis-services-databases.md)  
@@ -50,15 +49,15 @@ ms.locfileid: "66073517"
   
  [Mover um Banco de Dados do Analysis Services](move-an-analysis-services-database.md)  
   
- [Renomear um banco de dados multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Renomear um bancos de dados multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
  [Definir o nível de compatibilidade de um banco de dados multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Definir propriedades de banco de dados multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Definir as propriedades de banco de dados multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Sincronizar bancos de dados do Analysis Services](synchronize-analysis-services-databases.md)  
   
- [Alternar um banco de dados Analysis Services entre os modos ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Conectar-se no modo online a um banco de dados Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   

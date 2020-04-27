@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021694"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Informações da Publicação, Tokens de Rastreamento (publicação transacional, SQL Server 2005 e versões posteriores)
@@ -67,11 +67,11 @@ ms.locfileid: "63021694"
  O tempo decorrido entre a confirmação de uma transação no Publicador e a confirmação da transação correspondente no Assinante. Isso representa a latência completa do sistema de replicação para esse Assinante neste momento. Um valor **Pendente** indica que o token ainda não alcançou o Assinante.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Iniciar e interromper um agente de replicação &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Iniciar e parar um agente de replicação &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
- [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Medir a latência e validar conexões para replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)   
+ [Monitorando a replicação](monitoring-replication.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)  
   
   

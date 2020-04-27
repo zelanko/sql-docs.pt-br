@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079054"
 ---
 # <a name="defining-a-cube"></a>Definindo um cubo
@@ -34,27 +34,27 @@ ms.locfileid: "66079054"
   
      O assistente examina as tabelas e sugere **InternetSales** como uma tabela do grupo de medidas. As tabelas do grupo de medidas, também denominadas tabelas de fatos, contêm medidas que lhe interessam; por exemplo, o número de unidades vendidas.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
 7.  Na página **Selecionar Medidas** , examine as medidas selecionadas no grupo de medidas **Vendas pela Internet** e desmarque as caixas de seleção das seguintes medidas:  
   
-    -   **Chave de promoção**  
+    -   **Chave da Promoção**  
   
-    -   **Chave de moeda**  
+    -   **Chave da Moeda**  
   
-    -   **Chave de região de vendas**  
+    -   **Chave da Região de Vendas**  
   
-    -   **Número de revisão**  
+    -   **Número de Revisão**  
   
      Por padrão, o assistente seleciona como medidas todas as colunas numéricas da tabela de fatos que não estão vinculadas a dimensões. Porém, essas quatro colunas não são medidas reais. As três primeiras são valores de chave que vinculam a tabela de fatos às tabelas de dimensão que não são usadas na versão inicial deste cubo.  
   
-8.  Clique em **Próximo**.  
+8.  Clique em **Avançar**.  
   
 9. Na página **Selecionar Dimensões Existentes** , verifique se a dimensão **Data** criada anteriormente está selecionada e clique em **Avançar**.  
   
 10. Na página **Selecionar Novas Dimensões** , selecione as novas dimensões que serão criadas. Para fazer isso, verifique se as caixas de seleção **Cliente**, **Geografia**e **Produto** estão marcadas e desmarque a caixa de seleção **InternetSales** .  
   
-11. Clique em **Próximo**.  
+11. Clique em **Avançar**.  
   
 12. Na página **concluindo o assistente** , altere o nome do cubo para `Analysis Services Tutorial`. No painel Visualização, você pode ver o grupo de medidas **InternetSales** e suas medidas. É possível ver também as dimensões **Data**, **Cliente** e **Produto** .  
   
