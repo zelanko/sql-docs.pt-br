@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726112"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensões de personalização do Analysis Services
@@ -78,14 +78,11 @@ ms.locfileid: "62726112"
   
  **Propriedades**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, um valor de cadeia de caracteres somente leitura que representa a ID de sessão da conexão atual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, um valor de cadeia de caracteres somente leitura que representa a ID de sessão da conexão atual.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, uma referência somente leitura para a cultura de cliente associada à sessão atual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, uma referência somente leitura para a cultura de cliente associada à sessão atual.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, uma referência somente leitura para a interface de identidade que representa o usuário atual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, uma referência somente leitura para a interface de identidade que representa o usuário atual.  
   
  **Eventos**  
   
@@ -96,22 +93,18 @@ ms.locfileid: "62726112"
 #### <a name="new-properties-in-the-context-class"></a>Novas propriedades na classe Context  
  A classe <xref:Microsoft.AnalysisServices.AdomdServer.Context> tem duas propriedades novas:  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, uma referência somente leitura para o novo objeto de servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, uma referência somente leitura para o novo objeto de servidor.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, uma referência somente leitura para o novo objeto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, uma referência somente leitura para o novo objeto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
   
 #### <a name="new-server-class"></a>Nova classe Server  
  A classe <xref:Microsoft.AnalysisServices.AdomdServer.Server> é nova e expõe várias extensões de personalização por propriedades e eventos de classe.  
   
  **Propriedades**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, um valor de cadeia de caracteres somente leitura que representa o nome do servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, um valor de cadeia de caracteres somente leitura que representa o nome do servidor.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, uma referência somente leitura para a cultura global associada ao servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, uma referência somente leitura para a cultura global associada ao servidor.  
   
  **Eventos**  
   

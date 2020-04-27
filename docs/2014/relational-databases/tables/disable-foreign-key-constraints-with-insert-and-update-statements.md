@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62760997"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE
@@ -40,17 +40,17 @@ ms.locfileid: "62760997"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Depois de desabilitar essas restrições, as inserções ou atualizações futuras na coluna não serão validadas em relação às condições de restrição.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62760997"
   
 4.  Clique em **fechar**  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Para desabilitar uma restrição de chave estrangeira para instruções INSERT e UPDATE  
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735870"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Método SetCurrentCertificate (classe ServerSettings)
@@ -43,9 +43,9 @@ SHA
  *objeto*  
  Um objeto [ServerSettings Class] ServerSettings-class.md) que representa a configuração do servidor em uma instância [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*SHA*|Um valor da cadeia de caracteres que especifica o certificado de segurança atual.|  
   

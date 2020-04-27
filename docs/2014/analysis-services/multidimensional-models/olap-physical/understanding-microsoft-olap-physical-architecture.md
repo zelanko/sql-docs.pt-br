@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62724801"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>Arquitetura física (Analysis Services – Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "62724801"
 ## <a name="in-this-section"></a>Nesta seção  
  Os tópicos a seguir fornecem mais informações sobre a arquitetura de uma solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)|Descreve os componentes de um servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |[Cubos locais &#40;Analysis Services-dados multidimensionais&#41;](local-cubes-analysis-services-multidimensional-data.md)|Descreve como os cubos autônomos são implementados e o escopo dessa implementação na solução do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  

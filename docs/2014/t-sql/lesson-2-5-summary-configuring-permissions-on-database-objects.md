@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62642717"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>resumo: configurando permissões em objetos de banco de dados
@@ -25,6 +25,6 @@ ms.locfileid: "62642717"
  Uma exibição é uma única instrução SELECT e tem a aparência de uma tabela para o usuário. Um procedimento armazenado consiste em uma ou mais instruções [!INCLUDE[tsql](../includes/tsql-md.md)] executadas como um lote.  
   
 ## <a name="next-lesson-in-tutorial"></a>Próxima lição no tutorial  
- [Lição 3: excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
+ [Lição 3: Excluindo objetos de banco de dados](lesson-3-1-deleting-database-objects.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691479"
 ---
 # <a name="server-public-permissions"></a>Permissões públicas de servidor
@@ -26,7 +26,7 @@ ms.locfileid: "62691479"
  Não conceda permissões de servidor à função de servidor público.  
   
 > [!IMPORTANT]  
->  Após a conclusão da instalação **** , a função `CONNECT` pública tem permissão em todos os pontos de extremidade, exceto na **conexão de administrador dedicada**. Isso é normal e não deve ser alterado. (O acesso é controlado pela permissão `CONNECT SQL`, que é concedida automaticamente quando novos logons são criados.)  
+>  Após a conclusão da instalação **PUBLIC** , a função `CONNECT` pública tem permissão em todos os pontos de extremidade, exceto na **conexão de administrador dedicada**. Isso é normal e não deve ser alterado. (O acesso é controlado pela permissão `CONNECT SQL`, que é concedida automaticamente quando novos logons são criados.)  
   
 ### <a name="for-more-information"></a>Para obter mais informações  
  [Protegendo o SQL Server](../security/securing-sql-server.md)  

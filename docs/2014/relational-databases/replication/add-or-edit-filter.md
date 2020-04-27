@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676890"
 ---
 # <a name="add-or-edit-filter"></a>Adicionar ou Editar Filtro
-  As caixas de diálogo **Adicionar filtro** e **Editar Filtro** permitem adicionar e Editar filtros de linha estáticos e filtros de linha com parâmetros.  
+  As caixas de diálogo **Adicionar Filtro** e **Editar Filtro** permitem adicionar e editar filtros de linhas estáticos e filtros de linhas com parâmetros.  
   
 > [!NOTE]  
 >  Editar um filtro em uma publicação existente requer um novo instantâneo para a publicação. Se uma publicação tiver assinaturas, as assinaturas deverão ser reiniciadas. Para obter mais informações sobre alterações de propriedades, consulte [Alterar propriedades da publicação e do artigo](publish/change-publication-and-article-properties.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "62676890"
 ## <a name="options"></a>Opções  
  Essa caixa de diálogo envolve um processo de duas etapas para publicações transacional e de instantâneo e um processo de três etapas para publicações de mesclagem. Todo tipo de publicação requer que você selecione uma tabela a ser filtrada e uma ou mais colunas a serem incluídas no filtro; o filtro é definido como uma cláusula WHERE padrão.  
   
-1.  **Selecionar a tabela a ser filtrada**  
+1.  **Selecione a tabela a ser filtrada**  
   
      Se você estiver editando um filtro existente, a seleção da tabela não poderá ser alterada. Se você estiver adicionando um novo filtro , selecione uma tabela na caixa de listagem suspensa. Tabelas só aparecem na caixa de listagem se foram selecionadas na página **Artigos** e ainda não têm um filtro de linha. Se uma tabela tiver um filtro de linha e você quer definir um novo:  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62676890"
     > [!IMPORTANT]  
     >  Por motivos de desempenho, recomendamos que não sejam aplicadas funções a nomes de colunas em cláusulas de filtros de linha com parâmetros, como `LEFT([MyColumn]) = SUSER_SNAME()`. Se você usar HOST_NAME em uma cláusula de filtro e substituir o valor HOST_NAME, talvez precise converter tipos de dados usando CONVERT. Para obter mais informações sobre práticas recomendadas para esse caso, consulte a seção "Substituindo o valor de HOST_NAME()" no tópico [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
-3.  **Especificar quantas assinaturas receberão dados desta tabela**  
+3.  **Especifique quantas assinaturas receberão dados desta tabela**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores somente; somente replicação de mesclagem. Replicação de mesclagem permite especificar o tipo de partição que melhor combina com seus dados e aplicativo. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem definirá a opção de partições não sobrepostas. Partições não sobrepostas funcionam com partições pré-computadas para melhorar o desempenho, com as partições não sobrepostas minimizando o custo de carregamento associado a partições pré-computadas. O benefício de desempenho de partições que não se sobrepõem é mais notável quando os filtros com parâmetros e de junção usados são mais complexos. Se você selecionar essa opção, deve assegurar que os dados sejam particionados de forma tal que uma linha não possa ser replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+     Somente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores; somente replicação de mesclagem. Replicação de mesclagem permite especificar o tipo de partição que melhor combina com seus dados e aplicativo. Se você selecionar **Uma linha desta tabela irá para apenas uma assinatura**, a replicação de mesclagem definirá a opção de partições não sobrepostas. Partições não sobrepostas funcionam com partições pré-computadas para melhorar o desempenho, com as partições não sobrepostas minimizando o custo de carregamento associado a partições pré-computadas. O benefício de desempenho de partições que não se sobrepõem é mais notável quando os filtros com parâmetros e de junção usados são mais complexos. Se você selecionar essa opção, deve assegurar que os dados sejam particionados de forma tal que uma linha não possa ser replicada em mais de um Assinante. Para obter mais informações, consulte a seção "Configurando opções de partição" no tópico [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  Depois de adicionar ou editar um filtro, clique em **OK** para salvar as alterações e fechar a caixa de diálogo. O filtro que você especificou é analisado e executado na tabela, na cláusula SELECT. Se a instrução de filtro contiver erros de sintaxe ou outros problemas, você será notificado e poderá editar a instrução de filtro.  
   

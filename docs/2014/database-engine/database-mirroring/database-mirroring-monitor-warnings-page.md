@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755049"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de Espelhamento de Banco de Dados (página Avisos)
   Exibe uma lista somente leitura de avisos com suporte em eventos de espelhamento de banco de dados e dos valores limite de aviso especificados, se houver.  
   
- **Para usar SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
+ **Para usar o SQL Server Management Studio para monitorar o espelhamento de banco de dados**  
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -42,13 +42,13 @@ ms.locfileid: "62755049"
   
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
   
- **Definir limites**  
+ **Definir Limites**  
  Clique neste botão para definir um limite para um aviso em cada um dos parceiros de failover.  
   
  Para obter mais informações, consulte "Comentários", mais adiante neste tópico.  
   
 ## <a name="remarks"></a>Comentários  
- Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **não conectado a** _<SYSTEM_NAME>_ ou **não conectado a** _<SYSTEM_NAME_ **\\** _><instance_name>, dependendo _se a instância é a instância padrão ou uma instância nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
+ Se informações relativas a uma instância de servidor estiverem presentemente indisponíveis, as células da coluna **Limite em** correspondentes serão exibidas em plano de fundo cinza e texto marca d’água. Se o monitor não estiver conectado à instância do servidor, em todas as células a grade exibirá **Não conectado a** _<SYSTEM_NAME>_ ou **Não conectado a** _<SYSTEM_NAME>_ **\\** _<instance_name>_ , dependendo se a instância é padrão ou nomeada. Se o monitor estiver esperando por uma consulta para retornar, a grade exibirá **Aguardando dados…** em todas as células.  
   
  Quando houver informações disponíveis, a célula de cada aviso exibirá um valor limite especificado (e unidade de medida), ou **Não habilitado**.  
   

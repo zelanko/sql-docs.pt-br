@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670572"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar e desabilitar o Change Data Capture (SQL Server)
@@ -165,9 +165,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Controle de alterações de dados &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Controle as alterações de dados &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
- [Trabalhar com dados de alterações &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   
+ [Trabalhar com dados de alteração &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   
  [Administrar e monitorar a captura de dados de alteração &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

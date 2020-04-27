@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702300"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Criando e alterando objetos (XMLA)
@@ -94,7 +94,7 @@ ms.locfileid: "62702300"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir cria uma fonte de dados relacional que [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] faz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referência ao banco de dado de exemplo.  
   
 ### <a name="code"></a>Código  
@@ -119,7 +119,7 @@ ms.locfileid: "62702300"
 </Create>  
 ```  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir altera a fonte de dados relacional criada no exemplo anterior para definir o tempo limite da consulta para a fonte de dados como 30 segundos.  
   
 ### <a name="code"></a>Código  

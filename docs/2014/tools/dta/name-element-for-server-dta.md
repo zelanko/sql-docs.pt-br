@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657260"
 ---
 # <a name="name-element-for-server-dta"></a>Elemento Nome do servidor (DTA)
@@ -37,8 +37,7 @@ ms.locfileid: "62657260"
   
 |Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|
-  `string`, entre 1 e 255 caracteres.|  
+|**Comprimento e tipo de dados**|`string`, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Exigido uma vez por elemento de **Servidor** .|  
   

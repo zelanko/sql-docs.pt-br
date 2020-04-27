@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736359"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
@@ -63,10 +63,10 @@ GO
  A nomeação explícita dos parâmetros e a atribuição dos valores apropriados a cada parâmetro em uma chamada de procedimento permitem o fornecimento dos parâmetros em qualquer ordem. Por exemplo, se o procedimento **my_proc** espera três parâmetros com os nomes **\@first**, **\@second** e **\@third**, os valores passados ao procedimento podem ser atribuídos aos nomes de parâmetros, como: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Se um valor de parâmetro for fornecido no formato ** \@parâmetro =**_valor_, todos os parâmetros subsequentes deverão ser fornecidos dessa maneira. Se os valores de parâmetro não forem passados no formato ** \@Parameter =**_Value_, os valores deverão ser fornecidos na ordem idêntica (da esquerda para a direita), pois os parâmetros são listados na instrução CREATE PROCEDURE.  
+>  Se um valor de parâmetro for fornecido no formato **\@parameter =** _value_, todos os parâmetros subsequentes deverão ser fornecidos dessa maneira. Se os valores de parâmetros não forem passados no formato **\@parameter =** _value_, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) em que os parâmetros serão listados na instrução CREATE PROCEDURE.  
 > 
 > [!WARNING]
->  Qualquer parâmetro passado no formato ** \@Parameter =**_valor_ com o parâmetro grafado incorretamente fará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com que o gere um erro e impeça a execução do procedimento.  
+>  Qualquer parâmetro passado no formato **\@parameter =** _value_, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
   
 ## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados de parâmetros  
  Parâmetros devem ser definidos com um tipo de dados quando são declarados em uma instrução CREATE PROCEDURE. O tipo de dados de um parâmetro determina o tipo e o intervalo dos valores aceitos pelo parâmetro quando o procedimento é chamado. Por exemplo, se você definir um parâmetro com um tipo de dados `tinyint`, somente valores numéricos no intervalo entre 0 e 255 serão aceitos quando passados para esse parâmetro. Um erro será retornado se um procedimento for executado com um valor incompatível com o tipo de dados.  

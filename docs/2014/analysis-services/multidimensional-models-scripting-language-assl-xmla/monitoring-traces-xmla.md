@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62729062"
 ---
 # <a name="monitoring-traces-xmla"></a>Monitorando rastreamentos (XMLA)
@@ -33,7 +33,7 @@ ms.locfileid: "62729062"
   
  O conjunto de linhas contém as colunas listadas na tabela a seguir.  
   
-|Coluna|Tipo de dados|DESCRIÇÃO|  
+|Coluna|Tipo de dados|Descrição|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|A classe de evento do evento recebido pelo rastreamento.|  
 |EventSubclass|Long integer|A subclasse do evento recebido pelo rastreamento.|  
@@ -55,7 +55,7 @@ ms.locfileid: "62729062"
 |NestLevel|Integer|O nível da transação para a qual o evento ocorreu.|  
 |NumSegments|Long integer|O número de segmentos de dados afetados ou acessados pelo comando para o qual o evento ocorreu.|  
 |Severity|Integer|O nível de severidade de uma exceção para o evento. A coluna pode conter um dos seguintes valores:<br /><br /> Valor: 0 = êxito<br /><br /> Valor: 1 = informações<br /><br /> Valor: 2 = aviso<br /><br /> Valor: 3 = erro|  
-|Sucesso|Boolean|Indica se um comando teve êxito ou se falhou.|  
+|Êxito|Boolean|Indica se um comando teve êxito ou se falhou.|  
 |Erro|Long integer|O número do erro do evento, se aplicável.|  
 |ConnectionID|String|O identificador da conexão para a qual o evento ocorreu.|  
 |DatabaseName|String|O nome do banco de dados para o qual o evento ocorreu.|  

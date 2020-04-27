@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638847"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>O que&#39;s New no SQL Server Native Client
@@ -34,7 +34,7 @@ ms.locfileid: "62638847"
   
 -   [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Acessar informações de diagnóstico nos logs de eventos estendidos](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+-   [Acessando informações de diagnóstico no log de eventos estendidos](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
  Além disso, o ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client agora oferece suporte a três recursos que foram adicionados ao ODBC padrão no SDK do Windows 7:  
   
@@ -50,8 +50,7 @@ ms.locfileid: "62638847"
   
 -   Ao chamar `ICommandWithParameters::SetParameterInfo`, o valor passado para o parâmetro *pwszName* deve ser um identificador válido. Para obter mais informações, consulte [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
--   
-  `SQLDescribeParam` agora irá retornar de maneira consistente um valor que esteja de acordo com a especificação de ODBC. Para obter mais informações, consulte [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
+-   `SQLDescribeParam` agora irá retornar de maneira consistente um valor que esteja de acordo com a especificação de ODBC. Para obter mais informações, consulte [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   
 -   [Alteração de comportamento do driver ODBC ao lidar com conversões de caracteres](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   

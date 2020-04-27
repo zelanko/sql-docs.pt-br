@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664081"
 ---
 # <a name="brokercorrupted-message-event-class"></a>classe de evento Broker:Corrupted Message
@@ -47,10 +47,10 @@ ms.locfileid: "62664081"
 |**ObjectName**|**nvarchar**|O nome do serviço do outro lado da conversa e a cadeia de caracteres de conexão que o banco de dados remoto usou para se conectar a esse banco de dados.|34|Não|  
 |**RoleName**|**nvarchar**|A função do ponto de extremidade que recebe essa mensagem. Um dos seguintes valores:<br /><br /> **iniciador**:<br />                  O ponto de extremidade receptor é o iniciador da conversa.<br /><br /> **destino**:<br />                  O ponto de extremidade receptor é o destino da conversa.|38|Não|  
 |**ServerName**|**nvarchar**|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
-|**Severity**|**int**|A severidade do erro que fez com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartasse a mensagem.|29|Não|  
+|**Severidade**|**int**|A severidade do erro que fez com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descartasse a mensagem.|29|Não|  
 |**SPID**|**int**|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |**StartTime**|**datetime**|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|**Estado**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
+|**State**|**int**|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
 |**TextData**|**ntext**|Descrição do dano detectado.|1|Sim|  
 |**ID da transação**|**bigint**|ID da transação atribuída pelo sistema.|4|Não|  
   

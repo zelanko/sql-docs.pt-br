@@ -23,16 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753428"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
-  O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados e data warehouses. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
+  O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados e data warehouses. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  
   
 ## <a name="what-you-will-learn"></a>O que você aprenderá  
  Este tutorial o ajudará a compreender a apresentação de informações no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e como aproveitar os benefícios dos recursos. Observe que este tutorial se aplica à instalação completa do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] que é incluído em todas as edições de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. A funcionalidade para instalações básicas do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e para instalações do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornecidas com o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é ligeiramente diferente da apresentada neste tutorial.  
@@ -55,8 +53,7 @@ ms.locfileid: "62753428"
   
  Para que você possa usar o tutorial, os itens a seguir devem estar instalados no sistema:  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou uma versão posterior com os bancos de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou uma versão posterior com os bancos de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](http://sqlserversamples.codeplex.com).  
   
 -   Internet Explorer 9.0 ou posterior.  
   

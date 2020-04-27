@@ -26,10 +26,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755251"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
@@ -659,7 +659,7 @@ DROP TABLE Table1;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Gatilhos DML](../../relational-databases/triggers/dml-triggers.md)   
  [Gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [TENTAR... CAPTURAR &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [Criando objetos de banco de dados com o Common Language Runtime &#40;integração de&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

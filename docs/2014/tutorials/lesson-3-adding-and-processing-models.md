@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653694"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Lição 3: Adicionando e processando modelos
@@ -40,6 +40,6 @@ ms.locfileid: "62653694"
  [Lição 4: explorando os modelos de mala direta direcionados &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Adicionar modelos de mineração a uma estrutura &#40;mineração de dados Analysis Services&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Adicionar Modelos de Mineração a uma estrutura &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

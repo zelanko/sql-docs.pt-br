@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655449"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
@@ -29,7 +29,7 @@ ms.locfileid: "62655449"
 ## <a name="traditional-login-and-user-model"></a>Modelo de usuário e logon tradicional  
  No modelo de conexão tradicional, usuários do Windows ou membros de grupos do Windows se conectem ao [!INCLUDE[ssDE](../../includes/ssde-md.md)] fornecendo credenciais de usuário ou grupo autenticadas pelo Windows. Ou a conexão fornece um nome e uma senha e se conecta usando a autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (que é a única opção ao se conectar ao [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Em ambos os casos, o banco de dados mestre deve ter um logon que corresponde às credenciais de conexão. Depois que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] confirmar as credenciais de autenticação do Windows ou autenticar as credenciais de autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a conexão normalmente tenta se conectar a um banco de dados do usuário. Para se conectar a um banco de dados do usuário, o logon deve ser capaz de ser mapeado para (ou seja, associado) um usuário de banco de dados no banco de dados do usuário. A cadeia de conexão também pode especificar a conexão com um banco de dados específico que é opcional em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mas obrigatório em [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- A entidade de segurança importante é que o logon (no banco de dados mestre) e o usuário (no banco de dados do usuário) devem existir e estar relacionados entre si. Isso significa que a conexão com o banco de dados do usuário tem uma dependência no momento do logon no banco de dados mestre, e isso limita a capacidade do banco de dados de ser movido para um host [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente ou servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . E se, por algum motivo, uma conexão com o banco de dados mestre não estiver disponível (por exemplo, um failover estiver em andamento), o tempo geral de conexão aumenta ou a conexão pode atingir o tempo limite. Consequentemente, isso pode reduzir escalabilidade da conexão.  
+ A entidade de segurança importante é que o logon (no banco de dados mestre) e o usuário (no banco de dados do usuário) devem existir e estar relacionados entre si. Isso significa que a conexão com o banco de dados do usuário tem uma dependência no momento do logon no banco de dados mestre, e isso limita a capacidade do banco de dados de ser movido para um host [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente ou servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . E se, por algum motivo, uma conexão com o banco de dados mestre não estiver disponível (por exemplo, um failover está em andamento), o tempo de conexão geral será aumentado ou a conexão poderá atingir o tempo limite. Consequentemente, isso pode reduzir a escalabilidade da conexão.  
   
 ## <a name="contained-database-user-model"></a>Modelo de usuário de banco de dados independente  
  O logon no banco de dados mestre não está presente no modelo de usuário de banco de dados independente. Em vez disso, o processo de autenticação ocorre no banco de dados do usuário e o usuário no banco de dados não tem um logon associado no banco de dados mestre. O modelo de usuário de banco de dados independente dá suporte à autenticação do Windows (em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e à autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para se conectar como um usuário de banco de dados independente, a cadeia de conexão sempre deve conter um parâmetro para o banco de dados do usuário para que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] saiba qual banco de dados é responsável por gerenciar o processo de autenticação. A atividade do usuário de banco de dados independente está limitada ao banco de dados responsável pela autenticação. Portanto, ao se conectar como um usuário de banco de dados independente, a conta de usuário do banco de dados deve ser criada independentemente em cada banco de dados de que o usuário precisará. Para alterar os bancos de dados, os usuários [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devem criar uma nova conexão. Os usuários de bancos de dados independentes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] poderão alterar bancos de dados se um usuário idêntico estiver presente em outro banco de dados.  
@@ -44,12 +44,12 @@ ms.locfileid: "62655449"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Regras de firewall do Windows se aplicam a todas as conexões e têm os mesmos efeitos sobre logons (conexões de modelo tradicional) e usuários de bancos de dados independentes. Para obter mais informações sobre o firewall do Windows, veja [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permite regras de firewall separadas para conexões (logons) em nível de servidor e para conexões de nível de banco de dados (usuários de bancos de dados independentes). Ao se conectar a um banco de dados do usuário, primeiramente as regras de firewall do banco de dados são verificadas. Se não houver nenhuma regra que permita o acesso ao banco de dados, as regras de firewall em nível de servidor serão verificadas, o que requer acesso ao banco de dados mestre do servidor lógico. Regras de firewall em nível de banco de dados combinadas a usuários de banco de dados independente podem eliminar a necessidade de acessar o banco de dados mestre do servidor durante a conexão, resultando assim em uma melhor escalabilidade de conexão.  
   
  Para obter mais informações sobre as regras de firewall do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , veja os seguintes tópicos:  
   
--   [Firewall de banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Firewall do banco de dados SQL do Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
 -   [Como: definir as configurações do firewall (Banco de Dados SQL do Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   

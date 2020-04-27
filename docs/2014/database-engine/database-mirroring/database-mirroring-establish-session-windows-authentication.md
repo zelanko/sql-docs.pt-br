@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755516"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "62755516"
     > [!NOTE]  
     >  A forma de autenticação usada para o espelhamento de banco de dados por uma instância do servidor é uma propriedade do ponto de extremidade de espelhamento de banco de dados. Dois tipos de segurança de transporte estão disponíveis para o espelhamento de banco de dados: autenticação do Windows ou autenticação com certificado. Para obter mais informações, consulte [segurança de transporte para espelhamento de banco de dados e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância do servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você poderá atribuir a função de parceiro ao ponto de extremidade (ROLE **=** PARTNER). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
+     Em cada servidor parceiro, assegure que existe um ponto de extremidade de espelhamento de banco de dados. Independentemente do número de sessões de espelhamento a dar suporte, a instância do servidor só pode ter um ponto de extremidade de espelhamento de banco de dados. Se você pretende usar essa instância de servidor exclusivamente para parceiros em sessões de espelhamento de banco de dados, você pode atribuir a função de parceiro ao**=** ponto de extremidade (parceiro de função). Se você também pretende usar essa instância do servidor exclusivamente para testemunhas em sessões de espelhamento de banco de dados, você poderá definir o papel de parceiro ao ponto de extremidade como ALL.  
   
      Para executar uma instrução SET PARTNER, o STATE dos pontos de extremidade de ambos os parceiros deve ser definido como STARTED.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62755516"
   
      ALTER DATABASE *<database_name>* definir<**=** do parceiro _server_network_address_>  
   
-     onde *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address*>é o endereço de rede do servidor do servidor principal.  
+     em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address>* é o endereço de rede de servidor do servidor principal.  
   
      A sintaxe para um endereço de rede do servidor é a seguinte:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62755516"
   
     -   **Modo de alto desempenho**  
   
-         Alternativamente, se você não quiser failover automático e preferir enfatizar o desempenho em vez da disponibilidade, desative a segurança de transação. Para obter mais informações, consulte [Alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+         Alternativamente, se você não quiser failover automático e preferir enfatizar o desempenho em vez da disponibilidade, desative a segurança de transação. Para obter mais informações, consulte [alterar a segurança da transação em uma sessão de espelhamento de banco de dados &#40;&#41;Transact-SQL ](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
         >  Em modo de alto desempenho, WITNESS deverá ser definido como OFF. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
@@ -212,14 +212,14 @@ ms.locfileid: "62755516"
 ## <a name="see-also"></a>Consulte Também  
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Permitir o acesso à rede a um ponto de extremidade de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Permitir acesso à rede para um ponto de extremidade de espelhamento de banco de dados usando a autenticação do Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Espelhamento de banco de dados e envio de logs &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [Criar um ponto de extremidade de espelhamento de banco de dados para autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [O espelhamento de banco de dados e o envio de logs &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
+ [&#40;de replicação e espelhamento de banco de dados SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [Configurando o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [Especifique um endereço de rede de servidor &#40;espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Modos de operação de espelhamento de banco de dados](database-mirroring-operating-modes.md)  
   
   

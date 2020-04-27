@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637839"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Criar, alterar e remover índices XML seletivos secundários
   Descreve como criar um novo índice XML seletivo secundário, ou como alterar ou remover um índice XML seletivo secundário.  
   
-##  <a name="create"></a> Criando um índice XML seletivo secundário  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Criando um índice XML seletivo secundário  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Como: Criar um índice XML seletivo secundário  
  **Criar um índice XML seletivo secundário usando Transact-SQL**  
@@ -41,7 +41,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Alterando um índice XML seletivo secundário  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Alterando um índice XML seletivo secundário  
  A instrução ALTER não oferece suporte a índices XML secundários seletivos. Para alterar um índice XML secundário, remova o índice existente e recrie-o.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Como: Alterar um índice XML seletivo secundário  
@@ -67,7 +67,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Removendo um índice XML seletivo secundário  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Removendo um índice XML seletivo secundário  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Como: Remover um índice XML seletivo secundário  
  **Remover um índice XML seletivo secundário usando Transact-SQL**  

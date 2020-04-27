@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755603"
 ---
 # <a name="connect-to-server-analysis-services"></a>Conectar ao servidor (Analysis Services)
-  Use esta caixa de diálogo para exibir ou especificar opções ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]se conectar ao.  
+  Use essa caixa de diálogo para exibir ou especificar opções ao se conectar ao [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="options"></a>Opções  
  **Tipo de servidor**  
@@ -36,7 +36,7 @@ ms.locfileid: "62755603"
  O modo de **autenticação do Windows** permite que um usuário se conecte por meio de uma conta de usuário do Windows.  
   
  **Nome de usuário**  
- Essa opção não está disponível nesta versão. Digite o nome do usuário com o qual se conectar. Essa opção só estará disponível se você tiver optado por conectar-se usando a **autenticação do Windows**.  
+ Essa opção não está disponível nesta versão. Digite o nome do usuário com o qual se conectar. Essa opção estará disponível somente se você decidiu conectar-se usando a **Autenticação do Windows**.  
   
  **Senha**  
  Essa opção não está disponível nesta versão. Digite a senha do logon. Essa opção poderá ser editada somente se você decidiu conectar-se usando a Autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

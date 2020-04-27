@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721799"
 ---
 # <a name="replication-programming-concepts"></a>Conceitos de programação de replicação
@@ -54,7 +54,7 @@ ms.locfileid: "62721799"
   
 -   As topologias de replicação e como elas se alinham aos tipos de replicação.  
   
- Se você não está familiarizado com replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Tipos de replicação](../types-of-replication.md).  
+ Se você não estiver familiarizado com a replicação do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], confira [Tipos de replicação](../types-of-replication.md).  
   
 ## <a name="defining-application-functionality"></a>Definindo a funcionalidade do aplicativo  
  Após a definição da topologia de replicação, decida quais serão as funcionalidades oferecidas pelo seu aplicativo. Essas funcionalidades poderão variar de um script que sincroniza uma assinatura até um aplicativo com uma interface do usuário para a configuração da replicação. A replicação oferece suporte às seguintes tarefas de programação gerais:  
@@ -92,7 +92,7 @@ ms.locfileid: "62721799"
   
      Ambiente de desenvolvimento orientado a objeto que aproveita os benefícios da programação [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e do CLR (common language runtime) .NET. O código gerenciado é o ambiente de programação indicado para o desenvolvimento de .NET e de aplicativos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As interfaces de replicação gerenciadas permitem a programação de administração de replicação de uma forma orientada a objeto sem que seja preciso conhecer o [!INCLUDE[tsql](../../../includes/tsql-md.md)], e também oferece algumas funcionalidades de retorno de chamada durante a execução de agentes de replicação não disponíveis em scripts. O código gerenciado é o melhor ambiente para o desenvolvimento de componentes e de aplicativos de interface do usuário reutilizáveis.  
   
--   **Scripting**  
+-   **Script**  
   
      Aplicativos simples que executam uma série de comandos, além de quaisquer procedimentos armazenados do sistema de replicação presentes em scripts ou comandos [!INCLUDE[tsql](../../../includes/tsql-md.md)] de arquivos em lotes. Embora você possa executar scripts em um ambiente gerenciado usando o provedor gerenciado em processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a mesma funcionalidade pode ser obtida com interfaces de replicação, que também oferecem funcionalidades de retorno de chamada. A geração de scripts é o melhor ambiente para a execução de tarefas que só serão executadas algumas vezes e onde as funcionalidades de retorno de chamada não serão necessárias, como na instalação de um servidor de replicação.  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703087"
 ---
 # <a name="creating-stored-procedures"></a>Criando procedimentos armazenados
@@ -84,7 +84,7 @@ ms.locfileid: "62703087"
   
 1.  Expanda a instância [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] do banco de dados no Pesquisador de objetos, clique com o botão direito do mouse na pasta **assemblies** e clique em **nova referência de assembly**. Isso exibe a caixa de diálogo **Adicionar referência** . A guia **.net** da caixa de diálogo **Adicionar referência** lista os assemblies .net (CLR) existentes, enquanto a guia **projetos** lista os projetos.  
   
-2.  Você pode clicar em um componente ou projeto existente e, **** em seguida, clicar em Adicionar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicioná-lo ao projeto. Para adicionar uma referência a uma DLL COM, clique na guia **procurar** para localizar o arquivo. A lista **projetos e componentes selecionados** mostra o nome, o tipo, a versão e o local de cada componente que você está adicionando ao projeto.  
+2.  Você pode clicar em um componente ou projeto existente e, **Add** em seguida, clicar em Adicionar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para adicioná-lo ao projeto. Para adicionar uma referência a uma DLL COM, clique na guia **procurar** para localizar o arquivo. A lista **projetos e componentes selecionados** mostra o nome, o tipo, a versão e o local de cada componente que você está adicionando ao projeto.  
   
 3.  Quando terminar de selecionar os componentes a serem adicionados, clique em **OK** para adicioná- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los ao projeto.  
   

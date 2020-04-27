@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655477"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655477"
  **Para alternar entre modos de atualização**  
   
  Para alternar entre modos de atualização, deve-se habilitar a publicação e a assinatura para ambos os modos de atualização e, então, alternar entre eles, se necessário. Para obter mais informações, consulte  
-[Alternar entre os modos de atualização para uma assinatura transacional updatable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Alterne entre modos de atualização para uma assinatura transacional atualizável](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considerações para o uso de assinaturas atualizáveis  
   
@@ -123,9 +123,9 @@ ms.locfileid: "62655477"
     -   Se conflitos são esperados: não se deve usar restrições de chave estrangeira no Publicador ou Assinante se usar resolução de conflito "Assinante vence"; não se deve usar restrições de chave estrangeira no Assinante se você usar resolução de conflito "Publicador vence".  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação transacional peer-to-peer](peer-to-peer-transactional-replication.md)   
+ [Replicação transacional ponto a ponto](peer-to-peer-transactional-replication.md)   
  [Replicação transacional](transactional-replication.md)   
- [Publicar dados e objetos de banco de dados](../publish/publish-data-and-database-objects.md)   
- [Assinar publicações](../subscribe-to-publications.md)  
+ [Publicar objetos de banco de dados e](../publish/publish-data-and-database-objects.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

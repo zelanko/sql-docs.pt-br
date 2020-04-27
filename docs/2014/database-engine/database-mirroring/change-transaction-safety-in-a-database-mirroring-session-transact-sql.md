@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754924"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Alterar a segurança da transação em uma sessão de espelhamento de banco de dados (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754924"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     em que *\<database>* é o nome do banco de dados espelhado.  
+     em que * \<Database>* é o nome do banco de dados espelhado.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Para desativar a segurança da transação  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62754924"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     em que *\<database>* é o banco de dados espelhado.  
+     em que * \<o banco de dados>* é o banco de dados espelhado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Espelhamento de banco de dados ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702058"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
@@ -32,7 +32,7 @@ ms.locfileid: "62702058"
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Executando comandos em lote transacionais e não transacionais  
  O comando `Batch` executa comandos de uma destas maneiras:  
   
- **Transacional.**  
+ **Transacional**  
  Se o `Transaction` atributo do `Batch` comando for definido como true, o `Batch` comando executará comandos de todos os comandos contidos pelo `Batch` comando em uma única transação – um lote *transacional* .  
   
  Se qualquer comando falhar em um lote transacional, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reverterá qualquer comando no `Batch` comando executado antes do comando que falhou e o `Batch` comando terminará imediatamente. Qualquer comando de `Batch` que ainda não tiver sido executado não o será. Após o término do comando `Batch`, `Batch` informará qualquer erro ocorrido no comando que falhou.  

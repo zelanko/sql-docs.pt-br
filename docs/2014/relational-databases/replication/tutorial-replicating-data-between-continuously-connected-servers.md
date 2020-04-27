@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655385"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicando dados entre servidores que estão continuamente conectados
@@ -36,11 +36,11 @@ ms.locfileid: "62655385"
   
     -   Qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], menos a Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) ou [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Estas edições não podem ser Publicadores de replicação.  
   
-    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]banco de dados de exemplo. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão.  
+    -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] banco de dados de exemplo. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão.  
   
 -   Servidor de assinante (destino):  
   
-    -   Qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)]Não pode ser um Assinante na replicação transacional.  
+    -   Qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] não pode ser um Assinante em uma replicação transacional.  
   
     > [!NOTE]  
     >  A replicação não é instalada por padrão no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
@@ -52,15 +52,15 @@ ms.locfileid: "62655385"
   
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
   
--   [Lição 1: Publicando dados usando a replicação transacional](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [Lição 1: publicando dados que usam replicação transacional](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [Lição 2: criando uma assinatura para a publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [Lição 2: Criando uma assinatura na publicação transacional](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
 -   [Lição 3: Validando a assinatura e medindo a latência](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
- [Inicie o tutorial](transactional/transactional-replication.md)  
+ [Iniciar o tutorial](transactional/transactional-replication.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos de programação da replicação](concepts/replication-programming-concepts.md)  
+ [Conceitos de programação de replicação](concepts/replication-programming-concepts.md)  
   
   

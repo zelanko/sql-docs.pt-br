@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473217"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modificar ou renomear gatilhos DML
@@ -40,13 +40,13 @@ ms.locfileid: "62473217"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Quando você renomeia um gatilho, o gatilho deve estar no banco de dados atual e o novo nome deve seguir as regras para [identificadores](../databases/database-identifiers.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Recomendamos que você não use o procedimento armazenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para renomear um gatilho. A alteração de qualquer parte de um nome de objeto pode quebrar scripts e procedimentos armazenados. Renomear um gatilho não altera o nome do objeto correspondente na coluna de definição da exibição de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Nós recomendamos que você remova e recrie o gatilho.  
   
@@ -62,12 +62,12 @@ ms.locfileid: "62473217"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A alteração de um gatilho DML exige permissão ALTER na tabela ou exibição na qual o gatilho está definido.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>Para modificar um gatilho DML  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62473217"
   
 2.  [Recrie o gatilho](../triggers/create-dml-triggers.md), especificando o novo nome.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Para modificar um gatilho usando ALTER TRIGGER  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670684"
 ---
 # <a name="dta-utility"></a>utilitário dta
@@ -77,8 +77,8 @@ ms.locfileid: "62670684"
  **-?**  
  Exibe informações de uso.  
   
- **-Um** _time_for_tuning_in_minutes_  
- Especifica o prazo de ajuste em minutos. o **DTA** usa a quantidade de tempo especificada para ajustar a carga de trabalho e gerar um script com as alterações de design físico recomendadas. Por padrão, o **dta** assume um tempo de ajuste de 8 horas. Especificar 0 permite um tempo de ajuste ilimitado. o **DTA** pode terminar de ajustar toda a carga de trabalho antes que o limite de tempo expire. No entanto, para garantir que a carga de trabalho inteira seja ajustada, é aconselhável que você especifique um tempo de ajuste ilimitado (-A 0).  
+ **-A** _time_for_tuning_in_minutes_  
+ Especifica o prazo de ajuste em minutos. O**dta** usa a quantidade especificada de tempo para ajustar a carga de trabalho e gerar um script com as mudanças de design físico recomendadas. Por padrão, o **dta** assume um tempo de ajuste de 8 horas. Especificar 0 permite um tempo de ajuste ilimitado. O**dta** pode terminar o ajuste da carga de trabalho inteira antes que o prazo expire. No entanto, para garantir que a carga de trabalho inteira seja ajustada, é aconselhável que você especifique um tempo de ajuste ilimitado (-A 0).  
   
  **-a**  
  Ajusta a carga de trabalho e aplica a recomendação sem uma solicitação.  
@@ -96,7 +96,7 @@ ms.locfileid: "62670684"
  Especifica o número máximo de colunas nos índices proposto por **dta** . O valor máximo é 1024. Por padrão, esse argumento é definido como 16.  
   
  **-c** _max_key_columns_in_index_  
- Especifica o número máximo de colunas principais nos índices proposto por **dta** . O valor padrão é 16, o valor máximo permitido. o **DTA** também considera a criação de índices com colunas incluídas. Os índices recomendados com colunas incluídas podem exceder o número de colunas especificado neste argumento.  
+ Especifica o número máximo de colunas principais nos índices proposto por **dta** . O valor padrão é 16, o valor máximo permitido. O**dta** também considera a criação de índices com colunas incluídas. Os índices recomendados com colunas incluídas podem exceder o número de colunas especificado neste argumento.  
   
  **-D** _database_name_  
  Especifica o nome de cada banco de dados que será ajustado. O primeiro banco de dados é o banco de dados padrão. É possível especificar bancos de dados múltiplos separando os nomes do banco de dados com vírgulas, por exemplo:  
@@ -148,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parâmetro|Valor padrão|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado com a opção **-D**|  
+|*database_name*|*nome_do_banco_de_dados* especificado com a opção **-D**|  
 |*owner_name*|**dbo**<br /><br /> Observação: *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
 |*table_name*|Nenhum|  
   
@@ -163,20 +163,20 @@ dta -d AdventureWorks2012 ...
  **-fa** _physical_design_structures_to_add_  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor é especificado, o **DTA** usa o padrão **-FA**`IDX`.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
 |IV|Somente exibições indexadas.|  
 |NCL_IDX|Somente índices não clusterizados|  
   
- **-Fi**  
+ **-fi**  
  Especifica que os índices filtrados serão considerados em novas recomendações. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **-fk** _keep_existing_option_  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -187,7 +187,7 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
@@ -202,15 +202,15 @@ dta -d AdventureWorks2012 ...
  Especifica um identificador numérico para a sessão de ajuste. Se não estiver especificado, **dta** gerará um número de identificação. Você pode usar esse identificador para exibir informações para sessões de ajuste existentes. Se você não especificar um valor para **-ID**, um nome de sessão deverá ser especificado com **-s**.  
   
  **-ip**  
- Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n**.  
+ Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **-n** .  
   
  **-ipf**  
- Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **-n**.  
+ Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para todos os bancos de dados são analisados. Esse valor pode ser alterado usando a opção **-n** .  
   
- **-se** _workload_file_  
+ **-if** _workload_file_  
  Especifica o caminho e o nome do arquivo de carga de trabalho a ser usado como entrada para ajuste. O arquivo deve estar em um destes formatos: .trc (arquivo de rastreamento do SQL Server Profiler), .sql (arquivo de SQL) ou .log (arquivo de rastreamento do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Um arquivo de carga de trabalho ou uma tabela de carga de trabalho deve ser especificada.  
   
- **-** _workload_trace_table_name_  
+ **-it** _workload_trace_table_name_  
  Especifica o nome de uma tabela que contém o rastreamento de carga de trabalho para ajuste. O nome é especificado no formato: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  A tabela a seguir mostra os valores padrão de cada um:  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
 |ATIVADO|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
@@ -250,12 +250,12 @@ dta -n number_of_events -A 0
   
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.  
   
- **-de** _output_script_file_name_  
+ **-of** _output_script_file_name_  
  Especifica que **dta** grava a recomendação como um script [!INCLUDE[tsql](../../includes/tsql-md.md)] no nome de arquivo e destino especificados.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-or** e **-ox**.  
   
- **-ou** _output_xml_report_file_name_  
+ **-or** _output_xml_report_file_name_  
  Especifica que **dta** grava a recomendação em um relatório de saída em XML. Se um nome de arquivo for fornecido, as recomendações serão gravadas nesse destino. Caso contrário, o **dta** usa o nome de sessão para gerar o nome de arquivo e grava-o no diretório atual.  
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-ox**.  
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  Você pode usar **-F** com essa opção. Verifique se o nome de arquivo é exclusivo, especialmente se você também estiver usando **-of** e **-or**.  
   
- **-P** _senha_  
+ **-P** _password_  
  Especifica a senha para a ID de logon. Se essa opção não for usada, o **dta** solicitará a senha.  
   
  **-q**  
@@ -310,11 +310,11 @@ dta -n number_of_events -A 0
   
  Este é o formato de arquivo para *table_list_file*:  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *table_name* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
  Esse argumento é uma alternativa à inserção de uma lista de tabela no prompt de comando (**-Tl**). Não use um arquivo de lista de tabela (**-Tf**) se você estiver usando **-Tl**. Se ambos os argumentos forem usados, o **dta** falhará e retornará um erro.  
   
@@ -340,7 +340,7 @@ dta -n number_of_events -A 0
 ## <a name="examples"></a>Exemplos  
  **A. Ajuste uma carga de trabalho que inclui índices e exibições indexadas em sua recomendação**  
   
- Esse exemplo usa uma conexão segura (`-E`) para se conectar ao banco de dados **tpcd1G** no MyServer para analisar uma carga de trabalho e criar recomendações. Grava a saída em um arquivo de script nomeado script.sql. Se o script.sql já existir, **dta** substituirá o arquivo porque o argumento `-F` foi especificado. A sessão de ajuste é executada por um tempo ilimitado para garantir uma análise completa da carga de trabalho (`-A 0`). A recomendação deve fornecer uma melhoria mínima de 5% (`-m 5`). o **DTA** deve incluir índices e exibições indexadas em sua`-fa IDX_IV`recomendação final ().  
+ Esse exemplo usa uma conexão segura (`-E`) para se conectar ao banco de dados **tpcd1G** no MyServer para analisar uma carga de trabalho e criar recomendações. Grava a saída em um arquivo de script nomeado script.sql. Se o script.sql já existir, **dta** substituirá o arquivo porque o argumento `-F` foi especificado. A sessão de ajuste é executada por um tempo ilimitado para garantir uma análise completa da carga de trabalho (`-A 0`). A recomendação deve fornecer uma melhoria mínima de 5% (`-m 5`). **dta** deve incluir índices e exibições indexadas em sua recomendação final (`-fa IDX_IV`).  
   
 ```  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  

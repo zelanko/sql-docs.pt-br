@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727742"
 ---
 # <a name="debugging-stored-procedures"></a>Depurando procedimentos armazenados
@@ -45,7 +45,7 @@ ms.locfileid: "62727742"
   
     4.  Na caixa de texto **anexar a** , verifique se o tipo de programa apropriado está selecionado. Para uma DLL CLR, clique em **selecionar**, clique em **depurar esses tipos de código**, clique em **gerenciado**e em **OK**. Para uma DLL COM, clique em **selecionar**, clique em **depurar esses tipos de código**, clique em **nativo**e, em seguida, clique em **OK**.  
   
-    5.  Clique em **anexar**.  
+    5.  Clique em **Anexar**.  
   
 7.  No [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], acione o programa ou script MDX que chama o procedimento armazenado. O depurador será interrompido quando chegar a uma linha que contém um ponto de interrupção. Você pode avaliar variáveis na janela de informação, exibir os locais e navegar pelo código.  
   

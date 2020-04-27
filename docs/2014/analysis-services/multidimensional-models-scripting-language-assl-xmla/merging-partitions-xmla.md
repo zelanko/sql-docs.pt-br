@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702044"
 ---
 # <a name="merging-partitions-xmla"></a>Mesclando partições (XMLA)
@@ -45,7 +45,7 @@ ms.locfileid: "62702044"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir mescla todas as partições no grupo de medidas **Customer** Counts do cubo **Adventure Works** no banco de dados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exemplo do **Adventure Works DW** na partição **Customers_2004** .  
   
 ### <a name="code"></a>Código  

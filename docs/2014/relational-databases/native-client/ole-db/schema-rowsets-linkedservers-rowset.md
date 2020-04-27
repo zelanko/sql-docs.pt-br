@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667331"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de linhas LINKEDSERVERS (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "62667331"
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
-|Nome da coluna|Indicador de tipo|DESCRIÇÃO|  
+|Nome da coluna|Indicador de tipo|Descrição|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nome de um servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante ou outro nome que identifique o tipo de repositório de dados representado pelo nome do servidor vinculado.|  
@@ -37,6 +37,6 @@ ms.locfileid: "62667331"
  O conjunto de linhas é classificado em SRV_NAME, havendo suporte a uma única restrição em SRV_NAME.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Suporte a conjunto de linhas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

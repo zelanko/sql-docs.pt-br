@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638203"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Associações e conversões (OLE DB)
@@ -28,15 +28,15 @@ ms.locfileid: "62638203"
   
 -   O formato das cadeias de caracteres `datetime` e `datetimeoffset` é:  
   
-     *aaaa*-** mm-*DD*[ *hh*:*mm*:*SS*[.* 9999999*] [?? *hh*:*mm*]]  
+     *aaaa*-*mm*mm-*DD*[ *hh*:*mm*:*SS*[.* 9999999*] [?? *hh*:*mm*]]  
   
 -   O formato das cadeias de caracteres `time` é:  
   
-     *hh*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   O formato das cadeias de caracteres `date` é:  
   
-     *aaaa*-** mm-*DD*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  

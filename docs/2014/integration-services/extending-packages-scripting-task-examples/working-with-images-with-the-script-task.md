@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768442"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabalhando com imagens com a tarefa Script
@@ -40,7 +40,7 @@ ms.locfileid: "62768442"
 > [!NOTE]  
 >  Se desejar criar uma tarefa mais fácil de ser reutilizada em vários pacotes, procure utilizar o código desse exemplo de tarefa Script como o ponto inicial de uma tarefa personalizada. Para obter mais informações, consulte [Desenvolvendo uma tarefa personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrição do exemplo 1: converter imagens para o formato JPEG  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> Descrição do exemplo 1: converter imagens para o formato JPEG  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável e salva-o como um arquivo JPEG compactado usando um codificador. O código para recuperar informações de codificador é encapsulado em uma função particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrição do exemplo 2: criar e salvar imagens em miniatura  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> Descrição do exemplo 2: criar e salvar imagens em miniatura  
  O exemplo a seguir abre um arquivo de imagem especificado por uma variável, cria uma miniatura da imagem, mantendo uma taxa de proporção constante e salva a miniatura com um nome de arquivo modificado. O código que calcula a altura e largura da miniatura, mantendo uma taxa de proporção constante, é encapsulado em uma sub-rotina particular.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar esse exemplo de tarefa Script para uso com um único arquivo de imagem  
@@ -289,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone de Integration Services (pequeno)](../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

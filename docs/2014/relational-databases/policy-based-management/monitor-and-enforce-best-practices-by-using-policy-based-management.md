@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626043"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas
@@ -62,7 +62,7 @@ ms.locfileid: "62626043"
 |Erro de Dispositivo Não Pronto do Log de Eventos do Windows|[Erro de Dispositivo Não Pronto](device-not-ready-error.md)|  
 |Erro de Solicitação de I_O com Falha do Log de Eventos do Windows|[Detectar solicitação de saída de entrada com falha](detect-failed-input-and-output-requests.md)|  
 |Aviso de Atraso de I_O do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de atraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página física](input-and-output-error-during-hard-page-fault.md)|  
+|Erro de I_O do Log de Eventos do Windows durante Falha de Página de Hardware|[Erro de entrada e saída durante falha de página de hardware](input-and-output-error-during-hard-page-fault.md)|  
 |Erro de Repetição de Leitura do Log de Eventos do Windows|[Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Erro de Tempo Limite de I_O do Sistema de Armazenamento do Log de Eventos do Windows|[Tempo limite de entrada e saída dd sistema de armazenamento](storage-system-input-output-time-out.md)|  
 |Erro de Falha do Sistema do Log de Eventos do Windows|[Falhas inesperadas do sistema](unexpected-system-failures.md)|  

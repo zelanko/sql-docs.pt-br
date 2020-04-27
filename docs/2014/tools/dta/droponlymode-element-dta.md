@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659569"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
@@ -36,11 +36,11 @@ ms.locfileid: "62659569"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|Nenhum.|  
+|**Tipo de dados e comprimento**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Pode-se usar apenas uma vez para cada elemento de `TuningOptions`. Não poderá ser usado se os elementos seguintes forem especificados no elemento de `TuningOptions`:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
+|**C'**|Opcional. Pode-se usar apenas uma vez para cada elemento de `TuningOptions`. Não poderá ser usado se os elementos seguintes forem especificados no elemento de `TuningOptions`:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> O [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) é definido como **ALL**|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

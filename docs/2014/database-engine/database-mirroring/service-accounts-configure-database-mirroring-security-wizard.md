@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754392"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Contas de Serviço (Assistente para Configurar Segurança de Espelhamento do Banco de Dados)
@@ -34,25 +34,25 @@ ms.locfileid: "62754392"
 -   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 ## <a name="options"></a>Opções  
- **Principal**  
+ **Beneficiário**  
  Especifique a conta de serviço da instância de servidor principal. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*nomeusuário*  
+ *DOMAINNAME*\\*Nome de usuário* DomainName  
   
  **Espelho**  
  Especifique a conta de serviço da instância de servidor espelho. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*nomeusuário*  
+ *DOMAINNAME*\\*Nome de usuário* DomainName  
   
  **Witness (testemunha)**  
  Especifique a conta de serviço da instância de servidor testemunha. Digite o nome de domínio em letras maiúsculas:  
   
- *DOMAINNAME*\\*nomeusuário*  
+ *DOMAINNAME*\\*Nome de usuário* DomainName  
   
 ## <a name="see-also"></a>Consulte Também  
- [Propriedades do banco de dados &#40;página Espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Propriedades do banco de dados &#40;página espelhamento&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Iniciar o monitor de espelhamento de banco de dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
  [Configurar contas de logon para espelhamento de banco de dados ou Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

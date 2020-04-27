@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720051"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificando o tipo de dados e o tipo de conteúdo (Tutorial de mineração de dados básico)
@@ -32,27 +32,27 @@ ms.locfileid: "62720051"
     |------------|------------------|---------------|  
     |**Endereço linha1**|**Discreto**|**Texto**|  
     |**Endereço Linha2**|**Discreto**|**Texto**|  
-    |**Idade**|**Contínuo**|**long**|  
+    |**Idade**|**Visa**|**long**|  
     |**Bike Buyer**|**Discreto**|**long**|  
     |**Distância do Trabalho**|**Discreto**|**Texto**|  
     |**CustomerKey**|**Chave**|**long**|  
-    |**DateLastPurchase**|**Contínuo**|**Data**|  
+    |**DateLastPurchase**|**Visa**|**Data**|  
     |**Endereço de email**|**Discreto**|**Texto**|  
     |**Educação em Inglês**|**Discreto**|**Texto**|  
     |**Ocupação em Inglês**|**Discreto**|**Texto**|  
-    |**Nome**|**Discreto**|**Texto**|  
+    |**FirstName**|**Discreto**|**Texto**|  
     |**Sexo**|**Discreto**|**Texto**|  
     |**Geografia Principal**|**Discreto**|**Texto**|  
-    |**Sinalizador de proprietário da casa**|**Discreto**|**Texto**|  
+    |**Sinalizador do Proprietário da Casa**|**Discreto**|**Texto**|  
     |**Sobrenome**|**Discreto**|**Texto**|  
     |**Estado Civil**|**Discreto**|**Texto**|  
-    |**Número de carros**|**Discreto**|**long**|  
+    |**Número de Carros**|**Discreto**|**long**|  
     |**Número de filhos em casa**|**Discreto**|**long**|  
     |**Região**|**Discreto**|**Texto**|  
     |**Total de Filhos**|**Discreto**|**long**|  
-    |**Renda Anual**|**Contínuo**|**Clique**|  
+    |**Renda Anual**|**Visa**|**Double**|  
   
-3.  Clique em **Próximo**.  
+3.  Clique em **Avançar**.  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Especificação de um conjunto de dados de teste para a estrutura &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
@@ -62,6 +62,6 @@ ms.locfileid: "62720051"
   
 ## <a name="see-also"></a>Consulte Também  
  [Tipos de conteúdo &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Tipos de dados &#40;mineração de dados&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de dados &#40;Mineração de dados&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

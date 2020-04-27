@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664002"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>classe de evento Broker:Forwarded Message Sent
@@ -51,9 +51,9 @@ ms.locfileid: "62664002"
 |ServerName|`nvarchar`|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |SPID|`int`|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|`datetime`|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
-|Sucesso|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
+|Êxito|`int`|O tempo gasto pelo processo de encaminhamento.|23|Não|  
 |TargetLoginName|`nvarchar`|O endereço de rede para o qual a instância enviou a mensagem. Note que pode diferir do destino final da mensagem.|42|Não|  
-|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|11,8|Não|  
+|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|39|Não|  
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  
   
   

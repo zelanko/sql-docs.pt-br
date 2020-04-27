@@ -16,17 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754204"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
   Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  
   
 > [!NOTE]  
->  Verifique se você atende a todos os [pré-requisitos do espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
+>   Assegure-se de que você está satisfazendo todos os pré-requisitos [para o espelhamento de banco de dados](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
 |Problema|Resumo|  
 |-----------|-------------|  
@@ -37,10 +37,10 @@ ms.locfileid: "62754204"
 |[Acesso de rede](#NetworkAccess)|Documenta o requisito de cada instância do servidor para acessar as portas de outra instância do servidor ou instâncias no TCP.|  
 |[Preparação do banco de dados espelho](#MirrorDbPrep)|Resume os requisitos para preparar o banco de dados espelho para habilitar o início do espelhamento.|  
 |[Falha na operação para criar arquivo](#FailedCreateFileOp)|Descreve como responder a uma falha na operação para criar arquivo.|  
-|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem necessária para as instruções ALTER DATABASE *database_name* Set Partner **= '***partner_server***'** .|  
+|[Iniciando o espelhamento usando Transact-SQL](#StartDbm)|Descreve a ordem exigida para as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='***servidor_parceiro***'** .|  
 |[Transações envolvendo todos os bancos de dados](#CrossDbTxns)|Um failover automático pode levar a uma resolução automática e possivelmente incorreta de transações duvidosas. Por esta razão, o espelhamento de banco de dados não dá suporte a transações envolvendo todos os bancos de dados.|  
   
-##  <a name="Accounts"></a> Contas  
+##  <a name="accounts"></a><a name="Accounts"></a> Contas  
  As contas nas quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado devem ser configuradas corretamente.  
   
 1.  As contas têm as permissões corretas?  
@@ -51,7 +51,7 @@ ms.locfileid: "62754204"
   
 2.  Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver executando como um serviço que está usando a conta Sistema Local, você deve usar certificados para autenticação. Para obter mais informações, consulte [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
-##  <a name="Endpoints"></a> Endpoints  
+##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  Os pontos de extremidade devem ser configurados corretamente.  
   
 1.  Verifique se cada instância do servidor (o servidor principal, servidor espelho e testemunha, se houver) tem um ponto de extremidade de espelhamento de banco de dados. Para obter mais informações, veja [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) e, dependendo do formato de autenticação, [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) ou [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
@@ -108,13 +108,13 @@ ms.locfileid: "62754204"
   
     ```  
   
-##  <a name="SystemAddress"></a> Endereço de sistema  
+##  <a name="system-address"></a><a name="SystemAddress"></a> Endereço de sistema  
  Para o nome de sistema de uma instância do servidor em uma configuração de espelhamento de banco de dados, você pode usar qualquer nome que inequivocamente identifique o sistema. O endereço de servidor pode ser um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio totalmente qualificado ou um endereço de IP (preferivelmente, um endereço de IP estático). Usando o nome de domínio totalmente qualificado o funcionamento é garantido. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-##  <a name="NetworkAccess"></a> Network Access  
+##  <a name="network-access"></a><a name="NetworkAccess"></a>Acesso à rede  
  Cada instância do servidor deve poder acessar as portas da outra instância do servidor ou instâncias em TCP. Isso será especialmente importante se as instâncias do servidor estiverem em domínios diferentes que não confiam um no outro (domínios não confiáveis). Isso restringe muito da comunicação entre as instâncias do servidor.  
   
-##  <a name="MirrorDbPrep"></a> Mirror Database Preparation  
+##  <a name="mirror-database-preparation"></a><a name="MirrorDbPrep"></a> Mirror Database Preparation  
  Se iniciar o espelhamento pela primeira vez ou iniciá-lo novamente depois do espelhamento ser removido, verifique se o banco de dados espelho está preparado para o espelhamento.  
   
  Quando você criar o banco de dados espelho no servidor espelho, certifique-se de restaurar o backup do banco de dados principal especificando o mesmo nome de banco de dados WITH NORECOVERY. Além disso, deve-se aplicar também a todos os backups de log, criados depois que esse backup foi feito, WITH NORECOVERY novamente  
@@ -128,7 +128,7 @@ ms.locfileid: "62754204"
   
  Para obter mais informações, veja [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
+##  <a name="failed-create-file-operation"></a><a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Para que a inclusão de um arquivo não afete uma sessão de espelhamento, o caminho do arquivo deve existir nos dois servidores. Portanto, se você mover os arquivos de banco de dados quando estiver criando o banco de dados espelho, uma operação adicionar arquivo posterior pode não funcionar no banco de dados espelho e causar a suspensão do espelhamento.  
   
  Para corrigir o problema:  
@@ -141,19 +141,19 @@ ms.locfileid: "62754204"
   
  Para obter mais informações, veja [Remover o espelhamento de banco de dados&#40;SQL Server&#41;](database-mirroring-sql-server.md), [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [Usar certificados para um ponto de extremidade do espelhamento de banco de dados &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Estabelecer uma sessão de espelhamento de banco de dados com a Autenticação do Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="StartDbm"></a> Iniciando o espelhamento usando Transact-SQL  
- A ordem na qual as instruções ALTER DATABASE *database_name* Set Partner **= '***partner_server***'** são emitidas é muito importante.  
+##  <a name="starting-mirroring-by-using-transact-sql"></a><a name="StartDbm"></a>Iniciando o espelhamento usando Transact-SQL  
+ A ordem na qual as instruções ALTER DATABASE *nome_banco_dados* SET PARTNER **='***servidor_parceiro***'** são emitidas é muito importante.  
   
 1.  A primeira instrução deve ser executada no servidor espelho. Quando essa instrução for emitida, o servidor espelho não tenta contatar qualquer outra instância do servidor. Em vez disso, o servidor espelho instrui seu banco de dados para esperar até que o servidor espelho seja contatado pelo servidor principal.  
   
 2.  A segunda instrução ALTER DATABASE deve ser executada no servidor principal. Essa instrução faz o servidor principal tentar se conectar ao servidor espelho. Depois que essa conexão é criada, o espelho, então, tenta conectar ao servidor principal em outra conexão.  
   
- Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
+ Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 > [!NOTE]  
 >  Para obter informações sobre como usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para iniciar o espelhamento, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
-##  <a name="CrossDbTxns"></a> Transações envolvendo todos os bancos de dados  
+##  <a name="cross-database-transactions"></a><a name="CrossDbTxns"></a>Transações entre bancos de dados  
  Quando um banco de dados está sendo espelhado no modo de alta-segurança com failover automático, um failover automático pode levar a uma resolução automática e possivelmente incorreta de transações incertas. Se um failover automático acontecer em qualquer banco de dados enquanto uma transação envolvendo todos os bancos de dados está sendo confirmada, poderão ocorrer inconsistências lógicas entre os bancos de dados.  
   
  Os tipos de transações envolvendo todos os bancos de dados que podem ser afetadas por um failover automático incluem o seguinte:  

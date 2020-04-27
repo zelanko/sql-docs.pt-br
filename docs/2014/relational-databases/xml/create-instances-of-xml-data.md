@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637604"
 ---
 # <a name="create-instances-of-xml-data"></a>Criar instâncias de dados XML
@@ -67,12 +67,11 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Por padrão, o analisador XML descarta espaço em branco insignificante quando converte dados de cadeia de caracteres em XML se uma das seguintes situações for verdadeira:  
   
--   
-  `The xml:space` o atributo não está definido em um elemento ou em seus elementos ancestrais.  
+-   `The xml:space` o atributo não está definido em um elemento ou em seus elementos ancestrais.  
   
 -   O atributo `xml:space` em efeito em um elemento ou em um de seus elementos ancestrais tem o valor de padrão.  
   
- Por exemplo:   
+ Por exemplo:  
   
 ```  
 declare @x xml  
@@ -86,7 +85,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Porém, é possível alterar esse comportamento. Para preservar espaço em branco para uma instância DT XML, use o operador CONVERT e seu parâmetro opcional *style* definido como um valor de 1. Por exemplo:   
+ Porém, é possível alterar esse comportamento. Para preservar espaço em branco para uma instância DT XML, use o operador CONVERT e seu parâmetro opcional *style* definido como um valor de 1. Por exemplo:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -134,7 +133,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Usando a instrução SELECT com a cláusula FOR XML  
- É possível usar a cláusula FOR XML em uma instrução SELECT para retornar resultados como XML. Por exemplo:   
+ É possível usar a cláusula FOR XML em uma instrução SELECT para retornar resultados como XML. Por exemplo:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -184,7 +183,7 @@ go
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna instâncias de tipo de dados `xml`ao cliente como um resultado das diferentes construções do servidor como consultas FOR XML que usam a diretiva TYPE ou onde o tipo de dados `xml` é usado para retornar XML de colunas, variáveis e parâmetros de saída SQL. No código do aplicativo cliente, o provedor ADO.NET solicita que essas informações de tipo de dados `xml` sejam enviadas em uma codificação binária do servidor. Porém, se você estiver usando FOR XML sem a diretiva TYPE, os dados XML retornarão como um tipo de cadeia de caracteres. De qualquer forma, o provedor cliente sempre poderá controlar qualquer formulário de XML.  
   
 ## <a name="using-constant-assignments"></a>Usando atribuições de constantes  
- Uma constante de cadeia de caracteres pode ser usada onde uma `xml` instância do tipo de dados é esperada. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:   
+ Uma constante de cadeia de caracteres pode ser usada onde uma `xml` instância do tipo de dados é esperada. Isso é o mesmo que uma CAST implícita de cadeia de caracteres em XML. Por exemplo:  
   
 ```  
 DECLARE @xmlDoc xml  

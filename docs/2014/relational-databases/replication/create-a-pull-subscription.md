@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721579"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
@@ -29,7 +29,7 @@ ms.locfileid: "62721579"
  A configuração de uma assinatura pull para a replicação de P2P é possível por script, mas não está disponível por meio do assistente.  
   
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Crie uma assinatura pull no Publicador ou Assinante, usando o Assistente para Novas Assinaturas. Siga as páginas no assistente para:  
   
 -   Especificar o Publicador e a publicação.  
@@ -56,7 +56,7 @@ ms.locfileid: "62721579"
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>Para criar uma assinatura pull do Publicador  
   
-1.  Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e expanda o nó de servidor.  
+1.  Conecte-se ao Publicador no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e, em seguida, expanda o nó de servidor.  
   
 2.  Expanda a pasta **Replicação** e, em seguida, a pasta **Publicações Locais** .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62721579"
   
 7.  Complete as páginas no Assistente para Novas Assinaturas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  As assinaturas pull podem ser criadas de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados usados dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
@@ -141,20 +141,20 @@ ms.locfileid: "62721579"
   
 4.  No Publicador, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**, **@subscriber_db**e um valor de **pull** para **@subscription_type**. Isso registra a assinatura pull.  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Exemplos (Transact-SQL)  
  O exemplo a seguir cria uma nova assinatura pull para uma publicação transacional. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores para o logon e senha são fornecidos no runtime usando as variáveis sqlcmd scripting.  
   
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpullsub.sql#sp_addtranpullsubscriptionagent)]  
   
  [!code-sql[HowTo#sp_addtranpullsubscription](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpullsub.sql#sp_addtranpullsubscription)]  
   
- O exemplo a seguir cria uma nova assinatura pull para uma publicação de mesclagem. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores de logon e senha são fornecidos em tempo de execução usando variáveis de script do **sqlcmd** .  
+ O exemplo a seguir cria uma nova assinatura pull para uma publicação de mesclagem. O primeiro lote é executado no Assinante, e o segundo lote é executado no Publicador. Os valores de logon e senha são fornecidos em runtime através das variáveis de script **sqlcmd** .  
   
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsub.sql#sp_addmergepullsubscriptionagent)]  
   
  [!code-sql[HowTo#sp_addmergepullsubscription](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsub.sql#sp_addmergepullsubscription)]  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  As classes RMO usadas para criar uma assinatura pull dependem do tipo de publicação ao qual a assinatura pertence.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para criar uma assinatura pull em um instantâneo ou em uma publicação transacional  
@@ -167,7 +167,7 @@ ms.locfileid: "62721579"
   
 4.  Realize uma lógica AND de bit a bit (`&` no Visual C# e `And` no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (`|` em Visual C# e `Or` em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
   
-5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [criando, alterando e removendo bancos de dados](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
 6.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "62721579"
   
 4.  Realize uma lógica AND de bit a bit (`&` no Visual C# e `And` no Visual Basic) entre a propriedade <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se o resultado for <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, defina <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> para o resultado de uma lógica bit a bit OR (`|` em Visual C# e `Or` em Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Em seguida, chame <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para habilitar assinaturas pull.  
   
-5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [criando, alterando e removendo bancos de dados](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Se não houver banco de dados de assinatura, crie-o usando a classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obter mais informações, consulte [Creating, Altering, and Removing Databases](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Criando, alterando e removendo bancos de dados).  
   
 6.  Criar uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "62721579"
   
 9. Crie uma instância da classe <xref:Microsoft.SqlServer.Replication.MergePublication> da etapa 2, chame o método <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> para registrar a assinatura pull com o Publicador. Se esse registro já existir, haverá uma exceção.  
   
-###  <a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO)  
  Esse exemplo cria uma assinatura pull para uma publicação transacional. As credenciais da conta do Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] usadas para criar o trabalho do Distribution Agent são passadas em runtime.  
   
  [!code-csharp[HowTo#rmo_CreateTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpullsub)]  
@@ -268,7 +268,7 @@ ms.locfileid: "62721579"
 ## <a name="see-also"></a>Consulte Também  
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)   
- [Configurar sincronização da Web](configure-web-synchronization.md)   
+ [Configure Web Synchronization](configure-web-synchronization.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   

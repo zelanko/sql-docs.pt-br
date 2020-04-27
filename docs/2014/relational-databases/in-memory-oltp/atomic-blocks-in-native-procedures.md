@@ -11,14 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467276"
 ---
 # <a name="atomic-blocks"></a>Blocos atômicos
-  
   `BEGIN ATOMIC` não faz parte do padrão ANSI SQL. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a blocos atômicos somente no nível superior dos procedimentos armazenados compilados nativamente.  
   
 -   Cada procedimento armazenado compilado nativamente contém exatamente um bloco de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esse é um bloco ATOMIC.  
@@ -32,7 +31,7 @@ ms.locfileid: "62467276"
   
  Se não houver transação ativa em uma sessão, `BEGIN ATOMIC` iniciará uma nova transação. Se nenhuma exceção for lançada fora do escopo do bloco, a transação será confirmada no fim do bloco. Se o bloco lançar uma exceção (ou seja, se a exceção não for capturada e tratada no bloco), a transação será revertida. Para transações que abrangem um único bloco atômico (um único procedimento armazenado compilado nativamente), você não precisa gravar instruções `BEGIN TRANSACTION` e `COMMIT` ou `ROLLBACK` explícitas.  
   
- Os procedimentos armazenados compilados nativamente oferecem suporte às construções `TRY`, `CATCH` e `THROW` para tratamento de erros. `RAISERROR`Não tem suporte.  
+ Os procedimentos armazenados compilados nativamente oferecem suporte às construções `TRY`, `CATCH` e `THROW` para tratamento de erros. Não há suporte para `RAISERROR`.  
   
  O exemplo a seguir ilustra o comportamento de tratamento de erros com blocos atômicos e procedimentos armazenados compilados nativamente:  
   
@@ -131,18 +130,18 @@ GO
   
  As seguintes opções são necessárias com `BEGIN ATOMIC`:  
   
-|Configuração necessária|DESCRIÇÃO|  
+|Configuração necessária|Descrição|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Os valores com suporte são `SNAPSHOT`, `REPEATABLEREAD` e `SERIALIZABLE`.|  
 |`LANGUAGE`|Determina os formatos de data e hora, e as mensagens do sistema. Todos os idiomas e alias em [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) têm suporte.|  
   
  As seguintes configurações são opcionais:  
   
-|Configuração opcional|DESCRIÇÃO|  
+|Configuração opcional|Descrição|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|Há suporte para todos os formatos de data do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando especificado, `DATEFORMAT` substitui o formato de data padrão associado a `LANGUAGE`.|  
 |`DATEFIRST`|Quando especificado, `DATEFIRST` substitui o padrão associado a `LANGUAGE`.|  
-|`DELAYED_DURABILITY`|Os valores com suporte são `OFF` e `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]as confirmações de transação podem ser totalmente duráveis, o padrão ou durável atrasada. Para obter mais informações, consulte [controlar a durabilidade da transação](../logs/control-transaction-durability.md).|  
+|`DELAYED_DURABILITY`|Os valores com suporte são `OFF` e `ON`.<br /><br /> Confirmações de transação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser completamente duráveis, o padrão ou duráveis atrasadas. Para obter mais informações, consulte [Controlar a durabilidade da transação](../logs/control-transaction-durability.md).|  
   
  As opções SET a seguir têm o mesmo valor padrão de sistema para todos os blocos atômicos em todos os procedimentos armazenados compilados nativamente:  
   
@@ -163,6 +162,6 @@ GO
 |XACT_ABORT|OFF<br /><br /> As exceções não capturadas fazem com que o bloco atômico seja revertido, mas não fazem com que a transação seja anulada, a menos que o erro seja decretado por transação.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
+ [procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
   
   

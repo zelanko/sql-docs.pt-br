@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62630803"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar agendas de sincronização
@@ -37,7 +37,7 @@ ms.locfileid: "62630803"
   
      [RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Especifique agendas de sincronização na página **Agenda de Sincronização** do Assistente para Nova Assinatura. Para mais informações sobre como acessar esse assistente, consulte [Create a Push Subscription](create-a-push-subscription.md) e [Create a Pull Subscription](create-a-pull-subscription.md).  
   
  Modifique agendas de sincronização na caixa de diálogo **Propriedades da Agenda de Trabalho** , que se encontra disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e nas janelas de detalhes do agente no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
@@ -138,7 +138,7 @@ ms.locfileid: "62630803"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  Você pode definir agendas de sincronização de forma programada, usando os procedimentos de replicação armazenados. Os procedimentos armazenados que você usar dependem do tipo de replicação e do tipo de assinatura (de recepção ou push).  
   
  Uma agenda é definida pelos seguintes parâmetros de programação, os comportamentos dos quais são herdados de [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql):  
@@ -187,7 +187,7 @@ ms.locfileid: "62630803"
   
 2.  No Assinante, execute o [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Especifique **@subscriber**, **@subscriber_db**, **@publication**e as credenciais do Windows sob as quais o agente de mesclagem no assinante é **@job_name** executado **@password**para e. Especifique os parâmetros de sincronização, detalhados acima, que definem a agenda para o trabalho do Agente de Mesclagem que sincroniza a assinatura.  
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  A replicação usa o SQL Server Agent para agendar trabalhos para atividades que ocorrem periodicamente, como geração de instantâneo e sincronização de assinatura. Use programaticamente os RMO (Replication Management Objects) para especificar agendamentos de trabalhos de agente de replicação.  
   
 > [!NOTE]  
@@ -317,7 +317,7 @@ ms.locfileid: "62630803"
   
 3.  Chame o método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> para criar a assinatura.  
   
-###  <a name="PShellExample"></a> Exemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Exemplo (RMO)  
  Esse exemplo cria uma assinatura push para uma publicação de mesclagem e especifica o agendamento em que a assinatura é sincronizada.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  

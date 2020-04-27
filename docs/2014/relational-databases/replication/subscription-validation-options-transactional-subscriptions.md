@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745417"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opções de Validação de Assinatura (assinaturas transacionais)
-  Use a caixa de diálogo **Opções de Validação de Assinatura** para especificar se a validação deve usar somente uma contagem de linha ou uma contagem de linhas e uma soma de verificação binária.  
+  Use a caixa de diálogo **Opções de validação de assinatura** para especificar se a validação deve usar apenas uma contagem de linhas ou uma contagem de linhas e uma soma de verificação binária.  
   
 ## <a name="options"></a>Opções  
  **Verifique se o Assinante tem o mesmo número de linhas dos dados replicados que o Publicador**  
@@ -35,7 +35,7 @@ ms.locfileid: "62745417"
  Por padrão, o Distribution Agent executa continuamente. Selecione essa opção para interromper o agente depois que validação for executada. Isso permite verificar se validação teve êxito antes de continuar replicando dados para o Assinante.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Validar dados no assinante](validate-data-at-the-subscriber.md)   
+ [Validar dados no Assinante](validate-data-at-the-subscriber.md)   
  [Validar os dados replicados](validate-data-at-the-subscriber.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510373"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
@@ -59,7 +59,7 @@ ms.locfileid: "62510373"
   
 ### <a name="to-add-a-report-to-management-studio"></a>Para adicionar um relatório ao Management Studio  
   
--   No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um nó no Pesquisador de objetos, aponte para **relatórios**e clique em **relatórios personalizados**. Na caixa de diálogo **Abrir Arquivo** , localize a pasta de relatórios personalizados, selecione o arquivo **ConnectionsReport.rdl** e clique em **Abrir**.  
+-   No [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], clique com o botão direito do mouse em um nó no Pesquisador de Objetos, aponte para **Relatórios**e clique em **Relatórios Personalizados**. Na caixa de diálogo **Abrir Arquivo** , localize a pasta de relatórios personalizados, selecione o arquivo **ConnectionsReport.rdl** e clique em **Abrir**.  
   
      Quando um novo relatório personalizado é aberto pela primeira vez de um nó do Pesquisador de Objetos, esse relatório é adicionado à lista dos relatórios usados mais recentemente, em **Relatórios Personalizados** no menu de atalho desse nó. Quando um relatório padrão é aberto pela primeira vez, ele também é exibido nessa lista, em **Relatórios Personalizados**. Se um relatório personalizado for excluído, na próxima vez que ele for selecionado, será exibido um prompt para excluir o item da lista de relatórios usados mais recentemente.  
   

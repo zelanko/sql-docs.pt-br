@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472880"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Explorando o modelo Naive Bayes (Tutorial de mineração de dados básico)
@@ -24,7 +24,7 @@ ms.locfileid: "62472880"
   
  
   
-##  <a name="DependencyNetwork"></a>Rede de dependências  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>Rede de dependências  
  A guia **rede de dependências** funciona da mesma maneira que a guia **rede de dependências** para o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de árvore. Cada nó no visualizador representa um atributo e as linhas entre os nós representam as relações. No visualizador, você pode ver todos os atributos que afetam o estado do atributo de previsão, Comprador de Bicicletas.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Para explorar o modelo na guia Rede de Dependências  
@@ -42,7 +42,7 @@ ms.locfileid: "62472880"
      À medida que você abaixa o controle deslizante, somente os atributos com o efeito maior sobre a coluna [Comprador de Bicicleta] permanecem. Ao ajustar o controle deslizante, você poderá descobrir que alguns dos atributos mais influentes são: o número de carros, distância do trabalho e número total de crianças.  
  
   
-##  <a name="AttributeProfiles"></a>Perfis de atributo  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a> Perfis de Atributo  
  A guia **perfis de atributo** descreve como Estados diferentes dos atributos de entrada afetam o resultado do atributo previsível.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Para explorar o modelo na guia Perfis de Atributo  
@@ -64,7 +64,7 @@ ms.locfileid: "62472880"
      A **legenda de mineração** exibe uma exibição mais detalhada.  
   
   
-##  <a name="AttributeCharacteristics"></a>Características do atributo  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a> Características do Atributo  
  Com a guia **características do atributo** , você pode selecionar um atributo e um valor para ver com que frequência os valores de outros atributos aparecem nos casos de valores selecionados.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Para explorar o modelo na guia Características do Atributo  
@@ -76,7 +76,7 @@ ms.locfileid: "62472880"
      No visualizador, você verá que clientes sem filhos em casa, com pequenas distâncias até o trabalho e que moram na região da América do Norte têm mais probabilidade de comprarem uma bicicleta.  
   
   
-##  <a name="AttributeDiscrimination"></a>Discriminação de atributo  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a> Distinção de Atributo  
  Com a guia **discriminação de atributo** , você pode investigar a relação entre dois valores discretos de compra de bicicletas e outros valores de atributo. Como o `TM_NaiveBayes` modelo tem apenas dois Estados, 1 e 0, você não precisa fazer nenhuma alteração no visualizador.  
   
  No visualizador, você pode ver que as pessoas que não têm carro tendem a comprar bicicletas, e que as pessoas que têm dois carros tendem a não comprar bicicletas.  

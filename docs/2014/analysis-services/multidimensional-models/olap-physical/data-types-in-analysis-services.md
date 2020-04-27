@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725380"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipos de dados no Analysis Services
@@ -27,9 +27,9 @@ ms.locfileid: "62725380"
 |BigInt|Um inteiro de 64 bytes com sinal. O tipo de valor *bigint* representa inteiros com valores variando de 9.223.372.036.854.775.808 negativo para positivo 9.223.372.036.854.775.807.|  
 |Binário|Um fluxo de dados binários do tipo de **byte** . **Byte** é um tipo de valor que representa inteiros não assinados com valores que variam de 0 a 255.|  
 |Boolean|Instâncias desse tipo têm valores de `true` ou `false`.|  
-|Moeda|Um valor de *moeda* que varia de-922337203685477,5808 a + 922337203685477,5807 com precisão de dez milésimos de uma unidade monetária (quatro casas decimais).|  
+|Currency|Um valor de *moeda* que varia de-922337203685477,5808 a + 922337203685477,5807 com precisão de dez milésimos de uma unidade monetária (quatro casas decimais).|  
 |Data|Dados de data e hora armazenados como um duplo. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é uma fração de um dia ou hora do dia.|  
-|DOUBLE|Um número de ponto flutuante dentro do intervalo de -1,79769313486232E +308 a 1,79769313486232E +308. Um valor Double armazena informações numéricas com até 15 dígitos decimais de precisão.|  
+|Double|Um número de ponto flutuante dentro do intervalo de -1,79769313486232E +308 a 1,79769313486232E +308. Um valor Double armazena informações numéricas com até 15 dígitos decimais de precisão.|  
 |Integer|Um número inteiro com sinal de 32 bits que representa números inteiros com valores que variam de 2.147.483.648 negativo a 2.147.483.647 positivo.|  
 |Single|Um número de ponto flutuante dentro do intervalo de - 3,4028235E +38 a 3,4028235E +38. Um valor Single armazena informações numéricas com até sete dígitos decimais de precisão.|  
 |Smallint|Um inteiro com sinal de 16 bits. O tipo de valor *smallint* representa inteiros assinados com valores que variam de 32768 negativos a 32767 positivos.|  

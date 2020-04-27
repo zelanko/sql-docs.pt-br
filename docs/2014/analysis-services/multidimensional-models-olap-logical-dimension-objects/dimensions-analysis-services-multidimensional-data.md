@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702430"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensões (Analysis Services – Dados Multidimensionais)
@@ -26,9 +26,9 @@ ms.locfileid: "62702430"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Introdução às dimensões &#40;Analysis Services de dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)|Fornece uma visão geral de conceitos de dimensão.|  
+|[Introdução a Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)|Fornece uma visão geral de conceitos de dimensão.|  
 |[Atributos e hierarquias de atributos](attributes-and-attribute-hierarchies.md)|Descreve atributos e hierarquias de atributo.|  
 |[Hierarquias do usuário](user-hierarchies.md)|Descreve hierarquias definidas pelo usuário de atributos.|  
 |[Dimensões habilitadas para gravação](write-enabled-dimensions.md)|Descreve dimensões habilitadas para gravação.|  

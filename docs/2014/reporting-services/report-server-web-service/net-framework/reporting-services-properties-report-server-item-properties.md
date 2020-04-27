@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519136"
 ---
 # <a name="report-server-item-properties"></a>Propriedades do item do servidor de relatório
@@ -50,7 +50,7 @@ ms.locfileid: "62519136"
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|**Reserved**|Um valor retornado pelo método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para pastas reservadas pelo servidor de relatório. As pastas reservadas incluem Usuários, Meus Relatórios e /. As pastas reservadas não podem ser modificadas ou removidas.|  
+|**Reservado**|Um valor retornado pelo método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para pastas reservadas pelo servidor de relatório. As pastas reservadas incluem Usuários, Meus Relatórios e /. As pastas reservadas não podem ser modificadas ou removidas.|  
   
 ## <a name="report-properties"></a>Propriedades de relatório  
  Além das propriedades do item previamente listadas, as propriedades a seguir se aplicam a relatórios do banco de dados do servidor de relatório.  
@@ -69,9 +69,9 @@ ms.locfileid: "62519136"
 ## <a name="resource-properties"></a>Propriedades de recurso  
  Além das propriedades do item previamente listadas, a propriedade a seguir se aplica a recursos do banco de dados do servidor de relatório.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
-|**MIME**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
+|**MimeType**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando aplicativos usando o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

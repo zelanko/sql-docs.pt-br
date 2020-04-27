@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755228"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Conectar ao servidor (página Propriedades da Conexão) Analysis Services
-  Use esta guia para exibir ou especificar opções ao se conectar com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou ao registrar o [!INCLUDE[ssAS](../includes/ssas-md.md)] nos **Servidores Registrados**. **As opções** **conectar** e somente aparecem nessa caixa de diálogo durante a conexão. **Test** e **Save** aparecem apenas nesta caixa de diálogo durante o registro [!INCLUDE[ssAS](../includes/ssas-md.md)].  
+  Use essa guia para exibir ou especificar opções ao se conectar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou registrar [!INCLUDE[ssAS](../includes/ssas-md.md)] em **servidores registrados**. **Conectar** e **Opções** são exibidas apenas nessa caixa de diálogo durante a conexão. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssAS](../includes/ssas-md.md)].  
   
 ## <a name="options"></a>Opções  
  **Conectar ao banco de dados**  
@@ -35,7 +35,7 @@ ms.locfileid: "62755228"
  **Criptografar conexão**  
  Força a criptografia da conexão.  
   
- **Redefinir tudo**  
+ **Redefinir Tudo**  
  Substitua todos os valores de propriedade de conexão digitados manualmente pelos valores padrão.  
   
  **Connect**  
@@ -44,7 +44,7 @@ ms.locfileid: "62755228"
  **Opções**  
  Clique para alterar a caixa de diálogo e ocultar as opções de conexão de servidor adicionais, como lembrar a senha.  
   
- **Testar**  
+ **Teste**  
  Ao registrar o [!INCLUDE[ssAS](../includes/ssas-md.md)] em **Servidores Registrados**, clique para testar a conexão.  
   
  **Salvar**  

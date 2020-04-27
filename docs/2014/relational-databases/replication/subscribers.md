@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629394"
 ---
 # <a name="subscribers"></a>Publicadores
@@ -26,7 +26,7 @@ ms.locfileid: "62629394"
   
 ## <a name="options"></a>Opções  
  **Publicadores**  
- Marque a caixa de seleção na grade para habilitar a fonte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente ou não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados como um assinante para a publicação escolhida na página **publicação** . Se o Assinante não estiver na lista, clique em **Adicionar Assinante** ou **Adicionar Assinante SQL Server**.  
+ Marque a caixa de seleção na grade para habilitar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondente ou a fonte de dados não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um Assinante da publicação escolhida na página **Publicação** . Se o Assinante não estiver na lista, clique em **Adicionar Assinante** ou **Adicionar Assinante SQL Server**.  
   
  **Banco de dados de assinatura**  
  As informações exibidas e as informações exibidas nessa coluna dependem do tipo de Assinante listado na coluna **Assinantes** :  
@@ -38,7 +38,7 @@ ms.locfileid: "62629394"
   
 -   Para Assinantes não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o banco de dados de assinatura não é exibido. Especifique o banco de dados, juntamente com outras informações de conexão, no campo **Nome da fonte de dados** da caixa de diálogo **Adicionar não SQL Server** . Essa caixa de diálogo está disponível clicando em **Adicionar Assinante** e depois clicando em **Adicionar Assinante não SQL Server**.  
   
- **Adicionar assinante**  
+ **Adicionar Assinante**  
  Adicione um servidor à lista de servidores que podem ser habilitados como Assinantes. Esse botão é exibido quando todas as condições seguintes são verdadeiras:  
   
 -   A publicação selecionada é uma publicação de instantâneo ou transacional que não oferece suporte a assinaturas de atualização.  
@@ -48,7 +48,7 @@ ms.locfileid: "62629394"
   
 -   A assinatura é uma assinatura push.  
   
--   O editor da publicação selecionada é [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
+-   O Publicador da publicação selecionada é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior.  
   
  Clicar em **Adicionar Assinante** mostra um menu com duas opções: **Adicionar Assinante SQL Server** e **Adicionar Assinante não SQL Server**. Clique em **Adicionar Assinante não SQL Server** para adicionar um Assinante Oracle ou IBM DB2.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659570"
 ---
 # <a name="recommendation-element-dta"></a>Elemento de recomendação (DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659570"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento Table para Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Elementos filho**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`elementos. Para obter mais informações, consulte o esquema XML do [Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Elementos filho**|[Elemento Create &#40;DTA&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Para obter mais informações, consulte o esquema XML do [Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento tem o nome **RecommendationTypecomplexType** no esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. É usado para especificar os índices de uma configuração hipotética. Não confunda esse elemento `Recommendation` com os outros tipos que podem ser usados para especificar particionamento (`RecommendationPType`) ou exibições (`RecommendationViewType`). Para obter informações sobre esses `Recommendation` outros tipos de elemento, consulte o [Orientador de otimização do mecanismo de banco de dados esquema XML](https://go.microsoft.com/fwlink/?linkid=43100).  

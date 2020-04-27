@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754029"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Use os limites de aviso e alertas em métricas de desempenho de espelhamento (SQL Server)
@@ -35,11 +35,11 @@ ms.locfileid: "62754029"
   
 -   [Configurando e gerenciando limites de aviso](#SetUpManageWarningThresholds)  
   
--   [Usando alertas para um banco de dados espelhado](#UseAlerts)  
+-   [Usando alertas para um banco de dados espelho](#UseAlerts)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a> Métricas de desempenho e limites de aviso  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a>Métricas de desempenho e limites de aviso  
  A tabela a seguir lista as métricas de desempenho para as quais os avisos podem ser configurados, descreve o limite de aviso correspondente e lista os rótulos correspondentes do Monitor de Espelhamento de Banco de Dados.  
   
 |Métrica de desempenho|Limite de aviso|Rótulo do monitor de espelhamento de banco de dados|  
@@ -51,7 +51,7 @@ ms.locfileid: "62754029"
   
  Para qualquer uma dessas métrica de desempenho, um administrador de sistema pode especificar um limite em um banco de dados espelho. Para obter mais informações, consulte [Configurando e gerenciando limites de aviso](#SetUpManageWarningThresholds), posteriormente neste tópico.  
   
-##  <a name="SetUpManageWarningThresholds"></a> Configurando e gerenciando limites de aviso  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a>Configurando e gerenciando limites de aviso  
  Um administrador de sistema pode configurar um ou mais limites de aviso para as métricas de desempenho chave de espelhamento. Recomendamos a definição de um limite para um determinado aviso em ambos os parceiros para garantir que o aviso persista se o banco de dados cair. O limite apropriado de cada parceiro depende dos recursos de desempenho do sistema daquele parceiro.  
   
  Limites de aviso também podem ser configurados e gerenciados com uma das seguintes opções:  
@@ -66,14 +66,14 @@ ms.locfileid: "62754029"
   
      O conjunto a seguir de procedimentos armazenados do sistema permite que um administrador configure e gerencie limites de aviso em bancos de dados espelhados, um parceiro por vez.  
   
-    |Procedimento|DESCRIÇÃO|  
+    |Procedimento|Descrição|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Adiciona ou altera limites de aviso para uma métrica especificada de desempenho de espelhamento.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Retorna informações sobre limites de aviso em uma ou todas as várias métricas de desempenho do monitor de espelhamento de banco de dados principal.|  
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Descarta o aviso de uma métrica de desempenho especificada.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventos de limite de desempenho enviados para o log de eventos do Windows  
- Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido alcançado, o procedimento de atualização **sp_dbmmonitorupdate** gerará um evento informativo, um *evento do limite de desempenho*, para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
+ Se o limite de aviso for definido para uma métrica de desempenho, quando a tabela de status for atualizada, o valor mais recente será avaliado com relação ao limite. Se o limite tiver sido atingido, o procedimento de atualização, **sp_dbmmonitorupdate**, gerará um evento informativo – um *evento de limite de desempenho*-para a métrica e gravará o evento no log de eventos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. A tabela a seguir lista as IDs de evento dos eventos de limite de desempenho.  
   
 |Métrica de desempenho|ID do evento|  
 |------------------------|--------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "62754029"
 >   
 >  tópico.  
   
-##  <a name="UseAlerts"></a> Usando alertas para um banco de dados espelho  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>Usando alertas para um banco de dados espelhado  
  Uma parte importante do monitoramento de um banco de dados espelhado é a configuração de alertas sobre eventos importantes de espelhamento de banco de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera os seguintes tipos de eventos de espelhamento de banco de dados:  
   
 -   Eventos de limite de desempenho  
@@ -110,7 +110,7 @@ ms.locfileid: "62754029"
 > [!IMPORTANT]  
 >  Para todas a sessões de espelhamento, é altamente recomendável que você configure o banco de dados para enviar um alerta em qualquer evento de alteração de estado. A menos que uma alteração de estado seja esperada como resultado de uma alteração de configuração manual, algo ocorreu que pode comprometer seus dados. Para ajudar a proteger seus dados, identifique e repare a causa de uma alteração de estado imprevista.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para criar um alerta com o SQL Server Management Studio**  
   
 -   [Criar um alerta usando um número de erro](../../ssms/agent/create-an-alert-using-an-error-number.md)  
@@ -140,7 +140,7 @@ ms.locfileid: "62754029"
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
  [Monitorando o espelhamento de banco de dados &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   
   

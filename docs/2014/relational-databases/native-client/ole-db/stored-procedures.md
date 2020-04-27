@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638325"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
-  Um procedimento armazenado ([procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](../../stored-procedures/stored-procedures-database-engine.md)) é um objeto executável armazenado em um banco de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]suportar  
+  Um procedimento armazenado ([&#40;Mecanismo de Banco de Dados&#41; de Procedimento Armazenado](../../stored-procedures/stored-procedures-database-engine.md))é um objeto executável armazenado em um banco de dados. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a:  
   
 -   Procedimentos armazenados  
   

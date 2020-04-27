@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714913"
 ---
 # <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente
@@ -46,6 +46,6 @@ ms.locfileid: "62714913"
 -   [Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Tabelas com otimização de memória](memory-optimized-tables.md)  
   
   

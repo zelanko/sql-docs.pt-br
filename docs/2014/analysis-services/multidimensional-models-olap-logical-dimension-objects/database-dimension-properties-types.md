@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728552"
 ---
 # <a name="dimension-types"></a>Tipos de dimensão
@@ -42,9 +42,9 @@ ms.locfileid: "62728552"
 ## <a name="available-dimension-types"></a>Tipos de dimensão disponíveis  
  A tabela a seguir descreve os tipos de dimensão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]disponíveis no.  
   
-|Tipo de dimensão|DESCRIÇÃO|  
+|Tipo de dimensão|Descrição|  
 |--------------------|-----------------|  
-|Regular |Uma dimensão cujo tipo não foi definido como um tipo de dimensão especial.|  
+|Regular|Uma dimensão cujo tipo não foi definido como um tipo de dimensão especial.|  
 |Hora|Uma dimensão cujos atributos representam períodos, como anos, semestres, trimestres, meses e dias.|  
 |Organização|Uma dimensão cujos atributos representam informações organizacionais, como funcionários ou subsidiárias.|  
 |painel Geografia do app&#39;s selecionado|Uma dimensão cujos atributos representam informações geográficas, como cidades ou códigos postais.|  
@@ -55,13 +55,13 @@ ms.locfileid: "62728552"
 |Cenário|Uma dimensão cujos atributos representam informações de planejamento ou de análise estratégica.|  
 |Quantitative|Uma dimensão cujos atributos representam informações quantitativas.|  
 |Utilitário|Uma dimensão cujos atributos representam informações diversas.|  
-|Moeda|Este tipo de dimensão contém dados e metadados de moeda.|  
+|Currency|Este tipo de dimensão contém dados e metadados de moeda.|  
 |Rates|Uma dimensão cujos atributos representam informações de taxa de moeda.|  
 |Canal|Uma dimensão cujos atributos representam informações de canal.|  
 |Promoção|Uma dimensão cujos atributos representam informações de promoções de marketing.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar uma dimensão usando uma tabela existente](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

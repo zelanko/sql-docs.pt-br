@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725190"
 ---
 # <a name="multidimensional-model-programming"></a>Programação de modelo multidimensional
@@ -25,15 +25,15 @@ ms.locfileid: "62725190"
   
  [Desenvolvendo com ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- [Desenvolvendo com Objetos de Gerenciamento de Análise &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Desenvolvendo com AMO &#40;Objetos de Gerenciamento de Análise&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Desenvolvendo com XMLA no Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
- [Desenvolvendo com a linguagem de script Analysis Services &#40;ASSL&#41;](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Desenvolvendo com ASSL &#40;linguagem de script do Analysis Services&#41;](scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Estendendo a funcionalidade OLAP](extending-olap/extending-olap-functionality.md)  
   
- [Provedor Analysis Services OLE DB &#40;Analysis Services de dados multidimensionais&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+ [Provedor OLE DB do Analysis Services &#40;Analysis Services – Dados Multidimensionais&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Programação de modelo de tabela](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   

@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727642"
 ---
 # <a name="cube-properties"></a>Propriedades do cubo
@@ -46,7 +46,7 @@ ms.locfileid: "62727642"
   
  Para obter mais informações sobre como definir propriedades de cubo, consulte [Designer de cubo &#40;Analysis Services&#41;de dados multidimensionais ](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Especifica o prefixo comum usado para nomes de agregação.|  
 |`Collation`|Especifica o identificador de localidade (LCID) e o sinalizador de comparação, separados por um sublinhado: por exemplo, Latin1_General_C1_AS.|  
@@ -58,9 +58,9 @@ ms.locfileid: "62727642"
 |`Language`|Especifica o identificador de idioma padrão do cubo.|  
 |`Name`|Especifica o nome amigável do cubo.|  
 |`ProactiveCaching`|Define configurações de cache pró-ativas para o cubo.|  
-|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções **** são regular `lazy`ou.|  
+|`ProcessingMode`|Indica se a indexação e a agregação devem ocorrer durante ou após o processamento. As opções **regular** são regular `lazy`ou.|  
 |`ProcessingPriority`|Determina a prioridade de processamento do cubo durante as operações em segundo plano, como agregações lentas e indexação. O valor padrão é **0**.|  
-|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções **** são regular `lazy`e.|  
+|`ScriptCacheProcessingMode`|Indica se o cache de script deve ser criado durante ou após o processamento. As opções **regular** são regular `lazy`e.|  
 |`ScriptErrorHandlingMode`|Determina o tratamento de erros. As opções `IgnoreNone` são ou`IgnoreAll`|  
 |`Source`|Mostra a exibição da fonte de dados usada para o cubo.|  
 |`StorageLocation`|Especifica o local de armazenamento do sistema de arquivos para o cubo. Se nenhum for especificado, o local será herdado do banco de dados que contém o objeto de cubo.|  

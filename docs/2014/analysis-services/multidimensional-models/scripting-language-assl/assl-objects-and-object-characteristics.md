@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736610"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos e características de objeto ASSL
@@ -63,8 +63,7 @@ ms.locfileid: "62736610"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (onde apropriado)  
+-   `LastProcessed` (onde apropriado)  
   
 > [!NOTE]  
 >  A classificação de um objeto como um objeto principal afeta a forma como uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tratará esse objeto e como ele será manipulado na linguagem de definição de objeto. No entanto, essa classificação não garante que as ferramentas de desenvolvimento e de gerenciamento do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] permitirão a criação, a modificação ou a exclusão independente desses objetos.  
@@ -87,7 +86,7 @@ ms.locfileid: "62736610"
 ## <a name="object-expansion"></a>Expansão de objetos  
  A restrição `ObjectExpansion` pode ser usada para controlar o grau de expansão do XML ASSL retornado pelo servidor. As opções dessa restrição estão relacionadas na tabela a seguir.  
   
-|Valor de enumeração|Permitido para \<ALTER>|DESCRIÇÃO|  
+|Valor de enumeração|Permitido para \<ALTER>|Descrição|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|não|Retorna somente o nome, a ID e o carimbo de data/hora do objeto solicitado e de todos os objetos principais contidos de forma recursiva.|  
 |*ObjectProperties*|sim|Expande o objeto solicitado e os objetos secundários contidos, mas não retorna objetos principais contidos.|  

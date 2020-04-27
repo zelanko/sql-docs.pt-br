@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721788"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -186,7 +186,7 @@ ms.locfileid: "62721788"
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
- [Conceitos de programação da replicação](replication-programming-concepts.md)  
+ [Conceitos de procedimentos armazenados do sistema de replicação](replication-system-stored-procedures-concepts.md)   
+ [Conceitos de programação de replicação](replication-programming-concepts.md)  
   
   

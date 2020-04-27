@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f81b196ee1b686fbe2dd3563f694411a0e00d962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663040"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>classe de evento Database Mirroring State Change
-  A classe de evento de **alteração de estado do espelhamento de banco de dados** indica quando o estado de um banco de dados espelhado é alterado. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
+  A classe de evento **Database Mirroring State Change** indica quando muda o estado de um banco de dados espelho. Inclua esta classe de evento em rastreamentos que monitorem as condições de bancos de dados espelhados.  
   
  Quando a classe de evento **Database Mirroring State Change** é incluída em um rastreamento, a sobrecarga relativa é baixa. A sobrecarga poderá ser maior se o estado dos bancos de dados espelhados aumentar.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "62663040"
 |**EventSequence**|**int**|Sequência de classe de evento em lote.|51|Não|  
 |**IntegerData**|**int**|ID de estado anterior.|25|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
-|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição do catálogo **Sys. server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
 |**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo rastreada.|26|Não|  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o Logon1 e executar uma instrução como Logon2, o **SessionLoginName** mostrará o Logon1 e o **LoginName** mostrará o Logon2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  
 |**SPID**|**int**|Identificação da sessão em que ocorreu o evento.|12|Sim|  
 |**StartTime**|**datetime**|Hora de início do evento, se disponível.|14|Sim|  
-|**Estado**|**int**|ID do novo estado de espelhamento:<br /><br /> 0 = Notificação nula<br /><br /> 1 = Principal sincronizado com testemunha<br /><br /> 2 = Principal sincronizado sem testemunha<br /><br /> 3 = Espelho sincronizado com testemunha<br /><br /> 4 = Espelho sincronizado sem testemunha<br /><br /> 5 = Conexão com principal perdida<br /><br /> 6 = Conexão com espelho perdida<br /><br /> 7 = Failover manual<br /><br /> 8 = Failover automático<br /><br /> 9 = Espelhamento suspenso<br /><br /> 10 = Sem quorum<br /><br /> 11 = Sincronizando espelho<br /><br /> 12 = Principal em execução exposto|30|Sim|  
+|**State**|**int**|ID do novo estado de espelhamento:<br /><br /> 0 = Notificação nula<br /><br /> 1 = Principal sincronizado com testemunha<br /><br /> 2 = Principal sincronizado sem testemunha<br /><br /> 3 = Espelho sincronizado com testemunha<br /><br /> 4 = Espelho sincronizado sem testemunha<br /><br /> 5 = Conexão com principal perdida<br /><br /> 6 = Conexão com espelho perdida<br /><br /> 7 = Failover manual<br /><br /> 8 = Failover automático<br /><br /> 9 = Espelhamento suspenso<br /><br /> 10 = Sem quorum<br /><br /> 11 = Sincronizando espelho<br /><br /> 12 = Principal em execução exposto|30|Sim|  
 |**TextData**|**ntext**|Descrição da alteração de estado.|1|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
   

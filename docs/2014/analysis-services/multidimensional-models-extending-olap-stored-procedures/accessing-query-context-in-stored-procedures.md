@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702665"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Acessando o contexto de consulta nos procedimentos armazenados
   O contexto de execução de um procedimento armazenado está disponível no código do procedimento armazenado como um objeto do `Context` do modelo de objeto de servidor do ADOMD.NET. Trata-se de um contexto somente leitura e que não pode ser modificado pelo procedimento armazenado. As propriedades a seguir estão disponíveis nesse objeto.  
   
-|Propriedade|Type|DESCRIÇÃO|  
+|Propriedade|Tipo|Descrição|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|O cubo do contexto de consulta atual.|  
 |**CurrentDatabaseName**|String|O identificador do banco de dados atual.|  
 |**CurrentConnection**|Conexão|Uma referência ao objeto de conexão no contexto atual.|  
-|**Passá**|Integer|O número da passagem do contexto atual.|  
+|**Passar**|Integer|O número da passagem do contexto atual.|  
   
  Haverá um objeto `Context` quando o modelo de objeto de expressão MDX for usado em um procedimento armazenado. Ele não estará disponível quando o modelo de objeto MDX for usado em um cliente. O objeto `Context` não é passado explicitamente para o procedimento armazenado nem retornado por ele. Ele fica disponível durante a execução do procedimento armazenado.  
   

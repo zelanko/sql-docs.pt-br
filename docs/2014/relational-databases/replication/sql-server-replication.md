@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626142"
 ---
 # <a name="sql-server-replication"></a>Replicação do SQL Server
@@ -44,17 +44,17 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
   
 -   [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
 -   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
--   [Desabilitar a publicação e a distribuição](disable-publishing-and-distribution.md)  
+-   [Desabilitar publicação e distribuição](disable-publishing-and-distribution.md)  
   
 ## <a name="publications-and-articles"></a>Publicações e Artigos 
   
 -   [Criar uma publicação](publish/create-a-publication.md)    
--   [Defina um Artigo](publish/define-an-article.md)   
+-   [Definir um artigo](publish/define-an-article.md)   
 -   [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
 -   [Exibir e modificar as propriedades do artigo](publish/view-and-modify-article-properties.md)    
 -   [Excluir uma publicação](publish/delete-a-publication.md)   
 -   [Excluir um artigo](publish/delete-an-article.md)    
--   [Criar uma publicação de um Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Criar uma publicação de um Banco de Dados Oracle](publish/create-a-publication-from-an-oracle-database.md)   
 -   [Definir o período de validade da assinatura](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Especificar opções de esquema](publish/specify-schema-options.md)  
 -   [Replicar alterações de esquema](publish/replicate-schema-changes.md)    
@@ -91,17 +91,17 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
 -   [Create a Pull Subscription](create-a-pull-subscription.md)    
 -   [Exibir e modificar propriedades de assinatura pull](view-and-modify-pull-subscription-properties.md)    
 -   [Excluir uma assinatura pull](delete-a-pull-subscription.md)    
--   [Criar uma Assinatura Push](create-a-push-subscription.md)   
+-   [Criar uma assinatura push](create-a-push-subscription.md)   
 -   [Exibir e modificar propriedades de assinatura push](view-and-modify-push-subscription-properties.md)   
 -   [Excluir uma assinatura push](delete-a-push-subscription.md)   
 -   [Especificar agendas de sincronização](specify-synchronization-schedules.md)    
--   [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Criar uma assinatura atualizável em uma publicação transacional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [Criar uma assinatura para um Assinante não SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>Sincronizar Assinaturas  
   
 -   [Criar e aplicar o instantâneo inicial](create-and-apply-the-initial-snapshot.md)   
--   [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Criar um instantâneo para uma publicação de mesclagem com filtros parametrizados](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Inicializar uma assinatura transacional de um backup](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Inicializar uma assinatura manualmente](initialize-a-subscription-manually.md)    
 -   [Sincronizar uma assinatura pull](synchronize-a-pull-subscription.md)    
@@ -131,8 +131,8 @@ Para informações de compatibilidade com versões anteriores, confira [Compatib
 ## <a name="monitor"></a>Monitoramento
   
 -   [Permitir que não administradores usem o Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
--   [Monitorar programaticamente a replicação](monitor/programmatically-monitor-replication.md)    
+-   [Monitorar a replicação de forma programática](monitor/programmatically-monitor-replication.md)    
 -   [Exibir comandos replicados e outras informações no banco de dados de distribuição](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [Exibir informações sobre conflitos para publicações de mesclagem](view-conflict-information-for-merge-publications.md) 
--   [Medir a latência e validar conexões para replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [Medir a latência e validar as conexões para a replicação transacional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

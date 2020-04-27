@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754318"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurar contas de logon para espelhamento de banco de dados ou para grupos de disponibilidade AlwaysOn (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754318"
     > [!IMPORTANT]  
     >  Para criar um ambiente mais seguro, procure usar contas de domínio separadas para cada instância do servidor.  
   
-##  <a name="CreateLogin"></a> Criar um logon para uma conta diferente  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>Criar um logon para uma conta diferente  
  Se duas instâncias de servidor forem executadas como contas diferentes, o administrador do sistema deve usar a instrução CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar um logon para a conta de serviço de inicialização da instância remota para cada instância do servidor. Para obter mais informações, veja [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
 > [!IMPORTANT]  
@@ -49,10 +49,10 @@ ms.locfileid: "62754318"
 > [!NOTE]  
 >  É possível conectar-se com a conta de serviço de rede usando a conta da máquina em vez de um usuário de domínio. Se a conta da máquina for usada, ela deve ser adicionada como um usuário na outra instância de servidor.  
   
-##  <a name="GrantConnect"></a> Conceder permissão de conexão  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Conceder permissão de conexão  
  Quando um logon tiver sido criado em uma instância de servidor, deve ser concedida permissão para que ele se conecte com o ponto de extremidade de espelhamento de banco de dados da instância de servidor. O administrador do sistema concede a permissão de conexão usando uma instrução GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obter mais informações, veja [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   

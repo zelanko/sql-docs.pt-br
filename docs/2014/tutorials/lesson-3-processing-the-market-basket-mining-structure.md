@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653840"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lição 3: Processando a estrutura de mineração do Market Basket
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     Na instrução, `Products` se refere à tabela Produtos definida pela instrução SHAPE. 
-  `SKIP` é usado para ignorar a coluna Modelo, que existe nos dados de origem como uma chave, mas não é usada pela estrutura de mineração.  
+     Na instrução, `Products` se refere à tabela Produtos definida pela instrução SHAPE. `SKIP` é usado para ignorar a coluna Modelo, que existe nos dados de origem como uma chave, mas não é usada pela estrutura de mineração.  
   
 5.  Substitua o seguinte:  
   

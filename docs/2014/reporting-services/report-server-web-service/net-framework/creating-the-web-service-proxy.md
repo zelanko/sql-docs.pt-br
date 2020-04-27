@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520369"
 ---
 # <a name="creating-the-web-service-proxy"></a>Criando o proxy de serviço Web
@@ -31,7 +31,7 @@ ms.locfileid: "62520369"
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Adicionando o proxy usando a ferramenta WSDL  
  O SDK do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] inclui a ferramenta Wsdl.exe (Web Services Description Language), que permite a você gerar um proxy de serviço Web para uso em um ambiente de desenvolvimento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. A maneira mais comum de criar um proxy de cliente em idiomas que dão suporte aos serviços Web ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]atualmente C# e) é usar a ferramenta WSDL.  
   
- **Para adicionar uma classe proxy ao seu projeto usando WSDL. exe**  
+ **Para adicionar uma classe proxy ao projeto usando Wsdl.exe**  
   
 1.  Em um prompt de comando, use Wsdl.exe para criar uma classe proxy, especificando (no mínimo) a URL do serviço Web Servidor de Relatório.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a26192eb47faddfb8776fb873e9c19253969d1e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767768"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Bem-vindo ao Assistente de Importação e Exportação do SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "62767768"
  O objetivo do Assistente de Importação e Exportação do SQL Server é copiar dados de uma origem para um destino. O assistente também pode criar um banco de dados de destino e tabelas de destino para você. No entanto, se for necessário copiar vários bancos de dados ou tabelas, ou outros tipos de objetos de banco de dados, será necessário usar o Assistente para Copiar Banco de Dados. Para obter mais informações, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opções  
- **Não mostrar esta página inicial novamente.**  
+ **Não mostrar essa página inicial novamente.**  
  Ignore a página inicial da próxima vez que abrir o assistente.  
   
   

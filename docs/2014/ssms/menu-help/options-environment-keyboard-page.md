@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62662057"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
-  A caixa de diálogo **Opções** permite personalizar o esquema de teclado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]para o. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
+  A caixa de diálogo **Opções** permite personalizar o esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
   
  A lista suspensa **Esquema de teclado** fornece as coleções disponíveis de teclas de atalho. Para carregar um esquema específico, selecione-o na lista. Quando estiver pronto para sair da caixa de diálogo **Opções** , clique em **OK**. Seu esquema selecionado será carregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Standard**  
- O esquema padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se assemelha bastante às [!INCLUDE[msCoName](../../includes/msconame-md.md)] teclas de atalho do Visual Studio.  
+ O esquema Padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e assemelha-se muito às teclas de atalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio.  
   
  Use a grade **Atalhos de consulta** para associar um procedimento armazenado a um atalho do teclado.  
   

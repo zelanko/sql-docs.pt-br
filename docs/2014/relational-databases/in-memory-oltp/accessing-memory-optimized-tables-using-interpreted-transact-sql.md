@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468603"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acessando tabelas com otimização de memória usando Transact-SQL interpretado
@@ -42,7 +42,7 @@ ms.locfileid: "62468603"
 |Entre bancos de dados|Consultas de bancos de dados<br /><br /> Transações entre bancos de dados<br /><br /> Servidores vinculados|  
   
 ## <a name="table-hints"></a>Dicas de tabela  
- Para obter mais informações sobre dicas de tabela, consulte. [Dicas de tabela &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). O isolamento de SNAPSHOT foi adicionado para suportar [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Para obter mais informações sobre dicas de tabela, consulte. [Dicas de tabela &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). O isolamento de SNAPSHOT foi adicionado para suportar [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  As dicas de tabela a seguir não têm suporte para acessar uma tabela com otimização de memória usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado.  
   

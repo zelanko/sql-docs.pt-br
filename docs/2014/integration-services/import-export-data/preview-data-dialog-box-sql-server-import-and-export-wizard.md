@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767978"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Caixa de diálogo Visualizar Dados (Assistente de Importação e Exportação do SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62767978"
 -   Na página **selecionar tabelas e exibições de origem** do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assistente de importação e exportação do, clique em **Visualizar**.  
   
 ## <a name="options"></a>Opções  
- **Origem**  
+ **Fonte**  
  Exibe a consulta que o assistente enviará para a fonte de dados.  
   
  **Grade de dados de exemplo**  

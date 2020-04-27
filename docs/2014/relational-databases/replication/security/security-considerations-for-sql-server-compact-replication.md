@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666856"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Considerações de segurança para SQL Server Compact Replication
-  A proteção da conectividade entre uma instância do Mecanismo de Banco de Dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssEW](../../../includes/ssew-md.md)] envolve a configuração correta da segurança para o IIS (Serviços de Informações da Internet da Microsoft) e o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Proteger a conectividade entre uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mecanismo de banco de dados e [!INCLUDE[ssEW](../../../includes/ssew-md.md)] envolve configurar corretamente a segurança para o Microsoft serviços de informações da Internet (IIS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e o.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)  
+ [Práticas recomendadas em relação à segurança de replicação](replication-security-best-practices.md)  
   
   

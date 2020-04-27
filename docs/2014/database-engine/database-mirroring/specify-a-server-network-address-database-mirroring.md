@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755063"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar um endereço de rede do servidor (Espelhamento de banco de dados)
@@ -29,33 +29,33 @@ ms.locfileid: "62755063"
   
   
   
-##  <a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Sintaxe para um endereço de rede de servidor  
  A sintaxe para um endereço de rede de servidor é do formato:  
   
  <strong>TCP<strong>://</strong>*\<sistema->de endereços *:<strong>*\<porta>* 
   
- onde  
+ where  
   
--   *\<system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino. Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
+-   *o endereço do sistema>é uma cadeia de caracteres que identifica inequivocamente o sistema do computador de destino. \<* Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
   
     -   Se os sistemas estiverem no mesmo domínio, você poderá usar o nome do sistema de computador; por exemplo, `SYSTEM46`.  
   
-    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[** _<IPv6_address>_ **]** .  
+    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve ser colocado entre colchetes, por exemplo: **[** _<IPv6_address>_ **]**.  
   
          Para saber o endereço IP de um sistema, no prompt de comando do Windows, digite no comando **ipconfig** .  
   
     -   O nome de domínio completamente qualificado tem seu funcionamento garantido. Esta é uma cadeia de caracteres de endereço definida localmente de formatos diferentes em lugares diferentes. Frequentemente, mas não sempre, um nome de domínio completamente qualificado é um nome composto que inclui o nome do computador e uma série de segmentos de domínio separados por pontos no formato:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[... **.** _domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.**_domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Se você não conhecer o nome de domínio completamente qualificado do seu servidor, consulte seu administrador de sistema.  
   
         > [!NOTE]  
         >  Para obter informações sobre como achar um nome de domínio completamente qualificado, consulte "Encontrando o nome de domínio completamente qualificado", mais abaixo neste tópico.  
   
--   *\<port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância de servidor parceiro. Para obter informações sobre como especificar um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   a porta>é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. * \<* Para obter informações sobre como especificar um ponto de extremidade, veja [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Um ponto de extremidade de espelhamento de banco de dados pode usar qualquer porta disponível no sistema do computador. Cada número de porta em um sistema de computador deve estar associado a somente um ponto de extremidade e cada ponto de extremidade está associado a uma única instância de servidor; e assim, diferentes instâncias de servidor no mesmo servidor escutam em diferentes pontos de extremidade com portas diferentes. Por isso, a porta que você especifica no endereço de rede de servidor quando você configura uma sessão de espelhamento de banco de dados sempre dirigirá a sessão à instância de servidor cujo ponto de extremidade está associado a essa porta.  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a> Exemplos  
+##  <a name="examples"></a><a name="Examples"></a> Exemplos  
  O exemplo a seguir mostra o endereço de rede de servidor para uma instância de servidor em um sistema de computador nomeado `REMOTESYSTEM3` em outro domínio. As informações de domínio são `NORTHWEST.ADVENTURE-WORKS.COM`e a porta do ponto de extremidade de espelhamento de banco de dados é `7025`. Tendo estes exemplos de componentes determinados, o endereço de rede de servidor é.  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,12 +129,12 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
  [O ponto de extremidade de espelhamento de banco de dados &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

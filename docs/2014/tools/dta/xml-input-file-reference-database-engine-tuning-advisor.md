@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62509978"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referência do arquivo de entrada XML (Orientador de Otimização do Mecanismo de Banco de Dados)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]O Orientador de otimização pode usar um arquivo de entrada XML para ajustar um banco de dados. Este arquivo XML define os bancos de dados, tabelas, arquivos ou tabelas da carga de trabalho e as opções a serem usadas na sessão de ajuste. Você também pode usar este arquivo para indicar uma configuração específica de usuário a fim de realizar uma análise hipotética.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode usar um arquivo de entrada XML para ajustar o banco de dados Este arquivo XML define os bancos de dados, tabelas, arquivos ou tabelas da carga de trabalho e as opções a serem usadas na sessão de ajuste. Você também pode usar este arquivo para indicar uma configuração específica de usuário a fim de realizar uma análise hipotética.  
   
  O arquivo de entrada do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] contém uma hierarquia de elementos XML, cada qual contendo um texto ou outros elementos que especificam os parâmetros da sessão de ajuste. O arquivo de entrada XML do Orientador de Otimização do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve seguir os padrões do XML bem formado para que todos os nomes dos elementos diferenciem letras maiúsculas e minúsculas. Os elementos são especificados usando a caixa Pascal, o que significa que o primeiro caractere está em maiúscula e a primeira letra de qualquer palavra concatenada subsequente está em maiúscula.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62509978"
   
 -   [Elemento Configuration &#40;DTA&#41;](configuration-element-dta.md)  
   
-## <a name="server-elements"></a>Elementos de servidor   
+## <a name="server-elements"></a>Elementos de servidor  
   
 -   [Elemento Name para Server &#40;DTA&#41;](name-element-for-server-dta.md)  
   
@@ -98,13 +98,13 @@ ms.locfileid: "62509978"
   
 -   [Elemento Index &#40;DTA&#41;](index-element-dta.md)  
   
--   [Elemento de nome para o índice &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [Elemento Name para o índice &#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [Elemento Column para Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
 -   [Elemento Name para coluna &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [Elemento de grupo de arquivos para o índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Elemento Filegroup para o índice &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Elementos de banco de dados  
   

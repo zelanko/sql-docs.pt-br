@@ -23,15 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473127"
 ---
 # <a name="alerts"></a>Alertas
-  Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
+  Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
   
  Para definir um alerta, especifique:  
   
@@ -47,10 +46,9 @@ ms.locfileid: "62473127"
 ## <a name="selecting-an-event-type"></a>Selecionando um tipo de evento  
  Um alerta responde a um evento de tipo específico. Alertas respondem aos seguintes tipos de evento:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LostFocus  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condições de desempenho  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condições de desempenho  
   
 -   Eventos do WMI  
   
@@ -61,23 +59,19 @@ ms.locfileid: "62473127"
   
 -   **Número do erro**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre um erro específico. Por exemplo, você pode especificar o número de erro 2571 como resposta a tentativas não autorizadas de invocar DBCC (Database Console Commands).  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre um erro específico. Por exemplo, você pode especificar o número de erro 2571 como resposta a tentativas não autorizadas de invocar DBCC (Database Console Commands).  
   
 -   **Nível de severidade**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre qualquer erro de uma severidade específica. Por exemplo, você pode especificar um nível de severidade 15 como resposta a erros de sintaxe em instruções Transact-SQL.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre qualquer erro de uma severidade específica. Por exemplo, você pode especificar um nível de severidade 15 como resposta a erros de sintaxe em instruções Transact-SQL.  
   
 -   **Backup de banco de dados**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só dispara um alerta quando o evento ocorre em um banco de dados específico. Esta opção pode ser aplicada em conjunto com o número de erro ou o nível de severidade. Por exemplo, se uma instância contiver um banco de dados utilizado para produção e outro utilizado para relatórios, você poderá definir um alerta como resposta a erros de sintaxe apenas do banco de dados de produção.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só dispara um alerta quando o evento ocorre em um banco de dados específico. Esta opção pode ser aplicada em conjunto com o número de erro ou o nível de severidade. Por exemplo, se uma instância contiver um banco de dados utilizado para produção e outro utilizado para relatórios, você poderá definir um alerta como resposta a erros de sintaxe apenas do banco de dados de produção.  
   
 -   **Texto do evento**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando o evento especificado contém uma determinada cadeia de caracteres de texto em sua mensagem. Por exemplo, você pode definir um alerta como resposta a mensagens contendo o nome de uma tabela ou restrição em particular.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando o evento especificado contém uma determinada cadeia de caracteres de texto em sua mensagem. Por exemplo, você pode definir um alerta como resposta a mensagens contendo o nome de uma tabela ou restrição em particular.  
   
 ## <a name="selecting-a-performance-condition"></a>Selecionando uma condição de desempenho  
  É possível especificar que um alerta ocorra em resposta a uma condição de desempenho em particular. Neste caso, especifique o contador de desempenho a monitorar, o limite do alerta e o comportamento que o contador deve ter face ao alerta. Para definir uma condição de desempenho, é necessário definir os seguintes itens na página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geral **da caixa de diálogo** Novo Alerta **ou** Propriedades do Alerta **do** Agent:  
@@ -94,7 +88,7 @@ ms.locfileid: "62473127"
   
      A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define a instância específica (se houver) do atributo a ser monitorado.  
   
--   **Alertar se o contador** e o **valor**  
+-   **Alertar se o contador** e **Valor**  
   
      O limite do alerta e o comportamento que o alerta produz. O limite é um número. O comportamento é um **dos seguintes: cai abaixo**, **torna-se igual a**ou **sobe acima de um número especificado como Valor**. O **Valor** é um número que descreve o contador de condição de desempenho. Por exemplo, para definir que ocorra um alerta para o objeto de desempenho **SQLServer:Locks** quando **Tempo de Espera de Bloqueio** exceder 30 minutos, você deve escolher **sobe acima** e **especificar 30 como valor**.  
   
@@ -108,13 +102,11 @@ ms.locfileid: "62473127"
   
 -   **Namespace**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent se registra como um cliente do WMI no namespace do WMI que é fornecido para consulta de eventos.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent se registra como um cliente do WMI no namespace do WMI que é fornecido para consulta de eventos.  
   
 -   **Consulta**  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a instrução WQL da Instrumentação de Gerenciamento do Windows fornecida para identificar o evento específico.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a instrução WQL da Instrumentação de Gerenciamento do Windows fornecida para identificar o evento específico.  
   
  Encontram-se, a seguir, os links para tarefas comuns:  
   
@@ -124,13 +116,13 @@ ms.locfileid: "62473127"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **Para criar um alerta com base nos níveis de severidade**  
+ **Para criar um alerta com base em níveis de severidade**  
   
 -   [SQL Server Management Studio](create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)  
   
- **Para criar um alerta com base em um evento WMI**  
+ **Para criar um alerta com base em um evento do WMI**  
   
 -   [SQL Server Management Studio](create-a-wmi-event-alert.md)  
   
@@ -142,7 +134,7 @@ ms.locfileid: "62473127"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Para criar uma mensagem de erro de evento definido pelo usuário**  
+ **Para criar uma mensagem de erro de evento definida pelo usuário**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
@@ -150,7 +142,7 @@ ms.locfileid: "62473127"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Para excluir uma mensagem de erro de evento definido pelo usuário**  
+ **Para excluir uma mensagem de erro de evento definida pelo usuário**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

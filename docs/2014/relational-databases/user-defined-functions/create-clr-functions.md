@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524056"
 ---
 # <a name="create-clr-functions"></a>Criar funções CLR
-  Você pode criar um objeto de banco de dados dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de uma instância do que é programada em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] um assembly criado no Common Language Runtime (CLR). Os objetos do banco de dados que podem aproveitar o modelo de programação avançado fornecido pelo CLR inclui funções de agregação, funções, procedimentos armazenados, gatilhos e tipos.  
+  Crie um objeto de banco de dados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja programado em um assembly criado no CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Os objetos do banco de dados que podem aproveitar o modelo de programação avançado fornecido pelo CLR inclui funções de agregação, funções, procedimentos armazenados, gatilhos e tipos.  
   
  Criar uma função CLR em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envolve as seguintes etapas:  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736349"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
@@ -37,17 +37,17 @@ ms.locfileid: "62736349"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Quando uma coluna com um tipo de dados de alias é copiada de um banco de dados para outro, o tipo de dados de alias pode não estar disponível no banco de dados de destino. Nesse caso, a coluna receberá o tipo de dados base correspondente, mais próximo e disponível naquele banco de dados.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736349"
      Se você estiver copiando linhas em uma tabela, poderá adicionar a tabela de origem como tabela de destino.  
   
     > [!NOTE]  
-    >  O **Designer de consulta** não pode determinar com antecedência quais tabelas e exibições você pode atualizar. Portanto a lista de tabelas da caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados** mostra todas as tabelas e exibições disponíveis na conexão de dados que está sendo consultada, até mesmo aquelas nas quais não é possível copiar linhas.  
+    >  O**Designer de Consulta** não pode determinar antecipadamente quais tabelas e exibições poderão ser atualizadas. Portanto a lista de tabelas da caixa de diálogo **Escolher Tabela de Destino para Inserir Resultados** mostra todas as tabelas e exibições disponíveis na conexão de dados que está sendo consultada, até mesmo aquelas nas quais não é possível copiar linhas.  
   
 5.  Clique com o botão direito do mouse no corpo do painel do diagrama e, no menu de atalho, clique em **Adicionar Tabela ao Diagrama**.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62736349"
   
 11. Clique no botão **Executar SQL** para executar a consulta.  
   
-     Quando você executa uma consulta Insert Results, nenhum resultado é relatado no [painel de resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
+     Quando uma consulta para inserir resultados é executada, nenhum resultado é relatado no [Painel de Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Em vez disso, será exibida uma mensagem indicando o total de linhas copiadas.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definições de coluna de uma tabela para outra  
   

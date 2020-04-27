@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721648"
 ---
 # <a name="configure-web-synchronization"></a>Configurar Sincronização da Web
@@ -101,8 +101,7 @@ Há suporte para sincronização da Web no IIS, a partir da versão 5.0. O Assis
   
  Se você estiver usando um Publicador pela primeira vez, será necessário configurar também um Distribuidor e um compartilhamento de instantâneos. O Agente de Mesclagem, em cada Assinante, precisa ter permissões de leitura no compartilhamento de instantâneo. Para obter mais informações, consulte [Configurar a distribuição](configure-distribution.md) e [Proteger uma pasta de instantâneo](security/secure-the-snapshot-folder.md).  
   
- 
-  `gen` é uma palavra reservada em arquivos XML websync. Não tente publicar tabelas que contêm colunas nomeadas `gen`.  
+ `gen` é uma palavra reservada em arquivos XML websync. Não tente publicar tabelas que contêm colunas nomeadas `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurando a assinatura  
  Depois de habilitar uma publicação e configurar o IIS, crie uma assinatura pull e especifique que ela deve ser sincronizada usando o IIS. (A sincronização da Web tem suporte apenas para assinaturas pull.)  

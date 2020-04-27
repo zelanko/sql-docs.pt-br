@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761611"
 ---
 # <a name="create-foreign-key-relationships"></a>Criar relações de chaves estrangeiras
@@ -36,9 +36,9 @@ ms.locfileid: "62761611"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Uma restrição de chave estrangeira não precisa estar vinculada apenas a uma restrição de chave primária em outra tabela; ela também pode ser definida para referenciar as colunas de uma restrição UNIQUE em outra tabela.  
   
@@ -60,26 +60,26 @@ ms.locfileid: "62761611"
   
 -   A coluna do tipo `varchar(max)` poderá participar de uma restrição FOREIGN KEY somente se a chave primária que ela referencia também estiver definida como tipo `varchar(max)`.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A criação de uma nova tabela com uma chave estrangeira requer a permissão CREATE TABLE no banco de dados e a permissão ALTER no esquema no qual a tabela está sendo criada.  
   
  Criar uma chave estrangeira em uma tabela existente requer a permissão ALTER na tabela.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Para criar uma relação de chave estrangeira no Designer de Tabela  
   
 1.  No Pesquisador de Objetos, clique com o botão direito do mouse na tabela que estará ao lado da chave estrangeira da relação e clique em **Design**.  
   
-     A tabela é aberta no **Designer de Tabela**.  
+     A tabela é aberta no **Designer de tabela**.  
   
 2.  No menu **Designer de Tabela** , clique em **Relações**.  
   
 3.  Na caixa de diálogo **Relações de Chave Estrangeira** , clique em **Adicionar**.  
   
-     A relação aparece na lista **de relações selecionada** com um nome fornecido pelo sistema no formato FK_\<*TableName*>_\<*TableName*>, em que *TableName* é o nome da tabela de chave estrangeira.  
+     A relação é exibida na lista **Relação Selecionada** com um nome fornecido pelo sistema no formato FK_\<*tablename*>_\<*tablename*>, em que *tablename* é o nome da tabela de chave estrangeira.  
   
 4.  Clique na relação na lista **Relação Selecionada** .  
   
@@ -89,11 +89,11 @@ ms.locfileid: "62761611"
   
 7.  Na grade inferior, escolha as colunas que contribuem para chave primária da tabela. Na célula da grade adjacente à esquerda de cada coluna, escolha a coluna da chave estrangeira correspondente da tabela da chave estrangeira.  
   
-     **Designer de tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .  
+     O**Designer de Tabela** sugere um nome para a relação. Para mudar esse nome, edite o conteúdo da caixa de texto **Nome da Relação** .  
   
 8.  Escolha **OK** para criar a relação.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Para criar uma chave estrangeira em uma nova tabela  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702273"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
@@ -32,7 +32,7 @@ ms.locfileid: "62702273"
   
 -   O comando [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) sincroniza um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] banco de dados com os metadados de outro banco de dado, conforme descrito na seção [sincronizando bancos](#synchronizing_databases)de dados.  
   
-##  <a name="backing_up_databases"></a>Fazendo backup de bancos de dados  
+##  <a name="backing-up-databases"></a><a name="backing_up_databases"></a>Fazendo backup de bancos de dados  
  Como mencionado anteriormente, o comando `Backup` faz backup de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificado em um arquivo de backup. O comando `Backup` possui diversas propriedades que permitem a você especificar o banco de dados a ser incluído no backup, o arquivo de backup a ser usado, como fazer backup de definições de segurança e as partições remotas a serem incluídas no backup.  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ ms.locfileid: "62702273"
   
  O valor da propriedade `Security` está limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no arquivo de backup.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62702273"
   
  Para cada fonte de dados remota de backup, você pode especificar seu arquivo de backup correspondente, incluindo um elemento [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) na propriedade [Locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) do `Backup` comando. O `Location` elemento deve ter sua `File` propriedade definida como o caminho UNC e o nome de arquivo do arquivo de backup remoto e sua propriedade [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) definida como o identificador da fonte de dados remota definida no banco de dado.  
   
-##  <a name="restoring_databases"></a>Restaurando bancos de dados  
+##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Restaurando bancos de dados  
  O comando `Restore` restaura um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificado de um arquivo de backup. O comando `Restore` possui diversas propriedades que permitem a você especificar o banco de dados a ser restaurado, o arquivo de backup a ser usado, como restaurar definições de segurança, as partições remotas a serem armazenadas e os objetos ROLAP.  
   
 > [!IMPORTANT]  
@@ -89,7 +89,7 @@ ms.locfileid: "62702273"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados.|  
@@ -109,7 +109,7 @@ ms.locfileid: "62702273"
   
  Você pode usar o elemento `Location` em um comando `Restore` para realocar objetos ROLAP. Para cada `Location` elemento usado para realocar uma fonte de dados `DataSourceType` , a propriedade deve ser definida explicitamente como *local*. Você também precisa definir a propriedade `ConnectionString` do elemento `Location` para a cadeia de conexão do novo local. Durante a restauração, o comando `Restore` substituirá a cadeia de conexão para a fonte de dados identificada pela propriedade `DataSourceID` do elemento `Location` pelo valor da propriedade `ConnectionString` do elemento `Location`.  
   
-##  <a name="synchronizing_databases"></a>Sincronizando bancos de dados  
+##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Sincronizando bancos de dados  
  O comando `Synchronize` sincroniza os dados e os metadados de um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificado com outro banco de dados. O comando `Synchronize` possui diversas propriedades que permitem a você especificar o banco de dados de origem, como sincronizar as definições de segurança, as partições remotas a serem sincronizadas e a sincronização de objetos ROLAP.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "62702273"
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados de destino.|  

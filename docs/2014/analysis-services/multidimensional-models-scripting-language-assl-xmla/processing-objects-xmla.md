@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727592"
 ---
 # <a name="processing-objects-xmla"></a>Processando objetos (XMLA)
@@ -112,7 +112,7 @@ ms.locfileid: "62727592"
   
 ## <a name="examples"></a>Exemplos  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa totalmente o banco de dados [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de exemplo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>Código  
@@ -127,7 +127,7 @@ ms.locfileid: "62727592"
 </Process>  
 ```  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir processa incrementalmente a partição de **Internet_Sales_2004** no grupo de medidas **vendas pela Internet** do cubo do **Adventure Works DW** no banco de dados de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemplo. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] O `Process` comando está adicionando agregações para datas de pedido posteriores a 31 de dezembro de 2006 para a partição usando uma associação de consulta fora de linha na `Bindings` Propriedade do `Process` comando para recuperar as linhas da tabela de fatos das quais gerar agregações para adicionar à partição.  
   
 ### <a name="code"></a>Código  

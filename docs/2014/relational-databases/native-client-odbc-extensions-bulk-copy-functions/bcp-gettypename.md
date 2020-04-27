@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689024"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -85,12 +85,12 @@ fIsMaxType
 |`SQLFLTN`|Você pode usar o|**float-null**|  
 |`SQLAOPSUM`|Você pode usar o|**Quantia**|  
 |`SQLAOPAVG`|Você pode usar o|**Média**|  
-|`SQLAOPCNT`|Você pode usar o|**Contar**|  
+|`SQLAOPCNT`|Você pode usar o|**Count**|  
 |`SQLAOPMIN`|Você pode usar o|**Min**|  
 |`SQLAOPMAX`|Você pode usar o|**Maximizar**|  
 |`SQLDATETIM4`|Você pode usar o|**smalldatetime**|  
 |`SQLMONEY4`|Você pode usar o|**Smallmoney**|  
-|`SQLFLT4`|Você pode usar o|**Real**|  
+|`SQLFLT4`|Você pode usar o|**Foto**|  
 |`SQLUNIQUEID`|Você pode usar o|**uniqueidentifier**|  
 |`SQLNCHAR`|Não|**Nchar**|  
 |`SQLNVARCHAR`|Não|**Nvarchar**|  

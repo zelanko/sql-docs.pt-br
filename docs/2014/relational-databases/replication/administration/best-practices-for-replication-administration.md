@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629636"
 ---
 # <a name="best-practices-for-replication-administration"></a>Práticas recomendadas para administração de replicação
@@ -58,12 +58,12 @@ ms.locfileid: "62629636"
   
 -   Banco de dados de assinatura  
   
--   banco de dados **msdb** e banco de dados **mestre** no Publicador, distribuidor e todos os assinantes  
+-   O banco de dados**msdb** e o banco de dados **mestre** no Publicador, Distribuidor e todos os Assinantes  
   
  Bancos de dados replicados requerem atenção especial em relação a backup e restauração de dados. Para obter mais informações, veja [Fazer backup e restaurar bancos de dados replicados](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Faça o script da topologia de replicação  
- Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessários para implementar o(s) componente(s) de replicação que tiveram seus scripts feitos, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o assistente para nova publicação) ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] no após a criação de um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada. Para obter mais informações, consulte [Scripting Replication](../scripting-replication.md).  
+ Todos os componentes de replicação em uma topologia devem ser incluídos no script como parte de um plano de recuperação de desastre  e os scripts também podem ser usados para automatizar tarefas repetitivas. Um script contém os procedimentos armazenados do sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necessários para implementar o(s) componente(s) de replicação que tiveram seus scripts feitos, como uma publicação ou assinatura. Os scripts podem ser criados em um assistente (como o Assistente para Nova Publicação) ou no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] depois de você criar um componente. É possível exibir, modificar e executar o script por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do **sqlcmd**. Os scripts podem ser armazenados com arquivos de backup para serem usados no caso de uma topologia de replicação precisar ser reconfigurada. Para obter mais informações, consulte [Scripting Replication](../scripting-replication.md).  
   
  Um componente deve ter seu script refeito se qualquer alteração na propriedade for realizada. Se você usar procedimentos armazenados com replicação transacional, uma cópia de cada procedimento deve ser armazenada com os scripts; a cópia deve ser atualizada se o procedimento for alterado (os procedimentos são normalmente alterados devido a mudanças no esquema ou nos requisitos de aplicativo). Para mais informações sobre procedimentos personalizados, consulte [Especificar como as alterações são propagadas para artigos transacionais](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62629636"
   
 -   Parâmetros de agente  
   
--   Manutenção   
+-   Manutenção  
   
  Após a replicação ser configurada, é recomendável desenvolver uma linha de base de desempenho, que permitirá determinar como a replicação se comporta com uma carga de trabalho típica de seus aplicativos e de sua topologia. Use o Replication Monitor e Monitor do Sistema para determinar os números típicos para as seguintes cinco dimensões de desempenho de replicação:  
   

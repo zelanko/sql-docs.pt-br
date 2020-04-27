@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679794"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar caminhos e dicas de otimização para índices XML seletivos
@@ -28,7 +28,7 @@ ms.locfileid: "62679794"
   
  Para obter mais informações sobre índices XML seletivos, veja [Índices XML Seletivos &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md).  
   
-##  <a name="untyped"></a> Noções básicas sobre tipos XQuery e tipos do SQL Server em XML não tipado  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Noções básicas sobre tipos XQuery e tipos do SQL Server em XML não tipado  
  Os índices XML seletivos dão suporte a dois sistemas de tipos: tipos XQuery e tipos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O caminho indexado pode ser usado para corresponder a uma expressão XQuery ou para corresponder ao tipo de retorno do método value() do tipo de dados XML.  
   
 -   Quando um caminho a ser indexado não é anotado, ou é anotado com a palavra-chave XQUERY, o caminho corresponde a uma expressão XQuery. Há duas variações para caminhos de nós anotados de XQUERY:  
@@ -135,7 +135,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 
   
-##  <a name="typed"></a> Noções básicas sobre suporte à índice XML seletivo para XML tipado  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> Noções básicas sobre suporte à índice XML seletivo para XML tipado  
  O XML tipado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um esquema associado a determinado documento XML. O esquema define a estrutura geral do documento e tipos de nós. Se um esquema existe, o índice XML seletivo aplica a estrutura do esquema quando o usuário promove caminhos; assim, não há necessidade de especificar os tipos XQUERY para caminhos.  
   
  O índice XML seletivo dá suporte aos seguintes tipos XSD:  
@@ -209,7 +209,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Para obter mais informações sobre dicas de otimização, consulte [Especificando dicas de otimização](#hints).  
   
-##  <a name="paths"></a> Especificando caminhos  
+##  <a name="specifying-paths"></a><a name="paths"></a> Especificando caminhos  
  Um índice XML seletivo permite indexar somente um subconjunto de nós dos dados XML armazenados relevantes para as consultas que você pretende realizar. Quando o subconjunto de nós relevantes é muito menor que o número total de nós no documento XML, o índice XML seletivo armazena somente os nós relevantes. Para se beneficiar de um índice XML seletivo, identifique o subconjunto correto de nós para indexação.  
   
 ### <a name="choosing-the-nodes-to-index"></a>Escolhendo os nós a serem indexados  
@@ -346,7 +346,7 @@ WHERE T.xmldata.exist('
   
 
   
-##  <a name="hints"></a> Especificando dicas de otimização  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> Especificando dicas de otimização  
  Você pode usar dicas de otimização opcionais para especificar detalhes adicionais de mapeamento para um nó indexado por um índice XML seletivo. Por exemplo, você pode especificar o tipo de dados e a cardinalidade de um nó, bem como certas informações sobre a estrutura dos dados. Essas informações adicionais dão suporte a um melhor mapeamento. Também resultam em melhorias no desempenho ou economia no armazenamento, ou ambas.  
   
  O uso de dicas de otimização é opcional. Sempre é possível aceitar os mapeamentos padrão, que são confiáveis, mas que podem não proporcionar um desempenho e um armazenamento ideais.  
@@ -418,7 +418,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-##  <a name="sample"></a> Documento XML de exemplo  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> Documento XML de exemplo  
  O documento XML de exemplo a seguir é referenciado nos exemplos deste tópico:  
   
 ```xml  

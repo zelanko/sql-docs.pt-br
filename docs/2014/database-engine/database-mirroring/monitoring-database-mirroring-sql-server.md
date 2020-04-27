@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755364"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitorando o espelhamento de banco de dados (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62755364"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> Monitorando status de espelhamento  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> Monitorando status de espelhamento  
  Para configurar e gerenciar monitoramento para um ou mais dos bancos de dados espelhados em uma instância do servidor, você pode usar o Monitor de Espelhamento de Banco de Dados ou os procedimentos armazenados do sistema **dbmmonitor** . Você pode monitorar um banco de dados espelho durante uma sessão de espelhamento para verificar se e como os dados estão fluindo.  
   
  O monitoramento de um banco de dados espelho lhe permite, especificamente:  
@@ -62,7 +62,7 @@ ms.locfileid: "62755364"
   
      Se uma nova linha de status contém um valor que excede um limite, um evento informativo é enviado ao log de eventos do Windows. Um administrador de sistema pode, então, configurar alertas manualmente com base nesses eventos. Para obter mais informações, veja [Usar os limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> Ferramentas para monitoramento de status de espelhamento de banco de dados  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> Ferramentas para monitoramento de status de espelhamento de banco de dados  
  O status de espelhamento pode ser monitorado usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado do sistema **sp_dbmmonitorresults** . Essas ferramentas podem ser usadas para monitorar o espelhamento de banco de dados em qualquer banco de dados espelho na instância do servidor local, por ambos os administradores do Sistema, ou seja, membros da função de servidor fixa **sysadmin** e pelo usuário que foi adicionado à função do banco de dados fixa **dbm_monitor** no banco de dados **msdb** por um administrador do sistema. Ao usar qualquer uma das ferramentas, um administrador de sistema pode atualizar manualmente o status de espelhamento.  
   
 > [!NOTE]  
@@ -130,14 +130,14 @@ ms.locfileid: "62755364"
      Administradores do sistema podem usar o procedimento armazenado do sistema **sp_dbmmonitorresults** para exibir e, opcionalmente, atualizar a tabela de status, caso não tenha sido atualizada nos 15 segundos anteriores. Esse procedimento chama o procedimento **sp_dbmmonitorupdate** e retorna uma ou mais linhas do histórico, dependendo da quantidade solicitada na chamada de procedimento. Para obter informações sobre o status em seu conjunto de resultados, veja [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql).  
   
 #### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Monitorando o status de espelhamento de banco de dados (por membros dbm_monitor)  
- Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **log principal (***\<tempo>***)** e **log espelhado (***\<tempo>***)** na página **status** .  
+ Conforme mencionado, na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria a função de banco de dados fixa **dbm_monitor** no banco de dados **msdb** . Membros da função de banco de dados fixa **dbm_monitor** podem exibir o status de espelhamento existente usando o Monitor de Espelhamento de Banco de Dados ou o procedimento armazenado **sp_dbmmonitorresults** . Esses usuários, porém, não podem atualizar a tabela de status. Para saber a idade do status exibido, um usuário pode examinar os horários nos rótulos **Log principal (***\<time>***)** e **Log espelhado (***\<time>***)** na página **Status**.  
   
  Membros da função de banco de dados fixa **dbm_monitor** dependem do **Trabalho de Monitor de Espelhamento de Banco de Dados** para atualizar a tabela de status em intervalos regulares. Se o trabalho não existir ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for interrompido, o status se tornará cada vez mais obsoleto e poderá deixar de refletir a configuração da sessão de espelhamento. Por exemplo, depois de um failover, poderá parecer que os parceiros compartilham a mesma função, principal ou espelhada ou o servidor principal atual poderá ser mostrado como o espelho e o servidor espelhado atual como o principal.  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Descartando o Trabalho de Monitor de Espelhamento de Banco de Dados  
  O trabalho de monitor de espelhamento de banco de dados, **Trabalho de Monitor de Espelhamento de Banco de Dados**, permanece até que seja descartado. O trabalho de monitoramento deve ser gerenciado pelo administrador de sistema. Para remover o **Trabalho de Monitor de Espelhamento de Banco de Dados**, use **sp_dbmmonitordropmonitoring**. Para obter mais informações, veja [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql).  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> Status exibido pelo Monitor de Espelhamento de Banco de Dados  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Status exibido pelo Monitor de Espelhamento de Banco de Dados  
  A página **Status** do Monitor de Espelhamento de Banco de Dados descreve os parceiros, e também o estado da sessão de espelhamento. O status inclui métrica de desempenho como o estado de log de transações, além de outras informações, com o objetivo de ajudar o cálculo atual da hora exigida para completar um failover e o potencial de perda de dados, se a sessão não for sincronizada. Além disso, a página **Status** exibe status e informações em geral sobre a sessão de espelhamento.  
   
 > [!NOTE]  
@@ -247,7 +247,7 @@ ms.locfileid: "62755364"
   
     -   Alta segurança com failover automático (síncrono)  
   
-##  <a name="AdditionalSources"></a> Fontes adicionais de informação sobre um banco de dados espelho  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> Fontes adicionais de informação sobre um banco de dados espelho  
  Além de usar os procedimentos armazenados do Monitor de Espelhamento de Banco de Dados e dbmmonitor para monitorar um banco de dados espelhado e configurar alertas em variáveis de desempenho monitoradas, o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece exibições de catálogo, contadores de desempenho e notificações de eventos para espelhamento de banco de dados.  
   
  **Nesta seção:**  
@@ -258,7 +258,7 @@ ms.locfileid: "62755364"
   
 -   [Notificações de eventos de espelhamento de banco de dados.](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> Metadados de espelhamento de banco de dados  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> Metadados de espelhamento de banco de dados  
  Cada sessão de espelhamento de banco de dados é descrita em metadados expostos pelos catálogo ou exibições de gerenciamento dinâmico seguintes:  
   
 -   **sys.database_mirroring**  
@@ -279,7 +279,7 @@ ms.locfileid: "62755364"
   
      Para obter mais informações, veja [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections).  
   
-###  <a name="DbmPerfCounters"></a> Contadores de desempenho para espelhamento de banco de dados.  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> Contadores de desempenho para espelhamento de banco de dados.  
  Os contadores de desempenho permitem que você monitore o desempenho de espelhamento de banco de dados. Por exemplo, você pode examinar o contador **Atraso na Transação** para verificar se o espelhamento de banco de dados está afetando o desempenho do servidor principal, você pode examinar os contadores **Fila de Restauração** e **Fila de Envio de Log** para verificar como o banco de dados espelho está se comportando em relação ao banco de dados principal. Você pode examinar o contador **Bytes de Log Enviados/s** para monitorar a quantidade de logs enviados por segundo.  
   
  No Monitor de Desempenho em qualquer um dos parceiros, os contadores de desempenho estão disponíveis no objeto de desempenho de espelhamento de banco de dados (**SQLServer:Database Mirroring**). Para obter mais informações, consulte [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
@@ -288,7 +288,7 @@ ms.locfileid: "62755364"
   
 -   [Iniciar o Monitor do Sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> Notificações de eventos de espelhamento de banco de dados.  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> Notificações de eventos de espelhamento de banco de dados.  
  As notificações de evento são um tipo especial de objeto de banco de dados. As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) Transact-SQL e eventos de Rastreamento do SQL e enviam informações sobre o servidor e eventos de banco de dados para um serviço [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Os seguintes eventos estão disponíveis para o espelhamento de banco de dados:  
@@ -301,7 +301,7 @@ ms.locfileid: "62755364"
   
      Informa mensagens de auditoria relacionadas à segurança de transporte do espelhamento de banco de dados. Para obter mais informações, consulte [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar os limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

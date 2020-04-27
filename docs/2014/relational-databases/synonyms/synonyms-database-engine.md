@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736236"
 ---
 # <a name="synonyms-database-engine"></a>Sinônimos (Mecanismo de Banco de Dados)
@@ -143,7 +143,7 @@ GO
 ```  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Criar Sinônimos](create-synonyms.md)  
+ [Criar sinônimos](create-synonyms.md)  
   
  [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   

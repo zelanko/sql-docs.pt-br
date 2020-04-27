@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679817"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
@@ -32,7 +32,7 @@ ms.locfileid: "62679817"
   
  O recurso de índice XML seletivo também dá suporte a índices XML seletivos secundários em nós que foram indexados por um índice XML seletivo. Esses índices seletivos secundários são mais eficientes e melhoram o desempenho das consultas.  
   
-##  <a name="benefits"></a> Benefícios de índices XML seletivos  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Benefícios de índices XML seletivos  
  Os índices XML seletivos apresentam os seguintes benefícios:  
   
 1.  Desempenho significativamente melhor em consultas no tipo de dados XML para cargas típicas de consulta.  
@@ -45,7 +45,7 @@ ms.locfileid: "62679817"
   
 
   
-##  <a name="compare"></a> Índices XML seletivos e índices XML primários  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Índices XML seletivos e índices XML primários  
   
 > [!IMPORTANT]  
 >  Na maioria das vezes, crie um índice XML seletivo, em vez de um índice XML comum, para obter melhor desempenho e um armazenamento mais eficiente.  
@@ -58,7 +58,7 @@ ms.locfileid: "62679817"
   
 
   
-##  <a name="example"></a> Exemplo simples de índice XML seletivo  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Exemplo simples de índice XML seletivo  
  Considere o fragmento XML a seguir como um documento XML em uma tabela de aproximadamente 500.000 linhas:  
   
 ```xml  
@@ -103,7 +103,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Recursos com suporte, pré-requisitos e limitações  
   
-###  <a name="features"></a> Recursos XML com suporte  
+###  <a name="supported-xml-features"></a><a name="features"></a> Recursos XML com suporte  
  Os índices XML seletivos dão suporte à XQuery com suporte no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos métodos exist(), value() e nodes().  
   
 -   Para os métodos exist(), value() e nodes(), os índices XML seletivos contêm informações suficientes para transformar a expressão inteira.  
@@ -116,7 +116,7 @@ FOR
   
 
   
-###  <a name="unsupported"></a> Recursos XML sem suporte  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Recursos XML sem suporte  
  Os índices XML seletivos não dão suporte aos recursos a seguir que têm suporte na implementação de XML do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Indexação de nós com tipos XS complexos: tipos de união, tipos de sequência e tipos de lista.  
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos  
  Os pré-requisitos a seguir devem existir para que se possa criar um índice XML seletivo em uma coluna XML em uma tabela de usuário:  
   
 -   Um índice clusterizado deve existir na chave primária da tabela do usuário.  
@@ -144,7 +144,7 @@ FOR
   
 
   
-###  <a name="limits"></a> Limitações  
+###  <a name="limitations"></a><a name="limits"></a> Limitações  
  **Requisitos e limitações gerais**  
   
 -   Cada índice XML seletivo só pode ser criado em uma única coluna XML.  
@@ -197,7 +197,7 @@ FOR
   
 
   
-##  <a name="reltasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tarefas relacionadas  
   
 |||  
 |-|-|  

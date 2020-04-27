@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643332"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "62643332"
  Para obter mais informações sobre o recurso FileStream, consulte [suporte a filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
- Antes de compilar e executar este exemplo, habilite o suporte a FILESTREAM ([habilitar e configurar FileStream](../../blob/enable-and-configure-filestream.md)).  
+ Antes de compilar e executar este exemplo, habilite o suporte a FILESTREAM ([Habilitar e configurar o FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
   
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   

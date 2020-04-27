@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670910"
 ---
 # <a name="about-change-tracking-sql-server"></a>Sobre o controle de alterações (SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670910"
  As informações sobre a alteração feita em cada linha também podem ser obtidas usando o controle de alterações. Por exemplo, o tipo de operação DML que causou a alteração (inserção, atualização ou exclusão) ou as colunas que foram alteradas como parte de uma operação de atualização.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Habilitar e desabilitar o controle de alterações &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Habilitar e desabilitar Controle de Alterações &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Trabalhar com Controle de Alterações &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Gerenciar o controle de alterações &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Gerenciar Controle de Alterações &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Controle de alterações de dados &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

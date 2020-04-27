@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754518"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausando e retomando o espelhamento de banco de dados (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "62754518"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> Como pausar e continuar afetam o truncamento de log  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a>Como pausar e continuar afeta o truncamento de log  
  Normalmente, quando um ponto de verificação automático é executado em um banco de dados, seu log de transações é truncado àquele ponto de verificação após o próximo backup de log. Enquanto uma sessão de espelhamento de banco de dados permanece pausada, tudo nos registros de log atuais permanece ativo porque o servidor principal está esperando para enviá-los ao servidor espelho. Os registros de log não enviados acumulam no log de transações do banco de dados principal até que a sessão continue e o servidor principal envie os registros de log ao servidor espelho.  
   
  Quando a sessão é reiniciada, o servidor principal começa imediatamente a enviar os registros de log acumulados ao servidor espelho. Depois que o servidor espelho confirme que colocou em fila o registro de log que corresponde ao ponto de verificação automático mais antigo, o servidor principal trunca o log do banco de dados principal àquele ponto de verificação. O servidor espelho trunca a fila de restauração no mesmo registro de log. Como este processo é repetido para cada ponto de verificação sucessivo, o log é truncado nos estágios, ponto de verificação por ponto de verificação.  
@@ -49,7 +49,7 @@ ms.locfileid: "62754518"
 > [!NOTE]  
 >  Para obter mais informações sobre pontos de verificação e truncamento de log, veja [Pontos de verificação de banco de dados &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-##  <a name="AvoidFullLog"></a> Evitar um log de transações completo  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a>Evitar um log de transações completo  
  Se o log completar (ou porque alcança seu tamanho máximo ou a instância de servidor executa fora de espaço), o banco de dados não poderá mais executar quaisquer atualizações. Para evitar este problema, há duas alternativas:  
   
 -   Continue a sessão de espelhamento de banco de dados antes que o log se complete ou adicione mais espaço de log. Continuar o espelhamento de banco de dados permite ao servidor principal enviar seu log ativo acumulado ao servidor espelho e põe o banco de dados espelho no estado SYNCHRONIZING. O servidor espelho pode então endurecer o log no disco e começar a refazê-lo.  
@@ -58,7 +58,7 @@ ms.locfileid: "62754518"
   
      Diferente de pausar a sessão, remover o espelhamento descarta todas as informações sobre a sessão de espelhamento. Cada instância de servidor parceiro mantém sua própria cópia do banco de dados. Se a cópia de espelho anterior for recuperada, ela divergirá da cópia principal anterior e ficará atrasada pelo tempo decorrido desde o inicio da pausa da sessão. Para obter mais informações, veja [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para pausar ou retomar o espelhamento de banco de dados**  
   
 -   [Pausar ou retomar uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "62754518"
   
 ## <a name="see-also"></a>Consulte Também  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
  [Removendo o espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

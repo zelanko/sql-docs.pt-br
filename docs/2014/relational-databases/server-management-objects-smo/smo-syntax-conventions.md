@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655349"
 ---
 # <a name="smo-syntax-conventions"></a>Convenções de sintaxe de SMO
@@ -29,7 +29,7 @@ ms.locfileid: "62655349"
 |----------------|--------------|  
 |LETRAS MAIÚSCULAS|Instruções [!INCLUDE[tsql](../../includes/tsql-md.md)], nomes de macro e termos usados no nível do sistema operacional; nomes de arquivo em texto.|  
 |com espaçamento uniforme|Exemplos de linhas de comando e código de programa.|  
-|*itálico*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
-|**negrito**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
+|*italic*|Variáveis, fórmulas ou termos definidos em texto. Em sintaxe, letras em itálico indicam espaços reservados para obter informações fornecidas.|  
+|**bold**|Objetos, eventos, métodos ou propriedades SMO; termos de programação em texto.|  
   
   

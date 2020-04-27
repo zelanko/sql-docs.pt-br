@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735889"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Método SetDefaults (classe ServerSettings)
@@ -43,9 +43,9 @@ OverwriteAll
  *objeto*  
  Um objeto de [classe ServerSettings](serversettings-class.md) que representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância de cliente.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: `true` para substituir dados existentes, ou `false`, se os dados existentes não precisarem ser substituídos.|  
   

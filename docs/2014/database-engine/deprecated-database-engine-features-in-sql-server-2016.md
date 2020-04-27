@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754156"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2014
@@ -38,8 +38,7 @@ ms.locfileid: "62754156"
 |Servidores remotos|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Substitua servidores remotos usando servidores vinculados. sp_addserver só pode ser usado com a opção local.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Servidores remotos|\@\@remserver|Substitua servidores remotos usando servidores vinculados.|Nenhum|Nenhum|  
 |Servidores remotos|SET REMOTE_PROC_TRANSACTIONS|Substitua servidores remotos usando servidores vinculados.|SET REMOTE_PROC_TRANSACTIONS|110|  
-|Opções Set|
-  `SET ROWCOUNT` para as instruções `INSERT`, `UPDATE` e `DELETE`|Palavra-chave TOP|SET ROWCOUNT|109|  
+|Opções Set|`SET ROWCOUNT` para as instruções `INSERT`, `UPDATE` e `DELETE`|Palavra-chave TOP|SET ROWCOUNT|109|  
 |Dicas de tabela|Dica de tabela HOLDLOCK sem parênteses.|Use HOLDLOCK com parênteses.|Dica de tabela HOLDLOCK sem parênteses|167|  
 |Ferramentas|utilitário sqlmaint|Usar o recurso de plano de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Nenhum|Nenhum|  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62754156"
 |Bancos de dados removíveis|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
 |Segurança|A sintaxe ALTER LOGIN WITH SET CREDENTIAL|Substituída pela nova sintaxe ALTER LOGIN ADD e DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
 |Segurança|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|Segurança|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|11,8<br /><br /> 40|  
+|Segurança|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
 |Segurança|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
 |Segurança|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
 |Segurança|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
@@ -114,7 +113,7 @@ ms.locfileid: "62754156"
 |Segurança|Algoritmos de criptografia RC4 e DESX|Usar outro algoritmo, como AES.|Algoritmo DESX|238|  
 |Opções Set|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) e [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Opções de configuração de servidor|opção c2 audit<br /><br /> opção default trace enabled|[Opção de configuração de servidor com conformidade de critérios comuns habilitada](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Eventos estendidos](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information`classes<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings`classes<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions`classes<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication`Propriedade|`Microsoft.SqlServer.Management.Smo.Server`classes<br /><br /> `Microsoft.SqlServer.Management.Smo.Server`classes<br /><br /> `Microsoft.SqlServer.Management.Smo.Database`classes<br /><br /> Nenhum|Nenhum|Nenhum|  
+|Classes SMO|Classe `Microsoft.SQLServer.Management.Smo.Information`<br /><br /> Classe `Microsoft.SQLServer.Management.Smo.Settings`<br /><br /> Classe `Microsoft.SQLServer.Management.Smo.DatabaseOptions`<br /><br /> Propriedade `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication`|Classe `Microsoft.SqlServer.Management.Smo.Server`<br /><br /> Classe `Microsoft.SqlServer.Management.Smo.Server`<br /><br /> Classe `Microsoft.SqlServer.Management.Smo.Database`<br /><br /> Nenhum|Nenhum|Nenhum|  
 |SQL Server Agent|Notificação**net send**<br /><br /> Notificação por pager<br /><br /> Subsistema do ActiveX|Notificação por email<br /><br /> Notificação por email<br /><br /> Comando ou scripts do PowerShell|Nenhum|Nenhum|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integração com o Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integração com o Controle de Código-fonte no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Nenhum|Nenhum|  
 |Procedimentos armazenados do sistema|sp_db_increased_partitions|Nenhum. O suporte ao aumento de partições está disponível, por padrão, no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
@@ -143,7 +142,7 @@ ms.locfileid: "62754156"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de \@, \@\@ ou de \@\@ como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)].|Não use \@ nem \@\@ ou nomes que comecem com \@\@ como identificadores.|'\@' e nomes que começam com '\@\@' como identificadores [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso da palavra-chave DEFAULT como valor padrão.|Não use a palavra DEFAULT como um valor padrão.|A palavra-chave DEFAULT como um valor padrão|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso de um espaço como um separador entre dicas de tabela.|Use uma vírgula para separar dicas de tabela.|Várias dicas de tabela sem vírgula|168|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (*) no modo de compatibilidade 90|Use COUNT_BIG (*).|Lista de seleção de exibição indexada sem COUNT_BIG (\*)|2|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|A lista de seleção de uma exibição indexada de agregação deve conter COUNT_BIG (*) no modo de compatibilidade 90|Use COUNT_BIG (*).|Lista de seleção de exibição indexada sem COUNT_BIG (*)|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|O aplicativo indireto de dicas de tabela para uma invocação de uma função com valor de tabela (TVF) de várias instruções por meio de uma exibição.|Nenhum.|Dicas TVF indiretas|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sintaxe ALTER DATABASE:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Outros|DB-Library<br /><br /> Embedded SQL para C|Embora ainda ofereça suporte a conexões de aplicativos existentes que usam as APIS de DB-Library e Embedded SQL, o [!INCLUDE[ssDE](../includes/ssde-md.md)] não inclui a documentação ou os arquivos necessários para fazer o trabalho de programação em aplicativos que usam essas APIs. Uma versão futura do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] descartará suporte para conexões do DB-Library ou aplicativos do Embedded SQL. Não use DB-Library ou Embedded SQL para desenvolver novos aplicativos. Remova qualquer dependência do DB-Library ou do Embedded SQL ao modificar aplicativos existentes. Em vez destas APIs, use o namespace SQLClient ou uma API como ODBC. O[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] não inclui a DLL DB-Library necessária para executar estes aplicativos. Para executar aplicativos DB-Library ou Embedded SQL, a DLL DB-Library do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versão 6.5, do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 ou do [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]deve estar disponível.|Nenhum|Nenhum|  

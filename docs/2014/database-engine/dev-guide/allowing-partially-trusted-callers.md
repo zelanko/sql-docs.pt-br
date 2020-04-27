@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754194"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitindo chamadores parcialmente confiáveis
@@ -45,7 +45,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Suponha que haja uma classe de utilitário que seria útil em muitos aplicativos de integração do CLR do lado do servidor. Por exemplo, ela talvez fosse uma classe que representa os resultados de uma consulta invocada. Para habilitar o compartilhamento desse componente, essa classe de utilitário é colocada em um assembly separado. Dessa forma, o assembly é referenciado em vários outros assemblies que contêm objetos de integração do CLR. Como é usada em muitos aplicativos de servidor diferentes, essa classe de utilitário é examinada cuidadosamente e todos os problemas de segurança são resolvidos. Como o atributo `AllowPartiallyTrustedCallers` é aplicado ao assembly que contém a classe de utilitário, os objetos de integração do CLR contidos nos assemblies marcados com os conjuntos de permissões `SAFE` ou `EXTERNAL_ACCESS` podem usar a classe e os métodos do utilitário, mesmo que estejam em um assembly separado.  
   
  Às vezes, é útil poder executar comandos e, ao mesmo tempo, ler os resultados de uma consulta sem abrir uma nova conexão e sem ler todos os resultados na memória. O recurso MARS (Multiple Active Result Set) no ADO.NET 2.0 é uma tecnologia que pode ajudar a conseguir isso. Atualmente, MARS não é implementado para o provedor em processo usado para programação de servidor. Para solucionar essa limitação, você pode usar cursores de servidor. Este exemplo demonstra como usar cursores de servidor para solucionar a falta de suporte a MARS para programação de servidor.  

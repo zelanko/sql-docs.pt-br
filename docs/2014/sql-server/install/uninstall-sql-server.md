@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470176"
 ---
 # <a name="uninstall-sql-server-2014"></a>Desinstalar o SQL Server 2014
@@ -42,7 +42,7 @@ ms.locfileid: "62470176"
   
 -   [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
--   [Descartar uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
+-   [Remover uma instalação do SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Planejando uma instalação do SQL Server](planning-a-sql-server-installation.md)   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714754"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Computar limites de capacidade por edição do SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "62714754"
   
  A tabela a seguir descreve as notações que são usadas no diagrama acima:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0..1|Zero ou um|  
 |1|Exatamente um|  
@@ -80,7 +80,7 @@ ms.locfileid: "62714754"
   
  A tabela a seguir especifica os limites de capacidade de computação para uma única instância de cada edição do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Versão|Capacidade máxima de computação usada por uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidade máxima de computação usada por uma única instância (AS, RS)|  
+|Edição do[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacidade máxima de computação usada por uma única instância ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidade máxima de computação usada por uma única instância (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licenciamento baseado em núcleo<sup>1</sup>|Máximo do sistema operacional|Máximo do sistema operacional|  
 |Desenvolvedor|Máximo do sistema operacional|Máximo do sistema operacional|  
@@ -102,6 +102,6 @@ ms.locfileid: "62714754"
  [Edições e componentes do SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Recursos com suporte nas edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Especificações de capacidade máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Instalação de início rápido do SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Instalação de Início Rápido do SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

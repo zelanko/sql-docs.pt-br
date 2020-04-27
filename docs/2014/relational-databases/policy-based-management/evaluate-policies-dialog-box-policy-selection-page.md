@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705129"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Caixa de diálogo Avaliar Políticas, página Seleção de Políticas
   Use esta caixa de diálogo para avaliar políticas do Gerenciamento Baseado em Políticas. Ao selecionar a página **Resultados da Avaliação** , você pode aplicar políticas aos itens em um conjunto de destino que não esteja em conformidade com as políticas.  
   
 ## <a name="options"></a>Opções  
- **Origem**  
- Especifica a origem das políticas. Para alterar a origem, clique no botão Procurar ( **...** ) para abrir a caixa de diálogo **Selecionar Origem** .  
+ **Fonte**  
+ Especifica a origem das políticas. Para alterar a origem, clique no botão Procurar (**...**) para abrir a caixa de diálogo **Selecionar Origem** .  
   
  **Arquivos**  
- Digite o caminho de um arquivo que contenha uma política de Gerenciamento Baseado em Políticas ou use o botão Procurar ( **...** ) para selecionar o arquivo.  
+ Digite o caminho de um arquivo que contenha uma política de Gerenciamento Baseado em Políticas ou use o botão Procurar (**...**) para selecionar o arquivo.  
   
  **Servidor**  
  Selecione para conectar-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que contenha a política desejada.  
@@ -61,7 +61,7 @@ ms.locfileid: "62705129"
     -   O tipo de servidor de destino é diferente do tipo de servidor no qual a política é avaliada. Por exemplo, no [!INCLUDE[ssDE](../../includes/ssde-md.md)], se você tentar avaliar uma política criada para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], receberá um conjunto de destino vazio.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md)   
  [Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

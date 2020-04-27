@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691590"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Como criar uma assinatura atualizável para uma publicação transacional (Management Studio)
@@ -62,15 +62,15 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
 5. Conecte-se ao Publicador na caixa de diálogo **Conectar ao Servidor** .
 6. Selecione uma publicação transacional habilitada para atualizar assinaturas na página **Publicação**.
 7. Percorra as páginas no assistente para especificar opções para a assinatura, como onde o Distribution Agent deverá ser executado.
-8. Na página **Assinaturas Atualizáveis** do Assistente para Nova Assinatura, verifique se **Replicar** está selecionado.
+8. Na página **assinaturas atualizáveis** do assistente para nova assinatura, verifique se **replicar** está selecionado.
 9. Selecione uma opção na lista suspensa **Confirmar no Publicador**:
 
     * Para usar a atualização imediata de assinaturas, selecione **Confirmar alterações simultaneamente**. Se você selecionar essa opção e a publicação permitir atualização de assinatura na fila (o padrão para publicações criadas com o Assistente para Nova Publicação), a propriedade de assinatura **update_mode** será definida como **failover**. Esse modo permite a troca posterior para atualização em fila, se necessário.
-    * Para usar atualização de assinaturas em fila, selecione **Enfileirar alterações e confirmar quando possível**. Se você selecionar essa opção e a publicação permitir atualização imediata de assinaturas (o padrão para publicações criadas com o Assistente para Nova Publicação) e o Assinante estiver executando o SQL Server 2005 ou uma versão posterior, a propriedade de assinatura **update_mode** será definida como **failover** em fila. Esse modo permite troca imediata para atualização posterior, se necessária.
+    * Para usar atualização de assinaturas em fila, selecione **Enfileirar alterações e confirmar quando possível**. Se você selecionar essa opção e a publicação permitir assinaturas de atualização imediata (o padrão para publicações criadas com o assistente para nova publicação) e o Assinante estiver executando SQL Server 2005 ou uma versão posterior, a propriedade de assinatura **update_mode** será definida como **failover**em fila. Esse modo permite troca imediata para atualização posterior, se necessária.
 
     Para obter informações sobre como alternar os modos de atualização, consulte [Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md) (Alternar entre modos de atualização para uma assinatura transacional atualizável).
 
-10. A página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis) é exibida para assinaturas que usam a atualização imediata ou têm **update_mode** definido para **failover** em fila. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das seguintes opções:
+10. A página **logon para assinaturas atualizáveis** é exibida para assinaturas que usam atualização imediata ou têm **update_mode** definido para **failover**em fila. Na página **Login for Updatable Subscriptions** (Logon para Assinaturas Atualizáveis), especifique um servidor vinculado por meio do qual as conexões com o Publicador serão feitas para atualizações imediatas de assinaturas. Conexões são usadas pelos gatilhos acionados no Assinante e que propagam as alterações no Publicador. Selecione uma das seguintes opções:
 
     * **Criar um servidor vinculado que se conecta usando a Autenticação do SQL Server.** Selecione essa opção se um servidor vinculado ou remoto entre o Assinante e o Publicador ainda não tiver sido definido. A replicação cria um servidor vinculado para você. É necessário que a conta especificada já exista no Publicador.
     * **Usar servidor vinculado ou remoto já definido.** Selecione esta opção se você tiver definido um servidor remoto ou vinculado entre o Assinante e o Publicador usando [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), o SQL Server Management Studio ou outro método.
@@ -116,7 +116,7 @@ Configurar assinaturas atualizáveis no página **Assinaturas Atualizáveis** do
     * `1` – Use o contexto de segurança do usuário que faz alterações no Assinante quando se conecta ao Publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) quanto às restrições relacionadas a esse modo de segurança.
     * `2` – Use um logon de servidor vinculado, existente, definido pelo usuário criado usando [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. No Publicador, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`e o mesmo valor especificado na etapa 3 para `@update_mode`.
+6. No Publicador, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`, e o mesmo valor especificado na etapa 3 para `@update_mode`.
 
 Isto registra a assinatura pull no Publicador. 
 
@@ -190,7 +190,7 @@ Isto registra a assinatura pull no Publicador.
     * (Opcional) Um valor de `0` para `@distributor_security_mode` e as informações de logon do SQL Server para `@distributor_login` e `@distributor_password`, se você precisar usar a Autenticação do SQL Server ao se conectar ao Distribuidor. 
     * Agenda para o trabalho do Distribution Agent para essa assinatura.
 
-5. No Publicador, execute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar o Assinante no Publicador, especificando `@publication`, `@subscriber`, `@destination_db`, um valor de pull para `@subscription_type`e o mesmo valor especificado na etapa 3 para `@update_mode`.
+5. No Publicador, execute [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar o Assinante no Publicador, `@publication`especificando `@subscriber`, `@destination_db`,, um valor de pull `@subscription_type`para, e o mesmo valor especificado na etapa 3 `@update_mode`para.
 
 Isto registra a assinatura pull no Publicador. 
 
@@ -299,11 +299,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Definir opções de resolução de conflito de atualização na fila (SQL Server Management Studio)
-  Defina as opções de resolução de conflitos para publicações que dão suporte a assinaturas de atualização na fila na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** . Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Defina as opções de resolução de conflitos para publicações que dão suporte a assinaturas de atualização na fila na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**. Para obter mais informações sobre como acessar essa caixa de diálogo, consulte [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Para definir opções de resolução de conflito de atualização na fila  
   
-1.  Na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>** , selecione um dos seguintes valores para a opção **Política de resolução de conflitos**:    
+1.  Na página **Opções de Assinatura** da caixa de diálogo **Propriedades de Publicação – \<Publicação>**, selecione um dos seguintes valores para a opção **Política de resolução de conflitos**:    
     -   **Mantenha a alteração do Publicador.**    
     -   **Mantenha a alteração do Assinante.**    
     -   **Reinicialize a assinatura.**    

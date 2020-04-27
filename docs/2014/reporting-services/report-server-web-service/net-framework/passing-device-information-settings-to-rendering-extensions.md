@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518646"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passando configurações de informações de dispositivos para extensões de renderização
@@ -55,7 +55,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurações de informações de dispositivo para extensões de renderização &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [Personalizar parâmetros de extensão de renderização em RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Compilar aplicativos usando o Serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Personalizar parâmetros de extensão de renderização em RSReportServer. config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Criando aplicativos usando o serviço Web e o .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745876"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar uma assinatura push
-  Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], agentes de [replicação](agents/replication-agents-overview.md)ou Replication Management Objects (RMO).  
+  Este tópico descreve como sincronizar uma assinatura push no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicação](agents/replication-agents-overview.md), ou RMO (Replication Management Objects).  
   
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  Assinaturas são sincronizadas pelo Agente de Distribuição (para replicação transacional e de instantâneo) ou pelo Agente de Mesclagem (para replicação de mesclagem). Os agentes podem ser executados continuamente, sob demanda ou em um agendamento. Para obter mais informações sobre como especificar agendas de sincronização, consulte [Especificar agendas de sincronização](specify-synchronization-schedules.md).  
   
- Sincronize uma assinatura sob demea das pastas **Publicações Locais** e **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e the **Todas as Assinaturas** no Replication Monitor. As assinaturas para as publicações Oracle não podem ser sincronizadas sob demanda no Assinante. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
+ Sincronize uma assinatura sob demanda das pastas **Publicações Locais** e **Assinaturas Locais** no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e na guia **Todas as Assinaturas** no Replication Monitor. As assinaturas para as publicações Oracle não podem ser sincronizadas sob demanda no Assinante. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Para sincronizar uma assinatura push sob demanda no Management Studio (no Publicador)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62745876"
   
 4.  Clique com o botão direito do mouse na assinatura a ser sincronizada e clique em **Exibir Status da Sincronização**.  
   
-5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>**, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
+5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>** , clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
 6.  Clique em **fechar**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62745876"
   
 4.  Uma mensagem é exibida sobre como estabelecer conexão com o Distribuidor. Clique em **OK**.  
   
-5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>**, clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
+5.  Na caixa de diálogo **Exibir Status da Sincronização – \<Subscriber>:\<SubscriptionDatabase>** , clique em **Iniciar**. Quando a sincronização estiver concluída, a mensagem **Sincronização concluída** será exibida.  
   
 6.  Clique em **fechar**  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745876"
   
 4.  Para exibir o andamento da sincronização, clique com o botão direito do mouse na assinatura e, depois, clique em **Exibir Detalhes**.  
   
-##  <a name="ReplProg"></a>Usando agentes de replicação  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> Usando agentes de replicação  
  Assinaturas push podem ser sincronizadas por programa e sob demanda chamando o arquivo executável apropriado do agente de replicação do prompt de comando. O arquivo executável do agente de replicação chamado dependerá do tipo de publicação para a qual a assinatura push pertence.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Para iniciar o Distribution Agent para sincronizar uma assinatura push a uma publicação transacional  
   
 1.  Do prompt de comando ou do arquivo de lote no Distribuidor, execute **distrib.exe**. Especifique os seguintes argumentos de linha de comando:  
   
-    -   **-Publicador**  
+    -   **-Publisher**  
   
     -   **-PublisherDB**  
   
-    -   **-Distribuidor**  
+    -   **-Distributor**  
   
-    -   **-Assinante**  
+    -   **-Subscriber**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745876"
   
 1.  Do prompt de comando ou do arquivo de lote no Distribuidor, execute **replmerg.exe**. Especifique os seguintes argumentos de linha de comando:  
   
-    -   **-Publicador**  
+    -   **-Publisher**  
   
     -   **-PublisherDB**  
   
-    -   **-Publicação**  
+    -   **-Publication**  
   
-    -   **-Distribuidor**  
+    -   **-Distributor**  
   
-    -   **-Assinante**  
+    -   **-Subscriber**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745876"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a>Exemplos (agentes de replicação)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Exemplos (agentes de replicação)  
  O exemplo seguinte inicia o Agente de Distribuição para sincronizar uma assinatura push.  
   
  
@@ -191,7 +191,7 @@ REM -- The following command must be supplied without line breaks.
 ```
   
   
-##  <a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Usando o RMO (Replication Management Objects)  
  É possível sincronizar as assinaturas push programaticamente usando o RMO (Replication Management Objects) e o acesso de código gerenciado para as funcionalidades do agente de replicação. As classes usadas para sincronizar uma assinatura push dependem do tipo de publicação ao qual a assinatura pertence.  
   
 > [!NOTE]  
@@ -245,7 +245,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Obtenha uma instância de classe <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> da propriedade <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> , e chame o método <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> . Esse método inicia o Merge Agent de forma síncrona e o controle permanece com o trabalho do agente em execução. Durante execução síncrona, você pode manipular o evento <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> enquanto o agente está em execução.  
   
-###  <a name="PShellExample"></a> Exemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Exemplos (RMO)  
  Este exemplo sincroniza a assinatura push a uma publicação transacional, onde o agente é iniciado de forma assíncrona usando o trabalho do agente.  
   
  [!code-csharp[HowTo#rmo_SyncTranPushSub_WithJob](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

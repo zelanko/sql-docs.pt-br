@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc9a06601ed0819457b9348bb10cb33b4b92d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637909"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Quando usar o SQL Server Native Client
@@ -39,6 +39,6 @@ ms.locfileid: "62637909"
 ## <a name="see-also"></a>Consulte Também  
  [Programação de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Tópicos de instruções sobre ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Tópicos de instruções do OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Tópicos de instruções sobre OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

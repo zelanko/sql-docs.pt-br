@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676519"
 ---
 # <a name="snapshot-folder"></a>Pasta do Instantâneo
@@ -33,9 +33,9 @@ ms.locfileid: "62676519"
   
 ## <a name="see-also"></a>Consulte Também  
  [Locais de pastas de instantâneos alternativos](alternate-snapshot-folder-locations.md)   
- [Configurar Distribuição](configure-distribution.md)   
+ [Configurar a distribuição](configure-distribution.md)   
  [Configurar a publicação e a distribuição](configure-publishing-and-distribution.md)   
- [Exibir e modificar propriedades de Publicador e Distribuidor](view-and-modify-distributor-and-publisher-properties.md)   
+ [Exibir e modificar as propriedades do distribuidor e do Publicador](view-and-modify-distributor-and-publisher-properties.md)   
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)  
   
   

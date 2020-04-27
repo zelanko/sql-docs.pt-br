@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688840"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -65,7 +65,7 @@ pData
   
  Se você usar **bcp_moretext** para enviar uma coluna de tipo de dados com suporte em uma linha, você também deverá usá-la para enviar todas as outras colunas de tipo de dados com suporte na linha. Nenhuma coluna pode ser ignorada. Os tipos de dados para os quais há suporte são SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT e SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY e SQLVARBINARY também se encontram nessa categoria caso a coluna seja varchar(max), nvarchar(max) ou varbinary(max), respectivamente.  
   
- Chamar **bcp_bind** ou [bcp_collen](bcp-collen.md) define o tamanho total de todas as partes de dados a serem copiadas para a coluna SQL Server. Uma tentativa de enviar SQL Server mais bytes do que o especificado na chamada **** para bcp_bind `bcp_collen` ou gera um erro. Esse erro ocorreria, por exemplo, em um aplicativo que costumava `bcp_collen` definir o comprimento dos dados disponíveis para uma coluna de `text` SQL Server como 4500 e, em seguida, chamado **bcp_moretext** cinco vezes ao indicar em cada chamada que o comprimento do buffer de dados era de 1000 bytes.  
+ Chamar **bcp_bind** ou [bcp_collen](bcp-collen.md) define o tamanho total de todas as partes de dados a serem copiadas para a coluna SQL Server. Uma tentativa de enviar SQL Server mais bytes do que o especificado na chamada **bcp_bind** para bcp_bind `bcp_collen` ou gera um erro. Esse erro ocorreria, por exemplo, em um aplicativo que costumava `bcp_collen` definir o comprimento dos dados disponíveis para uma coluna de `text` SQL Server como 4500 e, em seguida, chamado **bcp_moretext** cinco vezes ao indicar em cada chamada que o comprimento do buffer de dados era de 1000 bytes.  
   
  Se uma linha copiada contiver mais de uma coluna de comprimento variável longa, **bcp_moretext** primeiro envia seus dados para a coluna numerada ordinal mais baixa, seguida pela próxima coluna numerada ordinal mais baixa e assim por diante. A configuração correta do comprimento total dos dados esperados é importante. Não há nenhuma forma de sinalizar, fora da configuração de comprimento, que todos os dados de uma coluna foram recebidos pela cópia em massa.  
   

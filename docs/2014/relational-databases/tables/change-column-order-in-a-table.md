@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736313"
 ---
 # <a name="change-column-order-in-a-table"></a>Alterar ordem de colunas em uma tabela
@@ -34,7 +34,7 @@ ms.locfileid: "62736313"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-change-the-column-order"></a>Para alterar a ordem das colunas  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62736313"
   
 3.  Arraste a coluna para outro local dentro da tabela.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para alterar a ordem das colunas**  
   
  Esta tarefa não pode ser executada usando instruções Transact-SQL.  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62680352"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
@@ -32,7 +32,7 @@ ms.locfileid: "62680352"
   
  Para obter mais informações sobre a sintaxe de exemplo para o uso do prompt de comando, consulte [instalar SQL Server 2014 no prompt de comando](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Antes de começar, examine as seguintes informações importantes:  
   
 -   [Antes de instalar o cluster de failover](../install/before-installing-failover-clustering.md)  
@@ -68,21 +68,21 @@ ms.locfileid: "62680352"
   
  **Observação** Se houver um cluster de failover de nó único, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a instalação levará o grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos offline.  
   
-## <a name="considerations-when-upgrading-from-includessversion2005includesssversion2005-mdmd"></a>Considerações ao fazer a atualização do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+## <a name="considerations-when-upgrading-from-ssversion2005"></a>Considerações ao fazer a atualização do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
  Se você especificou grupos de domínios para a política de segurança de cluster, não poderá especificar o SID de serviço em [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]. Se você quiser usar o SID de serviço, precisará executar uma atualização lado a lado.  
   
  Quando você seleciona o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para atualização, a pesquisa de texto completo é incluída na instalação, independentemente de ter sido ou não instalada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Se a pesquisa de texto completo foi habilitada no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], a Instalação recompilará o catálogo de pesquisa de texto completo, independentemente das opções disponíveis para você.  
   
-## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Atualizando para um cluster de failover de várias sub-redes do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
+## <a name="upgrading-to-a-sssql14-multi-subnet-failover-cluster"></a>Atualizando para um cluster de failover de várias sub-redes do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Há dois possíveis cenários para atualizações:  
   
 1.  O cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está atualmente configurado em uma única sub-rede: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando a instalação e seguindo o processo de atualização. Concluída a atualização do cluster de failover existente, adicione um nó que esteja em uma sub-rede diferente usando a funcionalidade AddNode. Confirme a alteração da dependência do recurso de endereço IP para OR na página de configuração de rede de cluster. Agora você tem um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 2.  O cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está atualmente configurado em várias sub-redes que usam a tecnologia V-LAN expansível: você deve atualizar primeiro o cluster existente para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Como a tecnologia V-LAN expansível configura uma única sub-rede, a configuração de rede deve ser alterada para várias sub-redes. Altere a dependência do recurso de endereço IP com a ferramenta de administração de Cluster de Failover do Windows e altere a dependência de IP para OR.  
   
-###  <a name="BestPractices"></a>Práticas recomendadas antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atualizar um cluster de failover  
+###  <a name="best-practices-before-upgrading-a-ssnoversion-failover-cluster"></a><a name="BestPractices"></a>Práticas recomendadas antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atualizar um cluster de failover  
  Para eliminar tempo de inatividade inesperado causado por uma reinicialização, pré-instale o pacote de não reinicialização para .NET Framework 4.0 em todos os nós de cluster de failover antes de executar a atualização nos nós de cluster. É recomendável seguir estas etapas para pré-instalar os pré-requisitos:  
   
 -   Instale o pacote de não reinicialização para .NET Framework 4.0 e atualize somente os componentes compartilhados, começando pelos nós passivos. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 4.0, o Windows Installer 4.5 e os arquivos de suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] serão instalados.  
@@ -97,11 +97,11 @@ ms.locfileid: "62680352"
   
 -   Não é possível adicionar recursos a um cluster de failover existente.  
   
--   A alteração da edição do cluster de failover é limitada a determinados cenários. Para obter mais informações, consulte [atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+-   A alteração da edição do cluster de failover é limitada a determinados cenários. Para obter mais informações, consulte [Atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-##  <a name="UpgradeSteps"></a>Para atualizar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de failover  
+##  <a name="to-upgrade-a-ssnoversion-failover-cluster"></a><a name="UpgradeSteps"></a> Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-upgrade-a-ssnoversion-failover-cluster"></a>Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Insira a mídia de instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, na pasta raiz, clique duas vezes em Setup.exe. Para instalar a partir de um compartilhamento de rede, vá para a pasta raiz no compartilhamento e clique duas vezes em Setup.exe. Talvez você receba uma solicitação para instalar os pré-requisitos, caso eles não tenham sido instalados anteriormente.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "62680352"
   
 5.  O Verificador de Configuração do Sistema executa uma operação de descoberta no computador. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
-6.  Na página Chave do Produto (Product Key), digite a chave do PID da nova edição da versão correspondente à edição da antiga versão do produto. Por exemplo, para atualizar um cluster de failover do Enterprise, forneça uma chave do PID do [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Clique em **Avançar** para continuar. Lembre-se de que a chave do PID que você usa para uma atualização de cluster de failover deve ser consistente em todos os nós de cluster de failover na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) e [atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+6.  Na página Chave do Produto (Product Key), digite a chave do PID da nova edição da versão correspondente à edição da antiga versão do produto. Por exemplo, para atualizar um cluster de failover do Enterprise, forneça uma chave do PID do [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Clique em **Próximo** para continuar. Lembre-se de que a chave do PID que você usa para uma atualização de cluster de failover deve ser consistente em todos os nós de cluster de failover na mesma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [edições e componentes do SQL Server 2014](../../editions-and-components-of-sql-server-2016.md) e [atualizações de versão e edição com suporte](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-7.  Na página Termos de Licença, leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. **Clique em avançar para continuar**. Para finalizar a Instalação, clique em **Cancelar**.  
+7.  Na página Termos de Licença, leia o contrato de licença e marque a caixa de seleção para aceitar os termos e as condições da licença. Para ajudar a aperfeiçoar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você também pode habilitar a opção de uso de recursos e enviar relatórios à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. **Clique em Avançar para continuar**. Para finalizar a Instalação, clique em **Cancelar**.  
   
-8.  Na página Selecionar Instância, especifique a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a ser atualizada para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. **Clique em avançar para continuar**.  
+8.  Na página Selecionar Instância, especifique a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a ser atualizada para o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. **Clique em Avançar para continuar**.  
   
 9. Na página Seleção de Recursos, os recursos a serem atualizados estão pré-selecionados. Uma descrição de cada grupo de componentes é exibida no painel à direita depois que você seleciona o nome do recurso. Lembre-se de que você não pode alterar os recursos a serem atualizados, nem adicionar recursos durante a operação de atualização. Para adicionar recursos a uma instância atualizada do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] após a conclusão da operação de atualização, consulte [Adicionar recursos a uma instância do SQL Server 2014 &#40;instalação&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
@@ -126,9 +126,9 @@ ms.locfileid: "62680352"
   
 10. Na página Configuração da Instância, os campos são preenchidos automaticamente a partir da instância antiga. Você pode optar por especificar o novo valor de InstanceID.  
   
-     **ID da Instância** – Por padrão, o nome da instância é usado como a ID da Instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, marque a caixa de seleção **ID da Instância** e forneça um valor. Se você substituir o valor padrão, deverá especificar a mesma ID de Instância para a instância que está sendo atualizada em todos os nós de cluster de failover. A ID da Instância atualizada deve coincidir em todos os nós.  
+     **ID da instância** – por padrão, o nome da instância é usado como a ID da instância. Isso é usado para identificar os diretórios de instalação e as chaves do Registro da sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esse é o caso para instâncias padrão e instâncias nomeadas. Para uma instância padrão, o nome de instância e o ID da instância seriam MSSQLSERVER. Para usar uma ID de instância não padrão, marque a caixa de seleção **ID da Instância** e forneça um valor. Se você substituir o valor padrão, deverá especificar a mesma ID de Instância para a instância que está sendo atualizada em todos os nós de cluster de failover. A ID da Instância atualizada deve coincidir em todos os nós.  
   
-     **Instâncias e recursos detectados** -a grade mostra as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instâncias do que estão no computador em que a instalação está sendo executada. **Clique em avançar para continuar**.  
+     **Instâncias e recursos detectados** -a grade mostra as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instâncias do que estão no computador em que a instalação está sendo executada. **Clique em Avançar para continuar**.  
   
 11. A página Requisitos de Espaço em Disco calcula o espaço em disco necessário para os recursos especificados e compara os requisitos com o espaço em disco disponível no computador onde a Instalação está sendo executada.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "62680352"
   
 21. Para concluir o processo de atualização, repita as etapas de 1 a 21 em todos os outros nós no cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="to-upgrade-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Para atualizar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="to-upgrade-a-ssnoversion-multi-subnet-failover-cluster"></a>Para atualizar um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-#### <a name="to-upgrade-to-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster-existing-includessnoversionincludesssnoversion-mdmd-cluster-is-a-non-multi-subnet-cluster"></a>Para atualizar para um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (o cluster existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é um cluster de várias sub-redes).  
+#### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Para atualizar para um cluster de failover de várias sub-redes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (o cluster existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não é um cluster de várias sub-redes).  
   
 1.  Siga as etapas de 1 a 24 descritas na seção [para atualizar um cluster de failover SQL Server](#UpgradeSteps) acima para atualizar o [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]cluster para o.  
   

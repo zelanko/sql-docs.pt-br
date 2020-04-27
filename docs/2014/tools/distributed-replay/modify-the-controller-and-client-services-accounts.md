@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505990"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar as contas dos serviços controlador e cliente
@@ -32,9 +32,9 @@ ms.locfileid: "62505990"
   
 2.  Em **Serviços**, clique com o botão direito do mouse em **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay**e selecione **Propriedades**.  
   
-3.  Na janela ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Propriedades do controlador de Distributed Replay** , na guia **logon** , selecione **essa conta**, digite ou clique em **procurar** para inserir a nova conta de logon e, em seguida, clique em **OK**.  
+3.  Na janela **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay** , na guia **Logon** , selecione **Esta conta**, digite ou clique em **Procurar** para inserir a nova conta de logon e clique em **OK**.  
   
-     **Importante**: ao configurar o controlador de Distributed Replay, você pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
+     **Importante**: Quando você configura o controlador Distributed Replay, pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
   
     -   Conta de usuário do domínio  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505990"
   
 2.  Pare o serviço cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay.  
   
-3.  Na janela ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Propriedades do cliente Distributed Replay** , na guia **logon** , selecione **essa conta**, digite ou clique em **procurar** para inserir a nova conta de logon e, em seguida, clique em **OK**.  
+3.  Na janela **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay** , na guia **Logon** , selecione **Esta conta**, digite ou clique em **Procurar** para inserir a nova conta de logon e clique em **OK**.  
   
 4.  Inicie o serviço cliente Distributed Replay.  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705138"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Caixa de diálogo Avaliar Políticas, página Resultados da Avaliação
@@ -26,7 +26,7 @@ ms.locfileid: "62705138"
  **Resultados: Política**  
  O nome da política em avaliação. Essa caixa é somente leitura.  
   
- **Resultados: Mensagem**  
+ **Resultados: mensagem**  
  Um link para informações, caso ocorra um erro.  
   
  **Detalhes de destino: Servidor**  
@@ -42,8 +42,8 @@ ms.locfileid: "62705138"
  Um link para informações, caso ocorra um erro.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores com Gerenciamento Baseado em Políticas](administer-servers-by-using-policy-based-management.md)   
- [Caixa de diálogo Avaliar Políticas, página Seleção de Políticas](evaluate-policies-dialog-box-policy-selection-page.md)   
+ [Administrar servidores usando o gerenciamento baseado em políticas](administer-servers-by-using-policy-based-management.md)   
+ [Caixa de diálogo avaliar políticas, página seleção de política](evaluate-policies-dialog-box-policy-selection-page.md)   
  [Caixa de diálogo Exibição Detalhada de Resultados](results-detailed-view-dialog-box.md)  
   
   

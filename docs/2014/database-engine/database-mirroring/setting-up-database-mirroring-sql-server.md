@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754450"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurando o espelhamento de banco de dados (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754450"
   
  
   
-##  <a name="PrepareInstances"></a> Preparando uma instância de servidor para hospedar um servidor espelho  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Preparando uma instância de servidor para hospedar um servidor espelho  
  Para cada sessão de espelhamento de banco de dados:  
   
 1.  O servidor principal, o servidor espelho e o servidor testemunha, se houver, devem ser hospedadas por instâncias de servidor separadas que devem estar em sistemas host separados. Cada instância de servidor exige um ponto de extremidade de espelhamento de banco de dados. Se você precisar criar um ponto de extremidade de espelhamento de banco de dados, verifique se está acessível a outras instâncias de servidor.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754450"
   
 3.  Na instância de servidor que hospedará o banco de dados espelho, configure o restante do ambiente que é necessário para o banco de dados espelhado. Para obter mais informações, consulte [Gerenciar metadados ao disponibilizar um banco de dados em outra instância do servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Visão geral: estabelecendo uma sessão de espelhamento de banco de dados  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Visão geral: estabelecendo uma sessão de espelhamento de banco de dados  
  As etapas básicas para estabelecer uma sessão de espelhamento são as seguintes:  
   
 1.  Crie o banco de dados espelho restaurando os seguintes backups, usando RESTORE WITH NORECOVERY em cada operação de restauração:  
@@ -99,7 +99,7 @@ ms.locfileid: "62754450"
   
  
   
-##  <a name="InThisSection"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> Nesta seção  
  [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Resume as etapas para criar ou preparar um banco de dados espelho antes de retomar uma sessão suspensa. Fornece também links para tópicos de instruções.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754450"
  [Configurar contas de logon para espelhamento de banco de dados ou Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Descreve como criar um logon para uma instância de servidor remoto usando uma conta diferente da instância de servidor local.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **SQL Server Management Studio**  
   
 -   [Iniciar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

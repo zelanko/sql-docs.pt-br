@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473138"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administração automatizada em toda a empresa
-  Automatizar a administração em várias instâncias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do é chamado de *Administração*multisservidor. Use a administração multisservidor para fazer o seguinte:  
+   A automatização de administração em várias instâncias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é chamada de *administração multisservidor*. Use a administração multisservidor para fazer o seguinte:  
   
 -   Gerenciar dois ou mais servidores.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62473138"
  [Gerenciar trabalhos em toda a empresa](manage-jobs-across-an-enterprise.md)  
  Contém informações sobre a verificação do status de trabalho, alteração de servidores de destino para os trabalhos, sincronização de relógios do servidor de destino e sondagem de servidores mestres para o status de trabalho atual.  
   
- [Solucionar problemas de trabalhos multisservidor que usam proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  
+ [Solucionar problemas de trabalhos com multisservidor que usam proxies](troubleshoot-multiserver-jobs-that-use-proxies.md)  
  Contém informações sobre a solução de problemas de trabalhos multisservidor que usam proxies que falham.  
   
  [Sondar servidores](poll-servers.md)  

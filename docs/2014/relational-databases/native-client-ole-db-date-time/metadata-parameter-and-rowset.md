@@ -1,5 +1,5 @@
 ---
-title: Metadados de parâmetro e conjunto de linhas | Microsoft Docs
+title: Parâmetro e metadados de conjunto de linhas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655622"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parâmetro e metadados de conjunto de linhas
@@ -35,12 +35,12 @@ ms.locfileid: "62655622"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  As seguintes informações são retornadas na estrutura DBPARAMINFO por meio de *prgParamInfo*:  
   
-|Tipo de Parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|Tipo de parâmetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Limpar|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Limpar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Limpar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Definir|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Definir|  
   
@@ -78,15 +78,14 @@ ms.locfileid: "62655622"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` retorna as seguintes colunas:  
+ `IColumnsRowset::GetColumnsRowset` retorna as seguintes colunas:  
   
 |Tipo de coluna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Limpar|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Limpar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Limpar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Definir|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Definir|  
   
@@ -115,12 +114,12 @@ ms.locfileid: "62655622"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  A estrutura DBCOLUMNINFO retorna as seguintes informações:  
   
-|Tipo de Parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|Tipo de parâmetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Limpar|  
+|date|DBTYPE_DBDATE|6|10|0|Liberada|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Limpar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Limpar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Definir|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Definir|  
   
@@ -140,9 +139,9 @@ ms.locfileid: "62655622"
   
  Os sinalizadores restantes (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE e DBCOLUMNFLAGS_WRITEUNKNOWN) podem ser definidos.  
   
- Um novo sinalizador, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, é fornecido em *dwFlags* para permitir que um aplicativo determine o tipo de servidor de colunas, em que *wType* é DBTYPE_DBTIMESTAMP. *bScale* também deve ser usado para identificar o tipo de servidor.  
+ Um novo sinalizador, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, é fornecido em *dwFlags* para permitir que um aplicativo determine o tipo de servidor de colunas, em que *wType* é DBTYPE_DBTIMESTAMP. *bScale* também precisa ser usado para identificar o tipo de servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [&#41;de metadados &#40;OLE DB](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadados &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

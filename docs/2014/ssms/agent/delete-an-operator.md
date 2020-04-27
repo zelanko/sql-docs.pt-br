@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524382"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
@@ -36,23 +36,23 @@ ms.locfileid: "62524382"
   
      [Segurança](#Security)  
   
--   **Para excluir um operador, usando:**  
+-   **Para excluir um operador usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Quando um operador é removido, todas as notificações associadas a ele também são eliminadas.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Membros da função de servidor fixa **sysadmin** podem excluir operadores.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>Para excluir um operador  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62524382"
   
 5.  Na caixa de diálogo **Excluir Objeto** , verifique se o operador correto está selecionado e clique em **OK**. Se desejar que outro operador receba os alertas e trabalhos enviados ao operador excluído, marque **Reatribuir a** e selecione um operador na lista.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-an-operator"></a>Para excluir um operador  
   

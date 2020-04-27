@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2e5dcfe771e1f2ff00dbdb1fb1efd5cd4f8b984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705271"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Caixa de diálogo Propriedades da Faceta, página Condições Dependentes

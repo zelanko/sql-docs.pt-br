@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657231"
 ---
 # <a name="partitioning-element-dta"></a>Elemento de particionamento (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62657231"
   
 |Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|
-  `string`, nenhum tamanho máximo.|  
+|**Comprimento e tipo de dados**|`string`, nenhum tamanho máximo.|  
 |**Valores permitidos**|**NONE**<br /> Sem particionamento<br /><br /> **FULL**<br /> Particionamento completo (Aprimora o desempenho.)<br /><br /> **ALIGNED**<br /> Somente o particionamento alinhado (Aprimora a capacidade de gerenciamento máxima).<br /><br /> Use apenas um desses valores com este elemento.<br /><br /> **ALIGNED** significa que na recomendação gerada pelo Database Engine Tuning Advisor cada índice proposto é particionado exatamente do mesmo modo da tabela subjacente para a qual o índice está definido. Índices não clusterizados em uma exibição indexada são alinhados com a exibição indexada.|  
 |**Valor padrão**|**NONE**|  
 |**Ocorrência**|Necessário uma vez para o elemento `TuningOptions`, a menos que o elemento `DropOnlyMode` seja usado. Se `DropOnlyMode` for usado, você não poderá usar o `Partitioning`. Estes elementos são mutuamente exclusivos.|  

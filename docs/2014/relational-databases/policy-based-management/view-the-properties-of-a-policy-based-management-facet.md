@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676861"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Exibir as propriedades de uma faceta de gerenciamento baseado em políticas
@@ -32,14 +32,14 @@ ms.locfileid: "62676861"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-facet"></a>Para visualizar as propriedades de uma faceta  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62676861"
   
 4.  Clique no sinal de adição para expandir a pasta **Facetas** .  
   
-5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Propriedades da faceta -** _nome_da_faceta_, confira [Caixa de diálogo Propriedades de Faceta, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md) e [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Clique com o botão direito do mouse na faceta cujas propriedades você deseja exibir e selecione **Propriedades**. Para obter mais informações sobre as opções disponíveis na caixa de diálogo **Propriedades da faceta -**_nome_da_faceta_, confira [Caixa de diálogo Propriedades de Faceta, página Geral](../../integration-services/general-page-of-integration-services-designers-options.md), [Caixa de diálogo Propriedades da Faceta, página Políticas Dependentes](facet-properties-dialog-box-dependent-policies-page.md) e [Caixa de diálogo Propriedades da Faceta, página Condições Dependentes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Quando terminar, clique em **Fechar**.  
   

@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755345"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a uma sessão de espelhamento de banco de dados (SQL Server)
   Para se conectar a uma sessão de espelhamento de banco de dados, um cliente pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou o .NET Framework Data Provider para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando configurados para um banco de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , esses provedores de acesso de dados dão suporte completo ao espelhamento de banco de dados. Para obter informações sobre as considerações de programação para usar um banco de dados espelho, consulte [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Além disso, a instância de servidor principal atual deve estar disponível e o logon do cliente deve ter sido criado na instância de servidor. Para obter mais informações, consulte [Solução de problemas de usuários órfãos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). As conexões de cliente com uma sessão de espelhamento de banco de dados não envolvem a instância de servidor testemunha, se essa existir.  
   
- ##  <a name="InitialConnection"></a> Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados  
  Para a conexão inicial com um banco de dados espelho, um cliente deve fornecer uma cadeia de conexão que no mínimo forneça o nome de uma instância de servidor. Esse nome de servidor exigido deve identificar a instância do servidor principal atual e é conhecido como *nome do parceiro inicial*.  
   
  Opcionalmente, a cadeia de conexão também pode fornecer o nome de outra instância de servidor que deverá identificar a instância do servidor espelho atual para uso, se o parceiro inicial estiver indisponível durante a primeira tentativa de conexão. O segundo nome é conhecido como *nome do parceiro de failover*.  
@@ -85,11 +85,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo de servidor  
  A cadeia de conexão deve conter um atributo `Server` que forneça o nome do parceiro inicial que deverá identificar a instância do servidor principal atual.  
   
- A forma mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]. Por exemplo:  
+ A maneira mais simples de identificar a instância do servidor é especificando seu nome, *<server_name>*[**\\** _<SQL_Server_instance_name>_]. Por exemplo:  
   
  `Server=Partner_A;`  
   
- ou  
+ ou o  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |Driver ODBC|`Failover_Partner`|  
 |ADO ( ActiveX Data Object)|`Failover Partner`|  
   
- A forma mais simples de identificar a instância do servidor é pelo seu nome do sistema, *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ].  
+ A maneira mais simples de identificar a instância do servidor é por seu nome do sistema, *<server_name>*[**\\** _<SQL_Server_instance_name>_].  
   
  Alternativamente, o endereço IP e número da porta podem ser fornecidos no atributo `Failover Partner`. Se a tentativa de conexão inicial falhar durante a primeira conexão com o banco de dados, a tentativa para se conectar ao parceiro de failover não precisará depender do DNS e do SQL Server Browser. Quando uma conexão é estabelecida, o nome do parceiro de failover será sobrescrito com o nome do parceiro de failover, assim, se um failover acontecer, as conexões redirecionadas necessitarão do DNS e do SQL Server Browser.  
   
@@ -152,13 +152,13 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algoritmo de nova tentativa de conexão (para conexões TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algoritmo de nova tentativa de conexão (para conexões TCP/IP)  
  Para uma conexão TCP/IP, quando ambos os nomes de parceiro estiverem no cache, o provedor de acesso a dados aderirá a um algoritmo de nova tentativa de conexão. Isto é verdade tanto para fazer a conexão inicial para a sessão como para reconectar depois de perder uma conexão estabelecida. Quando uma conexão tiver sido estabelecida, completar os passos de pré-logon e logon leva tempo adicional.  
   
 > [!NOTE]  
 >  O tempo gasto para abrir uma conexão pode exceder o tempo de retentar por causa de fatores externos, como lookups de DNS lento, controlador/Kerberos Key Distribution Center (KDC) de domínio lento, tempo gasto contatando o SQL Server Browser, congestão de rede e outros. Tais fatores externos podem impedir um cliente de conectar a um banco de dados espelho. Além disso, fatores externos podem fazer uma conexão levar mais tempo para abrir do que o tempo estimado para retentar. Para obter informações sobre como ignorar o DNS e o SQL Server Browser para a tentativa de conexão com o parceiro inicial, consulte [Estabelecendo a conexão inicial com uma sessão de espelhamento de banco de dados](#InitialConnection)anteriormente neste tópico.  
   
- Se uma tentativa de conexão falhar ou o tempo de nova tentativa expirar antes da conexão acontecer, o provedor de acesso de dados tentará o outro parceiro. Se uma conexão não for aberta neste ponto, o provedor tentará alternadamente os nomes do parceiro inicial e do failover, até que uma conexão seja aberta ou o período de logon expire. O período do tempo limite de logon padrão é de 15 segundos. Nós recomendamos que o período de tempo limite de logon seja pelo menos de 5 segundos. Especificar um período de tempo limite menor poderia impedir quaisquer das tentativas de conexão de ter êxito.  
+ Se uma tentativa de conexão falhar ou o tempo de nova tentativa expirar antes da conexão acontecer, o provedor de acesso de dados tentará o outro parceiro. Se uma conexão não for aberta por esse ponto, o provedor tentará, de maneira alternativa, os nomes de parceiros iniciais e de failover, até que uma conexão seja aberta ou o período de logon expire. O período de tempo limite de logon padrão é de 15 segundos. Nós recomendamos que o período de tempo limite de logon seja pelo menos de 5 segundos. Especificar um período de tempo limite menor poderia impedir quaisquer das tentativas de conexão de ter êxito.  
   
  O tempo da retentar é uma porcentagem do período de logon. O tempo da retentar para uma tentativa de conexão é maior em cada turno sucessivo. No primeiro turno, o tempo de retentar para cada das duas tentativas é de 8 por cento do período de logon total. Em cada turno sucessivo, o algoritmo de retentar aumenta o tempo máximo de retentar pela mesma quantia. Assim, o retentar para as primeiras oito tentativas de conexão é como se segue:  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  O tempo de retentar é calculado usando a seguinte fórmula:  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
+ **=** _RetryTime_ _PreviousRetryTime_ **+ (** 0, 8 **&#42;** _LoginTimeout_**)**  
   
  Onde *PreviousRetryTime* é inicialmente 0.  
   
@@ -183,7 +183,7 @@ Server=123.34.45.56,4724;
   
  ![Atrasos máximos de repetições para um tempo limite de logon de 15 segundos](../media/dbm-retry-algorithm.gif "Atrasos máximos de repetições para um tempo limite de logon de 15 segundos")  
   
- Para o período limite de logon padrão, o tempo máximo estimado para os primeiros três turnos de tentativas de conexão é de 14.4 segundos. Se toda tentativa fosse usar tudo de seu tempo estimado, só 0.6 segundo de tempo restaria antes do período de logon expirar. Naquele caso, o quarto turno seria reduzido, permitindo só uma tentativa rápida final para conectar usando o nome de parceiro inicial. Porém, uma tentativa de conexão pode falhar em menos tempo do que seu tempo estimado, particularmente em turnos posteriores. Por exemplo, receber um erro de rede pode fazer com que uma tentativa termine antes que o tempo de retentar expire. Se as primeiras tentativas falharem devido a um erro de rede, haveria tempo adicional disponível para o quarto turno e, talvez, turnos adicionais.  
+ Para o período limite de logon padrão, o tempo máximo estimado para os primeiros três turnos de tentativas de conexão é de 14.4 segundos. Se todas as tentativas fossem usar todo o tempo alocado, somente 0,6 segundos de tempo permaneceria antes do período de logon expirar. Nesse caso, a quarta rodada seria reduzida, permitindo apenas uma tentativa rápida final de se conectar usando o nome do parceiro inicial. Porém, uma tentativa de conexão pode falhar em menos tempo do que seu tempo estimado, particularmente em turnos posteriores. Por exemplo, receber um erro de rede pode fazer com que uma tentativa termine antes que o tempo de retentar expire. Se as primeiras tentativas falharem devido a um erro de rede, haveria tempo adicional disponível para o quarto turno e, talvez, turnos adicionais.  
   
  Outra causa de uma tentativa falha é uma instância de servidor inativa, como acontece quando uma instância de servidor estiver comprometida numa interrupção de seu banco de dados. Neste caso, um atraso é imposto para impedir clientes de sobrecarregar os parceiros com uma sucessão rápida de tentativas de conexão.  
   
@@ -192,7 +192,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Atrasos de nova tentativa durante o failover  
- Se um cliente tentar se conectar a um parceiro que está em failover, o parceiro responderá imediatamente que é inativo. Neste caso, cada turno de tentativas de conexão é muito mais breve que o tempo de retentar estimado. Isso significa que muitos turnos de tentativas de conexão poderiam acontecer antes que o período de logon expire. Para evitar a sobrecarrega dos parceiros com uma série rápida de tentativas de conexão durante um failover, o provedor de acesso de dados adiciona um breve retardo ao retentar depois de cada turno de retentar. A duração de um determinado retardo ao retentar é determinada pelo algoritmo de retardo ao retentar. Depois do primeiro turno, o retardo é 100 milissegundos. Após cada um dos três turnos, o retardo ao repetir dobra – para 200, 400 e 800. Em todos os últimos turnos, o atraso de nova tentativa é de 1 segundo até que a tentativa de conexão tenha êxito ou expire.  
+ Se um cliente tentar se conectar a um parceiro que está em failover, o parceiro responderá imediatamente que é inativo. Neste caso, cada turno de tentativas de conexão é muito mais breve que o tempo de retentar estimado. Isso significa que muitas rodadas de tentativas de conexão podem ocorrer antes que o período de logon expire. Para evitar sobrecarregar os parceiros com uma série rápida de tentativas de conexão durante um failover, o provedor de acesso a dados adiciona um breve atraso de repetição após cada ciclo de repetição. A duração de um determinado retardo ao retentar é determinada pelo algoritmo de retardo ao retentar. Depois do primeiro turno, o retardo é 100 milissegundos. Após cada um dos três turnos, o retardo ao repetir dobra – para 200, 400 e 800. Em todos os últimos turnos, o atraso de nova tentativa é de 1 segundo até que a tentativa de conexão tenha êxito ou expire.  
   
 > [!NOTE]  
 >  Se a instância de servidor for parada, então a solicitação de conexão falhará imediatamente.  
@@ -201,7 +201,7 @@ Server=123.34.45.56,4724;
   
  ![Algoritmo de repetição-atraso](../media/dbm-retry-delay-algorithm.gif "Algoritmo de repetição-atraso")  
   
-##  <a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Reconectando uma sessão de espelhamento de banco de dados  
  Se uma conexão estabelecida com uma sessão de espelhamento de banco de dados falhar por qualquer motivo, por exemplo, devido a um failover de espelhamento de banco de dados, e o aplicativo tentar se reconectar ao servidor inicial, o provedor de acesso de dados poderá tentar se reconectar usando o nome de parceiro de failover armazenado no cache do cliente. Porém, a reconexão não é automática. O aplicativo deve se dar conta do erro. Então, o aplicativo precisa fechar a conexão com falha e abrir uma conexão nova que use os mesmos atributos de cadeia de caracteres de conexão. Neste momento, o provedor de acesso de dados redireciona a conexão ao parceiro de failover. Se a instância de servidor identificada por este nome for atualmente o servidor principal, a tentativa de conexão normalmente terá sucesso. Caso estiver obscuro se uma transação foi confirmada ou revertida, o aplicativo deve inspecionar o estado da transação, da mesma maneira como ao reconectar a uma instância de servidor autônoma.  
   
  A reconexão se assemelha a uma conexão inicial para a qual a cadeia de caracteres de conexão forneceu um nome de parceiro de failover. Se a primeira tentativa de conexão falhar, as tentativas de conexão alternarão seguidamente entre o nome do parceiro inicial e o nome do parceiro de failover até que o cliente conecte ao servidor principal ou o provedor de acesso de dados expire o tempo limite.  
@@ -220,7 +220,7 @@ Server=123.34.45.56,4724;
   
  Depois de ser redirecionado ao parceiro de failover, um cliente pode experimentar resultados inesperados ao usar uma instrução USE [!INCLUDE[tsql](../../includes/tsql-md.md)] para usar um banco de dados diferente. Isso poderá acontecer se a instância do servidor principal atual (o parceiro de failover) tiver um conjunto de bancos de dados diferente do servidor principal original (o parceiro inicial).  
   
-##  <a name="StalePartnerName"></a> O impacto de um nome de parceiro de failover desatualizado  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> O impacto de um nome de parceiro de failover desatualizado  
  O administrador do banco de dados pode alterar o parceiro de failover a qualquer momento. Portanto, um nome de parceiro de failover fornecido pelo cliente pode estar desatualizado ou *obsoleto*. Por exemplo, considere um nome de parceiro de failover Partner_B que é substituído por outra instância de servidor, Partner_C. Se um cliente fornecer Partner_B como o nome do parceiro de failover, este nome estará desatualizado. Quando o nome do parceiro de failover fornecido pelo cliente está desatualizado, o comportamento do provedor de acesso de dados é equiparado ao caso em que um nome de parceiro de failover não é fornecido pelo cliente.  
   
  Por exemplo, considere uma situação em que um cliente usa uma cadeia de conexão para uma série de quatro tentativas de conexão. Na cadeia de conexão, o nome do parceiro inicial é Partner_A e o nome do parceiro de failover é Partner_B:  
@@ -242,7 +242,7 @@ Server=123.34.45.56,4724;
 |O failover do serviço é enviado manualmente para o Partner_C (desconectando os clientes).|Partner_C|Partner_B|O cliente tenta conexão com o Partner_A inicialmente, e depois com o Partner_B. Os dois nomes falham, e finalmente o tempo limite da solicitação de conexão se esgota e falha.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Espelhamento de banco de dados &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de espelhamento de banco de dados &#40;&#41;](database-mirroring-sql-server.md)   
  [Possíveis falhas durante espelhamento de banco de dados](possible-failures-during-database-mirroring.md)  
   
   

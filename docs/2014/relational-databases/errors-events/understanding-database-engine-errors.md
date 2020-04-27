@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761677"
 ---
 # <a name="understanding-database-engine-errors"></a>Compreendendo os erros do Mecanismo de Banco de Dados
-  Os erros gerados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela a seguir.  
+  Os erros acionados pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] têm os atributos descritos na tabela a seguir.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |Número do erro|Cada mensagem de erro tem um número de erro exclusivo.|  
 |Error message string|A mensagem de erro contém informações de diagnóstico sobre a causa do erro. Muitas mensagens de erro têm variáveis de substituição nas quais são inseridas informações, como o nome do objeto que gera o erro.|  
@@ -36,7 +36,7 @@ ms.locfileid: "62761677"
   
  Todas as mensagens de erro do sistema e definidas pelo usuário em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] estão na exibição de catálogo **sys.messages** . Você pode usar a instrução RAISERROR para retornar erros definidos pelo usuário a um aplicativo.  
   
- Todos os APIs de banco de dados, como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** namespace, ActiveX Data Objects (ADO), OLE DB e Open Database Connectivity (ODBC), informam os atributos básicos de erro. Essa informação inclui o número de erro e cadeia de caracteres de mensagem. Porém, nem todos os APIs informam todos os outros atributos de erro.  
+ Todas as APIs de banco de dados, como o namespace **SQLClient** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ADO (ActiveX Data Objects), o OLE DB e o ODBC, relatam os atributos de erro básicos. Essa informação inclui o número de erro e cadeia de caracteres de mensagem. Porém, nem todos os APIs informam todos os outros atributos de erro.  
   
  Informações sobre um erro que acontece no escopo do bloco TRY de um constructo TRY…CATCH podem ser obtidas em código [!INCLUDE[tsql](../../includes/tsql-md.md)] usando-se funções como ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE no escopo do bloco CATCH associado. Para obter mais informações, consulte [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   

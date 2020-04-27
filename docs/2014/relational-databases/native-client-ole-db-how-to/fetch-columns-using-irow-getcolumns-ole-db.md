@@ -1,5 +1,5 @@
 ---
-title: 'Buscar colunas usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: Buscar colunas usando IRow::GetColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468492"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "62468492"
 -   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** for 0, a chamada para `IRow` - `>GetColumns()` retornará apenas o comprimento real da coluna. Nesse caso, `IRow->GetColumns()` poderá ser chamado novamente na mesma coluna para recuperar os dados reais.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se você precisar manter as credenciais, deverá criptografá-las com a [API de criptografia do Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Para buscar colunas usando IRow::GetColumns  
   
@@ -517,6 +517,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções do OLE DB](ole-db-how-to-topics.md)  
+ [Tópicos de instruções sobre OLE DB](ole-db-how-to-topics.md)  
   
   

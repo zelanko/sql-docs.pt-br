@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664262"
 ---
 # <a name="blocked-process-report-event-class"></a>classe de evento Blocked Process Report
-  A classe de evento **bloqueado processo de relatório** indica que uma tarefa foi bloqueada por mais de um período de tempo especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
+  A classe de evento **Blocked Process Report** indica que uma tarefa foi bloqueada por um período mais longo que o especificado. Essa classe de evento não inclui tarefas de sistema ou tarefas que estejam esperando em recursos não detectáveis por deadlock.  
   
  Para configurar o limite e a frequência de geração dos relatórios, use o comando **sp_configure** para configurar a opção **blocked process threshold** , que pode ser definida em segundos. Por padrão, não são produzidos relatórios de processo bloqueado. Para obter mais informações sobre como configurar a opção **blocked process threshold** , veja [Opção blocked process threshold de configuração de servidor](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62664262"
 |**IndexID**|**int**|ID do índice no objeto afetado pelo evento. Para determinar a ID do índice de um objeto, use a coluna **indid** da tabela do sistema **sysindexes** .|24|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginSid**|**imagem**|SID (identificador de segurança) do usuário que fez logon. Esse evento sempre é informado pelo thread do sistema. IsSystem = 1; SID = sa.|41|Sim|  
-|**Mode**|**int**|O estado que o evento recebeu ou que está solicitando.<br /><br /> 0= NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sim|  
+|**Modo**|**int**|O estado que o evento recebeu ou que está solicitando.<br /><br /> 0= NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sim|  
 |**ObjectID**|**int**|A ID atribuída pelo sistema, do objeto em que foi adquirido o bloqueio, se disponível e aplicável.|22|Sim|  
 |**ServerName**|**nvarchar**|Nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está sendo rastreada.|26||  
 |**SessionLoginName**|**nvarchar**|Nome de logon do usuário que originou a sessão. Por exemplo, ao se conectar ao SQL Server usando Login1 e executar uma instrução como Login2, **SessionLoginName** mostrará Login1, enquanto que **LoginName** mostrará Login2. Essa coluna exibe logons do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do Windows.|64|Sim|  

@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695681"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Propriedades do trabalho: novo trabalho (página Agendas)
+# <a name="job-properties-new-job-schedules-page"></a>Propriedades do Trabalho: Novo Trabalho (página Agendamentos)
   Use esta página para exibir e organizar agendas para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um trabalho do Agent.  
   
 ## <a name="options"></a>Opções  
@@ -29,7 +29,7 @@ ms.locfileid: "62695681"
  **Novo**  
  Crie uma agenda nova. Depois de criada, a agenda é adicionada ao trabalho.  
   
- **Dique**  
+ **Escolher**  
  Selecione uma agenda dentre as agendas existentes. Como um trabalho e uma agenda precisam ter o mesmo proprietário, essa opção não lhe permitirá escolher dentre as agendas que você tem.  
   
  **Editar**  

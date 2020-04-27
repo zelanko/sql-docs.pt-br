@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520548"
 ---
 # <a name="report-server-web-service"></a>serviço Web Servidor de Relatórios
@@ -37,11 +37,11 @@ ms.locfileid: "62520548"
 -   Desenvolver aplicativos usando qualquer conjunto de ferramentas de desenvolvimento habilitado para SOAP. Para obter mais informações, consulte [Função do SOAP no Reporting Services](../report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Diagrama de programação  
- ![Opções de implantação do serviço Web do Servidor de Relatório](../../../2014/reporting-services/media/reportserviceswebserviceprog-01.gif "Opções de implantação do serviço Web do Servidor de Relatório")  
+ ![Opções de implantação do serviço Web Servidor de Relatórios](../../../2014/reporting-services/media/reportserviceswebserviceprog-01.gif "Opções de implantação do serviço Web Servidor de Relatórios")  
 Opções de desenvolvimento disponíveis para serviço Web do Reporting Services  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Métodos de serviço Web Servidor de Relatórios](../report-server-web-service/methods/report-server-web-service-methods.md)  
+ [Métodos do serviço Web Servidor de Relatórios](../report-server-web-service/methods/report-server-web-service-methods.md)  
  Descreve os recursos e os métodos de cada serviço Web Servidor de Relatórios.  
   
  [The Role of SOAP in Reporting Services](../report-server-web-service/the-role-of-soap-in-reporting-services.md)  
@@ -50,7 +50,7 @@ Opções de desenvolvimento disponíveis para serviço Web do Reporting Services
  [Acessando a API SOAP](../report-server-web-service/accessing-the-soap-api.md)  
  Descreve o WSDL (Web Service Description Language) e fornece as URLs para acessar um arquivo do WSDL do Reporting Services.  
   
- [Compilar aplicativos usando o Serviço Web e o .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Criando aplicativos usando o serviço Web e o .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  Contém informações sobre como desenvolver aplicativos e serviços Web que chamam a API SOAP do Reporting Services.  
   
  [Gerar scripts com o utilitário rs.exe e o serviço Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
@@ -62,12 +62,11 @@ Opções de desenvolvimento disponíveis para serviço Web do Reporting Services
 ## <a name="user-requirements-for-web-service-development"></a>Requisitos de usuário para o desenvolvimento de serviço Web  
  Para desenvolver aplicativos usando o serviço Web Servidor de Relatórios, você precisa:  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou posterior instalado em um computador com uma conexão com a Internet e acesso ao servidor de relatório.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 ou posterior instalado em um computador com uma conexão com a Internet e acesso ao servidor de relatório.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK instalado em um computador se você quiser desenvolver e implantar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicativos usando o. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  
   
--   Uma compreensão detalhada dos recursos e das capacidades do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Uma compreensão detalhada dos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recursos e funcionalidades.  
   
 -   Uma sólida compreensão de SOAP e de [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)].  
   

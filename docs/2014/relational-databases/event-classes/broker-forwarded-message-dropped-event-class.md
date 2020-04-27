@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664022"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
@@ -54,9 +54,9 @@ ms.locfileid: "62664022"
 |SPID|`int`|A ID de processo do servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|12|Sim|  
 |StartTime|`datetime`|O horário no qual o evento foi iniciado, quando disponível.|14|Sim|  
 |Estado|`int`|Indica o local, dentro do código-fonte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que produziu o evento. Cada local que pode produzir esse evento tem um código de estado diferente. Um engenheiro de suporte da Microsoft pode usar esse código de estado para descobrir onde o evento foi produzido.|30|Não|  
-|Sucesso|`int`|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
+|Êxito|`int`|O tempo em que a mensagem esteve ativa. Quando este valor é maior ou igual à vida útil, a mensagem é removida.|23|Não|  
 |TargetLoginName|`nvarchar`|O endereço de rede para o qual a mensagem deveria ser encaminhada.|42|Não|  
-|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|11,8|Não|  
+|TargetUserName|`nvarchar`|O nome do serviço que iniciou a mensagem.|39|Não|  
 |TextData|`ntext`|Descrição do motivo pelo qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] removeu a mensagem.|1|Sim|  
 |ID da transação|`bigint`|ID da transação atribuída pelo sistema.|4|Não|  
   

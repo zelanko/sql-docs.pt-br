@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62630555"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Assinatura , Histórico do Distribuidor para o Assinante (assinatura transacional)
@@ -45,7 +45,7 @@ ms.locfileid: "62630555"
  **Hora de término**  
  A hora de término da sessão. Se o agente não parou, esse campo estará vazio.  
   
- **Duration**  
+ **Permanência**  
  A quantidade de tempo que o Distribution Agent está em execução nessa sessão. O tempo representa o tempo decorrido, se o agente estiver sendo executado no momento, e o tempo total da sessão, se a sessão do agente tiver terminado.  
   
  **Mensagem de erro**  
@@ -63,7 +63,7 @@ ms.locfileid: "62630555"
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)   
+ [Monitorando a replicação](monitoring-replication.md)   
  [Visão geral dos agentes de replicação](agents/replication-agents-overview.md)  
   
   

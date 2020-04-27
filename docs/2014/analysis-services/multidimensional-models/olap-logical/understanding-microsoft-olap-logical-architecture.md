@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725469"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Arquitetura lógica (Analysis Services – Dados Multidimensionais)
@@ -39,7 +39,7 @@ ms.locfileid: "62725469"
  [Objetos de servidor &#40;Analysis Services-dados multidimensionais&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **Objetos de banco de dados**  
- [Objetos de banco de dados &#40;Analysis Services-&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de banco de dados &#40;Analysis Services – Dados Multidimensionais&#41;](database-objects-analysis-services-multidimensional-data.md)  
   
  **Objetos de dimensão**  
  [Objetos de dimensão &#40;Analysis Services de dados multidimensionais&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -52,6 +52,6 @@ ms.locfileid: "62725469"
   
 ## <a name="see-also"></a>Consulte Também  
  [Noções básicas sobre a arquitetura Microsoft OLAP](../olap-physical/understanding-microsoft-olap-architecture.md)   
- [Arquitetura física &#40;Analysis Services de dados multidimensionais&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [Arquitetura física &#40;Analysis Services – Dados Multidimensionais&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755028"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Visão geral do Monitor de Espelhamento de Banco de Dados
@@ -45,30 +45,30 @@ ms.locfileid: "62755028"
   
  Para cada banco de dados registrado, as seguintes informações serão exibidas:  
   
- _<Database_name>_ **(** _ \<status>_ **,** _<PRINCIPAL_SERVER_ **->** _><_ MIRROR_SERVER>**)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
- *<Database_name>*  
+ *<nome_do_banco_de_dados>*  
  O nome de um banco de dados espelho registrado no Monitor de Espelhamento de Banco de Dados.  
   
- *\<>de status*  
+ *\<Status>*  
  Os possíveis status e seus ícones associados são os seguintes:  
   
 |ícone|Status|DESCRIÇÃO|  
 |----------|------------|-----------------|  
-|Ícone de aviso|**Conhecidos**|O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.|  
-|Ícone de aviso|**Sincronizando**|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.|  
-|Cilindro padrão do banco de dados|**Realizada**|Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.<br /><br /> No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .|  
-|Ícone de aviso|**Suspenso**|O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.|  
-|Ícone de erro|**Desconecta**|A instância do servidor não pode se conectar ao seu parceiro.|  
+|Ícone de aviso:|**Desconhecido**|O monitor não está conectado a nenhum parceiro. As únicas informações disponíveis são aquelas armazenadas em cache pelo monitor.|  
+|Ícone de aviso:|**Sincronizando**|O conteúdo do banco de dados espelho está ficando atrás do conteúdo do banco de dados principal. A instância do servidor principal está enviando registros de log para a instância do servidor espelho, a qual está aplicando as alterações ao banco de dados espelho para rolagem para frente.<br /><br /> No início de uma sessão de espelhamento de banco de dados, o banco de dados espelho e principal estão nesse estado.|  
+|Cilindro padrão do banco de dados|**Sincronizado**|Quando o servidor espelho torna-se suficientemente atualizado em relação ao servidor principal, o estado do banco de dados é alterado para **Sincronizado**. O banco de dados permanece nesse estado enquanto o servidor principal continua enviando alterações para o servidor espelho e o servidor espelho continua aplicando as alterações ao banco de dados espelho.<br /><br /> Para o modo de alta segurança, o failover automático e o failover manual são ambos possíveis, sem perda de dados.<br /><br /> No modo de alto desempenho, alguma perda de dados é sempre possível, mesmo no estado **Sincronizado** .|  
+|Ícone de aviso:|**Suspenso**|O banco de dados principal está disponível, mas não está enviando logs para o servidor espelho.|  
+|Ícone de erro|**Desconectado**|A instância do servidor não pode se conectar ao seu parceiro.|  
   
- *<PRINCIPAL_SERVER>*  
+ *<SERVIDOR_PRINCIPAL>*  
  O nome do parceiro que atualmente é a principal instância do servidor. O nome está no seguinte formato:  
   
- *<SYSTEM_NAME>*[**\\** _<instance_name _>]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: _<SYSTEM_NAME>_ **\\** _<instance_name _>.  
+ em que *<SYSTEM_NAME>* é o nome do sistema no qual a instância do servidor reside. Para uma instância de servidor não padrão, o nome da instância também é exibido: _<SYSTEM_NAME>_ **\\** _<instance_name>_ .  
   
- *<MIRROR_SERVER>*  
+ *<SERVIDOR_ESPELHO>*  
  O nome do parceiro que é atualmente a instância do servidor espelho. O formato é o mesmo do servidor principal.  
   
 ## <a name="detail-pane"></a>Painel de detalhes  
@@ -88,17 +88,17 @@ ms.locfileid: "62755028"
   
 |Comando|DESCRIÇÃO|  
 |-------------|-----------------|  
-|**Registrar banco de dados espelhado...**|Abre a caixa de diálogo **Registrar Banco de Dados Espelho** . Use esta caixa de diálogo para registrar um ou mais bancos de dado espelhados em uma determinada instância do servidor, adicionando o banco de dados, ou bancos de dados, ao Monitor de Espelhamento de Banco de Dados. Quando um banco de dados é adicionado, o Monitor de Espelhamento de Banco de Dados armazena localmente em cache as informações do banco de dados, seus parceiros e como se conectar aos parceiros.|  
-|**Gerenciar conexões da instância do servidor...**|Quando você seleciona este comando, a caixa de diálogo **Gerenciar Conexões do Servidor** é exibida. Nela, você pode escolher uma instância de servidor para a qual deseja especificar as credencias a serem usadas pelo monitor quando se conectar a um determinado parceiro de failover.<br /><br /> Para editar as credenciais para o parceiro, localize sua entrada na grade **Instância de servidor** , e clique em **Editar** naquela linha. Isto exibe a caixa de diálogo **Conectar ao Servidor** com o nome de instância de servidor e com os controles de credenciais inicializados com o valor atual em cache. Altere as informações de autenticação conforme necessário e clique em **Conectar**. Se as credenciais tiverem privilégios suficientes, a coluna **Conectar Usando** é atualizada com as novas credenciais.|  
+|**Registrar um Banco de Dados Espelho**|Abre a caixa de diálogo **Registrar Banco de Dados Espelho** . Use esta caixa de diálogo para registrar um ou mais bancos de dado espelhados em uma determinada instância do servidor, adicionando o banco de dados, ou bancos de dados, ao Monitor de Espelhamento de Banco de Dados. Quando um banco de dados é adicionado, o Monitor de Espelhamento de Banco de Dados armazena localmente em cache as informações do banco de dados, seus parceiros e como se conectar aos parceiros.|  
+|**Gerenciar Conexões das Instâncias do Servidor...**|Quando você seleciona este comando, a caixa de diálogo **Gerenciar Conexões do Servidor** é exibida. Nela, você pode escolher uma instância de servidor para a qual deseja especificar as credencias a serem usadas pelo monitor quando se conectar a um determinado parceiro de failover.<br /><br /> Para editar as credenciais para o parceiro, localize sua entrada na grade **Instância de servidor** , e clique em **Editar** naquela linha. Isto exibe a caixa de diálogo **Conectar ao Servidor** com o nome de instância de servidor e com os controles de credenciais inicializados com o valor atual em cache. Altere as informações de autenticação conforme necessário e clique em **Conectar**. Se as credenciais tiverem privilégios suficientes, a coluna **Conectar Usando** é atualizada com as novas credenciais.|  
   
  Se você selecionar o banco de dados, o menu **Ação** também conterá os seguintes comandos:  
   
 |Comando|DESCRIÇÃO|  
 |-------------|-----------------|  
-|**Cancelar o registro deste banco de dados**|Remove o banco de dados selecionado do Monitor de Espelhamento de Banco de Dados.|  
-|**Definir limites de aviso...**|Abre a caixa de diálogo **Definir Limites de Aviso** . A partir deste ponto, o administrador pode habilitar ou desabilitar os avisos para o banco de dados em cada um dos parceiros e alterar o limite de cada aviso. Recomendamos definir o limite de um determinado aviso em ambos os parceiros a fim de garantir que o aviso continue se houver um failover no banco de dados. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.<br /><br /> Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado|  
+|**Cancelar o Registro deste Banco de Dados.**|Remove o banco de dados selecionado do Monitor de Espelhamento de Banco de Dados.|  
+|**Definir Limites de Aviso...**|Abre a caixa de diálogo **Definir Limites de Aviso** . A partir deste ponto, o administrador pode habilitar ou desabilitar os avisos para o banco de dados em cada um dos parceiros e alterar o limite de cada aviso. Recomendamos definir o limite de um determinado aviso em ambos os parceiros a fim de garantir que o aviso continue se houver um failover no banco de dados. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.<br /><br /> Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado|  
   
- **Para monitorar o espelhamento de banco de dados usando SQL Server Management Studio para**  
+ **Para monitorar o espelhamento de banco de dados usando o SQL Server Management Studio para**  
   
 -   [Iniciar o Monitor de Espelhamento de Banco de Dados &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
