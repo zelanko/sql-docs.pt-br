@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157118"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores com Gerenciamento Baseado em Políticas
@@ -53,7 +53,7 @@ ms.locfileid: "63157118"
  Para as políticas com falha, o Pesquisador de Objetos indica um aviso de integridade crítica como um ícone vermelho ao lado do destino e dos nós superiores na árvore do Pesquisador de Objetos.  
   
 > [!NOTE]  
->  Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Quando o sistema computar o objeto definido para uma política, por padrão os objetos do sistema serão excluídos.  Por exemplo, se o conjunto de objetos da política referenciar todas as tabelas, a política não se aplicará a tabelas do sistema. Se os usuários desejarem avaliar uma política em relação a objetos do sistema, eles poderão explicitamente adicionar objetos do sistema ao conjunto de objetos. Entretanto, embora todas as políticas tenham suporte para o modo de avaliação **verificação de agenda** , por questões de desempenho, nem todas as políticas com conjuntos de objetos arbitrários têm suporte para o modo de avaliação **verificação de alterações** . Para obter mais informações, consulte[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Conceitos do Gerenciamento Baseado em Políticas  
  O Gerenciamento Baseado em Políticas tem três componentes:  
@@ -122,13 +122,13 @@ ms.locfileid: "63157118"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Descreve como as políticas do Gerenciamento Baseado em Políticas são armazenadas.|Armazenamento do Gerenciamento Baseado em Políticas|  
-|Descreve como configurar alertas para notificar os administradores de políticas sobre falhas.|[Configurar alertas para notificar os administradores sobre falhas de políticas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
-|Descreve como criar, exibir, modificar e excluir uma condição de Gerenciamento Baseado em Políticas.|[Criar uma nova condição de gerenciamento baseado em políticas](create-a-new-policy-based-management-condition.md)<br /><br /> [Excluir uma condição de gerenciamento baseado em políticas](delete-a-policy-based-management-condition.md)<br /><br /> [Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+|Descreve como configurar alertas para notificar os administradores de políticas sobre falhas.|[Configurar alertas para notificar os administradores de políticas sobre falhas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
+|Descreve como criar, exibir, modificar e excluir uma condição de Gerenciamento Baseado em Políticas.|[Criar uma nova condição de Gerenciamento baseado em Políticas](create-a-new-policy-based-management-condition.md)<br /><br /> [Excluir uma condição de Gerenciamento baseado em Políticas](delete-a-policy-based-management-condition.md)<br /><br /> [Exibir ou modificar as propriedades de uma condição de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
 |Descreve como criar, exibir, modificar e excluir uma política do Gerenciamento Baseado em Políticas.|[Criar uma política do Gerenciamento Baseado em Políticas](create-a-policy-based-management-policy.md)<br /><br /> [Excluir uma política do Gerenciamento Baseado em Políticas](delete-a-policy-based-management-policy.md)<br /><br /> [Exibir ou modificar as propriedades de uma política de gerenciamento baseado em políticas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
-|Descreve como exportar e importar uma política do Gerenciamento Baseado em Políticas.|[Exportar uma política do gerenciamento baseado em políticas](export-a-policy-based-management-policy.md)<br /><br /> [Importar política de Gerenciamento Baseado em Políticas](import-a-policy-based-management-policy.md)|  
-|Descreve como verificar se uma instância de servidor, banco de dados, objeto de servidor ou objeto de banco de dados obedece a uma política.|[Avaliar uma política do gerenciamento baseado em políticas de um objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas dessa política](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas em um agendamento](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
+|Descreve como exportar e importar uma política do Gerenciamento Baseado em Políticas.|[Exportar uma política do Gerenciamento Baseado em Políticas](export-a-policy-based-management-policy.md)<br /><br /> [Importar política de Gerenciamento Baseado em Políticas](import-a-policy-based-management-policy.md)|  
+|Descreve como verificar se uma instância de servidor, banco de dados, objeto de servidor ou objeto de banco de dados obedece a uma política.|[Avaliar uma política do Gerenciamento Baseado em Políticas de um objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas dessa política](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Avaliar uma política do Gerenciamento Baseado em Políticas em um agendamento](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Descreve como exibir e copiar um estado de faceta de Gerenciamento Baseado em Políticas em um arquivo.|[Trabalhando com facetas do Gerenciamento Baseado em Políticas](working-with-policy-based-management-facets.md)|  
-|Fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e descreve como avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados.|[Monitorar e impor melhores práticas usando o gerenciamento baseado em políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
+|Fornece um conjunto de arquivos de políticas que você pode importar como políticas de práticas recomendadas e descreve como avaliar essas políticas em relação a um conjunto de destino que inclui instâncias, objetos de instância, bancos de dados ou objetos de bancos de dados.|[Monitorar e impor práticas recomendadas usando o Gerenciamento Baseado em Políticas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Fornece os tópicos da Ajuda F1 para o nó **PolicyManagement** do Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nó de gerenciamento de política &#40;Pesquisador de Objetos&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156836"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chamando procedimentos armazenados compilados nativamente em aplicativos de acesso a dados
@@ -48,8 +48,7 @@ ms.locfileid: "63156836"
   
 -   Execute o procedimento armazenado várias vezes usando `SQLExecute`.  
   
- O seguinte fragmento de código mostra a execução preparada de um procedimento armazenado para adicionar itens de linha a um pedido. 
-  `SQLPrepare` é chamado apenas uma vez, enquanto `SQLExecute` é chamado várias vezes, uma vez para cada execução de procedimento.  
+ O seguinte fragmento de código mostra a execução preparada de um procedimento armazenado para adicionar itens de linha a um pedido. `SQLPrepare` é chamado apenas uma vez, enquanto `SQLExecute` é chamado várias vezes, uma vez para cada execução de procedimento.  
   
 ```  
 // Bind parameters  
@@ -394,6 +393,6 @@ int _tmain() {
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
+ [procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
   
   

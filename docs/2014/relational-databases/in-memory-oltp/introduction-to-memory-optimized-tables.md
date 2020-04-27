@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157841"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introdução às tabelas com otimização de memória
@@ -28,7 +28,7 @@ ms.locfileid: "63157841"
   
  A figura a seguir ilustra o controle de várias versões. A figura mostra uma tabela com três linhas, e cada linha tem versões diferentes.  
   
- ![Várias versões.](../../database-engine/media/hekaton-tables-1.gif "Vários controles de versão.")  
+ ![Controle de várias versões.](../../database-engine/media/hekaton-tables-1.gif "Controle de várias versões.")  
   
  A tabela tem três linhas: r1, r2 e r3. r1 tem três versões, r2 tem duas versões e r3 tem quatro versões. Observe que as versões diferentes da mesma linha não ocupam necessariamente locais de memória consecutivos. As versões de linha diferentes podem ser dispersas em toda a estrutura de dados da tabela.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63157841"
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabelas com otimização de memória|Sim|Sim|Não <sup>1</sup>|  
 |[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Sim|Sim|Não|  
-|[Procedimentos armazenados compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx)|Você não pode usar a instrução EXECUTE para executar nenhum procedimento armazenado em um procedimento armazenado compilado nativamente.|Sim|Não <sup>1</sup>|  
+|[procedimentos armazenados compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx)|Você não pode usar a instrução EXECUTE para executar nenhum procedimento armazenado em um procedimento armazenado compilado nativamente.|Sim|Não <sup>1</sup>|  
   
  <sup>1</sup> você não pode acessar uma tabela com otimização de memória ou um procedimento armazenado compilado nativamente da conexão de contexto (a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexão do ao executar um módulo CLR). No entanto, é possível criar e abrir outra conexão, da qual você pode acessar tabelas com otimização de memória e procedimentos armazenados compilados nativamente. Para obter mais informações, consulte [regular versus conexões de contexto](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63157841"
  Comunicação  
  Um aplicativo com muitas chamadas para procedimentos armazenados curtos pode ver um ganho de desempenho menor em comparação com um aplicativo com menos chamadas e mais funcionalidade implementada em cada procedimento armazenado.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Chão  
+ Execução do [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
  O OLTP na memória atinge o melhor desempenho usando procedimentos armazenados compilados nativamente do que usando procedimentos armazenados interpretados ou execução de consulta. Os procedimentos armazenados que executam outros procedimentos armazenados não podem ser compilados nativamente, mas pode ser vantajoso acessar tabelas com otimização de memória nesses procedimentos.  
   
  Varredura de intervalo x pesquisa de ponto  

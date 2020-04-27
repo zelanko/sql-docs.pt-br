@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157996"
 ---
 # <a name="memory-optimization-advisor"></a>Orientador de otimização da memória
@@ -25,7 +25,7 @@ ms.locfileid: "63157996"
   
  Para começar, conecte-se à instância que contém a tabela de banco de dados baseada em disco. Você pode se conectar a uma instância do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . No entanto, se você desejar executar uma operação de migração com o orientador, deverá se conectar a uma instância do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] na qual a funcionalidade de OLTP na memória está habilitada. Para obter mais informações sobre os requisitos de OLTP na memória, consulte [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre metodologias de migração, consulte [padrões de carga de trabalho de OLTP em memória e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Passo a passo usando o orientador de otimização da memória  
  No **Pesquisador de Objetos**, clique com o botão direito do mouse na tabela que você deseja converter e selecione **Orientador de Otimização da Memória**. Isso exibirá a página de boas-vindas do **Orientador de Otimização da Memória da Tabela**.  
@@ -46,7 +46,7 @@ ms.locfileid: "63157996"
   
  Os avisos acionáveis terão um triângulo amarelo na coluna à esquerda. Se houver avisos acionáveis, você deverá sair da migração, resolver os avisos e reiniciar o processo. Se você não resolver os avisos, sua tabela migrada poderá causar uma falha.  
   
- Clique em **Gerar Relatório** para gerar um relatório HTML desses avisos. Clique em **Avançar** para continuar.  
+ Clique em **Gerar Relatório** para gerar um relatório HTML desses avisos. Clique em **Próximo** para continuar.  
   
 ### <a name="review-optimization-options"></a>Examine as opções de otimização  
  A tela a seguir permite alterar as opções para a migração para OLTP na memória:  
@@ -84,7 +84,7 @@ ms.locfileid: "63157996"
 > [!WARNING]  
 >  Selecione essa opção apenas se você entender o risco de perda de dados associado a tabelas não duráveis.  
   
- Clique em **Avançar** para continuar.  
+ Clique em **Próximo** para continuar.  
   
 ### <a name="review-primary-key-conversion"></a>Examinar conversão de chaves primárias  
  A tela seguinte é **Examinar Conversão de Chaves Primárias**. O Orientador de Otimização da Memória detectará se há uma ou mais chaves primárias na tabela, e populará a lista de colunas com base nos metadados de chave primária. Caso contrário, se desejar migrar para uma tabela com otimização de memória durável, você deverá criar uma chave primária.  

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157235"
 ---
 # <a name="supported-sql-server-features"></a>Recursos do SQL Server com suporte
   Este tópico aborda os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte para OLTP na memória  
+## <a name="ssnoversion-features-supported-for-in-memory-oltp"></a>Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com suporte para OLTP na memória  
  Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir têm suporte em um banco de dados que possui objetos com otimização de memória, incluindo o grupo de arquivos com otimização de memória.  
   
  Para obter mais informações sobre tipos de dados com suporte, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -37,11 +37,11 @@ ms.locfileid: "63157235"
   
 -   Exibições de catálogo, exibições de gerenciamento dinâmico e eventos estendidos para capacidade de suporte. Para obter mais informações, consulte [Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP na memória](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Objetos de gerenciamento. Para obter mais informações, consulte [Suporte ao SQL Server Management Objects para OLTP na memória](sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. Para obter mais informações, consulte [Suporte ao SQL Server Management Objects para OLTP na memória](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações, consulte [Suporte ao SQL Server Management Studio para OLTP na memória](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell. Para obter mais informações, consulte [Visão geral do SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obter mais informações, consulte [Visão geral do SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importar e exportar dados em massa usando o utilitário bcp. Para obter mais informações, consulte [Importar e exportar dados em massa usando o utilitário bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63157235"
   
 -   Envio de logs: o envio de logs do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite o envio automático de backups do log de transações de um banco de dados primário em uma instância do servidor primário para um ou mais bancos de dados secundários em outras instâncias de servidor secundário. Para obter mais informações, consulte [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
--   A replicação transacional para tabelas com otimização de memória em assinantes tem suporte com algumas restrições. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).  
+-   A replicação transacional para tabelas com otimização de memória em assinantes tem suporte com algumas restrições. Para obter mais informações, consulte [replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
 -   Administrador de Recursos: o Administrador de Recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Administrador de Recursos permite que você especifique os limites na quantidade de CPU, E/S física e memória que solicitações recebidas de aplicativos podem usar. Para obter mais informações, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63157235"
   
 -   Suporte a BACPAC.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Recursos sem suporte para OLTP in-memory  
  Os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a seguir não têm suporte em um banco de dados que possui objetos com otimização de memória (incluindo o grupo de arquivos de dados com otimização de memória).  
   
 |Recurso sem suporte|Descrição do recurso|  
@@ -81,7 +81,7 @@ ms.locfileid: "63157235"
 |Compactação de dados para tabelas com otimização de memória.|Você pode usar o recurso de compactação de dados para ajudar a compactar os dados dentro de um banco de dados e ajudar reduzir o tamanho do banco de dados. Para saber mais, veja [Data Compression](../data-compression/data-compression.md).|  
 |Particionamento de índices de HASH e tabelas com otimização de memória.|Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Para saber mais, confira [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |TDE (Criptografia de Dados Transparente) no grupo de arquivo de dados com otimização de memória de um banco de dados.|A criptografia transparente de dados (TDE) executa criptografia de E/S em tempo real e a descriptografia de dados e arquivos de log. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> A TDE pode ser habilitada em um banco de dados que tenha objetos OLTP na memória. Os registros de log do OLTP na memória serão criptografados se a TDE estiver habilitada. Os arquivos de ponto de verificação para tabelas duráveis não são criptografados, mesmo se a TDE estiver habilitada no banco de dados.|  
-|Replicação|As configurações de replicação diferentes de replicação transacional para tabelas com otimização de memória em assinantes são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória. A replicação usando sync_mode = ' instantâneo do banco de dados ' não terá suporte se houver um grupo de arquivos com otimização de memória. Para obter mais informações, veja [Replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replicação|As configurações de replicação diferentes de replicação transacional para tabelas com otimização de memória em assinantes são incompatíveis com tabelas ou exibições que referenciam tabelas com otimização de memória. A replicação usando sync_mode = ' instantâneo do banco de dados ' não terá suporte se houver um grupo de arquivos com otimização de memória. Para obter mais informações, consulte [replicação para assinantes de tabela com otimização de memória](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |MARS (Vários Conjuntos de Resultados Ativos)|O MARS (Vários Conjuntos de Resultados Ativos) não tem suporte com tabelas com otimização de memória. Esse erro também pode indicar uso de servidor vinculado. O servidor vinculado pode usar MARS. Os servidores vinculados não têm suporte com tabelas com otimização de memória. Conecte-se diretamente ao servidor e ao banco de dados que hospeda as tabelas com otimização de memória.|  
 |Espelhamento|O espelhamento de banco de dados é uma solução para aumentar a disponibilidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar log|A recompilação do log, tanto ao anexar quanto ao ALTERAR O BANCO DE DADOS, não tem suporte para bancos de dados com um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
@@ -91,7 +91,7 @@ ms.locfileid: "63157235"
 |controle de alterações|O controle de alterações pode ser habilitado em um banco de dados com objetos OLTP na memória. No entanto, as alterações em tabelas com otimização de memória não são rastreadas.|  
 |gatilhos DDL|Os gatilhos DDL no nível de servidor e de banco de dados não têm suporte com tabelas OLTP na memória e procedimentos armazenados compilados nativamente.|  
 |Change Data Capture (CDC)|O CDC não deve ser habilitado em um banco de dados que tenha objetos OLTP na memória, pois isso impede determinadas operações, como DROP.|  
-|Contenção do banco de dados|A contenção de banco de dados não é suportada em um banco de dados com procedimentos armazenados compilados nativamente e tabelas com otimização de memória. Para obter mais informações, consulte [bancos de dados independentes](../databases/contained-databases.md)|  
+|Contenção do banco de dados|A contenção de banco de dados não é suportada em um banco de dados com procedimentos armazenados compilados nativamente e tabelas com otimização de memória. Para obter mais informações, consulte [Contained Databases](../databases/contained-databases.md).|  
 |Conexões de contexto|Não é suportado o acesso a tabelas com otimização de memória usando a conexão de contexto nos procedimentos armazenados CLR.|  
 |Cursores|Cursores dinâmicos e de conjunto de chaves em consultas que acessam tabelas com otimização de memória. Essas consultas são degradadas para estáticas, tornando-se somente leitura.|  
 |TABLESTAMP|Não há suporte para TABLESTAMP. Veja [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql) para obter mais informações.|  
@@ -105,7 +105,7 @@ ms.locfileid: "63157235"
   
  Com algumas exceções, as transações entre bancos de dados não têm suporte. A tabela a seguir descreve os casos que têm suporte e as limitações correspondentes. (Veja também [Consultas de bancos de dados](cross-database-queries.md).)  
   
-|Bancos de dados|Permitido|DESCRIÇÃO|  
+|Bancos de dados|Permitido|Descrição|  
 |---------------|-------------|-----------------|  
 |Bancos de dados de usuário, modelo e msdb|Não|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
 |Banco de dados de recursos e tempdb|Sim|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  

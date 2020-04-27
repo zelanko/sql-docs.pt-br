@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157890"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Exemplos de código de OLTP na memória
   Esta seção contém exemplos de código que demonstram o OLTP na memória:  
   
--   [Demonstração: aprimoramento do desempenho do OLTP in-memory](demonstration-performance-improvement-of-in-memory-oltp.md)  
+-   [Demonstração: melhoria de desempenho do OLTP na memória](demonstration-performance-improvement-of-in-memory-oltp.md)  
   
 -   [Extensões do AdventureWorks para demonstrar OLTP na memória](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)  
   

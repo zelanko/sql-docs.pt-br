@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155398"
 ---
 # <a name="create-filtered-indexes"></a>Criar índices filtrados
@@ -56,15 +56,15 @@ ms.locfileid: "63155398"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Design"></a> Considerações de criação  
+###  <a name="design-considerations"></a><a name="Design"></a> Considerações de criação  
   
 -   Quando a coluna tem apenas uma pequena quantidade de valores relevantes para consultas, você pode criar um índice filtrado no subconjunto de valores. Por exemplo, se os valores de uma coluna forem predominantemente NULL e a consulta selecionar apenas valores não NULL, será possível criar um índice filtrado para linhas de dados não NULL. O índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa definido nas mesmas colunas de chave.  
   
 -   Quando a tabela contém linhas de dados heterogêneos, é possível criar um índice filtrado para uma ou mais categorias de dados. Isso pode melhorar o desempenho das consultas nessas linhas de dados limitando o foco de uma consulta a uma área específica da tabela. Novamente, o índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa.  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Não é possível criar um índice filtrado em uma exibição. No entanto, o otimizador de consulta pode se beneficiar do índice filtrado definido em uma tabela referenciada em uma exibição. O otimizador de consulta considera um índice filtrado para uma consulta que seleciona uma exibição se os resultados da consulta estiverem corretos.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "63155398"
   
 -   Se o operador de comparação especificado na expressão do índice filtrado resultar em uma conversão de dados implícita ou explícita, ocorrerá um erro se a conversão ocorrer à esquerda do operador de comparação. Uma solução seria gravar a expressão do índice filtrado com o operador de conversão de dados (CAST ou CONVERT) à direita do operador de comparação.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** . Para modificar a expressão de índice filtrado, use CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Para criar um índice filtrado  
   
@@ -105,13 +105,13 @@ ms.locfileid: "63155398"
   
 3.  Clique no sinal de adição ao lado da tabela na qual você deseja criar um índice filtrado.  
   
-4.  Clique com o botão direito do mouse na pasta **Índices**, aponte para **Novo Índice** e selecione **Índice Não Clusterizado...** .  
+4.  Clique com o botão direito do mouse na pasta **índices** , aponte para **novo índice**e selecione **índice não clusterizado...**.  
   
 5.  Na caixa de diálogo **Novo Índice** , na página **Geral** , insira o nome do novo índice na caixa **Nome do índice** .  
   
-6.  Em **Colunas de chave de índice**, clique em **Adicionar...** .  
+6.  Em **colunas de chave de índice**, clique em **Adicionar...**.  
   
-7.  Na caixa de diálogo **selecionar colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+7.  Na caixa de diálogo **Selecionar Colunas de**_table_name_ , marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63155398"
   
 10. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Para criar um índice filtrado  
   
