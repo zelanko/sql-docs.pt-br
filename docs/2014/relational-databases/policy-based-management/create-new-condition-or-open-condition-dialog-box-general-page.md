@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057757"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Caixa de diálogo Criar Nova Condição ou Abrir Condição, Página Geral
@@ -26,7 +26,7 @@ ms.locfileid: "63057757"
  **Nome**  
  Para uma condição nova, digite o nome da nova condição. Para uma condição existente, o nome será exibido.  
   
- **Faceta**  
+ **Particular**  
  A faceta usada por essa condição.  
   
  **AndOr**  
@@ -39,7 +39,7 @@ ms.locfileid: "63057757"
  Selecione um operador de comparação para esta expressão. Os operadores são os seguintes: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
  **Valor**  
- A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Os valores da cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'** . Nem todos os operadores estão disponíveis para algumas propriedades.  
+ A configuração de valor dessa expressão. Os valores permitidos dependem da faceta. Os valores podem ser TRUE/FALSE, cadeia de caracteres ou numéricos. Os valores da cadeia de caracteres devem ser colocados entre aspas simples, por exemplo: **'AdventureWorks'**. Nem todos os operadores estão disponíveis para algumas propriedades.  
   
 ## <a name="group-clauses"></a>Agrupar Cláusulas  
  As cláusulas podem ser agrupadas para operar como uma única unidade separada do restante da consulta, assim como se coloca uma expressão entre parênteses em uma equação matemática ou uma instrução lógica. O agrupamento de cláusulas é útil quando você está criando consultas complexas.  

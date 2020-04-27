@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045988"
 ---
 # <a name="soapexception-errors-table"></a>Tabela de erros SoapException
@@ -100,9 +100,9 @@ ms.locfileid: "63045988"
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Introdução ao tratamento de exceção no Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Introdução à manipulação de exceção no Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Referência de erros e eventos &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
- [Classe SoapException do Reporting Services](reporting-services-soapexception-class.md)   
- [Usar a propriedade Detail para manipular erros específicos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Classe SoapException Reporting Services](reporting-services-soapexception-class.md)   
+ [Usando a propriedade Detail para manipular erros específicos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

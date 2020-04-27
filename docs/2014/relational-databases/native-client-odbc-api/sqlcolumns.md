@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067704"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-  `SQLColumns`retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *TableName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando valores inválidos são usados nesses parâmetros.  
+  `SQLColumns`retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *TableName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
   
 > [!NOTE]  
 >  Para tipos de valores grandes, os parâmetros de todos os comprimentos serão retornados com um valor SQL_SS_LENGTH_UNLIMITED.  
@@ -35,7 +35,7 @@ ms.locfileid: "63067704"
   
  A tabela a seguir lista as colunas retornadas pelo conjunto de resultados:  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retorna SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR para os tipos de dados **varchar (max)** .|  
 |TYPE_NAME|Retorna "varchar", "varbinary" ou "nvarchar" para os tipos de dados **varchar (max)**, **varbinary (max)** e **nvarchar (max)** .|  
@@ -72,13 +72,12 @@ ms.locfileid: "63067704"
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Suporte de SQLColumns para UDTs CLR grandes  
- 
-  `SQLColumns` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColumns` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Suporte de SQLColumns para colunas esparsas  
  Duas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas específicas foram adicionadas ao conjunto de resultados para SQLColumns:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|Se a coluna for uma coluna esparsa, será SQL_TRUE; caso contrário, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Se a coluna for a coluna `column_set`, será SQL_TRUE; caso contrário, SQL_FALSE.|  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62932418"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Classe de evento Audit Change Database Owner
-  A classe de evento **Audit Change Database Owner** ocorre quando você usa a instrução ALTER AUTHORIZATION para alterar o proprietário de um banco de dados e as permissões necessárias para fazer isso são verificadas.  
+  A classe de evento **Audit Change Database Owner** ocorre quando você usa a instrução ALTER AUTHORIZATION para alterar o proprietário de um banco de dados e as permissões necessárias para fazer isso estão marcadas.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Change Database Owner  
   
@@ -32,14 +32,13 @@ ms.locfileid: "62932418"
 |**ClientProcessID**|**int**|ID atribuída pelo computador host ao processo em que o aplicativo cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer a ID de processo do cliente.|9|Sim|  
 |**DatabaseID**|**int**|ID do banco de dados especificado pela instrução USE de *database* ou o banco de dados padrão se nenhuma instrução USE de *database* tiver sido emitida para uma determinada instância. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] exibirá o nome do banco de dados se a coluna de dados **ServerName** for capturada no rastreamento e o servidor estiver disponível. Determine o valor para um banco de dados usando a função DB_ID.|3|Sim|  
 |**DatabaseName**|**nvarchar**|Nome do banco de dados no qual a instrução do usuário está sendo executada.|35|Sim|  
-|**DBUserName**|**nvarchar**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do cliente.|40|Sim|  
+|**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do cliente.|40|Sim|  
 |**EventClass**|**int**|Tipo de evento = 152.|27|Não|  
 |**EventSequence**|**int**|Sequência de um determinado evento na solicitação.|51|Não|  
 |**HostName**|**nvarchar**|Nome do computador no qual o cliente está sendo executado. Essa coluna de dados será populada se o cliente fornecer o nome do host. Para determinar o nome do host, use a função HOST_NAME.|8|Sim|  
 |**IsSystem**|**int**|Indica se o evento ocorreu em um processo do sistema ou do usuário. 1 = sistema, 0 = usuário.|60|Sim|  
 |**LoginName**|**nvarchar**|Nome do logon do usuário (logon de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou as credenciais de logon do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no formato DOMÍNIO\nomedeusuário).|11|Sim|  
-|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição do catálogo **Sys. server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
+|**LoginSid**|**imagem**|Número SID (identificação de segurança) do usuário que fez logon. Você pode encontrar essas informações na exibição de catálogo **sys.server_principals** . Cada SID é exclusivo para cada logon no servidor.|41|Sim|  
 |**NTDomainName**|**nvarchar**|O domínio do Windows ao qual o usuário pertence.|7|Sim|  
 |**NTUserName**|**nvarchar**|Nome do usuário do Windows.|6|Sim|  
 |**RequestID**|**int**|ID da solicitação que contém a instrução.|49|Sim|  
@@ -50,7 +49,7 @@ ms.locfileid: "62932418"
 |**Êxito**|**int**|1 = êxito. 0 = falha. Por exemplo, o valor 1 indica êxito em uma verificação de permissões e o valor 0 indica falha nessa verificação.|23|Sim|  
 |**TargetLoginName**|**nvarchar**|Para ações direcionadas a um logon, o nome do logon de destino.|42|Sim|  
 |**TargetLoginSid**|**imagem**|Para ações direcionadas a um logon, o número de identificação de segurança (SID) do logon de destino.|43|Sim|  
-|**TargetUserName**|**nvarchar**|Para ações direcionadas a um usuário do banco de dados (por exemplo, concessão de permissão a um usuário), o nome desse usuário.|11,8|Sim|  
+|**TargetUserName**|**nvarchar**|Para ações direcionadas a um usuário do banco de dados (por exemplo, concessão de permissão a um usuário), o nome desse usuário.|39|Sim|  
 |**TransactionID**|**bigint**|ID da transação atribuída pelo sistema.|4|Sim|  
 |**XactSequence**|**bigint**|Token usado para descrever a transação atual.|50|Sim|  
   

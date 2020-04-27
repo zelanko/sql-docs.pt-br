@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150826"
 ---
 # <a name="plan-guides"></a>Guias de plano
@@ -149,7 +149,7 @@ sp_create_plan_guide
 |Descreve como validar guias de plano.|[Validar guias de plano depois da atualização](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_create_plan_guide_from_handle](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_control_plan_guide](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

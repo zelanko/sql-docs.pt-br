@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127786"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -36,10 +36,10 @@ OLECHAR**ppErrorStrings);
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ppSSErrorInfo*[saída]  
+ *ppSSErrorInfo*[out]  
  Um ponteiro para uma estrutura SSERRORINFO. Se o método falhar ou se não houver informações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associadas ao erro, o provedor não alocará nenhuma memória e garantirá que o argumento *ppSSErrorInfo* seja um ponteiro nulo na saída.  
   
- *ppErrorStrings*[saída]  
+ *ppErrorStrings*[out]  
  Um ponteiro para um ponteiro de cadeia de caracteres Unicode. Se o método falhar ou se não houver informações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associadas a um erro, o provedor não alocará nenhuma memória e garantirá que o argumento *ppErrorStrings* seja um ponteiro nulo na saída. A liberação do argumento *ppErrorStrings* com o método **IMalloc::Free** libera os três membros de cadeia de caracteres individuais da estrutura SSERRORINFO retornada, pois a memória é alocada em um bloco.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -47,7 +47,7 @@ OLECHAR**ppErrorStrings);
  O método foi bem-sucedido.  
   
  E_INVALIDARG  
- O argumento *ppSSErrorInfo* ou *ppErrorStrings* era nulo.  
+ O argumento *ppSSErrorInfo* ou *ppErrorStrings* foi NULL.  
   
  E_OUTOFMEMORY  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo não pôde alocar memória suficiente para concluir a solicitação.  
@@ -71,7 +71,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Membro|DESCRIÇÃO|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |*pwszMessage*|A mensagem de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A mensagem é retornada por meio do método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o erro ocorreu.|  

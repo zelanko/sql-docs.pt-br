@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150711"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
@@ -78,7 +78,7 @@ ms.locfileid: "63150711"
 ## <a name="see-also"></a>Consulte Também  
  [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](database-engine-tuning-advisor.md)   
- [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Monitorar o uso de recursos &#40;o monitor do sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

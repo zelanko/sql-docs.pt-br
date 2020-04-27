@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057113"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -74,7 +74,7 @@ ms.locfileid: "63057113"
   
 ## <a name="see-also"></a>Consulte Também  
  [Administração do agente de replicação](agents/replication-agent-administration.md)   
- [Referência de erros e eventos &#40;Replicação&#41;](errors-and-events-reference-replication.md)   
+ [Referência de erros e eventos &#40;&#41;de replicação](errors-and-events-reference-replication.md)   
  [Agente de Distribuição de replicação](agents/replication-distribution-agent.md)   
  [Agente de Leitor de Log de replicação](agents/replication-log-reader-agent.md)   
  [Agente de Mesclagem de replicação](agents/replication-merge-agent.md)   

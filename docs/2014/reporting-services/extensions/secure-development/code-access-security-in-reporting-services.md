@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985746"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Segurança de acesso do código no Reporting Services
-  A segurança de acesso do código gira em torno desses conceitos centrais: evidência, grupos de código e conjuntos de permissões nomeadas. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os componentes Gerenciador de Relatórios, Desingner de Relatórios e Servidor de Relatório têm um arquivo de política que configura a segurança de acesso do código para assemblies personalizados, bem como para extensões de dados, entrega, renderização e segurança. As seções a seguir fornecem uma visão geral da segurança de acesso do código. Para obter informações mais detalhadas sobre os tópicos abordados nesta seção, consulte "modelo de política de segurança [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] " na documentação do SDK do.  
+  A segurança de acesso do código gira em torno desses conceitos centrais: evidência, grupos de código e conjuntos de permissões nomeadas. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os componentes Gerenciador de Relatórios, Desingner de Relatórios e Servidor de Relatório têm um arquivo de política que configura a segurança de acesso do código para assemblies personalizados, bem como para extensões de dados, entrega, renderização e segurança. As seções a seguir fornecem uma visão geral da segurança de acesso do código. Para obter informações mais detalhadas sobre os tópicos abordados nesta seção, confira “Modelo de Política de Segurança” na documentação do SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a segurança de acesso do código porque, embora o servidor de relatório esteja incorporado na tecnologia [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], há uma diferença significativa entre um aplicativo [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típico e o servidor de relatório. Um aplicativo [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típico não executa o código de usuário. Por outro lado, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma arquitetura aberta e extensível que permite aos usuários programar nos arquivos de definição de relatório usando o elemento **Code** da linguagem RDL e desenvolver funcionalidades especializadas em um assembly personalizado para uso em relatórios. Além disso, os desenvolvedores podem projetar e implantar extensões avançadas que aumentam as capacidades do servidor de relatório. Junto com este avanço e flexibilidade, existe a necessidade de fornecer o máximo de proteção e segurança possível.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "62985746"
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Reporting Services de desenvolvimento seguro &#40;&#41;](secure-development-reporting-services.md)  
+ [Desenvolvimento seguro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

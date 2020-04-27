@@ -22,14 +22,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990126"
 ---
 # <a name="understanding-security-policies"></a>Compreendendo políticas de segurança
-  Qualquer código executado por um servidor de relatório deve fazer parte de uma política de segurança de acesso a códigos específica. Essas políticas de segurança consistem em grupos de códigos que mapeiam evidência para um conjunto de conjuntos de permissões nomeados. Frequentemente, os grupos de códigos estão associados a um conjunto de permissões nomeado que especifica permissões permitidas para código nesse grupo. O runtime usa a evidência fornecida por um host confiável ou pelo carregador para determinar a quais grupos de códigos o código pertence e, portanto, quais permissões conceder ao código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]segue essa arquitetura de diretiva de segurança, conforme definido pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). As seções a seguir descrevem os vários tipos de código em [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e a as regras de política associadas a eles.  
+  Qualquer código executado por um servidor de relatório deve fazer parte de uma política de segurança de acesso a códigos específica. Essas políticas de segurança consistem em grupos de códigos que mapeiam evidência para um conjunto de conjuntos de permissões nomeados. Frequentemente, os grupos de códigos estão associados a um conjunto de permissões nomeado que especifica permissões permitidas para código nesse grupo. O runtime usa a evidência fornecida por um host confiável ou pelo carregador para determinar a quais grupos de códigos o código pertence e, portanto, quais permissões conceder ao código. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] segue esta arquitetura de política de segurança, conforme definido pelo CLR (Common Language Runtime) do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. As seções a seguir descrevem os vários tipos de código em [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e a as regras de política associadas a eles.  
   
 ## <a name="report-server-assemblies"></a>Assemblies do Servidor de Relatório  
  Os assemblies do servidor de relatório são os que contêm código que faz parte do produto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] é escrito com o uso de assemblies de código gerenciado. Todos esses assemblies têm nome forte (isto é, são assinados digitalmente). Os grupos de códigos desses assemblies são definidos com a **StrongNameMembershipCondition**, que fornece evidência com base nas informações de chave pública do nome forte do assembly. O grupo de códigos recebe o conjunto de permissões **FullTrust**.  
@@ -60,7 +60,7 @@ ms.locfileid: "62990126"
 </CodeGroup>  
 ```  
   
- A permissão de **execução** permite que o código seja executado (Execute), mas não use recursos protegidos. Todas as expressões localizadas em um relatório são compiladas em um assembly (chamado de assembly de “hosts de expressão”) armazenado como parte de um relatório compilado. Quando o relatório é executado, o servidor de relatório carrega o assembly de hosts de expressão e faz chamadas nesse assembly para executar expressões. Os assemblies de hosts de expressão são assinados com uma chave específica usada para definir o grupo de códigos para todos os hosts de expressão.  
+ A permissão **Execução** permite que o código seja executado, mas não use recursos protegidos. Todas as expressões localizadas em um relatório são compiladas em um assembly (chamado de assembly de “hosts de expressão”) armazenado como parte de um relatório compilado. Quando o relatório é executado, o servidor de relatório carrega o assembly de hosts de expressão e faz chamadas nesse assembly para executar expressões. Os assemblies de hosts de expressão são assinados com uma chave específica usada para definir o grupo de códigos para todos os hosts de expressão.  
   
  As expressões de relatório fazem referência a coleções de modelo de objeto de relatório (campos, parâmetros etc.) e executam tarefas simples como operações aritméticas e de cadeia de caracteres. O código que executa essas operações simples só exige a permissão **Execução**. Por padrão, os métodos definidos pelo usuário no elemento **Code** e qualquer assembly personalizado recebem a permissão **Execução** no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Assim, para a maioria das expressões, a configuração atual não requer a modificação de nenhum arquivo de política de segurança. Para conceder permissões adicionais a assemblies de hosts de expressão, um administrador precisa modificar os arquivos de configuração de política do servidor de relatório e Designer de Relatórios, além de alterar o grupo de códigos de expressões do relatório. Como essa é uma configuração global, alterar permissões padrão para os hosts de expressão afeta todos os relatórios. Por esse motivo, é altamente recomendado que você coloque todo código que solicite segurança adicional em um assembly personalizado. Apenas a esse assembly serão concedidas as permissões necessárias.  
   
@@ -77,6 +77,6 @@ ms.locfileid: "62990126"
   
 ## <a name="see-also"></a>Consulte Também  
  [Segurança de acesso do código no Reporting Services](code-access-security-in-reporting-services.md)   
- [Reporting Services de desenvolvimento seguro &#40;&#41;](secure-development-reporting-services.md)  
+ [Desenvolvimento seguro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

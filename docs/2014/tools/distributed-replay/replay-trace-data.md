@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149886"
 ---
 # <a name="replay-trace-data"></a>Reproduzir dados de rastreamento
-  Você pode iniciar uma reprodução distribuída com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recurso Distributed Replay depois de preparar os dados de rastreamento de entrada. Para obter mais informações, consulte [Preparar os dados de rastreamento de entrada](prepare-the-input-trace-data.md).  
+  Você pode iniciar uma reprodução distribuída com o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay depois de preparar os dados de rastreamento de entrada. Para obter mais informações, consulte [Preparar os dados de rastreamento de entrada](prepare-the-input-trace-data.md).  
   
  Use a opção **replay** da ferramenta de administração para iniciar o estágio de reprodução de evento da reprodução distribuída. Essa fase consiste em duas partes: a expedição de dados de rastreamento e o início e a sincronização da reprodução distribuída.  
   
- ![Utilitário de reprodução de eventos](../../database-engine/media/eventreplay.gif "Utilitário de reprodução de eventos")  
+ ![Reprodução de Evento Distribuído](../../database-engine/media/eventreplay.gif "Reprodução de Evento Distribuído")  
   
  Você pode reproduzir dados de rastreamento em um dois modos de sequenciamento: modo de estresse ou modo de sincronização. O comportamento padrão é reproduzir os dados de rastreamento em modo de estresse. Para obter mais informações sobre o estágio de reprodução de eventos e os modos de sequenciamento, consulte [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63149886"
   
 ### <a name="to-replay-the-trace"></a>Para reproduzir o rastreamento  
   
-1.  **(Opcional) modificar definições de configuração de reprodução**: se você quiser modificar os parâmetros de configuração de reprodução, como o modo de sequenciamento e vários valores de dimensionamento, você `<ReplayOptions>` deve modificar o elemento do arquivo `DReplay.exe.replay.config`de configuração de reprodução baseado em XML. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
+1.  **(Opcional) Modifique os parâmetros de configuração da reprodução:** se desejar modificar os parâmetros de configuração da reprodução, como o modo de sequenciamento e vários valores de escala, você deverá modificar o elemento `<ReplayOptions>` do arquivo de configuração da reprodução baseado em XML `DReplay.exe.replay.config`. Você também pode modificar o elemento `<OutputOptions>` para especificar configurações de saída, como, por exemplo, se a contagem de linhas deve ser registrada. Se você modificar o arquivo de configuração de reprodução, é recomendável modificar uma cópia em vez do original. Para modificar as configurações, siga estas etapas:  
   
     1.  Faça uma cópia do arquivo de configuração de reprodução padrão, `DReplay.exe.replay.config`, e renomeie o novo arquivo. O arquivo de configuração de reprodução padrão está localizado na pasta de instalação da ferramenta de administração.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63149886"
   
      Para obter mais informações sobre o arquivo de configuração de reprodução, consulte [Configurar Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Iniciar o estágio de reprodução de evento**: para iniciar a reprodução distribuída, você deve executar a ferramenta de administração com a opção de **reprodução** . Para obter mais informações, consulte [Opção Replay &#40;ferramenta de administração do Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Inicie o estágio de reprodução de eventos**: para iniciar a reprodução distribuída, você deve executar a ferramenta de administração com a opção **replay** . Para obter mais informações, consulte [Opção Replay &#40;ferramenta de administração do Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Abra o utilitário Prompt de Comando do Windows (`CMD.exe`) e navegue até o local de instalação da ferramenta de administração Distributed Replay (`DReplay.exe`).  
   
@@ -66,8 +66,8 @@ ms.locfileid: "63149886"
 3.  Quando a reprodução distribuída for concluída, a ferramenta de administração retornará informações resumidas. Se você tiver especificado a opção **-o** , a atividade de reprodução terá sido salva nos arquivos de rastreamento de resultado em cada cliente. Para obter mais informações sobre os arquivos de rastreamento de resultados, consulte [Revisar os resultados da reprodução](review-the-replay-results.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;utilitário de Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurar o Distributed Replay](configure-distributed-replay.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960756"
 ---
 # <a name="replication-tutorials"></a>Tutoriais de Replicação
@@ -30,7 +30,7 @@ ms.locfileid: "62960756"
 >  A maioria das tarefas mostradas nos tutoriais podem ser executadas de forma programática. Para obter mais informações, consulte [Guia do desenvolvedor &#40;&#41;de replicação ](concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Tutoriais de Replicação  
- [Preparando o servidor para replicação](tutorial-preparing-the-server-for-replication.md)  
+ [Preparando o servidor para a replicação](tutorial-preparing-the-server-for-replication.md)  
  Aprenda a preparar servidores de forma que a replicação possa ser executada com menos privilégios. É preciso completar este tutorial antes dos outros tutoriais de replicação.  
   
  [Replicando dados entre servidores conectados continuamente](tutorial-replicating-data-between-continuously-connected-servers.md)  

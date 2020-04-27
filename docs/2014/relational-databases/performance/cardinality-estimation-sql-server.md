@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151041"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151041"
 ## <a name="new-xevents"></a>Novos XEvents  
  Há dois novos XEvents query_optimizer_estimate_cardinality para dar suporte aos novos planos de consulta.  
   
--   *query_optimizer_estimate_cardinality* ocorre quando o otimizador de consulta estima a cardinalidade em uma expressão relacional.  
+-   *query_optimizer_estimate_cardinality* ocorre quando o otimizador de consulta calcula a cardinalidade em uma expressão relacional.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors ocorre quando sinalizadores 2312 e 9481 estão habilitados, tentando forçar o comportamento de estimativa de cardinalidade antigo e novo ao mesmo tempo.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors ocorre quando ambos os sinalizadores de rastreamento 2312 e 9481 estão habilitados, tentando forçar ao mesmo tempo os comportamentos anterior e novo da estimativa de cardinalidade.  
   
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram algumas das alterações nas novas estimativas de cardinalidade. O código para calcular a cardinalidade foi recriado. A lógica é complexa e não é possível fornecer uma lista completa de todas as alterações.  

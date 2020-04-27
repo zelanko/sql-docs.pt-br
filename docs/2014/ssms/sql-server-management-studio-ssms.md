@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155012"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
@@ -25,13 +25,13 @@ ms.locfileid: "63155012"
   
 ## <a name="sql-server-management-studio-components"></a>Componentes do SQL Server Management Studio  
   
-|DESCRIÇÃO|Tópico|  
+|Descrição|Tópico|  
 |-----------------|-----------|  
 |Descreve tarefas comuns executadas usando o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], como personalizar atalhos de teclado e exibir páginas de propriedades.|[Usar o SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 |Descreve como usar o **Pesquisador de Objetos** para exibir e gerenciar todos os objetos em uma ou mais instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Pesquisador de Objetos](object/object-explorer.md)|  
 |Descreve como usar o **Gerenciador de Modelos** para criar e gerenciar arquivos de texto de boilerplate que podem ser usados para agilizar o desenvolvimento de consultas e scripts.|[Explorador de Modelos](template/template-explorer.md)|  
 |Descreve como usar o **Gerenciador de Soluções** preterido para criar projetos usados para gerenciar itens de administração como scripts e consultas.|[Gerenciador de Soluções](solution/solution-explorer.md)|  
-|Descreve como conectar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] a instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] e do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[Ajuda de F1 para conexões de servidor &#40;SQL Server Management Studio&#41;](f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|  
+|Descreve como conectar o [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] a instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] e do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[Ajuda F1 para conexões de servidor &#40;SQL Server Management Studio&#41;](f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|  
 |Descreve como usar as ferramentas de design visuais incluídas no [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |Descreve como usar os editores de idioma do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para criar interativamente e depurar consultas e scripts.|[Editores de consultas e de texto &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   

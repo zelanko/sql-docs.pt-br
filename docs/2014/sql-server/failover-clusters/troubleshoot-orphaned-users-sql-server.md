@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035644"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solução de problemas de usuários órfãos (SQL Server)
@@ -93,10 +93,10 @@ GO;
      Para obter mais informações, consulte [sp_password &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  
- [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CRIAR usuário &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
+ [CRIAR logon &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-login-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_change_users_login](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   
- [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
+ [&#41;&#40;Transact-SQL de sp_addlogin](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_grantlogin](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_password](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
  [sys. sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022244"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
@@ -96,7 +96,7 @@ ms.locfileid: "63022244"
 -   Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não podem ser inicializados automaticamente de um backup.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](heterogeneous-database-replication.md)   
- [Assinar publicações](../subscribe-to-publications.md)  
+ [Replicação de banco de dados heterogêneo](heterogeneous-database-replication.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

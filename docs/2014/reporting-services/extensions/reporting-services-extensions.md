@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985773"
 ---
 # <a name="reporting-services-extensions"></a>Extensões do Reporting Services
-  A arquitetura modular do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] foi desenhada para extensibilidade. Uma API de código gerenciado está disponível de forma que você possa desenvolver, instalar e gerenciar facilmente extensões consumidas por muitos componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você pode criar assemblies privados ou compartilhados usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e Adicionar nova [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funcionalidade para atender às suas necessidades de negócios em evolução.  
+  A arquitetura modular do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] foi desenhada para extensibilidade. Uma API de código gerenciado está disponível de forma que você possa desenvolver, instalar e gerenciar facilmente extensões consumidas por muitos componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Você pode criar assemblies privados ou compartilhados usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e adicionar a nova funcionalidade do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para atender às suas necessidades empresariais em evolução.  
   
  A arquitetura de extensibilidade exclusiva do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que os desenvolvedores estendam recursos específicos do produto e de seus componentes. Atualmente, existem um amplo suporte para a extensão dos recursos de processamento de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A API de processamento de dados construções de provedor de dados familiares do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e convenções que permitem aos desenvolvedores criarem processamento de dados adicional no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essas extensões de processamento de dados adicionam funcionalidade ao Servidor de Relatório e ao Designer de Relatórios, permitindo a integração direta de dados personalizados em relatórios.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62985773"
  [Considerações de segurança para extensões](security-considerations-for-extensions.md)  
  Descreve assuntos de segurança relacionados ao desenvolvimento e à implantação de extensões do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de processamento de dados](data-processing/implementing-a-data-processing-extension.md)  
+ [Implementar uma extensão de processamento de dados](data-processing/implementing-a-data-processing-extension.md)  
  Descreve os requisitos e as etapas de implementação de uma extensão de processamento de dados para o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de entrega](delivery-extension/implementing-a-delivery-extension.md)  
+ [Implementar uma extensão de entrega](delivery-extension/implementing-a-delivery-extension.md)  
  Descreve os requisitos e as etapas para a implementação de uma extensão de entrega do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementando uma extensão de renderização](rendering-extension/implementing-a-rendering-extension.md)  
+ [Implementar uma extensão de renderização](rendering-extension/implementing-a-rendering-extension.md)  
  Contém uma introdução ao desenvolvimento de extensões de renderização.  
   
  [Implementando uma extensão de segurança](security-extension/implementing-a-security-extension.md)  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150858"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvar um plano de execução em formato XML
@@ -67,7 +67,7 @@ ms.locfileid: "63150858"
   
 5.  Na caixa de diálogo **Salvar** \<Grade ou Texto> **Resultados**, na caixa **Salvar como tipo**, clique em **Todos os arquivos (\*.\*)**.  
   
-6.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name **>.sqlplan** e clique em **Salvar**.  
+6.  Na caixa **nome do arquivo** , forneça um nome, no formato \<nome **>. sqlplan**e, em seguida, clique em **salvar**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para salvar um plano de execução usando opções do SQL Server Management Studio  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63150858"
   
 3.  Na caixa de diálogo **Salvar Como**, verifique se a opção **Salvar como tipo** está definida como **Arquivos de Plano de Execução (\*.sqlplan)**.  
   
-4.  Na caixa **Nome do arquivo**, forneça um nome no formato \<name **>.sqlplan** e clique em **Salvar**.  
+4.  Na caixa **nome do arquivo** , forneça um nome, no formato \<nome **>. sqlplan**e, em seguida, clique em **salvar**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Para abrir um plano de consulta XML salvo em SQL Server Management Studio  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63150858"
      Como alternativa, no Windows Explorer, clique duas vezes em um arquivo com a extensão **.sqlplan**. O plano abre em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [DEFINIR estatísticas XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [DEFINIR SHOWPLAN_XML &#40;&#41;Transact-SQL](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

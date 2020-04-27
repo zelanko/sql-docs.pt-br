@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144327"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gerenciar o tamanho do arquivo de log de transações
   Em alguns casos, pode ser útil reduzir ou expandir fisicamente o arquivo de log físico do log de transações de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico contém informações sobre como monitorar o tamanho de um log de transações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reduzir o log de transações, adicionar ou aumentar um arquivo de log de transações, otimizar a taxa de crescimento do log de transações **tempdb** e controlar o crescimento de um arquivo de log de transações.  
   
   
-##  <a name="MonitorSpaceUse"></a>Monitorar o uso do espaço de log  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Monitorar o uso do espaço de log  
  Você pode monitorar o uso do espaço de log usando DBCC SQLPERF (LOGSPACE). Esse comando retorna informações sobre a quantidade de espaço de log usada atualmente e indica quando o log de transações precisa ser truncado. Para obter mais informações, veja [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Para obter informações sobre o tamanho atual de um arquivo de log, seu tamanho máximo e a opção de crescimento automático para o arquivo, você também pode usar as colunas **size**, **max_size** e **growth** para esse arquivo de log em **sys.database_files**. Para obter mais informações, consulte [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).  
   
 > [!IMPORTANT]  
 >  Recomendamos que seja evitada a sobrecarga do disco de log.  
   
   
-##  <a name="ShrinkSize"></a>Reduzir o tamanho do arquivo de log  
+##  <a name="shrink-the-size-of-the-log-file"></a><a name="ShrinkSize"></a>Reduzir o tamanho do arquivo de log  
  Para reduzir o tamanho físico de um arquivo de log físico, você deve reduzir o arquivo de log. Isso será útil se você souber que um arquivo de log de transações contém espaço não utilizado que você não precisará. A redução de um arquivo de log poderá ocorrer apenas enquanto o banco de dados estiver online e, pelo menos, enquanto um arquivo de log virtual estiver livre. Em alguns casos, talvez não seja possível reduzir o log antes do próximo truncamento de log.  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "63144327"
   
  **Para reduzir um arquivo de log (sem reduzir os arquivos do banco de dados)**  
   
--   [&#41;&#40;Transact-SQL de DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)  
+-   [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)  
   
 -   [Reduzir um arquivo](../databases/shrink-a-file.md)  
   
@@ -50,27 +50,27 @@ ms.locfileid: "63144327"
   
  `To monitor log space`  
   
--   [&#41;DBCC SQLPERF &#40;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
+-   [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
   
--   [Sys. database_files &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (consulte as colunas **size**, **max_size**e **Growth** para o arquivo ou arquivos de log.)  
+-   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Consulte as colunas **size**, **max_size** e **growth** do arquivo ou arquivos de log.)  
   
 > [!NOTE]  
 >  A redução de arquivos de log e do banco de dados pode ser configurada para ocorrer automaticamente. Contudo, não é recomendável a redução automática, e a propriedade de banco de dados `autoshrink` é definida como FALSE por padrão. Se `autoshrink` for configurada como TRUE, a redução automática reduzirá o tamanho de um arquivo apenas quando mais de 25 por cento de seu espaço estiver inutilizado. O arquivo é reduzido de forma que 25% de seu tamanho seja de espaço não utilizado ou ele tenha o tamanho original, o que for maior. Para obter informações sobre como alterar a configuração `autoshrink` da propriedade, consulte [Exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)-use a propriedade **redução automática** nas opções página de **Opções** -ou [ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-use a opção AUTO_SHRINK.  
   
   
-##  <a name="AddOrEnlarge"></a>Adicionar ou ampliar um arquivo de log  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Adicionar ou ampliar um arquivo de log  
  Se desejar, você também pode obter mais espaço aumentando o arquivo de log existente (se houver espaço no disco) ou adicionando um arquivo de log ao banco de dados, geralmente em um disco diferente.  
   
 -   Para adicionar um arquivo de log ao banco de dados, use a cláusula ADD LOG FILE da instrução ALTER DATABASE. Adicionar um arquivo de log permite o crescimento do log.  
   
--   Para aumentar o arquivo de log, use a cláusula MODIFY FILE da instrução ALTER DATABASE, especificando a sintaxe SIZE e MAXSIZE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Para aumentar o arquivo de log, use a cláusula MODIFY FILE da instrução ALTER DATABASE, especificando a sintaxe SIZE e MAXSIZE. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
   
-##  <a name="tempdbOptimize"></a>Otimizar o tamanho do log de transações do tempdb  
+##  <a name="optimize-the-size-of-the-tempdb-transaction-log"></a><a name="tempdbOptimize"></a>Otimizar o tamanho do log de transações do tempdb  
  Reinicializar uma instância de servidor redimensiona o log de transações do banco de dados **tempdb** ao seu tamanho original, antes do crescimento automático. Isso pode reduzir o desempenho do log de transações do **tempdb** . Você pode evitar essa sobrecarga aumentando o tamanho do log de transações do **tempdb** depois de iniciar ou reinicializar a instância de servidor. Para obter mais informações, confira [tempdb Database](../databases/tempdb-database.md).  
   
   
-##  <a name="ControlGrowth"></a>Controlar o crescimento de um arquivo de log de transações  
+##  <a name="control-the-growth-of-a-transaction-log-file"></a><a name="ControlGrowth"></a>Controlar o crescimento de um arquivo de log de transações  
  Você pode usar a instrução [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) para gerenciar o crescimento de um arquivo de log de transações. Observe o seguinte:  
   
 -   Para alterar o tamanho do arquivo atual em unidades KB, MB, GB e TB, use a opção SIZE.  

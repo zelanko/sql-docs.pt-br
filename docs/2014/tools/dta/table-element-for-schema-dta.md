@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63138778"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
@@ -41,11 +41,11 @@ ms.locfileid: "63138778"
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|**string**, entre 1 e 255 caracteres.|  
+|**Tipo de dados e comprimento**|**cadeia**de caracteres, entre 1 e 255 caracteres.|  
 |**Valor padrão**|Nenhum.|  
-|**Ocorrência**|Opcional. Lista tantas tabelas quanto for apropriado para sua carga de trabalho.|  
+|**C'**|Opcional. Lista tantas tabelas quanto for apropriado para sua carga de trabalho.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   

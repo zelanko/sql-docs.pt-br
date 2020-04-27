@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b6fffd65b22900d7c505c4b50ec290b95fe9ab4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126167"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Integrando o Reporting Services por meio do acesso de SOAP
@@ -41,6 +41,6 @@ ms.locfileid: "63126167"
 ## <a name="see-also"></a>Consulte Também  
  [Integrando Reporting Services em aplicativos](../application-integration/integrating-reporting-services-into-applications.md)   
  [Serviço Web Servidor de Relatórios](../report-server-web-service/report-server-web-service.md)   
- [Compilar aplicativos usando o Serviço Web e o .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Criando aplicativos usando o serviço Web e o .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

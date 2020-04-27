@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044172"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriedades de Protocolos de Cliente (guia Ordem)
@@ -30,10 +30,10 @@ ms.locfileid: "63044172"
 >  Essas configurações não são usadas pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient. A ordem dos protocolos para o .NET SqlClient é primeiro o TCP, e, em seguida, pipes nomeados que não podem ser alterados.  
   
 ## <a name="options"></a>Opções  
- **Protocolos desabilitados**  
+ **Protocolos Desabilitados**  
  Lista os protocolos que estão instalados, mas não são usados atualmente.  
   
- **Protocolos habilitados**  
+ **Protocolos Habilitados**  
  Lista os protocolos que estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para clientes neste computador.  
   
  **>**  
@@ -48,7 +48,7 @@ ms.locfileid: "63044172"
  Seta para baixo  
  Move o protocolo realçado para baixo na lista. Isso permite diminuir a prioridade com que a Biblioteca de Rede tentará usar o protocolo selecionado para conexões.  
   
- **Habilitar protocolo de memória compartilhada**  
+ **Habilitar Protocolo de Memória Compartilhada**  
  Habilita o protocolo de memória compartilhada que sempre é tentado primeiro (se habilitado), ao conectar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de um cliente nesse computador.  
   
 > [!NOTE]  

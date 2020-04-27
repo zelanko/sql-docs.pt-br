@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151168"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
@@ -63,29 +63,29 @@ ms.locfileid: "63151168"
   
 -   [Permissões necessárias](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> Objetos de desempenho do SQL Server Agent  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a>SQL Server Agent objetos de desempenho  
  A seguinte tabela lista os objetos de desempenho oferecidos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Objeto de desempenho|DESCRIÇÃO|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](sql-server-agent-alerts-object.md)|Fornece informações sobre alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Jobs](sql-server-agent-jobs-object.md)|Fornece informações sobre trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:JobSteps](sql-server-agent-jobsteps-object.md)|Fornece informações sobre etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Statistics](sql-server-agent-statistics-object.md)|Fornece informações gerais sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
   
-##  <a name="ServiceBrokerPOs"></a> Objetos de desempenho do Service Broker  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a>Service Broker objetos de desempenho  
  A tabela a seguir lista os objetos de desempenho oferecidos para o [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Objeto de desempenho|DESCRIÇÃO|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](sql-server-broker-activation-object.md)|Fornece informações sobre tarefas ativadas pelo [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Broker Statistics](sql-server-broker-statistics-object.md)|Fornece informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |[SQLServer:Broker Transport](sql-server-broker-dbm-transport-object.md)|Fornece informações sobre o sistema de redes do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
   
-##  <a name="SQLServerPOs"></a> Objetos de desempenho do SQL Server  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a>SQL Server objetos de desempenho  
  A tabela a seguir descreve objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Objeto de desempenho|DESCRIÇÃO|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLServer:Métodos de Acesso](sql-server-access-methods-object.md)|Pesquisa e mede a alocação de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pesquisas de índice ou número de páginas alocadas para índices e dados).|  
 |[SQLServer:Backup Device](sql-server-backup-device-object.md)|Fornece informações sobre dispositivos de backup usados para operações de backup e restauração, como a taxa de transferência do dispositivo backup.|  
@@ -113,17 +113,17 @@ ms.locfileid: "63151168"
 |[SQLServer: Estatísticas de Espera](sql-server-wait-statistics-object.md)|Fornece informações sobre esperas.|  
 |[SQLServer: Estatísticas de Grupo de Cargas de Trabalho](sql-server-workload-group-stats-object.md)|Contém informações sobre estatísticas de grupo de cargas de trabalho do Administrador de Recursos.|  
   
-##  <a name="SQLServerReplicationPOs"></a> Objetos de desempenho de replicação do SQL Server  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a>Replicação do SQL Server objetos de desempenho  
  A seguinte tabela lista os objetos de desempenho fornecidos para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Objeto de desempenho|DESCRIÇÃO|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Para obter mais informações, consulte [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Fornece informações sobre a atividade do agente de replicação.|  
   
-##  <a name="SsisPipelineCounters"></a> Contadores de pipeline SSIS  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a>Contadores de pipeline do SSIS  
  Para o contador **Pipeline do SSIS** , veja [Contadores de desempenho](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="RequiredPermissions"></a> Permissões necessárias  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a>Permissões necessárias  
  O uso dos objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de permissões do Windows, exceto no caso de **SQLAgent:Alerts**. Os usuários devem ser membros da função de servidor fixa **sysadmin** para poderem usar **SQLAgent:Alerts**.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128678"
 ---
 # <a name="localdbunshareinstance-function"></a>Função LocalDBUnshareInstance
   Interrompe o compartilhamento da instância especificada de LocalDB do SQL Server Express.  
   
- **Arquivo de cabeçalho:** sqlncli. h  
+ **Arquivo de cabeçalho:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ HRESULT LocalDBUnShareInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *pInstanceSharedName*  
  [Entrada] O nome compartilhado da instância de LocalDB a ser descompartilhada.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62956316"
 ---
 # <a name="oledb-call-event-class"></a>classe de evento OLEDB Call
@@ -59,7 +59,7 @@ ms.locfileid: "62956316"
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Objetos Automation no Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Objetos de automação OLE em Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131800"
 ---
 # <a name="overview-smo"></a>Visão geral (SMO)
@@ -66,7 +66,7 @@ ms.locfileid: "63131800"
   
 -   Gatilhos DDL para adicionar funcionalidade quando ocorrerem eventos de DDL. Para obter mais informações, consulte [DDL Triggers](../triggers/ddl-triggers.md).  
   
- O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Isso significa que o Common Language Runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes da utilização dos objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os assemblies estão localizados em [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obter mais informações, consulte a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ O namespace do SMO é <xref:Microsoft.SqlServer.Management.Smo>. O SMO é implementado como um assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Isso significa que o Common Language Runtime do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versão 2.0 deve ser instalado antes da utilização dos objetos do SMO. Os assemblies do SMO são instalados por padrão no GAC (cache de assembly global) com o a opção SDK do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Os assemblies estão localizados em [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Para obter mais informações, confira a documentação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Classes do SMO  
  As classes do SMO incluem duas categorias: classes de instância e classes de utilitário.  
@@ -108,7 +108,7 @@ ms.locfileid: "63131800"
   
  Os objetos do Provedor WMI são quebrados pelo SMO. Isso fornece ao programador de SMO um modelo de objeto simples que é muito similar a classes de SMO, sem a necessidade de compreender o modelo de programação representado pelo namespace e os detalhes do Provedor WMI do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Provedor WMI permite configurar serviços, aliases e bibliotecas de rede do servidor e do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Scripting**  
+ **Script**  
   
  No SMO, a criação de scripts foi aprimorada e movida para a classe `Scripter`. A `Scripter` classe pode descobrir dependências, entender as relações entre objetos e habilitar a manipulação da hierarquia de dependência. O objeto principal da criação de scripts é o `Scripter`. Também há vários objetos que dão suporte, manipulam as dependências e respondem a eventos Error ou Progress.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "63131800"
   
  São fornecidos objetos novos no SMO representando os aprimoramentos da pesquisa de texto completo.  
   
- **Verificação de página**  
+ **Verificação de Página**  
   
  O objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> representa as opções de verificação de página do banco de dados.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "63131800"
   
  Um banco de dados de instantâneo é uma cópia somente leitura de um banco de dados especificado como momento determinado. Um banco de dados de instantâneo pode ser especificado usando a propriedade <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> do objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Agente de Serviço**  
+ **Service Broker**  
   
  O [!INCLUDE[ssSB](../../includes/sssb-md.md)] e sua funcionalidade são representados por um grupo de objetos  
   

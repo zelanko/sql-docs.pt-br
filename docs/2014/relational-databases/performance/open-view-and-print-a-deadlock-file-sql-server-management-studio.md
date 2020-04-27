@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150688"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Abrir, exibir e imprimir um arquivo de deadlock (SQL Server Management Studio)
@@ -27,13 +27,13 @@ ms.locfileid: "63150688"
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>Para abrir e exibir um arquivo de deadlock  
   
-1.  No menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **Abrir**e clique em **Arquivo**.  
+1.  No menu **arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **abrir**e clique em **arquivo**.  
   
 2.  Na caixa de diálogo **Abrir Arquivo** , selecione o tipo de arquivo .xdl na caixa **Arquivos do tipo** . Assim, você terá uma lista filtrada, contendo apenas arquivos de deadlock.  
   
 ### <a name="to-print-a-deadlock-file"></a>Para imprimir um arquivo de deadlock  
   
-1.  No menu **arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **abrir** e clique em **arquivo**.  
+1.  No menu **Arquivo** do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aponte para **Abrir** e clique em **Arquivo**.  
   
 2.  Na caixa de diálogo **Abrir Arquivo** , selecione o tipo de arquivo .xdl na caixa **Arquivos do tipo** . Assim, você terá uma lista filtrada, contendo apenas arquivos de deadlock.  
   

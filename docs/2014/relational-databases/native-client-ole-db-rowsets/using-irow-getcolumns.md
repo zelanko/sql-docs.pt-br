@@ -1,5 +1,5 @@
 ---
-title: 'Usando IRow:: GetColumns | Microsoft Docs'
+title: Usar IRow::GetColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b26d13fd5e1158c93118de3efb495469ff0d8f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62938624"
 ---
 # <a name="using-irowgetcolumns"></a>Usando IRow::GetColumns

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155794"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
@@ -68,7 +68,7 @@ ms.locfileid: "63155794"
   
 -   Ou atualize estatísticas usando um script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , conforme discutido abaixo.  
   
- Para atualizar as estatísticas de uma única tabela com otimização de memória (*myschema*. *MyTable*), execute o seguinte script:  
+ Para atualizar as estatísticas de uma única tabela com otimização de memória (*myschema*. *Mytable*), execute o seguinte script:  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Tabelas com otimização de memória](memory-optimized-tables.md)  
   
   

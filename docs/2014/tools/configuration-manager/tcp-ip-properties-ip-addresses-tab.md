@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151442"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propriedades de TCP-IP (guia endereços IP)
@@ -58,7 +58,7 @@ ms.locfileid: "63151442"
   
 ## <a name="see-also"></a>Consulte Também  
  [Escolhendo um protocolo de rede](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Criando uma cadeia de conexão válida usando TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Serviço Navegador do SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Criando uma cadeia de conexão válida usando IP TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

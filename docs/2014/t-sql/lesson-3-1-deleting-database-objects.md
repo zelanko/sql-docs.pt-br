@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63063108"
 ---
 # <a name="deleting-database-objects"></a>Excluindo objetos de bancos de dados
@@ -103,13 +103,13 @@ ms.locfileid: "63063108"
  [Tutorial: Gravando instruções Transact-SQL](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [REVOGAr &#40;&#41;de Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)   
  [&#41;descartar &#40;Transact-SQL do usuário](/sql/t-sql/statements/drop-user-transact-sql)   
  [DROP LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
  [Descartar procedimento &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-procedure-transact-sql)   
- [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
+ [Descartar exibição &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [Descartar tabela &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

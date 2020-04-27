@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992262"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de previsão (tutorial de mineração de dados intermediário)
@@ -28,7 +28,7 @@ ms.locfileid: "62992262"
   
 -   [Visualizador de Conteúdo Genérico da Microsoft](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>Guia gráficos  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>Guia gráficos  
  A guia **gráficos** do visualizador [!INCLUDE[msCoName](../includes/msconame-md.md)] do time Series mostra graficamente cada uma das séries, incluindo dados históricos e previsões. Cada linha do gráfico de série temporal representa uma combinação única de produto, região e atributo previsível.  
   
  A legenda à direita do visualizador relaciona a série temporal disponível, com base nas seleções na lista suspensa. É possível marcar e desmarcar as caixas de seleção na legenda para controlar a série temporal exibida no gráfico.  
@@ -87,7 +87,7 @@ ms.locfileid: "62992262"
   
  [Voltar ao início](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>Guia modelo  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>Guia modelo  
  A guia **modelo** do visualizador [!INCLUDE[msCoName](../includes/msconame-md.md)] de série temporal no designer de mineração de dados permite exibir o modelo de previsão na forma de um grafo de árvore.  
   
  Primeiramente, observe que, como seus dados descrevem duas medidas diferentes (Valor e Quantidade) para as vendas de várias linhas de produtos (T1000 etc.) em três regiões diferentes (Europa, América do Norte e Pacífico), o modelo que você criou contém, na verdade, 24 árvores diferentes, cada uma representando um modelo dos padrões de vendas de uma combinação diferente de região, produto e atributo previsível.  
@@ -100,7 +100,7 @@ ms.locfileid: "62992262"
   
 -   Quando um gráfico de árvore de uma série temporal tem várias ramificações, significa que a série temporal detectada é muito complexa para ser representada como uma única equação. Em vez disso, o grafo de árvore pode conter várias ramificações, cada ramificação rotulada com as condições que fizeram com que a árvore fosse *dividida*. Quando a árvore é dividida, cada ramificação representa um segmento diferente de tempo, dentro do qual a tendência pode ser descrita como uma única equação.  
   
-     Por exemplo, se você olhar o gráfico de gráfico e ver um salto repentino em um volume de vendas a partir de um dia em setembro e continuar com um feriado de fim de ano, poderá alternar para a exibição de **modelo** para ver a data exata em que a tendência foi alterada. As ramificações na árvore que representam "antes de setembro" e "depois de setembro" conteriam fórmulas diferentes: uma fórmula que descreve matematicamente as tendências de vendas até a divisão e outra fórmula que descreve as tendências de vendas de setembro a o feriado final do ano.  
+     Por exemplo, se você olhar o gráfico de gráfico e ver um salto repentino em um volume de vendas a partir de um dia em setembro e continuar com um feriado de fim de ano, poderá alternar para a exibição de **modelo** para ver a data exata em que a tendência foi alterada. As ramificações na árvore que representam "antes de setembro" e "depois de setembro" conteriam fórmulas diferentes: uma fórmula que descreve matematicamente as tendências de vendas até a divisão e outra fórmula que descreve as tendências de vendas de setembro até o feriado final do ano.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Para explorar a árvore de decisão para um modelo de série temporal  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992262"
   
  [Voltar ao início](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>Adicional Visualizador de árvore de conteúdo genérica  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>Adicional Visualizador de árvore de conteúdo genérica  
  Além do visualizador personalizado para a série temporal, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o fornece o **Visualizador de árvore de conteúdo MicrosoftGeneric** para uso com todos os modelos de data mining. Este visualizador fornece algumas vantagens:  
   
 -   **Visualizador do Microsoft Time Series**: essa exibição mescla os resultados dos dois algoritmos. Embora você possa exibir cada série separadamente, não é possível determinar como os resultados de cada algoritmo são combinados. Além disso, nessa exibição, as Dicas de Ferramenta e a Legenda de Mineração mostram somente as estatísticas mais importantes.  
@@ -174,6 +174,6 @@ ms.locfileid: "62992262"
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplos de consulta de modelo de série temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Referência técnica do algoritmo MTS](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+ [Referência técnica do algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

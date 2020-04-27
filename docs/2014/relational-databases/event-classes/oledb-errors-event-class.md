@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62961062"
 ---
 # <a name="oledb-errors-event-class"></a>classe de evento OLEDB Errors
-  A classe de evento OLEDB Errors [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ocorre quando uma chamada para um provedor de OLE DB retorna um erro. Inclua esta classe de evento em rastreamentos para exibir uma falha de HRESULT de um provedor OLE DB.  
+  A classe de evento OLEDB Errors ocorre no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando uma chamada para um provedor OLE DB retorna um erro. Inclua esta classe de evento em rastreamentos para exibir uma falha de HRESULT de um provedor OLE DB.  
   
  Quando a classe de evento OLEDB Errors é incluída no rastreamento, a quantidade de sobrecarga criada depende da frequência com que os erros do provedor OLE DB ocorrem em relação ao banco de dados durante o rastreamento. Se tais erros ocorrerem com frequência, o rastreamento poderá impedir desempenho de forma significativa.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62961062"
 |TransactionID|`bigint`|ID da transação atribuída pelo sistema.|4|Sim|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Objetos Automation no Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Objetos de automação OLE em Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

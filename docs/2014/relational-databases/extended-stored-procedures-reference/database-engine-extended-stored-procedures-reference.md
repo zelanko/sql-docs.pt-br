@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137605"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Referência do programador de procedimentos armazenados estendidos&#39;s
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  A [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procedimento armazenado estendido, anteriormente parte do Open Data Services, fornece uma API (interface de programação de aplicativo) baseada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em servidor para estender a funcionalidade. A API consiste nas funções e macros C e C++ usadas para criar aplicativos.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63137605"
   
 |||  
 |-|-|  
-|[Data Types](srv-pfield-extended-stored-procedure-api.md)|  
+|[Tipos de Dados](srv-pfield-extended-stored-procedure-api.md)|  
 |[srv_alloc](srv-alloc-extended-stored-procedure-api.md)||  
 |[srv_convert](srv-pfieldex-extended-stored-procedure-api.md)|  
 |[srv_describe](srv-rpcdb-extended-stored-procedure-api.md)|  

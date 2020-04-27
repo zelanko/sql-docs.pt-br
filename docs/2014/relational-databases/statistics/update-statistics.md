@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033619"
 ---
 # <a name="update-statistics"></a>Atualização de Estatísticas
@@ -37,14 +37,14 @@ ms.locfileid: "63033619"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Se você estiver usando UPDATE STATISTICS ou fazendo alterações por meio de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], isso exigirá a permissão ALTER na tabela ou exibição. Se você estiver usando `sp_updatestats`, isso exigirá a associação na função de servidor fixa **sysadmin** ou a propriedade do banco de dados (**dbo**).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>Para atualizar um objeto de estatísticas  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63033619"
   
 6.  Na caixa de diálogo **Propriedades de estatísticas –**_statistics_name_ , marque a caixa de seleção **atualizar estatísticas para estas colunas** e clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-update-a-specific-statistics-object"></a>Para atualizar um objeto de estatísticas específico  
   

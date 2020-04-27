@@ -1,5 +1,5 @@
 ---
-title: Descartando um índice de SQL Server | Microsoft Docs
+title: Descartar um índice do SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b54b80d18b79092ab46055477b59cb4ea6d5ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046378"
 ---
 # <a name="dropping-a-sql-server-index"></a>Descartando um índice do SQL Server

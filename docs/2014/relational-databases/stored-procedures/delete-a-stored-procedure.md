@@ -15,38 +15,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015638"
 ---
 # <a name="delete-a-stored-procedure"></a>Excluir um procedimento armazenado
     
-##  <a name="Top"></a> Este tópico descreve como excluir um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="this-topic-describes-how-to-delete-a-stored-procedure-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> Este tópico descreve como excluir um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Antes de começar:**  [Limitações e Restrições](#Restrictions), [Segurança](#Security)  
   
 -   **Para excluir um procedimento usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  Excluir um procedimento pode causar a falha em objetos e scripts dependentes quando os objetos e scripts não são atualizados para refletir a remoção do procedimento. Entretanto, se um novo procedimento com o mesmo nome e o mesmo parâmetro for criado para substituir aquele que foi excluído, os outros objetos que o referenciam ainda serão processados com êxito. Para obter mais informações, veja [Exibir as dependências de um procedimento armazenado](view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer permissão ALTER no esquema ao qual o procedimento pertence ou permissão CONTROL no procedimento.  
   
-##  <a name="Procedures"></a> Como excluir um procedimento armazenado  
+##  <a name="how-to-delete-a-stored-procedure"></a><a name="Procedures"></a> Como excluir um procedimento armazenado  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para excluir um procedimento no Pesquisador de Objetos**  
   
 1.  No Pesquisador de Objetos, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  
@@ -61,7 +61,7 @@ ms.locfileid: "63015638"
   
 6.  Remova as referências ao procedimento de quaisquer objetos e scripts dependentes.  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para excluir um procedimento no Editor de Consultas**  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e expanda-a.  

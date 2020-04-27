@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022004"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Informações da Publicação, Avisos (publicação transacional, SQL Server 2005 e versões posteriores)
-  A guia **Avisos** está disponível para Distribuidores que estão executando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  
+   A guia **Avisos** está disponível para Distribuidores que estão executando o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores. A guia **Avisos** permite executar as seguintes tarefas para a publicação selecionada:  
   
 -   Ativar advertências a serem exibidas no Replication Monitor.  
   
@@ -54,16 +54,16 @@ ms.locfileid: "63022004"
  Além de exibir de um aviso no Replication Monitor, atingir um limite também pode disparar um alerta. Os alertas são definidos clicando em **Configurar Alertas** e fornecendo informações na caixa de diálogo **Configurar Alertas de Replicação** .  
   
 ## <a name="options"></a>Opções  
- **Enabled**  
+ **Habilitada**  
  Selecione para habilitar um aviso e especificar um limite.  
   
- **Aviso**  
+ **Alerta**  
  Uma descrição do aviso associada a um limite.  
   
- **Limite**  
+ **Os**  
  Especifique um valor para o limite.  
   
- **Configurar Alertas**  
+ **Configurar alertas**  
  Selecione uma linha na grade **Avisos** e clique em **Configurar Alertas** para iniciar a caixa de diálogo **Configurar Alertas de Replicação** . A caixa de diálogo permite definir um alerta associado ao limite selecionado e ao aviso.  
   
  **Descartar Alterações**  
@@ -79,7 +79,7 @@ ms.locfileid: "63022004"
  [Iniciar o Replication Monitor](monitor/start-the-replication-monitor.md)   
  [Exibir informações e executar tarefas usando o Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitorar o desempenho com o Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)   
- [Monitorando a Replicação](monitoring-replication.md)   
+ [Monitorando a replicação](monitoring-replication.md)   
  [Definir limites e avisos no Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

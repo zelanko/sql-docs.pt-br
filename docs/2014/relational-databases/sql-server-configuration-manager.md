@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044451"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
@@ -61,8 +61,7 @@ ms.locfileid: "63044451"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager permite que você gerencie os protocolos de rede de servidor e cliente, incluindo o recurso de impor a criptografia do protocolo, exibir as propriedades do alias ou habilitar/desabilitar um protocolo.  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou exiba as propriedades do alias de um servidor, incluindo:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager permite que você crie ou remova um alias, altere a ordem em que os protocolos são usados ou exiba as propriedades do alias de um servidor, incluindo:  
   
 -   Alias de servidor: alias do servidor usado para o computador ao qual o cliente está se conectando.  
   
@@ -73,15 +72,14 @@ ms.locfileid: "63044451"
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager também permite que você visualize as informações sobre as instâncias de cluster de failover, apesar do Administrador de Cluster dever ser usado para algumas ações como iniciar e interromper os serviços.  
   
 ### <a name="available-network-protocols"></a>Protocolos de rede disponíveis  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a protocolos de Memória Compartilhada, TCP/IP e Pipes Nomeados. Para obter informações sobre como escolher protocolos de rede, consulte [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dá suporte aos protocolos de rede VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Os clientes que se conectavam anteriormente usando esses protocolos devem selecionar um protocolo diferente para conectar-se com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você não pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para configurar o proxy de WinSock. Configurar o proxy de WinSock, consulte sua documentação do Servidor ISA.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte a protocolos de Memória Compartilhada, TCP/IP e Pipes Nomeados. Para obter informações sobre como escolher protocolos de rede, consulte [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não dá suporte aos protocolos de rede VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk ou NWLink IPX/SPX. Os clientes que se conectavam anteriormente usando esses protocolos devem selecionar um protocolo diferente para conectar-se com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você não pode usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager para configurar o proxy de WinSock. Configurar o proxy de WinSock, consulte sua documentação do Servidor ISA.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Tópicos de instruções sobre gerenciamento de serviços &#40;SQL Server Configuration Manager&#41;](../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
   
  [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Iniciar, parar ou pausar o serviço do SQL Server Agent](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [Definir uma instância do SQL Server para iniciar automaticamente &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

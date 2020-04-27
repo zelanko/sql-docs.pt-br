@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071780"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Criando procedimentos armazenados compilados nativamente
@@ -53,7 +53,7 @@ go
   
  No exemplo de código, `NATIVE_COMPILATION` indica que esse procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] é compilado nativamente. As seguintes opções são necessárias:  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |`SCHEMABINDING`|Os procedimentos armazenados compilados nativamente devem ser associados ao esquema dos objetos que ele referencia. Isso significa que as referências de tabela pelo procedimento não podem ser eliminadas. As tabelas referenciadas no procedimento devem incluir o nome do esquema e os curingas (\*) não são permitidos em consultas. Há suporte para `SCHEMABINDING` somente nos procedimentos armazenados compilados nativamente nesta versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Os procedimentos armazenados compilados nativamente não oferecem suporte a `EXECUTE AS CALLER`, que é o contexto de execução padrão. Portanto, a especificação do contexto de execução é necessária. Há suporte `EXECUTE AS OWNER`para `EXECUTE AS`as opções, `EXECUTE AS SELF` o *usuário*e o.|  
@@ -110,6 +110,6 @@ go
  A vantagem dessa abordagem é que o aplicativo não fica offline. No entanto, é mais trabalhoso manter as referências e ter certeza de que elas apontam para a versão mais recente do procedimento armazenado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
+ [procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)  
   
   

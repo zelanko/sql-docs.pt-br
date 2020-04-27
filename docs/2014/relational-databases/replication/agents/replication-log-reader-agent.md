@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127010"
 ---
 # <a name="replication-log-reader-agent"></a>Replication Agente de Leitor de Log
@@ -68,20 +68,20 @@ ms.locfileid: "63127010"
  **-?**  
  Exibe informações de uso.  
   
- **-** _Server_name_do Publicador [**\\**_instance_name_]  
- É o nome do Publicador. Especifique *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ É o nome do Publicador. Especifica *server_name* para a instância padrão do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-PublisherDB** _publisher_database_  
  É o nome do banco de dados Publicador.  
   
- **-Contínuo**  
+ **-Continuous**  
  Especifica se o agente tenta ou não sondar transações replicadas continuamente. Se especificado, o agente sondará as transações replicadas da origem em intervalos de sondagem, mesmo que não haja transações pendentes.  
   
- **-Definitionfile** _def_path_and_file_name_  
+ **-DefinitionFile** _def_path_and_file_name_  
  É o caminho do arquivo de definição de agente. Um arquivo de definição de agente contém argumentos de linha de comando para o agente. O conteúdo do arquivo é analisado como um arquivo executável. Use aspas duplas (") para especificar os valores de argumentos que contêm caracteres arbitrários.  
   
- **-** _Server_name_do distribuidor**\\**[_instance_name_]  
- É o nome do Distribuidor. Especifique *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_**\\**_instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nesse servidor.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ É o nome do Distribuidor. Especifica *server_name* para a instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor. Especifique _server_name_ **\\** _instance_name_ para uma instância nomeada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] naquele servidor.  
   
  **-DistributorLogin** _distributor_login_  
  É o nome de logon do Distribuidor.  
@@ -95,7 +95,7 @@ ms.locfileid: "63127010"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  É o nível da criptografia SSL (Secure Sockets Layer) usada pelo Agente de Leitor de Log ao fazer conexões.  
   
-|Valor EncryptionLevel|DESCRIÇÃO|  
+|Valor EncryptionLevel|Descrição|  
 |---------------------------|-----------------|  
 |**0**|Especifica que o SSL não é usado.|  
 |**1**|Especifica que o SSL é usado, mas que +o agente não verifica se o certificado de servidor SSL é assinado por um emissor confiável.|  
@@ -112,7 +112,7 @@ ms.locfileid: "63127010"
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Especifica a quantidade de histórico registrada durante uma operação de leitura de log. Você pode minimizar o efeito de desempenho do registro de histórico selecionando **1**.  
   
-|Valor HistoryVerboseLevel|DESCRIÇÃO|  
+|Valor HistoryVerboseLevel|Descrição|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Padrão. Sempre atualiza uma mensagem de histórico anterior do mesmo status (inicialização, andamento, êxito, etc.). Se nenhum registro anterior com o mesmo status existir, insira um registro novo.|  
@@ -138,32 +138,32 @@ ms.locfileid: "63127010"
   
  Se não houver nenhuma transação replicada disponível na origem, o agente informará uma mensagem de não transação ao Distributor. Essa opção especifica quanto tempo o agente espera antes de informar outro mensagem de não transação. O agente sempre informa uma mensagem de não transação quando detecta que não há transações disponíveis na origem após transações replicadas de processamento anterior. O padrão é 60 segundos.  
   
- **-Saída** _output_path_and_file_name_  
+ **-Output** _output_path_and_file_name_  
  É o caminho do arquivo de saída do agente. Se o nome de arquivo não for fornecido, a saída será enviada ao console. Se o nome do arquivo especificado existir, a saída será anexada ao arquivo.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **** 3 | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Especifica se a saída deve ser detalhada.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Somente mensagens de erro são impressas.|  
 |**1**|Todas as mensagens de relatório de progresso do agente são impressas.|  
 |**2** (padrão)|Todas as mensagens de relatório de progresso do agente e de erro são impressas.|  
-|**Beta**|Os primeiros 100 bytes de cada comando replicado são impressos.|  
-|**quatro**|Todos os comandos replicados são impressos.|  
+|**3**|Os primeiros 100 bytes de cada comando replicado são impressos.|  
+|**4**|Todos os comandos replicados são impressos.|  
   
  Os valores 2-4 são úteis na depuração.  
   
- **-Pacotes de** _packet_size_  
+ **-PacketSize** _packet_size_  
  É o tamanho do pacote, em bytes. O padrão é 4096 (bytes).  
   
  **-PollingInterval** _polling_interval_  
  É a frequência, em segundos, que o log é consultado para transações replicadas. O padrão é 5 segundos.  
   
- **-Profilename** _profile_name_  
+ **-ProfileName** _profile_name_  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Especifica a instância de parceiro de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa de uma sessão de espelhamento de banco de dados com o banco de dados de publicação. Para obter mais informações, consulte [Espelhamento e replicação de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  

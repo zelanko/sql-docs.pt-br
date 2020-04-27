@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155721"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construções com suporte nos procedimentos armazenados compilados de modo nativo
@@ -38,7 +38,7 @@ ms.locfileid: "63155721"
   
  Para obter informações completas sobre construções sem suporte e sobre como resolver problemas de alguns recursos sem suporte em procedimentos armazenados compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para mais informações sobre os recursos sem suporte, veja [Constructos do Transact-SQL sem suporte no OLTP in-memory](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a>Programação em procedimentos armazenados compilados nativamente  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>Programação em procedimentos armazenados compilados nativamente  
  Há suporte para o seguinte:  
   
 -   BEGIN ATOMIC (no nível externo do procedimento armazenado), LANGUAGE, ISOLATION LEVEL, DATEFORMAT e DATEFIRST.  
@@ -63,7 +63,7 @@ ms.locfileid: "63155721"
   
      Para otimizar o desempenho, use um único bloco TRY/CATCH para um procedimento armazenado originalmente compilado inteiro.  
   
-##  <a name="so"></a> Operadores com suporte  
+##  <a name="supported-operators"></a><a name="so"></a>Operadores com suporte  
  Há suporte para os operadores que se seguem.  
   
 -   Os [operadores de comparação &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por exemplo, \<>,, >= e <=) têm suporte em condicionais (if, while).  
@@ -78,7 +78,7 @@ ms.locfileid: "63155721"
   
 -   Operadores bit a bit ~, &, |, e ^  
   
-##  <a name="bfncsp"></a>Funções internas em procedimentos armazenados compilados nativamente  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>Funções internas em procedimentos armazenados compilados nativamente  
  As seguintes funções têm suporte em restrições padrão nas tabelas com otimização de memória e em procedimentos armazenados compilados nativamente.  
   
 -   Funções matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE e TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155721"
   
 -   Funções do sistema: @@rowcount. As instruções dentro de procedimentos armazenados compilados nativamente atualizam @@rowcount e você pode usar @@rowcount em um procedimento armazenado compilado nativamente para determinar o número de linhas afetadas pela última instrução executada nesse procedimento armazenado compilado nativamente. No entanto, @@rowcount é redefinido como 0 no início e no final da execução de um procedimento armazenado compilado nativamente.  
   
-##  <a name="qsancsp"></a>Área de superfície de consulta em procedimentos armazenados compilados nativamente  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>Área de superfície de consulta em procedimentos armazenados compilados nativamente  
  Há suporte para o seguinte:  
   
 -   BETWEEN  
@@ -138,8 +138,7 @@ ms.locfileid: "63155721"
   
 -   Não há suporte para `WITH TIES` ou `PERCENT` na cláusula `TOP`.  
   
--   
-  `TOP` combinado com `ORDER BY` não dá suporte a mais de 8.192 ao usar uma constante na cláusula `TOP`. Esse limite poderá ser diminuído caso a consulta contenha junções ou funções de agregação. (Por exemplo, com uma junção (duas tabelas), o limite é 4.096 linhas. Com duas junções (três tabelas), o limite é 2.730 linhas.)  
+-   `TOP` combinado com `ORDER BY` não dá suporte a mais de 8.192 ao usar uma constante na cláusula `TOP`. Esse limite poderá ser diminuído caso a consulta contenha junções ou funções de agregação. (Por exemplo, com uma junção (duas tabelas), o limite é 4.096 linhas. Com duas junções (três tabelas), o limite é 2.730 linhas.)  
   
      Você pode obter resultados maiores que 8.192 armazenando o número de linhas em uma variável:  
   
@@ -152,12 +151,12 @@ ms.locfileid: "63155721"
   
  Essas restrições não se aplicam ao acesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado em tabelas com otimização de memória.  
   
-##  <a name="auditing"></a> Auditoria  
+##  <a name="auditing"></a><a name="auditing"></a>Auditoria  
  A auditoria no nível de procedimento tem suporte em procedimentos armazenados compilados nativamente. Não há suporte para a auditoria no nível da instrução.  
   
  Para obter mais informações sobre a auditoria, consulte [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a>Dicas de tabela, consulta e junção  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>Dicas de tabela, consulta e junção  
  Há suporte para o seguinte:  
   
 -   As dicas INDEX, FORCESCAN e FORCESEEK, seja na sintaxe das dicas de tabela ou na [Cláusula OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) da consulta.  
@@ -170,10 +169,10 @@ ms.locfileid: "63155721"
   
  Para obter mais informações, consulte [dicas &#40;&#41;Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a> Limitações na classificação  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) pode classificar até 8.000 linhas (menos linhas se houver junções).  
   
- Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, Nível 16, Estado 1, Procedimento *\<procedureName>* , Linha *\<lineNumber>* O operador TOP pode retornar no máximo 8192 linhas; *\<number>* foi solicitado.**  
+ Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **msg 41398, nível 16, estado 1, procedimento * \<ProcedureName>*, linha * \<LineNumber>* o operador Top pode retornar um máximo de 8192 linhas; número>solicitado. * \<* **  
   
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
   

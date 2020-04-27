@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061318"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>classe de evento TM: Save Tran Starting
@@ -52,7 +52,7 @@ ms.locfileid: "63061318"
   
 ## <a name="see-also"></a>Consulte Também  
  [Eventos estendidos](../extended-events/extended-events.md)   
- [SAVE TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/save-transaction-transact-sql)   
+ [SALVAR transação &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/save-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021946"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Outros assinantes não SQL Server
-  Para obter uma lista de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes não compatíveis [!INCLUDE[msCoName](../../../includes/msconame-md.md)]com o, consulte [assinantes não SQL Server](non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
+  Para uma lista de Assinantes não[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , suportados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)], consulte [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Esse tópico inclui informações sobre exigências para drivers ODBC e provedores OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Exigências do driver ODBC  
  O driver ODBC:  
@@ -40,15 +40,15 @@ ms.locfileid: "63021946"
 ## <a name="replicating-using-ole-db-interfaces"></a>Replicação com o uso de interfaces OLE DB  
  Provedores OLE DB devem oferecer suporte a esses objetos para replicação transacional:  
   
--   Objeto **DataSource**  
+-   Objeto**DataSource**  
   
--   Objeto de **sessão**  
+-   Objeto**Sessão**  
   
--   Objeto de **comando**  
+-   Objeto**Comando**  
   
--   Objeto **Rowset**  
+-   Objeto**Conjunto de linhas**  
   
--   Objeto de **erro**  
+-   Objeto**Erro**  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces de objeto DataSource  
  As interfaces a seguir são exigidas para a conexão com uma fonte de dados:  
@@ -59,7 +59,7 @@ ms.locfileid: "63021946"
   
 -   `IDBProperties`  
   
- Se o provedor oferece suporte para a interface **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa a interface para recuperar informações tais como o caractere identificador entre aspas, comprimento máximo da instrução SQL e número máximo de caracteres em nomes de tabelas e colunas.  
+ Se o provedor der suporte à interface **IDBInfo**, o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usará a interface para recuperar informações, como o caractere identificador entre aspas, tamanho máximo da instrução SQL e número máximo de caracteres em nomes de tabelas e colunas.  
   
 ### <a name="session-object-interfaces"></a>Interfaces de objeto de sessão  
  As seguintes interfaces são exigidas:  
@@ -77,7 +77,7 @@ ms.locfileid: "63021946"
   
 -   **ICommand**  
   
--   **ICommandproperties**  
+-   **ICommandProperties**  
   
 -   **ICommandText**  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63021946"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** é necessário para criar acessadores de parâmetro. Se o provedor oferecer **** suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IColumnRowset, o usará essa interface para determinar se uma coluna é uma coluna de identidade.  
+ **IAccessor** é necessário criar acessadores de parâmetro. Se o provedor oferecer **IColumnRowset**suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IColumnRowset, o usará essa interface para determinar se uma coluna é uma coluna de identidade.  
   
 ### <a name="rowset-object-interfaces"></a>Interfaces de objeto de conjunto de linhas  
  As seguintes interfaces são exigidas:  

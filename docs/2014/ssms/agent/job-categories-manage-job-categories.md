@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937013"
 ---
-# <a name="job-categories-manage-job-categories"></a>Categorias de trabalho: gerenciar categorias de trabalho
-  Use a caixa de diálogo **categorias de trabalho** para adicionar ou excluir categorias de trabalho. Categorias de trabalho internas não podem ser excluídas.  
+# <a name="job-categories-manage-job-categories"></a>Categorias de trabalho: Gerenciar categorias de trabalho
+  Use a caixa de diálogo **Categorias de Trabalho** para adicionar ou excluir categorias de trabalho. Categorias de trabalho internas não podem ser excluídas.  
   
 ## <a name="options"></a>Opções  
  **Nome**  
@@ -31,7 +31,7 @@ ms.locfileid: "62937013"
  **Número de trabalhos na categoria**  
  O número de trabalhos definido para essa categoria.  
   
- **Exibir trabalhos**  
+ **Exibir Trabalhos**  
  Abre a caixa de diálogo **Propriedades** para a categoria selecionada, para listar todos os trabalhos atualmente definidos para aquela categoria.  
   
  **Adicionar**  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036192"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar fator de preenchimento para um índice
@@ -44,9 +44,9 @@ ms.locfileid: "63036192"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Performance"></a> Considerações sobre desempenho  
+###  <a name="performance-considerations"></a><a name="Performance"></a> Considerações sobre desempenho  
   
 #### <a name="page-splits"></a>Divisões de página  
  Um valor de fator de preenchimento corretamente escolhido pode reduzir divisões potenciais de páginas fornecendo espaço suficiente para expansão do índice à medida que são adicionados dados à tabela subjacente. Quando uma nova linha é adicionada a uma página de índice cheia, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] move aproximadamente metade das linhas para uma nova página para fornecer espaço para a nova linha. Essa reorganização é conhecida como divisão de página. Uma divisão de página abre espaço para novos registros, mas pode demorar a ser executada e é uma operação que consome muitos recursos. Além disso, também pode causar fragmentação, o que gera um aumento das operações de E/S. Quando ocorrem divisões de página frequentemente, o índice pode ser recriado usando um valor de fator de preenchimento novo ou existente para redistribuir os dados. Para obter mais informações, veja [Reorganizar e recriar índices](reorganize-and-rebuild-indexes.md).  
@@ -56,12 +56,12 @@ ms.locfileid: "63036192"
 #### <a name="adding-data-to-the-end-of-the-table"></a>Adicionando dados ao final da tabela  
  Um fator de preenchimento diferente de zero ou 100 poderá ser bom para o desempenho se os novos dados forem distribuídos uniformemente ao longo da tabela. No entanto, se todos os dados forem adicionados ao final da tabela, o espaço vazio nas páginas do índice não será preenchido. Por exemplo, se a coluna de chave de índice for uma coluna IDENTITY, a chave de novas linhas estará sempre aumentando e as linhas do índice serão adicionadas logicamente no final do índice. Se as linhas existentes serão atualizadas com dados que aumentam o tamanho das linhas, use um fator de preenchimento menor que 100. Os bytes adicionais em cada página ajudarão minimizar divisões de página provocadas pelo comprimento adicional nas linhas.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Para especificar um fator de preenchimento usando o Designer de Tabela  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036192"
   
 8.  Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Para especificar um fator de preenchimento em um índice existente  
   

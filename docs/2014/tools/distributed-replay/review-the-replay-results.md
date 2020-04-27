@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149703"
 ---
 # <a name="review-the-replay-results"></a>Revisar os resultados da reprodução
-  Depois que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o recurso Distributed Replay concluir uma reprodução distribuída, a atividade de reprodução de cada cliente poderá ser capturada e salva nos arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Depois que o recurso [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay concluir uma reprodução distribuída, a atividade de reprodução de cada cliente poderá ser capturada e salva em arquivos de rastreamento de resultado em cada cliente. Para capturar essa atividade, você deve usar o parâmetro **-o** ao executar a ferramenta de administração com a opção **reproduzir** . Para obter mais informações sobre a opção de reprodução, consulte [Opção Reprodução &#40;Ferramenta de administração de reprodução distribuída&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  O local onde os arquivos de rastreamento de resultado são armazenados é especificado pelo elemento XML `<ResultDirectory>` no arquivo de configuração de cliente, `DReplayClient.xml`, situado em cada cliente. Os arquivos de rastreamento no diretório de resultados do cliente são substituídos em cada reprodução.  
   

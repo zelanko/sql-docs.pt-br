@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151099"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, objeto de estatísticas de grupo de cargas de trabalho
@@ -40,7 +40,7 @@ ms.locfileid: "63151099"
 |Threads paralelos ativos|A contagem atual de uso de threads paralelos.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [Monitorar o uso de recursos &#40;o monitor do sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, objeto de estatísticas do pool de recursos](sql-server-resource-pool-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   

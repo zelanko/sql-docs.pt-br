@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155306"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construções do Transact-SQL sem suporte pelo OLTP na memória
@@ -35,7 +35,7 @@ ms.locfileid: "63155306"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bancos de dados que usam OLTP na memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem ser exibidos no texto da mensagem de erro que envolve um banco de dados de OLTP na memória.  
   
-|Type|Nome|Resolução|  
+|Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
 |Opção|AUTO_CLOSE|A opção de banco de dados AUTO_CLOSE=ON não tem suporte nos bancos de dados que têm um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
 |Opção|ATTACH_REBUILD_LOG|A opção ATTACH_REBUILD_LOG do banco de dados CREATE não tem suporte nos bancos de dados que têm um grupo de arquivos MEMORY_OPTIMIZED_DATA.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63155306"
 ## <a name="memory-optimized-tables"></a>Tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve uma tabela com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Type|Nome|Resolução|  
+|Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|ATIVADO|As tabelas com otimização de memória não podem ser colocadas em um grupo de arquivos ou esquema de partição. Remova a cláusula ON da instrução `CREATE TABLE`.|  
 |Tipo de dados|*Nome do tipo de dados*|Não há suporte para o tipo de dados indicado. Substitua o tipo por um dos tipos de dados com suporte. Para obter mais informações, consulte [tipos de dados com suporte](supported-data-types-for-in-memory-oltp.md).|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155306"
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices em tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice em uma tabela com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Type|Nome|Resolução|  
+|Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|Índice filtrado|Os índices filtrados não têm suporte com tabelas com otimização de memória. Omita a cláusula `WHERE` da especificação de índice.|  
 |Recurso|UNIQUE|Não há suporte para índices exclusivos nas tabelas com otimização de memória. Remova o argumento `UNIQUE` da especificação de índice.|  
@@ -98,21 +98,21 @@ ms.locfileid: "63155306"
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash não clusterizados  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve um índice de hash não clusterizado, bem como a ação corretiva para resolver o erro.  
   
-|Type|Nome|Resolução|  
+|Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
 |Opção|ASC/DESC|Os índices de hash não clusterizados não são ordenados. Remova as palavras-chave `ASC` e `DESC` da especificação de chave de índice.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve procedimentos armazenados nativamente compilados, bem como a ação corretiva para resolver o erro.  
   
-|Type|Recurso|Resolução|  
+|Tipo|Recurso|Resolução|  
 |----------|-------------|----------------|  
 |Recurso|Variáveis de tabela alinhadas|Os tipos de tabela não podem ser declarados alinhados com declarações de variável. Os tipos de tabela devem ser declarados explicitamente usando uma instrução `CREATE TYPE`.|  
-|Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> -Ao executar o procedimento do cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] do `EXECUTE`, em vez de especificar o nome do procedimento diretamente.<br /><br /> -Ao executar o procedimento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado compilado nativamente.<br /><br /> -Ao criar um procedimento armazenado compilado nativamente, em vez de usar um cursor, use a lógica baseada em conjunto ou `WHILE` um loop.|  
+|Recurso|Cursores|Os cursores não têm suporte em procedimentos armazenados nativamente compilados.<br /><br /> -Ao executar o procedimento do cliente, use RPC em vez da API do cursor. Com o ODBC, evite a instrução `EXECUTE` do [!INCLUDE[tsql](../../includes/tsql-md.md)], em vez de especificar o nome do procedimento diretamente.<br /><br /> -Ao executar o procedimento de um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou outro procedimento armazenado, evite usar um cursor com o procedimento armazenado compilado nativamente.<br /><br /> -Ao criar um procedimento armazenado compilado nativamente, em vez de usar um cursor, use a lógica baseada em conjunto ou `WHILE` um loop.|  
 |Recurso|Padrões de parâmetro não constantes|Ao usar valores padrão com parâmetros em procedimentos armazenados nativamente compilados, os valores devem ser constantes. Remova todos os curingas das declarações de parâmetro.|  
 |Recurso|EXTERNAL|Os procedimentos armazenados CLR não podem ser compilados de modo nativo. Remova a cláusula AS EXTERNAL ou a opção NATIVE_COMPILATION da instrução CREATE PROCEDURE.|  
 |Recurso|Procedimentos armazenados numerados|Os procedimentos armazenados nativamente compilados não podem ser numerados. Remova o `;` *número* da `CREATE PROCEDURE` instrução.|  
-|Recurso|INSERT de várias linhas... Instruções VALUES|Não é possível inserir várias linhas que usam a mesma instrução `INSERT` em um procedimento armazenado nativamente compilado. Crie instruções `INSERT` para cada linha.|  
+|Recurso|INSERÇÃO de várias linhas... Instruções VALUEs|Não é possível inserir várias linhas que usam a mesma instrução `INSERT` em um procedimento armazenado nativamente compilado. Crie instruções `INSERT` para cada linha.|  
 |Recurso|CETs (expressões de tabela comum)|As CTEs (expressões de tabela comuns) não têm suporte em procedimentos armazenados nativamente compilados. Regravar a consulta.|  
 |Recurso|subconsulta|Não há suporte para subconsultas (consultas aninhadas dentro de outra consulta). Regravar a consulta.|  
 |Recurso|COMPUTE|Não há suporte para a cláusula `COMPUTE`. Remova-a da consulta.|  
@@ -124,8 +124,7 @@ ms.locfileid: "63155306"
 |Recurso|funções definidas pelo usuário|As funções definidas pelo usuário não podem ser usadas em procedimentos armazenados nativamente compilados. Remova a referência à função da definição de procedimento.|  
 |Recurso|agregações definidas pelo usuário|As funções de agregação definidas pelo usuário não podem ser usadas em procedimentos armazenados nativamente compilados. Remova a referência à função do procedimento.|  
 |Recurso|metadados do modo de procura|Os procedimentos armazenados nativamente compilados não oferecem suporte aos metadados do modo de procura. Verifique se a opção de sessão `NO_BROWSETABLE` está definida como OFF.|  
-|Recurso|DELETE com a cláusula FROM|A cláusula `FROM` não tem suporte para as instruções `DELETE` com uma fonte de tabela em procedimentos armazenados compilados de modo nativo.<br /><br /> 
-  `DELETE` com a cláusula `FROM` tem suporte quando ela é usada para indicar a tabela de onde haverá exclusão.|  
+|Recurso|DELETE com a cláusula FROM|A cláusula `FROM` não tem suporte para as instruções `DELETE` com uma fonte de tabela em procedimentos armazenados compilados de modo nativo.<br /><br /> `DELETE` com a cláusula `FROM` tem suporte quando ela é usada para indicar a tabela de onde haverá exclusão.|  
 |Recurso|UPDATE com a cláusula FROM|A cláusula `FROM` não tem suporte para as instruções `UPDATE` em procedimentos armazenados nativamente compilados.|  
 |Recurso|procedimentos temporários|Os procedimentos armazenados temporários não podem ser compilados nativamente. Crie um procedimento armazenado nativamente compilado permanente ou um procedimento armazenado do [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado temporário.|  
 |Nível de isolamento|READ UNCOMMITTED|O nível de isolamento READ UNCOMMITTED não tem suporte para procedimentos armazenados nativamente compilados. Use um nível de isolamento com suporte, como SNAPSHOT.|  
@@ -181,17 +180,14 @@ ms.locfileid: "63155306"
 |Função de agregação|*Função de agregação*|Não há suporte para essa cláusula. Para obter mais informações sobre procedimentos armazenados compilados de modo nativo, veja [Procedimentos armazenados compilados de modo nativo](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Função de classificação|*Função de classificação*|As funções de classificação não têm suporte em procedimentos armazenados nativamente compilados. Remova-as da definição de procedimento.|  
 |Função|*Função*|Não há suporte para essa função. Remova-a do procedimento armazenado nativamente compilado.|  
-|de|*Instrução*|Não há suporte para essa instrução. Remova-a do procedimento armazenado nativamente compilado.|  
+|de|*de*|Não há suporte para essa instrução. Remova-a do procedimento armazenado nativamente compilado.|  
 |Recurso|MIN e MAX usados com cadeias de caracteres e binários|As funções de agregação `MIN` e `MAX` não podem ser usadas para valores de cadeias de caracteres binários e caracteres dentro de procedimentos armazenados nativamente compilados.|  
 |Recurso|GROUP BY sem função de agregação|Em procedimentos armazenados compilados de modo nativo, quando uma consulta tem uma cláusula `GROUP BY`, a consulta também deve usar uma função de agregação na cláusula SELECT ou HAVING. Adicione uma função de agregação à consulta.|  
 |Recurso|GROUP BY ALL|ALL não pode ser usado com cláusulas GROUP BY em procedimentos armazenados compilados de modo nativo. Remova ALL da cláusula GROUP BY.|  
 |Recurso|GROUP BY ()|Não suporte para o agrupamento por uma lista vazia. Remova a cláusula GROUP BY ou inclua colunas na lista de agrupamentos.|  
-|Recurso|ROLLUP|
-  `ROLLUP` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `ROLLUP` da definição do procedimento.|  
-|Recurso|CUBE|
-  `CUBE` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `CUBE` da definição do procedimento.|  
-|Recurso|GROUPING SETS|
-  `GROUPING SETS` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `GROUPING SETS` da definição do procedimento.|  
+|Recurso|ROLLUP|`ROLLUP` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `ROLLUP` da definição do procedimento.|  
+|Recurso|CUBE|`CUBE` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `CUBE` da definição do procedimento.|  
+|Recurso|GROUPING SETS|`GROUPING SETS` não pode ser usado com cláusulas `GROUP BY` em procedimentos armazenados nativamente compilados. Remova `GROUPING SETS` da definição do procedimento.|  
 |Recurso|BEGIN TRANSACTION, COMMIT TRANSACTION e ROLLBACK TRANSACTION|Use blocos ATOMIC para controlar transações e tratamento de erros. Para obter mais informações, veja [Blocos atômicos](atomic-blocks-in-native-procedures.md).|  
 |Recurso|Declarações de variável de tabela embutidas.|As variáveis de tabela devem referenciar explicitamente os tipos de tabela com otimização de memória definidos. Você deve criar um tipo de tabela com otimização de memória e usar esse tipo para a declaração variável, em vez de especificar o tipo embutido.|  
 |Recurso|sp_recompile|Não há suporte para a recompilação de procedimentos armazenados compilados de modo nativo. Remova e recrie o procedimento.|  
@@ -203,7 +199,7 @@ ms.locfileid: "63155306"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transações que acessam tabelas com otimização de memória  
  A tabela a seguir lista os recursos e as palavras-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] que podem aparecer no texto da mensagem de um erro que envolve transações que acessam tabelas com otimização de memória, bem como a ação corretiva para resolver o erro.  
   
-|Type|Nome|Resolução|  
+|Tipo|Nome|Resolução|  
 |----------|----------|----------------|  
 |Recurso|ponto de salvamento|Não há suporte para a criação de pontos de salvamento explícitos em transações que acessam tabelas com otimização de memória.|  
 |Recurso|transação associada|As sessões associadas não podem participar de transações que acessam tabelas com otimização de memória. Não associe a sessão antes de executar o procedimento.|  

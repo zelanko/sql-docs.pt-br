@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044171"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Tutorial DMX de previsão de série temporal
   Neste tutorial, você aprenderá a criar uma estrutura de mineração de série temporal, a criar três modelos de mineração de série temporal e a fazer previsões usando esses modelos.  
   
- Os modelos de mineração são baseados nos dados contidos no banco de dados de exemplo do  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional.  
+ Os modelos de mineração são baseados nos dados contidos no banco de dados de exemplo do  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
  A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu usar a mineração de dados para gerar projeções de vendas. Eles já criaram alguns modelos de previsão regionais; para obter mais informações, consulte [lição 2: Criando um cenário de previsão &#40;tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). No entanto, o Departamento de Vendas precisa ser capaz de atualizar periodicamente o modelo de mineração de dados com novos dados de vendas. Eles também desejam personalizar os modelos para oferecer projeções diferentes.  

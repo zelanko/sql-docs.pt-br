@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154817"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar linhas em resultados da consulta (Visual Database Tools)
@@ -72,7 +72,7 @@ GROUP BY pub_id, type
   
      O Designer de Consulta e Exibição atribui automaticamente um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-     ![Adicionando um alias de coluna ao conjunto de resultados de consulta](../../database-engine/media//dv3w9e3.gif "Adicionando um alias de coluna ao conjunto de resultados de consulta")  
+     ![Adicionar um alias de coluna ao conjunto de resultados de consulta](../../database-engine/media//dv3w9e3.gif "Adicionar um alias de coluna ao conjunto de resultados de consulta")  
   
      A instrução correspondente no painel **SQL** pode ter esse formato:  
   

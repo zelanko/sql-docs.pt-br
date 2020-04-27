@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985809"
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
-  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de RENDERIZAÇÃO: HTML, Excel, Word, CSV ou texto, XML, imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
+  Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
   
 > [!NOTE]  
 >  Para determinar quais extensões de renderização estão disponíveis, exiba a lista das extensões instaladas no arquivo RSReportServer.config.  
   
  A tabela a seguir descreve as extensões de renderização incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Nome da extensão|DESCRIÇÃO|  
+|Nome da extensão|Descrição|  
 |--------------------|-----------------|  
 |`XML`|Renderiza um relatório em XML. O relatório é aberto em um navegador. Transformações adicionais aplicadas a esta saída XML podem ser uma forma econômica de evitar o desenvolvimento de sua própria extensão de renderização.|  
 |`CSV`|Renderiza um relatório em um formato delimitado por vírgula. O relatório é aberto em uma ferramenta de visualização associada a formatos de arquivo CSV.|  
@@ -36,10 +36,8 @@ ms.locfileid: "62985809"
 |`PDF`|Renderiza um relatório no Adobe Acrobat Reader. O formato é mostrado como **Arquivo Acrobat (PDF)** na lista suspensa Exportar da barra de ferramentas de relatório.|  
 |`EXCEL`|Renderiza um relatório no [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |`WORD`|Renderizar um relatório no [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
-|
-  `HTML 4.0` (parte da extensão de renderização HTML)|HTML é o formato usado para renderizar inicialmente o relatório. Se o seu navegador der suporte a HTML 4.0, esse será o formato usado. Caso contrário, o HTML 3.2 será usado.|  
-|
-  `MHTML` (parte da extensão de renderização HTML)|Renderiza um relatório em MHTML. O relatório é aberto no Internet Explorer. O formato é mostrado como **Arquivo Web** na lista suspensa Exportar da barra de ferramentas de relatório.|  
+|`HTML 4.0` (parte da extensão de renderização HTML)|HTML é o formato usado para renderizar inicialmente o relatório. Se o seu navegador der suporte a HTML 4.0, esse será o formato usado. Caso contrário, o HTML 3.2 será usado.|  
+|`MHTML` (parte da extensão de renderização HTML)|Renderiza um relatório em MHTML. O relatório é aberto no Internet Explorer. O formato é mostrado como **Arquivo Web** na lista suspensa Exportar da barra de ferramentas de relatório.|  
 |`NULL`|Não renderiza um relatório para um formato específico. Essa extensão de renderização é útil para colocar relatórios em cache. A renderização nula deve ser usada em conjunto com uma execução ou entrega agendada.|  
   
  Para obter mais informações sobre os formatos recomendados e seus usos, consulte [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md).  

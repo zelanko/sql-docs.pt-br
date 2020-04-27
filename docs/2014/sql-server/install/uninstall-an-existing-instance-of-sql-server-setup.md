@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990187"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
@@ -42,7 +42,7 @@ ms.locfileid: "62990187"
   
 ### <a name="before-you-uninstall"></a>Antes da desinstalação  
   
-1.  **Faça backup dos dados.** Embora essa não seja uma etapa necessária, pode haver bancos de dados que você queira salvar em seu estado atual. Você também pode desejar salvar alterações que foram feitas nos bancos de dados do sistema. Se qualquer situação for verdadeira, certifique-se de fazer backup dos dados antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como alternativa, salve uma cópia de todos os dados e arquivos de log em uma pasta que não seja a pasta do MSSQL. A pasta do MSSQL é excluída durante a desinstalação.  
+1.  **Faça backup dos seus dados.** Embora essa não seja uma etapa necessária, pode haver bancos de dados que você queira salvar em seu estado atual. Você também pode desejar salvar alterações que foram feitas nos bancos de dados do sistema. Se qualquer situação for verdadeira, certifique-se de fazer backup dos dados antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como alternativa, salve uma cópia de todos os dados e arquivos de log em uma pasta que não seja a pasta do MSSQL. A pasta do MSSQL é excluída durante a desinstalação.  
   
      Os arquivos que você deve salvar incluem os arquivos de banco de dados a seguir:  
   
@@ -72,11 +72,11 @@ ms.locfileid: "62990187"
   
 2.  **Exclua os grupos de segurança locais.** Antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exclua os grupos de segurança locais dos componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Interrompa todos os** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **serviços.**   É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Conexões ativas podem impedir a desinstalação com êxito.  
+3.  **Interromper todos**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **os serviços do .** É recomendável interromper todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar os componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conexões ativas podem impedir a desinstalação com êxito.  
   
 4.  **Use uma conta que tenha as permissões apropriadas.** Faça logon no servidor usando a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando uma conta que tenha permissões equivalentes. Por exemplo, é possível fazer logon no servidor com uma conta que seja membro do grupo Administradores local.  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Para começar o processo de desinstalação, vá para o **Painel de Controle** e clique em **Programa e Recursos**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62990187"
   
 1.  Se o processo de desinstalação não for concluído com êxito, tente corrigir o problema que causou a falha na desinstalação. Os seguintes artigos podem ajudá-lo a compreender a causa da falha na desinstalação:  
   
-    -   [Como identificar problemas de instalação do SQL Server 2008 nos arquivos de log da instalação](https://support.microsoft.com/kb/955396/en-us)  
+    -   [Como identificar problemas de instalação do SQL Server 2008 nos arquivos de log de instalação](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Exibir e ler arquivos de log da Instalação do SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

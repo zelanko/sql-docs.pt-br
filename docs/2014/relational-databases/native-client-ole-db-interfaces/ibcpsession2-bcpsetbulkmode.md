@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989989"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  IBCPSession2:: BCPSetBulkMode fornece uma alternativa para [IBCPSession:: BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato de coluna. Ao contrário de IBCPSession:: BCPColFmt, que define atributos de formato de coluna individuais, IBCPSession2:: BCPSetBulkMode define todos os atributos.  
+  IBCPSession2::BCPSetBulkMode fornece uma alternativa para [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato da coluna. Ao contrário de IBCPSession::BCPColFmt, que define atributos de formato de coluna individuais, IBCPSession2::BCPSetBulkMode define todos os atributos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ HRESULT BCPSetBulkMode (
  O comprimento (em bytes) do valor de terminador de linha.  
   
 ## <a name="returns"></a>Retornos  
- IBCPSession2:: BCPSetBulkMode pode retornar um dos seguintes:  
+ IBCPSession2::BCPSetBulkMode pode retornar uma das seguintes opções:  
   
 |||  
 |-|-|  
@@ -63,24 +63,24 @@ HRESULT BCPSetBulkMode (
 |`E_OUTOFMEMORY`|Erro de memória insuficiente.|  
   
 ## <a name="remarks"></a>Comentários  
- IBCPSession2:: BCPSetBulkMode pode ser usado para copiar em massa de uma consulta ou de uma tabela. Quando IBCPSession2::BCPSetBulkMode é usado para fazer cópias em massa de uma instrução de consulta, ele precisa ser chamado antes de `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` para especificar a instrução de consulta.  
+ IBCPSession2::BCPSetBulkMode pode ser usado para copiar em massa de uma consulta ou de uma tabela. Quando IBCPSession2::BCPSetBulkMode é usado para fazer cópias em massa de uma instrução de consulta, ele precisa ser chamado antes de `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` para especificar a instrução de consulta.  
   
- Evite combinar a sintaxe de chamada RPC com a sintaxe de consulta em lotes (`{rpc func};SELECT * from Tbl`, por exemplo) no texto de um único comando.  Isso causará ICommandPrepare::P reparêntese para retornar um erro e impedi-lo de recuperar metadados. Use a sintaxe de ODBC CALL (`{call func}; SELECT * from Tbl`, por exemplo) se precisar combinar a execução de procedimentos armazenados e a consulta em lotes no texto de um único comando.  
+ Evite combinar a sintaxe de chamada RPC com a sintaxe de consulta em lotes (`{rpc func};SELECT * from Tbl`, por exemplo) no texto de um único comando.  Isto fará ICommandPrepare::Prepare retornar um erro e impedirá você de recuperar metadados. Use a sintaxe de ODBC CALL (`{call func}; SELECT * from Tbl`, por exemplo) se precisar combinar a execução de procedimentos armazenados e a consulta em lotes no texto de um único comando.  
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE e para IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_SQLCHARACTER`.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_SQLNCHAR`como.|  
 |BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção-N no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_SQLNCHAR` como se o tipo de coluna for uma `BCP_TYPE_DEFAULT` cadeia de caracteres ou se não for uma cadeia de caracteres.|  
 |BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção-n no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_DEFAULT`como.|  
   
- Você pode chamar as opções IBCPSession:: BCPControl e IBCPSession2:: BCPSetBulkMode para IBCPSession:: BCPControl que não entram em conflito com IBCPSession2:: BCPSetBulkMode. Por exemplo, você pode chamar IBCPSession:: BCPControl com `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
+ Você pode chamar as opções IBCPSession::BCPControl e IBCPSession2::BCPSetBulkMode para IBCPSession::BCPControl que não entram em conflito com IBCPSession2::BCPSetBulkMode. Por exemplo, você pode chamar IBCPSession:: BCPControl com `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
   
  Você não pode chamar IBCPSession:: BCPControl `BCP_OPTION_TEXTFILE` com e IBCPSession2:: BCPSetBulkMode.  
   
- Se você tentar chamar IBCPSession2:: BCPSetBulkMode com uma sequência de chamadas de função que inclui IBCPSession:: BCPColFmt, IBCPSession:: BCPControl e IBCPSession:: BCPReadFmt, uma das chamadas de função retornará uma falha de erro de sequência. Se você optar por corrigir a falha, chame IBCPSession::BCPInit para redefinir as configurações e recomeçar.  
+ Se você tentar chamar IBCPSession2::BCPSetBulkMode com uma sequência de chamadas de função que inclui IBCPSession::BCPColFmt, IBCPSession::BCPControl e IBCPSession::BCPReadFmt, uma das chamadas de função retornará uma falha de erro de sequência. Se você optar por corrigir a falha, chame IBCPSession::BCPInit para redefinir as configurações e recomeçar.  
   
  A tabela a seguir apresenta alguns exemplos de chamadas de funções que resultam em um erro de sequência de função:  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151193"
 ---
 # <a name="create-a-new-plan-guide"></a>Criar um novo guia de plano
@@ -39,9 +39,9 @@ ms.locfileid: "63151193"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Os argumentos para sp_create_plan_guide devem ser fornecidos na ordem em que aparecem. Quando você aplica valores para os parâmetros de `sp_create_plan_guide`, todos os nomes de parâmetros devem ser especificados explicitamente ou nenhum deles deve ser especificado. Por exemplo, se `@name =` for especificado, `@stmt =`, `@type =`, entre outros, também deverão ser. Da mesma forma, se `@name =` for omitido e apenas o valor de parâmetro for fornecido, os nomes de parâmetro restantes deverão ser omitidos também e apenas os seus valores, fornecidos. Os nomes de argumento são usados apenas para fins descritivos, para ajudar compreender a sintaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não verifica se o nome de parâmetro especificado corresponde ao nome do parâmetro na posição em que o nome é usado.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "63151193"
   
 -   A tentativa de cancelar ou modificar uma função, procedimento armazenado ou gatilho DML referenciado por um guia de plano, habilitado ou desabilitado, provoca um erro. A tentativa de descartar uma tabela com um gatilho definido nela que é mencionado por um guia de plano também causa um erro.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A criação de um guia de plano do tipo OBJECT requer a permissão ALTER no objeto mencionado. A criação de um guia de plano do tipo SQL ou TEMPLATE requer a permissão ALTER no banco de dados atual.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-plan-guide"></a>Para criar um guia de plano  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63151193"
   
 11. Clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-plan-guide"></a>Para criar um guia de plano  
   

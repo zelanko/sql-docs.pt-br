@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032289"
 ---
 # <a name="localdbgetversions-function"></a>Função LocalDBGetVersions
   Retorna todas as versões de LocalDB do SQL Server Express disponíveis no computador.  
   
- **Arquivo de cabeçalho:** sqlncli. h  
+ **Arquivo de cabeçalho:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63032289"
 #define MAX_LOCALDB_VERSION_LENGTH 43typedef WCHAR TLocalDBVersion[MAX_LOCALDB_VERSION_LENGTH + 1];typedef TLocalDBVersion* PTLocalDBVersion;HRESULT LocalDBGetVersions(           PTLocalDBVersion pVersion,           LPDWORD lpdwNumberOfVersions);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *pVersionNames*  
  Der Contém nomes das versões de LocalDB que estão disponíveis na estação de trabalho do usuário.  
   

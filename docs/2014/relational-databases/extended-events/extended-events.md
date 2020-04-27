@@ -14,26 +14,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990700"
 ---
 # <a name="extended-events"></a>Eventos estendidos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os eventos estendidos têm uma arquitetura altamente escalonável e altamente configurável que permite aos usuários coletar o máximo ou o mínimo de informações necessárias para solucionar ou identificar um problema de desempenho.  
+  Os Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] têm uma arquitetura altamente escalonável e configurável que permite aos usuários coletar o máximo ou o mínimo de informações, conforme necessário, para solucionar ou identificar um problema.  
   
  Você pode encontrar mais informações sobre os Eventos Estendidos na Web em [Eventos Estendidos do SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho. Os eventos estendidos fornecem duas interfaces gráficas do usuário (**Assistente para nova sessão** e **nova sessão**) para criar, modificar, exibir e analisar os dados da sessão.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Benefícios de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Eventos Estendidos são um sistema de monitoramento de desempenho de peso leve que usa poucos recursos de desempenho. Os Eventos Estendidos fornecem duas interfaces gráficas do usuário (**Assistente de Nova Sessão** e **Nova Sessão**) para criar, modificar, exibir e analisar os dados da sessão.  
   
 ## <a name="extended-events-concepts"></a>Conceitos de eventos estendidos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os eventos estendidos (eventos estendidos) baseiam-se nos conceitos existentes, como um evento ou um consumidor de evento, usam conceitos do rastreamento de eventos para o Windows e apresentam novos conceitos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os Eventos Estendidos são criados com base em conceitos existentes, como um evento ou um consumidor do evento, usam conceitos de Rastreamento de Eventos para Windows e apresentam novos conceitos.  
   
  A tabela a seguir descreve os conceitos em Eventos Estendidos.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Pacotes de eventos estendidos do SQL Server](sql-server-extended-events-packages.md)|Descreve os pacotes de Eventos Estendidos que contêm objetos usados para obter e processar dados quando uma sessão de Eventos Estendidos é executada.|  
 |[Destinos de eventos estendidos do SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Descreve os consumidores de evento que podem receber dados durante uma sessão de evento.|  
@@ -73,7 +73,7 @@ ms.locfileid: "62990700"
   
 -   A capacidade de monitorar processos ativos dinamicamente com efeito mínimo sobre esses processos.  
   
--   Uma sessão de integridade de sistema padrão que é executada sem efeitos de desempenho notáveis. A sessão coleta dados do sistema que você pode usar para ajudar a solucionar problemas de desempenho. Para obter mais informações, veja [Usar a sessão system_health](use-the-ssms-xe-profiler.md).  
+-   Uma sessão de integridade de sistema padrão que é executada sem efeitos de desempenho notáveis. A sessão coleta dados do sistema que você pode usar para ajudar a solucionar problemas de desempenho. Para obter mais informações, consulte [usar a sessão de system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Tarefas de eventos estendidos  
  Usando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] para executar instruções DDL, exibições e funções de gerenciamento dinâmico ou exibições de catálogo [!INCLUDE[tsql](../../includes/tsql-md.md)] , é possível criar soluções para problemas simples ou complexos de eventos estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seu ambiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -83,14 +83,14 @@ ms.locfileid: "62990700"
 |Use o **Pesquisador de Objetos** para gerenciar sessões de eventos.|[Gerenciar sessões de evento no Pesquisador de Objetos](../../ssms/object/object-explorer.md)|  
 |Descreve como criar uma sessão de Eventos Estendidos.|[Criar uma sessão de Eventos Estendidos](../../database-engine/create-an-extended-events-session.md)|  
 |Descreve como exibir e atualizar dados de destino.|[Exibir dados de sessão de evento](../../database-engine/view-event-session-data.md)|  
-|Descreve como usar as ferramentas de Eventos Estendidos para criar e gerenciar suas sessões de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Ferramentas de Eventos Estendidos](extended-events-tools.md)|  
+|Descreve como usar as ferramentas de Eventos Estendidos para criar e gerenciar suas sessões de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Ferramentas de eventos estendidos](extended-events-tools.md)|  
 |Descreve como alterar uma sessão de Eventos Estendidos.|[Alterar uma sessão de Eventos Estendidos](alter-an-extended-events-session.md)|  
 |Descreve como copiar ou exportar dados de destino.|[Copiar ou exportar dados de destino](../../database-engine/copy-or-export-target-data.md)|  
 |Descreve como modificar sua exibição de resultados de rastreamento para personalizar como você deseja analisar seus dados.|[Modificar a exibição dos resultados de rastreamento](../../database-engine/modify-the-trace-results-view.md)|  
 |Descreve como obter informações sobre os campos associados aos eventos.|[Obter os campos de todos os eventos](../../database-engine/get-the-fields-for-all-events.md)|  
 |Descreve como descobrir quais eventos estão disponíveis nos pacotes registrados.|[Exibir os eventos de pacotes registrados](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Descreve como determinar quais destinos de Eventos Estendidos estão disponíveis nos pacotes registrados.|[Exibir os destinos dos Eventos Estendidos de pacotes registrados](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|Descreve como exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento de Rastreamento do SQL e suas colunas associadas.|[Exibir os Eventos Estendidos equivalentes às classes de rastreamento de eventos do SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Descreve como exibir os eventos e as ações dos Eventos Estendidos que são equivalentes a cada evento de Rastreamento do SQL e suas colunas associadas.|[Exibir os Eventos Estendidos equivalentes às classes de evento de Rastreamento do SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Descreve como localizar os parâmetros que você pode definir para o uso do argumento ADD TARGET em CREAT EVENT SESSION ou ALTER EVENT SESSION.|[Obter os parâmetros configuráveis para o argumento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Descreve como converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos.|[Converter um script existente de Rastreamento do SQL em uma sessão de Eventos Estendidos](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Descreve como determinar quais consultas estão mantendo o bloqueio, o plano da consulta e a pilha [!INCLUDE[tsql](../../includes/tsql-md.md)] no momento em que o bloqueio foi realizado.|[Determinar quais consultas estão mantendo bloqueios](determine-which-queries-are-holding-locks.md)|  
@@ -98,7 +98,7 @@ ms.locfileid: "62990700"
 |Descreve como usar os Eventos Estendidos com o Rastreamento de Eventos do Windows para monitorar a atividade do sistema.|[Monitorar a atividade do sistema usando Eventos Estendidos](monitor-system-activity-using-extended-events.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da camada de dados](../data-tier-applications/data-tier-applications.md)   
  [Suporte de DAC para objetos e versões SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implantar um aplicativo da camada de dados](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitorar aplicativos da camada de dados](../data-tier-applications/monitor-data-tier-applications.md)   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036202"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover um índice existente para um grupo de arquivos diferente
@@ -40,20 +40,20 @@ ms.locfileid: "63036202"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Se uma tabela tiver um índice clusterizado, mover o índice clusterizado a um novo grupo de arquivos moverá a tabela àquele grupo de arquivos.  
   
 -   Você não pode mover índices criados usando uma restrição UNIQUE ou PRIMARY KEY usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para mover esses índices, use a instrução [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) com a opção (DROP_EXISTING=ON) no [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Para mover um índice existente para um grupo de arquivos diferente, usando o Designer de Tabelas  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036202"
   
 3.  Clique com o botão direito do mouse na tabela que contém o índice que você quer mover e selecione **Design**.  
   
-4.  No menu **Designer de tabela** , clique em **índices/chaves**.  
+4.  No menu **Designer de Tabela** , clique em **Índices/Chaves**.  
   
 5.  Selecione o índice a ser movido.  
   
@@ -99,12 +99,12 @@ ms.locfileid: "63036202"
   
 8.  Clique em **OK**.  
   
- As informações a seguir estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –** _index_name_:  
+ As seguintes informações estão disponíveis na página **Armazenamento** da caixa de diálogo **Propriedades do Índice –**  _index_name_:  
   
- **Arquivos**  
+ **Grupo de arquivos**  
  Armazena o índice no grupo de arquivos especificado. A lista exibe apenas grupos de arquivos padrão (linha). A seleção de lista padrão é o grupo de arquivos PRIMARY do banco de dados.  
   
- **Grupo de arquivos FILESTREAM**  
+ **Grupos de Arquivos do Fluxo de Arquivos**  
  Especifica o grupo de arquivos para obter dados de FILESTREAM. Essa lista exibe apenas grupos de arquivos FILESTREAM. A seleção de lista padrão é o grupo de arquivos PRIMARY FILESTREAM.  
   
  **Esquema de partição**  
@@ -112,15 +112,15 @@ ms.locfileid: "63036202"
   
  A opção de esquema de partição fica indisponível se não houver nenhum esquema de partição no banco de dados.  
   
- **Esquema de partição FILESTREAM**  
+ **Esquema de Partição do Fluxo de Arquivos**  
  Especifica o esquema de partição para dados FILESTREAM. O esquema de partição deve ser simétrico com o esquema especificado na opção **Esquema de partição** .  
   
  Se a tabela não for particionada, o campo fica em branco.  
   
- **Parâmetro de esquema de partição**  
+ **Parâmetro do Esquema de Partição**  
  Exibe o nome da coluna que participa do esquema de partição.  
   
- **Coluna da tabela**  
+ **Coluna de tabela**  
  Selecione a tabela ou exiba para mapear para o esquema de partição.  
   
  **Tipo de dados da coluna**  
@@ -135,13 +135,13 @@ ms.locfileid: "63036202"
 > [!NOTE]  
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
- **Definir o grau máximo de paralelismo**  
+ **Definir grau máximo de paralelismo**  
  Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** .  
   
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover um índice existente para um grupo de arquivos diferente  
   

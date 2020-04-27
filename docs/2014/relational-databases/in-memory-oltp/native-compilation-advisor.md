@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072735"
 ---
 # <a name="native-compilation-advisor"></a>Orientador de compilação nativa
@@ -25,10 +25,10 @@ ms.locfileid: "63072735"
   
  Para começar, conecte-se à instância que contém o procedimento armazenado interpretado. Você pode se conectar a uma instância do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . No entanto, se você desejar executar uma operação de migração com o orientador, deverá se conectar a uma instância do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] na qual a funcionalidade de OLTP na memória está habilitada. Para obter mais informações sobre os requisitos de OLTP na memória, consulte [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Para obter informações sobre as metodologias de migração, confira [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in-memory – Padrões comuns de carga de trabalho e considerações de migração).  
+ Para obter informações sobre metodologias de migração, consulte [padrões de carga de trabalho de OLTP em memória e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Passo a passo usando o orientador de compilação nativa  
- No **Pesquisador de Objetos**, clique com o botão direito do mouse no procedimento armazenado que você quer converter e selecione **Orientador de Compilação Nativa**. Isso exibirá a página de boas-vindas para o **Orientador de Compilação Nativa de Procedimento Armazenado**. Clique em **Avançar** para continuar.  
+ No **Pesquisador de Objetos**, clique com o botão direito do mouse no procedimento armazenado que você quer converter e selecione **Orientador de Compilação Nativa**. Isso exibirá a página de boas-vindas para o **Orientador de Compilação Nativa de Procedimento Armazenado**. Clique em **Próximo** para continuar.  
   
 ### <a name="stored-procedure-validation"></a>Validação de procedimento armazenado  
  Essa página relatará se o procedimento armazenado usar alguma construção que não seja compatível com compilação nativa. Você pode clicar em **Avançar** para ver detalhes. Se houver construções que não sejam compatíveis com compilação nativa, você poderá clicar em **Avançar** para ver detalhes.  

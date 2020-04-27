@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150747"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
@@ -82,10 +82,9 @@ ms.locfileid: "63150747"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Monitor de atividade  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Monitor de Atividade  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plano de execução gráfico  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plano de execução gráfico  
   
 -   Procedimentos armazenados  
   
@@ -121,13 +120,11 @@ ms.locfileid: "63150747"
   
 3.  Salve os dados de eventos capturados.  
   
-     Ao salvar os dados de eventos capturados, é possível analisá-los mais tarde ou até mesmo reproduzi-los usando o Distributed Replay Utility ou o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Os dados de eventos capturados são salvos em um arquivo que pode ser carregado de volta na ferramenta que os criou originalmente para análise. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite salvar dados de evento em uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É importante salvar os dados de eventos capturados ao criar uma linha de base de desempenho. Os dados de linha de base de desempenho são salvos e utilizados para comparar dados de eventos capturados recentemente e determinar se o desempenho é o ideal. Para obter mais informações, veja [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     Ao salvar os dados de eventos capturados, é possível analisá-los mais tarde ou até mesmo reproduzi-los usando o Distributed Replay Utility ou o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Os dados de eventos capturados são salvos em um arquivo que pode ser carregado de volta na ferramenta que os criou originalmente para análise. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite salvar dados de evento em uma tabela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . É importante salvar os dados de eventos capturados ao criar uma linha de base de desempenho. Os dados de linha de base de desempenho são salvos e utilizados para comparar dados de eventos capturados recentemente e determinar se o desempenho é o ideal. Para obter mais informações, veja [Modelos e permissões do SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Crie modelos de rastreamento que contenham as configurações especificadas para capturar os eventos.  
   
-     Os modelos de rastreamento contêm especificações sobre os próprios eventos, dados de eventos e filtros utilizados para capturar dados. Esses modelos podem ser usados para monitorar um conjunto de eventos específicos mais tarde sem ter que redefinir os eventos, dados de eventos ou filtros. Por exemplo, se desejar monitorar com frequência o número de deadlocks e os usuários envolvidos neles, você poderá criar um modelo com a definição desses eventos, dados de eventos e filtros de eventos, salvá-lo e reaplicar o filtro na próxima vez em que quiser monitorar deadlocks. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa modelos de rastreamento para esse propósito. Para obter mais informações, veja [Definir padrões de definição de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) e [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+     Os modelos de rastreamento contêm especificações sobre os próprios eventos, dados de eventos e filtros utilizados para capturar dados. Esses modelos podem ser usados para monitorar um conjunto de eventos específicos mais tarde sem ter que redefinir os eventos, dados de eventos ou filtros. Por exemplo, se desejar monitorar com frequência o número de deadlocks e os usuários envolvidos neles, você poderá criar um modelo com a definição desses eventos, dados de eventos e filtros de eventos, salvá-lo e reaplicar o filtro na próxima vez em que quiser monitorar deadlocks. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa modelos de rastreamento para esse propósito. Para obter mais informações, veja [Definir padrões de definição de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) e [Criar um modelo de rastreamento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
   
 5.  Analise os dados de eventos capturados.  
   

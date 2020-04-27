@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154600"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Elemento de grupo de arquivos para índice (DTA)
@@ -39,8 +39,7 @@ ms.locfileid: "63154600"
   
 |Característica|DESCRIÇÃO|  
 |--------------------|-----------------|  
-|**Comprimento e tipo de dados**|
-  `string`, comprimento ilimitado.|  
+|**Comprimento e tipo de dados**|`string`, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  
 |**Ocorrência**|Opcional. Pode ser usado uma vez para cada elemento `Index`. Esse elemento não poderá ser usado se os elementos `PartitionScheme` e `PartitionColumn` forem especificados para o elemento `Index`.|  
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63000364"
 ---
 # <a name="audit-login-failed-event-class"></a>Classe de evento Audit Login Failed
-  A classe de evento **Audit login Failed** indica que um usuário tentou fazer logon no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e falhou. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
+  A classe de evento **Audit Login Failed** indica que um usuário tentou fazer logon no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não conseguiu. Os eventos nesta classe são disparados por novas conexões ou por conexões reutilizadas de um pool de conexões.  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Colunas de dados da classe de evento Audit Login Failed  
   
