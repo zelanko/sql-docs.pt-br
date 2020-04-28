@@ -20,20 +20,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254611"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>sys. dm_exec_compute_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Nome do pool de computação. Não permite valor nulo. Retorna `default` para o pool de computação padrão. |
 |compute_pool_id|`int`|Identificador exclusivo do pool. Chave para esta exibição.|  
-|location|`sysname`|Ponto de extremidade para controlador em um cluster de Big data do SQL. Não permite valor nulo. |
+|local|`sysname`|Ponto de extremidade para controlador em um cluster de Big data do SQL. Não permite valor nulo. |
 
 ## <a name="permissions"></a>Permissões
 

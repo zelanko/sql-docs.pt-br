@@ -12,10 +12,10 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251773"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
@@ -44,7 +44,7 @@ ms.locfileid: "75251773"
   
 -   Se um valor, conforme tiver sido alterado por uma relação baseada em termos, estiver no domínio, mas o valor for Erro/Inválido sem correção, o valor aparecerá sob a guia Inválido com a razão Valor de Domínio.  
   
- **Relações baseadas em termos e descoberta de conhecimento**  
+ **Relações baseadas em termos e descoberta da base de dados de conhecimento**  
   
  Quando você aplicar uma relação baseada em termos e em seguida executar o processo de descoberta da base de dados de conhecimento, qualquer valor compatível com o TBR permanecerá igual e será identificado como um valor correto. Qualquer valor que for alterado por um TBR será importado como um valor correto e será identificado como um sinônimo para um valor compatível com o TBR.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "75251773"
   
  Se você importar uma base de conhecimento de qualidade de dados coletada durante o processo de limpeza para um domínio, um valor que é alterado por um TBR será importado como um valor correto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para criar relações baseadas em termos, você deve ter um domínio aberto na atividade Gerenciamento de Domínio.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar relações baseadas em termos.  
   
-##  <a name="Create"></a>Criar relações baseadas em termos  
+##  <a name="create-term-based-relations"></a><a name="Create"></a>Criar relações baseadas em termos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "75251773"
   
     6.  Localize um valor na tabela Relações inserindo um ou mais dígitos na caixa de texto **Localizar** . Correspondências para a cadeia de caracteres serão realçadas. Use as setas para cima e para baixo para se mover para instâncias diferentes da cadeia de caracteres na tabela.  
   
-    7.  **Verificador ortográfico**: se um valor na coluna **valor** ou **corrigir para** tiver um sublinhado vermelho ondulado, o verificador ortográfico está sugerindo uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
+    7.  **Verificador Ortográfico**: se um valor na coluna **Valor** ou **Corrigir para** tiver um sublinhado vermelho ondulado, o Verificador Ortográfico sugerirá uma correção para o valor. Clique com o botão direito do mouse no valor com sublinhado e selecione um dos valores propostos pelo Verificador Ortográfico. Como alternativa, você pode clicar em **Adicionar** no menu de atalho para continuar com o valor original. Para obter mais informações, consulte [Usar o verificador ortográfico DQS](../data-quality-services/use-the-dqs-speller.md) e [Definir propriedades de domínio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para usar o Verificador Ortográfico, você pode habilitá-lo na página **Propriedades de Domínio** ou, se ele estiver desabilitado na página **Propriedades de Domínio** , você poderá clicar no ícone **Habilitar/Desabilitar o Verificador Ortográfico** na página **Relações Baseadas em Termos** para habilitá-lo nessa página.  
@@ -101,7 +101,7 @@ ms.locfileid: "75251773"
   
 7.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de criar relações baseadas em termos  
+##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> Acompanhamento: após criar relações baseadas em termos  
  Depois de criar relações baseadas em termos, você poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

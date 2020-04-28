@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957120"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
@@ -74,7 +74,7 @@ ms.locfileid: "74957120"
   
  [Criar uma chave mestra de banco de dados](create-a-database-master-key.md)  
   
- [Fazer backup da chave mestra de um banco de dados](back-up-a-database-master-key.md)  
+ [Fazer backup de uma chave mestra de banco de dados](back-up-a-database-master-key.md)  
   
  [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "74957120"
  [Restaurar uma chave mestra de banco de dados](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fazer backup e restaurar as chave de criptografia do Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Excluir e recriar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Adicionar e remover chaves de criptografia para implantação escalável &#40;Gerenciador de Configurações do SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Fazer backup e restaurar Reporting Services chaves de criptografia](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Excluir e recriar chaves de criptografia &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Adicionar e remover chaves de criptografia para implantação em expansão &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [TDE &#40;Transparent Data Encryption&#41;](transparent-data-encryption.md)  
   
   

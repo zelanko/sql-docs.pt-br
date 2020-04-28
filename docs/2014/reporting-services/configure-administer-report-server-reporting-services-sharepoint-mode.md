@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74685340"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuração e administração de um servidor de relatórios (modo do SharePoint do Reporting Services)
@@ -37,19 +37,19 @@ ms.locfileid: "74685340"
   
     -   [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-    -   [Opções de atualização do cache &#40;Report Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
+    -   [Opções de atualização do cache &#40;Gerenciador de Relatórios&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
--   [Recursos da coleção de sites do Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
+-   [Reporting Services recursos do conjunto de sites](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
 -   [Ativar o servidor de relatório e os recursos de integração do Power View no SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
--   [Reporting Services configurações de site e recursos de site&#40;modo do SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
+-   [Configurações de Site e Recursos de Site do Reporting Services &#40;Modo SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
--   [Ativar o recurso de Sincronização de Arquivos do servidor de relatório na administração central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
+-   [Ativar o recurso de sincronização de relatório do Servidor de Relatório na Administração Central do SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
 -   [Adicione tipos de conteúdo do servidor de relatório a uma biblioteca &#40;Reporting Services no modo integrado do SharePoint&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Relatórios de modo local vs. modo conectado no Visualizador de relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   [Relatórios em Modo Local vs. em modo Conectado no Visualizador de Relatórios &#40;Reporting Services no modo do SharePoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
 -   [Carregar documentos em uma biblioteca do SharePoint &#40;Reporting Services no modo do SharePoint&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   

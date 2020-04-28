@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401482"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de carregamento para data warehouse paralelos
 Este artigo descreve como adquirir e configurar um servidor de carregamento como um sistema Windows que não é de dispositivo para enviar cargas de dados para o PDW (Parallel data warehouse).  
   
-## <a name="Basics"></a>Algumas  
+## <a name="basics"></a><a name="Basics"></a>Noções básicas  
 O servidor de carregamento:  
   
 -   Não precisa ser um único servidor. Você pode carregar simultaneamente com vários servidores de carregamento.  
@@ -32,18 +32,18 @@ O servidor de carregamento:
   
 -   Está em seu próprio domínio de cliente, não no domínio do dispositivo. Não há nenhuma relação de confiança entre o domínio do cliente e o domínio do dispositivo.  
   
-## <a name="Step1"></a>Etapa 1: determinar os requisitos de capacidade  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Etapa 1: determinar os requisitos de capacidade  
 O sistema de carregamento pode ser projetado como um ou mais servidores de carregamento que executam cargas simultâneas. Cada servidor de carregamento não precisa ser dedicado apenas ao carregamento, desde que ele lide com os requisitos de desempenho e armazenamento de sua carga de trabalho.  
   
 Os requisitos de sistema para um servidor de carregamento dependem quase completamente da sua própria carga de trabalho. Use a [planilha de planejamento de capacidade do servidor de carregamento](loading-server-capacity-planning-worksheet.md) para ajudar a determinar seus requisitos de capacidade.  
   
-## <a name="Step2"></a>Etapa 2: adquirir o Server  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>Etapa 2: adquirir o Server  
 Agora que você entende melhor seus requisitos de capacidade, é possível planejar os servidores e os componentes de rede que precisará comprar ou provisionar. Incorpore a lista de requisitos a seguir em seu plano de compra e, em seguida, adquira o servidor ou provisione um servidor existente.  
   
-### <a name="R"></a>Requisitos de software  
+### <a name="software-requirements"></a><a name="R"></a>Requisitos de software  
 Sistemas operacionais com suporte:  
   
--   Windows Server 2012 ou Windows Server 2012 R2. Esses sistemas operacionais exigem o adaptador de rede FDR.  
+-   Windows Server 2012 ou Windows Server 2012 R2. Esses sistemas operacionais exigem o adaptador de rede FDR.  
   
 -   Windows Server 2008 R2. Este sistema operacional requer o adaptador de rede DDR.  
   
@@ -60,7 +60,7 @@ Para se preparar para uma conexão do Windows Server 2012 ou do Windows Server 2
   
 3.  Adquira 2 cabos de InfiniBand FDR para uma placa de porta dupla ou um cabo InfiniBand de 1 FDR para um cartão de porta única. Os cabos do FDR InfiniBand conectarão o servidor de carregamento à rede InfiniBand do dispositivo. O comprimento do cabo depende da distância entre o servidor de carregamento e os comutadores InfiniBand do dispositivo, de acordo com seu ambiente.  
   
-## <a name="Step3"></a>Etapa 3: conectar o servidor às redes InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Etapa 3: conectar o servidor às redes InfiniBand  
 Use estas etapas para conectar o servidor de carregamento à rede InfiniBand. Se o servidor não estiver usando a rede InfiniBand, ignore esta etapa.  
   
 1.  Rack o servidor está perto o suficiente para o dispositivo para que você possa conectá-lo à rede InfiniBand do dispositivo.  
@@ -75,7 +75,7 @@ Use estas etapas para conectar o servidor de carregamento à rede InfiniBand. Se
   
 5.  Defina as configurações de InfiniBand e DNS para os adaptadores de rede. Para obter instruções de configuração, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Etapa 4: instalar as ferramentas de carregamento  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>Etapa 4: instalar as ferramentas de carregamento  
 As ferramentas de cliente estão disponíveis para download no centro de download da Microsoft. 
 
 Para instalar o dwloader, execute a instalação do dwloader nas ferramentas de cliente.
@@ -85,7 +85,7 @@ Se você planeja usar Integration Services para carregar, será necessário inst
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Etapa 5: iniciar o carregamento  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>Etapa 5: iniciar o carregamento  
 Agora você está pronto para iniciar o carregamento de dados. Para obter mais informações, consulte:  
   
 1.  [Ferramenta de carregamento de linha de comando dwloader](dwloader.md)  
@@ -95,7 +95,7 @@ Agora você está pronto para iniciar o carregamento de dados. Para obter mais i
 ## <a name="performance"></a>Desempenho  
 Para um melhor desempenho de carregamento no Windows Server 2012 e posterior, ative a inicialização instantânea de arquivo para que, quando os dados forem substituídos, o sistema operacional não substitua os dados existentes por zeros. Se esse for um risco de segurança porque os dados anteriores ainda existem nos discos, certifique-se de desativar a inicialização instantânea de arquivo.  
   
-## <a name="Security"></a>Avisos de segurança  
+## <a name="security-notices"></a><a name="Security"></a>Avisos de segurança  
 Como os dados a serem carregados não são armazenados no dispositivo, sua equipe de ti é responsável pelo gerenciamento de todos os aspectos da segurança para que seus dados sejam carregados. Por exemplo, isso inclui o gerenciamento da segurança dos dados a serem carregados, a segurança do servidor usado para armazenar cargas e a segurança da infraestrutura de rede que conecta o servidor de carregamento ao dispositivo de SQL Server PDW.  
   
 > [!IMPORTANT]  

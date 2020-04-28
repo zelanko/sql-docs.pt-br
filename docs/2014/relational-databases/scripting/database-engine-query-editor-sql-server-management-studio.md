@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244940"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "75244940"
  **Connect**  
  Abra a caixa de diálogo **Conectar ao Servidor** . Use esta caixa de diálogo para estabelecer uma conexão a um servidor.  
   
- **Desconectar**  
+ **Desligar**  
  Desconecta o Editor de Consultas do servidor.  
   
  **Alterar Conexão**  
@@ -68,16 +68,16 @@ ms.locfileid: "75244940"
  **Bancos de Dados Disponíveis**  
  Alteram a conexão com um banco de dados diferente do mesmo servidor.  
   
- **Executar**  
+ **Executados**  
  Executa o código selecionado ou, se nenhum código estiver selecionado, executa todo o código no Editor de Consultas.  
   
- **Depurar**  
+ **Depuração**  
  Habilita o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador dá suporte a ações de depuração, como definir pontos de interrupção, detectar variáveis e depurar através de código.  
   
  **Cancelar Consulta de Execução**  
  Envia uma solicitação de cancelamento ao servidor. Algumas consultas não podem ser canceladas imediatamente, mas precisam esperar por uma condição de cancelamento satisfatória. Quando transações são canceladas, podem ocorrer atrasos enquanto as transações são revertidas.  
   
- **Analisar**  
+ **Passar**  
  Verifica a sintaxe do código selecionado. Se nenhum código estiver selecionado, esta opção verificará a sintaxe de todo o código na janela Editor de Consultas.  
   
  **Exibir Plano de Execução Estimado**  
@@ -130,16 +130,16 @@ ms.locfileid: "75244940"
  **Interromper Tudo**  
  Define o depurador para interromper todos os processos aos quais o depurador está anexado quando ocorrer uma interrupção.  
   
- **Parar depuração**  
+ **Parar Depuração**  
  Retira a janela selecionada do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do modo de depuração e restaura o modo de execução padrão.  
   
  **Mostrar Próxima Instrução**  
  Move o cursor para a próxima instrução a ser executada.  
   
- **Intervir**  
+ **Depuração Completa**  
  A próxima instrução é executada. Se a próxima instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o depurador exibirá uma nova janela do **Editor de Consultas** que contém o código do módulo. A janela está no modo de depuração e a execução pausa na primeira instrução do módulo. Você pode mover-se pelo módulo, por exemplo, definindo pontos de interrupção ou percorrendo o código.  
   
- **Contornar**  
+ **Depuração Parcial**  
  A próxima instrução é executada. Se a instrução chamar um procedimento armazenado, uma função ou um gatilho Transact-SQL, o módulo será executado até o fim, e os resultados serão retornados ao código de chamada. Se você tiver certeza de que não há erros no módulo, poderá passar por ele. A execução pausa na instrução que segue a chamada para o módulo.  
   
  **Sair**  

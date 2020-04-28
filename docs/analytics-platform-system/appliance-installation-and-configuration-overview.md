@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401443"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Instalação e configuração do dispositivo para o Analytics Platform System
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. instalar o hardware  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. instalar o hardware  
 Seu novo dispositivo será entregue em paletes para o Dock em seu data center.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Se o seu IHV não estiver executando a instalação de hardware, use as etapas a
 |Confirmar documentação|Confirme que você recebeu todos os documentos e informações necessários do seu fornecedor de hardware independente (IHV). Confira [as informações a serem obtidas do seu sistema de plataforma de análise &#40;do IHV&#41;](information-to-obtain-from-your-ihv.md).|  
 |Instalar o hardware|Verifique se o data center pode acomodar o dispositivo. Mova os componentes do dispositivo para a data center. Rack de comutadores de rede, PDUs e cabeamento. Consulte [instalação de Hardware &#40;&#41;do sistema de plataforma de análise ](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. ligar o dispositivo  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. ligar o dispositivo  
   
 |||  
 |-|-|  
 |**Tarefa**|**Descrição**|  
 |Ligar o dispositivo|Ligue cada nó de componente de dispositivo na ordem necessária, aguardando a necessidade de confirmar se nenhum erro foi encontrado.|  
   
-## <a name="ConfigureAppliance"></a>3. configurar o dispositivo  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. configurar o dispositivo  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Se o seu IHV não estiver executando a instalação de hardware, use as etapas a
 > [!WARNING]  
 > As alterações de configuração só devem ser feitas usando o SQL Server PDW**Configuration Manager**. Não há suporte para as alterações não expostas por meio de **Configuration Manager** . Por exemplo, o dispositivo SQL Server PDW só dá suporte à configuração de idioma inglês dos EUA.  
   
-## <a name="SoftwareServicing"></a>4. configurar a manutenção de software  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. configurar a manutenção de software  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Se o seu IHV não estiver executando a instalação de hardware, use as etapas a
 |Aplicar atualizações de SQL Server PDW|Adicional Talvez seja necessário aplicar uma ou mais atualizações SQL Server PDW para atualizar o software SQL Server PDW para a versão mais recente. Consulte [aplicar hotfixes do sistema de plataforma de análise &#40;Analytics Platform system&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configurar o Windows Server Update Services|Configure o dispositivo para receber atualizações de Windows Server Update Services para software de suporte. Confira [baixar e aplicar as atualizações da Microsoft &#40;o sistema de plataforma de análise&#41;](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Próximas etapas  
+## <a name="next-steps"></a><a name="NextSteps"></a>Próximas etapas  
 Depois de concluir todas as etapas anteriores, seu dispositivo estará pronto para uso. Você ou outras pessoas em seu local podem prosseguir com as tarefas a seguir.  
   
 |||  

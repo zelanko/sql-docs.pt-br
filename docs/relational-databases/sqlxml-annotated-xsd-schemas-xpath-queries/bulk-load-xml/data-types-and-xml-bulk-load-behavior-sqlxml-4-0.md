@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246730"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipos de dados e o comportamento do Carregamento em Massa de XML (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "75246730"
   
 -   Se o tipo for **DateTime** ou **time**, você deverá especificar o **SQL: DataType** porque o carregamento em massa de XML executa a conversão de dados antes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de enviar os dados para a Microsoft.  
   
--   Quando você está carregando em massa em uma coluna **** de tipo uniqueidentifier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em e o valor XSD é um GUID que inclui chaves ({e}), você deve especificar **SQL: datatype = "uniqueidentifier"** para remover as chaves antes que o valor seja inserido na coluna. Se **SQL: DataType** não for especificado, o valor será enviado com as chaves e a inserção falhará.  
+-   Quando você está carregando em massa em uma coluna **uniqueidentifier** de tipo uniqueidentifier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em e o valor XSD é um GUID que inclui chaves ({e}), você deve especificar **SQL: datatype = "uniqueidentifier"** para remover as chaves antes que o valor seja inserido na coluna. Se **SQL: DataType** não for especificado, o valor será enviado com as chaves e a inserção falhará.  
   
  Para obter mais informações sobre **SQL: DataType**, consulte [coerção de tipo de dados e a anotação sql: datatype &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401421"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoramento de dispositivo para o Analytics Platform System
 Este guia de monitoramento de dispositivo descreve as ferramentas e tarefas para monitorar o dispositivo de sistema de plataforma de análise.  
   
-## <a name="Basics"></a>Noções básicas e ferramentas de monitoramento  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>Noções básicas e ferramentas de monitoramento  
 Os valores e as informações que podem ser monitorados no dispositivo SQL Server PDW são extensivos. Por exemplo, veja a seguir as tarefas de monitoramento típicas.  
   
 -   Verifique se há alertas emitidos pelo SQL Server PDW.  
@@ -61,9 +61,9 @@ Se sua solução de monitoramento não oferecer suporte a\-consultas diretas do 
   
 -   [Exemplo de monitoramento do Power Shell para SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Tarefas de monitoramento relacionadas  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>Tarefas de monitoramento relacionadas  
   
-|Tarefa de monitoramento|DESCRIÇÃO|  
+|Tarefa de monitoramento|Descrição|  
 |-------------------|---------------|  
 |Monitore o dispositivo usando o console do administrador.|[Monitore o dispositivo usando o console de administração &#40;o sistema de plataforma de análise&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Monitore o dispositivo usando exibições do sistema.|[Monitore o dispositivo usando as exibições do sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  

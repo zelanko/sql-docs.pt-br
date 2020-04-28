@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243164"
 ---
 # <a name="step-through-transact-sql-code"></a>Percorrer código Transact-SQL
@@ -51,9 +51,9 @@ ms.locfileid: "75243164"
   
 |Ação|Procedimento|  
 |------------|---------------|  
-|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|No menu **depurar** , clique em **continuar**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **continuar** .|  
+|Executar todas as instruções da instrução atual para o próximo ponto de interrupção|No menu **Depurar**, clique em **Continuar**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **continuar** .|  
 |Avançar para a próxima instrução ou módulo|No menu **depurar** , clique em **depuração em**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **entrar em** .<br /><br /> Pressione F11.|  
-|Passar pela próxima instrução ou módulo|No menu **depurar** **, clique em depuração.**<br /><br /> Na barra de ferramentas **depurar** , clique no botão **passar sobre** .<br /><br /> Pressione F10.|  
+|Passar pela próxima instrução ou módulo|No menu **Depurar**, clique em **Percorrer**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **passar sobre** .<br /><br /> Pressione F10.|  
 |Sair de um módulo|No menu **depurar** , clique em **sair**.<br /><br /> Na barra de ferramentas **depurar** , clique no botão **sair** .<br /><br /> Pressione SHIFT+F11.|  
 |Executar para o local do cursor atual|Clique com o botão direito do mouse na janela Editor de Consultas e então clique em **Executar até o Cursor**.<br /><br /> Pressione CTRL+F10.|  
   

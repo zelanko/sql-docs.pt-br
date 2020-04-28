@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401241"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectar-se a nós de dispositivo no Analytics Platform System
@@ -22,7 +22,7 @@ Este artigo explica as várias maneiras de se conectar a cada nó do dispositivo
 ## <a name="connecting-with-hadoop"></a>Conectando-se ao Hadoop  
 Antes de usar o Hadoop com SQL Server PDW, peça ao administrador do dispositivo para instalar o Java Runtime Environment no SQL Server PDW. Para obter instruções, consulte [Configurar a conectividade do polybase com dados externos &#40;o sistema de plataforma de análise&#41;](configure-polybase-connectivity-to-external-data.md) no guia de operações do dispositivo.  
   
-## <a name="ConnectingToIndividualNodes"></a>Conectando a nós de dispositivo  
+## <a name="connecting-to-appliance-nodes"></a><a name="ConnectingToIndividualNodes"></a>Conectando a nós de dispositivo  
 Cada um dos nós de dispositivo é acessado diretamente somente em cenários de uso específicos e por tipos de usuário específicos. A tabela a seguir lista cada nó de dispositivo e os cenários sob os quais os usuários se conectarão diretamente a esse nó.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  

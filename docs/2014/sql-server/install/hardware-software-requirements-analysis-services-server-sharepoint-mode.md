@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245609"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisitos de hardware e software para servidor do Analysis Services no modo do SharePoint (SQL Server 2014)
@@ -24,24 +24,24 @@ O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oferece suporte 
   
 - Para o SharePoint 2013, instale a [instalação ou desinstale o suplemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
 
-##  <a name="bkmk_sqleditions"></a>Requisitos de edição do SQL Server  
+##  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> Requisitos de edição do SQL Server  
  Os recursos de business intelligence não estão disponíveis em todas as edições do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter detalhes, consulte [recursos com suporte nas edições do SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) e [edições e componentes do SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
  As notas de versão atuais podem ser encontradas em [notas de versão do Microsoft SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 
   
-##  <a name="bkmk_sqllicense"></a>Licenciamento de SQL Server  
+##  <a name="sql-server-licensing"></a><a name="bkmk_sqllicense"></a>Licenciamento de SQL Server  
  Para obter mais informações sobre o licenciamento do SQL Server, consulte:  
   
 -   [Folha de SQL Server de licenciamento 2014](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
 -   [Como comprar: suporte a modelos de licenciamento do SQL Server](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) (https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2).  
   
-##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services instalado no SharePoint 2013  
+##  <a name="analysis-services-installed-on-sharepoint-2013"></a><a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services instalado no SharePoint 2013  
  Se você instalar o servidor do Analysis Services no modo do SharePoint em um servidor sozinho, os requisitos mínimos do sistema serão baseados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] em vez de nos requisitos do SharePoint Server.  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Requisitos de hardware e software para instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  O [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint é melhor executado em servidores comerciais de nova geração que oferecem limites de RAM mais altos e maior capacidade de processamento. Grandes quantidades de RAM são usadas para armazenar dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] na memória. A RAM dá suporte à capacidade de adaptação a alterações estruturais. Processadores adicionais dão suporte a exames de dados brutos não agregados de longa execução. Os dados supõem sua estrutura em um ambiente dinâmico, em resposta à análise de dados controlada pelo usuário iniciada diretamente de um cliente Excel ou interface front-end.  
   
@@ -58,13 +58,13 @@ O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oferece suporte 
   
  Se você instalar o servidor do Analysis Services no modo do SharePoint em um servidor do farm do SharePoint, analise os requisitos mínimos do sistema para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e o SharePoint Server nos seguintes links:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware e software para instalação do SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Requisitos de hardware e software para o SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   
  As recomendações padrão de hardware e software do SharePoint 2013 são para uma solução de gerenciamento de documentos baseada na Web para um grupo de trabalho ou equipe. Como o processamento do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] faz uso intenso de dados, a recomendação padrão é suficiente se a carga de trabalho geral é pequena; por exemplo, menos de 100 usuários ou pastas de trabalho. Uma implantação do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] maior exige capacidade adicional de computação.  
   
-##  <a name="bkmk_ssas__sharepoint_2010"></a>Analysis Services instalado em um servidor do SharePoint 2010  
+##  <a name="analysis-services-installed-on-a-sharepoint-2010-server"></a><a name="bkmk_ssas__sharepoint_2010"></a>Analysis Services instalado em um servidor do SharePoint 2010  
  O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 é executado em servidores de aplicativos em um farm do SharePoint 2010, e usa os recursos e a infraestrutura do SharePoint para dar suporte a operações do servidor. A seguinte tabela resume os requisitos relacionados às implantações do SharePoint 2010:  
   
 |Componente|Requisito|  

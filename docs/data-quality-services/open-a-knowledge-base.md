@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246006"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir uma base de dados de conhecimento
@@ -24,17 +24,17 @@ ms.locfileid: "75246006"
 
   Este tópico descreve como abrir uma base de dados de conhecimento existente no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepará-la para o gerenciamento de domínio, a descoberta de conhecimento ou a adição de uma política de correspondência.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para abrir uma base de dados de conhecimento, essa base já deve ter sido criada e publicada (caso outra pessoa a tenha criado) ou fechada (se você a criou).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para abrir uma base de dados de conhecimento.  
   
-##  <a name="Open"></a>Abrir uma base de dados de conhecimento  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Abrir uma base de dados de conhecimento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,24 +70,24 @@ ms.locfileid: "75246006"
   
 -   Para abrir uma base de dados de conhecimento na lista Recente que foi bloqueada por outra pessoa, contate essa pessoa e peça a ela para desbloquear a base de dados de conhecimento.  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de abrir uma base de dados de conhecimento  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Acompanhamento: depois de abrir uma base de dados de conhecimento  
  Depois que você abrir uma base de dados de conhecimento, ela será colocada no estado indicado na coluna Estado da tabela Base de Dados de Conhecimento. Para as atividades de descoberta da base de dados de conhecimento e política de correspondência, a base de dados de conhecimento será aberta em uma página de assistente específica. Para a atividade de gerenciamento de domínio, a base de dados de conhecimento será aberta na página de gerenciamento de domínio. Para obter mais informações sobre os estados, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Locked"></a>Se a base de dados de conhecimento estiver bloqueada  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Se a base de dados de conhecimento estiver bloqueada  
  O ícone de bloqueio na primeira coluna mostra se a base de conhecimento está bloqueada. O nome de uma base de dados de conhecimento bloqueada estará em fonte vermelha. Uma base de dados de conhecimento que estiver sendo modificada por um usuário específico por meio de uma atividade de base de dados de conhecimento estará marcada como Bloqueada. Uma base de dados de conhecimento bloqueda não pode ser trabalhada por um segundo usuário. O usuário que está trabalhando na base de dados de conhecimento pode desbloqueá-la com um clique com o botão direito do mouse na base de conhecimento na tabela na página Abrir Base de Dados de Conhecimento e com um clique em **Desbloquear**ou publicando-a. Quando o cursor estiver posicionado em uma base de dados de conhecimento bloqueada, o DQS exibirá uma dica mostrando quem bloqueou a base de dados de conhecimento e quando ela foi bloqueada.  
   
-##  <a name="State"></a>Estado de uma base de dados de conhecimento  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de uma base de dados de conhecimento  
  O campo Estado indica em qual estágio de uma atividade a base de dados de conhecimento está. Se você abrir a base de dados de conhecimento, ela será aberta nesse estágio.  
   
 -   >vazio: o campo Estado estará vazio para uma base de dados de conhecimento se a base de dados de conhecimento tiver sido publicada clicando em **publicar** na atividade gerenciamento de domínio e clicando em **Sim – publicar a base de dados de conhecimento e sair**. ** \< **  
   
 -   **Em trabalho**: o trabalho na base de dados de conhecimento foi salvo clicando em **publicar** na atividade gerenciamento de domínio e clicando em **não-salvar o trabalho na base de dados de conhecimento e sair**.  
   
--   **Gerenciamento de domínio**: os dados foram inseridos para um domínio na base de dados de conhecimento, mas a base de dados de conhecimento não foi publicada e o trabalho permanece na atividade de gerenciamento de domínio. A atividade Descoberta da Base de Dados de Conhecimento não está disponível. Isso ocorre quando você clica em **Fechar** na tela **Gerenciamento de Domínio** .  
+-   **Gerenciamento de Domínio**: Os dados foram inseridos em um domínio na base de conhecimento, mas a base de conhecimento não foi publicada e o trabalho permanece na atividade Gerenciamento de Domínio. A atividade Descoberta da Base de Dados de Conhecimento não está disponível. Isso ocorre quando você clica em **Fechar** na tela **Gerenciamento de Domínio** .  
   
--   **Descoberta-mapeamento**: a base de dados de conhecimento foi fechada na página **Gerenciamento da base de dados de conhecimento: mapeamento** . A base de dados de conhecimento está bloqueada e as atividades Gerenciamento de Domínio e Correspondência não estão disponíveis.  
+-   **Descoberta - Mapeamento**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: Mapeamento** . A base de dados de conhecimento está bloqueada e as atividades Gerenciamento de Domínio e Correspondência não estão disponíveis.  
   
--   **Descoberta-** descoberta: a base de dados de conhecimento foi fechada na página **Gerenciamento da base de dados de conhecimento: analisar** . A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
+-   **Descoberta - Descobrir**: a base de dados de conhecimento foi fechada na página **Gerenciamento da Base de Dados de Conhecimento: Analisar** . A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
   
 -   **Gerenciamento de valor de descoberta**: a base de dados de conhecimento foi fechada na página **Gerenciamento da base de dados de conhecimento: gerenciar termos de domínio** . A base de dados de conhecimento está bloqueada e a atividade Gerenciamento de Domínio não está disponível.  
   

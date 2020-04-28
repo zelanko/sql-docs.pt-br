@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401188"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Baixar e aplicar atualizações da Microsoft para o Analytics Platform System
 Este tópico discute como baixar atualizações do catálogo Microsoft Update para o Windows Server Update Services (WSUS) e aplicar essas atualizações aos servidores do dispositivo do Analytics Platform System. Microsoft Update instalará todas as atualizações aplicáveis para o Windows e o SQL Server. O WSUS é instalado na máquina virtual do VMM do dispositivo.  
   
-## <a name="TOP"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="TOP"></a>Antes de começar  
   
 > [!WARNING]  
 > Não tente aplicar atualizações se seu dispositivo ou qualquer componente de dispositivo estiver inoperante ou em um estado de failover. Nesse caso, entre em contato com o suporte para obter assistência.  
 >   
 > Não aplique atualizações da Microsoft enquanto o dispositivo estiver em uso. A aplicação de atualizações pode fazer com que os nós do dispositivo reiniciem. As atualizações devem ser aplicadas durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Antes de executar essas etapas, você precisa:  
   
 -   Configure o WSUS em seu dispositivo seguindo as instruções em [Configurar o Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -35,9 +35,9 @@ Antes de executar essas etapas, você precisa:
   
 -   Ter um logon com permissões para acessar o console de administração do sistema da plataforma de análise e exibir informações de estado do dispositivo.  
   
--   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do baseado. Para obter mais informações, consulte [usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do dispositivo. Para obter mais informações, consulte [usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
-## <a name="bkmk_ImportUpdates"></a>Para baixar e aplicar atualizações da Microsoft  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>Para baixar e aplicar atualizações da Microsoft  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Verificar os indicadores de estado do dispositivo  
   
@@ -81,7 +81,7 @@ Antes de executar essas etapas, você precisa:
   
 4.  Selecione o grupo de servidores de dispositivo que você criou em [configurar Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Clique **Aprovado para Instalação** e clique em **OK**.  
+5.  Clique **Aprovado para Instalação**e clique em **OK**.  
   
     ![Aprove as atualizações do seu grupo de computadores.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -139,7 +139,7 @@ Antes de executar essas etapas, você precisa:
   
 2.  Verifique se as colunas de **rede** e de **cluster** mostram verde (ou na) para todos os nós. Se houver alertas em uma dessas colunas, o dispositivo poderá não ser capaz de instalar as atualizações corretamente. Contate o suporte se houver alertas críticos.  
   
-## <a name="RunUpdateWizard"></a>Executar o programa de atualização  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>Executar o programa de atualização  
 Siga estas instruções para executar o programa de atualização do sistema da plataforma de análise.  
   
 > [!NOTE]  

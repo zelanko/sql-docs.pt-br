@@ -28,10 +28,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257448"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapeamento padrão de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "75257448"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>a. Especificando o mapeamento padrão  
+### <a name="a-specifying-default-mapping"></a>A. Especificando o mapeamento padrão  
  Neste exemplo, nenhuma anotação é especificada no esquema XSD. O ** \<elemento Person. Contact>** é do tipo complexo e, portanto, é mapeado por padrão para a tabela Person. Contact no banco de dados AdventureWorks. Todos os atributos (ContactID, FirstName, LastName) da ** \<pessoa. Contact>** elemento são de tipo simples e são mapeados por padrão para colunas com os mesmos nomes na tabela Person. Contact.  
   
 ```  
@@ -207,7 +207,7 @@ ctions">
   
 ## <a name="see-also"></a>Consulte Também  
  [Considerações de segurança de esquema anotadas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Dados XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+ [&#40;de dados XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Suporte ao tipo de dados xml no SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

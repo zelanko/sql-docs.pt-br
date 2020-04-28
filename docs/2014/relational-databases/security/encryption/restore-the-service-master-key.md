@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957181"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar a chave mestra de serviço
@@ -34,11 +34,11 @@ ms.locfileid: "74957181"
   
      [Segurança](#Security)  
   
--   [Para restaurar a chave mestra de serviço usando Transact-SQL](#SSMSProcedure)  
+-   [Para restaurar a chave mestra de serviço usando o Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Quando a chave mestra de serviço é restaurada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descriptografa todas as chaves e segredos que foram criptografados com a chave mestra de serviço atual e, em seguida, criptografa a chave mestra de serviço carregada do arquivo de backup.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957181"
 > [!CAUTION]  
 >  A chave mestra de serviço é a raiz da hierarquia de criptografia do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A chave mestra de serviço protege todas as outras chaves diretamente ou indiretamente na árvore. Se uma chave dependente não puder ser descriptografada durante uma restauração forçada, os dados protegidos por ela serão perdidos.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão CONTROL SERVER no servidor.  
   
-##  <a name="SSMSProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="SSMSProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Para restaurar a chave mestra de serviço  
   

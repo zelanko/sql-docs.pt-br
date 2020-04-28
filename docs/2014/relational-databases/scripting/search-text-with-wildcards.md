@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243283"
 ---
 # <a name="search-text-with-wildcards"></a>Pesquisar texto com curingas
-  As expressões a seguir podem substituir caracteres ou dígitos no campo **Localizar** da caixa de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diálogo **Localizar e substituir** .  
+  As expressões a seguir podem substituir caracteres ou dígitos no campo **O que localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Localizar e Substituir**do**.  
   
 #### <a name="to-search-using-wildcards"></a>Para pesquisar usando curingas  
   

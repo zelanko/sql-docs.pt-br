@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244497"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
@@ -34,14 +34,14 @@ ms.locfileid: "75244497"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a>Itens de relatório no Word  
+##  <a name="report-items-in-word"></a><a name="ReportItemsWord"></a> Itens de relatório no Word  
  Os relatórios exportados para Word aparecem como uma tabela aninhada que representa o corpo do relatório. Uma região de dados tablix é renderizada como uma tabela aninhada que reflete a estrutura da região dos dados no relatório. As caixas de texto e os retângulos são renderizados cada um como uma célula dentro da tabela. O valor da caixa de texto é exibido dentro da célula.  
   
  Imagens, gráficos e barras de dados, minigráficos, mapas e indicadores são renderizados cada um como uma imagem estática dentro da célula da tabela. Hiperlinks e links de detalhamento nesses itens de relatórios são renderizados. Mapas e áreas que podem ser clicados dentro de um gráfico não têm suporte.  
   
  Relatórios de colunas tipo boletins informativos não são renderizados no Word. O corpo de relatório e as imagens de fundo das páginas e as cores não são renderizados.  
   
-##  <a name="Pagination"></a>Pagina  
+##  <a name="pagination"></a><a name="Pagination"></a>Pagina  
  Após o relatório ser aberto, o Word repagina o relatório inteiro novamente baseado no tamanho da página. A repaginação pode causar a inserção de quebras de páginas em locais onde você não pretendia acrescentá-las e, em alguns casos, pode fazer com que o relatório exportado tenha duas quebras de página sucessivas em uma linha ou até acrescentar páginas em branco. Você pode tentar alterar a paginação do Word ajustando as margens das páginas.  
   
  Este processador dá suporte somente às quebras de página lógicas.  
@@ -54,16 +54,16 @@ ms.locfileid: "75244497"
   
  Quando o relatório é renderizado, sua largura aumenta na extensão necessária, atingindo até 22 polegadas, com o intuito de exibir o conteúdo. A largura mínima do relatório baseia-se na propriedade Width do RDL no painel Propriedades.  
   
-##  <a name="DocumentProperties"></a>Propriedades do documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propriedades do documento  
  O processador do Word grava os seguintes metadados no arquivo DOCX.  
   
-|Propriedades do Elemento de Relatório|DESCRIÇÃO|  
+|Propriedades do Elemento de Relatório|Descrição|  
 |-------------------------------|-----------------|  
-|Título do Relatório (título do relatório)|Title|  
+|Título do Relatório (título do relatório)|Título|  
 |Autor do Relatório|Autor|  
 |Descrição do Relatório|Comentários|  
   
-##  <a name="ReportHeadersFooters"></a>Cabeçalhos e rodapés de página  
+##  <a name="page-headers-and-footers"></a><a name="ReportHeadersFooters"></a>Cabeçalhos e rodapés de página  
  Os cabeçalhos e os rodapés das páginas são renderizados no Word como regiões de rodapé e cabeçalho. Se o número de página de um relatório ou uma expressão que indica o número total de páginas do relatório aparecer no cabeçalho ou rodapé da página, eles são transferidos para um campo do word para que o número preciso da página seja exibido no relatório renderizado. Se a altura do cabeçalho ou do rodapé estiver definida no relatório, o Word não poderá dar suporte a esta configuração. A propriedade PrintOnFirstPage pode, em algumas circunstâncias, especificar se o texto do cabeçalho e do rodapé de uma página é impresso na primeira página de um relatório. Se o relatório renderizado tiver várias páginas, e cada página contiver somente uma única seção, você poderá definir PrintOnFirstPage como False e o texto será suprimido na primeira página; caso contrário, o texto será impresso independentemente do valor da propriedade PrintOnFirstPage.  
   
  O renderizador do Word tenta analisar todas as expressões em cabeçalhos e rodapés de páginas quando estes são exportados para o Word. Muitos formulários de expressões são analisados com êxito, e os valores esperados aparecem nos rodapés e cabeçalhos de todas as páginas do relatório.  
@@ -82,7 +82,7 @@ ms.locfileid: "75244497"
   
  Para evitar esse problema, use várias sequências de texto em vez de uma expressão complexa quando usar expressões em rodapés e cabeçalhos. As duas expressões a seguir são equivalentes. A primeira é uma expressão complexa, e a segunda usa sequências de texto. O renderizador de Word analisa somente a segunda expressão com êxito.  
   
-##  <a name="Interactivity"></a> Interatividade  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interatividade  
  Alguns elementos interativos têm suporte no Word. A seguir, uma descrição dos comportamentos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar e Ocultar  
@@ -100,7 +100,7 @@ ms.locfileid: "75244497"
 ### <a name="bookmarks"></a>Indicadores  
  Os indicadores no relatórios são renderizados como indicadores do Word. Links de indicadores são renderizados como hiperlinks que se conectam aos rótulos de indicadores no documento. Os rótulos de indicadores devem ter menos de 40 caracteres. O único caractere especial que pode ser usado em um rótulo de indicador é o sublinhado (_). Carateres especiais sem-suporte são eliminados do rótulo do indicador e, se o nome for mais comprido que 40 caracteres, o nome é truncado. Se houver nomes de indicadores duplicados no relatório, esses indicadores não serão renderizados no Word.  
   
-##  <a name="WordStyleRendering"></a>Renderização de estilo do Word  
+##  <a name="word-style-rendering"></a><a name="WordStyleRendering"></a> Renderização de estilo no Word  
  A seguir uma descrição breve de como os estilos são renderizados no Word.  
   
 ### <a name="color-palette"></a>Paleta de cores  
@@ -109,7 +109,7 @@ ms.locfileid: "75244497"
 ### <a name="border"></a>Borda  
  As bordas dos itens de relatório, além da borda da página, são renderizadas no Word como bordas de células de tabela.  
   
-##  <a name="SquigglyLines"></a>Linhas onduladas em relatórios exportados  
+##  <a name="squiggly-lines-in-exported-reports"></a><a name="SquigglyLines"></a> Linhas curvadas em relatórios exportados  
  Quando exportados e exibidos no Word, os dados de relatório ou constantes podem ser sublinhadas com linhas curvadas vermelhas ou verdes. As linhas curvadas vermelhas identificam erros de ortografia. As linhas curvadas verdes identificam erros gramaticais. Isso ocorre quando o relatório inclui palavras que não estão de acordo com a revisão de texto (ortografia e gramática) do idioma de edição que é especificado no Word. Por exemplo, os títulos de coluna de relatório em inglês provavelmente serão sublinhados por linhas curvadas vermelhas quando o relatório for renderizado em uma versão do Word em espanhol. Erros de ortografia percebidos são mais comuns em relatórios do que erros gramaticais percebidos porque relatórios costumam incluir apenas texto curto, e não frases ou parágrafos inteiros.  
   
  A presença de linhas curvadas em relatórios implica que o relatório tem erros, o que provavelmente não ocorre. Você pode remover as linhas curvadas alterando o idioma da revisão de texto para o relatório. Para alterar o idioma da revisão de texto, selecione o conteúdo do relatório e especifique o idioma adequado ao conteúdo. Você pode selecionar todo o documento ou parte dele. No Word 2010, a opção de idioma, **definir idioma de revisão**de texto, está na área de **idioma** na guia **revisar** . Depois de atualizar o conteúdo, você precisa salvar o documento novamente.  
@@ -125,7 +125,7 @@ ms.locfileid: "75244497"
 > [!NOTE]  
 >  Quando você altera o idioma de edição na caixa de diálogo **Preferências de Idioma do Microsoft Office 2010** ou **Opções do Word** no Word, a alteração se aplica a todos os programas do Office.  
   
-##  <a name="WordLimitations"></a>Limitações do Word  
+##  <a name="word-limitations"></a><a name="WordLimitations"></a> Limitações do Word  
  As limitações a seguir são aplicadas pelo [!INCLUDE[ofprword](../../includes/ofprword-md.md)]:  
   
 -   As tabelas de Word dão suporte a um máximo de 63 colunas. Se o seu relatório tiver mais de 63 colunas e você tentar renderizá-lo, o Word dividirá a tabela. As colunas adicionais serão colocadas adjacente às 63 colunas exibidas no corpo do relatório. Portanto, as colunas do relatório podem não ser alinhadas conforme o esperado.  
@@ -142,7 +142,7 @@ ms.locfileid: "75244497"
   
 -   Quando o texto é exportado para o Word, o texto que apresenta certas fontes com decoração pode gerar glifos inesperados ou não exibidos no relatório renderizado.  
   
-##  <a name="WordBenefits"></a>Benefícios do uso do renderizador do Word  
+##  <a name="benefits-of-using-the-word-renderer"></a><a name="WordBenefits"></a> Benefícios do uso do renderizador do Word  
  Além de disponibilizar os recursos que são novos no [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 para relatórios exportados, os arquivos *.docx de relatórios exportados tendem a ser menores. Os relatórios exportados usando o renderizador do Word são geralmente significativamente menores que os mesmos relatórios exportados usando o renderizador do Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidade com versões anteriores de relatórios exportados  
@@ -150,7 +150,7 @@ ms.locfileid: "75244497"
   
  Se você desligar o modo de compatibilidade e salvar um relatório novamente, o layout do relatório pode alterar de maneiras inesperadas.  
   
-##  <a name="AvailabilityWord"></a>Disponibilidade do renderizador do Word 2003  
+##  <a name="availability-of-the-word-2003-renderer"></a><a name="AvailabilityWord"></a>Disponibilidade do renderizador do Word 2003  
  No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o renderizador padrão do Word é a versão que renderiza para o formato nativo do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Esta é a opção do **Word** listada pelos menus **Exportar** no Gerenciador de Relatórios e no SharePoint. A versão anterior, compatível somente com o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, é nomeado Word 2003 e listada em menus usando esse nome. A opção de menu **Word 2003** não é visível por padrão, mas um administrador pode torná-la visível atualizando o arquivo de configuração RSReportServer. Para exportar relatórios do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o renderizador do Word 2003, atualize o arquivo de configuração RSReportDesigner. Porém, tornar o renderizador do Word 2003 visível não significa disponibilizá-lo em todos os cenários. Como o arquivo de configuração de RSReportServer reside no servidor de relatório, as ferramentas ou produtos de que onde você exporta relatórios devem estar conectados a um servidor de relatório para ler o arquivo de configuração. Se você usar ferramentas ou produtos em modo desconectado ou local, tornar o renderizador do Word 2003 visível não terá efeito. A opção de menu **Word 2003** permanece indisponível. Se você tornar o renderizador do Word 2003 visível no arquivo de configuração RSReportDesigner, a opção de menu **Word 2003** sempre estará disponível na visualização de relatório do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  A opção de menu do **Word 2003** nunca fica visível nos seguintes cenários:  
@@ -165,8 +165,7 @@ ms.locfileid: "75244497"
   
 -   Site do SharePoint quando o Reporting Services é instalado no modo integrado do SharePoint.  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e visualização de relatórios  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e visualização de relatórios  
   
 -   Construtor de Relatórios conectado a um servidor de relatórios. Esta pode ser uma versão [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] ou autônoma do Construtor de Relatórios.  
   
@@ -178,17 +177,16 @@ ms.locfileid: "75244497"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- A extensão WORDOPENXML define o renderizador do Word para o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. A extensão WORD define a versão do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. 
-  `Visible = "false"` indica que o renderizador do Word 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ A extensão WORDOPENXML define o renderizador do Word para o [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. A extensão WORD define a versão do [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indica que o renderizador do Word 2003 está oculto. Para obter mais informações, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
-##  <a name="Differences"></a>Diferenças entre os renderizadores do Word e do Word 2003  
+##  <a name="differences-between-the-word-and-word-2003-renderers"></a><a name="Differences"></a>Diferenças entre os renderizadores do Word e do Word 2003  
  Relatórios, renderizados usando renderizadores do Word ou Word 2003 tendem a ser visualmente indistinguíveis. Porém, você pode notar diferenças sutis entre os dois formatos do Word ou Word 2003.  
   
-##  <a name="DeviceInfo"></a> Configurações de informações de dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configurações de informações do dispositivo  
  É possível alterar algumas configurações padrão para este processador, como omitir hiperlinks e links de detalhamento ou expandir todos os itens que podem ser alternados independentemente do estado original do item quando renderizado, mudando as configurações das informações do dispositivo. Para obter mais informações, consulte [Word Device Information Settings](../word-device-information-settings.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Paginação no Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Paginação em Reporting Services &#40;Construtor de Relatórios e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamentos de renderização &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidade interativa para extensões de renderização de relatório diferentes &#40;Construtor de Relatórios e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Renderizando itens de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   

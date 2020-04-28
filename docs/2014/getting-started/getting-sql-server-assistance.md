@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683609"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtendo assistência do SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "74683609"
   
  Se não encontrar a informações que está procurando nessas origens, você poderá postar perguntas nos fóruns e grupos de notícias da comunidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou abrir um caso de suporte com a [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online  
+## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Manuais Online  
  Os Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentam os conceitos e procedimentos necessários para usar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Os Manuais Online também incluem material de referência dos idiomas e interfaces de programação para armazenamento, recuperação, relatórios e modificação de dados usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  É possível acessar os Manuais Online das seguintes formas:  
@@ -77,7 +77,7 @@ ms.locfileid: "74683609"
   
  A tabela a seguir descreve esses recursos e o público-alvo.  
   
-|Recurso|Audiência|  
+|Recurso|Público|  
 |--------------|--------------|  
 |[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Desenvolvedores que estão criando bancos de dados, sistemas de relatórios e soluções de business intelligence do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e estão habilitando seus aplicativos e sites para usar esses sistemas.|  
 |[XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)|Criadores de site e desenvolvedores de aplicativos cujos sites e aplicativos utilizam XML para armazenamento e manipulação de dados.|  
@@ -86,12 +86,12 @@ ms.locfileid: "74683609"
 ## <a name="additional-online-information"></a>Informações online adicionais  
  Informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] estão disponíveis nestes sites da [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Recurso|DESCRIÇÃO|  
+|Recurso|Descrição|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fornece informações de pré-venda sobre como avaliar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como um armazenamento de dados e ferramenta de business intelligence.|  
 |[Base de dados de conhecimento da Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fornece um repositório pesquisável de artigos sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- Os produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] têm um ciclo de vida de suporte que define por quanto tempo o suporte está disponível para cada versão. O suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] mantém uma página que define o ciclo de vida do suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)]. A página contém links para outras páginas que especificam a disponibilidade de suporte para produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações, consulte [suporte da Microsoft ciclo de vida](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Os produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] têm um ciclo de vida de suporte que define por quanto tempo o suporte está disponível para cada versão. O suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] mantém uma página que define o ciclo de vida do suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)]. A página contém links para outras páginas que especificam a disponibilidade de suporte para produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obter mais informações, consulte [Ciclo de vida de suporte da Microsoft](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Use a documentação do produto do SQL Server](../2014-toc/index.yml)  

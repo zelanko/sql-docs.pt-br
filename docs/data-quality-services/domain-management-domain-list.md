@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de domínio: lista de domínios'
+title: 'Gerenciamento de Domínio: Lista de domínios'
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,13 +12,13 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251660"
 ---
-# <a name="domain-management-domain-list"></a>Gerenciamento de domínio: lista de domínios
+# <a name="domain-management-domain-list"></a>Gerenciamento de Domínio: Lista de domínios
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -27,7 +27,7 @@ ms.locfileid: "75251660"
 ## <a name="options"></a>Opções  
   
 ### <a name="domains-list"></a>Lista de domínios  
- **Domínio**  
+ **Controlador**  
  Esta lista mostra todos os domínios na base de dados de conhecimento. Operações que você executa nas páginas tabuladas no painel direito serão executadas no domínio que é selecionado na lista. Para obter mais informações, consulte  
   
  **Criar um domínio composto**  
@@ -39,7 +39,7 @@ ms.locfileid: "75251660"
  **Criar uma cópia do domínio selecionado**  
  Crie uma cópia exata do domínio selecionado e adicione-a à base de dados de conhecimento. O nome da cópia será o nome do domínio que a originou, mais " – Cópia" anexado ao nome. Para disponibilizar este comando, clique com o botão direito do mouse em um domínio e clique em **Criar uma cópia**, ou clique no ícone acima da lista de domínios. Ele não está disponível para um domínio composto.  
   
- **Importar domínio do arquivo de dados**  
+ **Importar domínio de arquivo de dados**  
  Importe um domínio de um arquivo .dqs. Este comando exibe a caixa de diálogo **Importar do Arquivo de Dados** que o permite procurar o sistema de arquivos e selecionar um arquivo .dqs para um único domínio ou um domínio composto. Para disponibilizar este comando, clique no ícone acima da lista de domínios. Para obter mais informações, consulte [Importe um domínio de um arquivo .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md).  
   
  **Excluir domínio**  

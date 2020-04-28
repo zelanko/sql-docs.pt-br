@@ -13,10 +13,10 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245478"
 ---
 # <a name="create-a-domain-rule"></a>Criar uma regra de domínio
@@ -25,17 +25,17 @@ ms.locfileid: "75245478"
 
   Este tópico descreve como criar uma regra de domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma regra de domínio é uma condição usada para validar, corrigir e padronizar valores de domínio. A regra de domínio deve se repetir em um domínio para que os valores de domínio sejam considerados precisos e em conformidade com os requisitos comerciais. As regras de domínio podem incluir regras de validação usadas para validar valores de domínio, mas não são usadas para corrigir dados em um projeto de qualidade de dados. As regras também incluem regras de padronização que são aplicadas com base nos dados válidos e usadas na correção de dados.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para criar uma regra de domínio, você deve ter uma base de dados de conhecimento e um domínio aberto na atividade de Gerenciamento de Domínio.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma regra de domínio.  
   
-##  <a name="Build"></a>Criar regras de domínio  
+##  <a name="build-domain-rules"></a><a name="Build"></a> Criar regras de domínio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "75245478"
   
 6.  Selecione **Ativa** para especificar que a regra será executada (o padrão) ou anule a seleção para impedir a execução da regra.  
   
-7.  No painel **Criar uma Regra**, selecione uma condição na lista suspensa da caixa de cláusula da regra.  
+7.  No painel **criar uma regra** , selecione uma condição na lista suspensa na caixa de cláusula da regra.  
   
 8.  Se a condição exigir um valor, insira o valor na caixa de texto associada.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "75245478"
   
 16. Continue o procedimento de teste a seguir.  
   
-##  <a name="Test"></a>Regras de domínio de teste  
+##  <a name="test-domain-rules"></a><a name="Test"></a>Regras de domínio de teste  
   
 1.  Com uma regra selecionada, clique no ícone **Executar a regra de domínio selecionada em dados de teste** .  
   
 2.  Na caixa de diálogo Testar Regra de Domínio, clique no ícone **Adicionar um novo termo de teste para a regra de domínio** . Insira um valor para testar. Insira outros valores quando necessário. Selecione um valor e clique no ícone **Remover o termo de teste selecionado** se necessário.  
   
-3.  Clique no ícone **testar a regra de domínio em todos os termos** .  
+3.  Clique no ícone **Teste a regra de domínio em todos os termos** .  
   
 4.  Verifique a validade de cada termo. Uma marca de verificação significa "correto", uma cruz significa "erro" e um triângulo significa "inválido".  
   
@@ -88,7 +88,7 @@ ms.locfileid: "75245478"
   
 7.  Continue o procedimento de aplicação a seguir.  
   
-##  <a name="Apply"></a>Aplicar regras de domínio  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a>Aplicar regras de domínio  
   
 1.  Clique em **Aplicar Todas as Regras** para aplicar as regras aos valores do domínio. Se você clicar em **Aplicar Todas as Regras**, uma janela pop-up será exibida informando quantos valores em determinados estados serão afetados pela regra. Clique em **Sim** se você ainda desejar aplicar a regra; caso contrário, clique em **Não** . Se você clicar em **Sim**, clique em **OK** para fechar a janela pop-up de resultados.  
   
@@ -99,10 +99,10 @@ ms.locfileid: "75245478"
   
 3.  Clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [Terminar a atividade Gerenciamento de Domínio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio  
  Depois que você criar uma regra de domínio, poderá executar outras tarefas de gerenciamento de domínio, executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Conditions"></a>Condições de regra de domínio  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Condições de regra de domínio  
  A tabela a seguir descreve as condições que podem ser aplicadas na regra de domínio e fornece um exemplo para ilustrar como as condições podem ser aplicadas.  
   
  Quando uma regra de domínio é aplicada e um valor de domínio não obedece à regra, o valor é designado como Inválido. Um valor designado como Inválido será alterado para Correto se a regra que está fazendo com que ele seja inválido for excluída, for desativada ou se a regra tive sido alterada de modo que o valor não desobedeça mais à regra. Se você tiver designado manualmente um valor como Inválido (na guia Valores de Domínio da atividade de Gerenciamento de Domínio), e uma regra que dite a falha do valor tiver sido excluída, desativada ou alterada, o valor ainda será designado como Inválido, conforme a designação manual.  
@@ -111,7 +111,7 @@ ms.locfileid: "75245478"
   
  Você tem alternativas para escolher ao criar uma regra de domínio. Por exemplo, para validar se os valores começarão com a letra A, B ou C, você pode criar uma regra simples com uma condição complexa (como uma expressão regular com caracteres de pipe) ou criar uma regra complexa que contém várias condições simples. Um exemplo da primeira regra é "Valor contém a expressão regular (^A|^B|^C)". Um exemplo da segunda regra é "'Valor começa com A' OU 'Valor começa com B' OU 'Valor começa com C'".  
   
-|Condição|DESCRIÇÃO|Exemplo|  
+|Condição|Descrição|Exemplo|  
 |---------------|-----------------|-------------|  
 |Comprimento é igual a|Somente os valores compostos pelo número de caracteres designado pelo operando serão válidos.|Operando de exemplo: 3<br /><br /> Valor válido: BB1<br /><br /> Valor inválido: AA|  
 |O comprimento é maior ou igual a|Somente os valores compostos pelo número de caracteres designado pelo operando, ou um número de caracteres superior, serão válidos.|Operando de exemplo: 3<br /><br /> Valores válidos: BB1, BBAA<br /><br /> Valor inválido: AA|  

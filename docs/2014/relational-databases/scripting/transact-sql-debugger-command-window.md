@@ -13,31 +13,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243076"
 ---
 # <a name="command-window"></a>Janela Comando
-  Use o **janela comando** para executar comandos, como comandos debug e Edit, em relação ao código na janela [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] do editor de consultas que está sendo depurada no momento. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Command** window. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
+  Use a **Janela Comando** para executar comandos como de depuração e edição na janela do Editor de Consultas do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que está atualmente em depuração. É necessário estar no modo de depuração para usar a **Janela Comando**. O depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a muitos dos comandos que também têm suporte na janela de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obter mais informações, veja [Janela Comando do Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- **Para acessar a janela de comando**  
+ **Para acessar a Janela de Comando**  
   
 -   No menu **Depurar** , clique em **Iniciar Depuração**.  
   
  **Para imprimir o valor de uma variável**  
   
--   No **janela comando**, digite **debug. Print \<variávelname>** e pressione Enter.  
+-   No **CommandWindow**, digite **Debug.Print \<VariableName>** e pressione ENTER.  
   
- **Para listar informações sobre o thread atual**  
+ **Para listar as informações sobre a thread atual**  
   
 -   No **janela comando**, digite `Debug.ListThread`e pressione Enter.  
   
- **Para adicionar uma variável à janela QuickWatch**  
+ **Para adicionar uma variável à janela QuickWatch.**  
   
--   No **janela comando**, digite **debug. QuickWatch \<VariableName>** e pressione Enter.  
+-   Na **CommandWindow**, digite **Debug.QuickWatch \<VariableName>** e pressione ENTER.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Depurador do Transact-SQL](transact-sql-debugger.md)  

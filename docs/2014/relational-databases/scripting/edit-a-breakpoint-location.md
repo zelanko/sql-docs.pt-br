@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244894"
 ---
 # <a name="edit-a-breakpoint-location"></a>Editar um local de ponto de interrupção
@@ -38,7 +38,7 @@ ms.locfileid: "75244894"
      A opção **Permitir que o código-fonte seja diferente da versão original** não tem efeito durante a depuração de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
- [Especificar uma contagem de ocorrências](specify-a-hit-count.md)   
+ [Especificar uma contagem de acesso](specify-a-hit-count.md)   
  [Especificar uma ação de ponto de interrupção](specify-a-breakpoint-action.md)   
  [Especificar uma condição de ponto de interrupção](specify-a-breakpoint-condition.md)   
  [Especificar um filtro de ponto de interrupção](specify-a-breakpoint-filter.md)  

@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75225392"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Cenários de globalização para Analysis Services Multidimensional
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] armazena e manipula dados multilíngues e metadados em ambos os modelos de dados tabulares e multidimensionais. O armazenamento de dados é Unicode (UTF-16), em conjuntos de caracteres que usam a codificação Unicode. Se você carregar dados ANSI em um modelo de dados, os caracteres são armazenados usando pontos de código equivalentes a Unicode.  
   
  As implicações do suporte a Unicode significam que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pode armazenar dados em qualquer uma das linguagens com suporte pelo cliente e servidor de sistemas operacionais Windows, permissão de leitura, gravação, classificação e comparação de dados em qualquer conjunto de caracteres usado em um computador Windows. Aplicativos clientes de BI que consomem dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podem representar dados no idioma de preferência do usuário, supondo que os dados encontram-se no mesmo idioma do modelo.  
@@ -55,9 +54,8 @@ ms.locfileid: "75225392"
   
 -   Ambientes de desenvolvimento e produção estão localizados geograficamente em diferentes países. É cada vez mais comum desenvolver uma solução em um país e, em seguida, implantá-la em outro. Saber como definir as propriedades de ordenação e idioma é essencial se você ficar encarregado de preparar uma solução desenvolvida em um idioma para implantação em um servidor que usa um pacote de idiomas diferente. A configuração dessas propriedades permite substituir os padrões herdados que você obtém do sistema host original. Consulte [Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) para obter detalhes sobre como definir propriedades.  
   
-##  <a name="bkmk_features"></a>Recursos para a criação de uma solução multidimensional globalizada  
- 
-  [!INCLUDE[applies](../includes/applies-md.md)] Somente modelos de dados multidimensionais  
+##  <a name="features-for-building-a-globalized-multidimensional-solution"></a><a name="bkmk_features"></a>Recursos para a criação de uma solução multidimensional globalizada  
+ [!INCLUDE[applies](../includes/applies-md.md)] Somente modelos de dados multidimensionais  
   
  No nível do cliente, aplicativos globalizados que consomem ou manipulam dados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensionais podem usar os recursos multilíngues e multiculturais no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
@@ -69,9 +67,9 @@ ms.locfileid: "75225392"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Linguagens e agrupamentos &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Especifique o idioma padrão e ordenação do Windows para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Suas escolhas afetam dados e metadados gerenciados pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Idiomas e ordenações &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|Especifique o idioma padrão e ordenação do Windows para uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Suas escolhas afetam dados e metadados gerenciados pelo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Conversões &#40;Analysis Services&#41;](translations-analysis-services.md)|Definir traduções para um banco de dados e objetos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contidos no banco de dados. Este tópico explica como o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] resolve solicitações de dados traduzidos e metadados de aplicativos clientes.|  
 |[Conversões de moeda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Definir uma conversão de moeda usando o Assistente de Business Intelligence.|  
 |[Dicas de globalização e práticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Examina várias práticas de design e codificação que podem ajudá-lo a evitar problemas relacionados a dados em vários idiomas.|  

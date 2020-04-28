@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401370"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicar hotfixes do Analytics Platform System
@@ -27,14 +27,14 @@ Este artigo discute como aplicar hotfixes ao software do sistema da plataforma d
 > [!WARNING]  
 > Não aplique um hotfix do sistema de plataforma de análise enquanto o dispositivo estiver em uso. A aplicação de um hotfix pode fazer com que os nós do dispositivo sejam reinicializados. O hotfix deve ser aplicado durante uma janela de manutenção quando o dispositivo não está sendo usado.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Para executar essas etapas, será necessário:  
   
 -   Um logon do sistema de plataforma de análise com permissões para acessar o console de administração para monitorar o estado do dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
 -   Conhecimento da conta do administrador de domínio da malha para se conectar ao _<domain_name nó>_ **-HST01** .  
   
-## <a name="HowToInstallPDW"></a>Para aplicar um hotfix do sistema de plataforma de análise  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>Para aplicar um hotfix do sistema de plataforma de análise  
 Ao contrário das atualizações da Microsoft, os hotfixes para o software de sistema da plataforma de análise não são tratados por meio do WSUS. Eles têm um fluxo de trabalho diferente e são instalados executando um pacote de hotfix.  
   
 1.  **Verifique os indicadores de estado do dispositivo.**  

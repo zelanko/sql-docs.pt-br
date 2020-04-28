@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229426"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Entendendo a ordem de passagem e a ordem de resolução (MDX)
@@ -90,9 +90,9 @@ FROM [Adventure Works]
   
 ||Valor das Vendas pela Internet|Custo Total do Produto da Internet|  
 |-|---------------------------|---------------------------------|  
-|**CY 2007**|$9,791,060.30|$5,718,327.17|  
+|**AS 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Diferença de ano**|($20,160.56)|$2,878.06|  
+|**Diferença anual**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>Consulta 2-percentual de renda após despesas  
  Para a segunda consulta MDX, calcule a porcentagem da receita menos as despesas de cada ano, usando a consulta MDX a seguir:  
@@ -117,7 +117,7 @@ FROM [Adventure Works]
   
 ||Valor das Vendas pela Internet|Custo Total do Produto da Internet|Margem de Lucro|  
 |-|---------------------------|---------------------------------|-------------------|  
-|**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
+|**AS 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
   
  A diferença entre os conjuntos de resultados da primeira e da segunda consultas é proveniente da diferença no posicionamento do membro calculado. Na primeira consulta, o membro calculado faz parte do eixo ROWS e não no eixo COLUMNS mostrado na segunda consulta. A diferença de posicionamento passa a ser importante na próxima consulta, que combina os dois membros calculados em uma única consulta MDX.  
@@ -149,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- Neste exemplo de consulta MDX combinada, `Profit Margin` tem a ordem de resolução mais alta, portanto terá precedência quando as duas expressões interagirem. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avalia a célula em questão usando a fórmula `Profit Margin` . Os resultados desse cálculo aninhado são mostrados na tabela a seguir.  
+ Neste exemplo de consulta MDX combinada, `Profit Margin` tem a ordem de resolução mais alta, portanto terá precedência quando as duas expressões interagirem. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] avalia a célula em questão usando a fórmula `Profit Margin` . Os resultados desse cálculo aninhado são mostrados na tabela a seguir.  
   
 ||Valor das Vendas pela Internet|Custo Total do Produto da Internet|Margem de Lucro|  
 |-|---------------------------|---------------------------------|-------------------|  
-|**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
+|**AS 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Diferença de ano**|($20,160.56)|$2,878.06|114.28%|  
+|**Diferença anual**|($20,160.56)|$2,878.06|114.28%|  
   
  O resultado na célula compartilhada baseia-se na fórmula para `Profit Margin`. Ou seja, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calcula o resultado da célula compartilhada com os dados de `Year Difference` , produzindo a fórmula a seguir (o resultado foi arredondado para facilitar a leitura):  
   
@@ -164,7 +163,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- ou  
+ ou o  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -194,9 +193,9 @@ FROM [Adventure Works]
   
 ||Valor das Vendas pela Internet|Custo Total do Produto da Internet|Margem de Lucro|  
 |-|---------------------------|---------------------------------|-------------------|  
-|**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
+|**AS 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**Diferença de ano**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Diferença anual**|($20,160.56)|$2,878.06|(0.15%)|  
   
  Como essa consulta usa a fórmula `Year Difference` com os dados de `Profit Margin` , a fórmula da célula compartilhada assemelha-se a este cálculo:  
   
@@ -217,5 +216,5 @@ FROM [Adventure Works]
  [CalculationCurrentPass&#41;MDX &#40;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue&#41;MDX &#40;](/sql/mdx/calculationpassvalue-mdx)   
  [Instrução CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Manipulando dados &#40;&#41;MDX](mdx-data-manipulation-manipulating-data.md)  
+ [Manipulando dados &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

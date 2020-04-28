@@ -1,5 +1,5 @@
 ---
-title: Acessibilidade para pessoas com deficiências | Microsoft Docs
+title: Acessibilidade para pessoas portadoras de deficiências | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2019
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683595"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Acessibilidade para pessoas com deficiências
@@ -34,16 +34,16 @@ ms.locfileid: "74683595"
 > [!NOTE]  
 >  As informações desta seção só se aplicam a usuários que licenciaram os produtos [!INCLUDE[msCoName](../includes/msconame-md.md)] nos Estados Unidos. Se você adquiriu esse produto fora dos Estados Unidos, seu pacote conterá um cartão subsidiário de informações listando números de telefone e endereços de serviços de suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Contate a subsidiária para determinar se o tipo de produto e serviço descrito nesta seção está disponível em sua área. Para obter mais informações, disponíveis em inglês, francês, espanhol, chinês, japonês e italiano, consulte [Site de Acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-accessibility-features"></a>Recursos de acessibilidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-accessibility-features"></a>Recursos de acessibilidade do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Além dos recursos e utilitários de acessibilidade do Windows descritos na próxima seção, o visualizador da Ajuda torna o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mais acessível para pessoas com deficiências.  
   
 ### <a name="the-help-viewer"></a>O Visualizador da Ajuda  
  O Microsoft Help Viewer 1.1 é a ferramenta que você usa para ler a documentação do produto. A ferramenta é equipada com recursos de acessibilidade, inclusive teclas de atalho para navegação e comandos incluídos no [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Por exemplo, ele permite alterar as cores do monitor em sua tela de computador. Para obter informações sobre os recursos de acessibilidade do Microsoft Help Viewer 1,1, consulte [recursos de acessibilidade do Microsoft Help Viewer 1,1](https://go.microsoft.com/fwlink/?LinkID=220144).  
   
-## <a name="accessibility-in-includemsconameincludesmsconame-mdmd-windows"></a>Acessibilidade no [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
+## <a name="accessibility-in-msconame-windows"></a>Acessibilidade no [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows  
  Muitos recursos de acessibilidade foram criados na família [!INCLUDE[msCoName](../includes/msconame-md.md)] dos sistemas operacionais Windows. Esses recursos são úteis a indivíduos que têm dificuldade em digitar ou em usar um mouse, são cegos ou possuem deficiência visual, surdos ou com deficiência auditiva. Os recursos podem ser instalados durante instalação.  
   
-## <a name="adjusting-includemsconameincludesmsconame-mdmd-products-for-people-with-accessibility-needs"></a>Ajustando os produtos [!INCLUDE[msCoName](../includes/msconame-md.md)] para pessoas com necessidades de acessibilidade  
+## <a name="adjusting-msconame-products-for-people-with-accessibility-needs"></a>Ajustando os produtos [!INCLUDE[msCoName](../includes/msconame-md.md)] para pessoas com necessidades de acessibilidade  
  Opções de acessibilidade e recursos são criados em muitos produtos [!INCLUDE[msCoName](../includes/msconame-md.md)] , incluindo a família de sistemas operacionais Windows. Opções de acessibilidade e recursos são úteis a indivíduos que têm dificuldade em digitar ou usar um mouse, são cegos ou possuem deficiência visual, surdos ou com deficiência auditiva.  
   
 ### <a name="free-step-by-step-tutorials"></a>Tutoriais passo a passo gratuitos  
@@ -72,13 +72,13 @@ ms.locfileid: "74683595"
 ### <a name="upgrading"></a>Atualizando  
  Se você usa um produto de tecnologia assistencial, entre em contato com um fornecedor para verificar a compatibilidade com os produtos do seu computador antes de fazer a atualização. O fornecedor da tecnologia assistencial também pode ajudá-lo a ajustar suas configurações para otimizar a compatibilidade com sua versão do Windows ou outros produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
-## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>Documentação da [!INCLUDE[msCoName](../includes/msconame-md.md)] em formatos alternativos  
+## <a name="msconame-documentation-in-alternative-formats"></a>Documentação da [!INCLUDE[msCoName](../includes/msconame-md.md)] em formatos alternativos  
  A documentação de produto da [!INCLUDE[msCoName](../includes/msconame-md.md)] está disponível em formatos alternativos para ajudar nossos clientes com necessidades de acessibilidade.  
   
-### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtendo a documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+### <a name="obtaining-documentation-for-ssnoversion"></a>Obtendo a documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  A documentação para o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível online. Para obter mais informações, consulte [usar a documentação do produto para SQL Server](../2014-toc/index.yml).  
   
-## <a name="obtaining-documentation-for-additional-includemsconameincludesmsconame-mdmd-products"></a>Obtendo a documentação para produtos adicionais da [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+## <a name="obtaining-documentation-for-additional-msconame-products"></a>Obtendo a documentação para produtos adicionais da [!INCLUDE[msCoName](../includes/msconame-md.md)]  
  Você pode obter documentação acessível para [!INCLUDE[msCoName](../includes/msconame-md.md)] produtos do [site de acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  

@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232226"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar um arquivo BACPAC para criar um novo banco de dados de usuário
@@ -85,7 +85,7 @@ ms.locfileid: "75232226"
   
     -   [Página Resultados](#Results)  
   
-###  <a name="Introduction"></a> Página de Introdução  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas do Assistente de Importação do Aplicativo da Camada de Dados.  
   
  **Opções**  
@@ -96,7 +96,7 @@ ms.locfileid: "75232226"
   
 -   **Cancelar** – cancela a operação e fecha o assistente.  
   
-###  <a name="Import_settings"></a> Página Configurações de Importação  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Página Configurações de Importação  
  Use essa página para especificar a localização do arquivo .bacpac a ser importado.  
   
 -   **Importar do disco local** – clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
@@ -107,7 +107,7 @@ ms.locfileid: "75232226"
   
      Para continuar, especifique o arquivo .bacpac a ser importado e clique em **Abrir**.  
   
-###  <a name="Database_settings"></a> Página Configurações de Banco de Dados  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Página Configurações de Banco de Dados  
  Use essa página para especificar detalhes do banco de dados que será criado.  
   
  **Para uma instância local do SQL Server:**  
@@ -135,20 +135,20 @@ ms.locfileid: "75232226"
   
  Para continuar, clique em **Avançar**.  
   
-###  <a name="Summary"></a> Página de Resumo  
+###  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de importação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de importação e sair do assistente, clique em **Cancelar**.  
   
-###  <a name="Progress"></a> Página Progresso  
+###  <a name="progress-page"></a><a name="Progress"></a>Página progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
  Para continuar, clique em **Avançar**.  
   
-###  <a name="Results"></a> Página Resultados  
+###  <a name="results-page"></a><a name="Results"></a>Página de resultados  
  Esta página relata o êxito ou a falha das operações de importação e criação de bancos de dados, mostrando o êxito ou a falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Clique no link para exibir um relatório do erro para essa ação.  
   
  Clique em **Fechar** para fechar o assistente.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Exportar um aplicativo da camada de dados](export-a-data-tier-application.md)  
   

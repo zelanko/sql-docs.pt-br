@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247306"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "75247306"
 
 Retorna o instantâneo em um intervalo de 20 segundos para os últimos 32 minutos (128 Recs no total) de estatísticas de pools de recursos para um banco de dados SQL do Azure.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|ID do pool de recursos. Não permite valor nulo.
 |**name**|sysname|O nome do pool de recursos. Não permite valor nulo.|
@@ -135,5 +135,5 @@ select snapshot_time, name, cap_vcores_used_percent,
 ## <a name="see-also"></a>Consulte Também
 
 - [Governança de taxa de log de tradução](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites de recursos de DTU do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites de recursos DTU do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
 - [Limites de recursos vCore do pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

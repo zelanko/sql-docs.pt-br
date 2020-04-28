@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243178"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar o utilitário sqlcmd
@@ -31,7 +31,7 @@ ms.locfileid: "75243178"
   
 -   Os usuários enviam um trabalho `sqlcmd` especificando uma única instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] a ser executada ou apontando o utilitário para um arquivo de texto que contenha instruções[!INCLUDE[tsql](../../includes/tsql-md.md)] a serem executadas. O resultado geralmente é dirigido a um arquivo de texto, mas também pode ser exibido no prompt de comando.  
   
--   [Modo sqlcmd](edit-sqlcmd-scripts-with-query-editor.md) no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de consultas.  
+-   [modo SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75243178"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     ou  
+     ou o  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -116,8 +116,7 @@ ms.locfileid: "75243178"
  [!INCLUDE[tsql](../../includes/tsql-md.md)]as instruções que são inseridas em uma sessão interativa podem ser editadas inserindo o comando `sqlcmd` **: Ed** e o prompt. O editor será aberto e, após a edição da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] e de fechamento do editor, a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] revisada aparecerá na janela de comando. Insira `GO` para executar a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] revisada.  
   
 ## <a name="quoted-strings"></a>Cadeia de caracteres entre aspas  
- Os caracteres entre aspas são usados sem nenhum pré-processamento adicional, a não ser quando as aspas podem ser inseridas em uma cadeia de caracteres através de duas aspas consecutivas. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata esta sequência de caracteres como uma aspa. (Porém, a tradução acontece no servidor.) Não serão expandidas variáveis de script quando elas aparecerem dentro de uma cadeia de caracteres.  
+ Os caracteres entre aspas são usados sem nenhum pré-processamento adicional, a não ser quando as aspas podem ser inseridas em uma cadeia de caracteres através de duas aspas consecutivas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata esta sequência de caracteres como uma aspa. (Porém, a tradução acontece no servidor.) Não serão expandidas variáveis de script quando elas aparecerem dentro de uma cadeia de caracteres.  
   
  Por exemplo:  
   
@@ -171,8 +170,7 @@ ms.locfileid: "75243178"
   
  `1> _`  
   
- Pressionar ENTER depois de inserir `USE AdventureWorks2012` sinaliza ao `sqlcmd` para iniciar uma linha nova. Ao pressionar ENTER após digitar `GO,` , você sinalizou o `sqlcmd` para enviar a instrução `USE AdventureWorks2012` à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  `sqlcmd` retornou uma mensagem para indicar que a instrução `USE` foi concluída com êxito e exibiu um novo prompt `1>` como sinal para inserir uma nova instrução ou comando.  
+ Pressionar ENTER depois de inserir `USE AdventureWorks2012` sinaliza ao `sqlcmd` para iniciar uma linha nova. Ao pressionar ENTER após digitar `GO,` , você sinalizou o `sqlcmd` para enviar a instrução `USE AdventureWorks2012` à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sqlcmd` retornou uma mensagem para indicar que a instrução `USE` foi concluída com êxito e exibiu um novo prompt `1>` como sinal para inserir uma nova instrução ou comando.  
   
  O exemplo a seguir mostra o conteúdo da janela de prompt de comando ao você digitar uma instrução `SELECT` , uma `GO` para executar o comando `SELECT`, e uma `EXIT` para fechar o `sqlcmd`:  
   
@@ -312,7 +310,7 @@ ms.locfileid: "75243178"
   
  `SET NOCOUNT OFF`  
   
- Ao prompt `sqlcmd` , insira o seguinte:  
+ No prompt `sqlcmd` , insira o seguinte:  
   
  `C:\sqlcmd`  
   
@@ -337,7 +335,7 @@ ms.locfileid: "75243178"
   
  `BACKUP DATABASE [$(db)] TO DISK='$(bakfile)';`  
   
- Ao prompt `sqlcmd` , insira o seguinte:  
+ No prompt `sqlcmd` , insira o seguinte:  
   
  `C:\ >sqlcmd`  
   

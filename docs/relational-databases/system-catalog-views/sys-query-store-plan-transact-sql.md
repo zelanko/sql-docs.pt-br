@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479461"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "74479461"
 
   Contém informações sobre cada plano de execução associado a uma consulta.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Chave primária.|  
 |**query_id**|**bigint**|Chave estrangeira. Junções em [Sys. query_store_query &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|ID do grupo de planos. As consultas de cursor normalmente exigem vários planos (popular e buscar). Preencher e buscar planos que são compilados juntos estão no mesmo grupo.<br /><br /> 0 significa que o plano não está em um grupo.|  
-|**engine_version**|**nvarchar (32)**|Versão do mecanismo usada para compilar o plano no formato **' major. Minor. Build. Revision '** .|  
+|**engine_version**|**nvarchar(32)**|Versão do mecanismo usada para compilar o plano no formato **' major. Minor. Build. Revision '** .|  
 |**compatibility_level**|**smallint**|Nível de compatibilidade do banco de dados referenciado na consulta.|  
 |**query_plan_hash**|**binário (8)**|Hash MD5 do plano individual.|  
 |**query_plan**|**nvarchar(max)**|Showplan XML para o plano de consulta.|  
@@ -57,7 +57,7 @@ ms.locfileid: "74479461"
 |**avg_compile_duration**|**float**|Planejar estatísticas de compilação. <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**last_compile_duration**|**bigint**|Planejar estatísticas de compilação. <br/>**Observação:** O SQL Data Warehouse do Azure sempre retornará zero (0).|  
 |**plan_forcing_type**|**int**|Tipo de imposição de plano.<br /><br />0: NENHUM<br /><br />1: MANUAL<br /><br />2: AUTOMÁTICO|  
-|**plan_forcing_type_desc**|**nvarchar (60)**|Descrição de texto de plan_forcing_type.<br /><br />NENHUM: nenhum plano impondo<br /><br />MANUAL: plano forçado pelo usuário<br /><br />AUTOMÁTICO: plano forçado pelo ajuste automático|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descrição de texto de plan_forcing_type.<br /><br />NENHUM: nenhum plano impondo<br /><br />MANUAL: plano forçado pelo usuário<br /><br />AUTOMÁTICO: plano forçado pelo ajuste automático|  
 
 ## <a name="plan-forcing-limitations"></a>Limitações forçadas do plano
 O Repositório de Consultas tem um mecanismo para forçar o otimizador de consulta a usar um determinado plano de execução. No entanto, existem algumas limitações que podem impedir que um plano seja forçado. 
@@ -91,10 +91,10 @@ Por fim, problemas com o próprio plano:
  [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Monitorando o desempenho usando o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Procedimentos Armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231803"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem local para um computador de destino no Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lição 6: Migrar um banco de dados de um computador de origem no local para um computador de destino no Azure
   Esta lição pressupõe que você já tem outra SQL Server, que pode residir em outro computador local ou em uma máquina virtual no Azure. Para obter informações sobre como criar uma máquina virtual SQL Server no Azure, consulte [Provisionando uma máquina virtual SQL Server no Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Depois de provisionar uma máquina virtual SQL Server no Azure, verifique se você pode se conectar a uma instância do SQL Server nessa máquina virtual por meio de SQL Server Management Studio em outro computador.  
   
  Esta lição supõe também que você já concluiu as seguintes etapas:  
@@ -128,7 +128,7 @@ ms.locfileid: "75231803"
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do Mecanismo de Banco de Dados do SQL Server e expanda-a.  
   
-2.  Clique com o botão direito do mouse em **Bancos de Dados**e clique em **Novo Banco de Dados**. Em seguida, clique com o botão direito do mouse em TestDB1. Clique em Tarefas e, em seguida, clique em Desanexar. Na janela da caixa de diálogo Desanexar, marque Descartar Conexões. Clique em **OK**.  
+2.  Clique com o botão direito do mouse em **bancos**de **dados**e clique em novo. Em seguida, clique com o botão direito do mouse em TestDB1. Clique em Tarefas e, em seguida, clique em Desanexar. Na janela da caixa de diálogo Desanexar, marque Descartar Conexões. Clique em **OK**.  
   
 3.  Conecte-se ao computador de destino, que tem o SQL Server CTP2 2014 ou posterior. Para preparar seu computador de destino, é necessário criar uma credencial do SQL Server no computador de destino que aponte para o mesmo contêiner em que você colocou TestDB1. Se você pretende anexar novamente no mesmo computador, não será necessário criar outra credencial.  
   
@@ -146,5 +146,5 @@ ms.locfileid: "75231803"
   
  **Próxima lição:**  
   
- [Lição 7: Mover os arquivos de dados para o Armazenamento do Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lição 7: Migrar seus arquivos de dados para o Armazenamento do Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

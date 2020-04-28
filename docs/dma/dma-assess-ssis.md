@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687154"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Executar uma avaliação de migração do serviço de integração SQL Server com Assistente de Migração de Dados
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para avaliar os pacotes do SSIS (Integration Service) SQL Server, os componentes a seguir precisam ser instalados com o Assistente de Migração de Dados:
 
@@ -65,14 +65,14 @@ As instruções passo a passo a seguir ajudam a executar sua primeira avaliaçã
 1. Clique em **Iniciar avaliação**.
   ![Iniciar avaliação](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
-## <a name="view-results"></a>Exibir resultados
+## <a name="view-results"></a>Exibir os resultados
 
 A categoria de problemas de compatibilidade fornece recursos com suporte parcial ou sem suporte que bloqueiam a migração de pacotes SSIS locais para Azure-SSIS Integration Runtime. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
 
-![Exibir resultados](media/dma-assess-ssis/dma-assess-ssis-result.png)
+![Exibir os resultados](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Migrar cargas de trabalho do SSIS locais para o SSIS em visão geral do ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrar pacotes SQL Server Integration Services para uma instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrar pacotes do SQL Server Integration Services para uma instância gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Reimplantar pacotes SQL Server Integration Services no banco de dados SQL do Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

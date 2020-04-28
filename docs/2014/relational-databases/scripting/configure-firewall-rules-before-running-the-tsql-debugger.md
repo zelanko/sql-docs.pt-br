@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245185"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar o Depurador Transact-SQL
@@ -150,8 +150,7 @@ ms.locfileid: "75245185"
 ## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar o depurador  
  Todas as tentativas de iniciar o depurador do [!INCLUDE[tsql](../../includes/tsql-md.md)] também devem atender aos seguintes requisitos:  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve estar sendo executado em uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] deve estar sendo executado em uma conta do Windows que seja membro da função de servidor fixa sysadmin.  
   
 * A janela do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser conectada usando um logon de Autenticação do Windows ou Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seja um membro da função de servidor fixa sysadmin.  
   

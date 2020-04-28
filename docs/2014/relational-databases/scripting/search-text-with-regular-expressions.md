@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243318"
 ---
 # <a name="search-text-with-regular-expressions"></a>Pesquisar texto com expressões regulares
-  As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
+  As expressões regulares são notação concisa e flexível para pesquisa e substituição de padrões de texto. Um conjunto específico de expressões regulares pode ser usado no campo **Localizar** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Localizar e Substituir**.  
   
 #### <a name="to-find-using-regular-expressions"></a>Para fazer localização usando expressões regulares  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75243318"
 |Qualquer caractere no conjunto|[]|Faz a correspondência de qualquer um dos caracteres dentro de []. Para especificar um intervalo de caracteres, relacione o caractere de início e término separado por um traço (-), como em [a-z].|  
 |Qualquer caractere que não faz parte do conjunto|[^...]|Faz a correspondência de qualquer caractere que não pertence ao conjunto de caracteres depois de ^.|  
 |Ou|&#124;|Faz a correspondência da expressão antes ou depois do símbolo OR (&#124;). Usada principalmente dentro de grupos. Por exemplo, banho (esponja&#124;lama) corresponde a “banho de esponja” e “banho de lama”.|  
-|Escape|\|Corresponde ao caractere que segue a barra invertida\\() como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
+|Escape|\|Faz a correspondência do caractere que segue a barra invertida (\\) como um literal. Isso permite que você encontre os caracteres usados em notação de expressão regular, como { e ^. Por exemplo, \\^ pesquisa pelo caractere ^.|  
 |Expressão marcada|{}|Corresponde o texto marcado com a expressão anexada.|  
 |Identificador do C/C++|:i|Faz a correspondência da expressão ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadeia de caracteres entre aspas|:q|Faz a correspondência da expressão (("[^"]*")&#124;('[^']\*')).|  
@@ -66,9 +66,8 @@ ms.locfileid: "75243318"
 |Repetir n vezes|^n|Faz a correspondência de n ocorrências da expressão precedente. Por exemplo, [0-9]^4 corresponde a qualquer sequência de quatro dígitos.|  
 |Agrupamento|()|Agrupa uma subexpressão.|  
 |Enésimo texto marcado|\n|Em uma expressão **Localizar e Substituir** , indica o texto correspondente da enésima expressão marcada, em que n é um número de 1 a 9.<br /><br /> Em uma expressão **Substituir** , \0 insere o texto inteiro correspondente.|  
-|Campo justificado à direita|\\(w, n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
-|Campo justificado à esquerda|
-  \\(-w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
+|Campo justificado à direita|\\(w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à direita em um campo de, pelo menos, *w* caracteres de largura.|  
+|Campo justificado à esquerda|\\(-w,n)|Em uma expressão **Substituir** , justifica a enésima expressão marcada à esquerda em um campo de, pelo menos, *w* caracteres de largura.|  
 |Evitar correspondência|~(X)|Evita a correspondência quando X é exibido em um certo ponto da expressão. Por exemplo, real~(ity) faz a correspondência de "real" em "realty" e "really", mas não "real" em "reality".|  
 |Caractere alfanumérico|:a|Faz a correspondência da expressão ([a-zA-Z0-9]).|  
 |Caractere alfabético|:c|Faz a correspondência da expressão ([a-zA-Z]).|  

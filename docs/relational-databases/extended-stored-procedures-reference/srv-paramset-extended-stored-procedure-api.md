@@ -20,17 +20,17 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253548"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Define o valor de um parâmetro de retorno de chamada do procedimento armazenado remoto. Esta função foi substituída pela função **srv_paramsetoutput**.  
   
@@ -60,7 +60,7 @@ len
  *n*  
  Indica o número do parâmetro a ser definido. O primeiro parâmetro é 1.  
   
- *data*  
+ *dados*  
  É um ponteiro para o valor dos dados a ser enviado de volta ao cliente como o parâmetro de retorno do procedimento armazenado remoto.  
   
  *Len*  
@@ -75,14 +75,14 @@ len
   
 |Novos tipos de dados|Comprimento dos dados de retorno|  
 |--------------------|------------------------|  
-|**BITN**|**NULL:** _Len_ = 0, data = IG, RET = 0<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
-|**BIGVARCHAR**|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|**BIGCHAR**|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|**BIGBINARY**|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|**BIGVARBINARY**|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|NCHAR|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|NVARCHAR|**NULL:** _Len_ = 0, data = IG, RET = 1<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = max8k, data = Valid, RET = 0<br /><br /> **<255:** _Len_ = <8K, data = Valid, RET = 1|  
-|**NTEXT**|**NULL:** _Len_ = IG, data = IG, RET = 0<br /><br /> **Zero:** _Len_ = IG, data = IG, RET = 0<br /><br /> **>= 255:** _Len_ = IG, data = IG, RET = 0<br /><br /> 255: _Len_ = IG, data = IG, RET = 0 ** \<**|  
+|**BITN**|**NULL:** _len_ = 0, data = IG, RET = 0<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|**BIGVARCHAR**|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|**BIGCHAR**|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|**BIGBINARY**|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|**BIGVARBINARY**|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|NCHAR|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|NVARCHAR|**NULL:** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255:** _len_ = <8k, data = valid, RET = 1|  
+|**NTEXT**|**NULL:** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO:** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255:** _len_ = IG, data = IG, RET = 0<br /><br /> 255: _Len_ = IG, data = IG, RET = 0 ** \<**|  
 |RET = Valor de retorno de srv_paramset||  
 |IG = Valor será ignorado||  
 |valid = Qualquer ponteiro válido para dados||  
@@ -94,12 +94,12 @@ len
   
  Esta função define o valor de retorno para um parâmetro, mas não envia o valor de retorno ao cliente. Todos os parâmetros de retorno, independentemente se seus valores retornados foram ou não com **srv_paramset**, serão automaticamente enviados ao cliente quando **srv_senddone** for chamado com o sinalizador de status SRV_DONE_FINAL definido.  
   
- Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador de SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
+ Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://www.microsoft.com/msrc?rtc=1).  
   
 ## <a name="see-also"></a>Consulte Também  
- [srv_paramsetoutput &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
+ [srv_paramsetoutput &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401270"
 ---
 # <a name="what-is-polybase"></a>O que é o PolyBase?
 O polybase permite que o APS (sistema de plataforma de análise) processe consultas Transact-SQL que podem ler e gravar dados em fontes de dados externas. As mesmas consultas que acessam dados externos também podem incluir tabelas de relações em seus APS. Isso permite que você combine dados de fontes externas com dados relacionais de alto valor em seus bancos de dados APS.
 
-![Polybase lógico](media/polybase/polybase-logical.png)
+![PolyBase lógico](media/polybase/polybase-logical.png)
 
 O polybase no APS dá suporte à leitura e gravação no sistema de arquivos do Hadoop (HDFS) e ao armazenamento de BLOBs do Azure. O polybase também tem a capacidade de enviar alguns cálculos para nós do Hadoop como trabalhos MapReduce para otimizar o desempenho geral da consulta. O polybase no APS pode operar em texto delimitado, arquivos ORC e parquet. Veja [o que é o polybase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) para obter uma descrição completa e seus recursos.
 

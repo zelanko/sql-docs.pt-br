@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251724"
 ---
 # <a name="data-quality-client-home-screen"></a>Tela inicial do Cliente Data Quality
@@ -29,10 +29,10 @@ ms.locfileid: "75251724"
 ### <a name="knowledge-base-management"></a>Gerenciamento da base de dados de conhecimento  
  Uma base de conhecimento do DQS é um repositório de metadados usado pelo DQS para melhorar a qualidade dos dados. Estes metadados são criados pela plataforma do DQS em um processo de descoberta da base de dados de conhecimento assistido por computador e pelo administrador de dados em um processo de gerenciamento de domínio interativo.  
   
- **Nova base de dados de conhecimento**  
+ **Nova base de conhecimento**  
  Inicie o processo de criação de uma base de conhecimento a partir do zero ou baseado nos metadados de uma base de conhecimento existente. Este comando abre uma página na qual você pode identificar a base de dados de conhecimento, baseá-la em uma base de dados de conhecimento existente, selecionar a atividade de base de dados de conhecimento desejada e, em seguida, criar a base de dados de conhecimento.  
   
- **Abrir base de dados de conhecimento**  
+ **Abrir Base de Dados de Conhecimento**  
  Abrir uma base de dados de conhecimento para que você possa gerenciar seus domínios, executar a descoberta da base de dados de conhecimento ou criar uma política de correspondência. Clicar no botão **Abrir Base de Dados de Conhecimento** exibe a página **Abrir Base de Dados de Conhecimento** , que mostra uma lista de bases de dados de conhecimento existentes com suas propriedades, estado atual, base de dados de conhecimento e detalhes de seus domínios. Selecione uma base de dados de conhecimento e abra-a em **Abrir Base de Dados de Conhecimento**.  
   
  **Base de dados de conhecimento recente**  
@@ -55,7 +55,7 @@ ms.locfileid: "75251724"
 ### <a name="administration"></a>Administração  
  A administração do DQS permite monitorar, configurar e manter o DQS.  
   
- **Monitoramento de atividades**  
+ **Monitoramento de Atividades**  
  Exibe o status de todas as atividades (atuais e históricas) que estão relacionadas ao servidor do [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]conectado. Os tipos de atividades monitoradas incluem Gerenciamento de Conhecimento, um Projeto de Qualidade de Dados e uma correção de dados baseada no SSIS.  
   
  **Configuração**  

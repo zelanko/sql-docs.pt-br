@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243219"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar um filtro de ponto de interrupção
   Um filtro de ponto de interrupção limita o ponto de interrupção para atuar somente em computadores, sistemas operacionais, processos e threads especificados. Filtros de ponto de interrupção são normalmente usados ao depurar aplicativos paralelos.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Considerações sobre filtros  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> Considerações sobre filtros  
  Filtros de ponto de interrupção não são normalmente usados com o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] porque os scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e os procedimentos armazenados não são aplicativos paralelos.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Para especificar um filtro de ponto de interrupção  
@@ -35,14 +35,11 @@ ms.locfileid: "75243219"
   
 2.  Na caixa de diálogo **Filtros de Ponto de Interrupção** , use a caixa **Filtro** para especificar computadores por nome ou processos e threads do sistema operacional por nome ou número da ID:  
   
-    -   
-  `MachineName` é o computador que está executando a instância do Mecanismo de Banco de Dados.  
+    -   `MachineName` é o computador que está executando a instância do Mecanismo de Banco de Dados.  
   
-    -   
-  `ProcessID` e `ProcessName` são o processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados.  
+    -   `ProcessID` e `ProcessName` são o processo do sistema operacional que executa a instância do Mecanismo de Banco de Dados.  
   
-    -   
-  `ThreadID` e `ThreadName` são o thread do sistema operacional que executa o lote [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimento ou função na instância do Mecanismo de Banco de Dados.  
+    -   `ThreadID` e `ThreadName` são o thread do sistema operacional que executa o lote [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimento ou função na instância do Mecanismo de Banco de Dados.  
   
 3.  Clique em **OK** para implementar as alterações ou em **Cancelar** para sair sem aplicar as alterações.  
   

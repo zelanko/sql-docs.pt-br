@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257475"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversões de tipo de dados e a anotação sql: DataType (SQLXML 4,0)
@@ -60,30 +60,30 @@ ms.locfileid: "75257475"
 |--------------------------|-------------------|  
 |**bigint**|**Longas**|  
 |**binary**|**base64Binary**|  
-|**bit**|**Boolean**|  
-|**char**|**Strings**|  
+|**bit**|**booleano**|  
+|**char**|**cadeia de caracteres**|  
 |**datetime**|**Horário**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
 |**imagem**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**Strings**|  
-|**ntext**|**Strings**|  
-|**nvarchar**|**Strings**|  
+|**nchar**|**cadeia de caracteres**|  
+|**ntext**|**cadeia de caracteres**|  
+|**nvarchar**|**cadeia de caracteres**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**Horário**|  
 |**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**Strings**|  
-|**sysname**|**Strings**|  
-|**text**|**Strings**|  
+|**sql_variant**|**cadeia de caracteres**|  
+|**sysname**|**cadeia de caracteres**|  
+|**text**|**cadeia de caracteres**|  
 |**timestamp**|**Horário**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**Strings**|  
-|**uniqueidentifier**|**Strings**|  
+|**varchar**|**cadeia de caracteres**|  
+|**uniqueidentifier**|**cadeia de caracteres**|  
   
 ## <a name="sqldatatype-annotation"></a>Anotação sql:datatype  
  A anotação **SQL: DataType** é usada para especificar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados; Esta anotação deve ser especificada quando:  
@@ -99,7 +99,7 @@ ms.locfileid: "75257475"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>a. Especificando xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Especificando xsd:type  
  Este exemplo mostra como um tipo de **Data** XSD que é especificado usando o atributo **xsd: Type** no esquema afeta o documento XML resultante. O esquema fornece uma exibição XML da tabela Sales.SalesOrderHeader no banco de dados AdventureWorks.  
   
 ```  

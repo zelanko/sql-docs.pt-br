@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412850"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74412850"
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > No [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent têm suporte. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
+  > No [instância gerenciada do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria, mas nem todos os tipos de trabalho SQL Server Agent têm suporte. Consulte [instância gerenciada do banco de dados SQL do Azure diferenças de T-SQL do SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obter detalhes.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`O subsistema usado pelo serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar o *comando*. *subsistema* é **nvarchar (40)** e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|Script ativo<br /><br /> ** \* Importante \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando do sistema operacional ou programa executável|  
@@ -86,21 +86,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|Trabalho do Replication Queue Reader Agent|  
 |'**ANALYSISQUERY**'|Consulta do Analysis Services (MDX, DMX).|  
 |'**ANALYSISCOMMAND**'|Comando do Analysis Services (XMLA).|  
-|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]execução do pacote|  
-|'**PowerShell**'|Script do PowerShell|  
-|'**TSQL**' (padrão)|[!INCLUDE[tsql](../../includes/tsql-md.md)]privacidade|  
+|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] execução de pacotes|  
+|'**PowerShell**'|Scripts PowerShell|  
+|'**TSQL**' (padrão)|Instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
 `[ @command = ] 'command'`Os comandos a serem executados pelo serviço **SQLSERVERAGENT** por meio do *subsistema*. o *comando* é **nvarchar (max)**, com um padrão de NULL. O SQL Server Agent fornece uma substituição de token que propicia a mesma flexibilidade que as variáveis ao escrever programas de software.  
   
 > [!IMPORTANT]  
 >  Uma macro de fuga agora deve acompanhar todos os tokens utilizados em etapas de trabalho ou elas falharão. Além disso, deve-se colocar os nomes de token entre parênteses e um sinal de cifrão (`$`) no início da sintaxe do token. Por exemplo:  
 >   
->  `$(ESCAPE_`*nome da macro*`(DATE))`  
+>  `$(ESCAPE_` *nome da macro* `(DATE))`  
   
  Para obter mais informações sobre esses tokens e atualizar suas etapas de trabalho para usar a nova sintaxe de token, consulte [usar tokens em etapas de trabalho](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. São eles: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**e **WMI(**_propriedade_**)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
+>  Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Esses tokens são: **a-DBN**, **a-SVR**, **a-Err**, **a-Sev**, **a-msg**. e **WMI (**_Propriedade_**)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
 >  Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
@@ -114,8 +114,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|----------------------------|  
 |**1** (padrão)|Encerrar com êxito|  
 |**2**|Sair com falha|  
-|**Beta**|Ir para a próxima etapa|  
-|**quatro**|Ir para a etapa *on_success_step_id*|  
+|**3**|Ir para a próxima etapa|  
+|**4**|Ir para a etapa *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`A ID da etapa neste trabalho a ser executada se a etapa for bem sucedido e *success_action* for **4**. *success_step_id* é **int**, com um padrão de **0**.  
   
@@ -125,8 +125,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|----------------------------|  
 |**1**|Encerrar com êxito|  
 |**2** (padrão)|Sair com falha|  
-|**Beta**|Ir para a próxima etapa|  
-|**quatro**|Ir para a etapa *on_fail_step_id*|  
+|**3**|Ir para a próxima etapa|  
+|**4**|Ir para a etapa *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`A ID da etapa neste trabalho a ser executada se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de **0**.  
   
@@ -146,11 +146,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`É uma opção que controla o comportamento. *flags* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Substitui o arquivo de saída|  
 |**2**|Anexa a um arquivo de saída|  
-|**quatro**|Grava a saída da etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)] no histórico de etapas|  
+|**4**|Grava a saída da etapa de trabalho do [!INCLUDE[tsql](../../includes/tsql-md.md)] no histórico de etapas|  
 |**8**|Grava o log na tabela (substitui o histórico existente)|  
 |**16**|Grava o log na tabela (anexa ao histórico existente)|  
 |**32**|Grave todas as saídas no histórico do trabalho|  
@@ -176,7 +176,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Um proxy pode ser identificado por *proxy_name* ou *proxy_id*.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   

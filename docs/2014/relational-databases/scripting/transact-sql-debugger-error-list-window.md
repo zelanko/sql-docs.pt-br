@@ -1,5 +1,5 @@
 ---
-title: Janela de Lista de Erros
+title: Janela Lista de Erros
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243086"
 ---
 # <a name="error-list-window-management-studio"></a>Janela Lista de Erros (Management Studio)
-  O [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **lista de erros** exibe a sintaxe e os erros semânticos gerados a partir do código IntelliSense no [!INCLUDE[ssDE](../../includes/ssde-md.md)] editor de consultas.  
+  A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Lista de Erros**do** exibe os erros de sintaxe e semântica gerados no código IntelliSense do Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Recursos da Lista de Erros  
  A **Lista de Erros** fornece a seguinte funcionalidade:  
@@ -56,8 +56,7 @@ ms.locfileid: "75243086"
  A **Lista de Erros** não está vinculada a informações adicionais sobre erros específicos.  
   
 ## <a name="transact-sql-errors-in-management-studio"></a>Erros de Transact-SQL no Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe erros de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] nos seguintes locais:  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] exibe erros de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] nos seguintes locais:  
   
 -   A **Lista de Erros** contém todos os erros de sintaxe e semântica encontrados pelo IntelliSense no Editor do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Essa lista de erros é atualizada dinamicamente a medida que você edita scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . A lista inclui todos os erros que o editor encontrou em cada script [!INCLUDE[tsql](../../includes/tsql-md.md)] . O editor não interrompe a análise de um arquivo após encontrar erros em um script. No [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], o IntelliSense do Editor [!INCLUDE[ssDE](../../includes/ssde-md.md)] não dá suporte a todos os elementos de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . A **Lista de Erros** contém somente erros de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] que tem suporte no IntelliSense.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "75243086"
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  
  Quando a **Lista de Erros** estiver aberta, as informações serão exibidas nas seguintes colunas:  
   
- **Ordem padrão**  
+ **Ordem Padrão**  
  Exibe um inteiro que indica a ordem na qual uma entrada foi gerada.  
   
  **Descrição**  
@@ -86,5 +85,5 @@ ms.locfileid: "75243086"
  **Coluna**  
  Exibe um inteiro que indica a posição do erro linha na linha do código.  
   
- **Project**  
+ **Projeto**  
  Exibe o nome do projeto que inclui o arquivo de script.  

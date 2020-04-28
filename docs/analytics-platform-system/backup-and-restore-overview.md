@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401355"
 ---
 # <a name="backup-and-restore"></a>Backup e restauração
 
 Descreve como o backup e a restauração de dados funcionam para o PDW (data warehouse paralelo). As operações de backup e restauração são usadas para recuperação de desastre. O backup e a restauração também podem ser usados para copiar um banco de dados de um dispositivo para outro dispositivo.  
     
-## <a name="BackupRestoreBasics"></a>Noções básicas de backup e restauração
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>Noções básicas de backup e restauração
 
 Um *backup de banco de dados* PDW é uma cópia de um banco de dados de dispositivo, armazenado em um formato para que possa ser usado para restaurar o banco de dados original para um dispositivo.  
   
@@ -36,7 +36,7 @@ Os backups de banco de dados são armazenados em um ou mais servidores de backup
   
 Os backups são armazenados no servidor de backup como um conjunto de arquivos no sistema de arquivos do Windows. Um backup de banco de dados PDW só pode ser restaurado para o PDW. No entanto, você pode arquivar backups de banco de dados do servidor de backup para outro local usando processos padrão de backup de arquivos do Windows. Para obter mais informações sobre servidores de backup, consulte [adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Tipos de backup de banco de dados
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>Tipos de backup de banco de dados
 
 Há dois tipos de dados que exigem um backup: bancos de dados de usuário e de sistema (como o banco de dados mestre). O PDW não faz backup do log de transações.  
   
@@ -50,7 +50,7 @@ Um backup diferencial só tem suporte para bancos de dados de usuário. Um backu
   
 Para fazer backup de todo o dispositivo, você precisa executar um backup de todos os bancos de dados de usuário e um backup do banco de dados mestre.  
   
-## <a name="BackupProc"></a>Processo de backup do banco de dados
+## <a name="database-backup-process"></a><a name="BackupProc"></a>Processo de backup do banco de dados
 
 O diagrama a seguir mostra o fluxo de dados durante um backup de banco de dado.  
   
@@ -84,7 +84,7 @@ O processo de backup funciona da seguinte maneira:
   
     -   Você não pode alterar o nome do backup antes de executar uma restauração. O nome do diretório de backup deve corresponder ao nome do nome original do backup. O nome original do backup está localizado no arquivo backup. xml dentro do diretório de backup. Para restaurar um banco de dados para um nome diferente, você pode especificar o novo nome no comando Restore. Por exemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modos de restauração de banco de dados
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modos de restauração de banco de dados
 
 Uma restauração de banco de dados completa recria o banco de dados do PDW usando o backup de banco de dado. A restauração do banco de dados é executada primeiro restaurando um backup completo e, opcionalmente, restaurando um backup diferencial. A restauração do banco de dados inclui os usuários do banco de dados e funções de banco de dados  
   
@@ -92,7 +92,7 @@ Uma restauração somente de cabeçalho retorna as informações de cabeçalho d
   
 Uma restauração de dispositivo é uma restauração de todo o dispositivo. Isso inclui a restauração de todos os bancos de dados de usuários e do mestre.  
   
-## <a name="RestoreProc"></a>Processo de restauração
+## <a name="restore-process"></a><a name="RestoreProc"></a>Processo de restauração
 
 O diagrama a seguir mostra o fluxo de dados durante uma restauração de banco de dado.  
   
@@ -130,11 +130,11 @@ Após a redistribuição, cada nó de computação conterá menos dados reais e 
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa de backup e restauração|DESCRIÇÃO|  
+|Tarefa de backup e restauração|Descrição|  
 |---------------------------|---------------|  
 |Prepare um servidor como um servidor de backup.|[Adquirir e configurar um servidor de backup](acquire-and-configure-backup-server.md)|  
 |Fazer backup de um banco de dados.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaurar um banco de dados.|[RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Restaurar um banco de dados.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 
 <!-- MISSING LINKS
 

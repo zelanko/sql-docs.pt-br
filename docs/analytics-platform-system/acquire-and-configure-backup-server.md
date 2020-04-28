@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401492"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir e configurar um servidor de backup para data warehouse paralelos
 Este artigo descreve como configurar um sistema Windows que não seja de dispositivo como um servidor de backup para uso com os recursos de backup e restauração no sistema de plataforma de análise (PAS) e data warehouse em paralelo (PDW).  
   
   
-## <a name="Basics"></a>Noções básicas do servidor de backup  
+## <a name="backup-server-basics"></a><a name="Basics"></a>Noções básicas do servidor de backup  
 O servidor de backup:  
   
 -   É fornecido e gerenciado por sua própria equipe de ti.  
@@ -35,12 +35,12 @@ O servidor de backup:
   
 -   Hospeda um compartilhamento de arquivos de backup, que é um compartilhamento de arquivos do Windows que usa o protocolo de rede de nível de aplicativo SMB (bloco de mensagens do servidor). As permissões de compartilhamento de arquivo de backup fornecem a um usuário de domínio do Windows (geralmente esse é um usuário de backup dedicado) a capacidade de executar operações de backup e restauração no compartilhamento. As credenciais de nome de usuário e senha dos usuários de domínio do Windows são armazenadas no PDW para que o PDW possa executar operações de backup e restauração no compartilhamento de arquivos de backup.  
   
-## <a name="Step1"></a>Etapa 1: determinar os requisitos de capacidade  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Etapa 1: determinar os requisitos de capacidade  
 Os requisitos de sistema para o servidor de backup dependem quase completamente da sua própria carga de trabalho. Antes de comprar ou provisionar um servidor de backup, você precisa descobrir seus requisitos de capacidade. O servidor de backup não precisa ser dedicado apenas a backups, desde que ele lide com os requisitos de desempenho e armazenamento de sua carga de trabalho. Você também pode ter vários servidores de backup para fazer backup e restaurar cada banco de dados em um de vários servidores.  
   
 Use a [planilha de planejamento de capacidade do servidor de backup](backup-capacity-planning-worksheet.md) para ajudar a determinar os requisitos de capacidade.  
   
-## <a name="Step2"></a>Etapa 2: adquirir o servidor de backup  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>Etapa 2: adquirir o servidor de backup  
 Agora que você entende melhor seus requisitos de capacidade, é possível planejar os servidores e os componentes de rede que precisará comprar ou provisionar. Incorpore a lista de requisitos a seguir em seu plano de compra e, em seguida, adquira o servidor ou provisione um servidor existente.  
   
 ### <a name="software-requirements"></a>Requisitos de software  
@@ -61,7 +61,7 @@ Embora não seja necessário, o InfiniBand é o tipo de conexão recomendado par
   
 3.  Adquira 2 cabos de InfiniBand FDR para uma placa de porta dupla ou um cabo InfiniBand de 1 FDR para um cartão de porta única. Os cabos do FDR InfiniBand conectarão o servidor de carregamento à rede InfiniBand do dispositivo. O comprimento do cabo depende da distância entre o servidor de carregamento e os comutadores InfiniBand do dispositivo, de acordo com seu ambiente.  
   
-## <a name="Step3"></a>Etapa 3: conectar o servidor às redes InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Etapa 3: conectar o servidor às redes InfiniBand  
 Use estas etapas para conectar o servidor de carregamento à rede InfiniBand. Se o servidor não estiver usando a rede InfiniBand, ignore esta etapa.  
   
 1.  Rack o servidor está perto o suficiente para o dispositivo para que você possa conectá-lo à rede InfiniBand do dispositivo.  
@@ -76,7 +76,7 @@ Use estas etapas para conectar o servidor de carregamento à rede InfiniBand. Se
   
 5.  Defina as configurações de InfiniBand e DNS para os adaptadores de rede. Para obter instruções de configuração, consulte [configurar adaptadores de rede InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Etapa 4: configurar o compartilhamento de arquivos de backup  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>Etapa 4: configurar o compartilhamento de arquivos de backup  
 O PDW acessará o servidor de backup por meio de um compartilhamento de arquivos UNC. Para configurar o compartilhamento de arquivos:  
   
 1.  Crie uma pasta no servidor de backup para armazenar seus backups.  
@@ -101,7 +101,7 @@ O PDW acessará o servidor de backup por meio de um compartilhamento de arquivos
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Etapa 5: iniciar o backup dos dados  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>Etapa 5: iniciar o backup dos dados  
 Agora você está pronto para iniciar o backup de dados no servidor de backup.  
   
 Para fazer backup de dados, use um cliente de consulta para se conectar ao SQL Server PDW e, em seguida, enviar o banco de dados de BACKUP ou restaurar os comandos do banco Use a cláusula DISK = para especificar o servidor de backup e o local de backup.  
@@ -122,9 +122,9 @@ Para obter mais informações, consulte:
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTAURAR BANCO DE DADOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>Avisos de segurança  
+## <a name="security-notices"></a><a name="Security"></a>Avisos de segurança  
 O servidor de backup não está ingressado no domínio privado do dispositivo. Ele está em sua própria rede e não há nenhuma relação de confiança entre seu próprio domínio e domínio de dispositivo privado.  
   
 Como os backups do PDW não são armazenados no dispositivo, sua equipe de ti é responsável por gerenciar todos os aspectos da segurança de backup. Por exemplo, isso inclui o gerenciamento da segurança dos dados de backup, a segurança do servidor usado para armazenar backups e a segurança da infraestrutura de rede que conecta o servidor de backup ao dispositivo APS.  

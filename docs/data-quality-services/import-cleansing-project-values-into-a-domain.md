@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241798"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de projeto de limpeza para um domínio
@@ -24,20 +24,20 @@ ms.locfileid: "75241798"
 
   No [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), você pode importar conhecimento de qualidade de dados coletado durante o processo de limpeza em um projeto de limpeza de qualidade de dados ou um pacote do Integration Services que contém o componente de limpeza DQS em um domínio. Isto assegura que o conhecimento confiável não seja perdido, e que a base de dados de conhecimento seja aprimorada continuamente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Para importar valores de projeto de limpeza para dentro de um domínio, o domínio deverá ter sido usado no projeto de limpeza no Cliente Data Quality ou no pacote do Integration Services que contém o componente de limpeza DQS.  
   
 -   O projeto de limpeza no Cliente Data Quality ou o pacote do Integration Services contendo o componente de limpeza DQS deve ter sido concluído com sucesso.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar o conhecimento de qualidade de dados reunido durante o processo de limpeza para um domínio.  
   
-##  <a name="Import"></a>Importar valores de projeto de limpeza  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a> Importar valores de projeto de limpeza  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -71,12 +71,12 @@ ms.locfileid: "75241798"
 10. Clique em **Concluir**.  
   
     > [!NOTE]  
-    >  Para obter mais informações sobre como trabalhar com valores na página **Valores de Domínio** , consulte [Change Domain Values](../data-quality-services/change-domain-values.md).  
+    >   Para obter mais informações sobre como trabalhar com valores na página **Valores de Domínio** , consulte [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de importar valores de projeto para um domínio  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> Acompanhamento: após a importação dos valores do projeto para um domínio  
  Depois que você importar o conhecimento de qualidade de dados reunido durante o processo de limpeza para um domínio, você pode executar outras tarefas de gerenciamento de domínio no domínio e seus valores. Para obter mais informações, consulte [Gerenciando um domínio](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="Values"></a>Valores que serão importados  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> Valores que serão importados  
  Os seguintes valores serão importados de um projeto para um domínio:  
   
 -   Somente valores da cadeia de caracteres são importados para o domínio.  
@@ -95,7 +95,7 @@ ms.locfileid: "75241798"
   
 -   Uma correção feita em virtude de uma relação baseada em termo em um domínio é importada como um valor correto (não como um erro).  
   
-##  <a name="ValuesNot"></a>Valores que não serão importados  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> Valores que não serão importados  
  Os seguintes valores não serão importados de um projeto para um domínio:  
   
 -   Valores das guias **Sugerido** e **Inválido** na página **Gerenciar e exibir resultados** da atividade **Limpeza** não serão importados.  

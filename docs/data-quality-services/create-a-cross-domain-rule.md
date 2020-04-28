@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245470"
 ---
 # <a name="create-a-cross-domain-rule"></a>Criar uma regra de domínio cruzado
@@ -33,17 +33,17 @@ ms.locfileid: "75245470"
   
  As regras de domínio cruzado são levadas em consideração depois de todas as regras simples que afetam apenas um domínio único. Apenas se um valor estiver de acordo com as regras de domínio único (caso elas existam), a regra de domínio cruzado será aplicada. O domínio composto e os domínios únicos nos quais uma regra é executada devem ser definidos para que a regra possa ser executada.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Para criar uma regra de domínio cruzado, você deve criar e abrir um domínio composto.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para criar uma regra de domínio cruzado.  
   
-##  <a name="Create"></a>Criar regras entre domínios  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a>Criar regras entre domínios  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75245470"
   
 9. Continue o procedimento de teste a seguir.  
   
-##  <a name="Test"></a>Testar regras de domínio cruzado  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a>Testar regras de domínio cruzado  
   
 1.  Teste a regra de domínio cruzado da seguinte maneira:  
   
@@ -90,13 +90,13 @@ ms.locfileid: "75245470"
   
     4.  Clique no ícone **Adiciona um novo termo de teste para a regra de domínio** novamente para adicionar outro conjunto de valores de teste.  
   
-    5.  Clique no ícone **Teste a Regra de Domínio em Todos os Termos** . Se um conjunto de valores de teste for válido, o DQS inserirá uma marca de verificação na coluna **Validade** para a linha. Se o conjunto de valores de teste não for válido, o DQS inserirá um triângulo com um ponto de exclamação na coluna Validade da linha.  
+    5.  Clique no ícone **testar a regra de domínio em todos os termos** . Se um conjunto de valores de teste for válido, o DQS inserirá uma marca de verificação na coluna **Validade** para a linha. Se o conjunto de valores de teste não for válido, o DQS inserirá um triângulo com um ponto de exclamação na coluna Validade da linha.  
   
     6.  Depois que os testes forem concluídos, clique em **Fechar** na caixa de diálogo **Testar Regra de Domínio Composto** .  
   
 2.  Quando você concluído as regras de domínio cruzado, clique em **Concluir** para concluir a atividade de gerenciamento de domínio, conforme descrito em [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de criar uma regra de domínio cruzado  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Acompanhamento: Após a criação de uma regra de domínio cruzado  
  Após criar uma regra de domínio cruzado, você poderá executar outras tarefas de gerenciamento de domínio no domínio, poderá executar a descoberta da base de dados de conhecimento para adicionar conhecimento ao domínio ou poderá adicionar uma política de correspondência ao domínio. Para obter mais informações, consulte [Executar a descoberta de conhecimento](../data-quality-services/perform-knowledge-discovery.md), [Gerenciando um domínio](../data-quality-services/managing-a-domain.md) ou [Criar uma política de conciliação](../data-quality-services/create-a-matching-policy.md).  
   
   

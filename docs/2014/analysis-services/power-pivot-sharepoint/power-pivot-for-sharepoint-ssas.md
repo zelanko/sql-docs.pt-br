@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683583"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683583"
   
  Uma instância de servidor do Analysis Services no modo Integrado do SharePoint conclui a implantação. Ele carrega, consulta e descarrega os dados. Ele também processará dados se a pasta de trabalho for configurada para atualização de dados PowerPivot.  Cada instância está acoplado ao Serviço de Sistema PowerPivot local que faz parte da mesma instalação.  
   
-##  <a name="bkmk_RelatedContent"></a> Nesta seção  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>Nesta seção  
  [Administração e configuração de servidor do PowerPivot na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
@@ -76,7 +76,7 @@ ms.locfileid: "74683583"
   
  [Conexão de modelo semântico de BI do PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
- **Em outras seções**  
+ **Nas outras seções**  
   
 ## <a name="additional-topics"></a>Tópicos adicionais  
  [Atualizar o PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  

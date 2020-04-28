@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401305"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configurar System Center Operations Manager (SCOM) para monitorar o sistema de plataforma de análise
 Siga estas etapas para configurar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para o sistema de plataforma de análise. Os pacotes de gerenciamento são necessários para monitorar o sistema de plataforma de análise do SCOM.  
   
-## <a name="BeforeBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de começar  
 **Pré-requisitos**  
   
 System Center Operations Manager 2007 R2 deve estar instalado e em execução.  
   
 Os pacotes de gerenciamento devem ser instalados e configurados. Consulte [instalar os pacotes de gerenciamento do scom &#40;o sistema de plataforma de análise&#41;](install-the-scom-management-packs.md) e [importar o pacote de gerenciamento do SCOM para o PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Configurar o perfil executar como no System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Configurar o perfil executar como no System Center  
 Para configurar o System Center, você precisa executar as seguintes etapas:  
   
 -   Crie uma conta Executar como para o usuário de domínio do **Inspetor do APS** e mapeie-a para a conta do Inspetor de **APS da Microsoft.**  
@@ -61,7 +61,7 @@ Aqui estão instruções detalhadas sobre como executar as tarefas:
   
 2.  Defina o perfil da **conta do Inspetor de APS da Microsoft** para usar a conta Executar como do Inspetor de **APS** .  
   
-    1.  Navegue até **Administração** -> **Executar como perfis de configuração** -> ****.  
+    1.  Navegue até **Administração** -> **Executar como perfis de configuração** -> **Profiles**.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -71,7 +71,7 @@ Aqui estão instruções detalhadas sobre como executar as tarefas:
   
     3.  A caixa de diálogo **Assistente de perfil executar como** será aberta. Ignore a página **introdução** clicando em **Avançar**.  
   
-    4.  Na página **Propriedades gerais** , clique em **Avançar**.  
+    4.  Na página **Propriedades Gerais** , clique em **Avançar**.  
   
     5.  Na página **contas Executar como** , clique no botão **Adicionar...** e selecione a conta Executar como do **Inspetor de APS** criada anteriormente.  
   

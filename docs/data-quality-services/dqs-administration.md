@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251667"
 ---
 # <a name="dqs-administration"></a>administração do dqs
@@ -42,7 +42,7 @@ ms.locfileid: "75251667"
   
 -   Configure log com base no nível de severidade dos eventos.  
   
-##  <a name="AdminUsingClent"></a>Atividades de administração usando Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Atividades de administração usando Data Quality Client  
  Estas atividades são executadas usando o recurso **Administração** no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Monitoramento de Atividades  
@@ -53,19 +53,19 @@ ms.locfileid: "75251667"
   
 -   **Dados de referência**: configurar provedores de serviço de dados de referência: provedores de serviço de dados do Azure Marketplace ou de referência direta. Depois de configurar os provedores de serviço de dados de referência, você pode mapear um domínio ou domínio composto com os dados de referência durante a atividade de gerenciamento de domínio em uma base de dados de conhecimento e, em seguida, usar a mesma base de dados de conhecimento para a atividade de limpeza em um projeto de qualidade de dados. Ele também permite que você especifique as configurações de proxy para se conectar à Internet para usar o Azure Marketplace.  
   
--   **Configurações gerais**: Especifique os valores de limite para limpeza de dados e correspondência de dados e se deseja habilitar notificações para a criação [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]de perfil no. Estes valores de limite são usados pelo DQS durante a limpeza por computador e atividades correspondentes em um projeto de qualidade de dados.  
+-   **Configurações gerais**: especifique os valores de limite para limpeza e correspondência de dados e se é preciso habilitar notificações para criar perfil no [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Estes valores de limite são usados pelo DQS durante a limpeza por computador e atividades correspondentes em um projeto de qualidade de dados.  
   
--   **Configurações de log**: os arquivos de log no DQS registram as atividades executadas no DQS e são úteis para o rastreamento de problemas operacionais durante a manutenção e a solução de problemas. Você pode filtrar as mensagens que quiser que sejam registradas em log para vários recursos do DQS (gerenciamento de domínio, descoberta da base de dados de conhecimento, limpeza, correspondência e serviços de dados de referência) e módulos do DQS com base no nível de severidade dos eventos.  
+-   **Configurações de log**: os arquivos de log no DQS registram as atividades executadas no DQS e são úteis para rastrear problemas operacionais durante a manutenção e a solução de problemas. Você pode filtrar as mensagens que quiser que sejam registradas em log para vários recursos do DQS (gerenciamento de domínio, descoberta da base de dados de conhecimento, limpeza, correspondência e serviços de dados de referência) e módulos do DQS com base no nível de severidade dos eventos.  
   
 > [!NOTE]  
 >  A tela **Configuração** só estará disponível para os usuários que tiverem a função dqs_administrator no banco de dados DQS_MAIN.  
   
-##  <a name="AdminOutsideClient"></a>Atividades de administração fora do Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Atividades de administração fora do Data Quality Client  
  As atividades são executadas fora do Cliente Data Quality:  
   
--   **Fazer backup e restaurar bancos**de dados do DQS: o backup e a restauração de bancos de dados do DQS são os mesmos que fazer backup e restaurar qualquer SQL Server banco de dados com algumas considerações específicas para o DQS.  
+-   **Backup e restauração de bancos de dados do DQS**: o backup e a restauração de bancos de dados do DQS é o mesmo que fazer backup e restauração de qualquer banco de dados do SQL Server com algumas considerações que são específicas do DQS.  
   
--   **Desanexar e anexar bancos**de dados do DQS: as etapas para desanexar e anexar bancos de dados do DQS são as mesmas que desanexar e anexar qualquer SQL Server banco com algumas considerações específicas para o DQS.  
+-   **Desanexar e anexar bancos de dados DQS**: as etapas para desanexar e anexar bancos de dados DQS são as mesmas que desanexar e anexar qualquer banco de dados do SQL Server com algumas considerações que são específicas do DQS.  
   
  Para obter mais informações, consulte [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   

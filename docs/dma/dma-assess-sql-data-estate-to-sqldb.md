@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253507"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Avaliar a prontidão de um SQL Server banco de dados migrando para o Azure SQL usando o Assistente de Migração de Dados
@@ -58,11 +58,11 @@ Um projeto de migrações para Azure é usado para armazenar metadados de descob
 
     Você pode criar um projeto de Migrações para Azure em qualquer uma dessas regiões.
 
-    | **Gráfico**  | **Região do local de armazenamento** |
+    | **Geografia**  | **Região do local de armazenamento** |
     | ------------- | ------------- |
-    | Ásia | Sudeste Asiático ou Ásia Oriental |
+    | Ásia | Sudeste Asiático ou Leste da Ásia |
     | Europa | Sul da Europa ou Europa Ocidental |
-    | Reino Unido | Sul do Reino Unido ou Oeste do Reino Unido |
+    | United Kingdom | Sul do Reino Unido ou Oeste do Reino Unido |
     | Estados Unidos | EUA Central ou oeste dos EUA 2 |
 
     A localização geográfica especificada para o projeto só é usada para armazenar os metadados coletados das VMs locais. Você pode selecionar qualquer região de destino para a migração real.
@@ -93,7 +93,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
    ![Migração do Azure – ferramenta de avaliação adicionada](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. Baixe Assistente de Migração de Dados usando o link fornecido e, em seguida, instale-o em um computador com acesso às instâncias de SQL Server de origem.
-2. Iniciar Assistente de Migração de Dados.
+2. Inicie o Assistente de Migração de Dados.
 
 ### <a name="create-an-assessment"></a>Criar uma avaliação
 
@@ -118,7 +118,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
 2. Selecione **Avançar**.
 
-### <a name="add-databases-to-assess"></a>Adicionar bancos de dados a serem avaliados
+### <a name="add-databases-to-assess"></a>Adicionar os bancos de dados a serem avaliados
 
 1. Selecione **adicionar fontes** para abrir o menu suspenso de conexão.
 2. Insira o nome da instância do SQL Server, escolha o tipo de autenticação, defina as propriedades de conexão corretas e, em seguida, selecione **conectar**.
@@ -135,7 +135,7 @@ Depois de criar com êxito um projeto de migração, em **ferramentas de avalia�
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Entre no Portal do Azure.
+6. Entre no portal do Azure.
 
    ![Migração do Azure-tela de resultados de Assistente de Migração de Dados de análise](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

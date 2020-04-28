@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232276"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapeando dados de parâmetro CLR
@@ -38,7 +38,7 @@ ms.locfileid: "75232276"
   
 ||||  
 |-|-|-|  
-|**Tipo de dados SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
+|**Tipo de dados do SQL Server**|Tipo (em System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Tipo de dados CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64,>\<Int64 anulável**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Booliano,\<booleano anulável>**|  
@@ -48,35 +48,33 @@ ms.locfileid: "75232276"
 |`datetime`|`SqlDateTime`|**DateTime, data\<e hora anuláveis>**|  
 |`datetime2`|Nenhum|**DateTime, data\<e hora anuláveis>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, DateTimeOffset\<anulável>**|  
-|`decimal`|`SqlDecimal`|**Decimal, decimal\<anulável>**|  
+|`decimal`|`SqlDecimal`|**Decimal, Nullable\<Decimal>**|  
 |`float`|`SqlDouble`|**Duplo,>\<duplo anulável**|  
 |`geography`|`SqlGeography`<br /><br /> `SqlGeography`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
 |`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
 |`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`é definido em Microsoft. SqlServer. Types. dll, que é instalado com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]SQL Server e pode ser baixado do [Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164).|Nenhum|  
 |`image`|Nenhum|Nenhum|  
 |`int`|`SqlInt32`|**Int32,>\<Int32 anulável**|  
-|`money`|`SqlMoney`|**Decimal, decimal\<anulável>**|  
+|`money`|`SqlMoney`|**Decimal, Nullable\<Decimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|Nenhum|Nenhum|  
-|`numeric`|`SqlDecimal`|**Decimal, decimal\<anulável>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` é uma melhor correspondência para transferência e acesso a dados, e `SQLString` é uma melhor correspondência para executar operações de cadeia de caracteres.|`String, Char[]`|  
+|`numeric`|`SqlDecimal`|**Decimal, Nullable\<Decimal>**|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` é uma melhor correspondência para transferência e acesso a dados, e `SQLString` é uma melhor correspondência para executar operações de cadeia de caracteres.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [], Char\<anulável>**|  
-|`real`|
-  `SqlSingle` (o intervalo de `SqlSingle`, no entanto, é maior que `real`)|**Único>Anulável\<**|  
+|`real`|`SqlSingle` (o intervalo de `SqlSingle`, no entanto, é maior que `real`)|**Único>Anulável\<**|  
 |`rowversion`|Nenhum|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16, Int16\<anulável>**|  
-|`smallmoney`|`SqlMoney`|**Decimal, decimal\<anulável>**|  
+|`smallmoney`|`SqlMoney`|**Decimal, Nullable\<Decimal>**|  
 |`sql_variant`|Nenhum|`Object`|  
 |`table`|Nenhum|Nenhum|  
 |`text`|Nenhum|Nenhum|  
 |`time`|Nenhum|**TimeSpan, TimeSpan\<anulável>**|  
 |`timestamp`|Nenhum|Nenhum|  
-|`tinyint`|`SqlByte`|**Byte,>\<de bytes anuláveis**|  
+|`tinyint`|`SqlByte`|**Byte, Nullable\<Byte>**|  
 |`uniqueidentifier`|`SqlGuid`|**GUID, GUID\<anulável>**|  
 |`User-defined type(UDT)`|Nenhum|A mesma classe que é associada ao tipo definido pelo usuário no mesmo assembly ou em um assembly dependente.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte [],>\<de bytes anuláveis**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte, Byte[], Nullable\<byte>**|  
 |`varchar`|Nenhum|Nenhum|  
 |`xml`|`SqlXml`|Nenhum|  
   
@@ -111,7 +109,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**Tipo de dados CLR (SQL Server)**|**Tipo de dados SQL Server**|  
+|**Tipo de dados CLR (SQL Server)**|**Tipo de dados do SQL Server**|  
 |`Decimal`|SMALLMONEY|  
 |`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  

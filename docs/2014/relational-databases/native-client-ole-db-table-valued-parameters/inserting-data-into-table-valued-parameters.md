@@ -1,5 +1,5 @@
 ---
-title: Inserindo dados em parâmetros com valor de tabela | Microsoft Docs
+title: Inserir dados em parâmetros com valor de tabela | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231789"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserindo dados em parâmetros com valor de tabela
@@ -30,9 +30,9 @@ ms.locfileid: "75231789"
   
  Espera-se que o consumidor forneça todos os dados de parâmetro com valor de tabela ao provedor antes de executar um comando. Para fornecer os dados, o consumidor popula um objeto do conjunto de linhas de parâmetro com valor de tabela para cada parâmetro com valor de tabela. O objeto do conjunto de linhas de parâmetro com valor de tabela expõe operações Insert, Set e Delete do conjunto de linhas, que o consumidor usará para manipular os dados de parâmetro com valor de tabela. O provedor buscará os dados do objeto do conjunto de linhas de parâmetro com valor de tabela em tempo de execução.  
   
- Quando um objeto do conjunto de linhas de parâmetro com valor de tabela é fornecido ao consumidor, o consumidor pode processá-lo como um objeto do conjunto de linhas. O consumidor pode obter as informações de tipo de cada coluna (tipo, comprimento máximo, precisão e escala) usando o método de interface IColumnsInfo:: GetColumnInfo ou IColumnsRowset:: GetColumnsRowset. Em seguida, o consumidor cria um acessador para especificar as associações referentes aos dados. A próxima etapa é inserir linhas de dados no conjunto de linhas de parâmetro com valor de tabela. Isso pode ser feito usando IRowsetChange:: InsertRow. IRowsetChange:: SetData ou IRowsetChange::D eleteRows também pode ser usado no objeto de conjunto de linhas de parâmetro com valor de tabela se você precisar manipular os dados. Objetos do conjunto de linhas de parâmetro com valor de tabela são contados como referência, semelhante à transmissão de objetos.  
+ Quando um objeto do conjunto de linhas de parâmetro com valor de tabela é fornecido ao consumidor, o consumidor pode processá-lo como um objeto do conjunto de linhas. O consumidor pode obter as informações de tipo de cada coluna (tipo, comprimento máximo, precisão e escala) usando o método de interface IColumnsInfo::GetColumnInfo ou IColumnsRowset::GetColumnsRowset. Em seguida, o consumidor cria um acessador para especificar as associações referentes aos dados. A próxima etapa é inserir linhas de dados no conjunto de linhas de parâmetro com valor de tabela. Isso pode ser feito usando IRowsetChange::InsertRow. Se você tiver que manipular os dados, também será possível usar IRowsetChange::SetData ou IRowsetChange::DeleteRows no objeto do conjunto de linhas de parâmetro com valor de tabela. Objetos do conjunto de linhas de parâmetro com valor de tabela são contados como referência, semelhante à transmissão de objetos.  
   
- Se IColumnsRowset:: GetColumnsRowset for usado, haverá chamadas subsequentes para os métodos IRowset:: GetNextRows, IRowset:: GetData e IRowset:: ReleaseRows no objeto de conjunto de linhas da coluna resultante.  
+ Se IColumnsRowset::GetColumnsRowset for usado, haverá chamadas subsequentes para os métodos IRowset::GetNextRows, IRowset::GetData e IRowset::ReleaseRows no objeto de conjunto de linhas da coluna resultante.  
   
  Depois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo começar a executar o comando, os valores de parâmetro com valor de tabela serão obtidos desse objeto de conjunto de linhas de parâmetro com valor de tabela e enviados ao servidor.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75231789"
   
  No modelo de pull, o consumidor fornece dados sob demanda para o provedor. Use esta abordagem se seu aplicativo tiver muitas inserções de dados, e os dados do conjunto de linhas de parâmetro com valor de tabela na memória resultarem em acesso de memória excessivo. Se forem usados vários provedores OLE DB, o modelo de pull do consumidor permitirá que o consumidor forneça qualquer objeto do conjunto de linhas como o valor de parâmetro com valor de tabela.  
   
- Para usar o modelo de pull, os consumidores precisam fornecer suas próprias implementações de um objeto do conjunto de linhas. Ao usar o modelo de pull com conjuntos de linhas de parâmetro com valor de tabela (CLSID_ROWSET_TVP), o consumidor é solicitado a agregar o objeto de somador de parâmetro com valor de tabela que o provedor expõe por meio do ITableDefinitionWithConstraints:: Método CreateTableWithConstraints ou o método IOpenRowset:: OpenRowset. Espera-se que o objeto do consumidor substitua a implementação da interface IRowset. Você deve substituir as seguintes funções:  
+ Para usar o modelo de pull, os consumidores precisam fornecer suas próprias implementações de um objeto do conjunto de linhas. Ao usar o modelo de pull com conjuntos de linhas de parâmetro com valor de tabela (CLSID_ROWSET_TVP), solicita-se que o consumidor agregue o objeto do conjunto de linhas de parâmetro com valor de tabela que o provedor expõe pelo método ITableDefinitionWithConstraints::CreateTableWithConstraints method ou pelo método IOpenRowset::OpenRowset. Espera-se que o objeto do consumidor substitua a implementação da interface IRowset. Você deve substituir as seguintes funções:  
   
 -   IRowset::GetNextRows  
   
@@ -70,6 +70,6 @@ ms.locfileid: "75231789"
  No momento da execução, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client chamará novamente o objeto do conjunto de linhas para buscar linhas e ler dados das colunas.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Parâmetros com valor de tabela &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [Os parâmetros com valor de tabela &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

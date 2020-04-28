@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241344"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrar-se a um servidor conectado (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "75241344"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Para registrar um servidor conectado  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75241344"
      **Selecione um grupo de servidores**  
      Selecione o grupo de servidores em que você deseja salvar o registro do servidor.  
   
-     **Novo grupo**  
+     **Novo Grupo**  
      Clique para iniciar a caixa de diálogo **Novo Grupo** em que você pode criar um novo grupo de servidores para o servidor registrado.  
   
      **Salvar**  

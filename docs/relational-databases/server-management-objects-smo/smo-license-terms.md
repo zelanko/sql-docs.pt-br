@@ -10,16 +10,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238647"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do SMO (Objetos de Gerenciamento Compartilhado) do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA DE SOFTWARE DA MICROSOFT
+## <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT
 **OBJETOS DE GERENCIAMENTO COMPARTILHADO DO MICROSOFT SQL SERVER 2017**
 
 ---
@@ -40,12 +40,12 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 &nbsp;&nbsp;Você pode instalar e usar qualquer número de cópias do software em seus dispositivos para projetar, desenvolver e testar seus programas.
 
-**2. REQUISITOS DE LICENCIAMENTO E/OU DIREITOS DE USO ADICIONAIS.**
+**2.    REQUISITOS DE LICENCIAMENTO E/OU DIREITOS DE USO ADICIONAIS.**
 
 &nbsp;&nbsp;**um código. distribuível.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. Right para usar e distribuir. Se você estiver em conformidade com os termos abaixo:**
-*   Você pode copiar e distribuir a forma do código-objeto do software ("código distribuível") nos programas que você desenvolve; e
+*   Você poderá copiar e distribuir a forma de código-objeto do software (“Código Distribuível”) nos programas que desenvolve e
 *   Você poderá permitir que os distribuidores dos seus programas copiem e distribuam o Código Distribuível como parte desses programas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**II. requisitos de distribuição. Para qualquer código distribuível distribuído, você deve**
@@ -64,7 +64,7 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
   * outras pessoas tenham o direito de modificá-lo.
 
 
-**3. ESCOPO DA LICENÇA.** Este software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. Você não pode fazer nenhum dos seguintes:
+**3. ESCOPO DA LICENÇA.** O software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. Você não pode fazer nenhum dos seguintes:
 
 - Contornar qualquer limitação técnica no software.
 - Fazer engenharia reversa, descompilar ou desmontar o software, exceto e somente na medida em que a lei aplicável permitir expressamente, apesar dessa limitação.
@@ -73,23 +73,23 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
 
 **4. AVISOS DE TERCEIROS.** O software pode incluir componentes de terceiros com avisos legais separados ou regidos por outros contratos, conforme pode ser descrito no arquivo ThirdPartyNotices que acompanha o software.  Mesmo se tais componentes forem regidos por outros contratos, os avisos de isenção e as limitações e exclusões de danos abaixo também se aplicam.
 
-**5. CÓPIA DE BACKUP.** É possível fazer uma cópia do software para backup. Essa cópia poderá ser usada apenas para reinstalar o software.
+**5.    CÓPIA DE BACKUP.** É possível fazer uma cópia do software para backup. Essa cópia poderá ser usada apenas para reinstalar o software.
 
-**6. DOCUMENTAÇÃO.** Qualquer pessoa que tenha acesso válido ao seu computador ou à sua rede interna poderá copiar e usar a documentação para fins de referência interna.
+**6.    DOCUMENTAÇÃO.** Qualquer pessoa que tenha acesso válido ao seu computador ou à sua rede interna poderá copiar e usar a documentação para fins de referência interna.
 
-**7. RESTRIÇÕES DE EXPORTAÇÃO.** O software está sujeito às leis e normas de exportação dos Estados Unidos. Você deve concordar com todas as leis e normas de exportação internacionais e domésticas que se aplicam ao software. Essas leis incluem restrições a destinos, usuários finais e usos finais. Para obter informações adicionais, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consulte.
+**7.    RESTRIÇÕES À EXPORTAÇÃO.** O software está sujeito às leis e normas de exportação dos Estados Unidos. Você deve concordar com todas as leis e normas de exportação internacionais e domésticas que se aplicam ao software. Essas leis incluem restrições a destinos, usuários finais e usos finais. Para obter informações adicionais, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)consulte.
 
-**8. SERVIÇOS DE SUPORTE.** Como este software é fornecido “no estado em que se encontra”, a Microsoft poderá não prestar serviços de suporte para ele.
+**8.    SERVIÇOS DE SUPORTE.** Como este software é fornecido “no estado em que se encontra”, a Microsoft poderá não prestar serviços de suporte para ele.
 
 **9. contrato completo**. Este contrato e os termos dos suplementos, das atualizações, dos serviços baseados na Internet e dos serviços de suporte por você usados constituem o acordo integral para o software e os serviços de suporte.
 
-**10. LEI APLICÁVEL.**
+**10.   LEI APLICÁVEL.**
 
 &nbsp;&nbsp;**a. Estados Unidos.** Se você tiver adquirido o software nos Estados Unidos, o presente contrato será regido e interpretado de acordo com as leis do Estado de Washington, que serão aplicadas aos requerimentos judiciais ou extrajudiciais de violação de contrato, independentemente dos conflitos de princípios de leis. As leis do estado no qual você reside regerão todos os requerimentos judiciais ou extrajudiciais, incluindo leis de defesa do consumidor, concorrência desleal e atos ilícitos extracontratuais.
 
 &nbsp;&nbsp;**b. fora do Estados Unidos.** Se você tiver adquirido o software em qualquer outro país, serão aplicadas as leis desse país.
 
-**11. EFEITO LEGAL.** Este contrato descreve determinados direitos legais. Você pode ter outros direitos de acordo com as leis do seu país. Você também pode ter direitos em relação à parte de quem o software foi adquirido. Este contrato não altera seus direitos previstos nas leis do seu país, caso essas leis não o permitam.
+**11.   EFEITO LEGAL.** Este contrato descreve determinados direitos legais. Você pode ter outros direitos de acordo com as leis do seu país. Você também pode ter direitos em relação à parte de quem o software foi adquirido. Este contrato não altera seus direitos previstos nas leis do seu país, caso essas leis não o permitam.
 
 **12. ISENÇÃO DE GARANTIA. O SOFTWARE É LICENCIADO "NO ESTADO EM QUE SE ENCONTRA". VOCÊ ASSUME O RISCO DE USÁ-LO. A MICROSOFT NÃO OFERECE GARANTIAS OU CONDIÇÕES EXPRESSAS. VOCÊ PODE TER DIREITOS DE CONSUMIDOR ADICIONAIS OU GARANTIAS ESTATUTÁRIAS SOB SUAS LEIS LOCAIS QUE ESTE CONTRATO NÃO PODE ALTERAR. ATÉ O LIMITE PERMITIDO PELAS LEIS LOCAIS, A MICROSOFT EXCLUI AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO.**
 

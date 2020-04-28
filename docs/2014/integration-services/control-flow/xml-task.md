@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232733"
 ---
 # <a name="xml-task"></a>XML Task
@@ -119,7 +119,7 @@ ms.locfileid: "75232733"
   
  Para obter mais informações sobre as propriedades que podem ser definidas no [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, clique em um dos seguintes tópicos:  
   
--   [Editor da tarefa XML &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor da Tarefa XML &#40;página Geral&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Validar XML com a Tarefa XML](xml-task.md)  
   

@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232235"
 ---
 # <a name="coding-user-defined-types"></a>codificando tipos definidos pelo usuário
@@ -68,8 +68,7 @@ using Microsoft.SqlServer.Server;
  A `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` é obrigatória. O atributo `Serializable` é opcional. Também é possível especificar `Microsoft.SqlServer.Server.SqlFacetAttribute` para fornecer informações sobre o tipo de retorno de uma UDT. Para obter mais informações, confira [Atributos personalizados para rotinas do CLR (Common Language Runtime)](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Atributos da UDT Point  
- O `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` define o formato de armazenamento para o `Point` UDT como `Native`. 
-  `IsByteOrdered` é definido como `true`, o que garante que os resultados das comparações sejam os mesmos no SQL Server se a mesma comparação foi feita no código gerenciado. A UDT implementa a interface `System.Data.SqlTypes.INullable` para que a UDT reconheça nulos.  
+ O `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` define o formato de armazenamento para o `Point` UDT como `Native`. `IsByteOrdered` é definido como `true`, o que garante que os resultados das comparações sejam os mesmos no SQL Server se a mesma comparação foi feita no código gerenciado. A UDT implementa a interface `System.Data.SqlTypes.INullable` para que a UDT reconheça nulos.  
   
  O seguinte fragmento de código mostra os atributos da UDT `Point`.  
   
@@ -290,8 +289,7 @@ public Int32 Y
 ## <a name="validating-udt-values"></a>Validando valores de UDT  
  Ao trabalhar com dados de UDT, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converte automaticamente valores binários em valores de UDT. Esse processo de conversão envolve verificar se os valores são apropriados ao formato de serialização do tipo e garantir que o valor possa ser desserializado corretamente. Isso assegura que o valor possa ser novamente convertido em um formato binário. No caso das UDTs ordenadas por byte, isso também garante que o valor binário resultante corresponda ao valor binário original. Isso impede a manutenção de valores inválidos no banco de dados. Em alguns casos, esse nível de verificação pode ser inadequado. Talvez seja obrigatória uma validação adicional quando os valores de UDT devem estar em um domínio ou intervalo esperado. Por exemplo, uma UDT que implementa uma data pode exigir que o valor de dia seja um número positivo e que esteja em um determinado intervalo de valores válidos.  
   
- A propriedade `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` de `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` permite fornecer o nome de um método de avaliação executado pelo servidor quando os dados são atribuídos a uma UDT ou convertidos em uma. 
-  `ValidationMethodName` também é chamado durante a execução do utilitário bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, consulta distribuída e operações RPC (chamada de procedimento remoto) do protocolo TDS. O valor padrão de `ValidationMethodName` é null, o que indica não haver nenhum método de validação.  
+ A propriedade `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.ValidationMethodName` de `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` permite fornecer o nome de um método de avaliação executado pelo servidor quando os dados são atribuídos a uma UDT ou convertidos em uma. `ValidationMethodName` também é chamado durante a execução do utilitário bcp, BULK INSERT, DBCC CHECKDB, DBCC CHECKFILEGROUP, DBCC CHECKTABLE, consulta distribuída e operações RPC (chamada de procedimento remoto) do protocolo TDS. O valor padrão de `ValidationMethodName` é null, o que indica não haver nenhum método de validação.  
   
 ### <a name="example"></a>Exemplo  
  O seguinte fragmento de código mostra a declaração da classe `Point`, que especifica um `ValidationMethodName` de `ValidatePoint`.  

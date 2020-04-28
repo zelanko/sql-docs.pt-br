@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253061"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "75253061"
     child::Customer  
     ```  
   
-     Na consulta XPath a seguir, `child` é o eixo. 
-  `Customer` é o teste de nó.  
+     Na consulta XPath a seguir, `child` é o eixo. `Customer` é o teste de nó.  
   
 -   **primária**  
   
@@ -54,8 +53,7 @@ ms.locfileid: "75253061"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. 
-  `Customer` e `Order` são os testes de nó.  
+     Isso corresponde à especificação de `child::Customer`. Nesta consulta XPath, `child` e `parent` são os eixos. `Customer` e `Order` são os testes de nó.  
   
 -   **Attribute**  
   

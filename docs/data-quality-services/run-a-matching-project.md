@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244117"
 ---
 # <a name="run-a-matching-project"></a>Executar um projeto de correspondência
@@ -30,20 +30,20 @@ ms.locfileid: "75244117"
   
  Você deve se preparar para a correspondência, criando uma política de correspondência com uma ou mais regras de correspondência e executando a política em dados de exemplo. O processo de projeto de correspondência está separado do processo de política de correspondência, e uma base de dados de conhecimento não é populada com o conhecimento de correspondência obtido do projeto de correspondência. Para obter mais informações sobre como criar uma política de correspondência, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   Você deve ter criado uma base de dados de conhecimento com uma política de correspondência que consiste em uma ou mais regras de correspondência.  
   
 -   O Microsoft Excel deverá ser instalado no computador [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] se os dados de origem a serem correspondidos estiverem em um arquivo do Excel. Caso contrário, você não poderá selecionar o arquivo do Excel no estágio de mapeamento. Os arquivos criados pelo Microsoft Excel podem ter a extensão .xlsx, .xls ou .csv. Se a versão de 64 bits do Excel for usada, somente arquivos do Excel 2003 (.xls) terão suporte; não haverá suporte para os arquivos do Excel 2007 ou 2010 (.xlsx). Se você estiver usando a versão de 64 bits do Excel 2007 ou 2010, salve o arquivo como .xls ou .csv ou instale uma versão de 32 bits do Excel.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para executar um projeto de correspondência.  
   
-##  <a name="StartingaMatchingProject"></a>Primeira etapa: iniciar um projeto de correspondência  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Primeira etapa: iniciar um projeto de correspondência  
  Você executa a atividade de correspondência em um projeto de qualidade de dados criado no aplicativo cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "75244117"
   
 3.  Clique em **Abrir projeto de qualidade de dados** para fazer a correspondência em um projeto existente de qualidade de dados. Selecione o projeto e clique em **Avançar**. (Ou você pode clicar em um projeto em **projeto de qualidade de dados recente**.) Se você abrir um projeto de correspondência que foi fechado, prosseguirá para o estágio em que a atividade de projeto correspondente foi fechada (conforme indicado pela coluna **estado** na tabela projeto ou no nome do projeto em **projeto de qualidade de dados recente**). Se você abrir um projeto de correspondência que foi concluído, irá para a página **Exportar** (e não poderá retornar a telas anteriores).  
   
-##  <a name="MappingStage"></a>Estágio de mapeamento  
+##  <a name="mapping-stage"></a><a name="MappingStage"></a> Estágio de mapeamento  
  No estágio de mapeamento, identifique a origem dos dados nos quais você executará a correspondência e mapeie colunas de origem para domínios para disponibilizar os domínios para a atividade de política de correspondência.  
   
 1.  Na página **Mapa** , para executar a correspondência em um banco de dados, deixe **Fonte de Dados** como **SQL Server**, selecione o banco de dados no qual deseja executar a correspondência e selecione a tabela. O banco de dados de origem deve estar presente na mesma instância do SQL Server que o servidor do DQS. Caso contrário, ele não será exibido na lista suspensa.  
@@ -75,14 +75,14 @@ ms.locfileid: "75244117"
     > [!NOTE]  
     >  Clique em **Fechar** para salvar o estágio do projeto correspondente e retornar à página inicial do DQS. Na próxima vez que abrir este projeto, você iniciará no mesmo estágio. Clique em **Cancelar** para terminar a atividade de correspondência, perder seu trabalho e retornar à página inicial do DQS.  
   
-##  <a name="MatchingStage"></a>Estágio de correspondência  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a>Estágio de correspondência  
  Neste estágio, você executa um processo de correspondência assistido por computador que mostra quantas correspondências existem nos dados de origem com base nas regras de correspondência. Este processo gerará uma tabela de resultados correspondentes que mostra os clusters identificados pelo DQS, cada registro no cluster com sua ID de registro e sua pontuação de correspondência e o registro principal inicial para o cluster. O registro principal no cluster é selecionado aleatoriamente. Você determina o registro sobrevivente selecionando a regra de sobrevivência na página **Exportar** ao executar o projeto de correspondência. Cada linha adicional em um cluster é considerada uma correspondência; sua pontuação correspondente (em comparação com o registro principal) é fornecida na tabela de resultados. O número do cluster é igual à ID do registro principal no cluster.  
   
  Nos resultados correspondentes, você pode filtrar os dados desejados e rejeitar as correspondências não desejadas. Também é possível exibir os dados de criação de perfil do processo de correspondência como um todo, as especificações sobre as regras de correspondência que se aplicam e as estatísticas sobre os resultados correspondentes como um todo. O processo de correspondência pode identificar clusters sobrepostos e não sobrepostos e, se for executado várias vezes, pode ser executado em dados recém-copiados da origem e reindexados, ou em dados anteriores.  
   
 1.  Na página **Correspondência**, selecione **Clusters sobrepostos** na lista suspensa para exibir os registros dinâmicos e os registros a seguir para todos os clusters quando a correspondência for executada, mesmo que grupos de clusters tenham registros em comum. Selecione **Clusters não sobrepostos** para exibir clusters que tenham registros em comum como um cluster único quando a correspondência for executada.  
   
-2.  Clique em **Recarregar os dados da origem** (o padrão) para copiar dados da origem de dados na tabela de preparação e reindexá-los quando você executar o projeto de correspondência. Clique em **Executar nos dados anteriores** para executar um projeto de correspondência sem copiar os dados na tabela de preparação e reindexar os dados. A **execução nos dados anteriores** está desabilitada para a primeira execução do projeto de correspondência, ou se você alterar o mapeamento na página **mapa** e, em seguida, pressione **Sim** no pop-up a seguir. Em ambos os casos, você deverá reindexar. Não será necessário reindexar se o projeto de correspondência não tiver sido alterado. A execução nos dados anteriores pode ajudar no desempenho.  
+2.  Clique em **Recarregar os dados da origem** (o padrão) para copiar dados da origem de dados na tabela de preparação e reindexá-los quando você executar o projeto de correspondência. Clique em **Executar nos dados anteriores** para executar um projeto de correspondência sem copiar os dados na tabela de preparação e reindexar os dados. A opção**Executar nos dados anteriores** está desabilitada para a primeira execução do projeto de correspondência ou se você alterar o mapeamento na página **Mapa** e depois pressionar **Sim** no pop-up seguinte. Em ambos os casos, você deverá reindexar. Não será necessário reindexar se o projeto de correspondência não tiver sido alterado. A execução nos dados anteriores pode ajudar no desempenho.  
   
 3.  Clique em **Iniciar** para executar a correspondência na fonte de dados selecionada.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75244117"
   
 12. Clique em **Avançar** para prosseguir para o estágio de sobrevivência e exportação.  
   
-##  <a name="SurvivorshipandExportStage"></a>Estágio de sobrevivência e exportação  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> Estágio de sobrevivência e exportação  
  No processo de sobrevivência, os Data Quality Services determinam um registro de sobrevivente para cada cluster, que substituirá os outros registros que correspondem a ele no cluster. Ele exporta os resultados da correspondência e/ou sobrevivência para uma tabela no banco de dados do SQL Server, um arquivo .csv ou um arquivo do Excel.  
   
  A sobrevivência é opcional. Você pode exportar os resultados sem executar a sobrevivência; nesse caso, o DQS usaria o registro dinâmico que foi designado na análise correspondente. Se dois ou mais registros em um cluster obedecerem a regra de sobrevivência, o processo de sobrevivência selecionará a menor ID de registro entre os registros conflitantes para ser a sobrevivente. Você pode exportar os sobreviventes para arquivos ou tabelas diferentes usando regras de sobrevivência diferentes.  
@@ -166,10 +166,10 @@ ms.locfileid: "75244117"
     > [!NOTE]  
     >  Se você concluiu um projeto de correspondência e o utilizou novamente, ele usará a base de dados de conhecimento existente quando ele foi publicado. Ele não usará as alterações feitas na base de dados de conhecimento desde a conclusão do projeto. Para usar essas alterações, ou para usar uma nova base de dados de conhecimento, você terá que criar um novo projeto de correspondência. Por outro lado, se ele já foi criado, mas não concluído, um projeto de correspondência, quaisquer alterações publicadas na política de correspondência serão usados se você executar a correspondência no projeto.  
   
-##  <a name="FollowUp"></a>Acompanhamento: depois de executar um projeto de correspondência  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Acompanhamento: depois de executar um projeto de correspondência  
  Depois executar uma projeto de correspondência, você pode alterar a política de correspondência na base de dados de conhecimento, e criar e executar outro projeto de correspondência com base na política de correspondência atualizada. Para obter mais informações, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Profiler"></a>Guias criador de perfil e resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Guias criador de perfil e resultados  
  As guias Criador de Perfil e Resultados contêm estatísticas para o processo de correspondência.  
   
 ### <a name="profiler-tab"></a>Guia Criador de perfil  
@@ -179,25 +179,25 @@ ms.locfileid: "75244117"
   
 -   **Registros**: o número total de registros no banco de dados  
   
--   **Valores totais**: o número total de valores nos campos  
+-   **Valores Totais**: o número total de valores nos campos  
   
--   **Novos valores**: o número total de valores novos desde a execução anterior e sua porcentagem do todo  
+-   **Novos Valores**: o número total de valores novos desde a execução anterior e seu percentual em relação ao todo  
   
--   **Valores exclusivos**: o número total de valores exclusivos nos campos e o percentual do todo  
+-   **Valores Exclusivos**: o número total de valores exclusivos nos campos e seu percentual em relação ao todo  
   
--   **Novos valores exclusivos**: o número total de valores exclusivos que são novos nos campos e sua porcentagem do todo  
+-   **Novos Valores Exclusivos**: o número total de valores exclusivos novos nos campos e seu percentual em relação ao todo  
   
  As estatísticas de campo incluem o seguinte:  
   
--   **Campo**: o nome do campo que foi incluído nos mapeamentos.  
+-   **Campo**: nome do campo que foi incluído nos mapeamentos.  
   
 -   **Domínio**: o nome do domínio que foi mapeado para o campo.  
   
--   **Novo**: o número de novas correspondências encontradas e sua porcentagem do total  
+-   **Novo**: o número de novas correspondências localizadas e sua porcentagem do total  
   
--   **Exclusivo**: o número de registros exclusivos no campo e seus percentual do total  
+-   **Exclusivo**: o número de registros exclusivos no campo e seu percentual do total  
   
--   **Integridade**: a porcentagem em que a execução da regra foi concluída.  
+-   **Integridade**: a porcentagem de conclusão da execução da regra.  
   
 ### <a name="matching-policy-notifications"></a>Notificações de Política de Correspondência  
  Para a atividade de política de correspondência, as seguintes condições resultam em notificações:  
@@ -218,7 +218,7 @@ ms.locfileid: "75244117"
  **Lista de regras**  
  Exibe uma lista de todas as regras de correspondência na política de correspondência. Selecione uma das regras para exibir as condições na regra na tabela de Regra de Correspondência.  
   
- **Tabela de regras de correspondência**  
+ **Tabela Regra de Correspondência**  
  Exibe cada condição na regra selecionada, inclusive domínio, valor de semelhança, peso e seleção pré-requisitada.  
   
 ### <a name="matching-results-tab"></a>Guia Resultados Correspondentes  

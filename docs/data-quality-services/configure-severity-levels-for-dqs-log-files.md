@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255636"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar níveis de severidade para arquivos de log do DQS
@@ -30,26 +30,26 @@ ms.locfileid: "75255636"
 
   Este tópico descreve como configurar níveis de severidade para várias atividades e módulos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Níveis de severidade definem a intensidade de eventos que ocorrem no DQS. Eventos DQS têm os seguintes níveis de severidade, na ordem decrescente de severidade:  
   
--   **Fatal**: erros críticos de tempo de execução que podem causar resultados graves/inesperados.  
+-   **Fatal**: erros críticos em runtime que podem causar resultados severos/inesperados.  
   
--   **Erro**: outros erros de tempo de execução.  
+-   **Erro**: outros erros em runtime.  
   
--   **Warn**: aviso sobre eventos que podem resultar em um erro.  
+-   **Aviso**: avisos sobre eventos que podem resultar em um erro.  
   
--   **Informações**: informações sobre eventos gerais que não são um erro ou um aviso. Por exemplo, um processo de DQS foi iniciado.  
+-   **Informações**: informações sobre eventos em geral que não são um erro ou um aviso. Por exemplo, um processo de DQS foi iniciado.  
   
--   **Depuração**: informações detalhadas (detalhados) sobre o evento.  
+-   **Depuração**: informações detalhadas (detalhado) sobre o evento.  
   
  Ao configurar níveis de severidade para várias atividades e módulos do DQS, você está filtrando as informações a serem registradas e gravando no arquivo de log do DQS para a respectiva atividade ou módulo do DQS. Por exemplo, se você definir o nível de severidade de uma atividade do DQS como **Aviso**, apenas as mensagens de aviso e severidade mais alta (Erro e Fatal) associadas com a atividade do DQS serão registradas.  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  É necessário ter a função dqs_administrator no banco de dados DQS_MAIN para configurar definições de severidade de log.  
   
-##  <a name="ConfigureActivity"></a>Configurar níveis de severidade no nível de atividade  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurar níveis de severidade no nível de atividade  
  Você pode definir configurações de severidade de log para as seguintes atividades no DQS: gerenciamento de domínio, descoberta de conhecimento, política de correspondência, limpeza de dados, correspondência de dados e serviços de dados de referência. Para fazer isso:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Execute o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -63,9 +63,9 @@ ms.locfileid: "75255636"
     > [!NOTE]  
     >  Por padrão, **Erro** é selecionado para cada uma das atividades. Isso implica que mensagens de erro e fatais sejam gravadas nos arquivos de log do DQS para cada atividade, por padrão.  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
-##  <a name="ConfigureModule"></a>Configurar níveis de severidade no nível do módulo (avançado)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurar níveis de severidade no nível do módulo (avançado)  
  A seção **Avançado** na guia **Configurações de Log** permite que você defina configurações de severidade de log em um nível de módulo. Módulos são assemblies do sistema DQS que implementam várias funcionalidades em um recurso no DQS. Por exemplo, a atividade de gerenciamento de domínio contém várias funcionalidades, como a definição de regras de domínio, a definição de condições de regra, a definição de regras do domínio cruzado para domínios compostos e assim por diante.  
   
  Às vezes, o nível de granularidade no nível de atividade não é suficiente. Talvez você queira investigar um problema que está ocorrendo em um módulo específico de uma atividade. Convém ter uma opção para configurar severidade de log no nível de módulo para isolar e controlar o problema com mais precisão.  
@@ -88,7 +88,7 @@ ms.locfileid: "75255636"
   
 4.  Repita as etapas 2 e 3 para outros módulos, caso necessário. Você também pode adicionar ou excluir linhas à grade clicando nos ícones **Adicionar Módulo** e **Remover Módulo** .  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Definir configurações avançadas para arquivos de log do DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

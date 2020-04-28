@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229007"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de Disponibilidade AlwaysOn (SQL Server)
@@ -29,9 +29,8 @@ ms.locfileid: "75229007"
  Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Os failovers não são provocados por problemas de banco de dados, como um banco de dados que se torna suspeito devido à perda de um arquivo de dados, à exclusão de um banco de dados ou à corrupção de um log de transações.  
   
   
-##  <a name="Benefits"></a> Benefícios  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornecem um conjunto diversificado de opções que melhoram a disponibilidade do banco de dados e habilitam o uso aprimorado de recursos. Os principais componentes são os seguintes:  
+##  <a name="benefits"></a><a name="Benefits"></a>Benefícios  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornecem um conjunto diversificado de opções que melhoram a disponibilidade do banco de dados e habilitam o uso aprimorado de recursos. Os principais componentes são os seguintes:  
   
 -   Permite até nove réplicas de disponibilidade. Uma *réplica de disponibilidade* é uma instanciação de um grupo de disponibilidade que é hospedado por uma instância específica do SQL Server e que mantém uma cópia local de cada banco de dados de disponibilidade pertencente ao grupo de disponibilidade. Cada grupo de disponibilidade suporta uma réplica primária e até oito réplicas secundárias. Para obter mais informações, consulte [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
@@ -66,11 +65,9 @@ ms.locfileid: "75229007"
   
 -   Fornece um conjunto integrado de ferramentas para simplificar a implantação e o gerenciamento de grupos de disponibilidade, incluindo:  
   
-    -   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e gerenciar grupos de disponibilidade. Para obter mais informações, consulte [visão geral de instruções Transact-SQL para Always on grupo de disponibilidade; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] para criar e gerenciar grupos de disponibilidade. Para obter mais informações, consulte [visão geral de instruções Transact-SQL para Always on grupo de disponibilidade; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
   
-    -   
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , como a seguir:  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , como a seguir:  
   
         -   O [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] cria e configura um grupo de disponibilidade. Em alguns ambientes, este assistente também pode preparar automaticamente os bancos de dados secundários e iniciar a sincronização de dados para cada um deles. Para obter mais informações, consulte [usar a caixa de diálogo novo grupo de disponibilidade; SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
@@ -86,7 +83,7 @@ ms.locfileid: "75229007"
   
     -   Cmdlets do PowerShell. Para obter mais informações, consulte [visão geral dos cmdlets do PowerShell para grupos de disponibilidade Always on; SQL serve;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a> Termos e definições  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Termos e definições  
  grupo de disponibilidade  
  Um contêiner para um conjunto de bancos de dados, *bancos de dados de disponibilidade*, que executam failover juntos.  
   
@@ -114,9 +111,8 @@ ms.locfileid: "75229007"
 > [!NOTE]  
 >  Para obter mais informações, consulte [visão geral do grupos de disponibilidade AlwaysOn; SQL serve;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Interoperability"></a>Interoperabilidade e coexistência com outros recursos de Mecanismo de Banco de Dados  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] podem ser usados com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a>Interoperabilidade e coexistência com outros recursos de Mecanismo de Banco de Dados  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] podem ser usados com os seguintes recursos ou componentes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   [Sobre a captura de dados de alterações; SQL Server;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
@@ -138,7 +134,7 @@ ms.locfileid: "75229007"
   
 -   [Replicação](../../install-windows/install-sql-server-replication.md)  
   
--   [Agente de Serviço](../../configure-windows/sql-server-service-broker.md)  
+-   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
 -   [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)  
   
@@ -147,11 +143,11 @@ ms.locfileid: "75229007"
 > [!WARNING]  
 >  Para obter informações sobre restrições e limitações para usar outros recursos [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]com o, consulte [Always on grupos de disponibilidade: interoperabilidade; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Introdução com grupos de disponibilidade Always On; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   **Blogs:**  
   
@@ -159,7 +155,7 @@ ms.locfileid: "75229007"
   
      [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos:**  
+-   **Explica**  
   
      [Microsoft SQL Server codinome “Denali” Série AlwaysOn, Parte 1: Introduzindo a próxima geração de solução de alta disponibilidade](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

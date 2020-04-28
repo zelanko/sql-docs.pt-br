@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684089"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,21 +22,21 @@ ms.locfileid: "74684089"
   
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Você deve ser um farm ou administrador de serviço para designar uma URL como um local confiável.  
   
  Você deve saber o endereço da URL do site do SharePoint que possui a Galeria de Relatórios PowerPivot ou outra biblioteca que armazenar suas pastas de trabalho. Para obter o endereço, abra o site que contém a biblioteca, clique com o botão direito do mouse em **Galeria PowerPivot**, selecione **Propriedades**e, em seguida, copie a primeira parte do endereço (URL) que contém o nome do servidor e o caminho do site.  
   
-##  <a name="overview"></a>Sobre  
+##  <a name="overview"></a><a name="overview"></a> Visão geral  
  Uma instalação inicial de Serviços do Excel especifica 'http://' como seu local confiável, o que significa que podem ser abertas pastas de trabalho de qualquer site no farm no servidor. Se você precisar de mais controle sobre quais locais são considerados confiáveis, você poderá criar novos locais confiáveis que sejam mapeados para sites específicos em seu farm e então variar as configurações e permissões para cada um.  
   
  Criar um novo local confiável em Serviços do Excel para sites que hospedam pastas de trabalho PowerPivot é especialmente útil se você deseja preservar valores padrão para o resto do farm, aplicando configurações diferentes que funcionam melhor para acesso a dados PowerPivot. Por exemplo, um local confiável que é otimizado para pastas de trabalho do PowerPivot poderia ter um tamanho de pasta de trabalho máximo de 50 MB, enquanto o resto do farm usa o valor padrão de 10 MB.  
   
  Criar um local confiável é recomendado se você está usando bibliotecas da Galeria PowerPivot para visualizar pastas de trabalho publicadas, e você encontra avisos de atualização de dados em vez da imagem de visualização esperada. A Galeria PowerPivot renderiza imagens em miniatura de relatórios e pastas de trabalho que usam dados e informações de apresentação dentro do documento. Se Avisar ao Atualizar Dados estiver habilitado para um local confiável, a Galeria PowerPivot talvez não tenha permissões suficientes para executar a atualização, levando ao aparecimento de um erro em vez da imagem em miniatura. Adicionar um site que tenha a Galeria PowerPivot como um novo local confiável pode eliminar esse problema.  
   
-##  <a name="create"></a>Criar um local confiável para acesso a dados PowerPivot  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>Criar um local confiável para acesso a dados PowerPivot  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Clique no Aplicativo de Serviço de Serviços do Excel.  
   

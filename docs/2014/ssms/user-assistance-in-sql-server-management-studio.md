@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684454"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistência ao usuário no SQL Server Management Studio
@@ -26,7 +26,7 @@ ms.locfileid: "74684454"
 ## <a name="the-help-interface"></a>A interface da Ajuda  
  O **Conteúdo** e o **Índice** fornecem funcionalidade e uma interface já familiar aos usuários do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . As outras opções são:  
   
--   **Como faço para**  
+-   **Como Fazer**  
   
      Fornece um conjunto hierárquico de páginas vinculadas que contêm tópicos úteis relacionados a tarefas comuns do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . O conteúdo é organizado por componente e tarefa, por exemplo, tópicos de replicação etc.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74684454"
   
      Automaticamente exibe links para informações pertinentes enquanto os usuários trabalham no ambiente do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
--   **Favoritos da ajuda**  
+-   **Favoritos da Ajuda**  
   
      Armazena indicadores de tópico de usuário para facilitar o acesso posterior.  
   
