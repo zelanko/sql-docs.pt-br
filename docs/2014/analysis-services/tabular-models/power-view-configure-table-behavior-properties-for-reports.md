@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175585"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar propriedades de comportamento de tabela para relatórios de Power View (SSAS tabular)
   Se você estiver usando um modelo de tabela como um modelo de dados para o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], poderá definir propriedades de comportamento de tabela que exponham linhas de detalhes em um mais nível granular. Definir as propriedades do comportamento da tabela altera o comportamento do agrupamento das linhas de detalhes e produz uma melhor colocação padrão de identificação de informações (como nomes, IDs de fotografia ou imagens de logotipo) em layouts de peça, cartão e gráfico.
 
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design do relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] difere de outros aplicativos de relatório porque agrupará itens automaticamente durante o design do relatório, avaliando quais colunas colocou você na lista de campos de relatório em relação ao formato de apresentação que você está usando. Na maioria dos casos, o agrupamento padrão gera um resultado ótimo. Mas, para algumas tabelas, principalmente as que contêm dados de detalhes, o comportamento de agrupamento padrão às vezes agrupará linhas que não deveriam ser agrupadas. Para essas tabelas, você pode definir propriedades que alteram como os grupos são avaliados.
 
  Definir propriedades de comportamento de tabela é recomendado para tabelas onde as linhas individuais são de interesse primário, como registros de funcionário ou cliente. Em contraste, as tabelas que não se beneficiam destas propriedades incluem as que agem como uma tabela de pesquisa (por exemplo, uma tabela de data, uma tabela de categoria de produto ou uma tabela de departamento, onde a tabela consiste em um número relativamente pequeno de linhas e colunas) ou tabelas resumidas que contêm linhas que só são interessantes quando resumidas (por exemplo, dados de censo que acumulam por gênero, idade ou geografia). Para tabelas de pesquisa e resumo, o comportamento do agrupamento padrão gera o melhor resultado.
 
@@ -32,16 +31,16 @@ ms.locfileid: "78175585"
 
  As propriedades do comportamento de tabela incluem o seguinte:
 
--   **Identificador de linha** ─ especifica uma coluna que contém apenas valores exclusivos, permitindo que essa coluna seja usada como uma chave de agrupamento interna.
+-   **Identificador de Linha** ─ especifica uma coluna que só contém valores exclusivos, permitindo que seja usada como uma chave de agrupamento interna.
 
--   **Manter linhas exclusivas** ─ especifica quais colunas fornecem valores que devem ser tratados como exclusivos mesmo se forem duplicatas (por exemplo, nome do funcionário e sobrenome, para casos em que dois ou mais funcionários compartilham o mesmo nome).
+-   **Manter Linhas Exclusivas** ─ especifica quais colunas fornecem valores que deverão ser tratados como exclusivos mesmo se forem duplicados (por exemplo, nome e sobrenome do funcionário, para casos em que dois ou mais funcionários têm o mesmo nome).
 
--   **Rótulo padrão** : especifica qual coluna fornece um nome de exibição para representar os dados da linha (por exemplo, nome do funcionário em um registro de funcionário).
+-   **Rótulo Padrão** ─ especifica qual coluna fornece um nome de exibição para representar dados de linha (por exemplo, nome de funcionário em um registro de funcionário).
 
--   **Imagem padrão** : especifica qual coluna fornece uma imagem que representa os dados da linha (por exemplo, uma ID de foto em um registro de funcionário).
+-   **Imagem Padrão** ─ especifica qual coluna fornece uma imagem que representa os dados de linha (por exemplo, uma ID de foto em um registro de funcionário).
 
 > [!NOTE]
->  Veja a seção a seguir para obter otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para layouts específicos](#bkmk_optimizeforlayout).
+>   Consulte a seção a seguir para ver otimizações de layout do ponto de vista de um formato de apresentação específico:  [Otimizando para layouts específicos](#bkmk_optimizeforlayout).
 
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrindo a caixa de diálogo de Comportamento da Tabela
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175585"
 > [!NOTE]
 >  As imagens podem se obtidas de endereços de URL para um arquivo de imagem em um servidor Web, ou como dados binários inseridos na pasta de trabalho Se a imagem for baseada em uma URL, defina também a coluna como um tipo de imagem de forma que o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] recupere a imagem em vez de exibir a URL como dados de texto no relatório.
 
-##  <a name="bkmk_optimizeforlayout"></a>Otimizando para layouts específicos
+##  <a name="optimizing-for-specific-layouts"></a><a name="bkmk_optimizeforlayout"></a> Otimizando para layouts específicos
  Esta seção descreve o efeito de definir propriedades de comportamento de tabela do ponto de vista de um formato de apresentação específico e características dos dados. Se você estiver tentando ajustar o layout de um relatório de matriz, por exemplo, poderá usar estas informações para entender como melhorar uma apresentação de matriz usando as propriedades de comportamento de tabela no modelo.
 
 ### <a name="images-are-missing"></a>Imagens faltando
@@ -117,7 +116,7 @@ ms.locfileid: "78175585"
 
  ![Layout de matriz agrupado em identificador de linha](../media/ssas-rptprop-matrixrowid.gif "Layout de matriz agrupado em identificador de linha")
 
- **Após: agrupamento no identificador de linha**
+ **Depois: agrupamento em identificador de linha**
 
  ![Layout de matriz agrupado em identificador de linha](../media/ssas-rptprop-matrixrowid.gif "Layout de matriz agrupado em identificador de linha")
 
@@ -130,7 +129,7 @@ ms.locfileid: "78175585"
 
  ![Gráfico baseado em agrupamento padrão em nível de campo](../media/ssas-rptprop-chartfieldgroup.gif "Gráfico baseado em agrupamento padrão em nível de campo")
 
- **Após: agrupamento no identificador de linha (o identificador de linha se torna o eixo)**
+ **Depois: agrupamento em identificador de linha (o identificador de linha torna-se o eixo)**
 
  ![Gráfico baseado em agrupamento de IDs de linha](../media/ssas-rptprop-chartrowid.gif "Gráfico baseado em agrupamento de IDs de linha")
 

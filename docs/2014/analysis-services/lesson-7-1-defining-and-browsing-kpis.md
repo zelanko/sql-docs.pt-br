@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175245"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definindo e procurando KPIs
@@ -268,6 +268,6 @@ ms.locfileid: "78175245"
      A margem de lucro bruto para a venda de bicicletas dos revendedores na América do Norte no período Q3 CY 2007 é exibida.
 
 ## <a name="next-lesson"></a>Próxima lição
- [Lição 8: Definindo ações](lesson-8-defining-actions.md)
+ [Lição 8: Como definir ações](lesson-8-defining-actions.md)
 
 

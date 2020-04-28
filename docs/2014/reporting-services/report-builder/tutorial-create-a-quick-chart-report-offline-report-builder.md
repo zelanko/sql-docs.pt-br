@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176889"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráficos rápido offline (Construtor de Relatórios)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
   Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Ambos os métodos têm o mesmo resultado – um gráfico de pizza como o da ilustração a seguir:
 
  !["Meu Primeiro Gráfico de pizza" em modo Execução](../media/rs-my1stpierunview.gif "Meu primeiro gráfico de pizza no modo de exibição de execução")
@@ -29,7 +29,7 @@ ms.locfileid: "78176889"
 ## <a name="prerequisites"></a>Pré-requisitos
  Se você usa dados XML ou uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], precisa ter acesso ao Construtor de Relatórios da [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Você pode executar a versão autônoma ou a versão ClickOnce, disponível no Gerenciador de Relatórios ou em um site do SharePoint. Somente a primeira etapa, como abrir o Construtor de Relatórios, é diferente para versões do ClickOnce. Para obter mais informações, consulte [instalar, desinstalar e Construtor de relatórios suporte](../install-uninstall-and-report-builder-support.md).
 
-##  <a name="TwoWays"></a> Duas formas de executar este tutorial
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a>Duas maneiras de fazer este tutorial
 
 -   [Criar o gráfico de pizza com dados XML](#CreatePieChartXML)
 
@@ -50,17 +50,17 @@ ms.locfileid: "78176889"
  [Criar o gráfico de pizza com uma consulta Transact-SQL que contém dados](#CreatePieQueryData)
 
 ## <a name="also-in-this-article"></a>Também neste artigo
- [Depois de executar o assistente](#AfterWizard)
+ [Depois que você executar o assistente](#AfterWizard)
 
  [O que vem a seguir](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>Criando o gráfico de pizza com dados XML
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>Criando o gráfico de pizza com dados XML
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Para criar o gráfico de pizza com dados XML
 
 1.  Clique em **Iniciar**, aponte para **Programas**, para **Construtor de Relatórios do Microsoft SQL Server 2012**e clique em **Construtor de Relatórios**.
 
-     A caixa de diálogo **Guia de Introdução** é exibida.
+     A caixa de diálogo **introdução** é exibida.
 
     > [!NOTE]
     >  Se a caixa de diálogo **introdução** não for exibida, no botão **Construtor de relatórios** , clique em **novo**.
@@ -110,17 +110,17 @@ ms.locfileid: "78176889"
     </Query>
     ```
 
-11. (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.
+11. (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.
 
-12. Clique em **Próximo**.
+12. Clique em **Avançar**.
 
 13. Na página **Escolha um tipo de gráfico** , clique em **Pizza**e em **Avançar**.
 
-14. Na página **Organizar campos de gráfico**, clique duas vezes no campo **Vendas** na caixa **Campos disponíveis**.
+14. Na página **organizar campos de gráfico** , clique duas vezes no campo **vendas** na caixa **campos disponíveis** .
 
      Observe que ela se transforma automaticamente na caixa **Valores** porque é um valor numérico.
 
-15. Arraste o campo **FullName** da caixa **Campos disponíveis** para a caixa **Categorias** (ou clique duas vezes nela para ir para a caixa **Categorias**) e, em seguida, clique em **Avançar**.
+15. Arraste o campo **FullName** da caixa **campos disponíveis** para a caixa **categorias** (ou clique duas vezes nele; ele vai para a caixa **categorias** ) e, em seguida, clique em **Avançar**.
 
 16. Na página **escolher um estilo** , o **oceano** é selecionado por padrão. Clique nos outros estilos para visualizar sua aparência.
 
@@ -130,9 +130,9 @@ ms.locfileid: "78176889"
 
 18. Para ver seu gráfico de pizza real, clique em **Executar** na guia **Início** da Faixa de Opções.
 
- ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#TwoWays)
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>Criando o gráfico de pizza com [!INCLUDE[tsql](../../../includes/tsql-md.md)] uma consulta
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Criando o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)]
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>Para criar o gráfico de pizza com uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contenha dados
 
@@ -149,7 +149,7 @@ ms.locfileid: "78176889"
     > [!NOTE]
     >  A fonte de dados escolhida não tem importância, contanto que você tenha permissões suficientes. Você não obterá dados da fonte de dados. Para saber mais, veja [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md).
 
-6.  Na página **Crie uma Consulta** , clique em **Editar como Texto**.
+6.  Na página **criar uma consulta** , clique em **Editar como texto**.
 
 7.  Cole a seguinte consulta no painel de consulta:
 
@@ -161,17 +161,17 @@ ms.locfileid: "78176889"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  (Opcional) Clique no botão Executar ( **!** ) para ver os dados em que o gráfico se baseará.
+8.  (Opcional) Clique no botão Executar (**!**) para ver os dados em que o gráfico se baseará.
 
-9. Clique em **Próximo**.
+9. Clique em **Avançar**.
 
 10. Na página **Escolha um tipo de gráfico** , clique em **Pizza**e em **Avançar**.
 
-11. Na página **Organizar campos de gráfico**, clique duas vezes no campo **Vendas** na caixa **Campos disponíveis**.
+11. Na página **organizar campos de gráfico** , clique duas vezes no campo **vendas** na caixa **campos disponíveis** .
 
      Observe que ela se transforma automaticamente na caixa **Valores** , porque esse é um valor numérico.
 
-12. Arraste o campo **FullName** da caixa **Campos disponíveis** para a caixa **Categorias** (ou clique duas vezes nela para ir para a caixa **Categorias**) e, em seguida, clique em **Avançar**.
+12. Arraste o campo **FullName** da caixa **campos disponíveis** para a caixa **categorias** (ou clique duas vezes nele; ele vai para a caixa **categorias** ) e, em seguida, clique em **Avançar**.
 
 13. Na página **Escolha um estilo** , a opção Oceano é selecionada por padrão. Clique nos outros estilos para visualizar sua aparência.
 
@@ -181,9 +181,9 @@ ms.locfileid: "78176889"
 
 15. Para ver seu gráfico de pizza real, clique em **Executar** na guia **Início** da Faixa de Opções.
 
- ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#TwoWays)
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#TwoWays)
 
-##  <a name="AfterWizard"></a> Depois que você executar o assistente
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a>Depois de executar o assistente
  Agora que você tem seu relatório de gráfico de pizza, pode brincar com ele. Na guia **Executar** da Faixa de Opções, clique em **Design**, para que você possa continuar modificando-o.
 
 ### <a name="make-the-chart-bigger"></a>Aumentar o gráfico
@@ -202,14 +202,13 @@ ms.locfileid: "78176889"
 
 3.  Digite `#PERCENT{P0}` para a opção **rotular dados** .
 
-     O `{P0}` fornece o percentual sem casas decimais. Se você digitar apenas `#PERCENT`, seus números terão duas casas decimais. 
-  `#PERCENT` é uma palavra-chave que executa um cálculo ou função para você; há muitos outras.
+     O `{P0}` fornece o percentual sem casas decimais. Se você digitar apenas `#PERCENT`, seus números terão duas casas decimais. `#PERCENT` é uma palavra-chave que executa um cálculo ou função para você; há muitos outras.
 
  Para saber mais sobre como personalizar legendas e rótulos de gráfico, veja [Exibir valores de porcentagem em um gráfico de pizza e &#40;Construtor de Relatórios e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Alterar o texto de um item de legenda &#40;Construtor de Relatórios e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).
 
- ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#TwoWays)
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#TwoWays)
 
-##  <a name="WhatsNext"></a>O que vem a seguir?
+##  <a name="whats-next"></a><a name="WhatsNext"></a>O que vem a seguir?
  Agora que você criou seu primeiro relatório no Construtor de Relatórios, está pronto tentar os outros tutoriais e começar a criar relatórios com seus próprios dados. Para executar Construtor de Relatórios, você precisa de permissão para acessar suas fontes de dados, como bancos de dado, com uma *cadeia de conexão*que, na verdade, conecta você à fonte de dados. O administrador do sistema terá essas informações e poderá configurá-las.
 
  Para trabalhar nos outros tutoriais, você precisa do nome de uma instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e de credenciais suficientes para ter acesso somente leitura a qualquer banco de dados. O administrador do sistema também pode definir isso para você.
@@ -218,7 +217,7 @@ ms.locfileid: "78176889"
 
  Talvez seja útil ler sobre alguns dos conceitos e termos antes de começar. Para obter mais informações, consulte [conceitos de criação de relatórios &#40;Construtor de relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Além disso, dedique algum tempo ao planejamento, antes de criar seu primeiro relatório. Esse será um tempo bem gasto. Para obter mais informações, consulte [planejando um relatório &#40;Construtor de Relatórios&#41;](../report-design/planning-a-report-report-builder.md).
 
- ![Ícone de seta usado com o link Voltar ao Início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Voltar ao Início](#TwoWays)
+ ![Ícone de seta usado com o link voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [de volta ao início](#TwoWays)
 
 ## <a name="see-also"></a>Consulte Também
  [Tutoriais &#40;Construtor de Relatórios&#41;](../report-builder-tutorials.md) [Construtor de Relatórios no SQL Server 2014](report-builder-in-sql-server-2016.md)

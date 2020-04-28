@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929440"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Solucionar problemas de backup gerenciado do SQL Server para Azure
@@ -33,8 +33,7 @@ ms.locfileid: "76929440"
   
 1.  Habilite a Notificação por Email para começar a receber emails de erros e avisos.  
   
-     Se desejar, você também pode executar `smart_admin.fn_get_health_status` periodicamente para verificar os erros e as contagens de agregação. Por exemplo, `number_of_invalid_credential_errors` é o número de vezes em que o backup inteligente tentou um backup mas obteve um erro de credencial inválida. 
-  `Number_of_backup_loops` e `number_of_retention_loops` não são erros, mas indicam o número de vezes que o thread de backup e o thread de retenção verificaram a lista de bancos de dados. Normalmente, quando @begin_time e @end_time não são fornecidos, a função está mostrando as informações dos últimos 30 minutos e, normalmente, devemos ver valores diferentes de zero para essas duas colunas. Se eles forem zero, o sistema está sobrecarregado ou não está respondendo. Para obter mais informações, consulte a seção **solução de problemas do sistema** mais adiante neste tópico.  
+     Se desejar, você também pode executar `smart_admin.fn_get_health_status` periodicamente para verificar os erros e as contagens de agregação. Por exemplo, `number_of_invalid_credential_errors` é o número de vezes em que o backup inteligente tentou um backup mas obteve um erro de credencial inválida. `Number_of_backup_loops` e `number_of_retention_loops` não são erros, mas indicam o número de vezes que o thread de backup e o thread de retenção verificaram a lista de bancos de dados. Normalmente, quando @begin_time e @end_time não são fornecidos, a função está mostrando as informações dos últimos 30 minutos e, normalmente, devemos ver valores diferentes de zero para essas duas colunas. Se eles forem zero, o sistema está sobrecarregado ou não está respondendo. Para obter mais informações, consulte a seção **solução de problemas do sistema** mais adiante neste tópico.  
   
 2.  Revise os logs de Eventos Estendidos para obter mais detalhes sobre erros e outros eventos associados.  
   

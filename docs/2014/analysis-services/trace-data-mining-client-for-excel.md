@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175565"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Rastrear (Cliente de Mineração de Dados para Excel)
@@ -27,20 +27,20 @@ ms.locfileid: "78175565"
 
  Dependendo da ação solicitada, a instrução talvez seja uma consulta de definição de dados DMX ou uma consulta de manipulação de dados, um pacote ASSL do Analysis Services ou uma chamada a um procedimento armazenado do Analysis Services. No entanto, os resultados numéricos e os valores de dados reais não são mostrados.
 
- O **rastreamento** monitora apenas a conexão atual e o conteúdo da caixa de diálogo de **rastreamento** não é armazenado.
+ **Rastrear** monitora apenas a conexão atual. O conteúdo da caixa de diálogo **Rastreamento** não é armazenado.
 
 ## <a name="options"></a>Opções
  Painel rastreador lista todas as instruções enviadas do cliente do Excel para o servidor.
 
  Dependendo da ação solicitada, talvez a instrução seja uma manipulação de dados DMX ou uma instrução de definição de dados, uma chamada a um procedimento armazenado do Analysis Services ou um pacote XML/A.
 
- **Conexão atual** Clique para exibir a definição da conexão atual. A definição inclui o nome da conexão, o provedor, a fonte de dados e o catálogo, a hora do último uso da conexão para uma transação e o estado atual (Aberta, Inativa).
+ **Conexão Atual** Clique para exibir a definição da conexão atual. A definição inclui o nome da conexão, o provedor, a fonte de dados e o catálogo, a hora do último uso da conexão para uma transação e o estado atual (Aberta, Inativa).
 
- **Usar modelos de sessão** Marque essa caixa de seleção para armazenar modelos de Data Mining e estruturas como objetos temporários no servidor. As estruturas e os modelos criados ficarão disponíveis apenas durante a sessão atual.
+ **Usar modelos de sessão** Marque esta caixa de seleção para armazenar modelos e estruturas de mineração de dados como objetos temporários no servidor. As estruturas e os modelos criados ficarão disponíveis apenas durante a sessão atual.
 
  Desmarque esta opção para salvar as estruturas ou os modelos armazenando-os no servidor Analysis Services.
 
- **Observação** A capacidade de usar objetos temporários está disponível somente quando você estiver usando as ferramentas de análise de tabela para Excel. Os modelos de Mineração de Dados do Visio e o Cliente de Mineração de Dados para Excel requerem o armazenamento de estruturas e modelos no servidor.
+ **Observação** A capacidade de usar objetos temporários está disponível somente quando você está utilizando as Ferramentas de Análise de Tabela para Excel. Os modelos de Mineração de Dados do Visio e o Cliente de Mineração de Dados para Excel requerem o armazenamento de estruturas e modelos no servidor.
 
 ## <a name="tracing-temporary-structures-and-models"></a>Rastreando estruturas e modelos temporários
  Se você estiver usando as Ferramentas de Análise de Tabela, que por padrão criam estruturas e modelos temporários, a atividade entre o servidor e o cliente será monitorada, mas as estruturas ou os modelos criados não serão salvos permanentemente no servidor.

@@ -10,10 +10,10 @@ ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 36c34be6d994c543eb17f8c923fcf62c0fdd53d4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177266"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarefa 3: Importando valores de domínio de um arquivo do Excel

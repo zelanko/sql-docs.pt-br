@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175335"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupando membros de atributo automaticamente
@@ -22,11 +22,11 @@ ms.locfileid: "78175335"
 
  A propriedade **DiscretizationMethod** determina se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria agrupamentos e determina o tipo de agrupamento feito. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] não faz nenhum agrupamento. Ao habilitar agrupamentos automáticos, você pode permitir que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automaticamente o melhor método de agrupamento com base na estrutura do atributo ou ainda escolher um dos algoritmos de agrupamento da lista a seguir para especificar o método de agrupamento:
 
- O **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo para que a população total de membros de dimensão seja distribuída igualmente entre os grupos.
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria intervalos de grupo de forma que a população total de membros da dimensão seja distribuída igualmente pelos grupos.
 
  Os **clusters** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] criam grupos executando um clustering unidimensional nos valores de entrada usando o método de clustering K-means com distribuições gaussianas. Essa opção só é válida para colunas numéricas.
 
- Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;Discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ Depois de especificar um método de agrupamento, você deve especificar o número de grupos usando a propriedade **DiscretizationBucketCount** . Para obter mais informações, consulte [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
  Nas tarefas deste tópico, você habilitará tipos diferentes de agrupamentos para valores de renda anual na dimensão **Cliente** ; número de horas de dispensa médica dos funcionários na dimensão **Funcionários** ; e o número de horas de férias dos funcionários na dimensão **Funcionários** . Depois, você processará e navegará no cubo do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para exibir o efeito dos grupos de membros. Finalmente, você modificará as propriedades do grupo de membros para ver o efeito da alteração no tipo de agrupamento.
 
@@ -124,6 +124,6 @@ ms.locfileid: "78175335"
  [Ocultando e desabilitando as hierarquias de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>Consulte Também
- [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [Agrupar membros de atributo &#40;Discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

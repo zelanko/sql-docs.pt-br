@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed13821f9bd37525da962fa85dfe5683cb37329f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177037"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
@@ -24,7 +24,7 @@ ms.locfileid: "78177037"
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo do SharePoint|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] &#124; modo do SharePoint para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|
 
  **Neste tópico:**
 
@@ -32,53 +32,53 @@ ms.locfileid: "78177037"
 
 -   [Script: listar a propriedade de todas as assinaturas](#bkmk_list_ownership_all)
 
--   [Script: listar todas as assinaturas de propriedade de um usuário específico](#bkmk_list_all_one_user)
+-   [Script: listar todas as assinaturas pertencentes a um usuário específico](#bkmk_list_all_one_user)
 
--   [Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico](#bkmk_change_all)
+-   [Script: alterar a propriedade de todas as assinaturas pertencentes a um usuário específico](#bkmk_change_all)
 
 -   [Script: listar todas as assinaturas associadas a um relatório específico](#bkmk_list_for_1_report)
 
 -   [Script: alterar a propriedade de uma assinatura específica](#bkmk_change_all_1_subscription)
 
--   [Script: executar (disparar) uma única assinatura](#bkmk_run_1_subscription)
+-   [Script: executar (acionar) assinatura única](#bkmk_run_1_subscription)
 
-##  <a name="bkmk_how_to"></a>Como usar os scripts
+##  <a name="how-to-use-the-scripts"></a><a name="bkmk_how_to"></a> Como usar os scripts
 
 ### <a name="permissions"></a>Permissões
  Esta seção resume os níveis de permissão necessários para usar cada um dos métodos para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]em modo Nativo e SharePoint. Os scripts neste tópico usam os seguintes métodos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :
 
--   [Método método ReportingService2010. ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)
+-   [Método ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)
 
--   [Método método ReportingService2010. ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)
+-   [Método ReportingService2010.ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)
 
--   [Método ReportingService2010. ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)
 
 -   O método [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) é usado apenas no último script para disparar uma assinatura específica a ser executada. Se você não planeja usar esse script, é possível ignorar os requisitos de permissão para o método FireEvent.
 
- **Modo nativo:**
+ **Modo Nativo:**
 
 -   Listar assinaturas: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription no relatório e o usuário é o proprietário da assinatura) ou ReadAnySubscription
 
--   Alterar Assinaturas: o usuário deve ser membro do grupo BUILTIN\Administrators
+-   Alterar assinaturas: O usuário deve ser membro do grupo BUILTIN\Administrators
 
--   Listar Filhos: ReadProperties no Item
+-   Listar filhos: ReadProperties no item
 
--   Acionar Evento: GenerateEvents (System)
+-   Acionar evento: GenerateEvents (sistema)
 
- **Modo do SharePoint:**
+ **Modo SharePoint:**
 
 -   Listar assinaturas: ManageAlerts ou (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" createalerta no relatório e o usuário é o proprietário da assinatura e a assinatura é uma assinatura cronometrada).
 
--   Alterar Assinaturas: ManageWeb
+-   Alterar assinaturas: ManageWeb
 
--   Listar Filhos: ViewListItems
+-   Listar filhos: ViewListItems
 
--   Acionar Evento: ManageWeb
+-   Acionar evento: ManageWeb
 
  Para obter mais informações, consulte [Comparar funções e tarefas no Reporting Services com grupos e permissões do SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).
 
 ### <a name="script-usage"></a>Uso de script
- **Criar arquivos de script (. ps1)**
+ **Criar arquivos de script (.ps1)**
 
 1.  Crie uma pasta chamada **c:\scripts**. Se você escolher uma pasta diferente, mude o nome da pasta usado nas instruções de sintaxe da linha de comando do exemplo.
 
@@ -98,7 +98,7 @@ ms.locfileid: "78177037"
 
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]
 
-##  <a name="bkmk_list_ownership_all"></a>Script: listar a propriedade de todas as assinaturas
+##  <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> Script: listar a propriedade de todas as assinaturas
  Esse script lista todas as assinaturas em um site. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a identificação de assinatura para uso em outros scripts. Ele também é um script útil para simplesmente auditar as assinaturas existentes e seus proprietários.
 
 ### <a name="native-mode-syntax"></a>Sintaxe do modo nativo
@@ -113,7 +113,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters
@@ -135,7 +135,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]
 >  Para verificar URLs de sites no modo do SharePoint, use o cmdlet **Get-SPSite**do SharePoint. Para obter mais informações, consulte [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).
 
-##  <a name="bkmk_list_all_one_user"></a>Script: listar todas as assinaturas de propriedade de um usuário específico
+##  <a name="script-list-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_list_all_one_user"></a> Script: listar todas as assinaturas pertencentes a um usuário específico
  Esse script lista todas as assinaturas de propriedade de um usuário específico. Você pode usar esse script para testar sua conexão ou para verificar o caminho do relatório e a identificação de assinatura para uso em outros scripts. Esse script é útil quando alguém sai da organização e você deseja verificar quais assinaturas essa pessoa possuía para alterar o proprietário ou excluir a assinatura.
 
 ### <a name="native-mode-syntax"></a>Sintaxe do modo nativo
@@ -150,7 +150,7 @@ powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[se
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters:
@@ -172,7 +172,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}
 ```
 
-##  <a name="bkmk_change_all"></a>Script: alterar a propriedade de todas as assinaturas de propriedade de um usuário específico
+##  <a name="script-change-ownership-for-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_change_all"></a> Script: alterar a propriedade de todas as assinaturas pertencentes a um usuário específico
  Esse script muda a propriedade de todas as assinaturas de um usuário específico para o parâmetro do novo proprietário.
 
 ### <a name="native-mode-syntax"></a>Sintaxe do modo nativo
@@ -187,7 +187,7 @@ powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current own
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters:
@@ -242,7 +242,7 @@ ForEach ($item in $items)
 }
 ```
 
-##  <a name="bkmk_list_for_1_report"></a>Script: listar todas as assinaturas associadas a um relatório específico
+##  <a name="script-list-all-subscriptions-associated-with-a-specific-report"></a><a name="bkmk_list_for_1_report"></a> Script: listar todas as assinaturas associadas a um relatório específico
  Esse script lista todas as assinaturas associadas a um relatório específico. A sintaxe do caminho do relatório é um modo SharePoint diferente que exige uma URL completa. Nos exemplos de sintaxe, o nome do relatório usado é "somente título", que contém um espaço e, portanto, requer aspas simples em torno do nome do relatório.
 
 ### <a name="native-mode-syntax"></a>Sintaxe do modo nativo
@@ -257,7 +257,7 @@ powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportse
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters:
@@ -280,7 +280,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}
 ```
 
-##  <a name="bkmk_change_all_1_subscription"></a>Script: alterar a propriedade de uma assinatura específica
+##  <a name="script-change-ownership-of-a-specific-subscription"></a><a name="bkmk_change_all_1_subscription"></a> Script: alterar a propriedade de uma assinatura específica
  Esse script altera a propriedade de uma assinatura específica. A assinatura é identificada pela SubscriptionID que você passa no script. Você pode usar um dos scripts de assinatura da lista para determinar a SubscriptionID correta.
 
 ### <a name="native-mode-syntax"></a>Sintaxe do modo nativo
@@ -295,7 +295,7 @@ powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owne
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters:
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status
 ```
 
-##  <a name="bkmk_run_1_subscription"></a>Script: executar (disparar) uma única assinatura
+##  <a name="script-run-fire-a-single-subscription"></a><a name="bkmk_run_1_subscription"></a> Script: executar (acionar) uma assinatura única
  Esse script executa uma assinatura específica usando o método FireEvent. O script executa a assinatura de maneira imediata, independentemente da agenda configurada para a assinatura. O EventType é comparado com o conjunto conhecido de eventos que estão definidos no arquivo de configuração do servidor do relatório **rsreportserver.config** O script usa o tipo de evento a seguir para assinaturas padrão:
 
  `<Event>`
@@ -351,7 +351,7 @@ powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"
 ```
 
-### <a name="script"></a>Script
+### <a name="script"></a>script
 
 ```powershell
 # Parameters

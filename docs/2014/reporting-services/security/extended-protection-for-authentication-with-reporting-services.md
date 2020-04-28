@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177073"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "78177073"
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dá suporte e impõe a proteção estendida que foi habilitada no sistema operacional. Se o sistema operacional não suportar a proteção estendida ou se o recurso não foi ativado no sistema operacional, o recurso de Proteção Estendida do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não conseguirá ser autenticado. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] também exige um Certificado de SSL. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatório do Modo Nativo](configure-ssl-connections-on-a-native-mode-report-server.md)
 
 > [!IMPORTANT]
->  Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não vem com a Proteção Estendida habilitada. O recurso pode ser habilitado por meio da modificação do arquivo de configuração `rsreportserver.config` ou por meio das APIs WMI para atualização do arquivo de configuração. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]não fornece uma interface do usuário para modificar ou exibir configurações de proteção estendida. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.
+>  Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não vem com a Proteção Estendida habilitada. O recurso pode ser habilitado por meio da modificação do arquivo de configuração `rsreportserver.config` ou por meio das APIs WMI para atualização do arquivo de configuração. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não fornece uma interface do usuário para modificar ou exibir configurações de proteção estendida. Para obter mais informações, consulte a seção [de parâmetros de configuração](#ConfigurationSettings) neste tópico.
 
  Problemas que normalmente ocorrem em virtude de alterações nas configurações de proteção estendida ou de parâmetros incorretamente configurados não são expostos com mensagens de erro óbvias nem com janelas de caixa de diálogo. Problemas relacionados à configuração e à compatibilidade de proteção estendida geram falhas de autenticação e erros nos logs de rastreamento do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
 
@@ -53,7 +53,7 @@ ms.locfileid: "78177073"
 
 -   O valor padrão da configuração `RSWindowsExtendedProtectionScenario` é `Proxy`.
 
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]O supervisor de atualização não verifica se o sistema operacional ou a instalação atual [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] do tem suporte de proteção estendida habilitado.
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] não verifica se o suporte à Proteção Estendida do sistema operacional ou da instalação atual do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] está habilitada.
 
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>O que a proteção estendida do Reporting Services não contempla
  As seguintes áreas de recursos e cenários não têm suporte no recurso de proteção estendida do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :
@@ -81,12 +81,10 @@ ms.locfileid: "78177073"
 |Cenário|Diagrama do cenário|Como proteger|
 |--------------|----------------------|-------------------|
 |Comunicação por HTTP. O servidor de relatórios irá impor ao Cliente à Associação de Serviço do servidor de relatórios.|![RS_ExtendedProtection_Indirect](../media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy|Não há nenhum Canal de SSL. Portanto, não é possível nenhuma imposição de Associação de Canal.<br /><br /> Defina `RSWindowsExtendedProtectionLevel` como `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Any`.<br /><br /> Observe que o servidor de relatório deve ser configurado para saber o nome do servidor proxy para certificar-se de que a associação de serviço seja imposta corretamente.|
-|Comunicação por HTTP.<br /><br /> O servidor de relatórios irá impor ao cliente à Associação de Canal do Proxy e à Associação de Serviço de servidor de relatórios.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy|O canal SSL com o proxy está disponível. Portanto, a associação de canal com o proxy pode ser imposta.<br /><br /> A Associação de Serviço também pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> 
-  `RSWindowsExtendedProtectionLevel` para `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Proxy`.|
-|Comunicação indireta de HTTPS com um proxy seguro. O servidor de relatórios irá impor ao cliente à Associação de Canal do Proxy e o à Associação de Serviço de servidor de relatórios.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy|O canal SSL com o proxy está disponível. Portanto, a associação de canal com o proxy pode ser imposta.<br /><br /> A Associação de Serviço também pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> 
-  `RSWindowsExtendedProtectionLevel` para `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Proxy`.|
+|Comunicação por HTTP.<br /><br /> O servidor de relatórios irá impor ao cliente à Associação de Canal do Proxy e à Associação de Serviço de servidor de relatórios.|![RS_ExtendedProtection_Indirect_SSL](../media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy|O canal SSL com o proxy está disponível. Portanto, a associação de canal com o proxy pode ser imposta.<br /><br /> A Associação de Serviço também pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> `RSWindowsExtendedProtectionLevel` para `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Proxy`.|
+|Comunicação indireta de HTTPS com um proxy seguro. O servidor de relatórios irá impor ao cliente à Associação de Canal do Proxy e o à Associação de Serviço de servidor de relatórios.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Aplicativo cliente<br /><br /> 2) Servidor de relatórios<br /><br /> 3)  Proxy|O canal SSL com o proxy está disponível. Portanto, a associação de canal com o proxy pode ser imposta.<br /><br /> A Associação de Serviço também pode ser imposta.<br /><br /> O nome de Proxy deve ser conhecido pelo servidor de relatórios e o administrador de servidor de relatórios deverá criar uma reserva de URL para ele, com um cabeçalho de host, ou configurar o nome de Proxy na entrada `BackConnectionHostNames` do Registro do Windows.<br /><br /> `RSWindowsExtendedProtectionLevel` para `Allow` ou `Require`.<br /><br /> Defina `RSWindowsExtendedProtectionScenario` como `Proxy`.|
 
-### <a name="gateway"></a>gateway
+### <a name="gateway"></a>Gateway
  Este cenário descreve aplicativos Clientes que se conectam a um dispositivo ou software que realiza SSL e autentica o usuário. Então, o dispositivo ou software personifica o contexto de usuário ou o contexto de um usuário diferente antes de fazer uma solicitação ao servidor de relatórios.
 
 |Cenário|Diagrama do cenário|Como proteger|
@@ -109,13 +107,13 @@ ms.locfileid: "78177073"
 
  Quando validação dos parâmetros de configuração falhar, os tipos de autenticação `RSWindowsNTLM`, `RSWindowsKerberos` e `RSWindowsNegotiate` são desativados no servidor de relatórios.
 
-###  <a name="ConfigurationSettings"></a>Definições de configuração para a proteção estendida do Reporting Services
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Parâmetros de configuração para a proteção estendida dos serviços de relatórios
  A tabela a seguir fornece informações sobre os parâmetros de configuração que aparecem no  `rsreportserver.config` para proteção estendida.
 
-|Configuração|DESCRIÇÃO|
+|Configuração|Descrição|
 |-------------|-----------------|
 |`RSWindowsExtendedProtectionLevel`|Especifica o grau de imposição da proteção estendida. Os valores válidos são `Off`, `Allow` e `Require`.<br /><br /> O valor padrão é `Off`.<br /><br /> O valor `Off` especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> O valor `Allow` suporta a proteção estendida mas não a exige. O valor Permitir especifica.<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida. A maneira como a proteção é imposta é determinada pelo parâmetro `RsWindowsExtendedProtectionScenario`.<br /><br /> A autenticação será permitida para aplicativos executados em sistemas operacionais que não suportam a proteção estendida.<br /><br /> O valor `Require` especifica:<br /><br /> A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que suportam a proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos que estão em execução em sistemas operacionais que não dão suporte à proteção estendida.|
-|`RsWindowsExtendedProtectionScenario`|Especifica que formas de proteção estendida serão validadas: Associação de Canal, Associação de Serviço ou ambas. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: essa configuração será ignorada `RsWindowsExtendedProtectionLevel` se for definido `OFF`como.|
+|`RsWindowsExtendedProtectionScenario`|Especifica quais formas de proteção estendida serão validadas: associação de canal, associação de serviço ou ambas. Os valores válidos são `Any`, `Proxy` e `Direct`.<br /><br /> O valor padrão é `Proxy`.<br /><br /> O valor `Any` especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Proxy` especifica:<br /><br /> \- A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> O valor `Direct` especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> \- A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: essa configuração será ignorada `RsWindowsExtendedProtectionLevel` se for definido `OFF`como.|
 
  Entradas de exemplo no arquivo de configuração `rsreportserver.config`:
 
@@ -127,8 +125,7 @@ ms.locfileid: "78177073"
 ```
 
 ## <a name="service-binding-and-included-spns"></a>Associação de Serviço e SPNs incluídos
- A associação de serviço usa SPNs (nomes de entidades de serviço) para validar o destino pretendido dos tokens de autenticação. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa as informações de reserva da URL existente para compilar uma lista de SPNs que são considerados válidos. Usando as informações de reserva de URLs para validação de SPNs e reservas de URL permite que os administradores do sistema a gerenciem ambos a partir de um único local.
+ A associação de serviço usa SPNs (nomes de entidades de serviço) para validar o destino pretendido dos tokens de autenticação. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa as informações de reserva da URL existente para compilar uma lista de SPNs que são considerados válidos. Usando as informações de reserva de URLs para validação de SPNs e reservas de URL permite que os administradores do sistema a gerenciem ambos a partir de um único local.
 
  A lista de SPNs válidos é atualizada quando o servidor de relatórios é iniciado, quando são alterados os parâmetros de configuração da proteção estendida ou quando o domínio do aplicativo é reciclado.
 

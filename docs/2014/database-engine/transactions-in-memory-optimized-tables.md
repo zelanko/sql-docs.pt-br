@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175387"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transações em tabelas com otimização de memória
@@ -82,7 +82,7 @@ Tempo de vida de uma transação que acessa tabelas com otimização de memória
 
  Esse erro sempre condena a transação (mesmo que XACT_ABORT esteja como OFF), o que significa que a transação será revertida quando a sessão do usuário termina. As transações condenadas não podem ser confirmadas e somente dão suporte a operações de leitura que não são gravadas no log e não acessam tabelas com otimização de memória.
 
-#####  <a name="cd"></a>Dependências de confirmação
+#####  <a name="commit-dependencies"></a><a name="cd"></a>Dependências de confirmação
  Durante o processamento regular, uma transação pode ler as linhas gravadas por outras transações que estão na fase de validação ou confirmação, mas que ainda não foram confirmadas. As linhas são visíveis, pois a hora de término lógica das transações foi atribuída no início da fase de validação.
 
  Se uma transação ler essas linhas não confirmadas, ela obterá uma dependência de confirmação nessa transação. Isso tem duas consequências importantes:

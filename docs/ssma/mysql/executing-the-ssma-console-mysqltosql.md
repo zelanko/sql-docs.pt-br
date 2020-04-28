@@ -18,10 +18,10 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909686"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Executar o console do SSMA (MySQLToSQL)
@@ -285,7 +285,7 @@ gerar-avaliação-relatório
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <generate-assessment-report  
@@ -359,7 +359,7 @@ converter esquema
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <convert-schema  
@@ -419,7 +419,7 @@ migrar-dados
   
 </migrate-data>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <migrate-data  
@@ -507,7 +507,7 @@ sincronizar destino
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target  
@@ -516,7 +516,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target>  
@@ -572,7 +572,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database  
@@ -581,7 +581,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database>  
@@ -631,7 +631,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <save-as-script  
@@ -707,7 +707,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 </convert-sql-statement>  
 ```  
-ou  
+ou o  
   
 ```  
 <convert-sql-statement  
@@ -732,7 +732,7 @@ ou
   
 />  
 ```  
-ou  
+ou o  
   
 ```  
 <convert-sql-statement  

@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b7674e3e7696d91170f9bf955808923d713479a1
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77147407"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Banco de Dados SQL do Microsoft Azure)
@@ -33,7 +33,7 @@ Retorna uma única linha que descreve a configuração do objeto de trabalho que
 
 Um objeto de trabalho é uma construção do Windows que implementa a CPU, a memória e a governança de recursos de e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](/windows/desktop/ProcThread/job-objects).
   
-|Colunas|Tipo de Dados|DESCRIÇÃO|  
+|Colunas|Tipo de Dados|Descrição|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Especifica a parte dos ciclos do processador que o SQL Server threads pode usar durante cada intervalo de agendamento. O valor é relatado como uma porcentagem de ciclos disponíveis dentro de um intervalo de agendamento de ciclo de 10000. Por exemplo, o valor 100 significa que os threads podem usar os núcleos de CPU como sua capacidade total.|
 |cpu_affinity_mask|**bigint**|Uma máscara de bits que descreve quais processadores lógicos o processo de SQL Server pode usar dentro do grupo de processadores. Por exemplo, cpu_affinity_mask 255 (1111 1111 em binário) significa que os oito primeiros processadores lógicos podem ser usados. <br /><br />Esta coluna é fornecida para compatibilidade com versões anteriores. Ele não relata o grupo de processador e o valor relatado pode estar incorreto quando um grupo de processador contém mais de 64 processadores lógicos. Use a `process_physical_affinity` coluna para determinar a afinidade do processador.|

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176596"
 ---
 # <a name="debugging-control-flow"></a>Depurando o fluxo de controle
@@ -97,7 +97,7 @@ ms.locfileid: "78176596"
 
  O diagrama a seguir mostra a guia **Progresso** .
 
- ![Guia Progresso do Designer do SSIS](../media/mw-dtsflow04.gif "Guia Progresso do Designer SSIS")
+ ![Guia Progresso do Designer do SSIS](../media/mw-dtsflow04.gif "Guia Progresso do Designer do SSIS")
 
 ## <a name="debug-windows"></a>Janelas de depuração
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] inclui muitas janelas que você pode usar para trabalhar com pontos de interrupção e para depurar pacotes contendo pontos de interrupção. Para aprender mais sobre cada janela, abra a janela e, então, pressione F1 para exibir a Ajuda da janela.
@@ -113,6 +113,6 @@ ms.locfileid: "78176596"
 |Imediata|Usado para depurar e avaliar expressões e imprimir valores variáveis.|
 
 ## <a name="see-also"></a>Consulte Também
- [Ferramentas de solução de problemas para desenvolvimento de pacotes](troubleshooting-tools-for-package-development.md)
+ [Solucionando problemas de ferramentas para desenvolvimento de pacotes](troubleshooting-tools-for-package-development.md)
 
 

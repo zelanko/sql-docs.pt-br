@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322220"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -54,7 +54,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Se o tipo de publicação. *publication_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
@@ -65,12 +65,12 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |Valor|Nome da métrica|  
 |-----------|-----------------|  
-|**1**|**expiração** -monitora a expiração iminente de assinaturas para publicações transacionais.|  
-|**2**|**latência** – monitora o desempenho de assinaturas para publicações transacionais.|  
-|**quatro**|**mergeexpiration** -monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
-|**05**|**mergeslowrunduration** -monitora a duração de sincronizações de mesclagem em conexões de baixa largura de banda (discada).|  
+|**1**|**expiration** - monitora a expiração iminente de assinaturas para publicações transacionais.|  
+|**2**|**latency** - monitora o desempenho de assinaturas para publicações transacionais.|  
+|**4**|**mergeexpiration** - monitora a expiração iminente de assinaturas para publicações de mesclagem.|  
+|**5**|**mergeslowrunduration** -monitora a duração de sincronizações de mesclagem em conexões de baixa largura de banda (discada).|  
 |**6**|**mergefastrunduration** -monitora a duração das sincronizações de mesclagem em conexões de rede local (LAN) de alta largura de banda.|  
-|**7**|**mergefastrunspeed** -monitora a taxa de sincronização de sincronizações de mesclagem em conexões de alta largura de banda (LAN).|  
+|**7**|**mergefastrunspeed** - monitora a taxa de sincronizações de mesclagem em conexões de alta largura da banda (LAN).|  
 |**8**|**mergeslowrunspeed** -monitora a taxa de sincronização de sincronizações de mesclagem em conexões de baixa largura de banda (dial-up).|  
   
  Você deve especificar *metric_id* ou *thresholdmetricname*. Se *thresholdmetricname* for especificado, *METRIC_ID* deverá ser nulo.  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição podem executar **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

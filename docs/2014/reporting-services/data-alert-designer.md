@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47640a086ab85d0cb150bef66881684e2a9a774a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177016"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
@@ -48,10 +48,10 @@ ms.locfileid: "78177016"
 
  Para abrir o Designer de Alertas de Dados, clique na opção **Novo Alerta de Dados** no menu **Ações** na barra de ferramentas de relatório. Se a opção **Novo Alerta de Dados** não aparecer, o relatório não está configurado para usar credenciais armazenadas. Você pode atualizar o tipo de credencial atualizando a fonte de dados de relatório a partir da biblioteca do SharePoint.
 
-##  <a name="AlertDesigner"></a>Interface do usuário do designer de alertas de dados
+##  <a name="data-alert-designer-user-interface"></a><a name="AlertDesigner"></a> Interface de usuário do Designer de Alertas de Dados
  O Designer de Alerta de Dados divide-se em áreas. A área onde você seleciona o feed de dados de relatório, a área onde você cria condições simples ou complexas com a adição de regras a condições e assim por diante. A imagem a seguir mostra as áreas do Designer de Alerta de Dados.
 
- ![Áreas dentro da interface de usuário do Designer de Alertas](media/rs-alertdesigner.gif "Áreas dentro da interface de usuário do Designer de Alertas")
+ ![Áreas dentro da interface do usuário do Designer de Alertas](media/rs-alertdesigner.gif "Áreas dentro da interface do usuário do Designer de Alertas")
  
 
 ### <a name="alert-data"></a>Dados do alerta
@@ -89,27 +89,27 @@ ms.locfileid: "78177016"
 
 -   O nome da empresa **não é** Contoso
 
- **Regras combinadas por operador AND**
+ **Regras combinadas pelo operador AND**
 
 -   As Vendas **são maiores que** 1500,00
 
-     **e** As unidades vendidas **são inferiores a** 500
+     **e** Unidades Vendidas **são menores que** 500
 
      A Data de devolução **é anterior** a 1/1/2010
 
 -   As Vendas **são maiores ou iguais a** 1500,00
 
-     **e** A data de retorno **é posterior** a 1/1/2010
+     **e** a Data de devolução **é após** 1/1/2010
 
-     **e** As unidades vendidas **são maiores que** 500
+     **e** Unidades Vendidas **são maiores que** 500
 
 -   O Nome da promoção **contém** Spring
 
      **e** Unidades Vendidas **são maiores que** 500
 
-     **e** Retorna **0**
+     **e** Devoluções **é**  0
 
- **Regras com cláusulas OR**
+ **Regras com cláusula OR**
 
 -   O Sobrenome **é** Blythe
 
@@ -119,11 +119,11 @@ ms.locfileid: "78177016"
 
 -   A Data de devolução **é após** 1/1/2010
 
-     **e** Território de vendas **é** central
+     **e** o Território de Venda **é**  Central
 
-     **Ou**  Sul
+     **Ou**  South
 
-     **Ou**  Unidos
+     **Ou**  North
 
  Dependendo do tipo de dados do campo, o Designer de Alertas de Dados fornece diferentes comparações. O Design de Alertas de Dados fornece comparações de acordo com o tipo de dados do campo ao qual os valores são comparados. O conteúdo a seguir lista as comparações disponíveis para os diferentes tipos de dados. Não há suporte para o tipo de dados `Boolean` nas regras.
 
@@ -170,7 +170,7 @@ ms.locfileid: "78177016"
 
  Para obter mais informações sobre como a mensagem de email é gerada, consulte [Alertas de dados do Reporting Services](../ssms/agent/alerts.md).
 
-##  <a name="CreateAlert"></a>Criar uma definição de alerta de dados
+##  <a name="create-a-data-alert-definition"></a><a name="CreateAlert"></a> Criar uma definição de alerta de dados
  Se você tiver recebido as permissões Exibir Itens e Criar Alertas do SharePoint, poderá criar uma definição de alerta de dados para qualquer relatório que você tenha permissão para exibir, contanto que o relatório use credenciais armazenadas ou nenhuma credencial. Você executa o relatório em uma biblioteca do SharePoint. Os dados disponíveis para uso no Designer de Alertas de Dados são provenientes do relatório. Se o relatório estiver parametrizado, poderá ser necessário executar o relatório com valores de parâmetros diferentes para garantir que os dados nos quais você está interessado apareçam no relatório. Após abrir o relatório, clique na opção **Novo Alerta de Dados** no menu **Ações** , na barra de ferramentas de relatório, para abrir o Designer de Alertas de Dados. A imagem a seguir mostra como abrir o Designer de Alertas de Dados.
 
  ![Abra o Designer de Alertas da biblioteca do SharePoint](media/rs-openalertdesigneriw.gif "Abra o Designer de Alertas da biblioteca do SharePoint")
@@ -178,7 +178,7 @@ ms.locfileid: "78177016"
  Para obter mais informações, consulte [Criar um Alerta de Dados no Designer de Alertas de Dados](create-a-data-alert-in-data-alert-designer.md).
 
 
-##  <a name="SaveAlert"></a>Salvar uma definição de alerta de dados
+##  <a name="save-a-data-alert-definition"></a><a name="SaveAlert"></a> Salvar uma definição de alerta de dados
  O Designer de Alertas de Dados exibe a URL do site onde a definição de alerta de dados será salva. As definições de alertas de dados sempre são salvas no mesmo site dos relatórios.
 
 > [!NOTE]
@@ -187,7 +187,7 @@ ms.locfileid: "78177016"
  Antes que a definição de alerta seja salva, ela é validada. Você deve corrigir todos os erros para que a definição de alerta possa ser salva com êxito. Para obter mais informações, consulte [Criar um Alerta de Dados no Designer de Alertas de Dados](create-a-data-alert-in-data-alert-designer.md).
 
 
-##  <a name="EditAlert"></a>Editar uma definição de alerta de dados
+##  <a name="edit-a-data-alert-definition"></a><a name="EditAlert"></a> Editar uma definição de alerta de dados
  Após salvar uma definição de alerta de dados, é possível abri-la novamente e editá-la no Designer de Alertas de Dados. Você pode adicionar, alterar ou excluir regras e cláusulas, e alterar a agenda e as configurações de email. Se o feed de dados do relatório usado pelo alerta tiver sido alterado e não fornecer mais os campos que as regras de alerta referenciam, ou se os tipos de dados ou outros metadados dos campos tiverem sido alterados, a definição do alerta não será mais válida e você deverá corrigi-la para que possa salvá-la novamente. Se você desejar usar um feed de dados diferente, deverá criar uma nova definição de alerta.
 
  Para editar uma definição de alerta de dados, clique com o botão direito do mouse no Gerenciador de Alerta de Dados e clique em **Editar**. A imagem a seguir mostra o menu de contexto em um alerta de dados no Gerenciador de Alertas de Dados.
@@ -197,12 +197,12 @@ ms.locfileid: "78177016"
  Para obter mais informações, consulte [Editar um Alerta de Dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).
 
 
-##  <a name="HowTo"></a> Tarefas relacionadas
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tarefas relacionadas
  Esta seção lista procedimentos que mostram como criar e editar alertas.
 
--   [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md)
+-   [Editar um alerta de dados no Designer de alertas](edit-a-data-alert-in-alert-designer.md)
 
--   [Criar um Alerta de Dados no Designer de Alertas de Dados](create-a-data-alert-in-data-alert-designer.md)
+-   [Criar um alerta de dados no Designer de alertas de dados](create-a-data-alert-in-data-alert-designer.md)
 
 
 ## <a name="see-also"></a>Consulte Também

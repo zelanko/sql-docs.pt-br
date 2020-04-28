@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84418ca3f32700831eaac6b344f50f9cc862625a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175695"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar ou reparar o PowerPivot para SharePoint 2013 (Ferramenta de Configuração do PowerPivot)
@@ -34,17 +34,16 @@ ms.locfileid: "78175695"
 
  [Próximas etapas](#bkmk_nextsteps)
 
-##  <a name="bkmk_before"></a>Antes de começar
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>Antes de começar
  A Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 examina arquivos de programas, configurações do Registro e portas disponíveis. Para aproveitar ao máximo as ferramentas, examine os requisitos a seguir.
 
 -   Requisitos gerais para executar a ferramenta de configuração [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).
 
--   
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 prefere o aplicativo Web configurado para a autenticação baseada em declarações. Se a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 criar o aplicativo para você, ela o configurará para usar a autenticação do Windows baseada em declarações. Para obter mais informações sobre os requisitos de autenticação, consulte [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 prefere o aplicativo Web configurado para a autenticação baseada em declarações. Se a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 criar o aplicativo para você, ela o configurará para usar a autenticação do Windows baseada em declarações. Para obter mais informações sobre os requisitos de autenticação, consulte [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).
 
 -   A porta 80 deverá estar disponível para a ferramenta de Configuração do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013 para criar um aplicativo Web.
 
-##  <a name="bkmk_using"></a>Para usar a ferramenta de configuração do PowerPivot para SharePoint 2013
+##  <a name="to-use-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_using"></a>Para usar a ferramenta de configuração do PowerPivot para SharePoint 2013
  A primeira página da ferramenta fornece um resumo dos valores de entrada usados para configurar o farm do SharePoint. Além dos valores de entrada que você fornece, são usados valores padrão para configurar o sistema. Os nomes padrão são usados para aplicativos de serviço, bancos de dados de aplicativo de serviço e propriedades de aplicativo de serviço.
 
 > [!TIP]
@@ -60,7 +59,7 @@ ms.locfileid: "78175695"
 
 ||Descrição|
 |-|-----------------|
-|**(1)**|Janela Lista de tarefas.|
+|**uma**|Janela Lista de tarefas.|
 |**2**|Ações individuais.|
 |**Beta**|Os scripts do Windows PowerShell criados pela ferramenta de configuração.|
 |**quatro**|Mensagens de log criadas quando você inicia a validação ou executa ações.|
@@ -68,7 +67,7 @@ ms.locfileid: "78175695"
 |**152**|Parâmetros de entrada|
 |**7**|O botão **Executar** é habilitado após a validação das ações.|
 
-##  <a name="bkmk_steps"></a>Etapas de configuração
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Etapas de configuração
  O link para a ferramenta de configuração fica visível apenas quando o PowerPivot para SharePoint 2013 está instalado no servidor local.
 
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, clique em [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], em **Ferramentas de Configuração**e em **Configuração do PowerPivot para SharePoint 2013**.
@@ -77,11 +76,11 @@ ms.locfileid: "78175695"
 
 3.  Expanda a janela para o tamanho total. Você verá uma barra de botões na parte inferior da janela que inclui os comandos **Validar**, **Executar**e **Sair** .
 
-4.  **Conta padrão:** Na guia parâmetros, digite uma conta de usuário de domínio para o nome de usuários da **conta padrão**. Esta conta é usada para provisionar serviços essenciais, inclusive o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.
+4.  **Conta Padrão:** Na guia Parâmetros, digite uma conta de usuário de domínio para **Nome de Usuário da Conta Padrão**. Esta conta é usada para provisionar serviços essenciais, inclusive o pool de aplicativos do serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.
 
-     **Frase secreta:** digite uma frase secreta. Se o farm do SharePoint for novo, a frase secreta será usada sempre que novos servidores ou aplicativos forem adicionados ao farm do SharePoint. Se o farm existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.
+     **Frase Secreta:** digite uma frase secreta. Se o farm do SharePoint for novo, a frase secreta será usada sempre que novos servidores ou aplicativos forem adicionados ao farm do SharePoint. Se o farm existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.
 
-5.  **Porta:** Opcionalmente, digite um número de porta para se conectar ao aplicativo Web da administração central ou use o número gerado aleatoriamente fornecido. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.
+5.  **Porta:** opcionalmente, digite um número de porta para se conectar ao aplicativo Web Administração Central ou use o número fornecido gerado aleatoriamente. A ferramenta de configuração verifica se o número está disponível antes de oferecê-lo como opção.
 
 6.  Na página principal, digite o nome de um Servidor do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em execução no modo do SharePoint.
 
@@ -101,7 +100,7 @@ ms.locfileid: "78175695"
 
 11. [Verifique uma instalação do PowerPivot para SharePoint](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).
 
-##  <a name="bkmk_input"></a>Valores de entrada usados para configurar o servidor
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>Valores de entrada usados para configurar o servidor
  A Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usa uma combinação de valores de entrada que você digita e valores padrão que ele detecta ou usa automaticamente.
 
  A lista de ações exibida na ferramenta de configuração depende da configuração atual dos farms do SharePoint. Por exemplo, se o farm do SharePoint já estiver configurado, você não verá ações que configuram o farm ou criam um aplicativo Web. Você pode executar a ferramenta a qualquer momento para configurar, reparar ou detectar erros de configuração. Se os serviços obrigatórios como Serviços do Excel ou Serviço de Repositório Seguro não estiverem sendo executados no farm, a ferramenta detectará os serviços ausentes e fornecerá opções para habilitá-los. Se nenhuma ação for necessária, a lista de tarefas estará vazia.
@@ -110,44 +109,42 @@ ms.locfileid: "78175695"
 
 |Página|Valor de entrada|Fonte|Descrição|
 |----------|-----------------|------------|-----------------|
-|**Configurar ou reparar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint**|Conta padrão|Usuário atual|A conta padrão é uma conta de usuário de domínio do Windows usada para provisionar serviços compartilhados no farm. Ela é usada para provisionar o seguinte:<br />
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão<br />Serviço de Repositório Seguro<br />Serviços do Excel<br />A identidade do pool de aplicativos Web<br />O administrador de conjunto de sites<br />A conta autônoma de atualização de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Por padrão, ele usa a conta de domínio do usuário atual. É recomendável substituir o valor padrão, a menos que você esteja configurando um servidor para fins de avaliação e de não produção. Posteriormente, é possível alterar as identidades do serviço, usando a Administração Central. Opcionalmente, na ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique contas dedicadas para o seguinte:<br /><br /> Aplicativo Web, usando a página **criar aplicativo Web padrão** (supondo que a ferramenta esteja criando um aplicativo Web para o farm).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]conta de atualização de dados autônoma, usando a página **criar conta autônoma para atualização de dados** nesta ferramenta.|
-||Servidor de Banco de Dados|Instância nomeada local do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , se estiver disponível.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a ferramenta populará o campo de servidor de banco de dados com este nome de instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio.<br /><br /> O **servidor de banco de dados** é um parâmetro necessário. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|
+|**Configurar ou reparar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint**|Conta padrão|Usuário atual|A conta padrão é uma conta de usuário de domínio do Windows usada para provisionar serviços compartilhados no farm. Ela é usada para provisionar o seguinte:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Padrão<br />Serviço de Repositório Seguro<br />Serviços do Excel<br />A identidade do pool de aplicativos Web<br />O administrador de conjunto de sites<br />O Assistente de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Por padrão, ele usa a conta de domínio do usuário atual. É recomendável substituir o valor padrão, a menos que você esteja configurando um servidor para fins de avaliação e de não produção. Posteriormente, é possível alterar as identidades do serviço, usando a Administração Central. Opcionalmente, na ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique contas dedicadas para o seguinte:<br /><br /> Aplicativo Web, usando a página **criar aplicativo Web padrão** (supondo que a ferramenta esteja criando um aplicativo Web para o farm).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]conta de atualização de dados autônoma, usando a página **criar conta autônoma para atualização de dados** nesta ferramenta.|
+||Servidor de Banco de Dados|Instância nomeada local do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , se estiver disponível.|Se uma instância de mecanismo de banco de dados for instalada como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , a ferramenta populará o campo de servidor de banco de dados com este nome de instância. Se você não instalou o mecanismo de banco de dados, este campo estará vazio.<br /><br /> O**Servidor de Banco de Dados**  é um parâmetro obrigatório. Pode ser qualquer versão ou edição de SQL Server que tenha suporte para farms do SharePoint.|
 ||Senha|Entradas de usuário|Se estiver criando um novo farm, a frase secreta que você inserir será usada como a frase secreta para o farm. Se você estiver adicionando o [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a um farm existente, digite a frase secreta de farm existente.|
 ||Porta da Administração Central do SharePoint|Padrão, se necessário|Se o farm não estiver configurado, a ferramenta fornecerá opções para criar o farm, inclusive criar um ponto de extremidade de HTTP para a Administração Central. Ele escolhe um número de porta gerado aleatoriamente que não esteja em uso.|
-||
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é necessário para que os Serviços do Excel habilitem os recursos principais do PowerPivot. O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do PowerPivot** .|
-|**Configurar novo farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Serviços do Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entradas de usuário|O servidor do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é necessário para que os Serviços do Excel habilitem os recursos principais do PowerPivot. O nome do servidor digitado nesta página também é adicionado à lista na página **Configurar Servidores do PowerPivot** .|
+|**Configurar Novo Farm**|Servidor de Banco de Dados<br /><br /> Conta do Farm<br /><br /> Frase Secreta<br /><br /> Porta da Administração Central do SharePoint|Padrão, se necessário|O padrão das configurações é o valor inserido na página principal.|
 |**Criar Aplicativo de Serviço PowerPivot**|Nome do Aplicativo de Serviço|Padrão|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Nome do aplicativo de serviço o padrão é **aplicativo de serviço PowerPivot padrão**. Você pode substituir um valor diferente na ferramenta.|
 ||Servidor de Banco de Dados|Padrão|O servidor de banco de dados que hospeda o banco de dados do aplicativo de serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome do servidor padrão é o mesmo servidor de banco de dados usado para o farm. Você pode substituir um valor diferente do nome de servidor padrão.|
 ||Nome do Banco de Dados|Padrão|O nome do banco de dados a ser criado para o Banco de Dados de Aplicativo de Serviço [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . O nome de banco de dados padrão é baseado no nome de aplicativo de serviço, seguido por um GUID para garantir um nome exclusivo. Você pode substituir um valor diferente na ferramenta.|
-|**Criar aplicativo Web padrão**|Nome do Aplicativo Web|Padrão, se necessário|Se nenhum aplicativo Web existir, a ferramenta criará um. O aplicativo Web será configurado para a autenticação de modo clássico e escutará na porta 80. O tamanho máximo de carregamento de arquivo é definido para 2047, o máximo permitido pelo SharePoint. O maior tamanho de carregamento de arquivo é para acomodar os arquivos grandes do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que serão carregados no servidor.|
+|**Criar Aplicativo Web Padrão**|Nome do Aplicativo Web|Padrão, se necessário|Se nenhum aplicativo Web existir, a ferramenta criará um. O aplicativo Web será configurado para a autenticação de modo clássico e escutará na porta 80. O tamanho máximo de carregamento de arquivo é definido para 2047, o máximo permitido pelo SharePoint. O maior tamanho de carregamento de arquivo é para acomodar os arquivos grandes do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que serão carregados no servidor.|
 ||URL|Padrão, se necessário|A ferramenta cria uma URL baseada no nome do servidor, usando as mesmas convenções de nomenclatura de arquivo que o SharePoint.|
 ||Pool de Aplicativos|Padrão, se necessário|A ferramenta cria um pool de aplicativos padrão no IIS.|
 ||Conta e Senha do Pool de Aplicativos|Padrão, se necessário|A conta do pool de aplicativos é baseada na conta padrão, mas você pode substituí-la na ferramenta.|
 ||Servidor de Banco de Dados|Padrão, se necessário|A instância de banco de dados padrão é pré-selecionada para armazenar o banco de dados de conteúdo do aplicativo, mas você pode especificar uma instância do SQL Server diferente na ferramenta.|
 ||Nome do Banco de Dados|Padrão, se necessário|O nome do banco de dados do aplicativo. O nome de banco de dados é baseado nas convenções de nomenclatura de arquivo de SharePoint, mas você pode escolher um nome diferente.|
-|**Implantar solução de aplicativo Web**|URL|Padrão, se necessário|A URL padrão é do aplicativo Web padrão.|
+|**Implantar Solução de Aplicativo Web**|URL|Padrão, se necessário|A URL padrão é do aplicativo Web padrão.|
 ||Tamanho Máximo do Arquivo (em MB)|Padrão, se necessário|A configuração padrão é 2047. As bibliotecas de documentos do SharePoint também têm um tamanho máximo, e a configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] não deve exceder a configuração da biblioteca de documentos. Para obter mais informações, consulte [Configurar o tamanho máximo de upload de arquivo &#40;PowerPivot para SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|
-|**Criar conjunto de sites**|Administrador de site|Padrão, se necessário|A ferramenta usa a conta padrão. Você pode anulá-la na página **Criar Coleção de Sites** .|
+|**Criar Coleção de Sites**|Administrador de site|Padrão, se necessário|A ferramenta usa a conta padrão. Você pode anulá-la na página **Criar Coleção de Sites** .|
 ||Contact Email|Padrão, se necessário|Se o Microsoft Outlook estiver configurado no servidor, a ferramenta usará o endereço de email do usuário atual. Caso contrário, um valor de espaço reservado será usado.|
 ||URL do site|Padrão, se necessário|A ferramenta cria uma URL de site, usando as mesmas convenções de nomenclatura de URL que o SharePoint.|
 ||Título do site|Padrão, se necessário|A ferramenta adiciona o **Site do PowerPivot** como o título padrão.|
 |**Ativar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o recurso em um conjunto de sites**|URL do site||URL da coleção de sites para a qual você está ativando recursos do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|
 ||Habilite o recurso premium para este site||Habilite o recurso de site do SharePoint "PremiumSite".|
-|**Criar Serviço de Repositório Seguro aplicativo**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite o nome do aplicativo do serviço de Repositório Seguro.|
+|**Criar Aplicativo de Serviço de Repositório Seguro**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite o nome do aplicativo do serviço de Repositório Seguro.|
 ||Servidor de Banco de Dados|Entradas de usuário|Digite o nome do servidor de banco de dados a ser usado para o aplicativo de serviço de Repositório Seguro.|
-|**Criar Serviço de Repositório Seguro proxy de aplicativo**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite o nome do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|
+|**Criar Proxy de Aplicativo de Serviço de Repositório Seguro**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite o nome do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|
 ||Proxy de aplicativo de serviço|Padrão, se necessário|Digite o nome do proxy de aplicativo do serviço de Repositório Seguro. O nome aparecerá no grupo de conexões padrão que associa aplicativos a aplicativos Web de conteúdo do SharePoint.|
-|**Atualizar Serviço de Repositório Seguro chave mestra**|Proxy de aplicativo de serviço|Padrão, se necessário|Digite o nome do proxy do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|
+|**Atualizar Chave Mestra do Serviço de Repositório Seguro**|Proxy de aplicativo de serviço|Padrão, se necessário|Digite o nome do proxy do aplicativo de serviço de Repositório Seguro que você digitou na página anterior.|
 ||Senha|Entradas de usuário|A chave mestra é usada para criptografia de dados. Por padrão, a frase secreta usada para gerar a chave é a mesma que é usada para provisionar novos servidores no farm. Você pode substituir a frase secreta padrão por uma frase secreta exclusiva.|
-|**Criar conta autônoma para datarefresh**|ID do Aplicativo de Destino|Padrão, se necessário|Crie um aplicativo de destino para armazenar as credenciais para a atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> A ID do aplicativo pode ser um texto descritivo.|
+|**Criar Conta Autônoma para DataRefresh**|ID do Aplicativo de Destino|Padrão, se necessário|Crie um aplicativo de destino para armazenar as credenciais para a atualização de dados autônoma do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> A ID do aplicativo pode ser um texto descritivo.|
 ||Nome Amigável para Aplicativo de Destino|Padrão, se necessário||
 ||Nome de Usuário e Senha da Conta Autônoma|Padrão, se necessário|Digite as credenciais de uma conta de usuário do Windows que é usada pelo aplicativo de destino para executar a atualização de dados autônoma. Para obter mais informações, consulte [Configurar a atualização de dados dos serviços do Excel usando a conta de serviço autônoma no SharePoint Server 2013](https://technet.microsoft.com/library/hh525344\(office.15\).aspx) (https://technet.microsoft.com/library/hh525344(office.15).aspx).|
 ||URL do site|Padrão, se necessário|Digite a URL do site da coleção de sites associada ao aplicativo de destino. Para associar a coleções de sites adicionais, use a Administração Central do SharePoint.|
-|**Criar aplicativo de serviço dos serviços do Excel**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite um nome de aplicativo de serviço. Um banco de dados de aplicativo de serviço com o mesmo nome é criado no servidor de banco de dados do farm do SharePoint.|
+|**Criar Aplicativo de Serviço dos Serviços do Excel**|Nome do Aplicativo de Serviço|Padrão, se necessário|Digite um nome de aplicativo de serviço. Um banco de dados de aplicativo de serviço com o mesmo nome é criado no servidor de banco de dados do farm do SharePoint.|
 |**Configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidores**|Nome do Aplicativo de Serviço|Padrão, se necessário|Nome do aplicativo de serviço que você digitou na página anterior.|
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Nome do servidor||Lista de servidores registrados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> O nome do servidor digitado na página principal é adicionado automaticamente a essa página.|
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nome do servidor||Lista de servidores registrados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> O nome do servidor digitado na página principal é adicionado automaticamente a essa página.|
 |**Registrar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] suplemento como rastreador de uso dos serviços do Excel**|Nome do Aplicativo de Serviço||Nome do aplicativo de serviço que você digitou na página anterior.|
 |||||
 
@@ -158,7 +155,7 @@ ms.locfileid: "78175695"
 ## <a name="verify-the-configuration"></a>Verificar a configuração
  Consulte a seção " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verificar configuração" de [Configurar o PowerPivot e implantar soluções &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).
 
-##  <a name="bkmk_nextsteps"></a>Próximas etapas
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> Próximas etapas
  Depois de concluir a instalação do servidor, há várias tarefas pós-instalação que devem ser executadas:
 
 -   Conceder permissões do SharePoint a indivíduos e grupos. Essa tarefa é necessária para permitir o acesso a sites e conteúdo.
@@ -184,7 +181,7 @@ ms.locfileid: "78175695"
  A atualização de dados do servidor permite que os usuários reimportem dados atualizados para suas pastas de trabalho no modo autônomo. Para que a atualização de dados seja bem-sucedida, o servidor executando o Analysis Services no modo do SharePoint deverá ter os mesmos provedores de dados que foram usados originalmente para importar os dados. Além disso, a conta de usuário na qual a atualização de dados é executada frequentemente requer permissões de leitura nas fontes de dados externas. Verifique os requisitos para habilitar e configurar a atualização de dados para garantir êxito no resultado. Para obter mais informações, consulte [PowerPivot data Refresh com o SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md).
 
 > [!NOTE]
->  Para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, os provedores de dados são instalados quando você executa o instalador **spPowerPivot.msi** e a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obter mais informações, consulte [instalar ou desinstalar o suplemento de PowerPivot para SharePoint &#40;&#41;do SharePoint 2013 ](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).
+>  Para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o para SharePoint 2013, os provedores de dados são instalados quando você executa o instalador do **PowerPivot. msi** e [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a ferramenta de configuração do SharePoint 2013. Para obter mais informações, consulte [instalar ou desinstalar o suplemento de PowerPivot para SharePoint &#40;&#41;do SharePoint 2013 ](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).
 
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>Alterar o pool de aplicativos e as identidades de serviço no SharePoint
  A Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] provisiona recursos do farm, aplicativos e serviços a serem executados em uma única conta. Isso simplifica a instalação, mas não resulta em uma implantação que atende aos requisitos de segurança de um farm do SharePoint. Para criar uma implantação mais robusta, altere os pools de aplicativos e as identidades de serviço para serem executados em contas diferentes após a conclusão da instalação. Para obter mais informações, consulte [Configurar contas de serviço PowerPivot](configure-power-pivot-service-accounts.md).

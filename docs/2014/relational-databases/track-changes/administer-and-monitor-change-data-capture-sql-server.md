@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929188"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar e monitorar a captura de dados de alteração (SQL Server)
   Este tópico descreve como administrar e monitorar a captura de dados de alterações.  
   
-##  <a name="Capture"></a>Trabalho de captura  
+##  <a name="capture-job"></a><a name="Capture"></a> Trabalho de captura  
  O trabalho de captura é iniciado com a execução do procedimento armazenado sem-parâmetros `sp_MScdc_capture_job`. Esse procedimento armazenado é iniciado com a extração de valores configurados para *maxtrans*, *maxscans*, *continuous*e *pollinginterval* para o trabalho de captura de msdb.dbo.cdc_jobs. Estes valores configurados são passados como parâmetros ao procedimento armazenado `sp_cdc_scan`. Ele é usado para invocar `sp_replcmds` para executar a verificação de log.  
   
 ### <a name="capture-job-parameters"></a>Capturar parâmetros de trabalho  
@@ -61,7 +61,7 @@ ms.locfileid: "76929188"
 ### <a name="capture-job-customization"></a>Personalização do trabalho de captura  
  Para o trabalho de captura, você pode aplicar lógica adicional para determinar se uma nova verificação é iniciada imediatamente ou se um estado suspenso é imposto antes do início de uma nova verificação, em vez de depender de um intervalo de sondagem fixo. A opção pode se basear simplesmente na hora do dia, talvez impondo estados suspensos muito longos durante horários de pico de atividade e até mudando para um intervalo de sondagem de 0 no fechamento do dia quando é importante concluir o processamento dos dias e preparar-se para as execuções noturnas. Também foi possível monitorar o andamento do processo de captura para determinar quando todas as transações confirmadas até meia-noite foram verificadas e depositadas em tabelas de alterações. Isso permite a reinicialização do trabalho de captura por uma reinicialização diária agendada após seu término. Ao substituir a etapa de trabalho entregue chamando `sp_cdc_scan` por uma chamada a um invólucro de usuário gravado para `sp_cdc_scan`, é possível obter comportamento altamente personalizado com pouco esforço adicional.  
   
-##  <a name="Cleanup"></a>Trabalho de limpeza  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> Trabalho de limpeza  
  Esta seção fornece informações sobre como o trabalho de limpeza do Change Data Capture funciona.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Estrutura do trabalho de limpeza  
@@ -77,8 +77,8 @@ ms.locfileid: "76929188"
 ### <a name="cleanup-job-customization"></a>Personalização do trabalho de limpeza  
  Para o trabalho de limpeza, a possibilidade personalização está na estratégia usada para determinar quais entradas da tabela de alterações devem ser descartadas. A única estratégia com suporte no trabalho de limpeza entregue baseia-se na hora. Nessa situação, a nova marca d'água baixa é calculada pela subtração do período de retenção permitido da hora de confirmação da última transação processada. Como os procedimentos de limpeza subjacentes se baseiam no `lsn`, em vez da hora, qualquer número de estratégias pode ser usado para determinar o menor `lsn` a ser mantido nas tabelas de alterações. Somente alguns deles são estritamente baseados na hora. O conhecimento sobre os clientes, por exemplo, pode ser usado para fornecer um mecanismo seguro se não for possível executar os processos de downstream que requerem acesso às tabelas de alterações. Além disso, embora a estratégia padrão seja aplicável ao mesmo `lsn` para limpar todas as tabelas de alterações do banco de dados, o procedimento de limpeza subjacente também pode ser chamado para limpar no nível de captura da instância.  
   
-##  <a name="Monitor"></a>Monitorar o processo de captura de dados de alterações  
- O monitoramento do processo de captura de dados de alteração permite determinar se as alterações estão sendo gravadas corretamente e com latência razoável nas tabelas de alteração. O monitoramento também pode ajudar a identificar os erros que podem ocorrer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]inclui duas exibições de gerenciamento dinâmico para ajudá-lo a monitorar a captura de dados de alterações: [Sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [Sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Monitorar o processo de captura de dados de alterações  
+ O monitoramento do processo de captura de dados de alteração permite determinar se as alterações estão sendo gravadas corretamente e com latência razoável nas tabelas de alteração. O monitoramento também pode ajudar a identificar os erros que podem ocorrer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contém duas exibições de gerenciamento dinâmico para ajudar a monitorar a captura de dados de alterações: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identificar sessões com conjuntos de resultados vazios  
  Cada linha da exibição de gerenciamento sys.dm_cdc_log_scan_sessions representa uma sessão de verificação de log (exceto a linha que tem uma ID 0). Uma sessão de verificação de log é equivalente a uma execução de [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Durante uma sessão, a verificação pode retornar alterações ou um resultado vazio. Se o conjunto de resultados for vazio, a coluna empty_scan_count em sys.dm_cdc_log_scan_sessions será definida como 1. Se houver conjuntos de resultados vazios consecutivos, como se o trabalho de captura estivesse sendo executado continuamente, a coluna empty_scan_count na última linha existente será incrementada. Por exemplo, se sys.dm_cdc_log_scan_sessions já contém 10 linhas para verificações que retornaram alterações e se existem cinco conjuntos de resultados vazios em sequência, a exibição conterá 11 linhas. A última linha tem um valor de 5 na coluna empty_scan_count. Para determinar sessões que tiveram uma verificação vazia, execute a seguinte consulta:  
@@ -105,7 +105,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Usar o coletor de dados para coletar dados de amostragem  
  O coletor de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite coletar instantâneos de dados de qualquer tabela ou exibição de gerenciamento dinâmico e criar um data warehouse de desempenho. Quando a captura de dados de alteração está habilitada em um banco de dados, ela é útil para obter instantâneos das exibições sys.dm_cdc_log_scan_sessions e sys.dm_cdc_errors em intervalos regulares para análise posterior. O procedimento a seguir configura um coletor de dados para coletar dados de amostra da exibição de gerenciamento sys.dm_cdc_log_scan_sessions.  
   
- **Configurando a coleta de dados**  
+ **Configuração a coleta de dados**  
   
 1.  Habilite o coletor de dados e configure um data warehouse de gerenciamento. Para obter mais informações, consulte [Gerenciar coleta de dados](../data-collection/data-collection.md).  
   
@@ -160,7 +160,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 4.  No data warehouse configurado na etapa 1, localize a tabela custom_snapshots.cdc_log_scan_data. Essa tabela fornece um instantâneo histórico dos dados das sessões de verificação de log. Esses dados podem ser usados para analisar a latência, a taxa de transferência e outras medidas de desempenho ao longo do tempo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Controle de alterações de dados &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Controle as alterações de dados &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Habilitar e desabilitar a captura de dados de alterações &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
  [Trabalhar com dados de alterações &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  

@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762810"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>Emular registros e coleções por meio do tipo de dado CLR definido pelo usuário
@@ -340,4 +340,4 @@ SELECT
 
 ## <a name="select-into-record"></a>SELECIONAR no registro
 
-Quando o resultado da consulta Oracle é salvo em uma variável de registro PL/SQL, você tem duas opções dependendo da configuração do SSMA para **converter registro como uma lista de variáveis separadas** (disponível no menu **ferramentas** , **configurações do projeto**e conversão **geral** -> ****). Se o valor dessa configuração for **Sim** (o padrão), o SSMA não criará uma instância do tipo de registro. Em vez disso, ele divide o registro nos campos que constituem criando uma variável Transact-SQL separada por cada campo de registro. Se a configuração for **não**, o registro será instanciado e cada campo receberá um valor usando `Set` métodos.
+Quando o resultado da consulta Oracle é salvo em uma variável de registro PL/SQL, você tem duas opções dependendo da configuração do SSMA para **converter registro como uma lista de variáveis separadas** (disponível no menu **ferramentas** , **configurações do projeto**e conversão **geral** -> **Conversion**). Se o valor dessa configuração for **Sim** (o padrão), o SSMA não criará uma instância do tipo de registro. Em vez disso, ele divide o registro nos campos que constituem criando uma variável Transact-SQL separada por cada campo de registro. Se a configuração for **não**, o registro será instanciado e cada campo receberá um valor usando `Set` métodos.

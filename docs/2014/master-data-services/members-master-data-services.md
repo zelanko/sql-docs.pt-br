@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76b452e5ee362aeb2e66d8949a12ed910489f990
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175995"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
@@ -65,12 +65,12 @@ ms.locfileid: "78175995"
 |Criar um novo membro consolidado.|[Criar um membro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|
 |Excluir um membro ou uma coleção existente.|[Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|
 |Reativar um membro ou coleção excluído.|[Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|
-|Atualizar os valores de atributos de um membro.|[Altere o tipo de atributo &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
+|Atualizar os valores de atributos de um membro.|[Alterar o tipo de atributo &#40;Suplemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
 |Mover membros dentro de uma hierarquia.|[Mover membros dentro de uma hierarquia &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>Conteúdo relacionado
 
--   [Visão geral do Master Data Services](master-data-services-overview-mds.md)
+-   [Visão geral de Master Data Services](master-data-services-overview-mds.md)
 
 -   [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175715"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Visão geral da arquitetura lógica (Analysis Services – Dados Multidimensionais)
@@ -98,7 +98,7 @@ ms.locfileid: "78175715"
 |Nível Categoria da Rota na dimensão Rota|não-terra, terra|RouteDimensionTable|Route_Category|Não-terra|
 |Atributo Rota na dimensão Rota|aérea,marítima,rodoviária,ferroviária|RouteDimensionTable|Rota|Marítima|
 |Atributo Hemisfério na dimensão Origem|Hemisfério oriental,Hemisfério ocidental|SourceDimensionTable|Hemisphere|Hemisfério oriental|
-|Atributo Continente na dimensão Origem|África,Ásia,Austrália,Europa,América do Norte, América do América|SourceDimensionTable|Continente|Europa|
+|Atributo Continente na dimensão Origem|África,Ásia,Austrália,Europa,América do Norte, América do Sul|SourceDimensionTable|Continente|Europa|
 |Atributo Semestre na dimensão Horário|1º semestre,2º semestre|TimeDimensionTable|Half|2º semestre|
 |Atributo Trimestre na dimensão Horário|1º trimestre,2º trimestre,3º trimestre,4º trimestre|TimeDimensionTable|Quarter|3º trimestre|
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175285"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definindo uma relação muitos para muitos
@@ -105,7 +105,7 @@ ms.locfileid: "78175285"
 
 7.  Na lista **Coluna de nome** , selecione **SalesReasonName**.
 
-8.  Clique em **Próximo**.
+8.  Clique em **Avançar**.
 
 9. Na página **Selecionar Atributos de Dimensão** , o atributo **Chave do Motivo de Vendas** é selecionado automaticamente, pois se trata de um atributo de chave. Marque a caixa de seleção ao lado do atributo **tipo de motivo de motivo** de vendas `Sales Reason Type`, altere seu nome para e clique em **Avançar**.
 
@@ -143,7 +143,7 @@ ms.locfileid: "78175285"
 
      A imagem a seguir mostra as alterações na caixa de diálogo **Definir Relação** :
 
-     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-many-to-many-3.gif "Caixa de diálogo Definir Relação")
+     ![Caixa de diálogo Definir Relação](../../2014/tutorials/media/l5-many-to-many-3.gif "Caixa de diálogo Definir Relação")
 
 5.  Clique em **OK**.
 

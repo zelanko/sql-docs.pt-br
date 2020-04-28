@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1d2c3f1c0366d2c7d3d9efe700d9cfccc688dbc9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171595"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Carregando planilha de planejamento de capacidade do servidor para o Analytics Platform System
@@ -27,7 +27,7 @@ Essa planilha de planejamento de capacidade ajuda a determinar os requisitos de 
 
 3.  A maioria dos requisitos se aplica ao carregamento de arquivos de dados compactados ou descompactados; quaisquer diferenças nos requisitos são indicadas em negrito.
 
-## <a name="clipboard-capacity-planning-worksheet"></a>![Área de transferência](media/clipboard-icon.png "Área de transferência") Planilha de planejamento de capacidade
+## <a name="clipboard-capacity-planning-worksheet"></a>![Área de transferência](media/clipboard-icon.png "Área de Transferência") Planilha de planejamento de capacidade
 
 Imprima esta planilha e preencha-a com seus próprios requisitos.
 

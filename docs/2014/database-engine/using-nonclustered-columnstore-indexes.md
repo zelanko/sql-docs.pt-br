@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175345"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usando índices columnstore não clusterizados
@@ -28,14 +28,14 @@ ms.locfileid: "78175345"
 
 -   [Criar um índice columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 
--   [Alterar os dados em um índice Columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
+-   [Alterar os dados em um índice columnstore não clusterizado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>Criar um índice Columnstore não clusterizado
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>Criar um índice Columnstore não clusterizado
  Para carregar dados em um índice columnstore não clusterizado, primeiro carregue os dados em uma tabela de armazenamento tradicional armazenada como um índice de heap ou cluster e, em seguida, use [Create COLUMNSTORE index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) para criar um índice columnstore.
 
  ![Carregando dados em um índice columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Carregando dados em um índice columnstore")
 
-##  <a name="change"></a>Alterar os dados em um índice Columnstore não clusterizado
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>Alterar os dados em um índice Columnstore não clusterizado
  Quando você cria um índice columnstore não clusterizado em uma tabela, não pode modificar diretamente os dados nessa tabela. Uma consulta com INSERT, UPDATE, DELETE ou MERGE falhará e retornará uma mensagem de erro. Para adicionar ou modificar os dados na tabela, siga um destes procedimentos:
 
 -   Desabilite o índice columnstore. Depois, você pode atualizar os dados na tabela. Se você desabilitar o índice columnstore, poderá recriar o índice columnstore quando concluir a atualização dos dados. Por exemplo:

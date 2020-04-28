@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175355"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usando índices columnstore clusterizados
@@ -38,7 +38,7 @@ ms.locfileid: "78175355"
 
 -   [Reorganizar um índice columnstore clusterizado](#reorganize)
 
-##  <a name="create"></a>Criar um índice Columnstore clusterizado
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Criar um índice Columnstore clusterizado
  Para criar um índice columnstore clusterizado, primeiro crie uma tabela de repositório de armazenamento como um heap ou índice clusterizado e, em seguida, use a instrução [criar índice COLUMNSTORE clusterizado &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-columnstore-index-transact-sql) para converter a tabela em um índice columnstore clusterizado. Se você desejar que o índice columnstore clusterizado tenha o mesmo nome que o índice clusterizado, use a opção DROP_EXISTING.
 
  Este exemplo cria uma tabela como um heap e, depois, converte-o em um índice columnstore clusterizado chamado o cci_Simple. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.
@@ -56,10 +56,10 @@ GO
 
  Para obter mais exemplos, consulte a seção exemplos em [criar índice COLUMNSTORE clusterizado &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Remover um índice Columnstore clusterizado
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Remover um índice Columnstore clusterizado
  Use a instrução [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql) para descartar um índice columnstore clusterizado. Essa operação irá remover o índice e converter a tabela columnstore em um heap rowstore.
 
-##  <a name="load"></a>Carregar dados em um índice Columnstore clusterizado
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Carregar dados em um índice Columnstore clusterizado
  Você pode adicionar dados a um índice columnstore clusterizado existente usando qualquer um dos métodos de carregamento padrão.  Por exemplo, a ferramenta de carregamento em massa bcp, Integration Services e INSERT... SELECT pode carregar dados em um índice columnstore clusterizado.
 
  Os índices columnstore clusterizados aproveitam o deltastore a fim de evitar a fragmentação de segmentos de colunas no columnstore.
@@ -85,7 +85,7 @@ GO
 |102.000|0|102.000|
 |145.000|145.000<br /><br /> Tamanho do rowgroup: 145.000|0|
 |1,048,577|1\.048.576<br /><br /> Tamanho do rowgroup: 1.048.576.|1|
-|2,252,152|2,252,152<br /><br /> Tamanhos do rowgroup: 1.048.576, 1.048.576, 155.000.|0|
+|2,252,152|2,252,152<br /><br /> Tamanhos dos rowgroups: 1.048.576, 1.048.576, 155.000.|0|
 
  O exemplo a seguir mostra os resultados do carregamento de 1.048.577 linhas em uma partição. Os resultados mostram um rowgroup COMPRESSED no columnstore (como segmentos de coluna compactados) e 1 linha no deltastore.
 
@@ -93,11 +93,11 @@ GO
 SELECT * FROM sys.column_store_row_groups
 ```
 
- ![Rowgroup e deltastore para um carregamento de lote](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para um carregamento de lote")
+ ![Rowgroup e deltastore para um carregamento em lote](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup e deltastore para um carregamento em lote")
 
 
 
-##  <a name="change"></a>Alterar dados em um índice Columnstore clusterizado
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Alterar dados em um índice Columnstore clusterizado
  Os índices columnstore clusterizados oferecem suporte a operações DML de inserção, atualização e exclusão.
 
  Use [insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) para inserir uma linha. A linha será adicionada ao deltastore.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Se a linha estiver no deltastore, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] atualizará a linha no deltastore.
 
-##  <a name="rebuild"></a>Recriar um índice Columnstore clusterizado
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Recriar um índice Columnstore clusterizado
  Use [criar índice COLUMNSTORE clusterizado &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) ou [ALTER INDEX &#40;&#41;do Transact-SQL](/sql/t-sql/statements/alter-index-transact-sql) para executar uma recompilação completa de um índice COLUMNSTORE clusterizado existente. Além disso, você pode usar ALTER INDEX... Recompilar para recompilar uma partição específica.
 
 ### <a name="rebuild-process"></a>Processo de recriação
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      Isso garante que todos dados sejam armazenados no columnstore. Se vários carregamentos ocorrerem ao mesmo tempo, cada partição poderá acabar tendo vários deltastores. A recriação moverá todas as linhas do deltastore para o columnstore.
 
-##  <a name="reorganize"></a>Reorganizar um índice Columnstore clusterizado
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Reorganizar um índice Columnstore clusterizado
  A reorganização de um índice columnstore clusterizado move todos os rowgroups CLOSED para o columnstore. Para executar uma reorganização, use [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)com a opção reorganizar.
 
  A reorganização não é necessária para mover rowgroups CLOSED para o columnstore. O processo Tuple Mover acabará encontrando todos os rowgroups FECHADOS e os moverá. No entanto, o Tuple Mover tem thread único e não pode mover rowgroups com rapidez suficiente para a carga de trabalho.

@@ -159,10 +159,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a639fa3dcdc6f87f1b7f81cb724ec04020a8f51e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172625"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Construtor de Relatórios e SSRS)
@@ -180,7 +180,7 @@ ms.locfileid: "78172625"
 
  ![Diagrama de elementos de medidor](../media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")
 
- Saiba mais sobre como usar medidores como KPIs no [Tutorial: Adicionar um KPI ao relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
+ Para obter mais informações sobre como usar medidores como KPIs, consulte [Tutorial: Adicionando um KPI ao seu relatório &#40;Construtor de Relatórios&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
 
 > [!NOTE]
 >  É possível publicar medidores separadamente de um relatório como partes do relatório. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -188,7 +188,7 @@ ms.locfileid: "78172625"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="GaugeTypes"></a> Tipos de medidores
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a>Tipos de medidor
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fornece dois tipos de medidores: radial e linear. O medidor radial geralmente é usado quando você deseja expressar os dados como uma velocidade. O medidor linear é usado para expressar os dados como uma temperatura ou um valor escalar.
 
  As principais diferenças entre os dois tipos são a forma geral do medidor e os ponteiros de medidor disponíveis. Os medidores radiais são circulares, ou graus de um círculo, e lembram velocímetros. Os ponteiros do medidor frequentemente são agulhas, mas podem ser marcadores ou barras.
@@ -209,10 +209,10 @@ ms.locfileid: "78172625"
 
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")
 
- Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico com Marcadores.
+ Opções de medidor linear: Horizontal, Vertical, Vários Ponteiros de Barra, Duas Escalas, Intervalo de Três Cores, Logarítmico, Termômetro, Termômetro Fahrenheit/Celsius e Gráfico de Marcador.
 
 
-##  <a name="AddingData"></a> Adicionando dados a um medidor
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a>Adicionando dados a um medidor
  Depois que você adicionar um medidor à superfície de design, arraste um campo de subconjunto para o painel de dados do medidor. Por padrão, o medidor agrega todos os valores de campo em um valor que é mostrado no medidor. Esse valor é anexado ao ponteiro com o uso da propriedade Value. Dependendo do tipo de dados do campo, o medidor usará a agregação SUM ou COUNT. Quando você usar dados numéricos, apropriados para adição, o medidor usará a função SUM. Caso contrário, usará a agregação COUNT. O valor do ponteiro poderá usar uma agregação diferente ou nenhuma agregação.
 
  É possível adicionar agrupamento ao medidor para exibir grupos ou linhas individuais no medidor. Depois que o agrupamento e a filtragem são aplicados, o medidor usa o valor do ponteiro para exibir o último grupo ou linha no conjunto de dados retornado.
@@ -252,10 +252,10 @@ ms.locfileid: "78172625"
 ### <a name="defining-a-group-on-a-gauge"></a>Definindo um grupo em um medidor
  Depois de adicionar um campo ao medidor, é possível adicionar um grupo de dados. O Medidor difere de todas as outras regiões de dados no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]que podem exibir vários grupos em uma região de dados. A adição de um grupo com a definição de uma expressão de grupo no medidor é o mesmo que adicionar um grupo de linhas na região de dados Tablix. Porém, quando o grupo é adicionado, só o valor do último grupo é exibido como o valor do ponteiro no medidor. Por exemplo, se você adicionar uma expressão de agrupamento no Ano, o ponteiro apontará para o valor que representa o valor de vendas de agregação para o último ano no conjunto de dados. Para obter mais informações sobre grupos, consulte [Noções básicas sobre grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).
 
- Você pode desejar adicionar um grupo no medidor se, por exemplo, estiver exibindo vários medidores em uma tabela ou lista e desejar exibir dados agregados por grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).
+ Você pode desejar adicionar um grupo no medidor se, por exemplo, estiver exibindo vários medidores em uma tabela ou lista e desejar exibir dados agregados por grupo. Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de relatórios e SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).
 
 
-##  <a name="PositioningData"></a> Posicionando elementos em um medidor
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a>Posicionando elementos em um medidor
  O painel de medidores é o contêiner de nível superior que mantém um ou mais medidores. É possível exibir a caixa de diálogo **Propriedades do Painel de Medidores** clicando fora do medidor. Por sua vez, cada medidor contém vários elementos de medidor: uma escala, um intervalo e um ponteiro. Ao usar o medidor, você precisa compreender como os elementos são medidos no painel de medidores para modificar o tamanho e o local desses elementos.
 
 ### <a name="understanding-size-and-position-measurements"></a>Compreendendo as medidas de tamanho e de posição
@@ -283,7 +283,7 @@ ms.locfileid: "78172625"
  O medidor linear assume uma forma circular, portanto, normalmente, esse tipo de medidor mantém os mesmos valores de largura e altura. No entanto, em um medidor linear que assume uma forma retangular, a proporção entre a largura e a altura normalmente é irregular. A taxa de proporção de um medidor determina a proporção da largura em relação à altura que deveria ser mantida quando o medidor é redimensionado. Por exemplo, se o valor estiver definido como 2, a largura do medidor será sempre duas vezes a altura do medidor, não importando a maneira como o medidor é redimensionado. Para definir a taxa de proporção, você pode definir a propriedade AspectRatio na caixa de diálogo **Propriedades de Medidor Linear** .
 
 
-##  <a name="HowTo"></a> Tópicos de instruções
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Tópicos de instruções
  Esta seção lista os procedimentos que mostram, passo a passo, como trabalhar com medidores nos relatórios; como obter dados para exibição efetivamente em medidores e como adicionar e configurar medidores e seus elementos.
 
 -   [Adicionar um medidor a um relatório &#40;Construtor de Relatórios e SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)
@@ -295,7 +295,7 @@ ms.locfileid: "78172625"
 -   [Especifique uma imagem como um ponteiro em um medidor &#40;Construtor de Relatórios e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)
 
 
-##  <a name="InThisSection"></a> Nesta seção
+##  <a name="in-this-section"></a><a name="InThisSection"></a>Nesta seção
  Os tópicos a seguir fornecem informações adicionais sobre como trabalhar com medidores.
 
 |||

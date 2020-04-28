@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177093"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
@@ -64,7 +64,7 @@ ms.locfileid: "78177093"
 
 8.  Em **nome da função**, `RSExecRole`digite.
 
-9. Em **proprietário**, digite **dbo**.
+9. Em **Proprietário**, digite **DBO**.
 
 10. Clique em **Protegíveis**.
 
@@ -186,7 +186,7 @@ ms.locfileid: "78177093"
 30. Repita para a tabela sysjobs. O RSExecRole deve obter permissões Selecionar para as duas tabelas.
 
 ## <a name="move-the-report-server-database"></a>Mover o banco de dados do servidor de relatório
- Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
+ Depois de criar as funções, você pode mover o banco de dados de servidor de relatório para a nova instância do SQL Server. Para obter mais informações, consulte [Movendo os bancos de dados do servidor de relatório para outro computador &#40;modo nativo do SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
 
  Se você estiver atualizando o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] para [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], poderá atualizá-lo antes de ou depois de mover o banco de dados.
 
@@ -209,7 +209,7 @@ ms.locfileid: "78177093"
 
 6.  Clique em **Testar Conexão**.
 
-7.  Clique em **Próximo**.
+7.  Clique em **Avançar**.
 
 8.  Em Banco de Dados, selecione o banco de dados de servidor de relatório.
 
@@ -217,7 +217,7 @@ ms.locfileid: "78177093"
 
 10. Clique em **Chaves de Criptografia**.
 
-11. Clique em **Restaurar**.
+11. Clique em **restaurar**.
 
 12. Selecione o arquivo forte (.snk) que tem a cópia de backup da chave simétrica usada para descriptografar as credenciais armazenadas e as informações de conexão no banco de dados de servidor de relatório.
 

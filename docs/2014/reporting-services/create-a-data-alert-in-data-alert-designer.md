@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173942"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
@@ -48,7 +48,7 @@ ms.locfileid: "78173942"
 
 4.  Opcionalmente, selecione um feed de dados diferente na lista suspensa **Nome de dados do relatório** .
 
-     Se nenhum feed de dados for gerado a partir do relatório, você não poderá criar uma definição de alerta para o relatório. O layout do relatório determina o conteúdo de cada feed de dados. Para obter mais informações, consulte [gerando feeds de dados de relatórios &#40;Construtor de relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+     Se nenhum feed de dados for gerado a partir do relatório, você não poderá criar uma definição de alerta para o relatório. O layout do relatório determina o conteúdo de cada feed de dados. Para obter mais informações, consulte [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 5.  Opcionalmente, na caixa de texto **Nome do alerta** , atualize o nome padrão para que seja mais significativo.
 
@@ -70,7 +70,7 @@ ms.locfileid: "78173942"
 
 10. Digite o valor de comparação.
 
-11. Opcionalmente, clique no botão de reticências **(...)** novamente.
+11. Opcionalmente, clique nas reticências **(...)** novamente.
 
      As reticências **(...)** aparecem na linha que contém a primeira cláusula.
 
@@ -78,7 +78,7 @@ ms.locfileid: "78173942"
 
 12. Opcionalmente, clique na seta para baixo, selecione **Modo de Seleção de Campo**e selecione uma coluna na lista.
 
-     Você notará que as reticências **(...)** em que clica para adicionar cláusulas OR desapareceram.
+     Você observará que as reticências **(...)** em que você clica para adicionar cláusulas ou foram desaparecedas.
 
 13. Opcionalmente, clique em **Adicionar regra** novamente para adicionar mais regras.
 
@@ -109,13 +109,13 @@ ms.locfileid: "78173942"
 
 20. Opcionalmente, na caixa de texto **Assunto** , atualize a linha de Assunto da mensagem de alerta.
 
-     O Assunto padrão é **Alerta de dados para \<data alert name>**.
+     O assunto padrão é **alerta de dados \<para o nome do alerta de dados>**.
 
 21. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição da mensagem de alerta.
 
-22. Clique em **Save** (Salvar).
+22. Clique em **Salvar**.
 
 ## <a name="see-also"></a>Consulte Também
- [](../../2014/reporting-services/data-alert-designer.md) [Gerenciador de alertas de dados do designer de alertas de dados para administradores de](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) alertas [Reporting Services alertas de dados](../ssms/agent/alerts.md)
+ [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md) [Gerenciador de alertas de dados do designer de alertas de dados para administradores de](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) alertas [Reporting Services alertas de dados](../ssms/agent/alerts.md)
 
 

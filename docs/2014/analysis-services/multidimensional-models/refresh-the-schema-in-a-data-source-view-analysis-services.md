@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175703"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Atualizar o esquema em uma exibição da fonte de dados (Analysis Services)
@@ -30,9 +30,9 @@ ms.locfileid: "78175703"
 
  [Alterações com suporte na atualização](#bkmk_changlist)
 
- [Atualizar um DSV no SQL Server Data Tools](#bkmk_DSVrefresh)
+ [Atualize um DSV nas SQL Server Data Tools](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>Alterações com suporte na atualização
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>Alterações com suporte na atualização
  A atualização de DSV pode incluir qualquer uma das seguintes ações:
 
 -   Exclusão de tabelas, colunas e relações
@@ -43,7 +43,7 @@ ms.locfileid: "78175703"
 
  A atualização nunca adiciona novas tabelas a um DSV. Se você quiser adicionar uma nova tabela, faça isso manualmente. Para obter mais informações, consulte [Como adicionar ou remover tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).
 
-##  <a name="bkmk_DSVrefresh"></a>Atualizar um DSV no SQL Server Data Tools
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>Atualizar um DSV no SQL Server Data Tools
  Para atualizar um DSV, clique duas vezes no DSV do Gerenciador de Soluções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e clique no botão Atualizar Exibição da Fonte de Dados ou escolha **Atualizar** no menu Exibição da Fonte de Dados.
 
  Durante a atualização, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consulta todas as fontes de dados relacionais subjacentes para determinar se houve mudanças nas tabelas/exibições incluídas na DSV. Se for possível estabelecer conexões com todas as fontes de dados subjacentes e se tiver sido feita alguma alteração, você as verá na caixa de diálogo **Atualizar Exibição da Fonte de Dados** .

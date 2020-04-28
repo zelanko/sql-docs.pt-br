@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176696"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronização da Web para replicação de mesclagem.
@@ -47,7 +47,7 @@ ms.locfileid: "78176696"
 
  ![Fluxo de dados e componentes de sincronização da Web](media/web-sync01.gif "Fluxo de dados e componentes de sincronização da Web")
 
- A sincronização da Web é uma opção apenas para assinatura pull; então, um Merge Agent sempre será executado no Assinante. Esse Merge Agent pode ser o Merge Agent padrão, o MErge Agent do controle de Active X ou um aplicativo que fornece sincronização através do RMO (Replication Management Objects). Para especificar a localização do computador que está executando o IIS, use o parâmetro **–InternetUrl** para o Agente de Mesclagem.
+ A sincronização da Web é uma opção apenas para assinatura pull; então, um Merge Agent sempre será executado no Assinante. Esse Merge Agent pode ser o Merge Agent padrão, o MErge Agent do controle de Active X ou um aplicativo que fornece sincronização através do RMO (Replication Management Objects). Para especificar o local do computador que está executando o IIS, use o parâmetro **-InternetUrl** para o agente de mesclagem.
 
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) está configurado no computador que está executando IIS e é responsável pelo manuseio das mensagens enviadas para o servidor do Publicador e dos Assinantes. Cada nó na topologia controla o fluxo de dados XML usando o Reconciliador de Replicação de Mesclagem (Replrec.dll).
 

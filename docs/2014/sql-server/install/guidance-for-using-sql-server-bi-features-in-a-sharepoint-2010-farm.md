@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172475"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Orientação para usar os recursos de BI do SQL Server em um farm do SharePoint 2010
@@ -32,7 +32,7 @@ ms.locfileid: "78172475"
 
 -   [Requisitos e sugestões para executar a instalação do SharePoint](#bkmk_install)
 
-##  <a name="bkmk_generalsharepoint"></a>Requisitos gerais do SharePoint 2010
+##  <a name="general-sharepoint-2010-requirements"></a><a name="bkmk_generalsharepoint"></a>Requisitos gerais do SharePoint 2010
 
 -   Os produtos do SharePoint 2010 funcionam apenas em 64 bits. Se você tiver uma instalação de 32 bits de uma versão anterior do SharePoint e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no modo Integrado do SharePoint, não poderá realizar a atualização para o SharePoint 2010. Para obter mais informações, consulte a documentação do SharePoint.
 
@@ -40,18 +40,17 @@ ms.locfileid: "78172475"
 
 -   As ferramentas de desenvolvedor do SharePoint só dão suporte a uma configuração autônoma do SharePoint.  Para obter mais informações, consulte a documentação do SharePoint: [requisitos para desenvolver soluções do SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).
 
-##  <a name="bkmk_vers"></a>Edições do SharePoint e suporte a recursos de BI
+##  <a name="sharepoint-editions-and-bi-feature-support"></a><a name="bkmk_vers"></a>Edições do SharePoint e suporte a recursos de BI
  Alguns recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence só têm suporte nas edições específicas dos produtos do SharePoint.
 
 |Recursos com suporte|Produto do SharePoint|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], um recurso do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Alertas de dados.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]Enterprise Edition.|
-|Integração geral de recursos e exibição de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com SharePoint.|
-  [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard e Enterprise Editions.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], um recurso do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Alertas de dados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|
+|Integração geral de recursos e exibição de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard e Enterprise Editions.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  Para obter mais informações, consulte [recursos com suporte nas edições do SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).
 
-##  <a name="bkmk_sp1"></a>SharePoint 2010 Service Pack 1 (SP1)
+##  <a name="sharepoint-2010-service-pack-1-sp1"></a><a name="bkmk_sp1"></a>SharePoint 2010 Service Pack 1 (SP1)
  É recomendado que você atualize sua instalação do SharePoint 2010 para SharePoint 2010 Service Pack 1 (SP1). O SharePoint SP1 é obrigatório nos casos a seguir:
 
 -   Você quer usar a versão [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] do mecanismo de banco de dados para os bancos de dados de conteúdo do SharePoint ou bancos de dados do catálogo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
@@ -74,16 +73,16 @@ ms.locfileid: "78172475"
 
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Instalação do SharePoint com recursos de BI do SQL Server
 
-###  <a name="bkmk_prereq"></a>Ferramenta de preparação de produtos do SharePoint 2010
+###  <a name="sharepoint-2010-products-preparation-tool"></a><a name="bkmk_prereq"></a>Ferramenta de preparação de produtos do SharePoint 2010
  A Ferramenta de Preparação de Produtos do SharePoint habilita as funções de servidor no sistema operacional e instala outros pré-requisitos de software necessários para uma instalação do SharePoint. A tabela a seguir identifica as etapas adicionais para configurar o servidor para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 |Componente|Ação|
 |---------------|------------|
 |Suplemento Reporting Services|A ferramenta de Preparação de Produtos do SharePoint 2010 instala a versão [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] do suplemento Reporting Services. O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] inclui uma versão mais nova do suplemento que é necessária para recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O suplemento pode ser instalado com o uso do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bem como pode ser baixado do MSDN. Para obter mais informações sobre onde obter a versão atual do suplemento e como instalá-la, consulte [onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) e [instalar ou desinstalar o suplemento Reporting Services para sharepoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|
-|MSOLAP (Provedor Analysis Services OLE DB)|O SharePoint 2010 instala a versão SQL Server 2008 do provedor OLE DB como parte de uma implantação dos Serviços do Excel. Essa versão não tem suporte para o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Você deve instalar versões mais recentes do provedor nos SharePoint Servers que tenham suporte para conexões de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Para obter mais informações, consulte [instalar o provedor Analysis Services OLE DB em servidores do SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|
+|Provedor OLE DB do Analysis Services (MSOLAP)|O SharePoint 2010 instala a versão SQL Server 2008 do provedor OLE DB como parte de uma implantação dos Serviços do Excel. Essa versão não tem suporte para o acesso a dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Você deve instalar versões mais recentes do provedor nos SharePoint Servers que tenham suporte para conexões de dados [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Para obter mais informações, consulte [instalar o provedor Analysis Services OLE DB em servidores do SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)|
 |Serviços ADO.NET|O SharePoint 2010 lista serviços ADO.NET na lista de pré-requisitos, mas o instalador de pré-requisitos não instala esse item. Para adicionar serviços ADO.NET, você deve instalá-los manualmente. A instalação dos serviços ADO.NET será necessária se você quiser usar listas do SharePoint como feeds de dados para pastas de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou relatórios do Reporting Services. Para obter instruções, consulte [instalar o ADO.NET Data Services para dar suporte a exportações de feed de dados de listas do SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).|
 
-###  <a name="bkmk_install"></a>Requisitos e sugestões para executar a instalação do SharePoint
+###  <a name="requirements-and-suggestions-for-running-the-sharepoint-installation"></a><a name="bkmk_install"></a>Requisitos e sugestões para executar a instalação do SharePoint
  Os recursos do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalados por você e a ordem de instalação desses recursos determinarão quais níveis de integração com o SharePoint serão possíveis. Por exemplo, embora algum nível de integração de recursos esteja disponível por meio do Reporting Services em um SharePoint Server que use um banco de dados interno, a maioria dos cenários de integração de recursos requer uma instalação de farm do SharePoint, pois apenas uma instalação de farm fornece a infraestrutura necessária para alguns recursos de BI.
 
  Um farm do SharePoint pode ser constituído por um único servidor ou vários servidores. O que distingue um farm de uma instalação autônoma é a presença de uma infraestrutura adicional, como o Claims to Windows Token Service.

@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175425"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-  Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+  Introduzida no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], a extensão do pool de buffers fornece a integração consistente de uma extensão de memória RAM não volátil (isto é, unidade de estado sólido) com o pool de buffers do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para melhorar significativamente a taxa de transferência de E/S. A extensão do pool de buffers não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, consulte [recursos com suporte nas edições do SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Benefícios da extensão do pool de buffers
  A principal finalidade de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é armazenar e recuperar dados, de modo que a intensa E/S de disco é uma característica importante do Mecanismo de Banco de Dados. Como as operações de E/S de disco podem consumir muitos recursos e levar um tempo relativamente longo para terminar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se concentra em tornar a E/S altamente eficiente. O pool de buffers serve como fonte de alocação de memória primária do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O gerenciamento de buffer é um componente fundamental para alcançar essa eficiência. O componente de gerenciamento de buffer consiste em dois mecanismos: o gerenciador de buffer, para acessar e atualizar páginas de banco de dados, e o cache do pool de buffers, para reduzir a E/S do arquivo de banco de dados.
 
  As páginas de índice e dados são lidas do disco no pool de buffers e as páginas modificadas (também conhecidas como páginas sujas) são gravadas novamente no disco. A demanda de memória nos pontos de verificação de servidor e banco de dados faz com que as páginas sujas dinâmicas (ativas) no cache do buffer sejam removidas do cache e gravadas nos discos mecânicos e, em seguida, lidas novamente no cache. Normalmente, essas operações de E/S são leituras e gravações aleatórias pequenas de 4 a 16 KB de dados. Os padrões de E/S aleatória pequena incorrem em buscas frequentes, competição por braço do disco mecânico, aumento de latência de E/S e redução da taxa de transferência de E/S agregada do sistema.
 
- A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: A DRAM é mais cara do que as unidades de armazenamento de dados. A adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.
+ A abordagem comum para resolver esses gargalos de E/S é adicionar mais DRAM, ou como alternativa, a adição de eixos SAS de alto desempenho. Embora essas opções sejam úteis, elas apresentam desvantagens significativas: a DRAM é mais cara do que as unidades de armazenamento de dados, e a adição de eixos aumenta as despesas de capital na aquisição de hardware, bem como os custos operacionais com o aumento do consumo de energia e o aumento da probabilidade de falha do componente.
 
  O recurso de extensão do pool de buffers estende o cache do pool de buffers com o armazenamento não volátil (geralmente, SSD). Graças a essa extensão, o pool de buffers pode acomodar um conjunto de trabalho de banco de dados maior, o que força a paginação de E/Ss entre a RAM e as SSDs. Isso descarrega eficazmente as E/Ss aleatórias pequenas dos discos mecânicos nas SSDs. Devido à latência mais baixa e ao melhor desempenho de E/S aleatória das SSDs, a extensão do pool de buffers melhora significativamente a taxa de transferência de E/S.
 
@@ -57,11 +57,11 @@ ms.locfileid: "78175425"
 
  A ilustração a seguir fornece uma visão geral arquitetônica de alto nível do pool de buffers em relação a outros componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
- ![Arquitetura da extensão do pool de buffers da SSD](../media/ssdbufferpoolextensionarchitecture.gif "Arquitetura da extensão do pool de buffers da SSD")
+ ![Arquitetura da extensão do pool de buffers do SSD](../media/ssdbufferpoolextensionarchitecture.gif "Arquitetura da extensão do pool de buffers do SSD")
 
  Quando habilitada, a extensão do pool de buffers especifica o tamanho e o caminho do arquivo de cache do pool de buffers na SSD. Esse arquivo é uma extensão contígua de armazenamento na SSD e é configurado estaticamente durante a inicialização da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As alterações nos parâmetros da configuração do arquivo poderão ser realizadas somente quando o recurso de extensão do pool de buffers estiver desabilitado. Quando a extensão do pool de buffers é desabilitada, todas as definições da configuração relacionadas são removidas do Registro. O arquivo de extensão do pool de buffers é excluído durante o desligamento da instância do SQL Server.
 
-## <a name="best-practices"></a>Práticas Recomendadas
+## <a name="best-practices"></a>Práticas recomendadas
  É recomendável seguir estas práticas recomendadas.
 
 -   Depois de habilitar a extensão do Pool de buffers pela primeira vez, é recomendável reiniciar a instância do SQL Server para obter todos os benefícios de desempenho.
@@ -73,15 +73,15 @@ ms.locfileid: "78175425"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Informações de retorno sobre a extensão do pool de buffers
  Você pode usar as exibições de gerenciamento dinâmico a seguir para exibir a configuração da extensão do pool de buffers e informações de retorno sobre as páginas de dados na extensão.
 
--   [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  Os contadores de desempenho estão disponíveis no SQL Server, objeto Buffer Manager, para rastrear as páginas de dados no arquivo de extensão do pool de buffers. Para obter mais informações, consulte [contadores de desempenho da extensão do pool de buffers](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 
  Os Xevents a seguir estão disponíveis.
 
-|XEvent|Descrição|parâmetros|
+|XEvent|Descrição|Parâmetros|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|É acionado quando uma página ou um grupo de páginas é removido do pool de buffers e gravado no arquivo de extensão do pool de buffers.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|É acionado quando uma página é lida do arquivo de extensão do pool de buffers para o pool de buffers.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
@@ -95,7 +95,7 @@ ms.locfileid: "78175425"
 |**Descrição da tarefa**|**Tópico**|
 |Habilitar e configurar a extensão do pool de buffers|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |Modificar a configuração da extensão do pool de buffers|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Exibir a configuração da extensão do pool de buffers|[sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|Monitorar a extensão do pool de buffers|[sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contadores de desempenho](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|Exibir a configuração da extensão do pool de buffers|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|Monitorar a extensão do pool de buffers|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contadores de desempenho](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

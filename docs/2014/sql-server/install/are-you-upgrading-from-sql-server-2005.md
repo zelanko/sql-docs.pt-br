@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656573"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Você está atualizando do SQL Server 2005?
@@ -38,9 +38,9 @@ ms.locfileid: "75656573"
   
 |Opção de armazenamento relacional|Benefícios|Outros fatores a considerar|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server local**<br /><br /> Considere esta opção para aplicativos de banco de dados de qualquer tipo, desde sistemas transacionais até data warehouses.<br /><br /> Para obter mais informações, consulte [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Você tem o máximo de controle sobre recursos e escalabilidade porque você gerencia tanto o hardware quanto o software.<br /><br /> Se você estiver atualizando do SQL Server 2005, esse é o ambiente mais semelhante.|Você precisa fazer o maior investimento inicial e fornecer o gerenciamento mais contínuo, pois você precisa comprar, manter e gerenciar seu próprio hardware e software.|  
+|**SQL Server no local**<br /><br /> Considere esta opção para aplicativos de banco de dados de qualquer tipo, desde sistemas transacionais até data warehouses.<br /><br /> Para obter mais informações, consulte [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/).|Você tem o máximo de controle sobre recursos e escalabilidade porque você gerencia tanto o hardware quanto o software.<br /><br /> Se você estiver atualizando do SQL Server 2005, esse é o ambiente mais semelhante.|Você precisa fazer o maior investimento inicial e fornecer o gerenciamento mais contínuo, pois você precisa comprar, manter e gerenciar seu próprio hardware e software.|  
 |**SQL Server hospedado em máquinas virtuais do Azure**<br /><br /> Considere esta opção se você quiser as coisas a seguir.<br />-Benefícios da migração para um ambiente hospedado.<br />-Controle sobre o ambiente operacional.<br />-Conjunto de recursos familiares de SQL Server.<br /><br /> Para obter mais informações, consulte a [visão geral de SQL Server em máquinas virtuais do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Para obter informações sobre a migração, consulte [Migrar um banco de dados para o SQL Server em uma VM do Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|Você pode implantar rapidamente de uma biblioteca de imagens de máquinas virtuais.<br /><br /> Obtenha o conjunto completo de recursos do SQL Server.<br /><br /> Você economiza o custo de hardware e do software para servidores. Você paga apenas pelo uso por hora.|Você precisa configurar e gerenciar ambos o SQL Server e o software do sistema operacional.|  
-|**Serviço de banco de dados hospedado do banco de dados SQL**<br /><br /> Considere esta opção se você quiser uma solução de baixo custo com menos manutenção.<br /><br /> Essa opção é especialmente apropriada para aplicativos que não exigem a mesma capacidade durante todo o tempo ou que devem fornecer acesso externo.<br /><br /> Para obter mais informações, consulte [banco de dados SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Para obter informações sobre a migração, consulte [migrando um banco de dados SQL Server para o banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Você pode implantar rapidamente e escalar verticalmente com facilidade.<br /><br /> Você paga apenas pelo uso por hora.<br /><br /> O custo do serviço inclui não apenas armazenamento, mas alta disponibilidade e backups automáticos.|O banco de dados SQL do Azure não tem alguns recursos do SQL Server que não são aplicáveis em um ambiente de nuvem hospedado. Para obter mais informações, veja [Informações do Transact-SQL do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> O banco de dados SQL do Azure também tem um tamanho máximo de 500 GB, em comparação com 524 PB para o SQL Server.|  
+|**Serviço de banco de dados hospedado do banco de dados SQL do Azure**<br /><br /> Considere esta opção se você quiser uma solução de baixo custo com menos manutenção.<br /><br /> Essa opção é especialmente apropriada para aplicativos que não exigem a mesma capacidade durante todo o tempo ou que devem fornecer acesso externo.<br /><br /> Para obter mais informações, consulte [banco de dados SQL](https://azure.microsoft.com/services/sql-database/).<br /><br /> Para obter informações sobre a migração, consulte [migrando um banco de dados SQL Server para o banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|Você pode implantar rapidamente e escalar verticalmente com facilidade.<br /><br /> Você paga apenas pelo uso por hora.<br /><br /> O custo do serviço inclui não apenas armazenamento, mas alta disponibilidade e backups automáticos.|O banco de dados SQL do Azure não tem alguns recursos do SQL Server que não são aplicáveis em um ambiente de nuvem hospedado. Para obter mais informações, veja [Informações do Transact-SQL do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> O banco de dados SQL do Azure também tem um tamanho máximo de 500 GB, em comparação com 524 PB para o SQL Server.|  
   
  Você também pode desejar considerar uma solução não relacional ou NoSQL para determinados aplicativos e dados.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "75656573"
   
 -   Leia sobre como planejar sua atualização na seguinte série de postagens no blog da equipe do SQL Server:  
   
-    -   [Planejando uma atualização eficiente do SQL Server 2005: etapa 1 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Planejamento de uma atualização eficiente do SQL Server 2005: etapa 1 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Planejando uma atualização eficiente do SQL Server 2005: etapa 2 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Planejamento de uma atualização eficiente do SQL Server 2005: etapa 2 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Planejando uma atualização eficiente do SQL Server 2005: etapa 3 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Planejamento de uma atualização eficiente do SQL Server 2005: etapa 3 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   Examine os requisitos e as considerações em [planejando uma instalação SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), incluindo os [requisitos de hardware e software para instalar o SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   

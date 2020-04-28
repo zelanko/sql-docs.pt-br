@@ -1,5 +1,5 @@
 ---
-title: 'Lição 2: Modificar as propriedades de fonte de dados de relatório | Microsoft Docs'
+title: 'Lição 2: Modificando as propriedades de fonte de dados de relatório | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41679439c7c687cc4574a56369c535f019c77e13
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176919"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lição 2: Modificando as propriedades de fonte de dados de relatório
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   Nesta lição, você usará o Gerenciador de Relatórios para selecionar um relatório que será entregue a destinatários. A assinatura controlada por dados que será definida distribuirá o relatório **Pedidos de Vendas** criado no tutorial [Criar um relatório de tabela básico &#40;Tutorial do SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nas etapas a seguir, você modificará as informações da conexão de fonte de dados usadas pelo relatório para obter dados. Somente relatórios que usam **credenciais armazenadas** para acessar uma fonte de dados de relatório podem ser distribuídos por uma assinatura controlada por dados. Credenciais armazenadas são necessárias para o processamento de relatório autônomo.
 
  Você também modificará o conjunto de dados e relatório para usar um parâmetro para filtrar o relatório no `[Order]` para que a assinatura possa produzir instâncias diferentes do relatório para pedidos específicos e formatos de renderização.
@@ -32,7 +32,7 @@ ms.locfileid: "78176919"
 
 -   [Para reimplantar o relatório](#bkmk_redeploy)
 
-##  <a name="bkmk_modify_datasource"></a>Para modificar as propriedades da fonte de dados
+##  <a name="to-modify-the-data-source-properties"></a><a name="bkmk_modify_datasource"></a>Para modificar as propriedades da fonte de dados
 
 1.  Inicie [Report Manager &#40;modo nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) com privilégios de administrador, por exemplo, clique com o botão direito do mouse no ícone do Internet Explorer e clique em **Executar como administrador**.
 
@@ -42,7 +42,7 @@ ms.locfileid: "78176919"
 
 3.  Clique na guia **Fontes de Dados** .
 
-4.  Para **tipo de conexão**, selecione **Microsoft SQL Server**.
+4.  Para **Tipo de conexão**, selecione **Microsoft SQL Server**.
 
 5.  A cadeia de conexão da fonte de dados personalizada será a seguinte e presumirá que o banco de dados de exemplo esteja em um servidor de banco de dados local:
 
@@ -62,7 +62,7 @@ ms.locfileid: "78176919"
 
 11. Exiba o relatório para verificar se o relatório está sendo executado com as credenciais especificadas. Para exibir o relatório, clique na guia **Exibir** . Observe que, quando o relatório estiver aberto, você deverá selecionar um nome de funcionário e clicar no botão **Exibir relatório** para exibir o relatório.
 
-##  <a name="bkmk_modify_dataset"></a>Para modificar o AdventureWorksDataset
+##  <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Para modificar o AdventureWorksDataset
 
 1.  Abra o relatório Pedidos de Vendas no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]
 
@@ -89,7 +89,7 @@ ms.locfileid: "78176919"
 
 4.  Clique em **OK**
 
-##  <a name="bkmk_add_reportparameter"></a>Para adicionar um parâmetro de relatório e republicar o relatório
+##  <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Para adicionar um parâmetro de relatório e republicar o relatório
 
 1.  No painel **Dados do Relatório** , clique em **Novo** e em **Parâmetro...**
 
@@ -113,11 +113,11 @@ ms.locfileid: "78176919"
 
          ![Visualizador de Relatórios com área de parâmetro visível](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visualizador de Relatórios com área de parâmetro visível")
 
-8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, confira a seção 'Para publicar o relatório no Servidor de Relatório (opcional)' da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
+8.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades do projeto usadas no tutorial de tabela, consulte a seção ' para publicar o relatório no servidor de relatório (opcional) ' da [lição 6: adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 
-##  <a name="bkmk_redeploy"></a>Para reimplantar o relatório
+##  <a name="to-re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Para reimplantar o relatório
 
-1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades de projeto usadas no tutorial de tabela, confira a seção 'Para publicar o relatório no Servidor de Relatório (opcional)' da [Lição 6: Adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
+1.  Reimplantar o relatório para que a configuração de assinatura na próxima lição possa utilizar as alterações que você fez nesta lição. Para obter mais informações sobre as propriedades do projeto usadas no tutorial de tabela, consulte a seção ' para publicar o relatório no servidor de relatório (opcional) ' da [lição 6: adicionando agrupamentos e totais &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 2.  Na barra de ferramentas, clique em **Compilar** e, em seguida, em **Implantar tutorial**.
 

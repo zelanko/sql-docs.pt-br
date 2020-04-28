@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761900"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar o Windows Server Update Services (WSUS) no Analytics Platform System
@@ -35,7 +35,7 @@ Para configurar o WSUS, você precisa:
   
 -   Saiba o endereço IP do servidor proxy se seu dispositivo estiver usando um servidor proxy para acessar o servidor upstream ou Microsoft Update.  
   
--   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do baseado. Para obter mais informações, consulte [usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Na maioria dos casos, o WSUS precisa acessar servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do dispositivo. Para obter mais informações, consulte [usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Para configurar o Windows Server Update Services (WSUS)  
   
@@ -83,7 +83,7 @@ Para configurar o WSUS, você precisa:
   
     #### <a name="to-update-by-using-microsoft-update"></a>Para atualizar usando Microsoft Update  
   
-    1.  Se você optar por sincronizar com Microsoft Update, não será necessário fazer nenhuma alteração na página **escolher servidor upstream** . Clique em **Próximo**.  
+    1.  Se você optar por sincronizar com Microsoft Update, não será necessário fazer nenhuma alteração na página **escolher servidor upstream** . Clique em **Avançar**.  
   
         ![Sincronização do Servidor Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -109,7 +109,7 @@ Para configurar o WSUS, você precisa:
   
     ![Proxy WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
-    #### <a name="to-configure-proxy-server-settings"></a>Para definir as configurações do servidor proxy  
+    #### <a name="to-configure-proxy-server-settings"></a>Para definir as configurações de servidor proxy  
   
     1.  Na página **especificar servidor proxy** do assistente de configuração, marque a caixa de seleção **usar um servidor proxy ao sincronizar** e, em seguida, digite o endereço IP do servidor proxy (não nome) e o número da porta (porta 80 por padrão) nas caixas correspondentes.  
   
@@ -168,11 +168,11 @@ Para configurar o WSUS, você precisa:
   
     Selecione **Iniciar sincronização inicial**e clique em **Avançar**.  
   
-12. Terminar.  
+12. Concluir.  
   
     Clique em **Concluir**.  
   
-## <a name="bkmk_WSUSGroup"></a>Agrupar os servidores de dispositivo no WSUS  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>Agrupar os servidores de dispositivo no WSUS  
 Depois de configurar o WSUS para o Analytics Platform System, a próxima etapa é agrupar os servidores de dispositivo. Ao adicionar todos os servidores de dispositivo a um grupo, o WSUS poderá aplicar atualizações de software a todos os servidores do dispositivo.  
   
 > [!NOTE]  

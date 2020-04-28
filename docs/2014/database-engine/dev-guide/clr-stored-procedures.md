@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77213970"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
@@ -394,7 +394,7 @@ EXEC HelloWorld;
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções CLR definidas pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [Tipos definidos pelo usuário de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [Tipos CLR definidos pelo usuário](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Gatilhos CLR](../../../2014/database-engine/dev-guide/clr-triggers.md)  
   
   

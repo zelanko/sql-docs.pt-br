@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb1a0a862d3e6bf2a1d4e4361e2151c6ee4bf843
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176846"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Controlando títulos de linha e coluna (Construtor de Relatórios e SSRS)
@@ -38,28 +38,28 @@ ms.locfileid: "78176846"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>Compreendendo as linhas e colunas em uma região de dados Tablix
  Uma tabela ou matriz é um modelo para a região de dados tablix subjacente. Uma região de dados tablix tem quatro áreas possíveis: a área do grupo de linhas que controla linhas que se expandem por um relatório, a área do grupo de colunas que controla as colunas que se expandem em um relatório, o corpo que exibe dados e o canto. Para entender onde definir propriedades para controlar a repetição ou o congelamento de cabeçalhos, é útil entender que há duas representações para uma região de dados tablix:
 
--   **Na definição do relatório** Cada linha ou coluna em uma definição de região de dados Tablix é um membro tablix de um grupo de linhas ou colunas específico. Um membro tablix é estático ou dinâmico. Um membro tablix estático contém rótulos ou subtotais e se repete uma vez por grupo. Um membro tablix dinâmico contém valores de grupo e se repete uma vez por valor exclusivo de um grupo, também conhecido como instância de grupo.
+-   **Na definição de relatório** Cada linha ou coluna em uma definição de região de dados tablix é um membro tablix de um grupo específico de linhas ou colunas. Um membro tablix é estático ou dinâmico. Um membro tablix estático contém rótulos ou subtotais e se repete uma vez por grupo. Um membro tablix dinâmico contém valores de grupo e se repete uma vez por valor exclusivo de um grupo, também conhecido como instância de grupo.
 
--   **Na superfície de design** Na superfície de design, linhas pontilhadas dividem uma região de dados Tablix nas quatro áreas. Cada célula em uma área da região de dados tablix é organizada em linhas e colunas. As linhas e as colunas são associadas a grupos, inclusive o grupo de detalhes. Para uma região de dados tablix selecionada, as linha e as colunas e administram e realçam as barras que indicam associação em grupo. As células na área do grupo de linhas ou de grupo de colunas representa cabeçalhos de grupo para membros tablix. Uma única linha ou coluna pode ser associada a vários grupos.
+-   **Na superfície de design** Na superfície de design, as linhas pontilhadas dividem uma região de dados tablix nas quatro áreas. Cada célula em uma área da região de dados tablix é organizada em linhas e colunas. As linhas e as colunas são associadas a grupos, inclusive o grupo de detalhes. Para uma região de dados tablix selecionada, as linha e as colunas e administram e realçam as barras que indicam associação em grupo. As células na área do grupo de linhas ou de grupo de colunas representa cabeçalhos de grupo para membros tablix. Uma única linha ou coluna pode ser associada a vários grupos.
 
      Para obter mais informações, consulte [Região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) e [Células, linhas e colunas da região de dados Tablix &#40;Construtor de Relatórios&#41; e SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).
 
  Para regiões de dados tablix com áreas de grupos de linhas ou colunas, controle as linhas e as colunas associadas definindo propriedades na região de dados tablix. Para todos os outros casos, controle as linhas e as colunas definindo propriedades no painel Propriedades para o membro tablix selecionado. Para obter instruções passo a passo, consulte [Exibir cabeçalhos de linhas e colunas em várias páginas e &#40;Construtor de Relatórios e SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md) e [Manter os cabeçalhos visíveis ao rolar por um relatório &#40;Construtor de Relatórios e SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).
 
-##  <a name="Top"></a> Exemplos
+##  <a name="examples"></a><a name="Top"></a> Exemplos
  Os exemplos mais comuns de regiões de dados tablix são para uma matriz, uma tabela sem grupos, e uma tabela com um grupo de linhas e um cabeçalho de grupo de linhas e uma tabela com um grupo de linhas, mas nenhum cabeçalho de grupo de linhas. Para controlar o modo como repetir ou congelar cabeçalhos, você deve determinar se as linhas ou as colunas que deseja controlar estão associadas a um cabeçalho de grupo na área de grupos de linhas ou grupos de colunas.
 
  As seções seguintes fornecem exemplos para layouts comuns para uma região de dados tablix:
 
--   [Matriz](#Matrix)
+-   [Tabela](#Matrix)
 
 -   [Tabela sem grupos](#TableNoGroups)
 
 -   [Tabela com grupos de linhas e área de grupo de linhas](#TableRowGroupsGroupHeader)
 
--   [Tabela com grupos de linhas, mas sem área de grupo de linhas](#TableRowGroupsNoGroupHeader)
+-   [Tabela com grupos de linhas, mas nenhuma área de grupo de linhas](#TableRowGroupsNoGroupHeader)
 
-###  <a name="Matrix"></a> Matriz
+###  <a name="matrix"></a><a name="Matrix"></a>Tabela
  Por padrão, uma matriz simples tem um grupo de linhas e um grupo de colunas. A figura seguinte mostra uma matriz com um grupo de linhas baseado na Categoria e um grupo de colunas baseado na Geografia:
 
  ![Matriz, linha Categoria e grupo de colunas Geografia](../media/rs-basicmatrixdesign.gif "Matriz, linha Categoria e grupo de colunas Geografia")
@@ -72,9 +72,9 @@ ms.locfileid: "78176846"
 
  Para repetir ou congelar cabeçalhos de linha na primeira coluna, defina as propriedades para cabeçalhos de linha na região de dados tablix. Cabeçalhos de linha para grupos de linha aninhados são incluídos automaticamente.
 
- [Retornar ao início](#Top)
+ [Voltar ao início](#Top)
 
-###  <a name="TableNoGroups"></a>Tabela sem grupos de linhas
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a>Tabela sem grupos de linhas
  Por padrão, uma tabela simples sem grupos inclui o grupo de detalhes. A figura seguinte mostra uma tabela que exibe a categoria, o número do pedido e os dados da venda:
 
  ![Design, tabela com uma linha estática e uma dinâmica](../media/rs-tableheaderstaticdesign.gif "Design, tabela com uma linha estática e uma dinâmica")
@@ -93,9 +93,9 @@ ms.locfileid: "78176846"
 
  Para repetir ou congelar cabeçalhos de colunas para o membro tablix, selecione a linha estática rotulada (**Estático**). O painel de propriedades exibe as propriedades do membro tablix selecionado. Definindo propriedades para esse membro tablix, você pode controlar o modo como a primeira linha se repete ou permanece visível.
 
- [Retornar ao início](#Top)
+ [Voltar ao início](#Top)
 
-###  <a name="TableRowGroupsGroupHeader"></a>Tabela com grupos de linhas e uma área de grupo de linhas
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a>Tabela com grupos de linhas e uma área de grupo de linhas
  Se você adicionar um grupo de linhas a uma tabela simples, uma área de grupo de linhas será adicionada à tabela na superfície de design. A figura seguinte mostra uma tabela com um grupo de linhas baseado na Categoria:
 
  ![Design, tabela com grupo de uma linha e detalhes](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "Design, tabela com grupo de uma linha e detalhes")
@@ -114,9 +114,9 @@ ms.locfileid: "78176846"
 
  Para membros tablix são listados os itens: **Estático**, (**Estático**), Categoria e (**Detalhes**). Um membro tablix que inclui parênteses () indica que não há nenhum cabeçalho de grupo correspondente. Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix Estático superior e defina as propriedades no painel Propriedades.
 
- [Retornar ao início](#Top)
+ [Voltar ao início](#Top)
 
-###  <a name="TableRowGroupsNoGroupHeader"></a>Tabela com grupos de linhas e nenhuma área de grupo de linhas
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a>Tabela com grupos de linhas e nenhuma área de grupo de linhas
  Uma tabela pode ter grupos de linhas, mas nenhuma área de grupos de linhas de vários modos. Dois modos possíveis que isso ocorra incluem:
 
 -   Comece com uma tabela com grupos de linhas e uma área de grupo de linhas e exclua as colunas para a área de grupo de linhas. Exclua as colunas apenas e não os grupos. Por exemplo, talvez você queira controlar o formato de tabela para ser uma grade simples.
@@ -141,7 +141,7 @@ ms.locfileid: "78176846"
 
  No painel Grupos de Linhas, os membros tablix seguintes são listados: (**Estático**), (Categoria), (**Estático**) e (**Detalhes**). Para repetir ou congelar cabeçalhos de coluna, selecione o membro tablix (**Estático**) superior e defina as propriedades no painel Propriedades.
 
- [Retornar ao início](#Top)
+ [Voltar ao início](#Top)
 
 ## <a name="renderer-support-for-repeating-or-freezing-headers"></a>Suporte de renderizador para repetir ou congelar cabeçalhos
  Os renderizadores variam no suporte para a repetição ou o congelamento de cabeçalhos.

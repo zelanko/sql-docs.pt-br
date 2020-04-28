@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429007"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
@@ -37,13 +37,13 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 > - Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_query_stats**.    
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary (64)**  |É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte.<br /><br /> **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, podem ser usados para recuperar o texto SQL da consulta chamando a função de gerenciamento dinâmico **Sys. dm_exec_sql_text** .|  
+|**sql_handle**|**varbinary(64)**  |É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte.<br /><br /> Pode ser usado **sql_handle**, junto com **statement_start_offset** e **statement_end_offset**, para recuperar o texto SQL da consulta, chamando a função de gerenciamento dinâmico **sys.dm_exec_sql_text**.|  
 |**statement_start_offset**|**int**|Indica, em bytes, começando com 0, a posição inicial da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente.|  
 |**statement_end_offset**|**int**|Indica, em bytes, começando com 0, a posição final da consulta que a linha descreve dentro do texto de seu lote ou objeto persistente. Para versões anteriores [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], um valor de-1 indica o final do lote. Comentários à direita não são mais incluídos.|  
 |**plan_generation_num**|**bigint**|Um número de sequência que pode ser usado para distinguir entre instâncias de planos após uma recompilação.|  
-|**plan_handle**|**varbinary (64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Este valor pode ser transmitido à função de gerenciamento dinâmico [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) para a obtenção do plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**plan_handle**|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Este valor pode ser transmitido à função de gerenciamento dinâmico [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) para a obtenção do plano de consulta.<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**creation_time**|**datetime**|Hora em que o plano foi compilado.|  
 |**last_execution_time**|**datetime**|Hora do início da execução do plano.|  
 |**execution_count**|**bigint**|Número de vezes que o plano foi executado desde sua última compilação.|  
@@ -77,7 +77,7 @@ Retorna estatísticas de desempenho de agregação de planos de consulta em cach
 |**last_rows**|**bigint**|O número total de linhas retornadas pela última execução da consulta. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**min_rows**|**bigint**|Número mínimo de linhas já retornadas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**max_rows**|**bigint**|Número máximo de linhas já retornadas pela consulta durante uma execução. Não pode ser nulo.<br /><br /> Sempre será 0 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
-|**statement_sql_handle**|**varbinary (64)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
+|**statement_sql_handle**|**varbinary(64)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
 |**statement_context_id**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.<br /><br /> Populado com valores não nulos somente se Repositório de Consultas estiver ativado e coletando as estatísticas para essa consulta específica.|  
 |**total_dop**|**bigint**|A soma total do grau de paralelismo que este plano usou desde que foi compilado. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  
 |**last_dop**|**bigint**|O grau de paralelismo quando este plano foi executado pela última vez. Será sempre 0 para consultar uma tabela com otimização de memória.<br /><br /> **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior.|  

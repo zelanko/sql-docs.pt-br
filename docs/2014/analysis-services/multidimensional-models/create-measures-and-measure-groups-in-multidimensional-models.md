@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175762"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Criar medidas e grupos de medidas em modelos multidimensionais
@@ -24,15 +24,15 @@ ms.locfileid: "78175762"
 
  Este tópico inclui as seções a seguir:
 
--   [Abordagens para a criação de medidas](#bkmk_create)
+-   [Abordagens para criar medidas](#bkmk_create)
 
 -   [Componentes de uma medida](#bkmk_comps)
 
--   [Medidas de modelagem e grupos de medidas em fatos e tabelas de fatos](#bkmk_modeling)
+-   [Medidas de modelagem e grupos de medidas em fatos e em tabelas de fatos](#bkmk_modeling)
 
 -   [Granularidade de um grupo de medidas](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>Abordagens para a criação de medidas
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>Abordagens para a criação de medidas
  Medidas podem ser um elemento estático do cubo, criado no momento do design, sempre presente quando o cubo for acessado. Mas você também pode definir uma medida como um *membro calculado* usando uma MDX para fornecer um valor calculado para uma medida com base em outras medidas no cubo. Um membro calculado pode ter escopo para sessão ou usuário.
 
  Para criar uma medida ou um grupo de medidas, use uma destas abordagens:
@@ -44,7 +44,7 @@ ms.locfileid: "78175762"
 |membro calculado|Os membros calculados adicionam flexibilidade e capacidade de análise para um cubo no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pois você pode controlar quando e como eles são criados. Às vezes, você só precisa de uma medida temporária, pela duração de uma sessão de usuário ou no Management Studio como parte de uma investigação.<br /><br /> Em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra a guia Cálculos para criar um novo membro calculado.<br /><br /> Escolha essa abordagem ao basear uma medida em uma expressão MDX. Consulte estes tópicos para obter mais informações: [Compilando medidas em MDX](mdx/mdx-building-measures.md), [Cálculos](../multidimensional-models-olap-logical-cube-objects/calculations.md), [Cálculos em modelos multidimensionais](calculations-in-multidimensional-models.md) e [Conceitos básicos do script MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|
 |MDX ou XMLA|No SQL Server Management Studio, você pode executar o MDX ou XMLA para alterar um banco de dados para incluir uma nova medida calculada. Essa abordagem é útil para teste ad hoc de dados, depois que a solução for implantada em um servidor. Consulte [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md).|
 
-##  <a name="bkmk_comps"></a>Componentes de uma medida
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>Componentes de uma medida
  Uma medida é um objeto com propriedades. Além de seu nome, uma medida deve ter um tipo de agregação e uma coluna de origem ou uma expressão usada para carregar a medida com dados. Você pode modificar a definição da medida definindo suas propriedades.
 
 |||
@@ -53,7 +53,7 @@ ms.locfileid: "78175762"
 |**Aggregation**|Por padrão, as medidas são somadas a cada dimensão. No entanto, a propriedade `AggregateFunction` permite a modificação desse comportamento. Consulte [Use Aggregate Functions](use-aggregate-functions.md) para obter uma lista.|
 |**Propriedades**|Consulte [Configure Measure Properties](configure-measure-properties.md) para obter descrições de propriedades adicionais.|
 
-##  <a name="bkmk_modeling"></a>Medidas de modelagem e grupos de medidas em fatos e tabelas de fatos
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Medidas de modelagem e grupos de medidas em fatos e tabelas de fatos
  Antes de executar um assistente, é importante entender os princípios de modelagem por trás da definição da medida.
 
  Medidas e grupos de medidas são os objetos multidimensionais que representam fatos e tabelas de fatos em um data warehouse externo. Na maioria dos casos, medidas e grupos de medidas serão baseados em objetos em uma exibição da fonte de dados que, por sua vez, são criados por meio do data warehouse subjacente.
@@ -75,7 +75,7 @@ ms.locfileid: "78175762"
 > [!NOTE]
 >  Nem todas as medidas são derivadas diretamente de um valor armazenado em uma coluna da tabela de fatos. Por exemplo, a medida **Conta de Identificação do Vendedor** definida no grupo de medidas **Cota de Vendas** do cubo de exemplo do Adventure Works é realmente baseado na contagem de valores exclusivos (ou contagem distinta) na coluna **EmployeeKey** da tabela de fatos **FactSalesQuota** .
 
-##  <a name="bkmk_grain"></a>Granularidade de um grupo de medidas
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>Granularidade de um grupo de medidas
  Grupos de medidas têm uma granularidade associada que se refere ao nível de detalhes suportados por uma tabela de fatos. A granularidade é definida por meio da relação de chave estrangeira em uma dimensão.
 
  Por exemplo, a tabela de fatos **FactSalesQuota** tem uma relação de chave estrangeira com a tabela **DimEmployee** , cada registro da tabela **FactSalesQuota** está relacionado a um único funcionário e, além disso, a granularidade do grupo de medidas. conforme exibido por meio da dimensão do Funcionário, está no nível do funcionário individual.

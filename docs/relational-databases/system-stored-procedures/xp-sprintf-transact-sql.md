@@ -18,10 +18,10 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75831760"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
@@ -40,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Strings*  
+ *cadeia de caracteres*  
  É uma variável **varchar** que recebe a saída.  
   
  OUTPUT  
  Quando for especificado, põe o valor da variável no parâmetro de saída.  
   
- *ao*  
+ *format*  
  É uma cadeia de caracteres de formato com espaços reservados para valores de *argumento* , semelhante àquela com suporte da função **sprintf** em linguagem C. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
   
- *argumento*  
+ *argument*  
  É uma cadeia de caracteres que representa o valor do argumento de formato correspondente.  
   
  *n*  
@@ -67,7 +67,7 @@ xp_sprintf { string OUTPUT , format }
  Requer associação à função **pública** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   

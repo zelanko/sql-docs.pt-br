@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23184e77efbe41eae3d4de434a30ff8f3a4847ff
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177026"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurar as propriedades gerais de um relatório (Gerenciador de Relatórios)
@@ -26,9 +26,9 @@ ms.locfileid: "78177026"
 
 1.  Inicie o [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).
 
-2.  No Gerenciador de Relatórios, navegue até a página **Conteúdo** . Navegue até o relatório para o qual deseja configurar as propriedades gerais e abra-o.
+2.  Em Report Manager, navegue até a página **conteúdo** . Navegue até o relatório para o qual deseja configurar as propriedades gerais e abra-o.
 
-3.  Clique no guia **Propriedades**.
+3.  Clique na guia **Propriedades**.
 
      Ou, se a página **conteúdo** estiver no modo de exibição de detalhes, clique no ícone da página de propriedades:
 

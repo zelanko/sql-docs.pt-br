@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76923040"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Assistente de novo grupo de disponibilidade: assistente para adicionar réplica)
-  Este tópico descreve as opções da página **Especificar Réplicas** . Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar Réplicas (Assistente de Novo Grupo de Disponibilidade: Assistente para Adicionar Réplica)
+   Este tópico descreve as opções da página **Especificar Réplicas**. Essa página aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use a página **Especificar Réplicas** para especificar e configurar uma ou mais réplicas de disponibilidade para adicionar o grupo de disponibilidade. Essa página contém quatro guias que são apresentadas na tabela a seguir. Clique no nome de uma guia na tabela para ir para a seção correspondente, mais adiante neste tópico.  
   
 |Tab|Breve descrição|  
 |---------|-----------------------|  
@@ -31,14 +31,14 @@ ms.locfileid: "76923040"
 |[Preferências de backup](#BackupPreferencesTab)|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo e suas prioridades de backup para as réplicas de disponibilidade individuais.|  
 |[Ouvinte](#Listener)|Use esta guia, se disponível, para criar um ouvinte de grupo de disponibilidade. Por padrão, não é criado um ouvinte.<br /><br /> Observação: esta guia estará disponível apenas se você estiver executando o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
   
-##  <a name="ReplicasTab"></a> Guia Réplicas  
- **Instância do Servidor**  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Guia Réplicas  
+ **Instância do servidor**  
  Exibe o nome da instância de servidor que hospedará a réplica de disponibilidade.  
   
  Se uma instância de servidor que você usa para hospedar uma réplica secundária não estiver listada na grade **Réplicas de Disponibilidade** , clique no botão **Adicionar Réplica** . Para configurar um grupo de disponibilidade em um ambiente de TI híbrido (confira [Alta disponibilidade e recuperação de desastre para SQL Server nas Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), clique no botão **Adicionar Réplica do Azure** para criar máquinas virtuais com réplicas secundárias no Azure.  
   
  **Função inicial**  
- Indica a função que a nova réplica executará inicialmente: **Primária** ou **secundária**.  
+ Indica a função que a nova réplica executará inicialmente: **Primária** ou **Secundária**.  
   
  **Failover Automático (até 2)**  
  Marque esta caixa de seleção se você desejar que esta réplica de disponibilidade seja um parceiro de failover automático. Para configurar o failover automático, você deve escolher essa opção para a réplica primária inicial e para uma réplica secundária. Essas duas réplicas usarão o modo de disponibilidade da confirmação síncrona. Apenas duas réplicas podem dar suporte a failover automático.  
@@ -68,10 +68,10 @@ ms.locfileid: "76923040"
  **Adicionar Réplica do Azure**  
  Clique para criar uma máquina virtual do Azure que esteja executando uma réplica secundária no grupo de disponibilidade. Esta opção é aplicável apenas a um grupo de disponibilidade em TI híbrida que contenha réplicas locais. Para obter mais informações, confira [Alta disponibilidade e recuperação de desastres para o SQL Server em Máquinas Virtuais do Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
- **Remover Réplica**  
+ **Remover réplica**  
  Clique para remover a réplica secundária especificada do grupo de disponibilidade.  
   
-##  <a name="EndpointsTab"></a> Guia Pontos de Extremidade  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a>Guia pontos de extremidade  
  Para cada instância de servidor que hospedará uma réplica de disponibilidade, a guia **Pontos de Extremidade** exibirá valores reais do ponto de extremidade de espelhamento de banco de dados existente, se houver algum, ou valores sugeridos para um novo ponto de extremidade potencial que usaria a Autenticação do Windows. Para os pontos de extremidade existentes e potenciais, a grade Valores do ponto de extremidade exibe as seguintes informações:  
   
  **Nome do servidor**  
@@ -80,16 +80,16 @@ ms.locfileid: "76923040"
  **URL do Ponto de Extremidade**  
  Exibe a URL real ou proposta do ponto de extremidade de espelhamento do banco de dados. Para um novo ponto de extremidade proposto, você pode alterar esse valor. Para obter informações sobre o formato dessas URLs, veja [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Número da Porta**  
+ **Número da porta**  
  Exibe a URL real ou proposta do número da porta do ponto de extremidade. Para um novo ponto de extremidade proposto, você pode alterar esse valor.  
   
  **Nome do Ponto de Extremidade**  
  Exibe o nome real ou proposto do ponto de extremidade. Para um novo ponto de extremidade proposto, você pode alterar esse valor.  
   
- **Criptografar Dados**  
+ **Criptografar dados**  
  Indica se os dados enviados por este ponto de extremidade estão criptografados. Para um novo ponto de extremidade proposto, você pode alterar essa configuração.  
   
- **Conta de Serviço do SQL Server**  
+ **SQL Server conta de serviço**  
  Nome de usuário da conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para que uma instância de servidor use um ponto de extremidade que usa a Autenticação do Windows, sua conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve ser uma conta de domínio.  
@@ -98,7 +98,7 @@ ms.locfileid: "76923040"
   
 -   Se cada instância de servidor estiver sendo executada em uma conta de serviço de domínio, ou seja, se a coluna **Conta de Serviço do SQL Server** exibir uma conta de serviço de domínio para cada instância de servidor, clique em **Avançar**.  
   
--   Se alguma instância de servidor estiver sendo executada em uma conta de serviço que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Nesse caso, quando você clicar em **Avançar** , será exibida uma caixa de diálogo de aviso. Clique em **Não**para retornar à guia**Pontos de Extremidade** . Enquanto estiver saindo do assistente na página **Especificar Réplicas** , faça um das seguintes alterações em cada instância de servidor para a qual a coluna **Conta de Serviço do SQL Server** exiba uma conta de serviço que não pertence a um domínio:  
+-   Se alguma instância de servidor estiver sendo executada em uma conta de serviço que não pertence a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Nesse caso, clicar em **Avançar** abre uma caixa de diálogo de aviso; Você deve clicar em **não**, que retorna à guia**pontos de extremidade** . Ao deixar o assistente na página **especificar réplicas** , faça uma das seguintes alterações em cada instância de servidor para a qual a coluna **conta de serviço do SQL Server** exibe uma conta de serviço que não seja de domínio:  
   
     -   Use o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para transformar a conta de serviço do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma conta de domínio. Para obter mais informações, consulte [Alterar a conta de inicialização do serviço SQL Server &#40;SQL Server Configuration Manager&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76923040"
   
      Se você deixar a página **Especificar Réplicas de Disponibilidade** aberta enquanto configura pontos de extremidade, retorne à guia **Pontos de Extremidade** e clique em **Atualizar** para atualizar a grade **Valores do ponto de extremidade** .  
   
-##  <a name="BackupPreferencesTab"></a> Guia Preferências de Backup  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Guia Preferências de Backup  
  Para especificar onde os backups devem ocorrer, escolha uma das opções a seguir:  
   
  **Preferir Secundário**  
@@ -115,7 +115,7 @@ ms.locfileid: "76923040"
  **Somente Secundário**  
  Especifica que os backups nunca devem ser executados na réplica primária. Se a réplica primária for a única réplica online, o backup não deveria ocorrer.  
   
- **Primário**  
+ **Primary**  
  Especifica que os backups sempre devem ocorrer na réplica primária. Essa opção será útil se você precisar de recursos de backup, como a criação de backups diferenciais, que não têm suporte quando o backup é executado em uma réplica secundária.  
   
  **Qualquer Réplica**  
@@ -127,7 +127,7 @@ ms.locfileid: "76923040"
 ### <a name="replica-backup-priorities-grid"></a>Grade Prioridades de backup de réplica  
  Use a grade **Prioridades de backup de réplica** para especificar suas prioridades de backup para cada uma das réplicas do grupo de disponibilidade. Essa grade contém as seguintes colunas:  
   
- **Instância do Servidor**  
+ **Instância do servidor**  
  Exibe o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda a réplica de disponibilidade.  
   
  **Prioridade de Backup (Mais Baixa = 1, Mais Alta = 100)**  
@@ -136,7 +136,7 @@ ms.locfileid: "76923040"
  **Excluir Réplica**  
  Para evitar que esta réplica de disponibilidade seja escolhida para execução de backups. Isso é útil, por exemplo, para uma réplica de disponibilidade remota para a qual você nunca deseja que ocorra o failover de backups.  
   
-##  <a name="Listener"></a> Guia Ouvinte  
+##  <a name="listener-tab"></a><a name="Listener"></a> Guia Ouvinte  
  Especifique sua preferência para um[ouvinte de grupo de disponibilidade](../../listeners-client-connectivity-application-failover.md)que fornecerá um ponto de conexão de cliente entre as seguintes opções:  
   
  **Não crie um ouvinte de grupo de disponibilidade agora.**  
@@ -146,7 +146,7 @@ ms.locfileid: "76923040"
  Especifique suas preferências de ouvinte para este grupo de disponibilidade, da seguinte maneira:  
   
  **Nome DNS do Ouvinte**  
- Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços ( **-** ) e hifens ( **_** ), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
+ Especifique o nome da rede do ouvinte. Esse nome deve ser exclusivo no domínio e pode conter apenas caracteres alfanuméricos, traços (**-**) e hifens (**_**), em qualquer ordem. Quando especificado usando a guia **Ouvinte** , o nome DNS pode ter até 15 caracteres de comprimento.  
   
 > [!IMPORTANT]  
 >  Se você inserir um nome de ouvinte DNS inválido (ou número da porta) na guia **Ouvinte** , o botão **Avançar** será desabilitado na página **Especificar Réplicas** .  
@@ -194,7 +194,7 @@ ms.locfileid: "76923040"
 >  -   Peça ao administrador da rede para reservar o endereço IP do ouvinte para seu uso exclusivo. Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
 > -   Informe o nome do host DNS do ouvinte aos desenvolvedores de aplicativos para uso em cadeias de conexão ao pedir conexões cliente com esse grupo de disponibilidade.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
   
 -   [Usar o Assistente de Grupo de Disponibilidade &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -210,7 +210,7 @@ ms.locfileid: "76923040"
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [Criar grupo de disponibilidade &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903893"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "77903893"
 
 Retorna uma linha para cada item classificado no banco de dados.
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|
+|Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
+|**classe**|**int**|Identifica a classe do item no qual a classificação existe. Sempre terá o valor 1 (representando uma coluna)|  
 |**class_desc**|**varchar (16)**|Uma descrição da classe do item no qual a classificação existe. sempre terá o valor *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Representa a ID da tabela que contém a coluna classificada, correspondente a sys. all_objects. object_id|  
 |**minor_id**|**int**|Representa a ID da coluna na qual a classificação existe, correspondente a sys. all_columns. column_id|   
-|**chamada**|**sysname**|O rótulo (legível por humanos) atribuído para a classificação de sensibilidade|  
+|**label**|**sysname**|O rótulo (legível por humanos) atribuído para a classificação de sensibilidade|  
 |**label_id**|**sysname**|Uma ID associada ao rótulo, que pode ser usada por um sistema de proteção de informações, como a proteção de informações do Azure (AIP)|  
 |**information_type**|**sysname**|O tipo de informação (legível humana) atribuído para a classificação de sensibilidade|  
 |**information_type_id**|**sysname**|Uma ID associada ao tipo de informação, que pode ser usada por um sistema de proteção de informações, como a proteção de informações do Azure (AIP)|  
@@ -78,11 +78,11 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **View any sensibilidade de classificação** . 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="see-also"></a>Consulte Também  
 
-[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADICIONAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [DESCARTAR CLASSIFICAÇÃO DE CONFIDENCIALIDADE (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 

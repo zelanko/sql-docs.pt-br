@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321613"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -42,17 +42,17 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|É a fase da sessão de sincronização que pode ser uma das seguintes:<br /><br /> **0** = linha de inicialização ou Resumo<br /><br /> **1** = carregar<br /><br /> **2** = baixar|  
 |**ArticleName**|**sysname**|É o nome do artigo que está sendo sincronizado. O **artigoname** também contém informações resumidas para linhas no conjunto de resultados que não representam os detalhes do artigo.|  
 |**PercentComplete**|**decimal**|Indica a porcentagem do total de alterações aplicada a uma linha de detalhe de um determinado artigo em sessões atualmente em execução ou com falha.|  
 |**RelativeCost**|**decimal**|Indica o tempo gasto para sincronizar o artigo como uma porcentagem do tempo de sincronização total para a sessão.|  
-|**Duration**|**int**|Duração da sessão do agente.|  
+|**Permanência**|**int**|Duração da sessão do agente.|  
 |**Insere**|**int**|Número de inserções em uma sessão.|  
 |**Atualizações**|**int**|Número de atualizações em uma sessão.|  
 |**Deletes**|**int**|Número de exclusões em uma sessão.|  
-|**Conflicts**|**int**|Número de conflitos ocorrido em uma sessão.|  
+|**Conflitos**|**int**|Número de conflitos ocorrido em uma sessão.|  
 |**ErrorID**|**int**|ID de um erro de sessão.|  
 |**SeqNo**|**int**|Ordem das sessões no conjunto de resultados.|  
 |**RowType**|**int**|Indica que tipo de informação que cada linha no conjunto de resultados representa.<br /><br /> **0** = inicialização<br /><br /> **1** = carregar Resumo<br /><br /> **2** = detalhes do carregamento do artigo<br /><br /> **3** = Resumo de download<br /><br /> **4** = detalhes do download do artigo|  
@@ -70,6 +70,6 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante podem executar **sp_replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

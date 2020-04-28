@@ -15,19 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: 0381fd3b76933db7bb1c1ee6a3b29de1f08c7ce4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77646319"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
   Este tópico descreve as alterações no comportamento no [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="SQL14"></a>Alterações de comportamento em[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-sssql14"></a><a name="SQL14"></a>Alterações de comportamento em[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as consultas em um documento XML que contém cadeias de caracteres em um determinado comprimento (mais de 4020 caracteres) podem retornar resultados incorretos. No [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], tais consultas retornam os resultados corretos.  
   
-## <a name="Denali"></a>Alterações de comportamento em[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>Alterações de comportamento em[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Descoberta de metadados  
  Melhorias no [!INCLUDE[ssDE](../includes/ssde-md.md)] início do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitem que o SQLDescribeCol obtenha descrições mais precisas dos resultados esperados do que aqueles retornados pelo SQLDescribeCol em versões anteriores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]do. Para obter mais informações, veja [Descoberta de metadados](../relational-databases/native-client/features/metadata-discovery.md).  
@@ -83,7 +83,7 @@ O comportamento interno do método `value` do tipo de dados `xml` mudou. Este m�
   
 |Tipo de dados de origem XS|Tipo de dados de destino do SQL Server|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> INT<br /><br /> inteiro<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> decimal<br /><br /> numeric|  
+|byte<br /><br /> short<br /><br /> INT<br /><br /> inteiro<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> SMALLINT<br /><br /> INT<br /><br /> BIGINT<br /><br /> decimal<br /><br /> numeric|  
 |decimal|decimal<br /><br /> numeric|  
 |FLOAT|real|  
 |double|FLOAT|  

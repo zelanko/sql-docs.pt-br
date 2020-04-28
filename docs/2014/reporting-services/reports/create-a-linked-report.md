@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27667eececc3905b927b7e888e692a8261d14d30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177054"
 ---
 # <a name="create-a-linked-report"></a>Criar um relatório vinculado
@@ -34,15 +34,13 @@ ms.locfileid: "78177054"
 
 2.  Digite um nome para o novo relatório vinculado. Como opção, digite uma descrição.
 
-3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . 
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se você não selecionar uma pasta diferente, o relatório vinculado será criado na pasta atual (em que o relatório no qual ele se baseia está armazenado).
+3.  Para selecionar uma pasta diferente para o relatório, clique em **Alterar Local**. Clique na pasta que deseja usar ou digite o nome de pasta na caixa **Local** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se você não selecionar uma pasta diferente, o relatório vinculado será criado na pasta atual (em que o relatório no qual ele se baseia está armazenado).
 
-4.  
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] O relatório vinculado é aberto.
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] O relatório vinculado é aberto.
 
      O ícone de um relatório vinculado difere de outros itens gerenciados por um servidor de relatório. O ícone a seguir indica um relatório vinculado:
 
-     ![Ícone de relatório vinculado](../media/hlp-16linked.gif "Ícone de relatório vinculado")
+     ![Ícone do relatório vinculado](../media/hlp-16linked.gif "Ícone do relatório vinculado")
 
 ## <a name="see-also"></a>Consulte Também
  [Abra e feche um relatório &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md) [nova página de relatório vinculada &#40;Report Manager](../new-linked-report-page-report-manager.md)&#41;[escolha a página local &#40;](../choose-item-location-page-report-manager.md) Report Manager o SSRS [&#41;&#40;](../report-manager-ssrs-native-mode.md) [de propriedades gerais, relatórios Report Manager&#41;](../general-properties-page-reports-report-manager.md) Reporting Services [conceitos](../reporting-services-concepts-ssrs.md) &#40;

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172595"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelas (Construtor de Relatórios e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "78172595"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>Adicionando uma tabela para exibir dados detalhados
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> Adicionando uma tabela para exibir dados detalhados
  Adicione uma tabela à superfície de design usando a guia Inserir na faixa de opções. Para adicionar uma tabela, use o Assistente de Tabela ou Matriz, que inclui a criação de uma conexão de fonte de dados e de um conjunto de dados e a configuração da tabela, ou uma tabela com base no modelo de tabela, que você pode configurar manualmente.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "78172595"
 
  ![Modelo de tabela na superfície de design, selecionado](../media/rs-tabletemplatenewselected.gif "Modelo de tabela na superfície de design, selecionado")
 
- O identificador de linha para a linha de dados mostra o símbolo de detalhes (![identificador de linha com três linhas paralelas para a linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com 3 linhas paralelas para linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O seguinte diagrama mostra uma região de dados de tabela com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.
+ O identificador de linha da Linha de dados mostra o símbolo de detalhes (![Identificador de linha com três linhas paralelas da linha de detalhes](../media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")). Para exibir dados nessas linhas, arraste campos do painel de dados do relatório para as células da tabela na linha detalhada ou do cabeçalho. Ambas as linhas são preenchidas simultaneamente. Para adicionar mais colunas, arraste o campo para a tabela até que você veja um ponto de inserção. Depois de adicionar campos de conjunto de dados à tabela, você pode alterar o formato padrão das datas e da moeda para controlar o modo de exibição no relatório. O seguinte diagrama mostra uma região de dados de tabela com estes campos: Data, Ordem, Produto, Quantidade e Total da Linha.
 
  ![Design, Tabela com cabeçalhos de colunas em Negrito](../media/rs-basictabledetailsformatteddesign.gif "Design, Tabela com cabeçalhos de colunas em Negrito")
 
@@ -67,7 +67,7 @@ ms.locfileid: "78172595"
 
  Para obter mais informações, consulte [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="AddingRowGroups"></a>Adicionando grupos de linhas a uma tabela
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a>Adicionando grupos de linhas a uma tabela
  Da mesma forma como é possível arrastar um campo do painel de dados do relatório para uma célula a fim de exibir dados detalhados, você pode arrastar um campo para o painel Agrupamento a fim de adicionar um grupo. Em uma tabela, arraste o campo para o painel Grupos de Linhas. Após a adição de um grupo, a tabela automaticamente adiciona células a novas colunas da área do grupo de linhas em que os valores do grupo devem ser exibidos. Para obter mais informações sobre áreas, consulte [Áreas da região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).
 
  A seguinte figura mostra uma tabela com dois grupos de linhas aninhados no modo Design. Os grupos de linhas foram criados arrastando o campo Ordem e o campo Data para o painel Grupos de Linhas e inserindo cada grupo como pai dos grupos existentes. A figura mostra um grupo pai baseado na data e um grupo filho baseado no número da ordem, bem como o grupo detalhado definido por padrão.
@@ -83,7 +83,7 @@ ms.locfileid: "78172595"
 ### <a name="adding-totals-to-row-groups"></a>Adicionando totais a grupos de linhas
  Para mostrar totais de um grupo, é possível usar o comando **Adicionar Total** contextual. Em um grupo de linhas, o comando Adicionar Total adiciona uma linha fora do grupo para que ela só se repita uma vez em relação ao grupo. Em grupos aninhados, a linha de total do grupo filho está fora do grupo filho, mas dentro do grupo pai. Em casos assim, é útil definir a cor do plano de plano da linha de total do grupo filho para diferenciá-la das linhas detalhadas. Também é possível usar uma cor do plano de fundo diferente para diferenciar as linhas do cabeçalho e do rodapé da tabela. A seguinte figura mostra a tabela com uma linha de total adicionada para o grupo baseado nos números de ordens.
 
- ![Modo de design, adicionar total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de design, adicionar total de linhas ao grupo e à tabela")
+ ![Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela](../media/rs-basictablegroupstotalscolordesign.gif "Modo de exibição de Design, adicionar total de linhas ao grupo e à tabela")
 
  Quando você exibe o relatório, a linha que mostra os subtotais de ordem se repete uma vez para todos os números de ordem. O rodapé da tabela exibe totais de todas as datas. Na seguinte figura, as últimas linhas mostram as últimas três linhas detalhadas, o subtotal do último número de ordem SO71952 e os totais de todas as datas na tabela.
 
@@ -91,12 +91,12 @@ ms.locfileid: "78172595"
 
  Para obter mais informações, consulte [Adicionar um total a um grupo ou a uma região de dados Tablix &#40;Construtor de Relatórios e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="RemovingHidingRows"></a>Removendo ou ocultando linhas de detalhes
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a>Removendo ou ocultando linhas de detalhes
  Depois de visualizar uma tabela em um relatório, você talvez opte por remover as linhas detalhadas existentes. Ou você pode optar por ocultá-las por padrão e permitir ao usuário alternar visualizações mais ou menos detalhadas, como acontece em um relatório de de busca detalhada.
 
  Para remover linhas detalhadas de uma tabela, use o painel Agrupamento. Selecione o grupo detalhado e use o menu de atalho para excluir o grupo e as linhas que exibem os dados detalhados. A seguinte figura mostra o modo design de uma tabela agrupada por data e número de ordem, mas sem linhas detalhadas. Nenhuma linha de total foi adicionada à tabela.
 
- ![Exibição de Design, tabela com dois grupos, sem detalhes](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Exibição de Design, tabela com dois grupos, sem detalhes")
+ ![Modo de exibição de Design, tabela com dois grupos, sem detalhes](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "Modo de exibição de Design, tabela com dois grupos, sem detalhes")
 
  Depois que você exclui a linha detalhada, o escopo dos valores passa a ser os grupos de linhas. Os dados detalhados não são mais exibidos.
 

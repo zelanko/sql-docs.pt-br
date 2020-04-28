@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176481"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,7 +25,7 @@ ms.locfileid: "78176481"
 
  A captura de tela a seguir mostra o **Editor da Tarefa XML** com as configurações necessárias para a validação de XML com a saída de erros.
 
- ![Propriedades da tarefa XML no Editor da Tarefa XML](../media/xmltaskproperties.jpg "Propriedades da tarefa XML no editor da tarefa XML")
+ ![Propriedades da tarefa XML no Editor da Tarefa XML](../media/xmltaskproperties.jpg "Propriedades da tarefa XML no Editor da Tarefa XML")
 
  Antes da disponibilidade da propriedade `ValidationDetails`, a validação do XML pela tarefa XML retornava apenas um resultado true ou false, sem informações sobre erros ou suas localizações. Agora, quando você define `ValidationDetails` como true, o arquivo de saída contém informações detalhadas sobre cada erro, incluindo o número de linha e a posição. Você pode usar essas informações para entender, localizar e corrigir erros em documentos XML.
 
@@ -119,6 +119,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
  ![Consulta para agrupar erros de XML no Management Studio](../media/queryforxmlerrors.jpg "Consulta para agrupar erros de XML no Management Studio")
 
 ## <a name="see-also"></a>Consulte Também
- [](xml-task.md) [Editor da tarefa XML da tarefa XML &#40;página Geral&#41;](../xml-task-editor-general-page.md)
+ [XML Task](xml-task.md) [Editor da tarefa XML da tarefa XML &#40;página Geral&#41;](../xml-task-editor-general-page.md)
 
 

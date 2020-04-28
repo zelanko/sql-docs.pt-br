@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909706"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Novos recursos de GUI no SSMA para DB2 (DB2ToSQL)
@@ -47,7 +47,7 @@ Para abrir a caixa de diálogo Gerenciar layouts, no menu Exibir, aponte para la
 ## <a name="bookmarks"></a>Indicadores  
 Esse recurso permite que você defina um ou mais indicadores no código de origem ou de destino, rapidamente encontrou um indicador usando atalhos, gerenciando os indicadores com uma caixa de diálogo amigável.  
   
-### <a name="toggle-bookmark"></a>Ativar/desativar indicador  
+### <a name="toggle-bookmark"></a>Ativar/desativar Indicador  
 Você pode definir/remover um indicador das seguintes maneiras:  
   
 -   Usar indicador de alternância de botão na parte superior da janela SQL de origem ou de destino  

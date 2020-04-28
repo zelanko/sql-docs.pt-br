@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176163"
 ---
 # <a name="integration-services-ssis-projects"></a>Projetos do Integration Services (SSIS)
@@ -48,7 +48,7 @@ ms.locfileid: "78176163"
 
 |Pasta|Descrição|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Compacta|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../2014/integration-services/integration-services-ssis-packages.md).|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contém pacotes. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../2014/integration-services/integration-services-ssis-packages.md).|
 |Diversos|Contém arquivos diferentes de arquivos de pacotes.|
 
 ### <a name="files-in-integration-services-projects"></a>Arquivos em projetos do Integration Services
@@ -79,7 +79,7 @@ ms.locfileid: "78176163"
 ## <a name="related-tasks"></a>Related Tasks
  [Adicionar ou remover um projeto do Integration Services em uma solução](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)
 
- [Criar um novo projeto de Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)
+ [Criar um novo projeto do Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)
 
  [Adicionar um item a um projeto do Integration Services](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)
 

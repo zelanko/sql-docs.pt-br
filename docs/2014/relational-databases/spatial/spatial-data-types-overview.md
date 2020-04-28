@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176646"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
@@ -29,7 +29,7 @@ ms.locfileid: "78176646"
 > [!IMPORTANT]
 >  Para obter uma descrição detalhada e exemplos de recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo aprimoramentos nos tipos de dados espaciais, baixe o white paper, [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(Novos recursos espaciais no SQL Server codinome "Denali").
 
-##  <a name="objects"></a>Objetos de dados espaciais
+##  <a name="spatial-data-objects"></a><a name="objects"></a>Objetos de dados espaciais
  Os tipos de dados `geometry` e `geography` oferecem suporte a dezesseis objetos de dados espaciais, ou tipos de instâncias. No entanto, apenas onze desses tipos de instâncias *podem ser instanciados*. É possível criar e trabalhar com essas instâncias (ou criar uma instância delas) em um banco de dados. Essas instâncias derivam determinadas propriedades de seus tipos de dados pai que as `Points`distinguem como, **LineStrings, CircularStrings** `CompoundCurves`,, `Polygons` `CurvePolygons` ou `geometry` como `geography` várias instâncias ou `GeometryCollection`em um. O tipo `Geography` tem um tipo de instância adicional, `FullGlobe`.
 
  A figura a seguir ilustra a hierarquia `geometry` na qual os tipos de dados `geometry` e `geography` se baseiam. Os tipos instanciáveis de `geometry` e `geography` são indicados em azul.
@@ -42,7 +42,7 @@ ms.locfileid: "78176646"
 
  Os tipos simples incluem:
 
--   [Ponto](../spatial/point.md)
+-   [Point](../spatial/point.md)
 
 -   [LineString](../spatial/linestring.md)
 
@@ -65,7 +65,7 @@ ms.locfileid: "78176646"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Diferenças entre os tipos de dados geometry e geography
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Diferenças entre os tipos de dados de geometria e geografia
  Os dois tipos de dados espaciais sempre se comportam de maneira muito semelhante, mas há algumas diferenças importantes na maneira como eles são armazenados e manipulados.
 
 ### <a name="how-connecting-edges-are-defined"></a>Como bordas de conexão são definidas
@@ -92,20 +92,19 @@ ms.locfileid: "78176646"
 
 -   Os `geography` métodos de tipo de dados que exigem a entrada `geography` de duas instâncias, como a interseção (), a Union (), a adequação () e STSymDifference (), retornarão NULL se os resultados dos métodos não couberem dentro de um único hemisfério. STBuffer() também retornará nulo se a saída ultrapassar um único hemisfério.
 
- No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` é um tipo especial de Polígono que abrange o globo inteiro. 
-  `FullGlobe` tem uma área, mas nenhuma borda ou vértices.
+ No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], `FullGlobe` é um tipo especial de Polígono que abrange o globo inteiro. `FullGlobe` tem uma área, mas nenhuma borda ou vértices.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anéis externos e internos não são importantes no tipo de dados geography
  Os recursos simples do OGC para a especificação do SQL discutem anéis externos e anéis internos, mas essa distinção faz pouco [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` sentido para o tipo de dados; qualquer anel de um polígono pode ser levado para ser o anel externo.
 
  Para obter mais informações sobre especificações do OCG, consulte o seguinte:
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [Especificações do OGC, acesso de recurso simples parte 1 – Arquitetura comum](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [Especificações do OGC, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Acesso de recurso simples Parte 2 – opções de SQL)
 
 
-##  <a name="circular"></a>Segmentos de arco circular
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmentos de arco circular
  Três tipos instanciáveis podem adotar segmentos de arco circular: `CircularString`, `CompoundCurve` e `CurvePolygon`.  Um segmento de arco circular é definido por três pontos em um plano bidimensional, e o terceiro ponto não pode ser igual ao primeiro.
 
  As figuras A e B mostram segmentos de arco circular típicos. Observe como cada um dos três pontos se situa no perímetro de um círculo.
@@ -168,7 +167,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
- ou
+ ou o
 
  Nos exemplos anteriores, uma instância `LineString` ou uma instância `CompoundCurve` poderiam armazenar a figura.  Este próximo exemplo usa uma `CompoundCurve` para armazenar uma fatia de pizza:
 

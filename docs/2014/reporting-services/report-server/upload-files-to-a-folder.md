@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0bb599b49235cc68fdc7cfa2c74e7b15f6c1c4d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177161"
 ---
 # <a name="upload-files-to-a-folder"></a>Carregar arquivos em uma pasta
@@ -39,7 +39,7 @@ ms.locfileid: "78177161"
 
  Visualmente, os arquivos carregados em um banco de dados do servidor de relatório são representados na hierarquia de pastas com os seguintes ícones.
 
- Ícone do relatório de ![ícone de relatório](../media/hlp-16doc.gif "ícone de relatório")
+ Ícone do relatório de ![ícone de relatório](../media/hlp-16doc.gif "Ícone do relatório")
 
  Ícone ![modelo modelo de relatório ícone](../media/model-icon.gif "Ícone de modelo")
 

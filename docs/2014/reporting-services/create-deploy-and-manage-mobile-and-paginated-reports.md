@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173905"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "78173905"
 
  Para obter informações sobre outros componentes, ferramentas e recursos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consulte os [Manuais Online do SQL Server.](../2014-toc/index.yml)
 
- Ícone **Procurar conteúdo por pasta de área** ![](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services servidor de relatório](../../2014/reporting-services/reporting-services-report-server.md)
+ Ícone **Procurar conteúdo por pasta de área** ![Folder icon](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services servidor de relatório](../../2014/reporting-services/reporting-services-report-server.md)
 
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services relatórios &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)
 
@@ -46,7 +46,7 @@ ms.locfileid: "78173905"
 
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [agendas](subscriptions/schedules.md)
 
- ![](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services de ícone de pasta e &#40;de entrega&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
+ ![Folder icon](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services de ícone de pasta e &#40;de entrega&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
 
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services alertas de dados](../ssms/agent/alerts.md)
 
@@ -60,11 +60,11 @@ ms.locfileid: "78173905"
 
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [Reporting Services ferramentas](tools/reporting-services-tools.md)
 
- ![](media/hlp-16folder.gif "Ícone de pasta") [Referência de erros e eventos de ícone de pasta &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)
+ ![Folder icon](media/hlp-16folder.gif "Ícone de pasta") [Referência de erros e eventos de ícone de pasta &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)
 
  ![Ícone de pasta](media/hlp-16folder.gif "Ícone de pasta") [referência de recurso &#40;Reporting Services&#41;](feature-reference-reporting-services.md)
 
 ## <a name="see-also"></a>Consulte Também
- [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)
+ [Central de Recursos do SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)
 
 

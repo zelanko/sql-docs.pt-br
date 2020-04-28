@@ -17,10 +17,10 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322243"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
@@ -48,7 +48,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 |||  
 |-|-|  
-|**transação**|Remove objetos de publicação de replicação transacional.|  
+|**tran**|Remove objetos de publicação de replicação transacional.|  
 |**Mescle**|Remove objetos de publicação de replicação de mesclagem.|  
 |**ambos** (padrão)|Remove todos os objetos de publicação de replicação.|  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Desabilitar publicação e distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

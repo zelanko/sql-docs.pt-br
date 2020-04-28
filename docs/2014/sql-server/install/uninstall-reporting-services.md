@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4ef45498efdd86f5abe885108e4b140ba930cc58
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172217"
 ---
 # <a name="uninstall-reporting-services"></a>Desinstalar o Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "78172217"
 
 -   **Banco de dados temporário do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB
 
--   **Banco de dados de alerta do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
+-   **Banco de dados de alertas do servidor de relatório:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
 
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Desinstale o suplemento para produtos do SharePoint.
  Ao desinstalar o suplemento de um computador, você pode optar por desinstalar somente os arquivos ou também para remover o recursos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do farm. Para obter informações sobre a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desinstalação do suplemento para produtos do SharePoint, consulte [instalar ou desinstalar o suplemento Reporting Services para sharepoint &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).

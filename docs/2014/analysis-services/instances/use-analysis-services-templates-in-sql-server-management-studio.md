@@ -11,33 +11,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175219"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar modelos do Analysis Services no SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um conjunto de modelos para ajudá-lo a criar rapidamente scripts XMLA, consultas DMX ou MDX, criar KPIs em um cubo ou modelo de tabela, backup de script e operações de restauração e executar muitas outras tarefas. Os modelos estão localizados no **Gerenciador de Modelos** no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
  Este tópico inclui uma lista de modelos multidimensionais e de tabela, e fornece exemplos de como criar uma consulta MDX e instrução XMLA usando o Gerenciador de metadados e o Gerenciador de Modelos.
 
  Este tópico inclui as seções a seguir:
 
- [Abrir um modelo de Analysis Services](#bkmk_usingTE)
+ [Abrir um modelo do Analysis Services](#bkmk_usingTE)
 
- [Criar e executar uma consulta MDX em um modelo de tabela usando um modelo](#BKMK_Building_Queries)
+ [Compilar e executar uma consulta MDX em um modelo de tabela usando um modelo](#BKMK_Building_Queries)
 
- [Criar script XMLA a partir de um modelo](#bkmk_backup)
+ [Criar um script XMLA com base em um modelo](#bkmk_backup)
 
  [Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA](#bkmk_schemarowset)
 
- [Referência de modelo de Analysis Services](#bkmk_Ref)
+ [Referência de modelo do Analysis Services](#bkmk_Ref)
 
  Este tópico não abrange modelos DMX. Para ver exemplos de como criar consultas de mineração de dados usando os modelos, consulte [Criar uma consulta DMX no SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) ou [Criar uma consulta de previsão Singleton de um modelo](../data-mining/create-a-singleton-prediction-query-from-a-template.md).
 
-##  <a name="bkmk_usingTE"></a>Abrir um modelo de Analysis Services
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a>Abrir um modelo de Analysis Services
  Todos os modelos de consultas de mecanismo de banco de dados e consultas e comandos do Analysis Services estão disponíveis no Gerenciador de Modelos.
 
  Para abrir o **Gerenciador de Modelos**, selecione-o no menu **Exibir** . Em seguida, clique no ícone de cubo para visualizar uma lista de modelos disponíveis para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
@@ -56,7 +55,7 @@ ms.locfileid: "78175219"
 
      Alterne para a guia **Mensagens** para visualizar o número de registros retornados, os erros, as instruções de consulta e qualquer outra mensagem associada à execução da consulta. Por exemplo, se você executar uma instrução DAX em um modelo em execução no modo Consulta Direta, poderá visualizar a instrução Transact-SQL que é gerada pelo mecanismo analítico na memória xVelocity (VertiPaq).
 
-##  <a name="BKMK_Building_Queries"></a>Criar e executar uma consulta MDX em um modelo de tabela usando um modelo
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a>Criar e executar uma consulta MDX em um modelo de tabela usando um modelo
  Este exemplo mostra como criar uma consulta MDX no SQL Server Management Studio, usando um banco de dados modelo de tabela como a fonte de dados. Para repetir este exemplo em seu computador, você pode [baixar o projeto de exemplo de modelo de tabela Adventureworks](https://go.microsoft.com/fwlink/?LinkId=231183).
 
 > [!WARNING]
@@ -80,7 +79,7 @@ ms.locfileid: "78175219"
 
 4.  Você pode executar a consulta no estado em que ela se encontra, mas provavelmente vai querer fazer algumas alterações, como adicionar uma função para retornar membros específicos. Por exemplo, digite `.members` após **[categoria do produto]. [ Nome da categoria do produto]**. Para saber mais, confira [Using Member Expressions](/sql/mdx/using-member-expressions).
 
-##  <a name="bkmk_backup"></a>Criar script XMLA a partir de um modelo
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a>Criar script XMLA a partir de um modelo
  Os modelos de comando XMLA fornecidos no Gerenciador de Modelos podem ser usados para criar scripts para monitoramento e atualização de objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quer a instância esteja no modo multidimensional e de mineração de dados ou no modo de tabela. Os modelos **XMLA** incluem exemplos dos seguintes tipos de scripts:
 
 -   Operações de backup, restauração e sincronização
@@ -108,7 +107,7 @@ ms.locfileid: "78175219"
 
 5.  Clique duas vezes no texto dentro do \<elemento> do arquivo. Digite o nome do arquivo de backup, incluindo a extensão .abf. Especifique o caminho de arquivo completo se você não estiver usando o local de backup padrão. Para obter mais informações, consulte [Fazendo backup, restaurando e sincronizando bancos de dados &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
-##  <a name="bkmk_schemarowset"></a>Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>Gerar uma consulta de conjunto de linhas de esquema usando um modelo XMLA
  O **Gerenciador de Modelos** contém apenas um modelo para consultas de conjunto de linhas de esquema. Para usar esse modelo, você deve estar familiarizado com os requisitos do conjunto de linhas de esquema individual que deseja usar, incluindo qualquer elemento necessário e as colunas que podem ser usadas como restrições. Para obter mais informações, consulte [Conjuntos de linhas de esquema do Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
 
  Observe que muitos dos conjuntos de linha de esquema também foram expostos como DMVs (Exibições de Gerenciamento Dinâmico) por questões de simplicidade. Ao usar a DMV correspondente, você pode consultar o conjunto de linhas de esquema usando uma sintaxe semelhante à do Transact-SQL. Por exemplo, as consultas a seguir retornam os mesmos resultados, mas um está em formato XML e um está em um formato de tabela. Para obter mais informações sobre os DMVs, consulte [Usar DMVs &#40;Exibições de Gerenciamento Dinâmico&#41; para monitorar o Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).
@@ -163,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Referência de modelo de Analysis Services
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Referência de modelo de Analysis Services
  Os seguintes modelos são fornecidos para funcionar com bancos de dados do Analysis Services e os objetos no banco de dados, incluindo estruturas e modelos de mineração, cubos e modelos de tabela:
 
 |Categoria|Modelo de item|Descrição|

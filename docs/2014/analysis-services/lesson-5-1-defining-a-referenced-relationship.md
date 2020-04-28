@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175295"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definindo uma relação referenciada
@@ -52,7 +52,7 @@ ms.locfileid: "78175295"
 
      A imagem a seguir mostra a caixa de diálogo **Definir Relação** com uma relação normal entre a tabela de dimensões **DimCustomer** e a tabela de grupos de medidas **FactInternetSales** .
 
-     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Caixa de diálogo Definir Relação")
+     ![Caixa de diálogo Definir Relação](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Caixa de diálogo Definir Relação")
 
 9. Clique em **Cancelar**.
 
@@ -118,7 +118,7 @@ ms.locfileid: "78175295"
 
      Observe que agora a medida **Vendas do Revendedor/Valor das Vendas** foi dimensionada corretamente pelo atributo **País/Região** da hierarquia definida pelo usuário **Geografias** , como mostra a imagem a seguir.
 
-     ![Caixa de diálogo Definir relação](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Caixa de diálogo Definir Relação")
+     ![Caixa de diálogo Definir Relação](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Caixa de diálogo Definir Relação")
 
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição
  [Definindo uma relação de fatos](lesson-5-2-defining-a-fact-relationship.md)

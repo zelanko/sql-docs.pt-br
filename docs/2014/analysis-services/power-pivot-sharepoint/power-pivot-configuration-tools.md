@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175655"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
@@ -22,11 +22,11 @@ ms.locfileid: "78175655"
 
  O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010, bem como a Ferramenta de Configuração do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Este tópico descreve o uso geral das duas ferramentas e as diferenças entre elas.
 
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 2010
 
  **Neste tópico:**
 
--   [Requisitos para usar o Ferramentas de Configuração](#bkmk_requirements)
+-   [Requisitos para usar as ferramentas de configuração](#bkmk_requirements)
 
 -   [Duas versões da ferramenta de configuração](#bkmk_twoversions)
 
@@ -34,7 +34,7 @@ ms.locfileid: "78175655"
 
 -   [Iniciar uma das ferramentas de configuração do PowerPivot](#bmkm_start_tool)
 
-##  <a name="bkmk_requirements"></a>Requisitos para usar o Ferramentas de Configuração
+##  <a name="requirements-for-using-the-configuration-tools"></a><a name="bkmk_requirements"></a>Requisitos para usar o Ferramentas de Configuração
 
 -   Você deve ser um administrador de farm.
 
@@ -44,7 +44,7 @@ ms.locfileid: "78175655"
 
 -   Não há requisitos de porta TCP/IP para usar as ferramentas de configuração. Portanto, não é preciso configurar o firewall para acomodar as ferramentas de configuração. A ferramenta configuração espera que os aplicativos Web e serviços compartilhados estejam disponíveis como parte da plataforma SharePoint. Pode ser necessário configurar o firewall para o servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para obter mais informações, consulte [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).
 
-##  <a name="bkmk_twoversions"></a>Duas versões da ferramenta de configuração
+##  <a name="two-versions-of-the-configuration-tool"></a><a name="bkmk_twoversions"></a>Duas versões da ferramenta de configuração
  O Assistente de Configuração do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala a Ferramenta de Configuração do PowerPivot para SharePoint 2010, bem como a Ferramenta de Configuração do PowerPivot para SharePoint 2013.
 
  As ferramentas podem ser usada apenas com uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Não use-as com instalações do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .
@@ -54,7 +54,7 @@ ms.locfileid: "78175655"
 |Configuração do PowerPivot para SharePoint 2013|SharePoint 2013|[Configurar ou reparar a ferramenta de configuração do PowerPivot para SharePoint 2013 &#40;o PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|
 |Ferramenta de Configuração do PowerPivot|SharePoint 2010 com SharePoint 2010|[Configurar ou reparar a ferramenta de configuração do PowerPivot para SharePoint 2010 &#40;o PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|
 
-###  <a name="bkmk_sum_differences_betweentools"></a>Como os dois Ferramentas de Configuração são diferentes
+###  <a name="how-the-two-configuration-tools-are-different"></a><a name="bkmk_sum_differences_betweentools"></a>Como os dois Ferramentas de Configuração são diferentes
  As duas versões da ferramenta de configuração são semelhantes, mas há diferenças nas etapas de configuração executadas pelas duas ferramentas. As diferenças se devem a alterações entre o SharePoint 2010 e o SharePoint 2013, mas também a diferenças na arquitetura entre a versão do SQL Server 2012 SP1 do PowerPivot para SharePoint e as versões anteriores do PowerPivot para SharePoint.
 
  A tabela a seguir descreve recursos novos e modificados na ferramenta de **Configuração do PowerPivot para SharePoint 2013** . A tabela também descreve recursos da **Ferramenta de Configuração do PowerPivot** que não estão na Ferramenta de Configuração do PowerPivot para SharePoint 2013. As linhas da tabela estão na mesma ordem que as guias nas ferramentas de configuração.
@@ -68,7 +68,7 @@ ms.locfileid: "78175655"
 |A ferramenta 2013 tem uma nova página **Registrar o Suplemento PowerPivot como Rastreador de Uso de Serviços do Excel**. Os Serviços do Excel no SharePoint 2010 não rastreiam dados de uso do PowerPivot.||
 ||A ferramenta 2010 inclui a página **Adicionar MSOLAP.5 como um provedor confiável** para registrar MSOLAP de modo que os Serviços do Excel no SharePoint 2010 possam carregar modelos do PowerPivot. Essa página não faz parte da ferramenta 2013. Os Serviços do Excel para SharePoint 2013 não usam o provedor MSOLAP para carregar modelos.|
 
-##  <a name="bkmk_overview"></a>Visão geral do uso de uma ferramenta de configuração do PowerPivot
+##  <a name="overview-of-using-a-powerpivot-configuration-tool"></a><a name="bkmk_overview"></a>Visão geral do uso de uma ferramenta de configuração do PowerPivot
  Quando você inicia uma das Ferramentas de Configuração do PowerPivot, a ferramenta avalia a instalação existente para determinar quais operações são aplicáveis. Em uma nova instalação, apenas a tarefa de configuração está disponível. Depois que o servidor estiver configurado, a tarefa de remoção será exibida. Se você tiver iniciado com uma instância do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , a atualização também será habilitada na lista de tarefas disponíveis.
 
  Se não estiver familiarizado com a Administração Central ou o Windows PowerShell, você poderá executar a ferramenta de configuração como uma alternativa para concluir uma instalação do [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .
@@ -87,7 +87,7 @@ ms.locfileid: "78175655"
 >  -   [Instale o Reporting Services modo do SharePoint para sharepoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).
 > -   [Instale o Reporting Services modo do SharePoint para sharepoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).
 
-##  <a name="bmkm_start_tool"></a>Iniciar uma das Ferramentas de Configuração do PowerPivot
+##  <a name="start-one-of-the-powerpivot-configuration-tools"></a><a name="bmkm_start_tool"></a>Iniciar uma das Ferramentas de Configuração do PowerPivot
 
 1.  Na tela **Iniciar** , digite`powerpivot`
 
@@ -95,13 +95,13 @@ ms.locfileid: "78175655"
 
     -   **Ferramenta de configuração do PowerPivot**.
 
-    -   **OR**
+    -   **OU**
 
     -   **Configuração do PowerPivot para SharePoint 2013**.
 
-     ![duas ferramentas de configuração do powerpivot](../media/as-powerpivot-configtools-bothicons.gif "duas ferramentas de configuração do powerpivot")
+     ![duas ferramentas de configuração do PowerPivot](../media/as-powerpivot-configtools-bothicons.gif "duas ferramentas de configuração do PowerPivot")
 
-     **Observação:** As ferramentas estão disponíveis somente quando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o é instalado no servidor local.
+     **Observação:** As ferramentas estão disponíveis apenas quando o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é instalado no servidor local.
 
 2.  Na inicialização, as ferramentas de configuração verificam o status de sua instalação e fornecem tarefas que são válidas para a instalação.
 
@@ -122,9 +122,9 @@ ms.locfileid: "78175655"
  Quando você clica em Executar, a ferramenta processa todas as ações em modo de lote. Embora cada ação apareça como um item separado na lista de tarefas, todas as ações incluídas na tarefa são processadas em conjunto. Apenas as ações aprovadas em uma verificação de validação são processadas. Você pode precisar adicionar ou alterar alguns dos valores de entrada para ser aprovado para verificação de validação.
 
 ## <a name="related-content"></a>Conteúdo relacionado
- [Atualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que atualiza uma instalação existente que já está em um farm.
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que atualiza uma instalação existente que já está em um farm.
 
- [Desinstalar o PowerPivot para SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que remove PowerPivot para SharePoint serviços, soluções e páginas de aplicativo de um farm.
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Descreve o fluxo de trabalho que remove serviços, soluções e páginas de aplicativos do PowerPivot para SharePoint de um farm.
 
  [Configuração do PowerPivot usando o Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)
 

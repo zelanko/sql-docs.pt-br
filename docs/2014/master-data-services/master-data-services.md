@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db2e2fb2a174e73cfbe139c3ee15529af72e5b7b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176035"
 ---
 # <a name="master-data-services"></a>Master Data Services
@@ -26,11 +26,9 @@ ms.locfileid: "78176035"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]inclui os seguintes componentes e ferramentas:
 
--   
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar bancos de dados e aplicativos Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], uma ferramenta usada para criar e configurar bancos de dados e aplicativos Web do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
 
--   
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo Web usado para executar tarefas administrativas (como a criação de um modelo ou de uma regra de negócios) e acessado por usuários para atualizar dados.
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], um aplicativo Web usado para executar tarefas administrativas (como a criação de um modelo ou de uma regra de negócios) e acessado por usuários para atualizar dados.
 
 -   MDSModelDeploy.exe, uma ferramenta usada para criar pacotes de seus objetos de modelo e dados para que você possa implantá-los em outros ambientes.
 

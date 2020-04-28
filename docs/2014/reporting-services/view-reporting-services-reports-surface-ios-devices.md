@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174845"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Exibir relatórios do Reporting Services em dispositivos Microsoft Surface e Apple iOS
@@ -47,16 +47,16 @@ ms.locfileid: "78174845"
 
 2.  Abra o relatório seguindo um destes procedimentos:
 
-    -   **Iniciar do email:** Em um email criado por uma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] assinatura, toque na URL do relatório. O relatório será aberto no navegador.
+    -   **Início no email:** em um email criado por uma assinatura do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , toque na URL do relatório. O relatório será aberto no navegador.
 
-    -   **Iniciar do servidor de relatório:** Procure o diretório no servidor [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de relatório e, em seguida, toque no nome do relatório para abrir o relatório.
+    -   **Início a partir do servidor de relatório:** procure o diretório no servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e toque no nome do relatório para abri-lo.
 
-    -   **Iniciar em uma biblioteca de documentos do SharePoint:** Navegue até uma biblioteca de documentos do SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que contém relatórios e, em seguida, toque no nome do relatório. Você pode exibir e interagir com o relatório.
+    -   **Início a partir de uma biblioteca de documentos do SharePoint:** navegue até uma biblioteca de documentos do SharePoint que contenha relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e toque no nome do relatório. Você pode exibir e interagir com o relatório.
 
         > [!IMPORTANT]
         >  Para o iPad, certifique-se de que a propriedade de **Navegação Particular** para Safari esteja desativada.
 
-    -   **Web Part do SharePoint:** Se a Web Part tiver sido adicionada a uma página do SharePoint, você poderá [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] exibir relatórios.
+    -   **Web parts de SharePoint:** se a Web Part foi adicionada a uma página do SharePoint, você pode exibir relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .
 
 3.  No dispositivo Microsoft Surface, você também pode abrir o relatório usando o Gerenciador de Relatórios. Procure o diretório no Gerenciador de Relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e toque no nome do relatório para abri-lo.
 

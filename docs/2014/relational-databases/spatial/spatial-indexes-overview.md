@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176656"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
@@ -24,9 +24,9 @@ ms.locfileid: "78176656"
 > [!IMPORTANT]
 >  Para obter uma descrição detalhada e exemplos dos recursos espaciais introduzidos no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluindo recursos que afetam índices espaciais, baixe o white paper sobre [Novos recursos espaciais no SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="about"></a> Sobre índices espaciais
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Sobre índices espaciais
 
-###  <a name="decompose"></a> Decompondo espaço indexado em uma hierarquia de grade
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Decompondo espaço indexado em uma hierarquia de grade
  No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], índices espaciais são criados usando árvores B, o que significa que os índices devem representar os dados espaciais bidimensionais na ordem linear de árvores B. Portanto, antes de ler dados em um índice espacial, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa uma decomposição uniforme hierárquica do espaço. O processo de criação de índice *decompõe* o espaço em uma *hierarquia de grade*de quatro níveis. Esses níveis são chamados de *nível 1* (o nível superior), *nível 2*, *nível 3*e *nível 4*.
 
  Cada nível sucessivo decompõe ainda mais o nível acima dele, de forma que cada célula de nível superior contém uma grade completa no próximo nível. Em um determinado nível, todas as grades têm o mesmo número de células ao longo dos dois eixos (por exemplo, 4x4 ou 8x8) e as células são todas de um único tamanho.
@@ -60,7 +60,7 @@ ms.locfileid: "78176656"
 > [!NOTE]
 >  As densidades de grade de um índice espacial são visíveis nas colunas level_1_grid, level_2_grid, level_3_grid, e level_4_grid da exibição de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) quando o nível de compatibilidade do banco de dados é definido como 100 ou abaixo. As `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opções de esquema de mosaico não preenchem essas colunas. a exibição de catálogo sys. `NULL` spatial_index_tessellations tem valores para essas colunas quando as opções de grade automática são usadas.
 
-###  <a name="tessellation"></a>Mosaico
+###  <a name="tessellation"></a><a name="tessellation"></a> Mosaico
  Após a decomposição de um espaço indexado em uma hierarquia de grade, o índice espacial lê os dados da coluna espacial, linha a linha. Depois de ler os dados de um objeto espacial (ou instância), o índice espacial executa um *processo de mosaico* para esse objeto. O processo de mosaico ajusta o objeto na hierarquia da grade associando o objeto a um conjunto de células da grade tocadas por ele (*células tocadas*). Iniciando no nível 1 da hierarquia de grade, o processo de mosaico continua com *amplitude primeiro* em todo o nível. Potencialmente, o processo pode continuar por todos os quatro níveis, um nível de cada vez.
 
  A saída do processo de mosaico é um conjunto de células tocadas que são registradas no índice espacial do objeto. Consultando essas células registradas, o índice espacial pode localizar o objeto no espaço em relação a outros objetos na coluna espacial que também são armazenados no índice.
@@ -110,7 +110,7 @@ ms.locfileid: "78176656"
 
  ![Otimização de célula mais profunda](../../database-engine/media/spndx-opt-deepest-cell.gif "Otimização de célula mais profunda")
 
-###  <a name="schemes"></a>Esquemas de mosaico
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Esquemas de mosaico
  O comportamento de um índice espacial depende parcialmente de seu *esquema de mosaico*. O esquema de mosaico é específico ao tipo de dados. No [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], índices espaciais oferecem suporte a dois esquemas de mosaico:
 
 -   *Mosaico de grade geométrica*, que é o `geometry` esquema para o tipo de dados.
@@ -129,13 +129,13 @@ ms.locfileid: "78176656"
 ##### <a name="the-bounding-box"></a>A caixa delimitadora
  Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas `(` _, x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_`)`, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:
 
--   *x-min* é a coordenada x do canto inferior esquerdo da caixa delimitadora.
+-   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.
 
 -   *y-min* é a coordenada y do canto inferior esquerdo.
 
--   *x-Max* é a coordenada x do canto superior direito.
+-   *x-max* é a coordenada X do canto superior direito.
 
--   *y-Max* é a coordenada y do canto superior direito.
+-   *y-max* é a coordenada y do canto superior direito.
 
 > [!NOTE]
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
@@ -146,7 +146,7 @@ ms.locfileid: "78176656"
 
  A ilustração a seguir mostra os pontos definidos pelas `(` _x-min_**,**_y-min_ `)` e `(` _x-Max_**,**_y-Max_ `)` da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.
 
- ![Caixa delimitadora mostrando coordenadas e célula 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Caixa delimitadora mostrando coordenadas e a célula 0.")
+ ![Caixa delimitadora mostrando coordenadas e a célula 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Caixa delimitadora mostrando coordenadas e a célula 0.")
 
  Uma caixa delimitadora corresponde a uma parte dos dados espaciais de um aplicativo. Se a caixa delimitadora do índice contém completamente os dados armazenados na coluna espacial ou apenas uma parte é responsabilidade do aplicativo. Apenas operações computadas em objetos que estão completamente dentro da caixa delimitadora se beneficiam do índice espacial. Portanto, para obter o máximo benefício de um índice espacial em uma coluna `geometry`, é necessário especificar uma caixa delimitadora que contenha todos ou a maior parte dos objetos.
 
@@ -176,9 +176,9 @@ ms.locfileid: "78176656"
 
  ![Grade de geografia de nível 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Grade de geografia de nível 1")
 
-##  <a name="methods"></a>Métodos com suporte de índices espaciais
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a>Métodos com suporte de índices espaciais
 
-###  <a name="geometry"></a>Métodos Geometry com suporte de índices espaciais
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>Métodos Geometry com suporte de índices espaciais
  Índices espaciais dão suporte aos seguintes métodos geometry orientados por conjunto em determinadas condições: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Para que tenham suporte em um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE ou JOIN ON de uma consulta e ocorrer dentro de um predicado com o seguinte formato geral:
 
  *Geometry1*. *method_name*(*Geometry2*)*comparison_operator * * valid_number*
@@ -187,23 +187,23 @@ ms.locfileid: "78176656"
 
  Índices espaciais oferecem suporte aos seguintes formulários de predicado:
 
--   *Geometry1*. *Geometry2*( [concontains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *Geometry1*. *Número* de < de*Geometry2*(de [distância](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type))
 
--   *Geometry1*. *Geometry2*( [interurbano](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)) <= *número*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
 
--   *Geometry1*. *Geometry2*( [deigualdades](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1*. [Interseção](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1.* [Sobreposições](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(Geometry2) = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *Geometry1*. *Geometry2*( [sobretoques](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *Geometry1*. [(](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)*Geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>Métodos de Geografia com suporte de índices espaciais
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>Métodos de Geografia com suporte de índices espaciais
  Em determinadas condições, índices espaciais dão suporte aos seguintes métodos de geografia orientados a conjunto: STIntersects(), STEquals() e STDistance(). Para que tenham suporte de um índice espacial, esses métodos devem ser usados dentro da cláusula WHERE de uma consulta e ocorrer dentro de um predicado do seguinte formulário geral:
 
  *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -212,13 +212,13 @@ ms.locfileid: "78176656"
 
  Índices espaciais oferecem suporte aos seguintes formulários de predicado:
 
--   *geography1*. [Interseção](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*. *Geography2*( [deigualdades](/sql/t-sql/spatial-geography/stequals-geography-data-type)) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*. *Número* de < de*Geography2*(de [distância](/sql/t-sql/spatial-geography/stdistance-geography-data-type))
 
--   *geography1*. *Geography2*( [interurbano](/sql/t-sql/spatial-geography/stdistance-geography-data-type)) <= *número*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
 
 ### <a name="queries-that-use-spatial-indexes"></a>Consultas que usam um índices espaciais
  Os índices espaciais só têm suporte em consultas que incluem um operador espacial indexado na cláusula `WHERE`. Por exemplo, a seguinte sintaxe:

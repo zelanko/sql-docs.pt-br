@@ -21,10 +21,10 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172115"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Argumentos
-`[ @server = ] 'server'`É o nome do servidor. Os nomes de servidor devem ser exclusivos e seguir as regras de nomes do computador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, embora não sejam permitidos espaços. o *servidor* é **sysname**, sem padrão.
+`[ @server = ] 'server'`É o nome do servidor. Os nomes de servidor devem ser exclusivos e seguir as regras de nomes do computador do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, embora não sejam permitidos espaços. *server* é **sysname**, sem padrão.
 
  Quando diversas instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão instaladas em um computador, uma instância funciona como se estivesse em um servidor separado. Especifique uma instância nomeada fazendo referência ao *servidor* como *nomedoservidor \ NomedaInstância*.
 

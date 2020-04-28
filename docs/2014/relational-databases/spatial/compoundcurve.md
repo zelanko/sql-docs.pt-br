@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176676"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -41,7 +41,7 @@ ms.locfileid: "78176676"
 
 1.  Todas as instâncias contidas na instância `CompoundCurve` são instâncias de segmento de arco circular aceitas. Para obter mais informações sobre instâncias de segmento de arco circular aceitas, veja [LineString](linestring.md) e [CircularString](circularstring.md).
 
-2.  Todos os segmentos de arco circular na instância `CompoundCurve` estão conectados. O primeiro ponto para cada segmento de arco circular com sucesso é o mesmo que o último ponto no segmento de arco circular anterior.
+2.  Todos os segmentos de arco circular na instância `CompoundCurve` estão conectados. O primeiro ponto de cada segmento de arco circular sucessivo é igual ao último ponto no segmento de arco circular anterior.
 
     > [!NOTE]
     >  Isso inclui as coordenadas Z e M. Assim, as quatro coordenadas X, Y, Z e M devem ser iguais.
@@ -79,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` é válido porque a instância `CircularString` é válida. Para obter mais informações sobre a validade da `CircularString` instância, consulte [circularstring](circularstring.md).
+ `@g3` é válido porque a instância `CircularString` é válida. Para obter mais informações sobre a validade da `CircularString` instância, consulte [circularstring](circularstring.md).
 
  O exemplo a seguir mostra instâncias `CompoundCurve` que não são válidas.
 
@@ -91,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. 
-  `@g2` não é válido porque a instância de `LineString` não é válida. 
-  `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre `CircularString` as `LineString` instâncias e válidas, consulte [circularstring](circularstring.md) e [LineString](linestring.md).
+ `@g1` não é válido porque a segunda instância não é uma instância de LineString válida. `@g2` não é válido porque a instância de `LineString` não é válida. `@g3` não é válido porque a instância de `CircularString` não é válida. Para obter mais informações sobre `CircularString` as `LineString` instâncias e válidas, consulte [circularstring](circularstring.md) e [LineString](linestring.md).
 
 ## <a name="examples"></a>Exemplos
 

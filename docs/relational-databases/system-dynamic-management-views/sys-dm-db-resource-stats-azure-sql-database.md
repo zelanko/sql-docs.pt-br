@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175085"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Banco de Dados SQL do Azure)
@@ -31,7 +31,7 @@ ms.locfileid: "78175085"
 
   Retorna o consumo de CPU, E/S e consumo de memória para um banco de dados [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Existe uma linha para cada 15 segundos, mesmo se não houver nenhuma atividade no banco de dados. Os dados históricos são mantidos por aproximadamente uma hora.  
   
-|Colunas|Tipo de Dados|DESCRIÇÃO|  
+|Colunas|Tipo de Dados|Descrição|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica o término do intervalo de relatório atual.|  
 |avg_cpu_percent|**decimal (5, 2)**|Utilização média de computação, em porcentagem, do limite da camada de serviço.|  
@@ -101,4 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Sys. resource_stats &#40;camadas de serviço do banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [Sys. resource_stats &#40;camadas de serviço do banco de dados SQL do Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

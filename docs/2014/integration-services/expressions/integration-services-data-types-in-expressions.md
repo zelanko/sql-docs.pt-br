@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176424"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de dados do Integration Services em expressões
@@ -38,7 +38,7 @@ ms.locfileid: "78176424"
 
  O diagrama a seguir mostra o tipo de resultado de conversões implícitas de operações BINARY. A intersecção da coluna e da linha nesta tabela é o tipo de resultado de uma operação binário com operandos dos tipos à esquerda (De) e à direita (Para).
 
- ![Conversão de tipos de dados implícitos entre tipos de dados](../media/mw-dts-impl-conver-02.gif "Conversão de tipos de dados implícitos entre tipos de dados")
+ ![Conversão de tipo de dados implícitos entre tipos de dados](../media/mw-dts-impl-conver-02.gif "Conversão de tipo de dados implícitos entre tipos de dados")
 
  A intersecção de um inteiro assinado e não assinado é um inteiro assinado potencialmente maior do que o argumento.
 
@@ -55,15 +55,15 @@ ms.locfileid: "78176424"
 
 -   [== &#40;Igual&#41; &#40;Expressão do SSIS&#41;](equal-ssis-expression.md)
 
--   [\!= &#40;Diferente&#41; &#40;Expressão do SSIS&#41;](unequal-ssis-expression.md)
+-   [! = &#40;&#41; &#40;expressão SSIS desiguais&#41;](unequal-ssis-expression.md)
 
 -   [&#62; &#40;Maior que&#41; &#40;Expressão SSIS&#41;](greater-than-ssis-expression.md)
 
 -   [&#60; &#40;Menor que&#41; &#40;Expressão SSIS&#41;](less-than-ssis-expression.md)
 
--   [&#62;= &#40;Maior que ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)
+-   [&#62;= &#40;Maior ou igual a&#41; &#40;Expressão SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)
 
--   [&#60;= &#40;Menor que ou igual a&#41; &#40;Expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)
+-   [&#60;= &#40;Menor ou igual a&#41; &#40;Expressão SSIS&#41;](less-than-or-equal-to-ssis-expression.md)
 
  Uma função que usa um único argumento retorna um resultado com o mesmo tipo de dados que o argumento, com as seguintes exceções:
 

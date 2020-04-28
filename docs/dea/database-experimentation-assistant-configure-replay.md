@@ -13,17 +13,17 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761530"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurar Distributed Replay para Assistente para Experimentos de Banco de Dados
 
 Assistente para Experimentos de Banco de Dados (DEA) usa as ferramentas de Distributed Replay da instalação do SQL Server para reproduzir um rastreamento capturado em um ambiente de teste atualizado. É recomendável fazer uma execução de teste usando um pequeno arquivo de rastreamento antes de fazer uma repetição completa para garantir a reprodução adequada de consultas.
 
-## <a name="distributed-replay-requirements"></a>Requisitos de Distributed Replay
+## <a name="distributed-replay-requirements"></a>Requisitos do Distributed Replay
 
 - Um adicional de 78% do espaço na unidade de disco rígido é necessário para criar arquivos IRF no computador do controlador de Distributed Replay.
 - 200 MB ou 512 MB é o tamanho de substituição de rastreamento ideal a ser usado para capturar rastreamentos de produção ou de desempenho.

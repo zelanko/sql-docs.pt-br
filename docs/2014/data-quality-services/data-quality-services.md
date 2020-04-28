@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 09d57d0b1b0ac00cbad6f4d8dab1e2afad790d37
-ms.sourcegitcommit: c30a2def43c86860aeec69d3e3029f2296544b13
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175515"
 ---
 # <a name="data-quality-services"></a>Data Quality Services

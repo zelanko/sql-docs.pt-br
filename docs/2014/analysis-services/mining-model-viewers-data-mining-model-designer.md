@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175798"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visualizadores do Modelo de Mineração (Designer do Modelo de Mineração de Dados)
@@ -29,9 +29,9 @@ ms.locfileid: "78175798"
 ## <a name="common-options"></a>Opções comuns
  **Atualizar conteúdo do visualizador** Recarregue o modelo de mineração no visualizador.
 
- **Modelo de mineração** Escolha um modelo de mineração para exibir que está contido na estrutura de mineração atual. O modelo de mineração será aberto primeiro no visualizador personalizado associado.
+ **Modelo de mineração** Escolha um modelo de mineração para exibir o que está presente na estrutura de mineração atual. O modelo de mineração será aberto primeiro no visualizador personalizado associado.
 
- **Visualizador** do Escolha um visualizador a ser usado para explorar o modelo de mineração selecionado. Essa lista inclui os visualizadores [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que o fornece para cada modelo de [!INCLUDE[msCoName](../includes/msconame-md.md)] mineração, o Visualizador de conteúdo de mineração e quaisquer visualizadores de plug-in.
+ **Visualizador** Escolha um visualizador a ser utilizado para explorar o modelo de mineração selecionado. Essa lista inclui os visualizadores [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que o fornece para cada modelo de [!INCLUDE[msCoName](../includes/msconame-md.md)] mineração, o Visualizador de conteúdo de mineração e quaisquer visualizadores de plug-in.
 
  O diagrama a seguir mostra um visualizador personalizado e um genérico para o mesmo modelo.
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175635"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Criar ou personalizar uma biblioteca de feed de dados (PowerPivot para SharePoint)
@@ -37,15 +37,14 @@ ms.locfileid: "78175635"
 
  [Criar uma nova biblioteca de feeds de dados](#createlib)
 
- [Adicionar o tipo de conteúdo do feed de dados a qualquer biblioteca](#addtolib)
+ [Adicionar o tipo de conteúdo do feed de dados a uma biblioteca](#addtolib)
 
-##  <a name="prereq"></a> Pré-requisitos
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na administração central](activate-power-pivot-integration-for-site-collections-in-ca.md).
+##  <a name="prerequisites"></a><a name="prereq"></a> Pré-requisitos
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser ativada para sites para os quais você está criando a biblioteca de feeds de dados. Se o tipo de modelo da biblioteca de feeds de dados não estiver disponível, a causa mais provável será que esse pré-requisito não foi atendido. Para obter mais informações, consulte [ativar a integração de recursos do PowerPivot para coleções de sites na administração central](activate-power-pivot-integration-for-site-collections-in-ca.md).
 
  Você deve ser um proprietário do site criar a biblioteca.
 
-##  <a name="createlib"></a>Criar uma nova biblioteca de feeds de dados
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>Criar uma nova biblioteca de feeds de dados
  A criação de uma biblioteca de feeds de dados é a primeira etapa para habilitar feeds de dados para pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Como uma biblioteca de feeds de dados fornece páginas de aplicativo e gerenciamento para os documentos do serviço de dados, você deve ter essa biblioteca pronta para criar um novo documento.
 
  Uma biblioteca de feeds de dados é baseada em um modelo interno e em um *tipo de conteúdo de documento do serviço de dados* pré-configurado que define propriedades e comportamentos para um documento do serviço de dados.
@@ -64,7 +63,7 @@ ms.locfileid: "78175635"
 
  Depois de criar uma biblioteca, você pode usá-la para criar documentos de serviço de dados. Para obter mais informações, consulte [usar feeds de dados &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).
 
-##  <a name="addtolib"></a>Adicionar o tipo de conteúdo do feed de dados a qualquer biblioteca
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>Adicionar o tipo de conteúdo do feed de dados a qualquer biblioteca
  Se você não desejar criar uma biblioteca de feeds de dados dedicada, mas ainda quiser criar e gerenciar documentos do serviço de dados de um site do SharePoint, poderá adicionar e configurar manualmente o tipo de conteúdo de documento do serviço de dados para qualquer biblioteca que será usada para compartilhar arquivos de documento do serviço de dados (.atomsvc).
 
  Você deve ter pelo menos a permissão Gerenciar Listas para adicionar e configurar um tipo de conteúdo. Esta permissão é compilada no nível de permissão Design e superior.

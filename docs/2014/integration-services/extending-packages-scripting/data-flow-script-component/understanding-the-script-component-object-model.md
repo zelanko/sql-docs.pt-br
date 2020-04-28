@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176195"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
@@ -158,8 +158,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>O que o item de projeto ComponentWrapper fornece
  O item de projeto ComponentWrapper contém uma classe nomeada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A classe `ScriptMain` na qual você escreve seu código personalizado, por sua vez, deriva de `UserComponent`. A classe `UserComponent` contém os seguintes métodos:
 
--   Uma implementação substituída do método `PrimeOutput`. O mecanismo de fluxo de dados chama esse método antes do `ProcessInput` em tempo de execução e ele é chamado apenas uma vez. 
-  `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.
+-   Uma implementação substituída do método `PrimeOutput`. O mecanismo de fluxo de dados chama esse método antes do `ProcessInput` em tempo de execução e ele é chamado apenas uma vez. `PrimeOutput` entrega o processamento para o método `CreateNewOutputRows`. Depois, se o componente for uma origem (ou seja, se o componente não possuir entradas), o `PrimeOutput` chamará o método `FinishOutputs` substituível e o método `MarkOutputsAsFinished` particular. O método `MarkOutputsAsFinished` chama o `SetEndOfRowset` no último buffer de saída.
 
 -   Uma implementação substituível do método `CreateNewOutputRows`. A implementação padrão é vazia. Esse é o método que, em geral, você substituirá para escrever seu código de processamento de dados personalizado.
 
@@ -202,7 +201,7 @@ public override void ReleaseConnections()
 }
 ```
 
-![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.
+![Ícone de Integration Services (pequeno)](../../media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.
 
 ## <a name="see-also"></a>Consulte Também
  [Configurando o componente script no editor de componentes de script](configuring-the-script-component-in-the-script-component-editor.md) [codificando e Depurando o componente Script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md

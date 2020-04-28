@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173535"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar uma implantação de expansão do servidor de relatório no modo nativo (Gerenciador de configurações do SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "78173535"
 
  Os servidores de relatório no modo do SharePoint utilizam a infraestrutura de produtos do SharePoint para expansão. A expansão do modo do SharePoint é executada com a adição de mais servidores de relatório no modo do SharePoint ao farm do SharePoint. Para obter informações sobre a expansão no modo do SharePoint, consulte [Adicionar outro servidor de relatório a um farm &#40;Expansão do SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).
 
- **As implantações de expansão consistem em:**
+ **As implantações em expansão consistem de:**
 
 -   Duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.
 
@@ -59,8 +59,7 @@ ms.locfileid: "78173535"
 
 1.  Instale uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador que hospedará os bancos de dados do servidor de relatório. Instale pelo menos o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-2.  Se necessário, habilite o servidor de relatório para conexões remotas. Por padrão, algumas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitem conexões remotas TCP/IP e de Pipes Nomeados. Para confirmar se conexões remotas são permitidas, use o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exiba os parâmetros de configuração de rede da instância de destino. Se a instância remota também for uma instância nomeada, verifique se o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitado e em execução no servidor de destino. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o número da porta usado para estabelecer conexão com a instância nomeada.
+2.  Se necessário, habilite o servidor de relatório para conexões remotas. Por padrão, algumas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitem conexões remotas TCP/IP e de Pipes Nomeados. Para confirmar se conexões remotas são permitidas, use o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exiba os parâmetros de configuração de rede da instância de destino. Se a instância remota também for uma instância nomeada, verifique se o serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitado e em execução no servidor de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece o número da porta usado para estabelecer conexão com a instância nomeada.
 
 ### <a name="to-install-the-first-report-server-instance"></a>Para instalar a primeira instância do servidor de relatório
 
@@ -92,7 +91,7 @@ ms.locfileid: "78173535"
 
     6.  Em **Banco de Dados do Servidor de Relatório**, selecione o banco de dados que você criou para o primeiro servidor de relatório e clique em **Avançar**. O nome padrão é ReportServer. Não selecione ReportServerTempDB; ele é usado somente para armazenar dados temporários durante o processamento de relatórios. Se a lista de bancos de dados estiver vazia, repita as quatro etapas anteriores para estabelecer uma conexão com o servidor.
 
-    7.  Na página Credenciais, selecione o tipo de conta e as credenciais que o servidor de relatório usará para se conectar ao banco de dados do servidor de relatório. Você pode usar as mesmas credenciais que as da primeira instância do servidor de relatório ou credenciais diferentes. Clique em **Próximo**.
+    7.  Na página Credenciais, selecione o tipo de conta e as credenciais que o servidor de relatório usará para se conectar ao banco de dados do servidor de relatório. Você pode usar as mesmas credenciais que as da primeira instância do servidor de relatório ou credenciais diferentes. Clique em **Avançar**.
 
     8.  Clique em **Resumo** e clique em **Concluir**.
 
@@ -113,13 +112,13 @@ ms.locfileid: "78173535"
     > [!NOTE]
     >  **Problema:** Ao tentar ingressar em uma instância de servidor de relatório Reporting Services na implantação em expansão, você poderá encontrar mensagens de erro semelhantes a ' acesso negado '.
     > 
-    >  **Solução alternativa:** Faça backup da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] chave de criptografia da primeira [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instância e restaure a chave para o segundo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de relatório. Tente unir o segundo servidor à implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+    >  **Solução alternativa:** faça backup da chave de criptografia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da primeira instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e restaure a chave para o segundo servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Tente unir o segundo servidor à implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
 4.  Agora, deverá ser possível verificar que ambas as instâncias do servidor de relatório estão operacionais. Para verificar a segunda instância, você pode usar a ferramenta Configuração do Reporting Services para se conectar ao servidor de relatório e clicar na URL do Serviço da Web ou na URL do Gerenciador de Relatórios.
 
  Se você planejar executar os servidores de relatório em um cluster de servidores com balanceamento de carga, será necessária uma configuração adicional. Para obter mais informações, consulte [Configurar um servidor de relatório em um cluster com balanceamento de carga de rede](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).
 
 ## <a name="see-also"></a>Consulte Também
- [Configurar uma conta de serviço &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurar uma URL &#40;o SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [criar um banco de dados do servidor de relatório no modo nativo &#40;SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)&#41;[configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)&#41;[Adicionar e remover chaves de criptografia para implantação em expansão &#40;SSRS Configuration Manager](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)&#41;[gerenciar um relatório Servidor de relatório no modo nativo de serviços](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurar uma conta de serviço &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [criar um banco de dados do servidor de relatório no modo nativo &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md) [Configurar URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)&#41;[Adicionar e remover chaves de criptografia para implantação em expansão &#40;SSRS Configuration Manager](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)&#41;[gerenciar um Reporting Services servidor de relatório no modo nativo](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 
 

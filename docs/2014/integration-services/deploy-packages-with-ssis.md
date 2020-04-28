@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176446"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Tutorial SSIS: implantando pacotes
+# <a name="ssis-tutorial-deploying-packages"></a>Tutorial do SSIS: Como implantar pacotes
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.
 
  Primeiro, você executará as tarefas para preparar a implantação. Você criará um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e adicionará pacotes e arquivos de dados existentes ao projeto. Você não criará nenhum pacote a partir do zero; em vez disso, apenas trabalhará com pacotes concluídos criados apenas para este tutorial. Você não modificará a funcionalidade dos pacotes neste tutorial; porém, após adicionar os pacotes ao projeto, poderá achar útil abrir os pacotes no Designer [!INCLUDE[ssIS](../includes/ssis-md.md)] e revisar o conteúdo de cada pacote. Ao examinar os pacotes, aprenderá sobre as dependências dos pacotes, como arquivos de log, e sobre outros recursos interessantes dos pacotes.
@@ -48,7 +48,7 @@ ms.locfileid: "78176446"
 ## <a name="requirements"></a>Requisitos
  Este tutorial destina-se a usuários que já estão familiarizados com operações fundamentais do sistema de arquivos, mas que têm exposição limitada aos novos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]recursos disponíveis no. Para entender melhor os [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceitos básicos que você colocará para usar neste tutorial, talvez seja útil primeiro concluir os seguintes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriais: [Execute o assistente de SQL Server importação e exportação](import-export-data/start-the-sql-server-import-and-export-wizard.md) e o tutorial do [SSIS: Criando um pacote ETL simples](../integration-services/ssis-how-to-create-an-etl-package.md).
 
- **Computador de origem.** O computador no qual você criará o pacote de implantação deve ter os seguintes componentes instalados:
+ **Computador de origem** O computador no qual você criará o pacote de implantação deve ter os seguintes componentes instalados:
 
 -   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados AdventureWorks. Para reforçar a segurança, os bancos de dados de exemplo não são instalados por padrão. Você pode baixar o banco de dados de exemplo do [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
 
@@ -81,5 +81,5 @@ ms.locfileid: "78176446"
 
  [Lição 3: Instalando pacotes](../integration-services/lesson-3-install-ssis-package.md) Nesta lição, você copiará o pacote de implantação para o computador de destino, instalará os pacotes e, em seguida, executará os pacotes.
 
-![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.
+![Ícone de Integration Services (pequeno)](media/dts-16.gif "Ícone do Integration Services (pequeno)")  **Mantenha-se atualizado com Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.
 

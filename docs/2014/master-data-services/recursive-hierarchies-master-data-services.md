@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c28242daebfdaf01a457432027e68be59ae26f29
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175951"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Hierarquias recursivas (Master Data Services)
@@ -55,7 +55,7 @@ ms.locfileid: "78175951"
 |Descrição da tarefa|Tópico|
 |----------------------|-----------|
 |Criar uma hierarquia derivada.|[Criar uma hierarquia derivada &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|
-|Alterar o nome de uma hierarquia derivada existente.|[Alterar um nome de hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
+|Alterar o nome de uma hierarquia derivada existente.|[Alterar o nome de uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|
 |Excluir uma hierarquia derivada existente.|[Excluir uma hierarquia derivada &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>Conteúdo relacionado

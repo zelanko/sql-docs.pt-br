@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4024ae380a1ab6513f8bc055680d8848e97fbf6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173298"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Os aplicativos de serviço são gerenciados na administração central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são gerenciados na Administração Central do SharePoint. As páginas Gerenciamento e Propriedades permitem atualizar a configuração do aplicativo de serviço, bem como as tarefas de administração comuns.
 
  Este tópico aborda as seguintes informações:
 
 -   [Para abrir páginas de gerenciamento de aplicativos de serviço](#bkmk_openpages)
 
--   [Página Configurações do sistema](#bkmk_systemsettings)
+-   [Página de configurações do sistema](#bkmk_systemsettings)
 
 -   [Gerenciar trabalhos](#bkmk_managejobs)
 
@@ -45,7 +45,7 @@ ms.locfileid: "78173298"
 
  Para obter mais informações sobre as propriedade do aplicativo de serviço, consulte [Etapa 3: Criar um aplicativo de serviço do Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).
 
-##  <a name="bkmk_openpages"></a>Para abrir páginas de gerenciamento de aplicativos de serviço
+##  <a name="to-open-service-application-management-pages"></a><a name="bkmk_openpages"></a>Para abrir páginas de gerenciamento de aplicativos de serviço
  Para abrir as páginas de gerenciamento de um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , siga as etapas abaixo:
 
 1.  Na Administração Central, no grupo Gerenciamento de Aplicativos, clique em **Gerenciar aplicativos de serviço**.
@@ -54,20 +54,20 @@ ms.locfileid: "78173298"
 
 3.  Se desejar, você poderá clicar próximo ao nome ou na coluna **tipo** do aplicativo de serviço; essa ação selecionará toda a linha. Em seguida, clique no botão **Gerenciar** na faixa de opções do SharePoint.
 
-##  <a name="bkmk_systemsettings"></a>Página Configurações do sistema
+##  <a name="system-settings-page"></a><a name="bkmk_systemsettings"></a>Página Configurações do sistema
  A página de configurações de sistemas permite configurar o comportamento e a experiência de usuário do aplicativo de serviço, incluindo vários tempos limite.
 
--   [Configurações de relatório](#bkmk_report_settings_section)
+-   [Configurações do relatório](#bkmk_report_settings_section)
 
 -   [Configurações de sessão](#bkmk_session_settings_section)
 
--   [Configurações do sistema para registro em log](#bkmk_logging_settings_section)
+-   [Configurações do sistema para registro](#bkmk_logging_settings_section)
 
 -   [Configurações de segurança](#bkmk_security_settings_section)
 
 -   [Configurações do cliente](#bkmk_client_settings_section)
 
-###  <a name="bkmk_report_settings_section"></a>Configurações de relatório
+###  <a name="report-settings"></a><a name="bkmk_report_settings_section"></a>Configurações de relatório
 
 |Configuração|Comentários|
 |-------------|--------------|
@@ -78,7 +78,7 @@ ms.locfileid: "78173298"
 |Tempo de Vida de Parâmetros Armazenados|O padrão é 180|
 |Limite de Parâmetros Armazenados|O padrão é 1500 dias.|
 
-###  <a name="bkmk_session_settings_section"></a>Configurações de sessão
+###  <a name="session-settings"></a><a name="bkmk_session_settings_section"></a>Configurações de sessão
 
 |Configuração|Comentários|
 |-------------|--------------|
@@ -86,17 +86,16 @@ ms.locfileid: "78173298"
 |Usar Cookies de Sessão|O padrão é TRUE.|
 |Tempo Limite do Relatório EDLX|O padrão é 1.800 segundos.|
 
-###  <a name="bkmk_logging_settings_section"></a>Configurações do sistema para registro em log
+###  <a name="system-settings-for-logging"></a><a name="bkmk_logging_settings_section"></a>Configurações do sistema para registro em log
 
 |Configuração|Comentários|
 |-------------|--------------|
 |Habilitar Log de Execução|O padrão é TRUE.<br /><br /> Especifique se o servidor de relatórios gerará logs de rastreamento e por quantos dias os logs serão mantidos. . Os logs são armazenados no computador do servidor de relatório, na pasta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Um novo arquivo de log é iniciado cada vez que o serviço é reiniciado. Para obter mais informações sobre arquivos de log, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|
 |Dias em Que o Log de Execução Será Mantido|O padrão é 60 dias.|
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece suporte para o log ULS do SharePoint.  Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece suporte para o log ULS do SharePoint.  Para obter mais informações, consulte [Ativar eventos do Reporting Services para o log de rastreamento do SharePoint &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 
-###  <a name="bkmk_security_settings_section"></a>Configurações de segurança
+###  <a name="security-settings"></a><a name="bkmk_security_settings_section"></a>Configurações de segurança
 
 |Configuração|Comentários|
 |-------------|--------------|
@@ -105,7 +104,7 @@ ms.locfileid: "78173298"
 |Habilitar Erros Remotos|O padrão é FALSE|
 |Habilitar Erros Detalhados de Conexão de Teste|O padrão é TRUE.|
 
-###  <a name="bkmk_client_settings_section"></a>Configurações do cliente
+###  <a name="client-settings"></a><a name="bkmk_client_settings_section"></a>Configurações do cliente
 
 |Configuração|Comentários|
 |-------------|--------------|
@@ -115,25 +114,25 @@ ms.locfileid: "78173298"
 |Editar Tempo Limite da Sessão|O padrão é 7200 segundos.|
 |Editar Limite de Cache de Sessão|O padrão é 5.|
 
-##  <a name="bkmk_managejobs"></a>Gerenciar trabalhos
+##  <a name="manage-jobs"></a><a name="bkmk_managejobs"></a>Gerenciar trabalhos
  Você pode visualizar e excluir os trabalhos em execução; por exemplo trabalhos que foram criados pelas assinaturas de relatórios e assinaturas controladas por dados. A página não é usada para gerenciar assinaturas, mas trabalhos que foram disparados por uma assinatura. Por exemplo, uma assinatura que foi agendada para ser executada uma vez a cada hora gerará um trabalho por hora que será exibido na página **Gerenciar Trabalhos** .
 
- ![gerenciar trabalhos em execução](media/ssrs-manage-jobs.gif "gerenciamento de trabalhos em execução")
+ ![gerenciar trabalhos em execução](media/ssrs-manage-jobs.gif "gerenciar trabalhos em execução")
 
-##  <a name="bkmk_keymgt"></a>Gerenciamento de chaves
+##  <a name="key-management"></a><a name="bkmk_keymgt"></a>Gerenciamento de chaves
  A tabela a seguir resume as páginas de gerenciamento de chaves
 
 > [!IMPORTANT]
 >  Alterar periodicamente a chave de criptografia do Reporting Services é uma prática recomendada de segurança. Um momento indicado para alterar a chave é imediatamente após uma atualização de versão principal do Reporting Services. Alterar a chave depois de uma atualização minimiza a interrupção de serviço adicional causada pela alteração da chave de criptografia do Reporting Services fora do ciclo de atualização.
 
-|Página|DESCRIÇÃO|
+|Página|Descrição|
 |----------|-----------------|
 |Chave de Criptografia de Backup|1) Digite uma senha nas caixas **Senha:** e **Confirmar Senha:** , e clique em **Exportar**. Você verá um aviso se a senha digitada não atender aos requisitos de complexidade da política de domínio.<br /><br /> 2) Será solicitado que você informe um local em que o arquivo da chave será salvo. É recomendável armazenar o arquivo da chave em um computador que não seja o que está executando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. O nome de arquivo padrão é o mesmo do aplicativo de serviço.|
 |Restaurar chave de criptografia|1) Digite ou navegue até o arquivo da chave na caixa **Local do Arquivo**<br /><br /> 2) Na caixa **Senha** , digite a senha que foi usada para fazer backup do arquivo de criptografia.<br /><br /> 3) Clique em **OK**|
 |Alterar Chave de Criptografia|Esta operação criará uma nova chave e criptografará novamente seu conteúdo criptografado. Se você tiver muito conteúdo, esta operação poderá levar várias horas.<br /><br /> Quando a operação de alteração de chave de criptografia for concluída, é recomendado que você faça um backup de sua nova chave.|
 |Conteúdo Criptografado Excluído|O conteúdo excluído não pode ser recuperado.<br /><br /> ** \* Importante \* \* ** A ação de excluir e recriar a chave simétrica não pode ser revertida ou desfeita. Excluir ou recriar a chave simétrica pode ter ramificações importantes em sua instalação atual. Se você excluir a chave, quaisquer dados existentes criptografados pela chave simétrica também serão excluídos. Os dados excluídos incluem cadeias de caracteres de conexão a fontes de dados de relatório externas, cadeias de caracteres de conexões armazenadas e algumas informações de assinatura.|
 
-##  <a name="bkmk_executionaccount"></a>Conta de execução
+##  <a name="execution-account"></a><a name="bkmk_executionaccount"></a>Conta de execução
  Use esta página para configurar uma conta a ser usada para processamento autônomo. Essa conta é usada em circunstâncias especiais, quando outras fontes de credenciais não estiverem disponíveis:
 
 -   Quando o servidor de relatório se conecta a uma fonte de dados que não requer credenciais. Exemplos de fontes de dados que podem não requerer credenciais incluem documentos XML e alguns aplicativos de banco de dados do lado do cliente.
@@ -159,23 +158,23 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
 ### <a name="options"></a>Opções
  **Especificar uma conta de execução** Selecione para especificar uma conta.
 
- **Conta** do Insira uma conta de usuário de domínio do Windows. Use este formato: * \<>\\ de domínio<conta\>de usuário*.
+ **Conta** Insira uma conta de usuário de domínio do Windows. Use este formato: * \<>\\ de domínio<conta\>de usuário*.
 
- **Senha** do Digite a senha.
+ **Senha** Digite a senha.
 
- **Confirmar senha** Digite a senha novamente.
+ **Confirmar senha** Redigite a senha.
 
-##  <a name="bkmk_email"></a>Configurações de email
+##  <a name="e-mail-settings"></a><a name="bkmk_email"></a>Configurações de email
  Use esta página para especificar configurações do protocolo SMTP que habilitem a entrega de email do servidor de relatório a partir do servidor de relatório. Você pode usar a extensão de entrega de email do Servidor de Relatório para distribuir relatórios ou notificações de processamento de relatório por meio de assinaturas de email. A extensão de entrega de email do Servidor de relatório requer um servidor SMTP e um endereço de email a ser usado no campo De:.
 
 ### <a name="options"></a>Opções
  **Usar servidor SMTP** Especifica que o email do servidor de relatório é roteado por meio de um servidor SMTP.
 
- **Servidor SMTP de saída** Especifique o servidor SMTP ou o gateway a ser usado. Você pode usar um servidor local ou um servidor SMTP em sua rede.
+ **Servidor SMTP de Saída** Especifique o servidor SMTP ou o gateway a ser usado. Você pode usar um servidor local ou um servidor SMTP em sua rede.
 
  **Endereço de** Especifica o endereço de email a ser usado no campo de: de um email gerado. Você deve especificar uma conta de usuário que tenha permissão para enviar email do servidor SMTP.
 
-##  <a name="bkmk_provisionsubscriptions"></a>Provisionar assinaturas e alertas
+##  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provisionsubscriptions"></a>Provisionar assinaturas e alertas
  Use esta página para verificar se o SQL Server Agent está em execução e provisionar acesso para que o Reporting Services use o SQL Server Agent. O SQL Server Agent é necessário para assinaturas, agendas e alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . [Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)
 
 ## <a name="proxy-association"></a>Associação de proxy

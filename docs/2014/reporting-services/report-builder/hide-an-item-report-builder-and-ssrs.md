@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176875"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar um item (Construtor de Relatórios e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176875"
     > [!NOTE]
     >  Para selecionar uma tabela ou uma região de dados tablix inteira, clique na região de dados para selecioná-la, clique com o botão direito do mouse em uma linha, coluna ou alça de canto e, em seguida, clique em **Propriedades do Tablix**.
 
-2.  Clique em **Visibilidade**.
+2.  Clique em **visibilidade.**
 
 3.  Em **Quando o relatório for executado inicialmente**, especifique se deseja ocultar o item quando exibir o relatório pela primeira vez:
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176875"
         >  Quando você especifica uma expressão para visibilidade, você está configurando a propriedade Hidden do item de relatório, conforme mostrado na imagem a seguir. A expressão avaliada mostra o item de relatório quando o valor é False e oculta o item de relatório quando o valor é True. 
         > ![Caixa de diálogo Properties_Visibility e propriedade oculta](../media/hiddenproperty-propertiesvisibility.png "Caixa de diálogo Properties_Visibility e propriedade oculta")
 
-4.  Clique duas vezes em **OK** .
+4.  Clique em **OK** duas vezes.
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Para ocultar linhas estáticas em uma tabela, matriz ou lista
 

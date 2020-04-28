@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918086"
 ---
 # <a name="glossary-report-builder"></a>Glossário (Construtor de Relatórios)
@@ -37,8 +37,8 @@ ms.locfileid: "76918086"
 |banco de dados de aplicativo|O banco de dados que armazena dados do sistema e do usuário para um aplicativo.|  
 |argumento|Um valor que fornece informações para uma ação, um evento, um método, uma propriedade, uma função ou um procedimento.|  
 |assembly|Um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto no SQL Server, em relação ao qual as funções CLR, procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no SQL Server.|  
-|Autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
-|authorization|1. A operação que verifica as permissões e os direitos de acesso que são concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
+|autenticação|O processo de verificar a identidade de um usuário, computador, processo ou outra entidade validando as credenciais fornecidas pela entidade. Formas comuns de credenciais são assinaturas digitais, cartões inteligentes, dados biométricos e uma combinação de nomes e senhas de usuários.|  
+|autorização|1. A operação que verifica as permissões e os direitos de acesso que são concedidos a um usuário. 2. O processo de conceder a uma pessoa, um processo de computador ou um dispositivo acesso a certas informações, serviços ou funcionalidade.|  
 |eixo|As linhas horizontal e vertical em um gráfico usadas para mostrar a posição de um ponto.|  
 |intervalo de eixo|O número de unidades entre marcas de escala principais em um eixo de gráfico. O intervalo é calculado automaticamente, mas pode ser definido manualmente.|  
 |fazer backup|Para fazer uma cópia duplicada de um programa, um disco ou dados.|  
@@ -114,7 +114,7 @@ ms.locfileid: "76918086"
 |assinatura controlada por dados|Uma assinatura no Reporting Services que usa uma consulta para recuperar dados de assinatura de uma fonte de dados externa em tempo de execução.|  
 |dataset|1. No OLE DB para OLAP, o conjunto de dados multidimensionais que é o resultado da execução de uma instrução SELECT MDX.   <br />2. No Reporting Services, uma especificação nomeada que inclui uma definição de fonte de dados, uma definição de consulta e valores de parâmetro opcionais, campos calculados e informações de filtragem e ordenação como parte de um arquivo de definição de relatório (.rdl). Um arquivo .rdl pode ter vários conjuntos de dados.|  
 |DBCS|conjunto de caracteres de dois bytes|  
-|padrão|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
+|default|1. Um valor de dados, uma configuração de opção, uma ordenação ou um nome atribuído automaticamente pelo sistema, se um usuário não especificar o valor, a configuração, a ordenação ou o nome. 2. Uma ação executada automaticamente em determinados eventos, se o usuário não tiver especificado a ação a ser executada.|  
 |banco de dados padrão|O banco de dados ao qual o usuário é conectado imediatamente após fazer logon no SQL Server.|  
 |instância padrão|A instância do SQL Server que usa o mesmo nome que o nome do computador no qual está instalada.|  
 |delimiter|1. No Transact-SQL, os caracteres que indicam o início e o fim de um nome de objeto, usando aspas duplas ("") ou colchetes ([]). 2. No Integration Services e no Reporting Services, caracteres que são usados para separar registros, campos ou cadeias de caracteres.|  
@@ -243,7 +243,7 @@ ms.locfileid: "76918086"
 |operador|Um sinal ou símbolo que especifica o tipo de cálculo a ser executado dentro de uma expressão. Há operadores matemáticos, de comparação, lógicos e de referência.|  
 |agregação externa|Uma função de agregação que especifica um parâmetro de escopo que é outra função de agregação.|  
 |preenchimento|1. Uma cadeia de caracteres, normalmente adicionada quando o último bloco de texto não criptografado é curto. 2. O espaço alocado em uma célula para criar ou manter um tamanho específico.|  
-|Página|No Construtor de Relatórios, a página se refere à página física de papel. O tamanho do papel que você especifica para o relatório controla como o relatório é renderizado.|  
+|página|No Construtor de Relatórios, a página se refere à página física de papel. O tamanho do papel que você especifica para o relatório controla como o relatório é renderizado.|  
 |paleta|Um conjunto de valores predefinidos ou definidos pelo usuário para cores usadas em gráficos, mapas e medidores.|  
 |parâmetro|Uma coleção global interna em um relatório que permite aos usuários definir valores que podem variar dados de relatório, aparência e conectar relatórios relacionados. Os parâmetros de relatório são criados automaticamente a partir de parâmetros de consulta e parâmetros de conjunto de dados, e manualmente por autores de relatório.|  
 |relatório com parâmetros|Um relatório publicado que aceita valores de entrada por meio de parâmetros.|  
@@ -260,11 +260,11 @@ ms.locfileid: "76918086"
 |projeção|Um mapeamento de dados a partir de um sistema de coordenadas N-dimensional para um sistema de coordenadas (N-1)-dimensional. Por exemplo, o mapeamento de dados geográficos tridimensionais em uma superfície de exibição bidimensional.|  
 |página de propriedades|Uma caixa de diálogo que exibe informações sobre um objeto na interface.|  
 |propriedade|Um atributo nomeado de um objeto de controle, de campo ou de banco de dados que você configura para definir uma das características do objeto, como tamanho, cor ou local da tela; ou um aspecto de seu comportamento, como, por exemplo, se ele está oculto.|  
-|protocol|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
+|protocolo|Um conjunto padrão de formatos e procedimentos que permitem que computadores troquem informações.|  
 |provider|1. Um provedor OLE DB. 2. Uma DLL (biblioteca de vínculo dinâmico) em processo que fornece acesso a um banco de dados.|  
 |parâmetros de consulta|Parâmetros que são especificados em uma consulta de conjunto de dados, como uma consulta Transact-SQL.|  
 |RDL|Consulte outro termo: Linguagem de Definição de Relatório|  
-|record|Um grupo de campos relacionados (colunas) de informações tratadas como uma unidade. Um registro é mais comumente chamado de uma linha em um banco de dados relacional.|  
+|registro|Um grupo de campos relacionados (colunas) de informações tratadas como uma unidade. Um registro é mais comumente chamado de uma linha em um banco de dados relacional.|  
 |retângulo|Um item de relatório que pode ser usado como um contêiner para vários itens de relatório ou como um elemento gráfico em um relatório.|  
 |hierarquia recursiva|1. Uma hierarquia de dados de um único conjunto de dados de relatório que inclui vários níveis hierárquicos em uma estrutura hierárquica, como a estrutura de subordinação para relações gerente-funcionário em uma hierarquia organizacional. 2. No Master Data Services, uma hierarquia derivada que inclui uma relação recursiva. Uma relação recursiva existe quando uma entidade tem um atributo baseado em domínio baseado na própria entidade.|  
 |banco de dados relacional|Um banco de dados ou um sistema de gerenciamento de banco de dados que armazena informações em tabelas, como linhas e colunas de dados, e conduz pesquisas por meio de dados em colunas especificadas de uma tabela para localizar dados adicionais em outra tabela.|  
@@ -312,7 +312,7 @@ ms.locfileid: "76918086"
 |escalar|Um campo de valor único, em vez de uma agregação.|  
 |agregação escalar|Uma função de agregação, como MIN(), MAX() ou AVG(), que é especificada em uma lista de colunas da instrução SELECT que contém somente funções de agregação.|  
 |esquema|No padrão do SQL-92, uma coleção de objetos de banco de dados que são se propriedade de um único usuário e formam um único namespace. Um namespace é um conjunto de objetos que não podem ter nomes duplicados.|  
-|scope|Usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada ou o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância.|  
+|escopo|Usado em vários contextos. O escopo pode especificar os dados a serem usados para avaliar uma expressão, o conjunto de caixas de texto em uma página renderizada ou o conjunto de itens de relatório que podem ser mostrados ou ocultados com base em uma alternância.|  
 |script|Uma coleção de instruções Transact-SQL usada para executar uma operação.|  
 |protegível|Entidades que podem ser protegidas com permissões.|  
 |protocolo SSL|Um padrão aberto proposto para estabelecer um canal de comunicação seguro para impedir a interceptação de informações críticas, como números de cartão de crédito. Primeiramente, ele habilita transações financeiras eletrônicas seguras na World Wide Web, embora também seja criado para funcionar em outros serviços de Internet.|  
@@ -337,12 +337,12 @@ ms.locfileid: "76918086"
 |dados espaciais|Dados que especificam localizações de objetos em uma superfície plana ou curva. Os dados espaciais podem ser pontos, linhas ou polígonos.|  
 |tipos de dados espaciais|Especifica dados que representam informações geométricas (planares) ou geográficas (geodésicas).|  
 |SQL|Consulte outro termo: linguagem SQL|  
-|Consulta SQL|Uma instrução SQL, como SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
+|consulta SQL|Uma instrução SQL, como SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |Autenticação do SQL Server|O mecanismo para validar uma tentativa de conectar-se a uma instância do SQL Server especificando uma ID de logon e uma senha do SQL Server.|  
 |logon do SQL Server|Uma conta armazenada no SQL Server que permite que os usuários se conectem ao SQL Server.|  
 |Instrução SQL|Um comando SQL ou Transact-SQL, como SELECT ou DELETE, que executa uma ação nos dados.|  
 |cadeia de conexão estática|Um conjunto de valores que o relatório usa para conectar-se à mesma fonte de dados sempre que é executado.|  
-|string|Um tipo de dados que contém letras, números e muitos caracteres. Os números em um campo String, que é um campo com um tipo de dados String, não estão disponíveis para cálculos numéricos. Você deve usar um tipo de dados numérico, como Integer ou Float, para executar cálculos numéricos. Para um parâmetro, o tipo de dados String é igual ao tipo de dados Text.|  
+|cadeia de caracteres|Um tipo de dados que contém letras, números e muitos caracteres. Os números em um campo String, que é um campo com um tipo de dados String, não estão disponíveis para cálculos numéricos. Você deve usar um tipo de dados numérico, como Integer ou Float, para executar cálculos numéricos. Para um parâmetro, o tipo de dados String é igual ao tipo de dados Text.|  
 |funções de cadeia de caracteres|Funções que executam operações em cadeias de caracteres ou binárias.|  
 |SQL (Structured Query Language)|Uma linguagem usada para inserir, recuperar, modificar e excluir dados em um banco de dados relacional, criada especificamente para consultas de banco de dados.|  
 |sub-relatório|Um sub-relatório é um controle inserido no corpo de um relatório pai. Conceitualmente, um sub-relatório é semelhante a um quadro em uma página da Web que fornece um contêiner para outro conteúdo de página da Web. O sub-relatório é renderizado dentro do relatório pai que o contém. Os dois relatórios são processados e exibidos ao mesmo tempo.|  
@@ -370,6 +370,6 @@ ms.locfileid: "76918086"
 |eixo y|Consulte outro termo: eixo de valor (y)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Conceitos de criação de relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceitos de criação de relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

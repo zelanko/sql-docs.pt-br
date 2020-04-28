@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176416"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expressões de propriedade em pacotes
@@ -125,7 +125,7 @@ ms.locfileid: "78176416"
 
  Se o nome do pacote for EmailRowCountPP, se tiver sido executado em 04/03/2005, com duração de 9 segundos, a expressão avaliará a seguinte cadeia de caracteres.
 
- PExpression--> Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.
+ PExpression-->Pacote: (EmailRowCountPP) Iniciado em:3/4/2005 11:06:18 AM Duração:9 segundos.
 
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expressão de Propriedade para a Mensagem de uma Mensagem de Email
  A expressão de propriedade a seguir pode ser usada para definir a propriedade MessageSource de uma tarefa Enviar Email. A expressão usa uma combinação de literais de cadeia de caracteres, variáveis definidas pelo usuário e o operador de concatenação (+). As variáveis definidas pelo usuário são chamadas de `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. O "\n" da cadeia de caracteres indica um retorno de carro.

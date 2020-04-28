@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175965"
 ---
 # <a name="data-collection"></a>Coleta de dados
@@ -31,12 +31,12 @@ ms.locfileid: "78175965"
 
  A ilustração a seguir mostra como o coletor de dados se adapta à estratégia geral de coleta e gerenciamento de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
- ![A função do Coletor de Dados no gerenciamento de dados](../../database-engine/media/datacollectorroleindatastrategy.gif "A função do Coletor de Dados no gerenciamento de dados")
+ ![A função do coletor de dados no gerenciamento de dados](../../database-engine/media/datacollectorroleindatastrategy.gif "A função do coletor de dados no gerenciamento de dados")
 
 ## <a name="data-collector-concepts"></a>Conceitos do Coletor de Dados
  O coletor de dados é integrado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e ao [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e os utiliza extensivamente. Antes de trabalhar com o coletor de dados, você precisa entender determinados conceitos relacionados a cada um desses componentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent é usado para agendar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agente é usado para programar e executar trabalhos de coleta. Você precisa entender os seguintes conceitos:
 
 -   Trabalho
 
@@ -50,11 +50,11 @@ ms.locfileid: "78175965"
 
  Para obter mais informações, consulte [Tarefas de administração automatizadas &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).
 
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
+ O [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) é usado para executar pacotes que coletam dados de provedores de dados individuais. Você precisa estar familiarizado com as seguintes ferramentas e conceitos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]agrupa
+-   Pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configuração do pacote
+-   Configuração do pacote [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
  Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Pacotes](../../integration-services/integration-services-ssis-packages.md).
 

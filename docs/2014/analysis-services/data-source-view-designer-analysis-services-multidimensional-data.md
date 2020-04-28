@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175162"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Designer de Exibição da Fonte de Dados (Analysis Services – Dados Multidimensionais)
@@ -49,7 +49,7 @@ ms.locfileid: "78175162"
 |Adicionar manualmente relacionamentos de tabela|[Definir relações lógicas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|
 |Crie uma consulta nomeada para definir um novo objeto com base em uma consulta T-SQL genérica.|[Definir consultas nomeadas em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|
 |Explore os dados subjacentes para exibir os valores de dados reais representados por objetos de modelo.<br /><br /> A exploração de dados permite a você inspecionar visualmente e copiar dados retornados da tabela dimensional ou consulta dimensional subjacente. Por padrão, a exploração de dados usa a metodologia de amostragem de contagem superior, com uma contagem de exemplo de 5000, mas você pode revisar essas configurações.|[Explorar dados em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
-|Diagrame todas ou parte das tabelas e relacionamentos em um DSV|[Trabalhar com diagramas no designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
+|Diagrame todas ou parte das tabelas e relacionamentos em um DSV|[Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
 
 ## <a name="see-also"></a>Consulte Também
  [Exibições da fonte de dados em modelos multidimensionais](multidimensional-models/data-source-views-in-multidimensional-models.md) [adicionando ou removendo tabelas ou exibições em uma exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)

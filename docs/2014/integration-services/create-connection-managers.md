@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed61dbba038068b8584d8d73893e48adb832683b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176476"
 ---
 # <a name="create-connection-managers"></a>Criar gerenciadores de conexões
@@ -55,6 +55,6 @@ ms.locfileid: "78176476"
  Ambas as versões do provedor têm o mesmo ID. Para especificar se o tempo de execução do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa uma versão de 64 bits disponível do provedor, você define a propriedade Run64BitRuntime do projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se a propriedade Run64BitRuntime for definida como `true`, o tempo de execução localizará e usará o provedor de 64 bits; se Run64BitRuntime for `false`, o tempo de execução localizará e usará o provedor de 32 bits. Para obter mais informações sobre as propriedades que você pode definir em projetos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], consulte [Integration Services &#40;SSIS&#41; e Studio Environments](integration-services-ssis-development-and-management-tools.md).
 
 ## <a name="see-also"></a>Consulte Também
- [](control-flow/control-flow.md) [Fluxo de dados](data-flow/data-flow.md) de fluxo de controle [Integration Services &#40;os MANIPULADORes de eventos&#41; SSIS](integration-services-ssis-event-handlers.md)
+ [Control Flow](control-flow/control-flow.md) [Fluxo de dados](data-flow/data-flow.md) de fluxo de controle [Integration Services &#40;os MANIPULADORes de eventos&#41; SSIS](integration-services-ssis-event-handlers.md)
 
 

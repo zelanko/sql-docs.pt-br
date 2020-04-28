@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175315"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultando e desabilitando as hierarquias de atributo
@@ -49,25 +49,25 @@ ms.locfileid: "78175315"
 
 2.  Observe se as seguintes hierarquias de atributo aparecem na lista **Hierarquia** :
 
-    -   **Taxa base**
+    -   **Taxa Básica**
 
-    -   **Data de nascimento**
+    -   **Birth Date**
 
-    -   **ID de logon**
+    -   **ID de Logon**
 
-    -   **SSN do gerente**
+    -   **Gerente SSN**
 
     -   **SSN**
 
 3.  Alterne para a guia **Estrutura da Dimensão** e selecione os atributos a seguir no painel **Atributos** . Você pode selecionar várias medidas clicando em cada uma enquanto mantém pressionada a tecla CTRL.
 
-    -   **Taxa base**
+    -   **Taxa Básica**
 
-    -   **Data de nascimento**
+    -   **Birth Date**
 
-    -   **ID de logon**
+    -   **ID de Logon**
 
-    -   **SSN do gerente**
+    -   **Gerente SSN**
 
     -   **SSN**
 
@@ -93,13 +93,13 @@ ms.locfileid: "78175315"
 
     -   **Nome completo**
 
-    -   **CEP**
+    -   **Postal Code**
 
 3.  Alterne para a guia **Estrutura da Dimensão** e selecione os seguintes atributos no painel **Atributos** usando a tecla CTRL para selecionar vários atributos ao mesmo tempo:
 
     -   **Nome completo**
 
-    -   **CEP**
+    -   **Postal Code**
 
 4.  Na janela Propriedades, defina o valor da propriedade **AttributeHierarchyVisible** como **False** para os atributos selecionados.
 

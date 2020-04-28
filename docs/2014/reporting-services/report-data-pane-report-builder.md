@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173265"
 ---
 # <a name="report-data-pane-report-builder"></a>Painel de Dados do Relatório (Construtor de Relatórios)
@@ -29,11 +29,11 @@ ms.locfileid: "78173265"
 
  **Parâmetros** do Representa a coleção de parâmetros de relatório, cada um dos quais pode ser de valor único ou de múltiplos valores. Para obter mais informações, consulte [Parâmetros de relatório &#40;Construtor de Relatórios e Designer de Relatórios&#41;](report-design/report-parameters-report-builder-and-report-designer.md).
 
- **Imagens** do Representa o conjunto de imagens usadas no relatório. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
+ **Imagens** Representa o conjunto de imagens usadas no relatório. Para obter mais informações, consulte [Imagens &#40;Construtor de Relatórios e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
 
- **Fontes de dados** Representa uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada. Uma fonte de dados representa uma fonte de dados para o relatório. Uma fonte de dados é o nó pai da coleção de conjuntos de dados que a utiliza. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md) e [conexões de dados, fontes de dados e cadeias de conexão no construtor de relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).
+ **Fontes de dados** Representa uma fonte de dados inserida ou uma referência para uma fonte de dados compartilhada. Uma fonte de dados representa uma fonte de dados para o relatório. Uma fonte de dados é o nó pai da coleção de conjuntos de dados que a utiliza. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md) e [conexões de dados, fontes de dados e cadeias de conexão no construtor de relatórios](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).
 
- **Conjuntos** de os Representa os dados que são recuperados de uma fonte de dados executando um comando, por exemplo, [!INCLUDE[tsql](../includes/tsql-md.md)] uma consulta que recupera dados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] um banco de dado. Um conjunto de dados é o nó pai da coleção de campos especificados pela consulta e também inclui campos calculados. O Construtor de Relatórios oferece suporte aos designers de consulta para ajudar a especificar uma consulta. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md).
+ **Conjuntos de dados** Representa os dados recuperados de uma fonte de dados com a execução de um comando, por exemplo, uma consulta [!INCLUDE[tsql](../includes/tsql-md.md)] que recupere dados de um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Um conjunto de dados é o nó pai da coleção de campos especificados pela consulta e também inclui campos calculados. O Construtor de Relatórios oferece suporte aos designers de consulta para ajudar a especificar uma consulta. Para obter mais informações, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-data/report-datasets-ssrs.md).
 
 ## <a name="see-also"></a>Consulte Também
  [Coleção de campos de conjunto de &#40;Construtor de relatórios e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md) [Construtor de relatórios ajuda para caixas de diálogo, painéis e assistentes de](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md) [agrupamento &#40;](report-design/grouping-pane-report-builder.md) Construtor de relatórios a [localização, exibição e gerenciamento de relatórios&#41;&#40;e SSRS](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md) Construtor de relatórios

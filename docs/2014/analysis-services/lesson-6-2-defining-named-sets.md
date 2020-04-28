@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175262"
 ---
 # <a name="defining-named-sets"></a>Definindo conjuntos nomeados
@@ -75,7 +75,7 @@ ms.locfileid: "78175262"
 
 8.  Abra o Designer de Dimensão para a dimensão **Revendedor** e clique em **Número de Funcionários** no painel **Atributos** .
 
-9. No janela Propriedades `DiscretizationMethod` , altere a propriedade para **automático**e, em seguida, altere `DiscretizationBucketCount` a propriedade `5`para. Para obter mais informações, consulte [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. No janela Propriedades `DiscretizationMethod` , altere a propriedade para **automático**e, em seguida, altere `DiscretizationBucketCount` a propriedade `5`para. Para obter mais informações, consulte [Agrupar membros de atributo &#40;Diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. No menu **Compilar** do [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], clique em **Implantar Tutorial do Analysis Services**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175262"
      ![Painel Filtro com dois conjuntos nomeados](../../2014/tutorials/media/l6-named-set-05.gif "Painel Filtro com dois conjuntos nomeados")
 
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição
- [Lição 7: definindo indicadores chave de desempenho &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Lição 7: Definindo KPIs &#40;Indicadores Chave de Desempenho&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>Consulte Também
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md) [criam conjuntos nomeados](multidimensional-models/create-named-sets.md)

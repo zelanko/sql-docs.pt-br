@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174005"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "78174005"
 
  A ilustração a seguir mostra o processo.
 
- ![Como analisar XML com OPENXML](../../database-engine/media/xmlsp.gif "Analisando XML com OPENXML")
+ ![Como analisar XML com OPENXML](../../database-engine/media/xmlsp.gif "Como analisar XML com OPENXML")
 
  Observe que para entender o OPENXML, é necessário estar familiarizado com consultas XPath e ter um entendimento de XML. Para obter mais informações sobre suporte ao XPath no SQL Server, consulte [Usando consultas XPath no SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).
 
@@ -137,7 +137,7 @@ EXEC sp_xml_removedocument @docHandle;
 
  A tabela a seguir descreve a estrutura da tabela de borda.
 
-|Nome da coluna|Tipo de dados|Descrição|
+|Nome da coluna|Tipo de dados|DESCRIÇÃO|
 |-----------------|---------------|-----------------|
 |**id**|**bigint**|É a ID exclusiva do nó do documento.<br /><br /> O elemento raiz tem um valor de ID igual a 0. Os valores negativos da ID são reservados.|
 |**parentid**|**bigint**|Identifica o pai do nó. O pai identificado por esse ID necessariamente não é o elemento pai. No entanto isso depende do Tipo do Nó cujo o pai é identificado por esse ID. Por exemplo, se o nó for um nó de texto, seu pai poderá ser um nó de atributo.<br /><br /> Se o nó estiver no nível superior no documento XML, seu **ParentID** será NULL.|

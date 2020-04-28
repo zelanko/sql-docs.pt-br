@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175727"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "78175727"
 
  Há três tipos de permissões especificadas em nível de banco de dados.
 
- **Controle total (administrador)** ─ controle total é uma permissão totalmente abrangente que transmite uma ampla potência sobre um banco de dados Analysis Services, como a capacidade de consultar ou processar qualquer objeto no banco de dados e gerenciar a segurança da função. Controle Total é sinônimo de status de administrador de banco de dados. Ao selecionar `Full Control`, as permissões de `Process Database` e `Read Definition` também são selecionados e não podem ser removidas.
+ **Controle Total (Administrador)** ─ Controle Total é uma permissão abrangente que transmite amplos poderes sobre um banco de dados do Analysis Services, tais como a capacidade de consultar ou processar qualquer objeto dentro do banco de dados e gerenciar a segurança das funções. Controle Total é sinônimo de status de administrador de banco de dados. Ao selecionar `Full Control`, as permissões de `Process Database` e `Read Definition` também são selecionados e não podem ser removidas.
 
 > [!NOTE]
 >  Os administradores do servidor (membros da função de Administrador do Servidor) também têm Controle Total implícito sobre cada banco de dados no servidor.

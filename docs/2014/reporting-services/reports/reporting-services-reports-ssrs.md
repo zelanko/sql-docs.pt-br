@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177067"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Relatórios do Reporting Services (SSRS)
@@ -47,14 +47,14 @@ ms.locfileid: "78177067"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>Estágios do processamento de relatórios
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Estágios do processamento de relatório
  Ao criar um relatório, você define um arquivo de definição de relatório (.rdl) em formato XML. Esse arquivo contém todas as informações necessárias para combinar dados e layout de relatório pelo processador de relatório. Ao exibir um relatório, o relatório passa pelas seguintes fases:
 
 -   **Compilar.** Avalie expressões na definição de relatório e armazene o formato intermediário compilado internamente no servidor de relatório.
 
--   **Processar.** Execute as consultas de conjunto de dados e combine o formato intermediário com os dados e o layout.
+-   **Process.** Execute as consultas de conjunto de dados e combine o formato intermediário com os dados e o layout.
 
--   **Renderizar.** Envie o relatório processado para uma extensão de renderização para determinar quantas informações cabem em cada página e crie o relatório paginado.
+-   **Aplicar.** Envie o relatório processado para uma extensão de renderização para determinar quantas informações cabem em cada página e crie o relatório paginado.
 
 -   **Exportar (opcional).** Exporte o relatório para um formato de arquivo diferente.
 
@@ -128,7 +128,7 @@ ms.locfileid: "78177067"
 
 -   **Entrega.**  Configure uma assinatura para entregar relatórios aos leitores por email ou por uma pasta de arquivos compartilhada.  Para obter mais informações, consulte [Assinaturas e entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
 
--   **Exportar.**  Na barra de ferramentas do visualizador de relatórios, o leitor do relatório pode exportá-lo para um formato de arquivo diferente. Os formatos de arquivos de exportação podem ser configurados pelo administrador do servidor de relatório. Para obter mais informações, consulte [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)
+-   **Export.**  Na barra de ferramentas do visualizador de relatórios, o leitor do relatório pode exportá-lo para um formato de arquivo diferente. Os formatos de arquivos de exportação podem ser configurados pelo administrador do servidor de relatório. Para obter mais informações, consulte [Exportando relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)
 
 -   **Imprimir.**  O leitor do relatório pode imprimir um relatório ou páginas do documento dependendo do modo no qual é exibido. Para obter mais informações, consulte [Imprimir Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
 
@@ -139,11 +139,11 @@ ms.locfileid: "78177067"
 
 -   **Fontes de dados.** As fontes de dados inseridas e compartilhadas são gerenciadas de forma independente da definição do relatório.
 
--   **Conjuntos de dados.**  Os conjuntos de dados compartilhados são gerenciados de forma independente da definição do relatório.
+-   **Conjuntos.**  Os conjuntos de dados compartilhados são gerenciados de forma independente da definição do relatório.
 
--   **Parâmetros.**  Os parâmetros são gerenciados independentemente da definição de relatório. Depois que os parâmetros são alterados no servidor de relatório, os clientes de criação de relatório não podem publicar sobre as alterações feitas no servidor.
+-   **Parâmetro.**  Os parâmetros são gerenciados independentemente da definição de relatório. Depois que os parâmetros são alterados no servidor de relatório, os clientes de criação de relatório não podem publicar sobre as alterações feitas no servidor.
 
--   **Recursos.**  Imagens e dados espaciais em shapefiles ESRI são recursos que podem ser publicados e gerenciados de forma independente da definição de relatório.
+-   **Os.**  Imagens e dados espaciais em shapefiles ESRI são recursos que podem ser publicados e gerenciados de forma independente da definição de relatório.
 
 -   **Cache de relatório.**  Agendando a execução de grandes relatórios durante horas fora do pico de atividade, você pode reduzir o impacto do processamento no servidor de relatório durante o horário comercial.
 
@@ -153,7 +153,7 @@ ms.locfileid: "78177067"
 
  Para obter mais informações sobre o desempenho, consulte [Desempenho, instantâneos, caching &#40;Reporting Services&#41;](../report-server/performance-snapshots-caching-reporting-services.md).
 
-##  <a name="bkmk_SecureReportsSummary"></a>Relatórios seguros
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Relatórios seguros
  Para proteger um relatório:
 
 -   No administrador do servidor de relatório, identifique a autorização e o sistema de autenticação que são usados em sua instalação do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Por padrão, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa a autenticação do Windows, segurança integrada e atribuição de função para ajudar a controlar o acesso aos relatórios publicados. Para obter mais informações, consulte [Funções e permissões &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Segurança e proteção do Reporting Services](../security/reporting-services-security-and-protection.md).
@@ -164,7 +164,7 @@ ms.locfileid: "78177067"
 ## <a name="upgrade-reports"></a>Upgrade Reports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oferece suporte a várias versões de definições de relatório, servidores de relatório e sites do SharePoint. Para atualizar um relatório:
 
--   Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
+-   Atualize uma instalação de servidor de relatório. Os relatórios compilados armazenados no servidor de relatório são atualizados automaticamente no primeiro uso. A definição de relatório (.rdl) não é alterada. Para obter mais informações, consulte [atualizar e migrar Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
 
 -   Abra um relatório em um ambiente de criação de relatórios. A definição de relatório é atualizada na maioria das circunstâncias. Para obter mais informações, consulte [Atualizar Relatórios](../install-windows/upgrade-reports.md) e [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).
 

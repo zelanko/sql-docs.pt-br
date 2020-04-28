@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca5a4561c4b3f55044eb63068036105d878f150c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175063"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
@@ -41,7 +41,7 @@ ms.locfileid: "78175063"
 
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo do SharePoint | Modo nativo.
 
-##  <a name="bkmk_ReportServer"></a> Contadores de Desempenho ReportServer:Service (servidor de relatório no modo nativo)
+##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> Contadores de Desempenho ReportServer:Service (servidor de relatório no modo nativo)
  O objeto de desempenho `ReportServer:Service` inclui uma coleção de contadores a fim de controlar os eventos relativos ao HTTP e à memória de uma instância do servidor de relatório. Esse objeto aparece uma vez para cada instância do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no computador, e é possível adicionar ou remover contadores do objeto para cada instância. Os contadores da instância padrão aparecem no formato `ReportServer:Service`. Os contadores para instâncias nomeadas aparecem no `ReportServer$<`formato *instance_name*`>:Service`.
 
  O `ReportServer:Service` objeto de desempenho era novo [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]no e fornece um subconjunto de contadores que foram incluídos com serviços de informações da Internet (IIS) e [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] em versões anteriores do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Esses novos contadores são específicos do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]e controlam eventos relacionados ao HTTP do servidor de relatório, como solicitações, conexões e tentativas de logon. Adicionalmente, ele inclui contadores para controlar eventos de gerenciamento de memória.
@@ -54,7 +54,7 @@ ms.locfileid: "78175063"
 (get-counter -listset "ReportServer:Service").paths
 ```
 
-|Contador|Descrição|
+|Contador|DESCRIÇÃO|
 |-------------|-----------------|
 |`Active connections`|O número de conexões atualmente ativas no servidor.|
 |`Bytes Received Total`|O número de bytes recebidos pelo servidor. Esse contador calcula o total de bytes brutos recebidos pelo Gerenciador de Relatórios e pelo servidor de relatório.|
@@ -78,7 +78,7 @@ ms.locfileid: "78175063"
 |`Requests/sec`|O número de solicitações processadas por segundo. Esse valor representa a taxa de transferência atual do aplicativo.|
 |`Tasks Queued`|O número de tarefas que estão esperando um thread para se tornarem disponíveis para processamento. Cada solicitação feita ao servidor de relatório corresponde a uma ou mais tarefas. Esse contador representa apenas o número de tarefas que estão prontas para processamento; ele não inclui o número de tarefas atualmente em execução.|
 
-##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint: serviço (servidor de relatório no modo do SharePoint)
+##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:serviço (servidor de relatório no modo do SharePoint)
  O `ReportServerSharePoint:Service` objeto de desempenho foi adicionado [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]no.
 
  ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName
@@ -93,8 +93,8 @@ ms.locfileid: "78175063"
 |`Memory Shrink Amount`|
 |`Memory Shrink Notifications/Sec`|
 
-##  <a name="bkmk_powershell"></a>Usar cmdlets do PowerShell para retornar listas
- ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O script do Windows PowerShell a seguir retornará a lista de contadores de desempenho para o CounterSetName "ReportServerSharePoint: Service":
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a>Usar cmdlets do PowerShell para retornar listas
+ ![Conteúdo relacionado ao PowerShell](../media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName "ReportServerSharePoint:Service":
 
 ```
 (get-counter -listset "ReportServerSharePoint:Service").paths

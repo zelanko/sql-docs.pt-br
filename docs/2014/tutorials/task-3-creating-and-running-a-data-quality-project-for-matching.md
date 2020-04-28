@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171765"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criando e executando um projeto de qualidade de dados para correspondência
@@ -30,7 +30,7 @@ ms.locfileid: "78171765"
 
      ![Projeto de Qualidade de Novos Dados - Correspondência selecionada](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "Projeto de Qualidade de Novos Dados - Correspondência selecionada")
 
-5.  Clique em **Próximo**.
+5.  Clique em **Avançar**.
 
 6.  Na página **Mapear** , selecione **Arquivo do Excel** em **Fonte de Dados**.
 

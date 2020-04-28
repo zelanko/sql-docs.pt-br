@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175912"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP na memória (otimização na memória)
@@ -26,7 +26,7 @@ ms.locfileid: "78175912"
 
 |||
 |-|-|
-|![Máquina virtual do Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina Virtual do Azure")|Você deseja experimentar o SQL Server 2016 ? Inscreva-se no Microsoft Azure e acesse **[Aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server 2016 já instalado. Você pode excluir a máquina virtual quando tiver terminado.|
+|![Máquina Virtual do Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina Virtual do Azure")|Você deseja experimentar o SQL Server 2016 ? Inscreva-se no Microsoft Azure e acesse **[Aqui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para criar uma Máquina Virtual com o SQL Server 2016 já instalado. Você pode excluir a máquina virtual quando tiver terminado.|
 
  Para usar o [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], é preciso definir uma tabela muito acessada como memória otimizada. As tabelas com otimização de memória são totalmente transacionais, duráveis e acessados usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)] da mesma forma como ocorre com as tabelas baseadas em disco. Uma consulta pode fazer referência a tabelas com otimização de memória e tabelas baseadas em disco. Uma transação pode atualizar dados tanto nas tabelas com otimização de memória quanto as baseadas em disco. Os procedimentos armazenados que só fazem referência a tabelas com otimização de memória podem ser compilados nativamente em código de computador para mais melhorias de desempenho. O mecanismo do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] é projetado para simultaneidade de sessão extremamente elevada para tipo de transações OLTP acionadas de uma camada intermediária altamente escalada. Para isso, ele usa estruturas de dados livre de travas e controle de simultaneidade otimista de diversas versões. O resultado é uma baixa latência previsível de menos de um milissegundo e alta taxa de transferência com escala linear para transações de banco de dados. O ganho de desempenho real depende de muitos fatores, mas é comum uma melhoria de 5 a 20 vezes no desempenho.
 
@@ -70,16 +70,16 @@ ms.locfileid: "78175912"
 |-----------|-----------------|
 |[Requisitos para usar tabelas com otimização de memória](memory-optimized-tables.md)|Aborda os requisitos de hardware e software, e as diretrizes para usar tabelas com otimização de memória.|
 |[Usando OLTP na Memória em um Ambiente de VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Abrange o uso do [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] em um ambiente virtualizado.|
-|[Exemplos de código do OLTP in-memory](in-memory-oltp-code-samples.md)|Contém exemplos de código que mostram como criar e usar uma tabela com otimização de memória.|
-|[Memory-Optimized Tables](memory-optimized-tables.md)|Apresenta tabelas com otimização de memória.|
+|[Exemplos de código de OLTP na memória](in-memory-oltp-code-samples.md)|Contém exemplos de código que mostram como criar e usar uma tabela com otimização de memória.|
+|[Tabelas com otimização de memória](memory-optimized-tables.md)|Apresenta tabelas com otimização de memória.|
 |[Variáveis de tabela com otimização de memória](../../database-engine/memory-optimized-table-variables.md)|Exemplo de código mostrando como usar uma variável de tabela com otimização de memória em vez de uma variável de tabela tradicional para reduzir o uso de tempdb.|
 |[Índices em tabelas com otimização de memória](../../database-engine/indexes-on-memory-optimized-tables.md)|Incorpora índices com otimização de memória.|
-|[Procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)|Apresenta procedimentos armazenados compilados de modo nativo.|
-|[Gerenciando memória para OLTP in-memory](../../database-engine/managing-memory-for-in-memory-oltp.md)|Compreendendo e gerenciando o uso de memória no sistema.|
+|[procedimentos armazenados compilados nativamente](natively-compiled-stored-procedures.md)|Apresenta procedimentos armazenados compilados de modo nativo.|
+|[Gerenciando memória para OLTP na memória](../../database-engine/managing-memory-for-in-memory-oltp.md)|Compreendendo e gerenciando o uso de memória no sistema.|
 |[Criando e gerenciando armazenamento para objetos com otimização de memória](creating-and-managing-storage-for-memory-optimized-objects.md)|A aborda os arquivos delta e de dados, que armazenam informações sobre transações em tabelas com otimização de memória.|
 |[Backup, restauração e recuperação de tabelas com otimização de memória](restore-and-recovery-of-memory-optimized-tables.md)|Discute backup, restauração e recuperação de tabelas com otimização de memória.|
-|[Suporte ao Transact-SQL para OLTP in-memory](transact-sql-support-for-in-memory-oltp.md)|Discute o suporte do [!INCLUDE[tsql](../../../includes/tsql-md.md)] para [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
-|[Suporte de alta disponibilidade para bancos de dados do OLTP in-memory](high-availability-support-for-in-memory-oltp-databases.md)|Discute grupos de disponibilidade e clustering de failover no [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
+|[Suporte ao Transact-SQL para OLTP na memória](transact-sql-support-for-in-memory-oltp.md)|Discute o suporte do [!INCLUDE[tsql](../../../includes/tsql-md.md)] para [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
+|[Suporte de alta disponibilidade para bancos de dados OLTP na memória](high-availability-support-for-in-memory-oltp-databases.md)|Discute grupos de disponibilidade e clustering de failover no [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Suporte ao SQL Server para OLTP na memória](sql-server-support-for-in-memory-oltp.md)|Lista a sintaxe nova e atualizada, e os recursos que oferecem suporte a tabelas com otimização de memória.|
 |[Migrando para OLTP na memória](migrating-to-in-memory-oltp.md)|Aborda como migrar tabelas baseadas em disco para tabelas com otimização de memória.|
 
@@ -89,7 +89,7 @@ ms.locfileid: "78175912"
 
 -   [Blog do OLTP in-memory](https://go.microsoft.com/fwlink/?LinkId=311696)
 
--   [OLTP in-memory – Padrões comuns de carga de trabalho e considerações sobre migração](https://msdn.microsoft.com/library/dn673538.aspx)
+-   [OLTP na memória-padrões comuns de carga de trabalho e considerações de migração](https://msdn.microsoft.com/library/dn673538.aspx)
 
 -   [Visão geral interna do OLTP na memória do SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
     <!--

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175939"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
@@ -79,13 +79,12 @@ ms.locfileid: "78175939"
 
  No exemplo abaixo, o grupo de arquivos da tabela com otimização de memória tem quatro pares de arquivos delta e de dados no carimbo de data/hora 500 que contém dados de transações anteriores. Por exemplo, as linhas no primeiro arquivo de dados correspondem a transações com carimbo de data/hora superior a 100 e inferior ou igual a 200; alternativamente representados como (100, 200]. O segundo e terceiro arquivos de dados apresentam menos de 50% de utilização após a contagem das linhas marcadas como excluídas. A operação de mesclagem combina esses dois CFPs e cria um novo CFP que contém transações com carimbo de data/hora superior a 200 e inferior ou igual a 400, que é o intervalo combinado desses dois CFPs. Você vê outro CFP com intervalo (500, 600] e o arquivo delta não vazio do intervalo de transações (200, 400] mostra que a operação de mesclagem pode ser realizada junto com atividades transacionais, incluindo a exclusão de mais linhas dos CFPs de origem.
 
- ![O diagrama mostra o grupo de arquivos de tabela com otimização de memória](../../database-engine/media/storagediagram-hekaton.png "O diagrama mostra o grupo de arquivos de tabela com otimização de memória")
+ ![O diagrama mostra o grupo de arquivo de tabela com otimização de memória](../../database-engine/media/storagediagram-hekaton.png "O diagrama mostra o grupo de arquivo de tabela com otimização de memória")
 
  Um thread de segundo plano avalia todos os CFPs fechados usando uma política de mesclagem e, em seguida, inicia uma ou mais solicitações de mesclagem para os CFPs de qualificação. Essas solicitações de mesclagem são processadas pelo thread de ponto de verificação offline. A avaliação da política de mesclagem é feita periodicamente e também quando um ponto de verificação é fechado.
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Mesclar política
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa a seguinte política de mesclagem:
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Política de mesclagem
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa a seguinte política de mesclagem:
 
 -   Uma mesclagem será agendada se dois ou mais CFPs consecutivos puderem ser consolidados, após a contagem das linhas excluídas, para que as linhas resultantes possam caber em 1 CFP do tamanho ideal. O tamanho ideal do CFP é determinado desta forma:
 

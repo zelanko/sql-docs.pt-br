@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423cbb00f8c28cc1abca309c5a2d518da4511f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175839"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar alterações a linhas relacionadas com registros lógicos
@@ -141,6 +141,6 @@ ms.locfileid: "78175839"
  Se registros lógicos forem usados, o Merge Agent deverá processar as alterações para cada registro lógico inteiro, de forma conjunta. Isto tem um efeito no tempo necessário para o Merge Agent replicar as linhas. Adicionalmente, como o agente abre uma transação separada para cada registro lógico, os requisitos de bloqueio podem aumentar.
 
 ## <a name="see-also"></a>Consulte Também
- [Opções de artigos para a replicação de mesclagem](article-options-for-merge-replication.md)
+ [Opções de artigo para replicação de mesclagem](article-options-for-merge-replication.md)
 
 

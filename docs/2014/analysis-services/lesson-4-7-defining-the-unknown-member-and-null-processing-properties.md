@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175305"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definindo o membro desconhecido e as propriedades de processamento nulo
@@ -178,6 +178,6 @@ ms.locfileid: "78175305"
      ![Nível Nome do Produto mostrando componentes de assembly](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Nível Nome do Produto mostrando componentes de assembly")
 
 ## <a name="next-lesson"></a>Próxima lição
- [Lição 5: Definindo relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
+ [Lição 5: Como definir relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)
 
 

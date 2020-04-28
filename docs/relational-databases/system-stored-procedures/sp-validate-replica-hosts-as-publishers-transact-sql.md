@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75319986"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
@@ -61,7 +61,7 @@ sp_validate_replica_hosts_as_publishers
  Se a validação falhar, serão emitidos erros apropriados.  **sp_validate_redirected_publisher** faz um melhor esforço para gerar todos os problemas e não apenas o primeiro encontrado.  
   
 > [!NOTE]  
->  **sp_validate_replica_hosts_as_publishers** falhará com o seguinte erro ao validar hosts de réplica secundária que não permitem acesso de leitura ou exigir que a intenção de leitura seja especificada.  
+>  **sp_validate_replica_hosts_as_publishers** falhará com o erro a seguir ao validar hosts de réplica secundária que não permitirem acesso de leitura ou exigirem a especificação da intenção de leitura.  
 >   
 >  Msg 21899, Level 11, State 1, Procedure **sp_hadr_verify_subscribers_at_publisher**, Line 109  
 >   

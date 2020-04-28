@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44a63e55d6a0868ac8395828e5f386573665fcaa
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175825"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzir a carga de ajuste do servidor de produção
@@ -57,7 +57,7 @@ ms.locfileid: "78175825"
 
  A ilustração a seguir mostra o servidor de teste e o cenário do servidor de produção:
 
- ![Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados](../../database-engine/media/testsvr.gif "Uso do servidor de teste Orientador de Otimização do Mecanismo de Banco de Dados")
+ ![Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados](../../database-engine/media/testsvr.gif "Uso do servidor de teste do Orientador de Otimização do Mecanismo de Banco de Dados")
 
 > [!NOTE]
 >  O recurso de ajuste do servidor de teste não é suportado na interface gráfica de usuário do Orientador de Otimização do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .

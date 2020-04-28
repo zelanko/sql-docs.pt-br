@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175905"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
@@ -23,7 +23,7 @@ ms.locfileid: "78175905"
  Este tópico abrange o monitoramento do uso de memória de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .
 
 
-##  <a name="bkmk_CreateDB"></a>Criar um banco de dados de exemplo com tabelas com otimização de memória
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>Criar um banco de dados de exemplo com tabelas com otimização de memória
  Você poderá ignorar esta seção se já tiver um banco de dados com tabelas com otimização de memória.
 
  As etapas a seguir criam um banco de dados com três tabelas com otimização de memória que você pode usar no restante deste tópico. No exemplo, mapeamos o banco de dados para um pool de recursos a fim de controlar a quantidade de memória que pode ser usada por tabelas com otimização de memória.
@@ -113,8 +113,7 @@ ms.locfileid: "78175905"
 ##  <a name="monitoring-memory-usage"></a>Monitorando o uso da memória
 
 ###  <a name="using-ssmanstudiofull"></a>Usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é fornecido com relatórios internos padrão para monitorar a memória consumida por tabelas na memória. Você pode acessar esses relatórios usando o Pesquisador de Objetos, conforme descrito [aqui](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Você também pode usar o Pesquisador de Objetos para monitorar a memória consumida por tabelas individuais com otimização de memória.
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] é fornecido com relatórios internos padrão para monitorar a memória consumida por tabelas na memória. Você pode acessar esses relatórios usando o Pesquisador de Objetos, conforme descrito [aqui](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Você também pode usar o Pesquisador de Objetos para monitorar a memória consumida por tabelas individuais com otimização de memória.
 
 #### <a name="consumption-at-the-database-level"></a>Consumo em nível de banco de dados
  Você pode monitorar o uso da memória em nível de banco de dados da forma a seguir.

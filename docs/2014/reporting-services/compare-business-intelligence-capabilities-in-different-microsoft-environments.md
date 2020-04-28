@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
 ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656583"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar recursos de Business Intelligence em diferentes ambientes Microsoft
@@ -26,15 +26,14 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online plano 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Clip|Não|Site do Power BI|  
+|Sites BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Galeria|Não|Site do Power BI|  
 |Gerenciamento e compartilhamento de consulta e administração de dados|Não|Não|Sim ** <sup>1</sup>**|  
 |Integração com o Master Data Services (MDS) e Data Quality Services (DQS)|Sim|Não|Não|  
 |Agendar atualização de dados|Sim, mas não aceita as pastas de trabalho que contêm dados Power Query|Não|Sim|  
 |Consulta de linguagem natural (Q&A)|Não|Não|Sim ** <sup>2</sup>**|  
 |Previsão de previsão|Não|Não|Sim ** <sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrar|Sim|Não|Não|  
-|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integração|Sim|Não|Não|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integração (Multidimensional e Tabular)|Sim|Não|Não|  
 |Exportar painel interativo do Power View para apresentação do PowerPoint|Sim|Não|Não|  
 |Criação de painel no navegador|Sim|Não|Não|  
 |Monitoramento de uso|Sim|Não|Sim|  
@@ -45,7 +44,7 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
   
  **<sup>2</sup>**  [Power bi Q&A: otimizar uma pasta de trabalho do Power bi (modelagem de nuvem)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
- **<sup>3</sup>**  [apresentando novos recursos de previsão no Power View para o Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
+ **<sup>3</sup>**  [Introdução aos novos recursos de previsão no Power View para o Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Exibir e procurar dados, relatórios e painéis de BI  
   
@@ -58,11 +57,11 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
 |Capacidade de usar os recursos em diferentes navegadores e versões|Sim, para visualizações não Power View **<sup>3</sup>**|Sim, para tamanhos de arquivo de pasta de trabalho menores que 10 MB **<sup>3</sup>**|Sim ** <sup>3</sup>**|  
 |||||
 
- **<sup>1</sup>**  [Microsoft Power bi](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
+ **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
- **<sup>2</sup>**  [pastas de trabalho PowerPivot como uma fonte de dados](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
+ **<sup>2</sup>**  [Pastas de trabalho PowerPivot como uma fonte de dados](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
- **<sup>3</sup>**  [suporte móvel entre ferramentas de Business Intelligence (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) e [planejamento para Reporting Services e suporte a navegador Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
+ **<sup>3</sup>**  [Suporte móvel nas ferramentas de Business Intelligence (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) e [Planejamento para o Reporting Services e o suporte a navegador Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
 ## <a name="more-information"></a>Mais informações  
   
@@ -70,13 +69,13 @@ Para obter mais informações comparando o SharePoint Server e o SharePoint Onli
   
 - Para obter informações sobre os requisitos para usar sinônimos, consulte [otimizando Power bi Q&a com sinônimos & frases](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) em pragmaticworks.com.  
   
-- [Office Online, escolha sua rede social corporativa: Yammer ou News Feed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online, escolha a sua rede social da empresa: Yammer ou Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
-- [Power bi para Office 365](https://www.microsoft.com/powerbi/default.aspx).  
+- [Power BI para Office 365](https://www.microsoft.com/powerbi/default.aspx).  
   
 - [Preços de Power bi](https://www.microsoft.com/powerBI/pricing.aspx).  
   
 - [Análise e relatório com ferramentas de BI (business intelligence) da Microsoft](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
-## <a name="community-content"></a>Conteúdo da comunidade
+## <a name="community-content"></a>Conteúdo da Comunidade
 

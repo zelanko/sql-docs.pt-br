@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176127"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Manipuladores de eventos do SSIS (Integration Services)
@@ -73,7 +73,7 @@ ms.locfileid: "78176127"
 
 |Manipulador de eventos|Evento|
 |-------------------|-----------|
-|`OnError`|O manipulador de eventos para `OnError` o evento. Esse evento é gerado por um executável quando ocorre um erro.|
+|`OnError`|O manipulador de eventos para o evento `OnError`. Esse evento é gerado por um executável quando ocorre um erro.|
 |**OnExecStatusChanged**|Manipulador de eventos do evento **OnExecStatusChanged** . Esse evento é gerado por um executável quando seu status de execução é alterado.|
 |**OnInformation**|Manipulador de eventos do evento **OnInformation** . Esse evento é gerado durante a validação e execução de um executável para fornecer informações. Esse evento transmite apenas informações, nenhum erro ou avisos.|
 |**OnPostExecute**|Manipulador de eventos do evento **OnPostExecute** . Esse evento é gerado por um executável logo depois que este termina de ser executado.|

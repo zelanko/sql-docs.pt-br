@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656988"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
@@ -53,20 +53,20 @@ Os *plan_handle* podem ser obtidos nos seguintes objetos de gerenciamento dinâm
 
 ## <a name="table-returned"></a>Tabela retornada
 
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|A ID do banco de dados de contexto em vigor quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente a esse plano foi compilada. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.<br /><br /> A coluna é anulável.|  
 |**ObjectID**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparados, essa coluna é **null**.<br /><br /> A coluna é anulável.|  
 |**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o aplicativo de ** pedidos** pode ser nomeado **orderproc;1**, **orderproc;2** e assim por diante. Para lotes ad hoc e preparados, essa coluna é **null**.<br /><br /> A coluna é anulável.|  
 |**criptografados**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
-|**query_plan**|**XML**|Contém a última representação de SHOWPLAN de tempo de execução conhecida do plano de execução de consulta real que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.| 
+|**query_plan**|**xml**|Contém a última representação de SHOWPLAN de tempo de execução conhecida do plano de execução de consulta real que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.| 
 
 ## <a name="remarks"></a>Comentários
 Essa função de sistema está disponível a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] partir do CTP 2,4.
 
 Esse é um recurso opcional e requer que o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esteja habilitado. No [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 em diante, para fazer isso no nível do banco de dados, veja a opção LAST_QUERY_PLAN_STATS em [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Essa função do sistema funciona na infraestrutura de criação de perfil de estatísticas de execução de consulta **leve** . Para obter mais informações, confira [Infraestrutura de Criação de Perfil de Consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Essa função do sistema funciona na infraestrutura de criação de perfil de estatísticas de execução de consulta **leve** . Para obter mais informações, consulte [consultar a infraestrutura de criação de perfil](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 A saída Showplan por sys. dm_exec_query_plan_stats contém as seguintes informações:
 -  Todas as informações de tempo de compilação encontradas no plano em cache
@@ -89,7 +89,7 @@ Sob as condições a seguir, uma saída **simplificada de <sup>1</sup> ** plano 
 Sob as condições a seguir, **nenhuma saída é retornada** de **Sys. dm_exec_query_plan_stats**:
 
 -   O plano de consulta especificado usando *plan_handle* foi removido do cache de planos.     
-    **OR**    
+    **OU**    
 -   O plano de consulta não estava armazenado em cache em primeiro lugar. Para obter mais informações, consulte [cache e reutilização do plano de execução ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
@@ -148,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>Consulte Também
   [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas à execução &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 
