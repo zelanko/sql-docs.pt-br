@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067829"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68067829"
 
   Retorna informações sobre cada transação replicada ou do Change Data Capture.  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Se a transação estiver em um banco de dados publicado com o uso de replicação transacional ponto a ponto. Se verdadeiro, o valor será 1; caso contrário, será 0.|  
 |**db_ver**|**int**|Versão do banco de dados.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68067829"
 |**begin_lsn**|**nvarchar (64)**|Número de sequência de log (LSN) do registro de log inicial da transação.|  
 |**commit_lsn**|**nvarchar (64)**|LSN de registro de log de confirmação da transação.|  
 |**DBID**|**smallint**|ID do banco de dados.|  
-|**rows**|**int**|ID do comando replicado na transação.|  
+|**as**|**int**|ID do comando replicado na transação.|  
 |**xdesid**|**nvarchar (64)**|ID da transação.|  
 |**artcache_table_address**|**varbinary (8)**|Endereço na memória da estrutura de tabela de artigo em cache usada pela última vez nesta transação.|  
 |**servidor**|**nvarchar (514)**|Nome de servidor.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067829"
  As informações só serão retornadas para objetos de banco de dados replicados ou tabelas habilitadas para Change Data Capture atualmente armazenados no cache de artigo.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas à replicação &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Exibições de gerenciamento dinâmico relacionadas à captura de dados de alterações &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

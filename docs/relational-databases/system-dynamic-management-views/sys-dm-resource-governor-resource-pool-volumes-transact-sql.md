@@ -20,10 +20,10 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090809"
 ---
 # <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68090809"
   Retorna informações sobre o pool de recursos atual e estatísticas de e/s para cada volume de disco. Essas informações também estão disponíveis no nível do pool de recursos em [Sys. dm_resource_governor_resource_pools &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID do pool de recursos. Não permite valor nulo.|  
 |volume_name|**sysname**|O nome do volume de disco. Não permite valor nulo.|  
@@ -57,7 +57,7 @@ ms.locfileid: "68090809"
  Requer a permissão VIEW SERVER STAT.  
   
 ## <a name="see-also"></a>Confira também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

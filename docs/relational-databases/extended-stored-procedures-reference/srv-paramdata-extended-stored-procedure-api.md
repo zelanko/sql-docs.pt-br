@@ -20,17 +20,17 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064035"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Retorna o valor de um parâmetro de chamada de procedimento armazenado remoto. Essa função foi substituída pela função **srv_paraminfo**.  
   
@@ -61,17 +61,16 @@ n
   
 |Novos tipos de dados|Comprimento dos dados de entrada|  
 |--------------------|-----------------------|  
-|BITN|**Nulo:** VP, NULO<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
-|BIGVARCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
-|BIGCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 espaços<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGBINARY|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 0x00<br /><br /> **>= 255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|BIGVARBINARY|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 0x00<br /><br /> **>= 255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
-|NCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, 255 espaços<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
-|NVARCHAR|**Nulo:** NULL, N/A<br /><br /> **Zero:** VP, NULO<br /><br /> **>= 255:** VP, 255 caracteres<br /><br /> **<255:** VP, dados reais|  
-|NTEXT|**Nulo:** N/A<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
+|BITN|**NULL:** VP, NULL<br /><br /> **ZERO:** VP, NULL<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|BIGVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais|  
+|BIGCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, dados reais|  
+|NCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 espaços<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais + preenchimento (até 255)|  
+|NVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 chars<br /><br /> **<255:** VP, dados reais|  
+|NTEXT|**NULL:** N/A<br /><br /> **ZERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
   
- 
-  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
+ \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   
 ## <a name="remarks"></a>Comentários  
  Se você souber o nome do parâmetro, poderá usar **srv_paramnumber** para obter o número do parâmetro. Para determinar se um parâmetro é NULL, use **srv_paramlen**.  
@@ -82,6 +81,6 @@ n
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte Também  
- [srv_rpcparams &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

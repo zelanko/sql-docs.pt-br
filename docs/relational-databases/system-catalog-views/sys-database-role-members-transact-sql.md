@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079476"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68079476"
 
   Retorna uma linha para cada membro de cada função de banco de dados.  Usuários de banco de dados, funções de aplicativo e outras funções de banco de dados podem ser membros de uma função de banco de dados. Para adicionar membros a uma função, use a instrução [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) com a `ADD MEMBER` opção. Ingresse com [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para retornar os nomes dos `principal_id` valores.
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|ID da entidade do banco de dados da função.|  
 |**member_principal_id**|**int**|ID principal do banco de dados do membro.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68079476"
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode exibir a própria associação de função. Para exibir outras associações de função, é necessário `db_securityadmin` associar a função de `VIEW DEFINITION` banco de dados fixa ou no banco de dados.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="example"></a>Exemplo  
  A consulta a seguir retorna os membros das funções de banco de dados.  
@@ -58,7 +58,7 @@ ORDER BY DP1.name;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
 [ALTERAR função (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      

@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096028"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -53,10 +53,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  A tabela a seguir lista as opções, as descrições e seus valores.  
   
-|Nome da opção|Valor de opção|DESCRIÇÃO|  
+|Nome da opção|Valor de opção|Descrição|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Especifica que quando o *max_file_size* é atingido, o arquivo de rastreamento atual é fechado e um novo arquivo é criado. Todos os novos registros serão gravados no novo arquivo. O novo arquivo terá o mesmo nome do anterior, mas um número inteiro será adicionado para indicar a sequência. Por exemplo, se o arquivo de rastreamento original for filename.trc, o próximo arquivo de rastreamento será filename_1.trc, o seguinte será filename_2.trc, e assim por diante.<br /><br /> Quanto mais arquivos de rastreamento de substituição forem criados, o valor do inteiro adicionado ao nome de arquivo aumentará consecutivamente.<br /><br /> SQL Server usa o valor padrão de *max_file_size* (5 MB) se essa opção for especificada sem especificar um valor para *max_file_size*.|  
-|SHUTDOWN_ON_ERROR|**quatro**|Especifica que, se o rastreamento não puder ser gravado no arquivo por qualquer motivo, o SQL Server será encerrado. Esta opção é útil ao executar rastreamentos de auditoria de segurança.|  
+|SHUTDOWN_ON_ERROR|**4**|Especifica que, se o rastreamento não puder ser gravado no arquivo por qualquer motivo, o SQL Server será encerrado. Esta opção é útil ao executar rastreamentos de auditoria de segurança.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Especifica que um registro dos últimos 5 MB de informações de rastreamento produzidas pelo servidor será salvo pelo servidor. TRACE_PRODUCE_BLACKBOX é incompatível com todas as outras opções.|  
   
 `[ @tracefile = ] 'trace_file'`Especifica o local e o nome do arquivo para o qual o rastreamento será gravado. *trace_file* é **nvarchar (245)** sem padrão. o *trace_file* pode ser um diretório local (como N ' C:\MSSQL\Trace\trace.trc ') ou um UNC para um compartilhamento ou caminho (n '\\\\*nomedoservidor*\\*ShareName*\\*Directory*\trace.trc ').  
@@ -91,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|DESCRIÇÃO|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |0|Nenhum erro.|  
 |1|Erro desconhecido.|  
@@ -148,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setfilter](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setstatus](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

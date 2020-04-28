@@ -18,10 +18,10 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085820"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
@@ -58,7 +58,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  Requer a permissão ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir define [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] como o banco de dados padrão para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no `Victoria`.  
+ O exemplo a seguir define [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] como o banco de dados padrão para o logon `Victoria` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
@@ -67,7 +67,7 @@ EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

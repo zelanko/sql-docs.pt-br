@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097806"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68097806"
   
  Com base na ID da sessão e da solicitação, um usuário pode recuperar as solicitações distribuídas reais geradas para serem executadas-via sys. dm_exec_distributed_requests. Por exemplo, uma consulta envolvendo SQL regular e tabelas SQL externas serão decompostas em várias instruções/solicitações executadas em vários nós de computação. Para acompanhar as etapas distribuídas em todos os nós de computação, apresentamos uma ID de execução ' global ' que pode ser usada para rastrear todas as operações nos nós de computação associados a uma solicitação e um operador específicos, respectivamente.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|Chave para esta exibição. ID numérica exclusiva associada à solicitação.|Exclusivo em todas as solicitações no sistema.|  
+|sql_handle|**varbinary(64)**|Chave para esta exibição. ID numérica exclusiva associada à solicitação.|Exclusivo em todas as solicitações no sistema.|  
 |execution_id|**nvarchar (32**|ID numérica exclusiva associada à sessão na qual essa consulta foi executada.||  
 |status|**nvarchar (32**|Status atual da solicitação.|' Pendente ', ' autorizando ', ' AcquireSystemResources ', ' Inicializando ', ' plano ', ' análise ', ' AquireResources ', ' em execução ', ' cancelando ', ' Concluído ', ' com falha ', ' cancelado '.|  
 |error_id|**nvarchar (36)**|ID exclusiva do erro associado à solicitação, se houver.|Defina como NULL se nenhum erro tiver ocorrido.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68097806"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

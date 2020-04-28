@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070761"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
@@ -42,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |de|Result|  
 |---------------|------------|  
-|Excluir da estrutura da*\<estrutura de mineração>*<br /><br /> ou<br /><br /> Excluir da*\<estrutura *da estrutura de mineração>. DISPUTA|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
+|Excluir da estrutura da*\<estrutura de mineração>*<br /><br /> ou o<br /><br /> Excluir da*\<estrutura *da estrutura de mineração>. DISPUTA|Executa ProcessClear na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração e de seus modelos de mineração associados.|  
 |Excluir da*\<estrutura *da estrutura de mineração>. BOLSAS|Executa ProcessClearStructureOnly na estrutura de mineração. Todo o conteúdo é limpo da estrutura de mineração, deixando intactos os modelos de mineração associados. O detalhamento dos modelos de mineração associados falhará após a estrutura de mineração ter sido desmarcada.|  
-|Excluir do modelo de*\<modelo de mineração>*<br /><br /> ou<br /><br /> Excluir do*\<modelo *de modelo de mineração>. DISPUTA|Executa ProcessClear no modelo de mineração, mas deixa os valores de estado intactos. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
+|Excluir do modelo de*\<modelo de mineração>*<br /><br /> ou o<br /><br /> Excluir do*\<modelo *de modelo de mineração>. DISPUTA|Executa ProcessClear no modelo de mineração, mas deixa os valores de estado intactos. Os valores de estado consistem nos estados possíveis de uma coluna. Por exemplo, os valores de estado de uma coluna de sexo seriam masculino e feminino.|  
   
  Para obter mais informações sobre tipos de processamento, consulte [elemento Type &#40;&#41;XMLA ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   
@@ -58,6 +58,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>Consulte Também  
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

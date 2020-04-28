@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085286"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_proxy
   
  A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  
@@ -62,8 +62,8 @@ sp_help_proxy
 |QueueReader|Agente de Leitor de Fila de Replicação|  
 |ANALYSISQUERY|Comando do Analysis Services|  
 |ANALYSISCOMMAND|Consulta do Analysis Services|  
-|Dts|Execução de pacote SSIS|  
-|PowerShell|Script do PowerShell|  
+|Dts|Execução do pacote SSIS|  
+|PowerShell|Scripts PowerShell|  
   
 `[ @name = ] 'name'`O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon para listar proxies para. O nome é **nvarchar (256)**, com um padrão de NULL. Quando *Name* é especificado, *subsystem_name* também deve ser especificado.  
   
@@ -72,14 +72,14 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificação de proxy.|  
 |**name**|**sysname**|O nome do proxy.|  
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
 |**habilitado**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
 |**ndescrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
-|**user_sid**|**varbinary(85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
+|**user_sid**|**varbinary (85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
 |**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
 |**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
   
@@ -89,7 +89,7 @@ sp_help_proxy
  Para determinar quais proxies um logon pode usar para um determinado subsistema, especifique *nome* e *subsystem_name*. Quando esses argumentos são fornecidos, **sp_help_proxy** lista os proxies que o logon especificado pode acessar e que podem ser usados para o subsistema especificado.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
  Para obter detalhes sobre **SQLAgentOperatorRole**, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   

@@ -21,10 +21,10 @@ ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053439"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68053439"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID da tabela à qual o índice pertence.|  
-|**Estado**|**int**|Informações de status do sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**primeiro**|**binário (6)**|Ponteiro para a primeira página, ou página-raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
+|**id**|**int**|ID da tabela à qual o índice pertence.|  
+|**status**|**int**|Informações de status do sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**primeiro**|**binary(6)**|Ponteiro para a primeira página, ou página-raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
 |**indid**|**smallint**|ID do índice:<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> >1 = índice não clusterizado|  
-|**básica**|**binário (6)**|Para **indid** >= 1, **root** é o ponteiro para a página raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
+|**root**|**binary(6)**|Para **indid** >= 1, **root** é o ponteiro para a página raiz.<br /><br /> Não usado quando **indid** = 0.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
 |**minlen**|**smallint**|Tamanho mínimo de uma linha.|  
 |**keycnt**|**smallint**|Número de chaves.|  
 |**GroupId**|**smallint**|ID do grupo de arquivos em que o objeto foi criado.<br /><br /> NULL = o índice é particionado quando **indid** > 1.<br /><br /> NULL = a tabela é particionada quando **indid** é 0 ou 1.|  
@@ -57,15 +57,15 @@ ms.locfileid: "68053439"
 |**OrigFillFactor**|**tinyint**|Valor do fator de preenchimento original utilizado quando o índice foi criado. Este valor não é mantido; porém, poderá ser útil se você tiver que recriar um índice e não se lembrar do fator de preenchimento que foi utilizado.|  
 |**StatVersion**|**tinyint**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**FirstIAM**|**binário (6)**|NULL = O índice é particionado.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**FirstIAM**|**binary(6)**|NULL = O índice é particionado.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Sinalizador de implementação de índice.<br /><br /> Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Usado para restringir as granularidades de bloqueio consideradas para um índice. Por exemplo, para minimizar o custo de bloqueio, uma tabela de pesquisa que é essencialmente somente leitura pode ser configurada para realizar apenas bloqueios de nível de tabela.|  
 |**pgmodctr**|**int**|Retorna 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**novas**|**varbinary (816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [Sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**novas**|**varbinary(816)**|Lista de IDs das colunas que constituem a chave de índice.<br /><br /> Retorna NULL.<br /><br /> Para exibir as colunas de chave de índice, use [Sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Nome do índice ou estatística. Retorna NULL quando **indid** = 0. Modifique seu aplicativo de modo a fazê-lo procurar um nome de heap NULL.|  
 |**statblob**|**imagem**|Objeto binário grande (BLOB) de estatísticas.<br /><br /> Retorna NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|Contagem de linhas de nível de dados baseada em **indid** = 0 e **indid** = 1, e o valor é repetido para **indid** >1.|  
+|**as**|**int**|Contagem de linhas de nível de dados baseada em **indid** = 0 e **indid** = 1, e o valor é repetido para **indid** >1.|  
   
 ## <a name="remarks"></a>Comentários  
  Colunas definidas como reservadas não devem ser usadas.  
@@ -76,7 +76,7 @@ ms.locfileid: "68053439"
   
  Se você usar o valor em **rowmodctr** para determinar quando atualizar as estatísticas, considere as seguintes soluções:  
   
--   Não faça nada. O novo valor **rowmodctr** frequentemente ajudará a determinar quando atualizar as estatísticas, pois o comportamento é razoavelmente próximo aos resultados de versões anteriores.  
+-   Não fazer nada. O novo valor **rowmodctr** frequentemente ajudará a determinar quando atualizar as estatísticas, pois o comportamento é razoavelmente próximo aos resultados de versões anteriores.  
   
 -   Usar AUTO_UPDATE_STATISTICS. Para obter mais informações, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68053439"
 -   Usar informações de nível de aplicativo para determinar quando atualizar as estatísticas. Por exemplo, toda vez que o valor máximo de uma coluna de **identidade** é alterado por mais de 10.000, ou sempre que uma operação de inserção em massa é executada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1df2c474afa5e062dfa22cf05af6b0edf036f768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103043"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Criar os arquivos de Conexão de servidor (MySQLToSQL)

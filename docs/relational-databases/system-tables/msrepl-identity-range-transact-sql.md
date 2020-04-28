@@ -18,10 +18,10 @@ ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079157"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68079157"
 
   A tabela **MSrepl_identity_range** fornece suporte ao gerenciamento de intervalo de identidade. Essa tabela é armazenada na publicação, nos bancos de dados de assinatura e distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
+|**programa**|**sysname**|O nome do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
-|**tablename**|**sysname**|O nome da tabela.|  
+|**TableName**|**sysname**|O nome da tabela.|  
 |**identity_support**|**int**|Especifica se o tratamento de intervalo de identidade automático está habilitado. 0 especifica que o tratamento de intervalo de identidade automático não está habilitado.|  
 |**next_seed**|**bigint**|Se o intervalo de identidade automático estiver habilitado, indicará o ponto de início do próximo intervalo.|  
 |**pub_range**|**bigint**|O tamanho do intervalo de identidade do publicador.|  

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051564"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68051564"
   
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
     
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifica um grupo de índices ausentes. Esse identificador é exclusivo no servidor.<br /><br /> As outras colunas fornecem informações sobre todas as consultas para as quais o índice no grupo é considerado ausente.<br /><br /> Um grupo de índice contém apenas um índice.|  
 |**unique_compiles**|**bigint**|Número de compilações e recompilações que se beneficiariam deste grupo de índice ausente. Compilações e recompilações de muitas consultas diferentes podem contribuir para esse valor de coluna.|  
@@ -64,8 +64,8 @@ ms.locfileid: "68051564"
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir mostram como usar a exibição de gerenciamento dinâmico **sys.dm_db_missing_index_group_stats**.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>a. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
- A consulta a seguir determina quais os 10 índices ausentes que gerariam o aperfeiçoamento cumulativo antecipado mais alto, em ordem decrescente, para consultas de usuário.  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Localizar os 10 índices ausentes com o aperfeiçoamento antecipado mais alto para consultas de usuário  
+ A consulta seguinte determina quais os 10 índices ausentes que produziriam o aperfeiçoamento cumulativo antecipado mais alto, em ordem decrescente, para consultas de usuário.  
   
 ```  
 SELECT TOP 10 *  

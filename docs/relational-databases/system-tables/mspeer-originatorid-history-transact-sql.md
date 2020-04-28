@@ -18,10 +18,10 @@ ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95c641e094e9df405d1674c3c3c81ffa43da9d7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68069048"
 ---
 # <a name="mspeer_originatorid_history-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68069048"
 
   Contém uma linha para cada ID de originador que foi definida na topologia. Isso inclui ID para nós que são não estão mais ativos. A tabela é usada ao configurar um novo nó para a detecção de conflito, a fim de assegurar que a ID de originador especificada não esteja sendo usada. Essa tabela é armazenada no banco de dados de publicação. Para obter mais informações sobre a detecção de conflitos, consulte [detecção de conflitos na replicação ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |originator_publication|**sysname**|Publicação para a qual a ID de originador foi especificada.|  
 |originator_id|**int**|Número que identifica cada nó na topologia com a finalidade de detecção de conflito.|  

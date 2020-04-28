@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075629"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
@@ -47,10 +47,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  É um nome de recurso de bloqueio especificado pelo aplicativo cliente. O aplicativo deve garantir que o recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar (255)** sem padrão. *resource_name* é uma comparação binária, portanto diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
   
  [ @LockOwner= ] '*lock_owner*'  
- É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar (32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @DbPrincipal= ] '*database_principal*'  
- É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser membro da função de banco de dados fixa *database_principal*, dbo ou db_owner para chamar a função com êxito. O padrão é público.  
+ É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro de *database_principal*, dbo ou a função de banco de dados fixa db_owner para chamar a função com êxito. O padrão é público.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  \>= 0 (êxito) ou < 0 (falha)  
@@ -83,6 +83,6 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de APPLOCK_MODE](../../t-sql/functions/applock-mode-transact-sql.md)   
  [&#41;&#40;Transact-SQL de APPLOCK_TEST](../../t-sql/functions/applock-test-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079938"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
@@ -29,10 +29,10 @@ ms.locfileid: "68079938"
 
   A tabela **MSreplmonthresholdmetrics** define as métricas fornecidas para o monitoramento da replicação. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|Identifica uma métrica de desempenho de replicação, e pode ser um dos seguintes valores:<br /><br /> **1** = expiração<br /><br /> **2** = latência<br /><br /> **4** = mergeexpiration<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrunduration<br /><br /> **7** = mergefastrunspeed<br /><br /> **8** = mergeslowrunspeed|  
-|**título**|**sysname**|O nome da métrica de desempenho da replicação.|  
+|**title**|**sysname**|O nome da métrica de desempenho da replicação.|  
 |**warningbitstatus**|**int**|O identificador bit a bit usado para fornecer um aviso de uma violação de limite para uma das métricas seguintes:<br /><br /> **1** = expiração-uma assinatura para uma publicação transacional excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção.<br /><br /> **2** = latência-o tempo necessário para replicar dados de um Publicador transacional para o assinante excede o limite, em segundos.<br /><br /> **4** = mergeexpiration-uma assinatura para uma publicação de mesclagem excedeu o período de retenção por mais do que o limite permitido, como uma porcentagem do período de retenção.<br /><br /> **8** = mergefastrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede rápida.<br /><br /> **16** = mergeslowrunduration-o tempo necessário para concluir a sincronização de uma assinatura de mesclagem excede o limite, em segundos, em uma conexão de rede lenta ou discada.<br /><br /> **32** = mergefastrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede rápida.<br /><br /> **64** = mergeslowrunspeed-a taxa de entrega para linhas durante a sincronização de uma assinatura de mesclagem não conseguiu manter a taxa de limite, em linhas por segundo, em uma conexão de rede lenta ou discada.|  
 |**alertmessageid**|**int**|A ID da mensagem de erro que é exibida quando a condição de aviso de limite ocorre.|  
 |**ndescrição**|**nvarchar (3000)**|A descrição da métrica de desempenho da replicação|  

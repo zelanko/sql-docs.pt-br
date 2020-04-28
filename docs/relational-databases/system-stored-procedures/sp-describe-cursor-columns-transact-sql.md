@@ -18,10 +18,10 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053116"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
@@ -72,7 +72,7 @@ sp_describe_cursor_columns
   
  A tabela a seguir mostra o formato do cursor retornado quando se usa sp_describe_cursor_columns.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (anulável)|Nome atribuído à coluna do conjunto de resultados. A coluna será NULL se tiver sido especificada sem uma cláusula AS associada.|  
 |ordinal_position|**int**|Posição relativa da coluna a partir da coluna mais à esquerda do conjunto de resultados. A primeira coluna está na posição 0.|  
@@ -138,7 +138,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Cursores](../../relational-databases/cursors.md)   
  [&#41;&#40;Transact-SQL de CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARAR CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   

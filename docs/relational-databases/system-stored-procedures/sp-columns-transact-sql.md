@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070351"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -63,7 +63,7 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O procedimento armazenado do catálogo **sp_columns** é equivalente a **SQLColumns** no ODBC. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**e **table_name**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nome do qualificador do objeto. Esse campo pode ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome do proprietário do objeto. Esse campo sempre retorna um valor.|  
@@ -72,11 +72,11 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|Código inteiro para o tipo de dados do ODBC. Se este for um tipo de dados que não pode ser mapeado para um tipo do ODBC, ele será NULL. O nome do tipo de dados nativo é retornado na coluna **type_name** .|  
 |**TYPE_NAME**|**sysname**|Cadeia de caracteres que representa um tipo de dados. O DBMS subjacente apresenta este nome de tipo de dados.|  
 |**Preciso**|**int**|Número de dígitos significativos. O valor de retorno para a coluna de **precisão** está na base 10.|  
-|**MUITO**|**int**|Tamanho da transferência dos dados. <sup>1</sup>|  
+|**COMPRIMENTO**|**int**|Tamanho da transferência dos dados. <sup>1</sup>|  
 |**ESCALONÁVE**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**RADIX**|**smallint**|Base para tipos de dados numéricos.|  
 |**ANULA**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
-|**Comentários**|**varchar (254)**|Esse campo sempre retorna NULL.|  
+|**COMENTÁRIOS**|**varchar (254)**|Esse campo sempre retorna NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Essa coluna é igual à **data_type** coluna, exceto para os tipos de dados **DateTime** e SQL-92 **Interval** . Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para tipos de dados **DateTime** e SQL-92 **Interval** . Para outros tipos de dados, esta coluna retorna NULL.|  
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir retorna informações de coluna para uma tabela especificada.  
   
 ```  

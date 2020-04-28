@@ -20,10 +20,10 @@ ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053272"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68053272"
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome do Colmn|Tipo de dados|DESCRIÇÃO|  
+|Nome do Colmn|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
 |Pool_id|**int**|ID do pool de recursos. Não permite valor nulo.|  
 |Processor_group|**smallint**|A ID do grupo de processadores lógicos do Windows. Não permite valor nulo.|  
@@ -43,6 +43,6 @@ ms.locfileid: "68053272"
  Pools criados com uma afinidade de AUTO não aparecerão nessa exibição, pois eles não têm nenhuma afinidade. Para obter mais informações, consulte [Create Resource pool &#40;Transact-sql&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) e [ALTER RESOURCE pool &#40;instruções transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

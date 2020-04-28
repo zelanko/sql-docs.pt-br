@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076530"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -36,17 +36,17 @@ ms.locfileid: "68076530"
   
  Contém uma linha para cada mapeamento de usuário e senha para o servidor vinculado especificado. **sysoledbusers** é armazenado no banco de dados **mestre** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|Número de identificação de segurança do servidor.|  
 |**rmtloginame**|**nvarchar (** 128 **)**|Nome do logon remoto que o **LoginSid** mapeia para o **rmtservid**vinculado.|  
 |**rmtpassword**|**nvarchar (** 128 **)**|Retorna NULL.|  
-|**loginsid**|**varbinary (** 85 **)**|Identificação de segurança do logon local que será mapeado.|  
-|**Estado**|**smallint**|Se 1, o mapeamento deve usar as credenciais do usuário.|  
-|**changeDate**|**datetime**|Data da última alteração feita nas informações do mapeamento.|  
+|**loginsid**|**varbinary(** 85 **)**|Identificação de segurança do logon local que será mapeado.|  
+|**status**|**smallint**|Se 1, o mapeamento deve usar as credenciais do usuário.|  
+|**changedate**|**datetime**|Data da última alteração feita nas informações do mapeamento.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

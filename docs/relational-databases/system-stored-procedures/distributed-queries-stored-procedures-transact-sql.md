@@ -16,10 +16,10 @@ ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a6cf13ee2f083a26d871272f5197b550cdf3dd49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078177"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Procedimentos armazenados de consultas distribuídas (Transact-SQL)

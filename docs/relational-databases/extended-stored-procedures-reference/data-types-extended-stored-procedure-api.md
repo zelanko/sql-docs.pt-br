@@ -14,52 +14,52 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064213"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de dados (API de procedimentos armazenados estendidos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Para usar os tipos de dados de API de procedimento armazenado estendido, inclua o arquivo de cabeçalho Srv.h em seu programa.  
   
-|Tipo de dados|Tipo de dados do SQL Server|DESCRIÇÃO|  
+|Tipo de dados|Tipo de dados do SQL Server|Descrição|  
 |---------------|--------------------------|-----------------|  
-|SRVBIGBINARY|**binary**|tipo de dados **Binary** , comprimento de 0 a 8000 bytes.|  
-|SRVBIGCHAR|**char**|tipo de dados **Character** , comprimento 0 a 8000 bytes.|  
+|SRVBIGBINARY|**binary**|Tipo de dados **binary**, com tamanho de 0 a 8.000 bytes.|  
+|SRVBIGCHAR|**char**|Tipo de dados de **caractere**, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGVARBINARY|**varbinary**|Tipo de dados **binary** de comprimento variável, com tamanho de 0 a 8.000 bytes.|  
 |SRVBIGVARCHAR|**varchar**|Tipo de dados de **caractere** de comprimento variável, com tamanho de 0 a 8.000 bytes.|  
-|SRVBINARY|**binary**|tipo de dados **Binary** .|  
+|SRVBINARY|**binary**|Tipo de dados **binary**.|  
 |SRVBIT|**Parte**|tipo de dados **bit** .|  
-|SRVBITN|**bit nulo**|tipo de dados **bit** , com valores nulos permitidos.|  
-|SRVCHAR|**char**|tipo de dados **Character** .|  
+|SRVBITN|**bit null**|Tipo de dados **bit**, com valores nulos permitidos.|  
+|SRVCHAR|**char**|Tipo de dados de **caractere**.|  
 |SRVDATETIME|**datetime**|Tipo de dados **datetime** de 8 bytes.|  
 |SRVDATETIM4|**smalldatetime**|Tipo de dados **smalldatetime** de 4 bytes.|  
-|SRVDATETIMN|**DateTime nulo**|tipo de dados **smalldatetime** ou **DateTime** , valores nulos permitidos.|  
+|SRVDATETIMN|**datetime null**|Tipo de dados **smalldatetime** ou **datetime**, com valores nulos permitidos.|  
 |SRVDECIMAL|**decimal**|tipo de dados **decimal** .|  
-|SRVDECIMALN|**Decimal nulo**|tipo de dados **decimal** , valores nulos permitidos.|  
+|SRVDECIMALN|**decimal null**|Tipo de dados **decimal**, com valores nulos permitidos.|  
 |SRVFLT4|**real**|Tipo de dados **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de dados **float** de 8 bytes.|  
-|SRVFLTN|**real** &#124; **float NULL**|tipo de dados **real** ou **float** , valores nulos permitidos.|  
-|SRVIMAGE|**imagem**|tipo de dados **Image** .|  
+|SRVFLTN|**real** &#124; **float null**|Tipo de dados **real** ou **float**, com valores nulos permitidos.|  
+|SRVIMAGE|**imagem**|Tipo de dados **image**.|  
 |SRVINT1|**tinyint**|Tipo de dados **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de dados **smallint** de 2 bytes.|  
 |SRVINT4|**int**|Tipo de dados **int** de 4 bytes.|  
-|SRVINTN|**tinyint** &#124; **smallint** &#124; **int NULL**|tipo de dados **tinyint**, **smallint**ou **int** , são permitidos valores nulos.|  
+|SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Tipo de dados **tinyint**, **smallint** ou **int**, com valores nulos permitidos.|  
 |SRVMONEY4|**smallmoney**|Tipo de dados **smallmoney** de 4 bytes.|  
 |SRVMONEY|**money**|Tipo de dados **money** de 8 bytes.|  
-|SRVMONEYN|**money** &#124; **smallmoney NULL**|tipo de dados **smallmoney** ou **Money** , valores nulos permitidos.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Tipo de dados **smallmoney** ou **money**, com valores nulos permitidos.|  
 |SRVNCHAR|**nchar**|Tipo de dados de **caractere** Unicode.|  
 |SRVNTEXT|**ntext**|Tipo de dados **text** Unicode.|  
-|SRVNUMERIC|**numeric**|tipo de dados **numeric** .|  
-|SRVNUMERICN|**nulo numérico**|tipo de dados **numeric** , permitidos valores nulos.|  
+|SRVNUMERIC|**numeric**|Tipo de dados **numeric**.|  
+|SRVNUMERICN|**numeric null**|Tipo de dados **numeric**, com valores nulos permitidos.|  
 |SRVNVARCHAR|**nvarchar**|Tipo de dados de **caractere** Unicode de comprimento variável.|  
-|SRVTEXT|**text**|tipo de dados **Text** .|  
+|SRVTEXT|**text**|Tipo de dados **text**.|  
 |SRVVARBINARY|**varbinary**|Tipo de dados **binary** de comprimento variável.|  
 |SRVVARCHAR|**varchar**|Tipo de dados de **caractere** de comprimento variável.|  
   

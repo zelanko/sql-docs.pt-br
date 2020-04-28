@@ -18,10 +18,10 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096071"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`É o tipo da tabela a ser retornada. *TABLE_TYPE* é **sysname**, com um padrão de NULL, e pode ter um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**RECEBER**|Nome de um alias.|  
 |**GLOBAL TEMPORARY**|Nome de uma tabela temporária disponível no sistema.|  
@@ -72,13 +72,13 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em outros produtos, ela representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_TYPE**|**varchar (32)**|Tabela, tabela do sistema ou exibição.|  
-|**Comentários**|**varchar (254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**COMENTÁRIOS**|**varchar (254)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_tables_ex** é executado consultando o conjunto de linhas de tabelas da interface **IDBSchemaRowset** do provedor de OLE DB correspondente ao *table_server*. Os parâmetros *table_name*, *table_schema*, *TABLE_CATALOG*e *coluna* são passados para essa interface para restringir as linhas retornadas.  

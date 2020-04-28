@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055195"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -55,10 +55,10 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`A operação válida para o trabalho especificado. a *operação* é **varchar (64)**, com um padrão de NULL e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**REMOVER**|Operação de servidor que solicita ao servidor de destino o defeito do serviço mestre **SQLSERVERAGENT** .|  
-|**DELETE**|Operação de trabalho que remove um trabalho inteiro.|  
+|**Delete (excluir)**|Operação de trabalho que remove um trabalho inteiro.|  
 |**INSERT**|Operação de trabalho que insere um trabalho inteiro ou atualiza um trabalho existente. Esta operação inclui todas as etapas de trabalho e agendas, se aplicável.|  
 |**RE-ENLIST**|Operação de servidor que faz com que o servidor de destino reenvie suas informações de inscrição, incluindo o intervalo de sondagem e o fuso horário do domínio multisservidor. O servidor de destino também baixa os detalhes do **MSXOperator** .|  
 |**SET-POLL**|Operação de servidor que define o intervalo, em segundos, para que os servidores de destino sondem o domínio multisservidor. Se especificado, o *valor* será interpretado como o valor de intervalo necessário e poderá ser um valor de **10** a **28.800**.|  
@@ -84,14 +84,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificação inteiro exclusivo da instrução.|  
-|**source_server**|**nvarchar (30)**|Nome do computador do servidor do qual a instrução veio. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0, esse é sempre o nome do computador do servidor mestre (MSX).|  
+|**source_server**|**nvarchar(30)**|Nome do computador do servidor do qual a instrução veio. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0, esse é sempre o nome do computador do servidor mestre (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Código de operação da instrução.|  
 |**object_name**|**sysname**|Objeto afetado pela instrução.|  
 |**object_id**|**uniqueidentifier**|Número de identificação do objeto afetado pela instrução (**job_id** para um objeto de trabalho ou 0x00 para um objeto de servidor) ou um valor de dados específico para o **operation_code**.|  
-|**target_server**|**nvarchar (30)**|Servidor de destino pelo qual esta instrução deve ser baixada.|  
+|**target_server**|**nvarchar(30)**|Servidor de destino pelo qual esta instrução deve ser baixada.|  
 |**error_message**|**nvarchar(1024)**|Mensagem de erro (se houver) do servidor de destino se ele encontrou um problema ao processar esta instrução.<br /><br /> Observação: qualquer mensagem de erro bloqueará todos os downloads adicionais pelo servidor de destino.|  
 |**date_posted**|**datetime**|Data em que a instrução foi postada na tabela.|  
 |**date_downloaded**|**datetime**|Data em que a instrução foi baixada pelo servidor de destino.|  

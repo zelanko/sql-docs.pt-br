@@ -18,10 +18,10 @@ ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084838"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
@@ -89,11 +89,11 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  Especifica os dias em que o operador está disponível para receber páginas (sujeitos aos horários de início/término especificados). *pager_days*é **tinyint**, com um padrão de NULL, e deve ser um valor de **0** a **127**. *pager_days* é calculado adicionando os valores individuais para os dias necessários. Por exemplo, de segunda a sexta-feira é **2**+**4**+**8**+**16**+**32** = **64**.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
-|**quatro**|Terça-feira|  
+|**4**|Terça-feira|  
 |**8**|Quarta-feira|  
 |**16**|Quinta-feira|  
 |**32**|Friday|  

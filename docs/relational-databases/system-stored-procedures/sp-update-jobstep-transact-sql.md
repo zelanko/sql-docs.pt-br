@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084884"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -83,8 +83,8 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Sair com êxito.|  
 |**2**|Sair com falha.|  
-|**Beta**|Ir para a próxima etapa.|  
-|**quatro**|Vá para a etapa *success_step_id.*|  
+|**3**|Ir para a próxima etapa.|  
+|**4**|Vá para a etapa *success_step_id.*|  
   
 `[ @on_success_step_id = ] success_step_id`O número de identificação da etapa neste trabalho a ser executado se a etapa for bem sucedido e *success_action* for **4**. *success_step_id* é **int**, com um padrão de NULL.  
   
@@ -94,8 +94,8 @@ sp_update_jobstep
 |-----------|----------------------------|  
 |**1**|Sair com êxito.|  
 |**2**|Sair com falha.|  
-|**Beta**|Ir para a próxima etapa.|  
-|**quatro**|Vá para a etapa *fail_step_id * *.*|  
+|**3**|Ir para a próxima etapa.|  
+|**4**|Vá para a etapa *fail_step_id * *.*|  
   
 `[ @on_fail_step_id = ] fail_step_id`O número de identificação da etapa neste trabalho a ser executado se a etapa falhar e *fail_action* for **4**. *fail_step_id* é **int**, com um padrão de NULL.  
   
@@ -119,11 +119,11 @@ sp_update_jobstep
   
 `[ @flags = ] flags`Uma opção que controla o comportamento. *flags* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Substitui o arquivo de saída.|  
 |**2**|Anexa a um arquivo de saída|  
-|**quatro**|Grava a saída da etapa de trabalho do Transact-SQL no histórico de etapas|  
+|**4**|Grava a saída da etapa de trabalho do Transact-SQL no histórico de etapas|  
 |**8**|Grava o log na tabela (substitui o histórico existente)|  
 |**16**|Grava o log na tabela (anexa ao histórico existente)|  
   
@@ -140,7 +140,7 @@ sp_update_jobstep
  A atualização de uma etapa de trabalho incrementa o número de versão do trabalho.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   

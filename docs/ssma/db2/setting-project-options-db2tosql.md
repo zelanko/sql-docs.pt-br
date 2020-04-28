@@ -10,10 +10,10 @@ ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060028"
 ---
 # <a name="setting-project-options-db2tosql"></a>Configurando opções de projeto (DB2ToSQL)

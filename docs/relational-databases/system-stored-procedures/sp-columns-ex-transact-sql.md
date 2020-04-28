@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070340"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -61,7 +61,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nome do qualificador da tabela ou exibição. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário da tabela ou exibição. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
@@ -74,14 +74,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**NUM_PREC_RADIX**|**smallint**|É a base para tipos de dados numéricos.|  
 |**ANULA**|**smallint**|Especifica possibilidade de nulidade:<br /><br /> 1 = NULL é possível.<br /><br /> 0 = NOT NULL.|  
-|**Comentários**|**varchar (** 254 **)**|Esse campo sempre retorna NULL.|  
+|**COMENTÁRIOS**|**varchar (** 254 **)**|Esse campo sempre retorna NULL.|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL conforme exibido no campo TYPE do descritor. Essa coluna é igual à **data_type** coluna, exceto para os tipos de dados **DateTime** e SQL-92 **Interval** . Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para tipos de dados **DateTime** e SQL-92 **Interval** . Para outros tipos de dados, esta coluna retorna NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Comprimento máximo em bytes de uma coluna do tipo de dados caractere ou inteiro. Para todos os outros tipos de dados, esta coluna retorna NULL.|  
 |**ORDINAL_POSITION**|**int**|Posição ordinal da coluna na tabela. A primeira coluna na tabela é 1. Esta coluna sempre retorna um valor.|  
 |**IS_NULLABLE**|**varchar (** 254 **)**|Possibilidade de nulidade da coluna na tabela. As regras ISO são seguidas para determinar a possibilidade de nulidade. Um DBMS em conformidade com ISO SQL não pode retornar uma cadeia de caracteres vazia.<br /><br /> YES = A coluna pode incluir NULLS.<br /><br /> NO = A coluna não pode incluir NULLS.<br /><br /> Esta coluna retorna uma cadeia de caracteres de comprimento zero se a possibilidade de nulidade for desconhecida.<br /><br /> O valor retornado para essa coluna é diferente do valor retornado para a coluna que **permite valor nulo** .|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de dados, usado por procedimentos armazenados estendidos.|  
+|**SS_DATA_TYPE**|**tinyint**|Tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por procedimentos armazenados estendidos.|  
   
  Para obter mais informações, consulte a documentação do Microsoft ODBC.  
   

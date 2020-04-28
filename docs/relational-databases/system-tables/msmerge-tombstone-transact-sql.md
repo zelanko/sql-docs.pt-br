@@ -18,10 +18,10 @@ ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12caefe8b764090d46051912c876272c9efe86bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68092665"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68092665"
 
   A tabela **MSmerge_tombstone** contém informações sobre linhas excluídas e permite que as exclusões sejam propagadas para outros assinantes. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|O identificador de linha.|  
 |**tablenick**|**int**|O apelido da tabela.|  
-|**tipo**|**tinyint**|O tipo de exclusão:<br /><br /> 1 = Exclusão de usuário.<br /><br /> 5 = A linha não mais pertence à partição filtrada.<br /><br /> 6 = Exclusão de sistema.|  
+|**type**|**tinyint**|O tipo de exclusão:<br /><br /> 1 = Exclusão de usuário.<br /><br /> 5 = A linha não mais pertence à partição filtrada.<br /><br /> 6 = Exclusão de sistema.|  
 |**linhagem**|**varbinary (249)**|Indica a versão do registro que foi excluído e quais atualizações eram conhecidas quando ele foi excluído. Permite regras de resolução consistente de um conflito quando um Assinante atualiza uma linha enquanto está sendo excluída em outro Assinante.|  
 |**geração**|**int**|É atribuído quando uma linha é excluída. Se um assinante solicitar a geração N, somente marcas para exclusão com >de geração = N serão enviadas.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica o registro lógico ao qual uma linha excluída pertence.|  

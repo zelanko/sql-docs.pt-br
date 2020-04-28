@@ -16,10 +16,10 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075705"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
@@ -68,7 +68,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_reinitmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Reinicializar assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060197"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "68060197"
 
   Contém uma linha para cada anexo enviado ao Database Mail. Use esta exibição quando quiser informações sobre anexos do Database Mail. Para examinar todos os emails processados por Database Mail use [sysmail_allitems &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Identificador do anexo.|  
 |**mailitem_id**|**int**|Identificador do item de email que continha o anexo.|  
 |**nome do arquivo**|**nvarchar (520)**|O nome de arquivo do anexo. Quando **attach_query_result** é 1 e **query_attachment_filename** é nulo, Database Mail cria um nome de arquivo arbitrário.|  
 |**tamanho**|**int**|O tamanho do anexo em bytes.|  
-|**attachment**|**varbinary(max)**|O conteúdo do anexo.|  
+|**Associação**|**varbinary(max)**|O conteúdo do anexo.|  
 |**last_mod_date**|**datetime**|A data e a hora da última modificação da linha.|  
 |**last_mod_user**|**sysname**|O usuário que modificou a linha pela última vez.|  
   

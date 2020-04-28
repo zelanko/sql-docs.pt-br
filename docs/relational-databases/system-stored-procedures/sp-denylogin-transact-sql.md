@@ -18,10 +18,10 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053184"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
@@ -53,7 +53,7 @@ sp_denylogin [ @loginame = ] 'login'
  **sp_denylogin** não pode ser executado em uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra como usar **sp_denylogin** para impedir que o `CORPORATE\GeorgeV` usuário do Windows se conecte ao servidor.  

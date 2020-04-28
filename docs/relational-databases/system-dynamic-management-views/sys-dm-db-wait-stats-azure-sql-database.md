@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090870"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Banco de Dados SQL do Azure)
@@ -33,9 +33,9 @@ ms.locfileid: "68090870"
   
  Tipos específicos de horas de espera durante execução de consulta podem indicar gargalos ou pontos de pausa dentro da consulta. Da mesma forma, os tempos de espera altos ou as contagens de espera em todo o servidor podem indicar gargalos nas interações de consulta de interação na instância do servidor. Por exemplo, as esperas de bloqueio indicam a contenção de dados por consultas; as esperas de trava de ES de página indicam tempos de resposta de ES lentos; as esperas de atualização de trava de página indicam layout de arquivo incorreto.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
+|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090870"
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  
   
-##  <a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
  Esperas de recurso  
  As esperas de recurso ocorrem quando um trabalhador solicita acesso a um recurso que não está disponível porque esse recurso está sendo usado por outro trabalhador ou ainda não foi disponibilizado. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68090870"
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
   
-|Tipo de espera|DESCRIÇÃO|  
+|Tipo de espera|Descrição|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Ocorre durante o acesso exclusivo ao carregamento do assembly.|  
@@ -255,7 +255,7 @@ ms.locfileid: "68090870"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS|Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|PRINT_ROLLBACK_PROGRESS|Usado para aguardar enquanto os processos do usuário são finalizados em um banco de dados que passou por transição usando a cláusula de término ALTER DATABASE. Para obter mais informações, consulte [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Ocorre quando uma tarefa em segundo plano está aguardando a conclusão de uma tarefa em segundo plano que recebe (via sondagem) as notificações do Windows Server Failover Clustering.  Somente para uso interno.|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|Uma operação de acréscimo, substituição e/ou remoção está aguardando para obter um bloqueio de gravação em uma Always On lista interna (como uma lista de redes, endereços de rede ou ouvintes de grupo de disponibilidade).  Somente para uso interno.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Uma operação Always On remover grupo de disponibilidade está aguardando o grupo de disponibilidade de destino ficar offline antes de destruir os objetos de clustering de failover do Windows Server.|  

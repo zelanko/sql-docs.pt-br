@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066664"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
@@ -44,8 +44,8 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |Acessar tipo de dados|Tipo de dados do SQL Server|  
 |--------------------|------------------------|  
 |**binário [\*.. \*]**|**varbinary [\*]**|  
-|**Boolean**|**bit**|  
-|**minuciosa**|**tinyint**|  
+|**booleano**|**bit**|  
+|**byte**|**tinyint**|  
 |**moeda**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
@@ -56,7 +56,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |**longbinary**|**varbinary(max)**|  
 |**memorando**|**nvarchar(max)**|  
 |**memorando** -para o Access 97|**varchar(max)**|  
-|**exclusivo**|**real**|  
+|**single**|**real**|  
 |**texto [\*.. \*]**|**nvarchar [\*]**|  
 |**texto [\*.. ] \*** -para o Access 97|**varchar [\*]**|  
   
@@ -69,7 +69,7 @@ Clique para editar um tipo de dados na lista mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir todos os mapeamentos de tipo de dados para os padrões do SSMA.  
   
 ## <a name="see-also"></a>Consulte Também  

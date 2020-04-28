@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085085"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -48,15 +48,15 @@ sp_help_targetserver
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *server_name* não for especificado, **sp_help_targetserver** retornará esse conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificação do servidor.|  
-|**server_name**|**nvarchar (30)**|Nome de servidor.|  
+|**server_name**|**nvarchar(30)**|Nome de servidor.|  
 |**local**|**nvarchar(200)**|Localização do servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de fuso horário, em horas, com base na hora de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data do alistamento do servidor especificado.|  
 |**last_poll_date**|**datetime**|Data da última vez em que o servidor foi  sondado para trabalhos.|  
-|**Estado**|**int**|Status do servidor especificado.|  
+|**status**|**int**|Status do servidor especificado.|  
 |**unread_instructions**|**int**|Indica se o servidor tem ordens não lidas. Se todas as linhas tiverem sido baixadas, essa coluna será **0**.|  
 |**local_time**|**datetime**|Data e hora locais do servidor de destino, baseadas na hora local do servidor de destino até a última sondagem do servidor mestre.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|Usuário de Microsoft Windows que inscreveu o servidor de destino.|  

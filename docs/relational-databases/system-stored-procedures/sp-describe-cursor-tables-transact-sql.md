@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053091"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
@@ -71,7 +71,7 @@ sp_describe_cursor_tables
   
  A tabela a seguir exibe o formato do cursor retornado por sp_describe_cursor_tables.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|ID de usuário do proprietário de tabela.|  
 |Table_name|**sysname**|Nome do objeto ou tabela base. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cursores de servidor sempre retornam o objeto especificado pelo usuário, não as tabelas base.|  
@@ -132,7 +132,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Cursores](../../relational-databases/cursors.md)   
  [&#41;&#40;Transact-SQL de CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARAR CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

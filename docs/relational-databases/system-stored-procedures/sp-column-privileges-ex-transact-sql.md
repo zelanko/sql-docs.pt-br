@@ -18,10 +18,10 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070364"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
@@ -56,14 +56,14 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra as colunas do conjunto de resultados. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**, **column_name**e **privilégio**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_qualificador_**.** _proprietário_**.** _nome_). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome do proprietário da tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna, para cada coluna da **table_name** retornada. Esse campo sempre retorna um valor.|  
 |**CESSO**|**sysname**|O nome de usuário do banco de dados que concedeu permissões neste **column_name** ao **entidade autorizada**listado. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre a mesma que a **TABLE_OWNER**. Esse campo sempre retorna um valor.<br /><br /> A coluna de **concessor** pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou alguém ao qual o proprietário do banco de dados concedeu permissões usando a cláusula com Option Grant na instrução Grant.|  
-|**GRANTEE**|**sysname**|Nome de usuário do banco de dados que recebeu permissões neste **column_name** pelo **concessor**listado. Esse campo sempre retorna um valor.|  
+|**ENTIDADE autorizada**|**sysname**|Nome de usuário do banco de dados que recebeu permissões neste **column_name** pelo **concessor**listado. Esse campo sempre retorna um valor.|  
 |**PRIVILEGE**|**varchar (** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> SELECT = **entidade autorizada** pode recuperar dados para as colunas.<br /><br /> INSERT = **entidade autorizada** pode fornecer dados para essa coluna quando novas linhas são inseridas (por **entidade autorizada**) na tabela.<br /><br /> UPDATE = **entidade autorizada** pode modificar os dados existentes na coluna.<br /><br /> REFERENCEs = **entidade autorizada** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. As relações de chave primária/chave estrangeira são definidas com restrições de tabela.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **entidade autorizada** tem permissão para conceder permissões a outros usuários (geralmente chamados de permissão "Grant com Grant"). Pode ser YES, NO ou NULL. Um valor desconhecido, ou nulo, refere-se a uma fonte de dados em que "Grant com Grant" não é aplicável.|  
   

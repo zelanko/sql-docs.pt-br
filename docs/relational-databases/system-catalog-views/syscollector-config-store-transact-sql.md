@@ -19,10 +19,10 @@ ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060370"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68060370"
 
   Retorna as propriedades que se aplicam a todo o coletor de dados em vez de apenas uma instância do conjunto de coleta. Cada linha nesta exibição descreve uma propriedade específica do coletor de dados, como o nome do data warehouse de gerenciamento e o nome da instância em que o data warehouse de gerenciamento está situado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|O nome da propriedade. Não permite valor nulo.|  
 |parameter_value|**sql_variant**|O valor real da propriedade. Permite valor nulo.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68060370"
 ## <a name="remarks"></a>Comentários  
  A lista de propriedades disponíveis é fixa e seus valores só podem ser alterados por meio do procedimento armazenado apropriado. A tabela a seguir descreve as propriedades que são expostas por esta exibição.  
   
-|Nome da propriedade|DESCRIÇÃO|  
+|Nome da propriedade|Descrição|  
 |-------------------|-----------------|  
 |CacheDirectory|O nome do diretório no sistema de arquivo onde os pacotes de tipo de coletor armazenam informações temporárias.<br /><br /> NULL = o diretório temporário padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é usado.|  
 |CacheWindow|Indica a política de retenção de dados do diretório de cache para cargas de dados com falha.<br /><br /> -1 = Retém os dados de todas as falhas de carga.<br /><br /> 0 = Não retém nenhum dado das falhas de carga.<br /><br /> *n* = reter dados de *n* falhas de carregamento anteriores, em que *n* >= 1.<br /><br /> Use o procedimento armazenado sp_syscollector_set_cache_window para alterar esse valor.|  
@@ -58,13 +58,13 @@ FROM msdb.dbo.syscollector_config_store;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
  [&#41;&#40;Transact-SQL de sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_database_name](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_syscollector_set_warehouse_instance_name](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_syscollector_set_cache_window](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
+ [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097704"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68097704"
 > [!NOTE]  
 > Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID (SPID) da sessão em que esta consulta está em execução.|  
 |**request_id**|**int**|ID da solicitação. Exclusiva no contexto da sessão.|  
@@ -57,8 +57,8 @@ ms.locfileid: "68097704"
 |**wait_order**|**int**|Ordem sequencial de consultas de espera dentro da **queue_id** especificada. Esse valor pode ser alterado para uma determinada consulta se outras consultas obtiverem concessões de memória ou atingirem o tempo limite. NULL se a memória já tiver sido concedida.|  
 |**is_next_candidate**|**bit**|Candidato para a próxima concessão de memória.<br /><br /> 1 = Sim<br /><br /> 0 = Não<br /><br /> NULL = Se a memória já tiver sido concedida.|  
 |**wait_time_ms**|**bigint**|Tempo de espera em milissegundos. NULL se a memória já tiver sido concedida.|  
-|**plan_handle**|**varbinary (64)**|Identificador para este plano de consulta. Use **sys.dm_exec_query_plan** para extrair o plano XML real.|  
-|**sql_handle**|**varbinary (64)**|Identificador de texto [!INCLUDE[tsql](../../includes/tsql-md.md)] desta consulta. Use **sys.dm_exec_sql_text** para obter o texto [!INCLUDE[tsql](../../includes/tsql-md.md)] real.|  
+|**plan_handle**|**varbinary(64)**|Identificador para este plano de consulta. Use **sys.dm_exec_query_plan** para extrair o plano XML real.|  
+|**sql_handle**|**varbinary(64)**|Identificador de texto [!INCLUDE[tsql](../../includes/tsql-md.md)] desta consulta. Use **sys.dm_exec_sql_text** para obter o texto [!INCLUDE[tsql](../../includes/tsql-md.md)] real.|  
 |**group_id**|**int**|ID do grupo de carga de trabalho em que esta consulta está sendo executada.|  
 |**pool_id**|**int**|ID do pool de recursos a que este grupo de carga de trabalho pertence.|  
 |**is_small**|**tinyint**|Quando definido como 1, indica que esta concessão usa o sinal do recurso pequeno. Quando definido como 0, indica que um sinal normal é usado.|  
@@ -84,7 +84,7 @@ Em [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requer a permissão `V
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> nesse cenário, o tipo de espera normalmente é RESOURCE_SEMAPHORE. Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> Nesse cenário, o tipo de espera costuma ser RESOURCE_SEMAPHORE. Para obter mais informações, confira [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
 -   Pesquisar cache para consultas com concessões de memória usando [Sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   

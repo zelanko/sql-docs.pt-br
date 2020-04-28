@@ -19,10 +19,10 @@ ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060380"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68060380"
 
   Fornece informações sobre um conjunto de coleta, inclusive agendamento, modo de coleta e seu estado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|É o identificador local do conjunto de coleções. Não permite valor nulo.|  
 |collection_set_uid|**uniqueidentifier**|O identificador global exclusivo do conjunto de coleta. Não permite valor nulo.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68060380"
  A API do coletor de dados só permite que você altere ou exclua os conjuntos de coleta que você criar. Os conjuntos de coleta fornecidos com o sistema não podem ser modificados ou excluídos. Porém, você pode habilitar ou desabilitar um conjunto de coleta do sistema e alterar a sua configuração.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   

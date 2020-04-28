@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084555"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configurações do projeto (conversão) (DB2ToSQL)
@@ -167,7 +167,7 @@ A tabela a seguir mostra como o SSMA converte os modos de bloqueio do DB2:
 |COMPARTILHAMENTO DE LINHA|HOLDLOCK DE BLOQUEIO|  
 |LINHA EXCLUSIVA|XLOCK, HOLDLOCK|  
 |COMPARTILHAMENTO DE ATUALIZAÇÃO = COMPARTILHAMENTO DE LINHA|HOLDLOCK DE BLOQUEIO|  
-|Compartilhar|TABLOCK, HOLDLOCK|  
+|COMPARTILHAR|TABLOCK, HOLDLOCK|  
 |LINHA DE COMPARTILHAMENTO EXCLUSIVA|TABLOCK, XLOCK, HOLDLOCK|  
 |Exclude|TABLOCKX, HOLDLOCK|  
   
@@ -371,7 +371,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 ### <a name="use-isnull-in-replace-function-calls"></a>Usar ISNULL em substituir chamadas de função  
 A instrução ISNULL é usada em substituir chamadas de função para emular o comportamento do DB2. As seguintes opções estão presentes para essa configuração:  
   
--   SIM  
+-   YES  
   
 -   Não  
   
@@ -384,7 +384,7 @@ Quando você seleciona um modo de conversão na caixa **modo** , o SSMA aplica a
 ### <a name="use-isnull-in-concat-function-calls"></a>Usar ISNULL em chamadas de função CONCAT  
 A instrução ISNULL é usada em chamadas de função CONCAT para emular o comportamento do DB2. As seguintes opções estão presentes para essa configuração:  
   
--   SIM  
+-   YES  
   
 -   Não  
   

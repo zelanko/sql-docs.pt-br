@@ -18,10 +18,10 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084760"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_history_internal
@@ -29,13 +29,13 @@ ms.locfileid: "68084760"
 
   Contém informações sobre as ações realizadas para gerenciar aplicativos da camada de dados (DAC). Essa tabela é armazenada no esquema **dbo** do banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificador da ação|  
 |**sequence_id**|**int**|Identifica uma etapa dentro de uma ação.|  
 |**instance_id**|**uniqueidentifier**|Identificador da instância do DAC. Esta coluna pode ser unida na coluna **instance_id** em [dbo. sysdac_instances &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificador do tipo da ação:<br /><br /> **0** = implantar<br /><br /> **1** = criar<br /><br /> **2** = renomear<br /><br /> **3** = desanexar<br /><br /> **4** = excluir|  
-|**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **instalação**<br /><br /> **criada**<br /><br /> **nome**<br /><br /> **remover**<br /><br /> **apagar**|  
+|**action_type_name**|**varchar (19)**|Nome do tipo de ação.<br /><br /> **instalação**<br /><br /> **criada**<br /><br /> **rename**<br /><br /> **remover**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificador do tipo de objeto afetado pela ação:<br /><br /> **0** = dacpac<br /><br /> **1** = logon<br /><br /> **2** = banco de dados|  
 |**dac_object_type_name**|**varchar (8)**|Nome do tipo de objeto afetado pela ação:<br /><br /> **dacpac** = instância DAC<br /><br /> **entrar**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica o status atual da ação:<br /><br /> **0** = pendente<br /><br /> **1** = êxito<br /><br /> **2** = falha|  
@@ -44,7 +44,7 @@ ms.locfileid: "68084760"
 |**dac_object_name_pretran**|**sysname**|Nome do objeto antes que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**dac_object_name_posttran**|**sysname**|Nome do objeto depois que a transação que contém a ação seja confirmada. Usado somente para bancos de dados e logons.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa uma ação em um banco de dados ou logon.|  
-|**carga**|**varbinary(max)**|Definição de pacote do DAC salva em uma cadeia de caracteres codificada binária.|  
+|**payload**|**varbinary(max)**|Definição de pacote do DAC salva em uma cadeia de caracteres codificada binária.|  
 |**Comentários**|**varchar(max)**|Registra o logon de um usuário que aceitou perda de dados potencial em uma atualização de DAC.|  
 |**error_string**|**nvarchar(max)**|Mensagem de erro gerada se a ação encontrar um erro.|  
 |**created_by**|**sysname**|O logon que iniciou a ação que criou essa entrada.|  
@@ -80,7 +80,7 @@ WHERE instance_id NOT IN
  Requer associação na função de servidor fixa sysadmin. O acesso somente leitura a essa exibição está disponível para todos os usuários com permissões para se conectar ao banco de dados mestre.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [o dbo. sysdac_instances &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [&#41;&#40;Transact-SQL de sysdac_instances_internal](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   

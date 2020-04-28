@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096280"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68096280"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_db_partition_stats**. A partition_id em sys. dm_pdw_nodes_db_partition_stats difere da partition_id na exibição de catálogo sys. partitions para SQL Data Warehouse do Azure.
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|ID da partição. É exclusiva em um banco de dados. Esse é o mesmo valor que o **partition_id** na exibição do catálogo **Sys. partitions** , exceto pelo Azure SQL data warehouse.|  
 |**object_id**|**int**|ID de objeto da tabela ou exibição indexada da qual a partição faz parte.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68096280"
 |**distribution_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> A ID numérica exclusiva associada à distribuição.|  
   
 ## <a name="remarks"></a>Comentários  
- **Sys. dm_db_partition_stats** exibe informações sobre o espaço usado para armazenar e gerenciar dados LOB de dados em linha e dados de estouro de linha para todas as partições em um banco de dado. É exibida uma linha por partição.  
+ **sys.dm_db_partition_stats** exibe informações sobre o espaço usado para armazenar e gerenciar dados LOB de dados em linha e dados de estouro de linha para todas as partições em um banco de dados. É exibida uma linha por partição.  
   
  As contagens nas quais a saída tem como base são armazenadas em cache na memória ou armazenadas em disco nas diversas tabelas do sistema.  
   
@@ -105,7 +105,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

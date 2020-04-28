@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103227"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectar-se ao MySQL (MySQLToSQL)
@@ -26,7 +26,7 @@ Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-
   
 O provedor MySQL disponível é um driver do MySQL ODBC 5,1 (confiável).  
   
-**Mode**  
+**Modo**  
   
 O modo padrão é o modo padrão. No modo padrão, você insere ou seleciona valores para o MySQL, o nome do servidor, a porta do servidor, o nome de usuário e a senha.  
   
@@ -44,7 +44,7 @@ Insira o nome de usuário que o SSMA usará para se conectar ao banco de dados M
   
 **Senha**  
   
-Insira a senha para o nome de usuário.  
+Digite a senha para o nome de usuário.  
   
 **SSL**  
   

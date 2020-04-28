@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070907"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Referência de operador de DMX (Data Mining Extensions)
@@ -20,7 +20,7 @@ ms.locfileid: "68070907"
 
   A linguagem DMX (Data Mining Extensions) no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dá suporte a operadores aritméticos, de atribuição, de comparação, lógicos e unários. A tabela a seguir lista os operadores que a DMX suporta.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[+ &#40;adicionar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Um operador aritmético que soma dois números.|  
 |[-&#40;subtrair&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Operador aritmético que subtrai um número de outro.|  

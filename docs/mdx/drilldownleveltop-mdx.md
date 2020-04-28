@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049268"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -32,7 +32,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Uma expressão MDX (Multidimensional Expressions) válida que retorna um conjunto.  
   
- *Contar*  
+ *Count*  
  Uma expressão numérica válida que especifica o número de tuplas a ser retornado.  
   
  *Level_Expression*  
@@ -84,6 +84,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte Também  
  [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086821"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalar o SSMA para cliente MySQL (MySQLToSQL)
@@ -33,7 +33,7 @@ O cliente do SSMA para MySQL consiste nos arquivos de programa que executam as s
   
 Este tópico fornece os pré-requisitos de instalação e instruções para instalar o SSMA para cliente MySQL.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 O SSMA para MySQL foi projetado para funcionar com o MySQL 4,1 ou versões posteriores e todas as edições do SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017 e BD SQL do Azure.  
   
 Antes de instalar o SSMA, verifique se o computador atende aos seguintes requisitos:  

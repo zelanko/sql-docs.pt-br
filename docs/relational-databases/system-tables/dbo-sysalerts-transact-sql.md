@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084680"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "68084680"
 
   Contém uma linha para cada alerta. Um alerta é uma mensagem enviada em resposta a um evento. Um alerta pode encaminhar mensagens além do ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e um alerta pode ser uma mensagem de email ou de pager. Um alerta também pode gerar uma tarefa.  Essa tabela é armazenada no banco de dados **msdb** .
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID do alerta.|  
+|**id**|**int**|ID do alerta.|  
 |**name**|**sysname**|Nome do alerta.|  
 |**event_source**|**nvarchar (100)**|Origem do evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Reservado para uso futuro.|  
 |**event_id**|**int**|Reservado para uso futuro.|  
 |**message_id**|**int**|ID da mensagem definida pelo usuário ou referência à mensagem **sysmessages** que dispara este alerta.|  
-|**Severity**|**int**|Severidade que dispara esse alerta.|  
+|**severity**|**int**|Severidade que dispara esse alerta.|  
 |**habilitado**|**tinyint**|Status do alerta:<br /><br /> **0** = desabilitado.<br /><br /> **1** = habilitado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre as notificações para esse alerta.|  
 |**last_occurrence_date**|**int**|Última ocorrência (data) do alerta.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084680"
 |**count_reset_time**|**int**|A hora do número do dia será redefinida como **0**.|  
 |**job_id**|**uniqueidentifier**|ID da tarefa executada quando esse alerta ocorre.|  
 |**has_notification**|**int**|Número de operadores que recebem notificação de email quando o alerta ocorre.|  
-|**flags**|**int**|Reservado.|  
+|**sinalizadores**|**int**|Reservado.|  
 |**performance_condition**|**nvarchar(512)**|Reservado.|  
 |**category_id**|**int**|Reservado.|  
   

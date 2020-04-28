@@ -16,17 +16,17 @@ ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091277"
 ---
 # <a name="localdbdeleteinstance-function"></a>Função LocalDBDeleteInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Remove a instância especificada de LocalDB do SQL Server Express.  
   
- **Arquivo de cabeçalho:** sqlncli. h  
+ **Arquivo de cabeçalho:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ HRESULT LocalDBDeleteInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *pInstanceName*  
  [Entrada] O nome da instância de LocalDB a ser removida.  
   

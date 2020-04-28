@@ -20,10 +20,10 @@ ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b1cd1c1688922404b882069d9e100504dfbcb14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078713"
 ---
 # <a name="sysservice_queue_usages-transact-sql"></a>sys.service_queue_usages (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68078713"
 
   Esta exibição do catálogo retorna uma linha para cada referência entre o serviço e a fila de serviço. Um serviço só pode ser associado a uma fila. Uma fila pode ser associada a vários serviços.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|Identificador do serviço. Exclusiva no banco de dados. Não é NULLABLE.|  
 |**service_queue_id**|**int**|Identificador da fila de serviço usada pelo serviço. Não é NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. Services &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)  

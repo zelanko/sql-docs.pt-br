@@ -21,10 +21,10 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067779"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
@@ -42,13 +42,13 @@ ms.locfileid: "68067779"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @db_name  
  O nome do banco de dados. O @db_name parâmetro é **sysname**. Se uma cadeia de caracteres vazia ou um valor NULO for passado para esse parâmetro, as informações sobre todos os bancos de dados na instância do SQL Server serão retornadas.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|nome do banco de dados.|  
 |db_guid|UNIQUEIDENTIFIER|Identificador que identifica exclusivamente o banco de dados.|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074810"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074810"
   
  Um identificador de objeto é criado quando o objeto é definido. O identificador é utilizado para fazer referência ao objeto. Os identificadores devem ter 100 caracteres ou menos.  
   
-##  <a name="RegularIdentifiers"></a>Identificadores regulares  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificadores regulares  
  Os identificadores normais em DMX respeitam as regras do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para formato de identificadores. Os identificadores normais em DMX não requerem delimitadores. A seguir, um exemplo de instrução DMX que usa um identificador normal não delimitado:  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  É preciso pôr entre colchetes todos os identificadores usados em instruções DMX que não estejam em conformidade com essas regras.  
   
-##  <a name="DelimitedIdentifiers"></a>Identificadores delimitados  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificadores delimitados  
  Os identificadores delimitados são postos entre colchetes ([ ]).  A seguir, um exemplo de uma instrução DMX com identificador delimitado que obedece essas regras.  
   
 ```  

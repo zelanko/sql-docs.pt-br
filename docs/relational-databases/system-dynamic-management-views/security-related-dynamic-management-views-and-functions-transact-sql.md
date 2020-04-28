@@ -14,10 +14,10 @@ ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d4f2eccae414ec8ad12a5677052e5fd90519c24d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061893"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas à segurança (Transact-SQL)

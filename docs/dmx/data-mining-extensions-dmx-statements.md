@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070860"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instruções (DMX) de extensões de mineração de dados
@@ -58,9 +58,9 @@ ms.locfileid: "68070860"
   
  Essas tarefas encaixam-se em duas categorias, instruções de definição de dados e instruções de manipulação de dados, descritas na tabela a seguir.  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)|Parte da DLL (Data Definition Language). Usado definir um novo modelo de mineração (inclusive treinar) ou para descartar um modelo de mineração existente de um banco de dados.|  
+|[Instruções de definição de dados de extensões DMX &#40;extensões DMX&#41;](../dmx/dmx-statements-data-definition.md)|Parte da DLL (Data Definition Language). Usado definir um novo modelo de mineração (inclusive treinar) ou para descartar um modelo de mineração existente de um banco de dados.|  
 |[&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)|Parte da DML (Data Manipulation Language). Usado para trabalhar com modelos de mineração existentes, inclusive para pesquisar um modelo ou criar previsões.|  
   
 ## <a name="see-also"></a>Consulte Também  

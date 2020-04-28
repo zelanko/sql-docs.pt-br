@@ -18,10 +18,10 @@ ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053067"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
@@ -72,7 +72,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  A tabela a seguir mostra o formato do cursor retornado ao se usar sp_describe_cursor. O formato do cursor é o mesmo formato retornado ao se usar sp_cursor_list.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome especificado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome de cursor. Se a referência ao cursor for feita por uma variável, o nome de referência será o nome da variável.|  
 |cursor_name|**sysname**|Nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, cursor_name retornará o nome da variável de cursor. Em versões mais recentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna de saída retorna um nome gerado pelo sistema.|  
@@ -139,7 +139,7 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Cursores](../../relational-databases/cursors.md)   
  [&#41;&#40;Transact-SQL de CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARAR CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060552"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68060552"
 
   Contém uma linha para objeto de sequência em um banco de dados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |\<colunas herdadas>||Herda todas as colunas de [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant não nulo**|O valor inicial do objeto de sequência. Se o objeto de sequência for reiniciado com ALTER SEQUENCE, ele será reiniciado nesse valor. Quando o objeto de sequência circula, ele prossegue para o **minimum_value** ou **maximum_value**, não para o **start_value**.|  
@@ -52,14 +52,14 @@ ms.locfileid: "68060552"
 |**last_used_value**|**sql_variant nulo**|Retorna o último valor gerado pela função [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) . Aplica-se ao SQL Server 2017 e posterior.|  
   
 ## <a name="permissions"></a>Permissões  
- No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, a visibilidade dos metadados em exibições do catálogo é limitada a protegíveis que um usuário possui ou para os quais recebeu alguma permissão. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ No [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, a visibilidade dos metadados em exibições do catálogo é limitada a protegíveis que um usuário possui ou para os quais recebeu alguma permissão.  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [Números de sequência](../../relational-databases/sequence-numbers/sequence-numbers.md)   
+ [CRIAR sequência &#40;&#41;Transact-SQL](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [PRÓXIMO valor para &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

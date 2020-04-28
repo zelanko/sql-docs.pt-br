@@ -15,10 +15,10 @@ ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103058"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creating Script Files (MySQLToSQL)

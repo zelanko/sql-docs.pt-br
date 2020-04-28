@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083389"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectar-se ao Sybase (SybaseToSQL)
@@ -25,7 +25,7 @@ Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-
 **Provedor**  
 Selecione qualquer provedor instalado no computador para se conectar ao servidor Sybase.  
   
-**Mode**  
+**Modo**  
 Selecione o modo de conexão Standard ou avançado. No modo padrão, você insere ou seleciona valores para o nome do servidor, a porta, o nome de usuário e a senha. No modo avançado, você fornece uma cadeia de conexão.  
   
 **Nome do servidor**  
@@ -38,7 +38,7 @@ Se você estiver usando uma porta não padrão para conexões com o ASE, insira 
 Insira o nome de usuário que é usado para se conectar ao ASE. Essa é uma opção de modo padrão.  
   
 **Senha**  
-Insira a senha para o nome de usuário. Essa é uma opção de modo padrão.  
+Digite a senha para o nome de usuário. Essa é uma opção de modo padrão.  
   
 **Cadeia de conexão**  
 Insira a cadeia de conexão completa para a conexão com o ASE.  
@@ -51,7 +51,7 @@ Cadeias de conexão consistem em pares de nome e valor de parâmetro. Os nomes d
   
     |Configuração|Parâmetro Sybase 12,5|Parâmetro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nome do servidor|Nome do servidor|Servidor|  
+    |Nome do servidor|Nome do servidor|Server (Servidor)|  
     |Porta|Endereço de porta do servidor|Porta|  
     |Nome de usuário|Id de Usuário|Id de Usuário|  
     |Senha|Senha|Senha|  
@@ -70,8 +70,8 @@ Cadeias de conexão consistem em pares de nome e valor de parâmetro. Os nomes d
     |Configuração|Parâmetro Sybase 12.5/15|  
     |-----------|-----------------------------|  
     |Nome do driver|Driver|  
-    |Nome do servidor|Servidor|  
-    |Nome de usuário|UID|  
+    |Nome do servidor|Server (Servidor)|  
+    |Nome do Usuário|UID|  
     |Senha|Pwd|  
     |Número da porta|Porta|  
   
@@ -83,8 +83,8 @@ Cadeias de conexão consistem em pares de nome e valor de parâmetro. Os nomes d
   
     |Configuração|Parâmetro Sybase 12.5/15|  
     |-----------|-----------------------------|  
-    |Nome do servidor|Servidor|  
-    |Nome de usuário|UID|  
+    |Nome do servidor|Server (Servidor)|  
+    |Nome do Usuário|UID|  
     |Senha|Pwd|  
     |Número da porta|Porta|  
   

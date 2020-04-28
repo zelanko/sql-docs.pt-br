@@ -18,10 +18,10 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060210"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
@@ -31,17 +31,17 @@ ms.locfileid: "68060210"
   
  Para ver todas as mensagens processadas por Database Mail, use [sysmail_allitems &#40;&#41;do Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver apenas as mensagens não enviadas, use [sysmail_unsentitems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver apenas as mensagens que foram enviadas, use [sysmail_sentitems &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md). Para exibir anexos de email, use [sysmail_mailattachments &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador do item de email na fila de email.|  
 |**profile_id**|**int**|O identificador do perfil usado para enviar a mensagem.|  
-|**tiver**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
+|**recipients**|**varchar(max)**|Os endereços de email dos destinatários da mensagem.|  
 |**copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem.|  
 |**blind_copy_recipients**|**varchar(max)**|Os endereços de email daqueles que recebem cópias da mensagem, mas cujos nomes não aparecem no cabeçalho.|  
 |**Assunto**|**nvarchar (510)**|A linha de assunto da mensagem.|  
-|**conteúdo**|**varchar(max)**|O corpo da mensagem.|  
+|**body**|**varchar(max)**|O corpo da mensagem.|  
 |**body_format**|**varchar (20)**|O formato do corpo da mensagem. Os valores possíveis são TEXT e HTML.|  
-|**porta**|**varchar (6)**|O parâmetro de **importância** da mensagem.|  
+|**importance**|**varchar (6)**|O parâmetro de **importância** da mensagem.|  
 |**prioridade**|**varchar (12)**|O parâmetro de **sensibilidade** da mensagem.|  
 |**file_attachments**|**varchar(max)**|Uma lista delimitada por ponto-e-vírgula de nomes de arquivo anexados à mensagem de email.|  
 |**Attachment_encoding**|**varchar (20)**|O tipo de anexo de email.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68060210"
 |**attach_query_result_as_file**|**bit**|Quando o valor é 0, os resultados da consulta são incluídos no corpo da mensagem de email, depois do conteúdo do corpo. Quando o valor é 1, os resultados são retornados como um anexo.|  
 |**query_result_header**|**bit**|Quando o valor for 1, os resultados da consulta continham cabeçalhos de coluna. Quando o valor for 0, os resultados da consulta não incluirão cabeçalhos de coluna.|  
 |**query_result_width**|**int**|O parâmetro **query_result_width** da mensagem.|  
-|**query_result_separator**|**char(1)**|O caractere usado para separar as colunas na saída da consulta.|  
+|**query_result_separator**|**Char (1)**|O caractere usado para separar as colunas na saída da consulta.|  
 |**exclude_query_output**|**bit**|O parâmetro **exclude_query_output** da mensagem. Para obter mais informações, consulte [sp_send_dbmail &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|O parâmetro **append_query_error** da mensagem. 0 indica que o Database Mail não deverá enviar a mensagem de email se houver um erro na consulta.|  
 |**send_request_date**|**datetime**|A data e a hora em que a mensagem foi colocada na fila de email.|  

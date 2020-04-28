@@ -18,10 +18,10 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084861"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
@@ -49,11 +49,11 @@ sp_update_notification
   
 `[ @notification_method = ] notification`O método pelo qual o operador é notificado. a *notificação*é **tinyint**, sem padrão, e pode ser um ou mais desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Email|  
 |**2**|Pager|  
-|**quatro**|**net send**|  
+|**4**|**net send**|  
 |**7**|Todos os métodos|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

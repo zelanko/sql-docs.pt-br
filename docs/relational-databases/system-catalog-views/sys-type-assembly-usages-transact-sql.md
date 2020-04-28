@@ -20,10 +20,10 @@ ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 48dbb35fcecde99dad30e71fdcd2c85a2ab92e3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061281"
 ---
 # <a name="systype_assembly_usages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68061281"
   
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**user_type_id**|**int**|ID do tipo<br /><br /> Para retornar o nome do tipo, ingresse na exibição do catálogo [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) nesta coluna.|  
 |**assembly_id**|**int**|ID do assembly|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   

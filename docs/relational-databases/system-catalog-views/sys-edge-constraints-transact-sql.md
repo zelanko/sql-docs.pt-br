@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079324"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints (Transact-SQL)
@@ -32,21 +32,21 @@ ms.locfileid: "68079324"
 
 Contém uma linha para cada objeto que é uma restrição de borda. 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<Colunas herdadas de sys. Objects>**||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|1 = a restrição de borda é disbled.<br /><br /> 0 = a restrição de borda está habilitada.|  
 |**is_not_trusted**|**bit**|1 = a restrição de borda não foi verificada pelo sistema.<br /><br /> 0 = a restrição de borda foi verificada pelo sistema.|  
 |**delete_referential_action**|**tinyint**|Ação referencial que foi definida nesta restrição de borda.<br /><br />0 = nenhuma ação.|  
-|**delete_referential_action_desc**|**nvarchar (60)**|Descrição da ação referencial que foi definida nesta restrição de borda.<br /><br />NO_ACTION|  
+|**delete_referential_action_desc**|**nvarchar(60)**|Descrição da ação referencial que foi definida nesta restrição de borda.<br /><br />NO_ACTION|  
 |**is_system_named**|**bit**|1 = o nome da restrição de borda foi gerado pelo sistema.<br /><br />0 = o nome da restrição de borda foi fornecido pelo usuário.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

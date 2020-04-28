@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056454"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
@@ -38,7 +38,7 @@ ms.locfileid: "68056454"
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 `[ @masking_mode = ] masking_mode`Determina se a máscara de dados do usuário do log de criptografia de dados transparente está habilitada. *masking_mode* é **int**e pode ser um dos seguintes valores:  
   
 -   0 = desabilitado, os dados do usuário [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] aparecem nos logs de atividade.  

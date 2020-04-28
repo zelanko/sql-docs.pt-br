@@ -20,10 +20,10 @@ ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073185"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "68073185"
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) .  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifica a classe da entidade referenciada:<br /><br /> 0 = Objeto ou coluna (somente referências não associadas a esquema)<br /><br /> 1 = Objeto ou coluna (somente referências associadas a esquema)<br /><br /> 2 = Tipos (referências associadas a esquema)<br /><br /> 3 = Coleções de esquema XML (referências associadas a esquema)<br /><br /> 4 = Função de partição (referências associadas a esquema)|  
-|**class_desc**|**nvarchar (60)**|Descrição da classe da entidade referenciada:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
+|**classe**|**tinyint**|Identifica a classe da entidade referenciada:<br /><br /> 0 = Objeto ou coluna (somente referências não associadas a esquema)<br /><br /> 1 = Objeto ou coluna (somente referências associadas a esquema)<br /><br /> 2 = Tipos (referências associadas a esquema)<br /><br /> 3 = Coleções de esquema XML (referências associadas a esquema)<br /><br /> 4 = Função de partição (referências associadas a esquema)|  
+|**class_desc**|**nvarchar(60)**|Descrição da classe da entidade referenciada:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |**object_id**|**int**|ID do objeto de referência.|  
 |**column_id**|**int**|Se a ID de referência for uma coluna, ID da coluna de referência; caso contrário, 0.|  
 |**referenced_major_id**|**int**|ID da entidade referenciada, interpretada por valor de classe, de acordo com:<br /><br /> 0, 1 = ID de objeto do objeto ou coluna.<br /><br /> 2 = ID do tipo.<br /><br /> 3 = ID da coleção de esquemas XML.|  
@@ -48,11 +48,11 @@ ms.locfileid: "68073185"
 |**is_select_all**|**bit**|Objeto é usado na cláusula SELECT * (somente no nível do objeto).|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes do catálogo do sistema do SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

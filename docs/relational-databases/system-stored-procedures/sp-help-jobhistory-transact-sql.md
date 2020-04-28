@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054933"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`O status de execução do trabalho. *run_status* é **int**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Failed (Falha)|  
-|**1**|Bem-sucedido|  
+|**1**|Teve êxito|  
 |**2**|Repetir (somente a etapa)|  
-|**Beta**|Canceled|  
-|**quatro**|Mensagem em andamento|  
-|**05**|Unknown (desconhecido)|  
+|**3**|Canceled|  
+|**4**|Mensagem em andamento|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`O número mínimo de vezes que um trabalho deve ser executado novamente. *minimum_retries* é **int**, com um padrão de NULL.  
   
@@ -98,7 +98,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A lista de colunas real depende do valor de *Mode*. O conjunto de colunas mais abrangente é mostrado abaixo e é retornado quando o *modo* está cheio.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificação de entrada de histórico.|  
 |**job_id**|**uniqueidentifier**|Número de identificação do trabalho.|  
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|Nome da etapa (será o NULL para um histórico de trabalho).|  
 |**sql_message_id**|**int**|Para uma etapa do [!INCLUDE[tsql](../../includes/tsql-md.md)], o número de erro mais recente do [!INCLUDE[tsql](../../includes/tsql-md.md)] encontrado ao executar o comando.|  
 |**sql_severity**|**int**|Para uma etapa do [!INCLUDE[tsql](../../includes/tsql-md.md)], a severidade de erro mais alta do [!INCLUDE[tsql](../../includes/tsql-md.md)] encontrada ao executar o comando.|  
-|**Mensagem**|**nvarchar(1024)**|Mensagem de histórico do trabalho ou da etapa.|  
+|**message**|**nvarchar(1024)**|Mensagem de histórico de trabalho ou de etapa.|  
 |**run_status**|**int**|Resultado do trabalho ou da etapa.|  
 |**run_date**|**int**|Data em que o trabalho ou a etapa começaram a ser executados.|  
 |**run_time**|**int**|Hora em que o trabalho ou a etapa começaram a ser executados.|  
@@ -116,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operador ao qual foi enviada uma mensagem de rede em relação a esse trabalho (é NULL para o histórico de etapas).|  
 |**operator_paged**|**nvarchar (20)**|Operador que foi informado por pager em relação a esse trabalho (é NULL para o histórico de etapas).|  
 |**retries_attempted**|**int**|Número de vezes que a etapa foi repetida (sempre 0 para um histórico de trabalhos).|  
-|**servidor**|**nvarchar (30)**|Servidor no qual a etapa ou o trabalho são executados. É sempre (**local**).|  
+|**servidor**|**nvarchar(30)**|Servidor no qual a etapa ou o trabalho são executados. É sempre (**local**).|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_help_jobhistory** retorna um relatório com o histórico dos trabalhos agendados especificados. Se nenhum parâmetro for especificado, o relatório conterá o histórico para todos os trabalhos agendados.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -164,7 +164,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_purge_jobhistory](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

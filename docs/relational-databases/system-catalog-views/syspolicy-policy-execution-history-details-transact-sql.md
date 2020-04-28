@@ -18,10 +18,10 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094822"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68094822"
   Exibe as expressões de condição que foram executadas as políticas, os destinos das expressões, o resultado de cada execução e os detalhes sobre erros, se houver. A tabela a seguir descreve as colunas na exibição  syspolicy_execution_history_details.  
   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificador deste registro. Cada registro representa a tentativa para avaliar ou obrigar uma expressão de condição em uma política. Se aplicado a vários destinos, cada condição terá um registro de detalhe para cada destino.|  
 |history_id|**bigint**|Identificador do evento de histórico. Cada evento de histórico representa um tentativa para executar uma política. Como uma condição pode ter várias expressões de condição e vários destinos, um history_id pode criar vários registros de detalhe. Use a coluna history_id para adicionar essa exibição à exibição de [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
@@ -69,7 +69,7 @@ WHERE PolHistDet.result = 0 ;
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

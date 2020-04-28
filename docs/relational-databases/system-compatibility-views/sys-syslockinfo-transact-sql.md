@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053344"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68053344"
 > [!IMPORTANT]  
 >  Esse recurso foi alterado em relação às versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [alterações recentes em recursos de mecanismo de banco de dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar (32)**|Descrição textual de um recurso de bloqueio. Contém uma parte do nome de recurso.|  
-|**rsc_bin**|**Binary (16)**|Recurso de bloqueio binário. Contém o recurso de bloqueio real que está contido no administrador de bloqueio. Essa coluna está incluída para ferramentas que conhecem o formato de recurso de bloqueio para gerar seu próprio recurso de bloqueio formatado e para executar autojunções em **syslockinfo**.|  
-|**rsc_valblk**|**Binary (16)**|Bloco de valor de bloqueio. Alguns tipos do recurso podem incluir dados adicionais no recurso de bloqueio sem-hash do administrador de bloqueio para determinar a propriedade de um recurso de bloqueio específico. Por exemplo, bloqueios de página não pertencem a um ID de objeto específico. Para escalonamento de bloqueios e outros fins. Porém, o ID de objeto de um bloqueio de página pode ser incluído no bloco de valor de bloqueio.|  
+|**rsc_text**|**nchar(32)**|Descrição textual de um recurso de bloqueio. Contém uma parte do nome de recurso.|  
+|**rsc_bin**|**binary(16)**|Recurso de bloqueio binário. Contém o recurso de bloqueio real que está contido no administrador de bloqueio. Essa coluna está incluída para ferramentas que conhecem o formato de recurso de bloqueio para gerar seu próprio recurso de bloqueio formatado e para executar autojunções em **syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Bloco de valor de bloqueio. Alguns tipos do recurso podem incluir dados adicionais no recurso de bloqueio sem-hash do administrador de bloqueio para determinar a propriedade de um recurso de bloqueio específico. Por exemplo, bloqueios de página não pertencem a um ID de objeto específico. Para escalonamento de bloqueios e outros fins. Porém, o ID de objeto de um bloqueio de página pode ser incluído no bloco de valor de bloqueio.|  
 |**rsc_dbid**|**smallint**|ID de banco de dados associado ao recurso.|  
 |**rsc_indid**|**smallint**|ID de índice associado com o recurso, se apropriado.|  
 |**rsc_objid**|**int**|ID de objeto associado com o recurso, se apropriado.|  
@@ -64,6 +64,6 @@ ms.locfileid: "68053344"
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

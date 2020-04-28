@@ -16,10 +16,10 @@ ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68050877"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Exibições de catálogo de grupos de disponibilidade Always On (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68050877"
 ## <a name="see-also"></a>Consulte Também  
  [sys. databases (Transact-SQL)](sys-databases-transact-sql.md)   
  [sys. database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
- [Grupos de Disponibilidade AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On grupos de disponibilidade (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Monitorar grupos de disponibilidade (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Funções e exibições de gerenciamento dinâmico dos grupos de disponibilidade Always On (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   

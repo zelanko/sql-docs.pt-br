@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053108"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -65,20 +65,20 @@ sp_depends [ @objname = ] '<object>'
   
  O conjunto de resultados a seguir mostra os objetos dos quais * \<o objeto>* depende.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**type**|**nvarchar (16)**|Tipo do item.|  
 |**atualizações**|**nvarchar (7)**|Caso o item seja atualizado.|  
-|**Selecione**|**nvarchar (8)**|Se o item é usado em uma instrução SELECT.|  
-|**column**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
+|**selecionado**|**nvarchar(8)**|Se o item é usado em uma instrução SELECT.|  
+|**pilha**|**sysname**|Coluna ou parâmetro em que a dependência existe.|  
   
  O conjunto de resultados a seguir mostra os objetos que dependem do * \<objeto>*.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nome do item para o qual uma dependência existe.|  
-|**tipo**|**nvarchar (16)**|Tipo do item.|  
+|**type**|**nvarchar (16)**|Tipo do item.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
@@ -105,7 +105,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

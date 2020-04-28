@@ -10,14 +10,14 @@ ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 57d6ed457fe00e7ec78094b44db174e2c0150511
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059991"
 ---
 # <a name="shortcut-keys-db2tosql"></a>Teclas de atalho (DB2ToSQL)
-Você pode usar atalhos de teclado para navegar pelo aplicativo SSMA. Para obter mais informações, consulte os tópicos a seguir.  
+Você pode usar atalhos de teclado para navegar pelo aplicativo SSMA. Para obter mais informações, consulte estes tópicos.  
   
 -   [Comandos de menu e outras teclas de atalho &#40;DB2ToSQL&#41;](../../ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md)  
   

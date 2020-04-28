@@ -18,10 +18,10 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072654"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "68072654"
 
   A tabela **MSmerge_identity_range_allocations** é usada para acompanhar o histórico de atribuições de intervalo de identidade, para Publicadores e assinantes, para artigos publicados. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do Publicador.|  
 |**publisher_db**|**nvarchar(128)**|O nome do banco de dados de publicação.|  
 |**documento**|**nvarchar(128)**|O nome da publicação.|  
 |**artigo**|**nvarchar(128)**|O nome do artigo.|  
-|**Assinante**|**nvarchar(128)**|O nome do Assinante.|  
+|**farão**|**nvarchar(128)**|O nome do Assinante.|  
 |**subscriber_db**|**nvarchar(128)**|O nome do banco de dados de assinatura.|  
 |**is_pub_range**|**bit**|Lista se o intervalo de identidade é ou não atribuído a um Publicador.|  
 |**ranges_allocated**|**tinyint**|O número de intervalos de identidade atribuídos.|  

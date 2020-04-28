@@ -12,10 +12,10 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075356"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Instalar os componentes do SSMA no SQL Server (MySQLToSql)
@@ -26,7 +26,7 @@ O pacote de extensão do SSMA adiciona um banco de dados, **sysdb**, à [!INCLUD
   
 Além disso, quando você migra dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SSMA cria trabalhos do Agent quando o mecanismo de migração de dados do servidor é usado para migrar os dados.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Antes de instalar os componentes do SSMA para servidor MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, verifique se o computador atende aos seguintes requisitos:  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou uma versão posterior.  

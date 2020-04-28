@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090848"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`É o novo valor para a propriedade especificada. o *valor*é **nvarchar (255)** e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|DESCRIÇÃO|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Local em que a pasta de instantâneo é armazenada se o local for diferente de ou além do local padrão.|  
 |**ndescrição**||Descrição da assinatura pull de mesclagem.|  
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponível somente para compatibilidade com versões anteriores. É o nome de usuário usado para se conectar ao serviço FTP.|  
 |**ftp_password**||Disponível somente para compatibilidade com versões anteriores. É a senha de usuário usada para se conectar ao serviço FTP.|  
 |**ftp_port**||Disponível somente para compatibilidade com versões anteriores. É o número da porta do serviço FTP para o Distribuidor.|  
-|**nome do host**||Especifica o valor para HOST_NAME() quando essa função for usada na cláusula WHERE de uma relação de filtro de junção ou registro lógico.|  
+|**hostname**||Especifica o valor para HOST_NAME() quando essa função for usada na cláusula WHERE de uma relação de filtro de junção ou registro lógico.|  
 |**internet_login**||Logon que o Agente de Mesclagem usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_password**||Senha para o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_security_mode**|**1**|Use a Autenticação do Windows para se conectar ao servidor da Web que está hospedando a sincronização da Web.|  
@@ -74,20 +74,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL que representa o local do Replication Listener para sincronização da Web.|  
 |**merge_job_login**||Logon para a conta do Windows na qual o agente é executado.|  
 |**merge_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
-|**priority**||Disponível somente para compatibilidade com versões anteriores; Execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) no Publicador em vez de modificar a prioridade de uma assinatura.|  
+|**prioridade**||Disponível somente para compatibilidade com versões anteriores; Execute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) no Publicador em vez de modificar a prioridade de uma assinatura.|  
 |**publisher_login**||ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_password**||A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_security_mode**|**0**|Use a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Publicador.|  
 ||**1**|Use a Autenticação do Windows ao se conectar ao Publicador.|  
 ||**2**|Os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o Publicador deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
 |**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
-||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
+||**nenhum**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_ftp**|**true**|Use o FTP em vez do protocolo típico para recuperar instantâneos.|  
-||**for**|Use o FTP em vez do protocolo típico para recuperar instantâneos.|  
+||**false**|Use o FTP em vez do protocolo típico para recuperar instantâneos.|  
 |**use_web_sync**|**true**|A assinatura pode ser sincronizada pelo HTTP.|  
-||**for**|A assinatura não pode ser sincronizada pelo HTTP.|  
+||**false**|A assinatura não pode ser sincronizada pelo HTTP.|  
 |**use_interactive_resolver**|**true**|Resolvedor interativo usado durante a reconciliação.|  
-||**for**|Resolvedor interativo não é usado.|  
+||**false**|Resolvedor interativo não é usado.|  
 |**working_directory**||Caminho completamente qualificado para o diretório onde os arquivos de instantâneo são transferidos usando o FTP quando essa opção é especificada.|  
 |NULL (padrão)||Retorna a lista de valores com suporte para a *Propriedade*.|  
   

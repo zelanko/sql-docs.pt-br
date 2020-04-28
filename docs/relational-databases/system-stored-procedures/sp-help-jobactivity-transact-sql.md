@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054980"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -55,7 +55,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Número de identificação da sessão do agente.|  
 |**job_id**|**uniqueidentifier**|Identificador do trabalho.|  
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|A data em que o trabalho parou de ser executado.|  
 |**next_scheduled_run_date**|**datetime**|Quando o trabalho estiver agendado para ser executado em seguida.|  
 |**job_history_id**|**int**|Identificador para o histórico de trabalho na tabela de histórico de trabalho.|  
-|**Mensagem**|**nvarchar(1024)**|Mensagem produzida durante a última execução do trabalho.|  
+|**message**|**nvarchar(1024)**|Mensagem produzida durante a última execução do trabalho.|  
 |**run_status**|**int**|Status retornado da última execução do trabalho:<br /><br /> **0** = erro falhou<br /><br /> **1** = com êxito<br /><br /> **3** = cancelado<br /><br /> **5** = status desconhecido|  
 |**operator_id_emailed**|**int**|Número de ID do operador notificado por email na conclusão do trabalho.|  
 |**operator_id_netsent**|**int**|Número de ID do operador notificado via **net send** na conclusão do trabalho.|  

@@ -10,10 +10,10 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086185"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabalhando com projetos do SSMA (DB2ToSQL)
@@ -59,7 +59,7 @@ Para migrar dados de bancos de dado DB2 [!INCLUDE[ssNoVersion](../../includes/ss
   
 **Para criar um projeto**  
   
-1.  No menu **arquivo** , clique em **novo projeto**.  
+1.  No menu **Arquivo**, clique em **Novo Projeto**.  
   
     A caixa de diálogo **Novo Projeto** aparecerá.  
   
@@ -69,7 +69,7 @@ Para migrar dados de bancos de dado DB2 [!INCLUDE[ssNoVersion](../../includes/ss
   
 4.  Na lista suspensa **migração para** , selecione a versão do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para migração. As opções disponíveis são:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -95,7 +95,7 @@ Quando você salva um projeto, o SSMA retém as configurações do projeto e, op
   
         Salvar metadados pode levar vários minutos. Se você não quiser salvar os metadados ainda, não marque nenhuma caixa de seleção.  
   
-    2.  Clique no botão **Salvar**.  
+    2.  Clique no botão **Salvar** .  
   
         O SSMA analisará os esquemas do DB2 e salvará os metadados no arquivo do projeto.  
   

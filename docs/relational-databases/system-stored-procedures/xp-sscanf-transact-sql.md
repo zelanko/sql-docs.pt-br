@@ -18,10 +18,10 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091897"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
@@ -39,16 +39,16 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **Strings**  
+ **cadeia de caracteres**  
  É a cadeia de caracteres a partir da qual os valores de argumentos serão lidos.  
   
  OUTPUT  
  Quando especificado, coloca o valor do *argumento* no parâmetro de saída.  
   
- *ao*  
+ *format*  
  É uma cadeia de caracteres formatada semelhante ao que é suportado pela função **sscanf** em linguagem C. Atualmente, é oferecido suporte apenas para o argumento de formato %s.  
   
- *argumento*  
+ *argument*  
  É uma variável **varchar** definida como o valor do argumento de *formato* correspondente.  
   
  *n*  
@@ -83,7 +83,7 @@ products10.tmp        random
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados estendidos gerais &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de xp_sprintf](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

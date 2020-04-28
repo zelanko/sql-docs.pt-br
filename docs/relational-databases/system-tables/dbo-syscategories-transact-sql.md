@@ -20,10 +20,10 @@ ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084668"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68084668"
 
   Contém as categorias usadas pelo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para organizar trabalhos, alertas e operadores. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID da categoria|  
 |**category_class**|**int**|Tipo de item na categoria:<br /><br /> **1** = trabalho<br /><br /> **2** = alerta<br /><br /> **3** = operador|  

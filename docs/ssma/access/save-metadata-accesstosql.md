@@ -10,10 +10,10 @@ ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051555"
 ---
 # <a name="save-metadata-accesstosql"></a>Salvar metadados (AccessToSQL)
@@ -30,10 +30,10 @@ Indica se os metadados são carregados no projeto do SSMA ou se os metadados est
   
 O SSMA carrega metadados no projeto conforme necessário. Os metadados são carregados automaticamente quando você procura metadados e converte esquemas.  
   
-**Selecionar tudo**  
+**Selecionar Tudo**  
 Seleciona todos os bancos de dados listados.  
   
-**Limpar**  
+**Formatação**  
 Desmarca a caixa de seleção de todos os bancos de dados com metadados ausentes. Você não poderá desmarcar a caixa de seleção se um metadado tiver sido carregado.  
   
 **Salvar**  

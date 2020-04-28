@@ -20,17 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064140"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Altera dados de um tipo de dados para outro.  
   
@@ -69,7 +69,7 @@ destlen
  *srctype*  
  Especifica o tipo de dados dos dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
- *orig*  
+ *src*  
  Trata-se de um ponteiro para os dados a serem convertidos. Este parâmetro pode ser qualquer um dos tipos de dados da API de procedimento armazenado estendido.  
   
  *srclen*  
@@ -115,6 +115,6 @@ destlen
   
 ## <a name="see-also"></a>Consulte Também  
  [srv_setutype &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

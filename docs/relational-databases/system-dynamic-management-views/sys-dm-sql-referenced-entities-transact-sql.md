@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090672"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -77,7 +77,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|ID da coluna quando a entidade de referência for uma coluna; caso contrário, 0. Não permite valor nulo.|  
 |referenced_server_name|**sysname**|Nome do servidor da entidade referenciada.<br /><br /> Essa coluna é populada para dependências entre servidores que são feitas especificando um nome de quatro partes válido. Para obter informações sobre nomes com diversas partes, consulte [convenções de sintaxe Transact-sql &#40;&#41;Transact-SQL ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para dependências não associadas a esquema para as quais a entidade foi referenciada sem especificar um nome de quatro partes.<br /><br /> NULL para entidades associadas a esquema porque elas devem estar no mesmo banco de dados e, portanto, só podem ser definidas usando um nome de duas partes (*esquema. objeto*).|  
@@ -88,7 +88,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|ID da entidade referenciada. Quando referenced_minor_id não é 0, referenced_id é a entidade na qual a coluna é definida.<br /><br /> Sempre NULL para referências entre servidores.<br /><br /> NULL para referências entre bancos de dados quando a ID não pode ser determinada, porque o banco de dados está offline ou a entidade não pode ser associada.<br /><br /> NULL para referências dentro do banco de dados se a ID não puder ser determinada. Para referências não associadas a esquema, a ID não pode ser resolvida quando a entidade referenciada não existe no banco de dados ou quando a resolução de nome é dependente de chamador.  No último caso, is_caller_dependent é definido como 1.<br /><br /> Jamais NULL para referências associadas a esquema.|  
 |referenced_minor_id|**int**|ID da coluna quando a entidade referenciada é uma coluna; caso contrário, 0. Por exemplo, referenced_minor_is é 0 na linha que lista a própria entidade referenciada.<br /><br /> Para referências não associadas a esquema, as dependências de coluna são informadas somente quando todas as entidades referenciadas podem ser associadas. Se não for possível associar alguma entidade referenciada, nenhuma dependência no nível de coluna será informada e referenced_minor_id será 0. Consulte o exemplo D.|  
 |referenced_class|**tinyint**|Classe da entidade referenciada.<br /><br /> 1 = Objeto ou coluna<br /><br /> 6 = Tipo<br /><br /> 10 = Coleção de esquema XML<br /><br /> 21 = Função de partição|  
-|referenced_class_desc|**nvarchar (60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Descrição de classe da entidade referenciada.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica que a associação de esquema para a entidade referenciada ocorre em tempo de execução; portanto, a resolução da ID da entidade depende do esquema do chamador. Isso ocorre quando a entidade referenciada é um procedimento armazenado, um procedimento armazenado estendido ou uma função definida pelo usuário chamada em uma instrução EXECUTE.<br /><br /> 1 = A entidade referenciada depende do chamador e é resolvida em tempo de execução. Nesse caso, referenced_id é NULL.<br /><br /> 0 = A ID da entidade referenciada não é dependente do chamador. Sempre 0 para referências associadas a esquema e referências entre bancos de dados e entre servidores que especificam explicitamente um nome de esquema. Por exemplo, uma referência para uma entidade no formato `EXEC MyDatabase.MySchema.MyProc` não é dependente do chamador. Porém, uma referência no formato `EXEC MyDatabase..MyProc` é dependente do chamador.|  
 |is_ambiguous|**bit**|Indica que a referência é ambígua e pode ser resolvida em tempo de execução para uma função definida pelo usuário, um UDT (tipo definido pelo usuário) ou uma referência XQuery para uma coluna do tipo **XML**. Por exemplo, suponha que a instrução `SELECT Sales.GetOrder() FROM Sales.MySales` esteja definida em um procedimento armazenado. Até que o procedimento armazenado seja executado, não se sabe se `Sales.GetOrder()` é uma função definida pelo usuário no esquema `Sales` ou é uma coluna denominada `Sales` do tipo UDT com um método denominado `GetOrder()`.<br /><br /> 1 = A referência a uma função definida pelo usuário ou a um método UDT (Tipo Definido pelo Usuário) de coluna é ambígua.<br /><br /> 0 = A referência não é ambígua ou a entidade pode ser associada com êxito quando a função é chamada.<br /><br /> Sempre 0 para referências associadas a esquema.|  
 |is_selected|**bit**|1 = O objeto ou coluna é selecionada.|  
@@ -123,9 +123,9 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Tabela|Sim*|Sim|  
 |Visualizar|Sim|Sim|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]procedimento armazenado * *|Sim|Sim|  
+|Procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sim|Sim|  
 |procedimento armazenado CLR|Não|Sim|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]função definida pelo usuário|Sim|Sim|  
+|Função [!INCLUDE[tsql](../../includes/tsql-md.md)] definida pelo usuário|Sim|Sim|  
 |Função CLR definida pelo usuário|Não|Sim|  
 |Gatilho CLR (DML e DDL)|Não|Não|  
 |Gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sim|Não|  
@@ -335,7 +335,7 @@ SELECT
  ```
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

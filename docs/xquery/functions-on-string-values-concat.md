@@ -16,10 +16,10 @@ ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099835"
 ---
 # <a name="functions-on-string-values---concat"></a>Funções em Valores da Cadeia de Caracteres – concat
@@ -49,7 +49,7 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados de exemplo AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>a. Uso da função concat() XQuery para concatenar cadeias de caracteres  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Uso da função concat() XQuery para concatenar cadeias de caracteres  
  Para um modelo de produto específico, essa consulta retorna uma cadeia de caracteres criada concatenando o período de garantia e a descrição de garantia. No documento de descrição do catálogo, o `Warranty` elemento <> é composto de <`WarrantyPeriod`> e <`Description` elementos filho>.  
   
 ```  

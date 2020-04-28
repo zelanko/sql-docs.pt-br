@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097813"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>sys. dm_exec_distributed_request_steps (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "68097813"
 
   Contém informações sobre todas as etapas que compõem uma determinada solicitação ou consulta do polybase. Ele lista uma linha por etapa de consulta.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id e step_index compõem a chave para essa exibição. ID numérica exclusiva associada à solicitação.|Consulte a ID em [Sys. dm_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|A posição desta etapa na sequência de etapas que compõem a solicitação.|0 a (n-1) para uma solicitação com n etapas.|  
-|operation_type|**nvarchar(128)**|Tipo da operação representada por esta etapa.|' MoveOperation ', ' OnOperation ', ' RandomIDOperation ', ' RemoteOperation ', ' ReturnOperation ', ' ShuffleMoveOperation ', ' TempTablePropertiesOperation ', ' DropDiagnosticsNotifyOperation ', ' HadoopShuffleOperation ', ' HadoopBroadCastOperation ', 'HadoopRoundRobinOperation'|  
-|distribution_type|**nvarchar (32)**|Onde a etapa está em execução.|' AllComputeNodes ', ' aldistribuitions ', ' ComputeNode ', ' Distribution ', ' subnós ', ' SubsetNodes ', ' SubsetDistributions ', ' não especificado '.|  
-|location_type|**nvarchar (32)**|Onde a etapa está em execução.|"Compute", "Head" ou "DMS". Todas as etapas de movimentação de dados mostram ' DMS '.|  
-|status|**nvarchar (32)**|Status desta etapa|' Pendente ', ' em execução ', ' Concluído ', ' falha ', ' UndoFailed ', ' PendingCancel ', ' cancelado ', ' desfeito ', ' anulado '|  
+|operation_type|**nvarchar(128)**|Tipo da operação representada por esta etapa.|' MoveOperation ', ' OnOperation ', ' RandomIDOperation ', ' RemoteOperation ', ' ReturnOperation ', ' ShuffleMoveOperation ', ' TempTablePropertiesOperation ', ' DropDiagnosticsNotifyOperation ', ' HadoopShuffleOperation ', ' HadoopBroadCastOperation ', ' HadoopRoundRobinOperation '|  
+|distribution_type|**nvarchar(32)**|Onde a etapa está em execução.|' AllComputeNodes ', ' aldistribuitions ', ' ComputeNode ', ' Distribution ', ' subnós ', ' SubsetNodes ', ' SubsetDistributions ', ' não especificado '.|  
+|location_type|**nvarchar(32)**|Onde a etapa está em execução.|"Compute", "Head" ou "DMS". Todas as etapas de movimentação de dados mostram ' DMS '.|  
+|status|**nvarchar(32)**|Status desta etapa|' Pendente ', ' em execução ', ' Concluído ', ' falha ', ' UndoFailed ', ' PendingCancel ', ' cancelado ', ' desfeito ', ' anulado '|  
 |error_id|**nvarchar (36)**|ID exclusiva do erro associado a esta etapa, se houver|Consulte a ID de [Sys. dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL se não ocorreu nenhum erro.|  
 |start_time|**datetime**|Hora em que a execução da etapa foi iniciada|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta à qual essa etapa pertence.|  
 |end_time|**datetime**|A hora em que esta etapa concluiu a execução, foi cancelada ou falhou.|Menor ou igual à hora atual e maior ou igual a start_time, definido como nulo para as etapas atualmente em execução ou na fila.|  
@@ -51,7 +51,7 @@ ms.locfileid: "68097813"
   
 ## <a name="see-also"></a>Consulte Também  
  [Solução de problemas do polybase com exibições de gerenciamento dinâmico](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas ao banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079376"
 ---
 # <a name="sysdestination_data_spaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68079376"
 
   Contém uma linha para cada destino de espaço de dados de um esquema de partição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_scheme_id**|**int**|ID do esquema de partição que está particionando o espaço de dados.|  
 |**destination_id**|**int**|ID (de base 1 ordinal) do mapeamento de destino, exclusivo no esquema de partição.|  
 |**data_space_id**|**int**|ID do espaço de dados para o qual estão sendo mapeados os dados desse destino de esquema.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

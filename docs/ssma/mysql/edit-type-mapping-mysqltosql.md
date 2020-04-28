@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103005"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Editar mapeamento de tipo (MySQLToSQL)
@@ -29,7 +29,7 @@ Você pode acessar essa caixa de diálogo em vários locais:
   
 ## <a name="options"></a>Opções  
   
-##### <a name="source-type"></a>Tipo de fonte  
+##### <a name="source-type"></a>Tipo de origem  
 Selecione o tipo de dados de origem para mapear para um tipo de dados SQL Server.  
   
 Se o tipo de dados for de comprimento variável, os seguintes campos aparecerão sob **SourceType**:  

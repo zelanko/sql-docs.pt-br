@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3615dc8b5de0e5057e2dedaa0077aae51ed87ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074795"
 ---
 # <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= (Maior ou igual a) (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68074795"
 DMX_Expression >= DMX_Expression  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DMX_Expression*  
  Expressão DMX válida.  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084132"
 ---
 # <a name="functions-mdx-syntax"></a>Funções (sintaxe de MDX)
@@ -23,7 +23,7 @@ ms.locfileid: "68084132"
 > [!NOTE]  
 >  Para obter mais informações sobre funções individuais, consulte [referência de função mdx &#40;mdx&#41;](../mdx/mdx-function-reference-mdx.md).  
   
-|Categoria da função|DESCRIÇÃO|  
+|Categoria da função|Descrição|  
 |-----------------------|-----------------|  
 |Funções de matriz|Fornecem matrizes para serem usadas em procedimentos armazenados.<br /><br /> Para obter mais informações, consulte [usando procedimentos armazenados &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Funções de dimensão|Retornam uma referência a uma dimensão a partir de uma hierarquia, nível ou membro.<br /><br /> Para obter mais informações, consulte [usando funções de dimensão, hierarquia e nível](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
@@ -40,6 +40,6 @@ ms.locfileid: "68084132"
  As funções podem ser usadas ou incluídas em qualquer linguagem MDX. As funções também podem ser aninhadas (uma função usada dentro de outra função).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

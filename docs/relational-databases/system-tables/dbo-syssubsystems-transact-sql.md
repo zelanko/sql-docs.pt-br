@@ -20,10 +20,10 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68069081"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
@@ -31,16 +31,16 @@ ms.locfileid: "68069081"
 
   Contém informações sobre todos os subsistemas proxy disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. A tabela **syssubsystems** é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|ID do subsistema.|  
 |**subsistema**|**nvarchar(40)**|Nome do subsistema.|  
 |**description_id**|**int**|ID da mensagem da linha na exibição do catálogo **Sys. messages** que contém a descrição do subsistema.|  
 |**subsystem_dll**|**nvarchar (255)**|Local da DLL do subsistema.|  
 |**agent_exe**|**nvarchar (255)**|Caminho completo do executável que usa o subsistema.|  
-|**start_entry_point**|**nvarchar (30)**|Função que é chamada quando o subsistema é inicializado.|  
-|**event_entry_point**|**nvarchar (30)**|Função que é chamada quando uma etapa do subsistema é executada.|  
-|**stop_entry_point**|**nvarchar (30)**|Função que é chamada quando a execução de um subsistema é finalizada.|  
+|**start_entry_point**|**nvarchar(30)**|Função que é chamada quando o subsistema é inicializado.|  
+|**event_entry_point**|**nvarchar(30)**|Função que é chamada quando uma etapa do subsistema é executada.|  
+|**stop_entry_point**|**nvarchar(30)**|Função que é chamada quando a execução de um subsistema é finalizada.|  
 |**max_worker_threads**|**int**|Número máximo de etapas simultâneas para um determinado subsistema.|  
   
 ## <a name="remarks"></a>Comentários  

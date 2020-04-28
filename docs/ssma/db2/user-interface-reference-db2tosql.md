@@ -10,10 +10,10 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059966"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referência da interface do usuário (DB2ToSQL)
@@ -24,7 +24,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
   
 |||  
 |-|-|  
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |[Seleção de objeto avançada &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use a caixa de diálogo **seleção de objeto avançado** para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use o relatório de avaliação para exibir os resultados da conversão de objetos DB2 em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e para estimar o tempo e a complexidade de uma migração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o.|  
 |[Conectando-se ao banco de dados DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use a caixa de diálogo **conectar-se ao DB2** para se conectar ao banco de dados DB2 que você deseja migrar.|  

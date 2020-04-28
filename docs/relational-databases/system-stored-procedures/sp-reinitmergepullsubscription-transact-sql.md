@@ -16,10 +16,10 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075709"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
@@ -67,7 +67,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Reinicializar assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

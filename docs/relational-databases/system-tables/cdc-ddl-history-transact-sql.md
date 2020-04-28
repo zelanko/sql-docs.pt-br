@@ -18,10 +18,10 @@ ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079222"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
@@ -31,17 +31,17 @@ ms.locfileid: "68079222"
   
  É recomendável não consultar diretamente as tabelas do sistema. Em vez disso, execute o procedimento armazenado [Sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) .  
    
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|A identificação da tabela de origem na qual a DDL foi aplicada.|  
 |**object_id**|**int**|ID da tabela de alteração associada a uma instância de captura da tabela de origem.|  
 |**required_column_update**|**bit**|Indica que o tipo de dados de uma coluna capturada foi modificado na tabela de origem. Esta modificação alterou a coluna na tabela de alteração.|  
 |**ddl_command**|**nvarchar(max)**|Instrução DDL aplicada à tabela de origem.|  
-|**ddl_lsn**|**binário (10)**|Número de sequência de log (LSN) associado com a confirmação da modificação de DDL.|  
+|**ddl_lsn**|**binary(10)**|Número de sequência de log (LSN) associado com a confirmação da modificação de DDL.|  
 |**ddl_time**|**datetime**|Data e hora em que a alteração de DDL foi feita na tabela de origem.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

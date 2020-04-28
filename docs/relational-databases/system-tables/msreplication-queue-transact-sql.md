@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080013"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "68080013"
 
   A tabela de **MSreplication_queue** é usada pelo processo de replicação para armazenar os comandos na fila emitidos por todas as assinaturas de atualização enfileiradas que estão usando a fila baseada em SQL. Essa tabela é armazenada no banco de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
+|**programa**|**sysname**|O nome do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
 |**documento**|**sysname**|O nome da publicação.|  
 |**transid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  
-|**data**|**varbinary (8000)**|O pacote de fluxo de bytes que armazenou informações sobre os comandos na fila.|  
+|**dados**|**varbinary(8000)**|O pacote de fluxo de bytes que armazenou informações sobre os comandos na fila.|  
 |**datalen**|**int**|O comprimento dos dados, em bytes.|  
 |**CommandType**|**int**|O tipo de comando que está sendo enfileirado:<br /><br /> 1 = Comando de usuário na transação.<br /><br /> 2 = Comando de sincronização de assinatura.|  
 |**insertdate**|**datetime**|A data da inserção.|  

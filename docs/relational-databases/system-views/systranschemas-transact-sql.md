@@ -18,10 +18,10 @@ ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094750"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68094750"
 
   A tabela **systranschemas** é usada para acompanhar as alterações de esquema nos artigos publicados em publicações transacionais e de instantâneo. Essa tabela é armazenada nos bancos de dados de assinatura e publicação.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Identifica o artigo de tabela em que a alteração de esquema ocorreu.|  
 |**registrou startlsn**|**binary**|Valor LSN no início da alteração de esquema.|  

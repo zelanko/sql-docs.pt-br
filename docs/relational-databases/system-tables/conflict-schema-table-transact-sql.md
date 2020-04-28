@@ -18,10 +18,10 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084776"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>esquema&lt;&gt;de conflict_&lt;_&gt; tabela (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68084776"
   
  Para replicação ponto a ponto, por padrão, o Distribution Agent falha ao detectar um conflito. Um erro de conflito é registrado no log de erros, mas nenhum dado de conflito é registrado na tabela de conflito; assim, não está disponível para exibição. Se o Distribution Agent tiver permissão para continuar, um conflito será registrado localmente em cada nó onde ele for detectado. Para obter mais informações, consulte “Controlando conflitos” em [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |__$originator_id|**int**|ID do nó no qual originou-se a alteração conflitante. Para obter uma lista de IDs, execute [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Nó no qual originou-se a alteração conflitante.|  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048223"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
@@ -45,9 +45,9 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`É o tipo de gatilho DML para o qual retornar informações. o *tipo* é **Char (6)**, com um padrão de NULL e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**DELETE**|Retorna informações do gatilho DELETE.|  
+|**Delete (excluir)**|Retorna informações do gatilho DELETE.|  
 |**INSERT**|Retorna informações do gatilho INSERT.|  
 |**UPDATE**|Retorna informações do gatilho UPDATE.|  
   
@@ -57,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra as informações contidas no conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nome do gatilho.|  
 |**trigger_owner**|**sysname**|Nome do proprietário da tabela em que o gatilho é definido.|  

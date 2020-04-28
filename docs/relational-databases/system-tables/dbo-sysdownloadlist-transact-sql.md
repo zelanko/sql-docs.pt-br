@@ -20,10 +20,10 @@ ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061191"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68061191"
 
   Mantém a fila de instruções de download para todos os servidores de destino.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Coluna de identidade que fornece a sequência de inserção natural de linhas.|  
 |**source_server**|**sysname**|Nome do servidor de origem.|  

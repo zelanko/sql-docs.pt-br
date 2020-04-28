@@ -21,10 +21,10 @@ ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ead3e8b7df6eb563ce87fa6d6abbffa4a5d2b413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053412"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "68053412"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identificação da tabela.|  
+|**id**|**int**|Identificação da tabela.|  
 |**indid**|**smallint**|ID do índice.|  
 |**colid**|**smallint**|ID da coluna.|  
 |**keyno**|**smallint**|Posição da coluna no índice.|  

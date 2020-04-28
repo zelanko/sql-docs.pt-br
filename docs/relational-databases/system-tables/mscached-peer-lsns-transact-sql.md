@@ -18,10 +18,10 @@ ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078150"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68078150"
   
 ## <a name="definition"></a>Definição  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|A ID do Distribution Agent.|  
 |**autor**|**sysname**|O nome do Publicador de origem.|  
 |**originator_db**|**sysname**|O nome do banco de dados de publicação de origem.|  
 |**originator_publication_id**|**int**|Identifica a publicação de origem.|  
 |**originator_db_version**|**int**|Identifica o número da versão do banco de dados de origem.|  
-|**originator_lsn**|**varbinary (16)**|O LSN da transação de origem.|  
+|**originator_lsn**|**varbinary(16)**|O LSN da transação de origem.|  
   
 ## <a name="remarks"></a>Comentários  
  Valores LSN só são usados imediatamente após a inserção e não têm nenhum significado duradouro no sistema.  

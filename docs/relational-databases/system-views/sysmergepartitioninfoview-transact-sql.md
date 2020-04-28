@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094821"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68094821"
 
   A exibição **sysmergepartitioninfoview** expõe informações de particionamento para artigos de tabela. Essa exibição é armazenada no banco de dados de publicação, no Publicador, e no banco de dados de assinatura, no Assinante.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo.|  
-|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **0x0A** = tabela.<br /><br /> **0x20** = somente esquema de procedimento.<br /><br /> **0x40** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **0x80** = somente esquema de função.|  
-|**objID**|**int**|O identificador do objeto publicado.|  
+|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **0x0A** = tabela.<br /><br /> **0x20** = somente esquema de procedimento.<br /><br /> **0x40** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **0x80** = somente esquema de função.|  
+|**objid**|**int**|O identificador do objeto publicado.|  
 |**sync_objid**|**int**|A ID de objeto da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
@@ -56,8 +56,8 @@ ms.locfileid: "68094821"
 |**schema_option**|**binário (8)**|O bitmap da opção de geração de esquema para o artigo determinado. Para obter informações sobre valores de *schema_option* com suporte, consulte [sp_addmergearticle &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|O nome da tabela criada no Assinante.|  
 |**destination_owner**|**sysname**|O nome do proprietário do objeto de destino.|  
-|**resolver_clsid**|**nvarchar (50)**|A ID do resolvedor de conflitos personalizado. Para um manipulador de lógica de negócios, este valor é NULL.|  
-|**subset_filterclause**|**nvarchar (1000)**|A cláusula de filtro para este artigo.|  
+|**resolver_clsid**|**nvarchar(50)**|A ID do resolvedor de conflitos personalizado. Para um manipulador de lógica de negócios, este valor é NULL.|  
+|**subset_filterclause**|**nvarchar(1000)**|A cláusula de filtro para este artigo.|  
 |**missing_col_count**|**int**|O número de colunas publicadas que faltam no artigo.|  
 |**missing_cols**|**varbinary(128)**|O bitmap que descreve as colunas que faltam no artigo.|  
 |**excluded_cols**|**varbinary(128)**|O bitmap das colunas excluídas do artigo.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68094821"
 |**upload_options**|**tinyint**|Define se as alterações poderão ser feitas ou carregadas do Assinante, que pode ser um dos valores a seguir.<br /><br /> **0** = não há restrições sobre as atualizações feitas no Assinante; todas as alterações são carregadas no Publicador.<br /><br /> **1** = as alterações são permitidas no Assinante, mas não são carregadas no Publicador.<br /><br /> **2** = as alterações não são permitidas no Assinante.|  
 |**published_in_tran_pub**|**bit**|Indica que um artigo em uma publicação de mesclagem também é publicado em uma publicação transacional.<br /><br /> **0** = o artigo não é publicado em um artigo transacional.<br /><br /> **1** = o artigo também é publicado em um artigo transacional.|  
 |**baixa**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|A ID de exibição da tabela antes das atualizações.|  
 |**delete_tracking**|**bit**|Indica se as exclusões são replicadas.<br /><br /> **0** = as exclusões não são replicadas.<br /><br /> **1** = as exclusões são replicadas, que é o comportamento padrão para replicação de mesclagem.<br /><br /> Quando o valor de *delete_tracking* for **0**, as linhas excluídas no Assinante deverão ser removidas manualmente no Publicador e as linhas excluídas no Publicador deverão ser removidas manualmente no Assinante.<br /><br /> Observação: um valor de **0** resulta em não convergência.|  

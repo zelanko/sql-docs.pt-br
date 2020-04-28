@@ -18,10 +18,10 @@ ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6bf9b02afe0312a2be1a057ee19a594c9c488675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095851"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68095851"
   Mapeia cada banco de dados primário para seus bancos de dados secundários. Essa tabela é armazenada no banco de dados **msdb** .  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|A ID do banco de dados primário para a configuração de envio de log.|  
 |**secondary_server**|**sysname**|O nome da instância secundária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
@@ -41,6 +41,6 @@ ms.locfileid: "68095851"
  [&#41;&#40;Transact-SQL de sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

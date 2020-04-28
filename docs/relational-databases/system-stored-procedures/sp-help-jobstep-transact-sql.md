@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090048"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -60,13 +60,13 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador exclusivo da etapa.|  
 |**step_name**|**sysname**|Nome da etapa no trabalho.|  
 |**subsistema**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
 |**linha**|**nvarchar(max)**|Comando executado na etapa.|  
-|**flags**|**int**|Um bitmask de valores que controlam o comportamento da etapa.|  
+|**sinalizadores**|**int**|Um bitmask de valores que controlam o comportamento da etapa.|  
 |**cmdexec_success_code**|**int**|Para uma etapa de **CmdExec** , esse é o código de saída do processo de um comando bem-sucedido.|  
 |**on_success_action**|**tinyint**|Ação a ser efetuada se a etapa tiver êxito:<br /><br /> **1** = sair do trabalho relatando êxito.<br /><br /> **2** = sair do trabalho relatando falha.<br /><br /> **3** = vá para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
 |**on_success_step_id**|**int**|Se **on_success_action** for 4, isso indicará a próxima etapa a ser executada.|  
@@ -90,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobstep** está no banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   

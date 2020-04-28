@@ -18,10 +18,10 @@ ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084739"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tabelas de aplicativo da camada de dados – sysdac_instances_internal
@@ -29,7 +29,7 @@ ms.locfileid: "68084739"
 
   Exibe uma linha para cada instância do DAC (Aplicativo da Camada de Dados) implantada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Essa tabela é armazenada no esquema dbo no banco de dados msdb.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificador da instância do DAC.|  
 |instance_name|**sysname**|Nome da instância do DAC especificada quando a instância foi implantada.|  
@@ -47,7 +47,7 @@ ms.locfileid: "68084739"
  Requer associação na função de servidor fixa sysadmin.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [o dbo. sysdac_instances &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

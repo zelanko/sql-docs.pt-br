@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088230"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68088230"
 NOT Expression1  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Expression1*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -39,8 +39,8 @@ NOT Expression1
   
 |*Expression1*|Valor retornado|  
 |-------------------|------------------|  
-|**true**|**for**|  
-|**for**|**true**|  
+|**true**|**false**|  
+|**false**|**true**|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  

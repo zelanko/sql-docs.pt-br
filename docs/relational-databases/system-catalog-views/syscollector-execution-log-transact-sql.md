@@ -19,10 +19,10 @@ ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060348"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68060348"
 
   Fornece informações do log de execução para um conjunto de coleta ou pacote.   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica cada execução do conjunto de coleta. Usado para unir essa exibição a outros logs detalhados. Não permite valor nulo.|  
 |parent_log_id|**bigint**|Identifica o pacote pai ou o conjunto de coleta. Não permite valor nulo. As IDs são encadeadas na relação pai-filho, o que permite determinar qual pacote foi iniciado por qual conjunto de coleta. Essa exibição agrupa as entradas de log pela vinculação pai-filho e recua os nomes dos pacotes de forma que o encadeamento de chamada seja claramente visível.|  
@@ -45,13 +45,13 @@ ms.locfileid: "68060348"
 |package_id|**uniqueidentifier**|Identifica o conjunto de coleta ou pacote que gerou esse log. Permite valor nulo.|  
 |package_name|**nvarchar(4000)**|O nome do pacote que gerou este log. Permite valor nulo.|  
 |package_execution_id|**uniqueidentifier**|Fornece um link para a tabela de logs [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Permite valor nulo.|  
-|failure_message|**nvarchar (2048)**|Se houve falha no conjunto de coleta ou no pacote, a mais recente mensagem de erro para aquele componente. Permite valor nulo. Para obter informações de erro mais detalhadas, use o [fn_syscollector_get_execution_details &#40;função&#41;Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|Se houve falha no conjunto de coleta ou no pacote, a mais recente mensagem de erro para aquele componente. Permite valor nulo. Para obter informações de erro mais detalhadas, use o [fn_syscollector_get_execution_details &#40;função&#41;Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT para dc_operator.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   

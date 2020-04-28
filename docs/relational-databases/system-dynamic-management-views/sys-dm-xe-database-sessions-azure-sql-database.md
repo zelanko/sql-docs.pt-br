@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ab0d59026bd172cb1e3fd51a92c3e5bb8b83b2e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090368"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Banco de Dados SQL do Azure)
@@ -25,12 +25,12 @@ ms.locfileid: "68090368"
 |-|  
 |**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e a todas as versões posteriores.|  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|O endereço da memória da sessão de evento. Não permite valor nulo.|  
-|event_name|**nvarchar (60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
+|event_name|**nvarchar(60)**|O nome do evento ao qual uma ação está associada. Não permite valor nulo.|  
 |event_package_guid|**uniqueidentifier**|A GUID para o pacote que contém o evento. Não permite valor nulo.|  
-|event_predicate|**nvarchar (2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
+|event_predicate|**nvarchar(2048)**|Uma representação XML da árvore de predicado que é aplicada ao evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE.  
@@ -44,7 +44,7 @@ A partir de 2015-07-13, ' sys. dm_xe_objects ' é um desses DMVs XEvents que nã
 |sys. dm_xe_database_session_events. event_package_guid, sys. dm_xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Muitos para um|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Eventos estendidos no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Eventos estendidos no banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
  

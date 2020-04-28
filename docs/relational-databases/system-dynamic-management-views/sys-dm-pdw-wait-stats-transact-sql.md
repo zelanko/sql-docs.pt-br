@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088727"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys. dm_pdw_wait_stats (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68088727"
 
   Contém informações relacionadas ao estado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do sistema operacional relacionadas a instâncias em execução em nós diferentes. Para obter uma lista de tipos de espera e sua descrição, consulte [Sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|ID do nó ao qual essa entrada se refere.||  
 |**wait_name**|**nvarchar (255)**|Nome do tipo de espera.||  

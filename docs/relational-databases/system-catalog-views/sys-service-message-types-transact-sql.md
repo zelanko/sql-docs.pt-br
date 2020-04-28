@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078746"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -31,16 +31,16 @@ ms.locfileid: "68078746"
 
   Esta exibição do catálogo contém uma linha por tipo de mensagem registrado no agente de serviços.
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome de tipo de mensagem, exclusivo no banco de dados. Não é NULLABLE.|  
 |**message_type_id**|**int**|Identificador do tipo de mensagem, exclusivo no banco de dados. Não é NULLABLE.|  
 |**principal_id**|**int**|Identificador para a entidade de banco de dados que possui este tipo de mensagem. É NULLABLE.|  
-|**confirmação**|**Char (2)**|Validação feita pelo Broker antes de enviar mensagens desse tipo. Não é NULLABLE. Um destes:<br /><br /> N = Nenhum<br /><br /> X = XML<br /><br /> E = vazio|  
-|**validation_desc**|**nvarchar (60)**|Descrição da validação feita pelo Broker antes de enviar mensagens desse tipo. É NULLABLE. Um destes:<br /><br /> Nenhuma<br /><br /> XML<br /><br /> EMPTY|  
+|**confirmação**|**char(2)**|Validação feita pelo Broker antes de enviar mensagens desse tipo. Não é NULLABLE. Um destes:<br /><br /> N = Nenhum<br /><br /> X = XML<br /><br /> E = vazio|  
+|**validation_desc**|**nvarchar(60)**|Descrição da validação feita pelo Broker antes de enviar mensagens desse tipo. É NULLABLE. Um destes:<br /><br /> Nenhuma<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|Para validação que usa um esquema de XML, o identificador para a coleção de esquema usada.<br /><br /> Caso contrário, NULL.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

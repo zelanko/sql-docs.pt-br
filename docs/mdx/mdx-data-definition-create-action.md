@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098549"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definição de dados MDX – CREATE ACTION
@@ -80,7 +80,7 @@ FOR
 ## <a name="action-types"></a>Tipos de ação  
  A tabela a seguir descreve os diferentes tipos de ações disponíveis [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no.  
   
-|Tipo de ação|DESCRIÇÃO|  
+|Tipo de ação|Descrição|  
 |-----------------|-----------------|  
 |**URL**|A cadeia de caracteres de ação retornada é uma URL que deve ser aberto usando um navegador de Internet.<br /><br /> Observação: se essa ação não iniciar `https://` com ou `https://`, a ação não estará disponível para o navegador, a menos que **safetyoptions** esteja definido como **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|A cadeia de caracteres de ação retornada é um script HTML. A cadeia de caracteres deve ser salva em um arquivo e o arquivo deve ser processado com um navegador de Internet. Neste caso, um script inteiro pode ser executado como parte do HTML gerado.|  
@@ -93,7 +93,7 @@ FOR
 ## <a name="invocation-types"></a>Tipos de invocação  
  A tabela a seguir descreve os diferentes tipos de invocação disponíveis no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O tipo de invocação é usado somente pelo aplicativo cliente para ajudar a determinar quando a ação deve ser invocada. O tipo de invocação não determina realmente o comportamento de invocação da ação.  
   
-|Tipo de invocação|DESCRIÇÃO|  
+|Tipo de invocação|Descrição|  
 |---------------------|-----------------|  
 |**INTERACTIVE**|A ação deve ser invocada pelo aplicativo cliente por meio da interação do usuário.|  
 |**ON_OPEN**|A ação deve ser invocada pelo aplicativo cliente quando o objeto de destino é aberto. Esse tipo de invocação não é implementado atualmente.|  

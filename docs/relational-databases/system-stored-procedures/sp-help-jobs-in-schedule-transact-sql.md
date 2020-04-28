@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054901"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -51,15 +51,15 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ID exclusiva do trabalho.|  
-|**originating_server**|**nvarchar (30)**|Nome do servidor do qual o trabalho originou.|  
+|**job_id**|**uniqueidentifier**|A ID exclusiva do trabalho.|  
+|**originating_server**|**nvarchar(30)**|Nome do servidor do qual o trabalho originou.|  
 |**name**|**sysname**|Nome do trabalho.|  
 |**habilitado**|**tinyint**|Indica se o trabalho está habilitado para ser executado.|  
 |**ndescrição**|**nvarchar(512)**|Descrição do trabalho.|  
 |**start_step_id**|**int**|ID da etapa do trabalho em que a execução deve começar.|  
-|**Categorias**|**sysname**|Categoria do trabalho.|  
+|**category**|**sysname**|Categoria do trabalho.|  
 |**proprietário**|**sysname**|Proprietário do trabalho.|  
 |**notify_level_eventlog**|**int**|Bitmask que indica sob quais circunstâncias um evento de notificação deve ser registrado no log de aplicativos do Microsoft Windows. Pode ser um destes valores:<br /><br /> **0** = nunca<br /><br /> **1** = quando um trabalho é executado com sucesso<br /><br /> **2** = quando o trabalho falha<br /><br /> **3** = sempre que o trabalho for concluído (independentemente do resultado do trabalho)|  
 |**notify_level_email**|**int**|Bitmask que indica sob quais circunstâncias um email de notificação deve ser enviado quando um trabalho é concluído. Os valores possíveis são os mesmos para **notify_level_eventlog**.|  
@@ -84,13 +84,13 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Número de etapas que o trabalho possui.|  
 |**has_schedule**|**int**|Número de agendamentos que o trabalho possui.|  
 |**has_target**|**int**|Número de servidores de destino que o trabalho possui.|  
-|**tipo**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
+|**type**|**int**|Tipo do trabalho:<br /><br /> **1** = trabalho local.<br /><br /> **2** = trabalho multisservidor.<br /><br /> **0** = o trabalho não tem servidores de destino.|  
   
 ## <a name="remarks"></a>Comentários  
  Este procedimento lista informações sobre trabalhos anexados à agenda especificada.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   

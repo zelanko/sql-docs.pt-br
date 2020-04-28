@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061918"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificações de consulta-sys. dm_qn_subscriptions
@@ -30,15 +30,15 @@ ms.locfileid: "68061918"
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID de uma assinatura.|  
+|**id**|**int**|ID de uma assinatura.|  
 |**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
-|**SIDs**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
+|**SIDs**|**varbinary (85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
 |**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
-|**criação**|**datetime**|Data e hora em que a assinatura foi criada.|  
-|**cedido**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: a hora de acionamento real pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser acionada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o acionamento ocorrerá no momento em que a alteração foi feita.|  
-|**Estado**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
+|**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
+|**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: a hora de acionamento real pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser acionada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o acionamento ocorrerá no momento em que a alteração foi feita.|  
+|**status**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Exibições de gerenciamento dinâmico relacionadas a notificações de consulta &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

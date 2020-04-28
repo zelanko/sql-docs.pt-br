@@ -25,10 +25,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 055e64c743c453fb6362d45587b395bf6f3d77bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067895"
 ---
 # <a name="sysregistered_search_properties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68067895"
 
   Contém uma linha para cada propriedade de pesquisa contida por qualquer lista de propriedades de pesquisa no banco de dados atual.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|ID da lista de propriedades de pesquisa à qual esta propriedade pertence.|  
 |**property_set_guid**|**uniqueidentifier**|GUID (identificador global exclusivo) que identifica o conjunto de propriedades ao qual a propriedade de pesquisa pertence.|  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
+ [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055174"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**nome do catálogo de texto completo**|**int**|Nome do catálogo de texto completo.|  
 |**ID do catálogo de texto completo**|**sysname**|Identificação do catálogo de texto completo.|  
@@ -51,15 +51,15 @@ sp_help_fulltext_catalog_components
 |**ComponentName**|**sysname**|Nome do componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
 |**FullPath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro da função de servidor fixa **ServerAdmin** .|  
-|**Versão**|**nvarchar (30)**|A versão do componente.|  
-|**manufacturer**|**sysname**|Nome do fabricante do componente.|  
+|**version**|**nvarchar(30)**|A versão do componente.|  
+|**fabricante**|**sysname**|Nome do fabricante do componente.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Os procedimentos armazenados de pesquisa de texto completo e de semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys. fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)  
   

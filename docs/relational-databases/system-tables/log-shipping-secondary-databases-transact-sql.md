@@ -18,10 +18,10 @@ ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad6d61f4267e30c6c0b3f6cede9085cad5d39006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095782"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68095782"
 
   Armazena um registro para o banco de dados secundário em uma configuração de envio de logs. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**secondary_database**|**sysname**|Nome do banco de dados secundário na configuração de envio de logs.|  
 |**secondary_id**|**uniqueidentifier**|ID de servidor secundário na configuração de envio de logs.|  
@@ -49,6 +49,6 @@ ms.locfileid: "68095782"
  [&#41;&#40;Transact-SQL de sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [&#41;&#40;Transact-SQL de log_shipping_secondary](../../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096019"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -53,11 +53,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|DESCRIÇÃO|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |**0**|Nenhum erro.|  
 |**1**|Erro desconhecido.|  
-|**Beta**|O evento especificado não é válido. O evento pode não existir ou não é um apropriado para o procedimento de loja.|  
+|**3**|O evento especificado não é válido. O evento pode não existir ou não é um apropriado para o procedimento de loja.|  
 |**13**|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -96,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
   
 ## <a name="see-also"></a>Confira também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

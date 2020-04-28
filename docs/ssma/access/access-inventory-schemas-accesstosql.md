@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068950"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventário de acesso (AccessToSQL)
@@ -49,13 +49,13 @@ As seções a seguir descrevem as tabelas criadas pelo SSMA quando você exporta
 ## <a name="databases"></a>Bancos de dados  
 Os metadados do banco de dados são exportados para a tabela de **SSMA_Access_InventoryDatabases** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Um GUID que identifica exclusivamente cada banco de dados. Essa coluna também é a chave primária para a tabela.|  
 |**DatabaseName**|**nvarchar(4000)**|O nome do banco de dados do Access.|  
 |**Exporttime**|**datetime**|A data e a hora em que esses metadados foram criados pelo SSMA.|  
 |**FilePath**|**nvarchar(4000)**|O caminho completo e o nome do arquivo do banco de dados do Access.|  
-|**FileSize**|**bigint**|O tamanho do banco de dados do Access em KB.|  
+|**Tamanho**|**bigint**|O tamanho do banco de dados do Access em KB.|  
 |**Fileproprietário**|**nvarchar(4000)**|A conta do Windows que é especificada como o proprietário do banco de dados do Access.|  
 |**DateCreated**|**datetime**|A data e a hora em que o banco de dados do Access foi criado.|  
 |**DateModified**|**datetime**|A data e a hora da última modificação do banco de dados do Access.|  
@@ -74,7 +74,7 @@ Os metadados do banco de dados são exportados para a tabela de **SSMA_Access_In
 ## <a name="tables"></a>Tabelas  
 Os metadados de tabela são exportados para a tabela de **SSMA_Access_InventoryTables** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta tabela.|  
 |**TableId**|**uniqueidentifier**|Um GUID que identifica exclusivamente a tabela. Essa coluna também é a chave primária para a tabela.|  
@@ -87,14 +87,14 @@ Os metadados de tabela são exportados para a tabela de **SSMA_Access_InventoryT
 ## <a name="columns"></a>Colunas  
 Os metadados de coluna são exportados para a tabela de **SSMA_Access_InventoryColumns** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém esta coluna.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém esta coluna.|  
 |**ColumnId**|**int**|Um inteiro de incremento que identifica a coluna. **Columnid** é a chave primária para a tabela.|  
 |**ColumnName**|**nvarchar(4000)**|O nome da coluna.|  
 |**IsNullable**|**bit**|Especifica se a coluna pode conter valores nulos. Se o valor for 1, a coluna poderá conter valores nulos. Se o valor for 0, a coluna não poderá conter valores nulos. Observe que a regra de validação também pode ser usada para evitar valores nulos.|  
-|**Tipo de dados**|**nvarchar(4000)**|O tipo de dados de acesso da coluna, como **texto** ou **longo**.|  
+|**DataType**|**nvarchar(4000)**|O tipo de dados de acesso da coluna, como **texto** ou **longo**.|  
 |**IsAutoIncrement**|**bit**|Especifica se a coluna incrementa automaticamente valores inteiros. Se o valor for 1, os inteiros serão incrementados automaticamente.|  
 |**Ordinal**|**smallint**|A ordem da coluna na tabela, começando em zero.|  
 |**ValorPadrão**|**nvarchar(4000)**|O valor padrão da coluna.|  
@@ -103,11 +103,11 @@ Os metadados de coluna são exportados para a tabela de **SSMA_Access_InventoryC
 ## <a name="indexes"></a>Índices  
 Os metadados do índice são exportados para a tabela de **SSMA_Access_InventoryIndexes** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém este índice.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém este índice.|  
-|**IndexID**|**int**|Um inteiro de incremento que identifica o índice. Esta coluna é a chave primária para a tabela.|  
+|**IndexId**|**int**|Um inteiro de incremento que identifica o índice. Esta coluna é a chave primária para a tabela.|  
 |**IndexName**|**nvarchar(4000)**|O nome do índice.|  
 |**ColumnsIncluded**|**nvarchar(4000)**|Lista as colunas que estão incluídas no índice. Os nomes de coluna são separados por ponto e vírgula.|  
 |**IsUnique**|**bit**|Especifica se cada item no índice deve ser exclusivo. Em um índice de várias colunas, a combinação de valores deve ser exclusiva. Se o valor for 1, o índice aplicará valores exclusivos.|  
@@ -117,7 +117,7 @@ Os metadados do índice são exportados para a tabela de **SSMA_Access_Inventory
 ## <a name="foreign-keys"></a>Chaves estrangeiras  
 Os metadados de chave estrangeira são exportados para a tabela de **SSMA_Access_InventoryForeignKeys** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém essa chave estrangeira.|  
 |**TableId**|**uniqueidentifier**|Identifica a tabela que contém essa chave estrangeira.|  
@@ -133,7 +133,7 @@ Os metadados de chave estrangeira são exportados para a tabela de **SSMA_Access
 ## <a name="queries"></a>Consultas  
 Os metadados de consulta são exportados para a tabela de **SSMA_Access_InventoryQueries** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém essa consulta.|  
 |**QueryId**|**int**|Um inteiro de incremento que identifica a consulta. Esta coluna é a chave primária para a tabela.|  
@@ -143,10 +143,10 @@ Os metadados de consulta são exportados para a tabela de **SSMA_Access_Inventor
 |**QueryType**|**nvarchar(4000)**|Especifica o tipo de consulta, como **Select** ou **setoperation**.|  
 |**ExternalSource**|**nvarchar(4000)**|Se a consulta fizer referência a uma fonte de dados externa, essa será a cadeia de conexão usada pela consulta.|  
   
-## <a name="forms"></a>Formas  
+## <a name="forms"></a>Formulários  
 Os metadados de formulário são exportados para a tabela de **SSMA_Access_InventoryForms** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém este formulário.|  
 |**FormId**|**int**|Um inteiro de incremento que identifica o formulário. Esta coluna é a chave primária para a tabela.|  
@@ -155,7 +155,7 @@ Os metadados de formulário são exportados para a tabela de **SSMA_Access_Inven
 ## <a name="macros"></a>Macros  
 Os metadados de macro são exportados para a tabela de **SSMA_Access_InventoryMacros** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém a macro.|  
 |**Macroid**|**int**|Um inteiro de incremento que identifica a macro. Esta coluna é a chave primária para a tabela.|  
@@ -164,7 +164,7 @@ Os metadados de macro são exportados para a tabela de **SSMA_Access_InventoryMa
 ## <a name="reports"></a>Relatórios  
 Os metadados do relatório são exportados para a tabela de **SSMA_Access_InventoryReports** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o relatório.|  
 |**ReportId**|**int**|Um inteiro de incremento que identifica o relatório. Esta coluna é a chave primária para a tabela.|  
@@ -173,7 +173,7 @@ Os metadados do relatório são exportados para a tabela de **SSMA_Access_Invent
 ## <a name="modules"></a>Módulos  
 Os metadados do módulo são exportados para a tabela **SSMA_Access_InventoryModules** . Esta tabela contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica o banco de dados que contém o módulo.|  
 |**ModuleId**|**int**|Um inteiro de incremento que identifica o módulo. Esta coluna é a chave primária para a tabela.|  

@@ -19,10 +19,10 @@ ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099195"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68099195"
   Retorna uma linha para cada procedimento armazenado ativado pelo Service Broker.  
  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**spid**|**int**|ID da sessão do procedimento armazenado ativado. É NULLABLE.|  
+|**SPID**|**int**|ID da sessão do procedimento armazenado ativado. É NULLABLE.|  
 |**database_id**|**smallint**|ID do banco de dados no qual a fila está definida. É NULLABLE.|  
 |**queue_id**|**int**|ID do objeto da fila para a qual o procedimento armazenado foi ativado. É NULLABLE.|  
 |**procedure_name**|**nvarchar (650)**|Nome do procedimento armazenado ativado. É NULLABLE.|  
@@ -49,11 +49,11 @@ ms.locfileid: "68099195"
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Um-para-um|  
+|dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Um para um|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker exibições de gerenciamento dinâmico relacionadas &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Exibições de gerenciamento dinâmico relacionadas ao Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

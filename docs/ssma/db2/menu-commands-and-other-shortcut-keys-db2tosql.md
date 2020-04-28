@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074157"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menu e outras teclas de atalho (DB2ToSQL)
@@ -54,7 +54,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Localizar anterior.|ALT + E + F + P ou CTRL + SHIFT + F3|  
 |Localizar próximo|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Comandos do menu Exibir  
+## <a name="view-menu-commands"></a>comandos do menu Exibir  
 Para acessar o menu Exibir, o atalho de teclado usado é ALT + V. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu Exibir.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  
@@ -87,7 +87,7 @@ Para acessar o menu ferramentas, o atalho de teclado usado é ALT + T. A tabela 
 |Exiba a caixa de diálogo Configurações do projeto.|ALT + T + P|  
 |Exiba a caixa de diálogo Configurações de projeto padrão.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandos do menu ajuda  
+## <a name="help-menu-commands"></a>comandos do menu Ajuda  
 Para acessar o menu ajuda, o atalho de teclado usado é ALT + H. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu ajuda.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  

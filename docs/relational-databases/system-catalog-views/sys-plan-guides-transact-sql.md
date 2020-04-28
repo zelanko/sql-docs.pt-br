@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068076"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68068076"
 
   Contém uma linha para cada guia de plano no banco de dados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|Identificador exclusivo do guia de plano no banco de dados.|  
 |**name**|**sysname**|Nome do guia de plano.|  
@@ -41,18 +41,18 @@ ms.locfileid: "68068076"
 |**is_disabled**|**bit**|1 = Guia de plano desabilitado.<br /><br /> 0 = Guia de plano habilitado.|  
 |**query_text**|**nvarchar(max)**|Texto da consulta na qual o guia de plano é criado.|  
 |**scope_type**|**tinyint**|Identifica o escopo do guia de plano.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
-|**scope_type_desc**|**nvarchar (60)**|Descrição do escopo do guia de plano.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
-|**scope_object_id**|**Inteiro**|object_id do objeto que definirá o escopo do guia de plano se o escopo for OBJECT.<br /><br /> NULL se o guia de plano não tiver nenhum escopo para OBJECT.|  
+|**scope_type_desc**|**nvarchar(60)**|Descrição do escopo do guia de plano.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
+|**scope_object_id**|**Int**|object_id do objeto que definirá o escopo do guia de plano se o escopo for OBJECT.<br /><br /> NULL se o guia de plano não tiver nenhum escopo para OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Texto em lotes, se **scope_type** for SQL.<br /><br /> NULL se tipo de lote não for SQL.<br /><br /> Se NULL e **scope_type** for SQL, o valor de **query_text** se aplicará.|  
 |**parâmetro**|**nvarchar(max)**|A cadeia de caracteres que define a lista de parâmetros associada ao guia de plano.<br /><br /> NULL = Nenhuma lista de parâmetros está associada ao guia de plano.|  
 |**raízes**|**nvarchar(max)**|Dicas da cláusula OPTION associadas ao guia de plano.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070847"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxe de DMX (Data Mining Extensions)
@@ -24,7 +24,7 @@ ms.locfileid: "68070847"
  [Identificadores &#40;&#41;DMX](../dmx/identifiers-dmx.md)  
  Nomeie objetos, como modelos de mineração, estruturas de mineração e colunas.  
   
- [Tipos de dados &#40;&#41;DMX](../dmx/data-types-dmx.md)  
+ [Tipos de dados &#40;DMX&#41;](../dmx/data-types-dmx.md)  
  Defina o tipo de dados que uma coluna de modelo de mineração contém.  
   
  [Expressões &#40;DMX&#41;](../dmx/expressions-dmx.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "68070847"
  [Palavras-chave reservadas &#40;&#41;DMX](../dmx/reserved-keywords-dmx.md)  
  Palavras reservadas para uso da DMX, que não devem ser usadas para nomear objetos em um banco de dados.  
   
- [Tipos de conteúdo &#40;&#41;DMX](../dmx/content-types-dmx.md)  
+ [Tipos de conteúdo &#40;DMX&#41;](../dmx/content-types-dmx.md)  
  Defina o conteúdo contido em uma coluna de estrutura de mineração.  
   
  [Distribuições &#40;DMX&#41;](../dmx/distributions-dmx.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "68070847"
  [Uso &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Defina como um modelo de mineração utiliza as colunas que contém.  
   
- [Sinalizadores de modelagem &#40;&#41;DMX](../dmx/modeling-flags-dmx.md)  
+ [Sinalizadores de modelagem &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Defina dicas adicionais que o algoritmo poderá usar para processar um modelo de mineração.  
   
 ## <a name="see-also"></a>Consulte Também  

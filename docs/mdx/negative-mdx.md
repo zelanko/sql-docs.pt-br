@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088367"
 ---
 # <a name="--negative-mdx"></a>- (Negativo) (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68088367"
 - Numeric_Expression  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Numeric_Expression*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   

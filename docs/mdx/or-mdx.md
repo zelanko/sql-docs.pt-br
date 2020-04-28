@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055714"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68055714"
 Expression1 OR Expression2   
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  Expression1  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -43,9 +43,9 @@ Expression1 OR Expression2
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**for**|**true**|  
-|**for**|**true**|**true**|  
-|**for**|**for**|**for**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Exemplo  
  A consulta a seguir contém uma medida calculada que retorna a cadeia de caracteres "casado ou masculino" se o membro atual na hierarquia de gênero da dimensão do cliente for masculino ou o membro atual na hierarquia de status civil da dimensão do cliente for casado; caso contrário, ele retorna a cadeia de caracteres "incasado ou feminino".  

@@ -18,10 +18,10 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079177"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68079177"
 
   A tabela de **MSreplication_queuedtraninfo** é usada pelo processo de replicação para armazenar informações sobre os comandos na fila emitidos por todas as assinaturas de atualização enfileiradas que estão usando a atualização em fila baseada em SQL. Essa tabela é armazenada no banco de dados de Assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
+|**programa**|**sysname**|O nome do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  
 |**documento**|**sysname**|O nome da publicação.|  
 |**transid**|**sysname**|A ID da transação na qual o comando enfileirado foi executado.|  

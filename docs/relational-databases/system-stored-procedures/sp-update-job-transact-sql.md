@@ -18,10 +18,10 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084890"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
@@ -81,7 +81,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**0**|Never|  
 |**1**|Caso haja êxito|  
 |**2**|Caso haja falha|  
-|**Beta**|Sempre|  
+|**3**|Sempre|  
   
 `[ @notify_level_email = ] email_level`Especifica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**. *email_level*usa os mesmos valores que *eventlog_level*.  
   
@@ -108,7 +108,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  **sp_update_job** altera apenas as configurações para as quais os valores de parâmetro são fornecidos. Se um parâmetro for omitido, a configuração atual será retida.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
   
 -   **SQLAgentUserRole**  
   

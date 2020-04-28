@@ -22,16 +22,16 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083730"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o histórico de alteração DDL (linguagem de definição de dados) associado à instância de captura especificada desde que Change Data Capture foi habilitado para aquela instância de captura. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Retorna o histórico de alteração DDL (linguagem de definição de dados) associado à instância de captura especificada desde que Change Data Capture foi habilitado para aquela instância de captura. A captura de dados de alteração não está disponível em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,14 +51,14 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nome do esquema de tabela de origem.|  
 |source_table|**sysname**|Nome da tabela de origem.|  
 |capture_instance|**sysname**|Nome da instância de captura.|  
 |required_column_update|**bit**|Indica que a alteração de DDL requereu que uma coluna na tabela de alteração fosse alterada para refletir uma alteração de tipo de dados feita na coluna de origem.|  
 |ddl_command|**nvarchar(max)**|A instrução DDL aplicada à tabela de origem.|  
-|ddl_lsn|**binário (10)**|Número de sequência de log (LSN) associado com a alteração de DDL.|  
+|ddl_lsn|**binary(10)**|Número de sequência de log (LSN) associado com a alteração de DDL.|  
 |ddl_time|**datetime**|Hora associada à alteração de DDL.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -85,6 +85,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

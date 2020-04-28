@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090265"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "68090265"
   Lista todos os pacotes registrados com o mecanismo de eventos estendido.  
   
  
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|O nome do pacote. A descrição é exposta no próprio pacote. Não permite valor nulo.|  
 |guid|**uniqueidentifier**|O GUID que identifica o pacote. Não permite valor nulo.|  
 |descrição|**nvarchar (3072)**|A descrição do pacote. a descrição é definida pelo autor do pacote e não permite valor nulo.|  
-|recursos|**int**|Bitmap que descreve os recursos deste pacote. Permite valor nulo.|  
+|funcionalidades|**int**|Bitmap que descreve os recursos deste pacote. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma lista de todas as funcionalidades possíveis para este pacote. Permite valor nulo.|  
-|module_guid|**nvarchar (60)**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  
+|module_guid|**nvarchar(60)**|O GUID do módulo que expõe este pacote. Não permite valor nulo.|  
 |module_address|**varbinary (8)**|O endereço básico onde o módulo que contém o pacote é carregado. Um único módulo pode expor vários pacotes. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -18,10 +18,10 @@ ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060225"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68060225"
 
   Contém uma linha para cada mensagem do Windows ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornada pelo sistema Database Mail. (A mensagem neste contexto refere-se a uma mensagem como uma mensagem de erro, não uma mensagem de email.) Configure o parâmetro de **nível de log** usando a caixa de diálogo **configurar parâmetros do sistema** do assistente de configuração do Database Mail ou o procedimento armazenado [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) para determinar quais mensagens são retornadas.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificador de itens no log.|  
 |**event_type**|**varchar (11)**|O tipo de aviso inserido no log. Os valores possíveis são erros, avisos, mensagens informativas, mensagens de êxito e mensagens internas adicionais.|  

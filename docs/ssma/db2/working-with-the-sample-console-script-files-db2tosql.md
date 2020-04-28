@@ -10,10 +10,10 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086169"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabalhando com os arquivos de script de console de exemplo (DB2ToSQL)
@@ -52,7 +52,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
     Para obter mais informações sobre como gerar relatórios, consulte [gerando relatórios &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Registra**  
+    **Observações:**  
   
     Certifique-se de que o argumento de linha de comando do arquivo de valor da variável seja passado para o aplicativo de console e VariableValueFileSample. xml seja atualizado com os valores especificados pelo usuário.  
   
@@ -69,7 +69,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
 5.  **ConversionAndDataMigrationSample. xml:** Este exemplo permite que o usuário execute uma migração de ponta a ponta da conversão para a migração de dados. A lista de valores de atributo obrigatórios que eles terão que ser alterados está listada abaixo:  
   
-    |Nome do comando|DESCRIÇÃO|Atributo|  
+    |Nome do comando|Descrição|Atributo|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapeamento de esquema do banco de dados de origem para o esquema de destino.|`source-schema:`Especifica o banco de dados de origem que exige a conversão.<br /><br />`sql-server-schema`: Especifica o banco de dados de destino que deve ser migrado para|  
     |`convert-schema`|Executa a conversão de esquema da origem para o esquema de destino.<br /><br />Se o usuário tiver que avaliar vários objetos/bancos de dados, ele poderá especificar `metabase-object` vários nós, conforme ilustrado no exemplo 4 do `convert-schema` comando do arquivo de script do console de exemplo.|`object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`|  
