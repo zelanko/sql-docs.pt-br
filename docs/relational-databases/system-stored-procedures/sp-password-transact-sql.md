@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008924"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`É a nova senha. *new_password* é **sysname**, sem padrão. *old_password* deverá ser especificado se os parâmetros nomeados não forem usados.  
   
 > [!IMPORTANT]  
->  Não use uma senha NULL. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes (a página pode estar em inglês)](../../relational-databases/security/strong-passwords.md).  
+>  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'`É o nome do logon afetado pela alteração de senha. *logon* é **sysname**, com um padrão de NULL. o *logon* já deve existir e pode ser especificado somente por membros das funções de servidor fixas **sysadmin** ou **securityadmin** .  
+`[ @loginame = ] 'login'`É o nome do logon afetado pela alteração de senha. *login* é **sysname**, com um padrão de NULL. o *logon* já deve existir e pode ser especificado somente por membros das funções de servidor fixas **sysadmin** ou **securityadmin** .  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -89,9 +89,9 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [CRIAR logon &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_revokelogin](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

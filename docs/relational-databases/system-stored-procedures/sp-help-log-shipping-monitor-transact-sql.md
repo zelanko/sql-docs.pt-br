@@ -18,10 +18,10 @@ ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000935"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Status coletivo de agentes para banco de dados de envio de logs:<br /><br /> **0** = falhas íntegras e sem agente.<br /><br /> **1** = caso contrário.|  
 |**is_primary**|**bit**|Indica se essa linha é para um banco de dados primário:<br /><br /> **1** = a linha é para um banco de dados primário.<br /><br /> **0** = a linha é para um banco de dados secundário.|  
@@ -68,7 +68,7 @@ sp_help_log_shipping_monitor
  **sp_help_log_shipping_monitor** deve ser executado do banco de dados **mestre** no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte Também  
  [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

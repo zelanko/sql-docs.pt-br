@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002645"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -55,36 +55,36 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`É o tipo de assinatura. *subscription_type*é **nvarchar (15)** e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**enviar por push** (padrão)|Assinatura push.|  
 |**recebimento**|Assinatura pull|  
-|**ambos**|Assinaturas push e pull|  
+|**mesmo**|Assinaturas push e pull|  
   
 `[ @found = ] 'found'OUTPUT`É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão de NULL. **1** indica que a publicação foi encontrada. **0** indica que a publicação não foi encontrada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**sysname**|Nome da assinatura.|  
+|**subscription_name**|**sysname**|O nome da assinatura.|  
 |**documento**|**sysname**|Nome da publicação.|  
-|**Publicador**|**sysname**|Nome do Publicador.|  
+|**programa**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados do Publicador.|  
-|**Assinante**|**sysname**|Nome do Assinante.|  
+|**farão**|**sysname**|Nome do Assinante.|  
 |**subscriber_db**|**sysname**|Nome do banco de dados de assinatura.|  
-|**Estado**|**int**|Status da assinatura:<br /><br /> **0** = todos os trabalhos estão aguardando para iniciar<br /><br /> **1** = um ou mais trabalhos estão sendo iniciados<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando ser executado após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou ao ser executado com êxito|  
+|**status**|**int**|Status da assinatura:<br /><br /> **0** = todos os trabalhos estão aguardando para iniciar<br /><br /> **1** = um ou mais trabalhos estão sendo iniciados<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando ser executado após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou ao ser executado com êxito|  
 |**subscriber_type**|**int**|O tipo de Assinante.|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
-|**priority**|**float (8)**|Número que indica a prioridade da assinatura.|  
+|**prioridade**|**float (8)**|Número que indica a prioridade da assinatura.|  
 |**sync_type**|**tinyint**|Tipo de sincronização da Assinatura.|  
 |**ndescrição**|**nvarchar (255)**|Descrição breve da assinatura de mesclagem.|  
-|**merge_jobid**|**Binary (16)**|ID do trabalho do Agente de Mesclagem.|  
+|**merge_jobid**|**binary(16)**|ID do trabalho do Agente de Mesclagem.|  
 |**full_publication**|**tinyint**|Se a assinatura é para uma publicação completa ou filtrada.|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante. Se for NULL, a execução será executada no Publicador.|  
 |**offload_server**|**sysname**|Nome do servidor para onde o agente está executando.|  
 |**use_interactive_resolver**|**int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se for **0**, o resolvedor interativo não será usado.|  
-|**nome do host**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
+|**hostname**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor da função [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) .|  
 |**subscriber_security_mode**|**smallint**|É o modo de segurança no Assinante, em que **1** significa autenticação do Windows e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** significa autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
 |**subscriber_password**|**sysname**|A senha do Assinante atual nunca é retornada. O resultado é mascarado por uma cadeia**\*\*\*\*\*** de caracteres "".|  

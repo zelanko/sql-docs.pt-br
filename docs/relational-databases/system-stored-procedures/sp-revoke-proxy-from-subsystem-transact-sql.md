@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022274"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -49,23 +49,23 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`O número de ID do subsistema ao qual revogar o acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**2**|Script do ActiveX<br /><br /> ** \* Importante \* \* ** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
-|**Beta**|Sistema Operacional (CmdExec)|  
-|**quatro**|Replication Snapshot Agent|  
-|**05**|Replication Agente de Leitor de Log|  
+|**3**|Sistema Operacional (CmdExec)|  
+|**4**|Replication Snapshot Agent|  
+|**5**|Replication Agente de Leitor de Log|  
 |**6**|Agente de Distribuição de Replicação|  
 |**7**|Replication Merge Agent|  
 |**8**|Agente de Leitor de Fila de Replicação|  
-|**99**|Comando do Analysis Services|  
-|**254**|Consulta do Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]execução do pacote|  
-|**12**|Script do PowerShell|  
+|**9**|Comando do Analysis Services|  
+|**10**|Consulta do Analysis Services|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
+|**12**|Scripts PowerShell|  
   
 `[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema ao qual revogar o acesso. O *subsystem_name* é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  
@@ -76,14 +76,14 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|Agente de Leitor de Fila de Replicação|  
 |ANALYSISQUERY|Comando do Analysis Services|  
 |ANALYSISCOMMAND|Consulta do Analysis Services|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]execução do pacote|  
-|PowerShell|Script do PowerShell|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
+|PowerShell|Scripts PowerShell|  
   
 ## <a name="remarks"></a>Comentários  
  A revogação de acesso a um subsistema não altera as permissões para o principal especificado no proxy.  
   
 > [!NOTE]  
->  Para determinar quais etapas de trabalho fazem referência a um proxy, clique com o botão direito **** do mouse no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nó **proxies** em SQL Server Agent na Microsoft e clique em **Propriedades**. Na caixa de diálogo **Propriedades da conta proxy** , selecione a página **referências** para exibir todas as etapas de trabalho que fazem referência a esse proxy.  
+>  Para determinar quais etapas de trabalho fazem referência a um proxy, clique com o botão direito **SQL Server Agent** do mouse no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]nó **proxies** em SQL Server Agent na Microsoft e clique em **Propriedades**. Na caixa de diálogo **Propriedades da conta proxy** , selecione a página **referências** para exibir todas as etapas de trabalho que fazem referência a esse proxy.  
   
 ## <a name="permissions"></a>Permissões  
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_revoke_proxy_from_subsystem**.  

@@ -21,10 +21,10 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017911"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Espelhamento de banco de dados – sys. dm_db_mirroring_auto_page_repair
@@ -32,7 +32,7 @@ ms.locfileid: "68017911"
 
   Retorna uma linha para cada tentativa de reparo automático de página em qualquer banco de dados espelho na instância de servidor. Essa exibição contém linhas para as últimas tentativas de conserto de página automático em um determinado banco de dados espelho, com um máximo de 100 linhas por banco de dados. Assim que o banco de dados atinge o máximo, a linha de sua próxima tentativa de conserto de página automático substitui uma das entradas existentes. A tabela a seguir define o significado das diversas colunas.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados ao qual corresponde a linha.|  
 |**file_id**|**int**|ID do arquivo em que a página está localizada.|  
@@ -47,8 +47,8 @@ ms.locfileid: "68017911"
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Reparo automático de página &#40;Grupos de disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Reparo automático de página &#40;grupos de disponibilidade: espelhamento de banco de dados&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#41;&#40;Transact-SQL de suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Gerenciar a tabela suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

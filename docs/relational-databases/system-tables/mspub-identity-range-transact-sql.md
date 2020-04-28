@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032601"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68032601"
 
   A tabela **MSpub_identity_range** fornece suporte ao gerenciamento de intervalo de identidade. Essa tabela é armazenada no banco de dados de assinatura e publicação.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**objID**|**int**|A ID da tabela que tem a coluna de identidade administrada pela replicação.|  
+|**objid**|**int**|A ID da tabela que tem a coluna de identidade administrada pela replicação.|  
 |**amplitude**|**bigint**|Controla o tamanho do intervalo dos valores de identidade consecutivos que seriam atribuídos à assinatura em um ajuste.|  
 |**pub_range**|**bigint**|Controla o tamanho do intervalo dos valores de identidade consecutivos que seriam atribuídos à publicação em um ajuste.|  
 |**current_pub_range**|**bigint**|O intervalo atual usado pela publicação. Ele pode ser diferente de *pub_range* se for exibido depois de ser alterado por **sp_changearticle** e antes do próximo ajuste de intervalo.|  

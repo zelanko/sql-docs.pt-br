@@ -18,10 +18,10 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029784"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68029784"
 
   Contém uma linha para cada publicação de mesclagem definida no banco de dados. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do servidor padrão.|  
+|**programa**|**sysname**|O nome do servidor padrão.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador padrão.|  
 |**name**|**sysname**|O nome da publicação.|  
 |**ndescrição**|**nvarchar (255)**|Uma descrição breve da publicação.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029784"
 |**allow_synctoalternate**|**bit**|Especifica se um parceiro de sincronização alternativo tem permissão para sincronizar com esse Publicador. **0** significa que um parceiro de sincronização não é permitido.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Lista as funções que estão sendo usadas para recuperar informações do Assinante e validar os critérios de filtragem de linha com parâmetros no Assinante.|  
 |**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um GUID válido especifica que a publicação é publicada no Active Directory e o GUID é o objeto de publicação de Active Directory do **objectGUID**correspondente. Se for NULL, a publicação não será publicada no Active Directory.|  
-|**backward_comp_level**|**int**|Nível de compatibilidade do banco de dados. Pode ser um dos seguintes valores:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Nível de compatibilidade do banco de dados. Pode ser um dos seguintes valores:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|O número máximo de processos de mesclagem simultâneos permitido. Um valor de **0** para essa propriedade significa que não há nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento. Essa propriedade define um limite para o número de processos de mesclagem simultâneos que podem ser executados em uma publicação de mesclagem ao mesmo tempo. Se houver mais processos de instantâneo agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de mesclagem em execução no momento seja concluído.|  
 |**max_concurrent_dynamic_snapshots**|**int**|O número máximo permitido de sessões de instantâneo de dados filtrados simultâneas que pode ser executado na publicação de mesclagem. Se for **0**, não há nenhum limite para o número máximo de sessões de instantâneos de dados filtradas simultâneas que podem ser executadas simultaneamente na publicação em um determinado momento. Essa propriedade define um limite para o número de processos de instantâneo simultâneos que pode ser executado em uma publicação de mesclagem de uma só vez. Se houver mais processos de instantâneo agendados ao mesmo tempo do que o valor permitido para execução, os trabalhos em excesso serão enfileirados e esperarão até que o processo de mesclagem em execução no momento seja concluído.|  
 |**use_partition_groups**|**smallint**|Especifica se a publicação usa partições pré-computadas.|  
@@ -77,7 +77,7 @@ ms.locfileid: "68029784"
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica quantos minutos um Assinante precisa esperar na fila para que o processo de geração de instantâneo comece, ao usar filtros com parâmetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica quantos minutos um Assinante espera para que o processo de geração de instantâneo seja concluído, ao usar filtros com parâmetros.|  
 |**distribuidor**|**sysname**|O nome do Distribuidor para a publicação.|  
-|**snapshot_jobid**|**Binary (16)**|Identifica o trabalho de agente que gera o instantâneo quando o Assinante pode iniciar o processo de geração de instantâneo.|  
+|**snapshot_jobid**|**binary(16)**|Identifica o trabalho de agente que gera o instantâneo quando o Assinante pode iniciar o processo de geração de instantâneo.|  
 |**allow_web_synchronization**|**bit**|Especifica se a publicação está habilitada para sincronização da Web, em que **1** significa que a sincronização da Web está habilitada para a publicação.|  
 |**web_synchronization_url**|**nvarchar (500)**|Especifica o valor padrão da URL da Internet usado para sincronização da Web.|  
 |**allow_partition_realignment**|**bit**|Indica se exclusões serão enviadas para o Assinante quando modificação da linha no Publicador causar a mudança de sua partição.<br /><br /> **0** = os dados de uma partição antiga serão deixados no Assinante, onde as alterações feitas a esses dados no Publicador não serão replicadas para esse assinante, mas as alterações feitas no Assinante serão replicadas para o Publicador.<br /><br /> **1** = exclui o Assinante para refletir os resultados de uma alteração de partição removendo dados que não fazem mais parte da partição do Assinante.<br /><br /> Para obter mais informações, consulte [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Observação: os dados que permanecem no Assinante quando esse valor é **0** devem ser tratados como se fossem somente leitura; no entanto, isso não é estritamente imposto pelo sistema de replicação.|  
@@ -91,6 +91,6 @@ ms.locfileid: "68029784"
  [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

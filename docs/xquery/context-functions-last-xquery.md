@@ -16,10 +16,10 @@ ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038998"
 ---
 # <a name="context-functions---last-xquery"></a>Funções de Contexto – last (XQuery)
@@ -40,7 +40,7 @@ fn:last() as xs:integer
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>a. Usando a função last() XQuery para recuperar as últimas duas etapas de fabricação  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Usando a função last() XQuery para recuperar as últimas duas etapas de fabricação  
  A consulta a seguir recupera as duas últimas etapas do processo de fabricação de um modelo de produto específico. O valor, o número de etapas de fabricação, retornado pela função **Last ()** , é usado nesta consulta para recuperar as duas últimas etapas de fabricação.  
   
 ```  

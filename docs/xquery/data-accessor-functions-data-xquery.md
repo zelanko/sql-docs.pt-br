@@ -16,10 +16,10 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038974"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funções do Acessador de Dados – data (XQuery)
@@ -78,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>a. Usando a função data() XQuery para extrair valor com tipo de um nó  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Usando a função data() XQuery para extrair valor com tipo de um nó  
  A consulta a seguir ilustra como a função **Data ()** é usada para recuperar valores de um atributo, um elemento e um nó de texto:  
   
 ```  

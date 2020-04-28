@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018344"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Exibições de catálogo de esquemas-sys. schemas
@@ -35,7 +35,7 @@ ms.locfileid: "68018344"
 > [!NOTE]  
 >  Esquemas de banco de dados são diferentes de esquemas XML, que são usados para definir o modelo de conteúdo de documentos XML.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do esquema. É exclusiva no banco de dados.|  
 |**schema_id**|**int**|ID do esquema. É exclusiva no banco de dados.|  
@@ -47,15 +47,15 @@ Os esquemas de banco de dados atuam como namespaces ou contêineres para objetos
 Cada esquema tem um proprietário. O proprietário é uma [entidade](../../relational-databases/security/authentication-access/principals-database-engine.md)de segurança.
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
-[Entidades](../../relational-databases/security/authentication-access/principals-database-engine.md)
+[Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
 [Exibições de catálogo de esquemas &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

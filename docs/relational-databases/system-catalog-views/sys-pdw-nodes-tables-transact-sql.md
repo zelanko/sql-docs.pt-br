@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001116"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68001116"
 
   Contém uma linha para cada objeto de tabela que uma entidade de segurança proprietária ou para a qual a entidade de segurança recebeu alguma permissão.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |\<colunas herdadas>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. Objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).||  
 |lob_data_space_id|**int**||Sempre 0.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68001116"
 |large_value_types_out_of_row|**bit**|1 = Tipos de valor grande são armazenados fora de linha.|Sempre 0.|  
 |is_tracked_by_cdc|**bit**|1 = a tabela está habilitada para a captura de dados de alterações|Sempre 0; Não há suporte para CDC.|  
 |lock_escalation|**tinyint**|O valor da opção LOCK_ESCALATION para a tabela: 2 = AUTO|Sempre 2.|  
-|lock_escalation_desc|**nvarchar (60)**|Uma descrição de texto da opção lock_escalation.|Sempre "" automático.|  
+|lock_escalation_desc|**nvarchar(60)**|Uma descrição de texto da opção lock_escalation.|Sempre "" automático.|  
 |pdw_node_id|**int**|Identificador exclusivo de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|NOT NULL|  
   
 ## <a name="see-also"></a>Consulte Também  

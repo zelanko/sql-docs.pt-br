@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032817"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -65,7 +65,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome do qualificador de procedimento. Esta coluna pode ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome do proprietário do procedimento. Esta coluna sempre retorna um valor.|  
@@ -75,11 +75,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|Código de inteiro para um tipo de dados de ODBC. Se este tipo de dados não puder ser mapeado para um tipo ISO, o valor será NULL. O nome do tipo de dados nativo é retornado na coluna **type_name** .|  
 |**TYPE_NAME**|**sysname**|Representação em cadeia de caracteres do tipo de dados. É o nome do tipo de dados como apresentado pelo DBMS subjacente.|  
 |**Preciso**|**int**|Número de dígitos significativos. O valor de retorno para a coluna de **precisão** está na base 10.|  
-|**MUITO**|**int**|Tamanho da transferência dos dados.|  
+|**COMPRIMENTO**|**int**|Tamanho da transferência dos dados.|  
 |**ESCALONÁVE**|**smallint**|Número de dígitos à direita da vírgula decimal.|  
 |**RADIX**|**smallint**|É a base para tipos numéricos.|  
 |**ANULA**|**smallint**|Especifica a nulidade:<br /><br /> 1 = O tipo de dados pode ser criado permitindo valores nulos.<br /><br /> 0 = Não são permitidos valores nulos.|  
-|**Comentários**|**varchar (** 254 **)**|Descrição da coluna de procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**COMENTÁRIOS**|**varchar (** 254 **)**|Descrição da coluna de procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valor padrão da coluna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor do tipo de dados SQL como ele aparece no campo **tipo** do descritor. Essa coluna é igual à **data_type** coluna, exceto para os tipos de dados **DateTime** e **intervalo** ISO. Esta coluna sempre retorna um valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|O subcódigo de **interval** ISO de **datetime**, se o valor de **SQL_DATA_TYPE** for **SQL_DATETIME** ou **SQL_INTERVAL**. Para tipos de dados diferentes de **DateTime** e o **intervalo**ISO, esse campo é nulo.|  

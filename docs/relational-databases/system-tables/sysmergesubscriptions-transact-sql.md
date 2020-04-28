@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029777"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -29,12 +29,12 @@ ms.locfileid: "68029777"
 
   Contém uma linha para cada Assinante conhecido e é uma tabela local no Publicador. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|A ID do servidor. Usada para mapear o campo srvid para um valor específico de servidor ao migrar uma cópia do banco de dados de assinatura para um servidor diferente.|  
 |db_name|**sysname**|O nome do banco de dados de assinatura.|  
 |pubid|**uniqueidentifier**|A ID da publicação da qual a assinatura atual foi criada.|  
-|datasource_type|**int**|O tipo de fonte de dados:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB.|  
+|datasource_type|**int**|O tipo de fonte de dados:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB.|  
 |subid|**uniqueidentifier**|O número de identificação exclusivo para Assinatura.|  
 |replnickname|**binary**|O apelido compactado para a réplica.|  
 |replicastate|**uniqueidentifier**|Um identificador exclusivo que é usado para determinar se a sincronização anterior teve êxito, comparando o valor no Publicador com o valor no Assinante.|  

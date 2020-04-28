@@ -16,10 +16,10 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038876"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funções em Nós – local-name
@@ -49,7 +49,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>a. Recuperar o nome local de um nó específico  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recuperar o nome local de um nó específico  
  A consulta a seguir é especificada em uma instância XML não digitada. A expressão de consulta, `local-name(/ROOT[1])`, recupera a parte do nome local do nó especificado.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47ae49ab640b18cbcd7286bc5d95bdc74143aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029975"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68029975"
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|ID do plano de manutenção do banco de dados.|  
 |**plan_name**|**sysname**|Nome do plano de manutenção do banco de dados.|  

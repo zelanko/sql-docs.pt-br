@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044516"
 ---
 # <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>sys. dm_pdw_query_stats_xe_file (Transact-SQL)
@@ -24,10 +24,10 @@ ms.locfileid: "68044516"
 
   Essa DMV foi preterida e será removida em uma versão futura. Nesta versão, ele retorna 0 linhas.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|event|**nvarchar (60)**|Chave para esta exibição.||  
-|data|**XML**|||  
+|event|**nvarchar(60)**|Chave para esta exibição.||  
+|data|**xml**|||  
 |pdw_node_id|**int**|Nó no qual esta instância de XEvent está em execução.||  
   
 ## <a name="see-also"></a>Consulte Também  

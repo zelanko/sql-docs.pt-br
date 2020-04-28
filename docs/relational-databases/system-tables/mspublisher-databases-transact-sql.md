@@ -18,10 +18,10 @@ ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032611"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68032611"
 
   A tabela **MSpublisher_databases** contém uma linha para cada par de banco de dados Publicador/Publicador atendido pelo distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
-|**sessão**|**int**|A ID da linha.|  
+|**id**|**int**|A ID da linha.|  
 |**publisher_engine_edition**|**int**|A versão do Publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que pode ser uma das seguintes:<br /><br /> **10** = edição pessoal<br /><br /> **11** = mecanismo de área de trabalho (MSDE)<br /><br /> **20** = padrão<br /><br /> **21** = grupo de trabalho<br /><br /> **30** = Enterprise (avaliação)<br /><br /> **31** = desenvolvedor<br /><br /> **40** = Express (Express não pode ser um Publicador. Esse valor está presente para integridade.)|  
   
 ## <a name="see-also"></a>Consulte Também  

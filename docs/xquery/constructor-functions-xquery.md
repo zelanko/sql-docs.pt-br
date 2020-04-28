@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038995"
 ---
 # <a name="constructor-functions-xquery"></a>Funções do construtor (XQuery)
@@ -137,7 +137,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>a. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usando a função dateTime() XQuery para recuperar descrições de produtos mais antigos  
  Neste exemplo, um documento XML de exemplo é atribuído primeiro a uma variável de tipo **XML** . Este documento contém três exemplos de `ProductDescription` elementos de> de <, com cada um contendo `DateCreated` um <elemento filho>.  
   
  A variável é então consultada para recuperar apenas aquelas descrições de produtos que tenham sido criados antes de uma data específica. Para fins de comparação, a consulta usa a função de construtor **xs: DateTime ()** para digitar as datas.  

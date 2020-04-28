@@ -18,10 +18,10 @@ ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029814"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68029814"
 
   Rastreia artigos somente esquema para replicação de mesclagem. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo somente esquema em uma publicação de mesclagem.|  
-|**tipo**|**tinyint**|Indica o tipo de artigo somente esquema que pode ser um dos seguintes:<br /><br /> **0x20** = artigo de somente esquema de procedimento armazenado.<br /><br /> **0x40** = exibir somente esquema ou artigo somente esquema de exibição indexada.|  
-|**objID**|**int**|O identificador de objeto do objeto base do artigo. Pode ser o identificador de objeto de um procedimento, exibição indexada, exibição ou função definida pelo usuário.|  
+|**type**|**tinyint**|Indica o tipo de artigo somente esquema que pode ser um dos seguintes:<br /><br /> **0x20** = artigo de somente esquema de procedimento armazenado.<br /><br /> **0x40** = exibir somente esquema ou artigo somente esquema de exibição indexada.|  
+|**objid**|**int**|O identificador de objeto do objeto base do artigo. Pode ser o identificador de objeto de um procedimento, exibição indexada, exibição ou função definida pelo usuário.|  
 |**artid**|**uniqueidentifier**|A ID do artigo.|  
 |**ndescrição**|**nvarchar (255)**|A descrição do artigo.|  
 |**pre_creation_command**|**tinyint**|A ação padrão a ser executada quando o artigo é criado no banco de dados de assinatura:<br /><br /> **0 =** Nenhum – se a tabela já existir no Assinante, nenhuma ação será executada.<br /><br /> **1** = drop-remove a tabela antes de recriá-la.<br /><br /> **2** = Delete-emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.<br /><br /> **3** = truncar-igual a **2**, mas exclui páginas em vez de linhas. Porém, não exige uma cláusula WHERE.|  

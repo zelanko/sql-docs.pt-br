@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038118"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instruções de definição de dados MDX (MDX)
@@ -22,11 +22,11 @@ ms.locfileid: "68038118"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instrução ALTER CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Altera a estrutura de um cubo especificado.|  
 |[CRIAR instrução de ação &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Cria uma ação que pode ser associada a um cubo, uma dimensão, uma hierarquia ou um objeto subordinado.|  
-|[CRIAR instrução de cálculo de célula &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Cria um cálculo que avalia uma linguagem MDX em um conjunto de tuplas especificado em um cubo.|  
+|[Instrução CREATE CELL CALCULATION &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Cria um cálculo que avalia uma linguagem MDX em um conjunto de tuplas especificado em um cubo.|  
 |[CRIAR instrução de cubo GLOBAL &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Cria e popula um cubo localmente persistente, com base em um subcubo a partir de um cubo no servidor. Uma conexão com o servidor não é exigida para a conexão com o cubo localmente persistente.|  
 |[Instrução CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|Cria um membro calculado.|  
 |[Instrução CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Cria e popula um cubo disponível para todas as consultas da mesma sessão, com base nos cubos no servidor.|  
@@ -42,6 +42,6 @@ ms.locfileid: "68038118"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de instrução MDX &#40;&#41;MDX](../mdx/mdx-statement-reference-mdx.md)   
  [Instruções de manipulação de dados MDX &#40;&#41;MDX](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Instruções de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

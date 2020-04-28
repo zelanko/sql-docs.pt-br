@@ -18,10 +18,10 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022327"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68022327"
   Converte um usuário do banco de dados que foi mapeado para um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um usuário do banco de dados independente com senha. Em um banco de dados independente, use este procedimento para remover dependências na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] onde o banco de dados está instalado. **sp_migrate_user_to_contained** separa o usuário do logon original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para que as configurações como senha e idioma padrão possam ser administradas separadamente para o banco de dados independente. **sp_migrate_user_to_contained** pode ser usado antes de mover o banco de dados independente para uma instância [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] diferente do para eliminar dependências [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos logons da instância atual.  
   
 > [!NOTE]
-> Tenha cuidado ao usar o **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Esse procedimento só é usado em um banco de dados independente. Para obter mais informações, veja [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
+> Tenha cuidado ao usar o **sp_migrate_user_to_contained**, pois você não poderá reverter o efeito. Esse procedimento só é usado em um banco de dados independente. Para obter mais informações, consulte [bancos de dados independentes](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -117,7 +117,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Migrar para um banco de dados parcialmente independente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Bancos de dados independentes](../../relational-databases/databases/contained-databases.md)  
   
   

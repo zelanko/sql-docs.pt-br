@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006563"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Executando o console do SSMA (AccessToSQL)
@@ -157,7 +157,7 @@ Load-Access-Database: usado para carregar arquivos de banco de dados de acesso
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <load-access-database>  
@@ -191,7 +191,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <force-load>  
@@ -304,7 +304,7 @@ gerar-avaliação-relatório
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <generate-assessment-report  
@@ -376,7 +376,7 @@ converter esquema
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <convert-schema  
@@ -436,7 +436,7 @@ migrar-dados
   
 </migrate-data>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <migrate-data  
@@ -466,7 +466,7 @@ link-Tables: esse comando vincula a tabela de origem (acesso) à tabela de desti
   
 </link-tables>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <link-tables>  
@@ -492,7 +492,7 @@ Desvincular tabelas: esse comando desvincula a tabela de origem (acesso) da tabe
   
 </unlink-tables>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <unlink-tables>  
@@ -571,7 +571,7 @@ sincronizar destino
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target  
@@ -580,7 +580,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target>  
@@ -636,7 +636,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database  
@@ -645,7 +645,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database>  
@@ -695,7 +695,7 @@ Requer um ou vários nós da metabase como parâmetro de linha de comando.
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <save-as-script  

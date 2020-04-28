@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032644"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>a. Criando um conjunto de coleta com o uso de valores padrão  
- O exemplo a seguir cria um conjunto de coleta especificando apenas os parâmetros necessários. 
-  `@collection_mode` não é necessário, mas o modo de coleta padrão (armazenado em cache) requer a especificação de uma ID de agenda ou nome de agenda.  
+ O exemplo a seguir cria um conjunto de coleta especificando apenas os parâmetros necessários. `@collection_mode` não é necessário, mas o modo de coleta padrão (armazenado em cache) requer a especificação de uma ID de agenda ou nome de agenda.  
   
 ```  
 USE msdb;  
@@ -157,9 +156,9 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
- [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [&#41;&#40;Transact-SQL de syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Criar um conjunto de coleta personalizado que usa o tipo de coletor de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

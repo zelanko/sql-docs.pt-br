@@ -19,10 +19,10 @@ ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029802"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68029802"
 >  Não é possível descartar a exibição **sysopentapes** .  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**openTape**|**nvarchar (64)**|Nome de arquivo físico do dispositivo de fita aberto. Para obter mais informações sobre como abrir e liberar dispositivos de fita, consulte [BACKUP &#40;Transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md) e [restaurar &#40;&#41;do Transact-SQL ](../../t-sql/statements/restore-statements-transact-sql.md).|  
   

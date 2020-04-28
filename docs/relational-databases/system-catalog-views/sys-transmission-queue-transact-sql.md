@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022601"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68022601"
 
   Esta exibição do catálogo contém uma linha para cada mensagem na fila de transmissão, como mostra a tabela a seguir:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|Identificador da conversa à qual pertence essa mensagem. Não é NULLABLE.|  
 |**to_service_name**|**nvarchar(256)**|Nome do serviço a que se destina essa mensagem. É NULLABLE.|  
@@ -45,9 +45,9 @@ ms.locfileid: "68022601"
 |**is_end_of_dialog**|**bit**|Indica se esta mensagem é uma mensagem de término de conversa. Não é NULLABLE.<br /><br /> 0 = Não é uma mensagem de término de conversa.<br /><br /> 1 = Mensagem de término de conversa.<br /><br /> Não é NULLABLE.|  
 |**message_body**|**varbinary(max)**|O corpo desta mensagem. É NULLABLE.|  
 |**transmission_status**|**nvarchar(4000)**|Motivo que explica por que esta mensagem está na fila. Normalmente, é uma mensagem de erro que explica por que o envio da mensagem falhou. Se estiver em branco, a mensagem ainda não foi enviada. É NULLABLE.|  
-|**priority**|**tinyint**|O nível de prioridade atribuído a essa mensagem. Não é NULLABLE.|  
+|**prioridade**|**tinyint**|O nível de prioridade atribuído a essa mensagem. Não é NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

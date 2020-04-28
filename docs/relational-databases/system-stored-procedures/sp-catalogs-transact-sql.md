@@ -18,10 +18,10 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045945"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
@@ -43,7 +43,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Catalog_name**|**nvarchar (** 128 **)**|Nome do catálogo.|  
 |**Descrição**|**nvarchar (** 4000 **)**|Descrição do catálogo.|  
@@ -64,7 +64,7 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_column_privileges](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026859"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
@@ -41,10 +41,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]é substancialmente diferente das versões mais recentes e é discutido no tópico em [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e posterior  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e posterior  
  A tabela a seguir descreve as colunas `sys.dm_db_xtp_checkpoint_stats`no, começando **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** com.  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Último LSN visto pelo controlador.|  
 |end_of_log_lsn|**numeric (38)**|O LSN do final do log.|  
@@ -83,10 +83,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |internal_error_code|**bigint**|Erro visto por qualquer um dos threads de controlador, serializador, fechamento e mesclagem.|
 |bytes_of_large_data_serialized|**bigint**|A quantidade de dados serializados. |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  A tabela a seguir descreve as colunas `sys.dm_db_xtp_checkpoint_stats`no, **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** para.  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|O número de bytes de log entre o LSN (número de sequência de log) atual do thread e o fim do log.|  
 |total_log_blocks_processed|**bigint**|Número total de blocos de log processados desde a inicialização do servidor.|  

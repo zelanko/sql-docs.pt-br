@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008208"
 ---
 # <a name="operators---arithmetic"></a>Operadores – aritméticos
@@ -22,7 +22,7 @@ ms.locfileid: "68008208"
   
  A tabela a seguir identifica os operadores aritméticos aos quais a DMX oferece suporte.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[+ &#40;adicionar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Soma dois números.|  
 |[-&#40;subtrair&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Subtrai um número de outro.|  

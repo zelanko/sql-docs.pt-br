@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999991"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,7 +48,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Uma linguagem MDX válida que retorna um nível.  
   
- *Alcance*  
+ *Distância*  
  Uma expressão numérica válida que especifica a distância do membro especificado.  
   
  *Desc_Flag*  
@@ -91,7 +91,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Alterando o valor do sinalizador de descrição, você pode incluir ou excluir descendentes no nível ou na distância especificada, o filho antes ou depois de um nível ou distância especificada (até o nó folha), e a folha filha, independentemente do nível ou da distância especificada. A tabela a seguir descreve os sinalizadores permitidos no argumento *Desc_Flag* .  
   
-|Sinalizador|DESCRIÇÃO|  
+|Sinalizador|Descrição|  
 |----------|-----------------|  
 |SELF|Só retorna membros descendentes do nível especificado ou à distância especificada. A função inclui o membro especificado, se o nível especificado for o nível do membro especificado.|  
 |AFTER|Retorna os membros descendentes de todos os níveis subordinados ao nível especificado ou à distância.|  
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

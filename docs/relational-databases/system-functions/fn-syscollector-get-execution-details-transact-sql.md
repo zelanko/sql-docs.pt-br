@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042825"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -44,9 +44,9 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|O identificador exclusivo da entrada do log.|  
+|id|**int**|O identificador exclusivo da entrada do log.|  
 |event|**sysname**|O nome do evento que gerou a entrada do log.|  
 |computer|**nvarchar**|O computador no qual o pacote foi executado quando a entrada do log foi gerada.|  
 |operador|**nvarchar**|O nome de usuário da pessoa ou agente que executou o pacote que gerou a entrada do log.|  
@@ -57,7 +57,7 @@ fn_syscollector_get_execution_details ( log_id )
 |endtime|**datetime**|A hora em que o pacote foi concluído.|  
 |datacode|**int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
 |databytes|**imagem**|Uma matriz de bytes que identifica um valor de retorno.|  
-|message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
+|mensagem|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão SELECT para **dc_operator**.  

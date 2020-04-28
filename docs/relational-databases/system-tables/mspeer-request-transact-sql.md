@@ -18,10 +18,10 @@ ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026709"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68026709"
 
   A tabela MSpeer_request é usada em replicação ponto a ponto para controlar solicitações de status para uma determinada publicação. Essa tabela é armazenada no banco de dados de publicação.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|Identifica uma solicitação.|  
+|id|**int**|Identifica uma solicitação.|  
 |publication|**sysname**|Nome da publicação para a qual a solicitação de status foi iniciada.|  
 |sent_date|**datetime**|Data e hora em que a solicitação de status foi iniciada.|  
 |descrição|**nvarchar(4000)**|Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais.|  

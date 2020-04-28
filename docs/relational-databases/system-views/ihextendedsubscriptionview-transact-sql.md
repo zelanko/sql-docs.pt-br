@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029575"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68029575"
 
   A exibição **IHextendedSubscriptionView** expõe informações sobre assinatura para uma publicação não SQL Server. Essa exibição é armazenada no banco de dados de **distribuição** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|O identificador exclusivo para um artigo.|  
 |**dest_db**|**sysname**|O nome do banco de dados de destino.|  
@@ -46,11 +46,11 @@ ms.locfileid: "68029575"
 |**loopback_detection**|**bit**|Aplica-se a assinaturas que fazem parte de uma topologia de replicação transacional bidirecional. A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **1** = não envia de volta.<br /><br /> **0** = envia de volta.|  
 |**agent_id**|**int**|O identificador exclusivo do Distribution Agent.|  
 |**update_mode**|**tinyint**|Indica o tipo de modo de atualização, que pode ser um dos seguintes:<br /><br /> **0** = somente leitura.<br /><br /> **1** = atualização imediata.<br /><br /> **2** = atualização em fila usando o enfileiramento de mensagens.<br /><br /> **3** = atualização imediata com atualização em fila como failover usando o enfileiramento de mensagens.<br /><br /> **4** = atualização em fila usando a fila de SQL Server.<br /><br /> **5** = atualização imediata com failover de atualização em fila, usando SQL Server fila.|  
-|**publisher_seqno**|**varbinary (16)**|O número de sequência da transação no Publicador para esta assinatura.|  
-|**ss_cplt_seqno**|**varbinary (16)**|O número de sequência usado para significar a conclusão do processamento de instantâneo simultâneo.|  
+|**publisher_seqno**|**varbinary(16)**|O número de sequência da transação no Publicador para esta assinatura.|  
+|**ss_cplt_seqno**|**varbinary(16)**|O número de sequência usado para significar a conclusão do processamento de instantâneo simultâneo.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

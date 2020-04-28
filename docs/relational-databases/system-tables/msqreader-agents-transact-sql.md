@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032567"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68032567"
 
   A tabela **MSqreader_agents** contém uma linha para cada Queue Reader Agent em execução no distribuidor local. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|A ID do Queue Reader Agent.|  
+|**id**|**int**|A ID do Queue Reader Agent.|  
 |**name**|**nvarchar (100)**|O nome do Queue Reader Agent.|  
-|**job_id**|**Binary (16)**|O número de ID de trabalho exclusivo da tabela **sysjobs** .|  
+|**job_id**|**binary(16)**|O número de ID de trabalho exclusivo da tabela **sysjobs** .|  
 |**profile_id**|**int**|A ID do perfil da tabela de **MSagent_profiles** .|  
 |**job_step_uid**|**uniqueidentifier**|A ID exclusiva da etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na qual o agente foi iniciado.|  
   

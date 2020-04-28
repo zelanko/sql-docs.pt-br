@@ -20,17 +20,17 @@ ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005706"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Retorna o comprimento de dados de um parâmetro de chamada de procedimento armazenado remoto. Essa função foi substituída pela função **srv_paraminfo**.  
   
@@ -61,27 +61,27 @@ n
   
 |Novos tipos de dados|Comprimento dos dados de entrada|  
 |--------------------|-----------------------|  
-|**BITN**|**Nulo:** 1<br /><br /> **Zero:** 1<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
-|**BIGVARCHAR**|**Nulo:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** *Len* real|  
-|**BIGCHAR**|**Nulo:** 0<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**Nulo:** 0<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**Nulo:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** *Len* real|  
-|**NCHAR**|**Nulo:** 0<br /><br /> **Zero:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**Nulo:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** *Len* real|  
-|**NTEXT**|**Nulo:** -1<br /><br /> **Zero:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**BITN**|**NULL:** 1<br /><br /> **Zero:** 1<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|**BIGVARCHAR**|**NULL:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:***len* real|  
+|**BIGCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:***len* real|  
+|**NCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL:** 0<br /><br /> **Zero:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:***len* real|  
+|**NTEXT**|**Nulo:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
   
- \**comp* . real = comprimento da cadeia de caracteres multibyte (CCH)  
+ \*   *len* real = tamanho da cadeia de caracteres de vários bytes (cch)  
   
 ## <a name="remarks"></a>Comentários  
  Cada parâmetro de procedimento armazenado remoto tem um comprimento de dados real e um máximo. Para tipos de dados padrão de comprimento fixo que não permitem valores nulos, os comprimentos real e máximo são os mesmos. Para tipos de dados de comprimento de variável, os comprimentos podem variar. Por exemplo, um parâmetro declarado como **varchar(30)** pode ter dados de apenas 10 bytes de comprimento. O comprimento real do parâmetro é 10 e seu comprimento máximo é 30. A função **srv_paramlen** obtém o tamanho real de dados, em bytes, de um procedimento armazenado remoto. Para obter o tamanho máximo de dados de um parâmetro, use **srv_parammaxlen**.  
   
- Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
+ Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador de SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  
 >  Você deve examinar totalmente o código-fonte de procedimentos armazenados estendidos e deve testar as DLLs compiladas antes de instalá-las em um servidor de produção. Para obter informações sobre revisão e testes de segurança, consulte este [site da Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte Também  
  [srv_paraminfo &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
- [srv_rpcparams &#40;API de procedimento armazenado estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;API de Procedimento Armazenado Estendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

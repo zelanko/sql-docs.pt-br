@@ -14,10 +14,10 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029114"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introdução com o console do SSMA para Sybase (SybaseToSQL)
@@ -56,7 +56,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 A interpretação de cores da saída do console aparece na tabela a seguir:  
   
-|Color|DESCRIÇÃO|  
+|Color|Descrição|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

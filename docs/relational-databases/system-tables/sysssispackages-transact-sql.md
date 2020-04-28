@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029646"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "68029646"
   Contém uma linha para cada pacote que é salvo em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa tabela é armazenada no banco de dados **msdb** .  
   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O identificador exclusivo do pacote.|  
-|**sessão**|**uniqueidentifier**|O GUID do pacote.|  
+|**id**|**uniqueidentifier**|O GUID do pacote.|  
 |**ndescrição**|**nvarchar**|A descrição opcional do pacote.|  
-|**CreateDate**|**datetime**|A data em que o pacote foi criado.|  
+|**createdate**|**datetime**|A data em que o pacote foi criado.|  
 |**FolderId**|**uniqueidentifier**|O GUID da pasta lógica na qual o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lista o pacote.|  
 |**ownersid**|**varbinary**|O identificador de segurança exclusivo do usuário que criou o pacote.|  
 |**packagedata**|**imagem**|O pacote.|  
@@ -51,6 +51,6 @@ ms.locfileid: "68029646"
 |**writerolesid**|**varbinary**|A função [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode salvar pacotes.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Pacotes do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-packages.md)  
+ [Pacotes do Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)  
   
   

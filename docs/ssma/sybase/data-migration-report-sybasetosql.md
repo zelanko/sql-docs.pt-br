@@ -10,10 +10,10 @@ ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029401"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Relatório de migração de dados (SybaseToSQL)
@@ -41,6 +41,6 @@ A porcentagem de linhas migradas com êxito.
 **Detalhes**  
 Se houver falha na migração de dados, clique para exibir os detalhes de migração para a linha selecionada no relatório. O SSMA exibirá o motivo da falha.  
   
-**Salvar relatório**  
+**Salvar Relatório**  
 Salva o relatório em um. Arquivo CSV, (valores separados por vírgula), que pode ser examinado usando o Microsoft Excel.  
   

@@ -21,10 +21,10 @@ ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018128"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
@@ -35,16 +35,16 @@ ms.locfileid: "68018128"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|Identificação de servidor remoto.|  
 |**remoteusername**|**sysname**|Nome de logon do usuário em um servidor remoto.|  
-|**Estado**|**smallint**|Retorna 0.|  
-|**SIDs**|**varbinary(85)**|ID de segurança do usuário do[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
-|**changeDate**|**datetime**|Data e hora em que o usuário remoto foi adicionado.|  
+|**status**|**smallint**|Retorna 0.|  
+|**SIDs**|**varbinary (85)**|ID de segurança do usuário do[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|**changedate**|**datetime**|Data e hora em que o usuário remoto foi adicionado.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Exibições de compatibilidade &#40;&#41;Transact-SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

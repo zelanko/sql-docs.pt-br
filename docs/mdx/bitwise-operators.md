@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016970"
 ---
 # <a name="bitwise-operators"></a>Operadores bit a bit
@@ -22,12 +22,12 @@ ms.locfileid: "68016970"
   
  O MDX oferece suporte a operadores lógicos listados na tabela a seguir.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Realiza uma conjunção lógica em duas expressões numéricas.|  
-|[IS](../mdx/is-mdx.md)|Executa uma comparação lógica em duas expressões de objeto.|  
+|[FOR](../mdx/is-mdx.md)|Executa uma comparação lógica em duas expressões de objeto.|  
 |[NOT](../mdx/not-mdx.md)|Realiza uma negação lógica em uma expressão numérica.|  
-|[OR](../mdx/or-mdx.md)|Realiza uma disjunção lógica em duas expressões numéricas.|  
+|[OU](../mdx/or-mdx.md)|Realiza uma disjunção lógica em duas expressões numéricas.|  
 |[XOR](../mdx/xor-mdx.md)|Executa uma exclusão lógica em duas expressões numéricas.|  
   
 ## <a name="see-also"></a>Consulte Também  

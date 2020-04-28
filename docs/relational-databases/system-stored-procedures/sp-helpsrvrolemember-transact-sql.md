@@ -18,10 +18,10 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010758"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  a *função* pode ser qualquer um dos valores a seguir.  
   
-|Função de servidor fixa|DESCRIÇÃO|  
+|Função de servidor fixa|Descrição|  
 |-----------------------|-----------------|  
 |sysadmin|Administradores de sistema|  
 |securityadmin|Administradores de segurança|  
@@ -51,7 +51,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |setupadmin|Administradores de configuração|  
 |processadmin|Administradores de processo|  
 |diskadmin|Administradores de disco|  
-|dbcreator|Criadores de Banco de Dados|  
+|dbcreator|Criadores de banco de dados|  
 |bulkadmin|Pode executar instruções BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -59,11 +59,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome da função de servidor|  
 |MemberName|**sysname**|Nome de um membro de ServerRole|  
-|MemberSID|**varbinary(85)**|Identificador de segurança de MemberName|  
+|MemberSID|**varbinary (85)**|Identificador de segurança de MemberName|  
   
 ## <a name="remarks"></a>Comentários  
  Use sp_helprolemember para exibir os membros de uma função de banco de dados.  
@@ -87,7 +87,7 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helprolemember](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

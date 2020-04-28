@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004535"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Manipulando namespaces em XQuery
@@ -146,8 +146,8 @@ where ProductModelID=19
  Observe que ao substituir o elemento namespace padrão ou namespace vazio, todos os elementos nomeados localmente no XML construído serão subsequentemente associados ao namespace padrão substituído. Portanto, se você precisar de flexibilidade na construção XML para aproveitar o namespace vazio, não substitua o elemento namespace padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Adicionar namespaces a consultas com WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Adicionar namespaces a consultas com WITH sqlnamespaces](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [&#40;de dados XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

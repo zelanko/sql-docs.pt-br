@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016828"
 ---
 # <a name="case-statement-mdx"></a>Instrução CASE (MDX)
@@ -106,6 +106,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Instruções de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

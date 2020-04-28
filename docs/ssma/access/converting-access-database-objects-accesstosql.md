@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006623"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertendo AccessToSQL (objetos de banco de dados do Access)
@@ -59,11 +59,11 @@ A tabela a seguir mostra quais objetos de acesso são convertidos e [!INCLUDE[ss
 |coluna|coluna|  
 |índice|índice|  
 |chave estrangeira|chave estrangeira|  
-|consulta|exibição<br /><br />A maioria das consultas SELECT são convertidas em exibições. Outras consultas, como consultas de atualização, não são migradas.<br /><br />As consultas selecionadas que usam parâmetros não são convertidas nem consultas entre guias.|  
+|Consulta|exibição<br /><br />A maioria das consultas SELECT são convertidas em exibições. Outras consultas, como consultas de atualização, não são migradas.<br /><br />As consultas selecionadas que usam parâmetros não são convertidas nem consultas entre guias.|  
 |relatório|Não convertido|  
-|isolada|Não convertido|  
+|formulário|Não convertido|  
 |Macro |Não convertido|  
-|modulo|Não convertido|  
+|module|Não convertido|  
 |valor padrão|valor padrão|  
 |Propriedade de coluna permitir comprimento zero|restrição de verificação|  
 |regra de validação de coluna|restrição de verificação|  

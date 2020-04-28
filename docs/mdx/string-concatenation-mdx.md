@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4d5f2316e3af5ce3c925ef71e1da5baf5bab868d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036856"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (Concatenação de cadeia de caracteres) (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68036856"
 String_Expression + String_Expression  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *String_Expression*  
  Uma linguagem MDX válida que retorna um valor de cadeia de caracteres.  
   

@@ -10,10 +10,10 @@ ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028707"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Configurações do projeto (migração) (SybaseToSQL)
@@ -48,7 +48,7 @@ O painel migração está disponível nas caixas de diálogo **configurações d
 |**Verificar restrições**|Especifica se o SSMA deve verificar as restrições ao inserir dados em SQL Server tabelas.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
 |**Tempo limite de migração de dados**|Especifica o tempo limite usado durante a migração de dados<br /><br />**Modo padrão**: 15<br /><br />**Modo otimista**: 15<br /><br />**Modo completo**: 15|  
 |**Opções de migração de dados estendidas**|Mostra opções de migração de dados adicionais para cada tabela na guia detalhes separados.<br /><br />**Modo padrão**: ocultar<br /><br />**Modo otimista**: ocultar<br /><br />**Modo completo**: ocultar|  
-|**Gatilhos de incêndio**|Especifica se o SSMA deve acionar gatilhos de inserção ao adicionar dados a tabelas SQL Server.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
+|**Acionadores**|Especifica se o SSMA deve acionar gatilhos de inserção ao adicionar dados a tabelas SQL Server.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
 |**Manter identidade**|Especifica se o SSMA preserva valores de identidade Sybase ao adicionar dados a SQL Server. Um valor de false faz com que os valores de identidade sejam atribuídos pelo destino.<br /><br />**Modo padrão**: verdadeiro<br /><br />**Modo otimista**: verdadeiro<br /><br />**Modo completo**: verdadeiro|  
 |**Manter nulos**|Especifica se o SSMA preserva valores nulos nos dados de origem quando adiciona dados a SQL Server, independentemente dos valores padrão especificados em SQL Server.<br /><br />**Modo padrão**: verdadeiro<br /><br />**Modo otimista**: verdadeiro<br /><br />**Modo completo**: verdadeiro|  
 |**Se houver erro**|Interrompe a migração de dados quando ocorre um erro. Ele tem três opções:<br /><br />**Parar a migração:** Interrompe a operação de migração de dados<br /><br />**Vá para a próxima tabela:** Interrompe a migração de dados para a tabela atual e prossegue para a próxima<br /><br />**Vá para o próximo lote:** Interrompe a migração de dados para o lote atual e prossegue para o próximo<br /><br />**Modo padrão**: Vá para o próximo lote<br /><br />**Modo otimista**: Vá para o próximo lote<br /><br />**Modo completo**: Vá para o próximo lote|  

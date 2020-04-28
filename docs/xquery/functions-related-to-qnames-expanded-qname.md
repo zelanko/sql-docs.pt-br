@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004588"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funções Relacionadas a QNames – expanded-QName
@@ -50,9 +50,9 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -   Você pode modificar ou comparar os valores de tipo QName existentes. Por exemplo, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compara o valor do elemento, <`e`>, com QName retornado pela função **expanded-QName ()** .  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>a. Substituindo um valor de nó do tipo QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>A. Substituindo um valor de nó do tipo QName  
  Este exemplo ilustra como você pode modificar o valor de um nó de elemento do tipo QName. O exemplo executa o seguinte:  
   
 -   Cria uma coleção de esquemas XML que define um elemento do tipo QName.  
@@ -132,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Tratando as limitações ao usar a função expanded-QName()  
- A função **expanded-QName** não pode ser usada na construção XML. O exemplo a seguir mostra isso. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
+ A função **expanded-QName** não pode ser usada na construção XML. O exemplo a seguir ilustra isto. Para solucionar essa limitação, o exemplo primeiro insere um nó e, em seguida, modifica o nó.  
   
 ```  
 -- if exists drop the table T  

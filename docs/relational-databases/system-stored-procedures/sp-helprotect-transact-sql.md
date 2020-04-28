@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997480"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -62,14 +62,14 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Proprietário**|**sysname**|Nome do proprietário do objeto.|  
 |**Objeto**|**sysname**|Nome do objeto.|  
 |**Entidade autorizada**|**sysname**|Nome do principal para o qual foram concedidas permissões.|  
-|**Concessor**|**sysname**|Nome do principal que concedeu permissões ao usuário autorizado especificado.|  
+|**Cesso**|**sysname**|Nome do principal que concedeu permissões ao usuário autorizado especificado.|  
 |**Protejatype**|**nvarchar (10)**|Nome do tipo de proteção:<br /><br /> GRANT REVOKE|  
-|**Ação**|**nvarchar (60)**|Nome da permissão. As instruções de permissão válidas dependem do tipo de objeto.|  
+|**Ação**|**nvarchar(60)**|Nome da permissão. As instruções de permissão válidas dependem do tipo de objeto.|  
 |**Coluna**|**sysname**|Tipo de permissão:<br /><br /> Todas = Permissão que cobre todas as colunas atuais do objeto.<br /><br /> Nova = Permissão que cobre qualquer coluna nova que possa ser alterada (com a instrução ALTER) no objeto no futuro.<br /><br /> Todas+Nova = combinação de Todas e Nova.<br /><br /> Retornará um ponto se o tipo de permissão não se aplicar às colunas.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
- As informações retornadas estão sujeitas a restrições no acesso para metadados. Entidades em que o principal não tem nenhuma permissão não aparecem. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ As informações retornadas estão sujeitas a restrições no acesso para metadados. Entidades em que o principal não tem nenhuma permissão não aparecem.  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -133,9 +133,9 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [NEGAR &#40;&#41;de Transact-SQL](../../t-sql/statements/deny-transact-sql.md)   
+ [CONCEDER &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOGAr &#40;&#41;de Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

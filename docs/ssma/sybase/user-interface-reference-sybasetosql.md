@@ -10,10 +10,10 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020864"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referência da interface do usuário (SybaseToSQL)
@@ -21,7 +21,7 @@ Esta seção inclui tópicos de ajuda [!INCLUDE[ssNoVersion](../../includes/ssno
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Seleção de objeto avançada &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Use a caixa de diálogo **seleção de objeto avançado** para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Use o relatório de avaliação para exibir os resultados da conversão de objetos do Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[tsql](../../includes/tsql-md.md)] a sintaxe e para estimar o tempo e a complexidade de uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migração para o ou SQL Azure.|  

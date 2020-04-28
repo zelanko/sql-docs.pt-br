@@ -24,10 +24,10 @@ ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018028"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Exibições de compatibilidade do sistema (Transact-SQL)
@@ -42,17 +42,17 @@ ms.locfileid: "68018028"
 |Nome da coluna|Exibição de compatibilidade|Exibição SQL Server 2005|  
 |-----------------|------------------------|--------------------------|  
 |**xusertype**|**syscolumns**|**sys.columns**|  
-|**usertype**|**syscolumns**|**sys.columns**|  
+|**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
 |**UID**|**sysobjects**|**sys.objects**|  
 |**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
-|**cesso**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**grantor**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
 |**UID**|**systypes**|**sys.types**|  
 |**UID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
-|**GID**|**sysusers**|**sys.database_principals**|  
+|**gid**|**sysusers**|**sys.database_principals**|  
 |**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
 |**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68018028"
  Exemplo: se um usuário criar uma tabela de usuário chamada **syslanguages** em um banco de dados de usuário, no SQL Server 2008, `SELECT * from dbo.syslanguages;` a instrução nesse banco de dados retornará os valores da tabela de usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **Sys. syslanguages**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapeando tabelas do sistema para exibições do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

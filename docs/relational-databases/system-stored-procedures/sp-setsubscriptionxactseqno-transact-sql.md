@@ -16,10 +16,10 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021078"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
@@ -53,10 +53,10 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary (16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
-|**UPDATED XACT_SEQNO**|**varbinary (16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|É o LSN original da próxima transação a ser aplicada no Assinante.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|É o LSN atualizado da próxima transação a ser aplicada no Assinante.|  
 |**SUBSCRIPTION STREAM COUNT**|**int**|O número de fluxos de assinatura usado durante a última sincronização.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

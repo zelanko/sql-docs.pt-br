@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041000"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
@@ -44,7 +44,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
  database_name  
  O nome de um banco de dados habilitado para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] existente.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
 ## <a name="messages"></a>Mensagens  
  Se o banco de dados foi associado a um pool de recursos nomeado, o procedimento retornará com êxito. No entanto, você deve reiniciar o banco de dados para a desassociação entrar em vigor.  

@@ -10,10 +10,10 @@ ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029003"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configurações globais (testador) (SybaseToSQL)

@@ -22,10 +22,10 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041064"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
@@ -36,24 +36,24 @@ ms.locfileid: "68041064"
 > [!NOTE]  
 >  Essa exibição do catálogo não descreve detalhes de uma configuração de IP, que foi definida no cluster do WSFC.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|ID do grupo de disponibilidade (**group_id**) de [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|GUID da ID do recurso do cluster.|  
 |**dns_name**|**nvarchar (63)**|Nome de rede configurado (nome do host) do ouvinte do grupo de disponibilidade.|  
-|**port**|**int**|O número da porta TCP configurada para o ouvinte do grupo de disponibilidade.<br /><br /> NULL = O ouvinte foi configurado fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seu número de porta não foi adicionado ao grupo de disponibilidade. Para adicionar a porta, pleaseuse a opção modificar ouvinte da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**porta**|**int**|O número da porta TCP configurada para o ouvinte do grupo de disponibilidade.<br /><br /> NULL = O ouvinte foi configurado fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e seu número de porta não foi adicionado ao grupo de disponibilidade. Para adicionar a porta, pleaseuse a opção modificar ouvinte da instrução [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**is_conformant**|**bit**|Se esta configuração de IP é compatível, pode ser:<br /><br /> 1 = O ouvinte é compatível. Somente as relações "ou" existem entre seus endereços IP (Internet Protocol). *Compatível* abrange todas as configurações de IP que foram criadas pela instrução [Criar grupo](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] de disponibilidade. Além disso, se uma configuração de IP que foi criada fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por exemplo, usando o Gerenciador de Cluster de Failover do WSFC, mas puder ser modificada pela instrução tsql ALTER AVAILABILITY GROUP, a configuração de IP será qualificada como compatível.<br /><br /> 0 = O ouvinte não é compatível. Normalmente, indica um endereço IP que não pôde ser configurado usando comandos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em vez disso, foi definido diretamente no cluster do WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Cadeias de caracteres da configuração de IP do cluster, se houver, para esse ouvinte. NULL = O ouvinte não tem nenhum endereço IP virtual. Por exemplo:<br /><br /> Endereço IPv4: `65.55.39.10`.<br /><br /> Endereço IPv6: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
 ## <a name="security"></a>Segurança  
   
 ### <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Funções e exibições de gerenciamento dinâmico de Grupos de Disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Exibições de catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On funções e exibições de gerenciamento dinâmico de grupos de disponibilidade &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On exibições de catálogo de grupos de disponibilidade &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Monitorar grupos de disponibilidade &#40;&#41;Transact-SQL](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

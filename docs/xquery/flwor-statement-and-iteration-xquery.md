@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038906"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Iteração e instrução FLWOR (XQuery)
@@ -299,8 +299,7 @@ SELECT @x.query('
   
 -   A expressão associada a `$Loc` gera uma sequência de <`Location` elementos de>. Para cada <`Location` elemento>, `$FirstStep` gera uma sequência de um <`Step` elemento>, um singleton.  
   
--   
-  `$Loc` é especificado na expressão associada com a variável `$FirstStep`.  
+-   `$Loc` é especificado na expressão associada com a variável `$FirstStep`.  
   
  Este é o resultado:  
   

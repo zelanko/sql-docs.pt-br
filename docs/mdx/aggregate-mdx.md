@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017174"
 ---
 # <a name="aggregate-mdx"></a>Função Aggregate (MDX)
@@ -131,6 +131,6 @@ WHERE ([Geography].[State-Province].x,
  [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
  [Propriedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember&#41;MDX &#40;](../mdx/prevmember-mdx.md)   
- [Referência de função MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

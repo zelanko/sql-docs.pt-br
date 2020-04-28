@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028664"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
@@ -43,7 +43,7 @@ Clique para editar o tipo de dados selecionado na lista mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
@@ -57,13 +57,13 @@ A tabela a seguir contém o mapeamento de tipo padrão entre [!INCLUDE[ssNoVersi
 |**binário [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**variação de caractere**|**varchar**|  
+|**char varying**|**varchar**|  
 |**variável de caractere\*[.. 8000]**|**varchar [\*]**|  
 |**variação de caractere [8001.\*.]**|**varchar(max)**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*;]**|**varchar(max)**|  
-|**character**|**char**|  
-|**variável de caractere**|**varchar**|  
+|**espaço**|**char**|  
+|**character varying**|**varchar**|  
 |**variável de caractere\*[.. 8000]**|**varchar [\*]**|  
 |**variável de caractere [8001.\*.]**|**varchar(max)**|  
 |**caractere [\*.. 8000]**|**Char [\*]**|  
@@ -133,7 +133,7 @@ A tabela a seguir contém o mapeamento de tipo padrão entre [!INCLUDE[ssNoVersi
 |**univarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**bigint não assinado**|**numeric [20] [0]**|  
-|**int não assinado**|**bigint**|  
+|**unsigned int**|**bigint**|  
 |**smallint não assinado**|**int**|  
 |**tinyint não assinado**|**tinyint**|  
 |**varbinary**|**varbinary**|  

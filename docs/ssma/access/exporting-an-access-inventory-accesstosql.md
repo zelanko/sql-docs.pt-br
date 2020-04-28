@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006560"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportando um inventário de acesso (AccessToSQL)
@@ -82,7 +82,7 @@ Para obter mais informações sobre como criar projetos, consulte [criando e ger
     > [!IMPORTANT]  
     > A caixa de texto **tudo ou parte do nome do arquivo** não oferece suporte a caracteres curinga.  
   
-5.  Clique em **verificar**.  
+5.  Clique em **Verificar**.  
   
     A página verificação é exibida. Isso mostra os bancos de dados que foram encontrados e o progresso da pesquisa. Para interromper a pesquisa, clique em **parar**.  
   
@@ -90,7 +90,7 @@ Para obter mais informações sobre como criar projetos, consulte [criando e ger
   
     Você pode usar os botões **selecionar tudo** e **desmarcar todos** na parte superior da lista para selecionar ou limpar todos os bancos de dados. Você também pode manter a tecla CTRL pressionada para selecionar várias linhas ou manter a tecla SHIFT pressionada para selecionar um intervalo de linhas.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página verificar, clique em **concluir**.  
   
@@ -227,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 Se você não souber o nome da coluna, poderá escrever uma consulta para retornar todas as colunas. Para fazer isso, remova a cláusula WHERE da consulta anterior.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Preparar bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
+[Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
   

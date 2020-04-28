@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032814"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
@@ -44,15 +44,15 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>Argumentos  
 `[ @srvrolename = ] 'role'`É o nome da função de servidor fixa para a qual as permissões são retornadas. *role* é **sysname**, com um padrão de NULL. Se nenhuma função for especificada, as permissões de todas as funções de servidor fixas serão retornadas. a *função* pode ter um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**sysadmin**|Administradores de sistema|  
 |**securityadmin**|Administradores de segurança|  
-|**ServerAdmin**|Administradores de servidor|  
+|**serveradmin**|Administradores de servidor|  
 |**setupadmin**|Administradores de configuração|  
 |**processadmin**|Administradores de processo|  
 |**diskadmin**|Administradores de disco|  
-|**dbcreator**|Criadores de Banco de Dados|  
+|**dbcreator**|Criadores de banco de dados|  
 |**bulkadmin**|Pode executar instruções BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -60,7 +60,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nome de uma função de servidor fixa|  
 |**Permissão**|**sysname**|Permissão associada a **ServerRole**|  

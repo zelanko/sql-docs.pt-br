@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008151"
 ---
 # <a name="operators---logical"></a>Operadores – lógicos
@@ -22,7 +22,7 @@ ms.locfileid: "68008151"
   
  A tabela a seguir identifica os operadores lógicos aos quais a DMX oferece suporte.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
 |[E &#40;DMX&#41;](../dmx/and-dmx.md)|Realiza uma conjunção lógica em duas expressões numéricas.|  
 |[NÃO &#40;&#41;DMX](../dmx/not-dmx.md)|Realiza uma negação lógica em uma expressão numérica.|  

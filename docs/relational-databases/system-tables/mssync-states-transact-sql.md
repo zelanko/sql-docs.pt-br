@@ -18,10 +18,10 @@ ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016513"
 ---
 # <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68016513"
 
   A tabela **MSsync_states** controla qual publicação ainda está no modo de instantâneo simultâneo. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados de publicação.|  

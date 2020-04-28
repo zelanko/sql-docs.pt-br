@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021024"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Executar casos de teste (SybaseToSQL)
@@ -34,7 +34,7 @@ Quando o teste for concluído, o relatório de caso de teste será criado. Cliqu
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução de caso de teste  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 O SSMA Tester verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem satisfeitas, uma mensagem de erro será exibida.  
   
 ### <a name="initialization"></a>Inicialização  
@@ -44,7 +44,7 @@ Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os se
   
 Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db ou SSMATESTER2008db e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no banco de dados ssmatesterdb_syb.  
   
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Gatilho|Disparar a auditoria das alterações na tabela verificada.|  
 |USER_TABLE $ AUD|Tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
@@ -56,7 +56,7 @@ Os seguintes objetos são criados em Sybase no banco de dados SSMATESTER2005db o
   
 O objeto a seguir é criado no banco de dados da tabela verificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no Sybase e no.  
   
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Gatilho|Disparar a auditoria das alterações na tabela verificada.|  
   

@@ -18,10 +18,10 @@ ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dc2e7e5b2cf767972ab6531b5f06c2043a3f07fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016466"
 ---
 # <a name="mstracer_tokens-transact-sql"></a>MStracer_tokens (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68016466"
 
   A tabela **MStracer_tokens** mantém um registro de registros de token de rastreamento inseridos em uma publicação. Essa tabela é armazenada no banco de dados de distribuição e é usada pela replicação para monitorar o desempenho.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**trace_id**|**int**|Identifica um registro de token de rastreamento.|  
 |**publication_id**|**int**|Identifica a publicação na qual o registro de token de rastreamento foi inserido.|  

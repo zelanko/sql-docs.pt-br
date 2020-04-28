@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002467"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
@@ -48,7 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`É o nome do procedimento armazenado, a função definida pelo usuário, a exibição, o gatilho DML, o gatilho DDL no nível do banco de dados ou o gatilho DDL no nível do servidor. *module_name* não pode ser um procedimento armazenado Common Language Runtime (CLR) ou uma função CLR. *module_name* não pode ser associado a esquema. *module_name* é `nvarchar`, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode fazer referência a objetos no banco de dados atual.
 
-`[ @namespace = ] ' < class > '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>`é `nvarchar(20)`. As entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`são e.    
+`[ @namespace = ] ' < class > '`É a classe do módulo especificado. Quando *module_name* é um gatilho DDL, `<class>` é necessário. `<class>` é `nvarchar(20)`. As entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`são e.    
 
 ## <a name="return-code-values"></a>Valores do código de retorno  
 
@@ -156,5 +156,5 @@ GO
 ## <a name="see-also"></a>Consulte Também 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Assistente de Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Assistente do Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

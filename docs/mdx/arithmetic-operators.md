@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017078"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
@@ -22,10 +22,10 @@ ms.locfileid: "68017078"
   
  O MDX oferece suporte para os operadores aritméticos listados na tabela a seguir.  
   
-|Operador|DESCRIÇÃO|  
+|Operador|Descrição|  
 |--------------|-----------------|  
-|[+ (Adicionar)](../mdx/add-mdx.md)|Soma dois números.|  
-|[/(Divisão)](../mdx/divide-mdx-operator-reference.md)|Divide um número pelo outro.|  
+|[+ (Somar)](../mdx/add-mdx.md)|Soma dois números.|  
+|[/ (dividir)](../mdx/divide-mdx-operator-reference.md)|Divide um número pelo outro.|  
 |[* (Multiplicar)](../mdx/multiply-mdx.md)|Multiplica dois números.|  
 |[-(Subtrair)](../mdx/subtract-mdx.md)|Subtrai dois números.|  
 |^ (Potência)|Eleva um número pelo outro.|  
@@ -33,7 +33,7 @@ ms.locfileid: "68017078"
 > [!NOTE]  
 >  A linguagem MDX não inclui uma função para obter a raiz quadrada de um número. Para obter a raiz quadrada de um número, eleve-o à potência de 0,5 usando o operador ^.  
   
-## <a name="order-of-precedence"></a>Ordem de precedência  
+## <a name="order-of-precedence"></a>Ordem de Precedência  
  As regras a seguir determinam a ordem de prioridade dos operadores aritméticos em uma expressão MDX:  
   
 -   Quando houver mais de um operador aritmético em uma expressão, o MDX efetua a multiplicação e a divisão primeiramente, seguidas da subtração e da adição.  

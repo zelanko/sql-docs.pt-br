@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017091"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68017091"
 Expression1 AND Expression2  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Expression1*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -43,9 +43,9 @@ Expression1 AND Expression2
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**for**|**for**|  
-|**for**|**true**|**for**|  
-|**for**|**for**|**for**|  
+|**true**|**false**|**false**|  
+|**false**|**true**|**false**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Exemplo  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002654"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
@@ -50,11 +50,11 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID da coluna.|  
 |**column_name**|**sysname**|Nome da coluna da tabela.|  
-|**column_usage**|**varchar (20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: a coluna contribui para um predicado que expressa a igualdade, do formulário: <br />                        *constant_value de tabela. coluna* = **<br /><br /> Desigualdade: a coluna contribui para um predicado que expressa desigualdade, por exemplo, um predicado do formato: *Table. Column* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUDE: a coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para cobrir uma consulta.|  
+|**column_usage**|**varchar (20)**|Como a coluna é usada pela consulta. Os valores possíveis e suas descrições são:<br /><br /> IGUALDADE: a coluna contribui para um predicado que expressa a igualdade, do formulário: <br />                        *constant_value de tabela. coluna* = *constant_value*<br /><br /> Desigualdade: a coluna contribui para um predicado que expressa desigualdade, por exemplo, um predicado do formato: *Table. Column* > *constant_value*. Qualquer operador de comparação diferente de "=" expressa desigualdade.<br /><br /> INCLUDE: a coluna não é usada para avaliar um predicado, mas é usada por outro motivo, por exemplo, para cobrir uma consulta.|  
   
 ## <a name="remarks"></a>Comentários  
  As informações retornadas por **sys.dm_db_missing_index_columns** serão atualizadas quando uma consulta for otimizada pelo otimizador de consulta e não persistirão. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  

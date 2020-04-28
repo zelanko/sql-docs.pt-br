@@ -16,10 +16,10 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004644"
 ---
 # <a name="functions-on-string-values---substring"></a>Funções em Valores da Cadeia de Caracteres – substring
@@ -69,9 +69,9 @@ fn:substring($sourceString as xs:string?,
  SQL Server permite que *$startingLoc* e *$Length* sejam a sequência vazia, porque a sequência vazia é um valor possível como resultado de os erros dinâmicos serem mapeados para ().  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>a. Usando uma função substring() XQuery para recuperar descrições resumidas parciais de modelos de produtos  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Usando uma função substring() XQuery para recuperar descrições resumidas parciais de modelos de produtos  
  A consulta recupera os primeiros 50 caracteres do texto que descreve o modelo de produto, o <`Summary`> elemento no documento.  
   
 ```  

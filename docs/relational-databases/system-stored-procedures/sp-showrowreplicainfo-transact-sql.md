@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032888"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -50,24 +50,24 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultado para informações de linha  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão de linha.|  
 |**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
-|**db_nickname**|**binário (6)**|Apelido do banco de dados que fez essa entrada.|  
-|**Versão**|**int**|Versão da entrada.|  
+|**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
+|**version**|**int**|Versão da entrada.|  
 |**current_state**|**nvarchar (9)**|Retorna informações sobre o estado atual da linha.<br /><br /> os dados de linha **y** representam o estado atual da linha.<br /><br /> os dados de **n** linhas não representam o estado atual da linha.<br /><br /> >n/a-não aplicável. ** \<**<br /><br /> >desconhecido-o estado atual não pode ser determinado. ** \<**|  
 |**rowversion_table**|**nchar (17)**|Indica se as versões de linha são armazenadas na tabela de [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou na tabela [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultado para informações de coluna  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão da coluna.|  
 |**db_name**|**sysname**|Nome do banco de dados que fez essa entrada.|  
-|**db_nickname**|**binário (6)**|Apelido do banco de dados que fez essa entrada.|  
-|**Versão**|**int**|Versão da entrada.|  
+|**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
+|**version**|**int**|Versão da entrada.|  
 |**ColName**|**sysname**|Nome da coluna de artigo que a entrada de versão da coluna representa.|  
 |**mente**|**nvarchar (255)**|Informações adicionais sobre essa entrada de versão de coluna. Geralmente, esse campo fica vazio.|  
   

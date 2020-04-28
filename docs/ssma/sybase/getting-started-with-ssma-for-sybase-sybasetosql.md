@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029117"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introdução com o SSMA para SAP ASE (SybaseToSQL)
@@ -92,7 +92,7 @@ A barra de ferramentas de migração contém os seguintes comandos:
 ### <a name="menus"></a>Menus  
 O SSMA contém os seguintes menus:  
   
-|Menu|DESCRIÇÃO|  
+|Menu|Descrição|  
 |--------|---------------|  
 |**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao SAP ASE e conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -se ao ou ao banco de dados SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel detalhes do SQL. Também contém a opção **gerenciar indicadores** , em que você pode ver uma lista de indicadores existentes. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

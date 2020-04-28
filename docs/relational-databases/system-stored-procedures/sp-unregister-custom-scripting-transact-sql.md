@@ -16,10 +16,10 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017904"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
@@ -41,11 +41,11 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumentos  
 `[ @type = ] 'type'`É o tipo de procedimento armazenado personalizado ou o script que está sendo removido. o *tipo* é **varchar (16)**, sem padrão, e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**inserido**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução INSERT é replicada.|  
 |**cumulativo**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução UPDATE é replicada.|  
-|**apagar**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução DELETE é replicada.|  
+|**delete**|Procedimento armazenado personalizado registrado ou script executado quando uma instrução DELETE é replicada.|  
 |**custom_script**|Procedimento armazenado personalizado registrado ou script executado ao término do gatilho DDL (Data Definition Language).|  
   
 `[ @publication = ] 'publication'`Nome da publicação para a qual o procedimento armazenado personalizado ou o script está sendo removido. a *publicação* é **sysname**, com um padrão de NULL.  

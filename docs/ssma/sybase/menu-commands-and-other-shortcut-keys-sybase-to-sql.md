@@ -10,10 +10,10 @@ ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028879"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (SybaseToSQL)
@@ -54,7 +54,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Localizar anterior.|ALT + E + F + P ou CTRL + SHIFT + F3|  
 |Localizar próximo|ALT + E + F + N ou CTRL + F3|  
   
-## <a name="view-menu-commands"></a>Comandos do menu Exibir  
+## <a name="view-menu-commands"></a>comandos do menu Exibir  
 Para acessar o menu Exibir, o atalho de teclado usado é ALT + V. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu Exibir.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  
@@ -104,7 +104,7 @@ Para acessar o menu do testador, o atalho de teclado usado é ALT + S. A tabela 
 |Exibir as tabelas de restauração do backup para SQL Server caixa de diálogo.|ALT + S + M + R|  
 |Exiba o diálogo gerenciar conteúdo de backup para SQL Server.|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>Comandos do menu ajuda  
+## <a name="help-menu-commands"></a>comandos do menu Ajuda  
 Para acessar o menu ajuda, o atalho de teclado usado é ALT + H. A tabela a seguir descreve os atalhos de teclado usados para acessar itens de menu no menu ajuda.  
   
 |PARA FAZER ISSO|IMPRESSÃO|  

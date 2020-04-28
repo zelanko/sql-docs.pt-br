@@ -21,10 +21,10 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033117"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Exibições do aplicativo da camada de dados-dbo. sysdac_instances
@@ -32,7 +32,7 @@ ms.locfileid: "68033117"
 
   Exibe uma linha para cada instância do DAC (Aplicativo da Camada de Dados) implantada a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances pertence ao esquema dbo no banco de dados msdb. A tabela a seguir descreve as colunas na exibição sysdac_instances.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificador da instância do DAC.|  
 |instance_name|**sysname**|Nome da instância do DAC especificada quando o DAC foi implantado.|  
@@ -51,7 +51,7 @@ ms.locfileid: "68033117"
  Requer associação na função de servidor fixa sysadmin para exibir todas as colunas. Os membros da função pública podem exibir as colunas instance_name, description e type_version.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Aplicativos da camada de dados](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exibições de aplicativo da camada de dados &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

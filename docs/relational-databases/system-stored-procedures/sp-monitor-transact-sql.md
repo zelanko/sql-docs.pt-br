@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022321"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
@@ -43,11 +43,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**last_run**|A hora **sp_monitor** foi executada pela última vez.|  
 |**current_run**|A hora **sp_monitor** está sendo executada.|  
-|**segundos**|Número de segundos decorridos desde que **sp_monitor** foi executado.|  
+|**seg**|Número de segundos decorridos desde que **sp_monitor** foi executado.|  
 |**cpu_busy**|Segundos durante os quais a CPU do computador servidor está executando o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Segundos durante os quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executou operações de entrada e saída.|  
 |**ocioso**|Segundos durante os quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ficou inativo.|  
@@ -65,7 +65,7 @@ sp_monitor
  Para cada coluna, a estatística é impressa no *número*do formulário (*número*) –*número*% ou *número*(*número*). O primeiro *número* refere-se ao número de segundos (para **CPU_BUSY**, **IO_BUSY**e **ocioso**) ou ao número total (para as outras variáveis) desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que o foi reiniciado. O *número* entre parênteses refere-se ao número de segundos ou ao número total desde a última vez em que **sp_monitor** foi executado. A porcentagem é a porcentagem de tempo desde que **sp_monitor** foi executada pela última vez. Por exemplo, se o relatório mostrar **CPU_BUSY** como 4250 (215)-68%, a CPU estará ocupada em 4250 segundos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que foi iniciada pela última vez, 215 segundos desde que **sp_monitor** foi executada pela última vez e 68% do tempo total desde que **sp_monitor** foi executado pela última vez.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir relata as informações sobre o quanto o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteve ocupado.  
@@ -79,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**segundos**|  
+|**last_run**|**current_run**|**seg**|  
 |29 de março de 1998 11:55|4 de abril de 1998 14:22|561|  
   
 ||||  
@@ -98,7 +98,7 @@ EXEC sp_monitor
 |141 (0)|54920 (127)|0 (0)|4 (0)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

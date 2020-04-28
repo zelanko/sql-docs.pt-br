@@ -18,10 +18,10 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006123"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @srvrolename = ] 'role'`É o nome da função de servidor fixa. *role* é **sysname**, com um padrão de NULL. a *função* pode ser um dos valores a seguir.  
   
-|Função de servidor fixa|DESCRIÇÃO|  
+|Função de servidor fixa|Descrição|  
 |-----------------------|-----------------|  
 |sysadmin|Administradores de sistema|  
 |securityadmin|Administradores de segurança|  
@@ -49,7 +49,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |setupadmin|Administradores de configuração|  
 |processadmin|Administradores de processo|  
 |diskadmin|Administradores de disco|  
-|dbcreator|Criadores de Banco de Dados|  
+|dbcreator|Criadores de banco de dados|  
 |bulkadmin|Pode executar instruções BULK INSERT|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -57,10 +57,10 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nome da função de servidor|  
-|DESCRIÇÃO|**sysname**|Descrição de ServerRole|  
+|Descrição|**sysname**|Descrição de ServerRole|  
   
 ## <a name="remarks"></a>Comentários  
  As funções de servidor fixas são definidas no nível de servidor e possuem permissões para executar atividades administrativas específicas no nível de servidor. A funções de servidor fixas não podem ser adicionadas, removidas ou alteradas.  

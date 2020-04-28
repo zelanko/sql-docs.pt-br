@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004737"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68004737"
 
   Contém as informações de cada etapa em um trabalho a ser executado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificação do trabalho.|  
 |**step_id**|**int**|ID da etapa no trabalho.|  
 |**step_name**|**sysname**|Nome da etapa do trabalho.|  
 |**subsistema**|**nvarchar(40)**|Nome do subsistema usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para executar a etapa de trabalho.|  
 |**linha**|**nvarchar(max)**|Comando a ser executado pelo **subsistema**.|  
-|**flags**|**int**|Reservado.|  
+|**sinalizadores**|**int**|Reservado.|  
 |**additional_parameters**|**ntext**|Reservado.|  
 |**cmdexec_success_code**|**int**|Valor de nível de erro retornado pelas etapas do subsistema **CmdExec** para indicar êxito.|  
 |**on_success_action**|**tinyint**|Ação a ser executada quando uma etapa é executada com êxito.|  

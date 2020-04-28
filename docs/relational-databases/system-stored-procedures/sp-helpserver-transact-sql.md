@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997437"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -45,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`É a opção que descreve o servidor. a *opção* é **varchar (** 35 **)**, com um padrão de NULL e deve ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da consulta distribuída nos servidores vinculados. Se esta opção for definida como verdadeira,|  
 |**acesso a dados**|Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.|  
@@ -53,7 +53,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dpub**|Editor remoto para este Distribuidor.|  
 |**validação de esquema lenta**|Ignora a verificação de esquema de tabelas remotas no início da consulta.|  
 |**pub**|Editor.|  
-|**RPC**|Habilita o RPC a partir do servidor especificado.|  
+|**rpc**|Habilita o RPC a partir do servidor especificado.|  
 |**saída de RPC**|Habilita o RPC para o servidor especificado.|  
 |**projeto**|Farão.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -66,12 +66,12 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome de servidor.|  
 |**network_name**|**sysname**|Nome da rede do servidor.|  
-|**Estado**|**varchar (** 70 **)**|Status do servidor.|  
-|**sessão**|**Char (** 4 **)**|Número de identificação do servidor.|  
+|**status**|**varchar (** 70 **)**|Status do servidor.|  
+|**id**|**Char (** 4 **)**|Número de identificação do servidor.|  
 |**collation_name**|**sysname**|Ordenação do servidor.|  
 |**connect_timeout**|**int**|O valor do tempo limite para conexão com um servidor vinculado.|  
 |**query_timeout**|**int**|O valor do tempo limite para as consultas em servidor vinculado.|  
@@ -113,7 +113,7 @@ EXEC sp_helpserver 'SEATTLE2';
  [&#41;&#40;Transact-SQL de sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpremotelogin](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,17 +16,17 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032043"
 ---
 # <a name="creating-extended-stored-procedures"></a>Criando procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
  Um procedimento armazenado estendido é uma função com um protótipo:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68032043"
   
  Estes arquivos são necessários para criar uma DLL de procedimento armazenado estendido.  
   
-|Arquivo|DESCRIÇÃO|  
+|Arquivo|Descrição|  
 |----------|-----------------|  
 |Srv.h|Arquivo de cabeçalho da API do Procedimento Armazenado Estendido|  
 |Opends60.lib|Biblioteca de importação para Opends60.dll|  

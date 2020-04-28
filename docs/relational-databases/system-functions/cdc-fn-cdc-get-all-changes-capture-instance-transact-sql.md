@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043053"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Pode ser uma das seguintes opções:  
   
- tudo  
+ all  
  Retorna todas as alterações do intervalo LSN especificado. Para alterações relativas a uma operação de atualização, essa opção retorna apenas a linha que contém os novos valores após a aplicação da atualização.  
   
  all update old  
@@ -68,11 +68,11 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**_ de $ start_lsn**|**binário (10)**|LSN de confirmação associado à alteração que preserva a ordem de confirmação da alteração. Alterações confirmadas na mesma transação compartilham o mesmo valor LSN de confirmação.|  
-|**_ _ $ seqval**|**binário (10)**|Valor de sequência usado para solicitar alterações em uma linha dentro de uma transação.|  
-|**_ de $ operação**|**int**|Identifica a operação DML (linguagem de manipulação de dados) necessária para aplicar a linha de dados de alteração à fonte de dados de destino. Um dos seguintes pode ser feito:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores da coluna capturados são os valores anteriores à operação de atualização). Esse valor se aplica somente quando a opção de filtro de linha 'all update old' for especificada.<br /><br /> 4 = atualizar (valores de coluna capturados são os valores após a operação de atualização)|  
+|**__$start_lsn**|**binary(10)**|LSN de confirmação associado à alteração que preserva a ordem de confirmação da alteração. Alterações confirmadas na mesma transação compartilham o mesmo valor LSN de confirmação.|  
+|**__$seqval**|**binary(10)**|Valor de sequência usado para solicitar alterações em uma linha dentro de uma transação.|  
+|**_ de $ operação**|**int**|Identifica a operação DML (linguagem de manipulação de dados) necessária para aplicar a linha de dados de alteração à fonte de dados de destino. Pode ser um dos seguintes:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 3 = atualizar (valores da coluna capturados são os valores anteriores à operação de atualização). Esse valor se aplica somente quando a opção de filtro de linha 'all update old' for especificada.<br /><br /> 4 = atualizar (valores de coluna capturados são os valores após a operação de atualização)|  
 |**_ de $ update_mask**|**varbinary(128)**|Uma máscara de bits com um bit correspondente a cada coluna capturada identificada para a instância de captura. Esse valor tem todos os bits definidos configurados como 1 quando **_ _ $ operation** = 1 ou 2. Quando **_ _ $ operation** = 3 ou 4, somente os bits correspondentes às colunas que foram alteradas são definidos como 1.|  
 |**\<colunas da tabela de origem capturadas>**|varia|As colunas restantes retornadas pela função são as colunas capturadas identificadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  
   

@@ -16,10 +16,10 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038945"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funções do Acessador de Dados – string (XQuery)
@@ -54,7 +54,7 @@ fn:string($arg as item()?) as xs:string
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-string-function"></a>a. Usando a função string  
+### <a name="a-using-the-string-function"></a>A. Usando a função string  
  A consulta a seguir recupera o `Features` <> nó de elemento filho do `ProductDescription` elemento <>.  
   
 ```  

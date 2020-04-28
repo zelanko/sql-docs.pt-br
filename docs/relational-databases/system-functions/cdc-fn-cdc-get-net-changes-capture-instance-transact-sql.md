@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043038"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -65,7 +65,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* :: = {todos | todos com máscara | tudo com mesclagem}  
  Opção que rege o conteúdo das colunas de metadados, assim como as linhas retornadas no conjunto de resultados. Pode ser uma das seguintes opções:  
   
- tudo  
+ all  
  Retorna o LSN da alteração final para a linha e a operação necessária para aplicar a linha nas colunas de metadados _ $ start_lsn e \_ \_$Operation. A coluna \_ \_$Update _mask é sempre nula.  
   
  all with mask  
@@ -78,9 +78,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binário (10)**|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas colunas em duas linhas, a tabela de alteração conterá quatro linhas, cada uma com as mesmas _ $ start_lsnvalue.|  
+|__$start_lsn|**binary(10)**|LSN associado à transação de confirmação da alteração.<br /><br /> Todas as alterações confirmadas na mesma transação compartilham o mesmo LSN de confirmação. Por exemplo, se uma operação de atualização na tabela de origem modificar duas colunas em duas linhas, a tabela de alteração conterá quatro linhas, cada uma com as mesmas _ $ start_lsnvalue.|  
 |__$operation|**int**|Identifica a operação DML (linguagem de manipulação de dados) necessária para aplicar a linha de dados de alteração à fonte de dados de destino.<br /><br /> Se o valor do parâmetro row_filter_option for tudo ou tudo com máscara, o valor desta coluna poderá ser um dos seguintes valores:<br /><br /> 1 = excluir<br /><br /> 2 = inserir<br /><br /> 4 = atualizar<br /><br /> Se o valor do parâmetro row_filter_option for tudo ou tudo com mesclagem, o valor desta coluna poderá ser um dos seguintes valores:<br /><br /> 1 = excluir|  
 |__$update_mask|**varbinary(128)**|Uma máscara de bits com um bit correspondente a cada coluna capturada identificada para a instância de captura. Esse valor tem todos os bits definidos configurados como 1 quando __$operation = 1 ou 2. Quando \_ \_$Operation = 3 ou 4, somente os bits correspondentes às colunas que foram alteradas são definidos como 1.|  
 |*\<colunas da tabela de origem capturadas>*|varia|As colunas restantes retornadas pela função são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão retornadas.|  

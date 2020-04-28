@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003516"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Instruções de manipulação de dados MDX (MDX)
@@ -22,7 +22,7 @@ ms.locfileid: "68003516"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Instrução de chamada &#40;&#41;MDX](../mdx/mdx-data-manipulation-call.md)|Executa um procedimento armazenado que retorna um nulo no escopo atual ou opcionalmente em um cubo especificado.|  
 |[Instrução CLEAR CALCULAtions &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Remove todos os cálculos do cubo e retorna o cubo para a análise de cálculo 0.|  
@@ -33,6 +33,6 @@ ms.locfileid: "68003516"
 ## <a name="see-also"></a>Consulte Também  
  [Referência de instrução MDX &#40;&#41;MDX](../mdx/mdx-statement-reference-mdx.md)   
  [Instruções de definição de dados MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instruções de script MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instruções de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

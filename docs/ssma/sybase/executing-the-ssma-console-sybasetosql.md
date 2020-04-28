@@ -19,10 +19,10 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029147"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Executar o console do SSMA (SybaseToSQL)
@@ -230,7 +230,7 @@ Falha ao conectar-se ao servidor de banco de dados de origem durante a execuçã
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <generate-assessment-report  
@@ -295,7 +295,7 @@ Se a conexão de banco de dados de origem ou de destino não for executada antes
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <convert-schema  
@@ -351,7 +351,7 @@ Esse comando migra os dados de origem para o destino.
   
 </migrate-data>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <migrate-data  
@@ -430,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target  
@@ -439,7 +439,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou o  
   
 ```xml  
 <synchronize-target>  
@@ -491,7 +491,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database  
@@ -500,7 +500,7 @@ ou
   
   object-type="<object-category>" />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <refresh-from-database>  
@@ -545,7 +545,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 />  
 ```  
-ou  
+ou o  
   
 ```xml  
 <save-as-script  
@@ -619,7 +619,7 @@ Este comando requer um ou vários nós da metabase como parâmetro de linha de c
   
 </convert-sql-statement>  
 ```  
-ou  
+ou o  
   
 ```  
 <convert-sql-statement  
@@ -644,7 +644,7 @@ ou
   
 />  
 ```  
-ou  
+ou o  
   
 ```  
 <convert-sql-statement  

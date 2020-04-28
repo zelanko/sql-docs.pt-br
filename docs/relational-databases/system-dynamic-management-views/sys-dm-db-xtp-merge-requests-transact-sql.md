@@ -10,10 +10,10 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026808"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
@@ -28,9 +28,9 @@ Rastreia solicitações de mesclagem de banco de dados. A solicitação de mescl
 
 ## <a name="columns-in-the-report"></a>Colunas no relatório
 
-| Nome da coluna | Tipo de dados | DESCRIÇÃO |
+| Nome da coluna | Tipo de dados | Descrição |
 | :-- | :-- | :-- |
-| request_state | tinyint | O status da solicitação de mesclagem:<br/>0 = solicitado<br/>1 = pendente<br/>2 = instalado<br/>3 = abandonado |
+| request_state | TINYINT | O status da solicitação de mesclagem:<br/>0 = solicitado<br/>1 = pendente<br/>2 = instalado<br/>3 = abandonado |
 | request_state_desc | nvarchar(60) | Significas para o estado atual da solicitação:<br/><br/>Solicitado-existe uma solicitação de mesclagem.<br/>Pendente-a mesclagem está sendo processada.<br/>Instalado-a mesclagem foi concluída.<br/>Abandonado-a mesclagem não pôde ser concluída, talvez devido à falta de armazenamento. |
 | destination_file_id | GUID | O identificador exclusivo do arquivo de destino para a mesclagem dos arquivos de origem. |
 | lower_bound_tsn | BIGINT | O carimbo de data/hora mínimo para o arquivo de mesclagem de destino. O carimbo de data/hora da transação mais baixa de todos os arquivos de origem a serem mesclados. |
