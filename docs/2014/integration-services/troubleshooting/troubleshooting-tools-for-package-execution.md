@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087056"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Solucionando problemas de ferramentas para execução de pacotes
@@ -52,11 +52,11 @@ ms.locfileid: "82087056"
   
 -   **Adicionar informações amigáveis às saídas de erro**. A análise da saída de erro pode tornar-se uma tarefa mais fácil se você adicionar outras informações descritivas além dos dois identificadores numéricos que são fornecidos pela saída de erro.  
   
-     **Adicione a descrição do erro**. É fácil procurar pela descrição do erro usando um componente Script. Para obter mais informações, consulte [Aprimorando uma saída de erro para o componente de script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Adicione a descrição do erro**. É fácil procurar pela descrição do erro usando um componente Script. Para obter mais informações, consulte [aprimorando uma saída de erro para o componente Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
      **Adicione o nome da coluna de erro**. A pesquisa pelo nome de coluna que corresponde à ID da coluna salva pela saída de erro não pode ser feita facilmente no componente Script e requer etapas adicionais. Cada ID de coluna em um fluxo de dados é exclusivo dentro da tarefa Fluxo de Dados e persiste no pacote no momento da criação. A abordagem a seguir é uma sugestão para adicionar o nome de coluna à saída do erro. 
   
-    1.  **Crie uma tabela de olhares com nomes de colunas**. Crie outro aplicativo separado que use a API do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para iterar com cada pacote salvo, cada fluxo do pacote, cada objeto do fluxo de dados, e cada entrada e saída do objeto de fluxo de dados. O aplicativo deve persistir a ID de coluna e o nome de cada coluna a uma tabela de pesquisa, com a ID da tarefa Fluxo de Dados pai e a ID do pacote.  
+    1.  **Crie uma tabela de pesquisa de nomes de coluna**. Crie outro aplicativo separado que use a API do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para iterar com cada pacote salvo, cada fluxo do pacote, cada objeto do fluxo de dados, e cada entrada e saída do objeto de fluxo de dados. O aplicativo deve persistir a ID de coluna e o nome de cada coluna a uma tabela de pesquisa, com a ID da tarefa Fluxo de Dados pai e a ID do pacote.  
   
     2.  **Adicione o nome da coluna à saída**. Adicione uma transformação Pesquisa à saída de erro que pesquise pelo nome da coluna na tabela de pesquisa criada na etapa anterior. A pesquisa pode usar a ID da coluna na saída de erro, a ID do pacote (disponível na variável System::PackageID do sistema) e a ID da tarefa Fluxo de Dados (disponível na variável System::TaskID do sistema).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "82087056"
  Para obter mais informações, consulte [Solucionando problemas de relatórios para execução de pacotes](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Solucionar problemas de execução de pacotes usando exibições SSISDB  
- Várias exibições de banco de dados SSISDB estão disponíveis para você consultar e monitorar a execução de pacotes e outras informações de operações. Para obter mais informações, consulte [Monitoramento de Execuções de Pacotes e Outras Operações](../performance/monitor-running-packages-and-other-operations.md).  
+ Várias exibições de banco de dados SSISDB estão disponíveis para você consultar e monitorar a execução de pacotes e outras informações de operações. Para obter mais informações, consulte [monitorando execuções de pacote e outras operações](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solucionar problemas de execução de pacotes por meio dos logs  
  Você pode controlar muitas ocorrências em seus pacotes de execução ativando os logs. Os provedores de logs capturam as informações sobre os eventos especificados para análise posterior e salvam essas informações em uma tabela de banco de dados, um arquivo simples, um arquivo XML ou outro formato de saída suportado.  

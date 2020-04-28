@@ -1,6 +1,6 @@
 ---
-title: Usando System.Transactions | Microsoft Docs
-description: O namespace System.Transactions fornece uma estrutura de transação totalmente integrada à integração ADO.NET e SQL Server CLR.
+title: Usando System. Transactions | Microsoft Docs
+description: O namespace System. Transactions fornece uma estrutura de transação totalmente integrada ao ADO.NET e SQL Server integração CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488472"
 ---
 # <a name="using-systemtransactions"></a>Usando System.Transactions

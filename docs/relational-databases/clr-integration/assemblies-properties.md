@@ -1,6 +1,6 @@
 ---
-title: Propriedades de montagem (página geral) | Microsoft Docs
-description: Você pode visualizar ou modificar propriedades para um conjunto hospedado no SQL Server. Estes incluem nome de montagem e proprietário, conjunto de permissões e outras propriedades.
+title: Propriedades do assembly (página Geral) | Microsoft Docs
+description: Você pode exibir ou modificar as propriedades de um assembly hospedado no SQL Server. Isso inclui o nome do assembly e o proprietário, o conjunto de permissões e outras propriedades.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488015"
 ---
 # <a name="assemblies---properties"></a>Assemblies – propriedades
@@ -31,20 +31,20 @@ ms.locfileid: "81488015"
  Digite um nome de proprietário ou nome de esquema ou selecione na lista.  
   
  **Conjunto de permissões**  
- Defina o nível de segurança para o assembly. Três níveis de segurança são fornecidos: **seguro,** **acesso externo**e acesso **inseguro.**  
+ Defina o nível de segurança para o assembly. Três níveis de segurança são fornecidos: **seguro**, **acesso externo**e acesso **não seguro** .  
   
  **Caminho para assembly**  
  Digite o caminho do arquivo assembly.  
   
  **Procurar**  
- Navegue para o assembly que você quer adicionar. Clique **em Procurar** se você não quiser digitar o caminho para o arquivo de montagem.  
+ Navegue para o assembly que você quer adicionar. Clique em **procurar** se você não quiser digitar o caminho para o arquivo do assembly.  
   
 ## <a name="additional-properties-grid"></a>Grade de propriedades adicionais  
  **Data de Criação**  
  Exibe a data em que o assembly foi criado/registrado.  
   
  **Nome Forte**  
- Displays **Verdadeiro** se a montagem foi assinada digitalmente, **false** se não foi assinado digitalmente.  
+ Exibe **true** se o assembly tiver sido assinado digitalmente, **false** se ele não tiver sido assinado digitalmente.  
   
  **Versão**  
  Exibe o número de versão do assembly.  

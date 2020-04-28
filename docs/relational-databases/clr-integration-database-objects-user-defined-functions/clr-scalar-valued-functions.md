@@ -1,6 +1,6 @@
 ---
 title: Funções de valor escalar CLR | Microsoft Docs
-description: Uma função de valor escalonado retorna um único valor. Na integração SQL Server CLR, você pode escrever funções definidas pelo usuário com valor escalar em código gerenciado.
+description: Uma função de valor escalar retorna um único valor. No SQL Server integração CLR, você pode gravar funções de valor escalar definidas pelo usuário em código gerenciado.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488412"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funções de valor escalar CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Uma SVF (função de valor escalar) retorna um valor único como, por exemplo, uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções definidas pelo usuário em código gerenciado usando qualquer linguagem de programação do .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração e escolha da CLR entre código gerenciado e [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte Visão geral da [Integração CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Uma SVF (função de valor escalar) retorna um valor único como, por exemplo, uma cadeia de caracteres, um inteiro ou um valor de bit. Você pode criar funções de valor escalar definidas pelo usuário em código gerenciado usando qualquer linguagem de programação de .NET Framework. Essas funções são acessíveis a [!INCLUDE[tsql](../../includes/tsql-md.md)] ou outro código gerenciado. Para obter informações sobre as vantagens da integração CLR e como escolher entre código [!INCLUDE[tsql](../../includes/tsql-md.md)]gerenciado e, consulte [visão geral da integração do CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos das funções de valor escalar do CLR  
- As SVFs do .NET Framework são implementadas como métodos em uma classe de um assembly do .NET Framework. Os parâmetros de entrada e o tipo retornado de uma SVF podem ser qualquer um dos tipos de dados escalares para os quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece suporte, exceto **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**ou **cursor**. As SVFs devem garantir uma correspondência entre o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o tipo de dados de retorno do método de implementação. Para obter mais informações sobre conversões de tipo, consulte [Mapeamento de dados de parâmetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ As SVFs do .NET Framework são implementadas como métodos em uma classe de um assembly do .NET Framework. Os parâmetros de entrada e o tipo retornado de uma SVF podem ser qualquer um dos tipos de dados escalares para os quais o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oferece suporte, exceto **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**ou **cursor**. As SVFs devem garantir uma correspondência entre o tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o tipo de dados de retorno do método de implementação. Para obter mais informações sobre conversões de tipo, consulte [mapeando dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Ao implementar uma SVF do .NET Framework em uma linguagem do .NET Framework, o atributo personalizado **SqlFunction** pode ser especificado para incluir informações adicionais sobre a função. O atributo **SqlFunction** indica se a função acessa ou modifica os dados, se é determinística e se envolve operações de ponto flutuante.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81488412"
 >  Não marque uma função como determinística se ela sempre produzir os mesmos valores de saída, considerando os mesmos valores de entrada e o mesmo estado do banco de dados. A marcação de uma função como determinística, quando a função, de fato, não é pode resultar em exibições indexadas e colunas computadas danificadas. Você marca uma função como determinística definindo a propriedade **IsDeterministic** como true.  
   
 ### <a name="table-valued-parameters"></a>Parâmetros com valor de tabela  
- Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre TVPs, consulte [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Os TVPs (parâmetros com valor de tabela), ou seja, tipos de tabela definidos pelo usuário transmitidos para um procedimento ou uma função, oferecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os TVPs proporcionam funcionalidade semelhante para matrizes de parâmetro, porém com maior flexibilidade e integração com [!INCLUDE[tsql](../../includes/tsql-md.md)]. Eles também fornecem o potencial para melhor desempenho. Os TVPs também ajudam a reduzir o número de viagens de ida e volta para o servidor. Em vez de enviar várias solicitações ao servidor, como com uma lista de parâmetros escalares, os dados podem ser enviados ao servidor como um TVP. Um tipo de tabela definido pelo usuário não pode ser passado como um parâmetro com valor de tabela para, ou ser retornado de, um procedimento armazenado ou uma função gerenciada(o) que é executada(o) no processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre TVPs, consulte [usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Exemplo de uma função de valor escalar do CLR  
  Eis uma SVF simples que acessa dados e retorna um valor inteiro:  
@@ -152,8 +152,8 @@ GO
  Observe que o nome da função como exposto em [!INCLUDE[tsql](../../includes/tsql-md.md)] não precisa corresponder ao nome do método estático público de destino.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Mapeamento dos dados do parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Visão geral dos atributos personalizados de integração clr](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Mapeando dados de parâmetro CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Visão geral dos atributos personalizados de integração CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Funções definidas pelo usuário](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Acesso aos dados dos objetos de banco de dados CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087153"
 ---
 # <a name="excel-destination"></a>Destino do Excel
@@ -48,7 +48,7 @@ ms.locfileid: "82087153"
   
      Para obter informações sobre como evitar incluir aspas simples, consulte esta postagem no blog, [Aspas simples são acrescentadas a todas as cadeias de caracteres quando os dados são transformados para Excel ao usar o componente de fluxo de dados de destino do Excel no pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), no msdn.com.  
   
--   **Salvando dados de memorando (ntext)**. Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**. Se a tabela de destino já contém linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando. Se a tabela de destino for criada durante o projeto do pacote ou em tempo de execução, a declaração CREATE TABLE deve usar LONGTEXT (ou um de seus sinônimos) como o tipo de dados da coluna de memorando.  
+-   **Salvando dados de memorando (ntext)**. Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**. Se a tabela de destino já contém linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando. Se a tabela de destino for criada durante o design do pacote ou em tempo de execução, a instrução CREATE TABLE deverá usar LONGTEXT (ou um de seus sinônimos) como o tipo de dados da coluna de memorando.  
   
 -   **Tipos de dados**. O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por exemplo, todas as colunas numéricas são interpretadas como duplas (DT_R8) e todas as colunas de cadeia de caracteres (que não sejam colunas de memorando) são interpretadas como cadeias Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mapeia os tipos de dados do Excel da seguinte maneira:  
   
@@ -104,8 +104,8 @@ ms.locfileid: "82087153"
 -   [Definir as propriedades de um componente de fluxo de dados](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fonte excel](excel-source.md)   
- [Serviços de integração &#40;variáveis de&#41; SSIS](../integration-services-ssis-variables.md)   
+ [Origem do Excel](excel-source.md)   
+ [Integration Services &#40;as variáveis&#41; SSIS](../integration-services-ssis-variables.md)   
  [Fluxo de dados](data-flow.md)   
  [Trabalhando com arquivos do Excel com a tarefa Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

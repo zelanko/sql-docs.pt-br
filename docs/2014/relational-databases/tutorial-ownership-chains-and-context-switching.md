@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487725"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
@@ -48,7 +48,7 @@ ms.locfileid: "81487725"
  Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.  
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
- Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o seguinte `AdventureWorks2012` código para abrir `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] o banco de dados e use a declaração para verificar se o usuário dbo é exibido como o contexto.  
+ Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o e o código a seguir para `AdventureWorks2012` abrir o banco de dados `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] e use a instrução para verificar se o usuário dbo é exibido como o contexto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para um pôster [!INCLUDE[ssDE](../includes/ssde-md.md)] de todas [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)as permissões, veja.  
+ Para obter mais informações sobre a instrução GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obter mais informações sobre procedimentos armazenados, consulte [Procedimentos armazenados &#40;Mecanismo de Banco de Dados&#41;](stored-procedures/stored-procedures-database-engine.md). Para obter um pôster de [!INCLUDE[ssDE](../includes/ssde-md.md)] todas as permissões [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf), consulte.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Crie um procedimento armazenado para acessar os dados  
  Para alternar o contexto dentro de um banco de dados, use a instrução EXECUTE AS. EXECUTE AS exige permissões IMPERSONATE.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086875"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: criando relatórios principais e de detalhamento (Construtor de Relatórios)
@@ -22,7 +22,7 @@ ms.locfileid: "82086875"
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- A ilustração a seguir mostra como o valor do campo, Jogos e Brinquedos, no relatório principal é exibido no título do relatório de perfuração. Os dados no detalhamento pertencem à categoria de produto Games and Toys.  
+ A ilustração a seguir mostra como o valor do campo, jogos e brinquedos, no relatório principal é exibido no título do relatório de detalhamento. Os dados no detalhamento pertencem à categoria de produto Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82086875"
   
 2.  [Formatar dados como moeda](#DFormat)  
   
-3.  [Adicionar colunas para mostrar valores de vendas em sparklines](#DSparkline)  
+3.  [Adicionar colunas para mostrar valores de vendas em minigráficos](#DSparkline)  
   
 4.  [Adicionar título de relatório com nome da categoria do produto](#DReportTitle)  
   
@@ -84,14 +84,14 @@ ms.locfileid: "82086875"
 ## <a name="requirements"></a>Requisitos  
  Este tutorial exige acesso ao cubo Vendas da Contoso. Esse requisito se aplica aos relatórios detalhados e principal. Para obter mais informações sobre os requisitos, consulte [Pré-requisitos para tutoriais &#40;Construtor de Relatórios&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. Crie um relatório de perfuração do Assistente de Tabela ou Matriz  
+##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. criar um relatório detalhado do assistente de tabela ou matriz  
  Na caixa de diálogo Introdução , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**. Há dois modos disponíveis no assistente: design de relatório e design de conjunto de dados compartilhado. Neste tutorial, você usará o modo design de relatório.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique **em Iniciar,** aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Programas,** aponte para **''''''''''''Iniciar'.** **Report Builder**  
+1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
-     A caixa de diálogo **Guia de Introdução** é aberta. Se ele não aparecer, a partir do botão **'''Construtor de relatórios',** clique em **Nova**.  
+     A caixa de diálogo **Guia de Introdução** é aberta. Se não aparecer, no botão **Construtor de relatórios** , clique em **novo**.  
   
 2.  No painel esquerdo, verifique se **Novo Relatório** está selecionado.  
   
@@ -137,18 +137,18 @@ ms.locfileid: "82086875"
   
 12. Para verificar se é possível se conectar à fonte de dados, clique em **Testar Conexão**.  
   
-     A **mensagem Conexão criada** aparece com sucesso.  
+     A conexão da mensagem **criada com êxito** é exibida.  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Próximo**.  
+14. Clique em **Avançar**.  
   
-##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. Criar uma consulta MDX  
+##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1B. Criar uma consulta MDX  
  Em um relatório, é possível usar um conjunto de dados compartilhado que tenha uma consulta predefinida. Se preferir, crie um conjunto de dados inserido para ser usado somente em seu relatório. Neste tutorial, você criará um conjunto de dados inserido.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na **página Projetar uma consulta,** no painel Metadados, clique no botão **(...)**.  
+1.  Na página **criar uma consulta** , no painel metadados, clique no botão **(...)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "82086875"
     > [!NOTE]  
     >  O parâmetro contém os nomes das categorias de produto. Quando você clica no nome de uma categoria de produto no relatório principal, o nome é passado para o relatório detalhado por meio desse parâmetro.  
   
-###  <a name="to-create-the-dataset"></a><a name="DSkip"></a>Para criar o conjunto de dados  
+###  <a name="to-create-the-dataset"></a><a name="DSkip"></a>Para criar o conjunto de um  
   
 1.  Na dimensão Canal, arraste Nome do Canal até o painel de dados.  
   
@@ -208,11 +208,11 @@ ms.locfileid: "82086875"
   
 5.  Arraste a medida Valor das Vendas até o painel de dados e coloque-a à direita de Nome da Subcategoria do Produto.  
   
-6.  Na barra de ferramentas do designer de consulta, clique **em Executar (!)**.  
+6.  Na barra de ferramentas do designer de consultas, clique em **executar (!)**.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
-##  <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizar dados em grupos  
+##  <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1C. Organizar dados em grupos  
  Quando você seleciona os campos nos quais agrupar os dados, cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -236,25 +236,25 @@ ms.locfileid: "82086875"
   
      As etapas 4 e 5 especificam os dados a serem exibidos na matriz.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
-##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Adicionar subtotais e totais  
+##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1D. Adicionar subtotais e totais  
  Depois de criar grupos, é possível adicionar e formatar linhas onde os valores de agregação dos campos serão exibidos. Também é possível escolher mostrar todos os dados ou permitir que um usuário expanda e recolha dados agrupados de forma interativa.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para adicionar subtotais e totais  
   
-1.  Na **página Escolher o layout,** em **Opções,** verifique se **os subtotais e totais de exibição estão selecionados.**  
+1.  Na página **escolher o layout** , em opções, verifique se a **opção** **Mostrar Subtotais e totais gerais** está selecionada.  
   
      O painel Visualizar do assistente exibe uma matriz com quatro linhas.  
   
-2.  Clique em **Próximo**.  
+2.  Clique em **Avançar**.  
   
 ##  <a name="1e-choose-a-style"></a><a name="DStyle"></a>1e. Escolha um estilo  
  Um estilo especifica um estilo de fonte, um conjunto de cores e um estilo de borda.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
-1.  Na página **Escolha um Estilo,** no painel Estilos, selecione Ardósia.  
+1.  Na página **escolher um estilo** , no painel estilos, selecione Slate.  
   
 2.  Clique em **Concluir**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "82086875"
   
 3.  Para visualizar o relatório, clique em **Executar (!)**.  
   
-##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. Formato de dados como moeda  
+##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. formatar dados como moeda  
  Aplique a formatação de moeda aos campos de valor de vendas no relatório detalhado.  
   
 #### <a name="to-format-data-as-currency"></a>Para formatar dados como moeda  
@@ -273,7 +273,7 @@ ms.locfileid: "82086875"
   
 3.  Na guia **Início** , no grupo **Número** , clique em **Moeda**.  
   
-##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. Adicionar colunas para mostrar valores de vendas em sparklines  
+##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. adicionar colunas para mostrar valores de vendas em minigráficos  
  Em vez de mostrar vendas e devoluções de vendas como valores de moeda, o relatório mostra os valores em um minigráfico.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Para adicionar minigráficos a colunas  
@@ -306,7 +306,7 @@ ms.locfileid: "82086875"
   
 13. Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Adicionar título de relatório com nome da categoria do produto  
+##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. adicionar título de relatório com nome de categoria de produto  
  Um título é exibido na parte superior do relatório. É possível colocar o título em um cabeçalho do relatório ou, se o relatório não usar um cabeçalho, em uma caixa de texto na parte superior do corpo do relatório. Neste tutorial, você usará a caixa de texto colocada automaticamente na parte superior do corpo do relatório.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -333,14 +333,14 @@ ms.locfileid: "82086875"
   
  O título do relatório inclui o nome da primeira categoria de produto. Posteriormente, depois que você executar esse relatório como um relatório detalhado, o nome da categoria do produto será alterado dinamicamente para refletir o nome da categoria do produto que foi clicada no relatório principal.  
   
-##  <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Atualizar propriedades do parâmetro  
+##  <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. atualizar propriedades do parâmetro  
  Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros do relatório detalhado.  
   
 #### <a name="to-hide-a-parameter"></a>Para ocultar um parâmetro  
   
 1.  No painel Dados do Relatório, expanda **Parâmetros**.  
   
-2.  Clique com \@o botão direito do mouse ProductProductCategoryName e clique em **Propriedades de parâmetro .**  
+2.  Clique com o \@botão direito do mouse em ProductProductCategoryName e clique em **Propriedades do parâmetro**.  
   
     > [!NOTE]  
     >  O caractere \@ próximo ao nome indica que este é um parâmetro.  
@@ -356,7 +356,7 @@ ms.locfileid: "82086875"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. Salve o relatório em uma biblioteca sharepoint  
+##  <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6. salvar o relatório em uma biblioteca do SharePoint  
  É possível salvar o relatório em um biblioteca do SharePoint, em um servidor de relatório ou no computador. Se você salvar o relatório no computador, vários recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como partes do relatório e sub-relatórios, não estarão disponíveis. Neste tutorial, você salvará o relatório em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -376,7 +376,7 @@ ms.locfileid: "82086875"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Clique em **Save** (Salvar).  
+4.  Clique em **Salvar**.  
   
      **Sites e Servidores Recentes** lista as bibliotecas no site do SharePoint.  
   
@@ -387,14 +387,14 @@ ms.locfileid: "82086875"
     > [!NOTE]  
     >  Você salvará o relatório principal no mesmo local. Se desejar salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, você deverá atualizar o caminho da ação **Ir para o relatório** no relatório principal.  
   
-7.  Clique em **Save** (Salvar).  
+7.  Clique em **Salvar**.  
   
-##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Crie um novo relatório do Assistente de Tabela ou Matriz  
+##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. criar um novo relatório por meio do assistente de tabela ou matriz  
  Na caixa de diálogo **Introdução** , crie um relatório de matriz por meio do **Assistente de Tabela ou Matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para criar um novo relatório  
   
-1.  Clique **em Iniciar,** aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Programas,** aponte para **''''''''''''Iniciar'.** **Report Builder**  
+1.  Clique **em Iniciar**, aponte para **programas**, aponte [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] para **Construtor de relatórios**e, em seguida, clique em **Construtor de relatórios**.  
   
 2.  Na caixa de diálogo **Introdução** , verifique se a opção **Novo Relatório** está selecionada e clique em **Assistente de Tabela ou Matriz**.  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086875"
   
 5.  Em **Fonte de dados**, verifique se a fonte de dados é **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  Em **nome do servidor,** digite o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nome de um servidor onde uma instância de está instalada.  
+6.  Em **nome do servidor**, digite o nome de um servidor em que uma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instância do está instalada.  
   
 7.  Em **Selecionar ou inserir um nome de banco de dados**, selecione o cubo Contoso.  
   
@@ -435,14 +435,14 @@ ms.locfileid: "82086875"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Clique em **Próximo**.  
+14. Clique em **Avançar**.  
   
-##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Criar uma consulta MDX  
+##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1B. Criar uma consulta MDX  
  Em seguida, crie um conjunto de dados inserido. Para fazer isso, você usará o designer de consulta para criar filtros, parâmetros e membros calculados como também o próprio conjunto de dados.  
   
 #### <a name="to-create-query-filters"></a>Para criar filtros de consulta  
   
-1.  Na **página Design a consulta,** no painel Metadados, na seção cubo, clique na elipse **(...)**.  
+1.  Na página **criar uma consulta** , no painel metadados, na seção cubo, clique nas reticências **(...)**.  
   
 2.  Na caixa de diálogo **Seleção de Cubo** , clique em Vendas e em **OK**.  
   
@@ -463,7 +463,7 @@ ms.locfileid: "82086875"
   
      A consulta agora inclui um filtro para incluir apenas estes canais: Online e Revendedor.  
   
-6.  Expanda a dimensão Território de Vendas e arraste o Grupo Território de Vendas para a coluna **Hierarquia,** abaixo **nome do canal**.  
+6.  Expanda a dimensão região de vendas e arraste grupo região de vendas para a coluna **hierarquia** , abaixo do **nome do canal**.  
   
 7.  Abra a lista **Expressão de Filtro** , expanda **Toda a Região de Vendas**, clique em **América do Norte**e em **OK**.  
   
@@ -491,7 +491,7 @@ ms.locfileid: "82086875"
   
 1.  Posicione o cursor no painel Membros Calculados, clique com o botão direito do mouse e clique em **Novo Membro Calculado**.  
   
-2.  No painel Metadados, expanda **as Medidas** e, em seguida, expanda as vendas.  
+2.  No painel metadados, expanda **medidas** e, em seguida, vendas.  
   
 3.  Arraste a medida Quantidade de Vendas até a caixa **Expressão** , digite o caractere de subtração (-), arraste a medida Quantidade de Devoluções de Vendas até a caixa **Expressão** e coloque-a após o caractere de subtração.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "82086875"
   
 8.  Na caixa **Nome** , digite  **Vendas Líquidas**e clique em **OK**. O painel Membros Calculados lista o membro calculado **Vendas Líquidas** .  
   
-###  <a name="to-create-the-dataset"></a><a name="MSkip"></a>Para criar o conjunto de dados  
+###  <a name="to-create-the-dataset"></a><a name="MSkip"></a>Para criar o conjunto de um  
   
 1.  Na dimensão Canal, arraste Nome do Canal até o painel de dados.  
   
@@ -529,13 +529,13 @@ ms.locfileid: "82086875"
   
 4.  Em Membros Calculados, arraste Vendas Líquidas até o painel de dados e coloque-o à direita de `Net QTY`.  
   
-5.  Na barra de ferramentas do designer de consulta, clique **em Executar (!)**.  
+5.  Na barra de ferramentas do designer de consultas, clique em **executar (!)**.  
   
      Revise o conjunto de resultados da consulta.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
-##  <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizar dados em grupos  
+##  <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1C. Organizar dados em grupos  
  Quando seleciona os campos nos quais agrupar os dados, você cria uma matriz com linhas e colunas que exibe dados detalhados e dados agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar dados em grupos  
@@ -554,29 +554,29 @@ ms.locfileid: "82086875"
   
      As etapas 3 e 4 especificam os dados a serem exibidos na matriz.  
   
-##  <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Adicionar subtotais e totais  
+##  <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1D. Adicionar subtotais e totais  
  Você pode mostrar subtotais e totais gerais em relatórios. Os dados no relatório principal são exibidos como um indicador; você removerá o total geral depois de concluir o assistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Para adicionar subtotais e totais gerais  
   
-1.  Na **página Escolher o layout,** em **Opções,** verifique se **os subtotais e totais de exibição estão selecionados.**  
+1.  Na página **escolher o layout** , em opções, verifique se a **opção** **Mostrar Subtotais e totais gerais** está selecionada.  
   
      O painel Visualizar do assistente exibe uma matriz com quatro linhas.  Quando você executar o relatório, cada linha será exibida da seguinte maneira: a primeira linha é o grupo de colunas, a segunda linha contém os títulos das colunas, a terceira linha contém os dados da categoria do produto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e a quarta linha contém os totais.  
   
-2.  Clique em **Próximo**.  
+2.  Clique em **Avançar**.  
   
 ##  <a name="1e-choose-a-style"></a><a name="MStyle"></a>1e. Escolha um estilo  
  Aplique o estilo Ardósia ao relatório. Esse é o mesmo estilo usado pelo relatório detalhado.  
   
 #### <a name="to-specify-a-style"></a>Para especificar um estilo  
   
-1.  Na página **Escolha um Estilo,** no painel Estilos, selecione Ardósia.  
+1.  Na página **escolher um estilo** , no painel estilos, selecione Slate.  
   
 2.  Clique em **Concluir**.  
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Remova a grande linha total  
+##  <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. remover a linha de total geral  
  Os valores de dados são mostrados como estados do indicador, inclusive o totais dos grupos de colunas. Remova a linha que exibe o total geral.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Para remover a linha de total geral  
@@ -587,7 +587,7 @@ ms.locfileid: "82086875"
   
 3.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configure a ação da caixa de texto para perfuração  
+##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurar ação da caixa de texto para detalhamento  
  Para habilitar o detalhamento, especifique uma ação em uma caixa de texto no relatório principal.  
   
 #### <a name="to-enable-an-action"></a>Para habilitar uma ação  
@@ -598,7 +598,7 @@ ms.locfileid: "82086875"
   
 3.  Clique na guia **Ações**.  
   
-4.  Selecione **Ir para relatar.**  
+4.  Selecione **ir para o relatório.**  
   
 5.  Em **Especificar um relatório**, clique em **Procurar**e localize o relatório de detalhamento chamado ResellerVSOnlineDrillthrough.  
   
@@ -631,7 +631,7 @@ ms.locfileid: "82086875"
   
  Os nomes das categorias de produto estão no formato de link comum (azul e sublinhado).  
   
-##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. Substitua valores numéricos por indicadores  
+##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. substituir valores numéricos por indicadores  
  Use indicadores para mostrar o estado de quantidades e vendas dos canais Online e de Revendedor.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Para adicionar um indicador para valores de QTD Líquida  
@@ -662,7 +662,7 @@ ms.locfileid: "82086875"
   
 6.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Atualizar propriedades do parâmetro  
+##  <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. atualizar propriedades do parâmetro  
  Por padrão, os parâmetros estão visíveis, o que não é apropriado para este relatório. Você atualizará as propriedades dos parâmetros para tornar os parâmetros internos.  
   
 #### <a name="to-make-the-parameter-internal"></a>Para tornar o parâmetro interno  
@@ -677,7 +677,7 @@ ms.locfileid: "82086875"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. Adicione um título de relatório  
+##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. adicionar um título de relatório  
  Adicione um título ao relatório principal.  
   
 #### <a name="to-add-a-report-title"></a>Para adicionar um título de relatório  
@@ -692,7 +692,7 @@ ms.locfileid: "82086875"
   
 5.  Para visualizar o relatório, clique em **Executar**.  
   
-##  <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Salve o relatório principal em uma biblioteca sharepoint  
+##  <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. salvar o relatório principal em uma biblioteca do SharePoint  
  Salve o relatório principal em uma biblioteca do SharePoint.  
   
 #### <a name="to-save-the-report"></a>Para salvar o relatório  
@@ -716,9 +716,9 @@ ms.locfileid: "82086875"
     > [!IMPORTANT]  
     >  Salve o relatório principal no mesmo local onde você salvou o relatório detalhado. Para salvar os relatórios principal e de detalhamento em sites ou bibliotecas diferentes, confirme se a ação **Ir para o relatório** no relatório principal aponta para o local correto do relatório de detalhamento.  
   
-7.  Clique em **Save** (Salvar).  
+7.  Clique em **Salvar**.  
   
-##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Execute os relatórios principais e perfurados  
+##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. executar os relatórios principal e de detalhamento  
  Execute o relatório principal e clique nos valores da coluna de categorias de produto para executar o relatório detalhado.  
   
 #### <a name="to-run-the-reports"></a>Para executar os relatórios  
@@ -738,6 +738,6 @@ ms.locfileid: "82086875"
 5.  Opcionalmente, explore outras categorias de produto clicando nos respectivos nomes.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tutoriais &#40;relatório&#41;](report-builder-tutorials.md)  
+ [TUTORIAIS &#40;Construtor de Relatórios&#41;](report-builder-tutorials.md)  
   
   

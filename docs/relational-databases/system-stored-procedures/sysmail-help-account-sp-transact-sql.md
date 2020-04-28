@@ -18,10 +18,10 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81528401"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
@@ -39,12 +39,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id`O ID da conta para listar informações. *account_id* é **int**, com um padrão de NULL.  
+`[ @account_id = ] account_id`A ID da conta para a qual listar informações. *account_id* é **int**, com um padrão de NULL.  
   
-`[ @account_name = ] 'account_name'`O nome da conta para listar informações. *account_name* é **sysname,** com um padrão de NULL.  
+`[ @account_name = ] 'account_name'`O nome da conta para a qual listar informações. *account_name* é **sysname**, com um padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- **0** (sucesso) ou **1** (falha)  
+ **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna um conjunto de resultados que contém as colunas listadas a seguir.  
@@ -52,26 +52,26 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ||||  
 |-|-|-|  
 |Nome da coluna|Tipo de dados|Descrição|  
-|**Account_id**|**int**|O ID da conta.|  
+|**account_id**|**int**|O ID da conta.|  
 |**name**|**sysname**|O nome da conta.|  
-|**Descrição**|**nvarchar(256)**|A descrição da conta.|  
-|**Email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
+|**ndescrição**|**nvarchar(256)**|A descrição da conta.|  
+|**email_address**|**nvarchar(128)**|O endereço de email a partir do qual as mensagens serão enviadas.|  
 |**display_name**|**nvarchar(128)**|O nome para exibição da conta.|  
 |**replyto_address**|**nvarchar(128)**|O endereço onde as respostas às mensagens desta conta são enviadas.|  
-|**Servertype**|**sysname**|O tipo de servidor de email da conta.|  
-|**Servername**|**sysname**|O nome do servidor de email da conta.|  
-|**Porta**|**int**|O número da porta usada pelo servidor de email.|  
-|**Username**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **o nome de usuário** é NULO, o Database Mail não usa autenticação para esta conta.|  
-|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é pouco, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando este parâmetro é 0, o Database Mail usa o ** \@nome de usuário** e ** \@** a senha para autenticação no servidor SMTP. Se ** \@o nome de usuário** e ** \@a senha** forem NULL, então o Database Mail usará autenticação anônima. Consulte o administrador do SMTP antes de especificar este parâmetro.|  
-|**enable_ssl**|**bit**|Especifica se o Database Mail criptografa a comunicação usando o TLS (Transport Layer Security, segurança de camada de transporte), anteriormente conhecido como Secure Sockets Layer (SSL). Use esta opção se o TLS for necessário no servidor SMTP. **enable_ssl** é pouco, sem padrão. 1 indica que o Database Mail criptografa a comunicação usando O TLS. 0 indica que o Database Mail envia o e-mail sem criptografia TLS.|  
+|**ServerType**|**sysname**|O tipo de servidor de email da conta.|  
+|**ServerName**|**sysname**|O nome do servidor de email da conta.|  
+|**porta**|**int**|O número da porta usada pelo servidor de email.|  
+|**usu**|**nvarchar(128)**|O nome de usuário a ser usado para fazer logon no servidor de email, se o servidor de email usar autenticação. Quando **username** é nulo, Database Mail não usa a autenticação para essa conta.|  
+|**use_default_credentials**|**bit**|Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usa as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando esse parâmetro for 0, Database Mail usará o ** \@nome de usuário** e ** \@a senha** para autenticação no servidor SMTP. Se ** \@o nome de usuário** e ** \@a senha** forem nulos, Database Mail usará a autenticação anônima. Consulte o administrador do SMTP antes de especificar esse parâmetro.|  
+|**enable_ssl**|**bit**|Especifica se Database Mail criptografa a comunicação usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL). Use esta opção se o TLS for necessário no servidor SMTP. **Enable_ssl** é bit, sem padrão. 1 indica Database Mail criptografa a comunicação usando TLS. 0 indica Database Mail envia o email sem criptografia TLS.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando nenhum *account_id* ou *account_name* é fornecido, **sysmail_help_account** lista informações em todas as contas do Database Mail na instância do Microsoft SQL Server.  
+ Quando nenhum *account_id* ou *account_name* é fornecido, **sysmail_help_account** lista informações sobre todas as contas de Database Mail na instância de Microsoft SQL Server.  
   
- O procedimento armazenado **sysmail_help_account_sp** está no banco de dados do **MSDB** e pertence ao esquema **dbo.** O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
+ O procedimento armazenado **sysmail_help_account_sp** está no banco de dados **msdb** e pertence ao esquema **dbo** . O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Execute permissões para este procedimento padrão para membros da função servidor fixo **sysadmin.**  
+ As permissões de execução para este procedimento assumem como padrão os membros da função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  **A. Listando as informações de todas as contas**  
@@ -109,8 +109,8 @@ account_id  name                         description                            
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Correio de banco de dados](../../relational-databases/database-mail/database-mail.md)   
- [Criar uma conta de correio de banco de dados](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Procedimentos armazenados de correio de banco de dados &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)   
+ [Criar uma conta de Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

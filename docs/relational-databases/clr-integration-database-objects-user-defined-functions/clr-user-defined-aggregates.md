@@ -1,6 +1,6 @@
 ---
-title: Agregados definidos pelo usuário da CLR | Microsoft Docs
-description: A integração SQL Server CLR permite criar funções agregadas personalizadas em código gerenciado, que realizam um cálculo em um conjunto de valores e retornam um valor.
+title: Agregações CLR definidas pelo usuário | Microsoft Docs
+description: SQL Server integração CLR permite que você crie funções de agregação personalizadas em código gerenciado, que executam um cálculo em um conjunto de valores e retornam um valor.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488269"
 ---
 # <a name="clr-user-defined-aggregates"></a>Agregações CLR definidas pelo usuário

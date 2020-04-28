@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487860"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Aprender sobre o SQL Server Master Data Services
@@ -26,8 +26,8 @@ ms.locfileid: "81487860"
   
   
 ## <a name="training"></a>Treinamento  
-* Para explorar os novos recursos [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]e recursos introduzidos em ,experimente um [Laboratório auto-acelerado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (é necessário fazer login com sua conta Microsoft).  
-* Para desenvolver [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] uma solução para armazenar e gerenciar listas mestras de [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]dados geográficos, usando o Add-in para Excel e o , experimente um [Laboratório auto-acelerado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
+* Para explorar os novos recursos e funcionalidades introduzidos [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]no, experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (é necessário entrar com seu conta Microsoft).  
+* Para desenvolver uma [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solução para armazenar e gerenciar listas mestras de dados geográficos, usando o suplemento para Excel e [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]o, experimente um [laboratório individualizado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Você criará entidades e hierarquias e usará o [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para preencher uma tabela de dimensões.  
   
 ## <a name="videos"></a>vídeos  
 * Para saber mais sobre os novos recursos no [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] versão [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**assista a este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

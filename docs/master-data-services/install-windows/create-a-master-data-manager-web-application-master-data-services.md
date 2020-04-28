@@ -1,5 +1,5 @@
 ---
-title: Criar aplicativo web do gerenciador de dados mestre
+title: Criar aplicativo Web Master Data Manager
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728511"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Crie um aplicativo web master data manager (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Criar um aplicativo Web do Master Data Manager (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "81728511"
   
 -   Associe o aplicativo Web a um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obter mais informações, consulte [Associar um banco de dados do Master Data Services a um aplicativo Web](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
   
--   Opcionalmente, configure o site [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que hospeda o aplicativo web para usar uma vinculação HTTPS se você quiser criptografar conteúdo usando O TLS (Transport Layer Security, segurança de camada de transporte), anteriormente conhecido como Secure Sockets Layer (SSL). Você deve usar uma ferramenta iis (Internet Information Services, serviços de informação da Internet), como o IIS Manager, para configurar o certificado de servidor para o servidor web e configurar uma vinculação HTTPS e as configurações TLS para o site. Para obter mais informações, consulte [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
+-   Opcionalmente, configure o site que hospeda o [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicativo Web para usar uma associação HTTPS se você quiser criptografar o conteúdo usando TLS (segurança de camada de transporte), anteriormente conhecido como protocolo SSL (SSL). Você deve usar uma ferramenta Serviços de Informações da Internet (IIS), como o Gerenciador do IIS, para configurar o certificado do servidor para o servidor Web e para configurar uma associação HTTPS e as configurações de TLS para o site. Para obter mais informações, consulte [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
