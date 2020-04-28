@@ -15,26 +15,26 @@ ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294626"
 ---
 # <a name="using-sqlbindcol"></a>Usar SQLBindCol
-O aplicativo vincula colunas ligando para **SQLBindCol**. Esta função liga uma coluna de cada vez. Com ele, o aplicativo especifica o seguinte:  
+O aplicativo associa colunas chamando **SQLBindCol**. Essa função associa uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  
   
--   O número da coluna. A coluna 0 é a coluna marcadores; esta coluna não está incluída em alguns conjuntos de resultados. Todas as outras colunas estão numeradas a partir do número 1. É um erro vincular uma coluna numerada mais alta do que há colunas no conjunto de resultados; este erro não pode ser detectado até que o conjunto de resultados tenha sido criado, por isso é devolvido por **SQLFetch**, não **SQLBindCol**.  
+-   O número da coluna. A coluna 0 é a coluna de indicadores; Esta coluna não está incluída em alguns conjuntos de resultados. Todas as outras colunas são numeradas a partir do número 1. É um erro associar uma coluna de maior número do que as colunas no conjunto de resultados; Esse erro não pode ser detectado até que o conjunto de resultados tenha sido criado, portanto, ele é retornado por **SQLFetch**, não **SQLBindCol**.  
   
--   O tipo de dados C, endereço e comprimento de byte da variável vinculada à coluna. É um erro especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; este erro pode não ser detectado até que o conjunto de resultados tenha sido criado, por isso é devolvido por **SQLFetch**, não **SQLBindCol**. Para obter uma lista de conversões suportadas, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice D: Tipos de dados. Para obter informações sobre o comprimento do byte, consulte [Comprimento de buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   O tipo de dados C, o endereço e o comprimento de bytes da variável associada à coluna. É um erro especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; Esse erro pode não ser detectado até que o conjunto de resultados tenha sido criado, portanto, ele é retornado por **SQLFetch**, não **SQLBindCol**. Para obter uma lista de conversões com suporte, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice D: tipos de dados. Para obter informações sobre o comprimento do byte, consulte [comprimento do buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   O endereço de um buffer de comprimento/indicador. O buffer de comprimento/indicador é opcional. Ele é usado para retornar o comprimento do byte de dados binários ou de caracteres ou retornar SQL_NULL_DATA se os dados forem NULOS. Para obter mais informações, consulte [Usando valores de comprimento/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   O endereço de um buffer de comprimento/indicador. O buffer de comprimento/indicador é opcional. Ele é usado para retornar o comprimento de bytes de dados binários ou de caracteres ou retornar SQL_NULL_DATA se os dados forem nulos. Para obter mais informações, consulte [usando valores de comprimento/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Quando **o SQLBindCol** é chamado, o motorista associa essas informações à declaração. Quando cada linha de dados é buscada, ele usa as informações para colocar os dados de cada coluna nas variáveis de aplicação vinculadas.  
+ Quando **SQLBindCol** é chamado, o driver associa essas informações com a instrução. Quando cada linha de dados é buscada, ela usa as informações para inserir os dados para cada coluna nas variáveis de aplicativo associadas.  
   
- Por exemplo, o código a seguir vincula variáveis às colunas SalesPerson e CustID. Os dados das colunas serão devolvidos em *SalesPerson* e *CustID*. Como *o SalesPerson* é um buffer de caracteres, o aplicativo especifica seu comprimento de byte (11) para que o motorista possa determinar se truncar á data. O comprimento do byte do título devolvido, ou se é NULO, será devolvido em *SalesPersonLenOrInd*.  
+ Por exemplo, o código a seguir associa variáveis às colunas vendedor e CustID. Os dados das colunas serão retornados em *vendedor* e *CustID*. Como o *vendedor* é um buffer de caracteres, o aplicativo especifica seu comprimento de byte (11) para que o driver possa determinar se os dados devem ser truncados. O comprimento de bytes do título retornado ou se ele for nulo, será retornado em *SalesPersonLenOrInd*.  
   
- Como *CustID* é uma variável inteira e tem comprimento fixo, não há necessidade de especificar seu comprimento de byte; o motorista assume que é tamanho (SQLUINTEGER **)**. **sizeof(** O comprimento do byte dos dados de ID do cliente devolvidos, ou se é NULO, será devolvido em *CustIDInd*. Observe que a aplicação está interessada apenas em saber se o salário é NULO, pois o comprimento do byte é sempre tamanho (SQLUINTEGER). **sizeof(****)**  
+ Como *CustID* é uma variável de inteiro e tem comprimento fixo, não é necessário especificar seu comprimento de byte; o driver pressupõe que é **sizeof (** SQLUINTEGER **)**. O comprimento de bytes dos dados de ID de cliente retornados, ou se ele for nulo, será retornado em *CustIDInd*. Observe que o aplicativo está interessado apenas em se o salário é nulo, pois o comprimento do byte é sempre **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- O código a seguir executa uma declaração **SELECT** inserida pelo usuário e imprime cada linha de dados no conjunto de resultados. Como o aplicativo não pode prever a forma do conjunto de resultados criado pela **indescéia SELECT,** ele não pode vincular variáveis codificadas ao resultado definido como no exemplo anterior. Em vez disso, o aplicativo aloca um buffer que contém os dados e um buffer de comprimento/indicador para cada coluna nessa linha. Para cada coluna, ele calcula a compensação para o início da memória para a coluna e ajusta essa compensação para que os buffers de dados e comprimento/indicador para a coluna comecem nos limites de alinhamento. Em seguida, liga a memória a partir do deslocamento à coluna. Do ponto de vista do driver, o endereço desta memória é indistinguível do endereço de uma variável vinculada no exemplo anterior. Para obter mais informações sobre alinhamento, consulte [Alinhamento](../../../odbc/reference/develop-app/alignment.md).  
+ O código a seguir executa uma instrução **Select** inserida pelo usuário e imprime cada linha de dados no conjunto de resultados. Como o aplicativo não pode prever a forma do conjunto de resultados criado pela instrução **Select** , ele não pode associar variáveis embutidas em código ao conjunto de resultados como no exemplo anterior. Em vez disso, o aplicativo aloca um buffer que contém os dados e um buffer de comprimento/indicador para cada coluna nessa linha. Para cada coluna, ele calcula o deslocamento para o início da memória da coluna e ajusta esse deslocamento para que os buffers de dados e de comprimento/indicador da coluna comecem nos limites de alinhamento. Em seguida, ele associa a memória começando no deslocamento para a coluna. Do ponto de vista do driver, o endereço dessa memória é indistinguíveis do endereço de uma variável associada no exemplo anterior. Para obter mais informações sobre alinhamento, consulte [Alignment](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

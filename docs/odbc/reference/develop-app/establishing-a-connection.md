@@ -1,5 +1,5 @@
 ---
-title: Estabelecendo uma Conexão | Microsoft Docs
+title: Estabelecendo uma conexão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298696"
 ---
 # <a name="establishing-a-connection"></a>Estabelecer uma conexão
-Depois de alocar o ambiente e as alças de conexão e definir quaisquer atributos de conexão, o aplicativo está pronto para se conectar à fonte de dados ou driver. Existem três funções diferentes que o aplicativo pode usar para fazer isso: **SQLConnect** (nível de conformidade da interface principal), **SQLDriverConnect** (Core) e **SQLBrowseConnect** (Nível 1). Cada um dos três foi projetado para ser usado em um cenário diferente. Antes de conectar, o aplicativo pode determinar qual dessas funções é suportada com a palavra-chave **ConnectFunctions** retornada por **SQLDrivers**.  
+Depois de alocar identificadores de ambiente e conexão e definir qualquer atributo de conexão, o aplicativo estará pronto para se conectar à fonte de dados ou ao driver. Há três funções diferentes que o aplicativo pode usar para fazer isso: **SQLConnect** (nível de conformidade da interface principal), **SQLDriverConnect** (núcleo) e **SQLBrowseConnect** (nível 1). Cada um dos três é projetado para ser usado em um cenário diferente. Antes de se conectar, o aplicativo pode determinar quais dessas funções têm suporte com a palavra-chave **ConnectFunctions** retornada por **SQLDrivers**.  
   
 > [!NOTE]  
->  Alguns drivers limitam o número de conexões ativas que suportam. Um aplicativo chama **o SQLGetInfo** com a opção SQL_MAX_DRIVER_CONNECTIONS para determinar quantas conexões ativas um determinado driver suporta.  
+>  Alguns drivers limitam o número de conexões ativas para as quais dão suporte. Um aplicativo chama **SQLGetInfo** com a opção SQL_MAX_DRIVER_CONNECTIONS para determinar a quantas conexões ativas um driver específico dá suporte.  
   
  Esta seção contém os seguintes tópicos.  
   
@@ -39,7 +39,7 @@ Depois de alocar o ambiente e as alças de conexão e definir quaisquer atributo
   
 -   [Conectar-se com o SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)  
   
--   [Strings de conexão](../../../odbc/reference/develop-app/connection-strings.md)  
+-   [Cadeias de conexão](../../../odbc/reference/develop-app/connection-strings.md)  
   
 -   [Conectar-se com o SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)  
   

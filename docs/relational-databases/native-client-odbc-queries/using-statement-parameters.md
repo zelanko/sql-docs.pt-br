@@ -1,5 +1,5 @@
 ---
-title: Usando parâmetros de declaração | Microsoft Docs
+title: Usando parâmetros de instrução | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297885"
 ---
 # <a name="using-statement-parameters"></a>Usando parâmetros de instrução
@@ -35,9 +35,9 @@ ms.locfileid: "81297885"
   
 -   Aprimorar a interação do usuário na construção dos critérios de consulta.  
   
--   Gerenciar **texto,** **ntext**e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados de **imagem** e tipos de dados C específicos.  
+-   Gerencie dados de **texto**, **ntext**e **imagem** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de dados C específicos.  
   
- Por exemplo, uma **tabela de peças** tem colunas chamadas **PartID,** **Description**e **Price**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
+ Por exemplo, uma tabela de **peças** tem colunas denominadas **partid**, **Descrição**e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Associando parâmetros](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Execução de consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Executando consultas &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

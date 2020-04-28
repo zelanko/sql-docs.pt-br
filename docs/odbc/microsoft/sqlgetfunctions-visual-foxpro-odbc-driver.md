@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (Driver Visual FoxPro ODBC) | Microsoft Docs
+title: SQLGetFunctions (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298606"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do driver Visual FoxPro ODBC. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas do driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Suporte: Completo  
+ Suporte: completo  
   
- Conformidade da API ODBC: Nível 1  
+ Conformidade da API ODBC: nível 1  
   
- Retorna TRUE para todas as funções suportadas.  
+ Retorna TRUE para todas as funções com suporte.  
   
- O driver Visual FoxPro ODBC suporta todas as funções ODBC API Core e Level 1. A tabela a seguir indica se o driver suporta uma função específica de Nível 2.  
+ O driver ODBC do Visual FoxPro dá suporte a todas as funções de núcleo e nível 1 da API ODBC. A tabela a seguir indica se o driver dá suporte a uma função de nível 2 específica.  
   
 |*Função*|Com suporte|  
 |----------------|---------------|  
@@ -51,4 +51,4 @@ ms.locfileid: "81298606"
 |SQL_API_SQLSETSCROLLOPTIONS|Sim|  
 |SQL_API_SQLTABLEPRIVILEGES|Não|  
   
- Para obter mais informações, consulte [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) no *Programador ODBC .*
+ Para obter mais informações, consulte [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) na *referência do programador de ODBC*.

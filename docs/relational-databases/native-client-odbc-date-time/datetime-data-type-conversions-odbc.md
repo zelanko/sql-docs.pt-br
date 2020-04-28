@@ -1,5 +1,5 @@
 ---
-title: conversões de tipo de dados de data-data (ODBC) | Microsoft Docs
+title: conversões de tipo de dados DateTime (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba3d21b1f063c5f8a989d6d387538a4d15c8412
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301724"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>Conversões do tipo de dados datetime (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "81301724"
   
 -   O formato de cadeias de caracteres de data é 'aaaa-mm-dd'  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "Formatos de dados: strings e literais" do Suporte ao Tipo de [Dados para melhorias de data e hora do ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" do [suporte de tipo de dados para aprimoramentos de data e hora ODBC](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   
@@ -61,6 +61,6 @@ ms.locfileid: "81301724"
  Lista os problemas a serem considerados ao converter tipos de data/hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em tipos do C.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;da ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

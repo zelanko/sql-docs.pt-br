@@ -1,5 +1,5 @@
 ---
-title: Alças do Meio Ambiente | Microsoft Docs
+title: Identificadores de ambiente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300436"
 ---
 # <a name="environment-handles"></a>Identificadores de ambiente
-Um *ambiente* é um contexto global no qual acessar dados; associado a um ambiente é qualquer informação de natureza global, tais como:  
+Um *ambiente* é um contexto global no qual acessar dados; associado a um ambiente, qualquer informação que seja global por natureza, como:  
   
--   Estado do meio ambiente  
+-   O estado do ambiente  
   
--   Os diagnósticos atuais em nível de ambiente  
+-   O diagnóstico atual no nível do ambiente  
   
--   As alças das conexões atualmente alocadas no meio ambiente  
+-   Os identificadores de conexões atualmente alocadas no ambiente  
   
--   As configurações atuais de cada atributo ambiente  
+-   As configurações atuais de cada atributo de ambiente  
   
- Dentro de um código que implementa o ODBC (o Driver Manager ou um driver), uma alça de ambiente identifica uma estrutura para conter essas informações.  
+ Dentro de um trecho de código que implementa o ODBC (o Gerenciador de driver ou um driver), um identificador de ambiente identifica uma estrutura para conter essas informações.  
   
- As alças de ambiente não são usadas com freqüência em aplicações ODBC. Eles são sempre usados em chamadas para **SQLDataSources** e **SQLDrivers** e às vezes são usados em chamadas para **SQLAllocHandle,** **SQLEndTran,** **SQLFreeHandle,** **SQLGetDiagField**e **SQLGetDiagRec**.  
+ Os identificadores de ambiente não são usados com frequência em aplicativos ODBC. Eles são sempre usados em chamadas para **SQLDataSources** e **SQLDrivers** e, às vezes, usados em chamadas para **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**e **SQLGetDiagRec**.  
   
- Cada pedaço de código que implementa o ODBC (o Driver Manager ou um driver) contém uma ou mais alças de ambiente. Por exemplo, o Driver Manager mantém uma alça de ambiente separada para cada aplicativo conectado a ele. As alças do ambiente são alocadas com **SQLAllocHandle** e liberadas com **SQLFreeHandle**.
+ Cada parte do código que implementa o ODBC (o Gerenciador de driver ou um driver) contém um ou mais identificadores de ambiente. Por exemplo, o Gerenciador de driver mantém um identificador de ambiente separado para cada aplicativo conectado a ele. Os identificadores de ambiente são alocados com **SQLAllocHandle** e liberados com **SQLFreeHandle**.

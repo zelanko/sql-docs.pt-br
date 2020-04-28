@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo Retornado Valores para acesso | Microsoft Docs
+title: SQLGetInfo retornou valores para acesso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298556"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Valores retornados SQLGetInfo para Access
-A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valores correspondentes retornados pelo **SQLGetInfo**. Essas informações podem ser recuperadas passando o #defines em c listado para **SQLGetInfo** no argumento *fInfoType.* Para obter mais informações sobre os valores devolvidos pelo **SQLGetInfo,** consulte a *referência do programador ODBC*.  
+A tabela a seguir lista os #defines de linguagem C para o argumento *fInfoType* e os valores correspondentes retornados por **SQLGetInfo**. Essas informações podem ser recuperadas passando o #defines de linguagem C listado para **SQLGetInfo** no argumento *fInfoType* . Para obter mais informações sobre os valores retornados por **SQLGetInfo**, consulte a *referência do programador de ODBC*.  
   
 > [!NOTE]  
->  Quando **o SQLGetInfo** retorna uma máscara de bits de 32 bits, uma barra vertical (&#124;) representa um pouco de OR.  
+>  Onde **SQLGetInfo** retorna um bitmask de 32 bits, uma barra vertical (&#124;) representa uma ou bit-a-bit.  
   
-|Infotipo|Valor retornado|  
+|InfoType|Valor retornado|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tudo pronto|  
+|SQL_AGGREGATE_FUNCTIONS|Todos os conjuntos|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valore
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|"Banco de dados"|  
+|SQL_CATALOG_TERM|Banco|  
 |SQL_CATALOG_USAGE|Vários valores|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valore
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|O DSN de Odbc.ini ou "" se a palavra-chave DRIVER for usada em Odbc.ini|  
+|SQL_DATA_SOURCE_NAME|O DSN do ODBC. ini ou "" se a palavra-chave do DRIVER for usada em ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nome do arquivo|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"ACESSO"|  
+|SQL_DBMS_NAME|ÀS|  
 |SQL_DBMS_VER|Vários valores|  
 |SQL_DDL_INDEX|Vários valores|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Manuseado pelo Gerente de Motorista.|  
-|SQL_DRIVER_HENV|Manuseado pelo Gerente de Motorista.|  
-|SQL_DRIVER_HLIB|Manuseado pelo Gerente de Motorista.|  
-|SQL_DRIVER_HSTMT|Manuseado pelo Gerente de Motorista.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HENV|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HLIB|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_HSTMT|Manipulado pelo Gerenciador de driver.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn"**(nnnn* especifica a data de construção)|  
+|SQL_DRIVER_VER|"4, 0.*nnnn*" (*nnnn* especifica a data de compilação)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valore
 |SQL_GETDATA_EXTENSIONS|Vários valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`(citação de volta)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (aspas posteriores)|  
 |SQL_KEYWORDS|Vários valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -143,11 +143,11 @@ A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valore
 |SQL_NUMERIC_FUNCTIONS|Vários valores|  
 |CONFORMIDADE SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Do Driver Manager|  
+|SQL_ODBC_VER|Do Gerenciador de driver|  
 |SQL_OJ_CAPABILITIES|Vários valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|"CONSULTA"|  
+|SQL_PROCEDURE_TERM|CONSULTÁ|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ A tabela a seguir lista o #defines em c para o argumento *fInfoType* e os valore
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Vários valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"ACESSO"|  
-|SQL_SPECIAL_CHARACTERS|\`@#$%^&\*"~\\\'}{" ;:?/><,.!\_-+= \'[]&#124;"|  
+|SQL_SERVER_NAME|ÀS|  
+|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Vários valores|  
 |SQL_SUBQUERIES|Vários valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"MESA"|  
+|SQL_TABLE_TERM|TABELA|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Vários valores|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Vários valores|  
-|SQL_USER_NAME|"ADMIN"|
+|SQL_USER_NAME|ADM|

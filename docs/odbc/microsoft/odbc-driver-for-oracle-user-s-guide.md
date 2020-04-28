@@ -1,5 +1,5 @@
 ---
-title: Driver ODBC para Guia de&#39;do Usuário Oracle | Microsoft Docs
+title: Guia de&#39;s do ODBC driver for Oracle User | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293147"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Driver ODBC para Guia de&#39;do Usuário Oracle
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Guia do usuário do ODBC driver for Oracle&#39;s
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- O Guia do Usuário ODBC driver for Oracle destina-se a complementar a ajuda de configuração que pode ser acessada através do Administrador de Fonte de Dados da [ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
+ O guia do usuário do driver ODBC para Oracle destina-se a complementar a ajuda da instalação que pode ser acessada por meio do [administrador de fonte de dados ODBC](../../odbc/admin/odbc-data-source-administrator.md).  
   
  Esta seção contém os seguintes tópicos.  
   
 -   [Esquema de versão do driver](../../odbc/microsoft/driver-version-scheme.md)  
   
--   [Instalação do Software](../../odbc/microsoft/installing-the-software-odbc.md)  
+-   [Instalando o software](../../odbc/microsoft/installing-the-software-odbc.md)  
   
 -   [Patches de software da Oracle](../../odbc/microsoft/oracle-software-patches.md)  
   

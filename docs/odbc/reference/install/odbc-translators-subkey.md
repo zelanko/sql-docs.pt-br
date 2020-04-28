@@ -1,5 +1,5 @@
 ---
-title: Subchave de Tradutores ODBC | Microsoft Docs
+title: Subchave de conversores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296216"
 ---
 # <a name="odbc-translators-subkey"></a>Subchave de conversores ODBC
-Os valores sob a sub-chave ODBC Translators listam os tradutores instalados. O formato desses valores é mostrado na tabela a seguir.  
+Os valores na subchave de conversores ODBC listam os tradutores instalados. O formato desses valores é mostrado na tabela a seguir.  
   
 |Nome|Tipo de dados|Dados|  
 |----------|---------------|----------|  
-|*tradutor-desc*|REG_SZ|**Instalado**|  
+|*Tradutor-desc*|REG_SZ|**Instalada**|  
   
- O nome *tradutor-desc* é definido pelo desenvolvedor do tradutor.  
+ O nome do *Tradutor-desc* é definido pelo desenvolvedor do tradutor.  
   
- Por exemplo, suponha que um usuário tenha instalado o Microsoft® Code Page Translator e um ASCII personalizado para tradutor EBCDIC. Os valores sob a sub-chave Tradutores ODBC podem ser os seguintes:  
+ Por exemplo, suponha que um usuário tenha instalado o tradutor de página de código do Microsoft® e um conversor ASCII personalizado para EBCDIC. Os valores na subchave de conversores ODBC podem ser os seguintes:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

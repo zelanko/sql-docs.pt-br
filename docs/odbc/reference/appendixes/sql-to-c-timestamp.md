@@ -1,5 +1,5 @@
 ---
-title: 'SQL para C: Carimbo de tempo | Microsoft Docs'
+title: 'SQL para C: carimbo de data/hora | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296346"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL para C: carimbo de data/hora
 
-O identificador para o tipo de dados ODBC SQL de carimbo de data e hora é o seguinte:
+O identificador para o tipo de dados SQL ODBC de carimbo de data/hora é o seguinte:
 
 - SQL_TYPE_TIMESTAMP  
 
-A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL de carimbo de tempo podem ser convertidos. Para obter uma explicação das colunas e termos da tabela, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL de carimbo de data/hora podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
 
-|Identificador de tipo C|Teste|**TargetValuePtr*|**Strlen_or_indptr*|SQLSTATE|  
+|Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > comprimento do byte do caractere<br /><br /> 20 <= *TampãoComprimento* <= Comprimento do byte do caractere<br /><br /> *Comprimento de tampão* < 20|Dados<br /><br /> Dados truncados[b]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Comprimento do > comprimento* do caractere do buffer<br /><br /> 20 <= *<de comprimento de tampão* = comprimento do caractere<br /><br /> *Comprimento de tampão* < 20|Dados<br /><br /> Dados truncados[b]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento de byte de dados <= *BufferLength*<br /><br /> Comprimento de byte de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|A parte de tempo do carimbo de tempo é zero[a]<br /><br /> A parte de tempo do carimbo de tempo não é zero[a]|Dados<br /><br /> Dados truncados[c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|A porção de segundos fracionários do carimbo de tempo é zero[a]<br /><br /> A porção de segundos fracionários do carimbo de tempo não é zero[a]|Dados[d]<br /><br /> Dados truncados[d], [e]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
-|SQL_C_TYPE_TIMESTAMP|A porção de segundos fracionários do carimbo de tempo não é truncada[a]<br /><br /> A porção de segundos fracionários do carimbo de tempo é truncada[a]|Dados[e]<br /><br /> Dados truncados[e]|16[f]<br /><br /> 16[f]|n/d<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > comprimento de byte de caractere<br /><br /> 20 <= *BufferLength* <= comprimento de byte de caractere<br /><br /> *BufferLength* < 20|Dados<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caractere<br /><br /> 20 <= *BufferLength* <= comprimento do caractere<br /><br /> *BufferLength* < 20|Dados<br /><br /> Dados truncados [b]<br /><br /> Indefinido|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Comprimento de bytes de dados <= *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|A parte de tempo do carimbo de data/hora é zero [a]<br /><br /> A parte de tempo do carimbo de data/hora é diferente de zero|Dados<br /><br /> Dados truncados [c]|6 [f]<br /><br /> 6 [f]|n/d<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|A parte de segundos fracionários do carimbo de data/hora é zero [a]<br /><br /> A parte de segundos fracionários do carimbo de data/hora é diferente de um]|Dados [d]<br /><br /> Dados truncados [d], [e]|6 [f]<br /><br /> 6 [f]|n/d<br /><br /> 01S07|  
+|SQL_C_TYPE_TIMESTAMP|A parte de segundos fracionários do carimbo de data/hora não está truncada [a]<br /><br /> A parte de segundos fracionários do carimbo de data/hora é truncada [a]|Dados [e]<br /><br /> Dados truncados [e]|16 [f]<br /><br /> 16 [f]|n/d<br /><br /> 01S07|  
 
- [a] O valor do *BufferLength* é ignorado para esta conversão. O driver assume que o tamanho de **TargetValuePtr* é do tamanho do tipo de dados C.  
+ [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
   
- [b] Os segundos fracionados do carimbo de tempo são truncados.  
+ [b] os segundos fracionários do carimbo de data/hora estão truncados.  
   
- [c] A parte de tempo do carimbo de tempo é truncada.  
+ [c] a parte de tempo do carimbo de data/hora está truncada.  
   
- [d] A parte da data do carimbo de data é ignorada.  
+ [d] a parte de data do carimbo de hora é ignorada.  
   
- [e] A parte de segundos fracionados do carimbo de tempo é truncada.  
+ [e] a parte de segundos fracionários do carimbo de data/hora está truncada.  
   
  [f] Este é o tamanho do tipo de dados C correspondente.  
 
-Quando os dados SQL do carimbo de tempo são convertidos em dados do caractere C, a seqüência resultante está no "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.* f...*]" formato, onde até nove dígitos podem ser usados para segundos fracionados. Este formato não é afetado pela configuração de país ® Windows. (Exceto pelo ponto decimal e segundos fracionados, todo o formato deve ser usado, independentemente da precisão do tipo de dados SQL do carimbo de tempo.)
+Quando os dados SQL de carimbo de data/hora são convertidos em dados de caracteres C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*DD* *hh*:*mm*:*SS*[.* f...*] " formato, onde até nove dígitos podem ser usados para segundos fracionários. Esse formato não é afetado pela configuração de país do Windows®. (Exceto para o ponto decimal e os segundos fracionários, o formato inteiro deve ser usado, independentemente da precisão do tipo de dados timestamp SQL.)

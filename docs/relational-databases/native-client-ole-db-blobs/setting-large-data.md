@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297617"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor Native Client OLE DB, você pode definir dados BLOB passando um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, você pode definir dados de blob passando um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81297617"
 ## <a name="how-to-set-large-data"></a>Como definir dados grandes  
  Para transmitir um ponteiro para seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna BLOB e chama os métodos **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Para definir dados de BLOB:  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento *dwFlag* da estrutura DBOBJECT para STGM_READ e defina o elemento *iid* para IID_ISequentialStream (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento *dwFlag* da estrutura DBOBJECT como STGM_READ e defina o elemento *IID* como IID_ISequentialStream (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [BLOBs e Objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOBs e objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

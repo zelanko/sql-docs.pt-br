@@ -1,5 +1,5 @@
 ---
-title: Usando autofetch com cursors ODBC | Microsoft Docs
+title: Usando a busca prévia com cursores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 812f4742dfe8273c4e96fc5205626fe1f6c07347
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298406"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Usando a opção Autofetch com cursores ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Quando conectado a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância de , o driver Cliente Nativo ODBC suporta uma opção de autofetch ao usar qualquer tipo de cursor de servidor. Com o autofetch, a função **SQLExecute** ou **SQLExecDirect** que abre o cursor também tem uma função [sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) implícita. As linhas que formam o primeiro conjunto de linhas são retornadas para as variáveis associadas de aplicativo como parte da execução da instrução, evitando outra viagem de ida e volta pela rede até o servidor. [O SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) não é suportado quando a opção autofetch está ativada; as colunas de conjunto de resultados devem ser vinculadas às variáveis do programa.  
+  Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a uma opção de AutoBusca ao usar qualquer tipo de cursor do servidor. Com a busca prévia, a função **SQLExecute** ou **SQLExecDirect** que abre o cursor também tem uma função implícita de [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST). As linhas que formam o primeiro conjunto de linhas são retornadas para as variáveis associadas de aplicativo como parte da execução da instrução, evitando outra viagem de ida e volta pela rede até o servidor. Não há suporte para [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) quando a opção de AutoBusca está habilitada; as colunas do conjunto de resultados devem estar associadas a variáveis de programa.  
   
  Os aplicativos solicitam autofetch definindo o atributo de instrução SQL_SOPT_SS_CURSOR_OPTIONS específico de driver como SQL_CO_AF.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes da programação do cursor &#40;&#41;da ODBC](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+ [Detalhes de programação do cursor &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

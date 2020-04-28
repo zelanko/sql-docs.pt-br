@@ -1,5 +1,5 @@
 ---
-title: Executar uma Declaração Diretamente (ODBC) | Microsoft Docs
+title: Executar uma instrução diretamente (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a4516f25ee6d18ddb56bedab1e55a2924c03873
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294061"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Executar diretamente uma instrução (ODBC)
@@ -89,6 +89,6 @@ ms.locfileid: "81294061"
  **Observação** As associações por coluna e por linha geralmente são mais usadas em conjunto com [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) do que com [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando consultas como fazer tópicos &#40;&#41;da ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

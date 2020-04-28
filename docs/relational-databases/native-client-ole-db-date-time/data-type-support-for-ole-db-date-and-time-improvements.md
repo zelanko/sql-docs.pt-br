@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301038"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Este tópico fornece informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os tipos OLE DB (Native Client) que suportam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados de data/hora.  
+  Este tópico fornece informações sobre tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB (cliente nativo) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a tipos de dados de data/hora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros  
  O OLE DB fornece dois novos tipos de dados para dar suporte aos novos tipos de servidor: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. A seguinte tabela mostra o mapeamento de tipo do servidor completo:  
@@ -34,8 +34,8 @@ ms.locfileid: "81301038"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>Formatos de dados: cadeias e literais  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Os aplicativos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrarem para o Cliente Nativo que usam **sql_variant** e dependem da precisão limitada da **data-hora** terão que ser atualizados se o esquema subjacente for atualizado para usar **datetime2** em vez de **data.**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Os aplicativos que usam o **sql_variant** e contam com a precisão limitada de **DateTime** precisarão ser atualizados se o esquema subjacente for atualizado para usar **datetime2** em vez de **DateTime**.  
   
  Também foram estendidas as macros de acesso para SSVARIANT com a adição do seguinte:  
   
@@ -176,11 +176,11 @@ enum SQLVARENUM {
 |Tipo de dados OLE DB (*wType*)|Tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Observações|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB inspeciona o membro *bScale* dbcolumdesc para determinar a precisão de segundos fracionados.|  
-|DBTYPE_DBTIME2|**time**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB inspeciona o membro *bScale* dbcolumdesc para determinar a precisão de segundos fracionados.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB inspeciona o membro *bScale* dbcolumdesc para determinar a precisão de segundos fracionados.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo inspeciona o membro DBCOLUMDESC *bScale* para determinar a precisão de segundos fracionários.|  
+|DBTYPE_DBTIME2|**time**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo inspeciona o membro DBCOLUMDESC *bScale* para determinar a precisão de segundos fracionários.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo inspeciona o membro DBCOLUMDESC *bScale* para determinar a precisão de segundos fracionários.|  
   
- Quando um aplicativo especificar DBTYPE_DBTIMESTAMP em *wType*, ele poderá substituir o mapeamento para **datetime2** fornecendo um nome de tipo em *pwszTypeName*. Se **datetime** for especificado, *bScale* precisará ser 3. Se **smalldatetime** for especificado, *bScale* precisará ser 0. Se *bScale* não for consistente com *wType* e *pwszTypeName,* DB_E_BADSCALE é devolvido.  
+ Quando um aplicativo especificar DBTYPE_DBTIMESTAMP em *wType*, ele poderá substituir o mapeamento para **datetime2** fornecendo um nome de tipo em *pwszTypeName*. Se **datetime** for especificado, *bScale* precisará ser 3. Se **smalldatetime** for especificado, *bScale* precisará ser 0. Se *bScale* não for consistente com *wType* e *pwszTypeName*, DB_E_BADSCALE será retornado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Melhorias de data e hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

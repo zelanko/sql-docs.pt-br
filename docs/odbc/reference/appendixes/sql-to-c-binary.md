@@ -1,5 +1,5 @@
 ---
-title: 'SQL a C: Binário | Microsoft Docs'
+title: 'SQL para C: Binary | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70b0ce72f650e61b83ec99b0727752612d18da52
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298815"
 ---
 # <a name="sql-to-c-binary"></a>SQL para C: binário
-Os identificadores para os tipos binários de dados ODBC SQL são:  
+Os identificadores para os tipos de dados SQL ODBC binários são:  
   
  SQL_BINARY  
   
@@ -31,17 +31,17 @@ Os identificadores para os tipos binários de dados ODBC SQL são:
   
  SQL_LONGVARBINARY  
   
- A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL binários podem ser convertidos. Para obter uma explicação das colunas e termos da tabela, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL binários podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Identificador de tipo C|Teste|**TargetValuePtr*|**Strlen_or_indptr*|SQLSTATE|  
+|Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(Comprimento de byte de dados) \* 2 *< bufferLength*<br /><br /> (Comprimento de byte de dados) \* 2 >= *Comprimento do Buffer*|Dados<br /><br /> Dados truncados|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes|n/d<br /><br /> 01004|  
-|SQL_C_WCHAR|(Comprimento do caractere dos dados) \* 2 *< bufferLength*<br /><br /> (Comprimento do caractere dos dados) \* 2 >= *Comprimento do Buffer*|Dados<br /><br /> Dados truncados|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres|n/d<br /><br /> 01004|  
-|SQL_C_BINARY|Comprimento de byte de dados <= *BufferLength*<br /><br /> Comprimento de byte de dados > *BufferLength*|Dados<br /><br /> Dados truncados|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes|n/d<br /><br /> 01004|  
+|SQL_C_CHAR|(Comprimento de bytes de dados) \* 2 < *BufferLength*<br /><br /> (Comprimento de bytes de dados) \* 2 >= *BufferLength*|Dados<br /><br /> Dados truncados|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes|n/d<br /><br /> 01004|  
+|SQL_C_WCHAR|(Comprimento de caracteres de dados) \* 2 < *BufferLength*<br /><br /> (Comprimento de caracteres de dados) \* 2 >= *BufferLength*|Dados<br /><br /> Dados truncados|Comprimento dos dados em caracteres<br /><br /> Comprimento dos dados em caracteres|n/d<br /><br /> 01004|  
+|SQL_C_BINARY|Comprimento de bytes de dados <= *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Dados truncados|Comprimento dos dados em bytes<br /><br /> Comprimento dos dados em bytes|n/d<br /><br /> 01004|  
   
- Quando os dados SQL binários são convertidos em dados de caractere C, cada byte (8 bits) dos dados de origem é representado como dois caracteres ASCII. Esses caracteres são a representação do caractere ASCII do número em sua forma hexadecimal. Por exemplo, um binário 0000001 é convertido em "01" e um binário 11111111 é convertido em "FF".  
+ Quando dados SQL binários são convertidos em dados de caracteres C, cada byte (8 bits) de dados de origem é representado como dois caracteres ASCII. Esses caracteres são a representação de caractere ASCII do número em sua forma hexadecimal. Por exemplo, um 00000001 binário é convertido em "01" e um binário 11111111 é convertido em "FF".  
   
- O driver sempre converte bytes individuais em pares de dígitos hexadecimais e termina a seqüência de caracteres com um byte nulo. Por causa disso, se *BufferLength* estiver uniforme e for menor do que o comprimento dos dados convertidos, o último byte do buffer ** TargetValuePtr* não será usado. (Os dados convertidos exigem um número uniforme de bytes, o penúltimo byte é um byte nulo e o último byte não pode ser usado.)  
+ O driver sempre converte bytes individuais em pares de dígitos hexadecimais e encerra a cadeia de caracteres com um byte nulo. Por isso, se *BufferLength* for par e for menor que o comprimento dos dados convertidos, o último byte do * buffer de **TargetValuePtr* não será usado. (Os dados convertidos exigem um número par de bytes, o byte do próximo a último é um byte nulo e o último byte não pode ser usado.)  
   
 > [!NOTE]  
->  Os desenvolvedores de aplicativos são desencorajados de vincular dados SQL binários a um tipo de dados c de caractere. Esta conversão é geralmente ineficiente e lenta.
+>  Os desenvolvedores de aplicativos são desencorajados de associar dados SQL binários a um tipo de dados de caractere C. Normalmente, essa conversão é ineficiente e lenta.

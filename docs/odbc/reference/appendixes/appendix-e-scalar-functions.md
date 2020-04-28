@@ -1,5 +1,5 @@
 ---
-title: 'Apêndice E: Funções Escalares | Microsoft Docs'
+title: 'Apêndice E: funções escalares | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ea354a7f882bd1a75c5f16fb19350d69ca11d375
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292486"
 ---
 # <a name="appendix-e-scalar-functions"></a>Apêndice E: Funções escalares
-A ODBC especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidas nas seções correspondentes deste apêndice. As descrições da função incluem sintaxe associada.  
+O ODBC especifica os seguintes tipos de funções escalares, com informações detalhadas sobre cada um desses tipos de função fornecidos nas seções correspondentes deste apêndice. As descrições de função incluem a sintaxe associada.  
   
- Este apêndice contém os seguintes tópicos.  
+ Este apêndice contém os tópicos a seguir.  
   
--   [Funções de corda](../../../odbc/reference/appendixes/string-functions.md)  
+-   [Funções de Cadeia de Caracteres](../../../odbc/reference/appendixes/string-functions.md)  
   
 -   [Funções numéricas](../../../odbc/reference/appendixes/numeric-functions.md)  
   
@@ -38,11 +38,11 @@ A ODBC especifica os seguintes tipos de funções escalares, com informações d
   
 -   [Função CAST do SQL-92](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- O ODBC não determina um tipo de dados para valores de retorno de funções escalares porque as funções são muitas vezes específicas da fonte de dados. Os aplicativos devem usar a função ESCALAR CONVERT sempre que possível para forçar a conversão do tipo de dados.  
+ O ODBC não exige um tipo de dados para valores de retorno de funções escalares porque as funções geralmente são específicas da fonte de dados. Os aplicativos devem usar a função CONVERT escalar sempre que possível para forçar a conversão do tipo de dados.  
   
-## <a name="odbc-and-sql-92-scalar-functions"></a>Funções Escalares ODBC e SQL-92  
- As tabelas neste apêndice incluem funções que foram adicionadas no ODBC 3.0 para se alinhar em SQL-92. Essas funções adicionadas para um determinado tipo de função escalar, como definido no ODBC, são indicadas em cada seção.  
+## <a name="odbc-and-sql-92-scalar-functions"></a>Funções escalares ODBC e SQL-92  
+ As tabelas neste apêndice incluem funções que foram adicionadas no ODBC 3,0 para serem alinhadas com o SQL-92. Essas funções adicionadas a um tipo específico de função escalar, conforme definido no ODBC, são indicadas em cada seção.  
   
- ODBC e SQL-92 classificam suas funções escalares de forma diferente. A ODBC classifica funções escalares por tipo de argumento; O SQL-92 classifica-os pelo valor de retorno. Por exemplo, a função EXTRACT é classificada como uma função de data de data por ODBC, porque o argumento extrato-campo é uma palavra-chave de data-hora e o argumento da fonte de extração é uma expressão de data ou intervalo. SQL-92, por outro lado, classifica EXTRACT como uma função escalar numérica, porque o valor de retorno é um numérico.  
+ ODBC e SQL-92 classificam suas funções escalares de forma diferente. O ODBC classifica funções escalares por tipo de argumento; O SQL-92 os classifica por valor de retorno. Por exemplo, a função EXTRACT é classificada como uma função timedate pelo ODBC, porque o argumento Extract-Field é uma palavra-chave DateTime e o argumento Extract-Source é uma expressão DateTime ou Interval. O SQL-92, por outro lado, classifica a EXTRAção como uma função escalar numérica, pois o valor de retorno é numérico.  
   
- Um aplicativo pode determinar quais funções escalares um driver suporta chamando **SQLGetInfo**. Os tipos de informações estão incluídos tanto para o ODBC quanto para classificações SQL-92 de funções escalares. Como essas classificações são diferentes, o suporte para algumas funções escalares pode ser indicado em tipos de informações que não correspondem ao ODBC e ao SQL-92. Por exemplo, o suporte ao EXTRACT no ODBC é indicado pelo SQL_TIMEDATE_FUNCTIONS tipo de informação; o suporte para EXTRACT no SQL-92, por outro lado, é indicado pelo SQL_SQL92_NUMERIC_VALUE_FUNCTIONS tipo de informação.
+ Um aplicativo pode determinar a quais funções escalares um driver dá suporte chamando **SQLGetInfo**. Os tipos de informações são incluídos para as classificações de ODBC e SQL-92 de funções escalares. Como essas classificações são diferentes, o suporte para algumas funções escalares pode ser indicado em tipos de informações que não correspondem ao ODBC e ao SQL-92. Por exemplo, o suporte para extrair em ODBC é indicado pelo tipo de informação SQL_TIMEDATE_FUNCTIONS; o suporte para EXTRAção em SQL-92, por outro lado, é indicado pelo tipo de informação SQL_SQL92_NUMERIC_VALUE_FUNCTIONS.

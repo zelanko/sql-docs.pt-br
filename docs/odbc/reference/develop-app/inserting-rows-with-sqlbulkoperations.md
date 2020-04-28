@@ -15,23 +15,23 @@ ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a6fa384292f02026b8390aa92525144dce6f549b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300106"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Inserir linhas com SQLBulkOperations
-Inserir dados com **o SQLBulkOperations** é semelhante à atualização de dados com **o SQLBulkOperations** porque ele usa dados dos buffers de aplicativos vinculados.  
+A inserção de dados com **SQLBulkOperations** é semelhante à atualização de dados com o **SQLBulkOperations** porque ele usa dados dos buffers de aplicativo associados.  
   
- De modo que cada coluna na nova linha tenha um valor, todas as colunas vinculadas com um valor de comprimento/indicador de SQL_COLUMN_IGNORE e todas as colunas não vinculadas devem aceitar valores NULL ou ter um padrão.  
+ Para que cada coluna na nova linha tenha um valor, todas as colunas associadas com um valor de comprimento/indicador de SQL_COLUMN_IGNORE e todas as colunas não associadas devem aceitar valores nulos ou ter um padrão.  
   
- Para inserir linhas com **SQLBulkOperations,** o aplicativo faz o seguinte:  
+ Para inserir linhas com **SQLBulkOperations**, o aplicativo faz o seguinte:  
   
-1.  Define o atributo de declaração SQL_ATTR_ROW_ARRAY_SIZE ao número de linhas a serem inseridas e coloca os novos valores de dados nos buffers de aplicativos vinculados. Para obter informações sobre como enviar dados longos com **sqlbulkoperations,** consulte [Long Data e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Define o atributo de instrução SQL_ATTR_ROW_ARRAY_SIZE como o número de linhas a serem inseridas e coloca os novos valores de dados nos buffers de aplicativo associados. Para obter informações sobre como enviar dados longos com o **SQLBulkOperations**, consulte [Long data e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Define o valor no buffer de comprimento/indicador de cada coluna conforme necessário. Este é o comprimento do byte dos dados ou SQL_NTS para colunas vinculadas a buffers de seqüência, o comprimento do byte dos dados para colunas vinculadas a buffers binários e SQL_NULL_DATA para que quaisquer colunas sejam definidas como NULL. O aplicativo define o valor no buffer de comprimento/indicador das colunas que devem ser definidas como padrão (se existir) ou NULL (se não o fizer) para SQL_COLUMN_IGNORE.  
+2.  Define o valor no buffer de comprimento/indicador de cada coluna, conforme necessário. Esse é o comprimento de bytes dos dados ou SQL_NTS para colunas vinculadas a buffers de cadeia de caracteres, o comprimento de bytes dos dados para colunas vinculadas a buffers binários e SQL_NULL_DATA para qualquer coluna a ser definida como NULL. O aplicativo define o valor no buffer de comprimento/indicador dessas colunas que devem ser definidas para o padrão (se houver) ou NULL (se não houver) para SQL_COLUMN_IGNORE.  
   
-3.  Chama **SQLBulkOperations** com o argumento *Operação* definido para SQL_ADD.  
+3.  Chama **SQLBulkOperations** com o argumento de *operação* definido como SQL_ADD.  
   
- Após o retorno **do SQLBulkOperations,** a linha atual fica inalterada. Se a coluna de marcadores (coluna 0) estiver vinculada, **a SQLBulkOperations** retorna os marcadores das linhas inseridas no buffer de conjunto de linhas vinculados a essa coluna.
+ Depois que **SQLBulkOperations** retorna, a linha atual é inalterada. Se a coluna de indicador (coluna 0) estiver associada, **SQLBulkOperations** retornará os indicadores das linhas inseridas no buffer de conjunto de linhas associado a essa coluna.

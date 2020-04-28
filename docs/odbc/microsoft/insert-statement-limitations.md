@@ -1,5 +1,5 @@
 ---
-title: INSERIR limitações de instrução | Microsoft Docs
+title: Limitações da instrução INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f903f15ec13baa28a789891c1527dc742daa68ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299996"
 ---
 # <a name="insert-statement-limitations"></a>Limitações da instrução INSERT
-Os dados inseridos são truncados à direita sem aviso se for muito longo para caber na coluna.  
+Os dados inseridos são truncados à direita sem aviso se é muito longo para caber na coluna.  
   
- A tentativa de inserir um valor fora do intervalo do tipo de dados de uma coluna faz com que um NULL seja inserido na coluna.  
+ A tentativa de inserir um valor que está fora do intervalo do tipo de dados de uma coluna faz com que um NULL seja inserido na coluna.  
   
- Quando um dBASE, Microsoft Excel, Paradox ou Textdriver é usado, inserir uma string de comprimento zero em uma coluna realmente insere um NULL.  
+ Quando um dBASE, o Microsoft Excel, o Paradox ou o textdriver é usado, a inserção de uma cadeia de caracteres de comprimento zero em uma coluna insere, na verdade, um NULL.  
   
- Quando o driver do Microsoft Excel é usado, se uma seqüência de string vazia for inserida em uma coluna, a seqüência de string vazia será convertida em UM NULL; uma declaração SELECT pesquisada que é executada com uma seqüência de string vazia na cláusula WHERE não terá sucesso nessa coluna.  
+ Quando o driver do Microsoft Excel for usado, se uma cadeia de caracteres vazia for inserida em uma coluna, a cadeia de caracteres vazia será convertida em NULL; uma instrução SELECT pesquisada que é executada com uma cadeia de caracteres vazia na cláusula WHERE não terá sucesso nessa coluna.  
   
- Uma tabela não é updatable pelo motorista do Paradoxo sob duas condições:  
+ Uma tabela não é atualizável pelo driver do Paradox em duas condições:  
   
--   Quando um índice único não é definido na tabela. Isso não é verdade para uma tabela vazia, que pode ser atualizada com uma única linha, mesmo que um índice único não seja definido na tabela. Se uma única linha for inserida em uma tabela vazia que não tenha um índice único, um aplicativo não poderá criar um índice único ou inserir dados adicionais após a inserção da linha única.  
+-   Quando um índice exclusivo não está definido na tabela. Isso não é verdadeiro para uma tabela vazia, que pode ser atualizada com uma única linha, mesmo que um índice exclusivo não esteja definido na tabela. Se uma única linha for inserida em uma tabela vazia que não tem um índice exclusivo, um aplicativo não poderá criar um índice exclusivo ou inserir dados adicionais depois que a linha única tiver sido inserida.  
   
--   Se o Borland Database Engine não for implementado, somente serão permitidas instruções de leitura e apêndice na tabela Paradoxo.  
+-   Se o Borland Mecanismo de Banco de Dados não for implementado, somente instruções Read e Append serão permitidas na tabela do Paradox.  
   
- Quando o driver de texto é usado, os valores NULL são representados por uma seqüência de string acolchoada em branco em arquivos de comprimento fixo, mas são representados por nenhum espaço em arquivos delimitados. Por exemplo, na seguinte linha contendo três campos, o segundo campo é um valor NULL:  
+ Quando o driver de texto é usado, os valores nulos são representados por uma cadeia de caracteres preenchida em branco em arquivos de comprimento fixo, mas são representados sem espaços em arquivos delimitados. Por exemplo, na linha a seguir contendo três campos, o segundo campo é um valor nulo:  
   
 ```  
 "Smith:,, 123  
 ```  
   
- Quando o driver texto é usado, todos os valores da coluna podem ser acolchoados com espaços de liderança. O comprimento de qualquer linha deve ser menor ou igual a 65.543 bytes.
+ Quando o driver de texto é usado, todos os valores de coluna podem ser preenchidos com espaços à esquerda. O comprimento de qualquer linha deve ser menor ou igual a 65.543 bytes.

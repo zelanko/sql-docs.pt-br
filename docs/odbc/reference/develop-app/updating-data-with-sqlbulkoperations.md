@@ -1,5 +1,5 @@
 ---
-title: Atualização de dados com SQLBulkOperations | Microsoft Docs
+title: Atualizando dados com o SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298480"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Atualizar dados com SQLBulkOperations
-Os aplicativos podem executar operações de atualização em massa, exclusão, busca ou inserção na tabela subjacente na fonte de dados com uma chamada para **SQLBulkOperations**. Chamar **a SQLBulkOperations** é uma alternativa conveniente para construir e executar uma declaração SQL. Ele permite que um driver oDBC suporte a atualizações posicionadas mesmo quando a fonte de dados não suporta instruções SQL posicionadas. Faz parte do paradigma de alcançar o acesso completo ao banco de dados por meio de chamadas de função.  
+Os aplicativos podem executar operações de atualização, exclusão, busca ou inserção em massa na tabela subjacente na fonte de dados com uma chamada para **SQLBulkOperations**. Chamar **SQLBulkOperations** é uma alternativa conveniente para construir e executar uma instrução SQL. Ele permite que um driver ODBC dê suporte a atualizações posicionadas mesmo quando a fonte de dados não oferece suporte a instruções SQL posicionadas. Ele faz parte do paradigma da obtenção de acesso completo ao banco de dados por meio de chamadas de função.  
   
- **SQLBulkOperations** opera no conjunto de linhas atual e só pode ser usado após uma chamada para **SQLFetch** ou **SQLFetchScroll**. O aplicativo especifica as linhas para atualizar, excluir ou atualizar, registrando seus marcadores. O driver recupera os novos dados para que as linhas sejam atualizadas ou os novos dados a serem inseridos na tabela subjacente, a partir dos buffers de conjunto de linhas.  
+ **SQLBulkOperations** opera no conjunto de linhas atual e pode ser usado somente após uma chamada para **SQLFetch** ou **SQLFetchScroll**. O aplicativo especifica as linhas a serem atualizadas, excluídas ou atualizadas armazenando em cache seus indicadores. O driver recupera os novos dados para as linhas a serem atualizadas ou os novos dados a serem inseridos na tabela subjacente, dos buffers de conjunto de linhas.  
   
- O tamanho do conjunto de linhas a ser usado pelo **SQLBulkOperations** é definido por uma chamada para **SQLSetStmtAttr** com um argumento *de atributo* de SQL_ATTR_ROW_ARRAY_SIZE. Ao contrário **do SQLSetPos,** que usa um novo tamanho de conjunto de linhas somente após uma chamada para **SQLFetch** ou **SQLFetchScroll,** **a SQLBulkOperations** usa o novo tamanho de conjunto de linhas após a chamada para **SQLSetStmtAttr**.  
+ O tamanho do conjunto de linhas a ser usado pelo **SQLBulkOperations** é definido por uma chamada para **SQLSetStmtAttr** com um argumento de *atributo* de SQL_ATTR_ROW_ARRAY_SIZE. Ao contrário de **SQLSetPos**, que usa um novo tamanho de conjunto de linhas somente após uma chamada para **SQLFetch** ou **SQLFetchScroll**, **SQLBulkOperations** usa o novo tamanho do conjunto de linhas após a chamada para **SQLSetStmtAttr**.  
   
- Como a maior parte da interação com bancos de dados relacionais é feita através do SQL, **o SQLBulkOperations** não é amplamente suportado. No entanto, um driver pode facilmente emulá-lo construindo e executando uma instrução **UPDATE,** **DELETE**ou **INSERT.**  
+ Como a maior parte da interação com bancos de dados relacionais é feita por meio do SQL, o **SQLBulkOperations** não é amplamente suportado. No entanto, um driver pode facilmente emular, construindo e executando uma instrução **Update**, **delete**ou **Insert** .  
   
- Para determinar quais operações o **SQLBulkOperation** suporta, um aplicativo chama **SQLGetInfo** com a opção de SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 (dependendo do tipo do cursor).  
+ Para determinar a quais operações o **SQLBulkOperation** dá suporte, um aplicativo chama **SQLGetInfo** com a opção SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 informações (dependendo do tipo do cursor).  
   
  Esta seção contém os seguintes tópicos.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'SQL a C: Intervalos diurnos | Microsoft Docs'
+title: 'SQL to C: intervalos de tempo de dia | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1318da5285ba2384dd23e4c235e698aa72c7658e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296466"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL para C: intervalos de tempo-dia
 
-Os identificadores para os tipos de dados ODBC SQL de intervalo diurno são os seguintes:
+Os identificadores para os tipos de dados SQL ODBC do intervalo de tempo de dia são os seguintes:
 
 - SQL_INTERVAL_DAY
 - SQL_INTERVAL_DAY_TO_MINUTE
@@ -37,23 +37,23 @@ Os identificadores para os tipos de dados ODBC SQL de intervalo diurno são os s
 - SQL_INTERVAL_DAY_TO_HOUR
 - SQL_INTERVAL_MINUTE_TO_SECOND
 
-A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL de intervalo diurno podem ser convertidos. Para obter uma explicação das colunas e termos da tabela, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).
+A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL do intervalo de tempo de dia podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).
 
-|Identificador de tipo C|Teste|**TargetValuePtr*|**Strlen_or_indptr*|SQLSTATE|  
+|Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|Todos os tipos de intervalo C diurno|Porção de campos de arrasto não truncados<br /><br /> Porção de campos de arrasto truncados<br /><br /> A precisão líder do alvo não é grande o suficiente para conter dados da fonte|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Duração dos dados<br /><br /> Duração dos dados<br /><br /> Indefinido|n/d<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|A precisão do intervalo era um único campo e os dados foram convertidos sem truncação<br /><br /> Precisão de intervalo foi um único campo e truncado fracionado<br /><br /> Precisão de intervalo era um único campo e truncado inteiro<br /><br /> A precisão do intervalo não era um único campo|Dados<br /><br /> Dados truncados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Duração dos dados<br /><br /> Duração dos dados<br /><br /> Tamanho do tipo de dados C|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|Comprimento de byte de dados <= *BufferLength*<br /><br /> Comprimento de byte de dados > *BufferLength*|Dados<br /><br /> Indefinido|Duração dos dados<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_CHAR|Comprimento do byte do caractere < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição ao fracionado) < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição ao fracionado) >= *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Comprimento do caractere < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição ao fracionado) < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição ao fracionado) >= *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|Todos os tipos de intervalo de C de dia-hora|Parte dos campos à direita não truncada<br /><br /> Parte dos campos à direita truncada<br /><br /> A precisão inicial do destino não é grande o suficiente para manter os dados da origem|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|A precisão do intervalo era um único campo e os dados foram convertidos sem truncamento<br /><br /> A precisão do intervalo era um único campo e uma fração truncada<br /><br /> A precisão do intervalo era um único campo e um todo truncado<br /><br /> A precisão do intervalo não era um campo único|Dados<br /><br /> Dados truncados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Comprimento dos dados<br /><br /> Comprimento dos dados<br /><br /> Tamanho do tipo de dados C|n/d<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|Comprimento de bytes de dados <= *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|Dados<br /><br /> Indefinido|Comprimento dos dados<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_CHAR|Comprimento de bytes de caracteres < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição a fracionários) < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição a fracionários) >= *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Comprimento do caractere < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição a fracionários) < *BufferLength*<br /><br /> Número de dígitos inteiros (em oposição a fracionários) >= *BufferLength*|Dados<br /><br /> Dados truncados<br /><br /> Indefinido|Tamanho do tipo de dados C<br /><br /> Tamanho do tipo de dados C<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
   
- [a] Um tipo SQL de intervalo diurno pode ser convertido para qualquer tipo de intervalo diurno C.  
+ [a] um tipo SQL de intervalo de tempo de dia pode ser convertido em qualquer tipo de intervalo de dia C.  
   
- [b] Se a precisão do intervalo for um único campo (um de DIA, HORA, MINUTO ou SEGUNDO), o tipo SQL de intervalo pode ser convertido para qualquer numérico exato (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG ou SQL_C_NUMERIC).  
+ [b] se a precisão do intervalo for um único campo (um dos dias, hora, minuto ou segundo), o tipo SQL do intervalo poderá ser convertido em qualquer numérico exato (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG ou SQL_C_NUMERIC).  
   
-A conversão padrão de um tipo SQL de intervalo é para o tipo de dados de intervalo C correspondente. Em seguida, o aplicativo vincula a coluna ou parâmetro (ou define o campo SQL_DESC_DATA_PTR no registro apropriado do ARD) para apontar para a estrutura de SQL_INTERVAL_STRUCT inicializada (ou passa um ponteiro para a estrutura SQL_ INTERVAL_STRUCT como o argumento *TargetValuePtr* em uma chamada para **SQLGetData**).  
+A conversão padrão de um tipo SQL de intervalo é para o tipo de dados de intervalo de C correspondente. Em seguida, o aplicativo associa a coluna ou o parâmetro (ou define o campo SQL_DESC_DATA_PTR no registro apropriado do ARD) para apontar para a estrutura de SQL_INTERVAL_STRUCT inicializada (ou passa um ponteiro para a estrutura de INTERVAL_STRUCT SQL_ como o argumento *TargetValuePtr* em uma chamada para **SQLGetData**).  
   
-O exemplo a seguir demonstra como transferir dados de uma coluna de tipo SQL_INTERVAL_DAY_TO_MINUTE para a estrutura SQL_INTERVAL_STRUCT de tal forma que ele volte como um intervalo DAY_TO_HOUR.  
+O exemplo a seguir demonstra como transferir dados de uma coluna do tipo SQL_INTERVAL_DAY_TO_MINUTE para a estrutura de SQL_INTERVAL_STRUCT de forma que ele volte como um intervalo de DAY_TO_HOUR.  
 
 ```cpp
 SQL_INTERVAL_STRUCT is;  

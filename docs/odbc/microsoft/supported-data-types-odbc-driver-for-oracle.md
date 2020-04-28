@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados suportados (Driver ODBC para Oracle) | Microsoft Docs
+title: Tipos de dados com suporte (driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301111"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Tipos de dados com suporte (Driver ODBC para Oracle)
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- O Driver ODBC para Oracle suporta todos os tipos de dados Oracle 7.3; no entanto, ele não suporta nenhum dos novos tipos de dados Oracle8 listados aqui.  
+ O ODBC driver for Oracle dá suporte a todos os tipos de dados do Oracle 7,3; no entanto, ele não dá suporte a nenhum dos novos tipos de dados Oracle8 listados aqui.  
   
-|Tipo de dados|Oracle 7.3|Oráculo8|  
+|Tipo de dados|Oracle 7,3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|n/d|Sem suporte|  
 |BLOB|n/d|Sem suporte|  
@@ -46,4 +46,4 @@ ms.locfileid: "81301111"
 |MLSLABEL|Sem suporte.|Sem suporte.|  
   
 > [!NOTE]  
->  Para obter mais informações sobre o tamanho permitido da coluna VARCHAR, consulte [varchar tamanho da coluna](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) neste guia.
+>  Para obter mais informações sobre o tamanho permitido da coluna VARCHAR, consulte [varchar Column size](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) neste guia.

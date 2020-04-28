@@ -1,5 +1,5 @@
 ---
-title: Use colunas de dados de execução (ODBC) | Microsoft Docs
+title: Usar colunas de dados em execução (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78bfa4cd343fd13be121b660de700ef670f24adb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293726"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gerenciar colunas Text e Image – Usar colunas de dados em execução
@@ -45,15 +45,15 @@ ms.locfileid: "81293726"
 ## <a name="example"></a>Exemplo  
  O exemplo mostra como ler dados de caracteres variáveis de SQL_LONG usando o SQLGetData. Este exemplo não tem suporte em IA64.  
   
- Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo adventureworks da página inicial [do Microsoft SQL Server Samples and Community Projects.)](https://go.microsoft.com/fwlink/?LinkID=85384) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
+ Será necessária uma fonte de dados ODBC chamada AdventureWorks, cujo banco de dados padrão é o banco de dados de exemplo AdventureWorks. (Você pode baixar o banco de dados de exemplo AdventureWorks do [Microsoft SQL Server exemplos e projetos da comunidade](https://go.microsoft.com/fwlink/?LinkID=85384) Home Page.) Essa fonte de dados deve ser baseada no driver ODBC fornecido pelo sistema operacional (o nome do driver é "SQL Server"). Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]primeira ( ) listagem de código para criar a tabela usada pela amostra.  
+ Execute a primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para criar a tabela usada pelo exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib. Em seguida, execute o programa.  
   
- Execute a [!INCLUDE[tsql](../../includes/tsql-md.md)]terceira ( ) listagem de código para excluir a tabela usada pela amostra.  
+ Execute a terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () para excluir a tabela usada pelo exemplo.  
   
 ```  
 use AdventureWorks  
@@ -187,6 +187,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciamento de texto e imagens Colunas como fazer &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Tópicos de instruções sobre como gerenciar colunas de texto e imagem &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

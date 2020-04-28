@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301007"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadados – parâmetro e conjunto de linhas
@@ -44,8 +44,8 @@ ms.locfileid: "81301007"
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Definir|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Liberada|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Liberada|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Definir|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Definir|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Definir|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Definir|  
   
  Observe que em alguns casos os intervalos de valores não são contínuos. Isso se deve à adição de um ponto decimal quando a precisão fracionária é maior que zero.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "81301007"
   
  O parâmetro *bPrecision* é ignorado.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos do protocolo TDS herdados usando os nomes de tipo específicos do provedor "**datetime**" e "**smalldatetime**". Quando estiver conectado a servidores do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior), o formato "**datetime2**" será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando o nome do tipo for "**datetime2**" ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se os nomes "**datetime**" ou "**smalldatetime**" específicos do provedor forem usados. Caso contrário, as apelações devem garantir que *o bScale* seja definido corretamente. Os aplicativos atualizados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MDAC [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e do Cliente Nativo a partir desse uso "DBTYPE_DBTIMESTAMP" falharão se não definirem *bScale* corretamente. Quando estiver conectado a instâncias do servidor anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um valor *bScale* diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" será considerado um erro e E_FAIL será retornado.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" é ignorado ao enviar dados ao servidor. Os aplicativos podem forçar o uso de tipos do protocolo TDS herdados usando os nomes de tipo específicos do provedor "**datetime**" e "**smalldatetime**". Quando estiver conectado a servidores do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior), o formato "**datetime2**" será usado e uma conversão de servidor implícita ocorrerá, se necessário, quando o nome do tipo for "**datetime2**" ou "DBTYPE_DBTIMESTAMP". *bScale* será ignorado se os nomes "**datetime**" ou "**smalldatetime**" específicos do provedor forem usados. Caso contrário, aplicativos deverá garantir que *bScale* esteja definido corretamente. Os aplicativos atualizados do MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Native [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Client a partir desse uso "DBTYPE_DBTIMESTAMP" falharão se não definirem *bScale* corretamente. Quando estiver conectado a instâncias do servidor anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], um valor *bScale* diferente de 0 ou 3 com "DBTYPE_DBTIMESTAMP" será considerado um erro e E_FAIL será retornado.  
   
- Quando iCommandWithParameters::SetParameterInfo não é chamado, o provedor imita o tipo de servidor do tipo de vinculação conforme especificado em IAccessor::CreateAccessor da seguinte forma:  
+ Quando ICommandWithParameters:: SetParameterInfo não é chamado, o provedor imples o tipo de servidor do tipo de associação, conforme especificado em IAccessor:: createaccesser da seguinte maneira:  
   
 |Tipo de associação|*pwszDataSourceType*<br /><br /> (específico do provedor)|  
 |------------------|----------------------------------------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Sintaxe Literal Numérica | Microsoft Docs
+title: Sintaxe de literal numérico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299856"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxe literal numérica
-A seguinte sintaxe é usada para literais numéricos em ODBC:  
+A sintaxe a seguir é usada para literais numéricos no ODBC:  
   
- *numérico-literal* ::= *assinado-numérico-literal &#124; não assinado-numérico-literal*  
+ *numeric-literal* :: = *sinal-numérico-literal &#124; não assinado-numeric-literal*  
   
- *assinado-numérico-literal* ::= [*sinal*] *não assinado-numérico-literal*  
+ *sinal-numérico-literal* :: = [*Sign*] não *assinado-numeric-literal*  
   
- *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; aproxima-numérico-literal*  
+ *não atribuído-numérico-literal* :: = *Exact-numeric-literal &#124; aproximado numérico-literal*  
   
- *exato-numérico-literal* ::= *não-assinado-inteiro* [*período**[não assinado-inteiro*]] *&#124;período sem inteiro assinado*  
+ *exatos-numérico-literal* :: *= não assinado-inteiro* [*período*[*sem sinal-inteiro*]] *&#124;período sem sinal-inteiro*  
   
- *sinal* ::= *mais-sinal &#124; menos-sinal*  
+ *Sign* :: = sinal *de mais &#124; sinal de menos-sinal*  
   
- expoente *aproxima-numérico-literal* ::= *expoente mantissa E*  
+ *aproximado-numérico-literal* :: = *mantissa E expoente*  
   
- *mantissa* ::= *exata-numérica-literal*  
+ *mantissa* :: = *Exact-numeric-literal*  
   
- *expoente* ::= *inteiro assinado*  
+ *expoente* :: = *com sinal inteiro*  
   
- *inteiro assinado* ::= [*sinal*] *inassinado-inteiro*  
+ sinal *inteiro* :: = [*sinal*] *não assinado-inteiro*  
   
- *indeferido-inteiro* ::= *dígito...*  
+ *sem sinal-inteiro* :: = *dígito..* .  
   
- *plus-sign* ::=*+*  
+ sinal *de mais* :: =*+*  
   
- *menos sinal* ::= -  
+ sinal *de subtração* :: =-  
   
- *dígito* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *dígito* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *período* ::= .
+ *período* :: =.

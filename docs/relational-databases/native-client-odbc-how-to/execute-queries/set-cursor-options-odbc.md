@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01847d48b4f8791f5171e05284eb6eabd62a0af7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293804"
 ---
 # <a name="set-cursor-options-odbc"></a>Definir opções de cursor (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Para definir as opções do cursor, ligue para [sqlsetstmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir ou [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) para obter as opções de declaração que controlam o comportamento do cursor.  
+  Para definir opções de cursor, chame [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir ou [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) para obter as opções de instrução que controlam o comportamento do cursor.  
   
 |*Atributo*|Especifica|  
 |-----------------|---------------|  
@@ -60,6 +60,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Executando consultas como fazer tópicos &#40;&#41;da ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Tópicos de instruções sobre como executar consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

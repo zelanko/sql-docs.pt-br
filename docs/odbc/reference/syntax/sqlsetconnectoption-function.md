@@ -20,28 +20,28 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301591"
 ---
 # <a name="sqlsetconnectoption-function"></a>Função SQLSetConnectOption
 **Conformidade**  
- Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
+ Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
   
  **Resumo**  
- Em ODBC 3 *.x,* a função ODBC 2.0 **SQLSetConnectOption** foi substituída por **SQLSetConnectAttr**. Para obter mais informações, veja [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ No ODBC 3 *. x*, a função **SQLSetConnectOption** do ODBC 2,0 foi substituída por **SQLSetConnectAttr**. Para obter mais informações, veja [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
 > [!NOTE]
->  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um aplicativo ODBC 2 *.x* estiver trabalhando com um driver ODBC 3 *.x,* consulte [Mapeamento de Funções Depreciadas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
+>  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um aplicativo ODBC 2 *. x* está trabalhando com um driver ODBC 3 *. x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>Comentários  
- Consulte [As informações de 64 bits do ODBC,](../../../odbc/reference/odbc-64-bit-information.md)se o aplicativo for executado em um sistema operacional de 64 bits.  
+ Consulte [informações de ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md), se seu aplicativo for executado em um sistema operacional de 64 bits.  
   
 > [!NOTE]  
->  O atributo SQL_ASYNC_DBC_FUNCTION_ENABLE introduzido no ODBC 3.8 não é suportado pelo **SQLSetConnectOption**. Os aplicativos que usam a operação assíncrona no cabo de conexão devem usar **SQLSetConnectAttr**.  
+>  O atributo SQL_ASYNC_DBC_FUNCTION_ENABLE introduzido no ODBC 3,8 não é suportado pelo **SQLSetConnectOption**. Os aplicativos que usam a operação assíncrona no identificador de conexão devem usar **SQLSetConnectAttr**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: Excluir uma Fonte de Dados (ODBC) | Microsoft Docs
+title: Excluir uma fonte de dados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294458"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar o Driver ODBC do SQL Server – Excluir uma fonte de dados
@@ -25,20 +25,20 @@ ms.locfileid: "81294458"
 
   Antes de usar os aplicativos ODBC com o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você deve saber como atualizar a versão dos procedimentos armazenados de catálogo em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e adicionar, excluir e testar as fontes de dados.  
   
-  Você pode excluir uma fonte de dados usando o Administrador ODBC, programáticamente (usando [SQLConfigDataSource),](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)ou excluindo um arquivo (se um nome de origem de dados de arquivo).  
+  Você pode excluir uma fonte de dados usando o Administrador ODBC, programaticamente (usando [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)) ou excluindo um arquivo (se for um nome de fonte de dados de arquivo).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para excluir uma fonte de dados usando o Administrador de ODBC  
   
-1.  No **Painel de Controle,** abra **ferramentas administrativas**e clique duas vezes em **Fontes de Dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits).** Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
+1.  No **painel de controle**, **abra Ferramentas administrativas**e clique duas vezes em **fontes de dados ODBC (64 bits)** ou **fontes de dados ODBC (32 bits)**. Alternativamente, você pode executar odbcad32.exe no prompt de comando.  
   
-2.  Clique na guia **DSN do usuário,** **DSN do sistema**ou na guia **DSN de arquivo.**  
+2.  Clique na guia **DSN do usuário**, DSN do **sistema**ou DSN de **arquivo** .  
   
-3.  Selecione a fonte de dados para excluir.  
+3.  Selecione a fonte de dados a ser excluída.  
   
-4.  Clique **em Remover**e confirme a exclusão.  
+4.  Clique em **remover**e confirme a exclusão.  
 
 ## <a name="example"></a>Exemplo  
- Para excluir programáticamente uma fonte de dados, ligue para [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN ou ODBC_REMOVE_SYS_DSN como segundo parâmetro.  
+ Para excluir programaticamente uma fonte de dados, chame [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN ou ODBC_REMOVE_SYS_DSN como o segundo parâmetro.  
   
  O exemplo a seguir mostra como você pode excluir programaticamente uma fonte de dados.  
   

@@ -14,19 +14,19 @@ ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9da75702275959b48d4965189c9ef5cd856491ff
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300736"
 ---
 # <a name="setting-the-date-format-on-connection"></a>Configurar o formato de data na conexão
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- A nova versão do Microsoft ODBC Driver for Oracle não define automaticamente o formato de data para campos de data Oracle. Anteriormente, quando o driver `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`se conectava, ele usava .  
+ A nova versão do Microsoft ODBC driver for Oracle não define automaticamente o formato de data para campos de data do Oracle. Anteriormente, quando o driver estava conectado, `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`ele era usado.  
   
- Para definir o formato da data, ligue para ALTER SESSION SET e execute a inserção. Por exemplo:  
+ Para definir o formato de data, chame ALTER SESSION SET e, em seguida, execute a inserção. Por exemplo:  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

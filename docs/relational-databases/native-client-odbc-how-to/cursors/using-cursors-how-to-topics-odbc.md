@@ -1,5 +1,5 @@
 ---
-title: Usando cursors como fazer tópicos (ODBC) | Microsoft Docs
+title: Tópicos de instruções sobre o uso de cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 959110f3e240553bd94dab6c26e208b40c8d43ef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294059"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Tópicos de instruções sobre o uso de cursores (ODBC)
@@ -27,11 +27,11 @@ ms.locfileid: "81294059"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Use cursors &#40;o&#41;Da ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [Usar cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Use o&#41;de &#40;de ligação de conjunto de linhas o d'água&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Usar Associação de conjunto de linhas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Buscar e atualizar conjuntos de linhas &#40;o&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Buscar e atualizar conjuntos de linhas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

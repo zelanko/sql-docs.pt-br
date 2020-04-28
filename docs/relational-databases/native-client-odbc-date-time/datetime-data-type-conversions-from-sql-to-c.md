@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 83e4a72ba995d4fff796cdf8ec081a9ef9828936
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301740"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversões do tipo de dados datetime do SQL para C
@@ -30,12 +30,12 @@ ms.locfileid: "81301740"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
+|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_TYPE_DATE|OK|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Legenda dos símbolos  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81301740"
 |OK|Nenhum problema na conversão.|  
 |1|Regras anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se aplicam.|  
 |2|Os espaços à esquerda e à direita são ignorados.|  
-|3|A cadeia de caracteres é analisada em date, time, timezone ou timezoneoffset e permite até nove dígitos para segundos fracionários. Caso timezoneoffset seja analisado, a hora é convertida no fuso horário do cliente. Se ocorrer um erro durante essa conversão, um registro de diagnóstico será gerado com o SQLSTATE 22018 e a mensagem "Estouro de campo Datetime".|  
+|3|A cadeia de caracteres é analisada em date, time, timezone ou timezoneoffset e permite até nove dígitos para segundos fracionários. Caso timezoneoffset seja analisado, a hora é convertida no fuso horário do cliente. Se ocorrer um erro durante essa conversão, um registro de diagnóstico será gerado com SQLSTATE 22018 e a mensagem "estouro de campo de data/hora".|  
 |4|Caso o valor não seja date, timestamp ou timestampoffset válido, um registro de diagnóstico é gerado com SQLSTATE 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão".|  
 |5|Caso a hora seja diferente de zero, um registro de diagnóstico é gerado com SQLSTATE 01S07 e a mensagem "Truncamento fracionário".|  
 |6|Caso o valor não seja time, timestamp ou timestampoffset válido, um registro de diagnóstico é gerado com SQLSTATE 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão".|  
@@ -65,9 +65,9 @@ ms.locfileid: "81301740"
 |21|Caso o buffer seja grande o suficiente para acomodar um SQL_SS_TIMESTAMPOFFSET_STRUCT, o valor é retornado como SQL_SS_TIMESTAMPOFFSET_STRUCT. Caso contrário, um registro de diagnóstico é gerado com SQLSTATE 22003 e a mensagem "Valor numérico fora do intervalo".|  
 |22|O valor é convertido no fuso horário do cliente antes da extração da data. Isso proporciona consistência em relação às demais conversões com tipos timestampoffset. Se ocorrer um erro durante esta conversão, um registro de diagnóstico será gerado com SQLSTATE 22008 e a mensagem "Estouro do campo datetime". Isso pode resultar em uma data diferente do valor obtido pelo truncamento simples.|  
   
- A tabela neste tópico descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se o tipo de servidor especificado no SQLBindParameter não corresponder ao tipo real no servidor, uma conversão implícita será realizada pelo servidor e o tipo retornado ao cliente corresponderá ao tipo especificado através do SQLBindParameter. Isso pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes das listadas na tabela anterior. Por exemplo, quando uma data padrão precisar ser fornecida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1, e não a data atual.  
+ A tabela neste tópico descreve conversões entre o tipo retornado para o cliente e o tipo na associação. Para parâmetros de saída, se o tipo de servidor especificado em SQLBindParameter não corresponder ao tipo real no servidor, uma conversão implícita será executada pelo servidor e o tipo retornado para o cliente corresponderá ao tipo especificado por meio de SQLBindParameter. Isso pode levar a resultados de conversão inesperados quando as regras de conversão do servidor são diferentes daquelas listadas na tabela anterior. Por exemplo, quando uma data padrão precisar ser fornecida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1, e não a data atual.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Melhorias de data e hora &#40;&#41;da ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Melhorias de data e hora &#40;&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

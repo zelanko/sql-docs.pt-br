@@ -14,32 +14,32 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b1fb577e7b08f6ef332ed35f6d275a5f7ce543ba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292946"
 ---
 # <a name="oracle-software-patches"></a>Patches de software da Oracle
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- Patches para os produtos do servidor Oracle e seu componente cliente são necessários para o bom funcionamento de vários produtos e tecnologias da Microsoft, incluindo o Microsoft ODBC Driver for Oracle, o Microsoft OLE DB Provider for Oracle, Internet Information Services (IIS), Component Services (ou Microsoft Transaction Server, se você estiver usando o Windows NT), e assim por diante.  
+ Os patches para os produtos de servidor Oracle e seu componente de cliente são necessários para o funcionamento adequado de vários produtos e tecnologias da Microsoft, incluindo o Microsoft ODBC driver for Oracle, o Provedor Microsoft OLE DB para Oracle, o Serviços de Informações da Internet (IIS), os serviços de componentes (ou o Microsoft Transaction Server, se você estiver usando o Windows NT) e assim por diante.  
   
 > [!NOTE]  
->  As seguintes instruções podem não ser completamente precisas porque o site Oracle FTP está sujeito a alterações.  
+>  As instruções a seguir podem não ser completamente precisas porque o site FTP Oracle está sujeito a alterações.  
   
 ### <a name="to-download-the-oracle-software-patches"></a>Para baixar os patches de software Oracle  
   
-1.  Conecte-se ao site público da FTP em oracle-ftp.oracle.com. O ID do usuário é "anônimo" e a senha é seu endereço de e-mail.  
+1.  Conecte-se ao site FTP público em oracle-ftp.oracle.com. A ID de usuário é "anônima" e a senha é seu endereço de email.  
   
-2.  Navegue até o seguinte diretório: /server/wgt_tech/server/windowsNT.  
+2.  Navegue até o seguinte diretório:/Server/wgt_tech/server/windowsNT.  
   
-3.  Para baixar patches mais relevantes para windows 95, Windows 98 e Windows NT/Windows 2000, navegue até o subdiretório para a sua versão do Oracle - 7.3 ou 8.0. Os dois subdiretórios são /73patchsets e /80patchsets.  
+3.  Para baixar patches mais relevantes para o Windows 95, Windows 98 e Windows NT/Windows 2000, navegue até o subdiretório da sua versão do Oracle-7,3 ou 8,0. Os dois subdiretórios são/73patchsets e/80patchsets.  
   
-4.  Para baixar patches para a tecnologia de rede da Oracle, seja SQL*Net ou Net8, navegue até o seguinte diretório: /rede.  
+4.  Para baixar patches para a tecnologia de rede da Oracle, seja SQL * net ou Net8, navegue até o seguinte diretório:/Network.  
   
- Acessar este site FTP a partir do seu navegador da Web pode não funcionar. Se você tiver problemas, tente usar um cliente FTP "tradicional" ou use o prompt de comando DOS.  
+ O acesso a esse site FTP do navegador da Web pode não funcionar. Se você tiver problemas, tente usar um cliente FTP "tradicional" ou usar o prompt de comando do DOS.  
   
 > [!NOTE]  
->  Como o Oracle corrige bugs nas versões atuais e, em seguida, os adapta para versões anteriores usando patches de software, é recomendável que você baixe o patch mais recente disponível. Isso é especialmente verdadeiro para os componentes do Oracle Server Client. Se você tiver dúvidas sobre a instalação desses patches, entre em contato com o Suporte Oracle.
+>  Como o Oracle corrige os bugs nas versões atuais e os recorre a versões anteriores usando patches de software, é recomendável que você baixe o patch mais recente disponível. Isso é especialmente verdadeiro para os componentes do cliente do servidor Oracle. Se você tiver dúvidas sobre como instalar esses patches, entre em contato com o suporte da Oracle.

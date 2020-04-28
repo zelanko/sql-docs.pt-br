@@ -1,5 +1,5 @@
 ---
-title: Isolamento de Transações | Microsoft Docs
+title: Isolamento de transação | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 11ece337b06632df82d81dbbc058ff120f25adb4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298018"
 ---
 # <a name="transaction-isolation"></a>Isolamento de transação
-*O isolamento da transação* refere-se ao grau de interação entre múltiplas transações simultâneas. Para ver por que isso é importante, você precisará primeiro olhar para a idéia de serializabilidade.  
+O *isolamento de transação* refere-se ao grau de interação entre várias transações simultâneas. Para ver por que isso é importante, você precisará primeiro examinar a ideia de serialização.  
   
  Esta seção contém os seguintes tópicos.  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3bad30dbe0257d341ad91e2ed60bf698ca52dc8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295749"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81295749"
 
   Este exemplo compila uma tabela com três colunas: uma coluna esparsa, uma coluna que não é esparsa e uma coluna de conjunto de colunas. Em seguida, o exemplo exibe o sinalizador OLE DB mostrando os metadados da coluna e do catálogo paras as colunas que não são esparsas e para a coluna do conjunto de colunas.  
   
- Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, consulte [Suporte a colunas esparsas no Cliente Nativo do Servidor SQL](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas em SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  

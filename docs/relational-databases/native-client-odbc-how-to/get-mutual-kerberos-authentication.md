@@ -1,5 +1,5 @@
 ---
-title: Obtenha autenticação Mútua Kerberos | Microsoft Docs
+title: Obter autenticação Kerberos mútua | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301106"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obter autenticação Kerberos mútua
@@ -25,7 +25,7 @@ ms.locfileid: "81301106"
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações, consulte [O nome principal do serviço &#40;spn&#41; suporte em conexões com o cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obter mais informações, consulte [nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemplo  
  Se você compilar e executar esse exemplo como um aplicativo de 32 bits em um sistema operacional de 64 bits, deverá criar a fonte de dados ODBC com o Administrador ODBC em %windir%\SysWOW64\odbcad32.exe.  

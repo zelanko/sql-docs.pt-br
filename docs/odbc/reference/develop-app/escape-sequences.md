@@ -15,15 +15,15 @@ ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298706"
 ---
 # <a name="escape-sequences"></a>Sequências de escape
-O ODBC define seqüências de fuga contendo gramática padrão para literals de data, hora, carimbo de data e intervalo de data, chamadas de função escalar, caracteres de fuga **de** predicado, junções externas e chamadas de procedimento. As aplicações interoperáveis devem usar essas seqüências sempre que possível.  
+O ODBC define as sequências de escape contendo a gramática padrão para os literais de data, hora, carimbo de data e hora e intervalo de DateTime, chamadas de função escalares, **como** caracteres de escape de predicado, junções externas e chamadas de procedimento. Aplicativos interoperáveis devem usar essas sequências sempre que possível.  
   
- Para determinar se um driver suporta as seqüências de escape para literals de data, hora, carimbo de data ou intervalo de data, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados suportar um tipo de dados de data, hora, carimbo de data ou intervalo de data, ele também deve suportar a seqüência de fuga correspondente. Para determinar se as outras seqüências de fuga são suportadas, um aplicativo chama **SQLGetInfo**.  
+ Para determinar se um driver dá suporte a sequências de escape para os literais de data, hora, timestamp ou intervalo de DateTime, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados der suporte a um tipo de dados de data, hora, timestamp ou intervalo de DateTime, ele também deverá oferecer suporte à sequência de escape correspondente. Para determinar se há suporte para as outras sequências de escape, um aplicativo chama **SQLGetInfo**.  
   
- Para obter mais informações, consulte [Seqüências de fuga no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md), mais tarde nesta seção.
+ Para obter mais informações, consulte [sequências de escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md), mais adiante nesta seção.

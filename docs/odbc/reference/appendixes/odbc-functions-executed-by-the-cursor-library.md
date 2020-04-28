@@ -1,5 +1,5 @@
 ---
-title: Funções ODBC executadas pela Biblioteca Cursor | Microsoft Docs
+title: Funções ODBC executadas pela biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298226"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>Funções ODBC executadas pela biblioteca de cursores
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca do cursor executa as seguintes funções. Quando um aplicativo chama uma função nesta lista, o Gerenciador de driver invoca a biblioteca do cursor, não o driver. Observe que a biblioteca do cursor pode chamar o driver ao executar a função.  
+ A biblioteca de cursores executa as funções a seguir. Quando um aplicativo chama uma função nessa lista, o Gerenciador de driver invoca a biblioteca de cursores, não o driver. Observe que a biblioteca de cursores pode chamar o driver ao executar a função.  
   
 |||  
 |-|-|  
-|**SQLBindCol**|**Opção SQLGetStmt**|  
+|**SQLBindCol**|**SQLGetStmtOption**|  
 |**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**Opções de SQLParam**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**Sqlextendedfetch**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**Sqlsetconnectoption**|  
+|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**Opções de SQLSetScroll**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
-|**SQLGetFunctions**|**SQLSetStmtOpção**|  
+|**SQLGetFunctions**|**SQLSetStmtOption**|  
 |**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||

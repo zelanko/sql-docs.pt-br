@@ -1,5 +1,5 @@
 ---
-title: 'Como: Inserir linhas na Coluna Geografia (ODBC) | Microsoft Docs'
+title: 'Como: inserir linhas na coluna de Geografia (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3693a2f38542b0ae8c12d0634a9784a00340ba73
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293846"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Como fazer: Inserir linhas em coluna de geografia (ODBC)
@@ -27,10 +27,10 @@ ms.locfileid: "81293846"
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações sobre armazenamento espacial, consulte [Dados espaciais &#40;&#41;do SQL Server ](../../relational-databases/spatial/spatial-data-sql-server.md).  
+ Para obter mais informações sobre o armazenamento espacial, consulte [dados espaciais &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
- A primeira [!INCLUDE[tsql](../../includes/tsql-md.md)]listagem de código ( ) cria uma tabela usada por esta amostra.  
+ A primeira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria uma tabela usada por este exemplo.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e user32.lib. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81293846"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A terceira [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) lista de códigos exclui a tabela usada por esta amostra.  
+ A terceira listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui a tabela usada por este exemplo.  
   
 ```sql
 use tempdb  

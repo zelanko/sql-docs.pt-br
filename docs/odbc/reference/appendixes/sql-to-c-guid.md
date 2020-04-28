@@ -1,5 +1,5 @@
 ---
-title: 'SQL a C: GUID | Microsoft Docs'
+title: 'SQL to C: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296456"
 ---
 # <a name="sql-to-c-guid"></a>SQL para C: GUID
-O identificador para o tipo de dados GUID ODBC SQL é:  
+O identificador para o tipo de dados SQL ODBC GUID é:  
   
  SQL_GUID  
   
- A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados GUID SQL podem ser convertidos. Para obter uma explicação das colunas e termos da tabela, consulte [Convertendo Dados de SQL para C Tipos de Dados](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
+ A tabela a seguir mostra os tipos de dados ODBC C para os quais os dados SQL do GUID podem ser convertidos. Para obter uma explicação das colunas e dos termos na tabela, consulte [convertendo dados de SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Identificador de tipo C|Teste|**TargetValuePtr*|**Strlen_or_indptr*|SQLSTATE|  
+|Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > comprimento do byte do caractere|Dados|36|n/d|  
-||*Comprimento do buffer* < 37|Indefinido|Indefinido|22003|  
-|SQL_C_WCHAR|*Comprimento do > comprimento* do caractere do buffer|Dados|36|n/d|  
-||*Comprimento do buffer* < 37|Indefinido|Indefinido|22003|  
-|SQL_C_BINARY|Comprimento de byte de dados \< =  *BufferLength*|Dados|Comprimento dos dados em bytes|n/d|  
-||Comprimento de byte de dados > *BufferLength*|Indefinido|Indefinido|22003|  
-|SQL_C_GUID|Nenhum[a]|Dados|16[b]|n/d|  
+|SQL_C_CHAR|*BufferLength* > comprimento de byte de caractere|Dados|36|n/d|  
+||*BufferLength* < 37|Indefinido|Indefinido|22003|  
+|SQL_C_WCHAR|*BufferLength* > comprimento de caractere|Dados|36|n/d|  
+||*BufferLength* < 37|Indefinido|Indefinido|22003|  
+|SQL_C_BINARY|Comprimento de bytes de \< =  *BufferLength* de dados|Dados|Comprimento dos dados em bytes|n/d|  
+||Comprimento de bytes de dados > *BufferLength*|Indefinido|Indefinido|22003|  
+|SQL_C_GUID|Nenhum [a]|Dados|16 [b]|n/d|  
   
- [a] O valor do *BufferLength* é ignorado para esta conversão. O driver assume que o tamanho de **TargetValuePtr* é do tamanho do tipo de dados C.  
+ [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
   
  [b] Este é o tamanho do tipo de dados C correspondente.

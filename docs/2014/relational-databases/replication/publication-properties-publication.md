@@ -1,5 +1,5 @@
 ---
-title: Propriedades de publicação de replicação do servidor SQL - | Microsoft Docs
+title: Propriedades da publicação do Replicação do SQL Server-| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380717"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Propriedades de publicação de replicação do servidor SQL 
-  Esta seção fornece informações sobre todas as páginas da caixa de diálogo Propriedades de **publicação.** 
+# <a name="sql-server-replication-publication-properties"></a>Propriedades da publicação do Replicação do SQL Server 
+  Esta seção fornece informações sobre todas as páginas da caixa de diálogo **Propriedades da publicação** . 
 
 ## <a name="general"></a>Geral
   A página **Geral** da caixa de diálogo **Propriedades de Publicação** contém informações básicas sobre a publicação, incluindo nome, descrição e a política de validade da assinatura.  
@@ -37,7 +37,7 @@ ms.locfileid: "80380717"
  **Nome**  
  O nome da publicação (somente leitura).  
   
- **Database**  
+ **Backup de banco de dados**  
  O nome do banco de dados de publicação (somente leitura).  
   
  **Descrição**  
@@ -47,7 +47,7 @@ ms.locfileid: "80380717"
  O tipo da publicação (somente leitura).  
   
  **Validade da assinatura**  
- Selecione uma das opções para validade da assinatura: **As assinaturas nunca expiram** ou **As assinaturas expiram**, com um período de tempo explícito (**Intervalo**).  
+ Selecione uma das opções para término da assinatura: **Assinaturas nunca expiram** ou **Assinaturas expiram** com um período explícito (**intervalo**).  
   
  Para publicações de instantâneo e transacionais, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomenda que você aceite o padrão de **As assinaturas nunca expiram**.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "80380717"
   
  Para obter mais informações, consulte [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
- **Nível de Compatibilidade**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e apenas versões posteriores; mesclam apenas publicações. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
+ **Nível de compatibilidade**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores somente; só publicações de mesclagem. Selecione versão mínima requerida do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Assinantes que sincronizam com essa publicação. Há várias regras associadas com a determinação do nível de compatibilidade.  
 
 ## <a name="filter-rows"></a>Filtrar Linhas
 
@@ -84,7 +84,7 @@ ms.locfileid: "80380717"
  Esse painel é populado com filtros à medida que são adicionados a artigos de tabela na publicação. Tabelas com filtros de linha são mostradas como nós de alto nível no painel. Para publicações de mesclagem, tabelas para as quais a filtragem foi estendida através de um filtro de junção são mostradas como nós filhos.  
   
  **Adicionar**  
- Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar Junção para Estender o Filtro Selecionado**; **Gerar Filtros Automaticamente**.  
+ Clique em **Adicionar** para iniciar uma caixa de diálogo que permite filtrar artigos de tabela. Clicar em **Adicionar** para um instantâneo ou uma publicação transacional inicia imediatamente uma caixa de diálogo. Clicar em **Adicionar** para uma publicação de mesclagem exibe três opções: **Adicionar Filtro**; **Adicionar junção para estender o filtro selecionado**; **Gerar filtros automaticamente**.  
   
 -   Selecione **Adicionar Filtro** para iniciar a caixa de diálogo **Adicionar filtro** . Essa caixa de diálogo permite aplicar filtros de linha a um artigo de tabela. Na caixa de diálogo **Adicionar Filtro** você pode, por exemplo, especificar que uma tabela com dados de cliente só contenha dados de clientes franceses quando for replicada para Assinantes.  
   
@@ -101,24 +101,24 @@ ms.locfileid: "80380717"
  **Editar**  
  Selecione um filtro de linha ou um filtro de junção no painel de filtros e clique em **Editar** para iniciar a caixa de diálogo **Editar Filtro** ou **Editar Junção** .  
   
- **Excluir**  
+ **Delete (excluir)**  
  Selecione um filtro de linha ou um filtro de junção no painel de filtro e clique em **Excluir** para excluir o filtro.  
   
  **Localizar Tabela**  
  Somente publicações de mesclagem. Clique em **Localizar Tabela** para localizar uma tabela em uma árvore de filtro complexa. Em um banco de dados com relações complexas, pode haver junção de uma tabela com várias tabelas e, portanto, ela pode aparecer em mais de um lugar na árvore de filtro.  
   
- A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>**.  
+ A tabela real só aparece em um lugar na árvore; em outros lugares a tabela é representada por um atalho. Um atalho para uma tabela é somente uma referência à tabela; ele não mostra os nós filhos da tabela. Um nó de atalho é marcado com uma seta de atalho e expandir esse nó mostra o texto **Clique em localizar tabela para ver a tabela \<tablename>** .  
   
  Selecione um nó de atalho no painel e clique em **Localizar Tabela** . O painel é expandido e a tabela é destacada. Se você clicar em **Localizar Tabela** sem um nó de atalho selecionado, uma caixa de diálogo **Localizar Tabela** será ativada.  
   
- **Filtrar**  
+ **Filter**  
  Contém a definição [!INCLUDE[tsql](../../includes/tsql-md.md)] para o filtro selecionado no painel de filtro.  
 
 ## <a name="ftp-snapshot-and-internet"></a>Instantâneo de FTP e Internet
   
 Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos através da](transfer-snapshots-through-ftp.md) documentação do FTP Windows para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -153,7 +153,7 @@ Essa página permite:
 
   Essa página permite:  
   
--   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [Transferir instantâneos através da](transfer-snapshots-through-ftp.md) documentação do FTP Windows para obter mais informações.  
+-   Definir propriedades de entrega do instantâneo por FTP (File Transfer Protocol). Para obter mais informações, consulte [transferir instantâneos por meio](transfer-snapshots-through-ftp.md) da documentação do Windows FTP para obter mais informações.  
   
     > [!NOTE]  
     >  Alterações em qualquer configuração do FTP exigem que um novo instantâneo seja gerado.  
@@ -183,7 +183,7 @@ Essa página permite:
  Se um trabalho de agente tiver sido criado, clique em **Configurações de segurança** para acessar a caixa de diálogo que permite alterar as configurações de segurança de um agente. Se um trabalho de agente não tiver sido criado, clique em **Criar Agente** para criar um e especificar as configurações de segurança.  
 
 ## <a name="data-partitions"></a>Partições de Dados
-   A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+  A página **Partições de Dados** da caixa de diálogo **Propriedades de Publicação** permite definir partições de dados para publicações de mesclagem que usam filtragem com parâmetros. Depois de definir as partições, você pode gerar instantâneos para essas partições, fornecendo conjuntos de dados iniciais diferentes para Assinantes diferentes, com base nas propriedades de conexão (logon e/ou nome de computador) dos Assinantes. Você pode também selecionar para permitir aos Assinantes solicitarem a entrega e a geração de instantâneo, se não tiverem um instantâneo disponível para a partição, na primeira vez em que sincronizarem. Para obter mais informações, consulte [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Opções  
  **Adicionar**  
@@ -192,7 +192,7 @@ Essa página permite:
  **Editar**  
  Selecione uma partição existente na grade e clique em **Editar** para editar a partição.  
   
- **Excluir**  
+ **Delete (excluir)**  
  Selecione uma partição existente na grade e clique em **Excluir** para excluir a partição.  
   
  **Gerar os instantâneos selecionados agora**  
@@ -221,7 +221,7 @@ Essa página permite:
  **Local dos arquivos de instantâneo**  
  Selecione o local para armazenar arquivos de instantâneo. Eles podem ser armazenados no local padrão; e também, em vez disso, podem ser armazenados em um local alternativo ou em outro local além do local padrão. Arquivos armazenados em um local alternativo podem ser compactados.  
   
--   Selecione **Colocar os arquivos na pasta padrão** para usar a pasta de instantâneo padrão para o Publicador. O local da pasta de instantâneo é somente leitura nessa caixa de diálogo porque ele só pode ser alterado para o Publicador na caixa de diálogo **Propriedades do Distribuidor** . Para obter mais informações, consulte [Especificar o local de instantâneo padrão](snapshot-options.md#snapshot-folder-locations).   
+-   Selecione **Colocar os arquivos na pasta padrão** para usar a pasta de instantâneo padrão para o Publicador. O local da pasta de instantâneo é somente leitura nessa caixa de diálogo porque ele só pode ser alterado para o Publicador na caixa de diálogo **Propriedades do Distribuidor** . Para obter mais informações, consulte [especificar o local do instantâneo padrão](snapshot-options.md#snapshot-folder-locations).   
 -   Selecione **Colocar os arquivos nesta pasta** para especificar, em vez disso, um local alternativo ou outro local além do padrão. Insira em um caminho na caixa de texto ou clique em **Procurar** e navegue até um local. Selecione **Compactar arquivos de instantâneo nesta pasta** para compactar os arquivos no local de instantâneo alternativo. O local alternativo pode ser em outro servidor, em uma unidade de rede ou em uma mídia removível, como um CD-ROM ou disco removível. Para obter mais informações, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) e [Compressed Snapshots](compressed-snapshots.md).  
   
  **Executar scripts adicionais**  
@@ -234,12 +234,12 @@ Essa página permite:
 
 
 
-## <a name="see-also"></a>Consulte também  
- [Criar uma publicação](publish/create-a-publication.md)   
- [Exibir e modificar propriedades de publicação](publish/view-and-modify-publication-properties.md)   
- [Publicar dados e objetos de banco de dados](publish/publish-data-and-database-objects.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Create a Publication](publish/create-a-publication.md)   
+ [Exibir e modificar as propriedades da publicação](publish/view-and-modify-publication-properties.md)   
+ [Publicar objetos de banco de dados e](publish/publish-data-and-database-objects.md)   
  [Práticas recomendadas de segurança de replicação](security/replication-security-best-practices.md)   
- [Segurança de replicação do servidor SQL](security/view-and-modify-replication-security-settings.md)  
+ [Segurança de Replicação do SQL Server](security/view-and-modify-replication-security-settings.md)  
  [Inicializar uma assinatura com um instantâneo](initialize-a-subscription-with-a-snapshot.md)   
   
   

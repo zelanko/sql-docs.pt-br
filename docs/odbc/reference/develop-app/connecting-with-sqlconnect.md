@@ -1,5 +1,5 @@
 ---
-title: Conectando-se com o SQLConnect | Microsoft Docs
+title: Conectando-se ao SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294646"
 ---
 # <a name="connecting-with-sqlconnect"></a>Conectar-se com o SQLConnect
-**SQLConnect** é a função de conexão mais simples. Ele requer um nome de origem de dados e aceita um ID de usuário e senha opcionais. Funciona bem para aplicativos que codificam um nome de origem de dados e não exigem um ID de usuário ou senha. Também funciona bem para aplicativos que querem controlar seu próprio "olhar e sentir" ou que não têm interface de usuário. Esses aplicativos podem criar uma lista de fontes de dados usando **SQLDataSources,** solicitar ao usuário a fonte de dados, iD do usuário e senha e, em seguida, chamar **SQLConnect**.  
+O **SQLConnect** é a função de conexão mais simples. Ele requer um nome de fonte de dados e aceita uma ID de usuário e senha opcionais. Ele funciona bem para aplicativos que embutim em código um nome de fonte de dados e não exigem uma ID de usuário ou senha. Ele também funciona bem para aplicativos que desejam controlar sua própria "aparência" ou que não têm nenhuma interface do usuário. Esses aplicativos podem criar uma lista de fontes de dados usando **SQLDataSources**, solicitar a fonte de dados, a ID de usuário e a senha do usuário e, em seguida, chamar o **SQLConnect**.  
   
- O exemplo a seguir se conecta ao banco de dados Northwind, usando um DSN chamado Northwind, e recupera todos os campos de primeiro e sobrenome de todos os registros na tabela Funcionários.  
+ O exemplo a seguir conecta-se ao banco de dados Northwind, usando um DSN chamado Northwind e recupera todos os campos de nome e sobrenome de todos os registros na tabela Employees.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

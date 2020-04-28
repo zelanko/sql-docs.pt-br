@@ -1,5 +1,5 @@
 ---
-title: SET COMANDO COLLATE | Microsoft Docs
+title: Comando SET COLLATE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300886"
 ---
 # <a name="set-collate-command"></a>Comando SET COLLATE
-Especifica uma seqüência de colagem para campos de caracteres em operações subseqüentes de indexação e classificação.  
+Especifica uma sequência de agrupamento para campos de caracteres em operações subsequentes de indexação e classificação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,48 +30,48 @@ SET COLLATE TO cSequenceName
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *cNome de seqüência*  
- Especifica uma seqüência de colagem. As opções de seqüência de colagem disponíveis são descritas na tabela a seguir.  
+ *cSequenceName*  
+ Especifica uma sequência de agrupamento. As opções de sequência de agrupamento disponíveis são descritas na tabela a seguir.  
   
 |Opções|Linguagem|  
 |-------------|--------------|  
 |Holandês|Holandês|  
-|GENERAL|Inglês, francês, alemão, espanhol moderno, português e outras línguas da Europa Ocidental|  
-|Alemão|Pedido de lista telefônica alemã (DIN)|  
+|GENERAL|Inglês, francês, alemão, espanhol moderno, Português e outros idiomas da Europa Ocidental|  
+|Alemão|Pedido de catálogo telefônico alemão (DIN)|  
 |Islândia|Islandês|  
-|Máquina|Máquina (a seqüência de colagem padrão para versões anteriores do FoxPro)|  
+|Tradução|Computador (a sequência de agrupamento padrão para versões anteriores do FoxPro)|  
 |NORDAN|Norueguês, dinamarquês|  
 |Espanhol|Espanhol tradicional|  
 |SWEFIN|Sueco, finlandês|  
-|UNIQWT|Peso Único|  
+|UNIQWT|Peso exclusivo|  
   
 > [!NOTE]  
->  Quando você especifica a opção ESPANHOL, *ch* é uma única letra que classifica entre *c* e *d*, e *ll* classifica entre *l* e *m*.  
+>  Quando você especifica a opção espanhol, *ch* é uma única letra que classifica entre *c* e *d*e *ll* classifica entre *l* e *m*.  
   
- Se você especificar uma opção de seqüência de colagem como uma seqüência de caracteres literal, certifique-se de colocar a opção entre aspas:  
+ Se você especificar uma opção de sequência de agrupamento como uma cadeia de caracteres literal, certifique-se de colocar a opção entre aspas:  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- MACHINE é a opção de seqüência de colagem padrão e é a seqüência com a qual os usuários do Xbase estão familiarizados. Os caracteres são ordenados quando aparecem na página de código atual.  
+ O computador é a opção de sequência de agrupamento padrão e é a seqüência Xbase que os usuários estão familiarizados. Os caracteres são ordenados conforme aparecem na página de código atual.  
   
- Geral pode ser preferível para usuários dos EUA e da Europa Ocidental. Os caracteres são ordenados quando aparecem na página de código atual. Nas versões FoxPro anteriores a 2,5, os índices podem ter sido criados usando as funções **UPPER**( ) ou **LOWER**( ) para converter campos de caracteres em um caso consistente. Nas versões FoxPro mais tarde que 2.5, você pode especificar a opção de seqüência de colagem GERAL e omiti-lo na conversão **UPPER**( ).  
+ O geral pode ser preferível para usuários dos EUA e da Europa Ocidental. Os caracteres são ordenados conforme aparecem na página de código atual. Em versões do FoxPro anteriores a 2,5, os índices podem ter sido criados usando as funções **Upper**() ou **Lower**() para converter campos de caractere em um caso consistente. Em versões do FoxPro posteriores a 2,5, você pode especificar a opção de sequência de agrupamento geral e omitir a conversão **Upper**().  
   
- Se você especificar uma opção de seqüência de colagem diferente do MACHINE e se você criar um arquivo .idx, um compact .idx será sempre criado.  
+ Se você especificar uma opção de sequência de agrupamento diferente de MACHINE e se você criar um arquivo. idx, um Compact. idx será sempre criado.  
   
- Use SET ("COLLATE") para retornar a seqüência de colagem atual.  
+ Use SET ("COLLATE") para retornar a sequência de agrupamento atual.  
   
- Você pode especificar uma seqüência de colisão para uma fonte de dados usando a [caixa de diálogo de configuração Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou usando a palavra-chave Collate em sua seqüência de conexão com [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Isso é idêntico à emissão do seguinte comando:  
+ Você pode especificar uma sequência de agrupamento para uma fonte de dados usando a [caixa de diálogo configuração do ODBC do Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou usando a palavra-chave COLLATE em sua cadeia de conexão com [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Isso é idêntico a emitir o seguinte comando:  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- SET COLLATE permite que você peça tabelas contendo caracteres acentuados para qualquer um dos idiomas suportados. Alterar a configuração de SET COLLATE não afeta a seqüência de colisão de índices abertos anteriormente. O Visual FoxPro mantém automaticamente os índices existentes, proporcionando flexibilidade para criar muitos tipos diferentes de índices, mesmo para o mesmo campo.  
+ DEFINIR agrupamento permite que você ordene tabelas que contêm caracteres acentuados para qualquer um dos idiomas com suporte. Alterar a configuração de SET COLLATE não afeta a sequência de agrupamento de índices abertos anteriormente. O Visual FoxPro mantém automaticamente os índices existentes, fornecendo a flexibilidade para criar vários tipos diferentes de índices, mesmo para o mesmo campo.  
   
- Por exemplo, se um índice for criado com SET COLLATE definido como GERAL e a configuração SET COLLATE for posteriormente alterada para ESPANHOL, o índice retém a seqüência de colagem GERAL.  
+ Por exemplo, se um índice for criado com SET COLLATE definido como geral e a configuração definir agrupamento for alterada posteriormente para espanhol, o índice manterá a sequência de agrupamento geral.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Caixa de diálogo da instalação do Visual FoxPro do ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

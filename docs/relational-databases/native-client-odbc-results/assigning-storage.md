@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 067abcfc8aa5bfd781e6656e3ced9f9e1e573e5f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297866"
 ---
 # <a name="assigning-storage"></a>Atribuindo armazenamento
@@ -34,7 +34,7 @@ ms.locfileid: "81297866"
 
   Um aplicativo pode atribuir armazenamento para resultados antes ou depois de executar uma instrução SQL. Caso prepare ou execute a instrução SQL primeiro, um aplicativo pode consultar o conjunto de resultados antes de atribuir o armazenamento para resultados. Por exemplo, caso o conjunto de resultados seja desconhecido, o aplicativo deve recuperar o número de colunas antes de atribuir o armazenamento a eles.  
   
- Para associar o armazenamento a uma coluna de dados, um aplicativo chama [o SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)e passa-o:  
+ Para associar o armazenamento de uma coluna de dados, um aplicativo chama [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)e o passa:  
   
 -   O tipo de dados no qual os dados serão convertidos.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "81297866"
   
 -   A associação que reconhece a coluna é concluída quando cada coluna é associada a sua própria matriz de variáveis.  
   
-     A vinculação em termos de coluna é especificada chamando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) com *Atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como SQL_BIND_BY_COLUMN. Todos as matrizes devem ter o mesmo número de elementos.  
+     A associação de coluna é especificada chamando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) com o *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como SQL_BIND_BY_COLUMN. Todos as matrizes devem ter o mesmo número de elementos.  
   
 -   A associação que reconhece a linha é concluída quando todos os parâmetros na instrução SQL são associados como uma unidade a uma matriz de estruturas que contêm as variáveis individuais dos parâmetros.  
   
-     A vinculação em termos de linha é especificada chamando **SQLSetStmtAttr** com *Atributo* definido para SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido para o tamanho da estrutura que mantém as variáveis que receberão as colunas do conjunto de resultados.  
+     A associação de linha é especificada chamando **SQLSetStmtAttr** com o *atributo* definido como SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* definido como o tamanho da estrutura que contém as variáveis que receberão as colunas do conjunto de resultados.  
   
  O aplicativo também define SQL_ATTR_ROW_ARRAY_SIZE como o número de elementos nas matrizes da coluna ou da linha e define SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Resultados de processamento &#40;&#41;Da ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [Processando resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

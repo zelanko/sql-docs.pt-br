@@ -1,5 +1,5 @@
 ---
-title: Inscrições de registro para componentes ODBC | Microsoft Docs
+title: Entradas de registro para componentes ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296166"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Entradas do Registro para componentes ODBC
 > [!NOTE]  
->  Começando com o Windows XP e o Windows Server 2003, o ODBC está incluído no sistema operacional windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
+>  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
- O instalador DLL mantém informações no registro sobre cada componente ODBC instalado. Nos computadores que executam o Microsoft Windows NT e o Microsoft Windows 95/98, essas informações são armazenadas em subchaves sob a seguinte chave no registro:  
+ A DLL do instalador mantém informações no registro sobre cada componente ODBC instalado. Em computadores que executam o Microsoft Windows NT e o Microsoft Windows 95/98, essas informações são armazenadas em subchaves sob a seguinte chave no registro:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Como o Odbcinst.ini é um subchave da árvore HKEY_LOCAL_MACHINE, as informações sobre os componentes do ODBC estão disponíveis para todos os usuários da máquina.  
+ Como o Odbcinst. ini é uma subchave da árvore de HKEY_LOCAL_MACHINE, as informações sobre os componentes ODBC estão disponíveis para todos os usuários do computador.  
   
  Esta seção contém os seguintes tópicos.  
   

@@ -1,5 +1,5 @@
 ---
-title: Configuração do driver Visual FoxPro ODBC | Microsoft Docs
+title: Configurando o driver ODBC do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300726"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Configurar o driver ODBC do Visual FoxPro
-Para obter informações sobre como baixar e instalar o driver Visual FoxPro ODBC, consulte [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) em Downloads MSDN.  
+Para obter informações sobre como baixar e instalar o driver ODBC do Visual FoxPro, consulte downloads do [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) on msdn.  
   
- Você usa o programa de configuração de driver SinfumO Do Microsoft Visual FoxPro para fazer o seguinte:  
+ Use o programa de instalação do driver ODBC do Microsoft Visual FoxPro para fazer o seguinte:  
   
 -   Adicione novos componentes.  
   
@@ -34,4 +34,4 @@ Para obter informações sobre como baixar e instalar o driver Visual FoxPro ODB
   
 -   Remova todos os componentes instalados anteriormente.  
   
- Depois de instalar o driver no sistema, o programa Configuração reconhece os componentes do driver instalados e apresenta caixas de diálogo adicionais que permitem alterar a configuração do driver.
+ Depois de instalar o driver em seu sistema, o programa de instalação reconhece os componentes de driver instalados e apresenta caixas de diálogo adicionais que permitem que você altere a configuração do driver.

@@ -23,16 +23,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 41e5fceb2e69ab049bc7b82db5f67eb340d35ac9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296950"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Em conjuntos de linhas e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como valores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parâmetro, o provedor Nativo Cliente OLE DB representa os dados usando os seguintes tipos de dados definidos pelo OLE DB, relatados nas funções **IColumnsInfo::GetColumnInfo** e **ICommandWithParameters::GetParameterInfo**.  
+  Em conjuntos de linhas e como valores de parâmetro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o provedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cliente nativo representa dados usando os seguintes OLE DB tipos de dados definidos, relatados nas funções **IColumnsInfo:: GetColumnInfo** e **ICommandWithParameters:: GetParameterInfo**.  
   
 |Tipo de dados do SQL Server|Tipo de dados OLE DB|  
 |--------------------------|----------------------|  
@@ -60,13 +60,13 @@ ms.locfileid: "81296950"
 |**text**|DBTYPE_STR|  
 |**timestamp**|DBTYPE_BYTES|  
 |**tinyint**|DBTYPE_UI1|  
-|**Udt**|DBTYPE_UDT|  
+|**UDT**|DBTYPE_UDT|  
 |**uniqueidentifier**|DBTYPE_GUID|  
 |**varbinary**|DBTYPE_BYTES|  
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLE DB suporta conversões de dados solicitadas pelo consumidor, conforme mostrado na ilustração.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo oferece suporte a conversões de dados solicitadas pelo consumidor, conforme mostrado na ilustração.  
   
  Os objetos **sql_variant** podem armazenar qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exceto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp e os tipos CLR (Common Language Runtime) definidos pelo usuário do Microsoft .NET Framework. Uma instância de dados sql_variant também não pode ter sql_variant como seu tipo de dados base subjacente. Por exemplo, a coluna pode conter valores **smallint** em algumas linhas, valores **float** em outras linhas e valores **char**/**nchar** no restante.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81296950"
  Quando dados **sql_variant** são buscados como DBTYPE_VARIANT, eles são colocados em uma estrutura VARIANT no buffer. Mas os subtipos na estrutura VARIANT podem não ser mapeados para os subtipos definidos no tipo de dados **sql_variant**. Os dados **sql_variant** precisam ser buscados como DBTYPE_SQLVARIANT para que todos os subtipos obtenham uma correspondência.  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>Tipo de dados DBTYPE_SQLVARIANT  
- Para suportar **o** sql_variant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados, o provedor Native Client OLE DB expõe um tipo de dados específico do provedor chamado DBTYPE_SQLVARIANT. Quando dados **sql_variant** são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do tipo de dados **sql_variant**.  
+ Para dar suporte **sql_variant** ao tipo de dados sql_variant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o provedor de OLE DB de cliente nativo expõe um tipo de dados específico do provedor chamado DBTYPE_SQLVARIANT. Quando dados **sql_variant** são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do tipo de dados **sql_variant**.  
   
  A propriedade de sessão SSPROP_ALLOWNATIVEVARIANT também deve ser definida como TRUE.  
   
