@@ -1,6 +1,6 @@
 ---
-title: CLR Integração Security | Microsoft Docs
-description: A integração do SQL Server com o segurança .NET Framework CLR gerencia o acesso entre objetos. As verificações de segurança realizadas em objetos dependem das chamadas envolvidas.
+title: Segurança de integração CLR | Microsoft Docs
+description: SQL Server integração com o .NET Framework a segurança do CLR gerencia o acesso entre objetos. As verificações de segurança realizadas em objetos dependem das chamadas envolvidas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487098"
 ---
 # <a name="clr-integration-security"></a>Segurança da integração CLR

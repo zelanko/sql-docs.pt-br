@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388437"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
@@ -30,9 +30,9 @@ ms.locfileid: "81388437"
 >  O aumento do tempo limite de conexão e a implementação de lógica de repetição de conexão aumentarão a probabilidade de um aplicativo se conectar a um grupo de disponibilidade. Além disso, como uma conexão pode falhar devido a um failover de grupo de disponibilidade, você deve implementar lógica de repetição de conexão, repetindo uma conexão com falha até se reconectar.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectando-se ao MultiSubnetFailover  
- Sempre especifique **MultiSubnetFailover=Yes** quando for se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de cluster de failover do SQL Server 2012. **O MultiSubnetFailover** permite um failover mais rápido para todos os Grupos de Disponibilidade e a instância de cluster failover no SQL Server 2012 e reduzirá significativamente o tempo de failover para topologias únicas e multi-subnetas Sempre Em topologies. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará novamente a conexão TCP de forma agressiva.  
+ Sempre especifique **MultiSubnetFailover=Yes** quando for se conectar a um ouvinte de grupo de disponibilidade do SQL Server 2012 ou uma instância de cluster de failover do SQL Server 2012. O **MultiSubnetFailover** permite um failover mais rápido para todos os grupos de disponibilidade e a instância de cluster de failover no SQL Server 2012 e reduzirá significativamente o tempo de failover para topologias de Always on de várias sub-redes. Durante um failover de várias sub-redes, o cliente tentará conexões em paralelo. Durante um failover de sub-rede, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará novamente a conexão TCP de forma agressiva.  
   
- A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover e que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentando se conectar a todos os endereços IP do grupo de disponibilidade. Quando **MultiSubnetFailover=Yes** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão TCP padrão do sistema operacional. Isso permite uma reconexão mais rápida após o failover de um grupo always on availability ou de uma instância de cluster Sempre Em Failover, e é aplicável a grupos de disponibilidade de uma e várias sub-redes e instâncias de cluster failover.  
+ A propriedade de conexão **MultiSubnetFailover** indica que o aplicativo está sendo implantado em um grupo de disponibilidade ou instância de cluster de failover e que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tentará se conectar ao banco de dados na instância primária do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tentando se conectar a todos os endereços IP do grupo de disponibilidade. Quando **MultiSubnetFailover=Yes** é especificado para uma conexão, o cliente repete as tentativas de conexão TCP mais rápido do que os intervalos de retransmissão TCP padrão do sistema operacional. Isso permite uma reconexão mais rápida após o failover de um grupo de disponibilidade Always On ou de uma instância de cluster de failover do Always On e é aplicável a grupos de disponibilidade de várias sub-redes e a instâncias de cluster de failover.  
   
  Para obter mais informações sobre palavras-chave de cadeia de conexão, consulte [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "81388437"
   
  Use as diretrizes a seguir para conectar-se a um servidor em um grupo de disponibilidade ou Instância de Cluster de Failover:  
   
--   Use a propriedade **multisubnetFailover** ao se conectar a uma única sub-rede ou multi-sub-rede; vai melhorar o desempenho para ambos.  
+-   Use a propriedade de conexão **MultiSubnetFailover** ao conectar-se a uma única sub-rede ou a várias sub-redes; o desempenho será aprimorado para ambos.  
   
 -   Para conectar-se a um grupo de disponibilidade, especifique o ouvinte do grupo de disponibilidade como o servidor em sua cadeia de conexão.  
   
 -   Conectar-se a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   O comportamento de um aplicativo que usa a propriedade **multiSubnetFailover** não [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é afetado com base no tipo de autenticação: Autenticação, Autenticação kerberos ou autenticação do Windows.  
+-   O comportamento de um aplicativo que usa a propriedade de conexão **MultiSubnetFailover** não é afetado com base no tipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticação: autenticação, autenticação Kerberos ou autenticação do Windows.  
   
 -   Você pode aumentar o valor de **loginTimeout** para acomodar o tempo de failover e reduzir as tentativas de repetição de conexão do aplicativo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81388437"
   
 1.  Se o local de réplica secundário não for configurado para aceitar conexões.  
   
-2.  Se um aplicativo usar **ApplicationIntent=ReadWrite** (discutido abaixo) e o local de réplica secundária for configurado para acesso somente à leitura.  
+2.  Se um aplicativo usar **ApplicationIntent = ReadWrite** (discutido abaixo) e o local da réplica secundária estiver configurado para acesso somente leitura.  
   
  Uma conexão falhará se uma réplica primária for configurada para rejeitar cargas de trabalho somente leitura e a cadeia de conexão contiver **ApplicationIntent=ReadOnly**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "81388437"
 ## <a name="odbc"></a>ODBCODBC  
  Duas palavras-chave de cadeia de conexão ODBC foram adicionadas para oferecer suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **Intenção de aplicativos**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "81388437"
   
  Uma palavras-chave de cadeia de conexão OLE DB foi adicionada para oferecer suporte ao [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **Intenção de aplicação**  
+-   **Intenção do aplicativo**  
   
  Para obter mais informações sobre essas palavras-chave de cadeia de conexão no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "81388437"
  Quando forem estabelecidas conexões implícitas, a conexão implícita usará a configuração de tentativa de aplicativo da conexão pai. Da mesma forma, várias sessões criadas a partir da mesma fonte de dados herdarão a configuração de tentativa de aplicativo da fonte de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos do cliente nativo do sql server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Recursos de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

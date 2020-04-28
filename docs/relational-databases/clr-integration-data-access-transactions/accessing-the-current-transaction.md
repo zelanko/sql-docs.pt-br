@@ -1,6 +1,6 @@
 ---
-title: Acessando a Transação Atual | Microsoft Docs
-description: Na integração SQL Server CLR, a propriedade Atual da classe System.Transactions.Transaction permite que você acesse a transação atual.
+title: Acessando a transação atual | Microsoft Docs
+description: No SQL Server integração CLR, a propriedade atual da classe System. Transactions. Transaction permite que você acesse a transação atual.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487467"
 ---
 # <a name="accessing-the-current-transaction"></a>Acessando a transação atual

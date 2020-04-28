@@ -1,6 +1,6 @@
 ---
-title: Introdução aos Schemas XSD Anotados (SQLXML)
-description: Aprenda a criar visualizações XML de dados relacionais usando a linguagem XML Schema Definition (XSD) (SQLXML 4.0).
+title: Introdução aos esquemas XSD anotados (SQLXML)
+description: Saiba mais sobre como criar exibições XML de dados relacionais usando a linguagem XSD (XML Schema Definition) (SQLXML 4,0).
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -24,10 +24,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388652"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introdução a esquemas XSD anotados (SQLXML 4.0)
@@ -36,9 +36,9 @@ ms.locfileid: "81388652"
   
  Um esquema XML descreve a estrutura de um documento XML, além das várias restrições referentes aos dados do documento. Quando você especifica as consultas XPath com base no esquema, a estrutura do documento XML retornado é determinada pelo esquema que serve de base para a consulta XPath executada.  
   
- Em um esquema XSD, o ** \<elemento xsd:esquema>** inclui todo o esquema; todas as declarações de elemento devem ser ** \<contidas no elemento xsd:schema>.** Você pode descrever atributos que definem o namespace no qual o esquema reside e os namespaces que são usados no esquema como propriedades do ** \<elemento xsd:esquema>.**  
+ Em um esquema XSD, o ** \<elemento xsd: Schema>** inclui todo o esquema; todas as declarações de ** \<** elemento devem estar contidas no elemento xsd: Schema>. Você pode descrever atributos que definem o namespace no qual reside o esquema e os namespaces que são usados no esquema como propriedades do elemento ** \<xsd: Schema>** .  
   
- Um esquema XSD válido deve conter o ** \<elemento xsd:esquema>** definido da seguinte forma:  
+ Um esquema XSD válido deve conter o ** \<elemento xsd: Schema>** definido da seguinte maneira:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388652"
 </xsd:schema>  
 ```  
   
- O ** \<elemento xsd:schema>** é derivado da especificação de http://www.w3.org/2001/XMLSchemanamespace xML Schema em .  
+ O ** \<elemento xsd: Schema>** é derivado da especificação de namespace de esquema XML http://www.w3.org/2001/XMLSchemaem.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Anotações para o esquema XSD  
  É possível usar um esquema XSD com anotações que descrevam o mapeamento para um banco de dados, consultem o banco de dados e retornem os resultados na forma de um documento XML. São fornecidas anotações para mapear um esquema XSD para tabelas e colunas de banco de dados. As consultas XPath podem ser especificadas com base na exibição XML criada pelo esquema XSD para consultar o banco de dados e obter os resultados como um XML.  
@@ -55,10 +55,10 @@ ms.locfileid: "81388652"
 > [!NOTE]  
 >  No [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, a linguagem XSD oferece suporte a anotações introduzidas com a linguagem XDR no [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]. A XDR anotada está preterida no SQLXML 4.0.  
   
- No contexto do banco de dados relacional, é útil mapear o esquema XSD arbitrário para um armazenamento relacional. Uma maneira de fazer isso é anotar o esquema XSD. Um esquema XSD com as anotações é referido como um *esquema de mapeamento,* que fornece informações relativas a como os dados XML devem ser mapeados para o armazenamento relacional. Um esquema de mapeamento é, com efeito, uma exibição XML dos dados relacionais. Esses mapeamentos podem ser usados para recuperar dados relacionais como um documento XML.  
+ No contexto do banco de dados relacional, é útil mapear o esquema XSD arbitrário para um armazenamento relacional. Uma maneira de fazer isso é anotar o esquema XSD. Um esquema XSD com as anotações é conhecido como um esquema de *mapeamento*, que fornece informações sobre como os dados XML serão mapeados para a Relational Store. Um esquema de mapeamento é, com efeito, uma exibição XML dos dados relacionais. Esses mapeamentos podem ser usados para recuperar dados relacionais como um documento XML.  
   
 ## <a name="namespace-for-annotations"></a>Namespace para anotações  
- Em um esquema XSD, as anotações são especificadas usando o namespace **urn:schemas-microsoft-com:mapping-schema**. Como mostrado no exemplo a seguir, a maneira mais fácil de especificar o namespace é especá-lo na ** \<tag xsd:schema>.**  
+ Em um esquema XSD, as anotações são especificadas usando o namespace **urn: schemas-microsoft-com: Mapping-Schema**. Conforme mostrado no exemplo a seguir, a maneira mais fácil de especificar o namespace é especificá-lo na marca ** \<xsd: Schema>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -67,10 +67,10 @@ ms.locfileid: "81388652"
 </xsd:schema>  
 ```  
   
- O prefixo namespace que é usado é arbitrário. Nesta documentação, o prefixo **sql** é usado para denotar o namespace da anotação e para distinguir anotações neste namespace daqueles em outros namespaces.  
+ O prefixo de namespace usado é arbitrário. Nesta documentação, o prefixo **SQL** é usado para denotar o namespace Annotation e distinguir as anotações nesse namespace deles em outros namespaces.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Exemplo de um esquema XSD anotado  
- No exemplo a seguir, o esquema XSD consiste em um ** \<elemento Person.Contact>.** O ** \<** elemento Employee>tem um atributo **ContactID** e ** \<o FirstName>** e ** \<O Sobrenome>** elementos de criança:  
+ No exemplo a seguir, o esquema XSD consiste em um ** \<elemento Person. Contact>** . O ** \<elemento>Employee** tem um atributo **ContactID** e ** \<FirstName>** e ** \<LastName>** elementos filho:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "81388652"
 </xsd:schema>  
 ```  
   
- No esquema de mapeamento, ** \<** o elemento Contact>é mapeado para a tabela Person.Contact no banco de dados sample AdventureWorks usando a anotação **sql:relation.** Os atributos ConID, FName e LName são mapeados para as colunas ContactID, FirstName e LastName na tabela Person.Contact usando as anotações **sql:field.**  
+ No esquema de mapeamento, o ** \<elemento Contact>** é mapeado para a tabela Person. Contact no banco de dados AdventureWorks de exemplo usando a anotação **SQL: relation** . Os atributos ConID, FName e LName são mapeados para as colunas ContactID, FirstName e LastName na tabela Person. Contact usando as anotações **SQL: Field** .  
   
  Esse esquema XSD anotado fornece a exibição XML dos dados relacionais. Essa exibição XML pode ser consultada usando a linguagem XPath. Uma consulta XPath retorna um documento XML como resultado, e não o conjunto de linhas retornado pelas consultas SQL.  
   
@@ -121,18 +121,18 @@ ms.locfileid: "81388652"
 ## <a name="other-resources"></a>Outros recursos  
  Você pode encontrar mais informações sobre as linguagens XSD (XML Schema Definition), XPath (XML Path) e XSLT (Linguagem XSL Transformations) nos seguintes sites:  
   
--   Esquema XML Parte 0: Primer, Recomendação W3C (https://www.w3.org/TR/xmlschema-0/)  
+-   Esquema XML parte 0: Primer, recomendação do W3C (https://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML Parte 1: Estruturas, Recomendação W3C (https://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: estruturas, recomendação do W3C (https://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML Parte 2:Tipos de dados, Recomendação W3C (https://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: tipos de texto, recomendação do W3C (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (https://www.w3.org/TR/xpath)  
+-   Linguagem de caminho XML (XPath) (https://www.w3.org/TR/xpath)  
   
 -   Transformações XSL (XSLT) (https://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Considerações de segurança de esquema anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Schemas XDR anotados &#40;preteridos em sqlxml 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Considerações de segurança de esquema anotadas &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Esquemas XDR anotados &#40;preteridos no SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

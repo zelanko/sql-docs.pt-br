@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388541"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface de usuário do Designer de consultas gráficas
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md). Para obter mais informações sobre como trabalhar com tipos específicos de origem de dados, consulte [Adicionar dados a um relatório &#40;Report Builder e ssrs&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas e um designer de consultas baseadas em texto; com eles, é possível criar consultas e recuperar dados de um banco de dados relacional relativos a um conjunto de dados de relatório no Designer de Relatórios. Use o designer de consultas gráficas para criar uma consulta interativamente e ver os resultados de tipos de fonte de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Use o designer de consultas baseadas em texto para especificar várias instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] , consulta complexa ou sintaxe de comando e consultas baseadas em expressões. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md). Para obter mais informações sobre como trabalhar com tipos de fonte de dados específicos, consulte [Adicionar dados a um relatório &#40;Construtor de relatórios e SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Consulte Também
- [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) [Adicionar dados a um relatório &#40;Relatório Construtor e SSRS&#41;SQL](report-datasets-ssrs.md) [Server Connection Type &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB Tipo de conexão &#40;SSRS&#41;](ole-db-connection-type-ssrs.md) Adicionar dados a um relatório &#40;Relatório Construtor e [SSRS&#41;](report-datasets-ssrs.md) Tipo de [Conexão Oracle &#40;SSRS&#41;](oracle-connection-type-ssrs.md) RS&#41;[&#40;S](../report-server/rsreportdesigner-configuration-file.md) [Design Queries and Views How-to Topics &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [Ferramentas de design de consulta no Report Designer SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Adicionar dados a um relatório &#40;Construtor de relatórios e o SSRS&#41;SQL Server tipo de](report-datasets-ssrs.md) [conexão &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) OLE DB tipo de [conexão &#40;ssrs](ole-db-connection-type-ssrs.md)&#41;[Adicionar dados a um relatório &#40;Construtor de relatórios e o SSRS&#41;](report-datasets-ssrs.md) [tipo de conexão Oracle](oracle-connection-type-ssrs.md) &#40;o arquivo de [configuração](../report-server/rsreportdesigner-configuration-file.md) do SSRS&#41;as consultas de [design e exibições de projeto](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) &#40;
 
 

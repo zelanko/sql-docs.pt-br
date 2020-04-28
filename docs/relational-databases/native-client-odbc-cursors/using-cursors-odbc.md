@@ -1,5 +1,5 @@
 ---
-title: Usando cursors (ODBC) | Microsoft Docs
+title: Usando cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be512713462a9518856de2a16db749490ea24366
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306267"
 ---
 # <a name="using-cursors-odbc"></a>Usando cursores (ODBC)
@@ -37,17 +37,17 @@ ms.locfileid: "81306267"
   
 -   Atualizações posicionadas.  
   
- Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas por atributos de declaração definidos com [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) antes da execução da declaração SQL. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
+ Os aplicativos ODBC raramente declaram e abrem cursores ou usam qualquer instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionada com cursor. O ODBC abre automaticamente um cursor para cada conjunto de resultados retornado de uma instrução SQL. As características dos cursores são controladas pelos atributos de instrução definidos com [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) antes da execução da instrução SQL. As funções API ODBC para o processamento de conjuntos de resultados dão suporte à gama completa de funcionalidades de cursor, como buscar, rolar e posicionar atualizações.  
   
  Esta é uma comparação de como scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] e aplicativos ODBC funcionam com cursores.  
   
 |Ação|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBCODBC|  
 |------------|------------------------|----------|  
-|Definir o comportamento do cursor|Especifique por meio de parâmetros DECLARE CURSOR|Defina atributos do cursor usando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
-|Abrir um cursor|DECLARE CURSOR OPEN *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  
+|Definir o comportamento do cursor|Especifique por meio de parâmetros DECLARE CURSOR|Definir atributos de cursor usando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
+|Abrir um cursor|DECLARAR CURSOR aberto *cursor_name*|**SQLExecDirect** ou **SQLExecute**|  
 |Buscar linhas|FETCH|**SQLFetch** ou [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)|  
 |Atualização posicionada|Cláusula WHERE CURRENT OF em UPDATE ou DELETE|**SQLSetPos**|  
-|Fechar um cursor|FECHAR *CURSOR_NAME* DESLOCEU|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
+|Fechar um cursor|FECHAR *cursor_name* desalocar|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
   
  Os cursores de servidor implementados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte à funcionalidade de modelo do cursor ODBC. O driver do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client usa cursores de servidor para dar suporte à funcionalidade da API ODBC.  
   
@@ -61,19 +61,19 @@ ms.locfileid: "81306267"
   
 -   [Propriedades do cursor](../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
--   [Detalhes da programação do cursor &#40;&#41;da ODBC](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+-   [Detalhes de programação do cursor &#40;&#41;ODBC](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
 -   [Rolando e buscando linhas](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
--   [Atualizações posicionadas &#40;o&#41;da ODBC](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
+-   [Atualizações posicionadas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cliente nativo do servidor SQL &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [FECHAR &#40;&#41;Transact-SQL](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursores](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [Desalocar &#40;&#41;de Transact-SQL](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARAR CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [FETCH &#40;&#41;Transact-SQL](../../t-sql/language-elements/fetch-transact-sql.md)   
+ [BUSCAR &#40;&#41;de Transact-SQL](../../t-sql/language-elements/fetch-transact-sql.md)   
  [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   

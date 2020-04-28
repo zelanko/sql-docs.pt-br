@@ -1,5 +1,5 @@
 ---
-title: Requisitos de arquitetura do cliente para desenvolvimento de serviços de análise | Microsoft Docs
+title: Requisitos de arquitetura de cliente para o desenvolvimento de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388028"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisitos de arquitetura do cliente para o desenvolvimento do Analysis Services
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporta uma arquitetura de cliente [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fino. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de cálculo é inteiramente baseado em servidor, de modo que todas as consultas são resolvidas no servidor. Como resultado, apenas uma viagem de ida e volta entre o cliente e o servidor é necessária para cada consulta, resultando em um desempenho evolutivo à medida que as consultas aumentam em complexidade.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a uma arquitetura de cliente [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fino. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de cálculo é totalmente baseado em servidor, portanto, todas as consultas são resolvidas no servidor. Como resultado, apenas uma viagem de ida e volta entre o cliente e o servidor é necessária para cada consulta, resultando em um desempenho evolutivo à medida que as consultas aumentam em complexidade.
 
  O protocolo nativo para o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é XML for Analysis (XML/A). O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornece diversas interfaces de acesso de dados para aplicativos cliente, mas todos os componentes comunicam-se com uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando XML for Analysis.
 
@@ -53,7 +53,7 @@ ms.locfileid: "81388028"
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services no modo Tabular ou do SharePoint
  No [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], o servidor pode ser iniciado no modo do mecanismo analítico na memória xVelocity (VertiPaq) para bancos de dados tabulares e para pastas de trabalho do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que foram publicadas em um site do SharePoint.
 
- O [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] são os únicos ambientes de cliente com suporte para a criação e a consulta de bancos de dados na memória que usam o modo Tabular ou do SharePoint, respectivamente O banco de dados PowerPivot incorporado [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que você cria usando o Excel e as ferramentas está contido na pasta de trabalho do Excel e é salvo como parte do arquivo Excel .xlsx.
+ O [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] são os únicos ambientes de cliente com suporte para a criação e a consulta de bancos de dados na memória que usam o modo Tabular ou do SharePoint, respectivamente O banco de dados PowerPivot inserido que você cria usando o Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] e as ferramentas está contido na pasta de trabalho do Excel e é salvo como parte do arquivo Excel. xlsx.
 
  Porém, uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] poderá usar dados armazenados em um cubo tradicional se esses dados forem importados para ela. Você também poderá importar dados de outra pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] se eles tiverem sido publicados em um site do SharePoint.
 
@@ -61,18 +61,18 @@ ms.locfileid: "81388028"
 >  Quando você usa um cubo como uma fonte de dados para uma pasta de trabalho [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], os dados obtidos no cubo são definidos como uma consulta MDX; porém, os dados são importados como um instantâneo bidimensional. Não é possível trabalhar interativamente com os dados nem atualizar os dados do cubo.
 
 ### <a name="interfaces-for-powerpivot-client"></a>Interfaces para cliente do PowerPivot
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interage com o mecanismo de armazenamento do mecanismo de análise de memória xVelocity (VertiPaq) dentro da carteira de trabalho usando as interfaces e idiomas estabelecidos para serviços de análise: AMO e ADOMD.NET, e MDX e XMLA. Dentro do suplemento, as medidas são definidas por meio de uma linguagem de fórmula semelhante à do Excel, o DAX (Expressões de Análise de Dados). As expressões DAX são inseridas nas mensagens de XMLA que são enviadas ao servidor no processo.
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interage com o mecanismo de armazenamento do mecanismo analítico na memória xVelocity (VertiPaq) dentro da pasta de trabalho usando as interfaces e linguagens estabelecidas para Analysis Services: AMO e ADOMD.NET, e MDX e XMLA. Dentro do suplemento, as medidas são definidas por meio de uma linguagem de fórmula semelhante à do Excel, o DAX (Expressões de Análise de Dados). As expressões DAX são inseridas nas mensagens de XMLA que são enviadas ao servidor no processo.
 
 ### <a name="providers"></a>Provedores
- As [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] comunicações entre e excel utilizam o provedor MSOLAP OLEDB (versão 11.0). No provedor do MSOLAP, há quatro módulos diferentes, ou transportes, que podem ser usados para enviar mensagens entre o cliente e o servidor.
+ As comunicações [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] entre o e o Excel usam o provedor OLEDB do MSOLAP (versão 11,0). No provedor do MSOLAP, há quatro módulos diferentes, ou transportes, que podem ser usados para enviar mensagens entre o cliente e o servidor.
 
- **TCP/PI** Usado para conexões normais cliente-servidor.
+ **TCP/IP** Usado para conexões normais do cliente-servidor.
 
- **HTTP** Usado para conexões HTTP através do serviço de bomba de dados SSAS ou por uma chamada para o componente SharePoint PowerPivot Web Service (WS).
+ **Http** Usado para conexões HTTP por meio do serviço de bombeamento de dados do SSAS ou por uma chamada para o componente do serviço Web do SharePoint PowerPivot (WS).
 
- **INPROC** Usado para conexões com o motor em processo.
+ **InProc** Usado para conexões com o mecanismo em processo.
 
- **CANAL** Reservado para comunicações com o Serviço de Sistema PowerPivot na fazenda SharePoint.
+ **Canal** Reservado para comunicações com o Serviço de Sistema PowerPivot no farm do SharePoint.
 
 ## <a name="see-also"></a>Consulte Também
  [Componentes do servidor de mecanismo OLAP](olap-engine-server-components.md)

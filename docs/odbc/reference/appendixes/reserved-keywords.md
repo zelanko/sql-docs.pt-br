@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307987"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
-As palavras seguintes são reservadas para uso em chamadas de função ODBC. Estas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que suportam a gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor**de definição** # SQL_ODBC_KEYWORDS contém uma lista separada por comma dessas palavras-chave.  
+As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; no entanto, para garantir a compatibilidade com drivers que dão suporte à gramática SQL principal, os aplicativos devem evitar o uso de qualquer uma dessas palavras-chave. O valor de #**define** SQL_ODBC_KEYWORDS contém uma lista separada por vírgula dessas palavras-chave.  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Est
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|Posição|  
+|CONVERT|PROPOSTAS|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  

@@ -1,5 +1,5 @@
 ---
-title: Transações na ODBC ODBC | Microsoft Docs
+title: Transações no ODBC ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 073546ef578a8efebff33fef96ae4682dd6f53fe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306442"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transações em ODBC
-As transações em ODBC são concluídas no nível de conexão; ou seja, quando um aplicativo conclui uma transação, ele compromete ou reverte todo o trabalho feito através de todas as alças de declaração sobre essa conexão.  
+As transações em ODBC são concluídas no nível de conexão; ou seja, quando um aplicativo conclui uma transação, ele confirma ou reverte todo o trabalho feito por meio de todos os identificadores de instrução nessa conexão.  
   
  Esta seção contém os seguintes tópicos.  
   

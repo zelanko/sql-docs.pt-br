@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307448"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectar-se a uma fonte de dados ou a um driver
-Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados. Estes podem ser uma variedade de drivers e fontes de dados, o mesmo driver e uma variedade de fontes de dados, ou mesmo múltiplas conexões com o mesmo driver e fonte de dados.  
+Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados. Eles podem ser uma variedade de drivers e fontes de dados, o mesmo driver e uma variedade de fontes de dados, ou até mesmo várias conexões com o mesmo driver e fonte de dados.  
   
  Esta seção contém os seguintes tópicos.  
   
@@ -38,4 +38,4 @@ Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados
   
 -   [Desconectar de uma fonte de dados ou de um driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [A função do driver manager no processo de conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [A função do Gerenciador de driver no processo de conexão](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

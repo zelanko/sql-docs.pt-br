@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388700"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface do usuário do Designer de Consulta MDX do Analysis Services
@@ -72,7 +72,7 @@ ms.locfileid: "81388700"
 |![Alternar para mostrar células vazias](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar células vazias")|Alterna entre mostrar ou ocultar células vazias no painel Dados. (Equivale a usar a cláusula NON EMPTY em MDX).|
 |![Executar a consulta automaticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Executar a consulta automaticamente")|Executa automaticamente a consulta e mostra o resultado sempre que é feita uma alteração. Os resultados são mostrados no painel Dados.|
 |![Botão Mostrar Agregações](../../analysis-services/media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações")|Mostra agregações no painel Dados.|
-|![Excluir](../../analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|
+|![Delete (excluir)](../../analysis-services/media/rsqdicon-delete.gif "Excluir")|Exclui da consulta a coluna selecionada no painel Dados.|
 |![Ícone da caixa de diálogo Parâmetros de Consulta](../../analysis-services/media/iconqueryparameter.gif "Ícone da caixa de diálogo Parâmetros de Consulta")|Exiba a caixa de diálogo **Parâmetros de Consulta** . Quando você especifica os valores para um parâmetro de consulta, um parâmetro de relatório com o mesmo nome é automaticamente criado. O valor do parâmetro da consulta é definido como uma expressão que faz referência ao parâmetro do relatório.|
 |![Botão Preparar Consulta](../../analysis-services/media/rsqdicon-preparequery.gif "Botão Preparar Consulta")|Prepara a consulta.|
 |![Executar a consulta](../../analysis-services/media/rsqdicon-run.gif "Executar a consulta")|Executa a consulta e exibe os resultados no painel Dados.|
@@ -115,6 +115,6 @@ ms.locfileid: "81388700"
 -   **Mostrar Agregações** (![Botão Mostrar Agregações](../../analysis-services/media/rsqdicon-showaggregations.gif "Botão Mostrar Agregações"))
 
 ## <a name="see-also"></a>Consulte Também
- [Defina parâmetros no MDX Query Designer para Serviços de Análise &#40;Relatório Construtor e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [Criar um conjunto de dados compartilhado ou conjunto de dados incorporados &#40;Relatório Construtor e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [Serviços de Conexão serviços para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) Analysis Services Tipo de [conexão para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
+ [Defina os parâmetros no designer de consulta MDX para Analysis Services &#40;Construtor de relatórios e ssrs&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [criar um conjunto de entrada ou conjunto de entrada compartilhado &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services [tipo de conexão para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) [arquivo de configuração RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services tipo de conexão para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
 
 

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487004"
 ---
 # <a name="raw-file-destination"></a>Destino do Arquivo Bruto
@@ -113,7 +113,7 @@ ms.locfileid: "81487004"
   
 1.  Defina a propriedade WriteOption como **CreateOnce** ou **CreateAlways**e execute uma iteração do loop. O arquivo é criado. Isto assegura que os metadados de dados acrescentados e o arquivo correspondam.  
   
-2.  Redefinir a propriedade WriteOption **para Anexar** e definir `False`a propriedade ValidateExternalMetadata para .  
+2.  Redefina a propriedade WriteOption como **Append** e defina a propriedade ValidateExternalMetadata `False`como.  
   
  Se você usar a opção **TruncateAppend** em vez da opção **Append** , truncará filas que foram adicionadas a qualquer iteração anterior e então acrescentará novas filas. Usar a opção **TruncateAppend** também requer que os dados correspondam ao formato do arquivo.  
   

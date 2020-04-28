@@ -1,5 +1,5 @@
 ---
-title: SQL Dinâmico | Microsoft Docs
+title: SQL dinâmico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306684"
 ---
 # <a name="dynamic-sql"></a>SQL dinâmico
-Embora o SQL estático funcione bem em muitas situações, há uma classe de aplicativos em que o acesso aos dados não pode ser determinado com antecedência. Por exemplo, suponha que uma planilha permita que um usuário insira uma consulta, que a planilha então envia ao DBMS para recuperar dados. O conteúdo desta consulta obviamente não pode ser conhecido pelo programador quando o programa de planilha é escrito.  
+Embora o SQL estático funcione bem em muitas situações, há uma classe de aplicativos em que o acesso a dados não pode ser determinado com antecedência. Por exemplo, suponha que uma planilha permita que um usuário insira uma consulta, que a planilha enviará ao DBMS para recuperar dados. O conteúdo dessa consulta obviamente não pode ser conhecido pelo programador quando o programa de planilha é escrito.  
   
- Para resolver esse problema, a planilha usa uma forma de SQL embarcada chamada SQL dinâmico. Ao contrário das instruções estáticas de SQL, que são codificadas no programa, as instruções SQL dinâmicas podem ser construídas em tempo de execução e colocadas em uma variável host de seqüência de strings. Em seguida, são enviados ao DBMS para processamento. Como o DBMS deve gerar um plano de acesso em tempo de execução para demonstrações SQL dinâmicas, o SQL dinâmico é geralmente mais lento do que o SQL estático. Quando um programa contendo instruções SQL dinâmicas é compilado, as instruções SQL dinâmicas não são retiradas do programa, como no SQL estático. Em vez disso, eles são substituídos por uma chamada de função que passa a declaração para o DBMS; As instruções Estáticas SQL no mesmo programa são tratadas normalmente.  
+ Para resolver esse problema, a planilha usa um formulário de SQL inserido chamado SQL dinâmico. Ao contrário de instruções SQL estáticas, que são embutidas em código no programa, instruções SQL dinâmicas podem ser criadas em tempo de execução e colocadas em uma variável de host de cadeia de caracteres. Em seguida, eles são enviados para o DBMS para processamento. Como o DBMS deve gerar um plano de acesso em tempo de execução para instruções SQL dinâmicas, o SQL dinâmico geralmente é mais lento do que o SQL estático. Quando um programa que contém instruções SQL dinâmicas é compilado, as instruções SQL dinâmicas não são removidas do programa, como no SQL estático. Em vez disso, eles são substituídos por uma chamada de função que passa a instrução para o DBMS; as instruções SQL estáticas no mesmo programa são tratadas normalmente.  
   
- A maneira mais simples de executar uma declaração SQL dinâmica é com uma declaração EXECUTE IMMEDIATE. Esta declaração passa a declaração SQL para o DBMS para compilação e execução.  
+ A maneira mais simples de executar uma instrução SQL dinâmica é com uma instrução EXECUTE IMMEDIATE. Essa instrução passa a instrução SQL para o DBMS para compilação e execução.  
   
- Uma desvantagem da declaração EXECUTE IMMEDIATE é que o DBMS deve passar por cada uma das cinco etapas de processamento de uma declaração SQL cada vez que a declaração é executada. A sobrecarga envolvida neste processo pode ser significativa se muitas declarações forem executadas dinamicamente, e é um desperdício se essas declarações forem semelhantes. Para lidar com essa situação, o SQL dinâmico oferece uma forma otimizada de execução chamada execução preparada, que utiliza as seguintes etapas:  
+ Uma desvantagem da instrução EXECUTE IMMEDIATE é que o DBMS deve passar por cada uma das cinco etapas do processamento de uma instrução SQL cada vez que a instrução é executada. A sobrecarga envolvida nesse processo pode ser significativa se muitas instruções forem executadas dinamicamente, e será um desperdício se essas instruções forem semelhantes. Para resolver essa situação, o SQL dinâmico oferece uma forma otimizada de execução chamada execução preparada, que usa as seguintes etapas:  
   
-1.  O programa constrói uma declaração SQL em um buffer, assim como faz para a declaração EXECUTE IMMEDIATE. Em vez de variáveis de host, um ponto de interrogação (?) pode ser substituído por uma constante em qualquer lugar do texto da declaração para indicar que um valor para a constante será fornecido mais tarde. O ponto de interrogação é chamado de marcador de parâmetro.  
+1.  O programa constrói uma instrução SQL em um buffer, assim como faz para a instrução EXECUTE IMMEDIATE. Em vez de variáveis de host, um ponto de interrogação (?) pode ser substituído por uma constante em qualquer lugar no texto da instrução para indicar que um valor para a constante será fornecido posteriormente. O ponto de interrogação é chamado como um marcador de parâmetro.  
   
-2.  O programa passa a declaração SQL para o DBMS com uma declaração PREPARATÓRIA, que solicita que o DBMS analise, valide e otimize a declaração e gere um plano de execução para ele. Em seguida, o programa usa uma declaração EXECUTE (não uma declaração EXECUTE IMMEDIATE) para executar a declaração PREPARE-se posteriormente. Ele passa valores de parâmetros para a declaração através de uma estrutura de dados especial chamada SQL Data Area ou SQLDA.  
+2.  O programa passa a instrução SQL para o DBMS com uma instrução PREPARE, que solicita que o DBMS analise, valide e otimize a instrução e gere um plano de execução para ela. Em seguida, o programa usa uma instrução EXECUTE (não uma instrução EXECUTE IMMEDIATE) para executar a instrução PREPARE posteriormente. Ele passa valores de parâmetro para a instrução por meio de uma estrutura de dados especial chamada área de dados SQL ou SQLDA.  
   
-3.  O programa pode usar a declaração EXECUTE repetidamente, fornecendo diferentes valores de parâmetro cada vez que a declaração dinâmica é executada.  
+3.  O programa pode usar a instrução EXECUTE repetidamente, fornecendo valores de parâmetros diferentes cada vez que a instrução dinâmica é executada.  
   
- Execução preparada ainda não é o mesmo que SQL estático. No SQL estático, as quatro primeiras etapas do processamento de uma declaração SQL ocorrem no momento da compilação. Na execução preparada, essas etapas ainda ocorrem em tempo de execução, mas são realizadas apenas uma vez; execução do plano só ocorre quando EXECUTE é chamado. Isso ajuda a eliminar algumas das desvantagens de desempenho inerentes à arquitetura do SQL dinâmico. A próxima ilustração mostra as diferenças entre SQL estático, SQL dinâmico com execução imediata e SQL dinâmico com execução preparada.
+ A execução preparada ainda não é a mesma que a SQL estática. No SQL estático, as quatro primeiras etapas do processamento de uma instrução SQL ocorrem no momento da compilação. Na execução preparada, essas etapas ainda ocorrem em tempo de execução, mas são executadas apenas uma vez; a execução do plano ocorre somente quando EXECUTE é chamado. Isso ajuda a eliminar algumas das desvantagens de desempenho inerentes à arquitetura do SQL dinâmico. A ilustração a seguir mostra as diferenças entre SQL estático, SQL dinâmico com execução imediata e SQL dinâmico com execução preparada.

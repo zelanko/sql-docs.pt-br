@@ -1,6 +1,6 @@
 ---
-title: Atributos id válidos usando sql:prefixo (SQLXML)
-description: Saiba como criar atributos válidos do tipo ID, IDREF e IDREFS usando sql:prefixo (SQLXML 4.0).
+title: 'Atributos de ID válidos usando SQL: prefix (SQLXML)'
+description: 'Saiba como criar atributos de tipo ID, IDREF e IDREFS válidos usando SQL: prefix (SQLXML 4,0).'
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -25,17 +25,17 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388182"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  
   
- ID, IDREF e IDREFS correspondem às relações PK/FK (chave primária/chave estrangeira) no banco de dados, com poucas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se os atributos **CustomerID** e **OrderID** forem especificados como tipo de Identificação em um documento XML, esses valores devem ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
+ ID, IDREF e IDREFS correspondem a relações CP/FK (chave primária/chave estrangeira) no banco de dados, com poucas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se os atributos **CustomerID** e **OrderID** forem especificados como tipo de ID em um documento XML, esses valores deverão ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
   
  Para que os atributos ID, IDREF e IDREFS sejam válidos:  
   
@@ -45,19 +45,19 @@ ms.locfileid: "81388182"
   
 -   O valor de um atributo ID, IDREF e IDREFS deve ser um token nomeado. (Por exemplo, o valor inteiro 101 não pode ser um valor de ID.)  
   
--   Os atributos do tipo ID, IDREF e IDREFS não podem ser mapeados em colunas do **tipo texto,** **ntext**ou **imagem** ou qualquer outro tipo de dados binários (por exemplo, **carimbo de tempo**).  
+-   Os atributos de ID, IDREF e IDREFS não podem ser mapeados para colunas do tipo **Text**, **ntext**ou **Image** ou qualquer outro tipo de dados binary (por exemplo, **timestamp**).  
   
- Se um documento XML contiver vários IDs, use a anotação **sql:prefixo** para garantir que os valores sejam únicos.  
+ Se um documento XML contiver várias IDs, use a anotação **SQL: prefix** para garantir que os valores sejam exclusivos.  
   
- Observe que a anotação **sql:prefixo** não pode ser usada com atributo fixo XSD.  
+ Observe que **SQL:** a anotação de prefixo não pode ser usada com atributo xsd fixo.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requisitos para executar exemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>a. Especificando os tipos ID e IDREFS  
- No esquema a seguir, o elemento ** \<>cliente** consiste no ** \<** elemento Ordem>filho. O ** \<** elemento Order>também tem um elemento filho, o ** \<elemento OrderDetail>.**  
+### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificando os tipos ID e IDREFS  
+ No esquema a seguir, o ** \<elemento>do cliente** consiste no ** \<elemento filho Order>** . O ** \<elemento Order>** também tem um elemento filho, o ** \<OrderDetail>** elemento.  
   
- O atributo **OrderIDList** do ** \<Cliente>** é um atributo do tipo IDREFS que se refere ao atributo **OrderID** do ** \<elemento Order>.**  
+ O atributo **OrderIDList** de ** \<>do cliente** é um atributo de tipo IDREFS que se refere ao atributo **OrderID** do elemento ** \<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -133,7 +133,7 @@ ms.locfileid: "81388182"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [Usando ODO para executar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o resultado parcial:  
   

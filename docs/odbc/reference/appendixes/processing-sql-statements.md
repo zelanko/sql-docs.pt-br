@@ -1,5 +1,5 @@
 ---
-title: Processamento de declarações SQL | Microsoft Docs
+title: Processando instruções SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eda640f6e810eeccbfa17ea2b6ba7c1b19b28e08
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307997"
 ---
 # <a name="processing-sql-statements"></a>Processar instruções SQL
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca do cursor ODBC passa todas as instruções SQL diretamente para o driver, exceto as seguintes:  
+ A biblioteca de cursores ODBC passa todas as instruções SQL diretamente para o driver, exceto o seguinte:  
   
--   Atualização posicionada e exclusão de declarações  
+-   Instruções UPDATE e DELETE posicionadas  
   
--   **SELECIONE PARA INSTRUÇÕES DE ATUALIZAÇÃO**  
+-   **Selecionar para instruções UPDATE**  
   
--   Demonstrações SQL em lote  
+-   Instruções SQL em lote  
   
- Para executar as instruções de atualização e exclusão posicionadas e posicionar o cursor em uma linha para chamar **SQLGetData** para essa linha, a biblioteca do cursor constrói uma instrução pesquisada que identifica a linha.  
+ Para executar as instruções UPDATE e DELETE posicionadas e posicionar o cursor em uma linha para chamar **SQLGetData** para essa linha, a biblioteca de cursores constrói uma instrução pesquisada que identifica a linha.  
   
  Esta seção contém os seguintes tópicos.  
   

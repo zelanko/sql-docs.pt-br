@@ -1,5 +1,5 @@
 ---
-title: Número da versão | Microsoft Docs
+title: Número de versão | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 37b7924380b9e9beb60792b50436eaa13a503c76
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306714"
 ---
 # <a name="version-number"></a>Número da versão
-Existem várias versões de ODBC, cada uma com características diferentes. Um aplicativo determina qual versão do ODBC o Driver Manager e um suporte específico ao driver ligando para **o SQLGetInfo** com as opções SQL_ODBC_VER e SQL_DRIVER_ODBC_VER.
+Há várias versões do ODBC, cada uma com recursos diferentes. Um aplicativo determina a qual versão ODBC o Gerenciador de driver e um driver específico dão suporte chamando **SQLGetInfo** com as opções SQL_ODBC_VER e SQL_DRIVER_ODBC_VER.

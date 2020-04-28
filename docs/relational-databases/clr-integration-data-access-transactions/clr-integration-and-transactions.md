@@ -1,6 +1,6 @@
 ---
-title: Integração e Transações CLR | Microsoft Docs
-description: O namespace System.Transactions fornece uma estrutura de transação totalmente integrada à integração ADO.NET e SQL Server CLR.
+title: Integração e transações do CLR | Microsoft Docs
+description: O namespace System. Transactions fornece uma estrutura de transação totalmente integrada ao ADO.NET e SQL Server integração CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487460"
 ---
 # <a name="clr-integration-and-transactions"></a>Integração CLR e transações
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O **System.Transactions** fornece uma estrutura de transação que é totalmente integrada com o ADO.NET e a integração CLR (Common Language Runtime) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System.Transactions** e ADO.NET trabalham juntos para ampliar e simplificar o uso de transações locais e distribuídas em aplicativos gerenciados.  
+  O **System.Transactions** fornece uma estrutura de transação que é totalmente integrada com o ADO.NET e a integração CLR (Common Language Runtime) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **System. Transactions** e ADO.net trabalham juntos para estender e simplificar o uso de transações locais e distribuídas em aplicativos gerenciados.  
   
 > [!NOTE]  
 >  Um UDP (user-defined procedure) CLR não pode estabelecer uma conexão com o mesmo servidor no qual está sendo executado (uma conexão de loopback) e se inscrever na mesma transação. Caso uma dessas ações seja tentada, a tentativa de conexão será bloqueada e o controle não será devolvido ao UDP. Isso resultará em um erro de tempo limite (Msg 1206) no UDP.  
@@ -41,7 +41,7 @@ ms.locfileid: "81487460"
  Descreve como acessar uma transação que está atualmente sendo executada em processo no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Usando System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- Descreve como usar a API **(System.Transactions** application programming interface, interface de programação de aplicativos de transações).  
+ Descreve como usar a API (interface de programação de aplicativo) do **System. Transactions** em seu aplicativo gerenciado.  
   
  [Vidas úteis de transação](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Descreve a diferença no tempo de vida entre transações iniciadas nos procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] e transações iniciadas nos aplicativos de CLR.  

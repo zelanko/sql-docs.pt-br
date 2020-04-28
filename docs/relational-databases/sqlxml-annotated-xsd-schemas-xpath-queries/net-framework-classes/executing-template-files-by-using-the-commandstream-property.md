@@ -1,6 +1,6 @@
 ---
 title: Executar arquivos de modelo com a propriedade CommandStream
-description: Aprenda a executar arquivos de modelo que consistam em consultas SQL ou XPath usando a propriedade CommandStream do objeto SqlXmlCommand.
+description: Saiba como executar arquivos de modelo que consistem em consultas SQL ou XPath usando a propriedade CommandStream do objeto SqlXmlCommand.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,17 +18,17 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388361"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Executando os arquivos de modelo usando a propriedade CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Neste aplicativo, um FileStreamobject é aberto para um arquivo de comando, e o fluxo de arquivos é atribuído como o CommandStream que é executado.  
+  Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Nesse aplicativo, um filestreamobject é aberto para um arquivo de comando e o fluxo de arquivos é atribuído como o CommandStream que é executado.  
   
- No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType.Template (não como TemplateFile).  
+ No exemplo a seguir, a propriedade CommandType é especificada como SqlXmlCommandType. Template (não como TemplateFile).  
   
  Este é o modelo XML de exemplo:  
   

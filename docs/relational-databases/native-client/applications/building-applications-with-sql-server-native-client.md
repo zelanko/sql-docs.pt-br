@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fffae7ea51d75f54cb87a17c433df935de3139b7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388247"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Criando aplicativos com o SQL Server Native Client
@@ -43,7 +43,7 @@ ms.locfileid: "81388247"
  [Atualizando um aplicativo do MDAC para o SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
  Discute as diferenças entre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o MDAC, e os problemas que devem ser considerados ao atualizar do MDAC para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Atualizando um aplicativo do Cliente Nativo do SQL Server 2005](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [Atualizando um aplicativo do SQL Server Native Client 2005](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  Aborda problemas que devem ser considerados ao fazer a atualização do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Usando o ADO com SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
@@ -56,8 +56,8 @@ ms.locfileid: "81388247"
  Discute como conectar-se a um [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Programação do cliente nativo do servidor SQL](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Tópicos oDBC How-to](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Tópicos de instruções do OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Programação de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Tópicos de instruções sobre ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [Tópicos de instruções sobre OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

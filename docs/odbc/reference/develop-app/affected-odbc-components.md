@@ -17,22 +17,22 @@ ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306470"
 ---
 # <a name="affected-odbc-components"></a>Componentes ODBC afetados
-A compatibilidade retrógrada descreve como aplicativos, o Driver Manager e os drivers são afetados pela introdução de uma nova versão do Driver Manager. Isso afeta aplicativos e driver quando ambos permanecem na versão antiga. Há, portanto, três tipos de retrocompatibilidade a considerar, como mostrado na tabela a seguir.  
+A compatibilidade com versões anteriores descreve como os aplicativos, o Gerenciador de driver e os drivers são afetados pela introdução de uma nova versão do Gerenciador de driver. Isso afeta aplicativos e drivers quando um ou ambos permanecem na versão antiga. Há, portanto, três tipos de compatibilidade com versões anteriores a serem consideradas, conforme mostrado na tabela a seguir.  
   
 |Type|Versão do DM|Versão do aplicativo|Versão do driver|  
 |----------|-------------------|----------------------------|-----------------------|  
-|Compatibilidade retrógrada do driver manager|*3.x*|*2. x*|*2. x*|  
-|Retrocompatibilidade do driver[1]|*3.x*|*2. x*|*3.x*|  
-|Compatibilidade retroativa do aplicativo|*3.x*|*3.x*|*2. x*|  
+|Compatibilidade com versões anteriores do Gerenciador de driver|*3.x*|*2. x*|*2. x*|  
+|Compatibilidade com versões anteriores do driver [1]|*3.x*|*2. x*|*3.x*|  
+|Compatibilidade com versões anteriores do aplicativo|*3.x*|*3.x*|*2. x*|  
   
- [1] A retrocompatibilidade dos drivers é discutida principalmente no Apêndice G: Diretrizes do Driver para Compatibilidade Retrógrada.  
+ [1] a compatibilidade com versões anteriores dos drivers é discutida principalmente no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
   
 > [!NOTE]
->  Um aplicativo compatível com padrões - por exemplo, um aplicativo que tenha sido escrito de acordo com as normas Open Group ou ISO CLI - é garantido para trabalhar com um driver ODBC *3.x* através do ODBC *3.x* Driver Manager. Presume-se que a funcionalidade que o aplicativo está usando está disponível no driver. Também se supõe que o aplicativo compatível com padrões foi compilado com os arquivos de cabeçalho ODBC *3.x.*
+>  Um aplicativo compatível com padrões, por exemplo, um aplicativo que foi escrito de acordo com os padrões de grupo aberto ou CLI ISO-tem a garantia de funcionar com um driver ODBC *3. x* por meio do Gerenciador de driver ODBC *3. x* . Supõe-se que a funcionalidade que o aplicativo está usando está disponível no driver. Também pressupõe-se que o aplicativo em conformidade com os padrões tenha sido compilado com os arquivos de cabeçalho ODBC *3. x* .

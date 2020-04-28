@@ -15,21 +15,21 @@ ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306777"
 ---
 # <a name="using-concise-functions"></a>Usar funções concisas
-Algumas funções ODBC ganham acesso implícito aos descritores. Os escritores de aplicativos podem encontrá-los mais convenientes do que ligar para **sqlsetdescField** ou **SQLGetDescField**. Essas funções são chamadas de funções *concisas* porque executam uma série de funções, incluindo a configuração ou obtenção de campos descritores. Algumas funções concisas permitem que um aplicativo defina ou recupere vários campos de descritores relacionados em uma única chamada de função.  
+Algumas funções ODBC recebem acesso implícito aos descritores. Os gravadores de aplicativos podem encontrá-los mais convenientes do que chamar **SQLSetDescField** ou **SQLGetDescField**. Essas funções são chamadas de funções *concisas* porque executam várias funções, incluindo configuração ou obtenção de campos de descritor. Algumas funções concisas permitem que um aplicativo defina ou recupere vários campos de descritor relacionados em uma única chamada de função.  
   
- Funções concisas podem ser chamadas sem antes recuperar uma alça descritor para uso como argumento. Essas funções funcionam com os campos descritores associados à alça de declaração em que são chamados.  
+ Funções concisas podem ser chamadas sem primeiro recuperar um identificador de descritor para uso como um argumento. Essas funções funcionam com os campos de descritor associados ao identificador de instrução em que eles são chamados.  
   
- As funções concisas **SQLBindCol** e **SQLBindParameter** ligam uma coluna ou parâmetro definindo os campos descritores que correspondem aos seus argumentos. Cada uma dessas funções executa mais tarefas do que simplesmente definir descritores. **SQLBindCol** e **SQLBindParameter** fornecem uma especificação completa da vinculação de uma coluna de dados ou parâmetro dinâmico. Um aplicativo pode, no entanto, alterar detalhes individuais de uma vinculação chamando **SQLSetDescField** ou **SQLSetDescRec** e pode vincular completamente uma coluna ou parâmetro fazendo uma série de chamadas adequadas para essas funções.  
+ As funções concisas **SQLBindCol** e **SQLBindParameter** associam uma coluna ou um parâmetro definindo os campos do descritor que correspondem aos seus argumentos. Cada uma dessas funções executa mais tarefas do que simplesmente definir descritores. **SQLBindCol** e **SQLBindParameter** fornecem uma especificação completa da Associação de uma coluna de dados ou parâmetro dinâmico. No entanto, um aplicativo pode alterar detalhes individuais de uma associação chamando **SQLSetDescField** ou **SQLSetDescRec** e pode associar completamente uma coluna ou um parâmetro, fazendo uma série de chamadas adequadas para essas funções.  
   
- As funções concisas **SQLColAttribute,** **SQLDescribeCol,** **SQLDescribeParam,** **SQLNumParams**e **SQLNumResultCols** recuperam valores em campos descritores.  
+ As funções concisas **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**e **SQLNumResultCols** recuperam valores nos campos de descritor.  
   
- **SQLSetDescRec** e **SQLGetDescRec** são funções concisas que, com uma chamada, definem ou recebem vários campos de descritor que afetam o tipo de dados e o armazenamento de dados de coluna ou parâmetro. **SQLSetDescRec** é uma maneira eficaz de alterar a vinculação de dados de coluna ou parâmetro em uma etapa.  
+ **SQLSetDescRec** e **SQLGetDescRec** são funções concisas que, com uma chamada, definem ou obtêm vários campos de descritor que afetam o tipo de dados e o armazenamento de dados de coluna ou parâmetro. **SQLSetDescRec** é uma maneira eficaz de alterar a associação de dados de coluna ou parâmetro em uma única etapa.  
   
- **SQLSetStmtAttr** e **SQLGetStmtAttr** servem como funções concisas em alguns casos. (Ver [Campos do Descritor](../../../odbc/reference/develop-app/descriptor-fields.md).)
+ **SQLSetStmtAttr** e **SQLGetStmtAttr** servem como funções concisas em alguns casos. (Consulte os [campos de descritor](../../../odbc/reference/develop-app/descriptor-fields.md).)

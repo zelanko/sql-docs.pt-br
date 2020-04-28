@@ -1,6 +1,6 @@
 ---
-title: Criando seções CDATA usando sql:use-cdata (SQLXML)
-description: Aprenda a criar seções CDATA no SQLXML 4.0 usando a anotação sql:use-cdata para escapar de blocos de texto que contenham caracteres de marcação.
+title: 'Criando seções CDATA usando SQL: use-cdata (SQLXML)'
+description: 'Saiba como criar seções CDATA no SQLXML 4,0 usando a anotação sql: use-cdata para escapar blocos de texto que contêm caracteres de marcação.'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,10 +22,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388197"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Criando seções CDATA usando sql:use-cdata (SQLXML 4.0)
@@ -33,19 +33,19 @@ ms.locfileid: "81388197"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Em XML, as seções CDATA são usadas para sair de blocos de texto que contenham caracteres que seriam reconhecidos como caracteres de marcação.  
   
- Um banco [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados na Microsoft às vezes pode conter caracteres que são tratados como caracteres de marcação pelo analisador XML; por exemplo, os suportes angulares (< e >), o símbolo menor ou igual a (<=) e o ampersand (&) são tratados como caracteres de marcação. No entanto, é possível quebrar esse tipo de caracteres especiais em uma seção CDATA para impedi-los de serem tratados como caracteres de marcação. O texto na seção CDATA é tratado pelo analisador XML como texto sem-formatação.  
+ Um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Microsoft às vezes pode conter caracteres que são tratados como caracteres de marcação pelo analisador XML; por exemplo, colchetes angulares (< e >), o símbolo de menor que ou-igual a (<=) e o e comercial (&) são tratados como caracteres de marcação. No entanto, é possível quebrar esse tipo de caracteres especiais em uma seção CDATA para impedi-los de serem tratados como caracteres de marcação. O texto na seção CDATA é tratado pelo analisador XML como texto sem-formatação.  
   
- A anotação **sql:use-cdata** é usada para especificar que os dados retornados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser embrulhados em uma seção CDATA (ou seja, indica se o valor de uma coluna especificada por **sql:field** deve ser incluído em uma seção CDATA). A anotação **sql:use-cdata** só pode ser especificada em elementos que mapeiam para uma coluna de banco de dados.  
+ A anotação **SQL: use-cdata** é usada para especificar que os dados retornados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem ser encapsulados em uma seção CDATA (ou seja, indica se o valor de uma coluna especificada pelo **campo SQL:** deve ser incluído em uma seção CDATA). A anotação **SQL: use-cdata** pode ser especificada somente em elementos que são mapeados para uma coluna de banco de dados.  
   
- A anotação **sql:use-cdata** leva um valor booleano (0 = falso, 1 = verdadeiro). Os valores aceitáveis são 0, 1, true e false.  
+ A anotação **SQL: use-cdata** usa um valor booliano (0 = false, 1 = true). Os valores aceitáveis são 0, 1, true e false.  
   
- Esta anotação não pode ser usada com os tipos **de atributos SqL:url-encode** ou no ID, IDREFS, NMTOKEN e NMTOKENS.  
+ Esta anotação não pode ser usada com **SQL: url-encode** ou nos tipos de atributo ID, IDREF, IDREFS, NMTOKEN e NMTOKENS.  
   
 ## <a name="examples"></a>Exemplos  
- Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requisitos para executar exemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>a. Especificando sql:use-cdata em um elemento  
- No esquema a seguir, **sql:use-cdata** é definido como 1 (True) para o ** \<AddressLine1>** dentro do ** \<** elemento Endereço>. Como resultado, os dados são retornados em uma seção CDATA.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Especificando sql:use-cdata em um elemento  
+ No esquema a seguir, **SQL: use-cdata** é definido como 1 (true) para o ** \<>AddressLine1** no elemento ** \<address>** . Como resultado, os dados são retornados em uma seção CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -86,7 +86,7 @@ ms.locfileid: "81388197"
   
 3.  Crie e use o script de teste SQLXML 4.0 (Sqlxml4test.vbs) para executar o modelo.  
   
-     Para obter mais informações, consulte [Usando OA para executar consultas SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obter mais informações, consulte [usando o ADO para executar consultas do SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este é o conjunto de resultados parcial:  
   

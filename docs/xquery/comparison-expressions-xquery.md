@@ -1,6 +1,6 @@
 ---
 title: Expressões de comparação (XQuery) | Microsoft Docs
-description: Aprenda a usar as expressões de comparação XQuery que contêm operadores de comparação de ordem geral, valor, nó e nó.
+description: Saiba como usar expressões de comparação XQuery que contêm operadores de comparação geral, de valor, de nó e de ordem de nó.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 082fb2d1afdfa8824ea6f3d6e7bd3e4c484e281e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388163"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressões de comparação (XQuery)
@@ -40,7 +40,7 @@ ms.locfileid: "81388163"
   
 -   Operadores de comparação de ordem de nó  
   
-## <a name="general-comparison-operators"></a>Operadores gerais de comparação  
+## <a name="general-comparison-operators"></a>Operadores de comparação geral  
  Os operadores de comparação gerais podem ser usados para comparar valores atômicos, sequências ou qualquer combinação dos dois.  
   
  Os operadores gerais estão definidos na tabela a seguir.  
@@ -80,7 +80,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- A consulta a seguir retorna imagens de tamanho pequeno de um modelo de produto do catálogo de produtos fornecido no banco de dados de exemplo AdventureWorks. A consulta compara uma sequência de valores atômicos retornada por `PD:ProductDescription/PD:Picture/PD:Size` com uma “pequena” sequência de singleton. Se a comparação for True,\> ela retorna o elemento imagem <.  
+ A consulta a seguir retorna imagens de tamanho pequeno de um modelo de produto do catálogo de produtos fornecido no banco de dados de exemplo AdventureWorks. A consulta compara uma sequência de valores atômicos retornada por `PD:ProductDescription/PD:Picture/PD:Size` com uma “pequena” sequência de singleton. Se a comparação for verdadeira, ela retornará o elemento <\> Picture.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -91,7 +91,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- A consulta a seguir compara uma seqüência de números de telefone em <elementos numéricos\> com a string literal "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
+ A consulta a seguir compara uma sequência de números de telefone em\> <elementos de número ao literal de cadeia de caracteres "112-111-1111". A consulta comparará a sequência de elementos de número de telefone na coluna AdditionalContactInfo para determinar se há um número de telefone específico para um cliente específico no documento.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- A consulta retorna True. Isso indica que o número existe no documento. A consulta a seguir é uma versão levemente modificada da consulta anterior. Nesta consulta, são comparados os valores de número de telefone recuperados do documento a uma sequência de dois valores de número de telefone. Se a comparação for True, o elemento número\> <é devolvido.  
+ A consulta retorna True. Isso indica que o número existe no documento. A consulta a seguir é uma versão levemente modificada da consulta anterior. Nesta consulta, são comparados os valores de número de telefone recuperados do documento a uma sequência de dois valores de número de telefone. Se a comparação for verdadeira, o elemento de\> número de <será retornado.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -153,7 +153,7 @@ WHERE ContactID=1
   
  Esses operadores só funcionam em valores atômicos singleton. Ou seja, você não pode especificar uma sequência como um dos operandos.  
   
- Por exemplo, a consulta \<a seguir recupera elementos de imagem> para um modelo de produto onde o tamanho da imagem é "pequeno:  
+ Por exemplo, a consulta a seguir \<recupera elementos de> de imagem para um modelo de produto em que o tamanho da imagem é "pequeno:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,9 +170,9 @@ WHERE ProductModelID=19
   
 -   O `declare namespace` define o prefixo de namespace que é subsequentemente utilizado na consulta.  
   
--   O \<valor do elemento Tamanho> é comparado com o valor atômico especificado, "pequeno".  
+-   O \<valor do elemento de> de tamanho é comparado com o valor atômico especificado, "pequeno".  
   
--   Observe que, como os operadores de valor trabalham apenas em valores atômicos, a função **data()** é usada implicitamente para recuperar o valor do nó. Ou seja, o `data($P/PD:Size) eq "small"` produz o mesmo resultado.  
+-   Observe que, como os operadores de valor funcionam apenas em valores atômicos, a função **Data ()** é usada implicitamente para recuperar o valor do nó. Ou seja, o `data($P/PD:Size) eq "small"` produz o mesmo resultado.  
   
  Este é o resultado:  
   
@@ -188,7 +188,7 @@ WHERE ProductModelID=19
  Observe que as regras da promoção de tipo para comparações de valor são as mesmas das comparações gerais. Além disso, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa as mesmas regras de conversão para valores não digitados durante as comparações de valor que as usadas durante as comparações gerais. Em contraste, as regras na especificação XQuery sempre convertem o valor não digitado em xs:string durante as comparações de valor.  
   
 ## <a name="node-comparison-operator"></a>Operador de comparação de nó  
- O operador de comparação de nó, **é**, aplica-se apenas aos tipos de nó. O resultado que ele retorna indica se dois nós passados como operandos representam o mesmo nó no documento original. Esse operador retornará True se os dois operandos forem o mesmo nó. Caso contrário, ele retorna falso.  
+ O operador de comparação de nó, **é**, aplica-se somente a tipos de nós. O resultado que ele retorna indica se dois nós passados como operandos representam o mesmo nó no documento original. Esse operador retornará True se os dois operandos forem o mesmo nó. Caso contrário, retornará false.  
   
  A consulta a seguir verifica se o local do centro de trabalho 10 é o primeiro no processo de fabricação de um modelo de produto específico.  
   
@@ -221,11 +221,11 @@ ProductModelID       Result
   
  Estas são as comparações feitas, com base na ordem do documento:  
   
--   `<<`: **Operand 1** precede **o perand 2** na ordem do documento.  
+-   `<<`: O **operando 1** precede o **operando 2** na ordem do documento.  
   
--   `>>`: **Operand 1** segue **o pere 2** na ordem do documento.  
+-   `>>`: O **operando 1** segue o **operando 2** na ordem do documento.  
   
- A consulta a seguir retorna True se \<a descrição do catálogo \<do produto tiver o elemento Warranty> que aparece antes do elemento Manutenção> na ordem do documento para um determinado produto.  
+ A consulta a seguir retornará true se a descrição do catálogo de \<produtos tiver o elemento de> \<de garantia exibido antes do elemento de manutenção> na ordem do documento para um produto específico.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -241,14 +241,14 @@ where ProductModelID=19
   
  Observe o seguinte na consulta anterior:  
   
--   O método **de valor()** do tipo de dados **xml**é usado na consulta.  
+-   O método **Value ()** do tipo de dados **XML**é usado na consulta.  
   
--   O resultado booleano da consulta é convertido em **nvarchar(10)** e devolvido.  
+-   O resultado booliano da consulta é convertido em **nvarchar (10)** e retornado.  
   
 -   A consulta retorna True.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tipo sistema &#40;xquery&#41;](../xquery/type-system-xquery.md)   
+ [Digite System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Expressões XQuery](../xquery/xquery-expressions.md)  
   
   

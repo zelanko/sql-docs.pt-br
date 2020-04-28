@@ -1,5 +1,5 @@
 ---
-title: Adicionando uma fonte de dados Visual FoxPro | Microsoft Docs
+title: Adicionando uma fonte de dados do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,38 +14,38 @@ ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1fd0c0f929ca00b7cf731dc92f07f69b6503f884
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307137"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Adicionar uma fonte de dados do Visual FoxPro
-Para acessar os dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte de dados. Você pode criar uma fonte de dados da seguinte forma:  
+Para acessar dados do Visual FoxPro do seu aplicativo, você deve ter uma fonte de dados. Você pode criar uma fonte de dados da seguinte maneira:  
   
--   Em um aplicativo, como microsoft® Word, Microsoft Excel ou Microsoft Access, que usa drivers ODBC.  
+-   Em um aplicativo, como o Microsoft® Word, o Microsoft Excel ou o Microsoft Access, que usa drivers ODBC.  
   
--   Fora do seu aplicativo, usando o Microsoft Windows® 95, Microsoft Windows 98 ou Microsoft Windows NT®/Windows 2000 Control Panel.  
+-   Fora de seu aplicativo, usando o painel de controle do Microsoft Windows® 95, Microsoft Windows 98 ou Microsoft Windows NT®/Windows 2000.  
   
- Depois que uma fonte de dados existe em seu sistema, você pode reutilizar a mesma fonte de dados toda vez que quiser acessar os dados do Visual FoxPro. Se você tiver vários bancos de dados ou tabelas diferentes que deseja acessar, você pode criar uma fonte de dados separada para cada banco de dados ou diretório.  
+ Depois que uma fonte de dados existir no seu sistema, você poderá reutilizar a mesma fonte de dados sempre que desejar acessar os dados do Visual FoxPro. Se você tiver vários bancos de dados ou tabelas diferentes que deseja acessar, você poderá criar uma fonte de dados separada para cada banco de dado ou diretório.  
   
- O procedimento a seguir cria uma fonte de dados usando o Painel de Controle. Para obter mais informações sobre como criar uma fonte de dados a partir de um aplicativo, consulte [Acessando os dados visuais foxpro do Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md).  
+ O procedimento a seguir cria uma fonte de dados usando o painel de controle. Para obter mais informações sobre como criar uma fonte de dados de um aplicativo, consulte [acessando dados do Visual FoxPro do Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md).  
   
-### <a name="to-add-a-visual-foxpro-data-source"></a>Para adicionar uma fonte de dados Visual FoxPro  
+### <a name="to-add-a-visual-foxpro-data-source"></a>Para adicionar uma fonte de dados do Visual FoxPro  
   
-1.  Em computadores que estão executando o Windows 2000, abra o painel controle do Windows e clique duas vezes em Ferramentas Administrativas.  
+1.  Em computadores que executam o Windows 2000, abra o painel de controle do Windows e clique duas vezes em ferramentas administrativas.  
   
-2.  Clique duas vezes em Fontes de dados (ODBC) para abrir a caixa de diálogo Administrador de Origem de Dados ODBC. Este ícone está disponível depois de ter instalado o Driver Visual FoxPro ODBC ou qualquer software de driver ODBC.  
+2.  Clique duas vezes em fontes de dados (ODBC) para abrir a caixa de diálogo administrador de fonte de dados ODBC. Esse ícone estará disponível depois que você tiver instalado o driver ODBC do Visual FoxPro ou qualquer software de driver ODBC.  
   
     > [!NOTE]  
-    >  Se você estiver executando uma versão anterior do Windows, abra o painel Controle do Windows e clique duas vezes em ODBC ou ODBC de 32 bits para abrir a caixa de diálogo Administrador de Origem de Dados ODBC.  
+    >  Se você estiver executando uma versão anterior do Windows, abra o painel de controle do Windows e clique duas vezes em ODBC de 32 bits ou ODBC para abrir a caixa de diálogo administrador de fonte de dados ODBC.  
   
 3.  Clique em Adicionar.  
   
-4.  Na caixa de diálogo Criar nova fonte de dados, selecione Microsoft Visual FoxPro Driver e clique em Concluir.  
+4.  Na caixa de diálogo Criar nova fonte de dados, selecione Microsoft Visual FoxPro driver e clique em concluir.  
   
-5.  Na [caixa de diálogo Configuração Visual FoxPro do ODBC,](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)digite o nome e a descrição da fonte de dados, selecione o tipo de banco de dados, selecione o banco de dados ou diretório e clique em OK.  
+5.  Na [caixa de diálogo configuração do ODBC do Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), digite o nome e a descrição da fonte de dados, selecione o tipo de banco de dado, selecione o banco de dados ou o diretório e clique em OK.  
   
-     O novo nome de origem dos dados é exibido na lista Fontes de dados do usuário na guia DSN do usuário da caixa de diálogo Administrador de Origem de Dados oDBC.  
+     O novo nome da fonte de dados é exibido na lista fontes de dados do usuário na guia DSN do usuário da caixa de diálogo administrador de fonte de dados ODBC.  
   
-6.  Clique em OK para salvar a nova fonte de dados e feche a caixa de diálogo Administrador de Origem de Dados oDBC.
+6.  Clique em OK para salvar a nova fonte de dados e fechar a caixa de diálogo administrador de fonte de dados ODBC.

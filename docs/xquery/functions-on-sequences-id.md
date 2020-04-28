@@ -1,6 +1,6 @@
 ---
-title: Id Function (XQuery) | Microsoft Docs
-description: Aprenda a usar a função de identificação XQuery para retornar uma seqüência de elementos na instância XML, em ordem de documento, com os valores xs:IDREF fornecidos.
+title: Função de ID (XQuery) | Microsoft Docs
+description: 'Saiba como usar a função ID XQuery para retornar uma sequência de elementos na instância XML, em ordem de documento, com os valores xs: IDREF fornecidos.'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388511"
 ---
 # <a name="functions-on-sequences---id"></a>Funções em Sequências – ID
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna a seqüência de nós de elemento com valores xs:ID que correspondem aos valores de um ou mais dos valores xs:IDREF fornecidos em *$arg*.  
+  Retorna a sequência de nós de elemento com valores xs: ID que correspondem aos valores de um ou mais dos valores xs: IDREF fornecidos no *$ARG*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +45,20 @@ fn:id($arg as xs:IDREF*) as element()*
  Se o valor xs:IDREF não corresponder a qualquer elemento, a função retornará a sequência vazia.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery contra instâncias XML armazenadas [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] em várias colunas do tipo **xml** no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>a. Recuperando elementos com base no valor do atributo IDREF  
- O exemplo a seguir usa fn:id para recuperar o <`employee`> elementos, com base no atributo do gerenciador IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperando elementos com base no valor do atributo IDREF  
+ O exemplo a seguir usa FN: ID para recuperar os `employee` elementos de> de <, com base no atributo do Gerenciador IDREF. Neste exemplo, o atributo gerente é um atributo do tipo IDREF e o atributo eid é um atributo do tipo do ID.  
   
- Para um valor de atributo de gerente específico, a função **id()** encontra o elemento <`employee`> cujo valor de atributo do tipo DeD corresponde ao valor de IDREF de entrada. Em outras palavras, para um funcionário específico, a função **de id()** retorna o gerente do funcionário.  
+ Para um valor de atributo de gerente específico, a função **ID ()** localiza `employee` o elemento <> cujo valor de atributo de tipo de ID corresponde ao valor IDREF de entrada. Em outras palavras, para um funcionário específico, a função **ID ()** retorna gerente de funcionários.  
   
  Isso é o que ocorre no exemplo:  
   
 -   Uma coleção de esquemas XML é criada.  
   
--   Uma variável **xml** digitada é criada usando a coleção de esquemas XML.  
+-   Uma variável **XML** com tipo é criada usando a coleção de esquema XML.  
   
--   A consulta recupera o elemento que tem um valor de atributo ID `employee` referenciado pelo atributo IDREF do **<** elemento>.  
+-   A consulta recupera o elemento que tem um valor de atributo de ID referenciado pelo atributo **Manager** IDREF do `employee` elemento <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -99,9 +99,9 @@ Go
  A consulta retorna "Dave" como o valor. Isso indica que Dave é o gerente de Joe.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperando elementos com base no valor do atributo IDREFS de OrderList  
- No exemplo a seguir, o atributo OrderList do elemento> <`Customer` é um atributo tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada id de pedido, há uma criança <`Order`> elemento sob o <`Customer`> fornecendo o valor do pedido.  
+ No exemplo a seguir, o atributo OrderList do elemento <`Customer`> é um atributo de tipo IDREFS. Ele relaciona os ids de ordem desse cliente específico. Para cada ID do pedido, há um <`Order`> filho do elemento na <`Customer`> fornecendo o valor do pedido.  
   
- A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é então passado para a função **id().** A função então `Order` encontra o elemento <> cujo valor do atributo OrderID corresponde à entrada à função **id().**  
+ A expressão de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera o primeiro valor da lista IDRES para o primeiro cliente. Esse valor é passado para a função **ID ()** . Em seguida, a função localiza `Order` o elemento <> cujo valor do atributo OrderID corresponde à entrada para a função **ID ()** .  
   
 ```  
 drop xml schema collection SC  
@@ -177,9 +177,9 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]não suporta a versão de dois argumentos do **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]não oferece suporte à versão de dois argumentos da **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requer que o tipo de **argumento de id()** seja um subtipo de xs:IDREF*.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]exige que o tipo de argumento de **ID ()** seja um subtipo de xs: IDREF *.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções em sequências](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

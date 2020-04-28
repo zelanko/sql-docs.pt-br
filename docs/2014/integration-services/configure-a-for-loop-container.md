@@ -1,5 +1,5 @@
 ---
-title: Configure um recipiente para loop | Microsoft Docs
+title: Configurar um contêiner loop for | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486993"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar um contêiner Loop For
@@ -43,8 +43,8 @@ ms.locfileid: "81486993"
 7.  Clique em **OK** para fechar o **Editor do Loop For**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Para o recipiente de loop](control-flow/for-loop-container.md)   
- [Serviços de integração &#40;expressões&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Contêiner loop for](control-flow/for-loop-container.md)   
+ [Integration Services &#40;expressões&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [Usar expressões de propriedade em pacotes](expressions/use-property-expressions-in-packages.md)  
   
   

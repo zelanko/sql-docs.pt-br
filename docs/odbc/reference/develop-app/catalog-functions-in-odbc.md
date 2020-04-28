@@ -1,5 +1,5 @@
 ---
-title: Funções do Catálogo na ODBC | Microsoft Docs
+title: Funções de catálogo no ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c6731018b99f2f3043e48ee7c174a08cb9ef71fc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306227"
 ---
 # <a name="catalog-functions-in-odbc"></a>Funções de catálogo em ODBC
-O DBC contém as seguintes funções de catálogo:  
+O ODBC contém as seguintes funções de catálogo:  
   
 |Função|Descrição|  
 |--------------|-----------------|  
@@ -29,15 +29,15 @@ O DBC contém as seguintes funções de catálogo:
 |**SQLColumns**|Retorna uma lista de colunas em uma ou mais tabelas.|  
 |**SQLStatistics**|Retorna uma lista de estatísticas sobre uma única tabela. Também retorna uma lista de índices associados a essa tabela.|  
 |**SQLSpecialColumns**|Retorna uma lista de colunas que identifica exclusivamente uma linha em uma única tabela. Também retorna uma lista de colunas nessa tabela que são atualizadas automaticamente.|  
-|**SQLPrimaryKeys**|Retorna uma lista de colunas que compõem a chave principal de uma única tabela.|  
+|**SQLPrimaryKeys**|Retorna uma lista de colunas que compõem a chave primária de uma única tabela.|  
 |**SQLForeignKeys**|Retorna uma lista de chaves estrangeiras em uma única tabela ou uma lista de chaves estrangeiras em outras tabelas que se referem a uma única tabela.|  
 |**SQLTablePrivileges**|Retorna uma lista de privilégios associados a uma ou mais tabelas.|  
 |**SQLColumnPrivileges**|Retorna uma lista de privilégios associados a uma ou mais colunas em uma única tabela.|  
 |**SQLProcedures**|Retorna uma lista de procedimentos na fonte de dados.|  
 |**SQLProcedureColumns**|Retorna uma lista de parâmetros de entrada e saída, o valor de retorno e as colunas no conjunto de resultados de um único procedimento.|  
-|**SQLGetTypeInfo**|Retorna uma lista dos tipos de dados SQL suportados pela fonte de dados. Esses tipos de dados são geralmente usados em instruções **DE TABELA DE CRIAÇÃO** e TABELA DE **ALTER.**|  
+|**SQLGetTypeInfo**|Retorna uma lista dos tipos de dados SQL com suporte pela fonte de dados. Esses tipos de dados geralmente são usados em instruções **CREATE TABLE** e **ALTER TABLE** .|  
   
- Como **sqltables,** **sqlcolumns,** **sqlstatistics**e **sqlspecialcolumns** estão em conformidade com o CLI do Grupo Aberto, e **o SQLGetTypeInfo** está em conformidade com a ISO 92 CLI, eles são implementados pela maioria dos drivers. As demais funções do catálogo estão no nível de conformidade ODBC.  
+ Como o **SQLTables**, o **SQLColumns**, o **SQLStatistics**e o **SQLSpecialColumns** estão em conformidade com a CLI do grupo aberto e o **SQLGetTypeInfo** está de acordo com a CLI do ISO 92, eles são implementados pela maioria dos drivers. As funções de catálogo restantes estão no nível de compatibilidade ODBC.  
   
  Esta seção contém os seguintes tópicos.  
   

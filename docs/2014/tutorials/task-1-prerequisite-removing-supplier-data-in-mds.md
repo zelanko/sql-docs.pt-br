@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 1 (Pré-requisito): Remoção de dados do fornecedor em MDS | Microsoft Docs'
+title: 'Tarefa 1 (pré-requisito): removendo dados do fornecedor no MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81484626"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarefa 1 (pré-requisito): Removendo os dados do fornecedor no MDS
   Nesta tarefa, você removerá os dados do fornecedor armazenados no MDS. Você carregou os dados manualmente usando **Suplemento MDS do Excel** na lição anterior. O pacote SSIS que será criado nesta lição carregará automaticamente os dados no MDS para você. Consequentemente, antes de testar o pacote SSIS, será necessário remover os dados do fornecedor do MDS, remover da hierarquia derivada, remover entidades de fornecedor e estado e criar a entidade do fornecedor sem dados.  
   
-1.  Inicie **o Master Data** `http://localhost/MDS` Manager navegando para ou para o site e aplicativo que você especificou ao configurar o MDS. Se você tiver mantido o **Master Data Manager** aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para alternar para a **home page**.  
+1.  Inicie o **Master Data Manager** navegando `http://localhost/MDS` até o site e o aplicativo que você especificou ao configurar o MDS. Se você tiver mantido o **Master Data Manager** aberto, clique em **SQL Server 2012 Master Data Services** na parte superior para alternar para a **home page**.  
   
 2.  Clique em **Administração do Sistema** na seção **Tarefas Administrativas** .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81484626"
   
 8.  Repita a etapa anterior para excluir a entidade **State** .  
   
-9. Não feche o **Master Data Manager**.  
+9. Não feche **Master Data Manager**.  
   
 10. Alterne para a janela do Excel que tem o arquivo **Cleansed and Matched Suppliers.xls** aberto. Alterne para a guia **Planilha1** na parte inferior.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "81484626"
   
     1.  Selecione **Criar uma nova conexão**e clique no botão **Nova** .  
   
-    2.  Na caixa de diálogo Adicionar nova conexão, digite **O Servidor MDS local** para **descrição** e **http:\//localhost/MDS** for **MDS server address**e clique em **OK** para fechar a caixa de diálogo.  
+    2.  Na caixa de diálogo Adicionar nova conexão, digite **servidor MDS local** para **Descrição** e **http:\//localhost/MDS** para o **endereço do servidor MDS**e clique em **OK** para fechar a caixa de diálogo.  
   
-15. Na caixa de diálogo **Gerenciar conexões,** `http://localhost/MDS`selecione Servidor **MDS local** ( ), clique em **Testar** para testar a conexão. Clique em **OK** na caixa de mensagem.  
+15. Na caixa de diálogo **gerenciar conexões** , selecione **servidor MDS local** (`http://localhost/MDS`), clique em **testar** para testar a conexão. Clique em **OK** na caixa de mensagem.  
   
 16. Clique em **Conectar** para estabelecer uma conexão com o servidor MDS.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "81484626"
 22. Clique em **Gerenciador**. Observe que a entidade **Supplier** com todos os atributos foi criada sem **nenhum valor**.  
   
 ## <a name="next-step"></a>Próxima etapa  
- [Tarefa 2 &#40;&#41; opcional: criar uma exibição de assinatura MDS usando o Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Tarefa 2 &#40;&#41; opcional: criando uma exibição de assinatura do MDS usando o Master Data Manager](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funções ODBC não executadas pela Biblioteca cursor | Microsoft Docs
+title: Funções ODBC não executadas pela biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308037"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>Funções ODBC não executadas pela biblioteca de cursores
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca do cursor não executa as seguintes funções. Quando um aplicativo chama uma dessas funções, o Driver Manager invoca o driver, não a biblioteca do cursor.  
+ A biblioteca de cursores não executa as funções a seguir. Quando um aplicativo chama uma dessas funções, o Gerenciador de driver invoca o driver, não a biblioteca de cursores.  
   
 |||  
 |-|-|  
-|**SQLFetch**|**SQlGetEnvAttr**|  
+|**SQLFetch**|**SQLGetEnvAttr**|  
 |**SQLGetConnectAttr**|**SQLSetDescRec**|  
 |**SQLGetDiagField**|**SQLSetEnvAttr**|  
 |**SQLGetDiagRec**||

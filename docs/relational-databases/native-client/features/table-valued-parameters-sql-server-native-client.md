@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7134f0689701c663133e52dd9face50e99ef3102
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388420"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parâmetros com valor de tabela (SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "81388420"
 
   No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], foram introduzidos parâmetros com valor de tabela que fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante às matrizes de parâmetro, mas eles oferecem mais flexibilidade e uma integração melhor com o [!INCLUDE[tsql](../../../includes/tsql-md.md)], podendo, com frequência, melhorar o desempenho. Os parâmetros com valor de tabela também podem participar de operações baseadas em conjuntos, o que não ocorre com as matrizes de parâmetro.  
   
- Para obter informações sobre parâmetros de valor de tabela e ODBC, consulte [Parâmetros valorizados em tabela &#40;o ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter informações sobre parâmetros com valor de tabela e ODBC, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
  Para obter informações sobre parâmetros com valor de tabela e OLE DB, confira [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   

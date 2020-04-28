@@ -1,5 +1,5 @@
 ---
-title: Duração do ciclo do produto | Microsoft Docs
+title: Comprimento do ciclo do produto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306189"
 ---
 # <a name="length-of-the-product-cycle"></a>Comprimento do ciclo do produto
-A última questão sobre interoperabilidade é o tempo. Desenvolver uma aplicação interoperável geralmente leva mais tempo do que desenvolver uma não interoperável. A razão é que o aplicativo deve verificar os recursos do DBMS, executar as mesmas tarefas de forma diferente para DBMSs diferentes, trabalhar em torno da funcionalidade suportada por alguns DBMSs, mas não outros, e assim por diante.  
+A pergunta final sobre a interoperabilidade é o tempo. O desenvolvimento de um aplicativo interoperável geralmente demora mais do que desenvolver um noninteroperable. O motivo é que o aplicativo deve verificar os recursos do DBMS, executar as mesmas tarefas de forma diferente para DBMSs diferentes, contornar a funcionalidade com suporte de alguns DBMSs, mas não outros, e assim por diante.  
   
- Além do tempo de desenvolvimento, a vida útil do produto deve ser considerada. Se o aplicativo for projetado para ser usado uma vez, como um aplicativo que transfere dados ao migrar de um DBMS para outro, não há sentido em torná-lo interoperável. A aplicação será usada uma vez e descartada.  
+ Além do tempo de desenvolvimento, a vida útil do produto deve ser considerada. Se o aplicativo for projetado para ser usado uma vez, como um aplicativo que transfere dados ao migrar de um DBMS para outro, não há nenhum ponto de torná-lo interoperável. O aplicativo será usado uma vez e descartado.  
   
- Se o aplicativo existir por um longo tempo, pode ser mais fácil manter como uma aplicação interoperável. Isso é verdade até mesmo para aplicativos personalizados que têm um único DBMS como alvo. A razão é que o código interoperável usa um subconjunto limitado de recursos de banco de dados. O driver é obrigado a manter esses recursos disponíveis, mesmo diante das alterações no DBMS subjacente. Assim, o código interoperável pode transferir a carga de lidar com alterações no DBMS do desenvolvedor de aplicativos para o desenvolvedor do driver.
+ Se o aplicativo existir por muito tempo, poderá ser mais fácil de manter como um aplicativo interoperável. Isso é verdadeiro mesmo para aplicativos personalizados que têm um único DBMS como um destino. O motivo é que o código interoperável usa um subconjunto limitado de recursos de banco de dados. O driver é necessário para manter esses recursos disponíveis, mesmo diante de alterações no DBMS subjacente. Portanto, o código interoperável pode mudar a carga de coping com alterações no DBMS do desenvolvedor de aplicativos para o desenvolvedor de driver.

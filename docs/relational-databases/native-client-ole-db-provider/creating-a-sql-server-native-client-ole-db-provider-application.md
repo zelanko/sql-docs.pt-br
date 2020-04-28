@@ -1,5 +1,5 @@
 ---
-title: Crie um aplicativo OLE DB
+title: Criar um aplicativo OLE DB
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cf15d32e162dfd7881e6d0418a28e1f10212a44d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388567"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Criando um aplicativo provedor OLE DB do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] criação de um aplicativo de provedor OLE DB do Cliente Nativo envolve essas etapas:  
+  A criação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um aplicativo de provedor de OLE DB de cliente nativo envolve estas etapas:  
   
 1.  Estabelecimento de uma conexão a uma fonte de dados.  
   

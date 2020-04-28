@@ -1,5 +1,5 @@
 ---
-title: Sobre Drivers e Fontes de Dados | Microsoft Docs
+title: Sobre drivers e fontes de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 7dffeea3bea7e3fbfa66e534ecaa758fbc2064d5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307217"
 ---
 # <a name="about-drivers-and-data-sources"></a>Sobre drivers e fontes de dados
-*Os drivers* são os componentes que processam solicitações do ODBC e retornam dados ao aplicativo. Se necessário, os drivers modificam a solicitação de um aplicativo em um formulário que é compreendido pela fonte de dados. Você deve usar o programa de configuração do driver para adicionar ou excluir um driver do seu computador.  
+Os *drivers* são os componentes que processam solicitações ODBC e retornam dados para o aplicativo. Se necessário, os drivers modificam a solicitação de um aplicativo em um formulário compreendido pela fonte de dados. Você deve usar o programa de instalação do driver para adicionar ou excluir um driver do seu computador.  
   
- *As fontes de* dados são os bancos de dados ou arquivos acessados por um driver e são identificados por um nome de origem de dados (DSN). Use o Administrador de Origem de Dados do ODBC para adicionar, configurar e excluir fontes de dados do seu sistema. Os tipos de fontes de dados que podem ser utilizadas estão descritos na tabela a seguir.  
+ As *fontes de dados* são os bancos ou os arquivos acessados por um driver e são identificados por um DSN (nome da fonte de dados). Use o administrador de fonte de dados ODBC para adicionar, configurar e excluir fontes de dados do seu sistema. Os tipos de fontes de dados que podem ser usados são descritos na tabela a seguir.  
   
 |Fonte de dados|Descrição|  
 |-----------------|-----------------|  
-|Usuário|DSNs do usuário são locais para um computador e podem ser usados apenas pelo usuário atual. Eles estão registrados na subárvore de registro de HKEY_CURRENT_USER.|  
-|Sistema|DSNs do sistema são locais para um computador em vez de dedicados a um usuário. O sistema ou qualquer usuário com privilégios pode usar uma fonte de dados configurada com um DSN do sistema. Os DSNs do sistema são registrados na subárvore de registro de HKEY_LOCAL_MACHINE.|  
-|Arquivo|DSNs de arquivo são fontes baseadas em arquivos que podem ser compartilhadas entre todos os usuários que têm os mesmos drivers instalados e, portanto, têm acesso ao banco de dados. Essas fontes de dados não precisam ser dedicadas a um usuário nem serem locais a um computador. Os nomes de origem dos dados do arquivo não são identificados por entradas de registro dedicadas; em vez disso, eles são identificados por um nome de arquivo com uma extensão .dsn.|  
+|Usuário|Os DSNs de usuário são locais para um computador e podem ser usados somente pelo usuário atual. Eles são registrados na subárvore do registro HKEY_CURRENT_USER.|  
+|Sistema|Os DSNs do sistema são locais para um computador em vez de dedicados a um usuário. O sistema ou qualquer usuário com privilégios pode usar uma fonte de dados configurada com um DSN do sistema. Os DSNs do sistema são registrados na subárvore do registro do HKEY_LOCAL_MACHINE.|  
+|Arquivo|Os DSNs de arquivo são fontes baseadas em arquivo que podem ser compartilhadas entre todos os usuários que têm os mesmos drivers instalados e, portanto, têm acesso ao banco de dados. Essas fontes de dados não precisam ser dedicadas a um usuário nem ser locais para um computador. Nomes de fonte de dados de arquivo não são identificados por entradas de registro dedicadas; em vez disso, eles são identificados por um nome de arquivo com uma extensão. DSN.|  
   
- As fontes de dados do usuário e do sistema são coletivamente conhecidas como fontes de dados *da máquina* porque são locais para um computador.  
+ As fontes de dados do usuário e do sistema são coletivamente conhecidas como fontes de dados do *computador* porque são locais para um computador.  
   
- Cada uma dessas fontes de dados tem uma guia na caixa de diálogo **Administrador de Origem de Dados ODBC.** Para obter mais informações sobre as fontes de dados disponíveis, veja [Fontes de Dados](../../odbc/reference/data-sources.md).
+ Cada uma dessas fontes de dados tem uma guia na caixa de diálogo **administrador de fonte de dados ODBC** . Para obter mais informações sobre as fontes de dados disponíveis, veja [Fontes de Dados](../../odbc/reference/data-sources.md).
