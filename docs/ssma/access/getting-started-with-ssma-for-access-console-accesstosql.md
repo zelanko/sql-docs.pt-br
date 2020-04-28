@@ -10,10 +10,10 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68222224"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introdução com o console do SSMA para Access (AccessToSQL)
@@ -52,7 +52,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|DESCRIÇÃO|  
+|Color|Descrição|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

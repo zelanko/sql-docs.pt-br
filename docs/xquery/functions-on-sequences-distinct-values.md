@@ -16,10 +16,10 @@ ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68223731"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
@@ -48,7 +48,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>a. Usando a função distinct-values() para remover valores duplicados da sequência  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Usando a função distinct-values() para remover valores duplicados da sequência  
  Neste exemplo, uma instância XML que contém números de telefone é atribuída a uma variável de tipo **XML** . O XQuery especificado nessa variável usa a função de **valores distintos ()** para compilar uma lista de números de telefone que não contêm duplicatas.  
   
 ```  
