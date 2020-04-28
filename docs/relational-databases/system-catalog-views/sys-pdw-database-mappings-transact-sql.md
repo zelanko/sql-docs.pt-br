@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139939"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
@@ -24,12 +24,12 @@ ms.locfileid: "68139939"
 
   Mapeia o **database_id**s de bancos de dados para o nome físico usado em nós de computação e fornece a **ID da entidade de segurança** do proprietário do banco de dados no sistema. Ingresse em **Sys. pdw_database_mappings** em **Sys. databases** e **Sys. pdw_nodes_pdw_physical_databases**.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar (36)**|O nome físico do banco de dados nos nós de computação.<br /><br /> **physical_name** e **database_id** formate a chave para essa exibição.||  
 |database_id|**int**|A ID de objeto do banco de dados. Consulte [Sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** e **database_id** formate a chave para essa exibição.||  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Exemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir une sys. pdw_database_mappings a outras tabelas do sistema para mostrar como os bancos de dados são mapeados.  
   
 ```  

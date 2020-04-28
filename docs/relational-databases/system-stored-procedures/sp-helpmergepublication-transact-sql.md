@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137648"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -62,9 +62,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
+|id|**int**|Ordem sequencial da publicação na lista de conjunto de resultados.|  
 |name|**sysname**|Nome da publicação.|  
 |descrição|**nvarchar (255)**|Descrição da publicação.|  
 |status|**tinyint**|Indica quando os dados da publicação estão disponíveis.|  
@@ -78,7 +78,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Indica se o instantâneo da publicação está pronto:<br /><br /> **0** = o instantâneo está pronto para uso.<br /><br /> **1** = o instantâneo não está pronto para uso.|  
 |publication_type|**int**|O tipo de publicação:<br /><br /> **0** = instantâneo.<br /><br /> **1** = transacional.<br /><br /> **2** = mesclar.|  
 |pubid|**uniqueidentifier**|O identificador exclusivo da publicação.|  
-|snapshot_jobid|**Binary (16)**|A ID de trabalho do Agente de Instantâneo. Para obter a entrada para o trabalho de instantâneo na tabela do sistema [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , você deve converter esse valor hexadecimal em **uniqueidentifier**.|  
+|snapshot_jobid|**binary(16)**|A ID de trabalho do Agente de Instantâneo. Para obter a entrada para o trabalho de instantâneo na tabela do sistema [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) , você deve converter esse valor hexadecimal em **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Determina se a publicação está habilitada para a Internet. Se **1**, os arquivos de sincronização da publicação serão colocados no `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` diretório. O usuário deve criar o diretório de FTP. Se for **0**, a publicação não estará habilitada para acesso à Internet.|  
 |dynamic_filter|**int**|Indica se um filtro de linha parametrizado é usado. **0** significa que um filtro de linha com parâmetros não é usado.|  
 |has_subscription|**bit**|Indica se a publicação tem alguma assinatura. **0** significa que não há assinaturas para esta publicação no momento.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Especifica se a capacidade para copiar os bancos de dados de assinatura que assinam esta publicação foi habilitada. Um valor de **0** significa que A cópia não é permitida.|  
 |allow_synctoalternate|**int**|Especifica se um parceiro de sincronização alternativo tem permissão para sincronizar com esse Publicador. Um valor de **0** significa que um parceiro de sincronização não é permitido.|  
 |validate_subscriber_info|**nvarchar (500)**|Lista as funções que estão sendo usadas para recuperar informações do Assinante e validar os critérios de filtragem de linha com parâmetros no Assinante. Ajuda a verificar se as informações estão consistentemente particionadas com cada mesclagem.|  
-|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica se as informações de publicação são publicadas para o Active Directory. Um valor de **0** significa que as informações de publicação não estão disponíveis na Active Directory.<br /><br /> Esse parâmetro foi preterido e tem suporte somente para a compatibilidade com versões anteriores de scripts. Você não pode mais adicionar informações de publicação no Active Directory.|  
 |max_concurrent_merge|**int**|O número de processos de mesclagem simultâneos. Se for **0**, não haverá nenhum limite para o número de processos de mesclagem simultâneos em execução em um determinado momento.|  
 |max_concurrent_dynamic_snapshots|**int**|O número máximo de sessões de instantâneo de dados filtrados simultâneas que pode ser executado na publicação de mesclagem. Se for **0**, não há nenhum limite para o número máximo de sessões de instantâneos de dados filtradas simultâneas que podem ser executadas simultaneamente na publicação em um determinado momento.|  
@@ -108,7 +108,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_web_synchronization|**bit**|Determina se a publicação está habilitada para sincronização da Web. Um valor de **1** significa que a sincronização da Web está habilitada.|  
 |web_synchronization_url|**nvarchar (500)**|A URL da Internet usada para a sincronização da Web.|  
 |allow_partition_realignment|**bit**|Determina se as exclusões serão enviadas ao assinante quando a modificação da linha no publicador gerar uma alteração na partição. Um valor de **1** significa que as exclusões são enviadas ao Assinante.  Para obter mais informações, consulte [sp_addmergepublication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
-|retention_period_unit|**tinyint**|Define a unidade usada ao definir a retenção. Ele pode assumir um dos seguintes valores:<br /><br /> **0** = dia|<br /><br /> **1** = semana<br /><br /> **2** = mês<br /><br /> **3** = ano|  
+|retention_period_unit|**tinyint**|Define a unidade usada ao definir a retenção. Esse valor pode ser um dos seguintes:<br /><br /> **0** = dia|<br /><br /> **1** = semana<br /><br /> **2** = mês<br /><br /> **3** = ano|  
 |has_downloadonly_articles|**bit**|Indica se os artigos pertencentes à publicação são de somente download. Um valor de **1** indica que há artigos somente para download.|  
 |decentralized_conflicts|**int**|Indica se os registros de conflito são armazenados no Assinante que causou o conflito. Um valor de **0** indica que os registros de conflito não são armazenados no Assinante. Um valor 1 indica que os registros de conflito são armazenados no Assinante.|  
 |generation_leveling_threshold|**int**|Especifica o número de alterações que estão contidas em uma geração. Uma geração é uma coleção de alterações que são entregues a um Publicador ou assinante|  

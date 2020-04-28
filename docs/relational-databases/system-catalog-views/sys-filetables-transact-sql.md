@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133998"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68133998"
 
   Retorna uma linha para cada FileTable no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais informações sobre FileTables, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).    
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**||Número de identificação do objeto. É exclusivo em um banco de dados.<br /><br /> Para obter mais informações, [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_enabled**|**bit**|1 = A FileTable está no estado 'habilitado'.|  
-|**directory_name**|**varchar (255)**|Nome do diretório raiz de uma FileTable.|  
+|**directory_name**|**varchar(255)**|Nome do diretório raiz de uma FileTable.|  
 |**filename_collation_id**||É o identificador de ordenação definido para o FileTable|  
 |**filename_collation_name**||É o nome da ordenação definido para o FileTable.|  
   

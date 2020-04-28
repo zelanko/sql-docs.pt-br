@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138664"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68138664"
  Assemblies são arquivos de código DLL gerenciados, usados para definir e implantar objetos de banco de dados gerenciados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre que um usuário executa um desses objetos de banco de dados gerenciados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o CLR carregam o assembly (e suas referências) no qual o objeto de banco de dados gerenciado é definido. O assembly permanece carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aprimorar o desempenho, de forma que os objetos de banco de dados gerenciados contidos no assembly possam ser chamados no futuro sem a necessidade de recarregar o assembly. O assembly não é descarregado até que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sofra pressão de memória. Para obter mais informações sobre assemblies e integração CLR, consulte [ambiente hospedado do CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Para obter mais informações sobre objetos de banco de dados gerenciado, consulte [criando objetos de banco de dados com tempo de execução de linguagem comum &#40;integração de&#41; CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID do assembly carregado. O **assembly_id** pode ser usado para pesquisar mais informações sobre o assembly na exibição de catálogo de [&#41;de assemblies &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Observe que o [!INCLUDE[tsql](../../includes/tsql-md.md)] catálogo [Sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) mostra os assemblies somente no banco de dados atual. A exibição **SQS. dm_clr_loaded_assemblies** mostra todos os assemblies carregados no servidor.|  
 |**appdomain_address**|**int**|Endereço do domínio do aplicativo (**AppDomain**) no qual o assembly é carregado. Todos os assemblies pertencentes a um único usuário sempre são carregados no mesmo **AppDomain**. O **appdomain_address** pode ser usado para pesquisar mais informações sobre o **AppDomain** na exibição [Sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  

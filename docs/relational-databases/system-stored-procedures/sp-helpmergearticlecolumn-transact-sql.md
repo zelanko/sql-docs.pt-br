@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126438"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
@@ -44,11 +44,11 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica a coluna.|  
 |**column_name**|**sysname**|É o nome da coluna para uma tabela ou exibição.|  
-|**Checked**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** especifica que a coluna está sendo publicada.<br /><br /> **0** especifica que não está publicado.|  
+|**published**|**bit**|Especifica se o nome da coluna é publicado.<br /><br /> **1** especifica que a coluna está sendo publicada.<br /><br /> **0** especifica que não está publicado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

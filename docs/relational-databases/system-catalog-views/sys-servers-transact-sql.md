@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132945"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -32,16 +32,16 @@ ms.locfileid: "68132945"
 
   Contém uma linha por servidor vinculado ou remoto registrada e uma linha para o servidor local que tem **server_id** = 0.  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID local do servidor vinculado.|  
 |**name**|**sysname**|Quando **server_id** = 0, o valor retornado é o nome do servidor.<br /><br /> Quando **server_id** > 0, o valor retornado é o nome local do servidor vinculado.|  
-|**remessa**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**product**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**operador**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, exceto se o chamador tiver a permissão ALTER ANY LINKED SERVER.|  
-|**catalog**|**sysname**|Propriedade de conexão do catálogo OLEDB. NULL se nenhum.|  
+|**Catalog**|**sysname**|Propriedade de conexão do catálogo OLEDB. NULL se nenhum.|  
 |**connect_timeout**|**int**|Tempo de limite de conexão em segundos, 0 se nenhum.|  
 |**query_timeout**|**int**|Tempo de limite  de consulta em segundos, 0 se nenhum.|  
 |**is_linked**|**bit**|0 = é um servidor de estilo antigo adicionado usando **sp_addserver**, com comportamento de RPC e de transação distribuída diferente.<br /><br /> 1 = Servidor vinculado padrão.|  
@@ -73,9 +73,9 @@ ms.locfileid: "68132945"
 - Associação nas funções de servidor fixas **setupadmin** ou **sysadmin**  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

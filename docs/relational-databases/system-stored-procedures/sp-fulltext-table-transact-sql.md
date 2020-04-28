@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124144"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68124144"
   Marca ou desmarca uma tabela para indexação de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Em vez disso, use [criar índice de texto completo](../../t-sql/statements/create-fulltext-index-transact-sql.md), [alterar índice de texto](../../t-sql/statements/alter-fulltext-index-transact-sql.md)completo e [remover índice de texto completo](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`É a ação a ser executada. *Action* é **nvarchar (50)**, sem padrão, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**Criar**|Cria os metadados para um índice de texto completo para a tabela referenciada por *qualified_table_name* e especifica que os dados do índice de texto completo para essa tabela devem residir no *fulltext_catalog_name*. Essa ação também designa o uso de *unique_index_name* como a coluna de chave de texto completo. Este índice exclusivo já deve estar presente e deve ser definido em uma coluna da tabela.<br /><br /> Uma pesquisa de texto completo não pode ser executada nessa tabela até que o catálogo de texto completo seja populado.|  
 |**Suspensa**|Descarta os metadados no índice de texto completo para *qualified_table_name*. Se o índice de texto completo for ativo, será desativado automaticamente antes de ser descartado. Não é necessário remover colunas antes de descartar o índice de texto completo.|  
@@ -93,9 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>a. Habilitando uma tabela para indexação de texto completo  
- O exemplo a seguir cria metadados do índice de texto completo da tabela `Document` do banco de dados `AdventureWorks`. 
-  `Cat_Desc` é um catálogo de texto completo. 
-  `PK_Document_DocumentID` é um índice exclusivo de uma única coluna em `Document`.  
+ O exemplo a seguir cria metadados do índice de texto completo da tabela `Document` do banco de dados `AdventureWorks`. `Cat_Desc` é um catálogo de texto completo. `PK_Document_DocumentID` é um índice exclusivo de uma única coluna em `Document`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,7 +133,7 @@ GO
  [&#41;&#40;Transact-SQL de sp_help_fulltext_tables](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Os procedimentos armazenados de pesquisa de texto completo e de semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

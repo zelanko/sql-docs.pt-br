@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108451"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -42,10 +42,10 @@ sp_cursoroption cursor, code, value
  *cursor*  
  É um valor de *identificador* que é gerado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pelo e retornado pelo procedimento armazenado sp_cursoropen. o *cursor* requer um valor de entrada **int** para execução.  
   
- *auto-completar*  
+ *code*  
  Usado para estipular vários fatores dos valores de retorno de cursor. o *código* requer um dos seguintes valores de entrada **int** :  
   
-|Valor|Nome|DESCRIÇÃO|  
+|Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Retorna o ponteiro de texto, e não os dados reais, para certos textos designados ou colunas de imagem.<br /><br /> TEXTPTR_ONLY permite que os ponteiros de texto sejam usados como *identificadores* para objetos de BLOB, que posteriormente podem ser [!INCLUDE[tsql](../../includes/tsql-md.md)] recuperados seletivamente ou atualizados [!INCLUDE[tsql](../../includes/tsql-md.md)] usando ou DBLIB instalações (por exemplo, READTEXT ou DBLIB dbwritetext).<br /><br /> Se um valor "0" for atribuído, todas as colunas de texto e imagem na lista selecionada retornarão ponteiros de texto, em vez de dados.|  
 |0x0002|CURSOR_NAME|Atribui o nome especificado em *valor* ao cursor. Isso, por sua vez, permite que o [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC use instruções UPDATE/DELETE posicionadas nos cursores abertos por meio de sp_cursoropen.<br /><br /> É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou Unicode.<br /><br /> Como [!INCLUDE[tsql](../../includes/tsql-md.md)] as instruções UPDATE/DELETE posicionadas operam, por padrão, na primeira linha em um cursor de fat, SP_CURSOR SETPOSITION deve ser usado para posicionar o cursor antes de emitir a instrução UPDATE/DELETE posicionada.|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|Opção de controle de simultaneidade. Consulte "Valores de códigos retornados" posteriormente neste tópico para obter informações adicionais.|  
 |0x0006|ROWCOUNT|O número de linhas atualmente no conjunto de resultados.<br /><br /> Observação: o número de linhas pode ter mudado desde o valor retornado por sp_cursoropen se a população assíncrona estiver sendo usada. O valor-1 será retornado se o número de linhas for desconhecido.|  
   
- *valor*  
+ *value*  
  Designa o valor retornado pelo *código*. *Value* é um parâmetro necessário que chama um valor de entrada de *código* 0x0001, 0x0002 ou 0x0003.  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O parâmetro *Value* pode retornar um dos valores de *código* a seguir.  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de scrollopt.  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,14 +80,14 @@ sp_cursoroption cursor, code, value
   
  O parâmetro *Value* retorna um dos seguintes valores de ccopt.  
   
-|Valor retornado|DESCRIÇÃO|  
+|Valor retornado|Descrição|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  
 |0x0004 ou 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_cursor](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

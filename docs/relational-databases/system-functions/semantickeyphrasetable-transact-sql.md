@@ -18,10 +18,10 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140568"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
@@ -44,13 +44,13 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
- **tabela**  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+ **table**  
  É o nome de uma tabela que tem indexação de texto completo e semântica habilitada.  
   
  Esse nome pode ser um nome de uma a quatro partes, mas um nome de servidor remoto não é permitido.  
   
- **column**  
+ **pilha**  
  Nome da coluna indexada para a qual os resultados devem ser retornados. A coluna deve ter indexação semântica habilitada.  
   
  **column_list**  
@@ -67,12 +67,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Tabela retornada  
  A tabela a seguir descreve as informações sobre as frases-chave que podem ser retornadas por essa função de conjunto de linhas.  
   
-|Column_name|Type|DESCRIÇÃO|  
+|Column_name|Type|Descrição|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|ID da coluna da qual a frase de chave atual foi extraída e indexada.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|O valor da chave exclusiva do documento ou linha a partir da qual a frase-chave atual foi indexada.|  
 |**keyphrase**|**NVARCHAR**|A frase-chave localizada na coluna identificada por column_id e associada ao documento especificado por document_key.|  
-|**placar**|**FOTO**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave no mesmo documento na coluna indexada.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
+|**placar**|**real**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave no mesmo documento na coluna indexada.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Para obter mais informações, consulte [Localizar frases-chave em documentos com pesquisa semântica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
@@ -91,7 +91,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Exemplos  
   
-###  <a name="HowToTopPhrases"></a>Exemplo 1: localizar as principais frases-chave em um documento específico  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Exemplo 1: localizar as principais frases-chave em um documento específico  
  O exemplo a seguir recupera as 10 principais frases-chave do documento especificado pela variável @DocumentId na coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. A variável @DocumentId representa um valor da coluna de chave do índice de texto completo. A função **SEMANTICKEYPHRASETABLE** recupera esses resultados com eficácia usando uma busca de índice em vez de um exame de tabela. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
 ```sql  
@@ -106,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>Exemplo 2: localizar os principais documentos que contêm uma frase-chave específica  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Exemplo 2: localizar os principais documentos que contêm uma frase-chave específica  
  O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave "Bracket" da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
 ```sql  

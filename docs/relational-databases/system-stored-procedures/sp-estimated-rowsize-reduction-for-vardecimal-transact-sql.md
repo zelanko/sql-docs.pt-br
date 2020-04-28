@@ -22,10 +22,10 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124509"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "68124509"
   Estimará a redução do tamanho médio das linhas se você habilitar o formato de armazenamento vardecimal em uma tabela. Use este número para estimar a redução global do tamanho da tabela. Como a amostragem estatística é usada para calcular a redução média do tamanho da linha, considere-a apenas como uma estimativa. Em casos raros, o tamanho da linha pode aumentar após o formato de armazenamento vardecimal ser habilitado.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use compactação ROW e PAGE. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). Para efeitos de compactação no tamanho de tabelas e índices, consulte [sp_estimate_data_compression_savings &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Em vez disso, use compactação ROW e PAGE. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md). Para efeitos de compactação no tamanho de tabelas e índices, consulte [sp_estimate_data_compression_savings &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +54,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados a seguir é retornado para fornecer informações de tamanho do banco de dados estimado e atual.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**avg_rowlen_fixed_format**|**decimal (12, 2)**|Representa o comprimento da linha em formato de armazenamento decimal fixo.|  
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Representa o tamanho médio da linha quando o formato de armazenamento vardecimal é usado.|  

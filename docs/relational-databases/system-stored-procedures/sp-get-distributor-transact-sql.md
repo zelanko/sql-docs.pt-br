@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124123"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
@@ -38,9 +38,9 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**instalado**|**int**|**0** = não; **1** = Sim|  
+|**recém-instalado**|**int**|**0** = não; **1** = Sim|  
 |**servidor de distribuição**|**sysname**|O nome do servidor Distribuidor.|  
 |**BD de distribuição instalado**|**int**|**0** = não; **1** = Sim|  
 |**is distribution publisher**|**int**|**0** = não; **1** = Sim|  
@@ -54,7 +54,7 @@ sp_get_distributor
   
 ## <a name="see-also"></a>Consulte Também  
  [Configurar a publicação e a distribuição](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Script de informações do Distribuidor e Publicador](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
+ [Script de informações do distribuidor e do Publicador](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

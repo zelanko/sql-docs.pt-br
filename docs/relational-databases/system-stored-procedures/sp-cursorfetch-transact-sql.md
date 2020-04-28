@@ -18,10 +18,10 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108508"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  Especifica o buffer de cursor a ser buscado. *fetchtype* é um parâmetro opcional que requer um dos seguintes valores de entrada de inteiro.  
   
-|Valor|Nome|DESCRIÇÃO|  
+|Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Busca o primeiro buffer de linhas *nRows* . Se *nRows* for igual a 0, o cursor será posicionado antes do conjunto de resultados e nenhuma linha será retornada.|  
 |0x0002|NEXT|Busca o próximo buffer de linhas *nRows* .|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  O parâmetro de status RPC é definido como um dos valores mostrados na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0|Procedimento executado com êxito.|  
 |0x0001|Falha no procedimento.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  As linhas são retornadas como um conjunto de resultados comum, ou seja, formato de coluna (0x2a), linhas (0xd1), seguidas de Done (0xfd). Tokens de metadados são enviados no mesmo formato que o especificado para sp_cursoropen, ou seja, 0x81, 0xa5 e 0xa4 para usuários do SQL Server 7.0, e assim por diante. Os indicadores de status de linha são enviados como colunas ocultas, semelhante ao modo BROWSE, ao final de cada linha com o nome de coluna rowstat e o tipo de dados INT4. Essa coluna rowstat tem um dos valores mostrados na tabela a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

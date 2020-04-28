@@ -18,10 +18,10 @@ ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f780199361d9e5741187dd4e5346abb2df98b9cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130438"
 ---
 # <a name="sysdbmaintplan_jobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68130438"
   
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|ID do plano de manutenção do banco de dados.|  
 |**job_id**|**uniqueidentifier**|ID de um trabalho associado ao plano de manutenção do banco de dados.|  

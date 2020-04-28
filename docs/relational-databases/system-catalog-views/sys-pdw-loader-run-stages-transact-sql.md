@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127448"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>sys. pdw_loader_run_stages (Transact-SQL)
@@ -26,10 +26,10 @@ ms.locfileid: "68127448"
   
 |||||  
 |-|-|-|-|  
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |run_id|**int**|Identificador exclusivo de uma execução de carregador.||  
-|Test|**nvarchar (30)**|O estágio atual para a execução.|' CREATE_STAGING ', ' DMS_LOAD ', ' LOAD_INSERT ', ' LOAD_CLEANUP '|  
-|request_id|**nvarchar (32)**|ID da solicitação que está executando este estágio.||  
+|preparar|**nvarchar(30)**|O estágio atual para a execução.|' CREATE_STAGING ', ' DMS_LOAD ', ' LOAD_INSERT ', ' LOAD_CLEANUP '|  
+|request_id|**nvarchar(32)**|ID da solicitação que está executando este estágio.||  
 |status|**nvarchar (16)**|Status desta fase.||  
 |start_time|**datetime**|Hora em que o estágio foi iniciado.||  
 |end_time|**datetime**|Hora em que o estágio terminou, se houver.|NULL se não for iniciado ou estiver em andamento.|  

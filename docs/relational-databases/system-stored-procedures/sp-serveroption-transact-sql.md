@@ -19,10 +19,10 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104377"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
@@ -42,11 +42,11 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'`É o nome do servidor para o qual definir a opção. o *servidor* é **sysname**, sem padrão.  
+`[ @server = ] 'server'`É o nome do servidor para o qual definir a opção. *server* é **sysname**, sem padrão.  
   
 `[ @optname = ] 'option_name'`É a opção a ser definida para o servidor especificado. *option_name* é **varchar (** 35 **)**, sem padrão. *option_name* pode ser qualquer um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da Consulta Distribuída nos servidores vinculados. Se essa opção for definida como **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o assumirá que todos os caracteres no servidor vinculado são compatíveis com o servidor local, em relação ao conjunto de caracteres e à sequência de agrupamento (ou à ordem de classificação). Isso permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envie comparações sobre colunas de caracteres ao provedor. Se essa opção não estiver definida, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre avaliará comparações sobre colunas de caracteres localmente.<br /><br /> Essa opção deve ser definida somente se você tiver certeza de que a fonte de dados correspondente ao servidor vinculado tem o mesmo conjunto de caracteres e ordem de classificação do servidor local.|  
 |**nome do agrupamento**|Especifica o nome do agrupamento usado pela fonte de dados remota se **usar agrupamento remoto** for **true** e a fonte de dados não for uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonte de dados. O nome deve ser uma das ordenações que têm suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Use essa opção ao acessar uma origem de dados OLE DB diferente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas cuja ordenação coincide com uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> O servidor vinculado deve fornecer suporte a uma única ordenação a ser usada para todas as colunas naquele servidor. Não defina essa opção se o servidor vinculado fornecer suporte a várias ordenações dentro de uma única fonte de dados ou se a ordenação do servidor vinculado não puder ser determinada para corresponder a uma das ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -56,7 +56,7 @@ sp_serveroption [@server = ] 'server'
 |**validação de esquema lenta**|Determina se o esquema de tabelas remotas será verificado.<br /><br /> Se **for true**, ignorará a verificação de esquema de tabelas remotas no início da consulta.|  
 |**pub**|Editor.|  
 |**tempo limite da consulta**|O valor do tempo limite para consultas em um servidor vinculado.<br /><br /> Se **0**, use a **sp_configure** padrão.|  
-|**RPC**|Habilita RPC a partir do servidor fornecido.|  
+|**rpc**|Habilita RPC a partir do servidor fornecido.|  
 |**saída de RPC**|Habilita RPC para o servidor fornecido.|  
 |**projeto**|Farão.|  
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -87,7 +87,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpserver](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

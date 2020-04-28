@@ -16,10 +16,10 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105084"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
@@ -53,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'`É o nome da coluna a ser adicionada ou removida. a *coluna* é **sysname**, com um padrão de NULL. Se for NULL, todas as colunas serão publicadas.  
   
-`[ @operation = ] 'operation'`Especifica se as colunas devem ser adicionadas ou descartadas em um artigo. a *operação* é **nvarchar (5)**, com um padrão de adicionar. **Adicionar** marca a coluna para replicação. **** desmarca a coluna.  
+`[ @operation = ] 'operation'`Especifica se as colunas devem ser adicionadas ou descartadas em um artigo. a *operação* é **nvarchar (5)**, com um padrão de adicionar. **Adicionar** marca a coluna para replicação. **drop** desmarca a coluna.  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs`Especifica se os procedimentos armazenados que dão suporte a assinaturas de atualização imediata são regenerados para corresponder ao número de colunas replicadas. *refresh_synctran_procs* é **bit**, com um padrão de **1**. Se for **1**, os procedimentos armazenados serão regenerados.  
   
@@ -94,9 +94,9 @@ sp_articlecolumn [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_articlecolumn**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definir um artigo](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir e modificar um filtro de coluna](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
+ [Filtrar dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [&#41;&#40;Transact-SQL de sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

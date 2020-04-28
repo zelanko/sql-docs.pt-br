@@ -10,10 +10,10 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68112870"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabalhar com o Console do SSMA para Sybase (SybaseToSQL)

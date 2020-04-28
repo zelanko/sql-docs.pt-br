@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108570"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -50,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *OpType*  
  É um parâmetro necessário que designa qual operação o cursor executará. *OpType* requer um dos valores de entrada **int** a seguir.  
   
-|Valor|Nome|DESCRIÇÃO|  
+|Valor|Nome|Descrição|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|É usado para atualizar uma ou mais linhas no buffer de busca.  As linhas especificadas em *rownum* são acessadas novamente e atualizadas.|  
 |0x0002|Delete (excluir)|É usado para excluir uma ou mais linhas no buffer de busca. As linhas especificadas em *rownum* são acessadas novamente e excluídas.|  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Só é válido para uso com valores de UPDATE, DELETE, REFRESH ou LOCK *OpType* .  
   
- *tabela*  
+ *table*  
  O nome da tabela que identifica a tabela à qual *OpType* se aplica quando a definição do cursor envolve uma junção ou nomes de coluna ambíguos são retornados pelo parâmetro de *valor* . Se nenhuma tabela específica for designada, o padrão será a primeira tabela da cláusula FROM. *Table* é um parâmetro opcional que requer um valor de entrada de cadeia de caracteres. É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE. a *tabela* pode ser um nome de tabela de várias partes.  
   
- *valor*  
+ *value*  
  Usado inserir ou atualizar valores. O parâmetro de cadeia de caracteres *Value* é usado somente com os valores Update e Insert *OpType* . É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou UNICODE.  
   
 > [!NOTE]  

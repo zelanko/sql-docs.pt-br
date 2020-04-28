@@ -21,10 +21,10 @@ ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124925"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "68124925"
 
   Retorna uma linha para cada ação em cada evento de uma sessão de eventos.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
 |event_id|**int**|A ID do evento. Essa ID é exclusiva de um objeto da sessão de evento. Não permite valor nulo.|  
 |name|**sysname**|O nome da ação. Permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Permite valor nulo.|  
-|modulo|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
+|module|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
@@ -53,8 +53,8 @@ ms.locfileid: "68124925"
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Muitos para um|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de catálogo de eventos estendidos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de eventos estendidos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Eventos estendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

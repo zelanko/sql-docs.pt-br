@@ -16,10 +16,10 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123983"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
@@ -43,10 +43,10 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT`É o código que indica o tipo de exclusão. *delete_type* é **int**, sem padrão. *delete_type* também é um parâmetro de saída e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Exclusão de usuário|  
-|**05**|Exclusão parcial|  
+|**5**|Exclusão parcial|  
 |**6**|Exclusão de sistema|  
   
 ## <a name="remarks"></a>Comentários  

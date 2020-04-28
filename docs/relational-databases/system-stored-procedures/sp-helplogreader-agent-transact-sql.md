@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122444"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
@@ -41,11 +41,11 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID do agente.|  
+|**id**|**int**|ID do agente.|  
 |**name**|**nvarchar (100)**|O nome do agente.|  
-|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
+|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
 |**publisher_login**|**sysname**|Logon usado na conexão com o Publicador.|  
 |**publisher_password**|**nvarchar (524)**|Por motivos de segurança, um valor ** \* \* \* \* \* \* \* \* de \* ** é sempre retornado.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
@@ -62,7 +62,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
  Somente os membros da função de servidor fixa **sysadmin** no Publicador ou membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem ser executados **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [&#41;&#40;Transact-SQL de sp_addlogreader_agent](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   

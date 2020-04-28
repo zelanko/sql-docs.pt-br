@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137768"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
@@ -54,9 +54,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpmergeconflictrows** retorna um conjunto de resultados que consiste na estrutura de tabela base e essas colunas adicionais.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar (255)**|Origem do conflito.|  
+|**origin_datasource**|**varchar(255)**|Origem do conflito.|  
 |**conflict_type**|**int**|Código que indica o tipo de conflito:<br /><br /> **1** = conflito de atualização: o conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: o conflito detectado no nível de coluna.<br /><br /> **3** = atualizar conflito de exclusão de WINS: a exclusão vence o conflito.<br /><br /> **4** = atualizar o conflito de exclusão do WINS: o ROWGUID excluído que perde o conflito é registrado nesta tabela.<br /><br /> **5** = falha ao carregar inserção: não foi possível aplicar a inserção do Assinante no Publicador.<br /><br /> **6** = falha ao inserir download: não foi possível aplicar a inserção do Publicador no Assinante.<br /><br /> **7** = falha ao excluir upload: a exclusão no Assinante não pôde ser carregada no Publicador.<br /><br /> **8** = falha ao excluir download: a exclusão no Publicador não pôde ser baixada para o Assinante.<br /><br /> **9** = falha na atualização do carregamento: não foi possível aplicar a atualização no Assinante no Publicador.<br /><br /> **10** = falha na atualização do download: a atualização no Publicador não pôde ser aplicada ao Assinante.<br /><br /> **12** = atualização do registro lógico WINS excluir: o registro lógico excluído que perde o conflito é registrado nesta tabela.<br /><br /> **13** = atualização de inserção de conflito de registro lógico: Insert em um registro lógico está em conflito com uma atualização.<br /><br /> **14** = registro lógico excluir conflito de atualização do WINS: o registro lógico atualizado que perde o conflito é registrado nesta tabela.|  
 |**reason_code**|**int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar (720)**|Descrição de erro que pode ser sensível ao contexto.|  

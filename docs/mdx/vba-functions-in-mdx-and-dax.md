@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135015"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funções VBA no MDX e no DAX
@@ -22,7 +22,7 @@ ms.locfileid: "68135015"
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referência a funções do Visual Basic for Applications  
   
-|Nome da função|Suportado|Observações|  
+|Nome da função|Com suporte|Observações|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
 |Array|Sem suporte||  
@@ -36,7 +36,7 @@ ms.locfileid: "68135015"
 |CDate|Somente MDX||  
 |CDbl|Somente MDX||  
 |CDec|Somente MDX||  
-|Fechar|Somente MDX||  
+|Choose|Somente MDX||  
 |Chr|Somente MDX||  
 |CInt|Somente MDX||  
 |CLng|Somente MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "68135015"
 |FileDateTime|Sem suporte||  
 |FileLen|Sem suporte||  
 |Filtrar|Sem suporte|**Aviso** A linguagem MDX implementa uma função diferente com o mesmo nome; a função FILTER (Set_Expression, Logical_Expression) retorna o conjunto que resulta da filtragem de um conjunto especificado com base em um critério de pesquisa dos argumentos especificados<br /><br /> **Aviso** O DAX implementa uma função diferente com o mesmo nome; a função FILTER\<(> de\<tabela, Filter>) retorna uma tabela que representa um subconjunto de outra tabela ou expressão dos argumentos fornecidos|  
-|Correção|Somente MDX||  
+|Fix|Somente MDX||  
 |Formato (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Sem suporte||  
 |FormatDateTime|Sem suporte||  
@@ -116,7 +116,7 @@ ms.locfileid: "68135015"
 |Month|DAX, MDX||  
 |MonthName|Sem suporte||  
 |MsgBox|Sem suporte||  
-|Now|DAX, MDX||  
+|Agora|DAX, MDX||  
 |NPer|Somente MDX||  
 |NPV|Somente MDX||  
 |Oct|Somente MDX||  
@@ -138,7 +138,7 @@ ms.locfileid: "68135015"
 |Shell|Sem suporte||  
 |Sin|Somente MDX||  
 |SLN|Somente MDX||  
-|Espaço|Somente MDX||  
+|Space|Somente MDX||  
 |Spc|Sem suporte||  
 |Divisão|Sem suporte||  
 |Sqr|Somente MDX||  

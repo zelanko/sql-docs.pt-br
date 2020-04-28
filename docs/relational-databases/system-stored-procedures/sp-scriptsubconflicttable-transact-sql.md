@@ -16,10 +16,10 @@ ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 806209b4f881576c680c14b0bc17ec4fd04a086c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126370"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|Retorna o script [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar a tabela de conflitos no Assinante para o artigo de assinatura enfileirada. Esse script é executado no Assinante, no banco de dados de assinatura.|  
   

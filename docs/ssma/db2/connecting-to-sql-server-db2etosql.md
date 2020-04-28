@@ -10,10 +10,10 @@ ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7ab4c1f691820fb19dde7a3e3166abc2ff065b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126642"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Conectando-se ao SQL Server (DB2eToSQL)
@@ -80,8 +80,8 @@ Ao definir as propriedades de conexão, você também especifica o banco de dado
   
 ||||||  
 |-|-|-|-|-|  
-|**TIPO de projeto vs. versão do servidor de destino**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(Versão: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versão: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versão: 13. x)|BD SQL do Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|Sim|Sim|Sim||  
+|**TIPO de projeto vs. versão do servidor de destino**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Versão: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Versão: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Versão: 13. x)|BD SQL do Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Sim|Sim|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||Sim|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||Sim||  
 |BD SQL do Azure||||Sim|  

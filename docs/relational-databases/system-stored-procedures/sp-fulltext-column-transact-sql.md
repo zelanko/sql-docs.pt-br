@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124336"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -56,9 +56,9 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'`É a ação a ser executada. a *ação* é **varchar (20)**, sem valor padrão, e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**agrega**|Adiciona *column_name* de *qualified_table_name* ao índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
+|**add**|Adiciona *column_name* de *qualified_table_name* ao índice de texto completo inativo da tabela. Esta ação habilita a coluna para indexação de texto completo.|  
 |**suspensa**|Remove *column_name* de *qualified_table_name* do índice de texto completo inativo da tabela.|  
   
 `[ @language = ] 'language_term'`É o idioma dos dados armazenados na coluna. Para obter uma lista de idiomas incluídos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no, consulte [sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -118,7 +118,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [&#41;&#40;Transact-SQL de sp_help_fulltext_columns_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_tables](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Os procedimentos armazenados de pesquisa de texto completo e de semântica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

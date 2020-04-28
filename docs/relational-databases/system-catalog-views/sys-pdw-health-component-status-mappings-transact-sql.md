@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ec631e9008cc37a7b4f91ed3f530e5388bdf9c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127495"
 ---
 # <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-SQL)
@@ -22,11 +22,11 @@ ms.locfileid: "68127495"
 
   Define o mapeamento entre os [!INCLUDE[ssDW](../../includes/ssdw-md.md)] status do componente e os nomes de componentes definidos pelo fabricante.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|Identificador exclusivo da propriedade.<br /><br /> property_id, component_id e physical_name formam a chave para essa exibição.|NOT NULL|  
 |component_id|**int**|A ID do componente. Consulte [Sys. pdw_health_components &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id, component_id e physical_name formam a chave para essa exibição.|NOT NULL|  
-|physical_name|**nvarchar (32)**|Nome da propriedade, conforme definido pelo fabricante.<br /><br /> property_id, component_id e physical_name formam a chave para essa exibição.|NOT NULL|  
+|physical_name|**nvarchar(32)**|Nome da propriedade, conforme definido pelo fabricante.<br /><br /> property_id, component_id e physical_name formam a chave para essa exibição.|NOT NULL|  
 |logical_name|**nvarchar (255)**|Nome da propriedade, conforme [!INCLUDE[ssDW](../../includes/ssdw-md.md)]definido por.|NOT NULL<br /><br /> 0-a instância do dispositivo é exclusiva.<br /><br /> 1-a instância do dispositivo não é exclusiva.|  
   
 ## <a name="see-also"></a>Consulte Também  

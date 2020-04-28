@@ -16,10 +16,10 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124865"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
@@ -52,10 +52,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (255)** e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|DESCRIÇÃO|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**ndescrição**||Descrição da assinatura de mesclagem.|  
-|**priority**||É a prioridade da assinatura. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos.|  
+|**prioridade**||É a prioridade da assinatura. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos.|  
 |**merge_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**merge_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
 |**publisher_security_mode**|**1**|Use a Autenticação do Windows ao se conectar ao Publicador.|  
@@ -67,9 +67,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon de Assinante fornecido.|  
 |**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
-||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
+||**nenhum**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_interactive_resolver**|**true**|Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa.|  
-||**for**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  
+||**false**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  
 |NULL (padrão)|NULL (padrão)||  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

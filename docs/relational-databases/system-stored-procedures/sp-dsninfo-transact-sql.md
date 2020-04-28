@@ -16,10 +16,10 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124713"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`É o tipo de informação a ser retornado. Se *info_type* não for especificado ou se NULL for especificado, todos os tipos de informações serão retornados. *info_type* é **varchar (128)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica o nome de fornecedor da fonte de dados.|  
 |**DBMS_VERSION**|Especifica a versão da fonte de dados.|  
@@ -58,19 +58,19 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`É o tipo de fonte de dados. *dso_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Fonte de dados ODBC|  
-|**Beta**|Fonte de dados OLE DB|  
+|**3**|Fonte de dados OLE DB|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Information Type**|**nvarchar (64)**|Tipos de informações como DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
+|**Tipo de informação**|**nvarchar (64)**|Tipos de informações como DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Valor**|**nvarchar(512)**|Valor do tipo de informação associado.|  
   
 ## <a name="remarks"></a>Comentários  

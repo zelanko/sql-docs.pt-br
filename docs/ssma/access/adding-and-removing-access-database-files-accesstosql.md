@@ -29,10 +29,10 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104209"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
@@ -76,7 +76,7 @@ Se você quiser adicionar vários bancos de dados do Access de pastas diferentes
     > [!IMPORTANT]  
     > A caixa de texto **tudo ou parte do nome do arquivo** não oferece suporte a caracteres curinga.  
   
-5.  Clique em **verificar**.  
+5.  Clique em **Verificar**.  
   
     A página verificação é exibida. Isso mostra os bancos de dados que foram encontrados e o progresso da pesquisa. Para interromper a pesquisa, clique em **parar**.  
   
@@ -84,7 +84,7 @@ Se você quiser adicionar vários bancos de dados do Access de pastas diferentes
   
     Você pode usar os botões **selecionar tudo** e **desmarcar todos** na parte superior da lista para selecionar ou limpar todos os bancos de dados. Você pode manter a tecla CTRL pressionada para selecionar vários bancos de dados ou manter a tecla SHIFT pressionada para selecionar um intervalo de bancos de dados.  
   
-7.  Clique em **Próximo**.  
+7.  Clique em **Avançar**.  
   
 8.  Na página verificar, clique em **concluir**.  
   

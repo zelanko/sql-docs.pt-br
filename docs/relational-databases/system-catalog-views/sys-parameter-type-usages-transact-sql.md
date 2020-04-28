@@ -20,10 +20,10 @@ ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00372789f6e197e2fe9f2c4905cb58c32df3729e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125368"
 ---
 # <a name="sysparameter_type_usages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "68125368"
 > [!NOTE]  
 >  Esta exibição não retorna linhas para parâmetros de procedimentos numerados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual pertence o parâmetro.|  
 |**parameter_id**|**int**|ID do parâmetro. É exclusiva no objeto.|  
 |**user_type_id**|**int**|ID do tipo definido pelo usuário.<br /><br /> Para retornar o nome do tipo, ingresse na exibição do catálogo [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) nesta coluna.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de catálogo de tipos escalares &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   

@@ -18,10 +18,10 @@ ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45065f7cde525d65997df2c97c972d684cadd90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139817"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68139817"
   
 ## <a name="definition"></a>Definição  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
-|**Assinante**|**sysname**|O nome do Assinante.|  
-|**tipo**|**tinyint**|O tipo de assinante:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante.<br /><br /> **1** = fonte de dados ODBC.|  
+|**programa**|**sysname**|O nome do Publicador.|  
+|**farão**|**sysname**|O nome do Assinante.|  
+|**type**|**tinyint**|O tipo de assinante:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante.<br /><br /> **1** = fonte de dados ODBC.|  
 |**entrar**|**sysname**|O logon para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Armazenado em formato criptografado se o Assinante for adicionado com o modo de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|A senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Armazenado em formato criptografado se o Assinante for adicionado com o modo de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ndescrição**|**nvarchar (255)**|A descrição do Assinante.|  
-|**security_mode**|**int**|O modo de segurança implementado:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.|  
+|**security_mode**|**int**|O modo de segurança implementado:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

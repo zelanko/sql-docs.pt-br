@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137746"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -50,14 +50,14 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar (386)**|Objeto de origem para o conflito de exclusão.|  
 |**rowguid**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
 |**conflict_type**|**int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: o conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível da coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclui o conflito do WINS.<br /><br /> **4** = UpdateWinsDeleteConflict: o ROWGUID excluído que perde o conflito é registrado nesta tabela.<br /><br /> **5** = UploadInsertFailed: não foi possível aplicar a inserção do Assinante no Publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do Publicador não pôde ser aplicada ao Assinante.<br /><br /> **7** = UploadDeleteFailed: a exclusão no Assinante não pôde ser carregada no Publicador.<br /><br /> **8** = DownloadDeleteFailed: a exclusão no Publicador não pôde ser baixada para o Assinante.<br /><br /> **9** = UploadUpdateFailed: não foi possível aplicar a atualização no Assinante no Publicador.<br /><br /> **10** = DownloadUpdateFailed: a atualização no Publicador não pôde ser aplicada ao Assinante.|  
-|**reason_code**|**Inteiro**|Código de erro que pode ser sensível ao contexto.|  
+|**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar (720)**|Descrição de erro que pode ser sensível ao contexto.|  
-|**origin_datasource**|**varchar (255)**|Origem do conflito.|  
+|**origin_datasource**|**varchar(255)**|Origem do conflito.|  
 |**pubid**|**uniqueidentifier**|Identificador da publicação.|  
 |**MSrepl_create_time**|**datetime**|Hora em que as informações de conflitos foram adicionadas.|  
   

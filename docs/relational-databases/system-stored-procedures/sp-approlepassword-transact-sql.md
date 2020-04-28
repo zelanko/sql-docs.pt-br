@@ -18,10 +18,10 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117758"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
@@ -47,7 +47,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 `[ @newpwd = ] 'password'`É a nova senha para a função de aplicativo. a *senha* é **sysname**, sem padrão. a *senha* não pode ser nula.  
   
 > [!IMPORTANT]  
->  Não use uma senha NULL. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes (a página pode estar em inglês)](../../relational-databases/security/strong-passwords.md).  
+>  Não use uma senha NULL. Use uma senha forte. Para saber mais, confira [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,9 +67,9 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Funções de Aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
+ [Funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md)   
  [&#41;&#40;Transact-SQL de sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_setapprole](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124587"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
@@ -41,12 +41,12 @@ sp_enumdsn
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Nome da fonte de dados**|**sysname**|Nome da fonte de dados.|  
-|**Descrição**|**varchar (255)**|Descrição da fonte de dados|  
+|**Descrição**|**varchar(255)**|Descrição da fonte de dados|  
 |**Tipo**|**int**|Tipo da fonte de dados.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = OLE DB fonte de dados|  
-|**Nome do provedor**|**varchar (255)**|Nome do provedor OLE DB. O valor é NULL para ODBC DSN.|  
+|**Nome do Provedor**|**varchar(255)**|Nome do provedor OLE DB. O valor é NULL para ODBC DSN.|  
   
 ## <a name="remarks"></a>Comentários  
  Cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço tem um contexto de usuário. Um contexto de usuário é um conjunto de entradas de Registro que inclui as definições das fontes de dados ODBC para o usuário. O contexto de usuário é fornecido pelo nome de usuário sob o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está executando.  

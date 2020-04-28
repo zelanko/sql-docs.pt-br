@@ -20,17 +20,17 @@ ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 329ba87fea8229d8ab5849fcdb728495e1bc1c5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68131536"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a Integração CLR.  
   
  Envia uma mensagem de conclusão de resultado para o cliente.  
   
@@ -58,10 +58,10 @@ count
  *srvproc*  
  É um ponteiro para a estrutura SRV_PROC que é o identificador de uma conexão de cliente específica (neste caso, o identificador que recebeu a solicitação de linguagem). A estrutura contém informações que a biblioteca de APIs de procedimento armazenado estendido usa para gerenciar a comunicação e os dados entre o aplicativo e o cliente.  
   
- *Estado*  
+ *status*  
  É um campo de 2 bytes para vários sinalizadores *status* . Vários sinalizadores podem ser definidos usando os operadores lógicos AND e OR com valores de sinalizador *status* . A seguinte tabela lista os possíveis sinalizadores *status* .  
   
-|Sinalizador de status|DESCRIÇÃO|  
+|Sinalizador de status|Descrição|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|O parâmetro *count* contém uma contagem válida.|  
 |SRV_DONE_ERROR|O comando do cliente atual recebeu um erro.|  

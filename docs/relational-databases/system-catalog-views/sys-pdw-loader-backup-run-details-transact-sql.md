@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127653"
 ---
 # <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68127653"
 
   Contém informações detalhadas adicionais, além das informações em [Sys. pdw_loader_backup_runs &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), sobre operações de backup e restauração em andamento e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] concluídas no e sobre operações de backup, restauração e carregamento em [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]andamento e concluídas no. As informações persistem entre os reinícios do sistema.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Identificador exclusivo para uma execução de backup ou restauração específica.<br /><br /> run_id e pdw_node_id formate a chave para essa exibição.||  
 |pdw_node_id|**int**|Identificador exclusivo de um nó de dispositivo para o qual este registro contém detalhes.<br /><br /> run_id e pdw_node_id formate a chave para essa exibição.|Consulte node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  

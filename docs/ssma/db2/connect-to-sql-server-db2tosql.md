@@ -10,10 +10,10 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141084"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Conectar-se ao SQL Server (DB2ToSQL)

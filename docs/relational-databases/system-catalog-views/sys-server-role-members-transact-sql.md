@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133033"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68133033"
 
   Retorna uma linha para cada membro de cada função de servidor fixa e definida pelo usuário.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|ID do principal do servidor da função.|  
 |**member_principal_id**|**int**|ID do principal do servidor do membro.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68133033"
 ## <a name="permissions"></a>Permissões  
  Os logons podem exibir sua própria associação de função de servidor e podem exibir a principal_id dos membros das funções de servidor fixas. Para exibir todas as associações de função de servidor, é necessário ter a **definição de exibição na** permissão de função de servidor ou associação na função de servidor fixa **securityadmin** .  
   
- Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna os nomes e as IDs das funções e de seus membros.  
@@ -58,8 +58,8 @@ JOIN sys.server_principals AS member
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

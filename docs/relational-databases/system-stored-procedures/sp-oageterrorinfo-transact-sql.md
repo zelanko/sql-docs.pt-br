@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107910"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -46,13 +46,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  É o token do objeto de um objeto OLE criado anteriormente usando **sp_OACreate** ou é nulo. Se *objecttoken* for especificado, as informações de erro para esse objeto serão retornadas. Se o NULL for especificado, serão retornadas as informações de erro para o lote inteiro.  
   
- __ **saída** de origem  
+ _source_ **saída** de origem  
  É a origem das informações de erro. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- __ **saída** da descrição  
+ _description_ **saída** da descrição  
  É a descrição do erro. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- __ **saída** de ArquivoDeAjuda  
+ _helpfile_ **saída** de ArquivoDeAjuda  
  É o arquivo de ajuda para o objeto OLE. Se especificado, ele deve ser uma variável **Char**, **nchar**, **varchar**ou **nvarchar** local. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
  **saída** da _HelpID_  
@@ -69,10 +69,10 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se nenhum parâmetro de saída for especificado, as informações de erro serão retornadas ao cliente como um conjunto de resultados.  
   
-|Nomes de coluna|Tipo de dados|DESCRIÇÃO|  
+|Nomes de coluna|Tipo de dados|Descrição|  
 |------------------|---------------|-----------------|  
 |**Erro**|**Binary (4)**|Representação binária do número do erro.|  
-|**Origem**|**nvarchar (nn)**|A origem do erro.|  
+|**Fonte**|**nvarchar (nn)**|A origem do erro.|  
 |**Descrição**|**nvarchar (nn)**|Descrição do erro.|  
 |**HelpFile**|**nvarchar (nn)**|Arquivo de ajuda para a origem.|  
 |**HelpID**|**int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  

@@ -18,10 +18,10 @@ ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0ba22c75e36cc927fbd923af25aad48b3d02801
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119248"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68119248"
 
   A tabela **MSagentparameterlist** contém informações de parâmetro do agente de replicação e é usada para especificar os parâmetros que podem ser definidos para um determinado tipo de agente. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**agent_type**|**tinyint**|O tipo de agente:<br /><br /> **1** = agente de instantâneo.<br /><br /> **2** = agente de leitor de log.<br /><br /> **3** = agente de distribuição.<br /><br /> **4** = agente de mesclagem.<br /><br /> **9** = Queue Reader Agent.|  
 |**parameter_name**|**sysname**|O nome do parâmetro de agente válido.|  

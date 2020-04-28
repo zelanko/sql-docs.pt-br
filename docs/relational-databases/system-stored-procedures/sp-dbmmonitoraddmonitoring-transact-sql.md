@@ -19,10 +19,10 @@ ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108127"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
@@ -61,7 +61,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  Se você executar **sp_dbmmonitoraddmonitoring** antes de configurar o espelhamento de banco de dados, o trabalho de monitoramento será executado, mas não atualizará a tabela de status na qual o histórico do monitor de espelhamento de banco de dados é armazenado.  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir inicia o monitoramento com um período de atualização de `3` minutos.  

@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133798"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
@@ -33,17 +33,17 @@ ms.locfileid: "68133798"
 
   Contém uma linha por índice de texto completo de um objeto tabular.  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID do objeto ao qual pertence o índice de texto completo.|  
 |**unique_index_id**|**int**|ID do índice de texto não completo exclusivo correspondente, usado para relacionar o índice de texto completo às linhas.|  
 |**fulltext_catalog_id**|**int**|ID do catálogo de texto completo no qual o índice de texto completo reside.|  
 |**is_enabled**|**bit**|1 = O índice de texto completo está atualmente habilitado.|  
-|**change_tracking_state**|**char(1)**|Estado de rastreamento de alteração.<br /><br /> M = Manual<br /><br /> A = Automático<br /><br /> O = Desligado|  
-|**change_tracking_state_desc**|**nvarchar (60)**|Descrição do estado de rastreamento de alteração.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state**|**Char (1)**|Estado de rastreamento de alteração.<br /><br /> M = Manual<br /><br /> A = Automático<br /><br /> O = Desligado|  
+|**change_tracking_state_desc**|**nvarchar(60)**|Descrição do estado de rastreamento de alteração.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|Último rastreamento (população) que o índice de texto completo concluiu.|  
-|**crawl_type**|**char(1)**|Tipo do rastreamento atual ou do último.<br /><br /> F = Rastreamento completo<br /><br /> I = Rastreamento incremental, com base em carimbo de data/hora<br /><br /> U = Rastreio de atualização, com base em notificações<br /><br /> P = O rastreamento completo está em pausa.|  
-|**crawl_type_desc**|**nvarchar (60)**|Descrição do tipo de rastreamento atual ou do último.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type**|**Char (1)**|Tipo do rastreamento atual ou do último.<br /><br /> F = Rastreamento completo<br /><br /> I = Rastreamento incremental, com base em carimbo de data/hora<br /><br /> U = Rastreio de atualização, com base em notificações<br /><br /> P = O rastreamento completo está em pausa.|  
+|**crawl_type_desc**|**nvarchar(60)**|Descrição do tipo de rastreamento atual ou do último.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Início do rastreamento atual ou do último.<br /><br /> NULL = Nenhum.|  
 |**crawl_end_date**|**datetime**|Fim do rastreamento atual ou do último.<br /><br /> NULL = Nenhum.|  
 |**incremental_timestamp**|**binário (8)**|Valor do carimbo de data/hora a ser usado para o próximo rastreamento incremental.<br /><br /> NULL = Nenhum.|  
@@ -72,10 +72,10 @@ GO
  [sys. fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
  [sys. fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [sys. fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Criar e gerenciar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [Descartar índice de texto completo &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

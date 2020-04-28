@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139916"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique= ] '*is_unique*'  
  É o tipo de índice para o qual as informações devem ser retornadas. *is_unique* é **bit**, com um padrão de NULL, e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |1|Retorna informações sobre índices exclusivos.|  
 |0|Retorna informações sobre índices que não são exclusivos.|  
@@ -70,7 +70,7 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |TABLE_CAT|**sysname**|Nome do banco de dados onde a tabela especificada reside.|  
 |TABLE_SCHEM|**sysname**|Esquema da tabela.|  
@@ -81,8 +81,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = outro|  
 |ORDINAL_POSITION|**int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
 |COLUMN_NAME|**sysname**|É o nome correspondente da coluna para cada coluna de TABLE_NAME retornada.|  
-|ASC_OR_DESC|**varchar**|É a ordem usada na ordenação:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
+|ASC_OR_DESC|**varchar**|É a ordem usada na ordenação:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
 |CARDINALITY|**int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
 |PAGES|**int**|É o número de páginas para armazenar o índice ou a tabela.|  
 |FILTER_CONDITION|**nvarchar (** 4000 **)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  

@@ -20,10 +20,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133068"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (banco de dados SQL do Azure)
@@ -36,7 +36,7 @@ A exibição **Sys. server_resource_stats** tem definições diferentes, depende
   
  A tabela a seguir descreve as colunas disponíveis em um servidor v12:  
   
-|Colunas|Tipo de Dados|DESCRIÇÃO|  
+|Colunas|Tipo de Dados|Descrição|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC indicando o início do intervalo de relatório de quinze segundos|  
 |end_time|**datetime**|Hora UTC indicando o final do intervalo de relatórios de quinze segundos|

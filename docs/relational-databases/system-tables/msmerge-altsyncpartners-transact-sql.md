@@ -18,10 +18,10 @@ ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3bddc4642d13fe84d35782849a80d2737601763
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106400"
 ---
 # <a name="msmerge_altsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68106400"
 
   A tabela **MSmerge_altsyncpartners** rastreia a associação de quem são os parceiros de sincronização atuais para um Publicador. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|O identificador para o Publicador original.|  
 |**alternate_subid**|**uniqueidentifier**|O identificador para o Assinante que é o parceiro de sincronização alternativo.|  

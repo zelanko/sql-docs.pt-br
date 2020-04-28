@@ -18,10 +18,10 @@ ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121159"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "68121159"
 
   Exibe uma linha para cada política de gerenciamento baseado em políticas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_policies pertence ao esquema dbo no banco de dados msdb. A tabela a seguir descreve as colunas na exibição syspolicy_policies.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|Identificador da política.|  
 |name|**sysname**|O nome da política.|  
 |condition_id|**int**|ID da condição imposta ou testada por esta política.|  
 |root_condition_id|**int**|Apenas para uso interno.|  
 |date_created|**datetime**|Data e hora em que a política foi criada.|  
-|execution_mode|**int**|Modo de avaliação para a política. Os valores possíveis são os seguintes:<br /><br /> 0 = Sob demanda<br /><br /> Este modo avalia a política quando especificado diretamente pelo usuário.<br /><br /> 1 = Ao alterar: impedir<br /><br /> Esse modo automatizado usa gatilhos DDL para impedir violações de política.<br /><br /> 2 = Ao alterar: log apenas<br /><br /> Este modo automatizado usa notificação de eventos para avaliar uma política quando ocorre uma alteração relevante e registra em log as violações de política.<br /><br /> 4 = Ao agendar<br /><br /> Este modo automatizado usa um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para avaliar periodicamente uma política. O modo registra as violações de política.<br /><br /> Observação: o valor 3 não é um valor possível.|  
+|execution_mode|**int**|Modo de avaliação para a política. Os valores possíveis são:<br /><br /> 0 = Sob demanda<br /><br /> Este modo avalia a política quando especificado diretamente pelo usuário.<br /><br /> 1 = Ao alterar: impedir<br /><br /> Esse modo automatizado usa gatilhos DDL para impedir violações de política.<br /><br /> 2 = Ao alterar: log apenas<br /><br /> Este modo automatizado usa notificação de eventos para avaliar uma política quando ocorre uma alteração relevante e registra em log as violações de política.<br /><br /> 4 = Ao agendar<br /><br /> Este modo automatizado usa um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para avaliar periodicamente uma política. O modo registra as violações de política.<br /><br /> Observação: o valor 3 não é um valor possível.|  
 |policy_category|**int**|A ID da categoria das políticas do Gerenciamento Baseado em Políticas ao qual esta política pertence. Será NULL se for o grupo de políticas padrão.|  
 |schedule_uid|**uniqueidentifier**|Quando o execution_mode for Ao agendar, contém a ID da agenda; caso contrário, será NULL.|  
 |descrição|**nvarchar(max)**|A descrição da política. A coluna de descrição é opcional e pode ser NULL.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68121159"
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

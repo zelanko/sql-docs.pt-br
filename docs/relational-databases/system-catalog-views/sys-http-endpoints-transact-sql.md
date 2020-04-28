@@ -20,10 +20,10 @@ ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122728"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68122728"
 
   Contém uma linha para cada ponto de extremidade criado no servidor que usa o protocolo HTTP.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**< colunas herdadas>**||Herda colunas de [pontos sys. end&#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**locais**|**nvarchar(128)**|Nome do computador host do site, como especificado na opção SITE =.|  
@@ -51,10 +51,10 @@ ms.locfileid: "68122728"
 |**is_compression_enabled**|**bit**|1 = A opção COMPRESSION = ENABLED é definida.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições do catálogo de pontos de extremidade &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

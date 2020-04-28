@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117898"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -79,21 +79,21 @@ GO
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-adding-a-database-user"></a>a. Adicionando um usuário de banco de dados  
- O exemplo a seguir adicionar o usuário de banco de dados `Vidur` à função existente `Recruiting` no banco de dados atual, usando o logon existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `Vidur`.  
+ O exemplo a seguir adicionar o usuário de banco de dados `Vidur` à função existente `Recruiting` no banco de dados atual, usando o logon existente `Vidur` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Adicionando um usuário de banco de dados com a mesma ID de logon  
- O exemplo a seguir adiciona o usuário `Arvind` ao banco de dados atual para o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `Arvind`. Este usuário pertence à função **pública** padrão.  
+ O exemplo a seguir adiciona o usuário `Arvind` ao banco de dados atual para o logon `Arvind` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este usuário pertence à função **pública** padrão.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
 ### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. Adicionando um usuário de banco de dados com um nome diferente de seu logon em nível de servidor  
- O exemplo a seguir adiciona o logon [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do `BjornR` ao banco de dados atual que possui um nome de usuário `Bjorn`, e adiciona o usuário de banco de dados `Bjorn` à função de banco de dados `Production`.  
+ O exemplo a seguir adiciona o logon `BjornR` do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao banco de dados atual que possui um nome de usuário `Bjorn`, e adiciona o usuário de banco de dados `Bjorn` à função de banco de dados `Production`.  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
@@ -101,10 +101,10 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [CRIAR usuário &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_dropuser](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_grantdbaccess](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

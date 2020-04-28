@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108611"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108611"
   
  sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consulta gera estatísticas de coluna única conforme necessário para melhorar os planos de consulta quando a opção de **AUTO_CREATE_STATISTICS** está ativada.  
   
- Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte a opção **AUTO_CREATE_STATISTICS** em [Opções ALTER DATABASE SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106350"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "68106350"
 
   A tabela **MSmerge_sessions** contém linhas de histórico com os resultados das sessões de trabalho agente de mesclagem anteriores. Cada vez que o Merge Agent é executado, uma nova  linha é adicionada a essa tabela. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|A ID da sessão de trabalho do Merge Agent.|  
 |**agent_id**|**int**|A ID do Merge Agent.|  
 |**start_time**|**datetime**|A hora de início da execução do trabalho.|  
 |**end_time**|**datetime**|A hora de término da execução do trabalho.|  
-|**permanência**|**int**|A duração acumulada, em segundos, dessa sessão de trabalho.|  
+|**duration**|**int**|A duração acumulada, em segundos, dessa sessão de trabalho.|  
 |**delivery_time**|**int**|O número de segundos necessário para aplicar um lote de alterações.|  
 |**upload_time**|**int**|O número de segundos necessário para carregar alterações no Publicador.|  
 |**download_time**|**int**|O número de segundos necessário para baixar alterações no Assinante.|  

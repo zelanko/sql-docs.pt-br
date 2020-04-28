@@ -20,10 +20,10 @@ ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109489"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68109489"
 
   Esta exibição do catálogo contém uma linha para cada grupo de conversa.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**conversation_group_id**|**uniqueidentifier**|Identificador do grupo de conversa. Não é NULLABLE.|  
 |**service_id**|**int**|Identificador do serviço para conversas neste grupo. Não é NULLABLE.|  
 |**is_system**|**bit**|Indica se esta é uma instância de sistema ou não. É NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

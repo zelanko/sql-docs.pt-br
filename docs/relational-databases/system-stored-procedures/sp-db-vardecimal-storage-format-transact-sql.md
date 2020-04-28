@@ -23,10 +23,10 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108221"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
@@ -51,8 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  É o nome do banco de dados para o qual o formato de armazenamento será alterado. *database_name* é **sysname**, sem padrão. Se o nome do banco de dados for omitido, os status do formato de armazenamento vardecimal de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serão retornados.  
   
  [ @vardecimal_storage_format= ] {' ON ' | ' Desativado '}  
- Especifica se o formato de armazenamento vardecimal está habilitado. 
-  @vardecimal_storage_format pode ser ON ou OFF. O parâmetro é **varchar (3)**, sem padrão. Se um nome de banco de dados for fornecido, mas o @vardecimal_storage_format for omitido, a configuração atual do banco de dados especificado será retornada. Esse argumento não tem nenhum efeito no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em versões posteriores.  
+ Especifica se o formato de armazenamento vardecimal está habilitado. @vardecimal_storage_format pode ser ON ou OFF. O parâmetro é **varchar (3)**, sem padrão. Se um nome de banco de dados for fornecido, mas o @vardecimal_storage_format for omitido, a configuração atual do banco de dados especificado será retornada. Esse argumento não tem nenhum efeito no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou em versões posteriores.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

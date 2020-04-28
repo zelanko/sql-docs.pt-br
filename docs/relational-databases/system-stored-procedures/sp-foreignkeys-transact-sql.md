@@ -18,10 +18,10 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124382"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
@@ -65,7 +65,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Vários produtos DBMS dão suporte à nomeação de três partes para tabelas (_Catálogo_**.** _esquema_**.** _tabela_), que é representada no conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catálogo para a tabela na qual a chave primária reside.|  
 |**PKTABLE_SCHEM**|**sysname**|Esquema para a tabela na qual a chave primária reside.|  

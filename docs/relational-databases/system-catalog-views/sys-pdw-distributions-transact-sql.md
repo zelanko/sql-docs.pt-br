@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127547"
 ---
 # <a name="syspdw_distributions-transact-sql"></a>sys. pdw_distributions (Transact-SQL)
@@ -24,11 +24,11 @@ ms.locfileid: "68127547"
 
   Contém informações sobre as distribuições no dispositivo. Ele lista uma linha por distribuição de dispositivo.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |distribution_id|**int**|ID numérica exclusiva associada à distribuição.<br /><br /> Chave para esta exibição.|1 para o número de nós de computação no dispositivo multiplicado pelo número de distribuições por nó de computação.|  
 |pdw_node_id|**int**|ID do nó em que esta distribuição está.|Consulte pdw_node_id em [Sys. dm_pdw_nodes &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|name|**nvarchar (32)**|Identificador de cadeia de caracteres associado à distribuição, usado como um sufixo em tabelas distribuídas.|Cadeia de caracteres composta de ' A-Z ', ' a-z ', ' 0-9 ', ' _ ', '-'.|  
+|name|**nvarchar(32)**|Identificador de cadeia de caracteres associado à distribuição, usado como um sufixo em tabelas distribuídas.|Cadeia de caracteres composta de ' A-Z ', ' a-z ', ' 0-9 ', ' _ ', '-'.|  
 |position|**int**|Posição da distribuição em um nó correspondente a outras distribuições nesse nó.|1 para o número de distribuições por nó.|  
   
 ## <a name="see-also"></a>Consulte Também  

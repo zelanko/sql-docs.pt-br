@@ -20,10 +20,10 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106542"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Como os trabalhos de limpeza e captura são criados por padrão, este procedimento armazenado será necessário somente quando um trabalho tiver sido explicitamente encerrado e tiver de ser recriado.  
   
- O nome do trabalho é **CDC.** **limpeza de\_** _nome\_\>de banco de dados ou CDC. \<_ **** **captura de\_** _\_\>nome de banco de dados, em que<database_name>é o nome do banco de dados atual. \<_ ** Se já existir um trabalho com o mesmo nome, o nome será anexado com um ponto final (**.**) seguido por um identificador exclusivo, por exemplo: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ O nome do trabalho é **CDC.** **limpeza de\_** _nome\_\>de banco de dados ou CDC. \<_ **cdc.** **captura de\_** _\_\>nome de banco de dados, em que<database_name>é o nome do banco de dados atual. \<_ *<database_name>* Se já existir um trabalho com o mesmo nome, o nome será anexado com um ponto final (**.**) seguido por um identificador exclusivo, por exemplo: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para exibir a configuração atual de um trabalho de limpeza ou de captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para alterar a configuração de um trabalho, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

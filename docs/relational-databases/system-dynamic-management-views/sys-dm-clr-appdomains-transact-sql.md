@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138406"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68138406"
   
  Para obter mais informações, consulte [domínios de aplicativo](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary (8)**|Endereço do **AppDomain**. Todos os objetos de banco de dados gerenciados pertencentes a um usuário são sempre carregados no mesmo **AppDomain**. Você pode usar esta coluna para pesquisar todos os assemblies carregados atualmente neste **AppDomain** em **Sys. dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID do **AppDomain**. Cada **AppDomain** tem uma ID exclusiva.|  
@@ -42,11 +42,11 @@ ms.locfileid: "68138406"
 |**creation_time**|**datetime**|Hora em que o **AppDomain** foi criado. Como os **AppDomains** são armazenados em cache e reutilizados para melhorar o desempenho, **CREATION_TIME** não é necessariamente o momento em que o código foi executado.|  
 |**db_id**|**int**|ID do banco de dados no qual este **AppDomain** foi criado. O código armazenado em dois bancos de dados diferentes não pode compartilhar um **AppDomain**.|  
 |**user_id**|**int**|ID do usuário cujos objetos podem ser executados neste **AppDomain**.|  
-|**status**|**nvarchar(128)**|Um descritor para o estado atual do **AppDomain**. Um AppDomain pode estar em estados diferentes, da criação até a exclusão. Consulte a seção Comentários deste tópico para obter mais informações.|  
+|**state**|**nvarchar(128)**|Um descritor para o estado atual do **AppDomain**. Um AppDomain pode estar em estados diferentes, da criação até a exclusão. Consulte a seção Comentários deste tópico para obter mais informações.|  
 |**strong_refcount**|**int**|Número de referências fortes a este **AppDomain**. Isso reflete o número de lotes em execução no momento que usam este **AppDomain**. Observe que a execução dessa exibição criará um **Refcount forte**; mesmo que não haja nenhum código em execução no momento, **strong_refcount** terá um valor de 1.|  
 |**weak_refcount**|**int**|Número de referências fracas a este **AppDomain**. Isso indica quantos objetos dentro do **AppDomain** são armazenados em cache. Quando você executa um objeto de banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados gerenciado, o armazena em cache dentro do **AppDomain** para reutilização futura. Isso melhora o desempenho.|  
-|**custo**|**int**|Custo do **AppDomain**. Quanto maior o custo, mais provável que esse **AppDomain** seja descarregado sob pressão de memória. Geralmente, o custo depende da quantidade de memória necessária para recriar esse **AppDomain**.|  
-|**valor**|**int**|Valor do **AppDomain**. Quanto menor o valor, mais provável que esse **AppDomain** seja descarregado sob pressão de memória. Geralmente, o valor depende de quantas conexões ou lotes estão usando esse **AppDomain**.|  
+|**cost**|**int**|Custo do **AppDomain**. Quanto maior o custo, mais provável que esse **AppDomain** seja descarregado sob pressão de memória. Geralmente, o custo depende da quantidade de memória necessária para recriar esse **AppDomain**.|  
+|**value**|**int**|Valor do **AppDomain**. Quanto menor o valor, mais provável que esse **AppDomain** seja descarregado sob pressão de memória. Geralmente, o valor depende de quantas conexões ou lotes estão usando esse **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Tempo total do processador, em milissegundos, usado por todos os threads em execução no domínio do aplicativo atual desde que o processo foi iniciado. Isso é equivalente a **System. AppDomain. MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Tamanho total, em quilobytes, de todas as alocações de memória que foram feitas pelo domínio do aplicativo desde que foi criado, sem subtrair a memória coletada. Isso é equivalente a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Número de quilobytes que sobreviveram a última coleção de bloqueio completa e que são conhecidos por serem referenciados pelo domínio do aplicativo atual. Isso é equivalente a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
@@ -58,13 +58,13 @@ ms.locfileid: "68138406"
   
 ## <a name="appdomain-initialization"></a>Inicialização de AppDomain  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|O **AppDomain** está sendo criado.|  
   
 ## <a name="appdomain-usage"></a>Uso de AppDomain  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|O **AppDomain** de tempo de execução está pronto para ser usado por vários usuários.|  
 |E_APPDOMAIN_SINGLEUSER|O **AppDomain** está pronto para uso em operações DDL. Estes diferem de E_APPDOMAIN_SHARED porque os AppDomains compartilhados são usados para execuções de integração de CLR em vez de operações DDL. Esses AppDomains são isolados de outras operações simultâneas.|  
@@ -72,7 +72,7 @@ ms.locfileid: "68138406"
   
 ## <a name="appdomain-cleanup"></a>Limpeza de AppDomain  
   
-|Estado|DESCRIÇÃO|  
+|Estado|Descrição|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]solicitou que o CLR descarrega o **AppDomain**, geralmente porque o assembly que contém os objetos de banco de dados gerenciado foi alterado ou descartado.|  
 |E_APPDOMAIN_UNLOADED|O CLR descarregou o **AppDomain**. Normalmente, isso é o resultado de um procedimento de escalonamento devido à **ThreadAbortException**, à **OutOfMemory**ou a uma exceção sem tratamento no código do usuário.|  

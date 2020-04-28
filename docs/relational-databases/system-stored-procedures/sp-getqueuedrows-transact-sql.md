@@ -16,10 +16,10 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123937"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -51,7 +51,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Mostra todas as linhas que atualmente têm pelo menos uma transação em fila para a tabela assinada.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Ação**|**nvarchar (10)**|Tipo de ação a ser realizada quando ocorre sincronização.<br /><br /> INS = inserir<br /><br /> DEL = excluir<br /><br /> UPD = atualizar|  
 |**Transid**|**nvarchar (70)**|ID da transação sob a qual o comando foi executado.|  
@@ -67,7 +67,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** requer permissões SELECT na tabela especificada em *TableName*.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Detecção e resolução de conflitos de atualização na fila](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

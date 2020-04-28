@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130546"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130546"
   
  A tabela a seguir, que tem um limite de 1.000 linhas, é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados ao qual esta página se aplica.|  
 |**file_id**|**int**|ID do arquivo no banco de dados.|  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106700"
 ---
 # <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68106700"
   Retorna informações sobre os fusos horários com suporte. Todos os fusos horários instalados no computador são armazenados no seguinte hive do registro:  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do fuso horário no formato padrão do Windows. Por exemplo, **hora padrão CEN. Austrália** ou **horário padrão europeu central**.|  
 |**current_utc_offset**|**nvarchar (12)**|Deslocamento atual para UTC. Por exemplo, **+ 01:00** ou **-07:00**.|  

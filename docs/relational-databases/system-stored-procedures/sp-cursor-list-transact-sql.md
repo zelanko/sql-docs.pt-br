@@ -18,10 +18,10 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108586"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
@@ -47,7 +47,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope= ] *cursor_scope*  
  Especifica o nível dos cursores a serem relatados. *cursor_scope* é **int**, sem padrão, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |1|Informar todos os cursores locais.|  
 |2|Informar todos os cursores globais.|  
@@ -61,7 +61,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Esse é o formato do cursor retornado por sp_cursor_list. O formato do cursor é o mesmo que o formato retornado por sp_cursor_list.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|O nome usado para se referir ao cursor. Se a referência ao cursor for feita através do nome dado em uma instrução DECLARE CURSOR, o nome de referência será igual ao nome do cursor. Se a referência ao cursor foi feita por uma variável, o nome da referência será o nome da variável do cursor.|  
 |cursor_name|**sysname**|O nome do cursor de uma instrução DECLARE CURSOR. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o cursor tiver sido criado pela definição de uma variável de cursor para um cursor, **cursor_name** retornará o nome da variável de cursor.  Em versões anteriores, essa coluna de saída retorna um nome gerado pelo sistema.|  
@@ -81,8 +81,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="remarks"></a>Comentários  
  sp_cursor_list gera uma lista dos cursores de servidor atuais aberta pela conexão e descreve os atributos globais de cada cursor, como a capacidade do cursor de ser rolável e atualizável. Os cursores listados por sp_cursor_list incluem:  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor   
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]Cursores de servidor   
   
 -   Cursores de servidor API abertos por um aplicativo ODBC que é chamado SQLSetCursorName como o nome do cursor.  
   

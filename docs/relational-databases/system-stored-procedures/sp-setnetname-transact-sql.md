@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104405"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ** ** @server = '** servidor **'**  
- É o nome do servidor remoto conforme referenciado em sintaxe de chamada de procedimento armazenado remoto codificado pelo usuário. Exatamente uma linha em **Sys. Servers** já deve existir para usar esse *servidor*. o *servidor* é **sysname**, sem padrão.  
+ *server* ** @server = '** servidor **'**  
+ É o nome do servidor remoto conforme referenciado em sintaxe de chamada de procedimento armazenado remoto codificado pelo usuário. Exatamente uma linha em **Sys. Servers** já deve existir para usar esse *servidor*. *server* é **sysname**, sem padrão.  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  É o nome de rede do computador ao qual as chamadas de procedimento armazenado remoto são feitas. *network_name* é **sysname**, sem padrão.  
   
  Esse nome deve corresponder ao nome do computador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, e o nome pode incluir caracteres que não são permitidos em identificadores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,7 +89,7 @@ EXEC Win_1.master.dbo.sp_who;
   
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

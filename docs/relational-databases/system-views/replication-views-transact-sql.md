@@ -23,10 +23,10 @@ ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129574"
 ---
 # <a name="replication-views-transact-sql"></a>Exibições de replicação (Transact-SQL)
@@ -52,8 +52,8 @@ ms.locfileid: "68129574"
 |-|-|  
 |[&#41;IHextendedArticleView &#40;Transact-SQL](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
 |[&#41;IHextendedSubscriptionView &#40;Transact-SQL](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[&#41;sysextendedarticlesview &#40;Transact-SQL](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
-|[&#41;IHsyscolumns &#40;Transact-SQL](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
-|[&#41;&#40;Transact-SQL de MSdistribution_status](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
+|[&#41;IHsyscolumns &#40;Transact-SQL](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
+|[&#41;&#40;Transact-SQL de MSdistribution_status](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;Modo de Exibição do Sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
 |[sysarticlecolumns &#40;exibição do sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-publication-database"></a>Exibições de replicação no banco de dados de publicação  

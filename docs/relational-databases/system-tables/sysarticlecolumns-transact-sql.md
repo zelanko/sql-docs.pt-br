@@ -18,10 +18,10 @@ ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130523"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68130523"
 
   A tabela **sysarticlecolumns** contém uma linha para cada coluna de tabela que é publicada em uma publicação de instantâneo ou transacional e mapeia cada coluna para seu artigo. Essa tabela é armazenada no banco de dados de publicação.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identifica um artigo.|  
 |**colid**|**smallint**|Identifica uma coluna em um artigo.|  

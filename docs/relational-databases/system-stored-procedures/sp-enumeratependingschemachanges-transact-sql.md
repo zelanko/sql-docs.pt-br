@@ -16,10 +16,10 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124576"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
@@ -44,13 +44,12 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|Nome do artigo ao qual se aplica a alteração de esquema ou a **toda a publicação** para alterações de esquema que se aplicam à publicação inteira.|  
 |**SchemaVersion**|**int**|O número da alteração de esquema pendente.|  
 |**schematype**|**sysname**|Um valor de texto que representa o tipo de alteração de esquema.|  
-|**schematext**|**nvarchar(max)**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] que descreve a alteração de esquema.|  
+|**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] que descreve a alteração de esquema.|  
 |**schemastatus**|**nvarchar (10)**|Indica se uma alteração de esquema está pendente para o artigo, que pode ser um dos valores seguintes:<br /><br /> **ativo** = alteração de esquema pendente<br /><br /> **inativo** = alteração de esquema está inativa<br /><br /> **ignorar** = alteração de esquema não é replicada|  
 |**schemaguid**|**uniqueidentifier**|Identifica a alteração de esquema.|  
   

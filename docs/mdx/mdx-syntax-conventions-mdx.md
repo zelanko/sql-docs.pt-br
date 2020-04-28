@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 063d629ff908210b2c8e042d2c131a3449295ba3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138273"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenções de sintaxe de MDX (MDX)
@@ -22,15 +22,14 @@ ms.locfileid: "68138273"
   
 |Convenção|Uso|  
 |----------------|-----------|  
-|*itálico*|Indica os argumentos fornecidos pelo usuário da sintaxe MDX.|  
+|*italic*|Indica os argumentos fornecidos pelo usuário da sintaxe MDX.|  
 |&#124; (barra vertical)|Separa os itens de sintaxe entre colchetes ou entre chaves. Somente um desses itens pode ser selecionado.|  
-|`[ ]`colchetes|Indica itens de sintaxe opcionais. Não digite os colchetes.|  
+|`[ ]` (colchetes)|Indica itens de sintaxe opcionais. Não digite os colchetes.|  
 |[,] ...n|Indica que o item anterior pode ser repetido n vezes. Às vezes, os itens são separados por vírgulas.|  
-|
-  \<label> ::=|Indica o nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular partes de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre colchetes angulares: \<rótulo>.|  
+|\<label> ::=|Indica o nome de um bloco de sintaxe. Essa convenção é usada para agrupar e rotular partes de sintaxe extensa ou uma unidade de sintaxe que pode ser usada em mais de um local dentro de uma instrução. Cada local no qual o bloco de sintaxe pode ser usado é indicado com o rótulo entre colchetes angulares: \<rótulo>.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de linguagem MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)  
+ [Referência da linguagem MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

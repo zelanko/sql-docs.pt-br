@@ -19,10 +19,10 @@ ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108108"
 ---
 # <a name="sp_dbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
@@ -48,7 +48,7 @@ sp_dbmmonitorchangemonitoring parameter
   
  O número de minutos entre as atualizações da tabela de status do espelhamento de banco de dados. O intervalo padrão é de 1 minuto.  
   
- *valor*  
+ *value*  
  Especifica o novo valor do parâmetro que está sendo alterado.  
   
 |Parâmetro|Descrição do valor|  
@@ -62,7 +62,7 @@ sp_dbmmonitorchangemonitoring parameter
  Nenhum  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o período de atualização para 5 minutos.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124223"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -45,7 +45,7 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Chave**|*|É o valor da chave de texto completo da tabela especificada.|  
 |**DocId**|**bigint**|É a coluna do identificador de documento (DocId) interno que corresponde ao valor da chave.|  
@@ -55,7 +55,7 @@ sp_fulltext_pendingchanges table_id
  <sup>* O tipo de dados de Key é o mesmo da coluna da chave de texto completo da tabela base.</sup>  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="remarks"></a>Comentários  
  Se não houver nenhuma alteração para processar, um conjunto de linhas vazio será retornado.  

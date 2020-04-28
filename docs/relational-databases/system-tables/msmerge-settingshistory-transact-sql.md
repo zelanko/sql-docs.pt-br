@@ -18,10 +18,10 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106318"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68106318"
 
   A tabela **MSmerge_settingshistory** é usada para manter um histórico das alterações feitas nas propriedades do artigo e da publicação para replicação de mesclagem, com uma linha para cada alteração feita em uma topologia de replicação de mesclagem. Essa tabela também armazena informações sobre quando as configurações de propriedade iniciais foram feitas. Essa tabela é armazenada nos bancos de dados de publicação e de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**EventTime**|**datetime**|A data e hora em que o evento ocorreu.|  
 |**pubid**|**uniqueidentifier**|O número de identificação exclusivo de determinada publicação.|  

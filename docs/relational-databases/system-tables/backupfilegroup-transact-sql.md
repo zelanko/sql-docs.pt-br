@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122918"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -33,14 +33,14 @@ ms.locfileid: "68122918"
 > [!NOTE]  
 >  A tabela **backupfilegroup** mostra a configuração do grupo de arquivos do banco de dados, não do conjunto de backup. Para identificar se um arquivo está incluído no conjunto de backup, use a coluna **is_present** da tabela [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Conjunto de backup que contém este grupo de arquivos.|  
 |**name**|**sysname**|Nome do grupo de arquivos.|  
 |**filegroup_id**|**int**|ID de grupo de arquivos, exclusivo no banco de dados. Corresponde a **data_space_id** em **Sys. FileGroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificador Global Exclusivo do grupo de arquivos. Pode ser NULL.|  
-|**tipo**|**Char (2)**|Tipo de conteúdo, um de:<br /><br /> FG = Grupo de arquivos de “linhas”<br /><br /> SL = Grupo de arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**type_desc**|**nvarchar (60)**|Descrição de tipo de função, um de:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
+|**type**|**char(2)**|Tipo de conteúdo, um de:<br /><br /> FG = Grupo de arquivos de “linhas”<br /><br /> SL = Grupo de arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type_desc**|**nvarchar(60)**|Descrição de tipo de função, um de:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|O grupo de arquivos padrão, usado quando nenhum grupo de arquivos é especificado em CREATE TABLE ou CREATE INDEX.|  
 |**is_readonly**|**bit**|1 = O grupo de arquivos é somente leitura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Pode ser NULL.|  
@@ -57,9 +57,9 @@ ms.locfileid: "68122918"
 ## <a name="see-also"></a>Consulte Também  
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [&#41;backupmediafamily &#40;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [&#41;backupmediaset &#40;Transact-SQL](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [&#41;do conjunto de backup &#40;Transact-SQL](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

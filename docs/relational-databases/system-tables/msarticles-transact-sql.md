@@ -18,10 +18,10 @@ ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132104"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68132104"
 
   A tabela **MSarticles** contém uma linha para cada artigo sendo replicado por um Publicador. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|A ID do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  

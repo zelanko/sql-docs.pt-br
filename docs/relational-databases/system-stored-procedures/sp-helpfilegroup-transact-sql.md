@@ -18,10 +18,10 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122541"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
@@ -46,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**GroupName**|**sysname**|Nome do grupo de arquivos.|  
 |**GroupId**|**smallint**|Identificador de grupo de arquivos numérico.|  
@@ -54,12 +54,12 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  Se *Name* for especificado, uma linha para cada arquivo no grupo de arquivos será retornada.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nome lógico do arquivo no grupo de arquivos.|  
 |**FileID**|**smallint**|Identificador de arquivos numérico.|  
 |**nome do arquivo**|**nchar (260)**|O nome  físico do arquivo que inclui o caminho de diretório.|  
-|**tamanho**|**nvarchar (15)**|Tamanho do arquivo em kilobytes.|  
+|**size**|**nvarchar (15)**|Tamanho do arquivo em kilobytes.|  
 |**MaxSize**|**nvarchar (15)**|Tamanho máximo do arquivo.<br /><br /> É o tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar (15)**|Incremento de crescimento do arquivo. Isso indica a quantidade de espaço adicionada ao arquivo toda vez que um novo espaço é necessário.<br /><br /> 0 = Arquivo tem um tamanho fixo e não crescerá.|  
   
@@ -94,7 +94,7 @@ GO
  [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [os grupos de sys. File&#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Arquivos e grupos de arquivos do banco de dados](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

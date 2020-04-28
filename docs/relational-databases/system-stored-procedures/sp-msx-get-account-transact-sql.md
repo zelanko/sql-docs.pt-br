@@ -18,10 +18,10 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108040"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
@@ -44,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o seguinte conjunto de resultados:  
   
-|Nome da coluna|Type|DESCRIÇÃO|  
+|Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Número de conexão do servidor mestre.|  
 |msx_credential_id|**int**|ID da credencial usada para esta conexão de servidor mestre.|  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server Agent procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CRIAR CREDENCIAl &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_msx_set_account](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

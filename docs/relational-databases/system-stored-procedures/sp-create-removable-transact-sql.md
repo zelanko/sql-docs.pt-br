@@ -18,10 +18,10 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108620"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -119,7 +119,7 @@ EXEC sp_create_removable 'inventory',
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [SQL Server desanexar e anexar &#40;de banco de dados&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [&#41;&#40;Transact-SQL de sp_certify_removable](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dbremove](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

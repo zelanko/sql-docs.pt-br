@@ -16,10 +16,10 @@ ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 361a0d8e47372612eddf40cdf1663df2e70da0a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124625"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
@@ -41,10 +41,10 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar (255)**|Nome amigável para o manipulador de lógica de negócios ou resolvedor de conflito.|  
-|**resolver_clsid**|**nvarchar (50)**|CLSID (ID de classe) do resolvedor com base em COM. Para um manipulador de lógica de negócios, essa coluna retorna um valor zero de CLSID.|  
+|**resolver_clsid**|**nvarchar(50)**|CLSID (ID de classe) do resolvedor com base em COM. Para um manipulador de lógica de negócios, essa coluna retorna um valor zero de CLSID.|  
 |**is_dotnet_assembly**|**bit**|Indica se o registro é para um manipulador de lógica de negócios.<br /><br /> **0** = resolvedor de conflitos com base em com<br /><br /> **1** = manipulador de lógica de negócios|  
 |**dotnet_assembly_name**|**nvarchar (255)**|O nome do assembly do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework que implementa o manipulador de lógica de negócios.|  
 |**dotnet_class_name**|**nvarchar (255)**|É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios.|  

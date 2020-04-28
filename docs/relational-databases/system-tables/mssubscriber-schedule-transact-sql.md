@@ -18,10 +18,10 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139795"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68139795"
 > [!NOTE]
 >  Esta tabela do sistema foi preterida e está sendo mantida para dar suporte a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versões anteriores do.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
-|**Assinante**|**sysname**|O nome do Assinante.|  
+|**programa**|**sysname**|O nome do Publicador.|  
+|**farão**|**sysname**|O nome do Assinante.|  
 |**agent_type**|**smallint**|O tipo de agente:<br /><br /> 0 = Distribution Agent.<br /><br /> 1 = Merge Agent.|  
 |**frequency_type**|**int**|A frequência de agendamento do Distribution Agent:<br /><br /> **1** = uma vez.<br /><br /> **2** = sob demanda.<br /><br /> **4** = diariamente.<br /><br /> **8** = semanalmente.<br /><br /> **16** = mensalmente.<br /><br /> **32** = relativo mensal.<br /><br /> **64** = inicialização automática.<br /><br /> **128** = recorrente.|  
 |**frequency_interval**|**int**|O valor a ser aplicado à frequência definida por **frequency_type**.|  

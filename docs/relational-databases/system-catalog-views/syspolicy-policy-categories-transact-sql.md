@@ -18,10 +18,10 @@ ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121117"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68121117"
   Exibe uma linha para cada categoria de política do Gerenciamento Baseado em Políticas na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As categorias de políticas ajudam a organizar as políticas quando há muitas delas. A tabela a seguir descreve as colunas na exibição syspolicy_policy_groups.  
  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|Identificador da categoria da política.|  
 |name|**sysname**|Nome da categoria de política.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68121117"
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Administrar servidores com Gerenciamento Baseado em Políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores usando o gerenciamento baseado em políticas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Exibições de Gerenciamento Baseado em Políticas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

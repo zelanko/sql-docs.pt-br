@@ -19,10 +19,10 @@ ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121008"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
@@ -45,10 +45,10 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|É o número de identificação do algoritmo.|  
-|algorithm_tag|**nvarchar (60)**|É a marca de identificação do algoritmo.|  
+|algorithm_tag|**nvarchar(60)**|É a marca de identificação do algoritmo.|  
 |key_type|**nvarchar(128)**|Mostra o tipo de chave. Retorna ASYMMETRIC KEY ou SYMMETRIC KEY.|  
 |key_length|**int**|Indica o comprimento da chave em bits.|  
   

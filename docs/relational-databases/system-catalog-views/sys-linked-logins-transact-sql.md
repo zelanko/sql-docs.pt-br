@@ -20,10 +20,10 @@ ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dfde20205de71a302c7ba8151fc6171cecc05a08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140677"
 ---
 # <a name="syslinked_logins-transact-sql"></a>sys.linked_logins (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140677"
 
   Retorna uma linha por mapeamento de logon de servidor vinculado, para ser usado por RPC e consultas distribuídas de um servidor local para o servidor vinculado correspondente.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID do servidor em **Sys. Servers**.|  
 |**local_principal_id**|**int**|Principal de Servidor ao qual o mapeamento se aplica.<br /><br /> 0 = curinga ou público.|  
@@ -40,10 +40,10 @@ ms.locfileid: "68140677"
 |**modify_date**|**datetime**|Data em que o logon vinculado foi alterado pela última vez.|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Exibições de catálogo de servidores vinculados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)  
   
   

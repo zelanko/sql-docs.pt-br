@@ -20,10 +20,10 @@ ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99e3a647c55380e1731b97c267eb754a1f3c6a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122737"
 ---
 # <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68122737"
   
  A exibição sys. hash_indexes contém as mesmas colunas que a exibição sys. Indexes e uma coluna adicional denominada **bucket_count**. Para obter mais informações sobre as outras colunas na exibição sys. hash_indexes, consulte [Sys. indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**\<colunas herdadas>**||Herda colunas de [Sys. indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
 |**bucket_count**|**int**|Contagem de buckets de hash para índices de hash.<br /><br /> Para obter mais informações sobre o valor de bucket_count, incluindo diretrizes para definir o valor, consulte [CREATE TABLE &#40;&#41;do Transact-SQL ](../../t-sql/statements/create-table-transact-sql.md).|  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -51,7 +51,7 @@ WHERE OBJECT_NAME([object_id]) = 'T1';
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

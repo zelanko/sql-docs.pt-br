@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104508"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
@@ -52,43 +52,43 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valores|DESCRIÇÃO|  
+|Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Habilita o uso de um resolvedor interativo para o artigo.|  
-||**for**|Desabilita o uso de um resolvedor interativo para o artigo.|  
+||**false**|Desabilita o uso de um resolvedor interativo para o artigo.|  
 |**article_resolver**||Resolvedor personalizado para o artigo. Aplica-se somente a um artigo de tabela.|  
 |**check_permissions** (bitmap)|**0x00**|Permissões em nível de tabela não são verificadas.|  
 ||**0x10**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções INSERT feitas no Assinante sejam aplicadas no Publicador.|  
 ||**0x20**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções UPDATE feitas no Assinante sejam aplicadas no Publicador.|  
 ||**0x40**|Permissões em nível de tabela são verificadas no Publicador antes que as instruções DELETE feitas no Assinante sejam aplicadas no Publicador.|  
 |**column_tracking**|**true**|Ativa o rastreamento em nível de coluna. Aplica-se somente a um artigo de tabela.<br /><br /> Observação: o controle de nível de coluna não pode ser usado ao publicar tabelas com mais de 246 colunas.|  
-||**for**|Ativa o rastreamento em nível de coluna e deixa a detecção de conflito no nível de linha. Aplica-se somente a um artigo de tabela.|  
+||**false**|Ativa o rastreamento em nível de coluna e deixa a detecção de conflito no nível de linha. Aplica-se somente a um artigo de tabela.|  
 |**compensate_for_errors**|**true**|Ações de compensação são executadas quando ocorrem erros durante a sincronização. Para obter mais informações, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
-||**for**|As ações de compensação não são executadas, o que é o comportamento padrão. Para obter mais informações, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> ** \* Importante \* \* ** Embora os dados nas linhas afetadas pareçam estar fora de convergência, assim que você solucionar erros, as alterações poderão ser aplicadas e os dados convergirão. Se a tabela de origem de um artigo já estiver publicada em outra publicação, o valor de *compensate_for_errors* deverá ser o mesmo para ambos os artigos.|  
+||**false**|As ações de compensação não são executadas, o que é o comportamento padrão. Para obter mais informações, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> ** \* Importante \* \* ** Embora os dados nas linhas afetadas pareçam estar fora de convergência, assim que você solucionar erros, as alterações poderão ser aplicadas e os dados convergirão. Se a tabela de origem de um artigo já estiver publicada em outra publicação, o valor de *compensate_for_errors* deverá ser o mesmo para ambos os artigos.|  
 |**creation_script**||Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**delete_tracking**|**true**|Instruções DELETE são replicadas, o que é o comportamento padrão.|  
-||**for**|Instruções DELETE não são replicadas.<br /><br /> ** \* Importante \* \* ** Definir **delete_tracking** como **false** resulta em não convergência e as linhas excluídas precisam ser removidas manualmente.|  
+||**false**|Instruções DELETE não são replicadas.<br /><br /> ** \* Importante \* \* ** Definir **delete_tracking** como **false** resulta em não convergência e as linhas excluídas precisam ser removidas manualmente.|  
 |**ndescrição**||Entrada descritiva para o artigo.|  
 |**destination_owner**||Nome do proprietário do objeto no banco de dados de assinatura, se não for **dbo**.|  
 |**identity_range**||**bigint** que especifica o tamanho do intervalo a ser usado ao atribuir novos valores de identidade se o artigo tiver **identityrangemanagementoption** definido como **auto** ou **auto_identity_range** definido como **true**. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manual**|Desabilita gerenciamento automático do intervalo de identidade. Marca colunas de identidade com NOT FOR REPLICATION para ativar o tratamento manual do intervalo de identidade. Para obter mais informações, consulte [Replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-||**None**|Desabilita todo o gerenciamento do intervalo de identidade.|  
+||**nenhum**|Desabilita todo o gerenciamento do intervalo de identidade.|  
 |**logical_record_level_conflict_detection**|**true**|Um conflito será detectado se forem feitas alterações no registro lógico. Requer que **logical_record_level_conflict_resolution** seja definido como **true**.|  
-||**for**|A detecção de conflito padrão é usada conforme especificado pelo **column_tracking**.|  
+||**false**|A detecção de conflito padrão é usada conforme especificado pelo **column_tracking**.|  
 |**logical_record_level_conflict_resolution**|**true**|Todo o registro lógico vencedor substitui o registro lógico perdedor.|  
-||**for**|As linhas vencedoras não são restringidas ao registro lógico.|  
+||**false**|As linhas vencedoras não são restringidas ao registro lógico.|  
 |**partition_options**|**0**|A filtragem do artigo é estática ou não gera um subconjunto único de dados para cada partição, ou seja, uma partição “sobreposta”.|  
 ||**1**|As partições são sobrepostas e as atualizações DML feitas no Assinante não podem alterar a partição a qual uma linha pertence.|  
 ||**2**|A filtragem do artigo gera partições não sobrepostas, mas vários Assinantes podem receber a mesma partição.|  
-||**Beta**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.<br /><br /> Observação: se você especificar um valor de **3** para **partition_options**, pode haver apenas uma única assinatura para cada partição de dados nesse artigo. Se uma segunda assinatura for criada na qual o critério de filtragem da nova assinatura for resolvido para a mesma partição como a assinatura existente, a assinatura existente será cancelada.|  
-|**pre_creation_command**|**None**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
-||**apagar**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
+||**3**|A filtragem para o artigo gera partições não sobrepostas exclusivas de cada assinatura.<br /><br /> Observação: se você especificar um valor de **3** para **partition_options**, pode haver apenas uma única assinatura para cada partição de dados nesse artigo. Se uma segunda assinatura for criada na qual o critério de filtragem da nova assinatura for resolvido para a mesma partição como a assinatura existente, a assinatura existente será cancelada.|  
+|**pre_creation_command**|**nenhum**|Se a tabela já existir no Assinante, nenhuma ação será tomada.|  
+||**delete**|Emite uma exclusão com base na cláusula WHERE no filtro de subconjunto.|  
 ||**suspensa**|Cancela a tabela antes de recriá-la.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**processing_order**||**int** que indica a ordem de processamento dos artigos em uma publicação de mesclagem.|  
 |**pub_identity_range**||**bigint** que especifica o tamanho do intervalo alocado a um assinante com uma assinatura de servidor se o artigo tiver **identityrangemanagementoption** definido como **auto** ou **auto_identity_range** definido como **true**. Esse intervalo de identidade é reservado para um Assinante de republicação para ser alocado a seus próprios Assinantes. Aplica-se apenas a um artigo de tabela. Para obter mais informações, consulte a seção "replicação de mesclagem" de [replicar colunas de identidade](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|Artigo também é publicado em uma publicação transacional.|  
-||**for**|O artigo também não é publicado em uma publicação transacional.|  
+||**false**|O artigo também não é publicado em uma publicação transacional.|  
 |**resolver_info**||É usado para especificar informações adicionais requeridas por um determinador personalizado. Alguns resolvedores do [!INCLUDE[msCoName](../../includes/msconame-md.md)] necessitam de uma coluna fornecida como entrada para o resolvedor. **resolver_info** é **nvarchar (255)**, com um padrão de NULL. Para obter mais informações, consulte [Resolvedores Microsoft baseados em COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
 |**schema_option** (bitmap)||Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
 ||**0x00**|Desabilita o script pelo Agente de Instantâneo e usa o script fornecido no **creation_script**.|  
@@ -131,10 +131,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|Converte os tipos de dados **geography** e **Geometry** em **varbinary (max)** para que as colunas desses tipos possam ser replicadas para os [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]assinantes que estão em execução.|  
 ||**0x10000000000**|Replica índices em colunas do tipo **geography** e **Geometry**.|  
 ||NULO|O sistema gera automaticamente uma opção de esquema válida para o artigo.|  
-|**Estado**|**ativo**|O script de processamento inicial para publicação da tabela é executado.|  
+|**status**|**activo**|O script de processamento inicial para publicação da tabela é executado.|  
 ||**unsynced**|O script de processamento inicial para publicar a tabela é executado da próxima vez que o Snapshot Agent é executado.|  
 |**stream_blob_columns**|**true**|Uma otimização de fluxo de dados é usada ao replicar colunas de objeto binário grande. Porém, certas funcionalidades de replicação de mesclagem, como registros lógicos, ainda podem impedir que a otimização de fluxo seja usada. *stream_blob_columns* é definido como true quando o FileStream está habilitado. Isso permite a replicação de dados FILESTREAM para executar da maneira ideal e reduzir a utilização de memória. Para forçar os artigos da tabela FILESTREAM a não usarem o streaming de BLOB, defina *stream_blob_columns* como false.<br /><br /> ** \* Importante \* \* ** Habilitar essa otimização de memória pode prejudicar o desempenho do Agente de Mesclagem durante a sincronização. Esta opção só deve ser usada ao replicar colunas que contêm megabytes de dados.|  
-||**for**|A otimização não é usada ao replicar colunas de objeto binário grande.|  
+||**false**|A otimização não é usada ao replicar colunas de objeto binário grande.|  
 |**subscriber_upload_options**|**0**|Nenhuma restrição em atualizações feitas em um Assinante com uma assinatura de cliente. As alterações são carregadas no Publicador. A alteração dessa propriedade pode exigir a reinicialização dos Assinantes existentes.|  
 ||**1**|Alterações são permitidas em um Assinante com assinatura de cliente, mas elas não são carregadas no Publicador.|  
 ||**2**|Não são permitidas alterações em um Assinante com uma assinatura de cliente.|  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** e **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
 |**proc schema only**|**0x01** e **0x2000**|  
-|**tabela**|Todas as opções.|  
+|**table**|Todas as opções.|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**e **0x200000**|  
   
 ## <a name="example"></a>Exemplo  

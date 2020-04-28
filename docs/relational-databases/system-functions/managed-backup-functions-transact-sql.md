@@ -16,10 +16,10 @@ ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1b9b16e426143e1eca7dc39d7d050988faa0222a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140618"
 ---
 # <a name="managed-backup-functions-transact-sql"></a>Funções de backup gerenciadas (Transact-SQL)
@@ -43,6 +43,6 @@ ms.locfileid: "68140618"
  [managed_backup. fn_backup_instance_config &#40;&#41;do Transact-SQL](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Backup Gerenciado do SQL Server para o Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

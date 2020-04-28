@@ -18,10 +18,10 @@ ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119264"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68119264"
   
  Recomendamos que você **não consulte as tabelas do sistema diretamente**. Em vez disso, execute o procedimento armazenado [Sys. sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) .  
    
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|A identificação da tabela de origem à qual a coluna capturada pertence.|  
 |**column_name**|**sysname**|Nome da coluna capturada.|  

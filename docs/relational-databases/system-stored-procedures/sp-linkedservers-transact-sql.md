@@ -18,10 +18,10 @@ ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139825"
 ---
 # <a name="sp_linkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
@@ -43,7 +43,7 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nome do servidor vinculado.|  
 |**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nome amigável do provedor de OLE DB que gerencia o acesso ao servidor vinculado especificado.|  
@@ -65,7 +65,7 @@ sp_linkedservers
  [&#41;&#40;Transact-SQL de sp_primarykeys](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados de consultas distribuídas &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

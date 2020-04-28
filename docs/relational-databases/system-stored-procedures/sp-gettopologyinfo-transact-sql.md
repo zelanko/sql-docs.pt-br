@@ -16,10 +16,10 @@ ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123919"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
@@ -53,7 +53,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
  Requer associação na função de servidor fixa sysadmin ou na função de banco de dados fixa db_owner.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Replicação transacional ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

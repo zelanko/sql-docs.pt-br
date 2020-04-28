@@ -20,10 +20,10 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109565"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68109565"
 
   Contém uma linha para cada valor de opção de configuração em todo o servidor no sistema.  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Identificação exclusivo do valor de configuração.|  
-|**name**|**nvarchar (35)**|O nome da opção de configuração.|  
-|**valor**|**sql_variant**|Valor configurado dessa opção.|  
+|**name**|**nvarchar(35)**|O nome da opção de configuração.|  
+|**value**|**sql_variant**|Valor configurado dessa opção.|  
 |**máximo**|**sql_variant**|Valor mínimo para a opção de configuração.|  
-|**maior**|**sql_variant**|Valor máximo para a opção de configuração.|  
+|**máximo**|**sql_variant**|Valor máximo para a opção de configuração.|  
 |**value_in_use**|**sql_variant**|Valor de execução atualmente em efeito dessa opção.|  
 |**ndescrição**|**nvarchar (255)**|Descrição da opção de configuração.|  
 |**is_dynamic**|**bit**|1 = A variável é implementada quando a instrução RECONFIGURE é executada.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68109565"
 >  Para obter opções de configuração no nível do banco de dados, consulte [ALTER DATABASE scopeed configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Para configurar o soft-NUMA, consulte [Soft-numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requer associação à função **pública** .  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exibições do catálogo de configuração em todo o servidor &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

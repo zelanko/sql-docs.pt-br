@@ -20,10 +20,10 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139998"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68139998"
 
 Retorna uma linha para cada segmento de coluna em um índice columnstore. Há um segmento de coluna por coluna por rowgroup. Por exemplo, uma tabela com 10 RowGroups e 34 colunas retorna 340 linhas. 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
 |**column_id**|**int**|ID da coluna columnstore.|  
 |**segment_id**|**int**|ID do rowgroup. Para compatibilidade com versões anteriores, o nome da coluna continua sendo chamado segment_id embora seja a ID do rowgroup. Você pode identificar exclusivamente um segmento usando \<hobt_id, partition_id, column_id>, <segment_id>.|  
-|**Versão**|**int**|Versão de formato do segmento de coluna.|  
+|**version**|**int**|Versão de formato do segmento de coluna.|  
 |**encoding_type**|**int**|Tipo de codificação usado para esse segmento:<br /><br /> 1 = VALUE_BASED-não cadeia de caracteres/binário sem dicionário (muito semelhante a 4 com algumas variações internas)<br /><br /> 2 = VALUE_HASH_BASED-coluna não cadeia de caracteres/binária com valores comuns no dicionário<br /><br /> 3 = STRING_HASH_BASED-cadeia de caracteres/coluna binária com valores comuns no dicionário<br /><br /> 4 = STORE_BY_VALUE_BASED-não cadeia de caracteres/binário sem dicionário<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-cadeia de caracteres/binário sem dicionário<br /><br /> Todas as codificações aproveitam a codificação de bits e de tamanho de execução quando possível.|  
 |**row_count**|**int**|Número de linhas no grupo de linhas.|  
 |**has_nulls**|**int**|1 se o segmento de coluna tiver valores nulos.|  
@@ -69,16 +69,16 @@ GO
 ## <a name="permissions"></a>Permissões  
  Todas as colunas exigem pelo menos a permissão **View definition** na tabela. As colunas a seguir retornam NULL, a menos que o usuário também tenha a permissão **Select** : has_nulls, base_id, magnitude, min_data_id, max_data_id e null_value.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [&#41;sys. Columns &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Guia de Índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
+ [Guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   

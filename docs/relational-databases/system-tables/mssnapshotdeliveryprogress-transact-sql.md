@@ -18,10 +18,10 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139808"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68139808"
 
   A tabela **MSsnapshotdeliveryprogress** é usada para controlar os arquivos que foram entregues com êxito ao Assinante quando um instantâneo está sendo aplicado. Esses dados são usados para retomar a entrega de arquivos quando o Merge Agent não consegue entregar todos os arquivos durante a sessão, para que os mesmos arquivos não sejam entregues novamente na próxima execução do Merge Agent. Essa tabela é armazenada no Assinante, no banco de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|Identifica o caminho para a pasta de instantâneo na qual o arquivo foi entregue com êxito. Para publicações que usam filtros com parâmetros, a cadeia de caracteres **dynsnap** será anexada ao valor.|  
 |**progress_token_hash**|**int**|Um valor de hash gerado com base no valor de *progress_token* que é usado para melhorar a eficiência da pesquisa para um determinado valor de *progress_token* .|  

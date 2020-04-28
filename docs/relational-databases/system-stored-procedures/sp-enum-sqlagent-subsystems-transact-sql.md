@@ -18,10 +18,10 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124670"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
@@ -46,15 +46,15 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**subsistema**|**nvarchar(40)**|Nome do subsistema.|  
 |**ndescrição**|**nvarchar(512)**|Descrição do subsistema.|  
 |**subsystem_dll**|**nvarchar (510)**|Módulo DLL que contém o subsistema.|  
 |**agent_exe**|**nvarchar (510)**|Módulo executável usado pelo subsistema.|  
-|**start_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
-|**event_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
-|**stop_entry_point**|**nvarchar (30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**start_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**event_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedimento que o SQL Server Agent chama durante a execução da etapa de trabalho.|  
 |**max_worker_threads**|**int**|Número de máximo de threads que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent iniciará para este subsistema.|  
 |**subsystem_id**|**int**|Identificador do subsistema.|  
   
@@ -62,12 +62,12 @@ sp_enum_sqlagent_subsystems
  Este procedimento lista os subsistemas disponíveis na instância.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
  Para obter detalhes sobre **SQLAgentOperatorRole**, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Implementar segurança de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   
- [&#41;&#40;Transact-SQL de sp_add_jobstep](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

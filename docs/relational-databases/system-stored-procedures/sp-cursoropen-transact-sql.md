@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108480"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Opção de rolagem. *scrollopt* é um parâmetro opcional que requer um dos seguintes valores de entrada **int** .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opção de controle de simultaneidade. *ccopt* é um parâmetro opcional que requer um dos seguintes valores de entrada **int** .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (anteriormente conhecido como LOCKCC)|  
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Assim como ** com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, o pode substituir os valores de *ccopt* solicitados.  
+ Assim como *scrollopt*com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, o pode substituir os valores de *ccopt* solicitados.  
   
  *linhas*  
  O número de linhas do buffer de busca a serem usadas com AUTO_FETCH. O padrão é 20 linhas. o *número de linhas* se comporta de forma diferente quando atribuído como um valor de entrada versus um valor de retorno.  

@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122343"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -44,9 +44,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identificador do artigo.|  
+|**id**|**int**|Identificador do artigo.|  
 |**name**|**sysname**|Nome do artigo.|  
 |**source_owner**|**sysname**|Nome do proprietário do objeto de origem.|  
 |**source_object**|**sysname**|Nome do objeto de origem do qual adicionar o artigo.|  
@@ -57,10 +57,10 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**creation_script**|**nvarchar (255)**|Caminho e nome de um script de esquema de artigo opcional usados para criar o artigo no banco de dados de assinatura.|  
 |**conflict_table**|**nvarchar (270)**|Nome da tabela que armazena os conflitos de entrada ou atualização.|  
 |**article_resolver**|**nvarchar (255)**|Resolvedor personalizado para o artigo.|  
-|**subset_filterclause**|**nvarchar (1000)**|Cláusula WHERE especificando filtragem horizontal.|  
+|**subset_filterclause**|**nvarchar(1000)**|Cláusula WHERE especificando filtragem horizontal.|  
 |**pre_creation_command**|**tinyint**|Método de pré-criação, que pode ser um dos seguintes:<br /><br /> **0** = nenhum<br /><br /> **1** = remover<br /><br /> **2** = excluir<br /><br /> **3** = truncar|  
 |**schema_option**|**binário (8)**|Bitmap da opção de geração de esquema para o artigo. Para obter informações sobre essa opção de bitmap, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) ou [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**tipo**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
+|**type**|**smallint**|Tipo do artigo que pode ser um dos seguintes:<br /><br /> **10** = tabela<br /><br /> **32** = procedimento armazenado<br /><br /> **64** = exibição ou exibição indexada<br /><br /> **128** = função definida pelo usuário<br /><br /> **160** = somente esquema sinônimo|  
 |**column_tracking**|**int**|Configuração para rastreamento em nível de coluna; em que **1** significa que o controle no nível de coluna está ativado e **0** significa que o controle no nível de coluna está desativado.|  
 |**resolver_info**|**nvarchar (255)**|Nome do resolvedor do artigo.|  
 |**vertical_partition**|**bit**|Se o artigo for verticalmente particionado; em que **1** significa que o artigo está verticalmente particionado e **0** significa que ele não é.|  

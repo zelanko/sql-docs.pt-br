@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123817"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -47,36 +47,36 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`O número de ID do subsistema ao qual conceder acesso. O *subsystem_id* é **int**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script ActiveX<br /><br /> ** \* Importante \* \* ** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
-|**Beta**|Sistema operacional (**CmdExec**)|  
-|**quatro**|Replication Snapshot Agent|  
-|**05**|Replication Agente de Leitor de Log|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Script do ActiveX<br /><br /> ** \* Importante \* \* ** O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**3**|Sistema Operacional (**CmdExec**)|  
+|**4**|Replication Snapshot Agent|  
+|**5**|Replication Agente de Leitor de Log|  
 |**6**|Agente de Distribuição de Replicação|  
 |**7**|Replication Merge Agent|  
 |**8**|Agente de Leitor de Fila de Replicação|  
-|**99**|Consulta do Analysis Services|  
-|**254**|Comando do Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]execução do pacote|  
-|**12**|Script do PowerShell|  
+|**9**|Consulta do Analysis Services|  
+|**10**|Comando do Analysis Services|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] execução de pacotes|  
+|**12**|Scripts PowerShell|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`O nome do subsistema ao qual conceder acesso. O **subsystem_name** é **sysname**, com um padrão de NULL. *Subsystem_id* ou *subsystem_name* deve ser especificado, mas ambos não podem ser especificados. A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script do ActiveX|  
-|**CmdExec**|Sistema operacional (**CmdExec**)|  
+|**CmdExec**|Sistema Operacional (**CmdExec**)|  
 |**Instantâneo**|Replication Snapshot Agent|  
-|**Heterogêneo**|Replication Agente de Leitor de Log|  
+|**LogReader**|Replication Agente de Leitor de Log|  
 |**Distribuição**|Agente de Distribuição de replicação|  
-|**Mesclagem**|Replication Merge Agent|  
+|**Mescle**|Replication Merge Agent|  
 |**QueueReader**|Agente de Leitor de Fila de Replicação|  
 |**ANALYSISQUERY**|Consulta do Analysis Services|  
 |**ANALYSISCOMMAND**|Comando do Analysis Services|  
-|**Dts**|Execução de pacote SSIS|  
-|**PowerShell**|Script do PowerShell|  
+|**Dts**|Execução do pacote SSIS|  
+|**PowerShell**|Scripts PowerShell|  
 | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Comentários  

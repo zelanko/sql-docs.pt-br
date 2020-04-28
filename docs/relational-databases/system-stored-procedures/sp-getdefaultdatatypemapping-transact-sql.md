@@ -16,10 +16,10 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123985"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
@@ -53,7 +53,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumentos  
 `[ @source_dbms = ] 'source_dbms'`É o nome do DBMS do qual os tipos de dados são mapeados. *source_dbms* é **sysname**e pode ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
@@ -74,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`É o nome do DBMS de destino. *destination_dbms* é **sysname**e pode ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
@@ -111,8 +111,8 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_helpdatatypemap](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_setdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
- [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
- [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
+ [Mapeamento de tipo de dados para Publicadores Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Assinantes do IBM DB2](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
+ [Assinantes Oracle](../../relational-databases/replication/non-sql/oracle-subscribers.md)  
   
   

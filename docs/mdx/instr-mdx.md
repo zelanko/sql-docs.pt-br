@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105298"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Comece*  
+ *start*  
  (Opcional) Uma expressão numérica que define a posição inicial de cada pesquisa. Se esse valor for omitido, a pesquisa começará na primeira posição de caractere. Se o início for nulo, o valor de retorno da função será indefinido.  
   
  *searched_string*  
@@ -48,7 +48,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |---------------|------------------|  
 |String1 tem comprimento zero|zero (0)|  
 |String1 é nula|não definido|  
-|String2 tem comprimento zero|iniciar|  
+|String2 tem comprimento zero|start|  
 |String2 é nula|não definido|  
 |String2 não foi localizada|zero (0)|  
 |start é maior que Len (String2)|zero (0)|  

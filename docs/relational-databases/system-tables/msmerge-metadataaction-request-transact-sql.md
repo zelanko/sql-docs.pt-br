@@ -18,10 +18,10 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106376"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68106376"
 
   A tabela **MSmerge_metadataaction_request** armazena uma linha para cada ação de compensação necessária. Usando a sincronização da Web, se ocorrer um erro e a sincronização precisar ser repetida, uma entrada será feita em **MSmerge_metadataaction_request**. Durante a fase de carregamento da mesclagem subsequente, solicitações de todos os artigos que pertencem à publicação que está sendo sincronizada são recuperadas dessa tabela e carregadas. Quando a sincronização for concluída com êxito, a linha correspondente na tabela de **MSmerge_metadataaction_request** será excluída. Essa tabela é armazenada no Publicador, no banco de dados de publicação, e no Assinante, no banco de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|O apelido da tabela publicada.|  
 |**rowguid**|**uniqueidentifier**|O identificador para a linha determinada.|  

@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138333"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configurações do projeto (mapeamento de tipo) (MySQLToSQL)
@@ -50,7 +50,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
   
 |||  
 |-|-|  
-|**Tipo de dados MySQL**|**Tipo de dados do SQL Server**|  
+|**Tipo de dados MySQL**|**Tipo de dados SQL Server**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |binary|binário [1]|  
@@ -149,7 +149,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |time|time|  
 |timestamp|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint|SMALLINT|  
+|TINYINT|SMALLINT|  
 |tinyint [*.. 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
 |bigint não assinado|BIGINT|  
@@ -169,7 +169,7 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |float não assinado|float [24]|  
 |float não assinado [*.. 255] [\*.. máximo|numeric [*] [\*]|  
 |float não assinado [*.. 53]|float [53]|  
-|int não assinado|BIGINT|  
+|unsigned int|BIGINT|  
 |int não assinado [*.. 255]|BIGINT|  
 |inteiro sem sinal|BIGINT|  
 |inteiro sem sinal [*.. 255]|BIGINT|  
@@ -182,8 +182,8 @@ A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem 
 |real não assinado [*.. 255 [[\*.. máximo|numeric [*] [\*]|  
 |smallint não assinado|INT|  
 |smallint não assinado [*.. 255]|INT|  
-|tinyint não assinado|tinyint|  
-|tinyint não assinado [*.. 255]|tinyint|  
+|tinyint não assinado|TINYINT|  
+|tinyint não assinado [*.. 255]|TINYINT|  
 |varbinary [0.. 1]|varbinary [1]|  
 |varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  

@@ -16,10 +16,10 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130588"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Tabelas do SQL Server Agent (Transact-SQL)

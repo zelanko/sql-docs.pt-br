@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133092"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "68133092"
 
   Contém uma linha para cada principal do nível de servidor.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do principal. É exclusivo em um servidor.|  
 |**principal_id**|**int**|Número da ID do principal. É exclusivo em um servidor.|  
-|**SIDs**|**varbinary(85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
-|**tipo**|**char(1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> K = Logon mapeado para uma chave assimétrica|  
-|**type_desc**|**nvarchar (60)**|Descrição do tipo do principal:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**SIDs**|**varbinary (85)**|SID (ID de segurança) do principal. Se for o principal do Windows, corresponde à SID do Windows.|  
+|**type**|**Char (1)**|Tipo do principal:<br /><br /> S = Logon SQL<br /><br /> U = Logon do Windows<br /><br /> G = Grupo do Windows<br /><br /> R = Função do servidor<br /><br /> C = Logon mapeado para um certificado<br /><br /> K = Logon mapeado para uma chave assimétrica|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo do principal:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = O logon está desabilitado.|  
 |**create_date**|**datetime**|Hora em que o principal foi criado.|  
 |**modify_date**|**datetime**|Hora em que a definição do principal foi modificada pela última vez.|  
@@ -51,7 +51,7 @@ ms.locfileid: "68133092"
 ## <a name="permissions"></a>Permissões  
  Qualquer logon pode ver seu próprio nome de logon, os logons do sistema e as funções de servidor fixas. Ver outros logons requer ALTER ANY LOGIN ou uma permissão no logon. Ver funções de servidor definidas pelo usuário requer ALTER ANY SERVER ROLE ou associação na função.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do servidor.  
@@ -68,8 +68,8 @@ JOIN sys.server_permissions AS pe
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Entidades &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   

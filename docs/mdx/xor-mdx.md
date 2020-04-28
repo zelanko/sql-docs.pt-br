@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125785"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
@@ -28,7 +28,7 @@ Expression1 XOR Expression2
   
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Expression1*  
  Uma linguagem MDX válida que retorna um valor numérico.  
   
@@ -43,10 +43,10 @@ Expression1 XOR Expression2
   
 |*Expression1*|*Expression2*|Valor retornado|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**for**|  
-|**true**|**for**|**true**|  
-|**for**|**true**|**true**|  
-|**for**|**for**|**for**|  
+|**true**|**true**|**false**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  

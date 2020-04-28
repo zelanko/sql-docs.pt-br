@@ -16,10 +16,10 @@ ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124017"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
@@ -43,9 +43,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 |-----------|-----------|  
 |**1**|Instantâneo|  
 |**2**|Log Reader|  
-|**Beta**|Distribuição|  
-|**quatro**|Mesclar|  
-|**99**|Queue Reader|  
+|**3**|Distribuição|  
+|**4**|Mesclar|  
+|**9**|Queue Reader|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

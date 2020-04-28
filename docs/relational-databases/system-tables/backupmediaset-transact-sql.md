@@ -19,10 +19,10 @@ ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119352"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68119352"
   Contém uma linha para cada conjunto de mídias de backup. Essa tabela é armazenada no banco de dados **msdb** .  
  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|Número exclusivo de identificação do conjunto de mídias. Identidade, chave primária.|  
 |**media_uuid**|**uniqueidentifier**|O UUID do conjunto de mídias. Todos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] os conjuntos de mídia têm um UUID.<br /><br /> Para versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no entanto, se um conjunto de mídias contiver apenas uma família de mídia, a coluna **MEDIA_UUID** poderá ser nula (**media_family_count** é 1).|  
@@ -54,9 +54,9 @@ ms.locfileid: "68119352"
 ## <a name="see-also"></a>Consulte Também  
  [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [conjunto de backup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [&#41;backupfilegroup &#40;Transact-SQL](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [&#41;backupmediafamily &#40;Transact-SQL](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [&#41;do conjunto de backup &#40;Transact-SQL](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

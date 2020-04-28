@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122448"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @LoginNamePattern = ] 'login'`É um nome de logon. *logon* é **sysname**, com um padrão de NULL. o *logon* deve existir se especificado. Se o *logon* não for especificado, serão retornadas informações sobre todos os logons.  
+`[ @LoginNamePattern = ] 'login'`É um nome de logon. *login* é **sysname**, com um padrão de NULL. o *logon* deve existir se especificado. Se o *logon* não for especificado, serão retornadas informações sobre todos os logons.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -47,10 +47,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O primeiro relatório contém informações sobre cada logon especificado, como mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
-|**SID**|**varbinary(85)**|Identificador de segurança de Logon (SID).|  
+|**SID**|**varbinary (85)**|Identificador de segurança de Logon (SID).|  
 |**DefDBName**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a uma instância do.|  
 |**DefLangName**|**sysname**|Idioma padrão usado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sim = **LoginName** tem um nome de usuário associado em um banco de dados.<br /><br /> Não = **LoginName** não tem um nome de usuário associado.|  
@@ -58,7 +58,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  O segundo relatório contém informações sobre usuários mapeados para cada logon, e as associações de função do logon, conforme mostrado na tabela a seguir.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nome de logon.|  
 |**NomeDoBancoDeDados**|**sysname**|Banco de dados padrão que o **LoginName** usa ao se conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a uma instância do.|  

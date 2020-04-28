@@ -10,10 +10,10 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141089"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conectar-se ao DB2 (DB2ToSQL)
@@ -25,7 +25,7 @@ Para acessar essa caixa de diálogo, no menu **arquivo** , selecione **conectar-
 **Provedor**  
 Selecione o provedor de acesso a dados para sua conexão com o banco de dado DB2. Os provedores disponíveis são o provedor de cliente do DB2 e o provedor de OLE DB. O padrão é o provedor de cliente do DB2.  
   
-**Mode**  
+**Modo**  
 Selecione o modo padrão, TNSNAME ou cadeia de conexão.  
   
 -   No modo padrão, você insere ou seleciona valores para o provedor, o nome do servidor, a porta do servidor, o SID do DB2, o nome de usuário e a senha.  
@@ -59,7 +59,7 @@ Essa é uma opção de modo padrão.
 Insira o nome de usuário que o SSMA usará para se conectar ao banco de dados DB2.  
   
 **Senha**  
-Insira a senha para o nome de usuário.  
+Digite a senha para o nome de usuário.  
   
 **Cadeia de conexão**  
 > [!IMPORTANT]  

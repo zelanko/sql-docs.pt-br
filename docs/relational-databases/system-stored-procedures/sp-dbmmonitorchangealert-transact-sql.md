@@ -19,10 +19,10 @@ ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108146"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_dbmmonitorchangealert database_name
  Nenhum  
   
 ## <a name="permissions"></a>Permissões  
- Exige associação à função de servidor fixa **sysadmin** .  
+ Requer a associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define limites para todas as métricas de desempenho e para o período de retenção do banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. A tabela a seguir exibe os valores usados no exemplo:  

@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139904"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -57,13 +57,13 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`É o modo de segurança usado pelo assinante para se conectar a um Publicador remoto para atualização imediata. *security_mode* é **int**e pode ser um desses valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a autenticação com o logon especificado neste procedimento armazenado como *logon* e *senha*.<br /><br /> Observação: em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa opção foi usada para especificar uma RPC (chamada de procedimento remoto) dinâmica.|  
 |**1**|Usa o contexto de segurança (Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Autenticação do Windows) do usuário que faz a alteração no Assinante.<br /><br /> Observação: essa conta também deve existir no Publicador com privilégios suficientes. Ao usar Autenticação do Windows, deve haver suporte para delegação de conta de segurança.|  
 |**2**|Usa um logon de servidor vinculado existente definido pelo usuário criado usando **sp_link_publication**.|  
   
-`[ @login = ] 'login'`É o logon. *logon* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
+`[ @login = ] 'login'`É o logon. *login* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   
 `[ @password = ] 'password'`É a senha. a *senha* é **sysname**, com um padrão de NULL. Esse parâmetro deve ser especificado quando *security_mode* é **0**.  
   

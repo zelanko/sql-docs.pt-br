@@ -18,10 +18,10 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139718"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -29,19 +29,19 @@ ms.locfileid: "68139718"
 
   A tabela **MSsubscription_properties** contém linhas para as informações de parâmetro necessárias para executar agentes de replicação no Assinante. Essa tabela é armazenada no banco de dados de assinatura para uma assinatura pull e no banco de dados de distribuição, no Distribuidor, para uma assinatura push.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|O nome do Publicador.|  
+|**programa**|**sysname**|O nome do Publicador.|  
 |**publisher_db**|**sysname**|O nome do banco de dados Publicador.|  
 |**documento**|**sysname**|O nome da publicação.|  
 |**publication_type**|**int**|O tipo de publicação:<br /><br /> **0** = transacional.<br /><br /> **2** = mesclar.|  
 |**publisher_login**|**sysname**|A ID do logon usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticação.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer uma chamada de procedimento remoto (RPC) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
+|**publisher_security_mode**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticação.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows.<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer uma chamada de procedimento remoto (RPC) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
 |**distribuidor**|**sysname**|O nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usada no Distribuidor para Autenticação do SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|O modo de segurança implementado no Distribuidor.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1** = autenticação do Windows.|  
+|**distributor_security_mode**|**int**|O modo de segurança implementado no Distribuidor.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.<br /><br /> **1** = autenticação do Windows.|  
 |**ftp_address**|**sysname**|O endereço de rede do serviço FTP (File Transfer Protocol) para o Distribuidor.|  
 |**ftp_port**|**int**|O número da porta do serviço FTP do Distribuidor.|  
 |**ftp_login**|**sysname**|O nome de usuário usado para se conectar ao serviço FTP.|  
@@ -62,13 +62,13 @@ ms.locfileid: "68139718"
 |**internet_password**|**nvarchar (524)**|A senha para o logon que o Agente de Mesclagem usa ao se conectar ao servidor Web que está hospedando a sincronização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da Web usando a autenticação do.|  
 |**internet_security_mode**|**int**|O modo de autenticação usado durante a conexão com o servidor Web que está hospedando a sincronização da Web, em que o valor **1** significa autenticação do Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um valor de **0** significa autenticação.|  
 |**internet_timeout**|**int**|O período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
-|**nome do host**|**sysname**|Especifica o valor para **HOST_NAME** quando essa função é usada na cláusula **Where** de um filtro de junção ou relação de registro lógico.|  
+|**hostname**|**sysname**|Especifica o valor para **HOST_NAME** quando essa função é usada na cláusula **Where** de um filtro de junção ou relação de registro lógico.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

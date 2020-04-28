@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124917"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "68124917"
 
   Fornece informações sobre um tipo de coletor de um item de coleta.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|O GUID de um tipo de coleta. Não permite valor nulo.|  
 |**name**|**sysname**|O nome do tipo de coleta. Não permite valor nulo.|  
-|**parameter_schema**|**XML**|O esquema XML que descreve a aparência da configuração do tipo de coletor especificado. Este esquema XML é usado para validar a configuração XML atual associada a uma instância de item de coleta específica. Permite valor nulo.|  
-|**parameter_formatter**|**XML**|Determina o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. Permite valor nulo.|  
+|**parameter_schema**|**xml**|O esquema XML que descreve a aparência da configuração do tipo de coletor especificado. Este esquema XML é usado para validar a configuração XML atual associada a uma instância de item de coleta específica. Permite valor nulo.|  
+|**parameter_formatter**|**xml**|Determina o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. Permite valor nulo.|  
 |**collection_package_id**|**uniqueidentifer**|O GUID de um pacote de coleta. Não permite valor nulo.|  
 |**collection_package_path**|**nvarchar(4000)**|Fornece o caminho para o pacote de coleta. Permite valor nulo.|  
 |**collection_package_name**|**sysname**|O nome do pacote de coleta. Não permite valor nulo.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68124917"
 |Corrigido o tipo de dados para a coluna **upload_package_path** e a descrição foi atualizada para indicar que o valor é anulável.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Exibições do coletor de dados &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Coleta de dados](../../relational-databases/data-collection/data-collection.md)  
   

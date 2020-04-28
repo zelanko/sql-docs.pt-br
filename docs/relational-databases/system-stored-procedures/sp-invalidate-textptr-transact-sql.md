@@ -18,10 +18,10 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68113189"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
@@ -54,7 +54,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
 ## <a name="see-also"></a>Consulte Também  
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [&#41;TEXTPTR &#40;Transact-SQL](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  

@@ -18,10 +18,10 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123826"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
@@ -46,7 +46,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome da função de banco de dados fixa.|  
 |**Descrição**|**nvarchar (70)**|Descrição de **DbFixedRole.**|  
@@ -54,7 +54,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Comentários  
  As funções de banco de dados fixas, conforme mostrado na tabela a seguir, são definidas no nível de banco de dados e possuem permissões para executar atividades administrativas específicas no nível de banco de dados. As funções de banco de dados fixas não podem ser adicionadas ou removidas. As permissões concedidas a uma função de banco de dados fixa não podem ser alteradas.  
   
-|Função de banco de dados fixa|DESCRIÇÃO|  
+|Função de banco de dados fixa|Descrição|  
 |-------------------------|-----------------|  
 |**db_owner**|Proprietários de banco de dados|  
 |**db_accessadmin**|Administradores de acesso de banco de dados|  
@@ -77,7 +77,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  
   
- As informações retornadas estão sujeitas a restrições no acesso para metadados. Entidades em que o principal não tem nenhuma permissão não aparecem. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ As informações retornadas estão sujeitas a restrições no acesso para metadados. Entidades em que o principal não tem nenhuma permissão não aparecem.  Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra uma lista de todas as funções de banco de dados fixas.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helprole](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

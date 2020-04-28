@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124237"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
@@ -41,14 +41,14 @@ ms.locfileid: "68124237"
 sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *table_id*  
  É a ID do objeto da tabela indexada de texto completo. Se você especificar um *table_id*inválido, um erro será retornado. Para obter informações sobre como obter a ID de objeto de uma tabela, consulte [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).  
   
  *identificação*  
  É o identificador de um documento interno (DocId) que corresponde ao valor da chave. Um valor *docid* inválido não retorna nenhum resultado.  
   
- *chaves*  
+ *chave*  
  É o valor da chave de texto completo da tabela especificada. Um valor *key* inválido não retorna nenhum resultado. Para obter informações sobre valores de chave de texto completo, consulte [gerenciar índices de texto completo](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|É a coluna do identificador de documento (DocId) interno que corresponde ao valor da chave.|  
 |Chave|*|É o valor da chave de texto completo da tabela especificada.<br /><br /> Se nenhuma chave de texto completo existir na tabela de mapeamento, um conjunto de linhas vazio será retornado.|  
@@ -91,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  Os exemplo desta seção usam a tabela `Production.ProductReview` do banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Você pode criar esse índice executando o exemplo fornecido para a `ProductReview` tabela em [criar índice de texto completo &#40;&#41;Transact-SQL ](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>a. Obtendo todos os valores de Chave e DocId  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtendo todos os valores de Chave e DocId  
  O exemplo a seguir usa uma instrução [declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) para criar uma variável local `@table_id` e atribuir a ID da `ProductReview` tabela como seu valor. O exemplo executa **sp_fulltext_keymappings** especificando `@table_id` para o parâmetro *table_id* .  
   
 > [!NOTE]  

@@ -18,10 +18,10 @@ ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 609151e71e0ee59f8a428a7c9f193124e047818c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68120069"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_alert](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_alert](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
