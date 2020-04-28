@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175978"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
@@ -44,15 +44,15 @@ ms.locfileid: "70175978"
  O processo de exportação define a versão de DAC como 1.0.0.0 e a descrição de DAC no arquivo de exportação para uma cadeia de caracteres vazia. Se o banco de dados foi implantado de um DAC, a definição do DAC no arquivo de exportação conterá o nome atribuído ao DAC original; caso contrário, o nome do DAC será definido como o nome do banco de dados.  
   
 
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Um DAC ou banco de dados só pode ser exportado de um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior.  
   
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  A exportação de um DAC exige, no mínimo, as permissões ALTER ANY LOGIN e VIEW DEFINITION do escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A exportação de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é exportado. Membros da função de servidor fixa sysadmin ou da conta interna do administrador do sistema do SQL Server denominada **sa** também podem exportar um DAC.  
   
-##  <a name="UsingDeployDACWizard"></a> Usando o Assistente para Exportar Aplicativo da Camada de Dados  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>Usando o assistente para exportar aplicativo da camada de dados  
  **Para exportar um DAC usando um assistente**  
   
 1.  Conecte-se a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seja no local ou no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "70175978"
   
 3.  Clique com o botão direito do mouse no nome do banco de dados.  
   
-4.  Clique em **Tarefas** e selecione **Exportar Aplicativo da Camada de Dados...**  
+4.  Clique em **tarefas** e selecione **Exportar aplicativo da camada de dados...**  
   
 5.  Conclua as etapas das caixas de diálogo do assistente:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "70175978"
   
     -   [Página Resultados](#Results)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas do Assistente de Exportação do Aplicativo da Camada de Dados.  
   
  **Opções**  
@@ -86,9 +86,9 @@ ms.locfileid: "70175978"
   
  **Avançar** – Segue para a página **Selecionar Pacote de DAC** .  
   
- **Cancelar** – cancela a operação e fecha o Assistente.  
+ **Cancelar** – cancela a operação e fecha o assistente.  
   
-##  <a name="Export_settings"></a> Página Configurações de Exportação  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a>Página Configurações de exportação  
  Use essa página para especificar o local onde criar o arquivo BACPAC a ser criado.  
   
 -   **Salvar no disco local** – Cria um arquivo BACPAC em um diretório no computador local. Clique em **Procurar...** para navegar no computador local ou especifique o caminho no espaço fornecido. O nome do caminho deve incluir um nome de arquivo e a extensão .bacpac.  
@@ -97,23 +97,23 @@ ms.locfileid: "70175978"
   
  Para especificar um subconjunto de tabelas a serem exportadas, use a opção **Avançado** .  
   
-##  <a name="Validation"></a> Página de Validação  
+##  <a name="validation-page"></a><a name="Validation"></a>Página validação  
  Use a página de validação para revisar os problemas que bloqueiam a operação. Para continuar, resolva os problemas de bloqueio e clique em **Executar Novamente a Validação** para verificar se a validação foi bem-sucedida.  
   
  Para continuar, clique em **Avançar**.  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para analisar a origem especificada e as configurações de destino para a operação. Para concluir a operação de exportação usando as configurações especificadas, clique em **Concluir**. Para cancelar a operação de exportação e sair do Assistente, clique em **Cancelar**.  
   
-##  <a name="Progress"></a> Página Progresso  
+##  <a name="progress-page"></a><a name="Progress"></a>Página progresso  
  Esta página exibe a barra de progresso que indica o status da operação. Para exibir o status detalhado, clique na opção **Exibir detalhes** .  
   
-##  <a name="Results"></a> Página Resultados  
+##  <a name="results-page"></a><a name="Results"></a>Página de resultados  
  Esta página reporta o êxito ou falha da operação de exportação, mostrando os resultados de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Clique no link para exibir um relatório do erro para essa ação.  
   
- Clique em **Concluir** para fechar o Assistente.  
+ Clique em **concluir** para fechar o assistente.  
   
-##  <a name="NetApp"></a> Usando um aplicativo .NET Framework  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a>Usando um aplicativo .NET Framework  
  **Para exportar um DAC usando o método Export() em um aplicativo .NET Framework.**  
   
  Para exibir um exemplo de código, baixe o aplicativo de exemplo do DAC em [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
@@ -125,7 +125,7 @@ ms.locfileid: "70175978"
 3.  Use o método `Export` do tipo `Microsoft.SqlServer.Management.Dac.DacStore` para exportar o DAC. Especifique o nome do DAC a ser exportado e o caminho para a pasta onde o arquivo de exportação será colocado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Extrair um DAC de um banco de dados](extract-a-dac-from-a-database.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175968"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Práticas recomendadas e solução de problemas de backup do SQL Server para URL
@@ -22,7 +22,7 @@ ms.locfileid: "70175968"
   
  Para obter mais informações sobre como usar o serviço de Armazenamento de Blobs do Azure para operações de backup ou restauração do SQL Server, confira:  
   
--   [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Backup e restauração do SQL Server no serviço de Armazenamento de Blobs](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -98,15 +98,15 @@ ms.locfileid: "70175968"
   
          Para corrigir esse erro, emita novamente a instrução `BACKUP` com `BLOCKSIZE = 65536` especificada.  
   
--   Erro durante o backup devido a blobs que têm concessão ativa: A atividade de backup com falha pode resultar em blobs com concessões ativas.  
+-   Erro durante o backup devido a blobs que têm a concessão ativa neles: a atividade de backup com falha pode resultar em blobs com concessões ativas.  
   
      Se houver uma nova tentativa de uso de uma instrução de backup, a operação de backup pode falhar com um erro semelhante ao seguinte:  
   
-     **O backup para a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (412) atualmente, há uma concessão no BLOB e nenhuma ID de concessão foi especificada na solicitação**.  
+     **A opção backup a URL recebeu uma exceção do ponto de extremidade remoto. Mensagem de exceção: o servidor remoto retornou um erro: (412) há uma concessão no blob e nenhuma ID de concessão foi especificada na solicitação**.  
   
      Se for feita uma nova tentativa de uso de uma instrução de restauração em um arquivo de blob de backup que tenha uma concessão ativa, a operação de restauração falhará com um erro semelhante a:  
   
-     **Mensagem de exceção: o servidor remoto retornou um erro: (409) conflito..**  
+     **Mensagem de exceção: O servidor remoto retornou um erro: (409) Conflito.**  
   
      Quando esse erro ocorre, os arquivos de blob precisam ser excluídos. Para obter mais informações sobre esse cenário e como corrigir o problema, consulte [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   

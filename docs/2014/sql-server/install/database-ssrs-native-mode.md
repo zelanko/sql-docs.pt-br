@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952316"
 ---
 # <a name="database-ssrs-native-mode"></a>Banco de dados (modo nativo do SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "71952316"
  **Nome do SQL Server**  
  Em Banco de Dados do Servidor de Relatório Atual, o **Nome do SQL Server** especifica o nome do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que executa o banco de dados do servidor de relatório. Não é possível usar uma instância nomeada ou padrão em um computador local ou remoto.  
   
- **Database Name**  
+ **Nome do banco de dados**  
  Especifica o nome do banco de dados do servidor de relatório que armazena dados do servidor.  
   
  **Modo do Servidor de Relatório**  
@@ -43,7 +43,7 @@ ms.locfileid: "71952316"
  **Alterar banco de dados**  
  Inicia um assistente que orienta você durante todas as etapas necessárias para a criação ou a seleção de um banco de dados de servidor de relatório.  
   
- **Tipo de credencial**  
+ **Tipo de Credencial**  
  Especifica credenciais que o servidor de relatório usa para conectar-se ao banco de dados do servidor de relatório. Os tipos de credencial que podem ser especificados incluem a conta de serviço, um usuário de domínio do Windows, o usuário local do Windows ou o logon do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações sobre como selecionar credenciais, consulte [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nome de usuário**  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154752"
 ---
 # <a name="create-an-encrypted-backup"></a>Criar um backup criptografado
@@ -29,7 +29,7 @@ ms.locfileid: "70154752"
   
  Use as etapas a seguir para criar um backup criptografado de um banco de dados em um disco local. Este exemplo usa um banco de dados de usuário chamado MyTestDB.  
   
-1.  **Crie uma chave mestra de banco de dados do banco de dados mestre:** Escolha uma senha para criptografar a cópia da chave mestra que será armazenada no banco de dados. Conecte-se ao mecanismo de banco de dados, inicie uma nova janela de consulta, copie e cole o exemplo a seguir e clique em **Executar**.  
+1.  **Criar uma Chave Mestra do Banco de Dados para o banco de dados mestre:** escolha uma senha para criptografar a cópia da chave mestra que será armazenada no banco de dados. Conecte-se ao mecanismo de banco de dados, inicie uma nova janela de consulta, copie e cole o exemplo a seguir e clique em **Executar**.  
   
     ```  
     -- Creates a database master key.   
@@ -52,7 +52,7 @@ ms.locfileid: "70154752"
   
     ```  
   
-3.  **Fazer backup do banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser usado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  **Backup de banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser usado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -76,11 +76,11 @@ ms.locfileid: "70154752"
   
  **Pré-requisitos**  
   
--   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, confira: [Lição 1: criar objetos de armazenamento do Azure](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
+-   Uma conta de armazenamento do Windows e um contêiner. Para obter mais informações, consulte: [Lição 1: criar objetos de armazenamento do Azure](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
   
 -   Uma Chave Mestra do Banco de Dados para o banco de dados mestre, e um certificado ou uma chave assimétrica na instância do SQL Server. Para requisitos e permissões de criptografia, consulte [Backup Encryption](backup-encryption.md).  
   
-1.  **Criar SQL Server credencial:** Para criar uma credencial SQL Server, conecte-se ao Mecanismo de Banco de Dados, abra uma nova janela de consulta e copie e cole o exemplo a seguir e clique em **executar**.  
+1.  **Criar uma credencial do SQL Server:** Para criar uma credencial do SQL Server, conecte-se ao Mecanismo de Banco de Dados, abra uma nova janela de consulta, copie e cole o exemplo a seguir e clique em **Executar**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -100,7 +100,7 @@ ms.locfileid: "70154752"
   
     ```  
   
-3.  **Criar um certificado de backup:** Crie um certificado de backup no banco de dados mestre. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+3.  **Criar um Certificado de backup:** Crie um Certificado de backup no banco de dados mestre. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "70154752"
   
     ```  
   
-4.  **Fazer backup do banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser usado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
+4.  **Backup de banco de dados:** Especifique o algoritmo de criptografia e o certificado a ser utilizado. Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

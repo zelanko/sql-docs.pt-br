@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199337"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumentos  
  *\@object_id*  
- O @object_id de um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado ou um [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho. @object_idé do tipo **int**.  
+ O @object_id de um [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado ou um [!INCLUDE[tsql](../../includes/tsql-md.md)] gatilho. @object_id é do tipo **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationé de tipo **bit**. Se definido como 1, cada consulta será analisada como se tivesse uma opção FOR BROWSE na consulta. Retorna colunas-chave adicionais e informações de tabela de origem.  
@@ -52,7 +52,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>Tabela retornada  
  Estes metadados comuns são retornados como um conjunto de resultados com uma linha para cada coluna nos metadados de resultados. Cada linha descreve o tipo e a nulidade da coluna no formato descrito na seção a seguir. Se a primeira instrução não existir para todo caminho de controle, um conjunto de resultados com zero linhas será retornado.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica se a coluna é uma coluna extra adicionada para fins de informações de navegação e que ela não é exibida realmente no conjunto de resultados.|  
 |**column_ordinal**|**int**|Contém a posição ordinal da coluna no conjunto de resultados. A posição da primeira coluna será especificada como 1.|  
@@ -94,17 +94,17 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Contém a mensagem de estado retornada pela função. Se nenhum erro ocorreu. a coluna conterá NULL.|  
 |**error_message**|**nvarchar (4096)**|Contém a mensagem retornada pela função. Se nenhum erro ocorreu, a coluna conterá NULL.|  
 |**error_type**|**int**|Contém um inteiro que representa o erro que é retornado. Mapeia para error_type_desc. Consulte a lista sob comentários.|  
-|**error_type_desc**|**nvarchar (60)**|Contém uma pequena cadeia de caracteres maiúsculos que representa o erro sendo retornado. Mapeia para error_type. Consulte a lista sob comentários.|  
+|**error_type_desc**|**nvarchar(60)**|Contém uma pequena cadeia de caracteres maiúsculos que representa o erro sendo retornado. Mapeia para error_type. Consulte a lista sob comentários.|  
   
 ## <a name="remarks"></a>Comentários  
  Esta função usa o mesmo algoritmo como **sp_describe_first_result_set**. Para obter mais informações, consulte [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  A tabela a seguir lista os tipos de erros e suas descrições  
   
-|error_type|error_type|DESCRIÇÃO|  
+|error_type|error_type|Descrição|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Todos os erros que não são descritos de outra forma.|  
-|2|SINTAXE|Um erro de sintaxe ocorreu no lote.|  
+|2|SYNTAX|Um erro de sintaxe ocorreu no lote.|  
 |3|CONFLICTING_RESULTS|O resultado não pôde ser determinado devido a um conflito entre duas primeiras instruções possíveis.|  
 |4|DYNAMIC_SQL|O resultado não pôde ser determinado devido a um SQL dinâmico que poderia retornar o primeiro resultado.|  
 |5|CLR_PROCEDURE|O resultado não pôde ser determinado devido a um procedimento armazenado de CLR que poderia retornar o primeiro resultado.|  

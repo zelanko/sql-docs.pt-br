@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874724"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
@@ -32,7 +32,7 @@ ms.locfileid: "70874724"
   
  Para obter informações gerais sobre separadores de palavras e lematizadores, consulte [Configurar e gerenciar separadores de palavras e lematizadores de pesquisa](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Visão geral de como reverter e restaurar separadores de palavras e lematizadores  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Visão geral de como reverter e restaurar separadores de palavras e lematizadores  
  As instruções para reverter e restaurar separadores de palavras e lematizadores dependem do idioma. A tabela a seguir resume os 3 conjuntos de ações que podem ser exigidas para reverter para a versão anterior dos componentes.  
   
 |Arquivo atual|Arquivo anterior|Número de idiomas afetados|Ação para arquivos|Ação para entradas do Registro|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874724"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Idiomas para os quais o nome de arquivo do separador de palavras atual e do anterior é NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Idiomas para os quais o nome de arquivo do separador de palavras atual e do anterior é NaturalLanguage6.dll  
  Para os idiomas na tabela a seguir, o nome de arquivo do separador de palavras atual e do anterior é NaturalLanguage6.dll. A fim de reverter ou restaurar estes componentes, você tem que substituir NaturalLanguage6.dll por uma versão diferente do mesmo arquivo. Você não tem que alterar as entradas do Registro, porque elas não foram alteradas para esta versão.  
   
 > [!WARNING]  
@@ -95,7 +95,7 @@ ms.locfileid: "70874724"
   
  A tabela acima está classificada alfabeticamente na coluna de Abreviação.  
   
-###  <a name="nl6nl6revert"></a> Para reverter para os componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> Para reverter para os componentes anteriores  
   
 1.  Navegue até a pasta Binn descrita acima.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "70874724"
   
 4.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="nl6nl6restore"></a> Para restaurar os componentes atuais  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> Para restaurar os componentes atuais  
   
 1.  Navegue até o local onde você fez backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "70874724"
   
 3.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="newnl6"></a> Idiomas para os quais o nome de arquivo somente do separador de palavras anterior é NaturalLanguage6.dll  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Idiomas para os quais o nome de arquivo somente do separador de palavras anterior é NaturalLanguage6.dll  
  Para os idiomas na tabela a seguir, o nome de arquivo do separador de palavras anterior é diferente do nome de arquivo da nova versão. O nome do arquivo anterior é NaturalLanguage6.dll. A fim de reverter para a versão anterior, você tem que substituir a versão atual do NaturalLanguage6.dll por uma versão anterior do mesmo arquivo. Você também tem que alterar um conjunto de entradas do Registro para especificar a versão anterior ou a atual dos componentes.  
   
 > [!WARNING]  
@@ -139,7 +139,7 @@ ms.locfileid: "70874724"
   
  Use as instruções a seguir junto com a lista de valores na seção [Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores](#newnl6values).  
   
-###  <a name="newnl6revert"></a> Para reverter para os componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> Para reverter para os componentes anteriores  
   
 1.  Navegue até a pasta Binn descrita acima.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874724"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-7.  No registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+7.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 8.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70874724"
   
 10. Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6restore"></a> Para restaurar os componentes atuais  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> Para restaurar os componentes atuais  
   
 1.  Navegue até o local onde você fez backup da versão do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] do arquivo NaturalLanguage6.dll.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874724"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-5.  No registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+5.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 6.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "70874724"
   
 8.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnl6values"></a> Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores  
  Use a lista de nomes de arquivos e entradas do Registro a seguir junto com as instruções na seção acima. Use os valores anteriores para reverter à versão anterior ou use os valores atuais para restaurar a versão atual dos componentes.  
   
  A lista a seguir está classificada alfabeticamente na abreviação usada para cada idioma.  
@@ -251,7 +251,7 @@ ms.locfileid: "70874724"
 |CLSID atual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Nome do arquivo atual|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Idiomas para os quais nem o nome de arquivo atual ou anterior é NaturalLanguage6.dll  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Idiomas para os quais nem o nome de arquivo atual ou anterior é NaturalLanguage6.dll  
  Para os idiomas na tabela a seguir, os nomes de arquivo dos separadores de palavras e lematizadores anteriores são diferentes dos nomes de arquivo das novas versões. Nem o nome de arquivo atual nem o anterior é NaturalLanguage6.dll. Você não tem que substituir os arquivos, porque a instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia a versão atual e a anterior dos componentes para a pasta Binn. No entanto, você também tem que alterar um conjunto de entradas do Registro para especificar a versão anterior ou a atual dos componentes.  
   
  **Lista de idiomas afetados**  
@@ -269,7 +269,7 @@ ms.locfileid: "70874724"
   
  Use as instruções a seguir junto com a lista de valores na seção [Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> Para reverter para os componentes anteriores  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> Para reverter para os componentes anteriores  
   
 1.  Não remova os arquivos para a versão atual dos componentes da pasta Binn.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874724"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador anterior da tabela.  
   
-4.  No registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras atual.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "70874724"
   
 7.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewrestore"></a> Para restaurar os componentes anteriores  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> Para restaurar os componentes anteriores  
   
 1.  Não remova os arquivos para a versão anterior dos componentes da pasta Binn.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874724"
   
     4.  Se o idioma selecionado usar um lematizador, atualize os dados (Padrão) desse valor de chave para o nome de arquivo do lematizador atual da tabela.  
   
-4.  No registro, navegue até o seguinte nó: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key **>. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
+4.  No Registro, navegue até o nó: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* representa a abreviação para o idioma que é usado no Registro; por exemplo, "fra" para o francês e "esn" para espanhol.  
   
 5.  Atualize o valor de chave **WBreakerClass** para o valor da tabela para o separador de palavras anterior.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "70874724"
   
 7.  Reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="newnewvalues"></a> Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Nomes de arquivo e valores do Registro para reverter e restaurar separadores de palavras e lematizadores  
  Use a lista de nomes de arquivos e entradas do Registro a seguir junto com as instruções na seção acima. Use os valores anteriores para reverter à versão anterior ou use os valores atuais para restaurar a versão atual dos componentes.  
   
  A lista a seguir está classificada alfabeticamente na abreviação usada para cada idioma.  

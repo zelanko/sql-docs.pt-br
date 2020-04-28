@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289356"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "72289356"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_workers**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary (8)**|Endereço de memória do trabalhador.|  
 |status|**int**|Somente para uso interno.|  
@@ -58,10 +58,10 @@ ms.locfileid: "72289356"
 |exception_severity|**int**|Gravidade da última exceção que este trabalhador encontrou.|  
 |exception_address|**varbinary (8)**|Endereço de código que lançou a exceção|  
 |affinity|**bigint**|A afinidade do thread do trabalhador. Corresponde à afinidade do thread em [Sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|Estado do trabalhador. Pode ser um dos seguintes valores:<br /><br /> INIT = atualmente o trabalhador está sendo inicializado.<br /><br /> RUNNING = atualmente o trabalhador está executando de modo não preemptivo ou preemptivo.<br /><br /> RUNNABLE = o trabalhador está pronto para execução no agendador.<br /><br /> SUSPENDED = o trabalhador está atualmente suspenso, aguardando que um evento envie um sinal para ele.|  
+|state|**nvarchar(60)**|Estado do trabalhador. Pode ser um dos seguintes valores:<br /><br /> INIT = atualmente o trabalhador está sendo inicializado.<br /><br /> RUNNING = atualmente o trabalhador está executando de modo não preemptivo ou preemptivo.<br /><br /> RUNNABLE = o trabalhador está pronto para execução no agendador.<br /><br /> SUSPENDED = o trabalhador está atualmente suspenso, aguardando que um evento envie um sinal para ele.|  
 |start_quantum|**bigint**|Tempo, em milissegundos, no início da execução atual deste trabalhador.|  
 |end_quantum|**bigint**|Tempo, em milissegundos, no final da execução atual deste trabalhador.|  
-|last_wait_type|**nvarchar (60)**|Tipo da última espera. Para obter uma lista de tipos de espera, consulte [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Tipo da última espera. Para obter uma lista de tipos de espera, consulte [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor de retorno da última espera. Pode ser um dos seguintes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Somente para uso interno.|  
 |max_quantum|**bigint**|Somente para uso interno.|  
@@ -138,4 +138,4 @@ SELECT
 ## <a name="see-also"></a>Consulte Também  
 [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Guia de arquitetura de processamento de consultas](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Guia de arquitetura de thread e tarefa](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Guia de arquitetura de threads e tarefas](../../relational-databases/thread-and-task-architecture-guide.md)    

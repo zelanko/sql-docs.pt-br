@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682135"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71682135"
   Retorna o tamanho atual do objeto solicitado e faz a estimativa do tamanho do objeto para o estado de compactação solicitado. A compactação pode ser avaliada para tabelas inteiras ou partes de tabelas. Isso inclui heaps, índices clusterizados, índices não clusterizados, índices columnstore, exibições indexadas e partições de tabela e índice. Os objetos podem ser compactados usando a compactação de linha, página, columnstore ou arquivo morto columnstore. Se a tabela, o índice ou a partição já estiver compactada, será possível usar esse procedimento para estimar o tamanho da tabela, do índice ou da partição, caso ela seja descompactada.  
   
 > [!NOTE]
-> A compactação e a **sp_estimate_data_compression_savings** não estão disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> A compactação e a **sp_estimate_data_compression_savings** não estão disponíveis em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Para estimar o tamanho do objeto se ele usar a configuração de compactação solicitada, esse procedimento armazenado faz a amostragem do objeto de origem e carrega esses dados em uma tabela e índice equivalentes criados no tempdb. Em seguida, a tabela ou o índice criado no tempdb é compactado para a configuração solicitada e o aumento estimado da compactação é computado.  
   
@@ -78,7 +78,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>Conjuntos de resultados  
  O conjunto de resultados a seguir é retornado para fornecer o tamanho atual e estimado da tabela, índice ou partição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nome da tabela ou exibição indexada.|  
 |schema_name|**sysname**|Esquema da tabela ou exibição indexada.|  
@@ -116,7 +116,7 @@ sp_estimate_data_compression_savings
 
  |Objeto de origem|Objeto de referência|
  |-----------------|---------------|
- |Heap|Índice columnstore clusterizado|
+ |Pilha|Índice columnstore clusterizado|
  |Índice clusterizado|Índice columnstore clusterizado|
  |Índice não clusterizado|Índice columnstore não clusterizado (incluindo as colunas de chave e todas as colunas incluídas do índice não clusterizado fornecido, bem como a coluna de partição da tabela, se houver)|
  |índice columnstore não clusterizado|Índice columnstore não clusterizado (incluindo as mesmas colunas que o índice columnstore não clusterizado fornecido)|
@@ -129,7 +129,7 @@ sp_estimate_data_compression_savings
 
  |Objeto de origem|Objeto de referência|
  |-----------------|---------------|
- |Índice columnstore clusterizado|Heap|
+ |Índice columnstore clusterizado|Pilha|
  |índice columnstore não clusterizado|Índice não clusterizado (incluindo as colunas contidas no índice columnstore não clusterizado como colunas de chave, e a coluna de partição da tabela, se houver, como uma coluna incluída)|
 
 > [!NOTE]  

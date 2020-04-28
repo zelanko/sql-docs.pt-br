@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782759"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
@@ -63,12 +63,12 @@ ms.locfileid: "72782759"
  Por exemplo, especifique o Servidor para a classe **ServerCollection** , o Banco de dados para a classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere \@. Por exemplo, especifique \@IsAnsiNull para a propriedade **IsAnsiNull** da classe **Database**.  
+ Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere \@. Por exemplo, especifique \@IsAnsiNull para a propriedade de classe de **banco de dados** **IsAnsiNull**.  
   
- \@*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*= true ()  
  Enumera todos os objetos em que a propriedade booliana especificada está definida como TRUE.  
   
- \@*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*= false ()  
  Enumera todos os objetos em que a propriedade booliana especificada está definida como FALSE.  
   
  contains(\@*StringPropertyName*, '*PatternString*')  
@@ -103,7 +103,7 @@ ms.locfileid: "72782759"
   
  As expressões de consulta devem iniciar com uma referência absoluta ao objeto Servidor. Não são permitidas expressões relativas com uma / à esquerda. A sequência de objetos especificados em uma expressão de consulta deve seguir a hierarquia dos objetos de coleção do modelo de objetos associado. Por exemplo, uma expressão de consulta que faz referência a objetos no namespace Microsoft.SqlServer.Management.Smo deve começar com um nó Servidor, seguido por um nó Banco de Dados e assim por diante.  
   
- Se uma *\<FilterExpression>* não for especificada para um objeto, todos os objetos desse nó serão enumerados.  
+ Se uma * \<>FilterExpression* não for especificada para um objeto, todos os objetos desse nó serão enumerados.  
   
 ## <a name="uniform-resource-names-urn"></a>URN (Uniform Resource Names)  
  URNs são um subconjunto de expressões de consulta. Cada URN forma uma referência totalmente qualificada a um único objeto. Um URN típico usa a propriedade Nome para identificar um único objeto em cada nó. Por exemplo, este URN faz referência a uma coluna específica:  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

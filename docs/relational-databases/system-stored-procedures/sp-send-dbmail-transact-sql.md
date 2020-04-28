@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974372"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
@@ -89,7 +89,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @importance = ] 'importance'`É a importância da mensagem. O parâmetro é do tipo **varchar (6)**. O parâmetro pode conter um dos seguintes valores:  
   
--   Baixo  
+-   Baixa  
   
 -   Normal  
   
@@ -103,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Personal  
   
--   Private  
+-   Particular  
   
 -   Confidencial  
   

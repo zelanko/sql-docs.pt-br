@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175988"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "70175988"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a>Componentes e conceitos  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Componentes e conceitos  
  fazer backup [verbo]  
  Copia os dados ou registros de log de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de seu log de transações para um dispositivo de backup, como um disco, a fim de criar um backup de dados ou backup de log.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70175988"
  [modelo de recuperação](recovery-models-sql-server.md)  
  Uma propriedade de banco de dados que controla a manutenção do log de transações em um banco de dados. Existem três modelos de recuperação: simples, completo e bulk-logged. O modelo de recuperação de banco de dados determina seus requisitos de backup e de restauração.  
   
- [recuperar](restore-and-recovery-overview-sql-server.md)  
+ [restaurar](restore-and-recovery-overview-sql-server.md)  
  Um processo multifase que copia todos os dados e páginas de log de um backup do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um banco de dados especificado e, em seguida, efetua roll forward de todas as transações registradas no backup, aplicando as alterações registradas para avançar os dados no tempo.  
   
  **Tipos de backups**  
@@ -103,11 +103,10 @@ ms.locfileid: "70175988"
  [conjunto de mídias espelhado](mirrored-backup-media-sets-sql-server.md)  
  Várias cópias (espelhos) de um conjunto de mídias.  
   
-##  <a name="BackupCompression"></a>Compactação de backup  
- 
-  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à compactação de backups, e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores podem restaurar um backup compactado. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a>Compactação de backup  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à compactação de backups, e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versões posteriores podem restaurar um backup compactado. Para obter mais informações, veja [Compactação de backup &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>Restrições de operações de backup no SQL Server  
+##  <a name="restrictions-on-backup-operations-in-sql-server"></a><a name="Restrictions"></a>Restrições de operações de backup no SQL Server  
  O backup pode ser realizado com o banco de dados online e em uso. No entanto, existem as seguintes restrições.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Não é possível fazer backup de dados offline  
@@ -124,8 +123,7 @@ ms.locfileid: "70175988"
  Normalmente, um backup de log será realizado com êxito mesmo se um ou mais arquivos de dados estiverem indisponíveis. Entretanto, se algum arquivo contiver alterações bulk-logged feitas sob o modelo de recuperação bulk-logged, todos os arquivos devem estar online para a realização do backup.  
   
 ### <a name="concurrency-restrictions-during-backup"></a>Restrições de simultaneidade durante o backup  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um processo de backup online para permitir que um backup de banco de dados seja feito com o banco de dados em uso. Durante um backup, a maior parte das operações é possível. Por exemplo, instruções INSERT, UPDATE ou DELETE são permitidas durante uma operação de backup Contudo, se você tentar iniciar uma operação de backup enquanto um arquivo do banco de dados estiver sendo criado ou excluído, a operação de backup aguardará até a conclusão dessa operação ou até o tempo limite do backup.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa um processo de backup online para permitir que um backup de banco de dados seja feito com o banco de dados em uso. Durante um backup, a maior parte das operações é possível. Por exemplo, instruções INSERT, UPDATE ou DELETE são permitidas durante uma operação de backup Contudo, se você tentar iniciar uma operação de backup enquanto um arquivo do banco de dados estiver sendo criado ou excluído, a operação de backup aguardará até a conclusão dessa operação ou até o tempo limite do backup.  
   
  Operações que não podem ser executadas durante um backup de banco de dados ou de log de transações incluem:  
   
@@ -137,14 +135,14 @@ ms.locfileid: "70175988"
   
  Se uma operação de backup for sobreposta por uma operação de gerenciamento de arquivos ou de redução, ocorrerá um conflito. Independentemente de qual operação conflitante começou primeiro, a segunda operação aguarda o bloqueio definido pela primeira operação para atingir o tempo limite. (O período de tempo-limite é controlado por uma configuração de tempo limite de sessão.) Se o bloqueio for liberado durante o período de tempo limite, a segunda operação continuará. Se o tempo limite do bloqueio for esgotado, a segunda operação falhará.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para trabalhar com dispositivos de backup e mídias de backup**  
   
 -   [Definir um dispositivo de backup lógico para um arquivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [Definir um dispositivo de backup lógico para uma unidade de fita &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especifique um disco ou fita como um destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especificar um disco ou fita como destino de backup &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Excluir um dispositivo de backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
@@ -184,7 +182,7 @@ ms.locfileid: "70175988"
 -   [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Fazer backup e restaurar bancos de dados do SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e restauração de bancos de dados SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Visão geral de restauração e recuperação &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Planos de manutenção](../maintenance-plans/maintenance-plans.md)   
  [O log de transações &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

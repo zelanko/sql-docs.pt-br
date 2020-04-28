@@ -18,10 +18,10 @@ ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304782"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (Exibição de sistema) (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72304782"
 
   A exibição **syssubscriptions** expõe informações de assinatura. Essa exibição é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|A ID exclusiva de um artigo assinado.|  
 |**srvid**|**smallint**|A ID de servidor do Assinante.|  
@@ -38,7 +38,7 @@ ms.locfileid: "72304782"
 |**sync_type**|**tinyint**|O tipo de sincronização inicial:<br /><br /> **1** = automático.<br /><br /> **2** = nenhum.|  
 |**login_name**|**sysname**|O nome de logon usado ao conectar ao Publicador para adicionar a assinatura.|  
 |**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = push-o Distribution Agent é executado no distribuidor.<br /><br /> **1** = pull-o Distribution Agent é executado no Assinante.|  
-|**distribution_jobid**|**Binary (16)**|Identifica o trabalho do Distribution Agent usado para sincronizar a assinatura.|  
+|**distribution_jobid**|**binary(16)**|Identifica o trabalho do Distribution Agent usado para sincronizar a assinatura.|  
 |**timestmap**|**timestamp**|A data e hora em que a assinatura foi criada.|  
 |**update_mode**|**tinyint**|O modo de atualização:<br /><br /> **0** = somente leitura.<br /><br /> **1** = atualização imediata.|  
 |**loopback_detection**|**bit**|Aplica-se a assinaturas que fazem parte de uma topologia de replicação transacional bidirecional. A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **0** = envia de volta.<br /><br /> **1** = não envia de volta.|  
@@ -49,6 +49,6 @@ ms.locfileid: "72304782"
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [&#41;syssubscriptions &#40;Transact-SQL](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

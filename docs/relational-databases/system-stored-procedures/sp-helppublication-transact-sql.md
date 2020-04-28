@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689048"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID da publicação.|  
 |name|**sysname**|Nome da publicação.|  
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Se o Agente de Instantâneo gerou um instantâneo que está pronto para ser usado por novas assinaturas. Esse parâmetro só será definido se a publicação estiver definida para ter sempre um instantâneo disponível para assinaturas novas ou reiniciadas.|  
 |allow_sync_tran|**bit**|Se são permitidas assinaturas de atualização imediata na publicação.|  
 |autogen_sync_procs|**bit**|Se procedimentos armazenados devem ser gerados automaticamente dar suporte a assinaturas de atualização imediata.|  
-|snapshot_jobid|**Binary (16)**|ID de tarefa agendada.|  
+|snapshot_jobid|**binary(16)**|ID de tarefa agendada.|  
 |retenção|**int**|A quantidade de alteração, em horas, a ser salva para a publicação determinada.|  
 |has subscription|**bit**|Se a publicação tem assinatura ativas. **1** significa que a publicação tem assinaturas ativas e **0** significa que a publicação não tem assinaturas.|  
 |allow_queued_tran|**bit**|Especifica se o serviço de enfileiramento de alterações no Assinante foi desabilitado até que possam ser aplicadas no Publicador. Se **0**, as alterações no Assinante não serão enfileiradas.|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Especifica o período de retenção de conflito, em dias.|  
 |conflict_policy|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o Publicador vence o conflito.<br /><br /> **2** = Assinante vence o conflito.<br /><br /> **3** = a assinatura é reinicializada.|  
 |queue_type||Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **MSMQ** = usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] o enfileiramento de mensagens para armazenar transações.<br /><br /> **SQL** = use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Observação: o suporte para enfileiramento de mensagens foi descontinuado.|  
-|backward_comp_level||O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||O nível de compatibilidade do banco de dados, podendo ser um dos seguintes:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um valor de **1** indica que ele é publicado e um valor de **0** indica que ele não está publicado.|  
 |allow_initialize_from_backup|**bit**|Indica se os Assinantes podem iniciar uma assinatura para essa publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas a partir de um backup e **0** significa que elas não podem. Para obter mais informações, consulte [inicializar uma assinatura transacional sem um](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) assinante transacional de um instantâneo sem um instantâneo.|  
 |replicate_ddl|**int**|Indica se a replicação do esquema tem suporte para a publicação. **1** indica que as instruções DDL (linguagem de definição de dados) executadas no Publicador são replicadas e **0** indica que as instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).|  

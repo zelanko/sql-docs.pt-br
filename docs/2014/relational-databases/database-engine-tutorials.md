@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154607"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriais do Mecanismo de Banco de Dados
@@ -44,13 +44,13 @@ ms.locfileid: "70154607"
  [Tutorial: Administrar servidores com gerenciamento baseado em políticas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Este tutorial ensina como criar políticas que impõem padrões de administração de site.  
   
- [Tutorial: Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutorial: Como avaliar práticas recomendadas usando o Gerenciamento Baseado em Políticas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  Este tutorial ensina como criar políticas que podem ser usadas para analisar as instâncias do [!INCLUDE[ssDE](../includes/ssde-md.md)] para problemas conhecidos.  
   
  [Tutorial: Backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Este tutorial ilustra como fazer um backup do SQL Server e uma restauração do SQL Server para o serviço de Armazenamento de Blobs do Azure.  
   
- [Tutorial: Arquivos de dados do SQL Server no serviço de Armazenamento do Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Arquivos de dados do SQL Server no serviço de Armazenamento do Microsoft Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  Este tutorial explica como armazenar diretamente os arquivos de dados do SQL Server no serviço de Armazenamento de Blobs do Azure.  
   
 ## <a name="see-also"></a>Consulte Também  

@@ -18,10 +18,10 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304835"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -59,15 +59,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Quando ** \@legacy_format** é **0**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
+|**id**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
 |**name**|**sysname**|Nome do alerta (por exemplo, demonstração: log **msdb** completo).|  
-|**event_source**|**nvarchar (100)**|Fonte do evento. Ele sempre será **MSSQLSERVER** para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0|  
+|**event_source**|**nvarchar (100)**|Origem do evento. Ele sempre será **MSSQLSERVER** para a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Geralmente corresponde a um número de erro na tabela **sysmessages** ). Se a severidade for usada para definir o alerta, **message_id** será **0** ou NULL.|  
-|**Severity**|**int**|Nível de severidade (de **9** a **25**, **110**, **120**, **130**ou **140**) que define o alerta.|  
+|**severity**|**int**|Nível de severidade (de **9** a **25**, **110**, **120**, **130**ou **140**) que define o alerta.|  
 |**habilitado**|**tinyint**|Status de se o alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
@@ -84,25 +84,24 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Número de identificação do trabalho a ser executado em resposta a um alerta.|  
 |**job_name**|**sysname**|Nome do trabalho a ser executado em resposta a um alerta.|  
 |**has_notification**|**int**|Diferente de zero se um ou mais operadores forem notificados para este alerta. O valor é um ou mais dos seguintes valores (or ligad):<br /><br /> **1**= tem notificação por email<br /><br /> **2**= tem notificação por pager<br /><br /> **4**= tem notificação **net send** .|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sinalizadores**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|Se o **tipo** for **2**, essa coluna mostrará a definição da condição de desempenho; caso contrário, a coluna será nula.|  
-|**category_name**|**sysname**|
-  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] sempre será '[Uncategorized]' para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] sempre será '[Uncategorized]' para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Se **Type** for **3**, essa coluna mostrará o namespace para o evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Se **Type** for **3**, essa coluna mostrará a consulta para o evento WMI.|  
-|**tipo**|**int**|Tipo do evento:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
+|**type**|**int**|Tipo do evento:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
   
  Quando ** \@legacy_format** é **1**, **sp_help_alert** produz o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
+|**id**|**int**|Identificador inteiro exclusivo atribuído pelo sistema.|  
 |**name**|**sysname**|Nome do alerta (por exemplo, demonstração: log **msdb** completo).|  
-|**event_source**|**nvarchar (100)**|Fonte do evento. Ele sempre será **MSSQLSERVER** para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0|  
+|**event_source**|**nvarchar (100)**|Origem do evento. Ele sempre será **MSSQLSERVER** para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número de erro de mensagem que define o alerta. (Geralmente corresponde a um número de erro na tabela **sysmessages** ). Se a severidade for usada para definir o alerta, **message_id** será **0** ou NULL.|  
-|**Severity**|**int**|Nível de severidade (de **9** a **25**, **110**, **120**, **130**ou 1**40**) que define o alerta.|  
+|**severity**|**int**|Nível de severidade (de **9** a **25**, **110**, **120**, **130**ou 1**40**) que define o alerta.|  
 |**habilitado**|**tinyint**|Status de se o alerta está habilitado no momento (**1**) ou não (**0**). Um alerta não habilitado não é enviado.|  
 |**delay_between_responses**|**int**|Período de espera, em segundos, entre respostas ao alerta.|  
 |**last_occurrence_date**|**int**|Data em que o alerta ocorreu pela última vez.|  
@@ -119,16 +118,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Número de identificação do trabalho.|  
 |**job_name**|**sysname**|Um trabalho sob demanda a ser executado em resposta a um alerta.|  
 |**has_notification**|**int**|Diferente de zero se um ou mais operadores forem notificados para este alerta. O valor é um ou mais dos seguintes (unidos por OR):<br /><br /> **1**= tem notificação por email<br /><br /> **2**= tem notificação por pager<br /><br /> **4**= tem notificação **net send** .|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**sinalizadores**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Se o **tipo** for **2**, essa coluna mostrará a definição da condição de desempenho. Se **Type** for **3**, essa coluna mostrará a consulta para o evento WMI. Caso contrário, a coluna será NULL.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Será sempre '**[Não categorizado]**' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para 7,0.|  
-|**tipo**|**int**|Tipo de alerta:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
+|**type**|**int**|Tipo de alerta:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de desempenho<br /><br /> **3** = alerta de evento WMI|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_help_alert** deve ser executado do banco de dados **msdb** .  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, os membros da função de servidor fixa **sysadmin** podem executar esse procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
+ Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
  Para obter detalhes sobre **SQLAgentOperatorRole**, consulte [SQL Server Agent funções de banco de dados fixas](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_alert](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175921"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Criar uma fonte de dados (SSAS multidimensional)
@@ -30,24 +30,24 @@ ms.locfileid: "70175921"
   
  Este tópico inclui as seções a seguir:  
   
- [Escolha um Provedor de Dados](#bkmk_provider)  
+ [Escolher um provedor de dados](#bkmk_provider)  
   
  [Definir opções de credenciais e representação](#bkmk_impersonation)  
   
  [Exibir ou editar propriedades de conexão](#bkmk_ConnectionString)  
   
- [Criar uma fonte de dados usando o assistente de fonte de dados](#bkmk_steps)  
+ [Criar uma fonte de dados usando o Assistente para Fontes de Dados](#bkmk_steps)  
   
  [Criar uma fonte de dados usando uma conexão existente](#bkmk_connection)  
   
  [Adicionar várias fontes de dados a um modelo](#bkmk_multipleDS)  
   
-##  <a name="bkmk_provider"></a>Escolha um Provedor de Dados  
+##  <a name="choose-a-data-provider"></a><a name="bkmk_provider"></a>Escolha um Provedor de Dados  
  Você pode conectar usando um [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework gerenciado ou provedor do OLE DB nativo. O provedor de dados indicado para fontes de dados do SQL Server é o SQL Server Native Client porque normalmente oferece desempenho melhor.  
   
  Para a Oracle e outras fontes de dados de terceiros, verifique se as de terceiros fornecem um provedor do OLE DB nativo e tente isso primeiro. Se você encontrar erros, tente um dos outros provedores de .NET ou provedores do OLE DB nativos listados no Gerenciador de Conexões. Verifique se todos os provedores de dados que você usa estão instalados em todos os computadores usados para desenvolver e executar a solução do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-##  <a name="bkmk_impersonation"></a>Definir opções de credenciais e representação  
+##  <a name="set-credentials-and-impersonation-options"></a><a name="bkmk_impersonation"></a>Definir opções de credenciais e representação  
  Uma conexão da fonte de dados pode muitas vezes usar a autenticação do Windows ou serviço de autenticação fornecido pelo sistema de gerenciamento de banco de dados, como a autenticação do SQL Server ao conectar-se a bancos de dados do SQL Azure. A conta que você especificar deve ter um logon no servidor de banco de dados remoto e permissões de leitura no banco de dados externo.  
   
 ### <a name="windows-authentication"></a>Autenticação do Windows  
@@ -63,13 +63,12 @@ ms.locfileid: "70175921"
  Depois que você salva o objeto da fonte de dados em seu modelo, a cadeia de conexão e a senha são criptografadas.  Para fins de segurança, são removidos todos os rastreamentos visíveis da senha da cadeia de conexão quando você subsequentemente os exibe em ferramentas, script ou código.  
   
 > [!NOTE]  
->  Por padrão, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não salva senhas com a cadeia de conexão. Se a senha não for salva, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pedirá que você a digite sempre que necessário. Se você escolheu salvar a senha, a senha será armazenada em formato criptografado na cadeia de conexão de dados. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa informações de senha para fontes de dados usando a chave de criptografia do banco de dados que contém a fonte de dados. Com as informações da conexão criptografadas, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para alterar a conta de serviço ou a senha do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou não será possível recuperar as informações criptografadas. Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
+>  Por padrão, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] não salva senhas com a cadeia de conexão. Se a senha não for salva, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pedirá que você a digite sempre que necessário. Se você escolheu salvar a senha, a senha será armazenada em formato criptografado na cadeia de conexão de dados. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] criptografa informações de senha para fontes de dados usando a chave de criptografia do banco de dados que contém a fonte de dados. Com as informações da conexão criptografadas, use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para alterar a conta de serviço ou a senha do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou não será possível recuperar as informações criptografadas. Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definindo informações de representação para objetos de mineração de dados  
  As consultas de mineração de dados podem ser executadas no contexto da conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , mas também podem ser executadas no contexto do usuário que está enviando a consulta ou no contexto de um usuário especificado. O contexto no qual uma consulta é executada pode afetar seus resultados. Para operações do tipo `OPENQUERY` de mineração de dados, convém executar a consulta de mineração de dados no contexto do usuário atual ou no contexto de um usuário especificado (independentemente do usuário que está executando a consulta) e não no contexto da conta de serviço. Isso possibilita a execução da consulta com credenciais de segurança limitadas. Para que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] represente o usuário atual ou um usuário especificado, selecione a opção **Usar um nome de usuário e uma senha específicos** ou **Usar as credenciais do usuário atual** .  
   
-##  <a name="bkmk_steps"></a>Criar uma fonte de dados usando o assistente de fonte de dados  
+##  <a name="create-a-data-source-using-the-data-source-wizard"></a><a name="bkmk_steps"></a>Criar uma fonte de dados usando o assistente de fonte de dados  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra o projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou conecte-se ao banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no qual você deseja definir a fonte de dados.  
   
@@ -87,9 +86,9 @@ ms.locfileid: "70175921"
   
 5.  Insira as informações solicitadas pelo provedor selecionado para se conectar à fonte de dados subjacente. Se o provedor **OLE DB Nativo\SQL Server Native Client** estiver selecionado, insira as seguintes informações:  
   
-    1.  **Nome do servidor** é o nome de rede da instância de mecanismo de banco de dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deverá incluir o nome da instância (por exemplo \<, computername>\\<InstanceName\>).  
+    1.  **Nome do Servidor** é o nome de rede da instância do Mecanismo de Banco de Dados. É possível especificá-lo como o endereço IP, o nome NETBIOS do computador ou um nome de domínio totalmente qualificado. Se o servidor estiver instalado como uma instância nomeada, você deverá incluir o nome da instância (por exemplo \<, computername>\\<InstanceName\>).  
   
-    2.  **Fazer logon no servidor** especifica como a conexão será autenticada. **Usar a autenticação do Windows** usa a autenticação do Windows. **Usar autenticação de SQL Server** especifica um logon de usuário de banco de dados para um ou SQL Server instância do Azure que dá suporte à autenticação de modo misto.  
+    2.  **Fazer logon no servidor** especifica como a conexão será autenticada. **Usar Autenticação do Windows** usa a autenticação do Windows. **Usar autenticação de SQL Server** especifica um logon de usuário de banco de dados para um ou SQL Server instância do Azure que dá suporte à autenticação de modo misto.  
   
         > [!IMPORTANT]  
         >  O Gerenciador de Conexões inclui uma caixa de seleção **Salvar minha senha** para conexões que usam a autenticação do SQL Server. Embora a caixa de seleção sempre esteja visível, nem sempre ela é usada.  
@@ -98,7 +97,7 @@ ms.locfileid: "70175921"
         >   
         >  Esse comportamento se aplica apenas aos bancos de dados que a) são persistentes em uma instância do servidor Analysis Services e b) usam a autenticação do SQL Server para atualizar ou processar dados relacionais. Isso não se aplica às conexões de fontes de dados que você configura no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , que são utilizadas apenas durante a sessão. Embora não haja nenhuma forma de remover uma senha que já esteja armazenada, você pode usar credenciais diferentes ou a autenticação do Windows para substituir as informações de usuário atualmente armazenadas com o banco de dados.  
   
-    3.  **Selecione ou insira um nome de banco de dados** ou **anexe um arquivo de banco de dados** que será usado para especificar o banco de dados.  
+    3.  **Selecionar ou digitar um nome de banco de dados** ou **Anexar um arquivo de banco de dados** são usados para especificar o banco de dados.  
   
     4.  À esquerda da caixa de diálogo, clique em **Todos** para exibir as configurações adicionais dessa conexão, incluindo todas as configurações padrão desse provedor.  
   
@@ -106,23 +105,23 @@ ms.locfileid: "70175921"
   
          A nova conexão aparece no painel **Conexões de Dados** da página **Selecione como definir a conexão** do Assistente para Fontes de Dados.  
   
-6.  Clique em **Próximo**.  
+6.  Clique em **Avançar**.  
   
 7.  Em **Informações sobre Representação**, especifique as credenciais do Windows ou a identidade de usuário que o Analysis Services usará para se conectar à fonte de dados externa. Se você estiver usando autenticação de banco de dados, estas configurações serão ignoradas para fins de conexão.  
   
      As diretrizes para escolher uma opção de representação variam, dependendo de como você está usando a fonte de dados. Para tarefas de processamento, o serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve ser executado no contexto de segurança de sua conta de serviço ou da conta de usuário especificada ao se conectar com a fonte de dados.  
   
-    -   **Use um nome de usuário e senha específicos do Windows** para especificar um conjunto exclusivo de credenciais de privilégios mínimos.  
+    -   **Usar nome de usuário e senha específicos do Windows** para especificar um conjunto exclusivo de credenciais de privilégios mínimos.  
   
-    -   **Use a conta de serviço** para processar os dados usando a identidade do serviço.  
+    -   **Usar a conta de serviço** para processar os dados usando a identidade de serviço.  
   
      A conta que você especificar deve ter permissões de Leitura na fonte de dados.  
   
-8.  Clique em **Próximo**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
+8.  Clique em **Avançar**.  Em **Concluindo o Assistente**, insira um nome da fonte de dados ou use o nome padrão. O nome padrão é o nome do banco de dados especificado na conexão. O painel **Visualizar** exibe a cadeia de conexão dessa nova fonte de dados.  
   
 9. Clique em **Concluir**.  A nova fonte de dados aparece na pasta **Fontes de Dados** do Gerenciador de Soluções.  
   
-##  <a name="bkmk_connection"></a>Criar uma fonte de dados usando uma conexão existente  
+##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>Criar uma fonte de dados usando uma conexão existente  
  Quando você trabalha em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , a fonte de dados pode se basear em uma fonte de dados existente na solução ou em um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O Assistente de Fonte de Dados fornece várias opções para criar o objeto de fonte de dados, inclusive usar uma conexão existente no mesmo projeto.  
   
 -   Ao criar uma fonte de dados com base em uma fonte de dados existente, você poderá definir uma fonte de dados sincronizada com a fonte de dados existente. Quando o projeto que contém essa nova fonte de dados for criado, serão utilizadas as configurações da fonte de dados subjacente.  
@@ -131,10 +130,10 @@ ms.locfileid: "70175921"
   
  Ao fazer referência a um objeto de fonte de dados, você pode editar esse objeto apenas no objeto ou projeto de referência. Não é possível editar a informações de conexão no objeto de fonte de dados que contém a referência. As alterações feitas nas informações de conexão no objeto de referência ou projeto aparecerão na nova fonte de dados quando ela for criada. As informações da cadeia de conexão que aparecem no arquivo da fonte de dados (.ds) do projeto serão sincronizadas quando você criar o projeto ou eliminar a referência no Design de Fonte de Dados.  
   
-##  <a name="bkmk_ConnectionString"></a>Exibir ou editar propriedades de conexão  
+##  <a name="view-or-edit-connection-properties"></a><a name="bkmk_ConnectionString"></a>Exibir ou editar propriedades de conexão  
  A cadeia de conexão é formulada com base nas propriedades selecionadas no Designer da Fonte de Dados ou no Novo Assistente para Fonte de dados. Você pode exibir a cadeia de conexão e outras propriedades no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
- **Para editar a cadeia de conexão**  
+ **Para editar a cadeia de conexão.**  
   
 1.  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique duas vezes no objeto da fonte de dados no Gerenciador de Soluções.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "70175921"
   
  Você pode remover a referência desmarcando a caixa de seleção. Isso encerra a sincronização entre os objetos e permite a alteração da cadeia de conexão da fonte de dados.  
   
-##  <a name="bkmk_multipleDS"></a>Adicionar várias fontes de dados a um modelo  
+##  <a name="add-multiple-data-sources-to-a-model"></a><a name="bkmk_multipleDS"></a>Adicionar várias fontes de dados a um modelo  
  Você pode criar mais de um objeto de fonte de dados para dar suporte a conexões com fontes de dados adicionais. Cada fonte de dados deve ter colunas que podem ser usadas para criar relações.  
   
 > [!NOTE]  

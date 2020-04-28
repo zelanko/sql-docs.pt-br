@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154834"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup de Banco de Dados (página Opções de Mídia)
@@ -40,7 +40,7 @@ ms.locfileid: "70154834"
 ### <a name="overwrite-media"></a>Substituir mídia  
  As opções do painel **Substituir mídia** controlam como o backup é gravado na mídia. SE você selecionou a URL (Armazenamento do Microsoft Azure) como destino de backup na página Geral da caixa de diálogo Backup de Banco de Dados, as opções na seção Substituir mídia serão desabilitadas. Você pode substituir um backup usando a instrução Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para saber mais, confira [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
- Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente** , as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
+ Há suporte somente para a opção **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes** nas opções de criptografia. Se você selecionar as opções na seção **Fazer backup na mídia existente**, as opções de criptografias na página **Opções de Backup** serão desabilitadas.  
   
 > [!NOTE]  
 >  Para obter informações sobre conjuntos de mídias, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "70154834"
  **Substituir todos os conjuntos de backup existentes**  
  Substitua pelo backup atual quaisquer backups anteriores no conjunto de mídias existente.  
   
- **Verificar o nome do conjunto de mídias e o vencimento do conjunto de backup**  
+ **Verificar nome do conjunto de mídias e validade do conjunto de backup**  
  Opcionalmente, ao efetuar o backup para um conjunto de mídias existente, solicite que a operação de backup verifique o nome e a data de validade dos conjuntos de backup.  
   
  **Nome do conjunto de mídias**  
@@ -86,7 +86,7 @@ ms.locfileid: "70154834"
  A operação de backup deve continuar mesmo tendo-se encontrado um ou mais erros.  
   
 ### <a name="transaction-log"></a>Log de transações  
- As opções do painel **Log de transações** controlam o comportamento de um backup de log de transações. Essas opções são relevantes apenas no modelo de recuperação completa ou modelo de recuperação bulk-logged. Elas são habilitadas apenas se o **Log de transações** tiver sido selecionado no campo **Tipo de backup** na página [Geral](../../integration-services/general-page-of-integration-services-designers-options.md) da caixa de diálogo **Fazer Backup de Banco de Dados** .  
+ As opções do painel **Log de transações** controlam o comportamento de um backup de log de transações. Essas opções são relevantes apenas no modelo de recuperação completa ou modelo de recuperação bulk-logged. Elas são habilitadas apenas se o **Log de transações** tiver sido selecionado no campo **Tipo de backup** na página [Geral](../../integration-services/general-page-of-integration-services-designers-options.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  
   
 > [!NOTE]  
 >  Para obter informações sobre backups do log de transações, veja [Backups do log de transações &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
@@ -100,7 +100,7 @@ ms.locfileid: "70154834"
  A seleção dessa opção equivale à especificação de WITH NO_TRUNCATE, NORECOVERY em uma instrução [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obter mais informações, veja [Backups da parte final do log &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Unidade de fita  
- As opções do painel **Unidade de fita** controlam o gerenciamento de fita durante a operação de backup. Essas opções serão habilitadas apenas se **Fita** tiver sido selecionada no painel **Destino** da página [Geral](../../integration-services/general-page-of-integration-services-designers-options.md) da caixa de diálogo **Fazer Backup de Banco de Dados** .  
+ As opções do painel **Unidade de fita** controlam o gerenciamento de fita durante a operação de backup. Essas opções serão habilitadas apenas se **Fita** tiver sido selecionada no painel **Destino** da página [Geral](../../integration-services/general-page-of-integration-services-designers-options.md) da caixa de diálogo **Fazer Backup de Banco de Dados**.  
   
 > [!NOTE]  
 >  Para obter informações sobre como usar dispositivos de fita, veja [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "70154834"
 ## <a name="see-also"></a>Consulte Também  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Fazer backup de arquivos e de grupos de arquivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [Fazer backup de arquivos e grupos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Fazer backup do log de transações quando o banco de dados está danificado &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

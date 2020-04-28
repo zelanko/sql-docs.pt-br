@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952464"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Status do Servidor de Relatórios (modo nativo do SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "71952464"
  Se você estabelecer conexão com o servidor de relatórios e todos os links da página estiverem esmaecidos, verifique se o serviço Servidor de Relatórios foi iniciado. O **status do serviço de relatório:** deve ser "iniciado". Você também pode usar o aplicativo de console Serviços em Ferramentas do Administrador para verificar o status do serviço.  
   
 ## <a name="options"></a>Opções  
- **Instância do SQL Server**  
+ **Instância de SQL Server**  
  Exibe informações sobre a instância do servidor de relatórios à qual você está atualmente conectado. Os nomes de instância do servidor de relatórios têm como base as instâncias nomeadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A instância padrão é MSSQLSERVER. Uma instância nomeada será um valor que você especificou durante a instalação. Para obter mais informações sobre instâncias, consulte [trabalhar com várias versões e instâncias do SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manuais online do.  
   
 > [!NOTE]  
@@ -49,13 +49,13 @@ ms.locfileid: "71952464"
   
  Se você instalar uma segunda instância de um componente já instalado, como o [!INCLUDE[ssDE](../../includes/ssde-md.md)], e nomear a instância como Contoso, a **ID da Instância** será MSSQL12.Contoso.  
   
- **Versão**  
+ **Edição**  
  Exibe informações de edição. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server](https://go.microsoft.com/fwlink/?linkid=232473).  
   
  **Versão do produto**  
  Exibe a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que você instalou.  
   
- **Banco de dados do servidor de relatório**  
+ **Banco de dados do Servidor de Relatório**  
  Exibe o nome do banco de dados do servidor de relatórios que armazena dados de aplicativo para a instância atual do servidor de relatórios.  
   
  **Modo do Servidor de Relatório**  
@@ -64,7 +64,7 @@ ms.locfileid: "71952464"
  **Status do servidor**  
  Mostra se o serviço Servidor de Relatórios está em execução.  
   
- **Iniciar**  
+ **Início**  
  Inicia o serviço Servidor de Relatórios. O reinício do serviço será necessário depois de algumas alterações na configuração (por exemplo, ao reconfigurar um servidor de relatórios depois da alteração de um nome de computador). Se você reconfigurar as reservas de URL, o serviço será reiniciado automaticamente. O reinício é necessário para obter as alterações.  
   
  **Parar**  
@@ -73,6 +73,6 @@ ms.locfileid: "71952464"
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciador de Configurações do Reporting Services F1 tópicos de ajuda &#40;modo nativo do SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Gerenciador de Configurações do Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
- [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

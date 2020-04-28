@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782913"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar o Provedor do PowerShell para eventos estendidos
   É possível gerenciar Eventos Estendidos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do uso do provedor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. A subpasta XEvent está disponível sob a unidade SQLSERVER. É possível acessar a pasta por meio do uso de um dos métodos a seguir:  
   
--   Em um prompt de comando, digite `sqlps` e pressione ENTER. Digite `cd xevent` e pressione ENTER. A partir daí, você pode usar **** o CD `dir` e os comandos (ou o cmdlet **Set-Location** e **Get-ChildItem** ) para navegar até o nome do servidor e o nome da instância.  
+-   Em um prompt de comando, digite `sqlps` e pressione ENTER. Digite `cd xevent` e pressione ENTER. A partir daí, você pode usar **cd** o CD `dir` e os comandos (ou o cmdlet **Set-Location** e **Get-ChildItem** ) para navegar até o nome do servidor e o nome da instância.  
   
 -   No Pesquisador de Objetos, expanda o nome de instância, expanda **Gerenciamento**, clique com o botão direito do mouse em **Eventos Estendidos**e clique em **Iniciar PowerShell**. Isso inicia o PowerShell no seguinte caminho:  
   
-     PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
+     PS SqlServer: \ XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
     >  Você pode iniciar o PowerShell em qualquer nó sob **Eventos Estendidos**. Por exemplo, você pode clicar com o botão direito do mouse em **Sessões**e clicar em **Iniciar PowerShell**. Isso inicia o PowerShell um nível mais profundo na pasta de Sessões.  
@@ -111,5 +111,5 @@ $session.Create()
   
 ## <a name="see-also"></a>Consulte Também  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [Usar a sessão system_health](use-the-ssms-xe-profiler.md)   
- [Ferramentas de Eventos Estendidos](extended-events-tools.md)  
+ [Usar a sessão de system_health](use-the-ssms-xe-profiler.md)   
+ [Ferramentas de eventos estendidos](extended-events-tools.md)  

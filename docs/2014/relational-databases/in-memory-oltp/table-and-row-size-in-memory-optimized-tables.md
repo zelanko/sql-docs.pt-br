@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688896"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
@@ -82,7 +82,7 @@ Tabela com otimização de memória composta por índices e linhas.
 |Colunas do tipo profundas de comprimento variável [tamanho calculado]|SUM([tamanho calculado das colunas do tipo profundas de comprimento variável])<br /><br /> O tamanho calculado de cada coluna é o seguinte:<br /><br /> i para varchar(i) e varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Essa linha é aplicada somente ao [tamanho do corpo da linha calculado].<br /><br /> As colunas do tipo profundas de comprimento variável são colunas do tipo varchar(i), nvarchar(i) ou varbinary(i). O tamanho calculado é determinado pelo comprimento máximo (i) da coluna.|  
 |Colunas do tipo profundas de comprimento variável [tamanho real]|SUM([tamanho real das colunas do tipo profundas de comprimento variável])<br /><br /> O tamanho real de cada coluna é o seguinte:<br /><br /> n, onde n é o número de caracteres armazenados na coluna, para varchar(i).<br /><br /> 2 * n, onde n é o número de caracteres armazenados na coluna, para nvarchar(i).<br /><br /> n, onde n é o número de bytes armazenados na coluna, para varbinary(i).|Essa linha é aplicada somente ao [tamanho do corpo da linha real].<br /><br /> O tamanho real é determinado pelos dados armazenados nas colunas da linha.|  
   
-##  <a name="bkmk_RowStructure"></a>Estrutura de linha  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a>Estrutura de linha  
  As linhas em uma tabela com otimização de memória têm os seguintes componentes:  
   
 -   O cabeçalho de linha contém o carimbo de data/hora necessário para implementar o controle de versão de linha. O cabeçalho da linha também contém o ponteiro de índice para implementar o encadeamento de linhas nos buckets de hash (descrito acima).  
@@ -130,7 +130,7 @@ Tabela com otimização de memória composta por índices e linhas.
 |Jane|Praga|  
 |Susan|Bogotá|  
   
-##  <a name="bkmk_ExampleComputation"></a>Exemplo: computação de tamanho de tabela e linha  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Exemplo: Cálculo do tamanho da tabela e da linha  
  Para índices de hash, o número de buckets real é arredondado até a potência mais próxima de 2. Por exemplo, se o bucket_count especificado for 100000, o número real de buckets para o índice será 131072.  
   
  Considere uma tabela Orders com a seguinte definição:  
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Tabelas com otimização de memória](memory-optimized-tables.md)  
   
   

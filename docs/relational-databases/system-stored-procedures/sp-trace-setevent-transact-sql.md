@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305302"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -51,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Esta tabela lista os eventos que podem ser adicionados ou removidos de um rastreamento.  
   
-|Número do evento|Nome do evento|DESCRIÇÃO|  
+|Número do evento|Nome do evento|Descrição|  
 |------------------|----------------|-----------------|  
 |0-9|Reservado|Reservado|  
 |10|RPC:Completed|Ocorre quando uma RPC (chamada de procedimento remoto) é concluída.|  
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indica quando um item é removido do cache de procedimento.|  
 |37|SP:Recompile|Indica que um procedimento armazenado foi recompilado.|  
 |38|SP:CacheHit|Indica quando um procedimento armazenado é localizado no cache de procedimento.|  
-|11,8|Preteridos|Preteridos|  
+|39|Preterido|Preterido|  
 |40|SQL:StmtStarting|Ocorre quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é iniciada.|  
 |41|SQL:StmtCompleted|Ocorre quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] é concluída.|  
 |42|SP:Starting|Indica quando o procedimento armazenado é iniciado.|  
@@ -240,28 +240,28 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  A tabela a seguir lista as colunas que podem ser adicionadas a um evento.  
   
-|Número da coluna|Nome da coluna|DESCRIÇÃO|  
+|Número da coluna|Nome da coluna|Descrição|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valor de texto dependente da classe de evento que é capturada no rastreamento.|  
 |2|**BinaryData**|Valor binário dependente da classe de evento capturada no rastreamento.|  
 |3|**DatabaseID**|ID do banco de dados especificado pela instrução USE *Database* ou o banco de dados padrão se nenhuma instrução de *banco de dados* use for emitida para uma determinada conexão.<br /><br /> O valor para um banco de dados pode ser determinado usando a função DB_ID.|  
 |4|**TransactionID**|ID da transação atribuída pelo sistema.|  
 |5|**LineNumber**|O número da linha que contém o erro. No caso de eventos que envolvem instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , como **SP:StmtStarting**, **LineNumber** contém o número de linha da instrução no procedimento armazenado ou lote.|  
-|6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Nome de usuário do Windows.|  
+|6|**NTUserName**|Nome de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |7|**NTDomainName**|O domínio do Windows ao qual o usuário pertence.|  
-|8|**Nome do host**|Nome do computador cliente que originou a solicitação.|  
+|8|**HostName**|Nome do computador cliente que originou a solicitação.|  
 |9|**ClientProcessID**|ID atribuída pelo computador cliente ao processo no qual o aplicativo cliente está sendo executado.|  
 |10|**ApplicationName**|Nome do aplicativo cliente que criou a conexão com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa coluna é populada com os valores passados pelo aplicativo e não com o nome exibido do programa.|  
 |11|**LoginName**|Nome de logon do cliente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |12|**SPID**|ID de processo de servidor atribuída pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao processo associado ao cliente.|  
-|13|**Duration**|Tempo decorrido (em milhões de segundos) utilizado pelo evento. Esta coluna de dados não é populada pelo evento Hash Warning.|  
+|13|**Permanência**|Tempo decorrido (em milhões de segundos) utilizado pelo evento. Esta coluna de dados não é populada pelo evento Hash Warning.|  
 |14|**StartTime**|Horário de início do evento, quando disponível.|  
-|15|**EndTime**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**. Ele também não é preenchido pelo evento de **aviso de hash** .|  
-|16|**Leituras**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
-|17|**Gravações**|Número de gravações no disco físico executadas pelo servidor em nome do evento.|  
-|18|**CPU**|Tempo da CPU (em milissegundos) usado pelo evento.|  
+|15|**Final**|Horário em que o evento foi encerrado. Esta coluna não é populada para classes de eventos iniciais, como **SQL:BatchStarting** ou **SP:Starting**. Ele também não é preenchido pelo evento de **aviso de hash** .|  
+|16|**Pareça**|Número de leituras lógicas do disco executadas pelo servidor em nome do evento. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
+|17|**Registra**|Número de gravações no disco físico executadas pelo servidor em nome do evento.|  
+|18|**CPUs**|Tempo da CPU (em milissegundos) usado pelo evento.|  
 |19|**Permissões**|Representa o bitmap de permissões; usada pela Security Auditing.|  
-|20|**Severity**|Nível de severidade de uma exceção.|  
+|20|**Severidade**|Nível de severidade de uma exceção.|  
 |21|**EventSubClass**|Tipo de subclasse de evento. Essa coluna de dados não é populada para todas as classes de evento.|  
 |22|**ObjectID**|ID de objeto atribuída pelo sistema.|  
 |23|**Êxito**|Êxito da tentativa de uso de permissões; usada para auditoria.<br /><br /> **1** = êxito**0** = falha|  
@@ -271,16 +271,16 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|Tipo de classe de evento que está sendo registrada.|  
 |28|**ObjectType**|Tipo de objeto, como tabela, função ou procedimento armazenado.|  
 |29|**NestLevel**|O nível de aninhamento no qual esse procedimento armazenado está sendo executado. Confira [&#41;de@NESTLEVEL &#40;Transact-SQL ](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**Estado**|Estado do servidor, no caso de um erro.|  
+|30|**State**|Estado do servidor, no caso de um erro.|  
 |31|**Erro**|Número de erro.|  
-|32|**Mode**|Modo de bloqueio do bloqueio adquirido. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
+|32|**Modo**|Modo de bloqueio do bloqueio adquirido. Esta coluna não é preenchida pelo evento **Lock: solto** .|  
 |33|**Handle**|Identificador do objeto mencionado no evento.|  
 |34|**ObjectName**|Nome do objeto acessado.|  
 |35|**DatabaseName**|Nome do banco de dados especificado na instrução de *banco de dados* use.|  
-|36|**Nome do arquivo**|Nome lógico do nome de arquivo modificado.|  
+|36|**FileName**|Nome lógico do nome de arquivo modificado.|  
 |37|**OwnerName**|Nome do proprietário do objeto referenciado.|  
 |38|**RoleName**|Nome do banco de dados ou da função em todo o servidor direcionados por uma instrução.|  
-|11,8|**TargetUserName**|Nome de usuário do destino de alguma ação.|  
+|39|**TargetUserName**|Nome de usuário do destino de alguma ação.|  
 |40|**DBUserName**|Nome de usuário do banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do cliente.|  
 |41|**LoginSid**|SID (identificador de segurança) do usuário que fez logon.|  
 |42|**TargetLoginName**|Nome de logon do destino de alguma ação.|  
@@ -304,7 +304,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |60|**IsSystem**|Indica se o evento ocorreu em um processo do sistema ou do usuário.<br /><br /> **1** = sistema<br /><br /> **0** = usuário.|  
 |61|**Deslocamento**|O deslocamento inicial da instrução no lote ou procedimento armazenado.|  
 |62|**SourceDatabaseID**|ID do banco de dados no qual a origem do objeto existe.|  
-|63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado a **sys.dm_exec_sql_text()** para recuperar o texto SQL associado.|  
+|63|**SqlHandle**|Hash de 64 bits com base no texto de uma consulta ad hoc ou na ID de objeto e banco de dados de um objeto SQL. Esse valor pode ser passado para **Sys. dm_exec_sql_text ()** para recuperar o texto SQL associado.|  
 |64|**SessionLoginName**|O nome de logon do usuário que originou a sessão. Por exemplo, se você se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **Login1** e executar uma instrução como **Login2**, **SessionLoginName** irá exibir **Login1**, enquanto que **LoginName** exibirá **Login2**. Esta coluna de dados exibe logons tanto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quanto do Windows.|  
   
  **[ @on=]** *em*  
@@ -326,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Valores do código de retorno  
  A tabela a seguir descreve os valores de código que os usuários podem obter após a conclusão do procedimento armazenado.  
   
-|Código de retorno|DESCRIÇÃO|  
+|Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |0|Nenhum erro.|  
 |1|Erro desconhecido.|  
@@ -358,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Consulte Também  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Referência de classe de evento do SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Referência de classe de evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Rastreamento do SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

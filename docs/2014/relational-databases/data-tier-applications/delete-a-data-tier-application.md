@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782741"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
@@ -43,7 +43,7 @@ ms.locfileid: "72782741"
 |Desanexar banco de dados|O banco de dados associado é desanexado. A instância do Mecanismo de Banco de Dados não pode fazer referência ao banco de dados, mas os dados e os arquivos de log estão intatos.|  
 |Excluir banco de dados|O banco de dados associado é removido. Os dados e os arquivos de log são excluídos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  Não há nenhum mecanismo automático para restaurar os metadados da definição do DAC ou o banco de dados depois que um DAC é excluído. A maneira como a instância do DAC pode ser recriada manualmente depende da opção de exclusão.  
   
 |Opção|Como recriar a instância do DAC|  
@@ -55,10 +55,10 @@ ms.locfileid: "72782741"
 > [!WARNING]  
 >  A recompilação de uma instância de DAC através do registro de um DAC em um banco de dados restaurado ou reanexado não recriará algumas partes do DAC original, como a política de seleção de servidor.  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Um DAC pode ser excluído somente pelos membros das funções de servidor fixas **sysadmin** ou **serveradmin** , ou pelo proprietário do banco de dados. A conta interna do administrador de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chamada **sa** também pode iniciar o assistente.  
   
-##  <a name="UsingDeleteDACWizard"></a> Usando o Assistente para Excluir Aplicativo da Camada de Dados  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> Usando o Assistente para Excluir Aplicativo da Camada de Dados  
  **Para excluir um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o DAC a ser excluído.  
@@ -79,7 +79,7 @@ ms.locfileid: "72782741"
   
     4.  [Excluir Aplicativo da Camada de Dados](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Esta página descreve as etapas para excluir um aplicativo da camada de dados.  
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
@@ -88,47 +88,47 @@ ms.locfileid: "72782741"
   
  **Cancelar** : finaliza o assistente sem excluir um aplicativo da camada de dados ou banco de dados.  
   
-##  <a name="Choose_method"></a>Página escolher método  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> Página Escolher Método  
  Use esta página para especificar a opção que tratará o banco de dados associado ao DAC que será excluído.  
   
- **Excluir registro** – remove os metadados que definem o aplicativo da camada de dados, mas deixa o banco de dado associado intacto.  
+ **Excluir registro** : remove os metadados que definem o aplicativo da camada de dados, mas deixa o banco de dados associado intacto.  
   
- **Desanexar banco** de dados – remove os metadados que definem o aplicativo da camada de dados e desanexa o banco de dado associado.  
+ **Desanexar banco de dados** : remove os metadados que definem o aplicativo da camada de dados e desanexa o banco de dados associado.  
   
  O banco de dados não pode mais ser referenciado por aquela instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], mas os dados e os arquivos de log permanecem intactos.  
   
- **Excluir banco de dados** – remove os metadados que definem o DAC e descarta o banco de dados associado.  
+ **Excluir banco de dados** : remove os metadados que definem o DAC e descarta o banco de dados associado.  
   
  Os dados e os arquivos de log do banco de dados são excluídos permanentemente.  
   
  Anterior – retorna à página **introdução** . ** \< **  
   
- **Próximo >** -prossegue para a página **Resumo** .  
+ **Avançar >**: continua para a página **Resumo**.  
   
- **Cancelar** – finaliza o assistente sem excluir o DAC ou o banco de dados.  
+ **Cancelar** : finaliza o assistente sem excluir o DAC ou o banco de dados.  
   
-##  <a name="Summary"></a> Página de Resumo  
+##  <a name="summary-page"></a><a name="Summary"></a> Página de Resumo  
  Use esta página para examinar as ações que o assistente tomará ao excluir a instância do DAC.  
   
- **Revisar o resumo da seleção** -examine o DAC, o banco de dados e o método de exclusão exibidos na caixa. Se as informações estiverem corretas, selecione **Avançar** ou **Concluir** para excluir o DAC. Se o DAC e as informações do banco de dados não estiverem corretas, selecione **Cancelar** e selecione o DAC correto. Se o método de exclusão não estiver correto, selecione **Anterior** para retornar ou a página **Escolher Método** e selecione um método diferente.  
+ **Review your selection summary (Examinar o resumo de sua seleção)** : examine o DAC, o banco de dados e o método de exclusão exibidos na caixa. Se as informações estiverem corretas, selecione **Avançar** ou **Concluir** para excluir o DAC. Se o DAC e as informações do banco de dados não estiverem corretas, selecione **Cancelar** e selecione o DAC correto. Se o método de exclusão não estiver correto, selecione **Anterior** para retornar ou a página **Escolher Método** e selecione um método diferente.  
   
  Anterior – retorna para a página **escolher método** para escolher um método de exclusão diferente. ** \< **  
   
- **Próximo >** -exclui a instância do DAC usando o método escolhido na página anterior e prossegue para a página **excluir aplicativo da camada de dados** .  
+ **Avançar >**: exclui a instância de DAC usando o método escolhido na página anterior e continua para a página **Excluir Aplicativo da Camada de Dados**.  
   
- **Cancelar** – finaliza o assistente sem excluir a instância do DAC.  
+ **Cancelar** : finaliza o assistente sem excluir a instância de DAC.  
   
-##  <a name="Delete_datatier_application"></a>Página excluir aplicativo da camada de dados  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a>Página excluir aplicativo da camada de dados  
  Esta página relata o êxito ou a falha da operação de exclusão.  
   
- **Excluindo o DAC** – relata o êxito ou a falha de cada ação executada para excluir a instância do DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
+ **Excluindo o DAC** : relata o êxito ou falha de cada ação realizada para excluir a instância de DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
   
- **Salvar relatório** – selecione esse botão para salvar o relatório de exclusão em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é SQL Server Management Studio\DAC Packages na pasta Documents da conta do Windows.  
+ **Salvar Relatório** : selecione esse botão para salvar o relatório de exclusão em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é SQL Server Management Studio\DAC Packages na pasta Documents da conta do Windows.  
   
- **Concluir** – finaliza o assistente.  
+ **Concluir** : finaliza o assistente.  
   
-##  <a name="DeleteDACPowerShell"></a>Excluir um DAC usando o PowerShell  
- **Para excluir um DAC usando um script do PowerShell**  
+##  <a name="delete-a-dac-using-powershell"></a><a name="DeleteDACPowerShell"></a>Excluir um DAC usando o PowerShell  
+ **Para excluir um DAC usando o script do PowerShell**  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o DAC a ser excluído.  
   
@@ -219,9 +219,9 @@ $dacName  = "MyApplication"
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
- [Aplicativos da Camada de Dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
+ [Aplicativos da camada de dados](data-tier-applications.md)   
  [Implantar um aplicativo da camada de dados](deploy-a-data-tier-application.md)   
  [Registrar um banco de dados como um DAC](register-a-database-as-a-dac.md)   
- [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Backup e restauração de bancos de dados SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Anexar e desanexar bancos de dados &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

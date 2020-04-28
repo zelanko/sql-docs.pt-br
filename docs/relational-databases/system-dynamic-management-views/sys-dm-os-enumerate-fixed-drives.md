@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71342511"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
@@ -31,7 +31,7 @@ Introduzido no SQL Server 2019.
 
 Enumera volumes montados em letras de unidade `C:\`como.
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|
+|Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|Caminho para o volume, como `C:\`.|  
 |`drive_type`|`int`|Código para o tipo de unidade. Consulte [ `GetDriveTypeW` a função](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
@@ -44,5 +44,5 @@ O usuário deve ter `VIEW SERVER STATE` permissão no servidor.
 
 ## <a name="see-also"></a>Consulte Também  
 
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas a e/s &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

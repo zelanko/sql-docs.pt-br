@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874476"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possíveis falhas durante sessões entre réplicas de disponibilidade (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "70874476"
   
  As réplicas primárias e secundárias executam ping uma da outra para sinalizar que ainda estão ativas e um tempo limite de sessão impede que as réplicas esperem indefinidamente para receber um ping da outra réplica. O tempo limite de sessão é uma propriedade de réplica configurável pelo usuário com um valor padrão de 10 segundos. A recepção de um ping durante o período de tempo-limite indica que a conexão ainda está aberta e que as instâncias do servidor estão se comunicando por ela. Durante o recebimento de um ping, uma réplica de disponibilidade redefine seu contador de tempo limite nessa conexão.  
   
- Se nenhum ping for recebido da outra réplica dentro do período de tempo limite da sessão, ocorrerá o tempo limite da conexão. A conexão é fechada e a réplica de tempo limite entra no estado DISCONNECTED. Até mesmo se uma réplica desconectada estiver configurada para o modo de confirmação assíncrona, as transações não esperarão que a réplica se reconecte e seja sincronizada novamente.  
+ Se nenhum ping for recebido da outra réplica dentro do período de tempo limite da sessão, a conexão atingirá o tempo limite. A conexão é fechada e a réplica com tempo limite entra no estado desconectado. Até mesmo se uma réplica desconectada estiver configurada para o modo de confirmação assíncrona, as transações não esperarão que a réplica se reconecte e seja sincronizada novamente.  
   
 ## <a name="responding-to-an-error"></a>Respondendo a um erro  
  Independentemente do tipo de erro, uma instância do servidor que detecta um erro responde adequadamente com base na função da instância, no modo de disponibilidade da sessão e no estado de qualquer outra conexão na sessão. Para obter informações sobre o que ocorre na perda de um parceiro, consulte [modos de disponibilidade (grupos de disponibilidade AlwaysOn)](availability-modes-always-on-availability-groups.md).  

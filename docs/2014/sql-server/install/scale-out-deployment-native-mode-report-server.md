@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952425"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
@@ -40,10 +40,10 @@ ms.locfileid: "71952425"
  **Nome do SQL Server**  
  Especifique o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instância que hospeda o banco de dados do servidor de relatório.  
   
- **Database Name**  
+ **Nome do banco de dados**  
  Especifica o nome do banco de dados ao qual a instância do servidor de relatório está atualmente conectada.  
   
- **Modo de servidor**  
+ **Modo do Servidor**  
  Exibe o modo do servidor e do banco de dados. O modo do servidor é Nativo ou integrado do SharePoint. Os dois modos dão suporte a implantações de expansão.  
   
  **Servidor**  
@@ -76,8 +76,8 @@ ms.locfileid: "71952425"
  Se os dados criptografados não mais forem necessários ou se você não tiver uma cópia de backup da chave, você deverá excluir os dados criptografados. Para obter mais informações, consulte [chaves de criptografia &#40;o modo nativo do SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inicializar um servidor de relatório &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Configurar e gerenciar chaves de criptografia &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configurar e gerenciar chaves de criptografia &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurar uma implantação de expansão do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

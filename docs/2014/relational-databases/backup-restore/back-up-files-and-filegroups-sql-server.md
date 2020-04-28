@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782745"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Fazer backup de arquivos e de grupos de arquivos (SQL Server)
@@ -44,9 +44,9 @@ ms.locfileid: "72782745"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   A instrução BACKUP não é permitida em uma transação explícita ou implícita.  
   
@@ -54,18 +54,18 @@ ms.locfileid: "72782745"
   
 -   Para obter mais informações sobre limitações e restrições, veja [Visão geral do backup &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendações  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendações  
   
 -   Por padrão, toda operação de backup bem-sucedida acrescenta uma entrada ao log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ao log de eventos do sistema. Se você fizer backup do log com muita frequência, essas mensagens de êxito serão acumuladas muito rapidamente, resultando em logs de erros imensos que podem dificultar a localização de outras mensagens. Em tais situações, você pode suprimir essas entradas de log usando o sinalizador de rastreamento 3226, caso nenhum dos seus scripts dependa dessas entradas. Para obter mais informações, veja, [Sinalizadores de rastreamento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  As permissões BACKUP DATABASE e BACKUP LOG usam como padrão os membros da função de servidor fixa **sysadmin** e as funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
  Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Esses problemas no arquivo físico do dispositivo de backup podem não aparecer até que o recurso físico seja acessado quando o backup ou restauração é tentado.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>Para fazer backup de arquivos de banco de dados e grupos de arquivos  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72782745"
   
 2.  Expanda **Bancos de Dados**e, dependendo do banco de dados, selecione um banco de dados de usuário ou expanda **Bancos de Dados do Sistema** e selecione um banco de dados do sistema.  
   
-3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas**e clique em **Backup**. Será exibida a caixa de diálogo **Backup de Banco de Dados** .  
+3.  Clique com o botão direito do mouse no banco de dados, aponte para **Tarefas** e clique em **Backup**. A caixa de diálogo **Backup do Banco de Dados** é exibida.  
   
 4.  Na lista **Banco de Dados**, verifique o nome do banco de dados. Você pode, como opção, selecionar um banco de dados diferente da lista.  
   
@@ -83,30 +83,30 @@ ms.locfileid: "72782745"
   
 7.  Na caixa de diálogo **Selecionar Arquivos e Grupos de Arquivos** , selecione os arquivos e os grupos de arquivos a serem incluídos no backup. É possível selecionar um ou mais arquivos individuais ou marcar a caixa para um grupo de arquivos para selecionar automaticamente todos os arquivos nesse grupo.  
   
-8.  Aceite o nome do conjunto de backup padrão sugerido na caixa de texto **Nome** ou digite um nome diferente para o conjunto de backup.  
+8.  Aceite o nome padrão do conjunto de backup sugerido na caixa de texto **Nome** ou insira outro nome.  
   
-9. Opcionalmente, na caixa de texto **Descrição** , digite uma descrição do conjunto de backup.  
+9. Como opção, na caixa de texto **Descrição**, insira uma descrição do conjunto de backup.  
   
 10. Especifique quando o conjunto de backup irá expirar:  
   
     -   Para que o conjunto de backup expire após um número específico de dias, clique em **Após** (a opção padrão). Em seguida, insira o número de dias (a partir da criação do conjunto) após o qual o conjunto irá expirar. Esse valor pode ser de 0 a 99999 dias; 0 dia significa que o conjunto de backup nunca vai expirar.  
   
-         O valor padrão é definido na opção **Retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do Servidor** (página**Configurações do Banco de Dados** ). Para acessar essa opção, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados** .  
+         O valor padrão é definido na opção **retenção de mídia de backup padrão (em dias)** da caixa de diálogo **Propriedades do servidor** (página**configurações do banco de dados** ). Para acessar essa opção, clique com o botão direito do mouse no nome do servidor no Pesquisador de Objetos, selecione propriedades e a página **Configurações do Banco de Dados** .  
   
-    -   Para que o conjunto de backup expire em uma data específica, clique no campo **Em**e digite a data de expiração do conjunto.  
+    -   Para que o conjunto de backup expire em uma data específica, clique em **Em** e insira a data de expiração do conjunto.  
   
 11. Escolha o tipo do destino de backup clicando em **Disco** ou **Fita**. Para selecionar os caminhos de até 64 unidades de disco ou fita que contêm um único conjunto de mídias, clique em **Adicionar**. Os caminhos selecionados são exibidos na lista **Fazer backup em** .  
   
     > [!NOTE]  
     >  Para remover um destino de backup, selecione-o e clique em **Remover**. Para exibir o conteúdo de um destino de backup, selecione-o e clique em **Conteúdo**.  
   
-12. Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página** .  
+12. Para exibir ou selecionar as opções avançadas, clique em **Opções** no painel **Selecionar uma página**.  
   
-13. Selecione uma opção **Substituir Mídia** , com um clique em uma das opções a seguir:  
+13. Selecione uma opção de **Substituir Mídia** clicando em um das seguintes:  
   
     -   **Fazer backup no conjunto de mídias existente**  
   
-         Para essa opção, clique em **Anexar ao conjunto de backup existente** ou **Substituir todos os conjuntos de backup existentes**. Para obter informações sobre como fazer backup de um conjunto de mídias existente, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para esta opção, clique em **Acrescentar ao conjunto de backup existente** ou em **Substituir todos os conjuntos de backup existentes**. Para obter informações sobre como fazer backup de um conjunto de mídias existente, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
          Opcionalmente, selecione **Verificar nome do conjunto de mídias e validade do conjunto de backup** para que a operação de backup verifique a data e a hora em que o conjunto de mídias e de backup expiram.  
   
@@ -116,26 +116,26 @@ ms.locfileid: "72782745"
   
     -   **Fazer backup em um novo conjunto de mídias e apagar todos os conjuntos de backup existentes**  
   
-         Para essa opção, digite um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias** . Para obter mais informações sobre como criar um novo conjunto de mídias, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Para esta opção, insira um nome na caixa de texto **Nome do novo conjunto de mídias** e, opcionalmente, descreva o conjunto de mídias na caixa de texto **Descrição do novo conjunto de mídias**. Para obter mais informações sobre como criar um novo conjunto de mídias, veja [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 14. Na seção **confiabilidade** , marque opcionalmente:  
   
     -   **Verificar backup quando concluído**  
   
-    -   **Executar soma de verificação antes de gravar na mídia**e, como opção, **Continuar com erro da soma de verificação**. Para obter mais informações sobre somas de verificação, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Executar soma de verificação antes de gravar na mídia** e, opcionalmente, **Continuar em caso de erro de soma de verificação**. Para obter mais informações sobre somas de verificação, veja [Erros de mídia possíveis durante backup e restauração &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Se o backup estiver sendo feito em uma unidade de fita (conforme especificado na seção **Destino** da página **Geral** ), a opção **Descarregar a fita após o backup** estará ativa. O clique nessa opção habilita a opção **Rebobinar a fita antes de descarregar** .  
   
     > [!NOTE]  
     >  As opções na seção **Log de transações** estarão inativos exceto se o backup estiver sendo feito em um log de transações (como especificado na seção **Tipo de backup** da página **Geral** ).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]e versões posteriores dão suporte à [compactação de backup](backup-compression-sql-server.md). Por padrão, a compactação de um backup depende do valor da opção de configuração de servidor **padrão de compactação de backup**. Porém, independentemente do padrão atual do nível do servidor, é possível compactar um backup, marcando a opção **Compactar backup**e evitar a compactação marcando **Não compactar o backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versões posteriores dão suporte à [compactação de backup](backup-compression-sql-server.md). Por padrão, se um backup é compactado ou não depende do valor da opção de configuração do servidor **Padrão de Compactação de Backup**. No entanto, independentemente do padrão atual do nível de servidor, é possível compactar um backup selecionando **Compactar backup** e impedir a compactação selecionando **Não compactar o backup**.  
   
      **Para exibir o padrão de compactação de backup atual**  
   
     -   [Exibir ou configurar a opção de configuração de servidor backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-back-up-files-and-filegroups"></a>Para efetuar backup de arquivos e grupos de arquivos  
   
@@ -151,31 +151,31 @@ ms.locfileid: "72782745"
   
      BACKUP DATABASE *database*  
   
-     {Arquivo **=** _logical_file_name_ | Grupo de arquivos _logical_filegroup_name_ } [,... **** **=** *f* ]  
+     {Arquivo **=** _logical_file_name_ | Grupo de arquivos _logical_filegroup_name_ } [,... **,** **=** *f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
      [ WITH *com_opções* [ **,**...*o* ] ] ;  
   
-    |Opção|DESCRIÇÃO|  
+    |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
     |**=** _Logical_file_name_ de arquivo|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  
     |**=** Grupo de arquivos _logical_filegroup_name_|Especifica o nome lógico de um grupo de arquivos que será incluído no backup de arquivos. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.|  
     |[ **,**...*f* ]|É um espaço reservado que indica que vários arquivos e grupos de arquivos podem ser especificados. O número de arquivos ou grupos de arquivos é ilimitado.|  
-    |*backup_device* [ **,**... *n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> {DISCO &#124; FITA} **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> {DISCO &#124; FITA} **=** _physical_backup_device_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, como DIFFERENTIAL.<br /><br /> Observação: um backup de arquivo diferencial exige um backup de arquivo completo como base. Para obter mais informações, veja [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
 2.  No modelo de recuperação completa, você deverá também efetuar backup do log de transações. Para usar um conjunto inteiro de backups de arquivo completos para restaurar um banco de dados, você deverá também ter suficientes backups de log para abranger todos os backups de arquivo, desde o início do primeiro backup de arquivo. Para obter mais informações, veja [Fazer backup de um log de transações &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="TsqlExample"></a> Exemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Exemplos (Transact-SQL)  
  Os exemplos seguintes fazem backup de um ou mais arquivos dos grupos de arquivos secundários do banco de dados `Sales` . Esse banco de dados usa o modelo de recuperação completa e contém os seguintes grupos de arquivos secundários:  
   
 -   Um grupo de arquivo nomeado `SalesGroup1` que tem os arquivos `SGrp1Fi1` e `SGrp1Fi2`.  
   
 -   Um grupo de arquivo nomeado `SalesGroup2` que tem os arquivos `SGrp2Fi1` e `SGrp2Fi2`.  
   
-#### <a name="a-creating-a-file-backup-of-two-files"></a>a. Criando um backup de arquivo de dois arquivos  
+#### <a name="a-creating-a-file-backup-of-two-files"></a>A. Criando um backup de arquivo de dois arquivos  
  O exemplo a seguir cria um backup diferencial de arquivo só do arquivo `SGrp1Fi2` do `SalesGroup1` e o arquivo `SGrp2Fi2` do grupo de arquivos `SalesGroup2` .  
   
 ```sql  
@@ -213,7 +213,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
   
 Use o cmdlet `Backup-SqlDatabase` e especifique `Files` para o valor do parâmetro `-BackupAction`. Além disso, especifique um dos seguintes parâmetros:  
   
@@ -234,11 +234,11 @@ Para configurar e usar o provedor de SQL Server PowerShell, consulte [provedor d
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Informações de histórico e cabeçalho de backup &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
- [Fazer backup do banco de dados &#40;página Geral&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Fazer backup do banco de dados &#40;página Opções de Backup&#41;](back-up-database-backup-options-page.md)   
+ [&#41;de backup do banco de dados &#40;geral](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Página backup do banco de dados &#40;opções de backup&#41;](back-up-database-backup-options-page.md)   
  [Backups completos de arquivos &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Backups diferenciais &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [Restaurações de arquivo &#40;Modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
+ [Restaurações de arquivos &#40;modelo de recuperação completa&#41;](file-restores-full-recovery-model.md)   
  [Restaurações de arquivos &#40;Modelo de recuperação simples&#41;](file-restores-simple-recovery-model.md)  
   
   

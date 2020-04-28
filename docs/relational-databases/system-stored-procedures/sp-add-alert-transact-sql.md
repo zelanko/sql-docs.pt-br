@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174261"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -79,12 +79,12 @@ sp_add_alert [ @name = ] 'name'
 > [!IMPORTANT]
 >  As opções pager e **net send** serão removidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Agent em uma versão futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Nenhum|  
 |**1**|Email|  
 |**2**|Pager|  
-|**quatro**|**net send**|  
+|**4**|**net send**|  
   
 `[ @database_name = ] 'database'`O banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. Se o *banco de dados*não for fornecido, o alerta será acionado, independentemente de onde ocorreu o erro. o *banco de dados* é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
@@ -101,7 +101,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`É um valor expresso no*formato ' comparador '.* *performance_condition* é **nvarchar (512)** com um padrão de NULL e consiste nesses elementos.  
   
-|Elemento Format|DESCRIÇÃO|  
+|Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: >, < ou =|  
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Qualquer evento registrado usando **xp_logevent**  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um modo gráfico e fácil para gerenciar o sistema de alertas inteiro e é recomendado para configurar uma infraestrutura de alerta.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornece um modo gráfico e fácil para gerenciar o sistema de alertas inteiro e é recomendado para configurar uma infraestrutura de alerta.  
   
  Se um alerta não estiver funcionando corretamente, verifique se:  
   
@@ -143,7 +142,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   O alerta está habilitado.  
   
--   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta a menos que o **\@database_name** para o alerta seja **'mestre'** ou NULL.  
+-   Eventos gerados com **xp_logevent** ocorrem no banco de dados mestre. Portanto, **xp_logevent** não dispara um alerta, a menos que o ** \@database_name** do alerta seja **' Master '** ou NULL.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, somente membros da função de servidor fixa **sysadmin** podem executar **sp_add_alert**.  

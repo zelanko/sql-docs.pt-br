@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782826"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implantar soluções PowerPivot para SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "72782826"
   
  [Sobre as soluções PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a>Pré-requisito: Verifique se o aplicativo Web usa a autenticação de modo clássico  
+##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> Pré-requisito: verificar se o aplicativo Web usa a autenticação de modo clássico  
  O PowerPivot para SharePoint tem suporte apenas para aplicativos Web que utilizam a autenticação de modo clássico do Windows. Para verificar se o aplicativo usa o modo clássico, execute o seguinte cmdlet do PowerShell no **Shell de gerenciamento do sharepoint 2010**, substituindo `http://<top-level site name>` pelo nome do seu site do SharePoint:  
   
 ```powershell
@@ -47,7 +47,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  O valor retornado deve ser **false**. Se for **true**, você não poderá acessar dados PowerPivot com este aplicativo Web.  
   
-##  <a name="bkmk_farm"></a>Etapa 1: implantar a solução de farm  
+##  <a name="step-1-deploy-the-farm-solution"></a><a name="bkmk_farm"></a>Etapa 1: implantar a solução de farm  
  Esta seção mostra como implantar soluções usando o PowerShell, mas você também pode usar a Ferramenta de Configuração do PowerPivot para concluir esta tarefa. Para obter mais informações, consulte [Configurar ou reparar 2010 PowerPivot para SharePoint &#40;ferramenta de configuração do PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Esta tarefa somente precisa ser executada uma vez, depois de instalar o PowerPivot para SharePoint.  
@@ -68,7 +68,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a>Etapa 2: implantar a solução de aplicativo Web PowerPivot na administração central  
+##  <a name="step-2-deploy-the-powerpivot-web-application-solution-to-central-administration"></a><a name="deployCA"></a>Etapa 2: implantar a solução de aplicativo Web PowerPivot na administração central  
  Depois de implantar a solução do farm, você deverá implantar a solução de aplicativo Web na Administração Central. Essa etapa adiciona o Painel de Gerenciamento do PowerPivot à Administração Central.  
   
 1.  Abra um Shell de Gerenciamento do SharePoint 2010 usando a opção **Executar como Administrador** .  
@@ -95,12 +95,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Agora que a solução de aplicativo Web está implantada na Administração Central, você poderá usar a Administração Central para concluir todas as etapas de configuração restantes.  
   
-##  <a name="deployUI"></a>Etapa 3: implantar a solução de aplicativo Web PowerPivot em outros aplicativos Web  
+##  <a name="step-3-deploy-the-powerpivot-web-application-solution-to-other-web-applications"></a><a name="deployUI"></a>Etapa 3: implantar a solução de aplicativo Web PowerPivot em outros aplicativos Web  
  Na tarefa anterior, você implantou o Powerpivotwebapp.wsp na Administração Central. Nesta seção, você implanta o powerpivotwebapp.wsp em cada aplicativo Web existente que dá suporte a acesso a dados PowerPivot. Se você adicionar mais aplicativos Web posteriormente, repita esta etapa para esses aplicativos.  
   
 1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar soluções de farm**.  
   
-2.  Clique em **Powerpivotwebapp.wsp**.  
+2.  Clique em **powerpivotwebapp. wsp**.  
   
 3.  Clique em **Implantar Solução**.  
   
@@ -110,7 +110,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 6.  Repita para outros aplicativos Web do SharePoint que também oferecerão suporte ao acesso a dados PowerPivot.  
   
-##  <a name="retract"></a>Reimplantar ou cancelar a solução  
+##  <a name="redeploy-or-retract-the-solution"></a><a name="retract"></a>Reimplantar ou cancelar a solução  
  Embora a Administração Central do SharePoint forneça o cancelamento da solução, você não precisa cancelar o arquivo powerpivotwebapp.wsp, a menos que esteja solucionando problemas sistematicamente de uma instalação ou um problema de implantação do patch.  
   
 1.  Na Administração Central do SharePoint 2010, em Configurações do Sistema, clique em **Gerenciar soluções de farm**.  
@@ -131,7 +131,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  Reimplante a solução de aplicativo Web PowerPivot para todos os aplicativos Web do SharePoint.  
   
-##  <a name="intro"></a>Sobre as soluções PowerPivot  
+##  <a name="about-the-powerpivot-solutions"></a><a name="intro"></a>Sobre as soluções PowerPivot  
  O PowerPivot para SharePoint usa dois pacotes de soluções para implantar páginas de aplicativos e arquivos de programas no farm e em aplicativos Web individuais.  
   
 -   A solução de farm é global. É implantada uma vez e permanece disponível automaticamente para qualquer servidor novo do PowerPivot para SharePoint adicionado ao farm posteriormente.  
@@ -142,7 +142,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  A solução do aplicativo Web é implantada inicialmente na Administração Central, seguida por implantações subsequentes da solução em qualquer aplicativo Web adicional que dará suporte a solicitações para dados PowerPivot. Para implantar a solução de aplicativo Web da Administração Central, você deve usar a Ferramenta de Configuração do PowerPivot ou cmdlet do PowerShell. Para todos os outros aplicativos Web, você pode implantar a solução de aplicativo Web manualmente usando a Administração Central ou PowerShell.  
   
-|Solução|DESCRIÇÃO|  
+|Solução|Descrição|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Adiciona o Microsoft.AnalysisServices.SharePoint.Integration.dll ao assembly global.<br /><br /> Adiciona o Microsoft.AnalysisServices.ChannelTransport.dll ao assembly global.<br /><br /> Instala recursos e arquivos de recurso e registra tipos de conteúdo.<br /><br /> Adiciona modelos de biblioteca para bibliotecas da Galeria PowerPivot e do Feed de Dados.<br /><br /> Adiciona páginas de aplicativos para configuração de aplicativos de serviço, Painel de Gerenciamento PowerPivot, atualização de dados e Galeria PowerPivot.|  
 |Powerpivotwebapp.wsp|Adiciona arquivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll à pasta de extensões no servidor Web front-end.<br /><br /> Adiciona serviço Web do PowerPivot ao front-end Web.<br /><br /> Adiciona geração de imagens em miniatura para Galeria PowerPivot.|  

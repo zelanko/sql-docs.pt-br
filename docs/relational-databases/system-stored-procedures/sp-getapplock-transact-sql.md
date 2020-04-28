@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717256"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
  [ @LockMode= ] '*lock_mode*'  
- É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar (32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **Exclusive**. Para obter mais informações, consulte [modos de bloqueio](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **Exclusive**. Para obter mais informações, consulte [modos de bloqueio](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] '*lock_owner*'  
- É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar (32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o valor de *lock_owner* é **transação**, por padrão ou especificado explicitamente, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @LockTimeout= ] '*valor*'  
  É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por @@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um código de retorno de-1 em vez de aguardar o bloqueio quando a solicitação não puder ser concedida imediatamente, especifique 0.  
@@ -132,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o ID de banco de dados atual para qualificar o recurso. Logo, se sp_getapplock for executado, mesmo com valores de parâmetro idênticos em bancos de dados diferentes, o resultado criará bloqueios separados em recursos separados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o ID de banco de dados atual para qualificar o recurso. Logo, se sp_getapplock for executado, mesmo com valores de parâmetro idênticos em bancos de dados diferentes, o resultado criará bloqueios separados em recursos separados.  
   
  Use a exibição de gerenciamento dinâmico sys.dm_tran_locks ou o procedimento armazenado de sistema sp_lock para examinar informações de bloqueio ou use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para monitorar os bloqueios.  
   
@@ -167,6 +166,6 @@ GO
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de APPLOCK_MODE](../../t-sql/functions/applock-mode-transact-sql.md)   
  [&#41;&#40;Transact-SQL de APPLOCK_TEST](../../t-sql/functions/applock-test-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_releaseapplock](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

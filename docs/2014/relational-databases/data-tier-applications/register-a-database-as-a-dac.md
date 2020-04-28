@@ -21,31 +21,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782717"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar um banco de dados como um DAC
   Use o **Assistente para registrar o aplicativo da camada de dados** ou um script do Windows PowerShell para criar uma definição de DAC (aplicativo da camada de dados) que descreva os objetos em um banco de dado existente e `msdb` Registre a definição de DAC no banco de dados do sistema (**mestre** no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Antes de começar:**  [limitações e restrições](#LimitationsRestrictions), [permissões](#Permissions)  
+-   **Antes de começar:**  [Limitações e Restrições](#LimitationsRestrictions), [Permissões](#Permissions)  
   
--   **Para atualizar um DAC, usando:**  [o assistente para registrar aplicativo da camada de dados](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Para atualizar um DAC, usando:**  [O Assistente de Aplicativo da Camada de Dados de Registro](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Antes de começar  
  O processo de registro cria uma definição do DAC que define os objetos no banco de dados. A combinação da definição do DAC e do banco de dados forma uma instância do DAC. Se você registrar um banco de dados como um DAC em uma instância gerenciada do Mecanismo de Banco de Dados, o DAC registrado será incorporado ao Utilitário do SQL Server na próxima vez que o conjunto de coleta do utilitário for enviado da instância para o Ponto de Controle do Utilitário. O DAC estará presente no nó **Aplicativos no Nível de Dados Implantados** do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Gerenciador do Utilitário** e é relatado na página de detalhes **Aplicativos no Nível de Dados Implantados**.  
   
-###  <a name="LimitationsRestrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitações e restrições  
  O registro do DAC só pode ser executado em um banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou posterior. O registro do DAC não poderá ser executado se um DAC já estiver registrado para o banco de dados. Por exemplo, se o banco de dados foi criado através da implantação de um DAC, você não poderá executar o **Assistente para Registrar o Aplicativo da Camada de Dados**.  
   
  Você não poderá registrar um DAC se o banco de dados tiver objetos que não tenham suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  O registro de um DAC em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] requer, pelo menos, permissões VIEW DEFINITION de escopo de banco de dados e ALTER ANY LOGIN, permissões SELECT em **sys.sql_expression_dependencies**, e associação na função de servidor fixa **dbcreator** . Os membros da função de servidor fixa **sysadmin** ou a conta interna do administrador do sistema do SQL Server denominada **sa** também podem registrar um DAC. O registro de um DAC que não contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **dbmanager** ou **serveradmin** . O registro de um DAC que contém logons no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] exige associação nas funções **loginmanager** or **serveradmin** .  
   
-##  <a name="UsingRegisterDACWizard"></a>Usando o assistente para registrar o aplicativo da camada de dados  
+##  <a name="using-the-register-data-tier-application-wizard"></a><a name="UsingRegisterDACWizard"></a> Usando o Assistente para Registrar o Aplicativo da Camada de Dados  
  **Para registrar um DAC usando um assistente**  
   
 1.  No **Pesquisador de Objetos**, expanda o nó da instância que contém o banco de dados a ser registrado como um DAC.  
@@ -62,18 +62,18 @@ ms.locfileid: "72782717"
   
     3.  [Página Validação e Resumo](#Summary)  
   
-    4.  [Página registrar DAC](#Register)  
+    4.  [Página Registrar o DAC](#Register)  
   
-##  <a name="Introduction"></a> Página de Introdução  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página de Introdução  
  Essa página descreve as etapas do registro de um aplicativo da camada de dados.  
   
  **Não mostrar esta página novamente.** - Clique na caixa de seleção para interromper a exibição da página no futuro.  
   
- **Próximo >** -prossegue para a página **definir propriedades** .  
+ **Avançar >** - Continua na página **Definir Propriedades**.  
   
- **Cancelar** – encerra o assistente sem registrar um DAC.  
+ **Cancelar** - Finaliza o assistente sem registrar um DAC.  
   
-##  <a name="Set_properties"></a>Página definir propriedades  
+##  <a name="set-properties-page"></a><a name="Set_properties"></a>Página definir propriedades  
  Use essa página para especificar propriedades no nível do DAC, como o nome e a versão do aplicativo.  
   
  **Nome do aplicativo.** – Uma cadeia de caracteres que especifica o nome usado para identificar a definição do DAC, o campo foi populado com o nome do banco de dados.  
@@ -84,53 +84,53 @@ ms.locfileid: "72782717"
   
  Anterior – retorna para a página **introdução** . ** \< **  
   
- **Próximo >** -verifica se um DAC pode ser criado a partir dos objetos no banco de dados e exibe os resultados na página **validação e Resumo** .  
+ **Avançar >** - Verifica se um DAC pode ser compilado por meio dos objetos do banco de dados e exibe os resultados na página de **Validação e Resumo**.  
   
- **Cancelar** – encerra o assistente sem registrar o DAC.  
+ **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
-##  <a name="Summary"></a>Página validação e Resumo  
+##  <a name="validation-and-summary-page"></a><a name="Summary"></a>Página validação e Resumo  
  Use essa página para revisar as ações do assistente ao registrar o DAC. A página faz transição por três estados ao verificar se um DAC pode ser compilado a partir dos objetos do banco de dados.  
   
 ### <a name="retrieving-objects"></a>Recuperando objetos  
- **Recuperando objetos de banco de dados e de servidor.** - Exibe uma barra de progresso enquanto o assistente recupera todos os objetos necessários do banco de dados e da instância do Mecanismo de Banco de Dados.  
+ **Recuperando os objetos de banco de dados e de servidor.** - Exibe uma barra de progresso enquanto o assistente recupera todos os objetos necessários do banco de dados e da instância do Mecanismo de Banco de Dados.  
   
  Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
   
- **Em seguida >** -registra o DAC e exibe os resultados na página **registrar DAC** .  
+ **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
- **Cancelar** – encerra o assistente sem registrar o DAC.  
+ **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
 ### <a name="validating-objects"></a>Validando objetos  
  **Verificando**  _SchemaName_ **.** _Objectname_ **.** - Exibe uma barra de progresso enquanto o assistente verifica as dependências dos objetos recuperados e se todos eles são objetos válidos para um DAC. _Esquema_**.** _Objectname_ identificar qual objeto está sendo verificado no momento.  
   
  Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
   
- **Em seguida >** -registra o DAC e exibe os resultados na página **registrar DAC** .  
+ **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
- **Cancelar** – encerra o assistente sem registrar o DAC.  
+ **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
 ### <a name="summary"></a>Resumo  
  **A configuração a seguir será usada para registrar o DAC.** - Exibe um relatório das propriedades e objetos que serão incluídos no DAC.  
   
- **Salvar relatório** – Selecione este botão para salvar uma cópia do relatório de validação em um arquivo HTML. A pasta padrão é uma pasta **SQL Server Management Studio\Pacotes Packages** na pasta documentos da sua conta do Windows.  
+ **Salvar Relatório** - Selecione esse botão para salvar uma cópia do relatório de validação em um arquivo HTML. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows.  
   
  Anterior – retorna para a página **definir propriedades** para alterar suas entradas. ** \< **  
   
- **Em seguida >** -registra o DAC e exibe os resultados na página **registrar DAC** .  
+ **Avançar >** - Registra o DAC e exibe os resultados na página **Registrar o DAC**.  
   
- **Cancelar** – encerra o assistente sem registrar o DAC.  
+ **Cancelar** - Finaliza o assistente sem registrar o DAC.  
   
-##  <a name="Register"></a>Página registrar DAC  
+##  <a name="register-dac-page"></a><a name="Register"></a>Página registrar DAC  
  Essa página relata o êxito ou a falha da operação de registro.  
   
- **Registrando o DAC** – relata o êxito ou a falha de cada ação executada para registrar o DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
+ **Registrando o DAC** - Relata o êxito ou a falha de cada ação realizada para registrar o DAC. Analise as informações para determinar o êxito ou falha de cada ação. Todas as ações que encontrarem um erro terão um link na coluna **Resultado** . Selecione o link para exibir um relatório do erro para aquela ação.  
   
- **Salvar relatório** – selecione esse botão para salvar o relatório de registro em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é uma pasta **SQL Server Management Studio\Pacotes Packages** na pasta documentos da sua conta do Windows. O nome de arquivo está no formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, em que \<*DACPackageName*> é o nome do pacote que está sendo implantado, *yyyy* = ano atual, *mm* = mês atual e *dd* = dia atual.  
+ **Salvar Relatório** - Selecione esse botão para salvar o relatório de registro em um arquivo HTML. O arquivo relata o status de cada ação, inclusive todos os erros gerados por qualquer uma das ações. A pasta padrão é **SQL Server Gerenciamento Studio\DAC Packages** na pasta Documentos da conta do Windows. O nome de arquivo está no formato \<DACPackageName>_RegisterDACReport_yyyymmdd.html, em que \<*DACPackageName*> é o nome do pacote que está sendo implantado, *yyyy* = ano atual, *mm* = mês atual e *dd* = dia atual.  
   
- **Concluir** – encerra o assistente.  
+ **Concluir** – Encerra o assistente.  
   
-##  <a name="RegisterDACPowerShell"></a>Registrar um DAC usando o PowerShell  
- **Para registrar um banco de dados como um DAC usando o método Register () em um script do PowerShell**  
+##  <a name="register-a-dac-using-powershell"></a><a name="RegisterDACPowerShell"></a>Registrar um DAC usando o PowerShell  
+ **Para registrar um banco de dados como um DAC usando o método Register() em um script de PowerShell**  
   
 1.  Crie um objeto de servidor SMO e defina-o como a instância que contém o banco de dados a ser registrado como um DAC.  
   
@@ -163,4 +163,4 @@ $registerunit.Register()
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Aplicativos da camada de dados](data-tier-applications.md)  
+ [Aplicativos da camada de Dados](data-tier-applications.md)  

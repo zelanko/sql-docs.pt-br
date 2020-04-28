@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586734"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar o SKU do banco de dados SQL/Instância Gerenciada do Azure correto para seu banco de dados local
@@ -38,7 +38,7 @@ O recurso de recomendações de SKU permite que você identifique o banco de dad
 
 Veja a seguir as instruções para ajudá-lo a determinar as recomendações de SKU do banco de dados SQL do Azure e provisionar os bancos de dados individuais correspondentes ou instâncias gerenciadas no Azure usando DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Baixe e instale a versão mais recente do [DMA](https://aka.ms/get-dma). Se você já tiver uma versão anterior da ferramenta, abra-a e será solicitado a atualizar o DMA.
 - Verifique se o computador tem o [PowerShell versão 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou posterior, que é necessário para executar todos os scripts. Para obter informações sobre como findoug a versão do PowerShell que está instalada em seu computador, consulte o artigo [baixar e instalar o Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ Além disso, selecione um dos seguintes argumentos:
     - **/AzureAuthenticationTenantId**: o locatário de autenticação.
     - **/AzureAuthenticationClientId**: a ID do cliente do aplicativo AAD usado para autenticação.
     - Uma das seguintes opções de autenticação:
-      - Interativo
+      - Interactive (Interativo)
         - **AzureAuthenticationInteractiveAuthentication**: Defina como true para uma janela pop-up de autenticação.
       - Baseado em certificado
         - **AzureAuthenticationCertificateStoreLocation**: defina para o local do repositório de certificados (por exemplo, "CurrentUser").

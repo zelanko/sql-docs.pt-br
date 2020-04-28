@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305232"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
@@ -24,7 +24,7 @@ ms.locfileid: "72305232"
 
   Contém uma linha para cada partição de todas as tabelas e a maioria dos tipos de índices em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um banco de dados. Todas as tabelas e índices contêm pelo menos uma partição, independentemente de estarem ou não particionados explicitamente.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|ID da partição. É exclusivo em um banco de dados.|  
 |object_id|**int**|ID do objeto ao qual essa partição pertence. Toda tabela ou exibição é composta por pelo menos uma partição.|  
@@ -33,13 +33,13 @@ ms.locfileid: "72305232"
 |hobt_id|**bigint**|ID da heap ou árvore B de dados (HoBT) que contém as linhas desta partição.|  
 |rows|**bigint**|Número aproximado de linhas nesta partição. |  
 |data_compression|**int**|Indica o estado da compactação de cada partição:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|Indica o estado da compactação de cada partição. Os valores possíveis são NONE, ROW e PAGE.|  
+|data_compression_desc|**nvarchar(60)**|Indica o estado da compactação de cada partição. Os valores possíveis são NONE, ROW e PAGE.|  
 |pdw_node_id|**int**|Identificador exclusivo de um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nó.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão `CONTROL SERVER`.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Exemplo A: exibir linhas em cada partição dentro de cada distribuição 
 

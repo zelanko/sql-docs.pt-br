@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199329"
 ---
 # <a name="query-options-execution-advanced-page"></a>Execução de opções de consulta (Página Avançado)
@@ -35,18 +35,18 @@ ms.locfileid: "71199329"
   
 **definir SHOWPLAN_TEXT** Quando essa caixa de seleção é marcada, o plano de consulta é retornado no formulário de texto com cada consulta. Essa opção é desmarcada por padrão.
   
-**definir tempo de estatísticas** Quando essa caixa de seleção é marcada, as estatísticas de tempo são retornadas com cada consulta. Essa opção é desmarcada por padrão.
+**SET STATISTICS TIME** Quando essa caixa de seleção é marcada, as estatísticas de tempo são retornadas com cada consulta. Essa opção é desmarcada por padrão.
   
 **definir estatísticas de e/s** Quando essa caixa de seleção é marcada, as estatísticas sobre entrada/saída (e/s) são retornadas com cada consulta. Essa opção é desmarcada por padrão.
   
-**definir nível de isolamento da transação** O nível de isolamento da transação de leitura confirmada é definido por padrão. Para obter mais informações, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). O nível de isolamento da transação de instantâneo não está disponível. Para usar isolamento SNAPSHOT, adicione a seguinte instrução [!INCLUDE[tsql](../includes/tsql-md.md)] :
+**SET TRANSACTION ISOLATION LEVEL** O nível de isolamento da transação READ COMMITTED é definido por padrão. Para obter mais informações, veja [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). O nível de isolamento da transação de instantâneo não está disponível. Para usar isolamento SNAPSHOT, adicione a seguinte instrução [!INCLUDE[tsql](../includes/tsql-md.md)] :
   
   ```sql
   SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
   GO
   ```
 
-**definir prioridade de deadlock** O valor padrão **normal** permite que cada consulta tenha a mesma prioridade quando ocorre um deadlock. Selecione a prioridade como Baixa da lista suspensa, se você deseja que essa consulta libere qualquer conflito de deadlock e seja selecionado o encerramento da consulta.
+**SET DEADLOCK PRIORITY** O valor padrão **Normal** permite que cada consulta tenha a mesma prioridade quando ocorrer um deadlock. Selecione a prioridade como Baixa da lista suspensa, se você deseja que essa consulta libere qualquer conflito de deadlock e seja selecionado o encerramento da consulta.
 
 **definir tempo limite de bloqueio** O valor padrão de-1 indica que os bloqueios são mantidos até que as transações sejam concluídas. Um valor 0 significa não esperar e retornar uma mensagem assim que for encontrado um bloqueio. Forneça um valor maior que 0 milissegundo para encerrar a transação se os bloqueios para a transação devem ser mantidos por um tempo maior que esse.
 
@@ -54,7 +54,7 @@ ms.locfileid: "71199329"
 
 **Suprimir cabeçalhos de mensagens do provedor** Quando essa caixa de seleção está marcada, as mensagens de status do provedor (como o provedor de OLE DB) não são exibidas. Esta caixa de seleção fica marcada por padrão. Desmarque essa caixa de seleção para ver as mensagens do provedor ao solucionar problemas com consultas que podem estar falhando no nível do provedor.
 
-**Desconectar após a execução da consulta** Quando essa caixa de seleção é marcada, a conexão com SQL Server é encerrada após a conclusão da consulta. Essa opção é desmarcada por padrão.
+**Desconectar depois que a consulta for executada** Quando essa caixa de seleção é marcada, a conexão com SQL Server é encerrada depois que a consulta é completada. Essa opção é desmarcada por padrão.
 
 **Mostrar hora de conclusão** Permite imprimir a hora em que a execução da consulta foi concluída depois dos resultados da consulta ou na guia mensagens.
 
@@ -66,4 +66,4 @@ Os protocolos de atestado com suporte atuais são:
 
 Para obter mais informações, consulte [Always Encrypted com Secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) e [Secure enclave atestation](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Redefinir para padrão** Redefine todos os valores desta página para os valores padrão originais.
+**Restaurar Padrões** Redefine todos os valores dessa página com os valores padrão originais.

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688731"
 ---
 # <a name="collation-and-unicode-support"></a>Suporte a ordenações e a Unicode
@@ -42,14 +42,14 @@ ms.locfileid: "72688731"
  Para usar o suporte a ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da melhor maneira possível, você deve estar ciente dos termos definidos neste tópico e de como eles estão relacionados às características de seus dados.  
   
   
-###  <a name="Collation_Defn"></a> Ordenação  
+###  <a name="collation"></a><a name="Collation_Defn"></a>Agrupamento  
  Uma ordenação especifica os padrões de bit que representam cada caractere em um conjunto de dados. As ordenações também determinam as regras que classificam e comparam dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte ao armazenamento de objetos com ordenações diferentes em um banco de dados individual. Para colunas não Unicode, a configuração de ordenação especifica a página de códigos dos dados e quais caracteres podem ser representados. Os dados movidos entre colunas não Unicode devem ser convertidos da página de código de origem para a página de código de destino.  
   
  Os resultados da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] podem variar quando a instrução for executada no contexto de diferentes bancos de dados que tenham configurações de ordenação diferentes. Se possível, use uma ordenação padronizada para sua organização. Deste modo, não será preciso especificar a ordenação explicitamente em todo caractere ou expressão Unicode. Se você deve trabalhar com objetos que tenham configurações de ordenação e página de códigos diferentes, codifique suas consultas para considerar as regras da precedência de ordenação. Para obter mais informações, consulte [Precedência de ordenação (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql).  
   
  As opções associadas a uma ordenação fazem diferenciação de maiúsculas e minúsculas, de caracteres Kana e de largura. Estas opções são especificadas através de sua anexação ao nome de ordenação. Por exemplo, esta ordenação `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` tem diferenciação de maiúsculas e minúsculas, de acentos, de caracteres Kana e de largura. A tabela a seguir descreve o comportamento associado com estas opções.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |Case-sensitive (_CS)|Faz distinção entre letras maiúscula e minúsculas. Se selecionada, as letras minúsculas são ordenadas à frente das versões em letras maiúsculas. Se esta opção não for selecionada, a ordenação será sem diferenciação de maiúsculas e minúsculas. Ou seja, o SQL Server considera as versões de letras maiúsculas e minúsculas como idênticas para fins de classificação. Você pode selecionar caso explicitamente a não diferenciação de maiúsculas e minúsculas especificando _CI.|  
 |Accent-sensitive (_AS)|Faz distinção entre caracteres acentuados e não acentuados. Por exemplo, ' a ' não é igual a ' &#x1EA5; '. Se esta opção não for selecionada, a ordenação não diferenciará acentos. Ou seja, o SQL Server considera as versões com e sem acentos como idênticas para fins de classificação. Você pode selecionar a não diferenciação de acentos especificando _AI.|  
@@ -67,7 +67,7 @@ ms.locfileid: "72688731"
  Há dois tipos de ordenações primárias em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; as ordenações mais antigos do `BIN` e as ordenações mais novas do `BIN2`. Em uma ordenação do `BIN2`, todos os caracteres são classificados de acordo com seus pontos de código. Em uma ordenação do `BIN`, apenas o primeiro caractere é classificado de acordo com o ponto de código e os caracteres restantes são classificados de acordo com seus valores de byte. (Como a plataforma Intel é um arquitetura little endian, os caracteres de código Unicode são sempre trocados por bytes armazenados.)  
   
  ordenações do SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os agrupamentos (SQL_ *) fornecem compatibilidade de ordem de classificação com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versões anteriores do. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você verá resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
+ As ordenações (SQL_*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferecem compatibilidade de ordem de classificação com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As regras de classificação de dicionário para dados não Unicode são incompatíveis com rotinas de classificação fornecidas pelos sistemas operacionais Windows. No entanto, a classificação de dados Unicode é compatível com uma versão específica das regras de classificação do Windows. Como as ordenações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam regras de comparação diferentes para dados não Unicode e Unicode, você verá resultados diferentes para comparações dos mesmos dados, dependendo do tipo de dados subjacente. Para obter mais informações, veja [Nome de ordenação do SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
 > [!NOTE]
 >  Quando você atualiza uma instância em português do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as ordenações (SQL_*) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser especificadas para compatibilidade com instâncias existentes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como a ordenação padrão de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é definida durante a instalação, é importante especificar as configurações de ordenação com cuidado quando as seguintes afirmações forem verdadeiras:  
@@ -100,19 +100,19 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```  
   
   
-###  <a name="Locale_Defn"></a> Localidade  
+###  <a name="locale"></a><a name="Locale_Defn"></a>Localidade  
  Uma localidade é um conjunto de informações associadas a um local ou a uma cultura. Essas informações podem incluir o nome e o identificador do idioma falado, o script usado para escrever o idioma e as convenções culturais. As ordenações podem ser associadas a uma ou mais localidades. Para obter mais informações, consulte o artigo sobre [IDs de localidade atribuídas pela Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
-###  <a name="Code_Page_Defn"></a>Página de código  
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a>Página de código  
  Uma página de código é um conjunto de caracteres ordenado de um determinado script no qual um índice numérico ou valor de ponto de código é associado a cada caractere. Uma página de códigos do Windows geralmente é referenciada como um *conjunto de caracteres* ou um *charset*. As páginas de código são usadas para oferecer suporte aos conjuntos de caracteres e layouts de teclado usados por diferentes localidades de sistema do Windows.  
   
   
-###  <a name="Sort_Order_Defn"></a>Ordem de classificação  
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a>Ordem de classificação  
  A ordem de classificação especifica como os valores de dados são classificados. Isso afeta os resultados da comparação de dados. Os dados são classificados com o uso de ordenações e podem ser otimizados com o uso de índices.  
   
   
-##  <a name="Unicode_Defn"></a>Suporte a Unicode  
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Suporte de Unicode  
  O Unicode é um padrão para mapear pontos de código para caracteres. Como é projetado para abranger todos os caracteres de todos os idiomas do mundo, não necessita de páginas de código diferentes para lidar com os diferentes conjuntos de caracteres. Se você armazenar dados de caractere que refletem vários idiomas, sempre use tipos de dados Unicode (`nchar`, `nvarchar` e `ntext`) em vez dos tipos de dados não Unicode (`char`, `varchar` e `text`).  
   
  Limitações consideráveis estão associadas a tipos de dados não Unicode. Isso ocorre porque um computador não Unicode fica limitado a usar uma única página de código. Você pode experimentar ganho de desempenho com o uso de Unicode, porque menos conversões de página de código são necessárias. As ordenações Unicode devem ser selecionadas individualmente no nível de banco de dados, coluna ou expressão porque não têm suporte no nível de servidor.  
@@ -129,13 +129,13 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  Na maioria das situações, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] irá interagir com outros servidores ou clientes, e sua organização poderá usar vários padrões de acesso a dados entre aplicativos e instâncias de servidor. Clientes[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são de um destes dois tipos principais:  
   
--   **Clientes Unicode** que usam OLE DB e ODBC (conectividade aberta de banco de dados) versão 3,7 ou uma versão posterior.  
+-   **Clientes Unicode** que usam OLE DB e ODBC (Open Database Connectivity) versão 3.7 ou uma versão posterior.  
   
--   **Clientes não Unicode** que usam o DB-Library e a versão 3,6 do ODBC ou uma versão anterior.  
+-   **Clientes não Unicode** que usam DB-Library e ODBC versão 3.6 ou uma versão anterior.  
   
  A tabela a seguir fornece informações sobre como usar dados multilíngues com várias combinações de servidores Unicode e não Unicode.  
   
-|Servidor|Cliente|Benefícios ou limitações|  
+|Server (Servidor)|Cliente|Benefícios ou limitações|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|Como os dados Unicode serão usados em todo o sistema, este cenário fornece o melhor desempenho e proteção contra danos de dados recuperados. É isso o que acontece com ADO (ActiveX Data Objects), OLE DB e ODBC versão 3.7 ou uma versão posterior.|  
 |Unicode|Não Unicode|Neste cenário, principalmente em conexões entre um servidor que executa um sistema operacional mais recente e um cliente com uma versão mais antiga do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou em um sistema operacional mais antigo, pode haver limitações ou erros quando você move os dados para um computador cliente. Os dados Unicode no servidor tentarão mapear para uma página de código correspondente no cliente não Unicode para converter os dados.|  
@@ -143,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Não Unicode|Não Unicode|Este é um cenário muito limitado para dados multilíngues. Você pode usar uma única página de código.|  
   
   
-##  <a name="Supplementary_Characters"></a>Caracteres suplementares  
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> Caracteres complementares  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fornece tipos de dados como `nchar` e `nvarchar` para armazenar dados Unicode. Esses tipos de dados codificam texto em um formato chamado *UTF-16*. O Consórcio Unicode aloca para cada caractere um ponto de código exclusivo, que é um valor no intervalo de 0x0000 a 0x10FFFF. Os caracteres mais frequentemente usados têm valores de ponto de código que se ajustarão em uma palavra de 16 bits na memória e no disco, mas os caracteres com ponto de código maiores que 0xFFFF exigem duas palavras de 16 bits consecutivas. Esses caracteres são chamados de *caracteres suplementares*e as duas palavras de 16 bits consecutivas são chamadas de *pares substitutos*.  
   
  Se você usar caracteres suplementares:  
@@ -181,11 +181,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[Corresponder a um caractere curinga](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [Curinga – caracter(es) para não corresponder](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|Há suporte para caracteres suplementares para todas as operações de curingas.|Não há suporte para caracteres suplementares para estas operações de curingas. Há suporte para outros operadores curinga.|  
   
   
-##  <a name="GB18030"></a>Suporte a GB18030  
+##  <a name="gb18030-support"></a><a name="GB18030"></a> Suporte a GB18030  
  GB18030 é um padrão separado usado na República Popular da China para codificar caracteres chineses. Em GB18030, caracteres podem ter 1, 2 ou 4 bytes em comprimento. O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte a caracteres GB18030 codificados, reconhecendo-os quando eles entram no servidor, provenientes de um aplicativo cliente, convertendo-os e armazenando-os nativamente como caracteres Unicode. Após serem armazenados no servidor, são tratados como caracteres Unicode em todas as operações subsequentes. Você pode usar qualquer ordenação em chinês, preferivelmente a mais recente versão 100. Todas as ordenações de nível _100 dão suporte à classificação linguística com caracteres GB18030. Se os dados incluírem caracteres suplementares (pares alternativos), você poderá usar as ordenações de SC disponíveis no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para aprimorar a pesquisa e a classificação.  
   
   
-##  <a name="Complex_script"></a>Suporte a scripts complexos  
+##  <a name="complex-script-support"></a><a name="Complex_script"></a> Suporte a script complexo  
  O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte à inserção, armazenamento, alteração e exibição de scripts complexos. Scripts complexos incluem o seguinte:  
   
 -   Scripts que incluem uma combinação de texto da direita para a esquerda e da esquerda para a direita, como uma combinação de texto em árabe e inglês.  
@@ -197,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  Aplicativos de banco de dados que interagem com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devem usar controles que oferecem suporte a scripts complexos. Controles de formulário padrão do Windows que são criados em código gerenciado são habilitados para script complexo.  
   
   
-##  <a name="Related_Tasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> Tarefas relacionadas  
   
 |Tarefa|Tópico|  
 |----------|-----------|  
@@ -209,16 +209,16 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |Descreve como alterar o idioma de mensagens de erro e preferências de como data, hora e dados de moeda são usados e exibidos.|[Definir um idioma de sessão](set-a-session-language.md)|  
   
   
-##  <a name="Related_Content"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="Related_Content"></a> Conteúdo relacionado  
  [Práticas recomendadas para alteração em ordenações do SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server a migração de práticas recomendadas para o Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["Práticas recomendadas para migração para Unicode no SQL Server"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Site da Web do consórcio Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Site de consórcio Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ordenações de banco de dados independentes](../databases/contained-database-collations.md)   
- [Escolher um idioma ao criar um índice de texto completo](../search/choose-a-language-when-creating-a-full-text-index.md)   
+ [Agrupamentos de banco de dados independentes](../databases/contained-database-collations.md)   
+ [Escolha um idioma ao criar um índice de texto completo](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

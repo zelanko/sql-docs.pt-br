@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911270"
 ---
 # <a name="getting-started-in-smo"></a>Guia de Introdução ao SMO
@@ -29,7 +29,7 @@ Esta página fornece links para tópicos criados para ajudá-lo a começar a usa
 ## <a name="installing-smo"></a>Instalando o SMO
 A [instalação do Smo](installing-smo.md) fornece instruções para instalar e referenciar os ASSEMBLIES do Smo.
 
-## <a name="object-model"></a>Modelo de objeto  
+## <a name="object-model"></a>Modelo de Objeto  
 O [modelo de objeto](../../relational-databases/server-management-objects-smo/smo-object-model.md) descreve a hierarquia de objetos do Smo e como os objetos se relacionam entre si.  
   
 ## <a name="programming-languages"></a>Linguagens de Programação  

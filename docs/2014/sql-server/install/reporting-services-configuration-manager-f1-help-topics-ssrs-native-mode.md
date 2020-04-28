@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952039"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Tópicos de Ajuda F1 do Gerenciador de Configurações do Reporting Services (modo nativo do SSRS).
@@ -38,7 +38,7 @@ ms.locfileid: "71952039"
   
 -   [Backup de banco de dados](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
--   [Assistente para alterar banco de dados](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
+-   [Assistente para Alterar Banco de Dados](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
 -   [Assistente para Alterar Credenciais](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   

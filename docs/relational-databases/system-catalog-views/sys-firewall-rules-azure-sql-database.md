@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155548"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Banco de Dados SQL do Azure)
@@ -32,12 +32,12 @@ ms.locfileid: "70155548"
   
  A exibição `sys.firewall_rules` contém as seguintes colunas:  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|ID|**INTEIRO**|O identificador da configuração de firewall de nível de servidor.|  
+|id|**INTEIRO**|O identificador da configuração de firewall de nível de servidor.|  
 |name|**NVARCHAR (128)**|O nome escolhido para descrever e distinguir a configuração de firewall de nível de servidor.|  
 |start_ip_address|**VARCHAR (45)**|O endereço IP mais baixo no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou maiores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais baixo possível é `0.0.0.0`.|  
-|end_ip_address|**VARCHAR (45)**|O endereço IP mais alto no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou menores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse **** campo e o `0.0.0.0`campo de start_ip_address é igual a.|  
+|end_ip_address|**VARCHAR (45)**|O endereço IP mais alto no intervalo da configuração do firewall em nível de servidor. Os endereços IP iguais a ou menores que esse podem tentar se conectar ao servidor do [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. O endereço IP mais alto possível é `255.255.255.255`.<br /><br /> Observação: as tentativas de conexão do Azure são permitidas quando esse **start_ip_address** campo e o `0.0.0.0`campo de start_ip_address é igual a.|  
 |create_date|**HORÁRIO**|A data e a hora UTC em que a configuração de firewall de nível de servidor foi criada.<br /><br /> Observação: o UTC é um acrônimo para tempo universal coordenado.|  
 |modify_date|**HORÁRIO**|A data e a hora UTC em que a configuração de firewall de nível de servidor foi modificada por último.|  
   

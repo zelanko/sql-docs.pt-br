@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952659"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistente para Alterar Banco de Dados (modo nativo do SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "71952659"
   
  Com esse valor, você especifica o idioma no qual são criadas definições e descrições de função. O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece um modelo de autorização baseada em função que inclui um conjunto de funções predefinidas. Essas funções são criadas uma única vez no idioma especificado. Os nomes e as descrições de função nunca aparecem em outros idiomas, mesmo que você se conecte ao servidor de relatório usando um navegador que tenha configurações de cultura ou idioma suportadas pelo servidor. O idioma especificado também determina o idioma usado para criar o nome da pasta Meus Relatórios e as pastas Usuários que fazem parte do recurso Meus Relatórios.  
   
- **Modo de servidor**  
+ **Modo do Servidor**  
  Um banco de dados do servidor de relatório dá suporte ao modo nativo ou ao modo integrado do SharePoint. Os modos são mutuamente exclusivos.  
   
  Se você estiver criando um novo banco de dados do servidor de relatório, deverá especificar um modo. O modo selecionado determina a estrutura do banco de dados do servidor de relatório e define a propriedade `SharePointIntegrated` do sistema de servidor de relatório como `true` ou `false`.  

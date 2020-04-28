@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952675"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuração avançada de vários sites (modo nativo do SSRS)
@@ -34,20 +34,20 @@ ms.locfileid: "71952675"
  **Endereço IP**  
  Identifica o computador do servidor de relatório em uma rede TCP/IP. Os valores válidos incluem:  
   
--   **Todos atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador pode ser usado em uma URL que aponta para um aplicativo de servidor de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todos Atribuídos** especifica que qualquer um dos endereços IP atribuídos ao computador podem ser usados em uma URL que aponta para um aplicativo do servidor de relatório. Esse valor também abrange nomes de host amigáveis (como nomes de computadores) que podem ser resolvidos por um servidor de nome de domínio para um endereço IP que é atribuído ao computador. Esse é o valor padrão para uma URL do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Todos os não atribuídos** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
+-   **Nenhum Atribuído** especifica que o servidor de relatório aceitará qualquer solicitação que não tenha uma correspondência exata para o endereço IP ou o nome do host. Não use esse valor se outro aplicativo Web já o estiver usando. Se isso for feito, você interromperá o serviço para o outro aplicativo.  
   
--   **127.0.0.1** é usado para acessar o localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
+-   **127.0.0.1** é usado para acessar localhost. Ele dá suporte à administração local no computador do servidor de relatório. Se você selecionar apenas esse valor, somente os usuários que fizerem logon localmente no computador do servidor de relatório terão acesso ao aplicativo.  
   
--   *Nnn. nnn. nnn. nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar o endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* é o endereço IPv4 de uma placa de adaptador de rede em seu computador. Se sua rede usar o endereçamento IPv6, o endereço IP será um valor de 128 bits de campos de 8 4 bytes semelhante ao seguinte formato: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se você tiver várias placas, verá um endereço IP para cada uma. Se você selecionar apenas esse valor, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório.  
   
  **Porta**  
  Especifica a porta que o servidor de relatório monitora por solicitações. A porta 80 é a padrão. Se você usar a porta 80, não precisará incluí-la na URL. Se você usar qualquer outro número de porta, sempre deverá incluí-lo na URL (por exemplo, http://localhost:8181/reports).  
   
- **Cabeçalho do host**  
+ **Cabeçalho de Host**  
  Se você já tiver um cabeçalho de host definido em um servidor de nome de domínio que seja resolvido para seu computador, poderá especificar esse cabeçalho de host em uma URL que você configure para acesso ao servidor de relatório.  
   
  Um cabeçalho de host é um nome exclusivo que permite que vários sites compartilhem um único endereço IP e porta. Os nomes de cabeçalho de host são mais fáceis de se lembrar e digitar que endereço IP e números de porta. Um exemplo de um nome de cabeçalho de host poderia ser www.adventure-works.com.  
@@ -62,7 +62,7 @@ ms.locfileid: "71952675"
   
  Você deve ter um certificado instalado para que possa usar essa opção. Você também deve modificar o parâmetro de configuração UrlRoot no arquivo RSReportServer.config para que ele especifique o nome totalmente qualificado do computador para o qual o certificado está registrado. Para obter mais informações, veja [Configurar conexões SSL em um Servidor de Relatórios do Modo Nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Emitido para**  
+ **Emitido Para**  
  Mostra o nome do computador para o qual o certificado foi criado.  
   
  **Adicionar**  
@@ -76,7 +76,7 @@ ms.locfileid: "71952675"
   
 ## <a name="see-also"></a>Consulte Também  
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar uma URL &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

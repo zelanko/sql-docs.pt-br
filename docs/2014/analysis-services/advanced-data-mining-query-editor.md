@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4973ea427cea99d6e3c4527e8686e322a97efe48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313605"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor de Consulta Avançada de Mineração de Dados
@@ -60,7 +60,7 @@ ms.locfileid: "72313605"
   
  Você também pode clicar no link realçado ** \<>** no painel consulta DMX.  
   
- **Adicionar saída**  
+ **Adicionar Saída**  
  Clique para escolher as colunas que devem ser incluídas na saída como parte de uma consulta de previsão.  
   
  Você também pode clicar no link ** \<adicionar saída>** realçado no painel consulta DMX.  
@@ -68,7 +68,7 @@ ms.locfileid: "72313605"
  **Colunas do Modelo**  
  Lista as colunas no modelo de mineração selecionado. Um losango ao lado do nome da coluna indica que ela é uma coluna previsível.  
   
- **Colunas de entrada**  
+ **Colunas de Entrada**  
  Lista as colunas da fonte de dados externa que foram adicionadas como entradas.  
   
 ## <a name="see-also"></a>Consulte Também  

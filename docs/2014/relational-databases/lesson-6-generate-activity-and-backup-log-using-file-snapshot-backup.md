@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175458"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lição 7: Mover os arquivos de dados para o Armazenamento do Microsoft Azure
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lição 7: Migrar seus arquivos de dados para o Armazenamento do Microsoft Azure
   Nesta lição, você aprenderá a mover seus arquivos de dados para o armazenamento do Azure (mas não sua instância de SQL Server). Para acompanhar esta lição, você não precisará concluir as lições 4, 5 e 6.  
   
  Para mover seus arquivos de dados para o armazenamento do Azure, você `ALTER DATABASE` pode usar a instrução, pois ajuda a alterar o local dos arquivos de dados.  
@@ -50,7 +50,7 @@ ms.locfileid: "70175458"
   
     ```  
   
-2.  Execute o código a seguir:  
+2.  Execute o seguinte código:  
   
     ```sql  
   

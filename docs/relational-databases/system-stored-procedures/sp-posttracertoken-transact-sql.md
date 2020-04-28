@@ -18,16 +18,16 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72041176"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Esse procedimento envia um token de rastreamento para um log de transações no Publicador e inicia o processo de rastreamento de estatística de latência. As informações são registradas quando o token de rastreamento é gravado no log de transações, quando é captado pelo Agente de Leitor de Log e quando é aplicado pelo Agente de Distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Para obter mais informações, consulte [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+  Esse procedimento envia um token de rastreamento para um log de transações no Publicador e inicia o processo de rastreamento de estatística de latência. As informações são registradas quando o token de rastreamento é gravado no log de transações, quando é captado pelo Agente de Leitor de Log e quando é aplicado pelo Agente de Distribuição. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Para obter mais informações, consulte [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,6 +60,6 @@ sp_posttracertoken [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952595"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Extensões personalizadas foram detectadas no servidor de relatório (Supervisor de Atualização)
@@ -28,12 +28,12 @@ ms.locfileid: "71952595"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo do SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma arquitetura extensível que permite aos desenvolvedores criar extensões personalizadas para processamento de dados, entrega, renderização, segurança e autenticação.  
   
  Se forem usados extensões ou assemblies personalizados na instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será possível usar a Instalação para fazer uma atualização, mas talvez seja necessário mover as extensões para o novo local de instalação ao final da atualização ou executar as etapas anteriores à atualização.  
@@ -66,7 +66,7 @@ ms.locfileid: "71952595"
   
  Se você decidir não continuar com a atualização, convém migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter as etapas de migração de extensões personalizadas, consulte [migrando extensões personalizadas](#migrcustext) neste tópico.  
   
-###  <a name="dataprocdeliver"></a>Processamento de dados personalizado ou extensões de entrega  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>Processamento de dados personalizado ou extensões de entrega  
  Se o Supervisor de Atualização detectar extensões de processamento de dados ou de entrega personalizadas, o processo de atualização não será bloqueado. No entanto, concluída a atualização, pode ser necessário executar etapas adicionais para que a funcionalidade personalizada fornecida por essas extensões funcione. Por exemplo, você terá que executar etapas adicionais quando os arquivos de extensão personalizados forem instalados na pasta de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Etapas pós-atualização para extensões de processamento de dados ou de entrega personalizadas  
@@ -75,7 +75,7 @@ ms.locfileid: "71952595"
   
  Para obter mais informações, consulte "Implantando uma extensão de processamento de dados" e "Implementando uma extensão de entrega" nos Manuais Online do SQL Server.  
   
-###  <a name="render"></a>Extensões de renderização personalizadas  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>Extensões de renderização personalizadas  
  Se o Supervisor de Atualização detectar extensões de renderização personalizadas, o processo de atualização será bloqueado. Você pode prosseguir com o processo de atualização removendo as entradas de configuração das extensões personalizadas do arquivo de configuração. No entanto, isso tornará as extensões personalizadas indisponíveis para os usuários depois da atualização. Se você precisar de extensões de renderização personalizadas depois da atualização, terá que criar extensões de renderização atualizadas ou obtê-las com um fornecedor de extensão personalizada.  
   
  Você deve executar etapas para habilitar uma atualização ou pode escolher migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "71952595"
   
  Para obter mais informações, consulte “Implementando uma extensão de renderização" nos Manuais Online do SQL Server.  
   
-###  <a name="secauth2000"></a>Extensões de segurança ou de autenticação personalizadas em um servidor de relatório SQL Server 2000  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>Extensões de segurança ou de autenticação personalizadas em um servidor de relatório SQL Server 2000  
  Se o Supervisor de Atualização detectar extensões de segurança ou de autenticação personalizadas em um servidor de relatório do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], o processo de atualização será bloqueado. Você deve executar etapas para habilitar uma atualização ou pode escolher migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Em qualquer das hipóteses, atualize e recompile as extensões com as interfaces mais recentes em Microsoft.ReportingServices.Interfaces.dll, pois as interfaces mudaram entre o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] e o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952595"
   
  Para obter mais informações, consulte “Implementando uma extensão de segurança" nos Manuais Online do SQL Server.  
   
-###  <a name="secauth2005"></a>Extensões de segurança ou de autenticação personalizadas em um servidor de relatório SQL Server 2005  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>Extensões de segurança ou de autenticação personalizadas em um servidor de relatório SQL Server 2005  
  Se o Supervisor de Atualização detectar extensões de segurança ou de autenticação personalizadas em um servidor de relatório do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o processo de atualização será bloqueado. Você deve executar etapas para habilitar uma atualização ou pode escolher migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>Para atualizar extensões de segurança ou de autenticação personalizadas de um servidor de relatório do SQL Server 2005  
@@ -130,7 +130,7 @@ ms.locfileid: "71952595"
   
  Para obter mais informações, consulte “Implementando uma extensão de segurança" nos Manuais Online do SQL Server.  
   
-###  <a name="migrcustext"></a>Migrando extensões personalizadas  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>Migrando extensões personalizadas  
  Se você decidir migrar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em vez de executar uma atualização, use as etapas para migrar extensões personalizadas para a nova instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>Para migrar extensões personalizadas para uma nova instância do Reporting Services  

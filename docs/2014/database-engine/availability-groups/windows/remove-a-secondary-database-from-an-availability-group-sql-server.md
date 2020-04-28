@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782948"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Remover um banco de dados primário de um grupo de disponibilidade (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "72782948"
   
      [Segurança](#Security)  
   
--   **Para remover um banco de dados secundário, usando:**  
+-   **Para remover um banco de dados secundário usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,19 +42,19 @@ ms.locfileid: "72782948"
   
 -   **Acompanhamento:**  [depois de remover um banco de dados secundário de um grupo de disponibilidade](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
 ###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Pré-requisitos e restrições  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Pré-requisitos e restrições  
   
 -   Esta tarefa tem suporte apenas em réplicas secundárias. Você deve estar conectado à instância do servidor que hospeda a réplica secundária da qual o banco de dados deve ser removido.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER no banco de dados.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para remover um banco de dados secundário de um grupo de disponibilidade**  
   
 1.  Em Pesquisador de Objetos, conecte-se à instância de servidor que hospeda a réplica secundária da qual você deseja remover um ou mais bancos de dados secundários e expanda a árvore de servidor.  
@@ -73,7 +73,7 @@ ms.locfileid: "72782948"
   
 6.  Na caixa de diálogo **Remover Banco de Dados do Grupo de Disponibilidade** , para remover todos os bancos de dados listados, clique em **OK**. Se você não desejar remover todos os bancos de dados listados, clique em **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para remover um banco de dados secundário de um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782948"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para remover um banco de dados secundário de um grupo de disponibilidade**  
   
 1.  Altere o diretório (`cd`) para a instância de servidor que hospeda a réplica secundária.  
@@ -111,7 +111,7 @@ ms.locfileid: "72782948"
   
 -   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Acompanhamento: depois de remover um banco de dados secundário de um grupo de disponibilidade  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a>Acompanhamento: depois de remover um banco de dados secundário de um grupo de disponibilidade  
  Quando um banco de dados secundário é removido, ele não é mais unido ao grupo de disponibilidade, e todas as informações sobre o banco de dados secundário removido são descartadas pelo grupo de disponibilidade. O banco de dados secundário removido é colocado no estado RESTORING.  
   
 > [!TIP]  

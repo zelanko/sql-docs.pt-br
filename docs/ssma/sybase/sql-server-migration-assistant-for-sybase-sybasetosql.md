@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 3913ae22155ca5e560db7fee946df0f8062a23b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252159"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Assistente de Migração do SQL Server para Sybase (SybaseToSQL)
@@ -25,7 +25,7 @@ Esta documentação apresenta o SSMA para Sybase e fornece instruções passo a 
   
 ## <a name="contents"></a>Conteúdo  
   
-|Seção|DESCRIÇÃO|
+|Seção|Descrição|
 |-----------|---------------|
 |[O que há de novo no SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|Lista as alterações em versões do SSMA.|  
 |[Instalando o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|Contém artigos que fornecem pré-requisitos e instruções para instalar o cliente do SSMA para Sybase e os componentes necessários no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instância do.|  

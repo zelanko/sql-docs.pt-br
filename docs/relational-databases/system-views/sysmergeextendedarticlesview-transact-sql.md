@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278176"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "72278176"
 
   A exibição **sysmergeextendedarticlesview** expõe informações de artigo. Essa exibição é armazenada no banco de dados de publicação, no Publicador, e no banco de dados de assinatura, no Assinante.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do artigo.|  
-|**tipo**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = somente esquema proc.<br /><br /> **64** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **128** = somente esquema de função.<br /><br /> **160** = somente esquema sinônimo.|  
-|**objID**|**int**|Identificador para o objeto de publicador.|  
+|**type**|**tinyint**|Indica o tipo do artigo, que pode ser um dos seguintes:<br /><br /> **10** = tabela.<br /><br /> **32** = somente esquema proc.<br /><br /> **64** = somente esquema de exibição ou somente esquema de exibição indexada.<br /><br /> **128** = somente esquema de função.<br /><br /> **160** = somente esquema sinônimo.|  
+|**objid**|**int**|Identificador para o objeto de publicador.|  
 |**sync_objid**|**int**|Identificador da exibição que representa o conjunto de dados sincronizado.|  
 |**view_type**|**tinyint**|O tipo da exibição.<br /><br /> **0** = não é uma exibição; Use todos os objetos base.<br /><br /> **1** = exibição permanente.<br /><br /> **2** = exibição temporária.|  
 |**artid**|**uniqueidentifier**|O número de identificação exclusivo para o artigo determinado.|  
@@ -53,8 +53,8 @@ ms.locfileid: "72278176"
 |**select_proc**|**sysname**|O nome de um procedimento armazenado gerado automaticamente usado pelo Merge Agent para efetuar bloqueio e localizar colunas e linhas para um artigo.|  
 |**schema_option**|**binário (8)**|Para obter os valores com suporte de *schema_option*, consulte [sp_addmergearticle &#40;&#41;do Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|O nome da tabela criada no Assinante.|  
-|**resolver_clsid**|**nvarchar (50)**|A ID do resolvedor de conflitos personalizado.|  
-|**subset_filterclause**|**nvarchar (1000)**|A cláusula de filtro para este artigo.|  
+|**resolver_clsid**|**nvarchar(50)**|A ID do resolvedor de conflitos personalizado.|  
+|**subset_filterclause**|**nvarchar(1000)**|A cláusula de filtro para este artigo.|  
 |**missing_col_count**|**int**|O número de colunas ausentes.|  
 |**missing_cols**|**varbinary(128)**|O bitmap de colunas ausentes.|  
 |**Columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72006096"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
@@ -43,11 +43,11 @@ sp_validatemergepublication [@publication=] 'publication'
   
 `[ @level = ] level`É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
-|Valor de nível|DESCRIÇÃO|  
+|Valor de nível|Descrição|  
 |-----------------|-----------------|  
 |**1**|Validação só de número de linhas.|  
 |**2**|Validação de número de linhas e soma de verificação. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]assinantes, isso é definido automaticamente como **3**.|  
-|**Beta**|Esse é o valor recomendado.|  
+|**3**|Esse é o valor recomendado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,7 +59,7 @@ sp_validatemergepublication [@publication=] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Validar dados replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [&#41;&#40;Transact-SQL de sp_validatemergesubscription](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   

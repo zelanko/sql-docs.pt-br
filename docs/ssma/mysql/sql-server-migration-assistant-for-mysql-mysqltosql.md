@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252147"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>Assistente de Migração do SQL Server para MySQL (MySQLToSQL)
@@ -25,7 +25,7 @@ Esta documentação apresenta o SSMA para MySQL e fornece instruções passo a p
   
 ## <a name="contents"></a>Conteúdo  
   
-|Seção|DESCRIÇÃO|
+|Seção|Descrição|
 |-----------|---------------|
 |[Novidades no SSMA para MySQL](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|O que há de novo nesta versão do SSMA para MySQL|  
 |[Instalando o SSMA para MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|Contém artigos que fornecem pré-requisitos e instruções para instalar o cliente do SSMA para MySQL e os componentes necessários no computador que está executando o SQL Server.|  
