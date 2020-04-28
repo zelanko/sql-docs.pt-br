@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046031"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -47,7 +47,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @rulename = ] 'rule'`É o nome de uma regra criada pela instrução CREATE RULE. *Rule* é **nvarchar (776)**, sem padrão.  
   
-`[ @objname = ] 'object_name'`É a tabela e a coluna ou o tipo de dados do alias ao qual a regra deve ser associada. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
+`[ @objname = ] 'object_name'`É a tabela e a coluna ou o tipo de dados do alias ao qual a regra deve ser associada. Uma regra não pode ser associada a um **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, tipo de dado CLR definido pelo usuário ou uma coluna **timestamp**. A regra não pode ser associada a uma coluna computada.  
   
  *object_name* é **nvarchar (776)** sem padrão. Se *object_name* for um nome de uma parte, ele será resolvido como um tipo de dados de alias. Se for um nome composto de duas ou três partes, primeiro será resolvido como uma tabela e coluna e, se essa resolução falhar, será resolvido como um tipo de dados de alias. Por padrão, as colunas existentes do tipo de dados alias herdam a *regra* , a menos que uma regra tenha sido associada diretamente à coluna.  
   
@@ -118,11 +118,11 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Mecanismo de Banco de Dados procedimentos armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [Descartar regra &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_unbindrule](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
