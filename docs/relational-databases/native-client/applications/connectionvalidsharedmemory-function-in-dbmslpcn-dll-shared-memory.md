@@ -1,5 +1,5 @@
 ---
-title: ConexãoValidSharedMemory dbmslpcn.dll
+title: ConnectionValidSharedMemory dbmslpcn. dll
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303872"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Função ConnectionValidSharedMemory na memória compartilhada dbmslpcn.dll
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  A função determina se a memória compartilhada do servidor SQL está instalada e ativa.  
+  A função determina se SQL Server memória compartilhada está instalada e ativa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,13 +31,13 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ## <a name="parameters"></a>Parâmetros  
  *szServerName*  
   
--   Tipo: **\* char**  
+-   Tipo: **Char\* **  
   
--   O nome do servidor SQL.  
+-   O nome do SQL Server.  
   
 ## <a name="return-value"></a>Valor retornado  
- Tipo: **BOOL**  
+ Tipo: **bool**  
   
- Retorna 0 se não for válido; outra coisa retorna não zero.  
+ Retornará 0 se não for válido; caso contrário, retorna zero.  
   
   

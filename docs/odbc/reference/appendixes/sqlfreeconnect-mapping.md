@@ -1,5 +1,5 @@
 ---
-title: Mapeamento do SQLFreeConnect | Microsoft Docs
+title: Mapeamento de SQLFreeConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 20da205d53acbebca1fee12134c04f17fb8b2db3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302037"
 ---
 # <a name="sqlfreeconnect-mapping"></a>Mapeamento SQLFreeConnect
-Quando um aplicativo chama **sqlfreeconnect** através de um driver ODBC *3.x,* a chamada para  
+Quando um aplicativo chama **SQLFreeConnect** por meio de um driver ODBC *3. x* , a chamada para  
   
 ```  
 SQLFreeConnect(hdbc)   
 ```  
   
- é mapeado para  
+ está mapeado para  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_DBC,Handle)  
 ```  
   
- com o argumento *Handle* definido para o valor em *hdbc*.
+ com o argumento *Handle* definido como o valor em *HDBC*.

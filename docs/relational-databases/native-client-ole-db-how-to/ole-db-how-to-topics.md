@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 773d00c14953e14d680c75d06c11701bc654c06f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302206"
 ---
 # <a name="ole-db-how-to-topics"></a>Tópicos de instruções do OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Para usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor Native Client OLE DB, você tem que entender como fazer uma conexão com o servidor, executar o comando e processar os resultados.  
+  Para usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, você precisa entender como fazer uma conexão com o servidor, executar o comando e processar os resultados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   

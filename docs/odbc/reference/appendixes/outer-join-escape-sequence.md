@@ -1,5 +1,5 @@
 ---
-title: Sequência de fuga de adesão externa | Microsoft Docs
+title: Sequência de escape de junção externa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,38 +15,38 @@ ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303607"
 ---
 # <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
-ODBC usa seqüências de fuga para junções externas. A sintaxe desta seqüência de fuga é a seguinte:  
+O ODBC usa sequências de escape para junções externas. A sintaxe dessa sequência de escape é a seguinte:  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Na notação da BNF, a sintaxe é a seguinte:  
+ Na notação BNF, a sintaxe é a seguinte:  
   
- *ODBC-outer-join-escape* ::=  
+ *ODBC-externo-junção-escape* :: =  
   
- *ODBC-esc-iniciador* oj *outer-join ODBC-esc-terminator*  
+ *ODBC-ESC-Initiator* OJ *externo-junção ODBC-ESC-terminador*  
   
- *externa-juntar::=* *nome da tabela* *[correlação-nome*] {ESQUERDA &#124; DIREITA &#124; FULL}  
+ *externa-junção* :: = *table-name* [*correlação-nome*] {Left &#124; direita &#124; Full}  
   
- OUTER JOIN{*nome de tabela* *[nome de correlação*] &#124; *adesão externa*} ON  
+ JUNÇÃO externa {*table-name* [*Correlation-Name*] &#124; *OUTER-JOIN*} on  
   
- *pesquisa-*  
+ *procurando*  
   
- *Condição*  
+ *problema*  
   
- *nome de correlação* ::= *nome definido pelo usuário*  
+ *correlação-nome* :: = *nome definido pelo usuário*  
   
- *ODBC-esc-iniciador* ::= {  
+ *ODBC-ESC-Initiator* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-ESC-terminador* :: =}  
   
- Para determinar quais partes desta declaração são suportadas, um aplicativo chama **SQLGetInfo** com o SQL_OJ_CAPABILITIES tipo de informação. Para as adesões externas, *a condição de pesquisa* deve conter apenas a condição de adesão entre os nomes de *tabela*especificados .
+ Para determinar quais partes dessa instrução têm suporte, um aplicativo chama **SQLGetInfo** com o tipo de informação SQL_OJ_CAPABILITIES. Para junções externas, a *condição de pesquisa* deve conter apenas a condição de junção entre os *nomes de tabela*especificados.

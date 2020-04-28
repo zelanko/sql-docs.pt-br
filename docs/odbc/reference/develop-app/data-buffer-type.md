@@ -16,16 +16,16 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305242"
 ---
 # <a name="data-buffer-type"></a>Tipo de buffer de dados
-O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando a aplicação aloca a variável. Com memória genérica - ou seja, memória apontada por um ponteiro do tipo vazio - isso ocorre quando o aplicativo lança a memória para um tipo específico. O motorista descobre esse tipo de duas maneiras:  
+O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única variável, isso ocorre quando o aplicativo aloca a variável. Com memória genérica – ou seja, a memória apontada por um ponteiro do tipo void-isso ocorre quando o aplicativo converte a memória para um tipo específico. O driver descobre esse tipo de duas maneiras:  
   
--   **Argumento do tipo de buffer de dados.** Os buffers usados para transferir valores de parâmetros e dados de conjunto de resultados, como o buffer vinculado ao *TargetValuePtr* no **SQLBindCol,** geralmente têm um argumento de tipo associado, como o argumento *TargetType* no **SQLBindCol**. Neste argumento, o aplicativo passa o identificador de tipo C que corresponde ao tipo do buffer. Por exemplo, na seguinte chamada para **SQLBindCol,** o valor SQL_C_TYPE_DATE informa ao driver que o buffer *Date* é uma SQL_DATE_STRUCT:  
+-   **Argumento de tipo de buffer de dados.** Os buffers usados para transferir valores de parâmetro e dados de conjunto de resultados, como o buffer associado a *TargetValuePtr* em **SQLBindCol**, geralmente têm um argumento de tipo associado, como o argumento *TargetType* em **SQLBindCol**. Nesse argumento, o aplicativo passa o identificador do tipo C que corresponde ao tipo do buffer. Por exemplo, na chamada a seguir para **SQLBindCol**, o valor SQL_C_TYPE_DATE informa ao driver que o buffer de *data* é um SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  
@@ -33,9 +33,9 @@ O tipo de dados C de um buffer é especificado pelo aplicativo. Com uma única v
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     Para obter mais informações sobre identificadores de tipos, consulte a seção Tipos de dados na seção [ODBC,](../../../odbc/reference/develop-app/data-types-in-odbc.md) mais tarde nesta seção.  
+     Para obter mais informações sobre identificadores de tipo, consulte a seção [tipos de dados no ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md) , mais adiante nesta seção.  
   
--   **Tipo predefinido.** Os buffers usados para enviar e recuperar opções ou atributos, como o buffer apontado pelo argumento *InfoValuePtr* no **SQLGetInfo,** têm um tipo fixo que depende da opção especificada. O driver assume que o buffer de dados é desse tipo; é responsabilidade do aplicativo alocar um buffer desse tipo. Por exemplo, na chamada a seguir para **SQLGetInfo,** o driver assume que o buffer é um inteiro de 32 bits porque é isso que a opção SQL_STRING_FUNCTIONS requer:  
+-   **Tipo predefinido.** Os buffers usados para enviar e recuperar opções ou atributos, como o buffer apontado pelo argumento *InfoValuePtr* em **SQLGetInfo**, têm um tipo fixo que depende da opção especificada. O driver pressupõe que o buffer de dados é desse tipo; é responsabilidade do aplicativo alocar um buffer desse tipo. Por exemplo, na chamada a seguir para **SQLGetInfo**, o driver pressupõe que o buffer é um inteiro de 32 bits porque é isso que a opção SQL_STRING_FUNCTIONS requer:  
   
     ```  
     SQLUINTEGER StringFuncs;  

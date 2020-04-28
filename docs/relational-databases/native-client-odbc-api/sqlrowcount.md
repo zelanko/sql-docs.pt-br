@@ -1,5 +1,5 @@
 ---
-title: SQLrowCount | Microsoft Docs
+title: SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3cfb76dbd1732e32238c484f589d3b4696ff89d2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302293"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
@@ -30,10 +30,10 @@ ms.locfileid: "81302293"
   
  Além disso, o aplicativo pode usar uma matriz de valores de status, associada usando o atributo da instrução SQL_ATTR_PARAM_STATUS_PTR, para capturar os deslocamentos de matriz de linhas de parâmetro incorretas. O aplicativo pode atravessar a matriz de status para determinar o número real de linhas processadas.  
   
- Quando [!INCLUDE[tsql](../../includes/tsql-md.md)] uma instrução INSERT, UPDATE, DELETE ou MERGE com uma cláusula OUTPUT for executada, o SQLRowCount não retornará a contagem das linhas afetadas até que todas as linhas no conjunto de resultados gerados pela cláusula OUTPUT tenham sido consumidas. Para consumir essas linhas, você chama SQLFetch ou SQLFetchScroll. SQLResultCols retornará -1 até que todas as linhas de resultado tenham sido consumidas. Depois que SQLFetch ou SQLFetchScroll retornar SQL_NO_DATA, o aplicativo deve ligar para o SQLRowCount para determinar o número de linhas afetadas antes de chamar o SQLMoreResults para passar para o próximo resultado.  
+ Quando uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução INSERT, Update, Delete ou Merge com uma cláusula OUTPUT é executada, SQLRowCount não retornará a contagem de linhas afetadas até que todas as linhas do conjunto de resultados geradas pela cláusula OUTPUT tenham sido consumidas. Para sconsume essas linhas, você chama SQLFetch ou SQLFetchScroll. SQLResultCols retornará-1 até que todas as linhas de resultado tenham sido consumidas. Depois que SQLFetch ou SQLFetchScroll retorna SQL_NO_DATA, o aplicativo deve chamar SQLRowCount para determinar o número de linhas afetadas antes de chamar SQLMoreResults para mover para o próximo resultado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLrowcount](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [Função SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Escolhendo um Nível de Interoperabilidade | Microsoft Docs
+title: Escolhendo um nível de interoperabilidade | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: aa04eea9821b024f9e8dadc8ad09f449d4fb14b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303352"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Escolher um nível de interoperabilidade
-Supondo que o aplicativo use ODBC, o próximo passo é determinar qual nível de interoperabilidade é necessário. O nível básico de interoperabilidade é geralmente uma função do tipo de aplicação: aplicações personalizadas tendem a não ser interoperáveis, aplicações verticais tendem a ser interoperáveis entre um número limitado de DBMSs, e aplicações genéricas tendem a ser interoperáveis entre todos os DBMSs.  
+Supondo que o aplicativo usará o ODBC, a próxima etapa é determinar qual nível de interoperabilidade é necessário. O nível básico de interoperabilidade é geralmente uma função do tipo de aplicativo: aplicativos personalizados tendem a ser interoperáveis, aplicativos verticais tendem a ser interoperáveis entre um número limitado de DBMSs, e aplicativos genéricos tendem a ser interoperáveis entre todos os DBMSs.  
   
  Esta seção contém os seguintes tópicos.  
   

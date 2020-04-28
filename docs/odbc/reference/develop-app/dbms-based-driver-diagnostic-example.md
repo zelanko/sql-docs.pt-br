@@ -15,16 +15,16 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 117f43548d2b57233dea6f7423e6bad67b6233b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304347"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Exemplo de diagnóstico de driver baseado em DBMS
-Um driver baseado em DBMS envia solicitações a um DBMS e retorna informações ao aplicativo através do Driver Manager. Como o driver é o componente que interage com o Driver Manager, ele formata e retorna argumentos para **SQLGetDiagRec**.  
+Um driver baseado em DBMS envia solicitações para um DBMS e retorna informações para o aplicativo por meio do Gerenciador de driver. Como o driver é o componente que faz interface com o Gerenciador de driver, ele formata e retorna argumentos para **SQLGetDiagRec**.  
   
- Por exemplo, se, usando SQL/Services, um driver Microsoft para Oracle Rdb encontrou um nome de cursor inválido, ele poderá retornar os seguintes valores do **SQLGetDiagRec**:  
+ Por exemplo, se, usando SQL/Services, um driver da Microsoft para Oracle RDB tiver encontrado um nome de cursor inválido, ele poderá retornar os seguintes valores de **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- Como o erro ocorreu no driver, ele adicionou prefixos à mensagem de diagnóstico para o fornecedor ([Microsoft]) e para o driver ([Driver ODBC Rdb]).  
+ Como o erro ocorreu no driver, ele adicionou prefixos à mensagem de diagnóstico para o fornecedor ([Microsoft]) e o driver ([Driver do ODBC RDB]).  
   
- Se o DBMS não conseguiu encontrar a tabela EMPLOYEE, o driver pode formatar e retornar os seguintes valores do **SQLGetDiagRec**:  
+ Se o DBMS não pôde localizar o funcionário da tabela, o driver pode formatar e retornar os seguintes valores de **SQLGetDiagRec**:  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- Como o erro ocorreu na fonte de dados, o driver adicionou um prefixo para o identificador de origem de dados ([Rdb]) à mensagem de diagnóstico. Como o driver era o componente que interagia com a fonte de dados, ele adicionou prefixos para seu fornecedor ([Microsoft]) e identificador ([ODBC Rdb Driver]) à mensagem de diagnóstico.
+ Como o erro ocorreu na fonte de dados, o driver adicionou um prefixo para o identificador de fonte de dados ([RDB]) à mensagem de diagnóstico. Como o driver era o componente que interfrenteu com a fonte de dados, ele adicionou prefixos para seu fornecedor ([Microsoft]) e identificador ([Driver do ODBC RDB]) à mensagem de diagnóstico.

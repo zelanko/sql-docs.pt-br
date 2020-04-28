@@ -1,5 +1,5 @@
 ---
-title: Tipos de Aplicações | Microsoft Docs
+title: Tipos de aplicativos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,66 +17,66 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305527"
 ---
 # <a name="types-of-applications"></a>Tipos de aplicativos
-As aplicações ODBC podem ser classificadas da seguinte forma:  
+Os aplicativos ODBC podem ser classificados da seguinte maneira:  
   
--   **ODBC 2 puro.**  
-     ** _x_ Aplicativo** Um aplicativo de 32 bits que:  
+-   **ODBC puro 2.**  
+     ** _x_ aplicativo** um aplicativo de 32 bits que:  
   
-    -   Chama apenas ODBC 2. *x* funções (incluindo a função ODBC 1.0 **SQLSetParam**). Estes incluem ODBC 1. *x* aplicativos que foram portados para 32 bits.  
+    -   Chama somente ODBC 2. funções *x* (incluindo a função ODBC 1,0 **SQLSetParam**). Isso inclui o ODBC 1. aplicativos *x* que foram portados para 32 bits.  
   
-    -   Espera ODBC 2. *x* comportamento para características que tiveram mudanças comportamentais. (Consulte [Mudanças comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md) para obter mais informações.)  
+    -   Espera o ODBC 2. comportamento *x* para recursos que tiveram alterações comportamentais. (Consulte [alterações comportamentais](../../../odbc/reference/develop-app/behavioral-changes.md) para obter mais informações.)  
   
-    -   Não foi recompilado com cabeçalhos ODBC 3.5.  
+    -   Não foi recompilado com cabeçalhos ODBC 3,5.  
   
--   **ODBC 2 puro.**  
-     **_x_ Aplicativo recompilado** Um ODBC puro 2. *x* aplicativo que foi recompilado usando os arquivos de cabeçalho ODBC 3.5, definindo ODBCVER=0x0250.  
+-   **ODBC puro 2.**  
+     **_x_ aplicativo recompilado** um ODBC 2 puro. *x* aplicativo que foi recompilado usando os arquivos de cabeçalho ODBC 3,5, definindo ODBCVER = 0x0250.  
   
--   **ODBC 2 puro.**  
-     **_x_ Aplicação Unicode** Um ODBC puro 2. *x* aplicativo recompilado que é compatível com Unicode e usa o SQL_WCHAR tipo de dados.  
+-   **ODBC puro 2.**  
+     **_x_ aplicativo Unicode** um ODBC puro 2. *x* aplicativo recompilado que é compatível com Unicode e usa o tipo de dados SQL_WCHAR.  
   
--   **Pure Open Group e ISO**-**compatível com o Aplicativo ODBC** Um aplicativo de 32 bits que:  
+-   **O Open Group puro e**-o**aplicativo ODBC em conformidade com** ISO um aplicativo de 32 bits que:  
   
-    -   Funções de chamadas definidas nos padrões Open Group ou ISO CLI. (Essas funções podem incluir funções 3.0 depreciadas.)  
+    -   Chama funções definidas nos padrões de grupo aberto ou CLI ISO. (Essas funções podem incluir funções de 3,0 preteridas.)  
   
     -   Não usa os tipos de dados Unicode.  
   
-    -   Espera-se o comportamento do ODBC 3.0 para características que tiveram alterações comportamentais.  
+    -   Espera o comportamento do ODBC 3,0 para recursos que tiveram alterações comportamentais.  
   
--   **Aplicação ODBC 3.0 pura** Um aplicativo de 32 bits que:  
+-   **Aplicativo ODBC puro 3,0** Um aplicativo de 32 bits que:  
   
-    -   É compilado com cabeçalhos 3.0.  
+    -   É compilado com 3,0 cabeçalhos.  
   
-    -   Chama qualquer função ODBC 3.0, possivelmente incluindo aquelas que são preteridas.  
+    -   Chama qualquer função ODBC 3,0, possivelmente incluindo aquelas que foram preteridas.  
   
-    -   Espera-se o comportamento do ODBC 3.0 para características que tiveram alterações comportamentais.  
+    -   Espera o comportamento do ODBC 3,0 para recursos que tiveram alterações comportamentais.  
   
--   **Aplicação ODBC 3.5 pura** Um aplicativo de 32 ou 64 bits que:  
-  
-    -   Pode usar tipos de dados Unicode.  
-  
-    -   Chama qualquer função ODBC 3.5, possivelmente incluindo aquelas que são preteridas.  
-  
-    -   Espera-se o comportamento do ODBC 3.5 para características que tiveram alterações comportamentais.  
-  
--   **Aplicação ODBC pura 3.8 (ou posterior)** Um aplicativo de 32 bits ou 64 bits que:  
+-   **Aplicativo ODBC puro 3,5** Um aplicativo de 32 ou 64 bits que:  
   
     -   Pode usar tipos de dados Unicode.  
   
-    -   Chama qualquer função ODBC 3.8, possivelmente incluindo aquelas que são preteridas.  
+    -   Chama qualquer função ODBC 3,5, possivelmente incluindo aquelas que foram preteridas.  
   
-    -   Espera-se o comportamento do ODBC 3.8 para características que tiveram alterações comportamentais.  
+    -   Espera o comportamento do ODBC 3,5 para recursos que tiveram alterações comportamentais.  
+  
+-   **Aplicativo ODBC puro 3,8 (ou posterior)** Um aplicativo de 32 bits ou 64 bits que:  
+  
+    -   Pode usar tipos de dados Unicode.  
+  
+    -   Chama qualquer função ODBC 3,8, possivelmente incluindo aquelas que foram preteridas.  
+  
+    -   Espera o comportamento do ODBC 3,8 para recursos que tiveram alterações comportamentais.  
   
 -   **Aplicativo substituído** Um aplicativo de 32 ou 64 bits que:  
   
-    -   Implementa um novo comportamento para funcionalidade duplicada.  
+    -   Implementa um novo comportamento para a funcionalidade duplicada.  
   
-    -   Usa quaisquer novos recursos em uma versão posterior do ODBC apenas dentro de código condicional.  
+    -   Usa quaisquer novos recursos em uma versão posterior do ODBC somente dentro do código condicional.  
   
-    -   Tem código condicional limitado para lidar com mudanças comportamentais ou registrou-se como uma versão anterior do aplicativo ODBC.
+    -   Tem um código condicional limitado para lidar com alterações comportamentais ou se registrou para ser uma versão anterior do aplicativo ODBC.

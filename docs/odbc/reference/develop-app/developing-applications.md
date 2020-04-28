@@ -1,5 +1,5 @@
 ---
-title: Desenvolvimento de Aplicações | Microsoft Docs
+title: Desenvolvendo aplicativos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305857"
 ---
-# <a name="developing-applications"></a>Desenvolver aplicativos
-Esta seção contém informações sobre o desenvolvimento de aplicativos que usam a interface ODBC e drivers que a implementam.  
+# <a name="developing-applications"></a>Desenvolvendo aplicativos
+Esta seção contém informações sobre como desenvolver aplicativos que usam a interface ODBC e os drivers que o implementam.  
   
  Esta seção contém os seguintes tópicos.  
   
@@ -48,11 +48,11 @@ Esta seção contém informações sobre o desenvolvimento de aplicativos que us
   
 -   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
--   [Diagnósticos](../../../odbc/reference/develop-app/diagnostics.md)  
+-   [Diagnóstico](../../../odbc/reference/develop-app/diagnostics.md)  
   
 -   [Interoperabilidade](../../../odbc/reference/develop-app/interoperability.md)  
   
--   [Considerações de programação](../../../odbc/reference/develop-app/programming-considerations.md)  
+-   [Considerações sobre programação](../../../odbc/reference/develop-app/programming-considerations.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência do programador ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

@@ -20,22 +20,22 @@ ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303278"
 ---
 # <a name="sqlgetstmtoption-function"></a>Função SQLGetStmtOption
 **Conformidade**  
- Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
+ Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
   
  **Resumo**  
- Em ODBC 3. *x*, a função ODBC 2.0 **SQLGetStmtOption** foi substituída por **SQLGetStmtAttr**. Para obter mais informações, consulte [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ No ODBC 3. *x*, a função **SQLGetStmtOption** do ODBC 2,0 foi substituída por **SQLGetStmtAttr**. Para obter mais informações, consulte [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um ODBC 2. *x* aplicativo está trabalhando com um ODBC 3. *x* driver, consulte [Mapeamento de Funções Depreciadas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice G: Diretrizes do driver para compatibilidade retrógrada.  
+>  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um ODBC 2. o aplicativo *x* está trabalhando com um ODBC 3. Driver *x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305326"
 ---
 # <a name="stored-procedures---calling"></a>Procedimentos armazenados – Chamando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor Native Client OLE DB, os parâmetros para um procedimento armazenado podem ser passados por:  
+  Um procedimento armazenado pode ter zero ou mais parâmetros. Também pode retornar um valor. Ao usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, os parâmetros para um procedimento armazenado podem ser passados por:  
   
 -   Hard-coding o valor de dados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305326"
 5.  Execute o comando usando **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos de chamar um procedimento armazenado  
- Ao executar um procedimento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]armazenado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em , o provedor Native Client OLE DB suporta o:  
+ Ao executar um procedimento armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao:  
   
 -   Sequência de escape CALL do ODBC.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "81305326"
   
  A sintaxe geral para chamar um procedimento usando a sequência de escape ODBC CALL é:  
   
- {[**?=**]**chamar**_procedure_name_[**[**[ [ [ [*parameter***parâmetro**]...*parameter* **)**]}  
+ {[**? =**]**chamar**_procedure_name_[**(**[*parâmetro*] [**,**[*Parameter*]]... **)**]}  
   
  Por exemplo:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305326"
  Para um aplicativo de exemplo que demonstra uma sequência de escape RPC, confira [Executar um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrução Transact-SQL EXECUTE  
- A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa o mecanismo RPC para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
+ A sequência de escape ODBC CALL e a sequência de escape RPC são os métodos preferidos para chamar um procedimento armazenado no lugar da instrução [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo usa o mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC do para otimizar o processamento de comandos. Este protocolo de RPC aumenta o desempenho, eliminando grande parte do processamento de parâmetros e da análise da instrução feita no servidor.  
   
  Este é um exemplo da instrução  **EXECUTE** do [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
@@ -129,6 +129,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos Armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

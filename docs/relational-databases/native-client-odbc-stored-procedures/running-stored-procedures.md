@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304538"
 ---
 # <a name="running-stored-procedures"></a>Executando procedimentos armazenados
@@ -58,7 +58,7 @@ ms.locfileid: "81304538"
   
      Os procedimentos armazenados estendidos podem usar recursos do C e do C++ não disponíveis em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Para obter um exemplo de como chamar um procedimento armazenado, consulte [Códigos de devolução de processos e parâmetros de saída &#40;o ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     Para obter um exemplo de como chamar um procedimento armazenado, consulte [processar códigos de retorno e parâmetros de saída &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81304538"
 -   [Processando resultados do procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cliente nativo do servidor SQL &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Executando procedimentos armazenados como a atos &#40;o&#41;da ODBC](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Tópicos de instruções sobre como executar procedimentos armazenados &#40;&#41;ODBC](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Exemplos de tratamento de diagnóstico | Microsoft Docs
+title: Exemplos de manipulação de diagnóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ddb833e133ddc6f1e0b959b3da5b8ec464826ed2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305847"
 ---
 # <a name="diagnostic-handling-examples"></a>Exemplos de tratamento de diagnóstico
-Os exemplos a seguir mostram como vários componentes em uma conexão ODBC podem gerar mensagens de diagnóstico e como vários drivers podem retornar diagnósticos ao aplicativo com **sQLGetDiagRec**.  
+Os exemplos a seguir mostram como vários componentes em uma conexão ODBC podem gerar mensagens de diagnóstico e como vários drivers podem retornar o diagnóstico para o aplicativo com **SQLGetDiagRec**.  
   
 -   [Exemplo de diagnóstico de driver baseado em arquivo](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

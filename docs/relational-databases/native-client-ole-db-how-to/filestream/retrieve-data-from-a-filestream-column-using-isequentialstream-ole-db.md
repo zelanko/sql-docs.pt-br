@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302237"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar dados de uma coluna FILESTREAM usando ISequentialStream (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81302237"
 
   Este exemplo mostra como usar uma interface ISequentialStream em uma interface ICommandText para recuperar um único registro de uma coluna Filestream.  
   
- Para obter mais informações sobre o recurso filestream, consulte [FILESTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obter mais informações sobre o recurso FileStream, consulte [suporte a filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Exemplo  
  Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  

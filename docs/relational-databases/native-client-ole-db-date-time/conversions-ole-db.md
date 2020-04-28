@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304383"
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
@@ -31,20 +31,20 @@ ms.locfileid: "81304383"
   
 -   O formato das cadeias de caracteres de **datetime** e **datetimeoffset** é:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.* 9999999*[± *hh*:*mm*]]  
+     *aaaa*-*mm*mm-*DD*[ *hh*:*mm*:*SS*[.* 9999999*] [± *hh*:*mm*]]  
   
 -   O formato de cadeias de caracteres **time** é:  
   
-     *hh:**mm:**ss*[.* 9999999*]  
+     *hh*:*mm*:*SS*[.* 9999999*]  
   
 -   O formato das cadeias de caracteres de **date** é:  
   
-     *yyyy*-*mm*-*dd*  
+     *aaaa*-*mm*mm-*DD*  
   
 > [!NOTE]  
 >  As versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. Consequentemente, algumas conversões executadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versões posteriores diferem da especificação OLE DB.  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "Formatos de dados: strings e literais" no [Suporte ao Tipo de Dados para Melhorias de Data e Hora do OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "formatos de dados: cadeias de caracteres e literais" em [suporte de tipo de dados para OLE DB melhorias de data e hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   

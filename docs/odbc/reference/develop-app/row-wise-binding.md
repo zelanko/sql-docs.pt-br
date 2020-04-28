@@ -1,5 +1,5 @@
 ---
-title: Ligação em sentido de linha | Microsoft Docs
+title: Associação de linha | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304267"
 ---
 # <a name="row-wise-binding"></a>Associação de linha
-Ao usar a vinculação em termos de linha, um aplicativo define uma estrutura contendo um ou dois, ou em alguns casos três, elementos para cada coluna para os quais os dados devem ser devolvidos. O primeiro elemento contém o valor dos dados, e o segundo elemento contém o buffer de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR para valores diferentes; se isso for feito, a estrutura contém um terceiro elemento. O aplicativo então aloca uma matriz dessas estruturas, que contém tantos elementos quanto há linhas no conjunto de linhas.  
+Ao usar a associação de linha, um aplicativo define uma estrutura que contém uma ou duas, ou, em alguns casos, três, elementos para cada coluna para a qual os dados serão retornados. O primeiro elemento contém o valor de dados e o segundo elemento contém o buffer de comprimento/indicador. Os indicadores e os valores de comprimento podem ser armazenados em buffers separados definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR com valores diferentes; Se isso for feito, a estrutura conterá um terceiro elemento. Em seguida, o aplicativo aloca uma matriz dessas estruturas, que contém tantos elementos quanto há linhas no conjunto de linhas.  
   
- O aplicativo declara o tamanho da estrutura ao driver com o atributo de declaração SQL_ATTR_ROW_BIND_TYPE e vincula o endereço de cada membro no primeiro elemento da matriz. Assim, o motorista pode calcular o endereço dos dados para uma determinada linha e coluna como  
+ O aplicativo declara o tamanho da estrutura para o driver com o atributo SQL_ATTR_ROW_BIND_TYPE Statement e associa o endereço de cada membro no primeiro elemento da matriz. Assim, o driver pode calcular o endereço dos dados de uma linha e coluna específica como  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- onde as linhas são numeradas de 1 para o tamanho do conjunto de linhas. (Uma é subtraída do número da linha porque a indexação da matriz em C é baseada em zero.) A ilustração a seguir mostra como funciona a vinculação em termos de linha. Geralmente, apenas as colunas que serão vinculadas são incluídas na estrutura. A estrutura pode conter campos que não estão relacionados às colunas de conjunto de resultados. As colunas podem ser colocadas na estrutura em qualquer ordem, mas são mostradas em ordem seqüencial para clareza.  
+ em que as linhas são numeradas de 1 até o tamanho do conjunto de linhas. (Um é subtraído do número de linha porque a indexação de matriz em C é baseada em zero). A ilustração a seguir mostra como funciona a associação de linha. Em geral, somente as colunas que serão associadas serão incluídas na estrutura. A estrutura pode conter campos que não estão relacionados às colunas do conjunto de resultados. As colunas podem ser colocadas na estrutura em qualquer ordem, mas são mostradas em ordem sequencial para fins de clareza.  
   
- ![Mostra linha&#45;encadernação sábia](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Mostra a associação&#45;inteligente da linha](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Por exemplo, o código a seguir cria uma estrutura com elementos para retornar dados para as colunas OrderID, SalesPerson e Status e comprimento/indicadores para as colunas SalesPerson e Status. Ele aloca 10 dessas estruturas e as vincula às colunas OrderID, SalesPerson e Status.  
+ Por exemplo, o código a seguir cria uma estrutura com elementos nos quais retornar dados para as colunas OrderID, SalesPerson e status e comprimento/indicadores para as colunas vendedor e status. Ele aloca 10 dessas estruturas e as associa às colunas OrderID, SalesPerson e status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

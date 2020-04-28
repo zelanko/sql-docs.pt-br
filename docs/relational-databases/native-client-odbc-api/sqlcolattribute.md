@@ -1,5 +1,5 @@
 ---
-title: SQLColattribute | Microsoft Docs
+title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302605"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
@@ -41,7 +41,7 @@ ms.locfileid: "81302605"
 |SQL_DESC_TABLE_NAME|Disponível em conjuntos de resultados recuperados de instruções que geram cursores de servidor ou em instruções SELECT executadas que contêm uma cláusula FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED para todas as colunas de um conjunto de resultados, a menos que uma coluna seja o resultado de uma expressão que não contém uma atribuição de rótulo como parte da expressão. Quando SQL_DESC_UNNAMED retorna SQL_UNNAMED, todos os atributos de identificador de coluna ODBC contêm cadeias de caracteres de comprimento zero para a coluna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O driver Nativo Cliente ODBC usa a instrução SET FMTONLY para reduzir a sobrecarga do servidor quando **o SQLColAttribute** é chamado para instruções preparadas, mas não executadas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O driver ODBC do Native Client usa a instrução SET FMTONLY para reduzir a sobrecarga do servidor quando **SQLColAttribute** é chamado para instruções preparadas, mas não executadas.  
   
  Para tipos de valores grandes, **SQLColAttribute** retornará os valores a seguir:  
   
@@ -74,9 +74,9 @@ ms.locfileid: "81302605"
 |SQL_CA_SS_NUM_COMPUTES|Número de cláusulas COMPUTE especificado na instrução SELECT Transact-SQL atual.|  
 |SQL_CA_SS_NUM_ORDERS|Número de colunas especificado em uma cláusula ORDER BY da instrução SELECT Transact-SQL ou ODBC.|  
   
- \*Disponível se o SQL_SOPT_SS_HIDDEN_COLUMNS de atributo de declaração estiver definido como SQL_HC_ON.  
+ \*Disponível se o atributo de instrução SQL_SOPT_SS_HIDDEN_COLUMNS estiver definido como SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritores específicos do driver para fornecer informações adicionais para denotar o nome da coleção do esquema XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introduziu campos de descritor específicos de driver para fornecer informações adicionais para indicar o nome da coleção de esquemas XML, o nome do esquema e o nome do catálogo, respectivamente. Essas propriedades não exigem aspas ou um caractere de escape se eles contiverem caracteres não alfanuméricos. A tabela a seguir lista esses novos campos de descritor:  
   
 |Nome da coluna|Type|Descrição|  
 |-----------------|----------|-----------------|  
@@ -98,19 +98,19 @@ ms.locfileid: "81302605"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Suporte do SQLColAttribute a recursos aprimorados de data e hora  
  Para obter os valores retornados para tipos de data/hora, consulte a seção sobre informações retornadas em campos IRD em [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;da ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Suporte do SQLColAttribute a UDTs CLR grandes  
- O**SQLColAttribute** suporta UDTs CLR grandes. Para obter mais informações, consulte [Grandes tipos definidos pelo usuário da CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O**SQLColAttribute** suporta UDTs CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Suporte do SQLColAttribute a colunas esparsas  
- SQLColAttribute consulta o novo campo de descritor de linha de implementação (IRD) SQL_CA_SS_IS_COLUMN_SET, para determinar se uma coluna é uma coluna **column_set.**  
+ SQLColAttribute consulta o novo campo IRD (descritor de linha de implementação), SQL_CA_SS_IS_COLUMN_SET, para determinar se uma coluna é uma coluna de **column_set** .  
   
- Para obter mais informações, consulte [Colunas Esparsas Suporte &#40;o&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obter mais informações, consulte [suporte a colunas esparsas &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Função SQLColATTRIBUTE](https://go.microsoft.com/fwlink/?LinkId=59334)   
- [Detalhes da implementação da API da ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Função SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   

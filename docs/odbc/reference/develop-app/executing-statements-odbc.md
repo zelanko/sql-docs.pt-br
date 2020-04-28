@@ -1,5 +1,5 @@
 ---
-title: Executando declarações ODBC | Microsoft Docs
+title: Executando instruções ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f34053646c9a279a95740132fcb7a046c559795c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305697"
 ---
 # <a name="executing-statements-odbc"></a>Executar instruções (ODBC)
-Os aplicativos ODBC executam quase todo o acesso ao banco de dados executando instruções SQL. A seqüência geral de eventos é alocar uma alça de declaração, definir quaisquer atributos de declaração, executar a declaração, recuperar quaisquer resultados e liberar o cabo da declaração.  
+Os aplicativos ODBC executam quase todo o acesso ao banco de dados executando instruções SQL. A sequência geral de eventos é alocar um identificador de instrução, definir qualquer atributo de instrução, executar a instrução, recuperar todos os resultados e liberar o identificador da instrução.  
   
  Esta seção contém os seguintes tópicos.  
   
@@ -30,8 +30,8 @@ Os aplicativos ODBC executam quase todo o acesso ao banco de dados executando in
   
 -   [Parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md)  
   
--   [Execução Assíncrona (Método de Votação)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)  
+-   [Execução assíncrona (método de sondagem)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)  
   
--   [Execução Assíncrona (Método de Notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+-   [Execução assíncrona (método de notificação)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [Liberando um identificador de instrução](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)

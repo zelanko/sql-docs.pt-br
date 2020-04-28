@@ -14,15 +14,15 @@ ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6469a5394e232ab9d9135fbbbd56ba7b791ccbcb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305717"
 ---
 # <a name="executing-catalog-functions"></a>Executar funções de catálogo
-Como uma função de catálogo cria um conjunto de resultados, ela é equivalente à execução de qualquer demonstração SQL de geração de resultados. Na verdade, as funções de catálogo são frequentemente implementadas executando declarações SQL predefinidas ou chamando procedimentos predefinidos que são enviados com o driver ou DBMS. Quase tudo o que se aplica às instruções SQL que criam conjuntos de resultados também se aplica às funções de catálogo. Por exemplo, o atributo de declaração SQL_ATTR_MAX_ROWS limita o número de linhas retornadas pela função catálogo, assim como limita o número de linhas retornadas por uma declaração **SELECT.**  
+Como uma função de catálogo cria um conjunto de resultados, é equivalente a executar qualquer instrução SQL que gere o conjunto de resultados. Na verdade, as funções de catálogo são geralmente implementadas executando instruções SQL predefinidas ou chamando procedimentos predefinidos que são fornecidos com o driver ou DBMS. Quase tudo que se aplica a instruções SQL que criam conjuntos de resultados também se aplica às funções de catálogo. Por exemplo, o atributo de instrução SQL_ATTR_MAX_ROWS limita o número de linhas retornadas pela função de catálogo, assim como limita o número de linhas retornadas por uma instrução **Select** .  
   
  Para executar uma função de catálogo, um aplicativo apenas chama a função.  
   
- Para obter mais informações sobre funções de catálogo, consulte [Funções do Catálogo](../../../odbc/reference/develop-app/catalog-functions.md).
+ Para obter mais informações sobre as funções de catálogo, consulte [Catalog Functions](../../../odbc/reference/develop-app/catalog-functions.md).

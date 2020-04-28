@@ -1,5 +1,5 @@
 ---
-title: Processamento de resultados do procedimento armazenado | Microsoft Docs
+title: Processando resultados de procedimento armazenado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304531"
 ---
 # <a name="processing-stored-procedure-results"></a>Processando resultados do procedimento armazenado
@@ -35,7 +35,7 @@ ms.locfileid: "81304531"
   
 -   O procedimento pode ter um código de retorno de inteiro.  
   
- Os aplicativos devem conseguir tratar todas essas saídas dos procedimentos armazenados. A instrução CALL ou EXECUTE deve incluir marcadores de parâmetro para o código de retorno e parâmetros de saída. Use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para vinculá-los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todos como parâmetros de saída e o driver ODBC do Cliente Nativo transferirá os valores de saída para as variáveis vinculadas. Parâmetros de saída e códigos de devolução são [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os últimos itens devolvidos ao cliente por ; eles não são devolvidos ao aplicativo até que [o SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA.  
+ Os aplicativos devem conseguir tratar todas essas saídas dos procedimentos armazenados. A instrução CALL ou EXECUTE deve incluir marcadores de parâmetro para o código de retorno e parâmetros de saída. Use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para associá-los todos como parâmetros de saída [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o driver ODBC do Native Client irá transferir os valores de saída para as variáveis associadas. Os parâmetros de saída e os códigos de retorno são os últimos itens retornados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o cliente; Eles não são retornados para o aplicativo até que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA.  
   
  O ODBC não dá suporte à associação de parâmetros de cursor do [!INCLUDE[tsql](../../includes/tsql-md.md)]. Como todos os parâmetros de saída devem ser associados antes de executar um procedimento, todos os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] que contêm um parâmetro de cursor de saída não podem ser chamados por aplicativos ODBC.  
   

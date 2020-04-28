@@ -1,5 +1,5 @@
 ---
-title: Mapeamento SQLAllocEnv | Microsoft Docs
+title: Mapeamento de SQLAllocEnv | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cb26e3443fabda2d6490c071b1f2668895e66b8d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304037"
 ---
 # <a name="sqlallocenv-mapping"></a>Mapeamento SQLAllocEnv
-Quando um aplicativo chama **SQLAllocEnv** através de um driver ODBC *3.x,* a chamada para **SQLAllocEnv***(phenv)* é mapeada para **SQLAllocHandle** da seguinte forma:  
+Quando um aplicativo chama **SQLAllocEnv** por meio de um driver ODBC *3. x* , a chamada para **SQLAllocEnv**(*phenv*) é mapeada para **SQLAllocHandle** da seguinte maneira:  
   
-1.  O Gerenciador de Driver aloca uma alça de ambiente e a devolve ao aplicativo. O Driver Manager chama **o SQLSetEnvAttr** para definir o SQL_ATTR_ODBC_VERSION atributo do ambiente para SQL_OV_ODBC2.  
+1.  O Gerenciador de driver aloca um identificador de ambiente e o retorna para o aplicativo. O Gerenciador de driver chama **SQLSetEnvAttr** para definir o atributo de ambiente SQL_ATTR_ODBC_VERSION como SQL_OV_ODBC2.  
   
-2.  Quando o aplicativo estabelece a primeira conexão a um driver, o Gerenciador de Driver chama  
+2.  Quando o aplicativo estabelece a primeira conexão com um driver, o Gerenciador de driver chama  
   
     ```  
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, OutputHandlePtr)  

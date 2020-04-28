@@ -1,5 +1,5 @@
 ---
-title: Filestream Support (OLE DB) | Microsoft Docs
+title: Suporte a FILESTREAM (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: da09fc65de4be75798730fd0cc9785204a0c6917
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303650"
 ---
 # <a name="filestream-support-ole-db"></a>Suporte a FILESTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Começando [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Cliente Nativo 10.0, o OLE DB suporta o recurso FILESTREAM aprimorado. Para obter mais informações sobre esse recurso, consulte [FILESTREAM Support](../../../relational-databases/native-client/features/filestream-support.md). Para ver exemplos, confira [Fluxo de arquivos e OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
+  A partir [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e do cliente nativo 10,0, o OLE DB dá suporte ao recurso FileStream avançado. Para obter mais informações sobre esse recurso, consulte [suporte a FileStream](../../../relational-databases/native-client/features/filestream-support.md). Para ver exemplos, confira [Fluxo de arquivos e OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   
  Para enviar e receber valores **varbinary(max)** maiores que 2 GB, um aplicativo usa **DBTYPE_IUNKNOWN** nas associações de parâmetro e resultado. Para os parâmetros, o provedor precisa chamar IUnknown::QueryInterface para ISequentialStream e os resultados que retornam ISequentialStream.  
   

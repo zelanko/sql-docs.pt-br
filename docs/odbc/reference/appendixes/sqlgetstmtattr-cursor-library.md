@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr (Biblioteca cursor) | Microsoft Docs
+title: SQLGetStmtAttr (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305997"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Esse recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar aplicativos que atualmente usam esse recurso. A Microsoft recomenda o uso da funcionalidade do cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que atualmente usam esse recurso. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Este tópico discute o uso da função **SQLGetStmtAttr** na biblioteca do cursor. Para obter informações gerais sobre **sqlgetstmtAttr**, consulte [SQLGetStmtAttr Function](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ Este tópico discute o uso da função **SQLGetStmtAttr** na biblioteca de cursores. Para obter informações gerais sobre **SQLGetStmtAttr**, consulte [SQLGetStmtAttr function](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
- A biblioteca do cursor suporta os atributos de declaração a seguir com **SQLGetStmtAttr**:  
+ A biblioteca de cursores dá suporte aos seguintes atributos de instrução com **SQLGetStmtAttr**:  
   
 |||  
 |-|-|  

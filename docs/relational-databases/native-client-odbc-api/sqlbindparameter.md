@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302677"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
@@ -41,24 +41,24 @@ ms.locfileid: "81302677"
  Por exemplo, se o tipo de dados SQL for **SQL_WVARCHAR**, *ColumnSize* não deverá ser maior que 4000. Se o comprimento de dados real for maior que 4000, *ColumnSize* deverá ser definido como **SQL_SS_LENGTH_UNLIMITED** , de modo que **nvarchar(max)** será usado pelo driver.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter e parâmetros com valor de tabela  
- Como outros tipos de parâmetros, os parâmetros avaliados em tabela são vinculados pelo SQLBindParameter.  
+ Assim como outros tipos de parâmetro, os parâmetros com valor de tabela são associados por SQLBindParameter.  
   
- Depois que um parâmetro com valor de tabela é associado, suas colunas também são associadas. Para associar as colunas, chame [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir SQL_SOPT_SS_PARAM_FOCUS como o ordinal do parâmetro com valor de tabela. Em seguida, chame SQLBindParameter para cada coluna no parâmetro avaliado em tabela. Para voltar às associações de parâmetro de nível superior, defina SQL_SOPT_SS_PARAM_FOCUS como 0.  
+ Depois que um parâmetro com valor de tabela é associado, suas colunas também são associadas. Para associar as colunas, chame [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para definir SQL_SOPT_SS_PARAM_FOCUS como o ordinal do parâmetro com valor de tabela. Em seguida, chame SQLBindParameter para cada coluna no parâmetro com valor de tabela. Para voltar às associações de parâmetro de nível superior, defina SQL_SOPT_SS_PARAM_FOCUS como 0.  
   
- Para obter informações sobre parâmetros de mapeamento para campos de descritores para parâmetros de valor de tabela, consulte [Vinculação e Transferência de Dados de Parâmetros e Valores de Coluna valorizados pela tabela](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Para obter informações sobre como mapear parâmetros para campos de descritor para parâmetros com valor de tabela, consulte [Binding and transferência de dados of table-valued Parameters and Column Values](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Para obter mais informações sobre parâmetros avaliados em tabela, consulte [Parâmetros valorizados em tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>Suporte de SQLBindParameter a recursos aprimorados de data e hora  
- Os valores dos parâmetros dos tipos de data/hora são convertidos conforme descrito em [Conversões de C para SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Observe que parâmetros de tipo **time** e **datetimeoffset** precisam ter *ValueType* especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY** quando são usadas suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
+ Os valores de parâmetro dos tipos de data/hora são convertidos conforme descrito em [conversões de C para SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Observe que parâmetros de tipo **time** e **datetimeoffset** precisam ter *ValueType* especificado como **SQL_C_DEFAULT** ou **SQL_C_BINARY** quando são usadas suas estruturas correspondentes (**SQL_SS_TIME2_STRUCT** e **SQL_SS_TIMESTAMPOFFSET_STRUCT**).  
   
- Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;da ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>Suporte de SQLBindParameter a UDTs CLR grandes  
- O**SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [Grandes tipos definidos pelo usuário da CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ O**SQLBindParameter** suporta UDTs (tipos de dados definidos pelo usuário) CLR grandes. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detalhes da implementação da API da ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Função SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

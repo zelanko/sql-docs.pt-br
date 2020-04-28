@@ -1,5 +1,5 @@
 ---
-title: Campos Diferidos | Microsoft Docs
+title: Campos adiados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305967"
 ---
 # <a name="deferred-fields"></a>Campos adiados
-Os valores dos *campos diferidos* não são usados quando são definidos, mas o driver salva os endereços das variáveis para um efeito diferido. Para um descritor de parâmetro de aplicativo, o driver usa o conteúdo das variáveis no momento da chamada para **SQLExecDirect** ou **SQLExecute**. Para um descritor de linha de aplicativo, o driver usa o conteúdo das variáveis no momento da busca.  
+Os valores dos *campos adiados* não são usados quando eles são definidos, mas o driver salva os endereços das variáveis para um efeito adiado. Para um descritor de parâmetro de aplicativo, o driver usa o conteúdo das variáveis no momento da chamada para **SQLExecDirect** ou **SQLExecute**. Para um descritor de linha de aplicativo, o driver usa o conteúdo das variáveis no momento da busca.  
   
- Os seguintes campos são diferidos:  
+ Os seguintes são os campos adiados:  
   
--   O SQL_DESC_DATA_PTR e SQL_DESC_INDICATOR_PTR campos de um registro descritor.  
+-   Os campos SQL_DESC_DATA_PTR e SQL_DESC_INDICATOR_PTR de um registro de descritor.  
   
--   O SQL_DESC_OCTET_LENGTH_PTR campo de um registro de descritor de aplicação.  
+-   O campo SQL_DESC_OCTET_LENGTH_PTR de um registro de descritor de aplicativo.  
   
--   No caso de uma busca multirow, o SQL_DESC_ARRAY_STATUS_PTR e SQL_DESC_ROWS_PROCESSED_PTR campos de um cabeçalho descritor.  
+-   No caso de uma busca de LinhaMúltipla, os campos SQL_DESC_ARRAY_STATUS_PTR e SQL_DESC_ROWS_PROCESSED_PTR de um cabeçalho de descritor.  
   
- Quando um descritor é alocado, os campos diferidos de cada registro descritor inicialmente têm um valor nulo. O significado do valor nulo é o seguinte:  
+ Quando um descritor é alocado, os campos adiados de cada registro de descritor inicialmente têm um valor nulo. O significado do valor nulo é o seguinte:  
   
--   Se SQL_DESC_ARRAY_STATUS_PTR tiver um valor nulo, uma busca multirow não retorna este componente das informações de diagnóstico por linha.  
+-   Se SQL_DESC_ARRAY_STATUS_PTR tiver um valor nulo, uma busca de LinhaMúltipla falhará ao retornar esse componente das informações de diagnóstico por linha.  
   
--   Se SQL_DESC_DATA_PTR tiver um valor nulo, o registro será desvinculado.  
+-   Se SQL_DESC_DATA_PTR tiver um valor nulo, o registro será não associado.  
   
--   Se o campo SQL_DESC_OCTET_LENGTH_PTR de um ARD tiver um valor nulo, o driver não retornará as informações de comprimento para essa coluna.  
+-   Se o campo SQL_DESC_OCTET_LENGTH_PTR de um ARD tiver um valor nulo, o driver não retornará informações de comprimento para essa coluna.  
   
--   Se o campo SQL_DESC_OCTET_LENGTH_PTR de uma APD tiver um valor nulo e o parâmetro for uma seqüência de caracteres, o driver assumirá que a seqüência é anulada. Para parâmetros dinâmicos de saída, um valor nulo neste campo impede que o driver retorne as informações de comprimento. (Se o campo SQL_DESC_TYPE não indicar um parâmetro de seqüência de caracteres, o campo SQL_DESC_OCTET_LENGTH_PTR será ignorado.)  
+-   Se o campo SQL_DESC_OCTET_LENGTH_PTR de um APD tiver um valor nulo e o parâmetro for uma cadeia de caracteres, o driver assumirá que a cadeia de caracteres é terminada em nulo. Para parâmetros dinâmicos de saída, um valor nulo nesse campo impede que o driver retorne informações de comprimento. (Se o campo SQL_DESC_TYPE não indicar um parâmetro de cadeia de caracteres, o campo SQL_DESC_OCTET_LENGTH_PTR será ignorado.)  
   
- O aplicativo não deve desalocar ou descartar variáveis usadas para campos diferidos entre o momento em que os associa aos campos e o tempo em que o motorista lê ou escreve.
+ O aplicativo não deve desalocar ou descartar variáveis usadas para campos adiados entre o tempo que as associa aos campos e a hora em que o driver lê ou grava.

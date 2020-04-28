@@ -1,5 +1,5 @@
 ---
-title: Declaração DE ÍNDICE DE QUEDA | Microsoft Docs
+title: Instrução de DROP INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 638bae6491c020519a0123ff56fe31e9a9ca1cf7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303427"
 ---
 # <a name="drop-index-statement"></a>Instrução DROP INDEX
-Quando o driver Microsoft Access, dBASE ou Paradox é usado, a sintaxe da declaração DROP INDEX é "DROP INDEX a on b" onde "a" é o nome do índice e "b" é o nome da tabela (não *NOME do índice*DE ÍNDICE DE QUEDA ).  
+Quando o driver do Microsoft Access, dBASE ou Paradox é usado, a sintaxe da instrução DROP INDEX é "DROP INDEX a em b", em que "a" é o nome do índice e "b" é o nome da tabela (não DROP INDEX *índice-Name*).  
   
- Quando o driver Paradox é usado, a declaração DROP INDEX exclui arquivos de índice secundário satisfaz o Paradoxo.  
+ Quando o driver do Paradox é usado, a instrução DROP INDEX exclui arquivos de índice secundários do Paradox.  
   
- A declaração DROP INDEX não é suportada para os drivers Microsoft Excel ou Text.
+ Não há suporte para a instrução DROP INDEX para os drivers de texto ou do Microsoft Excel.

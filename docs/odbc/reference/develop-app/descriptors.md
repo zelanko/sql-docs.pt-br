@@ -16,21 +16,21 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ca8299daae744fb9398ed6ffc99c838ce8edff48
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305897"
 ---
 # <a name="descriptors"></a>Descritores
-Uma alça de descritor refere-se a uma estrutura de dados que contém informações sobre colunas ou parâmetros dinâmicos.  
+Um identificador de descritor refere-se a uma estrutura de dados que contém informações sobre colunas ou parâmetros dinâmicos.  
   
- Funções ODBC que operam em dados de coluna e parâmetro satisfaz e recuperam implicitamente campos descritores. Por exemplo, quando **o SQLBindCol** é chamado para vincular dados de coluna, ele define campos descritores que descrevem completamente a vinculação. Quando **o SQLColAttribute** é chamado para descrever dados da coluna, ele retorna dados armazenados em campos descritores.  
+ Funções ODBC que operam em dados de parâmetros e de coluna implicitamente definem e recuperam campos de descritor. Por exemplo, quando **SQLBindCol** é chamado para associar dados de coluna, ele define os campos de descritor que descrevem completamente a associação. Quando **SQLColAttribute** é chamado para descrever os dados da coluna, ele retorna os dados armazenados nos campos do descritor.  
   
- Um aplicativo chamado funções ODBC não precisa se preocupar com descritores. Nenhuma operação de banco de dados requer que o aplicativo obtenha acesso direto aos descritores. No entanto, para alguns aplicativos, obter acesso direto a descritores agiliza muitas operações. Por exemplo, o acesso direto a descritores fornece uma maneira de revincular dados de coluna, o que pode ser mais eficiente do que chamar **o SQLBindCol** novamente.  
+ Um aplicativo que chama funções ODBC não precisa se preocupar com descritores. Nenhuma operação de banco de dados requer que o aplicativo tenha acesso direto aos descritores. No entanto, para alguns aplicativos, obter acesso direto aos descritores simplifica muitas operações. Por exemplo, o acesso direto aos descritores fornece uma maneira de reassociar dados de coluna, o que pode ser mais eficiente do que chamar **SQLBindCol** novamente.  
   
 > [!NOTE]  
->  A representação física do descritor não está definida. Os aplicativos ganham acesso direto a um descritor apenas manipulando seus campos, chamando funções ODBC com a alça do descritor.  
+>  A representação física do descritor não está definida. Os aplicativos recebem acesso direto a um descritor apenas manipulando seus campos chamando funções ODBC com o identificador do descritor.  
   
  Esta seção contém os seguintes tópicos.  
   

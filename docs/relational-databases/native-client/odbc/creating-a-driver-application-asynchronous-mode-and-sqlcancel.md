@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 014314eebdeabc137f9f1735e899f7d111105ed4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303742"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Criar um aplicativo de driver – Modo assíncrono e SQLCancel
@@ -48,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Quando o aplicativo testa para concluir o comando, faz a mesma chamada de função com os mesmos parâmetros para o driver. Se o driver ainda não tiver recebido uma resposta do servidor, novamente retornará SQL_STILL_EXECUTING. O aplicativo deve testar o comando periodicamente até que o código de retorno seja diferente de SQL_STILL_EXECUTING. Quando o aplicativo obtiver algum outro código de retorno, até mesmo SQL_ERROR, ele poderá determinar que o comando foi concluído.  
   
- Às vezes um comando fica pendente por muito tempo. Se o aplicativo precisar cancelar o comando sem esperar por uma resposta, ele pode fazê-lo ligando para **o SQLCancel** com o mesmo cabo de declaração do comando pendente. Esta é a única vez que **o SQLCancel** deve ser usado. Alguns programadores usam **SQLCancel** quando eles processam parcialmente através de um conjunto de resultados e querem cancelar o resto do conjunto de resultados. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) devem ser usados para cancelar o restante de um conjunto de resultados em circulação, não **o SQLCancel**.  
+ Às vezes um comando fica pendente por muito tempo. Se o aplicativo precisar cancelar o comando sem esperar por uma resposta, ele poderá fazer isso chamando **SQLCancel** com o mesmo identificador de instrução que o comando pendente. Essa é a única vez que **SQLCancel** deve ser usado. Alguns programadores usam **SQLCancel** quando processavam partes por meio de um conjunto de resultados e desejam cancelar o restante do conjunto de resultados. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) ou [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) devem ser usados para cancelar o restante de um conjunto de resultados pendentes, e não **SQLCancel**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criando um aplicativo de driver ODBC do SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

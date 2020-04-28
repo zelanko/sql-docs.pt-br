@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302117"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -48,7 +48,7 @@ ms.locfileid: "81302117"
   
 -   As informações de diagnóstico nos logs de rastreamento de acesso a dados, quando habilitado.  
   
- Para obter mais informações, consulte [Acessar informações de diagnóstico no Registro de Eventos Estendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Para obter mais informações, consulte [Acessando informações de diagnóstico no log de eventos estendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -75,20 +75,20 @@ ms.locfileid: "81302117"
 |Qualquer outro valor|Um ponteiro para os dados do usuário.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>Suporte do SQLGetConnectAttr a SPNs (Nomes da Entidade de Serviço)  
- O SQLGetConnectAttr pode ser usado para consultar o valor dos novos atributos de conexão SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption também pode ser usado para consultar esses valores.)  
+ SQLGetConnectAttr pode ser usado para consultar o valor dos novos atributos de conexão SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED e SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption também pode ser usado para consultar esses valores.)  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD só está disponível para conexões abertas que usam a Autenticação do Windows.  
   
  Caso SQL_COPT_SS_SERVER_SPN ou SQL_COPT_SS_FAILOVER_PARTNER não tenha sido definido, será retornado o valor padrão (uma cadeia de caracteres vazia).  
   
- Para obter mais informações sobre SPNs, consulte [Os principais nomes do serviço &#40;SPNs&#41; em conexões ao cliente &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obter mais informações sobre SPNs, consulte [nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
- [Detalhes da implementação da API da ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER &#40;&#41;Transact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [CONJUNTO ANSI_NULLS&#41;&#40;Transact-SQL](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [&#41;de ANSI_PADDING &#40;Transact-SQL](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [Detalhes de implementação da API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [DEFINIR QUOTED_IDENTIFIER &#40;&#41;Transact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [DEFINIR ANSI_NULLS &#40;&#41;Transact-SQL](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [DEFINIR ANSI_PADDING &#40;&#41;Transact-SQL](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

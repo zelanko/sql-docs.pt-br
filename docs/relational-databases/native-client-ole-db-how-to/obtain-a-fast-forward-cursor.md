@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60da6e10349c94f491f711a00136949f2e886c9a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302229"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Obter um cursor FAST_FORWARD
@@ -25,7 +25,7 @@ ms.locfileid: "81302229"
 
   Para obter um cursor somente encaminhamento, somente leitura, defina as propriedades do conjunto de linhas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE como VARIANT_TRUE.  
   
- Um exemplo completo mostra como definir as propriedades de conjunto de linhas para obter um cursor FAST_FORWARD. Depois que as propriedades são definidas, uma declaração SELECT é executada para recuperar e exibir a coluna **Nome** da tabela **Compra.Fornecedor** no banco de dados **AdventureWorks.**  
+ Um exemplo completo mostra como definir as propriedades de conjunto de linhas para obter um cursor FAST_FORWARD. Depois que as propriedades são definidas, uma instrução SELECT é executada para recuperar e exibir a coluna **Name** da tabela **comprando. Vendor** no banco de dados **AdventureWorks** .  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  

@@ -1,5 +1,5 @@
 ---
-title: Executando uma Declaração | Microsoft Docs
+title: Executando uma instrução | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305737"
 ---
 # <a name="executing-a-statement"></a>Executar uma instrução
-Existem quatro maneiras de executar uma declaração, dependendo de quando elas são compiladas (preparadas) pelo mecanismo do banco de dados e quem as define:  
+Há quatro maneiras de executar uma instrução, dependendo de quando elas são compiladas (preparadas) pelo mecanismo de banco de dados e quem as define:  
   
--   **Execução Direta** O aplicativo define a declaração SQL. É preparado e executado em tempo de execução em uma única etapa.  
+-   **Execução direta** O aplicativo define a instrução SQL. Ele é preparado e executado em tempo de execução em uma única etapa.  
   
--   **Execução Preparada** O aplicativo define a declaração SQL. É preparado e executado em tempo de execução em etapas separadas. A declaração pode ser preparada uma vez e executada várias vezes.  
+-   **Execução preparada** O aplicativo define a instrução SQL. Ele é preparado e executado em tempo de execução em etapas separadas. A instrução pode ser preparada uma vez e executada várias vezes.  
   
--   **Procedimentos** O aplicativo pode definir e compilar uma ou mais instruções SQL no momento do desenvolvimento e armazenar essas instruções na fonte de dados como um procedimento. O procedimento é executado uma ou mais vezes no tempo de execução. O aplicativo pode enumerar procedimentos armazenados disponíveis usando funções de catálogo.  
+-   **Procedimentos** do O aplicativo pode definir e compilar uma ou mais instruções SQL em tempo de desenvolvimento e armazenar essas instruções na fonte de dados como um procedimento. O procedimento é executado uma ou mais vezes em tempo de execução. O aplicativo pode enumerar os procedimentos armazenados disponíveis usando funções de catálogo.  
   
--   **Funções do catálogo** O driver writer cria uma função que retorna um conjunto de resultados predefinido. Normalmente, essa função envia uma declaração SQL predefinida ou chama um procedimento criado para esse fim. A função é executada uma ou mais vezes no tempo de execução.  
+-   **Funções de catálogo** O gravador de driver cria uma função que retorna um conjunto de resultados predefinido. Normalmente, essa função envia uma instrução SQL predefinida ou chama um procedimento criado para essa finalidade. A função é executada uma ou mais vezes em tempo de execução.  
   
- Uma declaração específica (identificada pelo seu identificador de declaração) pode ser executada várias vezes. A instrução pode ser executada com uma variedade de diferentes instruções SQL, ou pode ser executada repetidamente com a mesma instrução SQL. Por exemplo, o código a seguir usa a mesma alça de declaração *(hstmt1)* para recuperar e exibir as tabelas no banco de dados de Vendas. Em seguida, ele reutiliza esta alça para recuperar as colunas em uma tabela selecionada pelo usuário.  
+ Uma determinada instrução (conforme identificado por seu identificador de instrução) pode ser executada várias vezes. A instrução pode ser executada com uma variedade de diferentes instruções SQL ou pode ser executada repetidamente com a mesma instrução SQL. Por exemplo, o código a seguir usa o mesmo identificador de instrução (*hstmt1*) para recuperar e exibir as tabelas no banco de dados Sales. Em seguida, ele reutiliza esse identificador para recuperar as colunas em uma tabela selecionada pelo usuário.  
   
 ```  
 SQLHSTMT    hstmt1;  
@@ -52,7 +52,7 @@ SQLColumns(hstmt1, "Sales", SQL_NTS, "sysadmin", SQL_NTS, Table, SQL_NTS, NULL, 
 // Code not shown.  
 ```  
   
- E o código a seguir mostra como uma única alça é usada para executar repetidamente a mesma declaração para excluir linhas de uma tabela.  
+ E o código a seguir mostra como um único identificador é usado para executar repetidamente a mesma instrução para excluir linhas de uma tabela.  
   
 ```  
 SQLHSTMT      hstmt1;  
@@ -72,13 +72,13 @@ while ((OrderID = GetOrderID()) != 0) {
 }  
 ```  
   
- Para muitos drivers, alocar declarações é uma tarefa cara, então reutilizar a mesma declaração dessa maneira geralmente é mais eficiente do que liberar declarações existentes e alocar novas. Os aplicativos que criam conjuntos de resultados em uma declaração devem ter o cuidado de fechar o cursor sobre o conjunto de resultados antes de reexecutar a declaração; para obter mais informações, consulte [Fechando o Cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ Para muitos drivers, as instruções de alocação são uma tarefa cara, portanto, reutilizar a mesma instrução dessa maneira geralmente é mais eficiente do que liberar Instruções existentes e alocar novas. Os aplicativos que criam conjuntos de resultados em uma instrução devem ter cuidado para fechar o cursor sobre o conjunto de resultados antes de executar novamente a instrução; para obter mais informações, consulte [fechando o cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- A reutilização de declarações também força o aplicativo a evitar uma limitação em alguns drivers do número de declarações que podem estar ativas ao mesmo tempo. A definição exata de "ativo" é específica do driver, mas muitas vezes se refere a qualquer declaração que tenha sido preparada ou executada e ainda tenha resultados disponíveis. Por exemplo, depois que uma instrução **INSERT** foi preparada, ela é geralmente considerada ativa; depois que uma declaração **SELECT** foi executada e o cursor ainda está aberto, ele é geralmente considerado ativo; depois que uma declaração **DE TABELA CREATE** foi executada, ela não é geralmente considerada ativa.  
+ Reutilizar instruções também força o aplicativo a evitar uma limitação em alguns drivers do número de instruções que podem estar ativas ao mesmo tempo. A definição exata de "active" é específica do driver, mas geralmente se refere a qualquer instrução que tenha sido preparada ou executada e que ainda tenha resultados disponíveis. Por exemplo, após uma instrução **Insert** ter sido preparada, ela é geralmente considerada ativa; Depois que uma instrução **Select** tiver sido executada e o cursor ainda estiver aberto, geralmente será considerado como ativo; após a execução de uma instrução **CREATE TABLE** , ela não é geralmente considerada ativa.  
   
- Um aplicativo determina quantas instruções podem estar ativas em uma única conexão de uma só vez, ligando para **o SQLGetInfo** com a opção SQL_MAX_CONCURRENT_ACTIVITIES. Um aplicativo pode usar mais instruções ativas do que esse limite, abrindo várias conexões à fonte de dados; porque as conexões podem ser caras, no entanto, o efeito sobre o desempenho deve ser considerado.  
+ Um aplicativo determina quantas instruções podem estar ativas em uma única conexão ao mesmo tempo chamando **SQLGetInfo** com a opção SQL_MAX_CONCURRENT_ACTIVITIES. Um aplicativo pode usar mais instruções ativas do que esse limite abrindo várias conexões com a fonte de dados; no entanto, como as conexões podem ser caras, o efeito no desempenho deve ser considerado.  
   
- Os aplicativos podem limitar a quantidade de tempo atribuída para uma declaração ser executada com o atributo de declaração SQL_ATTR_QUERY_TIMEOUT. Se o período de tempo expirar antes que a fonte de dados retorne o conjunto de resultados, a função que executa a declaração SQL retorna SQLSTATE HYT00 (O tempo expirado). Por padrão, não há nenhum tempo limite.  
+ Os aplicativos podem limitar a quantidade de tempo alocada para que uma instrução seja executada com o atributo de instrução SQL_ATTR_QUERY_TIMEOUT. Se o período de tempo limite expirar antes que a fonte de dados retorne o conjunto de resultados, a função que executa a instrução SQL retornará SQLSTATE HYT00 (timeout expirado). Por padrão, não há nenhum tempo limite.  
   
  Esta seção contém os seguintes tópicos.  
   

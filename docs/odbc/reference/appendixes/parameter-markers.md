@@ -14,29 +14,29 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
 ms.openlocfilehash: 132473de586094f79dd34c999d44f6dd59aefaef
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303567"
 ---
 # <a name="parameter-markers"></a>Marcadores de parâmetro
-De acordo com a especificação SQL-92, um aplicativo não pode colocar marcadores de parâmetros nos seguintes locais. Para obter uma lista mais abrangente, consulte a especificação SQL-92.  
+De acordo com a especificação do SQL-92, um aplicativo não pode posicionar os marcadores de parâmetro nos locais a seguir. Para obter uma lista mais abrangente, consulte a especificação do SQL-92.  
   
--   Em uma **lista SELECT**  
+-   Em uma lista de **seleção**  
   
--   Como ambas as *expressões* em um *predicado de comparação*  
+-   Como as duas *expressões* em um *predicado de comparação*  
   
--   Como ambos os operands de um operador binário  
+-   Como ambos os operandos de um operador binário  
   
--   Como o primeiro e o segundo operands de uma operação **BETWEEN**  
+-   Como o primeiro e o segundo operandos de uma operação **between**  
   
--   Como o primeiro e o terceiro operands de uma operação **BETWEEN**  
+-   Como o primeiro e terceiro operandos de uma operação **between**  
   
--   Como a expressão e o primeiro valor de uma operação **IN**  
+-   Como a expressão e o primeiro valor de uma operação **in**  
   
--   Como o operand de uma unary + ou - operação  
+-   Como o operando de uma operação unário + or  
   
--   Como o argumento de uma *referência de função de set*  
+-   Como o argumento de uma *referência de set-Function*  
   
- Para obter mais informações sobre marcadores de parâmetros, consulte a especificação SQL-92. Para obter mais informações sobre parâmetros, consulte [Parâmetros de declaração](../../../odbc/reference/develop-app/statement-parameters.md).
+ Para obter mais informações sobre marcadores de parâmetro, consulte a especificação do SQL-92. Para obter mais informações sobre parâmetros, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md).

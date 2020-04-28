@@ -1,5 +1,5 @@
 ---
-title: Sobrepondo a precisão e a escala padrão para tipos de dados numéricos | Microsoft Docs
+title: Substituindo a precisão e a escala padrão para tipos de dados numéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303587"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Substituir a precisão e a escala padrão para tipos de dados numéricos
-Quando o campo de SQL_DESC_TYPE em um ARD é definido como SQL_C_NUMERIC, chamando **sqlBindCol** ou **SQLSetDescField**, o campo de SQL_DESC_SCALE no ARD é definido como 0 e o campo SQL_DESC_PRECISION é definido como uma precisão padrão definida pelo driver. Isso também é verdade quando o campo de SQL_DESC_TYPE em um APD é definido como SQL_C_NUMERIC, chamando **sQLBindParameter** ou **SQLSetDescField**. Isso é verdadeiro para parâmetros de entrada, entrada/saída ou de saída.  
+Quando o campo SQL_DESC_TYPE em um ARD é definido como SQL_C_NUMERIC, chamando **SQLBindCol** ou **SQLSetDescField**, o campo SQL_DESC_SCALE no ARD é definido como 0 e o campo SQL_DESC_PRECISION é definido como uma precisão padrão definida pelo driver. Isso também é verdadeiro quando o campo de SQL_DESC_TYPE em um APD é definido como SQL_C_NUMERIC, chamando **SQLBindParameter** ou **SQLSetDescField**. Isso é verdadeiro para parâmetros de entrada, entrada/saída ou saída.  
   
- Se qualquer um dos padrões descritos anteriormente não for aceitável para um aplicativo, o aplicativo deverá definir o campo SQL_DESC_SCALE ou SQL_DESC_PRECISION ligando para **SQLSetDescField** ou **SQLSetDescRec**.  
+ Se qualquer um dos padrões descritos anteriormente não for aceitável para um aplicativo, o aplicativo deverá definir o SQL_DESC_SCALE ou SQL_DESC_PRECISION campo chamando **SQLSetDescField** ou **SQLSetDescRec**.  
   
- Se o aplicativo chamar **o SQLGetData** para retornar dados em uma estrutura SQL_C_NUMERIC, os campos padrão SQL_DESC_SCALE e SQL_DESC_PRECISION serão usados. Se os padrões não forem aceitáveis, o aplicativo deve chamar **SQLSetDescRec** ou **SQLSetDescField** para definir os campos e, em seguida, chamar **SQLGetData** com um *TargetType* de SQL_ARD_TYPE para usar os valores nos campos descritores.  
+ Se o aplicativo chamar **SQLGetData** para retornar dados em uma estrutura de SQL_C_NUMERIC, os campos de SQL_DESC_SCALE e SQL_DESC_PRECISION padrão serão usados. Se os padrões não forem aceitáveis, o aplicativo deverá chamar **SQLSetDescRec** ou **SQLSetDescField** para definir os campos e, em seguida, chamar **SQLGetData** com um *TargetType* de SQL_ARD_TYPE para usar os valores nos campos de descritor.  
   
- Quando **o SQLPutData** é chamado, a chamada usa os campos SQL_DESC_SCALE e SQL_DESC_PRECISION do registro descritor que corresponde ao parâmetro ou coluna data-at-execution, que são campos APD para chamadas para **sQLExecute** ou **SQLExecDirect,** ou campos ARD para chamadas para **SQLBulkOperations** ou **SQLSetPos**.
+ Quando **SQLPutData** é chamado, a chamada usa os campos SQL_DESC_SCALE e SQL_DESC_PRECISION do registro de descritor que corresponde à coluna ou ao parâmetro de dados em execução, que são campos APD para chamadas para **SQLExecute** ou **SQLExecDirect**, ou ARD campos para chamadas para **SQLBulkOperations** ou **SQLSetPos**.

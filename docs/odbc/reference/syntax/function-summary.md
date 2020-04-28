@@ -14,14 +14,14 @@ ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306017"
 ---
 # <a name="function-summary"></a>Resumo de funções
-As seções a seguir resumem as funções usadas por aplicativos habilitados para ODBC e softwares relacionados.  
+As seções a seguir resumem as funções usadas por aplicativos habilitados para ODBC e software relacionado.  
   
 -   [Resumo de funções do ODBC](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303176"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Usando MARS (vários conjuntos de resultados ativos)
@@ -50,15 +50,15 @@ ms.locfileid: "81303176"
 -   No MARS, a representação de escopo por sessão é proibida durante a execução dos lotes simultâneos.  
 
 > [!NOTE]
-> Por padrão, a funcionalidade MARS não é habilitada pelo driver. Para usar o MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao se conectar com o Cliente Nativo, você deve habilitar especificamente o MARS dentro de uma seqüência de conexões. No entanto, alguns aplicativos podem habilitar o MARS por padrão, se o aplicativo detectar que o driver suporta MARS. Para esses aplicativos, você pode desativar MARS na seqüência de conexões conforme necessário. Para obter mais informações, consulte o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e as seções sobre o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, mais adiante neste tópico.
+> Por padrão, a funcionalidade MARS não é habilitada pelo driver. Para usar MARS ao se conectar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com o Native Client, você deve habilitar o Mars especificamente em uma cadeia de conexão. No entanto, alguns aplicativos podem habilitar o MARS por padrão, se o aplicativo detectar que o driver oferece suporte a MARS. Para esses aplicativos, você pode desabilitar MARS na cadeia de conexão, conforme necessário. Para obter mais informações, consulte o provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e as seções sobre o driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, mais adiante neste tópico.
 
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client não limita o número de instruções ativas em uma conexão.  
   
- Aplicativos típicos que não precisam ter mais do que um único lote de várias declarações ou procedimento armazenado executando ao mesmo tempo se beneficiarão da MARS sem ter que entender como a MARS é implementada. Porém, aplicativos com requisitos mais complexos devem levar isso em conta.  
+ Aplicativos típicos que não precisam ter mais do que um único lote de várias instruções ou um procedimento armazenado em execução ao mesmo tempo se beneficiarão do MARS sem a necessidade de entender como o MARS é implementado. Porém, aplicativos com requisitos mais complexos devem levar isso em conta.  
   
  O MARS habilita a execução intercalada de várias solicitações em uma única conexão. Isto é, ele permite que um lote seja executado e, dentro de sua execução, permite a execução de outras solicitações. Observe, porém, que o MARS é definido em termos de intercalação, e não em termos de execução paralela.  
   
- A infraestrutura do MARS permite que vários lotes sejam executados de uma maneira intercalada, embora a execução só possa ser alterada em pontos bem definidos. Além disso, a maioria das instruções deve ser executada atomicamente dentro de um lote. As declarações que retornam linhas ao cliente, que às vezes são referidas como *pontos de rendimento,* são permitidas para intercalar a execução antes da conclusão enquanto as linhas são enviadas ao cliente, por exemplo:  
+ A infraestrutura do MARS permite que vários lotes sejam executados de uma maneira intercalada, embora a execução só possa ser alterada em pontos bem definidos. Além disso, a maioria das instruções deve ser executada atomicamente dentro de um lote. As instruções que retornam linhas ao cliente, às vezes chamadas de *pontos de rendimento*, têm permissão para intercalar a execução antes da conclusão enquanto as linhas são enviadas ao cliente, por exemplo:  
   
 -   SELECT  
   
@@ -75,10 +75,10 @@ ms.locfileid: "81303176"
 > [!NOTE]  
 >  Um lote ou procedimento armazenado que inicie uma transação manual ou implícita quando o MARS está habilitado deve concluir a transação antes de ser encerrado. Se não fizer, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] acumulará todas as alterações feitas pela transação quando o lote for concluído. Essa transação é gerenciada pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como uma transação de escopo em lote. Este é um tipo novo de transação introduzido no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] para habilitar procedimentos armazenados existentes com bom comportamento para uso quando o MARS for habilitado. Para obter mais informações sobre transações com escopo do lote, confira [Instruções de transação &#40;Transact-SQL&#41;](~/t-sql/statements/statements.md).  
   
- Para um exemplo de uso de MARS do ADO, consulte [Usando ADO com cliente nativo do servidor SQL](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
+ Para obter um exemplo de como usar MARS do ADO, consulte [usando o ADO com SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP na memória  
- O OLTP in-memory dá suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. O MARS permite solicitar dados de várias consultas sem a necessidade de recuperar completamente cada conjunto de resultados antes de enviar uma solicitação para buscar linhas de um novo conjunto de resultados. Para ler com sucesso vários conjuntos de resultados abertos, você deve usar uma conexão habilitada para MARS.  
+ O OLTP in-memory dá suporte a MARS usando consultas e procedimentos armazenados compilados nativamente. O MARS permite solicitar dados de várias consultas sem a necessidade de recuperar completamente cada conjunto de resultados antes de enviar uma solicitação para buscar linhas de um novo conjunto de resultados. Para ler com êxito de vários conjuntos de resultados abertos, você deve usar uma conexão de MARS habilitado.  
   
  O MARS é desabilitado por padrão, portanto, você precisa habilitá-lo explicitamente adicionando `MultipleActiveResultSets=True` a uma cadeia de conexão. O seguinte exemplo demonstra como se conectar a uma instância do SQL Server e como especificar que o MARS está habilitado:  
   
@@ -106,21 +106,21 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  As alterações feitas por instruções e blocos atômicos intercalados são isoladas umas das outras. Por exemplo, se uma instrução ou um bloco atômico fizer algumas alterações e, em seguida, suspender a execução e passar para outra instrução, a nova instrução não verá as alterações feitas pela primeira instrução. Além disso, quando a primeira instrução retomar a execução, ela não verá nenhuma alteração feita por outras instruções. As instruções verão apenas as alterações que foram concluídas e confirmadas antes da instrução em questão ser iniciada.  
   
- Uma nova transação de usuário pode ser iniciada dentro da transação do usuário atual usando a declaração BEGIN TRANSACTION - isso é suportado apenas no modo interop para que a TRANSAÇÃO BEGIN só possa ser chamada a partir de uma declaração T-SQL, e não de dentro de um procedimento armazenado nativamente compilado. Você pode criar um ponto de salvamento em uma transação usando SAVE TRANSACTION ou uma chamada de API para transação. Salvar(save_point_name) para reverter para o ponto de salvamento. Esse recurso também é habilitado apenas de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
+ Uma nova transação do usuário pode ser iniciada dentro da transação do usuário atual usando a instrução BEGIN TRANSACTION – há suporte apenas no modo Interop, de modo que o BEGIN TRANSACTION só pode ser chamado a partir de uma instrução T-SQL e não de dentro de um procedimento armazenado compilado nativamente. Você pode criar um ponto de salvamento em uma transação usando salvar transação ou uma chamada à API para transação. Salve (save_point_name) para reversão para o salvamento de pontos. Esse recurso também é habilitado apenas de instruções T-SQL e não de dentro de procedimentos armazenados compilados nativamente.  
   
  **MARS e índices columnstore**  
   
  O SQL Server (do 2016 em diante) dá suporte ao MARS com índices columnstore. O SQL Server 2014 usa o MARS para conexões somente leitura com tabelas que contenham um índice columnstore.    No entanto, o SQL Server 2014 não é compatível com o MARS para operações de DML (linguagem de manipulação de dados) simultâneas em uma tabela com um índice columnstore. Quando isso ocorrer, o SQL Server encerrará as conexões e anulará as transações.   O SQL Server 2012 tem índices columnstore somente leitura e o MARS não se aplica a eles.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Native Client OLE DB suporta mars através da adição da propriedade de inicialização de origem de dados SSPROP_INIT_MARSCONNECTION, que é implementada no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT. Além disso, uma nova palavra-chave de cadeia de conexão, **MarsConn**, foi adicionada. Ele aceita valores **true** ou **false**, sendo **false** o padrão.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo oferece suporte a Mars por meio da adição da propriedade de inicialização da fonte de dados SSPROP_INIT_MARSCONNECTION, que é implementada no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT. Além disso, uma nova palavra-chave de cadeia de conexão, **MarsConn**, foi adicionada. Ele aceita valores **true** ou **false**, sendo **false** o padrão.  
   
- A propriedade da fonte de dados DBPROP_MULTIPLECONNECTIONS é padronizada como VARIANT_TRUE. Isto significa que o provedor gerará várias conexões para oferecer suporte a vários objetos simultâneos do conjunto de linhas e do comando. Quando o MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estiver ativado, o Cliente Nativo pode suportar vários objetos de comando e conjunto de linhas em uma única conexão, de modo MULTIPLE_CONNECTIONS é definido como VARIANT_FALSE por padrão.  
+ A propriedade da fonte de dados DBPROP_MULTIPLECONNECTIONS é padronizada como VARIANT_TRUE. Isto significa que o provedor gerará várias conexões para oferecer suporte a vários objetos simultâneos do conjunto de linhas e do comando. Quando o MARS está habilitado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o Native Client pode dar suporte a vários objetos Command e Rowset em uma única conexão, portanto MULTIPLE_CONNECTIONS é definido como VARIANT_FALSE por padrão.  
   
  Para obter mais informações sobre aprimoramentos realizados no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, confira [Propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Exemplo de provedor OLE DB do SQL Server Native Client  
- Neste exemplo, um objeto de origem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de dados é criado usando o provedor Nativo OLE DB, e o MARS é habilitado usando o conjunto de propriedade DBPROPSET_SQLSERVERDBINIT antes de o objeto de sessão ser criado.  
+ Neste exemplo, um objeto de fonte de dados é criado usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor de OLE DB nativo, e o Mars é habilitado usando a propriedade DBPROPSET_SQLSERVERDBINIT definida antes que o objeto de sessão seja criado.  
   
 ```cpp
 #include <sqlncli.h>  
@@ -206,10 +206,10 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Cliente Nativo suporta MARS através de adições às funções [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_MARS_ENABLED foi adicionada para aceitar SQL_MARS_ENABLED_YES ou SQL_MARS_ENABLED_NO, com SQL_MARS_ENABLED_NO sendo o padrão. Além disso, uma nova palavra-chave de cadeia de conexão, **Mars_Connection,** como foi adicionado. Ela aceita valores “yes” ou “no”; “no” é o padrão.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a Mars por meio de adições às funções [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_MARS_ENABLED foi adicionada para aceitar SQL_MARS_ENABLED_YES ou SQL_MARS_ENABLED_NO, com SQL_MARS_ENABLED_NO sendo o padrão. Além disso, uma nova palavra-chave de cadeia de conexão, **Mars_Connection**, conforme foi adicionada. Ela aceita valores “yes” ou “no”; “no” é o padrão.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>Exemplo do driver ODBC do SQL Server Native Client  
- Neste exemplo, a função **SQLSetConnectAttr** é usada para ativar o MARS antes de chamar a função **SQLDriverConnect** para conectar o banco de dados. Uma vez feita a conexão, duas funções **SQLExecDirect** são chamadas para criar dois conjuntos de resultados separados na mesma conexão.  
+ Neste exemplo, a função **SQLSetConnectAttr** é usada para habilitar Mars antes de chamar a função **SQLDriverConnect** para conectar o banco de dados. Depois que a conexão é estabelecida, duas funções **SQLExecDirect** são chamadas para criar dois conjuntos de resultados separados na mesma conexão.  
   
 ```cpp
 #include <sqlncli.h>  
@@ -234,7 +234,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos do cliente nativo do sql server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Recursos de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usando conjuntos de resultados padrão do SQL Server](../../../relational-databases/native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

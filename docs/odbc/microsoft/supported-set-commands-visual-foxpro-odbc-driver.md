@@ -1,5 +1,5 @@
 ---
-title: Comandos SET suportados (driver Visual FoxPro ODBC) | Microsoft Docs
+title: Comandos SET com suporte (driver ODBC do Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303127"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Comandos SET com suporte (Driver ODBC do Visual FoxPro)
-Seu aplicativo pode enviar os seguintes comandos Visual FoxPro **SET** para uma fonte de dados:  
+Seu aplicativo pode enviar os seguintes comandos **set** do Visual FoxPro para uma fonte de dados:  
   
  [DEFINIR ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [DEFINIR TAMANHO DE BLOCO](../../odbc/microsoft/set-blocksize-command.md)  
+ [DEFINIR BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
   
- [CONJUNTO COLLATE](../../odbc/microsoft/set-collate-command.md)  
+ [DEFINIR AGRUPAMENTO](../../odbc/microsoft/set-collate-command.md)  
   
  [DEFINIR EXCLUÍDO](../../odbc/microsoft/set-deleted-command.md)  
   
@@ -44,6 +44,6 @@ Seu aplicativo pode enviar os seguintes comandos Visual FoxPro **SET** para uma 
   
  [DEFINIR CAMINHO](../../odbc/microsoft/set-path-command.md)  
   
- [DEFINIR REPROCESSO](../../odbc/microsoft/set-reprocess-command.md)  
+ [DEFINIR REPROCESSAMENTO](../../odbc/microsoft/set-reprocess-command.md)  
   
- [DEFINIR ÚNICO](../../odbc/microsoft/set-unique-command.md)
+ [DEFINIR EXCLUSIVO](../../odbc/microsoft/set-unique-command.md)

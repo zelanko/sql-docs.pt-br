@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303911"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -65,7 +65,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **ISSAsynchStatus::Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize::Initialize** não foi chamado ou não foi concluído.  
   
- **ISSAsynchStatus::Abort** foi chamado em um objeto de origem de dados no qual **o IDBInitialize::Initialize** foi chamado, mas posteriormente cancelado antes da inicialização ou foi cronometrado. O objeto de origem de dados ainda não foi inicializado.  
+ **ISSAsynchStatus:: Abort** foi chamado em um objeto de fonte de dados no qual **IDBInitialize:: Initialize** foi chamado, mas subsequentemente cancelado antes da inicialização ou atingiu o tempo limite. O objeto de fonte de dados ainda não foi inicializado.  
   
  **ISSAsynchStatus::Abort** foi chamado em um conjunto de linhas no qual **ITransaction::Commit** ou **ITransaction::Abort** foi chamado anteriormente, e o conjunto de linhas não sobreviveu à operação de confirmação ou anulação e está em um estado zumbi.  
   

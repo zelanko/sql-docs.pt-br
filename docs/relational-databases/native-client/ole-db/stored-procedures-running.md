@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305318"
 ---
 # <a name="stored-procedures---running"></a>Procedimentos armazenados – em execução
@@ -37,7 +37,7 @@ ms.locfileid: "81305318"
   
 -   Maior funcionalidade.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Native Client OLE DB suporta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] três dos mecanismos que os procedimentos armazenados usam para retornar dados:  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte a três [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dos mecanismos que os procedimentos armazenados usam para retornar dados:  
   
 -   Toda instrução SELECT no procedimento gera um conjunto de resultados.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "81305318"
   
  O aplicativo precisa ser capaz de tratar todas essas saídas provenientes dos procedimentos armazenados.  
   
- Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do provedor Native Client OLE DB, os parâmetros de saída e os códigos de devolução não são fornecidos até que o consumidor tenha recuperado ou cancelado os conjuntos de resultados devolvidos pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
+ Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso do provedor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB de cliente nativo, os parâmetros de saída e os códigos de retorno não são fornecidos até que o consumidor tenha recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
   
  Os provedores usam a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY para informar o momento em que são retornados os parâmetros de saída e valores de retorno. Essa propriedade faz parte do conjunto de propriedades DBPROPSET_DATASOURCEINFO.  
   
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Native Client OLE DB define a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY para DBPROPVAL_OA_ATROWRELEASE indicar que os códigos de devolução e os parâmetros de saída não são retornados até que o conjunto de resultados seja processado ou liberado.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo define a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY como DBPROPVAL_OA_ATROWRELEASE para indicar que os códigos de retorno e os parâmetros de saída não são retornados até que o conjunto de resultados seja processado ou liberado.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos Armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Procedimentos armazenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

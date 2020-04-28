@@ -1,5 +1,5 @@
 ---
-title: Perfildo Desempenho do driver ODBC | Microsoft Docs
+title: Criando perfil do desempenho do driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2bd869b16cc6ec81d77ce0256859de1ed8c1d0e3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303645"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
@@ -44,7 +44,7 @@ ms.locfileid: "81303645"
   
 -   Conectando a uma fonte de dados que especifica o log.  
   
--   Chamando [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para definir atributos específicos do driver que controlam o perfil.  
+-   Chamando [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para definir atributos específicos do driver que controlam a criação de perfil.  
   
  Cada processo de aplicativo obtém sua própria cópia do driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, e a criação de perfil é global para a combinação de uma cópia do driver e um processo do aplicativo. Quando tudo no aplicativo ativar a criação de perfil, esta registrará informações para todas as conexões ativas no driver desse aplicativo. Mesmo as conexões que não foram especificamente chamadas para a criação de perfil são incluídas.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "81303645"
   
  Se um aplicativo iniciar a criação de perfil para um arquivo de log e um segundo aplicativo tentar iniciar a criação de perfil para o mesmo arquivo de log, o segundo aplicativo não conseguirá registrar nenhum dado da criação de perfil. Se o segundo aplicativo iniciar a criação de perfil depois que o primeiro aplicativo tiver descarregado seu driver, o segundo aplicativo substituirá o arquivo de log do primeiro aplicativo.  
   
- Se um aplicativo se conectar a uma fonte de dados habilitada para o perfil, o driver retorna SQL_ERROR se o aplicativo chamar **SQLSetConnectOption** para iniciar o registro. Uma chamada para **SQLGetDiagRec** retorna o seguinte:  
+ Se um aplicativo se conectar a uma fonte de dados que tem a criação de perfil habilitada, o driver retornará SQL_ERROR se o aplicativo chamar **SQLSetConnectOption** para iniciar o registro em log. Uma chamada para **SQLGetDiagRec** , em seguida, retorna o seguinte:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -85,7 +85,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Número de instruções SELECT processadas depois de SQL_PERF_START.|  
 |SQLSelectRows|Número de linhas selecionadas depois de SQL_PERF_START.|  
 |Transactions|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
-|SQLPrepares|Número de chamadas [de função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) após SQL_PERF_START.|  
+|SQLPrepares|Número de chamadas de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) após SQL_PERF_START.|  
 |ExecDirects|Número de chamadas **SQLExecDirect** após SQL_PERF_START.|  
 |SQLExecutes|Número de chamadas **SQLExecute** após SQL_PERF_START.|  
 |CursorOpens|Número de horas que o driver abriu um cursor de servidor depois de SQL_PERF_START.|  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Quantidade cumulativa de horas que o driver gastou esperando respostas do servidor.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cliente nativo do servidor SQL &#40;&#41;ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Perfildo desempenho do driver ODBC Como fazer tópicos &#40;o ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Tópicos de instruções de desempenho do driver ODBC de criação de perfil &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

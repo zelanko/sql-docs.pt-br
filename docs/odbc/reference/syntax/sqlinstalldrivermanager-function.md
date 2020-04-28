@@ -20,18 +20,18 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302107"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Função SQLInstallDriverManager
 **Conformidade**  
- Versão introduzida: ODBC 1.0: Preterido no Windows XP Service Pack 2, No Windows Server 2003 Service Pack 1 e posteriormente nos sistemas operacionais  
+ Versão introduzida: ODBC 1,0: preterido no Windows XP Service Pack 2, no Windows Server 2003 Service Pack 1 e em sistemas operacionais posteriores  
   
  **Resumo**  
- **SQLInstallDriverManager** retorna o caminho do diretório de destino para a instalação dos componentes principais do ODBC. O programa de chamada deve, na verdade, copiar os arquivos do Driver Manager para o diretório de destino.  
+ **SQLInstallDriverManager** retorna o caminho do diretório de destino para a instalação dos componentes principais do ODBC. O programa de chamada deve realmente copiar os arquivos do Gerenciador de driver para o diretório de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,35 +45,35 @@ BOOL SQLInstallDriverManager(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszPath*  
- [Saída] Caminho do diretório de destino da instalação.  
+ Der Caminho do diretório de destino da instalação.  
   
  *cbPathMax*  
- [Entrada] Comprimento de *lpszPath*. Isso deve ser pelo menos _MAX_PATH bytes.  
+ Entrada Comprimento de *lpszPath*. Deve ter pelo menos _MAX_PATH bytes.  
   
- *pcbpathOut*  
- [Saída] Número total de bytes (excluindo o byte de rescisão nula) retornado em *lpszPath*. Se o número de bytes disponíveis para retornar for maior ou igual ao *cbPathMax,* o caminho no *lpszPath* será truncado para *cbPathMax* menos o caractere de rescisão nula. O *argumento pcbPathOut* pode ser um ponteiro nulo.  
+ *pcbPathOut*  
+ Der Número total de bytes (excluindo o byte de terminação nula) retornado em *lpszPath*. Se o número de bytes disponíveis para retornar for maior ou igual a *cbPathMax*, o caminho em *lpszPath* será truncado para *cbPathMax* menos o caractere de terminação nula. O argumento *pcbPathOut* pode ser um ponteiro nulo.  
   
 ## <a name="returns"></a>Retornos  
- A função retorna TRUE se for bem sucedida, FALSA se falhar.  
+ A função retornará TRUE se for bem-sucedida, FALSE se falhar.  
   
-## <a name="diagnostics"></a>Diagnósticos  
- Quando **o SQLInstallDriverManager** retorna FALSO, um valor * \*pfErrorCode* associado pode ser obtido ligando para **SQLInstallerError**. A tabela a * \** seguir lista os valores pfErrorCode que podem ser retornados pelo **SQLInstallerError** e explica cada um no contexto desta função.  
+## <a name="diagnostics"></a>Diagnóstico  
+ Quando **SQLInstallDriverManager** retorna false, um valor * \*pfErrorCode* associado pode ser obtido chamando **SQLInstallerError**. A tabela a seguir lista os valores de * \*pfErrorCode* que podem ser retornados por **SQLInstallerError** e explica cada um no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Descrição|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erro do instalador geral|Ocorreu um erro para o qual não houve erro específico do instalador.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O argumento *lpszPath* não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O *argumento cbPathMax* foi menos de _MAX_PATH.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Não foi possível incrementar ou diminuir a contagem de uso de componentes|O instalador não conseguiu incrementar a contagem de uso do componente principal ODBC.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não conseguiu executar a função por falta de memória.|  
+|ODBC_ERROR_GENERAL_ERR|Erro geral do instalador|Ocorreu um erro para o qual não havia nenhum erro do instalador específico.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Comprimento de buffer inválido|O argumento *lpszPath* não era grande o suficiente para conter o caminho de saída. O buffer contém o caminho truncado.<br /><br /> O argumento *cbPathMax* era menor que _MAX_PATH.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Não foi possível incrementar ou decrementar a contagem de uso do componente|O instalador não pôde incrementar a contagem de uso do componente principal ODBC.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **O SQLInstallDriverManager** é chamado para retornar o caminho para os componentes principais do ODBC e incrementar a contagem de uso de componentes nas informações do sistema. Se uma versão do Driver Manager já existir, mas a contagem de uso do componente para o driver não existir, o novo valor de contagem de uso do componente será definido como 2.  
+ **SQLInstallDriverManager** é chamado para retornar o caminho para componentes principais do ODBC e incrementar a contagem de uso do componente nas informações do sistema. Se já existir uma versão do Gerenciador de driver, mas a contagem de uso de componentes para o driver não existir, o novo valor de contagem de uso do componente será definido como 2.  
   
- O programa de configuração do aplicativo é responsável por copiar fisicamente os arquivos do componente principal e manter as contagens de uso do arquivo. Se um arquivo de componente principal não tiver sido instalado anteriormente, o programa de configuração do aplicativo deve copiar o arquivo e criar a contagem de uso do arquivo. Se o arquivo tiver sido instalado anteriormente, o programa de configuração apenas incrementa a contagem de uso do arquivo.  
+ O programa de instalação do aplicativo é responsável por copiar fisicamente os arquivos do componente principal e manter as contagens de uso do arquivo. Se um arquivo de componente principal não tiver sido instalado anteriormente, o programa de instalação do aplicativo deverá copiar o arquivo e criar a contagem de uso do arquivo. Se o arquivo tiver sido instalado anteriormente, o programa de instalação simplesmente incrementará a contagem de uso do arquivo.  
   
- Se uma versão mais antiga do Driver Manager foi previamente instalada pelo programa de configuração do aplicativo, os componentes principais devem ser desinstalados e depois reinstalados, de modo que a contagem de uso do componente principal seja válida. **SQLRemoveDriverManager** deve ser chamado primeiro para diminuir a contagem de uso do componente. **SQLInstallDriverManager** deve então ser chamado para incrementar a contagem de uso do componente. O programa de configuração do aplicativo deve substituir os arquivos de componentes antigos por novos arquivos. As contagens de uso de arquivos permanecerão as mesmas, e outros aplicativos que usaram os arquivos de componentes da versão mais antiga agora usarão os arquivos de versão mais recente.  
+ Se uma versão mais antiga do Gerenciador de driver foi instalada anteriormente pelo programa de instalação do aplicativo, os componentes principais devem ser desinstalados e reinstalados, para que a contagem de uso do componente principal seja válida. **SQLRemoveDriverManager** deve primeiro ser chamado para decrementar a contagem de uso do componente. **SQLInstallDriverManager** deve ser chamado para incrementar a contagem de uso do componente. O programa de instalação do aplicativo deve substituir os arquivos do componente principal antigo pelos novos arquivos. As contagens de uso do arquivo permanecerão as mesmas, e outros aplicativos que usaram os arquivos do componente principal da versão mais antiga agora usarão os arquivos de versão mais recentes.  
   
- Em uma nova instalação dos componentes principais do ODBC, drivers e tradutores, o programa de configuração do aplicativo deve chamar as seguintes funções em seqüência: **SQLInstallDriverManager,** **SQLInstallDriverEx,** **SQLConfigDriver** (com um *fRequest* of ODBC_INSTALL_DRIVER) e, em seguida, **SQLInstallTranslatorEx**. Em uma desinstalação dos componentes principais, drivers e tradutores, o programa de configuração do aplicativo deve chamar as seguintes funções em seqüência: **SQLRemoveTranslator,** **SQLRemoveDriver**e, em seguida, **SQLRemoveDriverManager**. Essas funções devem ser chamadas nesta seqüência. Em uma atualização de todos os componentes, todas as funções de desinstalação devem ser chamadas em seqüência e, em seguida, todas as funções de instalação devem ser chamadas em seqüência.  
+ Em uma nova instalação dos componentes, drivers e tradutores do ODBC Core, o programa de instalação do aplicativo deve chamar as seguintes funções em Sequence: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (com um *fRequest* de ODBC_INSTALL_DRIVER) e, em seguida, **SQLInstallTranslatorEx**. Em uma desinstalação dos componentes principais, dos drivers e dos tradutores, o programa de instalação do aplicativo deve chamar as seguintes funções em sequência: **SQLRemoveTranslator**, **SQLRemoveDriver**e, em seguida, **SQLRemoveDriverManager**. Essas funções devem ser chamadas nesta sequência. Em uma atualização de todos os componentes do, todas as funções de desinstalação devem ser chamadas em sequência e, em seguida, todas as funções de instalação devem ser chamadas em sequência.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
@@ -83,5 +83,5 @@ BOOL SQLInstallDriverManager(
 |Instalando um driver|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  
 |Instalando um tradutor|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|  
 |Removendo um driver|[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
-|Removendo o Driver Manager|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
-|Removendo um tradutor|[SQLRemoveTradutor](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|Removendo o Gerenciador de driver|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
+|Removendo um tradutor|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

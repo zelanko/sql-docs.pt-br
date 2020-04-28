@@ -1,5 +1,5 @@
 ---
-title: Instalação e Configuração do Software ODBC | Microsoft Docs
+title: Instalando e Configurando o software ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301921"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>Instalar e configurar o software ODBC
 > [!NOTE]  
->  Começando com o Windows XP e o Windows Server 2003, o ODBC está incluído no sistema operacional windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
+>  A partir do Windows XP e do Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Você só deve instalar explicitamente o ODBC em versões anteriores do Windows.  
   
  Esta seção contém os seguintes tópicos.  
   

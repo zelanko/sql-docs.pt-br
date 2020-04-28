@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303183"
 ---
 # <a name="using-encryption-without-validation"></a>Usando criptografia sem validação
@@ -30,9 +30,9 @@ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre criptograf
 
 Os certificados autoassinados não garantem a segurança. O handshake criptografado é baseado no NTLM (NT LAN Manager). É altamente recomendável que você provisione um certificado verificável no SQL Server a fim de ter uma conectividade segura. O protocolo TLS pode se tornar seguro somente com a validação de certificado.
 
-Os aplicativos também podem solicitar a criptografia de todo o tráfego de rede usando palavras-chave de cadeia de conexão ou propriedades de conexão. As palavras-chave são "Criptografar" para ODBC e OLE DB ao usar uma seqüência de provedor com **IDbInitialize::Initialize**, ou "Use Encryption for Data" para ADO e OLE DB ao usar uma seqüência de inicialização com **IDataInitialize**. Isso também pode ser configurado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando a opção **Forçar Protocolo de Criptografia** e configurando o cliente para solicitar conexões criptografadas. Por padrão, a criptografia de todo o tráfego de rede para uma conexão requer que um certificado seja aprovisionado no servidor. Ao configurar o cliente para confiar no certificado no servidor, você pode se tornar vulnerável a ataques man-in-the-middle. Se você implantar um certificado verificável no servidor, será necessário alterar as configurações do cliente sobre confiar no certificado para FALSE.
+Os aplicativos também podem solicitar a criptografia de todo o tráfego de rede usando palavras-chave de cadeia de conexão ou propriedades de conexão. As palavras-chave são "Encrypt" para ODBC e OLE DB ao usar uma cadeia de caracteres de provedor com **IDBInitialize:: Initialize**ou "usar criptografia para dados" para ADO e OLE DB ao usar uma cadeia de inicialização com **IDataInitialize**. Isso também pode ser configurado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando a opção **Forçar Protocolo de Criptografia** e configurando o cliente para solicitar conexões criptografadas. Por padrão, a criptografia de todo o tráfego de rede para uma conexão requer que um certificado seja aprovisionado no servidor. Ao configurar o cliente para confiar no certificado no servidor, você pode se tornar vulnerável a ataques man-in-the-middle. Se você implantar um certificado verificável no servidor, será necessário alterar as configurações do cliente sobre confiar no certificado para FALSE.
 
-Para obter informações sobre palavras-chave de seqüência de conexão, consulte [Usando palavras-chave de seqüência de conexão com o Cliente Nativo do Servidor SQL](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Para obter informações sobre palavras-chave da cadeia de conexão, consulte [usando palavras-chave da cadeia de conexão com SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  Para permitir o uso da criptografia quando um certificado não for provisionado no servidor, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager poderá ser usado para definir as opções **Forçar Criptografia de Protocolo** e **Confiar em Certificado do Servidor**. Neste caso, a criptografia usará um certificado do servidor autoassinado sem validação, se nenhum certificado verificável tiver sido provisionado no servidor.  
   
@@ -53,12 +53,12 @@ Para obter informações sobre palavras-chave de seqüência de conexão, consul
 > A tabela anterior fornece apenas um guia sobre o comportamento do sistema em diferentes configurações. Para conectividade segura, verifique se tanto o cliente quanto o servidor exigem criptografia. Verifique também se o servidor tem um certificado verificável e se a configuração **TrustServerCertificate** no cliente está definida como FALSE.
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor Nativo Cliente OLE DB suporta criptografia sem validação através da adição da propriedade de inicialização de origem de dados SSPROP_INIT_TRUST_SERVER_CERTIFICATE, que é implementada no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT. Além disso, uma nova palavra-chave de cadeia de conexão, "TrustServerCertificate", foi adicionada. Ela aceita os valores sim ou não; não é o padrão. Ao usar componentes de serviço, aceita os valores true ou false; false é o padrão.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte à criptografia sem validação por meio da adição da propriedade de inicialização da fonte de dados SSPROP_INIT_TRUST_SERVER_CERTIFICATE, que é implementada no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT. Além disso, uma nova palavra-chave de cadeia de conexão, "TrustServerCertificate", foi adicionada. Ela aceita os valores sim ou não; não é o padrão. Ao usar componentes de serviço, aceita os valores true ou false; false é o padrão.  
   
  Para obter mais informações sobre aprimoramentos realizados no conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, confira [Propriedades de inicialização e autorização](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Cliente Nativo suporta criptografia sem validação por meio de adições às funções [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_TRUST_SERVER_CERTIFICATE foi adicionado para aceitar SQL_TRUST_SERVER_CERTIFICATE_YES ou SQL_TRUST_SERVER_CERTIFICATE_NO, com SQL_TRUST_SERVER_CERTIFICATE_NO sendo padrão. Além disso, uma nova palavra-chave de cadeia de conexão, “TrustServerCertificate”, foi adicionada. Aceita sim ou não valores; "não" é o padrão.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte à criptografia sem validação por meio de adições às funções [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_TRUST_SERVER_CERTIFICATE foi adicionado para aceitar SQL_TRUST_SERVER_CERTIFICATE_YES ou SQL_TRUST_SERVER_CERTIFICATE_NO, com SQL_TRUST_SERVER_CERTIFICATE_NO sendo padrão. Além disso, uma nova palavra-chave de cadeia de conexão, “TrustServerCertificate”, foi adicionada. Ele aceita sim ou nenhum valor; "não" é o padrão.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

@@ -1,5 +1,5 @@
 ---
-title: Conformidade de função | Microsoft Docs
+title: Conformidade da função | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305587"
 ---
 # <a name="function-conformance"></a>Conformidade de função
-A tabela a seguir indica o nível de conformidade de cada função ODBC, onde isso é bem definido.  
+A tabela a seguir indica o nível de conformidade de cada função ODBC, em que isso é bem definido.  
   
 |Função|Compatibilidade com nível|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|Núcleo|  
 |**SQLBindCol**|Núcleo|  
-|**SQLBindParameter**|Núcleo[1]|  
+|**SQLBindParameter**|Núcleo [1]|  
 |**SQLBrowseConnect**|Nível 1|  
 |**SQLBulkOperations**|Nível 1|  
-|**SQLCancel**|Núcleo[1]|  
+|**SQLCancel**|Núcleo [1]|  
 |**SQLCloseCursor**|Núcleo|  
-|**SQLColAttribute**|Núcleo[1]|  
+|**SQLColAttribute**|Núcleo [1]|  
 |**SQLColumnPrivileges**|Nível 2|  
 |**SQLColumns**|Núcleo|  
 |**SQLConnect**|Núcleo|  
 |**SQLCopyDesc**|Núcleo|  
 |**SQLDataSources**|Núcleo|  
-|**SQLDescribeCol**|Núcleo[1]|  
+|**SQLDescribeCol**|Núcleo [1]|  
 |**SQLDescribeParam**|Nível 2|  
-|**Sqldisconnect**|Núcleo|  
+|**SQLDisconnect**|Núcleo|  
 |**SQLDriverConnect**|Núcleo|  
 |**SQLDrivers**|Núcleo|  
-|**SQLEndTran**|Núcleo[1]|  
+|**SQLEndTran**|Núcleo [1]|  
 |**SQLExecDirect**|Núcleo|  
 |**SQLExecute**|Núcleo|  
 |**SQLFetch**|Núcleo|  
-|**SQLFetchScroll**|Núcleo[1]|  
+|**SQLFetchScroll**|Núcleo [1]|  
 |**SQLForeignKeys**|Nível 2|  
 |**SQLFreeHandle**|Núcleo|  
 |**SQLFreeStmt**|Núcleo|  
@@ -60,7 +60,7 @@ A tabela a seguir indica o nível de conformidade de cada função ODBC, onde is
 |**SQLGetDescRec**|Núcleo|  
 |**SQLGetDiagField**|Núcleo|  
 |**SQLGetDiagRec**|Núcleo|  
-|**SQlGetEnvAttr**|Núcleo|  
+|**SQLGetEnvAttr**|Núcleo|  
 |**SQLGetFunctions**|Núcleo|  
 |**SQLGetInfo**|Núcleo|  
 |**SQLGetStmtAttr**|Núcleo|  
@@ -76,18 +76,18 @@ A tabela a seguir indica o nível de conformidade de cada função ODBC, onde is
 |**SQLProcedures**|Nível 1|  
 |**SQLPutData**|Núcleo|  
 |**SQLRowCount**|Núcleo|  
-|**SQLSetConnectAttr**|Núcleo[2]|  
-|**Sqlsetcursorname**|Núcleo|  
-|**SQLSetDescField**|Núcleo[1]|  
+|**SQLSetConnectAttr**|Núcleo [2]|  
+|**SQLSetCursorName**|Núcleo|  
+|**SQLSetDescField**|Núcleo [1]|  
 |**SQLSetDescRec**|Núcleo|  
-|**SQLSetEnvAttr**|Núcleo[2]|  
-|**SQLSetPos**|Nível 1[1]|  
-|**SQLSetStmtAttr**|Núcleo[2]|  
-|**SQLSpecialColumns**|Núcleo[1]|  
+|**SQLSetEnvAttr**|Núcleo [2]|  
+|**SQLSetPos**|Nível 1 [1]|  
+|**SQLSetStmtAttr**|Núcleo [2]|  
+|**SQLSpecialColumns**|Núcleo [1]|  
 |**SQLStatistics**|Núcleo|  
 |**SQLTablePrivileges**|Nível 2|  
 |**SQLTables**|Núcleo|  
   
- [1] Características significativas desta função estão disponíveis apenas em níveis mais altos de conformidade.  
+ [1] recursos significativos dessa função estão disponíveis apenas em níveis de conformidade mais altos.  
   
- [2] Definir certos atributos a valores não padrão depende do nível de conformidade. Para obter mais informações, consulte a próxima seção, [Atribuição de Conformidade](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] a configuração de determinados atributos para valores não padrão depende do nível de conformidade. Para obter mais informações, consulte a próxima seção, [conformidade do atributo](../../../odbc/reference/develop-app/attribute-conformance.md).
