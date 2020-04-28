@@ -10,10 +10,10 @@ ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 45c4f7b9d3c997db98e3a570136b5bf24b4d8e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989615"
 ---
 # <a name="global-settings-editor-db2tosql"></a>Configurações globais (editor) (DB2ToSQL)

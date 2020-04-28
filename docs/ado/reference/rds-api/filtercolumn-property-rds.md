@@ -14,10 +14,10 @@ ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964088"
 ---
 # <a name="filtercolumn-property-rds"></a>Propriedade FilterColumn (RDS)
@@ -33,7 +33,7 @@ Indica a coluna na qual os critérios de filtro são avaliados.
 DataControl.FilterColumn = String  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

@@ -14,10 +14,10 @@ ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963253"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
@@ -33,7 +33,7 @@ Sincronize o conjunto de registros fornecido com o banco de dados especificado p
 object.Synchronize21(ConnectionString As String, HandlerString As String, lSynchronizeOptions As Long, ppRecordset As Object, pStatusArray)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
  Uma cadeia de caracteres usada para se conectar ao provedor de OLE DB em que a solicitação será enviada. Se um manipulador for usado, o manipulador poderá editar ou substituir a cadeia de conexão.  
   

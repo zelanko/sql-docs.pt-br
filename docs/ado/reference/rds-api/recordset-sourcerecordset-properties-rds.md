@@ -14,10 +14,10 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963578"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Conjunto de registros, propriedades SourceRecordset (RDS)
@@ -36,11 +36,11 @@ DataControl.SourceRecordset = Recordset
 Recordset = DataControl.Recordset   
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Conjunto de registros*  
+ *Recordset*  
  Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  

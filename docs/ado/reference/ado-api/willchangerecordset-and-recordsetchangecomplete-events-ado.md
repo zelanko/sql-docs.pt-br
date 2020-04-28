@@ -20,10 +20,10 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938683"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset e RecordsetChangeComplete (ADO)
@@ -37,7 +37,7 @@ WillChangeRecordset adReason, adStatus, pRecordset
 RecordsetChangeComplete adReason, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *adReason*  
  Um valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica o motivo para esse evento. Seu valor pode ser **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
   
@@ -55,7 +55,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pError*  
  Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Ele descreve o erro que ocorreu se o valor de *adStatus* for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto **Recordset** . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  

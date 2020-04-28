@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937060"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -34,7 +34,7 @@ ms.locfileid: "67937060"
   
  No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a saída de **Sys. dm_db_rda_migration_status** é limitada a 200 linhas.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|A ID da tabela da qual as linhas foram migradas.|  
 |**database_id**|**int**|A ID do banco de dados do qual as linhas foram migradas.|  

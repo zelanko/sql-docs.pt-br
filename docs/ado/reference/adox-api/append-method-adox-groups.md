@@ -17,10 +17,10 @@ ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967311"
 ---
 # <a name="append-method-adox-groups"></a>Método Append (Grupos do ADOX)
@@ -33,7 +33,7 @@ Adiciona um novo objeto de [grupo](../../../ado/reference/adox-api/group-object-
 Groups.Append Group  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Agrupar*  
  O objeto de **grupo** a ser anexado ou o nome do grupo a ser criado e acrescentado.  
   

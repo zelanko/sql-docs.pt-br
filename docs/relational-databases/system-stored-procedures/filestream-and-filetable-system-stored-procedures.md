@@ -15,13 +15,13 @@ ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942248"
 ---
-# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Procedimentos armazenados do sistema Filetable e FileStream (Transact-SQL)
+# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Procedimentos armazenados de fluxo de arquivos e FileTable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Esta seção descreve os procedimentos armazenados do sistema para o recurso Filetable e FileStream.  

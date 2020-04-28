@@ -10,10 +10,10 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989704"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Editar mapeamento de tipo (DB2ToSQL)
@@ -28,7 +28,7 @@ Você pode acessar essa caixa de diálogo em vários locais:
 Os mapeamentos de tipo específicos de tabela substituem o banco de dados e os mapeamentos de tipo de projeto. Mapeamentos específicos de banco de dados substituem mapeamentos de projeto.  
   
 ## <a name="options"></a>Opções  
-**Tipo de origem**  
+**Tipo de fonte**  
 Selecione o tipo de dados de origem para mapear para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   
 Se o tipo de dados for de comprimento variável, os campos a seguir aparecerão em **tipo de origem**:  
@@ -44,6 +44,6 @@ Selecione o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de da
   
 Se o tipo de dados for de comprimento variável, o campo a seguir aparecerá em **tipo de destino**:  
   
-**Substituir por**  
+**Replace with**  
 Especifique o comprimento de destino para esse mapeamento. Por exemplo, para o tipo de dados **nvarchar** , você pode inserir 20 para especificar que o tipo de dados de origem especificado deve ser mapeado para **nvarchar (20)**.  
   

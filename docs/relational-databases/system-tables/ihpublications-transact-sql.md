@@ -18,10 +18,10 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990336"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67990336"
 
   A tabela do sistema **IHpublications** contém uma linha para cada publicação não SQL Server usando o distribuidor atual. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|A coluna de identidade que fornece um ID exclusivo para a publicação.|  
 |**name**|**sysname**|O nome exclusivo associado com a publicação.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67990336"
 |**conflict_policy**|**int**|Especifica a política de resolução de conflito seguida quando a opção de assinante de atualização enfileirado é usada. Pode ser um destes valores:<br /><br /> **1** = o Publicador vence o conflito.<br /><br /> **2** = Assinante vence o conflito.<br /><br /> **3** = a assinatura é reinicializada.<br /><br /> *Sem suporte para Publicadores não SQL.*|  
 |**queue_type**|**int**|Especifica o tipo de fila usado. Pode ser um destes valores:<br /><br /> **1** = MSMQ, que usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] o enfileiramento de mensagens para armazenar transações.<br /><br /> **2** = SQL, que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.<br /><br /> Esta coluna não é usada por não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.<br /><br /> Observação: o [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso do enfileiramento de mensagens foi preterido e não tem mais suporte.<br /><br /> *Não há suporte para esta coluna em Publicadores não SQL.*|  
 |**ad_guidname**|**sysname**|Especifica se a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Um GUID (identificador global exclusivo) válido especifica que a publicação é publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory e o GUID é o **objectGUID**do objeto de publicação Active Directory correspondente. Se for NULL, a publicação não será publicada no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Sem suporte para Publicadores não SQL.*|  
-|**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Sem suporte para Publicadores não SQL.*|  
+|**backward_comp_level**|**int**|Nível de compatibilidade de banco de dados, que pode ser um dos valores seguintes:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Sem suporte para Publicadores não SQL.*|  
 |**ndescrição**|**nvarchar (255)**|Entrada descritiva para a publicação.|  
 |**independent_agent**|**bit**|Especifica se existe um Distribution Agent autônomo para essa publicação.<br /><br /> **0** = a publicação usa um agente de distribuição compartilhado e cada par de banco de dados/assinante do Publicador tem um agente único e compartilhado.<br /><br /> **1** = há um agente de distribuição autônomo para esta publicação.|  
 |**immediate_sync**|**bit**|Indica se os arquivos de sincronização são criados ou recriados sempre que o Agente de Instantâneo é executado, em que **1** significa que eles são criados toda vez que o agente é executado.|  
@@ -70,7 +70,7 @@ ms.locfileid: "67990336"
 |**allow_initialize_from_backup**|**bit**|Indica se os Assinantes podem iniciar uma assinatura para essa publicação de um backup em vez de um instantâneo inicial. **1** significa que as assinaturas podem ser inicializadas a partir de um backup e **0** significa que elas não podem. Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md). *Sem suporte para Publicadores não SQL.*|  
 |**min_autonosync_lsn**|**binário (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indica se a replicação do esquema tem suporte para a publicação. **1** indica que as instruções DDL executadas no Publicador são replicadas e **0** indica que as instruções DDL não são replicadas. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação). *Sem suporte para Publicadores não SQL.*|  
-|**Opções**|**int**|Bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são:<br /><br /> **0x1** -habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar apenas alterações locais.<br /><br /> **0x4** -habilitado para assinantes não SQL Server.|  
+|**options**|**int**|Bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são:<br /><br /> **0x1** -habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar apenas alterações locais.<br /><br /> **0x4** -habilitado para assinantes não SQL Server.|  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

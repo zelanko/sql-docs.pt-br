@@ -17,10 +17,10 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967286"
 ---
 # <a name="append-method-adox-procedures"></a>Método Append (Procedimentos do ADOX)
@@ -33,7 +33,7 @@ Adiciona um novo objeto de [procedimento](../../../ado/reference/adox-api/proced
 Procedures.Append Name, Command  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Nome*  
  Um valor de **cadeia de caracteres** que especifica o nome do procedimento a ser criado e acrescentado.  
   

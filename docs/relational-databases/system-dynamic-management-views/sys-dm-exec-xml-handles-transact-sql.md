@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936785"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -47,12 +47,12 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID de sessão da sessão que contém o identificador de documento XML.|  
 |**document_id**|**int**|ID do identificador do documento XML retornado por **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|ID de identificador interno usada para o documento de namespace associado que foi passado como o terceiro parâmetro para **sp_xml_preparedocument**. NULL se não houver nenhum documento de namespace.|  
-|**sql_handle**|**varbinary (64)**|Identificador para o texto do código SQL em que o identificador foi definido.|  
+|**sql_handle**|**varbinary(64)**|Identificador para o texto do código SQL em que o identificador foi definido.|  
 |**statement_start_offset**|**int**|Número de caracteres no lote ou procedimento armazenado atualmente em execução no qual ocorre a chamada de **sp_xml_preparedocument** . Pode ser usado junto com o **sql_handle**, o **statement_end_offset**e a função de gerenciamento dinâmico **Sys. dm_exec_sql_text** para recuperar a instrução atualmente em execução para a solicitação.|  
 |**statement_end_offset**|**int**|Número de caracteres no lote ou procedimento armazenado atualmente em execução no qual ocorre a chamada de **sp_xml_preparedocument** . Pode ser usado junto com o **sql_handle**, o **statement_start_offset**e a função de gerenciamento dinâmico **Sys. dm_exec_sql_text** para recuperar a instrução atualmente em execução para a solicitação.|  
 |**creation_time**|**datetime**|Carimbo de data/hora quando **sp_xml_preparedocument** foi chamado.|  

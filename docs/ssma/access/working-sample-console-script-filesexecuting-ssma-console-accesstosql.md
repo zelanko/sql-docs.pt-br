@@ -10,10 +10,10 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938380"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Trabalhando com o script de console de exemplo FilesExecuting The SSMA console (AccessToSQL)
@@ -56,7 +56,7 @@ Os seguintes arquivos de script de console de exemplo que abrangem diferentes ce
   
 -   **ConversionAndDataMigrationSample. xml:** Este exemplo permite que o usuário execute uma migração de ponta a ponta da conversão para a migração de dados. A lista de valores de atributo obrigatórios que eles terão que ser alterados está listada abaixo:  
   
-    |Nome do comando|DESCRIÇÃO|Atributo|  
+    |Nome do comando|Descrição|Atributo|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapeamento de esquema do banco de dados de origem para o esquema de destino.|`source-schema:`Especifica o banco de dados de origem que exige a conversão.<br /><br />`sql-server-schema`: Especifica o banco de dados de destino que deve ser migrado para|  
     |`convert-schema`|Executa a conversão de esquema da origem para o esquema de destino.<br /><br />Se o usuário tiver que avaliar vários objetos/bancos de dados, ele poderá especificar `metabase-object` vários nós, conforme ilustrado no exemplo 4 do `convert-schema` comando do arquivo de script do console de exemplo.|`object-name`: Especifique o nome do banco de dados/objeto de origem que exige a conversão. Verifique se o correspondente `object-type` é alterado com base no tipo de objeto especificado no`object-name`|  

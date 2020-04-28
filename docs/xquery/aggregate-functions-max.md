@@ -16,10 +16,10 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985958"
 ---
 # <a name="aggregate-functions---max"></a>Funções de Agregação – max
@@ -46,9 +46,9 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  A função **Max ()** retorna um valor na sequência que é maior que qualquer outro na sequência de entrada. Para valores xs:string, a ordenação de ponto de código Unicode padrão está sendo usada. Se um valor de xdt: untypedAtomic não puder ser convertido em xs: Double, o valor será ignorado na sequência de entrada, *$ARG*. Se a entrada for uma sequência vazia calculada dinamicamente, a sequência vazia será retornada.  
   
 ## <a name="examples"></a>Exemplos  
- Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
+ Este tópico fornece exemplos de XQuery em relação a instâncias XML que são **xml** armazenadas em várias colunas de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tipo XML no banco de dados.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>a. Usando a função max() XQuery para localizar locais de centro de trabalho no processo de fabricação que têm grande parte das horas de trabalho  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Usando a função max() XQuery para localizar locais de centro de trabalho no processo de fabricação que têm grande parte das horas de trabalho  
  A consulta fornecida na [função mín (XQuery)](../xquery/aggregate-functions-min.md) pode ser reescrita para usar a função **Max ()** .  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  

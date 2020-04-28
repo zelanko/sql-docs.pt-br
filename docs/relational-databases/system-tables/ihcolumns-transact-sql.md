@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990391"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67990391"
   
 ## <a name="definition"></a>Definição  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica uma coluna publicada.|  
 |**publishercolumn_id**|**int**|Associa uma coluna publicada com metadados de coluna armazenados na tabela do sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
@@ -45,7 +45,7 @@ ms.locfileid: "67990391"
 |**mapped_nullable**|**bit**|Indica se a coluna no Assinante aceita valores nulos, em que **1** significa que valores nulos são aceitos.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

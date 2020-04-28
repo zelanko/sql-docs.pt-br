@@ -17,10 +17,10 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945853"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
@@ -35,7 +35,7 @@ O evento **WillConnect** é chamado antes de iniciar uma conexão.
 WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
  Uma **cadeia de caracteres** que contém informações de conexão para a conexão pendente.  
   

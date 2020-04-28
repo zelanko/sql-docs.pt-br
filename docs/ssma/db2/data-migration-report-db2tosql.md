@@ -10,10 +10,10 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989751"
 ---
 # <a name="data-migration-report-db2tosql"></a>Relatório de migração de dados (DB2ToSQL)
@@ -41,6 +41,6 @@ A porcentagem de linhas migradas com êxito.
 **Detalhes**  
 Se houver falha na migração de dados, clique para exibir os detalhes de migração para a linha selecionada no relatório. O SSMA exibirá o motivo da falha.  
   
-**Salvar relatório**  
+**Salvar Relatório**  
 Salva o relatório em um. Arquivo CSV, (valores separados por vírgula), que pode ser examinado usando o Microsoft Excel.  
   

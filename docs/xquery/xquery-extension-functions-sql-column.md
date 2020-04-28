@@ -16,10 +16,10 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946017"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
@@ -132,9 +132,9 @@ select @x
 ## <a name="see-also"></a>Consulte Também  
  [Funções de extensão SQL Server XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [&#40;de dados XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Criar instâncias de dados XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
- [XML DML &#40;linguagem de manipulação de dados XML &#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md)   
+ [Linguagem de modificação de dados XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

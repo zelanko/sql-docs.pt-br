@@ -14,10 +14,10 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963260"
 ---
 # <a name="synchronize-method-rds"></a>Método Synchronize (RDS)
@@ -33,7 +33,7 @@ Sincronize o conjunto de registros fornecido com o banco de dados especificado p
 object.Synchronize(ConnectionString As String, HandlerString As String, lSynchronizeOptions As Long, ppRecordset As Object, pStatusArray, [lcid As Long], [pInformation)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
  Uma cadeia de caracteres usada para se conectar ao provedor de OLE DB em que a solicitação será enviada. Se um manipulador for usado, o manipulador poderá editar ou substituir a cadeia de conexão.  
   
@@ -57,7 +57,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pStatusArray*  
  Uma variante usada para retornar uma matriz segura de status de linha para as linhas afetadas por sincronização. Não definido se nenhuma das seguintes opções de sincronização estiver definida: *RefreshWithUpdate*, *Refresh* e *RefreshConflicts*.  
   
- *LCID*  
+ *lcid*  
  O LCID usado para criar os erros retornados em *pInformation*.  
   
  *pInformation*  

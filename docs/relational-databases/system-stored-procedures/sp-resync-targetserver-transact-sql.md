@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995490"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'`O nome do servidor a ser ressincronizado. o *servidor* é **sysname**, sem padrão. Se **All** for especificado, todos os servidores de destino serão ressincronizados.  
+`[ @server_name = ] 'server'`O nome do servidor a ser ressincronizado. *server* é **sysname**, sem padrão. Se **All** for especificado, todos os servidores de destino serão ressincronizados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

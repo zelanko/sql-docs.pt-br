@@ -21,10 +21,10 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942031"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @parameter_name  
  O nome do parâmetro para o qual você quer definir o valor. @parameter_nameé NVARCHAR (128). Os nomes de parâmetro disponíveis são **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**e **StorageOperationDebugXevent**.  
   
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="best-practices"></a>Práticas Recomendadas  
+## <a name="best-practices"></a>Práticas recomendadas  
  A seção opcional que descreve as práticas recomendadas que o usuário deve saber ao executar a instrução ou a rotina.  
   
 ## <a name="security"></a>Segurança  

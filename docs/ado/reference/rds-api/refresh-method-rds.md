@@ -18,10 +18,10 @@ ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963504"
 ---
 # <a name="refresh-method-rds"></a>Método Refresh (RDS)
@@ -37,7 +37,7 @@ Consulta novamente a fonte de dados especificada na propriedade [Connect](../../
 DataControl.Refresh  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

@@ -17,10 +17,10 @@ ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942304"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimentos armazenados do plano de manutenção do banco de dados (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67942304"
 |[sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)||  
   
 ## <a name="see-also"></a>Consulte Também  
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

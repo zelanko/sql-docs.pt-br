@@ -17,10 +17,10 @@ ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966272"
 ---
 # <a name="getobjectowner-method-adox"></a>Método GetObjectOwner (ADOX)
@@ -36,14 +36,14 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ## <a name="return-value"></a>Valor retornado  
  Retorna um valor de **cadeia de caracteres** que especifica o [nome](../../../ado/reference/adox-api/name-property-adox.md) do [usuário](../../../ado/reference/adox-api/user-object-adox.md) ou [grupo](../../../ado/reference/adox-api/group-object-adox.md) que possui o objeto.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ObjectName*  
  Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual retornar o proprietário.  
   
  *ObjectType*  
  Um valor **longo** que pode ser uma das constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica o tipo do objeto para o qual obter o proprietário.  
   
- *Objecttypeid*  
+ *ObjectTypeId*  
  Opcional. Um valor de **variante** que especifica o GUID para um tipo de objeto de provedor não definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
   
 ## <a name="remarks"></a>Comentários  

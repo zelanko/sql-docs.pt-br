@@ -17,10 +17,10 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937013"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
@@ -30,7 +30,7 @@ ms.locfileid: "67937013"
   
  **dm_db_rda_schema_update_status** está no escopo do contexto do banco de dados atual. Verifique se você está no contexto do banco de dados da tabela habilitada para Stretch para a qual você deseja ver o status de atualização do esquema.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|A ID da tabela local habilitada para Stretch cujo esquema de arquivo de dados remoto está sendo atualizado.|  
 |**database_id**|**int**|A ID do banco de dados que contém a tabela local habilitada para Stretch.|  

@@ -14,10 +14,10 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964312"
 ---
 # <a name="execute-method-rds"></a>Método Execute (RDS)
@@ -33,7 +33,7 @@ Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2,5 
 object.Execute(ConnectionString As String, HandlerString As String, QueryString As String, lFetchOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters, [lcid As Long], [pInformation])  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
  Uma cadeia de caracteres usada para se conectar ao provedor de OLE DB em que a solicitação será enviada para execução. Se um manipulador for especificado usando *handlerString* , ele poderá editar ou substituir a cadeia de conexão.  
   
@@ -71,7 +71,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pParameters*  
  Uma **variante** que contém uma matriz segura de definições de parâmetro. Se a opção *GetInfo* tiver sido especificada em *lExecuteOptions*, esse parâmetro será usado para retornar as definições de parâmetro obtidas do provedor de OLE DB. Caso contrário, esse parâmetro poderá ficar vazio.  
   
- *LCID*  
+ *lcid*  
  O LCID usado para criar os erros retornados em *pInformation*.  
   
  *pInformation*  

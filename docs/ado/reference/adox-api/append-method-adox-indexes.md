@@ -16,10 +16,10 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967305"
 ---
 # <a name="append-method-adox-indexes"></a>Método Append (Índices do ADOX)
@@ -32,7 +32,7 @@ Adiciona um novo objeto de [índice](../../../ado/reference/adox-api/index-objec
 Indexes.Append Index [,Columns]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Index*  
  O objeto de **índice** a ser acrescentado ou o nome do índice a ser criado e acrescentado.  
   

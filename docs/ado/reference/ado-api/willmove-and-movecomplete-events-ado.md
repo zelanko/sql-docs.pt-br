@@ -20,10 +20,10 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945919"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove e MoveComplete (ADO)
@@ -37,7 +37,7 @@ WillMove adReason, adStatus, pRecordset
 MoveComplete adReason, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *adReason*  
  Um valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica o motivo para esse evento. Seu valor pode ser **adRsnMoveFirst**, **adRsnMoveLast**, **adRsnMoveNext**, **adRsnMovePrevious**, **adRsnMove**ou **adRsnRequery**.  
   
@@ -55,7 +55,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  Antes de **MoveComplete** retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  

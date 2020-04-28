@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940295"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "67940295"
 
   Retorna uma linha para cada provedor criptográfico registrado.  
     
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificação do provedor criptográfico.|  
 |**name**|**sysname**|Nome do provedor criptográfico.|  
 |**volume**|**uniqueidentifier**|GUID de provedor exclusivo.|  
-|**Versão**|**nvarchar (50)**|Versão do provedor no formato '*AA.BB.cccc.DD*'.|  
+|**version**|**nvarchar(50)**|Versão do provedor no formato '*AA.BB.cccc.DD*'.|  
 |**dll_path**|**nvarchar(512)**|Caminho para a DLL que implementa a interface de aplicativo (API) do Gerenciamento Extensível de Chaves.|  
 |**is_enabled**|**bit**|Indica se o provedor está habilitado no servidor ou não.<br /><br /> 0 = Não habilitado (padrão)<br /><br /> 1 = habilitado|  
   
@@ -45,10 +45,10 @@ ms.locfileid: "67940295"
  A exibição **Sys. cryptographic_providers** é visível para o público.  
   
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Hierarquia de criptografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Gerenciamento extensível de chaves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  

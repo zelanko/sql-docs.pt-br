@@ -16,16 +16,16 @@ ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaeac9e4b8d542b00df190b366d2c7b9d29f9183
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965795"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Especifica o tipo de [chave](../../../ado/reference/adox-api/key-object-adox.md): primária, estrangeira ou exclusiva.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|Padrão. A chave é uma chave primária.|  
 |**adKeyForeign**|2|A chave é uma chave estrangeira.|  

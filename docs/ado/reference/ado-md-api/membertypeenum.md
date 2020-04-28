@@ -16,16 +16,16 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949408"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 Especifica a configuração da propriedade [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) de um objeto [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|Indica que o objeto de **membro** representa todos os membros do nível.|  
 |**adMemberFormula**|3|Indica que o objeto de **membro** é calculado usando uma expressão de fórmula.|  

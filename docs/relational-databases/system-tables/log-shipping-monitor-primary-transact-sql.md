@@ -18,10 +18,10 @@ ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989980"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67989980"
   
  As tabelas relacionadas ao histórico e monitoramento também são usadas no servidor primário e nos servidores secundários.   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|A ID do banco de dados primário para a configuração de envio de log.|  
 |**primary_server**|**sysname**|Nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
@@ -56,6 +56,6 @@ ms.locfileid: "67989980"
  [&#41;&#40;Transact-SQL de sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_log_shipping_monitor_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

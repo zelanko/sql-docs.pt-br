@@ -18,10 +18,10 @@ ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938854"
 ---
 # <a name="underlyingvalue-property"></a>Propriedade UnderlyingValue
@@ -37,7 +37,7 @@ Indica o valor atual de um objeto de [campo](../../../ado/reference/ado-api/fiel
   
  Ao usar essa propriedade com a propriedade **OriginalValue** , você pode resolver conflitos que surgem de atualizações em lotes.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Record  
  Para objetos de [registro](../../../ado/reference/ado-api/record-object-ado.md) , essa propriedade estará vazia para os campos adicionados antes da [atualização](../../../ado/reference/ado-api/update-method.md) ser chamada.  
   
 ## <a name="applies-to"></a>Aplica-se A  

@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964510"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
@@ -39,19 +39,19 @@ Cria um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-
 object.CreateRecordset(ColumnInfos)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Objeto*  
  Uma variável de objeto que representa um [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ou [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
  Uma matriz **variante** de atributos que define cada coluna no **conjunto de registros** criado. Cada definição de coluna contém uma matriz de quatro atributos necessários e um atributo opcional.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |Nome|Nome do cabeçalho da coluna.|  
 |Type|Inteiro do tipo de dados.|  
 |Tamanho|O número inteiro da largura em caracteres, independentemente do tipo de dados.|  
-|Nulidade|Valor booliano.|  
+|Nulidade|$True.|  
 |Escala (opcional)|Esse atributo opcional define a escala para campos numéricos. Se esse valor não for especificado, os valores numéricos serão truncados para uma escala de três. A precisão não é afetada, mas o número de dígitos após o ponto decimal será truncado para três.|  
   
  O conjunto de matrizes de coluna é então agrupado em uma matriz, que define o **conjunto de registros**.  

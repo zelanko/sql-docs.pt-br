@@ -14,10 +14,10 @@ ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940018"
 ---
 # <a name="ado-md-collections"></a>Coleções do ADO MD
@@ -28,7 +28,7 @@ ms.locfileid: "67940018"
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contém os objetos **CubeDef** que representam um cubo de um catálogo multidimensional.|  
 |[Dimensões](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contém os objetos de **dimensão** que compõem um cubo.|  
 |[Hierarquias](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contém os objetos de **hierarquia** de conjunto de uma dimensão.|  
-|[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém os objetos de **nível** que compõem uma hierarquia.|  
+|[Níveis](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém os objetos de **nível** que compõem uma hierarquia.|  
 |[Membros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contém os objetos de **membro** de um nível ou uma posição ao longo de um eixo.|  
 |[Posições](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contém os objetos **Position** que definem um ponto em um eixo.|  
   

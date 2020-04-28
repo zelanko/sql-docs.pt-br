@@ -17,10 +17,10 @@ ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963882"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>Métodos MoveFirst, MoveLast, MoveNext e MovePrevious (RDS)
@@ -36,7 +36,7 @@ Move para o primeiro, o último, o próximo ou o registro anterior em um objeto 
 DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

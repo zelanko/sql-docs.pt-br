@@ -16,10 +16,10 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949608"
 ---
 # <a name="level-object-ado-md"></a>Objeto Level (ADO MD)
@@ -42,11 +42,11 @@ Contém um conjunto de membros, cada um dos quais tem a mesma classificação em
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual este cubo pertence.|  
 |CubeName|O nome do cubo.|  
-|DESCRIÇÃO|Uma descrição significativa do nível.|  
+|Descrição|Uma descrição significativa do nível.|  
 |DimensionUniqueName|O nome não ambíguo da [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|O nome não ambíguo da hierarquia.|  
 |LevelCaption|Um rótulo ou legenda associado ao nível.|  

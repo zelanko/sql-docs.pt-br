@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946604"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos e prólogos – Prólogo XQuery
@@ -45,8 +45,7 @@ WHERE ProductModelID=7
   
 -   A palavra-chave `declare namespace` define um prefixo de namespace que depois é usado no corpo da consulta.  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` é o corpo da consulta.  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` é o corpo da consulta.  
   
 ## <a name="namespace-declarations"></a>Declarações de namespace  
  Uma declaração de namespace define um prefixo e o associa a um namespace URI, como mostrado na consulta a seguir. Na consulta, `CatalogDescription` é uma coluna de tipo **XML** .  

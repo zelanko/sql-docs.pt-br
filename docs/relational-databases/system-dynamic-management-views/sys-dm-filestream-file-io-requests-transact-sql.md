@@ -19,10 +19,10 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67951032"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
@@ -30,12 +30,12 @@ ms.locfileid: "67951032"
 
   Exibe uma lista de solicitações de E/S sendo processadas NSO (proprietário do namespace) no momento determinado.  
   
-|Coluna|Type|DESCRIÇÃO|  
+|Coluna|Type|Descrição|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|Mostra o endereço interno do bloco memória NSO que contém a solicitação de E/S do driver. Não permite valor nulo.|  
 |**current_spid**|**smallint**|Mostra a ID de processo do sistema (SPID) para a conexão do SQL Server atual. Não permite valor nulo.|  
-|**request_type**|**nvarchar (60)**|Mostra o tipo de IRP (pacote de solicitação de E/S). Os possíveis tipos de solicitação são: REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY e REQ_SET_SECURITY. Não permite valor nulo|  
-|**request_state**|**nvarchar (60)**|Mostra o estado da solicitação de E/S no NSO. Os valores possível são: REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING e REQ_STATE_COMPLETED. Não permite valor nulo.|  
+|**request_type**|**nvarchar(60)**|Mostra o tipo de IRP (pacote de solicitação de E/S). Os possíveis tipos de solicitação são: REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY e REQ_SET_SECURITY. Não permite valor nulo|  
+|**request_state**|**nvarchar(60)**|Mostra o estado da solicitação de E/S no NSO. Os valores possível são: REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING e REQ_STATE_COMPLETED. Não permite valor nulo.|  
 |**request_id**|**int**|Mostra a ID de solicitação exclusiva atribuída pelo driver a esta solicitação. Não permite valor nulo.|  
 |**irp_id**|**int**|Mostra a ID de IRP exclusiva. Isso é útil para identificar todas as solicitações de E/S relacionadas ao IRP determinado. Não permite valor nulo.|  
 |**handle_id**|**int**|Indica a ID do identificador de namespace. Esse é o identificador específico ao NSO e é exclusivo em uma instância. Não permite valor nulo.|  

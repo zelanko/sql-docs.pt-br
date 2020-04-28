@@ -16,10 +16,10 @@ ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 96edefd5409520109e2b2155507dd8879ed4b0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946631"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções Relacionadas a QNames – namespace-uri-from-QName
@@ -40,7 +40,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>a. Recuperar o URI do namespace de um QName  
+### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Recuperar o URI do namespace de um QName  
  Para obter um exemplo funcional, consulte [local-name-from-QName &#40;&#41;XQuery ](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limitações de implementação  

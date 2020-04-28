@@ -13,14 +13,14 @@ ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b8a888460d115ee5ee3e9b392292c50587709357
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952181"
 ---
 # <a name="ado-programmer39s-reference"></a>Referência do programador do ADO&#39;s
-Esta seção contém os seguintes tópicos:  
+Esta seção contém os seguintes tópicos.  
   
 -   [Referência de API ADO](../../ado/reference/ado-api/ado-api-reference.md)  
   

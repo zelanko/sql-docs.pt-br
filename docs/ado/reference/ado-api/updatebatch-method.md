@@ -17,10 +17,10 @@ ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937847"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
@@ -33,7 +33,7 @@ Grava todas as atualizações de lote pendentes no disco.
 recordset.UpdateBatch AffectRecords, PreserveStatus  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *AffectRecords*  
  Opcional. Um valor [AffectEnum](../../../ado/reference/ado-api/affectenum.md) que indica quantos registros o método **UpdateBatch** afetará.  
   

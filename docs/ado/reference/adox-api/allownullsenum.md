@@ -16,16 +16,16 @@ ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48e9d8c40d2ab76b902d285526fcd9e9abf7be07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967330"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Especifica se os registros com valores nulos são indexados.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|O índice permite entradas em que as colunas de chave são nulas. Se um valor nulo for inserido em uma coluna de chave, a entrada será inserida no índice.|  
 |**adIndexNullsDisallow**|1|Padrão. O índice não permite entradas em que as colunas de chave são nulas. Se um valor nulo for inserido em uma coluna de chave, ocorrerá um erro.|  

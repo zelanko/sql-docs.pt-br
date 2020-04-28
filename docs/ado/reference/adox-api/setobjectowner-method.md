@@ -17,10 +17,10 @@ ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965234"
 ---
 # <a name="setobjectowner-method"></a>Método SetObjectOwner
@@ -33,7 +33,7 @@ Especifica o proprietário de um objeto em um [Catálogo](../../../ado/reference
 Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ObjectName*  
  Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual especificar o proprietário.  
   
@@ -43,7 +43,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  *OwnerName*  
  Um valor de **cadeia de caracteres** que especifica o [nome](../../../ado/reference/adox-api/name-property-adox.md) do [usuário](../../../ado/reference/adox-api/user-object-adox.md) ou [grupo](../../../ado/reference/adox-api/group-object-adox.md) para o qual o objeto é proprietário.  
   
- *Objecttypeid*  
+ *ObjectTypeId*  
  Opcional. Um valor **Variant** que especifica o GUID para um tipo de objeto de provedor que não é definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
   
 ## <a name="remarks"></a>Comentários  

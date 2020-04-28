@@ -13,17 +13,17 @@ ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966167"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Propriedades, Métodos e Eventos da coleção Groups
 ## <a name="properties"></a>Propriedades  
  [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Propriedade Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [Método Append (grupos)](../../../ado/reference/adox-api/append-method-adox-groups.md)  

@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936611"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
@@ -33,12 +33,12 @@ O evento **WillExecute** é chamado logo antes de um comando pendente ser execut
 WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordset, pConnection  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Uma **cadeia de caracteres** que contém um comando SQL ou um nome de procedimento armazenado.  
   
  *CursorType*  
- Um [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) que contém o tipo de cursor para o **conjunto de registros** que será aberto. Com esse parâmetro, você pode alterar o cursor para qualquer tipo durante uma **** operação de[método Open do conjunto de registros (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . O *CursorType* será ignorado para qualquer outra operação.  
+ Um [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) que contém o tipo de cursor para o **conjunto de registros** que será aberto. Com esse parâmetro, você pode alterar o cursor para qualquer tipo durante uma **Recordset**operação de[método Open do conjunto de registros (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . O *CursorType* será ignorado para qualquer outra operação.  
   
  *LockType*  
  Um [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) que contém o tipo de bloqueio para o **conjunto de registros** que será aberto. Com esse parâmetro, você pode alterar o bloqueio para qualquer tipo durante uma operação **RecordsetOpen** . *LockType* será ignorado para qualquer outra operação.  
@@ -52,7 +52,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pCommand*  
  O objeto do [objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md) para o qual essa notificação de evento se aplica.  
   
- *precaboset*  
+ *pRecordset*  
  O objeto [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) para o qual essa notificação de evento se aplica.  
   
  *pConnection*  

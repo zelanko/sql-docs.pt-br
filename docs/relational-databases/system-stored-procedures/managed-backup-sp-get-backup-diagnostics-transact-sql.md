@@ -21,10 +21,10 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942040"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67942040"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @xevent_channel  
  O tipo do Evento Estendido. O valor padrão é definido para retornar todos os eventos registrados para os 30 minutos anteriores. Os eventos registrados dependem do tipo de Eventos Estendidos habilitados. Você pode usar esse parâmetro para filtrar o procedimento armazenado para mostrar apenas eventos de um determinado tipo. Você pode especificar o nome do evento completo ou especificar uma subcadeia de caracteres, como: **' admin**, **' analítica '**, **' operacional '** e **' depurar '**. O @event_channel é **varchar (255)**.  
   
@@ -59,7 +59,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |event_type|NVARCHAR (512)|Tipo de Evento Estendido.|  
 |Evento|NVARCHAR (512)|Resumo dos logs de eventos.|  
 |Timestamp|timestamp|Carimbo de data/hora de evento que mostra quando o evento foi gerado.|  

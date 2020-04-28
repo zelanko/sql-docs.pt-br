@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933413"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
@@ -33,8 +33,8 @@ Copia uma entidade representada por um [registro](../../../ado/reference/ado-api
 Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Um valor de **cadeia de caracteres** que contém uma URL que especifica a entidade a ser copiada (por exemplo, um arquivo ou diretório). Se a *origem* for omitida ou especificar uma cadeia de caracteres vazia, o arquivo ou diretório representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md) atual será copiado.  
   
  *Destino*  

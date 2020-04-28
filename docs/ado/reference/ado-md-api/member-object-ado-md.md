@@ -16,10 +16,10 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949492"
 ---
 # <a name="member-object-ado-md"></a>Objeto Member (ADO MD)
@@ -68,12 +68,12 @@ Representa um membro de um nível em um cubo, os filhos de um membro de um níve
   
  A coleção **Properties** contém propriedades fornecidas pelo provedor. A tabela a seguir lista as propriedades que podem estar disponíveis. A lista de propriedades real pode diferir dependendo da implementação do provedor. Consulte a documentação do seu provedor para obter uma lista mais completa das propriedades disponíveis.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |CatalogName|O nome do catálogo ao qual este cubo pertence.|  
 |ChildrenCardinality|O número de filhos de um membro.|  
 |CubeName|O nome do cubo.|  
-|DESCRIÇÃO|Uma descrição significativa do membro.|  
+|Descrição|Uma descrição significativa do membro.|  
 |DimensionUniqueName|O nome não ambíguo da [dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|O nome não ambíguo da hierarquia.|  
 |LevelNumber|A distância entre o nível e a raiz da hierarquia.|  

@@ -17,10 +17,10 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967030"
 ---
 # <a name="changepassword-method-adox"></a>Método ChangePassword (ADOX)
@@ -33,7 +33,7 @@ Altera a senha de uma conta de [usuário](../../../ado/reference/adox-api/user-o
 User.ChangePassword OldPassword, NewPassword  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *OldPassword*  
  Um valor de **cadeia de caracteres** que especifica a senha existente do usuário. Se o usuário não tiver uma senha no momento, use uma cadeia de caracteres vazia ("") para *oldPassword*.  
   

@@ -14,10 +14,10 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964209"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
@@ -33,7 +33,7 @@ Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2,1.
 object.Execute21(ConnectionString As String, HandlerString As String, QueryString As String, lMarshalOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
  Uma cadeia de caracteres usada para se conectar ao provedor de OLE DB em que a solicitação será enviada para execução. Se um manipulador for especificado usando *handlerString*, ele poderá editar ou substituir a cadeia de conexão.  
   

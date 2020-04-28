@@ -14,10 +14,10 @@ ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964059"
 ---
 # <a name="filtervalue-property-rds"></a>Propriedade FilterValue (RDS)
@@ -33,7 +33,7 @@ Indica o valor com o qual filtrar os registros.
 DataControl.FilterValue = String  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

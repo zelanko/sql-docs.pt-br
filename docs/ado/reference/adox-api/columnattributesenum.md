@@ -16,16 +16,16 @@ ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966883"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 Especifica as características de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md).  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|A coluna tem um comprimento fixo.|  
 |**adColNullable**|2|A coluna pode conter valores nulos.|  

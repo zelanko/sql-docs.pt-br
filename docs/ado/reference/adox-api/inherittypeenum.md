@@ -16,16 +16,16 @@ ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965955"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 Especifica como os objetos herdarão as permissões definidas com [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Os objetos e outros contêineres contidos no objeto primário herdam a entrada.|  
 |**adInheritContainers**|2|Outros contêineres que estão contidos pelo objeto primário herdam a entrada.|  

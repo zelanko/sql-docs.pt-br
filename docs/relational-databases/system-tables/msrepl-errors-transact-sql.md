@@ -18,10 +18,10 @@ ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986473"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
@@ -29,16 +29,16 @@ ms.locfileid: "67986473"
 
   A tabela **MSrepl_errors** contém linhas com agente de distribuição estendido e informações de agente de mesclagem falha. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|A ID do erro.|  
+|**id**|**int**|A ID do erro.|  
 |**time**|**datetime**|A hora da ocorrência do erro.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|A ID de tipo de origem do erro.|  
 |**source_name**|**nvarchar (100)**|O nome de origem do erro.|  
 |**error_code**|**sysname**|O código do erro.|  
 |**error_text**|**ntext**|A mensagem de erro.|  
-|**xact_seqno**|**varbinary (16)**|O número de sequência do log de transações inicial do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
+|**xact_seqno**|**varbinary(16)**|O número de sequência do log de transações inicial do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
 |**command_id**|**int**|A ID de comando do lote de execução com falha. Usado somente por Distribution Agents, essa é a ID de comando do primeiro comando do lote de execução com falha.|  
 |**session_id**|**int**|A ID da sessão de agente na qual ocorreu o erro.|  
   

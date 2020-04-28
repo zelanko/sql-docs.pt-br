@@ -14,10 +14,10 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964545"
 ---
 # <a name="createobject-method-rds"></a>Método CreateObject (RDS)
@@ -36,7 +36,7 @@ Cria o proxy para o objeto comercial de destino e retorna um ponteiro para ele. 
 |DCOM|Set Object = DataSpace. CreateObject ("ProgId", "computername")|  
 |Em processo|Set Object = DataSpace. CreateObject ("ProgId", "")|  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *Objeto*  
  Uma variável de objeto que é avaliada como um objeto que é o tipo especificado em *ProgID*.  
   

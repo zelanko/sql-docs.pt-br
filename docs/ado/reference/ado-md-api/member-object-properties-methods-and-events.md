@@ -13,10 +13,10 @@ ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949489"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Member
@@ -37,7 +37,7 @@ ms.locfileid: "67949489"
   
  [Propriedade Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Propriedade Pai](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [Propriedade pai](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
  [Propriedade ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   

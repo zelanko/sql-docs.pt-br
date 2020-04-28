@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946488"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressões de Caminho – Especificar Eixo
@@ -43,14 +43,14 @@ ms.locfileid: "67946488"
   
  A implementação XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oferece suporte às seguintes etapas de eixo:  
   
-|Axis|DESCRIÇÃO|  
+|Axis|Descrição|  
 |----------|-----------------|  
-|**filho**|Retorna os filhos do nó de contexto.|  
-|**descendente**|Retorna todos os descendentes do nó de contexto.|  
+|**child**|Retorna os filhos do nó de contexto.|  
+|**descendant**|Retorna todos os descendentes do nó de contexto.|  
 |**primária**|Retorna o pai do nó de contexto.|  
 |**Attribute**|Retorna os atributos do nó de contexto.|  
 |**auto-restauração**|Retorna o próprio nó de contexto.|  
-|**descendente ou próprio**|Retorna o nó de contexto e todos os descendentes do nó de contexto.|  
+|**descendant-or-self**|Retorna o nó de contexto e todos os descendentes do nó de contexto.|  
   
  Todos esses eixos, exceto o eixo **pai** , são eixos de encaminhamento. O eixo **pai** é um eixo reverso, pois ele pesquisa retroativamente na hierarquia do documento. Por exemplo, a expressão do caminho relativo `child::ProductDescription/child::Summary` tem duas etapas, e cada etapa especifica um eixo `child`. A primeira etapa recupera os \<filhos do elemento ProductDescription> do nó de contexto. Para cada \<nó de elemento de> de ProductDescription, a segunda \<etapa recupera o resumo> nó filho de elemento.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67946488"
 ## <a name="examples"></a>Exemplos  
  Os exemplos de consulta neste tópico são especificados em relação às colunas do tipo **XML** no banco de dados **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>a. Especificando um eixo filho  
+### <a name="a-specifying-a-child-axis"></a>A. Especificando um eixo filho  
  Para um modelo de produto específico, a consulta a seguir \<recupera os recursos> nó de elemento \<filho do nó do elemento ProductDescription> da descrição do catálogo de `Production.ProductModel` produtos armazenada na tabela.  
   
 ```  

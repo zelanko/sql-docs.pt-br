@@ -14,10 +14,10 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984540"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introdução ao SSMA para MySQL (MySQLToSQL)

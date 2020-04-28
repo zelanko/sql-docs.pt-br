@@ -14,10 +14,10 @@ ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea3be9a06d41718271fee2480da1bf58081c1f07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964597"
 ---
 # <a name="cancelupdate-method-rds"></a>Método CancelUpdate (RDS)
@@ -33,7 +33,7 @@ Cancela as alterações feitas na linha atual ou nova de um objeto [Recordset](.
 DataControl.CancelUpdate  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

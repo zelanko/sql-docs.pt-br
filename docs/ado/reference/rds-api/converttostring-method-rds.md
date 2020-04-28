@@ -14,10 +14,10 @@ ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964573"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
@@ -33,11 +33,11 @@ Converte um [conjunto de registros](../../../ado/reference/ado-api/recordset-obj
 DataFactory.ConvertToString(Recordset)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataFactory*  
  Uma variável de objeto que representa um objeto [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
- *Conjunto de registros*  
+ *Recordset*  
  Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  

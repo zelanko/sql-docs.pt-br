@@ -18,10 +18,10 @@ ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933084"
 ---
 # <a name="description-property"></a>Propriedade Description
@@ -36,7 +36,7 @@ Descreve um objeto de [erro](../../../ado/reference/ado-api/error-object.md) .
  Os provedores são responsáveis por passar o texto de erro específico para o ADO. O ADO adiciona um objeto de [erro](../../../ado/reference/ado-api/error-object.md) à coleção de **erros** para cada erro de provedor ou aviso recebido. Enumere a coleção de **erros** para rastrear os erros que o provedor passa.  
   
 ## <a name="applies-to"></a>Aplica-se A  
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo das propriedades Description, HelpContext, ArquivoDeAjuda, NativeError, Number, Source e SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

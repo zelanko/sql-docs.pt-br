@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965222"
 ---
 # <a name="setpermissions-method-adox"></a>Método SetPermissions (ADOX)
@@ -35,7 +35,7 @@ Especifica as permissões para um [grupo](../../../ado/reference/adox-api/group-
 GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, ObjectTypeId]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Nome*  
  Um valor de **cadeia de caracteres** que especifica o nome do objeto para o qual definir permissões.  
   
@@ -45,13 +45,13 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Ação*  
  Um valor **longo** que pode ser uma das constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) que especifica o tipo de ação a ser executada ao definir permissões.  
   
- *Privilégios*  
+ *Direitos*  
  Um valor **longo** que pode ser um bitmask de uma ou mais constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , que indica os direitos a serem definidos.  
   
  *Herd*  
  Opcional. Um valor **longo** que pode ser uma das constantes [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , que especifica como os objetos herdarão essas permissões. O valor padrão é **adInheritNone**.  
   
- *Objecttypeid*  
+ *ObjectTypeId*  
  Opcional. Um valor **Variant** que especifica o GUID para um tipo de objeto de provedor que não é definido pela especificação de OLE DB. Esse parâmetro será necessário se *objecttype* for definido como **adPermObjProviderSpecific**; caso contrário, ele não será usado.  
   
 ## <a name="remarks"></a>Comentários  

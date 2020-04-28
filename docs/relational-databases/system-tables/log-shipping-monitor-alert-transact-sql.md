@@ -18,10 +18,10 @@ ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990081"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67990081"
 
   Armazena a identificação do trabalho de alerta para envio de logs. Essa tabela é armazenada no banco de dados **msdb** .   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|O agente de identificação do trabalho de alerta para envio de logs.do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -38,6 +38,6 @@ ms.locfileid: "67990081"
  [&#41;&#40;Transact-SQL de sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)   
- [Tabelas do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Tabelas do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945888"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField e FieldChangeComplete (ADO)
@@ -37,7 +37,7 @@ WillChangeField cFields, Fields, adStatus, pRecordset
 FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *cFields*  
  Um **longo** que indica o número de objetos **Field** em *campos*.  
   
@@ -58,7 +58,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
  Antes de **FieldChangeComplete** retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto **Recordset** . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  

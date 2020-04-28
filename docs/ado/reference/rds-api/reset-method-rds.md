@@ -14,10 +14,10 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963490"
 ---
 # <a name="reset-method-rds"></a>Método Reset (RDS)
@@ -33,11 +33,11 @@ Executa a classificação ou o filtro em um **conjunto de registros** do lado do
 DataControl.Reset(value)  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *valor*  
+ *value*  
  Opcional. Um valor **booliano** que é **verdadeiro** (padrão) se você quiser filtrar o conjunto de linhas "filtrado" atual. **False** indica que você filtra o conjunto de linhas original, removendo todas as opções de filtro anteriores.  
   
 ## <a name="remarks"></a>Comentários  

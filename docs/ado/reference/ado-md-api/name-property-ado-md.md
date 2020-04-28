@@ -23,10 +23,10 @@ ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949392"
 ---
 # <a name="name-property-ado-md"></a>Propriedade Name (ADO MD)
@@ -36,7 +36,7 @@ Indica o nome de um objeto.
  Retorna uma **cadeia de caracteres** e é somente leitura.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `cdf.CubeDefs(0).Name` o gerar "bobs Video Store", você poderá fazer referência a [](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) esse CubeDef `cdf.CubeDefs("Bobs Video Store")`como.  
+ Você pode recuperar a propriedade **Name** de um objeto por uma referência ordinal, após o qual você pode fazer referência ao objeto diretamente por nome. Por exemplo, se `cdf.CubeDefs(0).Name` o gerar "bobs Video Store", você poderá fazer referência a [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) esse CubeDef `cdf.CubeDefs("Bobs Video Store")`como.  
   
 ## <a name="applies-to"></a>Aplica-se A  
   

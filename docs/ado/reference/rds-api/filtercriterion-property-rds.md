@@ -14,10 +14,10 @@ ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5b14e042c7566b6b6f8559e9dc371028a509979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964064"
 ---
 # <a name="filtercriterion-property-rds"></a>Propriedade FilterCriterion (RDS)
@@ -33,7 +33,7 @@ Indica o operador de avaliação a ser usado no valor do filtro.
 DataControl.FilterCriterion = String  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

@@ -16,10 +16,10 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937900"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -68,7 +68,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Somente os membros da função de banco de dados fixa **db_owner** no banco de dados de publicação podem executar **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Detecção e resolução de conflito de replicação de mesclagem avançada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecção e resolução de conflitos de replicação de mesclagem avançada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Executar lógica de negócios durante a sincronização de mesclagem](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Especificar um resolvedor de artigo de mesclagem](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

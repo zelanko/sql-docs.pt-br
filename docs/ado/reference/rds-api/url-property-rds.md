@@ -14,10 +14,10 @@ ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963225"
 ---
 # <a name="url-property-rds"></a>Propriedade URL (RDS)
@@ -36,7 +36,7 @@ Design time: <PARAM NAME="URL" VALUE="Server">
 Run time: DataControl.URL="Server"  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Servidor*  
  Um valor de **cadeia de caracteres** que contém uma URL válida.  
   

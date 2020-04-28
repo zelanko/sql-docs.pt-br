@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942280"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,23 +46,22 @@ sp_filestream_force_garbage_collection
  Significa o nome do banco de dados no qual o coletor de lixo será executado.  
   
 > [!NOTE]  
-> `@dbname`é **sysname**. Se não for especificado, o banco de dados atual será assumido.  
+> `@dbname` é **sysname**. Se não for especificado, o banco de dados atual será assumido.  
   
  `[ @filename = ] 'logical_file_name'`  
- Especifica o nome lógico do contêiner FILESTREAM no qual o coletor de lixo será executado. 
-  `@filename` é opcional. Se nenhum nome de arquivo lógico for especificado, o coletor de lixo limpará todos os contêineres FILESTREAM no banco de dados especificado.  
+ Especifica o nome lógico do contêiner FILESTREAM no qual o coletor de lixo será executado. `@filename` é opcional. Se nenhum nome de arquivo lógico for especificado, o coletor de lixo limpará todos os contêineres FILESTREAM no banco de dados especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
   
 |||  
 |-|-|  
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |0|Êxito na operação|  
 |1|Falha na operação|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |*file_name*|Indica o nome de contêiner FILESTREAM|  
 |*num_collected_items*|Indica o número de itens FILESTREAM (arquivos/diretórios) que foram limpos (excluídos) pelo coletor de dados neste contêiner.|  
@@ -89,7 +88,7 @@ A coleta de lixo (GC) depende do truncamento de log. Portanto, se os arquivos fo
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir executam o coletor de lixo para contêineres FILESTREAM no banco de dados `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>a. Não especificando nenhum contêiner  
+### <a name="a-specifying-no-container"></a>A. Não especificando nenhum contêiner  
   
 ```sql  
 USE FSDB;  

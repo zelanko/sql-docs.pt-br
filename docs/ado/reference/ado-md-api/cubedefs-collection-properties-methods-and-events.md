@@ -13,17 +13,17 @@ ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e80c7ae85b32bde70f863181b808256f91302917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938598"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção CubeDefs
 ## <a name="properties"></a>Propriedades  
  [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Propriedade Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [Método de atualização](../../../ado/reference/ado-api/refresh-method-ado.md)  

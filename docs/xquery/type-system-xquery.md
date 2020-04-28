@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946209"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 >  O uso explícito da função **Data ()** neste exemplo é apenas para fins ilustrativos. Se não for especificado, **Sum ()** aplicará implicitamente a função **Data ()** para extrair os valores tipados dos nós.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Modelos e permissões do SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Modelos e permissões de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Fundamentos de XQuery](../xquery/xquery-basics.md)  
   
   

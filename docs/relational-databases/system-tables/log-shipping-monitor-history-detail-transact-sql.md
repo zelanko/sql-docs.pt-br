@@ -18,10 +18,10 @@ ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989996"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67989996"
   
  As tabelas relacionadas ao histórico e monitoramento também são usadas no servidor primário e nos servidores secundários.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|A ID primária para backup ou ID secundária para cópia ou restauração.|  
 |**agent_type**|**tinyint**|O tipo de trabalho de envio de log.<br /><br /> 0 = Backup.<br /><br /> 1 = Cópia.<br /><br /> 2 = restaurar.|  
@@ -40,7 +40,7 @@ ms.locfileid: "67989996"
 |**session_status**|**tinyint**|O status da sessão.<br /><br /> 0 = Iniciando.<br /><br /> 1 = Executando.<br /><br /> 2 = Sucesso.<br /><br /> 3 = Erro.<br /><br /> 4 = Aviso.|  
 |**log_time**|**datetime**|A data e hora em que o registro foi criado.|  
 |**log_time_utc**|**datetime**|A data e hora em que o registro foi criado, expressa em Tempo Universal Coordenado.|  
-|**Mensagem**|**nvarchar(max)**|Texto de mensagem.|  
+|**message**|**nvarchar(max)**|Texto de mensagem.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa tabela contém detalhes de histórico para os agentes de envio de logs. Para identificar uma sessão de agente, use as colunas **agent_id**, **agent_type**e **session_id**. Para ver os detalhes do histórico da sessão do agente, classifique por **log_time**.  

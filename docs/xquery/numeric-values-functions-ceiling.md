@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946574"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funções de Valores Numéricos – ceiling 
@@ -50,7 +50,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>a. Usando a função ceiling() XQuery  
+### <a name="a-using-the-ceiling-xquery-function"></a>A. Usando a função ceiling() XQuery  
  Para o modelo de produto 7, essa consulta retorna uma lista de locais de centro de trabalho no processo de fabricação do modelo de produto. Para cada local de centro de trabalho, a consulta retorna a ID do local, as horas de trabalho e o tamanho de lote, se documentados. A consulta usa a função de **teto** para retornar as horas de trabalho como valores do tipo **decimal**.  
   
 ```  

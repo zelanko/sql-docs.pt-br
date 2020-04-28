@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989870"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Convertendo esquemas do DB2 (DB2ToSQL)
@@ -66,7 +66,7 @@ A tabela a seguir mostra quais objetos DB2 são convertidos e os [!INCLUDE[ssNoV
 |Instrução WHILE|É mapeado.|  
 |OBTER instrução de diagnóstico|**O SSMA Maps Obtém DIAGNÓSTICOs com as seguintes exceções:**<br /><br />ROW_COUNT-está mapeado.<br /><br />DB2_RETURN_STATUS-está mapeado.<br /><br />MESSAGE_TEXT-está mapeado.<br /><br />DB2_SQL_NESTING_LEVEL-não mapeia para SQL Server semântica<br /><br />DB2_TOKEN_STRING-não mapeia para SQL Server semântica|  
 |Cursores|**CURSOres do SSMA Maps com as seguintes exceções:**<br /><br />Instrução ALLOCATE CURSOR-não mapeia para SQL Server semântica<br /><br />Instrução associar LOCALIZADOres-não mapeia para SQL Server semântica<br /><br />Instrução DECLARE CURSOR-a cláusula de retorno não está mapeada para a semântica do SQL Server<br /><br />Instrução FETCH-mapeamento parcial. Variáveis como destino têm suporte apenas. O DESCRITOr SQLDA não está mapeado para a semântica do SQL Server|  
-|variáveis|São mapeados.|  
+|Variáveis|São mapeados.|  
 |Exceções, manipuladores e condições|**O SSMA mapeia "manipulação de exceções" com as seguintes exceções:**<br /><br />Manipuladores de saída-são mapeados.<br /><br />Manipuladores de desfazer-são mapeados.<br /><br />CONTINUAR manipuladores-não estão mapeados.<br /><br />Condições-ele não é mapeado para a semântica do SQL Server.|  
 |SQL dinâmico|Não mapeado.|  
 |Aliases|São mapeados.|  
@@ -75,7 +75,7 @@ A tabela a seguir mostra quais objetos DB2 são convertidos e os [!INCLUDE[ssNoV
 |Funções padrão no DB2|O SSMA mapeia as funções padrão do DB2 quando uma função equivalente está disponível no SQL Server:|  
 |Autorização|Não mapeado.|  
 |Predicados|São mapeados.|  
-|Instrução SELECT INTO|Não mapeado.|  
+|instrução SELECT INTO|Não mapeado.|  
 |VALORES em instrução|Não mapeado.|  
 |Controle de transação|Não mapeado.|  
   

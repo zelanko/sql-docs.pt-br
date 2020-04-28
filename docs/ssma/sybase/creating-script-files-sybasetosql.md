@@ -15,10 +15,10 @@ ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948471"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Criar arquivos de script (SybaseToSQL)

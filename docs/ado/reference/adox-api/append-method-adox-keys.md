@@ -17,10 +17,10 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967294"
 ---
 # <a name="append-method-adox-keys"></a>Método Append (Chaves do ADOX)
@@ -33,7 +33,7 @@ Adiciona um novo objeto de [chave](../../../ado/reference/adox-api/key-object-ad
 Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Chave*  
  O objeto de **chave** a ser acrescentado ou o nome da chave a ser criada e acrescentada.  
   

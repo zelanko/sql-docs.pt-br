@@ -18,10 +18,10 @@ ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948620"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "67948620"
 
   A tabela **MSrepl_transactions** contém uma linha para cada transação replicada. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|A ID do banco de dados Publicador.|  
-|**xact_id**|**varbinary (16)**|A ID da transação.|  
-|**xact_seqno**|**varbinary (16)**|O número de sequência da transação.|  
+|**xact_id**|**varbinary(16)**|A ID da transação.|  
+|**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
 |**entry_time**|**datetime**|A hora em que a transação foi inserida no banco de dados de distribuição.|  
   
 ## <a name="see-also"></a>Consulte Também  

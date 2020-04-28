@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964182"
 ---
 # <a name="executeoptions-property-rds"></a>Propriedade ExecuteOptions (RDS)
@@ -29,7 +29,7 @@ Indica se a execução assíncrona está habilitada.
 ## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
  Define ou retorna um dos valores a seguir.  
   
-|Constante|DESCRIÇÃO|  
+|Constante|Descrição|  
 |--------------|-----------------|  
 |**adcExecSync**|Executa a próxima atualização do conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de forma síncrona.|  
 |**adcExecAsync**|Padrão. Executa a próxima atualização do conjunto de **registros** de forma assíncrona.|  

@@ -14,10 +14,10 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963285"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
@@ -33,7 +33,7 @@ Envia alterações pendentes do [conjunto de registros](../../../ado/reference/a
 DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
@@ -43,7 +43,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Conexão*  
  Um valor de **cadeia de caracteres** que representa a conexão criada com o **RDS. **Propriedade [Connect](../../../ado/reference/rds-api/connect-property-rds.md) do objeto DataControl.  
   
- *Conjunto de registros*  
+ *Recordset*  
  Uma variável de objeto que representa um objeto **Recordset** .  
   
 ## <a name="remarks"></a>Comentários  

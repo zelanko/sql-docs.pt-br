@@ -18,10 +18,10 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990160"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67990160"
 
   A tabela do sistema **IHpublishertables** representa os metadados armazenados no Publicador. Essa tabela contém uma linha para cada tabela de origem publicada de um Editor não SQL Server usando o Distribuidor atual. Esta tabela é armazenada no banco de dados de distribuição.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Identifica uma tabela publicada.|  
 |**publisher_id**|**smallint**|Identifica o Editor não SQL Server do qual a tabela está sendo publicada.|  
@@ -37,7 +37,7 @@ ms.locfileid: "67990160"
 |**proprietário**|**sysname**|O proprietário da tabela.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replicação de banco de dados heterogênea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicação de banco de dados heterogêneo](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tabelas de replicação &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Exibições de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

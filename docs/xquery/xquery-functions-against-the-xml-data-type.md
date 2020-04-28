@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945990"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funções XQuery em tipos de dados xml
@@ -55,11 +55,11 @@ ms.locfileid: "67945990"
 |[Funções de agregação &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[contagem](../xquery/aggregate-functions-count.md)|  
 ||[média](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
-||[maximizar](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[quantia](../xquery/aggregate-functions-sum.md)|  
 |[Funções de Construtor &#40;&#41;XQuery](../xquery/constructor-functions-xquery.md)|[Funções de construtor](../xquery/constructor-functions-xquery.md)|  
-|[Funções do acessador de dados](../xquery/data-accessor-functions.md)|[Strings](../xquery/data-accessor-functions-string-xquery.md)|  
-||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[Funções do acessador de dados](../xquery/data-accessor-functions.md)|[cadeia de caracteres](../xquery/data-accessor-functions-string-xquery.md)|  
+||[dados](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Funções de Construtor boolianas &#40;&#41;XQuery](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[Função true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Função false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Funções relacionadas a QNames &#40;&#41;XQuery](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -69,7 +69,7 @@ ms.locfileid: "67945990"
 ||[função sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Métodos de tipos de dados xml](../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md)   
  [Referência de linguagem XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Dados XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   

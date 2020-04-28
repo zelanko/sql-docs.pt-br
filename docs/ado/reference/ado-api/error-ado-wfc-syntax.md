@@ -14,10 +14,10 @@ ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 201218ba5c82b88fabbb26e279f52ce95bb79527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933022"
 ---
 # <a name="error-ado---wfc-syntax"></a>Erro (ADO – Sintaxe WFC)
@@ -34,4 +34,4 @@ public String getSQLState()
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Objeto Error](../../../ado/reference/ado-api/error-object.md)
+ [Objeto de erro](../../../ado/reference/ado-api/error-object.md)

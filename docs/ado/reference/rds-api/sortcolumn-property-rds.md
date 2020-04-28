@@ -14,10 +14,10 @@ ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963400"
 ---
 # <a name="sortcolumn-property-rds"></a>Propriedade SortColumn (RDS)
@@ -33,7 +33,7 @@ Indica por qual coluna classificar os registros.
 DataControl.SortColumn = String  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *DataControl*  
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   

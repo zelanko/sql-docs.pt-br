@@ -16,10 +16,10 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938848"
 ---
 # <a name="update-method"></a>Método Update
@@ -33,7 +33,7 @@ recordset.Update Fields, Values
 record.Fields.Update  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Fields*  
  Opcional. Uma **variante** que representa um único nome ou uma matriz **variante** que representa nomes ou posições ordinais do campo ou campos que você deseja modificar.  
   
@@ -61,7 +61,7 @@ record.Fields.Update
   
  O registro atual permanece atual depois que você chama o método **Update** .  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Record  
  O método **Update** finaliza adições, exclusões e atualizações em campos na coleção [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de um objeto **Record** .  
   
  Por exemplo, os campos excluídos com o método **delete** são marcados para exclusão imediatamente, mas permanecem na coleção. O método **Update** deve ser chamado para realmente excluir esses campos da coleção do provedor.  

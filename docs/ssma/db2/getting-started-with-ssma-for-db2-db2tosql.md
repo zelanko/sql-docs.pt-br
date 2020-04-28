@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989642"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introdução com o SSMA para DB2 (DB2ToSQL)
@@ -88,7 +88,7 @@ A tabela a seguir mostra os comandos da barra de ferramentas de migração:
 ### <a name="menus"></a>Menus  
 A tabela a seguir mostra os menus do SSMA.  
   
-|Menu|DESCRIÇÃO|  
+|Menu|Descrição|  
 |----|-----------|  
 |**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao DB2 e conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-se ao.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel detalhes do SQL. Também contém a opção **gerenciar indicadores** , em que você poderá ver uma lista de indicadores existentes. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

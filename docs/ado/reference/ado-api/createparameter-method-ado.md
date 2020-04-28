@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933293"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
@@ -36,7 +36,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="return-value"></a>Valor retornado  
  Retorna um objeto de **parâmetro** .  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Nome*  
  Opcional. Um valor de **cadeia de caracteres** que contém o nome do objeto de **parâmetro** .  
   

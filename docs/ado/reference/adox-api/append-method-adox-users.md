@@ -17,10 +17,10 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967220"
 ---
 # <a name="append-method-adox-users"></a>Método Append (Usuários do ADOX)
@@ -33,7 +33,7 @@ Adiciona um novo objeto de [usuário](../../../ado/reference/adox-api/user-objec
 Users.Append User[,Password]  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Usuário*  
  Um valor **Variant** que contém o objeto de **usuário** a ser anexado ou o nome do usuário a ser criado e acrescentado.  
   

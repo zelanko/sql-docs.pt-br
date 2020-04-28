@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949383"
 ---
 # <a name="open-method-ado-md"></a>Método Open (ADO MD)
@@ -33,8 +33,8 @@ Recupera os resultados de uma consulta multidimensional e retorna os resultados 
 Cellset.Open Source, ActiveConnection  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Uma **variante** que é avaliada como uma consulta multidimensional válida, como uma consulta MDX (multidimensional Expression). O argumento de *origem* corresponde à propriedade [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) . Para obter mais informações sobre o MDX, consulte a documentação de [OLE DB para processamento analítico online (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) no SDK do Microsoft Data Access Components.  
   
  *ActiveConnection*  

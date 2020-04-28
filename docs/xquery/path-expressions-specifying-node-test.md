@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946424"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expressões de Caminho – Especificar Teste de Nó
@@ -71,7 +71,7 @@ child::ProductDescription
   
  Como resultado, quando essa expressão é executada em documentos XML do catálogo de produtos na tabela **ProductModel** , ela recupera todos os filhos do nó de elemento \<dos recursos> nó filho do elemento \<ProductDescription>.  
   
- A expressão de caminho `/child::PD:ProductDescription/attribute::ProductModelID`,, é composta de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **** o nó de atributo ProductModelID \<do nó do elemento de> ProductDescription.  
+ A expressão de caminho `/child::PD:ProductDescription/attribute::ProductModelID`,, é composta de duas etapas. Ambas as etapas especificam um nome de nó como o node test. Além disso, a segunda etapa usa o eixo de atributo. Como resultado, cada etapa seleciona nós do tipo de nó principal de seu eixo com o nome especificado como o node test. Assim, a expressão retorna **ProductModelID** o nó de atributo ProductModelID \<do nó do elemento de> ProductDescription.  
   
  Ao especificar os nomes de nós para node tests, você também pode usar o caractere curinga (*) para especificar o nome local de um nó ou para seu prefixo de namespace, como mostrado no seguinte exemplo:  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |Tipo de nó|Retornos|Exemplo|  
 |---------------|-------------|-------------|  
-|`comment()`|True para um nó de comentário.|
-  `following::comment()` seleciona todos os nós de comentário exibidos depois do nó de contexto.|  
-|`node()`|True para um nó de qualquer tipo.|
-  `preceding::node()` seleciona todos os nós de comentário exibidos antes do nó de contexto.|  
-|`processing-instruction()`|True para um nó de instrução de processamento.|
-  `self::processing instruction()` seleciona todos os nós de instrução de processamento no nó de contexto.|  
-|`text()`|True para um nó de texto.|
-  `child::text()` seleciona os nós de texto que são os filhos do nó de contexto.|  
+|`comment()`|True para um nó de comentário.|`following::comment()` seleciona todos os nós de comentário exibidos depois do nó de contexto.|  
+|`node()`|True para um nó de qualquer tipo.|`preceding::node()` seleciona todos os nós de comentário exibidos antes do nó de contexto.|  
+|`processing-instruction()`|True para um nó de instrução de processamento.|`self::processing instruction()` seleciona todos os nós de instrução de processamento no nó de contexto.|  
+|`text()`|True para um nó de texto.|`child::text()` seleciona os nós de texto que são os filhos do nó de contexto.|  
   
  Se o tipo de nó, como text() ou comment()..., for especificado como o node test, a etapa apenas retornará nós de tipo especificado, independentemente do tipo de nó principal do eixo. Por exemplo, a seguinte expressão de caminho retorna apenas os filhos de nó de comentário do nó de contexto:  
   
@@ -114,7 +110,7 @@ child::comment()
 ## <a name="examples"></a>Exemplos  
  Os exemplos a seguir comparam nome de nó e tipo de nó.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>a. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Resultados da especificação do nome de nó e do tipo de nó como node tests em uma expressão de caminho  
  No exemplo a seguir, um documento XML simples é atribuído a uma variável de tipo **XML** . O documento é consultado usando expressões de caminho diferentes. Os resultados são comparados.  
   
 ```  

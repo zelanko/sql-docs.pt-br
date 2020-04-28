@@ -16,10 +16,10 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985753"
 ---
 # <a name="aggregate-functions---min"></a>Funções de Agregação – min
@@ -48,7 +48,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML que são armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>a. Usando a função min() XQuery para localizar o local de centro de trabalho com menos horas de trabalho  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Usando a função min() XQuery para localizar o local de centro de trabalho com menos horas de trabalho  
  A consulta a seguir recupera todos os locais de centro de trabalho no processo de fabricação do modelo de produto (ProductModelID=7) com menos horas de trabalho. Geralmente, como mostrado a seguir, um único local é retornado. Se vários locais tivessem um número igual de horas de trabalho mínimas, todos eles seriam retornados.  
   
 ```  

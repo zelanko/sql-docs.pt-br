@@ -19,10 +19,10 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938674"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord e RecordChangeComplete (ADO)
@@ -36,7 +36,7 @@ WillChangeRecord adReason, cRecords, adStatus, pRecordset
 RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *adReason*  
  Um valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica o motivo para esse evento. Seu valor pode ser **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**ou **adRsnFirstChange**.  
   
@@ -57,7 +57,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Antes de **RecordChangeComplete** retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto **Recordset** . O **conjunto de registros** para o qual esse evento ocorreu.  
   
 ## <a name="remarks"></a>Comentários  

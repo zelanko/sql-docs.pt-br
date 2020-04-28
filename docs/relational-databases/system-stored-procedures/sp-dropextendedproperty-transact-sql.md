@@ -18,10 +18,10 @@ ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67934018"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
@@ -136,6 +136,6 @@ GO
  [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_addextendedproperty](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_updateextendedproperty](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

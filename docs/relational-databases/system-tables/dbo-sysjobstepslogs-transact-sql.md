@@ -20,10 +20,10 @@ ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984930"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67984930"
 
   Contém o log de todas as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que estão configuradas para gravar saída de etapa de trabalho em uma tabela. Essa tabela é armazenada no banco de dados **msdb** .  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|ID do log de etapa de trabalho.|  
 |**Façam**|**nvarchar(max)**|Conteúdo do log de etapa de trabalho.|  

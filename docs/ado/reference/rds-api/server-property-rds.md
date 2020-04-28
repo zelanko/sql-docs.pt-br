@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963470"
 ---
 # <a name="server-property-rds"></a>Propriedade Server (RDS)
@@ -106,11 +106,11 @@ DataControl.Server="computername"
 DataControl.Server=""  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *awebsrvr*ou *ComputerName*  
  Um valor de **cadeia de caracteres** que contém um caminho de Internet ou intranet, ou nome do computador, se o servidor estiver em um computador remoto; ou uma cadeia de caracteres vazia se o servidor estiver no computador local.  
   
- *port*  
+ *porta*  
  Opcional. Uma porta que é usada para se conectar a um servidor que executa o IIS. O número da porta é definido no Internet Explorer (no menu **Exibir** , clique em **Opções**e selecione a guia **conexão** ) ou no IIS.  
   
  *DataControl*  

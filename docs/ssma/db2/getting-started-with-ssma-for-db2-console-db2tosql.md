@@ -10,10 +10,10 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989665"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introdução com o console do SSMA para DB2 (DB2ToSQL)
@@ -52,7 +52,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|DESCRIÇÃO|  
+|Color|Descrição|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  
