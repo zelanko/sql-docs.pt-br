@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633440"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
@@ -26,11 +26,11 @@ ms.locfileid: "73633440"
 
  Retorna detalhes para grupos de cargas de trabalho.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|ID exclusivo do grupo de carga de trabalho. Não permite valor nulo.||
 |name|**sysname**|Nome do grupo de carga de trabalho. Deve ser exclusivo para a instância.  Não permite valor nulo.||
-|importância|**nvarchar(128)**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados. Não permite valor nulo.|baixa, below_normal, normal (padrão), above_normal, alta||
+|importance|**nvarchar(128)**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados. Não permite valor nulo.|baixa, below_normal, normal (padrão), above_normal, alta||
 |min_percentage_resource|**tinyint**|Quantidade garantida de recursos para solicitações no grupo de cargas de trabalho. Os recursos não são compartilhados com outros grupos de carga de trabalho. Não permite valor nulo.||
 |cap_percentage_resource|**tinyint**|Limite de alocação de porcentagem de recursos para solicitações no grupo de cargas de trabalho. Limita o número máximo de recursos alocados para o nível especificado. O intervalo permitido para o valor é de 1 a 100.||
 |request_min_resource_grant_percent|**decimal (5, 2)**|Especifica a quantidade mínima de recursos alocados a uma solicitação. O intervalo permitido para value é de 0,75 a 100.||

@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145651"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
@@ -28,13 +28,13 @@ Monitora o andamento da consulta data warehouse em tempo real enquanto a consult
 ## <a name="table-returned"></a>Tabela retornada  
 Os contadores retornados são por operador por thread. Os resultados são dinâmicos e não correspondem aos resultados das opções existentes, como `SET STATISTICS XML ON` o que cria apenas a saída quando a consulta é concluída.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|ID numérica exclusiva associada ao nó.|
 |session_id|**smallint**|Identifica a sessão na qual esta consulta é executada. Referencia dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica a solicitação de destino. Referencia dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary (64)**|É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte. Referencia dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary (64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Faz referência a dm_exec_query_stats. plan_handle.|  
+|sql_handle|**varbinary(64)**|É um token que identifica exclusivamente o lote ou o procedimento armazenado do qual a consulta faz parte. Referencia dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary(64)**|É um token que identifica exclusivamente um plano de execução de consulta para um lote que foi executado e seu plano reside no cache de planos ou está em execução no momento. Faz referência a dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nome do operador físico.|  
 |node_id|**int**|Identifica um nó do operador na árvore de consulta.|  
 |thread_id|**int**|Distingue os threads (para uma consulta paralela) que pertencem ao mesmo nó do operador de consulta.|  

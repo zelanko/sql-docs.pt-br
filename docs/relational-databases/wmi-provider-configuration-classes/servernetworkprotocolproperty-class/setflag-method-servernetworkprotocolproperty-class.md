@@ -18,10 +18,10 @@ ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1b341456d2135206083e632b6bbf6dd97f12ca50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658972"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Método SetFlag (classe ServerNetworkProtocolProperty)
@@ -39,9 +39,9 @@ object.SetFlag(BoolValue)
  *objeto*  
  A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*BoolValue*|Um valor booliano que especifica o novo valor do sinalizador.|  
   

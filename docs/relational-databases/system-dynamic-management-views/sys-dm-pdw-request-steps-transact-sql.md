@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 260b822d111f94fc567704cd908cb5632e3bdcaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73240779"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
@@ -24,14 +24,14 @@ ms.locfileid: "73240779"
 
   Contém informações sobre todas as etapas que compõem uma determinada solicitação ou consulta [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]no. Ele lista uma linha por etapa de consulta.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|request_id e step_index compõem a chave para essa exibição.<br /><br /> ID numérica exclusiva associada à solicitação.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|request_id e step_index compõem a chave para essa exibição.<br /><br /> ID numérica exclusiva associada à solicitação.|Consulte request_id em [Sys. dm_pdw_exec_requests &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index compõem a chave para essa exibição.<br /><br /> A posição desta etapa na sequência de etapas que compõem a solicitação.|0 a (n-1) para uma solicitação com n etapas.|  
-|operation_type|**nvarchar (35)**|Tipo de operação representada por esta etapa.|**Operações do plano de consulta DMS:** ' ReturnOperation ', ' PartitionMoveOperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **Operações do plano de consulta SQL:** ' OnOperation ', ' RemoteOperation '<br /><br /> **Outras operações do plano de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operações externas para leituras:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operações externas para o MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operações externas para gravações:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obter mais informações, consulte "Noções básicas sobre planos de [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]consulta" no. <br /><br />  Um plano de consulta também pode ser afetado pelas configurações do banco de dados.  Verifique [as opções de ALTER DATABASE SET](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest) para obter detalhes.|  
-|distribution_type|**nvarchar (32)**|Tipo de distribuição que esta etapa passará.|' Subnós ', ' ' distribuições ', ' AllComputeNodes ', ' ComputeNode ', ' Distribution ', ' SubsetNodes ', ' SubsetDistributions ', ' não especificado '|  
-|location_type|**nvarchar (32)**|Onde a etapa está em execução.|"Compute", "Control", "DMS"|  
-|status|**nvarchar (32)**|Status desta etapa.|Pendente, em execução, concluído, com falha, UndoFailed, PendingCancel, cancelado, desfeito, anulado|  
+|operation_type|**nvarchar(35)**|Tipo de operação representada por esta etapa.|**Operações do plano de consulta DMS:** ' ReturnOperation ', ' PartitionMoveOperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **Operações do plano de consulta SQL:** ' OnOperation ', ' RemoteOperation '<br /><br /> **Outras operações do plano de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operações externas para leituras:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operações externas para o MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operações externas para gravações:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obter mais informações, consulte "Noções básicas sobre planos de [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]consulta" no. <br /><br />  Um plano de consulta também pode ser afetado pelas configurações do banco de dados.  Verifique [as opções de ALTER DATABASE SET](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest) para obter detalhes.|  
+|distribution_type|**nvarchar(32)**|Tipo de distribuição que esta etapa passará.|' Subnós ', ' ' distribuições ', ' AllComputeNodes ', ' ComputeNode ', ' Distribution ', ' SubsetNodes ', ' SubsetDistributions ', ' não especificado '|  
+|location_type|**nvarchar(32)**|Onde a etapa está em execução.|"Compute", "Control", "DMS"|  
+|status|**nvarchar(32)**|Status desta etapa.|Pendente, em execução, concluído, com falha, UndoFailed, PendingCancel, cancelado, desfeito, anulado|  
 |error_id|**nvarchar (36)**|ID exclusiva do erro associado a esta etapa, se houver.|Consulte error_id de [Sys. dm_pdw_errors &#40;&#41;do Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL se nenhum erro tiver ocorrido.|  
 |start_time|**datetime**|Hora em que a execução da etapa foi iniciada.|Menor ou igual à hora atual e maior ou igual a end_compile_time da consulta à qual essa etapa pertence. Para obter mais informações sobre consultas, consulte [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |end_time|**datetime**|A hora em que esta etapa concluiu a execução, foi cancelada ou falhou.|Menor ou igual à hora atual e maior ou igual a start_time. Defina como nulo para as etapas atualmente em execução ou na fila.|  

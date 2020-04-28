@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798334"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar o PowerPivot pelo prompt de comando
   É possível executar a Instalação na linha de comando para instalar o SQL Server PowerPivot para SharePoint. Você deve incluir o parâmetro `/ROLE` no comando e excluir o parâmetro `/FEATURES`.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  O SharePoint Server 2010 Enterprise Edition com Service Pack 1 (SP1) deve ser instalado.  
   
  Você deve usar contas de domínio para provisionar o Analysis Services.  
   
  O computador deve ingressar no mesmo domínio do farm do SharePoint.  
   
-##  <a name="Commands"></a>Opções de instalação baseadas em/ROLE  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>Opções de instalação baseadas em/ROLE  
  Para implantações do PowerPivot para SharePoint, o parâmetro `/ROLE` é usado no lugar do parâmetro `/FEATURES`. Os valores válidos incluem:  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>Modificando a sintaxe do comando  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>Modificando a sintaxe do comando  
  Use as etapas a seguir para modificar a sintaxe do comando de exemplo.  
   
 1.  Copie e cole o seguinte comando no Bloco de Notas:  

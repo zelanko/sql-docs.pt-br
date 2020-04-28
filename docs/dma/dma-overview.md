@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632859"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Visão geral do Assistente de Migração de Dados
@@ -67,7 +67,7 @@ Para instalar o DMA, baixe a versão mais recente da ferramenta no [centro de do
 
   - Problemas de informação: detecta recursos com suporte parcial ou preteridos que são usados em pacotes de origem.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para executar uma avaliação, você precisa ser membro da função SQL Server **sysadmin** .
 
@@ -75,7 +75,7 @@ Para executar uma avaliação, você precisa ser membro da função SQL Server *
 
 O DMA substitui todas as versões anteriores do supervisor de atualização do SQL Server e deve ser usado para atualizações para a maioria das versões de SQL Server. As versões de origem e destino com suporte são:
 
-**Causas**
+**Fontes**
 
 - SQL Server 2005
 - SQL Server 2008

@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728010"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
@@ -68,7 +68,7 @@ ms.locfileid: "73728010"
 |Criar um novo membro consolidado.|[Criar um membro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Excluir um membro ou uma coleção existente.|[Excluir um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Reativar um membro ou coleção excluído.|[Reativar um membro ou uma coleção &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Atualizar os valores de atributos de um membro.|[Altere o tipo de atributo &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Atualizar os valores de atributos de um membro.|[Alterar o tipo de atributo &#40;Suplemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Conteúdo relacionado  

@@ -18,10 +18,10 @@ ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 4c73916392c87df199ce5cb99e71a325f45a9540
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658923"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Método SetNumericalValue (classe ServerNetworkProtocolProperty)
@@ -39,9 +39,9 @@ object.SetNumericalValue(NumValue)
  *objeto*  
  A [classe ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) que representa um atributo do protocolo de rede na instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*NumValue*|Um valor **uint32** que especifica o novo valor da propriedade atual.|  
   

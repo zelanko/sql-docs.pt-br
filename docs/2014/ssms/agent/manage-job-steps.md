@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798224"
 ---
 # <a name="manage-job-steps"></a>Gerenciar etapas de trabalho
@@ -36,33 +36,30 @@ ms.locfileid: "72798224"
   
 -   Programas executáveis e comandos de sistema operacional.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, inclusive procedimentos armazenados e procedimentos armazenados estendidos.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, inclusive procedimentos armazenados e procedimentos armazenados estendidos.  
   
 -   Scripts PowerShell.  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Scripts ActiveX.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Scripts ActiveX.  
   
 -   Tarefas de replicação.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tarefa.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarefas.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]compacta.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacotes.  
   
  Toda etapa de trabalho é executada em um contexto de segurança específico. Se a etapa de trabalho especificar um proxy, será executada no contexto de segurança da credencial para aquele proxy. Se a etapa de trabalho não especificar um proxy, ela será executada no contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Apenas membros da função de servidor fixa sysadmin podem criar trabalhos que não especifiquem um proxy explicitamente.  
   
  Como as etapas de trabalho são executadas no contexto de um usuário específico do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, esse usuário deve ter as permissões e a configuração necessárias para a execução da etapa de trabalho. Por exemplo, se você criar um trabalho que requeira uma letra de unidade ou um caminho UNC (convenção de nomenclatura universal), as etapas do trabalho poderão ser executadas em sua conta de usuário do Microsoft Windows durante o teste das tarefas. Porém, o usuário Windows da etapa de trabalho também deve ter as permissões necessárias, as configurações de letra de unidade ou o acesso à unidade necessária. Caso contrário, a etapa de trabalho falhará. Para evitar esse problema, assegure que o proxy de cada etapa de trabalho tenha as permissões necessárias para a tarefa executada pela etapa. Para obter mais informações, consulte [central de segurança para SQL Server mecanismo de banco de dados e banco de dados SQL do Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Logs de etapas de trabalho  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent pode gravar a saída de algumas etapas de trabalho em um arquivo do sistema operacional ou na tabela sysjobstepslogs do banco de dados msdb. Os seguintes tipos de etapa de trabalho podem gravar a saída em ambos os destinos:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent pode gravar a saída de algumas etapas de trabalho em um arquivo do sistema operacional ou na tabela sysjobstepslogs do banco de dados msdb. Os seguintes tipos de etapa de trabalho podem gravar a saída em ambos os destinos:  
   
 -   Programas executáveis e comandos de sistema operacional.  
   
 -   Instruções[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tarefa.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tarefas.  
   
  Apenas etapas de trabalho executadas por usuários membros da função de servidor fixa sysadmin podem gravar a saída de etapas de trabalho em arquivos do sistema operacional. Se as etapas de trabalho forem executadas por usuários que são membros das funções de banco de dados fixas SQLAgentUserRole, SQLAgentReaderRole ou SQLAgentOperatorRole no banco de dados msdb, a saída dessas etapas só poderá ser gravada na tabela sysjobstepslogs.  
   
@@ -92,12 +89,10 @@ ms.locfileid: "72798224"
   
  Opcionalmente, você pode abrir um arquivo [!INCLUDE[tsql](../../includes/tsql-md.md)] existente na forma de um comando para a etapa de trabalho.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, consulte [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Etapas de trabalho não usam proxies do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Em vez disso, a etapa de trabalho é executada como o seu proprietário ou como a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, caso o proprietário da etapa de trabalho seja membro da função de servidor fixa sysadmin. Os membros da função de servidor fixa sysadmin também podem especificar que as etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] sejam executadas sob o contexto de outro usuário através do parâmetro *database_user_name* do procedimento armazenado sp_add_jobstep. Para obter mais informações, consulte [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
->  Uma única etapa de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter vários lotes. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] As etapas de trabalho podem conter comandos GO inseridos.  
+>  Uma única etapa de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] pode conter vários lotes. [!INCLUDE[tsql](../../includes/tsql-md.md)] As etapas de trabalho podem conter comandos GO inseridos.  
   
 ## <a name="powershell-scripting-job-steps"></a>Etapas de trabalho de scripts PowerShell  
  Ao criar uma etapa de trabalho de script PowerShell, é necessário especificar uma das duas opções a seguir como comando da etapa:  
@@ -154,15 +149,14 @@ Set oServer = nothing
  Quando a replicação está configurada, é possível especificar a execução de agentes de replicação de três formas: continuamente, depois que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é iniciado; sob demanda; ou de acordo com a agenda. Para obter mais informações sobre os agentes de replicações, consulte [Visão geral dos agentes de replicação](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 ## <a name="analysis-services-job-steps"></a>Etapas de trabalho do Analysis Services  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dá suporte a dois tipos distintos de etapas de trabalho do Analysis Services, etapas de trabalho de comando e de consulta.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dá suporte a dois tipos distintos de etapas de trabalho do Analysis Services, etapas de trabalho de comando e de consulta.  
   
 ### <a name="analysis-services-command-job-steps"></a>Etapas de trabalho de comando do Analysis Services  
  Ao criar uma etapa de trabalho de comando do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é necessário:  
   
 -   Identificar o servidor OLAP do banco de dados no qual a etapa de trabalho será executada.  
   
--   Digitar a instrução a ser executada. A instrução deve ser um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **do** . A instrução talvez não tenha um envelope SOAP completo ou um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **do** . Observe que, embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dê suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não dão.  
+-   Digitar a instrução a ser executada. A instrução deve ser um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute**. A instrução talvez não tenha um envelope SOAP completo ou um XML para o método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover**. Observe que, embora o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dê suporte a envelopes SOAP completos e ao método **Discover** , as etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não dão.  
   
 ### <a name="analysis-services-query-job-steps"></a>Etapas de trabalho de consulta do Analysis Services  
  Ao criar uma etapa de trabalho de consulta do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , é necessário:  
@@ -218,4 +212,4 @@ Set oServer = nothing
 ## <a name="see-also"></a>Consulte Também  
  [dbo. sysjobstepslogs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Criar trabalhos](create-jobs.md)   
- [&#41;&#40;Transact-SQL de sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+ [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

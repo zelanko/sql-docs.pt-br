@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798287"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
@@ -37,16 +37,16 @@ ms.locfileid: "72798287"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-schedule"></a>Para criar uma agenda  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e a expanda.  
   
 2.  Expanda **SQL Server Agent**, clique com o botão direito do mouse em **Trabalhos**e selecione **Gerenciar Agendas**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "72798287"
   
     -   Para que a agenda seja executada somente uma vez, clique em **Uma vez**. Para definir a agenda **Uma vez** , conclua o grupo **Ocorrência única** na caixa de diálogo.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-schedule"></a>Para criar uma agenda  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72798287"
   
  Para obter mais informações, consulte [sp_add_schedule &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
-##  <a name="SMO"></a>Usando SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando SQL Server Management Objects  
  **Para criar uma agenda**  
   
  Use a classe `JobSchedule` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter mais informações, veja [SMO (SQL Server Management Objects)](https://msdn.microsoft.com/library/ms162169.aspx).  

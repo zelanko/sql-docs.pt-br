@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798270"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
@@ -39,17 +39,17 @@ ms.locfileid: "72798270"
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>Para criar uma etapa de trabalho de Script ActiveX  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e a expanda.  
   
 2.  Expanda **SQL Server Agent**, crie um novo trabalho ou clique com o botão direito do mouse em um trabalho existente e clique em **Propriedades**. Para obter mais informações sobre como criar um trabalho, consulte [Criando trabalhos](create-jobs.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72798270"
   
 9. Clique na página **Avançado** para definir as seguintes opções de etapa de trabalho: a ação a tomar em caso de êxito ou falha da etapa, quantas vezes o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve tentar executar a etapa e com que frequência.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-an-activex-script-job-step"></a>Para criar uma etapa de trabalho de Script ActiveX  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72798270"
   
  Para obter mais informações, consulte [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a>Usando SQL Server Management Objects  
- **Para criar uma etapa de trabalho de script ActiveX**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando SQL Server Management Objects  
+ **Para criar uma etapa de trabalho de Script ActiveX**  
   
  Use a classe `JobStep` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell.  

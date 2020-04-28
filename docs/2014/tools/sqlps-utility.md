@@ -14,18 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798139"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
   O utilitário `sqlps` inicia uma sessão do Windows PowerShell 2.0 com os cmdlets e o provedor do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell carregados e registrados. Você pode inserir comandos ou scripts do PowerShell que usam os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabalhar com instâncias do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e seus objetos.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use o módulo `sqlps` do PowerShell. Para obter mais informações sobre `sqlps` o módulo, consulte [importar o módulo sqlps](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use o módulo `sqlps` do PowerShell. Para obter mais informações sobre `sqlps` o módulo, consulte [importar o módulo sqlps](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +65,7 @@ ms.locfileid: "72798139"
  **-**  
  **-Command-** especifica que o `sqlps` utilitário leu a entrada da entrada padrão.  
   
- *Script_block* [ **-args**_argument_array_ ]  
+ *script_block* [ **-args**_argument_array_ ]  
  Especifica um bloco de comandos de PowerShell para executar. O bloco deve ficar entre chaves: {}. *Script_block* só pode ser especificado quando o `sqlps` utilitário é chamado do **PowerShell** ou de outra `sqlps` sessão do utilitário. O *argument_array* é uma matriz de variáveis do PowerShell que contêm os argumentos para os comandos do PowerShell em *script_block*.  
   
  *string* [ *command_parameters* ]  

@@ -18,10 +18,10 @@ ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: edd3b4a5fa4d787292f1978da80c5f7803242010
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660907"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Método SetStartMode (classe SqlService)
@@ -39,7 +39,7 @@ object.SetStartMode(StartMode)
  *objeto*  
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *StartMode*  
  Um valor **uint32** que especifica o modo de início da instância do serviço.  
   

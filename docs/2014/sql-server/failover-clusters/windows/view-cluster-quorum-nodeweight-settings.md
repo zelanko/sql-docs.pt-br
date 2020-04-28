@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12d68b8494fee4400c0a8e9ec043f0972ba2de5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783357"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Exibir configurações de NodeWeight de quorum de cluster
@@ -27,9 +27,9 @@ ms.locfileid: "72783357"
   
 -   **Para exibir as configurações de NodeWeight de quorum usando:** [Usando o Transact-SQL](#TsqlProcedure), [Usando o PowerShell](#PowerShellProcedure), [Usando Cluster.exe](#CommandPromptProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de iniciar  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Antes de iniciar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
  Esse recurso somente tem suporte no [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ou em versões posteriores.  
   
 > [!IMPORTANT]  
@@ -40,10 +40,10 @@ ms.locfileid: "72783357"
 > [!TIP]  
 >  Se esse hotfix não for instalado, os exemplos neste tópico retornarão valores vazios ou NULL para NodeWeight.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  O usuário deve ser uma conta de domínio que seja membro do grupo Administradores local em cada nó do cluster WSFC.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 ##### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight  
   
@@ -59,7 +59,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
  FROM   sys.dm_hadr_cluster_members;  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usando o Powershell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o Powershell  
   
 ### <a name="to-view-nodeweight-settings"></a>Para exibir configurações de NodeWeight
   
@@ -83,7 +83,7 @@ $nodes = Get-ClusterNode -Cluster $cluster
 $nodes | Format-Table -Property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Usando Cluster.exe  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a> Usando Cluster.exe  
   
 > [!NOTE]  
 >  O utilitário cluster.exe foi preterido na versão [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Use o PowerShell com Clustering de Failover para desenvolvimento futuro.  O utilitário cluster.exe será removido na próxima versão do Windows Server. Para obter mais informações, consulte [Mapeando comandos cluster.exe para cmdlets Windows PowerShell para clusters de failover](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx).  

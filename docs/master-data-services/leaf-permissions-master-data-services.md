@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728081"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permissões de folha (Serviços de Dados Mestre)
@@ -31,32 +31,32 @@ ms.locfileid: "73728081"
   
  Para entidades sem hierarquias explícitas habilitadas, atribuir permissão a **Folha** é o mesmo que atribuir permissão à entidade.  
   
- **Registra**  
+ **Observações:**  
   
 -   As permissões de folha aplicam-se apenas à área funcional **Gerenciador** da interface do usuário.  
   
 -   As permissões atribuídas aos atributos **Name** e **Code** não são impostas.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros folha e atributos.|  
-|**Criada**|O usuário pode criar membros folha e atribuir valores de atributo durante a criação.|  
-|**Cumulativo**|O usuário pode atualizar membros folha e atributos.|  
+|**Criar**|O usuário pode criar membros folha e atribuir valores de atributo durante a criação.|  
+|**Atualização**|O usuário pode atualizar membros folha e atributos.|  
 |**Delete (excluir)**|O usuário pode excluir membros folha.|  
-|**Deny**|Nega todo o acesso aos membros folha.|  
+|**Negar**|Nega todo o acesso aos membros folha.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas. Ao atribuir Criar, Atualizar e Excluir, a permissão de leitura é atribuída automaticamente.  
   
 ## <a name="attribute-permissions"></a>Permissões de atributo  
  As permissões de atributo se aplicam aos valores de atributo da entidade específica. Os usuários apenas com permissões de atributo não podem adicionar ou remover membros.  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler atributos.|  
-|**Criada**|O usuário pode atribuir valores ao criar membros.|  
-|**Cumulativo**|O usuário pode atualizar atributos.|  
-|**Delete (excluir)**|Sem efeito.|  
-|**Deny**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
+|**Criar**|O usuário pode atribuir valores ao criar membros.|  
+|**Atualização**|O usuário pode atualizar atributos.|  
+|**Delete (excluir)**|Nenhum efeito.|  
+|**Negar**|O atributo não é exibido.<br /><br /> Observação: você não pode negar acesso explicitamente para os atributos Name e Code.|  
   
 ### <a name="example"></a>Exemplo  
  Para a entidade Product, atribua a permissão **Atualizar** ao atributo Subcategory. Negue permissão a todos os demais atributos.  

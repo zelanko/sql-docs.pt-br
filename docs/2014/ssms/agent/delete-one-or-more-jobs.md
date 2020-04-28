@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783254"
 ---
 # <a name="delete-one-or-more-jobs"></a>Excluir um ou mais trabalhos
@@ -28,18 +28,18 @@ ms.locfileid: "72783254"
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  A menos que seja membro da função de servidor fixa **sysadmin** , você só poderá excluir trabalhos de sua propriedade.  
   
  
   
-##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-delete-a-job"></a>Para excluir um trabalho  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e a expanda.  
   
 2.  Expanda **SQL Server Agent**, expanda **Trabalhos**, clique com o botão direito do mouse no trabalho que deseja excluir e então clique em **Excluir**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72783254"
   
 #### <a name="to-delete-multiple-jobs"></a>Para excluir vários trabalhos  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e a expanda.  
   
 2.  Expanda o **SQL Server Agent**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72783254"
   
 
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usando o Transact-SQL  
   
 #### <a name="to-delete-a-job"></a>Para excluir um trabalho  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72783254"
   
  Para obter mais informações, consulte [sp_delete_job &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
-##  <a name="SMO"></a>Usando SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando SQL Server Management Objects  
 
 ### <a name="to-delete-multiple-jobs"></a>Para excluir vários trabalhos
   

@@ -16,10 +16,10 @@ ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1058f1491dbf3b52a30f0bcc9720aab3fb056318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659257"
 ---
 # <a name="wmi-provider-for-configuration-management"></a>Provedor WMI para gerenciamento de configuração

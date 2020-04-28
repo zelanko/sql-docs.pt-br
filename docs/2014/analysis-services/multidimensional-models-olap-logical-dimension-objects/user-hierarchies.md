@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811594"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
@@ -38,17 +38,17 @@ ms.locfileid: "72811594"
 |Ano|Quarter|Month|  
 |----------|-------------|-----------|  
 |1999|1º Trimestre|Jan|  
-|1999|1º Trimestre|Feb|  
+|1999|1º Trimestre|Fev|  
 |1999|1º Trimestre|Mar|  
-|1999|2º Trimestre|Apr|  
-|1999|2º Trimestre|May|  
+|1999|2º Trimestre|Abr|  
+|1999|2º Trimestre|Mai|  
 |1999|2º Trimestre|Jun|  
 |1999|3º Trimestre|Jul|  
-|1999|3º Trimestre|Aug|  
+|1999|3º Trimestre|Ago|  
 |1999|3º Trimestre|Set|  
 |1999|4º Trimestre|Oct|  
 |1999|4º Trimestre|Nov|  
-|1999|4º Trimestre|Dec|  
+|1999|4º Trimestre|Dez|  
   
  São usados os atributos Ano, Trimestre e Mês para criar uma hierarquia definida pelo usuário, nomeado Calendário, na dimensão temporal. A relação entre os níveis e membros da dimensão Calendário (uma dimensão comum) é mostrada no diagrama a seguir.  
   

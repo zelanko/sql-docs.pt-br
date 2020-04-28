@@ -14,10 +14,10 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728458"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Criar um atributo de texto (Master Data Services)
@@ -26,37 +26,37 @@ ms.locfileid: "73728458"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de texto quando desejar que os usuários insiram uma cadeia de caracteres de texto como um valor de atributo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Uma entidade deve existir para que se possa criar o atributo para ela. Para obter mais informações, consulte [criar uma entidade &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
 ## <a name="attribute-information"></a>Informações de Atributo  
  Para cada atributo criado, uma linha com sete colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Status|O status do atributo.<br /><br /> Quando você clica em salvar, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que o atributo está sendo atualizado.<br /><br /> Se houver erros ao criar ou editar um atributo, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
 |Nome|O nome do atributo.|  
 |Nome de exibição|O nome de exibição do atributo.|  
-|DESCRIÇÃO|A descrição do atributo.|  
+|Descrição|A descrição do atributo.|  
 |Exibir Largura em Pixels|A largura do atributo.|  
 |Tipo e Propriedades|As informações de tipo e de tipo de dados do atributo.|  
 |Habilitar Controle de Alterações|Especifica se o atributo está habilitado para o controle de alterações e mostra o número do grupo entre parênteses.|  
   
  Quando você clica em um atributo, as seguintes informações são exibidas.  
   
--   **Criado por**: o nome do usuário que criou o atributo.  
+-   **Criado Por**: o nome do usuário que criou o atributo.  
   
--   **Em**: a data e a hora em que o atributo foi criado.  
+-   **Em**: a data e hora em que o atributo foi criado.  
   
--   **Atualizado por**: o nome do usuário que atualizou o atributo pela última vez.  
+-   **Atualizado Por**: o nome do usuário que atualizou o atributo pela última vez.  
   
--   **Em**: a data e a hora em que o atributo foi atualizado pela última vez.  
+-   **Em**: a data e hora em que o atributo foi atualizado pela última vez.  
   
 ### <a name="to-create-a-text-attribute"></a>Para criar um atributo de texto  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73728458"
   
     -   Se o atributo for para coleções, selecione **Coleção** na caixa de listagem **Tipos de Membro** .  
   
-6.  Na caixa **Nome** , digite um nome para o atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributo, consulte [Palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+6.  Na caixa **Nome** , digite um nome para o atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributos, consulte [palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 7.  Opcionalmente, digite um nome de exibição e digite uma descrição para o atributo na caixa **Descrição** .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73728458"
   
 12. Opcionalmente, selecione **Habilitar controle de alterações** para controlar alterações de grupos de atributos. Para obter mais informações, consulte [Adicionar atributos a um grupo de controle de alterações &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Clique em **Save** (Salvar).  
+13. Clique em **Salvar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

@@ -17,10 +17,10 @@ ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660821"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propriedade AcceptPause (classe SqlService)
@@ -39,7 +39,7 @@ object.AcceptPause [= value]
  Um objeto da [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa o serviço.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
- Um valor booliano que especifica se é possível pausar o serviço. **true** se o serviço puder ser pausado; **false** se o serviço não puder ser pausado.  
+ Um valor booliano que especifica se é possível pausar o serviço. **true** se for possível pausar o serviço; **false** se não for possível pausar o serviço.  
   
 ## <a name="remarks"></a>Comentários  
   

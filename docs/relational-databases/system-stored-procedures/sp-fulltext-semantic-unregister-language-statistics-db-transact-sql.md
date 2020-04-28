@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909135"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
@@ -40,7 +40,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  Esse procedimento não requer nenhum argumento. Como uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem apenas um banco de dados de estatísticas de idioma semântico, não é necessário identificar o banco de dados.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  

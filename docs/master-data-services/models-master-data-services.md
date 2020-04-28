@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727951"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -74,7 +74,7 @@ ms.locfileid: "73727951"
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
 |Criar um modelo para organizar seus dados mestre.|[Criar um modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Alterar o nome de um modelo existente.|[Editar &#40;de Master Data Services de modelo&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Alterar o nome de um modelo existente.|[Editar Modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Excluir um modelo existente.|[Excluir um modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  

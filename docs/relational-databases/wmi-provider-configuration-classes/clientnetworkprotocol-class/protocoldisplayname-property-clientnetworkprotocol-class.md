@@ -18,10 +18,10 @@ ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d6941d2b6ad7417a6193318ab94d90a37d4a77ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660264"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
@@ -37,7 +37,7 @@ object.ProtocolDisplayName [= value]
   
 ## <a name="parts"></a>Partes  
  *objeto*  
- Um objeto da [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa o protocolo de rede usado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pelo cliente.  
+ A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa o protocolo de rede usado pelo cliente do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o nome para exibição do protocolo de rede do cliente.  

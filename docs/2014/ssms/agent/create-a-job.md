@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798312"
 ---
 # <a name="create-a-job"></a>Crie um trabalho
@@ -31,7 +31,7 @@ ms.locfileid: "72798312"
   
      [Segurança](#Security)  
   
--   **Para criar um trabalho usando:**  
+-   **Para criar um trabalho, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure),  
   
@@ -39,9 +39,9 @@ ms.locfileid: "72798312"
   
      [SQL Server Management Objects](#SMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 -   Para criar um trabalho, o usuário deve ser membro de uma das funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou da função de servidor fixa **sysadmin** . Um trabalho só pode ser editado por seu proprietário ou por membros da função **sysadmin** . Para obter mais informações sobre as funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consulte [Funções de banco de dados fixas do SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72798312"
   
 -   Trabalhos locais são armazenados em cache pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent local. Portanto, qualquer modificação obriga, implicitamente, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a rearmazenar em cache o trabalho. Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não armazena o trabalho em cache até que **sp_add_jobserver** seja chamado, é mais eficiente chamar **sp_add_jobserver** por último.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
 -   Você precisa ser um administrador do sistema para alterar o proprietário de um trabalho.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "72798312"
     > [!NOTE]  
     >  Se você transmitir a propriedade a um usuário que não seja membro da função de servidor fixa **sysadmin** e o trabalho estiver executando etapas que exijam contas proxy (por exemplo, execução de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), verifique se o usuário tem acesso à conta proxy necessária, ou o trabalho falhará.  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Para criar um trabalho do SQL Server Agent  
   
@@ -79,13 +79,13 @@ ms.locfileid: "72798312"
   
 7.  Na página **Alertas** , organize os alertas para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de alertas de &#40;de trabalho&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  Na página **Notificações** , defina ações para que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja executado quando o trabalho terminar. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de notificações de &#40;de trabalho&#41;](job-properties-new-job-notifications-page.md).  
+8.  Na página **Notificações**, defina ações para que o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seja executado quando o trabalho for concluído. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de notificações de &#40;de trabalho&#41;](job-properties-new-job-notifications-page.md).  
   
 9. Na página **Destinos** , gerencie os servidores de destino para o trabalho. Para obter mais informações sobre as opções disponíveis nesta página, consulte [Propriedades do trabalho: nova página de destinos de &#40;de trabalho&#41;](job-properties-new-job-targets-page.md).  
   
-10. Quando terminar, clique em **OK**.  
+10. Ao concluir, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Para criar um trabalho do SQL Server Agent  
   
@@ -126,18 +126,18 @@ ms.locfileid: "72798312"
   
  Para obter mais informações, consulte:  
   
--   [&#41;&#40;Transact-SQL de sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [&#41;&#40;Transact-SQL de sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [&#41;&#40;Transact-SQL de sp_add_schedule](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [&#41;&#40;Transact-SQL de sp_attach_schedule](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
 -   [&#41;&#40;Transact-SQL de sp_add_jobserver](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a>Usando SQL Server Management Objects  
- **Para criar um trabalho de SQL Server Agent**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMOProcedure"></a>Usando SQL Server Management Objects  
+ **Para criar um trabalho do SQL Server Agent**  
   
  Chame o método `Create` da classe `Job` usando uma linguagem de programação da sua escolha, como o Visual Basic, o Visual C# ou o PowerShell. Para obter um código de exemplo, consulte [Agendamento de tarefas administrativas automáticas no SQL Server Agent](sql-server-agent.md).  
   

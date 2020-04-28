@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797624"
 ---
 # <a name="dimension-relationships"></a>Relações de dimensão
@@ -84,6 +84,6 @@ ms.locfileid: "72797624"
  Para obter mais informações sobre relações muitos para muitos, consulte [definir uma relação muitos-para-muitos e propriedades de relação muitos-para-muitos](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Dimensões &#40;Analysis Services de dados multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensões &#40;Analysis Services – Dados Multidimensionais&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

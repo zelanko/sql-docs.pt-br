@@ -11,20 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637629"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>Tipo de dados de cadeia de caracteres UTF8 definido pelo usuário (UDT)
   O exemplo UTF8String do SQL Server demonstra a implementação de um tipo de dados definido pelo usuário. Esse exemplo mostra a implementação de um tipo de dados UTF8 definido pelo usuário, que estende o sistema de tipos do banco de dados para fornecer armazenamento para valores UTF8 codificados. Esse tipo também implementa código para converter a cadeia de caracteres Unicode de e para UTF8.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para criar e executar este projeto, o software a seguir deve estar instalado:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. É possível obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express gratuitamente no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [de Documentação e Amostras do](https://www.microsoft.com/sql-server/sql-server-editions-express)Express  
   
 -   O banco de dados AdventureWorks que está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site [do](https://go.microsoft.com/fwlink/?linkid=62796)Developer  
   
@@ -53,7 +52,7 @@ ms.locfileid: "73637629"
   
 -   O banco de dados AdventureWorks deve estar instalado na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você está usando.  
   
--   Se você não for um administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, será preciso solicitar que um administrador conceda a permissão **CreateAssembly**  a você para que seja possível concluir a instalação.  
+-   Se você não for um administrador da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância que está usando, deverá ter um administrador para conceder a permissão **CreateAssembly** para concluir a instalação.  
   
 ## <a name="building-the-sample"></a>Compilando o exemplo  
   
@@ -907,6 +906,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Cenários de uso e exemplos de integração do CLR&#41; &#40;Common Language Runtime](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Cenários de uso e exemplos para a integração do CLR &#40;Common Language Runtime&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -15,17 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798183"
 ---
 # <a name="start-a-job"></a>Iniciar um trabalho
   Este tópico descreve como iniciar a execução de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um trabalho do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o, ou SQL Server Management Objects.  
   
- Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ser executados em um servidor local ou em vários servidores remotos.  
+ Um trabalho é uma série especificada de ações que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ser executados em um servidor local ou em vários servidores remotos.  
   
 -   **Antes de começar:**  
   
@@ -39,16 +38,16 @@ ms.locfileid: "72798183"
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
  Para obter informações detalhadas, consulte [Implementar a segurança do SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Usando o SQL Server Management Studio  
   
 ### <a name="to-start-a-job"></a>Para iniciar um trabalho  
   
-1.  No **Pesquisador de Objetos** , conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]e a expanda.  
+1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e a expanda.  
   
 2.  Expanda **SQL Server Agent** e expanda **Trabalhos**. Segundo o modo pelo qual você queira que o trabalho seja iniciado, siga um destes procedimentos:  
   
@@ -60,7 +59,7 @@ ms.locfileid: "72798183"
   
     -   Se estiver trabalhando em um servidor mestre e quiser especificar servidores de destino para o trabalho, clique com o botão direito do mouse no trabalho que deseja iniciar, clique em **Iniciar Trabalho**e, em seguida, clique em **Iniciar em servidores de destino específicos**. Na caixa de diálogo **Instruções Pós-Download** , marque a caixa de seleção **Estes servidores de destino** e selecione cada servidor de destino em que o trabalho deve ser executado.  
   
-##  <a name="TSQL"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usando o Transact-SQL  
   
 ### <a name="to-start-a-job"></a>Para iniciar um trabalho  
   
@@ -81,7 +80,7 @@ ms.locfileid: "72798183"
   
  Para obter mais informações, consulte [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a>Usando SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usando SQL Server Management Objects  
 
 ### <a name="to-start-a-job"></a>Para iniciar um trabalho
   

@@ -18,10 +18,10 @@ ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659638"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance – Método SetDefaults
@@ -39,9 +39,9 @@ object.SetDefaults(OverwriteAll)
  *objeto*  
  Um objeto da [class CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) que representa uma instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*OverwriteAll*|Um valor booliano que especifica se os valores existentes devem ser substituídos na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância do cliente: **true** para substituir os dados existentes ou **false** se os dados existentes não forem substituídos.|  
   
@@ -51,6 +51,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

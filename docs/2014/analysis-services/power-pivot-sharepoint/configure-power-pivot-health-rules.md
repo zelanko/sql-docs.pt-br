@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797630"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Regras de integridade do PowerPivot - Configurar
@@ -28,7 +28,7 @@ ms.locfileid: "72797630"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Observação:** As configurações de regra de integridade são definidas separadamente para a instância de SQL Server Analysis Services e o aplicativo de serviço PowerPivot. Use as instruções neste tópico para configurar as regras de integridade para cada serviço. Para uma implantação do SharePoint 2013, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] usa apenas o aplicativo de serviço. Portanto, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala diferentes conjuntos de regras de integridade para diferentes versões do SharePoint. Consulte a coluna "versão" no tópico [referência de regras de integridade &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)ou você pode executar o seguinte comando do Windows PowerShell para ver as regras instaladas.  
+ **Observação:** as definições de regra de integridade são configuradas separadamente para a instância do SQL Server Analysis Services e o aplicativo de serviço PowerPivot. Use as instruções neste tópico para configurar as regras de integridade para cada serviço. Para uma implantação do SharePoint 2013, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] usa apenas o aplicativo de serviço. Portanto, o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala diferentes conjuntos de regras de integridade para diferentes versões do SharePoint. Consulte a coluna "versão" no tópico [referência de regras de integridade &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)ou você pode executar o seguinte comando do Windows PowerShell para ver as regras instaladas.  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -42,10 +42,10 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [Configurar regras de integridade usadas para avaliar a estabilidade do aplicativo (aplicativo de serviço PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Você deve ser um administrador de aplicativo de serviço para alterar propriedades de configuração da instância do Analysis Services e do aplicativo de serviço PowerPivot.  
   
-##  <a name="bkmk_view"></a>Exibir regras de integridade do PowerPivot  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>Exibir regras de integridade do PowerPivot  
   
 1.  Na Administração Central do SharePoint, clique em **Monitoramento**e, na seção **Analisador de Integridade** , clique em **Revisar definições de regra**.  
   
@@ -57,12 +57,12 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  Para fazer isso, clique na regra para abrir sua definição de regra e clique em **Executar Agora** . Clique em **Fechar** para voltar para a página **Rever problemas e soluções** para exibir o relatório. Se a regra detectou um problema, um aviso ou erro será reportado na página. Em alguns casos, pode levar alguns minutos antes de o erro ou aviso ser exibido.  
   
-##  <a name="bkmk_HR_SSAS"></a>Configurar regras de integridade usadas para avaliar a estabilidade do servidor (SQL Server Analysis Services)  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a> Configurar regras de integridade usadas para avaliar a estabilidade do servidor (SQL Server Analysis Services)  
  A instância do Analysis Services inclui regras de integridade que detectam problemas em nível de sistema (CPU, memória e espaço em disco usado para fins de cache). Use as instruções a seguir para modificar limites que disparam regras de integridade específicas.  
   
 1.  Na Administração Central do SharePoint, na seção **Configurações do Sistema** , clique em **Gerenciar serviços no servidor**.  
   
-2.  Na parte superior da página, selecione o servidor em seu farm do SharePoint que tem uma instância do Analysis Services (na ilustração a seguir, o nome de servidor é AW-SRV033). **SQL Server Analysis Services** aparecerá na lista de serviços.  
+2.  Na parte superior da página, selecione o servidor em seu farm do SharePoint que tem uma instância do Analysis Services (na ilustração a seguir, o nome de servidor é AW-SRV033). O**SQL Server Analysis Services** aparecerá na lista de serviços.  
   
      ![Captura de tela da página Gerenciar Serviços no Servidor](../media/ssas-centraladmin-servicesonserver.gif "Captura de tela da página Gerenciar Serviços no Servidor")  
   
@@ -98,9 +98,9 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      Intervalo de coleta de dados (em horas)  
      Você pode especificar o período de coleta de dados usado para calcular os números usados para disparar regras de integridade. Embora o sistema seja constantemente monitorado, os limites usados para disparar avisos de regra de integridade são calculados usando dados que foram gerados em um intervalo predefinido. O intervalo padrão é 4 horas. O servidor recupera os dados de sistema e uso coletados durante as 4 horas anteriores para avaliar o número de conexões de usuário, uso de espaço em disco, e taxas de CPU e de utilização de memória.  
   
-##  <a name="bkmk_evaluate_application_stability"></a>Configurar regras de integridade usadas para avaliar a estabilidade do aplicativo (aplicativo de serviço PowerPivot)  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>Configurar regras de integridade usadas para avaliar a estabilidade do aplicativo (aplicativo de serviço PowerPivot)  
   
-1.  Na Administração Central, em Gerenciamento de Aplicativo, clique em **Gerenciar aplicativos de serviço**.  
+1.  Na administração central, em gerenciamento de aplicativos, clique em **gerenciar aplicativos de serviço**.  
   
 2.  Na página Aplicativos de Serviço, clique em **Aplicativo de Serviço PowerPivot Padrão**.  
   

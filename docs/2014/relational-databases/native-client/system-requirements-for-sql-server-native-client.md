@@ -16,17 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637793"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos do sistema do SQL Server Native Client
   Para usar recursos de acesso a dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como o MARS, você precisa ter este software instalado:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client em seu cliente.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client em seu cliente.  
   
 -   Uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seu servidor.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "73637793"
 > [!NOTE]  
 >  Certifique-se de que tenha efetuado logon com privilégios de administrador antes de instalar esse software.  
   
-## <a name="operating-system-requirements"></a>Requisitos de sistema operacional  
+## <a name="operating-system-requirements"></a>Requisitos do Sistema Operacional  
  Para obter uma lista de sistemas operacionais que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dão suporte a cliente nativo, consulte [políticas de suporte para SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Requisitos do SQL Server  

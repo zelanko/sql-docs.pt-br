@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797880"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
@@ -30,7 +30,7 @@ ms.locfileid: "72797880"
  Para obter uma visão geral do provedor e os cmdlets do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### <a name="help-in-the-windows-powershell-environment"></a>Ajude no ambiente de Windows PowerShell  
- Use o cmdlet **Get-Help** para obter ajuda no ambiente Windows PowerShell. **Get-Help** fornece ajuda básica para a linguagem do Windows PowerShell e os vários cmdlets e provedores disponíveis no Windows PowerShell.  
+ Use o cmdlet **Get-Help** para obter ajuda no ambiente Windows PowerShell. **Get-Help** fornece ajuda básica para a linguagem Windows PowerShell e os diversos cmdlets e provedores disponíveis no Windows PowerShell.  
   
  Para obter mais informações sobre os modos você pode usar **Get-Help**, veja [Get-Help: Obtendo Ajuda](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72797880"
   
  A entrada *-Query* ou *-QueryFromFile* pode conter:  
   
--   comandos e variáveis **sqlcmd** . Para obter informações sobre essas variáveis e comandos, consulte a seção Comentários de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+-   Variáveis e comandos do**sqlcmd** . Para obter informações sobre essas variáveis e comandos, consulte a seção Comentários de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
 -   Instruções[!INCLUDE[tsql](../includes/tsql-md.md)] . Para obter mais informações sobre a linguagem [!INCLUDE[tsql](../includes/tsql-md.md)], veja [Referência de Transact-SQL &#40;Mecanismo de Banco de Dados&#41;](/sql/t-sql/language-reference).  
   
@@ -101,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>Listar métodos e propriedades  
- **Para listar os métodos e as propriedades de um nó em um caminho do provedor de SQL Server**  
+ **Para listar os métodos e propriedades para um nó em um caminho de provedor do SQL Server**  
   
 1.  O CD para um nó no caminho do SQL Server ou crie uma variável definida para esse local.  
   

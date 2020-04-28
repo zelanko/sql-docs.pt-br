@@ -13,10 +13,10 @@ ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73658914"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Compreendendo o provedor WMI para gerenciamento de configuração
@@ -31,7 +31,7 @@ ms.locfileid: "73658914"
  Enumeração  
  Enumeração de todas as instâncias de um tipo de classe.  
   
- Modificação  
+ Modification  
  Modificação de uma instância específica de um tipo de classe.  
   
  As classes têm métodos que permitem a modificação de suas propriedades.  

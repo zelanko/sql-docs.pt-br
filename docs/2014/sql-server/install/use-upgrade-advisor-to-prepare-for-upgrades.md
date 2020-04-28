@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632733"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar o Supervisor de Atualização para preparar para atualizações
@@ -56,14 +56,13 @@ ms.locfileid: "73632733"
 >  Os relatórios podem conter um item "outros problemas de atualização". Esse item é vinculado a uma lista de problemas que não são detectados pelo Supervisor de Atualização, mas que podem existir em seu servidor ou em seus aplicativos. Você deve revisar a lista de problemas não detectáveis e determinar se deve alterar seu servidor ou seus aplicativos devido aos problemas não detectáveis.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Como instalar e executar o Supervisor de Atualização  
- O local onde você instala o Aconselhador de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende do que você irá analisar. O Supervisor de Atualização dá suporte à análise remota de todos os componentes com suporte, exceto o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se não estiver examinando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você poderá instalar o Supervisor de Atualização em qualquer computador que possa se conectar à sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e que atenda aos pré-requisitos do Supervisor de Atualização. Para obter mais informações, consulte [atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Se você estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será necessário instalar o Supervisor de Atualização no servidor de relatório.  
+ O local onde você instala o Aconselhador de Atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende do que você irá analisar. O Supervisor de Atualização dá suporte à análise remota de todos os componentes com suporte, exceto o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se não estiver examinando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você poderá instalar o Supervisor de Atualização em qualquer computador que possa se conectar à sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e que atenda aos pré-requisitos do Supervisor de Atualização. Para obter mais informações, consulte [Atualizações de versão e edição com suporte](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Se você estiver verificando instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], será necessário instalar o Supervisor de Atualização no servidor de relatório.  
   
  O Supervisor de Atualização está disponível em um pacote de recursos.  
   
  Os pré-requisitos para instalar e executar o supervisor de atualização são os seguintes:  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer desde a versão 4.5. Você pode instalar o Windows Installer do [site do Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   

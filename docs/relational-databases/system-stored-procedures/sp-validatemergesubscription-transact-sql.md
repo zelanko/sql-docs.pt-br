@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632985"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
@@ -48,11 +48,11 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] 'level'`É o tipo de validação a ser executada. o *nível* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
-|Valor de nível|DESCRIÇÃO|  
+|Valor de nível|Descrição|  
 |-----------------|-----------------|  
 |**1**|Validação só de número de linhas.|  
 |**2**|Validação de número de linhas e soma de verificação.|  
-|**Beta**|Validação de número de linhas e soma de verificação binária.|  
+|**3**|Validação de número de linhas e soma de verificação binária.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

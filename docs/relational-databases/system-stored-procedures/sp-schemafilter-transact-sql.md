@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633013"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -45,15 +45,15 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`A ação a ser tomada neste esquema. a *operação* é **nvarchar (4)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**agrega**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
+|**add**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
 |**suspensa**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
-|**Ajuda**|Retorna a lista de esquemas não qualificados para publicação.|  
+|**help**|Retorna a lista de esquemas não qualificados para publicação.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|É o nome do esquema não qualificado para publicação.|  
   

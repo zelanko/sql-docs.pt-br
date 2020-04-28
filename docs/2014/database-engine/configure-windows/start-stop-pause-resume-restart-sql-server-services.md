@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797946"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser
@@ -52,7 +52,7 @@ ms.locfileid: "72797946"
   
 -   **Antes de começar:**  
   
-    -   [O que são esses serviços?](#Services)  
+    -   [O que são estes serviços?](#Services)  
   
     -   [Informações adicionais](#MoreInformation)  
   
@@ -64,29 +64,27 @@ ms.locfileid: "72797946"
   
     -   [SQL Server Management Studio](#SSMSProcedure)  
   
-    -   [Comandos net em uma janela de prompt de comando](#CommandPrompt)  
+    -   [Comandos net em uma janela do prompt de comando](#CommandPrompt)  
   
     -   [Transact-SQL](#TsqlProcedure)  
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Services"></a>O que é [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o serviço, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o serviço do Agent e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o serviço navegador?  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são programas executáveis usados como um serviço do Windows. Programas executados como um serviço do Windows podem continuar operando sem exibir qualquer atividade na tela do computador.  
+###  <a name="what-is-the-ssdenoversion-service-the-ssnoversion-agent-service-and-the-ssnoversion-browser-service"></a><a name="Services"></a> O que é o serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser?  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são programas executáveis usados como um serviço do Windows. Programas executados como um serviço do Windows podem continuar operando sem exibir qualquer atividade na tela do computador.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)]serviço**  
  O processo executável que é o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser a instância padrão (limite de uma por computador) ou pode ser uma de muitas instâncias nomeadas do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use o Gerenciador de Configurações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar quais instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)] são instaladas no computador. A instância padrão (se você a instala) está listada como ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. As instâncias nomeadas (se você instalá-las) são listadas como ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)**. Por padrão, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Express é instalado como ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLExpress)**.  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Serviço do agente**  
- Um serviço Windows que executa tarefas administrativas agendadas, chamadas trabalhos e alertas. Para obter mais informações, consulte [SQL Server Agent](../../ssms/agent/sql-server-agent.md). 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Um serviço Windows que executa tarefas administrativas agendadas, chamadas trabalhos e alertas. Para obter mais informações, consulte [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não está disponível em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Serviço browser**  
  Um serviço Windows que escuta solicitações de entrada para recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornece informações de clientes sobre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador. Uma única instância do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser é usada para todas as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas no computador.  
   
-###  <a name="MoreInformation"></a>Informações adicionais  
+###  <a name="additional-information"></a><a name="MoreInformation"></a>Informações adicionais  
   
 -   Pausar o serviço [!INCLUDE[ssDE](../../includes/ssde-md.md)] impede que novos usuários se conectem ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], mas os usuários que já estão conectados podem continuar trabalhando até que suas conexões sejam interrompidas. Use a pausa quando você quiser esperar que os usuários concluam o trabalho antes de parar o serviço. Isso os permite que eles concluam as transações em andamento. Retomar permite que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] aceite novas conexões novamente. Não é possível pausar ou retomar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Service.  
   
@@ -114,16 +112,16 @@ ms.locfileid: "72797946"
   
 -   Durante a execução em um cluster, o serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] é gerenciador melhor com o uso do Administrador de Cluster.  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Por padrão, apenas membros do grupo de administradores local podem iniciar, interromper, pausar, retomar ou reiniciar um serviço. Para conceder a capacidade de gerenciar serviços a não administradores, consulte [Como conceder aos usuários direitos para gerenciar serviços no Windows Server 2003](https://support.microsoft.com/kb/325349). (O processo é semelhante em outras versões do Windows.)  
   
  Parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando o comando [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` requer a associação nas funções de servidor fixas **sysadmin** ou **ServerAdmin** e não é transferível.  
   
-##  <a name="SSCMProcedure"></a>Usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager  
+##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a> Usando o Gerenciador de Configurações [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-ssdenoversion"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
@@ -138,7 +136,7 @@ ms.locfileid: "72797946"
 > [!NOTE]  
 >  Para iniciar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] com opções de inicialização, consulte [Configurar opções de inicialização do servidor &#40;SQL Server Configuration Manager&#41;](scm-services-configure-server-startup-options.md).  
   
-#### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-start-stop-pause-resume-or-restart-the-ssnoversion-browser-or-an-instance-of-the-ssnoversion-agent"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ou uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], aponte para **Ferramentas de Configuração**e clique em **SQL Server Configuration Manager**.  
   
@@ -153,9 +151,9 @@ ms.locfileid: "72797946"
 > [!NOTE]  
 >  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não pode ser colocado em pausa.  
   
-##  <a name="SSMSProcedure"></a>Usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
+##  <a name="using-ssnoversion-management-studio"></a><a name="SSMSProcedure"></a> Usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
-#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
+#### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-ssdenoversion"></a>Para iniciar, parar, pausar, retomar ou reiniciar a instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], clique com o botão direito do mouse na instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] que você deseja iniciar e clique em **Iniciar**, **Parar**, **Pausar**, **Retomar**ou **Reiniciar**.  
   
@@ -165,7 +163,7 @@ ms.locfileid: "72797946"
   
 3.  Quando solicitado a indicar se você deseja executar a ação, clique em **Sim**.  
   
-#### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, parar ou reiniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+#### <a name="to-start-stop-or-restart-the-an-instance-of-the-ssnoversion-agent"></a>Para iniciar, parar ou reiniciar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
 1.  No Pesquisador de objetos, conecte-se à [!INCLUDE[ssDE](../../includes/ssde-md.md)]instância do, clique com o botão direito do mouse em ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente**e clique em **Iniciar**, **parar**ou **reiniciar**.  
   
@@ -173,10 +171,10 @@ ms.locfileid: "72797946"
   
 3.  Quando solicitado a indicar se você deseja executar a ação, clique em **Sim**.  
   
-##  <a name="CommandPrompt"></a>Na janela do prompt de comando usando comandos net  
- Os serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser iniciados, parados ou pausados com o uso de comandos [!INCLUDE[msCoName](../../includes/msconame-md.md)]**net** do Windows.  
+##  <a name="from-the-command-prompt-window-using-net-commands"></a><a name="CommandPrompt"></a>Na janela do prompt de comando usando comandos net  
+ Os serviços do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser iniciados, interrompidos ou colocados em pausa com os comandos **net** do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-###  <a name="dbDefault"></a>Para iniciar a instância padrão do[!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+###  <a name="to-start-the-default-instance-of-the-ssde"></a><a name="dbDefault"></a>Para iniciar a instância padrão do[!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -186,30 +184,30 @@ ms.locfileid: "72797946"
   
      **net start MSSQLSERVER**  
   
-###  <a name="dbNamed"></a>Para iniciar uma instância nomeada do[!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+###  <a name="to-start-a-named-instance-of-the-ssde"></a><a name="dbNamed"></a> Para iniciar uma instância nomeada do [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Em um prompt de comando, digite um dos comandos a seguir. Substitua * \<InstanceName>* pelo nome da instância que você deseja gerenciar.  
+-   Em um prompt de comando, digite um dos comandos a seguir. Substitua *\<instancename>* pelo nome da instância que você deseja gerenciar.  
   
-     **net start "SQL Server (** *InstanceName* **)"**  
+     **net start "SQL Server (** *instancename* **)"**  
   
      -ou-  
   
-     **net start MSSQL $** *InstanceName*  
+     **net start MSSQL$** *instancename*  
   
-###  <a name="dbStartup"></a>Para iniciar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] com opções de inicialização  
+###  <a name="to-start-the-ssde-with-startup-options"></a><a name="dbStartup"></a> Para iniciar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] com opções de inicialização  
   
 -   Adicione opções de inicialização ao final da instrução **net start "SQL Server (MSSQLSERVER)"** , separadas por espaço. Quando começar usando **net start**, as opções de inicialização usam uma barra (/) em vez de um hífen (-).  
   
-     **net start "SQL Server (MSSQLSERVER)"/f/m**  
+     **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
      -ou-  
   
-     **net start MSSQLSERVER/f/m**  
+     **net start MSSQLSERVER /f /m**  
   
     > [!NOTE]  
     >  Para obter mais informações sobre as opções de inicialização, consulte [Opções de inicialização do serviço Mecanismo de Banco de Dados](database-engine-service-startup-options.md).  
   
-###  <a name="agDefault"></a>Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente na instância padrão do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="to-start-the-ssnoversion-agent-on-the-default-instance-of-ssnoversion"></a><a name="agDefault"></a> Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent na instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -219,19 +217,19 @@ ms.locfileid: "72797946"
   
      **net start SQLSERVERAGENT**  
   
-###  <a name="agNamed"></a>Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente em uma instância nomeada do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+###  <a name="to-start-the-ssnoversion-agent-on-a-named-instance-of-ssnoversion"></a><a name="agNamed"></a> Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Em um prompt de comando, digite um dos comandos a seguir. Substitua *instancename* pelo nome da instância que você deseja gerenciar.  
   
-     **net start "SQL Server Agent (** *InstanceName* **)"**  
+     **net start "SQL Server Agent(** *instancename* **)"**  
   
      -ou-  
   
-     **net start SQLAgent $** *InstanceName*  
+     **net start SQLAgent$** *instancename*  
   
  Para obter informações sobre como executar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em modo detalhado para solução de problemas, consulte [sqlagent90 Application](../../tools/sqlagent90-application.md).  
   
-###  <a name="Browser"></a>Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador  
+###  <a name="to-start-the-ssnoversion-browser"></a><a name="Browser"></a> Para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
   
 -   Em um prompt de comando, digite um dos seguintes comandos:  
   
@@ -239,9 +237,9 @@ ms.locfileid: "72797946"
   
      -ou-  
   
-     **net start sqlbrowser**  
+     **net start SQLBrowser**  
   
-###  <a name="pauseStop"></a>Para pausar ou parar serviços na janela do prompt de comando  
+###  <a name="to-pause-or-stop-services-from-the-command-prompt-window"></a><a name="pauseStop"></a> Para pausar ou parar os serviços na janela Prompt de Comando  
   
 -   Para pausar ou parar serviços, modifique os comandos das maneiras a seguir.  
   
@@ -249,10 +247,10 @@ ms.locfileid: "72797946"
   
     -   Para pausar um serviço, substitua **net start** com **net pause**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode ser parado com a instrução `SHUTDOWN`.  
   
-#### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>Para parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+#### <a name="to-stop-the-ssde-using-tsql"></a>Para parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 -   Para aguardar a conclusão de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e procedimentos armazenados em execução atualmente e parar o [!INCLUDE[ssDE](../../includes/ssde-md.md)], execute a instrução a seguir.  
   
@@ -268,9 +266,9 @@ ms.locfileid: "72797946"
   
  Para obter mais informações sobre `SHUTDOWN` a instrução, consulte [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
   
-#### <a name="to-start-and-stop-includessdeincludesssde-mdmd-services"></a>Para iniciar e parar os serviços [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+#### <a name="to-start-and-stop-ssde-services"></a>Para iniciar e parar os serviços [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 1.  Em uma janela Prompt de Comando, inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell executando o comando a seguir.  
   

@@ -16,10 +16,10 @@ ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 730f996a35e7ea2e31518322d710b197cf31f38b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632823"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
@@ -39,13 +39,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>Argumentos  
 `[ @agent_type = ] 'agent_type'`É o tipo de agente. *agent_type* é **int**, sem padrão, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent.|  
 |**2**|Log Reader Agent.|  
-|**Beta**|Distribution Agent.|  
-|**quatro**|Merge Agent.|  
-|**99**|Queue Reader Agent.|  
+|**3**|Distribution Agent.|  
+|**4**|Merge Agent.|  
+|**9**|Queue Reader Agent.|  
   
 `[ @agent_id = ] 'agent_id'`É a ID do agente. *agent_id* é **int**, sem padrão.  
   

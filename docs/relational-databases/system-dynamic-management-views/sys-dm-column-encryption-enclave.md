@@ -10,10 +10,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73599239"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
@@ -23,7 +23,7 @@ Retorna contadores de desempenho para o enclave seguro para Always Encrypted. Pa
 
 Se o enclave estiver configurado e tiver sido inicializado corretamente após a última reinicialização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a exibição conterá exatamente uma linha. Se o enclave não estiver configurado ou não tiver sido inicializado corretamente, a exibição não retornará nenhuma linha. 
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|O número atual de sessões de cliente usando o enclave.|  
 |current_column_encryption_key_count|**int**|A contagem de chaves de criptografia de coluna que o enclave contém atualmente.|  

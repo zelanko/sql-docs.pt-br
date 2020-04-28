@@ -18,10 +18,10 @@ ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ac698d7fa655e47459b9de3af0f5896e038c0c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657633"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings – Método SetDefaults
@@ -39,11 +39,11 @@ object.SetDefaults(OverwriteAll)
  *objeto*  
  Um objeto **ClientSettings** que representa uma instância de cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
-|*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** para substituir os dados existentes; **false** se os dados existentes não forem substituídos.|  
+|*OverwriteAll*|Um valor booliano, que especifica se deve-se substituir valores existentes na instância do cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **true** para substituir dados existentes, ou **false** , se os dados existentes não precisarem ser substituídos.|  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor **uint32** , que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  

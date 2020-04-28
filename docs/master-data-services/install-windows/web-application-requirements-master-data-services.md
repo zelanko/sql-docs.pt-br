@@ -13,23 +13,21 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728087"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]funciona somente no Internet Explorer (IE) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] é um aplicativo Web hospedado pelo IIS (Serviços de Informações da Internet). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona apenas no IE (Internet Explorer) 9 ou posterior. Não há suporte para o IE 8 e versões anteriores, para o Microsoft Edge e o Chrome.  
 
-**Para obter instruções sobre como instalar e configurar o IIS**, consulte [Instalando e Configurando o IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
+**Para obter instruções sobre como instalar e configurar o IIS**, consulte [Instalando e configurando o IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
- Use o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para criar e configurar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura o IIS no computador local; portanto, ele é ideal para tarefas de configuração inicial da Web. Por exemplo, configure um ambiente do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] com um único aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou configure o primeiro aplicativo Web em uma implantação em expansão do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Use ferramentas do IIS para executar tarefas mais complexas, como, por exemplo, configurar vários servidores Web em uma implantação em expansão.  
+ Use o [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para criar e configurar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura o IIS no computador local; portanto, ele é ideal para tarefas de configuração inicial da Web. Por exemplo, configure um ambiente do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] com um único aplicativo Web do [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou configure o primeiro aplicativo Web em uma implantação em expansão do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Use ferramentas do IIS para executar tarefas mais complexas, como, por exemplo, configurar vários servidores Web em uma implantação em expansão.  
   
 > [!NOTE]  
 >  Qualquer computador em que os componentes do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] deve ser licenciado. Para obter mais informações, consulte o Contrato de Licença de Usuário Final (EULA).  
@@ -49,11 +47,11 @@ ms.locfileid: "73728087"
  
  
 > [!IMPORTANT]  
->A **compactação de conteúdo dinâmico** é habilitada por padrão. Isso reduz consideravelmente o tamanho da resposta xml e salva a E/S de rede, embora o uso da CPU aumente.  Para obter mais informações, veja **Melhoria do desempenho do [CTP] 2.0** em [Novidades no MDS &#40;Master Data Services&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>A**Compactação de Conteúdo Dinâmico** é habilitada por padrão. Isso reduz consideravelmente o tamanho da resposta xml e salva a E/S de rede, embora o uso da CPU aumente.  Para obter mais informações, veja **Melhoria do desempenho do [CTP] 2.0** em [Novidades no MDS &#40;Master Data Services&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
-|Serviços de Informação da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de Aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo estático<br /><br /> [Observação: não instale a Publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
+|Serviços de Informação da Internet<br /><br /> Ferramentas de gerenciamento da Web<br /><br /> Console de Gerenciamento IIS<br /><br /> Serviços da World Wide Web<br /><br /> Desenvolvimento de aplicativo<br /><br /> .NET Extensibility 3.5<br /><br /> Extensibilidade do .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensões ISAPI<br /><br /> Filtros ISAPI<br /><br /> Recursos comuns de HTTP<br /><br /> Documento padrão<br /><br /> Navegação de diretório<br /><br /> Erros de HTTP<br /><br /> Conteúdo estático<br /><br /> [Observação: não instale a Publicação WebDAV]<br /><br /> Integridade e diagnóstico<br /><br /> Log de HTTP<br /><br /> Monitor de solicitação<br /><br /> Desempenho<br /><br /> Compactação de conteúdo estático<br /><br /> Segurança<br /><br /> Filtragem de solicitação<br /><br /> Autenticação do Windows|  
   
 ### <a name="features"></a>Recursos 
  No Windows Server 2012 ou no Windows Server 2012 R2, você pode usar o **Gerenciador do Servidor** para instalar os recursos necessários a seguir.  
@@ -74,7 +72,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Contas e permissões  
   
-|Type|DESCRIÇÃO|  
+|Type|Descrição|  
 |----------|-----------------|  
 |Conta do Windows|Você deve fazer logon no computador do servidor Web com uma conta do Windows que tenha permissão para configurar funções, serviços de função e recursos do Windows e para criar e gerenciar pools de aplicativos, sites e aplicativos Web no IIS no computador local.|  
 |Conta de serviço|Quando você criar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] no [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], especifique uma identidade para o pool de aplicativos em que o aplicativo é executado. Esta conta pode ser diferente da conta de serviço especificada quando o banco de dados [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] foi criado.<br /><br /> Essa identidade deve ser uma conta de usuário de domínio e é acrescentada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Essa conta também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
@@ -83,6 +81,6 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
  [Instalar o Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Criar um aplicativo Web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [&#40;Gerenciador de Configuração do Master Data Services da página de configuração da Web&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Página Configuração da Web &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637833"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar a versão autônoma do Construtor de Relatórios (Construtor de Relatórios)
@@ -47,11 +47,11 @@ ms.locfileid: "73637833"
   
 6.  Na página **Bem-vindo ao assistente de instalação** , clique em **Avançar**.  
   
-7.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Próximo**.  
+7.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Avançar**.  
   
-8.  Forneça seu nome e o nome da sua empresa. Clique em **Próximo**.  
+8.  Forneça seu nome e o nome da sua empresa. Clique em **Avançar**.  
   
-9. Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Próximo**.  
+9. Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Avançar**.  
   
     -   Clique em **procurar** para ver o local padrão de construtor de relatórios e atualizá-lo.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73637833"
         > [!NOTE]  
         >  Se um volume não tiver a quantidade suficiente de espaço livre em disco, esse volume será realçado.  
   
-10. Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Próximo**.  
+10. Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se você planejar trabalhar com o Construtor de Relatórios quando estiver conectado a um servidor de relatório, será conveniente fornecer a URL ao servidor nesse momento. No entanto, você também pode fazer isso na caixa de diálogo **Opções** quando estiver trabalhando no construtor de relatórios.  
@@ -80,11 +80,11 @@ ms.locfileid: "73637833"
   
 3.  Na página **Bem-vindo ao assistente de instalação** , clique em **Avançar**.  
   
-4.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Próximo**.  
+4.  Na página **contrato de licença** , leia o contrato e, em seguida, selecione a opção **eu aceito os termos do contrato de licença** . Clique em **Avançar**.  
   
-5.  Forneça seu nome e o nome da sua empresa. Clique em **Próximo**.  
+5.  Forneça seu nome e o nome da sua empresa. Clique em **Avançar**.  
   
-6.  Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Próximo**.  
+6.  Na página **seleção de recursos** , opcionalmente, clique em **procurar** ou em **custo de disco**. Clique em **Avançar**.  
   
     -   Clique em **procurar** para ver o local padrão de construtor de relatórios e atualizá-lo.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "73637833"
         > [!NOTE]  
         >  Se um volume não tiver a quantidade suficiente de espaço livre em disco, esse volume será realçado.  
   
-7.  Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Próximo**.  
+7.  Na página **Servidor de Destino Padrão** , se desejar, forneça a URL ao servidor de relatório de destino se for diferente do padrão. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se você planejar trabalhar com o Construtor de Relatórios quando estiver conectado a um servidor de relatório, será conveniente fornecer a URL ao servidor nesse momento. No entanto, você também pode fazer isso na caixa de diálogo **Opções** quando estiver trabalhando no construtor de relatórios.  
@@ -113,7 +113,7 @@ ms.locfileid: "73637833"
   
 4.  Opcionalmente, navegue até o local para salvar, verifique se a opção **salvar como** está **Windows Installer pacote**e, em seguida, clique em **salvar**.  
   
-5.  No menu **Iniciar** , clique em **Executar**.  
+5.  No menu **Iniciar**, clique em **Executar**.  
   
 6.  Na caixa de texto Abrir, digite `cmd.`  
   

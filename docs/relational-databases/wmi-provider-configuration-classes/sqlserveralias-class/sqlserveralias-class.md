@@ -18,10 +18,10 @@ ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6cbcb2ab05c30f667e6e5b95d8223ab4e152137e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659191"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
@@ -37,6 +37,6 @@ ms.locfileid: "73659191"
  **Observação:** A [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) herda o método **Put** da classe Provider. Porém, ela não retorna nenhum resultado como indicado pelo método **Provider::Put** . Para obter mais informações, consulte a documentação do WMI.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

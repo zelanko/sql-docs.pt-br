@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632960"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
@@ -25,12 +25,12 @@ ms.locfileid: "73632960"
 
  Retorna detalhes para classificadores de carga de trabalho.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|Intervalo|  
+|Nome da coluna|Tipo de Dados|Descrição|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID exclusiva do classificador. Não permite valor nulo||
 group_name|**sysname**|Nome do grupo de carga de trabalho ao qual o classificador está atribuído. Não permite valor nulo. Ingresse em sys. workload_management_workload_groups ||
 name|**sysname**|Nome do classificador. Deve ser exclusivo para a instância. Não permite valor nulo.||
-|importância|**sysname**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho. Permite valor nulo.  Quando NULL, a configuração de importância do grupo de carga de trabalho é usada.|baixa, below_normal, normal (padrão), above_normal, alta |
+|importance|**sysname**|É a importância relativa de uma solicitação neste grupo de carga de trabalho e entre grupos de carga de trabalho para recursos compartilhados.  A importância especificada no classificador substitui a configuração de importância do grupo de carga de trabalho. Permite valor nulo.  Quando NULL, a configuração de importância do grupo de carga de trabalho é usada.|baixa, below_normal, normal (padrão), above_normal, alta |
 |create_time|**datetime**|Hora em que o classificador foi criado. Não permite valor nulo.||
 modify_time|**datetime**|Hora em que o classificador foi modificado pela última vez. Não permite valor nulo.||
 is_enabled|**bit**|INTERNAL||

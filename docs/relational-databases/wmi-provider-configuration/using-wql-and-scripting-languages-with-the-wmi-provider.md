@@ -19,10 +19,10 @@ ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 66a0af86e5a9939e9f4621b506991f8234d887dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660593"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>Usar as linguagens WQL e de scripts com o provedor WMI

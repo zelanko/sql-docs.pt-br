@@ -16,10 +16,10 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727829"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Validar uma versão em relação a regras de negócio (Master Data Services)
@@ -33,12 +33,12 @@ ms.locfileid: "73727829"
 > [!NOTE]  
 >  Todos os membros deverão ser validados antes que uma versão possa ser confirmada.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Gerenciamento de Versões** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   O status da versão deve ser **Aberto** ou **Bloqueado**.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "73727829"
  [Procedimento armazenado de validação &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Versões &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 545c13aaa062c0aa55a72d74c52cf4cc112dc9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660663"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Classe ClientSettingsGeneralFlag
@@ -36,6 +36,6 @@ ms.locfileid: "73660663"
 -   Exibir e modificar o valor de sinalizador.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -20,31 +20,31 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796393"
 ---
 # <a name="create-dml-triggers"></a>Criar gatilhos DML
   Este tópico descreve como criar um gatilho DML [!INCLUDE[tsql](../../includes/tsql-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
-##  <a name="Top"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="Top"></a> Antes de começar  
   
 ### <a name="limitations-and-restrictions"></a>Limitações e Restrições  
  Para obter uma lista de limitações e restrições relacionadas à criação de gatilhos DML, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Permissões  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Exige a permissão ALTER na tabela ou exibição na qual o gatilho é criado.  
   
-##  <a name="Procedures"></a> Como criar um gatilho DML  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> Como criar um gatilho DML  
  Você pode usar uma das seguintes opções:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e expanda-a.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72796393"
   
  [Antes de começar](#Top)  
   
-###  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e expanda-a.  
   

@@ -18,10 +18,10 @@ ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e93cfbb28276b15906296323539937009213632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659985"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumericalValue (classe SqlServiceAdvancedProperty)
@@ -39,9 +39,9 @@ object.SetNumericalValue(NumValue)
  *objeto*  
  Um objeto da [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa uma propriedade avançada.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*NumValue*|Um valor **uint32** que especifica o valor da propriedade avançada.|  
   

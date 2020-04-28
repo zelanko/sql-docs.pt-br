@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797663"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Unir uma réplica secundária a um grupo de disponibilidade (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "72797663"
   
      [Segurança](#Security)  
   
--   **Para preparar um banco de dados secundário usando:**  
+-   **Para preparar um banco de dados secundário, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,11 +40,11 @@ ms.locfileid: "72797663"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Acompanhamento:** [configurar bancos de dados secundários](#FollowUp)  
+-   **Acompanhamento:** [Configurar bancos de dados secundários](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Pré-requisitos  
   
 -   A réplica primária do grupo de disponibilidade deve estar online no momento.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "72797663"
 > [!IMPORTANT]  
 >  Se qualquer pré-requisito não for atendido, a operação de junção falhará. Após uma tentativa de junção com falha, talvez seja necessário conectar a instância do servidor que hospeda a réplica primária para remover e adicionar novamente a réplica secundária antes que seja possível uni-la ao grupo de disponibilidade. Para obter mais informações, veja [Remover uma réplica secundária de um grupo de disponibilidade &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão ALTER AVAILABILITY GROUP no grupo de disponibilidade, a permissão CONTROL AVAILABILITY GROUP, a permissão ALTER ANY AVAILABILITY GROUP ou a permissão CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
  **Para unir uma réplica de disponibilidade a um grupo de disponibilidade**  
   
 1.  No Pesquisador de Objetos, conecte-se à instância do servidor que hospeda a réplica secundária e clique no nome do servidor para expandir a árvore de servidores.  
@@ -75,7 +75,7 @@ ms.locfileid: "72797663"
   
 6.  Para unir a réplica secundária ao grupo de disponibilidade, clique em **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
  **Para unir uma réplica de disponibilidade a um grupo de disponibilidade**  
   
 1.  Conecte-se à instância de servidor que hospeda a réplica secundária.  
@@ -95,7 +95,7 @@ ms.locfileid: "72797663"
     > [!NOTE]  
     >  Para ver esta instrução [!INCLUDE[tsql](../../../includes/tsql-md.md)] usada no contexto, veja [Criar um grupo de disponibilidade &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
-##  <a name="PowerShellProcedure"></a> Usando o PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usando o PowerShell  
  **Para unir uma réplica de disponibilidade a um grupo de disponibilidade**  
   
  No provedor do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell:  
@@ -117,7 +117,7 @@ ms.locfileid: "72797663"
   
 -   [Provedor do SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Acompanhamento: Configurar bancos de dados secundários  
+##  <a name="follow-up-configure-secondary-databases"></a><a name="FollowUp"></a>Acompanhamento: configurar bancos de dados secundários  
  Para cada banco de dados do grupo de disponibilidade, você precisa de um banco de dados secundário na instância de servidor que está hospedando a réplica secundária. Você pode configurar bancos de dados secundários antes ou depois que une uma réplica secundária a um grupo de disponibilidade, da seguinte maneira  
   
 1.  Restaure o banco de dados e os backups de log recentes de cada banco de dados primário na instância de servidor que hospeda a réplica secundária, usando RESTORE WITH NORECOVERY em cada operação de restauração. Para obter mais informações, consulte [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  

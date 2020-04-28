@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727921"
 ---
 # <a name="reserved-words-master-data-services"></a>Palavras reservadas (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73727921"
   
 -   [Modelos](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [Entidades](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [Entities](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [Hierarquias explícitas](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -39,20 +39,20 @@ ms.locfileid: "73727921"
   
 -   [Membros](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a>Modelos  
+##  <a name="models"></a><a name="models"></a>Modelos  
  Se você criar um modelo com o nome definido como **Name** ou **Code**, não selecione **Criar entidade com o mesmo nome como modelo** porque **Name** ou **Code** não podem ser usados para o nome de uma entidade.  
   
-##  <a name="entities"></a>Contabilidade  
+##  <a name="entities"></a><a name="entities"></a>Contabilidade  
  Para nomes de entidade, você não pode usar **Name** nem **Code**.  
   
-##  <a name="exhierarchies"></a>Hierarquias explícitas  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Hierarquias explícitas  
  Para nomes de hierarquia explícita, você não pode usar **Name** nem **Code**.  
   
-##  <a name="attributes"></a>Atributos  
+##  <a name="attributes"></a><a name="attributes"></a>Atributos  
   
--   **SESSÃO**  
+-   **ID**  
   
--   **Código**  
+-   **Auto-completar**  
   
 -   **EnterUserName**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "73727921"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>Os  
+##  <a name="members"></a><a name="members"></a>Os  
  Para membros, você não pode usar **MDMMemberStatus**, **MDMUnused**ou **ROOT** como valor do atributo **Código** .  
   
 ## <a name="see-also"></a>Consulte Também  

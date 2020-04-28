@@ -18,10 +18,10 @@ ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659082"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Método SetDefaults (classe SInstance)
@@ -39,9 +39,9 @@ object.SetDefaults(OverwriteAll)
  *objeto*  
  Um objeto de [classe SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa uma instância de servidor.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*OverwriteAll*|Um valor booliano que especifica se o valor existente deve ser substituído na instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do cliente: **true** se os dados existentes forem substituídos ou **falso** se os dados existentes não forem substituídos.|  
   

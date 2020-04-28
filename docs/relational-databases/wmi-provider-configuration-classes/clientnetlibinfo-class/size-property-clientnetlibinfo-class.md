@@ -18,10 +18,10 @@ ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eda80b5efcee562050539bf9d50f46cc507f280e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659149"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriedade Size (classe ClientNetLibInfo)
@@ -45,6 +45,6 @@ object.Size [= value]
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte Também  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

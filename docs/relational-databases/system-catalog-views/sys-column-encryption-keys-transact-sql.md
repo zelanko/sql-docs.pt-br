@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593724"
 ---
 # <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73593724"
 
   Retorna informações sobre CEKs (chaves de criptografia de coluna) criadas com a instrução [Create Column Encryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) . Cada linha representa um CEK.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome do CMK.|  
 |**column_encryption_key_id**|**int**|ID do CEK.|  
@@ -42,14 +42,14 @@ ms.locfileid: "73593724"
 ## <a name="permissions"></a>Permissões  
  Requer a permissão **exibir qualquer chave de criptografia de coluna** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [CRIAR chave de criptografia de coluna &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTERAR a chave de criptografia de coluna &#40;&#41;Transact-SQL](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [Descartar chave de criptografia de coluna &#40;&#41;Transact-SQL](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CRIAR chave mestra de coluna &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Exibições do catálogo de segurança &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted com enclaves seguro](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   

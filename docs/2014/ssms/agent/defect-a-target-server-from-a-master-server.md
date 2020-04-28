@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783216"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Remover um servidor de destino de um servidor mestre
@@ -40,14 +40,14 @@ ms.locfileid: "72783216"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Para executar este procedimento armazenado, o usuário deve ser um membro da função de servidor fixa `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para remover um servidor de destino de um servidor mestre  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72783216"
   
 3.  Clique em **Sim** para confirmar que deseja remover o servidor de destino de um servidor mestre.  
   
-##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para remover um servidor de destino de um servidor mestre  
   
@@ -73,7 +73,7 @@ sp_msx_defect ;
   
  Para obter mais informações, consulte [sp_msx_defect &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Usando o SQL Server Management Objects (SMO)  
  Use a `MsxDefect Method`.  
   
 ## <a name="see-also"></a>Consulte Também  

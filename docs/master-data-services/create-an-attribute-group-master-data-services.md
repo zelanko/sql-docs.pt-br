@@ -14,10 +14,10 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728445"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Criar um grupo de atributo (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728445"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie grupos de atributos quando você desejar exibir atributos em guias individuais na grade do **Gerenciador** .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Pelo menos um atributo deve existir. Para obter mais informações, veja [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73728445"
   
 11. Clique nos grupos na caixa **Grupos Disponíveis** e clique na seta **Adicionar** . Para adicionar todos os grupos, clique na seta **Adicionar Tudo** .  
   
-12. Clique em **Save** (Salvar).  
+12. Clique em **Salvar**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   

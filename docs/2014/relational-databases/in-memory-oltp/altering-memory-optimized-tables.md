@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783236"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Tabelas com otimização de memória](memory-optimized-tables.md)  

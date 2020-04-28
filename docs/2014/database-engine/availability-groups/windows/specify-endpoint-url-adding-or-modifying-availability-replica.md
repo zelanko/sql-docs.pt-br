@@ -16,50 +16,50 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797972"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especifique a URL do Ponto de Extremidade Ao Adicionar ou Modificando uma Réplica de disponibilidade (SQL Server)
-  Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados – TCP, o endereço do sistema da instância de servidor e o número da porta associado ao ponto de extremidade.  
+  Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL do ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados-TCP, o endereço do sistema da instância do servidor e o número da porta associada ao ponto de extremidade.  
   
 > [!NOTE]  
 >  O termo "URL de ponto de extremidade" é sinônimo do termo "endereço de rede de servidor" usado pela interface do usuário e pela documentação de espelhamento de banco de dados.  
   
 -   [Sintaxe para uma URL de ponto de extremidade](#SyntaxOfURL)  
   
--   [Encontrando o nome de domínio totalmente qualificado de um sistema](#Finding_FQDN)  
+-   [Encontrando o nome de domínio completamente qualificado de um sistema](#Finding_FQDN)  
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
 -   [Conteúdo relacionado](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a> Sintaxe para uma URL de ponto de extremidade  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Sintaxe para uma URL de ponto de extremidade  
  A sintaxe para uma URL de ponto de extremidade é do seguinte formato:  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
+ TCP<strong>://</strong>*\<sistema->de endereços * <strong>:</strong>*\<porta>*  
   
- onde  
+ where  
   
--   *\<system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino. Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
+-   *o endereço do sistema>é uma cadeia de caracteres que identifica inequivocamente o sistema do computador de destino. \<* Normalmente, o endereço de servidor é um nome de sistema (se os sistemas estiverem no mesmo domínio), um nome de domínio completamente qualificado ou um endereço de IP.  
   
     -   Como os nós do cluster WSFC (Windows Server Failover Clustering) são do mesmo domínio, você pode usar o nome do sistema de computador; por exemplo, `SYSTEM46`.  
   
-    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve estar entre colchetes. Por exemplo: **[** _<IPv6_address>_ **]** .  
+    -   Para usar um endereço IP, ele deve ser exclusivo em seu ambiente. Recomendamos que você use um endereço IP somente se ele for estático. O endereço IP pode ser o IP Versão 4 (IPv4) ou IP Versão 6 (IPv6). Um endereço IPv6 deve ser colocado entre colchetes, por exemplo: **[** _<IPv6_address>_ **]**.  
   
          Para saber o endereço IP de um sistema, no prompt de comando do Windows, digite no comando **ipconfig** .  
   
     -   O nome de domínio completamente qualificado tem seu funcionamento garantido. Esta é uma cadeia de caracteres de endereço definida localmente de formatos diferentes em lugares diferentes. Frequentemente, mas não sempre, um nome de domínio completamente qualificado é um nome composto que inclui o nome do computador e uma série de segmentos de domínio separados por pontos no formato:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[...**.**_domain_segment_]  
   
-         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[... **.** _domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
+         em que *computer_name i*é o nome de rede do computador que executa a instância de servidor e *domain_segment*[...**.**_domain_segment_] são as informações restantes de domínio do servidor; por exemplo: `localinfo.corp.Adventure-Works.com`.  
   
          O conteúdo e número de segmentos de domínio são determinados dentro da companhia ou organização. Para obter mais informações, consulte [Encontrando o nome de domínio completamente qualificado](#Finding_FQDN), posteriormente neste tópico.  
   
--   *\<port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância de servidor parceiro.  
+-   a porta>é o número da porta usado pelo ponto de extremidade de espelhamento da instância do servidor parceiro. * \<*  
   
      Um ponto de extremidade de espelhamento de banco de dados pode usar qualquer porta disponível no sistema do computador. Cada número de porta deve estar associado a somente um ponto de extremidade e cada ponto de extremidade está associado a uma única instância de servidor; e assim, diferentes instâncias de servidor no mesmo servidor escutam em diferentes pontos de extremidade com portas diferentes. Por isso, a porta que você especifica na URL de ponto de extremidade quando você especifica uma réplica de disponibilidade sempre direcionará mensagens de entrada para a instância de servidor cujo ponto de extremidade está associado a essa porta.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "72797972"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a> Encontrando o nome de domínio completamente qualificado de um sistema  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a>Encontrando o nome de domínio totalmente qualificado de um sistema  
  Para encontrar o nome de domínio completamente qualificado de um sistema, no prompt de comando do Windows desse sistema, digite:  
   
  **IPCONFIG /ALL**  
@@ -119,7 +119,7 @@ ms.locfileid: "72797972"
 > [!NOTE]  
 >  Se você precisar de mais informações sobre um nome de domínio completamente qualificado, consulte seu administrador de sistema.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  **Para configurar um ponto de extremidade de espelhamento de banco de dados**  
   
 -   [Criar um ponto de extremidade de espelhamento de banco de dados para Grupos de Disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
@@ -132,7 +132,7 @@ ms.locfileid: "72797972"
   
     -   [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+-   [Especificar um endereço de rede do servidor &#40;espelhamento de banco de dados&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
 -   [Solucionar problemas de &#40;de configuração de Grupos de Disponibilidade AlwaysOn SQL Server&#41;excluídos](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
@@ -146,7 +146,7 @@ ms.locfileid: "72797972"
   
 -   [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Conteúdo relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
 -   [Guia de soluções AlwaysOn do Microsoft SQL Server para alta disponibilidade e recuperação de desastre](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

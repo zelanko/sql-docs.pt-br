@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637783"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Níveis de isolamento da transação em tabelas com otimização de memória
@@ -50,7 +50,7 @@ ms.locfileid: "73637783"
  Para tabelas baseadas em disco, a maioria das garantias do nível de isolamento é implementada usando o bloqueio, o que evita conflitos pelo bloqueio. Para tabelas com otimização de memória, as garantias são impostas usando um mecanismo de detecção de conflito, que evita a necessidade de aplicar bloqueios. A exceção é o isolamento SNAPSHOT em tabelas baseadas em disco. Ele é implementado de maneira semelhante ao isolamento SNAPSHOT em tabelas com otimização de memória usando um mecanismo de detecção de conflito.  
   
  SNAPSHOT  
- Esse nível de isolamento especifica que os dados lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente dos dados que existiam no início da transação. A transação pode reconhecer apenas modificações de dados que estavam confirmadas antes do início da transação. Modificações de dados feitas por outras transações após o início da transação atual não são visíveis para instruções em execução na transação atual. As instruções em uma transação obtêm um instantâneo dos dados confirmados conforme existiam no início da transação.  
+ Esse nível de isolamento especifica que os dados lidos por qualquer instrução em uma transação serão a versão transacionalmente consistente dos dados que existiam no início da transação. A transação pode reconhecer apenas modificações de dados que estavam confirmadas antes do início da transação. Modificações de dados efetuadas por outras transações após o início da transação atual não são visíveis para as instruções em execução na transação atual. As instruções em uma transação obtêm um instantâneo dos dados confirmados conforme existiam no início da transação.  
   
  As operações de gravação (atualizações, inserções e exclusões) são sempre completamente isoladas de outras transações. Consequentemente, as operações de gravação em uma transação SNAPSHOT podem entrar em conflito com operações de gravação por outras transações. Quando a transação atual tentar atualizar ou excluir uma linha que foi atualizada ou excluída por outra transação que foi confirmada depois que a transação atual foi iniciada, a transação é encerrada com a mensagem de erro a seguir.  
   

@@ -11,19 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798042"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Monitorar o backup gerenciado do SQL Server para Azure
   O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem medidas internas para identificar problemas e erros durante processos de backup e adotar uma ação corretiva quando possível.  No entanto, há determinadas situações onde a intervenção do usuário é necessária. Este tópico descreve as ferramentas que você pode usar para determinar o estado de integridade geral dos backups e identifica todos os erros que precisam ser resolvidos.  
   
-## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>Visão geral de depuração interna do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>Visão geral de depuração interna do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] examina periodicamente backups agendados e tenta reagendar todos os backups com falha. Ele pesquisa a conta de armazenamento periodicamente para identificar interrupções nas cadeias de logs que afetam a capacidade de recuperação do banco de dados e agenda backups novos apropriadamente. Ele também leva em conta as políticas de limitação do Azure e tem mecanismos em vigor para gerenciar vários backups de banco de dados. O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa eventos estendidos para rastrear toda a atividade. Os canais de Evento Estendido usados pelo agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluem Administração, Operacional, Analítico e Depuração. Os eventos que entram na categoria Admin geralmente estão relacionados a erros, requerem intervenção do usuário e são habilitados por padrão. Os eventos analíticos são ativados também por padrão, mas geralmente não relacionados aos erros que requerem intervenção do usuário. Os eventos operacionais normalmente são informativos. Por exemplo, os eventos operacionais incluem o agendamento de um backup, uma conclusão bem-sucedida do backup, etc. A depuração é a mais detalhada e é usada internamente pelo [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar problemas e corrigi-los, se necessário.  
   
-### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>Configurar parâmetros de monitoramento para o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>Configurar parâmetros de monitoramento para o [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  O procedimento armazenado do sistema **smart_admin. sp_set_parameter** permite que você especifique as configurações de monitoramento. As seções a seguir mostram o processo de habilitar Eventos Estendidos e habilitar a notificação por email sobre erros e avisos.  
   
  A função **smart_admin. fn_get_parameter** pode ser usada para obter a configuração atual de um parâmetro específico ou de todos os parâmetros configurados. Se os parâmetros nunca tiverem sido configurados, a função não retornará nenhum valor.  

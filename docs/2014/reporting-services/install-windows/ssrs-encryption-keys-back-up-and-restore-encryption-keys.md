@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796396"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Fazer backup e restaurar as chave de criptografia do Reporting Services
   Um parte importante da configuração do servidor de relatório é a criação de uma cópia de backup da chave simétrica usada para criptografar informações confidenciais. Uma cópia de backup da chave é necessária para várias operações rotineiras, possibilitando que você reutilize um banco de dados de servidor de relatório existente em uma nova instalação.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo do SharePoint  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo do SharePoint para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  Será necessário restaurar a cópia de backup da chave de criptografia quando ocorrer quaisquer dos seguintes eventos:  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72796396"
 ## <a name="backing-up-the-encryption-keys"></a>Fazendo backup das chaves de criptografia  
  O backup da chave simétrica é um processo que grava a chave em um arquivo especificado e codifica a chave usando uma senha que você fornecer. A chave simétrica nunca pode ser armazenada em um estado não criptografado, portanto você deve fornecer uma senha para codificar a chave ao salvá-la em disco. Depois que o arquivo for criado, você deverá armazená-lo em um local seguro **e lembrar-se da senha** usada para desbloquear o arquivo. Para fazer backup da chave simétrica, você pode usar as seguintes ferramentas:  
   
- **Modo nativo:** O Gerenciador de Configurações do Reporting Services ou o utilitário **rskeymgmt** .  
+ **Modo nativo:** Gerenciador de configurações do Reporting Services ou o utilitário **rskeymgmt** .  
   
- **Modo do SharePoint:** Páginas de administração central do SharePoint ou PowerShell.  
+ **O modo do SharePoint:** Páginas do PowerShell ou Administração Central do SharePoint.  
   
-####  <a name="bkmk_backup_sharepoint"></a>Backup de servidores de relatório no modo SharePoint  
+####  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> Fazer backup dos servidores de relatório do modo SharePoint  
  Para servidores de relatório do modo do SharePoint, você pode usar os comandos do PowerShell ou as páginas de gerenciamento para o aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obter mais informações, confira a seção “Gerenciamento de chaves” de [Gerenciar um aplicativo de serviço SharePoint do Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md)  
   
-####  <a name="bkmk_backup_configuration_manager"></a>Fazer backup das chaves de criptografia-Gerenciador de Configurações do Reporting Services (modo nativo)  
+####  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Fazer backup das chaves de criptografia - Gerenciador de configurações do Reporting Services (Modo Nativo)  
   
 1.  Inicie o Gerenciador de configurações do Reporting Services e conecte-se à instância do servidor de relatório que deseja configurar.  
   
@@ -61,12 +61,11 @@ ms.locfileid: "72796396"
   
 3.  Digite uma senha forte.  
   
-4.  Especifique um arquivo para conter a chave armazenada. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acrescenta uma extensão .snk ao arquivo. Considere o armazenamento do arquivo em um disco separado do servidor de relatório.  
+4.  Especifique um arquivo para conter a chave armazenada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acrescenta uma extensão .snk ao arquivo. Considere o armazenamento do arquivo em um disco separado do servidor de relatório.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a>Fazer backup das chaves de criptografia-rskeymgmt (modo nativo)  
+####  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a>Fazer backup das chaves de criptografia-rskeymgmt (modo nativo)  
   
 1.  Execute **rskeymgmt.exe** localmente no computador que hospeda o servidor de relatório. Você deve usar o argumento de extração `-e` para copiar a chave, fornecer um nome de arquivo e especificar uma senha. O exemplo a seguir ilustra os argumentos que você deve especificar:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "72796396"
   
  Para restaurar a chave de criptografia, você deve ter uma cópia da chave de criptografia em arquivo. Você também deve saber a senha que desbloqueia a cópia armazenada. Se você tiver a chave e a senha, poderá executar a ferramenta Configuração do Reporting Services ou o utilitário **rskeymgmt** para restaurar a chave. A chave simétrica deve ser a mesma que bloqueia e desbloqueia os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se você restaurar uma cópia que não seja válida, o servidor de relatório não poderá acessar os dados criptografados atualmente armazenados no banco de dados do servidor de relatório. Se isso ocorrer, poderá ser necessário excluir todos os valores criptografados se você não puder restaurar uma chave válida. Se por alguma razão você não puder restaurar a chave de criptografia (por exemplo, se você não tiver uma cópia de backup), você deverá excluir a chave existente e o conteúdo criptografado. Para obter mais informações, consulte [Excluir e recriar chaves de criptografia &#40; 	Gerenciador de Configurações do SSRS&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obter mais informações sobre como criar chaves simétricas, veja [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
-####  <a name="bkmk_restore_configuration_manager"></a>Restaurar chaves de criptografia-Gerenciador de Configurações do Reporting Services (modo nativo)  
+####  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a>Restaurar chaves de criptografia-Gerenciador de Configurações do Reporting Services (modo nativo)  
   
 1.  Inicie o Gerenciador de configurações do Reporting Services e conecte-se à instância do servidor de relatório que deseja configurar.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "72796396"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a>Restaurar chaves de criptografia-rskeymgmt (modo nativo)  
+####  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a>Restaurar chaves de criptografia-rskeymgmt (modo nativo)  
   
 1.  Execute **rskeymgmt.exe** localmente no computador que hospeda o servidor de relatório. Use o argumento `-a` para restaurar as chaves. Você deve fornecer um nome de arquivo totalmente qualificado e especificar uma senha. O exemplo a seguir ilustra os argumentos que você deve especificar:  
   

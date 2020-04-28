@@ -15,10 +15,10 @@ ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 63cc23d19a6eeb5f3a44cd0bbf62d9bcd87ace0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660520"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Compreendendo o Provedor WMI para eventos do servidor
@@ -53,12 +53,11 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- Neste exemplo, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` é um identificador [!INCLUDE[tsql](../../includes/tsql-md.md)] que é composto do prefixo `SQLWEP_` e um GUID. 
-  `SQLWEP` cria um novo GUID para cada identificador. O valor `A7E5521A-1CA6-4741-865D-826F804E5135` na `TO SERVICE` cláusula é o GUID que identifica a instância do agente no banco de dados **msdb** .  
+ Neste exemplo, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` é um identificador [!INCLUDE[tsql](../../includes/tsql-md.md)] que é composto do prefixo `SQLWEP_` e um GUID. `SQLWEP` cria um novo GUID para cada identificador. O valor `A7E5521A-1CA6-4741-865D-826F804E5135` na `TO SERVICE` cláusula é o GUID que identifica a instância do agente no banco de dados **msdb** .  
   
  Para obter mais informações sobre como trabalhar com o WQL, consulte [usando o WQL com o provedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
- Os aplicativos de gerenciamento direcionam o Provedor WMI para Eventos de Servidor para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando-se a um namespace WMI definido pelo provedor. O serviço Windows WMI mapeia esse namespace para o DLL do provedor, Sqlwep.dll, e carrega-o na memória. O provedor gerencia um namespace WMI para eventos de servidor para cada instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do e o formato é: \\ \\. \\ ** \Microsoft\SqlServer\ServerEvents\\raiz*instance_name*, em que *instance_name* usa como padrão o MSSQLSERVER. Para obter mais informações sobre como se conectar a um namespace WMI para uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do, consulte [usando o WQL com o provedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Os aplicativos de gerenciamento direcionam o Provedor WMI para Eventos de Servidor para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectando-se a um namespace WMI definido pelo provedor. O serviço Windows WMI mapeia esse namespace para o DLL do provedor, Sqlwep.dll, e carrega-o na memória. O provedor gerencia um namespace WMI para eventos de servidor para cada instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do e o formato é: \\ \\. \\ *root*\Microsoft\SqlServer\ServerEvents\\raiz*instance_name*, em que *instance_name* usa como padrão o MSSQLSERVER. Para obter mais informações sobre como se conectar a um namespace WMI para uma instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do, consulte [usando o WQL com o provedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
  A DLL do provedor, Sqlwep.dll, é carregada apenas uma vez no serviço de host WMI do sistema operacional do servidor, independentemente de quantas instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão no servidor.  
   

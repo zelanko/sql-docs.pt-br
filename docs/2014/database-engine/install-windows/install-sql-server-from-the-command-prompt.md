@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a5b8f798e6dcf29b6c022cfc1065d1cf61ad8e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797923"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
@@ -121,7 +121,7 @@ ms.locfileid: "72797923"
 > [!NOTE]  
 >  Para instalações locais, você deve executar a Instalação como um administrador. Se você instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de um compartilhamento remoto, deverá usar uma conta de domínio que tenha permissões de leitura e de execução no compartilhamento remoto. Para instalações de cluster de failover, você deve ter privilégios de administrador local com permissões para fazer logon como um serviço e atuar como parte do sistema operacional em todos os nós do cluster de failover.  
   
-##  <a name="ProperUse"></a>Uso adequado dos parâmetros de instalação  
+##  <a name="proper-use-of-setup-parameters"></a><a name="ProperUse"></a>Uso apropriado dos parâmetros de instalação  
  Use as diretrizes a seguir para desenvolver comandos de instalação com a sintaxe correta:  
   
 -   /PARAMETER  
@@ -148,7 +148,7 @@ ms.locfileid: "72797923"
 >  -   Os valores de servidores relacionais dão suporte aos formatos de barra invertida finais adicionais (caracteres de barra invertida ou duas barras invertidas) para o caminho.  
 > -   /PID, o valor deste parâmetro deve ser incluído entre aspas duplas.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-parameters"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parâmetros  
+## <a name="ssnoversion-parameters"></a>Parâmetros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  As seções a seguir fornecem parâmetros para o desenvolvimento de scripts de instalação de linha de comando a fim de instalar, atualizar e reparar cenários.  
   
  Os parâmetros listados para um componente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são específicos àquele componente. Os parâmetros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e do Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são aplicáveis quando você instala o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -177,10 +177,10 @@ ms.locfileid: "72797923"
   
 -   [ID da instância ou configuração de InstanceID](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
-##  <a name="Install"></a> Parâmetros de instalação  
+##  <a name="installation-parameters"></a><a name="Install"></a> Parâmetros de instalação  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação. Valores com suporte:<br /><br /> Instalar|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -205,7 +205,7 @@ ms.locfileid: "72797923"
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits:% Arquivos de programas (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ %<\> \\ INSTANCEDIR<asinstanceid\>\OLAP\Backup.<br /><br /> Para todas as outras instalações:% Arquivos de\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ programas%\> \\<INSTANCEDIR<asinstanceid\>\OLAP\Backup.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Opcional**|Especifica a configuração de ordenação do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Valor padrão:<br /><br /> Latin1_General_CI_AS|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de configuração do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits:% Arquivos de programas (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ %<\> \\ INSTANCEDIR<asinstanceid\>\OLAP\Config.<br /><br /> Para todas as outras instalações:% Arquivos de\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ programas%\> \\<INSTANCEDIR<asinstanceid\>\OLAP\Config.|  
@@ -214,7 +214,7 @@ ms.locfileid: "72797923"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica o modo de servidor da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os valores válidos são MULTIDIMENSIONAL, POWERPIVOT ou TABULAR. **ASSERVERMODE** diferencia maiúsculas de minúsculas. Todos os valores devem ser expressos em maiúsculas. Para obter mais informações sobre valores válidos, consulte [Install Analysis Services in Tabular Mode](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de serviço do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSYSADMINACCOUNTS<br /><br /> **Necessário**|Especifica as credenciais de administrador do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASTEMPDIR<br /><br /> **Opcional**|Especifica o diretório de arquivos temporários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits:% Arquivos de programas (x86)\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ %<\> \\ INSTANCEDIR<asinstanceid\>\OLAP\Temp.<br /><br /> Para todas as outras instalações:% Arquivos de\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \\ programas%\> \\<INSTANCEDIR<asinstanceid\>\OLAP\Temp.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASPROVIDERMSOLAP<br /><br /> **Opcional**|Especifica se o provedor MSOLAP pode ser executado no processo. Valor padrão:<br /><br /> 1=habilitado|  
@@ -222,18 +222,17 @@ ms.locfileid: "72797923"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMPASSWORD<br /><br /> **Necessário para SPI_AS_NewFarm**|Especifica uma senha para a conta do farm.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/PASSPHRASE<br /><br /> **Necessário para SPI_AS_NewFarm**|Especifica uma frase secreta que será usada para adicionar outros servidores de aplicativos ou servidores Web front-end a um farm do SharePoint.<br /><br /> Esse parâmetro é usado apenas para instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instaladas por meio de [Parâmetros de função](#Role) = SPI_AS_NEWFARM.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/FARMADMINIPORT<br /><br /> **Necessário para SPI_AS_NewFarm**|Especifica uma porta usada para conexão com o aplicativo Web Administração Central do SharePoint.<br /><br /> Esse parâmetro é usado apenas para instâncias do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instaladas por meio de [Parâmetros de função](#Role) = SPI_AS_NEWFARM.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **Opcional**|Habilita credenciais de executar como para instalações do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **Opcional**|Especifica o diretório de dados dos arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits:% Arquivos de programas (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Para todas as outras instalações:% Arquivos de programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Necessário quando /SECURITYMODE=SQL**|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Opcional**|Especifica o modo de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse parâmetro não for fornecido, apenas o modo de autenticação do Windows terá suporte. Valor com suporte:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup. Valor padrão:<br /><br /> 
-  \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup. Valor padrão:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica as configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> O valor padrão baseia-se na localidade do sistema operacional Windows. Para obter mais informações, veja [Configurações de ordenação na Instalação](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Opcional**|Adiciona o usuário atual à função [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin` de servidor fixa. O parâmetro /ADDCURRENTUSERASSQLADMIN pode ser usado ao instalar edições Express ou quando /Role=ALLFeatures_WithDefaults estiver sendo usado. Para obter mais informações, consulte [/role](#Role) abaixo. O uso de /ADDCURRENTUSERASSQLADMIN é opcional, mas /ADDCURRENTUSERASSQLADMIN ou /SQLSYSADMINACCOUNTS é obrigatório. Valores padrão:<br /><br /> True para edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> False para todas as outras edições|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha de SQLSVCACCOUNT.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.<br /><br /> Para as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes da [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], /SQLSYSADMINACCOUNTS é obrigatório. Para as edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], o uso de /SQLSYSADMINACCOUNTS é opcional, mas /SQLSYSADMINACCOUNTS ou /ADDCURRENTUSERASSQLADMIN é obrigatório.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados do tempdb. Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do tempdb. Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
@@ -260,7 +259,7 @@ ms.locfileid: "72797923"
 setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="SysPrep"></a> Parâmetros do SysPrep  
+##  <a name="sysprep-parameters"></a><a name="SysPrep"></a> Parâmetros do SysPrep  
  Para obter mais informações sobre o SysPrep do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte  
   
  [Instale o SQL Server 2014 usando o Sysprep](install-sql-server-using-sysprep.md).  
@@ -268,7 +267,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Parâmetros de preparação de imagem  
  Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para preparar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem configurá-la.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de instalação. Valores com suporte:<br /><br /> PrepareImage|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -296,7 +295,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>Parâmetros de conclusão de imagem  
  Use os parâmetros da tabela a seguir para desenvolver scripts de linha de comando para concluir e configurar uma instância preparada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação. Valores com suporte:<br /><br /> CompleteImage|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -314,18 +313,17 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha da conta do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Navegador|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o [](#Accounts) modo de inicialização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o serviço navegador. Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|/AGTSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o [startup](#Accounts) modo de inicialização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o serviço navegador. Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENABLERANU<br /><br /> **Opcional**|Habilita credenciais de executar como para instalações do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **Opcional**|Especifica o diretório de dados dos arquivos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores padrão:<br /><br /> Para o modo WOW em 64 bits:% Arquivos de programas (x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Para todas as outras instalações:% Arquivos de programas%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Necessário quando /SECURITYMODE=SQL**|Especifica a senha da conta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Opcional**|Especifica o modo de segurança do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse parâmetro não for fornecido, apenas o modo de autenticação do Windows terá suporte. Valor com suporte:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup.<br /><br /> Valor padrão:<br /><br /> 
-  \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de backup.<br /><br /> Valor padrão:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica as configurações de ordenação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> O valor padrão baseia-se na localidade do sistema operacional Windows. Para obter mais informações, veja [Configurações de ordenação na Instalação](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta de inicialização do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha de SQLSVCACCOUNT.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados do tempdb.<br /><br /> Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log do tempdb.<br /><br /> Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
@@ -349,10 +347,10 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /IACCEPTSQLSERVERLICENSETERMS 
 ```  
   
-##  <a name="Upgrade"></a> Parâmetros de atualização  
+##  <a name="upgrade-parameters"></a><a name="Upgrade"></a> Parâmetros de atualização  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para atualização.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação. Valores com suporte:<br /><br /> Atualizar<br /><br /> EditionUpgrade<br /><br /> O valor EditionUpgrade é usado para atualizar uma edição existente do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para outra edição. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -371,7 +369,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UIMODE<br /><br /> **Opcional**|Especifica se deve apresentar somente o número mínimo de caixas de diálogo durante a instalação. <br />                **/UIMode** somente pode ser usado com os parâmetros **/ACTION=INSTALL** e **UPGRADE** . Valores com suporte:<br /><br /> **/UIMODE=Normal** é o padrão para edições diferentes de Express e apresenta todas as caixas de diálogo de instalação para os recursos selecionados.<br /><br /> **/UIMODE=AutoAdvance** é o padrão para edições Express e ignora caixas de diálogo dispensáveis.<br /><br /> A configuração **UIMode** não pode ser usada com os parâmetros **/Q** ou **/QS** .|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/SQMREPORTING<br /><br /> **Opcional**|Especifica o relatório de uso de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para obter mais informações, consulte a [Política de Privacidade do Serviço de Relatório de Erros da Microsoft](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Valores com suporte:<br /><br /> 1=habilitado<br /><br /> 0=desabilitado|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console deve ser ocultada ou fechada.|  
-|Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Texto completo|/FTUPGRADEOPTION<br /><br /> **Opcional**|Especifica a opção de atualização do catálogo de Texto Completo. Valores com suporte:<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Valor padrão:<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -387,10 +385,10 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER /RSUPGRADEDATABASEACCOUNT="<Provide a SQL Server logon account that can connect to the report server during upgrade>" /RSUPGRADEPASSWORD="<Provide a password for the report server upgrade account>" /ISSVCAccount="NT Authority\Network Service" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-##  <a name="Repair"></a> Parâmetros de reparo  
+##  <a name="repair-parameters"></a><a name="Repair"></a> Parâmetros de reparo  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para reparação.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reparo. Valores com suporte:<br /><br /> Reparar|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
@@ -406,10 +404,10 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
-##  <a name="Rebuild"></a> Parâmetros de recompilação do banco de dados do sistema  
+##  <a name="rebuild-system-database-parameters"></a><a name="Rebuild"></a> Parâmetros de recompilação do banco de dados do sistema  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para recompilar os bancos de dados do sistema mestre, modelo, msdb e tempdb. Para obter mais informações, consulte [Recriar bancos de dados do sistema](../../relational-databases/databases/system-databases.md).  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de reconstrução do banco de dados. Valores com suporte:<br /><br /> Rebuilddatabase|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCENAME<br /><br /> **Necessário**|Especifica um nome de instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para obter mais informações, consulte [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
@@ -418,10 +416,10 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Necessário quando /SECURITYMODE=SQL tiver sido especificado durante a instalação da instância.**|Especifica a senha da conta SA do SQL.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Necessário**|Use este parâmetro para provisionar logons para serem membros da função sysadmin.|  
   
-##  <a name="Uninstall"></a> Parâmetros de desinstalação  
+##  <a name="uninstall-parameters"></a><a name="Uninstall"></a> Parâmetros de desinstalação  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para desinstalação.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da desinstalação. Valores com suporte:<br /><br /> Desinstalar|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](install-sql-server-using-a-configuration-file.md) a ser usado.|  
@@ -441,10 +439,10 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
   
  Para remover uma instância nomeada, especifique o nome da instância em vez de "MSSQLSERVER" no exemplo que foi mencionado anteriormente neste tópico.  
   
-##  <a name="ClusterInstall"></a> Parâmetros de cluster de failover  
+##  <a name="failover-cluster-parameters"></a><a name="ClusterInstall"></a> Parâmetros de cluster de failover  
  Antes de instalar uma instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verifique os tópicos a seguir:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware e software para instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Considerações sobre segurança para uma instalação do SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
@@ -515,7 +513,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de dados de bancos de dados do usuário. Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Opcional**|Especifica o diretório dos arquivos de log de bancos de dados do usuário. Valor padrão:<br /><br /> \<InstallSQLDataDir> \ \<sqlinstanceid> \MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Opcional**|Especifica o nível de acesso para o recurso FILESTREAM. Valores com suporte:<br /><br /> 0 =Desabilitar o suporte ao FILESTREAM desta instância. (Valor padrão)<br /><br /> 1=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> 2=Habilitar FILESTREAM para o acesso de [!INCLUDE[tsql](../../includes/tsql-md.md)] e o acesso de fluxo de E/S de arquivo. (Inválido para cenários de cluster)<br /><br /> 3=Permitir que clientes remotos tenham acesso de streaming a dados FILESTREAM.|  
-|FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Opcional**<br /><br /> **Requiredwhen FILESTREAMLEVEL é maior que 1.**|Especifica o nome do compartilhamento do Windows no qual os dados FILESTREAM serão armazenados.|  
+|FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Opcional**<br /><br /> **Necessário quando FILESTREAMLEVEL for maior do que 1.**|Especifica o nome do compartilhamento do Windows no qual os dados FILESTREAM serão armazenados.|  
 |Texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/FTSVCACCOUNT<br /><br /> **Opcional**|Especifica a conta do serviço iniciador de filtro de texto completo.<br /><br /> Esse parâmetro é ignorado no [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]. ServiceSID será usado para ajudar a proteger a comunicação entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o Daemon de Filtro de Texto Completo.<br /><br /> Se os valores não forem fornecidos, o Serviço Iniciador de Filtro de Texto Completo será desabilitado. Você deve usar o Gerenciador de Controle do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para alterar a conta de serviço e habilitar a funcionalidade de texto completo. Valor padrão:<br /><br /> Conta Serviço Local|  
 |Texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/FTSVCPASSWORD<br /><br /> **Opcional**|Especifica a senha do serviço iniciador de filtro de texto completo.<br /><br /> Esse parâmetro é ignorado no [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)].|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Valor padrão:<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
@@ -541,7 +539,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>Parâmetros de preparação de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a preparação do cluster de failover. Essa é a primeira etapa da instalação avançada de cluster, na qual você deve preparar as instâncias de cluster de failover em todos os nós do cluster de failover. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da preparação do cluster de failover. Valores com suporte:<br /><br /> PrepareFailoverCluster|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -601,7 +599,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>Parâmetros de conclusão de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a conclusão do cluster de failover. Esta é a segunda etapa na opção de instalação avançada de cluster de failover. Depois de executar a preparação em todos os nós de cluster de failover, execute esse comando no nó que possui os discos compartilhados. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da conclusão do cluster de failover. Valores com suporte:<br /><br /> CompleteFailoverCluster|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Opcional**|Use esse parâmetro para instalar a versão em inglês do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um sistema operacional localizado quando a mídia de instalação incluir pacotes do idioma inglês e do idioma correspondente ao sistema operacional.|  
@@ -659,7 +657,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Parâmetros de atualização de cluster de failover  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a atualização de cluster de failover. Para obter mais informações, consulte [atualizar uma instância de cluster de failover SQL Server &#40;instalação&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) e [instâncias de cluster de failover AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho da instalação. Valores com suporte:<br /><br /> Atualizar|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -678,7 +676,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/SQMREPORTING<br /><br /> **Opcional**|Especifica o relatório de uso de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para obter mais informações, consulte a [Política de Privacidade do Serviço de Relatório de Erros da Microsoft](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj618323(v=ws.11)). Valores com suporte:<br /><br /> 0=desabilitado<br /><br /> 1=habilitado|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/HIDECONSOLE<br /><br /> **Opcional**|Especifica se a janela do console é ocultada ou fechada.|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/FAILOVERCLUSTERROLLOWNERSHIP|Especifica o [comportamento de failover](#RollOwnership) durante a atualização.|  
-|Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automático<br /><br /> Desabilitado<br /><br /> Manual|  
+|Serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/BROWSERSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica o modo de [inicialização](#Accounts) do serviço Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Valores com suporte:<br /><br /> Automática<br /><br /> Desabilitado<br /><br /> Manual|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Texto completo|/FTUPGRADEOPTION<br /><br /> **Opcional**|Especifica a opção de atualização do catálogo de Texto Completo. Valores com suporte:<br /><br /> REBUILD<br /><br /> RESET<br /><br /> IMPORT|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **Necessário**|Especifica a conta do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Valor padrão:<br /><br /> NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [Necessário](#Accounts)|Especifica a senha do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -686,10 +684,10 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEDATABASEACCOUNT<br /><br /> **Opcional**|A propriedade só é usada ao atualizar um servidor de relatório no modo SharePoint que seja da versão 2008 R2 ou anterior. As demais operações de atualização são executadas para servidores de relatório que usam a arquitetura mais antiga do modo do SharePoint, que foi modificada no SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se essa opção não estiver incluída com a instalação de linha de comando, o serviço de conta padrão para a instância do servidor de relatório antigo será usado. Se esta propriedade for usada, forneça a senha para a conta usando a propriedade **/RSUPGRADEPASSWORD** .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do Servidor de Relatórios existente.|  
   
-####  <a name="AddNode"></a> Parâmetros de adição de nó  
+####  <a name="add-node-parameters"></a><a name="AddNode"></a> Parâmetros de adição de nó  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para AddNode.  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de AddNode. Valor com suporte:<br /><br /> AddNode|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Necessário somente quando o parâmetro /Q ou /QS é especificado para instalações autônomas.**|Necessário para confirmar a aceitação dos termos de licença.|  
@@ -729,7 +727,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>Parâmetros de remoção de nó  
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para RemoveNode. Para desinstalar um cluster de failover, execute RemoveNode em cada nó de cluster de failover. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|DESCRIÇÃO|  
+|componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parâmetro|Descrição|  
 |-----------------------------------------|---------------|-----------------|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Necessário**|Necessário para indicar o fluxo de trabalho de RemoveNode. Valor com suporte:<br /><br /> RemoveNode|  
 |Controle de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/CONFIGURATIONFILE<br /><br /> **Opcional**|Especifica o [ConfigurationFile](install-sql-server-using-a-configuration-file.md) a ser usado.|  
@@ -748,7 +746,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
-##  <a name="Accounts"></a> Parâmetros de conta de serviço  
+##  <a name="service-account-parameters"></a><a name="Accounts"></a> Parâmetros de conta de serviço  
  É possível configurar os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conta interna, uma conta local ou uma conta de domínio.  
   
 > [!NOTE]  
@@ -764,12 +762,12 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT|/ISSVCPASSWORD|/ISSVCStartupType|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCStartupType|  
   
-##  <a name="Feature"></a> Parâmetros de funcionalidades  
+##  <a name="feature-parameters"></a><a name="Feature"></a> Parâmetros de funcionalidades  
  Para instalar recursos específicos, use o parâmetro /FEATURES e especifique o recurso pai ou os valores de recursos listados na tabela a seguir. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ||||  
 |-|-|-|  
-|Parâmetro de recurso pai|Parâmetro de recurso|DESCRIÇÃO|  
+|Parâmetro de recurso pai|Parâmetro de recurso|Descrição|  
 |SQL||Instala o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], a Replicação, o Texto Completo e o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Instala apenas o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 ||Replicação|Instala o componente Replicação juntamente com o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
@@ -785,8 +783,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||BOL|Instala componentes de Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para exibir e gerenciar o conteúdo da ajuda.|  
 ||Conn|Instala os componentes de conectividade.|  
 ||SSMS|Instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas de gerenciamento-básicas. Isso inclui o seguinte:<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]suporte para o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], o utilitário **sqlcmd** e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do PowerShell|  
-||ADV_SSMS|Instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas de gerenciamento-completo. Isso inclui os seguintes componentes, além dos componentes da versão Básica:<br /><br /> Suporte do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Orientador de Otimização<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gerenciamento de utilitário|  
+||ADV_SSMS|Instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas de gerenciamento-completo. Isso inclui os seguintes componentes, além dos componentes da versão Básica:<br /><br /> Suporte do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] Orientador de Otimização<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gerenciamento de utilitário|  
 ||DREPLAY_CTLR|Instala o Distributed Replay Controller|  
 ||DREPLAY_CLT|Instala o Distributed Replay Client|  
 ||SNAC_SDK|Instala o SDK para o [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
@@ -797,25 +794,25 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>Exemplos de parâmetros de recursos:  
   
-|Parâmetro e valores|DESCRIÇÃO|  
+|Parâmetro e valores|Descrição|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] sem os componentes de replicação e texto completo.|  
 |/FEATURES=SQLEngine, FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  
 |/FEATURES=SQL, Tools|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] completo e todas as ferramentas.|  
 |/FEATURES=BOL|Instala componentes de Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para exibir e gerenciar o conteúdo da ajuda.|  
   
-##  <a name="Role"></a> Parâmetros de função  
+##  <a name="role-parameters"></a><a name="Role"></a> Parâmetros de função  
  A função de instalação ou o parâmetro /Role é usado para instalar uma seleção pré-configurada de recursos. As funções do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instalam uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] em um farm existente do SharePoint ou em um novo farm não configurado. São fornecidas duas funções de instalação para dar suporte a cada cenário. Você pode escolher somente uma função de instalação para instalar de cada vez. Se você escolher uma função de instalação, serão instalados os recursos e os componentes que pertencem à função. Você não pode variar os recursos e os componentes que são designados para aquela função. Para obter mais informações sobre como usar o parâmetro de função de recurso, consulte [instalar o PowerPivot no prompt de comando](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md).  
   
  A função AllFeatures_WithDefaults é o comportamento padrão de edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e reduz o número de caixas de diálogo apresentadas ao usuário. Ela pode ser especificada na linha de comando ao instalar uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não seja o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
-|Função|DESCRIÇÃO|Instala...|  
+|Função|Descrição|Instala...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um farm existente do [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Programa instalador do [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online|  
 |SPI_AS_NewFarm|Instala o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] como uma instância nomeada do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um novo farm não configurado do Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ou em um servidor autônomo. A Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará o farm durante a instalação da função de recurso.|Mecanismo de cálculo do[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-configurado para o armazenamento e o processamento de dados na memória.<br /><br /> Pacotes de solução do[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manuais Online<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Ferramentas de configuração<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|Instala todos os recursos que estão disponíveis com a edição atual.<br /><br /> Adiciona o usuário atual à função [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin` de servidor fixa.<br /><br /> No [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou posterior e quando o sistema operacional não é controlador de domínios, o [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são padronizados para usar a conta NTAUTHORITY\NETWORK SERVICE e o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é padronizado para usar a conta NTAUTHORITY\NETWORK SERVICE.<br /><br /> Essa função é habilitada por padrão em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Para todas as outras edições, essa função não é habilitada, mas pode ser especificada por meio da interface do usuário ou de parâmetros de linha de comando.|Em edições do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], instala somente os recursos disponíveis na edição. Nas outras edições, instala todos os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> O parâmetro **AllFeatures_WithDefaults** pode ser combinado com outros parâmetros que substituem as configurações de parâmetro **AllFeatures_WithDefaults** . Por exemplo, o uso do parâmetro **AllFeatures_WithDefaults** e do parâmetro **/Features=RS** substitui o comando para instalar todos os recursos e instala apenas o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mas obriga o parâmetro **AllFeatures_WithDefaults** a usar a conta de serviço padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Ao usar o parâmetro **AllFeatures_WithDefaults** junto com **/ADDCURRENTUSERASSQLADMIN=FALSE** , a caixa de diálogo de provisionamento não será preenchida automaticamente com o usuário atual. Adicione **/AGTSVCACCOUNT** e **/AGTSVCPASSWORD** para especificar uma conta de serviço e uma senha para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
   
-##  <a name="RollOwnership"></a> Controlando o comportamento de failover com o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP  
+##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Controlando o comportamento de failover com o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP  
  Para atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], você deve executar a Instalação em um nó de cluster de failover de cada vez, começando com os nós passivos. A Instalação determina quando executar o failover para o nó atualizado, dependendo do número total de nós na instância de cluster de failover e do número de nós que já foram atualizados. Quando metade ou mais da metade dos nós já tiver sido atualizada, por padrão, a Instalação provocará um failover em um nó atualizado.  
   
  Para controlar o comportamento de failover de nós de cluster durante o processo de atualização, execute a operação de atualização no prompt de comando e use o parâmetro /FAILOVERCLUSTERROLLOWNERSHIP para controlar o comportamento de failover antes de a operação de atualização colocar o nó offline. Este parâmetro é usado da seguinte maneira:  
@@ -826,7 +823,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   /FAILOVERCLUSTERROLLOWNERSHIP=2 é a configuração padrão. Ele será usado se esse parâmetro não for especificado. Essa configuração indica que a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerenciará a propriedade (mover grupo) do cluster conforme necessário.  
   
-##  <a name="InstanceID"></a> Configuração de ID da Instância ou InstanceID  
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Configuração de ID da Instância ou InstanceID  
  O parâmetro ID da Instância ou /InstanceID é usado para especificar onde você pode instalar os componentes da instância e o caminho do Registro da instância. O valor de "INSTANCEID" é uma cadeia de caracteres e deve ser exclusivo.  
   
 -   ID da instância do SQL: MSSQL12. \<InstanceId>  

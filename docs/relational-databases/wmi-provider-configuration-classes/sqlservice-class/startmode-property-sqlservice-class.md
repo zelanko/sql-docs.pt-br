@@ -18,10 +18,10 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660866"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propriedade StartMode (classe SqlService)
@@ -50,7 +50,7 @@ object.StartMode [= value]
  Sistema  
  Valor = 1. Serviço iniciado pelo método **IoInitSystem** . Esta opção só é válida para serviços de driver.  
   
- Automático  
+ Automática  
  Valor = 2. Serviço a ser iniciado automaticamente pelo gerenciador de controle de serviço durante a inicialização do sistema.  
   
  Manual  

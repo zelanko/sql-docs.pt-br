@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728474"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Criar uma exibição de assinatura para exportar dados (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728474"
 
   Crie uma exibição de assinatura para exportar dados do Master Data Services para sistemas de assinatura. Você está criando uma exibição para seus dados no banco de dados do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
--   Você deve ter permissão para acessar a área funcional **Gerenciamento de Integração** . Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Você deve ter permissão para acessar a área funcional **Gerenciamento de Integração** . Para obter mais informações, consulte [permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>Para criar e editar uma exibição de assinatura  
   
@@ -60,12 +60,12 @@ ms.locfileid: "73728474"
   
 10. Se você escolheu **Níveis Explícitos** ou **Níveis Derivados** da lista **Formato** , digite o número de níveis na hierarquia para incluir na exibição.  
   
-11. Clique em **Save** (Salvar).  
+11. Clique em **Salvar**.  
   
 ## <a name="view-information"></a>Informações de Exibição  
  Para cada exibição criada, uma linha com dez colunas é adicionada à grade. A tabela a seguir descreve as colunas.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |Status|O status da exibição.<br /><br /> Quando você clica em **salvar**, o ![ícone para atualizar a imagem de status](../master-data-services/media/mds-statusicon-updating.png "Ícone para atualizar o status") é exibido, indicando que a exibição está sendo atualizada.<br /><br /> Se houver erros ao criar ou editar um modo de exibição, a imagem ![ícone para o status de erro](../master-data-services/media/mds-statusicon-error.png "Ícone para status de erro") será exibida.<br /><br /> Caso contrário, o status é OK e o ![ícone para a imagem de status OK](../master-data-services/media/mds-statusicon-ok.png "Ícone para status OK") é exibido.|  
 |Nome|O nome da exibição de assinatura.|  
@@ -80,13 +80,13 @@ ms.locfileid: "73728474"
   
  Quando você clica em uma exibição, as informações a seguir são exibidas.  
   
--   **Criado por**: o nome do usuário que criou a exibição.  
+-   **Criada Por**: o nome do usuário que criou a exibição.  
   
--   **Em**: a data e a hora em que a exibição foi criada.  
+-   **Em**: obtém a data e a hora em que a exibição foi criada.  
   
--   **Atualizado por**: o nome do usuário que atualizou a exibição pela última vez.  
+-   **Atualizada Por**: o nome do usuário que atualizou a exibição pela última vez.  
   
--   **Em**: a data e a hora em que a exibição foi atualizada pela última vez.  
+-   **Em**: obtém a data e a hora em que a exibição foi atualizada pela última vez.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral: exportando dados &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   

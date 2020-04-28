@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783153"
 ---
 # <a name="use-my-subscriptions"></a>Usar Minhas Assinaturas
@@ -25,7 +25,7 @@ ms.locfileid: "72783153"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo|  
   
  Em Minhas Assinaturas, você pode classificar assinaturas por pasta, relatório, descrição, gatilho, data da última execução ou status. Todos os valores são classificados por ordem alfabética, exceto Data da Última Execução, que está em ordem cronológica.  
   
@@ -55,4 +55,4 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## <a name="see-also"></a>Consulte Também  
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)  
+ [Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](../create-manage-subscriptions-native-mode-report-servers.md)  

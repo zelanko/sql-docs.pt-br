@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637827"
 ---
 # <a name="data-flow-performance-features"></a>Recursos de desempenho de fluxo de dados
@@ -155,10 +155,9 @@ ms.locfileid: "73637827"
  Você pode achar que salvar os dados em destinos leva mais tempo que o esperado. Para identificar se a lentidão é causada por uma incapacidade do destino em processar dados rápido o suficiente, você pode substituir temporariamente o destino por uma transformação Contagem de Linhas. Se a taxa de transferência melhorar significativamente, é provável que o destino que está carregando os dados esteja causando a lentidão.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisar as informações na guia Progresso  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece informações adicionais sobre o fluxo de controle e o fluxo de dados quando você executa um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece informações adicionais sobre o fluxo de controle e o fluxo de dados quando você executa um pacote no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A guia **Progresso** lista as tarefas e os contêineres em ordem de execução e inclui horários de início e término, avisos e mensagens de erro para cada tarefa e contêiner, inclusive do próprio pacote. Ela também lista os componentes de fluxo de dados em ordem de execução e inclui informações sobre o progresso exibidas como um percentual completo, e o número de linhas processadas.  
   
- Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Para habilitar ou desabilitar a exibição de mensagens na guia **Progresso** , marque ou desmarque a opção **Depurar Relatório do Progresso** no menu **SSIS** . Desabilitar o relatório do progresso pode ajudar a melhorar o desempenho durante a execução de um pacote complexo no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -183,7 +182,7 @@ ms.locfileid: "73637827"
   
 -   Postagem do blog, [Solução de problemas de desempenho do pacote SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), no blogs.msdn.com.  
   
- **Explica**  
+ **Vídeos**  
   
 -   Série de vídeos, [Design e ajuste para desempenho dos seus pacotes SSIS no Enterprise (Série de vídeo do SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
@@ -198,7 +197,7 @@ ms.locfileid: "73637827"
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), em technet.microsoft.com  
   
 ## <a name="see-also"></a>Consulte Também  
- [Solucionando problemas de ferramentas para desenvolvimento de pacotes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Ferramentas de solução de problemas de execução de pacote](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Ferramentas de solução de problemas para desenvolvimento de pacotes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Solucionando problemas de ferramentas para execução de pacotes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
