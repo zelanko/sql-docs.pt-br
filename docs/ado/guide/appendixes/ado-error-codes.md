@@ -13,10 +13,10 @@ ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9efe0f39ce304501096d9dcc682a0ea5d5137ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926995"
 ---
 # <a name="capture-ado-error-codes"></a>Capturar códigos de erro do ADO
@@ -25,4 +25,4 @@ Além dos erros de provedor retornados nos objetos de [erro](../../../ado/refere
  Para obter a lista de códigos de erro do ADO, consulte [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
 
 ## <a name="see-also"></a>Consulte Também
- [](../../../ado/reference/ado-api/error-object.md) [Coleção de erros de objeto de erro (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)
+ [Error Object](../../../ado/reference/ado-api/error-object.md) [Coleção de erros de objeto de erro (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)

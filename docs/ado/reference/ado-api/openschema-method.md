@@ -17,10 +17,10 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931861"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
@@ -36,11 +36,11 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="return-value"></a>Valor retornado  
  Retorna um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contém informações de esquema. O **conjunto de registros** será aberto como um cursor estático somente leitura. O *QueryType* determina quais colunas aparecem no **conjunto de registros**.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *QueryType*  
  Qualquer valor de [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) que representa o tipo de consulta de esquema a ser executado.  
   
- *Critérios*  
+ *Aos*  
  Opcional. Uma matriz de restrições de consulta para cada opção *QueryType* , conforme listado em [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaId*  

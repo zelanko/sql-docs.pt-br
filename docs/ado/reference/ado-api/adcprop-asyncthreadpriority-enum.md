@@ -16,10 +16,10 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921463"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
@@ -27,7 +27,7 @@ Para um objeto de [conjunto de registros](../../../ado/reference/ado-api/records
   
  Use essas constantes com a propriedade dinâmica "**prioridade de thread em segundo plano**" do **conjunto de registros** , que é referenciada no índice de propriedade dinâmica do ADO para OLE DB e documentada no [serviço de cursor da Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Define a prioridade entre normal e mais alta.|  
 |**adPriorityBelowNormal**|2|Define a prioridade entre a mais baixa e a normal.|  

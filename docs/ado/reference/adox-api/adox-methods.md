@@ -14,10 +14,10 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928542"
 ---
 # <a name="adox-methods"></a>Métodos do ADOX
@@ -33,7 +33,7 @@ ms.locfileid: "67928542"
 |[Acrescentar (usuários)](../../../ado/reference/adox-api/append-method-adox-users.md)|Adiciona um novo objeto de **usuário** à coleção **usuários** .|  
 |[Acrescentar (exibições)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo objeto de **exibição** à coleção **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
-|[Criada](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
+|[Criar](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
 |[Delete (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retorna as permissões para um grupo ou usuário em um objeto.|  

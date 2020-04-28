@@ -14,16 +14,16 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925319"
 ---
 # <a name="field-related-error-information"></a>Informações de erro relacionadas ao campo
 Se um erro estiver diretamente relacionado a um campo, por exemplo, se os dados estiverem ausentes ou se forem do tipo incorreto para o campo – você poderá recuperar mais informações sobre a causa do problema examinando a propriedade **status** do objeto **Field** . Esta propriedade foi aprimorada para fornecer informações específicas sobre o problema. Portanto, por exemplo, quando uma chamada para **UpdateBatch** falha, a causa do problema pode ser determinada examinando a propriedade **status** dos **campos** em cada um dos registros afetados. A propriedade conterá um dos valores na constante **FieldStatusEnum** . A tabela a seguir inclui os valores que são de interesse particular quando ocorre um erro.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica que o campo não pode ser recuperado ou armazenado sem perda de dados.|  
 |**adFieldDataOverflow**|6|Indica que os dados retornados do provedor estouram o tipo de dados do campo.|  

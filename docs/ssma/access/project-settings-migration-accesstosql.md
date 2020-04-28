@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929391"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
@@ -38,7 +38,7 @@ Especifica se o SSMA deve verificar as restrições ao adicionar dados às tabel
   
 -   **Modo completo**: falso  
   
-**Gatilhos de incêndio**  
+**Acionadores**  
 Especifica se o SSMA deve acionar gatilhos de inserção ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adicionar dados a tabelas.  
   
 -   **Modo padrão**: false  

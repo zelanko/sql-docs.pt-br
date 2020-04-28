@@ -13,10 +13,10 @@ ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923144"
 ---
 # <a name="using-ado-with-ado-md"></a>Usar o ADO com ADO MD
@@ -26,7 +26,7 @@ O ADO e o ADO MD estão relacionados, mas modelos de objeto separados. O ADO for
   
  Geralmente, é útil para os consumidores obter uma exibição de tabela achatada de um conjunto de uma multidimensional. Você pode fazer isso usando o objeto ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Especifique a origem de seu [células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) como o parâmetro de ***origem*** para o método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) de um **conjunto de registros**, em vez de como a origem de um ADO MD **células**.  
   
- Também pode ser útil exibir os metadados do esquema em uma exibição tabular em vez de como uma hierarquia de objetos. O método ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) no objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) permite que o usuário abra um **conjunto de registros** que contém informações de esquema. O parâmetro ***QueryType*** do método **OpenSchema** tem vários valores [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) relacionados especificamente a MDPs. Esses valores são os seguintes:  
+ Também pode ser útil exibir os metadados do esquema em uma exibição tabular em vez de como uma hierarquia de objetos. O método ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) no objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) permite que o usuário abra um **conjunto de registros** que contém informações de esquema. O parâmetro ***QueryType*** do método **OpenSchema** tem vários valores [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) relacionados especificamente a MDPs. Esses valores são:  
   
 -   **adSchemaCubes**  
   

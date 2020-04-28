@@ -10,10 +10,10 @@ ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927784"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Seleção de objeto avançada (DB2ToSQL)
@@ -46,6 +46,6 @@ Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exem
   
 Se os itens corresponderem aos critérios de filtro, as categorias ou os itens aparecerão à medida que você digitar a cadeia de caracteres. Para ver os itens correspondentes, recomendamos que você clique no botão **exibido somente itens carregados** .  
   
-**Limpar filtro**  
+**Limpar Filtro**  
 Limpa a caixa de **filtro** .  
   

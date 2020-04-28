@@ -13,10 +13,10 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925648"
 ---
 # <a name="data-section"></a>Seção de dados
@@ -34,7 +34,7 @@ A seção de dados define os dados do conjunto de linhas junto com quaisquer atu
 ## <a name="binary"></a>Binário  
  Os dados binários são de bin. Hex codificados (ou seja, um byte é mapeado para dois caracteres, um caractere por Nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  O formato da variante VT_DATE não é compatível diretamente com os tipos de dados XML-Data. O formato correto para datas com um componente de dados e hora é aaaa-mm-ddThh: mm: SS.  
   
  Para obter mais informações sobre formatos de data especificados pelo XML, consulte a [especificação de dados XML do W3C](https://go.microsoft.com/fwlink/?LinkId=5692).  

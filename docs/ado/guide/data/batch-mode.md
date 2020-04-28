@@ -15,10 +15,10 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925950"
 ---
 # <a name="batch-mode"></a>Modo de lote
@@ -32,10 +32,10 @@ O modo de lote está em vigor quando a propriedade **LockType** está definida c
   
 -   [Filtrar os registros atualizados](../../../ado/guide/data/filtering-for-updated-records.md)  
   
--   [Lidar com atualizações de falha](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [Lidando com atualizações de falha](../../../ado/guide/data/dealing-with-failed-updates.md)  
   
 -   [Detectando e solucionando conflitos](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
   
--   [Desconectar e reconectar o conjunto de registros](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Desconectando e reconectando o conjunto de registros](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
 -   [Atualizar resultados JOINed: tabela única](../../../ado/guide/data/updating-joined-results-unique-table.md)

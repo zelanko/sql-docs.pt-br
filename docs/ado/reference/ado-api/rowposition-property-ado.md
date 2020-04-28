@@ -20,10 +20,10 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931228"
 ---
 # <a name="rowposition-property-ado"></a>Propriedade RowPosition (ADO)
@@ -38,7 +38,7 @@ HRESULT get_RowPosition([out, retval] IUnknown** ppRowPos);
 HRESULT put_RowPosition([in] IUnknown* pRowPos);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *ppRowPos*  
  Ponteiro para um objeto de OLE DB de @ **Position** .  
   

@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920013"
 ---
 # <a name="clone-method-ado"></a>Método Clone (ADO)
@@ -36,7 +36,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
 ## <a name="return-value"></a>Valor retornado  
  Retorna uma referência de objeto **Recordset** .  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *rstDuplicate*  
  Uma variável de objeto que identifica o objeto de **conjunto de registros** duplicado a ser criado.  
   

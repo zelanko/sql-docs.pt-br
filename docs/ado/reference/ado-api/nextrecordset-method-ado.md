@@ -18,10 +18,10 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932032"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
@@ -37,7 +37,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="return-value"></a>Valor retornado  
  Retorna um objeto **Recordset** . No modelo de sintaxe, *recordset1* e *recordset2* podem ser o mesmo objeto **Recordset** ou você pode usar objetos separados. Ao usar objetos **Recordset** separados, redefinir a propriedade **ActiveConnection** no **conjunto de registros** original (*recordset1*) depois que **NextRecordset** foi chamado gerará um erro.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *RecordsAffected*  
  Opcional. Uma variável **longa** para a qual o provedor retorna o número de registros que a operação atual afetou.  
   

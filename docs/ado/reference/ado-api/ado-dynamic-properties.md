@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921090"
 ---
 # <a name="ado-dynamic-properties"></a>Propriedades dinâmicas do ADO
@@ -30,7 +30,7 @@ As propriedades dinâmicas podem ser adicionadas às coleções de [Propriedades
 |||  
 |-|-|  
 |[Formato](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Especifica se um índice deve ser criado neste campo.|  
-|[Aviso](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica se o provedor de OLE DB deve solicitar informações de inicialização ao usuário.|  
+|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica se o provedor de OLE DB deve solicitar informações de inicialização ao usuário.|  
 |[Remodelar nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Especifica um nome para o objeto **Recordset** .|  
 |[Comando Ressync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Especifica uma cadeia de caracteres de comando fornecida pelo usuário que o método de **ressincronização** emite para atualizar os dados na tabela nomeada na propriedade dinâmica da **tabela exclusiva** .|  
 |[Tabela exclusiva, esquema exclusivo, catálogo exclusivo](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabela exclusiva** Especifica o nome da tabela base na qual são permitidas atualizações, inserções e exclusões.<br /><br /> **Esquema exclusivo** Especifica o esquema ou o nome do proprietário da tabela.<br /><br /> **Catálogo exclusivo** Especifica o catálogo ou o nome do banco de dados que contém a tabela.|  

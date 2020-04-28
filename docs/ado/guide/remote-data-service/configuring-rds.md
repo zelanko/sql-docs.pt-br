@@ -13,10 +13,10 @@ ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922844"
 ---
 # <a name="configuring-rds"></a>Configurar o RDS
@@ -25,11 +25,11 @@ ms.locfileid: "67922844"
   
  Para implementar o RDS com eficiência, verifique se você está familiarizado com as várias configurações disponíveis para você. Esta seção inclui informações importantes sobre a segurança e a escalabilidade em sua implementação do RDS. Consulte os tópicos a seguir para obter informações sobre como configurar seus computadores para usar o RDS.  
   
--   [Conceder privilégios de convidado para um computador do servidor Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [Concedendo privilégios de convidado para um computador do servidor Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [Registrar um objeto de negócios personalizado](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [Registrando um objeto de negócios personalizado](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
   
--   [Marcar objetos de negócios como seguros para script](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [Marcando objetos de negócios como seguros para script](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
   
 -   [Registrar objetos de negócios no cliente para uso com DCOM](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
   

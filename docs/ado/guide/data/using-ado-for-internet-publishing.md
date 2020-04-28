@@ -16,10 +16,10 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923612"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Usar o ADO para publicação na Internet
@@ -42,7 +42,7 @@ ms.locfileid: "67923612"
   
 -   Como um atalho e uma alternativa para o método **Append** , você pode criar campos atribuindo um valor a um campo indefinido ou excluído anteriormente.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [O Provedor OLE DB para publicação na Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)  
   

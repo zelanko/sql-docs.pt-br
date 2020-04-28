@@ -16,10 +16,10 @@ ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926563"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usando o ADO com o Microsoft Visual Basic e Visual Basic for Applications
@@ -108,7 +108,7 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 
  Criar uma instância de objetos usando o método **CreateObject** normalmente é mais lento do que usar a instrução **Dim** .
 
-## <a name="handling-events"></a>Manipulando eventos
+## <a name="handling-events"></a>Tratando eventos
  Para manipular eventos ADO no Microsoft Visual Basic, você deve declarar uma variável em nível de módulo usando a palavra-chave **WithEvents** . A variável só pode ser declarada como parte de um módulo de classe e deve ser declarada no nível do módulo. Para obter uma discussão mais completa sobre como lidar com eventos ADO, consulte [manipulando eventos ADO](../../../ado/guide/data/handling-ado-events.md).
 
 ## <a name="visual-basic-examples"></a>Exemplos de Visual Basic

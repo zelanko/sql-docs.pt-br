@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926458"
 ---
 # <a name="visual-c-extensions"></a>Extensões de Visual C++
@@ -86,12 +86,12 @@ Update(CADORecordBinding *binding)
  Para obter mais informações, consulte o [Apêndice a: tipos de dados](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), da referência do programador de OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniciar entradas de associação
- **BEGIN_ADO_BINDING**(*classe*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Dados de comprimento fixo
  **ADO_FIXED_LENGTH_ENTRY**(*ordinal, DataType, buffer, status, modificar*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*ordinal, DataType, buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Dados numéricos
  **ADO_NUMERIC_ENTRY**(*ordinal, DataType, buffer, precisão, escala, status, modificar*)
@@ -99,23 +99,23 @@ Update(CADORecordBinding *binding)
  **ADO_NUMERIC_ENTRY2**(*ordinal, DataType, buffer, precisão, escala, modificar*)
 
 ### <a name="variable-length-data"></a>Dados de comprimento variável
- **ADO_VARIABLE_LENGTH_ENTRY**(*ordinal, DataType, buffer, tamanho, status, comprimento, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinal, DataType, buffer, tamanho, status, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinal, DataType, buffer, tamanho, comprimento, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinal, DataType, buffer, tamanho, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Encerrar entradas de associação
  **END_ADO_BINDING**()
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
-|*Classes*|Classe na qual as entradas de associação e as variáveis C/C++ são definidas.|
+|*Classe*|Classe na qual as entradas de associação e as variáveis C/C++ são definidas.|
 |*Ordinal*|Número ordinal, contando de um, do campo **conjunto de registros** correspondente à sua variável C/C++.|
-|*Tipo de dados*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor do campo **conjunto de registros** será convertido nesse tipo de dados, se necessário.|
-|*Buffer*|Nome da variável C/C++ em que o campo do **conjunto de registros** será armazenado.|
+|*DataType*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor do campo **conjunto de registros** será convertido nesse tipo de dados, se necessário.|
+|*Completo*|Nome da variável C/C++ em que o campo do **conjunto de registros** será armazenado.|
 |*Tamanho*|Tamanho máximo em bytes de *buffer*. Se o *buffer* contiver uma cadeia de caracteres de comprimento variável, deixe espaço para um zero de terminação.|
 |*Status*|Nome de uma variável que indicará se o conteúdo do *buffer* é válido e se a conversão do campo em *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável são **adFldOK**, o que significa que a conversão foi bem-sucedida; e **adFldNull**, o que significa que o valor do campo seria uma variante do tipo VT_NULL e não apenas vazio.<br /><br /> Os valores possíveis para *status* são listados na tabela a seguir, "valores de status".|
 |*Modificar*|Sinalizador booliano; Se for TRUE, indicará que o ADO tem permissão para atualizar o campo **Recordset** correspondente com o valor contido no *buffer*.<br /><br /> Defina o parâmetro de *modificação* booliana como true para habilitar o ADO para atualizar o campo associado e false se você quiser examinar o campo, mas não alterá-lo.|
@@ -128,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  Ao definir dados, o *status* pode ser definido como **adFldNull** para indicar que o campo do **conjunto de registros** deve ser definido como nulo.
 
-|Constante|Valor|DESCRIÇÃO|
+|Constante|Valor|Descrição|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Um valor de campo não nulo foi retornado.|
 |**adFldBadAccessor**|1|A associação era inválida.|

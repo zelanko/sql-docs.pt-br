@@ -16,10 +16,10 @@ ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931121"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Exemplo do método Seek e da propriedade index (VB)
@@ -118,4 +118,4 @@ End Sub
 ## <a name="see-also"></a>Consulte Também  
  [Propriedade index](../../../ado/reference/ado-api/index-property.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Método Seek](../../../ado/reference/ado-api/seek-method.md)
+ [Método de busca](../../../ado/reference/ado-api/seek-method.md)

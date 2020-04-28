@@ -17,10 +17,10 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932830"
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
@@ -33,7 +33,7 @@ O evento **FetchComplete** é chamado depois que todos os registros em uma opera
 FetchComplete pError, adStatus, pRecordset  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pError*  
  Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Ele descreve o erro que ocorreu se o valor de **adStatus** for **adStatusErrorsOccurred**; caso contrário, ele não será definido.  
   
@@ -42,7 +42,7 @@ FetchComplete pError, adStatus, pRecordset
   
  Antes desse evento retornar, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
- *precaboset*  
+ *pRecordset*  
  Um objeto **Recordset** . O objeto para o qual os registros foram recuperados.  
   
 ## <a name="remarks"></a>Comentários  

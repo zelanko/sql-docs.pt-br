@@ -14,10 +14,10 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924171"
 ---
 # <a name="shape-commands-in-general"></a>Modelar comandos em geral
@@ -25,7 +25,7 @@ O data Shaping define as colunas de um **conjunto de registros**moldado, as rela
   
  Um **conjunto de registros** moldado pode consistir nos seguintes tipos de colunas.  
   
-|Tipo de coluna|DESCRIÇÃO|  
+|Tipo de coluna|Descrição|  
 |-----------------|-----------------|  
 |data|Campos de um **conjunto de registros** retornado por um comando de consulta para um provedor de dados, uma tabela ou um **conjunto de registros**moldado anteriormente.|  
 |6|Uma referência a outro **conjunto de registros**, chamada de *capítulo*. As colunas de capítulo possibilitam definir uma relação *pai-filho* em que o *pai* é o **conjunto de registros** que contém a coluna de capítulo e o *filho* é o conjunto de **registros** representado pelo capítulo.|  
@@ -51,7 +51,7 @@ O data Shaping define as colunas de um **conjunto de registros**moldado, as rela
   
  Para obter informações precisas sobre os comandos de forma sintaticamente corretos, consulte [gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Funções de agregação, a função CALC e a palavra-chave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   

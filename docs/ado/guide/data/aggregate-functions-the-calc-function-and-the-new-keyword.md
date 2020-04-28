@@ -16,10 +16,10 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926005"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funções de agregação, a função CALC e a palavra-chave NEW
@@ -27,7 +27,7 @@ O data Shaping oferece suporte às funções a seguir. O nome atribuído ao cap�
   
  Um alias de capítulo pode ser totalmente qualificado, consistindo em cada nome de coluna de capítulo que leva ao capítulo que contém o *nome da coluna,* tudo separado por pontos. Por exemplo, se o capítulo pai, chap1, contiver um capítulo filho, CHAP2, que tem uma coluna amount, AMT, o nome qualificado será chap1. CHAP2. AMT.  
   
-|Funções de Agregação|DESCRIÇÃO|  
+|Funções de Agregação|Descrição|  
 |-------------------------|-----------------|  
 |SUM (*capítulo-alias*.* nome da coluna*)|Calcula a soma de todos os valores na coluna especificada.|  
 |AVG (*alias de capítulo*.* nome da coluna*)|Calcula a média de todos os valores na coluna especificada.|  
@@ -37,11 +37,11 @@ O data Shaping oferece suporte às funções a seguir. O nome atribuído ao cap�
 |DESVPAD (*capítulo-alias*.* nome da coluna*)|Calcula o desvio padrão na coluna especificada.|  
 |QUALQUER (*alias de capítulo*.* nome da coluna*)|Um valor da coluna especificada. ANY tem um valor previsível somente quando o valor da coluna é o mesmo para todas as linhas do capítulo.<br /><br /> **Observação** Se a coluna não contiver o mesmo valor para todas as linhas do capítulo, o comando SHAPE, arbitrariamente, retornará um dos valores para ser o valor da função ANY.|  
   
-|Expressão calculada|DESCRIÇÃO|  
+|Expressão calculada|Descrição|  
 |---------------------------|-----------------|  
 |CALC (*expressão*)|Calcula uma expressão arbitrária, mas apenas na linha do **conjunto de registros** que contém a função Calc. Qualquer expressão que use essas [funções Visual Basic for Applications (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) é permitida.|  
   
-|NOVA palavra-chave|DESCRIÇÃO|  
+|NOVA palavra-chave|Descrição|  
 |-----------------|-----------------|  
 |NOVO *campo-tipo* [(*largura* &#124; *escala* &#124; *precisão* &#124; *erro* [, *escala* &#124; *erro*])]|Adiciona uma coluna vazia do tipo especificado ao conjunto de **registros**.|  
   

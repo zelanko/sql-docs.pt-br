@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925134"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: um aplicativo ADO simples
@@ -51,7 +51,7 @@ Este aplicativo simples percorre cada uma das quatro principais operações do A
 |TextBox|Nome|txtDisplay1|  
 ||Multilinha|true|  
 |Botão de comando|Nome|cmdGetData|  
-||Legenda|Obter Dados|  
+||Legenda|Get Data|  
 |Botão de comando|Nome|cmdExamineData|  
 ||Legenda|Examinar dados|  
 |Botão de comando|Nome|cmdEditData|  

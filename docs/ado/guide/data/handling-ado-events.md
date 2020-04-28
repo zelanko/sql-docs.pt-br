@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925221"
 ---
 # <a name="handling-ado-events"></a>Manipular eventos ADO
@@ -33,7 +33,7 @@ O modelo de evento ADO dá suporte a determinadas operações de ADO síncronas 
 > [!NOTE]
 >  Para lidar com eventos, o ADO precisa ter uma bomba de mensagem ou ser usada em um modelo STA (single-threaded apartment). Os eventos ADO são manipulados internamente pela criação de uma janela oculta. O ADO envia mensagens para essa janela quando os eventos precisam ser acionados. Isso é feito para garantir que os eventos sejam enviados para o thread que chamou **IConnectionPoint:: Advise** no ponto de conexão. Essa arquitetura pode causar problemas quando o thread que deve receber as notificações não bombea as mensagens da janela. Problemas potenciais incluem eventos ADO que não estão sendo entregues ao thread e as difusões de janela global expiram e possivelmente atrasando o sistema inteiro porque as janelas ocultas não processam as mensagens. Os threads STA normalmente têm uma bomba de mensagem em execução, portanto, esse problema não se manifesta em threads STA. Os threads MTA, no entanto, normalmente não têm uma bomba de mensagem, portanto, o problema normalmente se manifestará em threads MTA.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   

@@ -15,16 +15,16 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926602"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Visão geral do provedor simples do Microsoft OLE DB
 O Microsoft OLE DB Simple Provider (OSP) permite que o ADO acesse todos os dados para os quais um provedor foi escrito usando o [Kit de ferramentas de OLE DB provedor (OSP) simples](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Provedores simples destinam-se a acessar fontes de dados que exigem apenas suporte fundamental OLE DB, como matrizes na memória ou documentos XML.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar ao OLE DB DLL do provedor simples, defina o argumento do *provedor* como a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
@@ -44,7 +44,7 @@ MSDAOSP
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para SQL Server.|
 |**Fonte de Dados**|Especifica o nome de um servidor.|

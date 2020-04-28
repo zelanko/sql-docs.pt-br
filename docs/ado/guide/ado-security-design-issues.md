@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927034"
 ---
 # <a name="ado-security-design-features"></a>Recursos de design de segurança do ADO
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  A mensagem anterior permite que o usuário tome uma decisão mais informada e continue de acordo.
 
 > [!NOTE]
->  Para sites não confiáveis (ou seja, sites não listados na lista de zona de sites confiáveis), se o provedor também não for confiável (como discutido anteriormente nesta seção), o usuário poderá ver dois avisos de segurança em uma linha, um aviso sobre o provedor não seguro e um segundo aviso sobre o Tente usar sua identidade. Se o usuário clicar em OK para o primeiro aviso, as configurações do Internet Explorer e o código de comportamento de resposta descritos na tabela anterior serão executados.
+>  Para sites não confiáveis (ou seja, sites não listados na lista de zona de sites confiáveis), se o provedor também não for confiável (como discutido anteriormente nesta seção), o usuário poderá ver dois avisos de segurança em uma linha, um aviso sobre o provedor não seguro e um segundo aviso sobre a tentativa de usar sua identidade. Se o usuário clicar em OK para o primeiro aviso, as configurações do Internet Explorer e o código de comportamento de resposta descritos na tabela anterior serão executados.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Controlando se o texto da senha é retornado nas cadeias de conexão ADO
  Quando você tenta obter o valor da propriedade [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) em um objeto de **conexão** ADO, ocorrem os seguintes eventos:

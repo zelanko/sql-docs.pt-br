@@ -16,16 +16,16 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928637"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Especifica se um separador de linha é acrescentado à cadeia de caracteres gravada em um objeto de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|Padrão. Grava a cadeia de caracteres de texto especificada (especificada pelo parâmetro de *dados* ) no objeto de **fluxo** .|  
 |**adWriteLine**|1|Grava uma cadeia de caracteres de texto e um caractere separador de linha em um objeto de **fluxo** . Se a propriedade [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) não for definida, isso retornará um erro em tempo de execução.|  

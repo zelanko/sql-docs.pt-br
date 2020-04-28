@@ -17,10 +17,10 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931901"
 ---
 # <a name="open-method-ado-recordset"></a>Método Open (Conjunto de registros ADO)
@@ -33,8 +33,8 @@ Abre um cursor em um objeto [Recordset](../../../ado/reference/ado-api/recordset
 recordset.Open Source, ActiveConnection, CursorType, LockType, Options  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
- *Origem*  
+#### <a name="parameters"></a>Parâmetros  
+ *Fonte*  
  Opcional. Uma **variante** que é avaliada como um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) válido, uma instrução SQL, um nome de tabela, uma chamada de procedimento armazenado, uma URL ou o nome de um objeto de arquivo ou de [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) que contém um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)armazenado de forma persistente.  
   
  *ActiveConnection*  

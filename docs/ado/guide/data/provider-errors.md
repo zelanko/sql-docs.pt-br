@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924542"
 ---
 # <a name="provider-errors"></a>Erros do provedor
@@ -64,13 +64,13 @@ End Function
 ## <a name="the-error-object"></a>O objeto de erro  
  Ao examinar um objeto de **erro** , você pode determinar qual erro ocorreu e, mais importante, qual aplicativo ou qual objeto causou o erro. O objeto de **erro** tem as seguintes propriedades:  
   
-|Nome da propriedade|DESCRIÇÃO|  
+|Nome da propriedade|Descrição|  
 |-------------------|-----------------|  
 |**Descrição**|Uma descrição de texto do erro que ocorreu.|  
 |**HelpContext, HelpFile**|Refere-se ao tópico da ajuda e ao arquivo de ajuda que contém uma descrição do erro que ocorreu.|  
 |**NativeError**|O número do erro específico do provedor.|  
 |**Automática**|Um inteiro longo que representa o número (listado no **ErrorValueEnum**) do erro que ocorreu.|  
-|**Origem**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
+|**Fonte**|Indica o nome do objeto ou aplicativo que gerou um erro.|  
 |**SQLState**|Um código de erro de cinco caracteres que o provedor retorna durante o processo de uma instrução SQL.|  
   
  O objeto de **erro** ADO é muito semelhante ao objeto padrão Visual Basic **Err** . Suas propriedades descrevem o erro que ocorreu. Além do número do erro, você também recebe duas partes de informação relacionadas. A propriedade **NativeError** contém um número de erro específico para o provedor que você está usando. No exemplo anterior, o provedor é o provedor de OLE DB da Microsoft para SQL Server, portanto **NativeError** conterá erros específicos para SQL Server. A propriedade **SQLSTATE** tem um código de cinco letras que descreve um erro em uma instrução SQL.  

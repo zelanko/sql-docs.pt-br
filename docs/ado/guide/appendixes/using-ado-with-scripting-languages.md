@@ -14,10 +14,10 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926485"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar o ADO com linguagens de script
@@ -46,7 +46,7 @@ Em um ambiente de script, o ADO permite expor dados por meio de scripts do lado 
 |--------------|-------------------------|  
 |Forma|Sim|  
 |Persist|Sim|  
-|Remote|Sim|  
+|Remoto|Sim|  
 |Provedor de OLE DB para SQL Server (SQLOLEDB)|Não|  
 |Provedor de OLE DB para ODBC (MSDASQL)|Não|  
   
@@ -68,4 +68,4 @@ Em um ambiente de script, o ADO permite expor dados por meio de scripts do lado 
 ## <a name="see-also"></a>Consulte Também  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Usar o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Usando o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

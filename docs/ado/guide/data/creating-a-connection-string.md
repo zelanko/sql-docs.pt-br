@@ -14,10 +14,10 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925761"
 ---
 # <a name="creating-a-connection-string"></a>Criando uma cadeia de conexão
@@ -31,10 +31,10 @@ Uma cadeia de conexão consiste em uma lista de pares de argumento/valor (ou sej
   
  O ADO reconhece os cinco argumentos a seguir em uma cadeia de conexão.  
   
-|Argumento|DESCRIÇÃO|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
 |*Provedor*|Especifica o nome de um provedor a ser usado para a conexão.|  
-|*Nome do arquivo*|Especifica o nome de um arquivo específico do provedor (por exemplo, um objeto de fonte de dados persistente) que contém informações de conexão predefinidas.|  
+|*Nome do Arquivo*|Especifica o nome de um arquivo específico do provedor (por exemplo, um objeto de fonte de dados persistente) que contém informações de conexão predefinidas.|  
 |*URL*|Especifica a cadeia de conexão como uma URL absoluta que identifica um recurso, como um arquivo ou diretório.|  
 |*Provedor remoto*|Especifica o nome de um provedor a ser usado ao abrir uma conexão do lado do cliente. (Somente serviço de dados remotos.)|  
 |*Servidor remoto*|Especifica o nome do caminho do servidor a ser usado ao abrir uma conexão do lado do cliente. (Somente serviço de dados remotos.)|  

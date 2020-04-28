@@ -16,16 +16,16 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932041"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Especifica o comportamento do método [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) do objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|Padrão. Executa a operação de movimentação padrão: a operação falhará se o arquivo ou diretório de destino já existir, e a operação atualizará os links de hipertexto.|  
 |**adMoveOverWrite**|1|Substitui o arquivo ou diretório de destino, mesmo que ele já exista.|  

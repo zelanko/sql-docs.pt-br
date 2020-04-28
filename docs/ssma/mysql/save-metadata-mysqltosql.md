@@ -10,10 +10,10 @@ ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929366"
 ---
 # <a name="save-metadata--mysqltosql"></a>Salvar metadados (MySQLToSQL)
@@ -30,10 +30,10 @@ Indica se os metadados são carregados no projeto do SSMA ou se os metadados est
   
 O SSMA carrega metadados no projeto conforme necessário. Os metadados são carregados automaticamente quando você procura metadados e converte esquemas.  
   
-**Selecionar tudo**  
+**Selecionar Tudo**  
 Seleciona todos os bancos de dados listados.  
   
-**Limpar**  
+**Formatação**  
 Desmarca a caixa de seleção de todos os bancos de dados com metadados ausentes. Você não poderá desmarcar a caixa de seleção se um metadado tiver sido carregado.  
   
 **Salvar**  

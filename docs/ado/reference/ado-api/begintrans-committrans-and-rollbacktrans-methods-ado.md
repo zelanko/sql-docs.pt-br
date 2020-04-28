@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920525"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)
@@ -51,7 +51,7 @@ object.RollbackTrans
 ## <a name="return-value"></a>Valor retornado  
  **BeginTrans** pode ser chamado como uma função que retorna uma variável **longa** indicando o nível de aninhamento da transação.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *objeto*  
  Um objeto de **conexão** .  
   
@@ -69,7 +69,7 @@ object.RollbackTrans
   
  Dependendo da propriedade de [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) do objeto de **conexão** , chamar os métodos **CommitTrans** ou **RollbackTrans** pode iniciar automaticamente uma nova transação. Se a propriedade **Attributes** for definida como **adXactCommitRetaining**, o provedor iniciará automaticamente uma nova transação após uma chamada de **CommitTrans** . Se a propriedade **Attributes** for definida como **adXactAbortRetaining**, o provedor iniciará automaticamente uma nova transação após uma chamada **RollbackTrans** .  
   
-## <a name="remote-data-service"></a>Serviço de dados remoto  
+## <a name="remote-data-service"></a>Serviço de Dados Remotos  
  Os métodos **BeginTrans**, **CommitTrans**e **RollbackTrans** não estão disponíveis em um objeto de **conexão** do lado do cliente.  
   
 ## <a name="applies-to"></a>Aplica-se A  

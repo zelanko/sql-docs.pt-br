@@ -17,10 +17,10 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932465"
 ---
 # <a name="getstring-method-ado"></a>Método GetString (ADO)
@@ -36,7 +36,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="return-value"></a>Valor retornado  
  Retorna o **conjunto de registros** como uma **variante** com valor de cadeia de caracteres (BSTR).  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *StringFormat*  
  Um valor [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) que especifica como o **conjunto de registros** deve ser convertido em uma cadeia de caracteres. Os parâmetros *madelimiter*, *ColumnDelimiter*e *NullExpr* são usados apenas com um *StringFormat* de **adClipString**.  
   

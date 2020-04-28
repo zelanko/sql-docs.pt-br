@@ -14,10 +14,10 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920894"
 ---
 # <a name="ado-properties"></a>Propriedades ADO
@@ -37,11 +37,11 @@ ms.locfileid: "67920894"
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica o conjunto de caracteres no qual o conteúdo de um **fluxo** de texto deve ser traduzido.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Indica o fluxo usado como a entrada para um objeto de **comando** .|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Indica o texto de um comando a ser emitido em relação a um provedor.|  
-|[CommandTimeOut](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.|  
+|[CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)|Indica por quanto tempo aguardar ao executar um comando antes de encerrar a tentativa e gerar um erro.|  
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica o tipo de um objeto de **comando** .|  
 |[Propriedade ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica as informações usadas para estabelecer uma conexão com uma fonte de dados.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica por quanto tempo aguardar ao estabelecer uma conexão antes de encerrar a tentativa e gerar um erro.|  
-|[Contar](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica o número de objetos em uma coleção.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica o local do serviço de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica o tipo de cursor usado em um objeto **Recordset** .|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica o nome do membro de dados que será recuperado do objeto referenciado pela propriedade **DataSource** .|  
@@ -52,7 +52,7 @@ ms.locfileid: "67920894"
 |[Dialeto](../../../ado/reference/ado-api/dialect-property.md)|Indica a sintaxe e as regras gerais que o provedor usará para analisar as propriedades **CommandText** ou **CommandStream** .|  
 |[Direção](../../../ado/reference/ado-api/direction-property.md)|Indica se o **parâmetro** representa um parâmetro de entrada, um parâmetro de saída ou ambos, ou se o parâmetro é o valor de retorno de um procedimento armazenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica o status de edição do registro atual.|  
-|[Electric](../../../ado/reference/ado-api/eos-property.md)|Indica se a posição atual está no final do fluxo.|  
+|[EOS](../../../ado/reference/ado-api/eos-property.md)|Indica se a posição atual está no final do fluxo.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica um filtro para dados em um **conjunto de registros**.|  
 |[HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica o arquivo de ajuda e o tópico associado a um objeto de **erro** .<br /><br /> O **HelpContextId** retorna uma ID de contexto, como um valor **longo** , para um tópico em um arquivo de ajuda.<br /><br /> **HelpFile** retorna um valor de **cadeia de caracteres** que é avaliado como um caminho totalmente resolvido de um arquivo de ajuda.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica o nome do índice atualmente em vigor para um objeto **Recordset** .|  
@@ -62,7 +62,7 @@ ms.locfileid: "67920894"
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Indica o tipo de bloqueios colocados em registros durante a edição.|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Indica quais registros devem ser empacotados de volta para o servidor.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Indica o número máximo de registros a serem retornados a um **conjunto de registros** de uma consulta.|  
-|[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|Indica as permissões disponíveis para modificar dados em um objeto de **conexão**, **registro**ou **fluxo** .|  
+|[Modo](../../../ado/reference/ado-api/mode-property-ado.md)|Indica as permissões disponíveis para modificar dados em um objeto de **conexão**, **registro**ou **fluxo** .|  
 |[Nome](../../../ado/reference/ado-api/name-property-ado.md)|Indica o nome de um objeto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica o código de erro específico do provedor para um objeto de **erro** específico.|  
 |[Automática](../../../ado/reference/ado-api/number-property-ado.md)|Indica o número que identifica exclusivamente um objeto de **erro** .|  
@@ -72,20 +72,20 @@ ms.locfileid: "67920894"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Indica quantos registros representam uma página no conjunto de **registros**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Define o contêiner de um objeto de **linha** de OLE DB em um objeto **ADORecordConstruction** , para que o pai da linha seja transformado em um objeto de **registro** ADO.|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|Indica uma cadeia de caracteres de URL absoluta que aponta para o **registro** pai do objeto de **registro** atual.|  
-|[Posição](../../../ado/reference/ado-api/position-property-ado.md)|Indica a posição atual em um objeto de **fluxo** .|  
+|[Propostas](../../../ado/reference/ado-api/position-property-ado.md)|Indica a posição atual em um objeto de **fluxo** .|  
 |[Precisão](../../../ado/reference/ado-api/precision-property-ado.md)|Indica o grau de precisão para valores numéricos em um objeto de **parâmetro** ou para objetos de **campo** numérico.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Indica se deve salvar uma versão compilada de um comando antes da execução.|  
 |[Provedor](../../../ado/reference/ado-api/provider-property-ado.md)|Indica o nome do provedor para um objeto de **conexão** .|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Indica o número de registros em um objeto **Recordset** .|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indica o tipo de objeto de **registro** .|  
 |[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Obtém ou define um objeto de **linha** de OLE DB de/em um objeto **ADORecordConstruction** .|  
-|[Colocar](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtém ou define um OLE DB objeto de **função** de/em um objeto **ADORecordsetConstruction** .|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtém ou define um OLE DB objeto de **função** de/em um objeto **ADORecordsetConstruction** .|  
 |[Conjunto de linhas](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtém ou define um OLE DB objeto de **conjunto de linhas** de/em um objeto **ADORecordsetConstruction** .|  
 |[Origem (erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica o nome do objeto ou aplicativo que originalmente gerou um erro.|  
 |[Origem (registro ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)|Indica a entidade representada pelo objeto de **registro** .|  
 |[Fonte (conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica a origem dos dados em um objeto **Recordset**|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|Indica o estado SQL de um objeto de **erro** específico.|  
-|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|Indica para todos os objetos aplicáveis se o estado do objeto está aberto ou fechado. Indica para todos os objetos aplicáveis que executam um método assíncrono, se o estado atual do objeto está se conectando, executando ou recuperando|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Indica para todos os objetos aplicáveis se o estado do objeto está aberto ou fechado. Indica para todos os objetos aplicáveis que executam um método assíncrono, se o estado atual do objeto está se conectando, executando ou recuperando|  
 |[Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)|Indica o status de um objeto de **campo** .|  
 |[Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica o status do registro atual em relação a atualizações em lotes ou outras operações em massa.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, em um objeto **Recordset** hierárquico, se a referência aos registros filho subjacentes (ou seja, o *capítulo*) é alterada quando a posição da linha pai é alterada.|  

@@ -14,10 +14,10 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926816"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Visão geral do Microsoft Data Shaping Service para OLE DB
@@ -36,7 +36,7 @@ ms.locfileid: "67926816"
 ## <a name="dynamic-properties"></a>Propriedades Dinâmicas
  Quando esse provedor de serviços é invocado, as propriedades dinâmicas a seguir são adicionadas à coleção [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto de[conexão](../../../ado/reference/ado-api/connection-object-ado.md) .
 
-|Nome da propriedade dinâmica|DESCRIÇÃO|
+|Nome da propriedade dinâmica|Descrição|
 |---------------------------|-----------------|
 |**Nomes de remodelação exclusivos**|Indica se os objetos do **conjunto de registros** com valores duplicados para suas propriedades de **nome de reformação** são permitidos. Se essa propriedade dinâmica for **verdadeira** e um novo **conjunto de registros** for criado com o mesmo nome de remodelação especificado pelo usuário como um **conjunto de registros**existente, o novo nome de remodelação do objeto **Recordset** será modificado para torná-lo exclusivo. Se essa propriedade for **false** e um novo **conjunto de registros** for criado com o mesmo nome de remodelação especificado pelo usuário que o **conjunto de registros**existente, ambos os objetos **Recordset** terão o mesmo nome de nova forma. Portanto, nenhum **conjunto de registros** pode ser remodelado desde que ambos os conjuntos de registros existam.<br /><br /> O valor padrão da propriedade é **false**.|
 |**Provedor de Dados**|Indica o nome do provedor que fornecerá linhas a serem moldadas. Esse valor pode ser nenhum se um provedor não for usado para fornecer linhas.|

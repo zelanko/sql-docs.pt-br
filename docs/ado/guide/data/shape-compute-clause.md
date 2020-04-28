@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924141"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
@@ -32,10 +32,10 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  As partes dessa cláusula são as seguintes:  
   
- *filho-comando*  
+ *child-command*  
  Consiste em um dos seguintes:  
   
 -   Um comando de consulta entre chaves ("{}") que retorna um objeto de **conjunto de registros** filho. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
@@ -46,13 +46,13 @@ SHAPE child-command [AS] child-alias
   
 -   A palavra-chave TABLE, seguida pelo nome de uma tabela no provedor de dados.  
   
- *alias filho*  
+ *child-alias*  
  Um alias usado para fazer referência ao **conjunto de registros** retornado pelo *comando filho.* O *alias filho* é necessário na lista de colunas da cláusula COMPUTE e define a relação entre os objetos **Recordset** pai e filho.  
   
- *lista de colunas acrescentadas*  
+ *appended-column-list*  
  Uma lista na qual cada elemento define uma coluna no pai gerado. Cada elemento contém uma coluna de capítulo, uma nova coluna, uma coluna calculada ou um valor resultante de uma função de agregação no **conjunto de registros**filho.  
   
- *GRP-field-list*  
+ *grp-field-list*  
  Uma lista de colunas nos objetos de conjunto de **registros** pai e filho que especifica como as linhas devem ser agrupadas no filho.  
   
  Para cada coluna na *lista GRP-Field-,* há uma coluna correspondente nos objetos do **conjunto de registros** filho e pai. Para cada linha no conjunto de **registros**pai, as colunas *GRP-field-list* têm valores exclusivos, e o **conjunto de registros** filho referenciado pela linha pai consiste exclusivamente em linhas filhas cujas colunas *GRP-field-list* têm os mesmos valores que a linha pai.  
@@ -110,21 +110,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |1,2 milhões|Referência a child2|WA|  
 |1,1 milhões|Referência a child3|OU|  
   
-## <a name="child1"></a>Child1  
+## <a name="child1"></a>Filho1  
   
 |Estado|City|População|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
-## <a name="child2"></a>Child2  
+## <a name="child2"></a>Filho2  
   
 |Estado|City|População|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
-## <a name="child3"></a>Child3  
+## <a name="child3"></a>Filho3  
   
 |Estado|City|População|  
 |-----------|----------|----------------|  

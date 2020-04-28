@@ -13,16 +13,16 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923852"
 ---
 # <a name="types-of-cursors-ado"></a>Tipos de cursor (ADO)
 Como regra geral, seu aplicativo deve usar o cursor mais simples que fornece o acesso de dados necessário. Cada maior característica do cursor além dos conceitos básicos (somente encaminhamento, somente leitura, estático, rolagem, sem buffer) tem um preço na memória do cliente, na carga de rede ou no desempenho. Em muitos casos, as opções de cursor padrão geram um cursor mais complexo do que o seu aplicativo realmente precisa.  
   
- A escolha do tipo de cursor depende de como seu aplicativo usa o conjunto de resultados e também de várias considerações de design, incluindo o tamanho do conjunto de resultados, a porcentagem dos dados que provavelmente serão usados, a sensibilidade às alterações de dados e o desempenho do aplicativo requirement.  
+ A escolha do tipo de cursor depende de como seu aplicativo usa o conjunto de resultados e também de várias considerações de design, incluindo o tamanho do conjunto de resultados, a porcentagem dos dados que provavelmente serão usados, a sensibilidade às alterações de dados e os requisitos de desempenho do aplicativo.  
   
  Em seu mais básico, a escolha do cursor depende se você precisa alterar ou simplesmente exibir os dados:  
   
@@ -34,7 +34,7 @@ Como regra geral, seu aplicativo deve usar o cursor mais simples que fornece o a
   
  Embora cada tipo de cursor pareça ser distinto, tenha em mente que esses tipos de cursor não são tão diferentes variedades que simplesmente o resultado de características e opções sobrepostas.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Cursores de somente avanço](../../../ado/guide/data/forward-only-cursors.md)  
   

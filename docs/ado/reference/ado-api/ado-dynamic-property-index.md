@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921088"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice da propriedade dinâmica do ADO
@@ -38,8 +38,8 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Definição de coluna|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |Catálogo atual|DBPROP_CURRENTCATALOG|  
-|Fonte de dados|DBPROP_INIT_DATASOURCE|  
-|Nome da fonte de dados|DBPROP_DATASOURCENAME|  
+|fonte de dados|DBPROP_INIT_DATASOURCE|  
+|Nome da Fonte de Dados|DBPROP_DATASOURCENAME|  
 |Modelo de Threading do objeto de fonte de dados|DBPROP_DSOTHREADMODEL|  
 |Nome do DBMS|DBPROP_DBMSNAME|  
 |Versão do DBMS|DBPROP_DBMSVER|  
@@ -51,7 +51,7 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificador de Localidade|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|Local|DBPROP_INIT_LOCATION|  
 |Tamanho máximo do índice|DBPROP_MAXINDEXSIZE|  
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|  
 |O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -90,8 +90,8 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Termo da tabela|DBPROP_TABLETERM|  
 |DDL de transação|DBPROP_SUPPORTEDTXNDDL|  
 |Id de Usuário|DBPROP_AUTH_USERID|  
-|Nome de usuário|DBPROP_USERNAME|  
-|Identificador de janela|DBPROP_INIT_HWND|  
+|Nome do Usuário|DBPROP_USERNAME|  
+|Identificador da Janela|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Propriedades dinâmicas do conjunto de registros  
  Observe que as **propriedades dinâmicas** do objeto **Recordset** saem do escopo (tornam-se indisponíveis) quando o **conjunto de registros** é fechado.  

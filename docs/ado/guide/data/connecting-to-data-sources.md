@@ -13,10 +13,10 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925793"
 ---
 # <a name="connecting-to-data-sources"></a>Conectando-se a fontes de dados
@@ -26,14 +26,14 @@ Um objeto de **conexão** ADO representa uma sessão exclusiva com uma fonte de 
   
  Você pode se conectar a uma fonte de dados usando um objeto de **conexão** ou um objeto **Recordset** .  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
--   [Usar um objeto Connection](../../../ado/guide/data/using-a-connection-object.md)  
+-   [Usando um objeto Connection](../../../ado/guide/data/using-a-connection-object.md)  
   
--   [Usar um objeto Recordset](../../../ado/guide/data/using-a-recordset-object.md)  
+-   [Usando um objeto Recordset](../../../ado/guide/data/using-a-recordset-object.md)  
   
 -   [Criando uma cadeia de conexão](../../../ado/guide/data/creating-a-connection-string.md)  
   
--   [Especificar propriedades de conexão](../../../ado/guide/data/specifying-connection-properties.md)  
+-   [Especificando propriedades de conexão](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Controle de transações](../../../ado/guide/data/controlling-transactions-ado.md)

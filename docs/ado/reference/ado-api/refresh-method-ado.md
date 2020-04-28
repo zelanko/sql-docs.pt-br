@@ -18,10 +18,10 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931259"
 ---
 # <a name="refresh-method-ado"></a>Método Refresh (ADO)
@@ -37,7 +37,7 @@ collection.Refresh
 ## <a name="remarks"></a>Comentários  
  O método **Refresh** realiza diferentes tarefas, dependendo da coleção da qual você a chama.  
   
-### <a name="parameters"></a>parâmetros  
+### <a name="parameters"></a>Parâmetros  
  O uso do método **Refresh** na coleção [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de um objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) recupera informações de parâmetro do lado do provedor para o procedimento armazenado ou a consulta parametrizada especificada no objeto **Command** . A coleção estará vazia para provedores que não dão suporte a chamadas de procedimento armazenado ou consultas parametrizadas.  
   
  Você deve definir a [propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) do objeto **de comando** como um objeto de [conexão](../../../ado/reference/ado-api/connection-object-ado.md) válido, a propriedade [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) para um comando válido e a propriedade [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) como **adCmdStoredProc** antes de chamar o método **Refresh** .  

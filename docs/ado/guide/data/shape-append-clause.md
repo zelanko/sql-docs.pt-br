@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924188"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND de forma
@@ -30,10 +30,10 @@ A cláusula comando de forma APPEND acrescenta uma coluna ou colunas a um **conj
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>DESCRIÇÃO  
+## <a name="description"></a>Descrição  
  As partes dessa cláusula são as seguintes:  
   
- *comando pai*  
+ *parent-command*  
  Zero ou um dos seguintes (você pode omitir completamente o *comando pai* ):  
   
 -   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
@@ -65,7 +65,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Comentários  
- *filho-conjunto de registros*  
+ *child-recordset*  
  -   Um comando de provedor entre chaves ("{}") que retorna um objeto **Recordset** . O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos desse provedor. Normalmente, essa será a linguagem SQL, embora o ADO não exija nenhuma linguagem de consulta específica.  
   
 -   Outro comando de forma inserido entre parênteses.  
@@ -74,19 +74,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   A palavra-chave TABLE, seguida pelo nome de uma tabela no provedor de dados.  
   
- *alias filho*  
+ *child-alias*  
  Um alias que se refere ao **conjunto de registros**filho.  
   
- *coluna pai*  
+ *parent-column*  
  Uma coluna no **conjunto de registros** retornada pelo *comando pai.*  
   
- *coluna filho*  
+ *child-column*  
  Uma coluna no **conjunto de registros** retornada pelo *comando filho*.  
   
  *param-Number*  
  Consulte a [operação de comandos com parâmetros](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *Capítulo-alias*  
+ *chapter-alias*  
  Um alias que se refere à coluna de capítulo anexada ao pai.  
   
 > [!NOTE]
@@ -110,7 +110,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
  A forma é `select * from t1; drop table t1` executada e`select * from t2 RELATE k1 TO k2),` (não percebendo que `drop table t1` é um comando de provedor separado e, nesse caso, perigoso. Os aplicativos sempre devem validar a entrada do usuário para evitar que tais ataques de hacker potenciais ocorram.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Operação de comandos não parametrizados](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   

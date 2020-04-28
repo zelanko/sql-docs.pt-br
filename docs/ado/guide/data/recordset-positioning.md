@@ -16,10 +16,10 @@ ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924439"
 ---
 # <a name="recordset-positioning"></a>Posicionamento do conjunto de registros

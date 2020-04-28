@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920924"
 ---
 # <a name="ado-methods"></a>Métodos ADO
@@ -25,14 +25,14 @@ ms.locfileid: "67920924"
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Cria um novo registro para um objeto **Recordset** atualizável.|  
-|[Acrescentar](../../../ado/reference/ado-api/append-method-ado.md)|Anexa um objeto a uma coleção. Se a coleção for de **campos**, um novo objeto de **campo** poderá ser criado antes de ser anexado à coleção.|  
+|[Anexar](../../../ado/reference/ado-api/append-method-ado.md)|Anexa um objeto a uma coleção. Se a coleção for de **campos**, um novo objeto de **campo** poderá ser criado antes de ser anexado à coleção.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Anexa dados a um **campo**de dados binário ou de texto grande ou a um objeto de **parâmetro** .|  
 |[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gerencia o processamento de transações dentro de um objeto de **conexão** da seguinte maneira:<br /><br /> **BeginTrans** – inicia uma nova transação.<br /><br /> **CommitTrans** -salva todas as alterações e encerra a transação atual. Ele também pode iniciar uma nova transação.<br /><br /> **RollbackTrans** -cancela as alterações e encerra a transação atual. Ele também pode iniciar uma nova transação.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de uma chamada de método pendente e assíncrona.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela uma atualização de lote pendente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela as alterações feitas na linha atual ou nova de um objeto **Recordset** ou na coleção **Fields** de um objeto **Record** , antes de chamar o método **Update** .|  
-|[Limpar](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os objetos de **erro** da coleção de **erros** .|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Cria um objeto **Recordset** duplicado a partir de um objeto **Recordset** existente. Opcionalmente, especifica que o clone é somente leitura.|  
+|[Formatação](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os objetos de **erro** da coleção de **erros** .|  
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Cria um objeto **Recordset** duplicado a partir de um objeto **Recordset** existente. Opcionalmente, especifica que o clone é somente leitura.|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Fecha um objeto aberto e quaisquer objetos dependentes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dois indicadores e retorna uma indicação de seus valores relativos.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia um arquivo ou diretório e seu conteúdo para outro local.|  
@@ -45,14 +45,14 @@ ms.locfileid: "67920924"
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na propriedade **CommandText** .|  
 |[Executar (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Executa a consulta especificada, a instrução SQL, o procedimento armazenado ou o texto específico do provedor.|  
 |[Considerar](../../../ado/reference/ado-api/find-method-ado.md)|Pesquisa um **conjunto de registros** para a linha que satisfaz os critérios especificados.|  
-|[Liberar](../../../ado/reference/ado-api/flush-method-ado.md)|Força o conteúdo do **fluxo** restante no buffer do ADO para o objeto subjacente ao qual o **fluxo** está associado.|  
+|[Libere](../../../ado/reference/ado-api/flush-method-ado.md)|Força o conteúdo do **fluxo** restante no buffer do ADO para o objeto subjacente ao qual o **fluxo** está associado.|  
 |[Método get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retorna o comando OLEDB subjacente, primeiro propagando todas as informações de parâmetro definidas no comando ADO para o comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retorna um **conjunto de registros** cujas linhas representam os arquivos e subdiretórios no diretório representado por esse **registro**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Retorna todos, ou uma parte, do conteúdo de um objeto de **campo** de dados binário ou de texto grande.|  
 |[Método GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera o objeto de fonte de dados OLEDB subjacente do provedor de forma.|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Recupera vários registros de um objeto **Recordset** em uma matriz.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Retorna o **conjunto de registros** como uma cadeia de caracteres.|  
-|[Loaddofile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Carrega o conteúdo de um arquivo existente em um **fluxo**.|  
+|[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Carrega o conteúdo de um arquivo existente em um **fluxo**.|  
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Move a posição do registro atual em um objeto **Recordset** .|  
 |[MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Move para o primeiro, último, próximo ou registro anterior em um objeto **Recordset** especificado e torna esse registro o registro atual.|  
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Move um arquivo ou um diretório e seu conteúdo para outro local.|  
@@ -74,8 +74,8 @@ ms.locfileid: "67920924"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Define a posição que é o final do fluxo.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora uma linha inteira ao ler um fluxo de texto.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtém informações estatísticas sobre um fluxo aberto.|  
-|[Suportar](../../../ado/reference/ado-api/supports-method.md)|Determina se um objeto **Recordset** especificado dá suporte a um tipo específico de funcionalidade.|  
-|[Cumulativo](../../../ado/reference/ado-api/update-method.md)|Salva as alterações feitas na linha atual de um objeto **Recordset** ou a coleção **Fields** de um objeto **Record** .|  
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Determina se um objeto **Recordset** especificado dá suporte a um tipo específico de funcionalidade.|  
+|[Atualização](../../../ado/reference/ado-api/update-method.md)|Salva as alterações feitas na linha atual de um objeto **Recordset** ou a coleção **Fields** de um objeto **Record** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Grava todas as atualizações de lote pendentes no disco.|  
 |[Gravar](../../../ado/reference/ado-api/write-method.md)|Grava dados binários em um objeto de **fluxo** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Grava uma cadeia de caracteres de texto especificada em um objeto de **fluxo** .|  

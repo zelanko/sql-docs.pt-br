@@ -16,10 +16,10 @@ ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919683"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
@@ -27,7 +27,7 @@ Especifica como um argumento de comando deve ser interpretado.
   
  É importante validar os valores de *commandstring* fornecidos pelo usuário para evitar que os usuários de aplicativos tenham a oportunidade de injetar comandos potencialmente perigosos para execução do ADO.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Não especifica o argumento de tipo de comando.|  
 |**adCmdText**|1|Avalia [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como uma definição textual de um comando ou uma chamada de procedimento armazenado.|  

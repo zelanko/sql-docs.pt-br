@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926628"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Visão geral de Provedor Microsoft OLE DB para Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "67926628"
 
  O Provedor Microsoft OLE DB para Oracle permite que o ADO acesse bancos de dados Oracle.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o argumento do *provedor* da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
@@ -47,7 +47,7 @@ MSDAORA
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para Oracle.|
 |**Fonte de Dados**|Especifica o nome de um servidor.|
@@ -62,12 +62,12 @@ MSDAORA
 
  Esses parâmetros são totalmente descritos na [referência do programador de OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). O [índice de propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornece uma referência cruzada entre esses nomes de parâmetro e as propriedades de OLE DB correspondentes.
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
-|**Identificador de janela**|Indica o identificador de janela a ser usado para solicitar informações adicionais.|
-|**Identificador de localidade**|Indica um número de bits de 32 exclusivo (por exemplo, 1033) que especifica as preferências relacionadas ao idioma do usuário. Essas preferências indicam como as datas e horas são formatadas, os itens são classificados alfabeticamente, as cadeias de caracteres são comparadas e assim por diante.|
+|**Identificador da Janela**|Indica o identificador de janela a ser usado para solicitar informações adicionais.|
+|**Identificador de Localidade**|Indica um número de bits de 32 exclusivo (por exemplo, 1033) que especifica as preferências relacionadas ao idioma do usuário. Essas preferências indicam como as datas e horas são formatadas, os itens são classificados alfabeticamente, as cadeias de caracteres são comparadas e assim por diante.|
 |**Serviços OLE DBs**|Indica um bitmask que especifica OLE DB serviços a serem habilitados ou desabilitados.|
-|**Aviso**|Indica se o usuário deve ser avisado enquanto uma conexão está sendo estabelecida.|
+|**Prompt**|Indica se o usuário deve ser avisado enquanto uma conexão está sendo estabelecida.|
 |**Propriedades estendidas**|Uma cadeia de caracteres que contém informações de conexão estendidas específicas do provedor. Use essa propriedade somente para informações de conexão específicas do provedor que não podem ser descritas por meio do mecanismo de propriedade.|
 
 ## <a name="see-also"></a>Consulte Também

@@ -15,10 +15,10 @@ ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925423"
 ---
 # <a name="error-handling"></a>Tratamento de erros
@@ -39,7 +39,7 @@ O ADO usa vários métodos diferentes para notificar uma aplicação de erros qu
   
 -   Os problemas que ocorrem envolvendo um determinado **campo** no registro atual também são indicados pela propriedade **status** de cada **campo** na coleção **Fields** do **registro** ou **conjunto de registros**. Por exemplo, as atualizações que não puderam ser concluídas ou tipos de dados incompatíveis podem ser especificadas por valores de **FieldStatusEnum** .  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Erros ADO](../../../ado/guide/data/ado-errors.md)  
   
@@ -51,4 +51,4 @@ O ADO usa vários métodos diferentes para notificar uma aplicação de erros qu
   
 -   [Tratamento de erro em outras linguagens](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
--   [Antecipar erros](../../../ado/guide/data/anticipating-errors.md)
+-   [Antecipando erros](../../../ado/guide/data/anticipating-errors.md)

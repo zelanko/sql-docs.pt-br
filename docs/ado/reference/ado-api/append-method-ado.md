@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920669"
 ---
 # <a name="append-method-ado"></a>Método Append (ADO)
@@ -33,11 +33,11 @@ collection.Append object
 fields.Append Name, Type, DefinedSize, Attrib, FieldValue  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Cole*  
  Um objeto de coleção.  
   
- *campo*  
+ *campos*  
  Uma coleção de **campos** .  
   
  *objeto*  
@@ -78,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Ocorrerá um erro em tempo de execução se o método **Append** for chamado na coleção **Fields** de um **conjunto de registros**aberto ou em um conjunto de **registros** em que a propriedade [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) foi definida. Você só pode acrescentar campos a um **conjunto de registros** que não esteja aberto e ainda não tenha sido conectado a uma fonte de dados. Normalmente, esse é o caso quando um objeto **Recordset** é criei com o método [createrecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) ou atribuído a uma variável de objeto.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Record  
  Um erro de tempo de execução não ocorrerá se o método **Append** for chamado na coleção **Fields** de um **registro**aberto. O novo campo será adicionado à coleção **Fields** do objeto **Record** . Se o **registro** tiver sido derivado de um **conjunto de registros**, o novo campo não será exibido na coleção **Fields** do objeto **Recordset** .  
   
  Um campo inexistente pode ser criado e acrescentado à coleção **Fields** , atribuindo um valor ao objeto Field como se ele já existisse na coleção. A atribuição irá disparar a criação automática e o acréscimo do objeto **Field** e, em seguida, a atribuição será concluída.  

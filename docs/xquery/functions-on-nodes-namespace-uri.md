@@ -16,10 +16,10 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929949"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funções em Nós – namespace-uri
@@ -51,7 +51,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em relação a instâncias XML armazenadas em várias colunas de tipo **XML** no banco de dados AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>a. Recuperar o URI do namespace de um nó específico  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recuperar o URI do namespace de um nó específico  
  A consulta a seguir é especificada em uma instância XML não digitada. A expressão de consulta, `namespace-uri(/ROOT[1])`, recupera a parte do namespace URI do nó especificado.  
   
 ```  

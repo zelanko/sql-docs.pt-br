@@ -15,10 +15,10 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924495"
 ---
 # <a name="records-and-streams"></a>Registros e fluxos
@@ -60,7 +60,7 @@ Atualmente, o ADO fornece o objeto [Recordset](../../../ado/reference/ado-api/re
   
 -   Um campo de BLOB em um **conjunto de registros**.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md)  
   

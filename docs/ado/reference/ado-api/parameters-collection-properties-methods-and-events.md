@@ -13,17 +13,17 @@ ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bffb3dfc89f07169bdbedc0d8960325e3f780085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931683"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Parameters
 ## <a name="properties"></a>Propriedades  
  [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Propriedade Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propriedade do item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [Método Append](../../../ado/reference/ado-api/append-method-ado.md)  

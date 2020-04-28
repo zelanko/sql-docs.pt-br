@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925561"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectando e solucionando conflitos
@@ -30,7 +30,7 @@ Se você estiver lidando com o conjunto de registros no modo imediato, haverá m
   
  Quando você chama BatchUpdate, o ADO e o provedor estão gerando instruções SQL para executar atualizações na fonte de dados. Lembre-se de que determinadas fontes de dados têm limitações sobre quais tipos de colunas podem ser usados em uma cláusula WHERE.  
   
- Em seguida, chame o método Ressync no conjunto de registros com o argumento AffectRecords definido igual a adAffectGroup e o argumento ResyncValues definido igual a adResyncUnderlyingValues. O método Ressync atualiza os dados no objeto Recordset atual do banco de dados subjacente. Usando o adAffectGroup, você está garantindo que apenas os registros visíveis com a configuração de filtro atual, ou seja, apenas os registros conflitantes, sejam ressincronizados com o banco de dados. Isso pode fazer uma diferença significativa no desempenho se você estiver lidando com um grande conjunto de registros. Ao definir o argumento ResyncValues como adResyncUnderlyingValues ao chamar a ressincronização, você garante que a propriedade subdependent conterá o valor (conflitante) do banco de dados, que a propriedade Value manterá o valor inserido pelo usuário e Essa propriedade original conterá o valor original do campo (o valor que ele tinha antes da última chamada UpdateBatch bem-sucedida foi feita). Você pode usar esses valores para resolver o conflito programaticamente ou exigir que o usuário selecione o valor que será usado.  
+ Em seguida, chame o método Ressync no conjunto de registros com o argumento AffectRecords definido igual a adAffectGroup e o argumento ResyncValues definido igual a adResyncUnderlyingValues. O método Ressync atualiza os dados no objeto Recordset atual do banco de dados subjacente. Usando o adAffectGroup, você está garantindo que apenas os registros visíveis com a configuração de filtro atual, ou seja, apenas os registros conflitantes, sejam ressincronizados com o banco de dados. Isso pode fazer uma diferença significativa no desempenho se você estiver lidando com um grande conjunto de registros. Ao definir o argumento ResyncValues como adResyncUnderlyingValues ao chamar a ressincronização, você garante que a propriedade subdependent conterá o valor (conflitante) do banco de dados, que a propriedade Value manterá o valor inserido pelo usuário e que a propriedade OriginalValue manterá o valor original do campo (o valor que ele tinha antes da última chamada UpdateBatch bem-sucedida foi feita). Você pode usar esses valores para resolver o conflito programaticamente ou exigir que o usuário selecione o valor que será usado.  
   
  Essa técnica é mostrada no exemplo de código a seguir. O exemplo cria artificialmente um conflito usando um conjunto de registros separado para alterar um valor na tabela subjacente antes que UpdateBatch seja chamado.  
   

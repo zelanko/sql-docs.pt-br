@@ -13,10 +13,10 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927002"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrappers de classe Java ADO
@@ -41,4 +41,4 @@ public static void main( String args[])
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar o Microsoft SDK para Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
+ [Usando o Microsoft SDK para Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

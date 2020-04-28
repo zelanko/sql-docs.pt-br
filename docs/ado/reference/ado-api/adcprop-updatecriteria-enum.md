@@ -16,10 +16,10 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921414"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
@@ -27,7 +27,7 @@ Especifica quais campos podem ser usados para detectar conflitos durante uma atu
   
  Use essas constantes com a propriedade dinâmica "**Atualizar critérios**" do **conjunto de registros** , que é referenciada no índice de [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) e documentada no [serviço de cursor da Microsoft para obter OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentação.  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|Detecta conflitos se qualquer coluna da linha de fonte de dados tiver sido alterada.|  
 |**adCriteriaKey**|0|Detecta conflitos se a coluna de chave da linha de fonte de dados foi alterada, o que significa que a linha foi excluída.|  

@@ -16,16 +16,16 @@ ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931260"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Especifica o tipo de objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
   
-|Constante|Valor|DESCRIÇÃO|  
+|Constante|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|Indica um registro *simples* (não contém nós filho).|  
 |**adCollectionRecord**|1|Indica um registro de *coleção* (contém nós filho).|  

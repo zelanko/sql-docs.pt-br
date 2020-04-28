@@ -14,10 +14,10 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922784"
 ---
 # <a name="customization-file-logs-section"></a>Seção Logs do arquivo de personalização
@@ -38,10 +38,10 @@ FileName
   
 ## <a name="remarks"></a>Comentários  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**erra**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de arquivo de log.|  
-|*Nome do arquivo*|Um caminho completo e um nome de arquivo. O nome de arquivo típico é **c:\msdfmap.log**.|  
+|*FileName*|Um caminho completo e um nome de arquivo. O nome de arquivo típico é **c:\msdfmap.log**.|  
   
  O arquivo de log conterá o nome de usuário, HRESULT, data e hora de cada erro.  
   

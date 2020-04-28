@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920905"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objetos e interfaces do ADO
@@ -39,7 +39,7 @@ As relações entre esses objetos são representadas no [modelo de objeto ADO](.
 |[Parâmetro](../../../ado/reference/ado-api/parameter-object.md)|Representa um parâmetro ou argumento associado a um objeto de **comando** com base em uma consulta parametrizada ou em um procedimento armazenado.<br /><br /> O objeto de **parâmetro** não é seguro para scripts.|  
 |[Propriedade](../../../ado/reference/ado-api/property-object-ado.md)|Representa uma característica dinâmica de um objeto ADO que é definido pelo provedor.|  
 |[Gravável](../../../ado/reference/ado-api/record-object-ado.md)|Representa uma linha de um **conjunto de registros**ou um diretório ou arquivo em um sistema de arquivos. O objeto de **registro** é seguro para scripts.|  
-|[Conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o objeto **Recordset** refere-se apenas a um único registro dentro do conjunto como o registro atual.<br /><br /> O objeto **Recordset** é seguro para scripts.|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa o conjunto de registros de uma tabela base ou os resultados de um comando executado. A qualquer momento, o objeto **Recordset** refere-se apenas a um único registro dentro do conjunto como o registro atual.<br /><br /> O objeto **Recordset** é seguro para scripts.|  
 |[Fluxo](../../../ado/reference/ado-api/stream-object-ado.md)|Representa um fluxo de dados binário.<br /><br /> O objeto de **fluxo** é seguro para scripts.|  
   
 ## <a name="see-also"></a>Consulte Também  

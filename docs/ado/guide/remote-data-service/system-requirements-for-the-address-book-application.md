@@ -14,10 +14,10 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922031"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos de sistema para o aplicativo de catálogo de endereços
@@ -26,7 +26,7 @@ Para configurar o aplicativo de exemplo do catálogo de endereços, você precis
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="software-requirements"></a>Requisitos de Software  
+## <a name="software-requirements"></a>Requisitos de software  
  Os requisitos de software do computador servidor para executar esse aplicativo Web incluem:  
   
 -   Microsoft Windows NT® Server 4,0, com Service Pack 3 ou posterior, ou Microsoft Windows® 2000 Server.  

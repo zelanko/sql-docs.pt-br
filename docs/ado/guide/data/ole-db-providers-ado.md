@@ -14,24 +14,24 @@ ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924751"
 ---
 # <a name="ole-db-providers-ado"></a>Provedores OLE DB (ADO)
 OLE DB define um conjunto de interfaces COM para fornecer aos aplicativos acesso uniforme aos dados armazenados em diversas fontes de informações. Essa abordagem permite que uma fonte de dados Compartilhe seus dados por meio das interfaces que dão suporte à quantidade de funcionalidade de DBMS apropriada à fonte de dados. Por design, a arquitetura de alto desempenho do OLE DB é baseada no uso de um modelo de serviços flexível baseado em componentes. Em vez de ter um número prescrito de camadas intermediárias entre o aplicativo e os dados, OLE DB requer apenas quantos componentes forem necessários para realizar uma tarefa específica.  
   
- Por exemplo, suponha que um usuário queira executar uma consulta. Considere os seguintes cenários:  
+ Por exemplo, suponha que um usuário queira executar uma consulta. Considere os seguintes cenário:  
   
 -   Os dados residem em um banco de dado relacional para o qual existe atualmente um driver ODBC, mas nenhum provedor de OLE DB nativo: o aplicativo usa o ADO para se comunicar com o provedor de OLE DB para ODBC, que então carrega o driver ODBC apropriado. O driver passa a instrução SQL para o DBMS, que recupera os dados.  
   
 -   Os dados residem no Microsoft SQL Server para o qual há um provedor de OLE DB nativo: o aplicativo usa o ADO para se comunicar diretamente com o provedor de OLE DB para Microsoft SQL Server. Não são necessários intermediários.  
   
--   Os dados residem no Microsoft Exchange Server, para o qual há um provedor de OLE DB, mas que não expõe um mecanismo para processar consultas SQL: o aplicativo usa o ADO para se comunicar com o provedor de OLE DB para o Microsoft Exchange e chama um processador de consulta OLE DB componente para lidar com a consulta.  
+-   Os dados residem no Microsoft Exchange Server, para o qual há um provedor de OLE DB, mas que não expõe um mecanismo para processar consultas SQL: o aplicativo usa o ADO para se comunicar com o provedor de OLE DB para o Microsoft Exchange e chama um componente de processador de consulta OLE DB para lidar com a consulta.  
   
--   Os dados residem no sistema de arquivos NTFS da Microsoft na forma de documentos: os dados são acessados usando um provedor de OLE DB nativo sobre o serviço de indexação da Microsoft, que indexa o conteúdo e as propriedades de documentos no sistema de arquivos para permitir conteúdo eficiente pesquisas.  
+-   Os dados residem no sistema de arquivos NTFS da Microsoft na forma de documentos: os dados são acessados usando um provedor de OLE DB nativo sobre o serviço de indexação da Microsoft, que indexa o conteúdo e as propriedades de documentos no sistema de arquivos para permitir pesquisas de conteúdo eficientes.  
   
  Em todos os exemplos anteriores, o aplicativo pode consultar os dados. As necessidades do usuário são atendidas com um número mínimo de componentes. Em cada caso, componentes adicionais são usados apenas se necessário, e apenas os componentes necessários são invocados. Esse carregamento por demanda de componentes reutilizáveis e compartilháveis contribui muito para o alto desempenho quando OLE DB é usado.  
   
@@ -39,8 +39,8 @@ OLE DB define um conjunto de interfaces COM para fornecer aos aplicativos acesso
   
  O ADO fornece uma interface consistente e de nível superior para vários provedores de OLE DB.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
--   [Provedores de Dados](../../../ado/guide/data/data-providers.md)  
+-   [Provedores de dados](../../../ado/guide/data/data-providers.md)  
   
 -   [Provedores de serviços e componentes](../../../ado/guide/data/service-providers-and-components.md)

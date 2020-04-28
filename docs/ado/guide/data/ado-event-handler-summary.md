@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926194"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Eventos de conexão e conjunto de registros ADO
@@ -29,14 +29,14 @@ Dois objetos ADO podem gerar eventos: o objeto de [conexão](../../../ado/refere
 
  As tabelas a seguir resumem os eventos e suas descrições.
 
-|ConnectionEvent|DESCRIÇÃO|
+|ConnectionEvent|Descrição|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Gerenciamento de transações** -notificação de que a transação atual na conexão foi iniciada, confirmada ou revertida.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Gerenciamento de conexão** -notificação de que a conexão atual iniciará, foi iniciada ou terminou.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Gerenciamento de execução de comando** -notificação de que a execução do comando atual na conexão será iniciada ou finalizada.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** -notificação de que há informações adicionais sobre a operação atual.|
 
-|RecordsetEvent|DESCRIÇÃO|
+|RecordsetEvent|Descrição|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Status de recuperação** -notificação do progresso de uma operação de recuperação de dados ou que a operação de recuperação foi concluída. Esses eventos só estarão disponíveis se o **conjunto de registros** tiver sido aberto usando um cursor do lado do cliente.|
 |[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Gerenciamento de alterações de campo** -notificação de que o valor do campo atual será alterado ou alterado.|

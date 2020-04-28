@@ -16,10 +16,10 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924703"
 ---
 # <a name="persisting-data"></a>Persistência de dados
@@ -113,7 +113,7 @@ Destination, PersistFormat
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Mais informações sobre a persistência do conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md)  
   

@@ -13,10 +13,10 @@ ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924568"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparar e executar comandos
@@ -29,7 +29,7 @@ Comandos são instruções emitidas para um provedor para executar algumas opera
 > [!NOTE]
 >  Determinados s de **comando**podem retornar um conjunto de resultados como um fluxo binário ou um único **registro** em vez de como um **conjunto de registros**, se houver suporte para ele no provedor. Além disso, alguns s de **comando**não se destinam a retornar qualquer conjunto de resultados (por exemplo, uma consulta SQL Update). Esta seção abordará o cenário mais típico, no entanto: executando o **comando**s que retornam resultados como um objeto **Recordset** . Para obter mais informações sobre como retornar resultados no **registro**s ou no **Stream**s, consulte [registros e fluxos](../../../ado/guide/data/records-and-streams.md).  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Visão geral do objeto Command](../../../ado/guide/data/command-object-overview.md)  
   
@@ -37,7 +37,7 @@ Comandos são instruções emitidas para um provedor para executar algumas opera
   
 -   [Parâmetros do objeto Command](../../../ado/guide/data/command-object-parameters.md)  
   
--   [Chamar um procedimento armazenado com um comando](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [Chamando um procedimento armazenado com um comando](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [Chamando um procedimento armazenado como um método em um objeto de conexão](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   

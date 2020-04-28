@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926661"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Visão geral do Microsoft OLE DB Provider para serviço de indexação da Microsoft
@@ -26,7 +26,7 @@ O provedor de OLE DB da Microsoft para o serviço de indexação da Microsoft fo
 
  O provedor está livre de threads e UNICODE habilitado.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o argumento **Provider =** como a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
@@ -44,11 +44,11 @@ MSIDXS
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para o serviço de indexação da Microsoft. Normalmente, essa é a única palavra-chave especificada na cadeia de conexão.|
 |**Fonte de Dados**|Especifica o nome do catálogo do serviço de indexação. Se essa palavra-chave não for especificada, o catálogo de sistema padrão será usado.|
-|**Identificador de localidade**|Especifica um número exclusivo de bits de 32 (por exemplo, 1033) que especifica as preferências relacionadas ao idioma do usuário. Se essa palavra-chave não for especificada, o identificador de localidade do sistema padrão será usado.|
+|**Identificador de Localidade**|Especifica um número exclusivo de bits de 32 (por exemplo, 1033) que especifica as preferências relacionadas ao idioma do usuário. Se essa palavra-chave não for especificada, o identificador de localidade do sistema padrão será usado.|
 
 ## <a name="command-text"></a>Texto do comando
  A sintaxe de consulta SQL do serviço de indexação consiste em extensões para a instrução **Select** do sql-92 e suas cláusulas **from** e **Where** . Os resultados da consulta são retornados por meio de conjuntos de linhas OLE DB, que podem ser consumidos pelo ADO e manipulados como objetos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
@@ -85,21 +85,21 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|somente leitura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|leitura/gravação|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|somente leitura|
-|[Origem](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|
-|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|
+|[Fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|somente leitura|
 
  \*Os indicadores devem ser habilitados no provedor para que esse recurso exista no conjunto de **registros**.
 
  **Disponibilidade de métodos Recordset padrão do ADO:**
 
-|Método|Há?|
+|Método|Disponível?|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Não|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Não|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Não|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|
 |[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Não|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|
@@ -109,8 +109,8 @@ MSIDXS
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|
 |[Repita](../../../ado/reference/ado-api/requery-method.md)|Sim|
 |[Sincronizar novamente](../../../ado/reference/ado-api/resync-method.md)|Sim|
-|[Suportar](../../../ado/reference/ado-api/supports-method.md)|Sim|
-|[Cumulativo](../../../ado/reference/ado-api/update-method.md)|Não|
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|
+|[Atualização](../../../ado/reference/ado-api/update-method.md)|Não|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Não|
 
  Para obter detalhes de implementação específicos e informações funcionais sobre o provedor de OLE DB da Microsoft para o serviço de indexação da Microsoft, consulte o [Guia do programador de OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)ou visite a página de serviços da Web do site do Windows NT Server.

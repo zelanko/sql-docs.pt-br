@@ -14,10 +14,10 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930570"
 ---
 # <a name="ado-md-objects"></a>Objetos do ADO MD
@@ -26,18 +26,18 @@ ms.locfileid: "67930570"
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa um eixo de posição ou de filtro de um células, que contém os membros selecionados de uma ou mais dimensões.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contém informações de esquema multidimensional (ou seja, cubos e dimensões subjacentes, hierarquias, níveis e membros) específicas para um provedor de dados multidimensional (MDP).|  
-|[Célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção de coordenadas de eixo, contidas em um células.|  
+|[CÉL](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa os dados na interseção de coordenadas de eixo, contidas em um células.|  
 |[Células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa os resultados de uma consulta multidimensional. É uma coleção de células selecionadas de cubos ou outros células.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa um cubo de um esquema multidimensional que contém um conjunto de dimensões relacionadas.|  
 |[Dimensão](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa uma das dimensões de um cubo multidimensional que contém uma ou mais hierarquias de membros.|  
 |[Hierarquia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Representa uma maneira na qual os membros de uma dimensão podem ser agregados ou "acumulados". Uma dimensão pode ser agregada ao longo de uma ou mais hierarquias.|  
-|[Nível](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém um conjunto de membros, cada um dos quais tem a mesma classificação em uma hierarquia.|  
+|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contém um conjunto de membros, cada um dos quais tem a mesma classificação em uma hierarquia.|  
 |[Membro](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Representa um membro de um nível em um cubo, os filhos de um membro de um nível ou um membro de uma posição ao longo de um eixo de um células.|  
-|[Posição](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Representa um conjunto de um ou mais membros de dimensões diferentes que define um ponto ao longo de um eixo.|  
+|[Propostas](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Representa um conjunto de um ou mais membros de dimensões diferentes que define um ponto ao longo de um eixo.|  
   
  Além disso, o objeto de **Catálogo** está conectado a um objeto de **conexão** ADO, que está incluído na biblioteca padrão do ADO:  
   
-|Objeto|DESCRIÇÃO|  
+|Objeto|Descrição|  
 |------------|-----------------|  
 |[Conexão](../../../ado/reference/ado-api/connection-object-ado.md)|Representa uma conexão aberta com uma fonte de dados.|  
   

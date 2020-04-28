@@ -18,10 +18,10 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920103"
 ---
 # <a name="chapter-property-ado"></a>Propriedade Chapter (ADO)
@@ -34,7 +34,7 @@ HRESULT get_Chapter([out, retval] long* plChapter);
 HRESULT put_Chapter([in] long lChapter);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  *plChapter*  
  Ponteiro para o identificador de um capítulo.  
   

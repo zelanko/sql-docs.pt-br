@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931170"
 ---
 # <a name="save-method"></a>Método Save
@@ -33,7 +33,7 @@ Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Destino*  
  Opcional. Uma **variante** que representa o nome completo do caminho do arquivo em que o **conjunto de registros** deve ser salvo ou uma referência a um objeto de **fluxo** .  
   

@@ -16,10 +16,10 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926383"
 ---
 # <a name="visual-c-extensions-header"></a>Cabeçalho de extensões do Visual C++
@@ -209,4 +209,4 @@ public:
   
 ## <a name="see-also"></a>Consulte Também  
  [Exemplo de extensões de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Usar as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Usando as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)

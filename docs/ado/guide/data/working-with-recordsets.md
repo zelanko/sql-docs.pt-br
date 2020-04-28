@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923410"
 ---
 # <a name="working-with-recordsets"></a>Trabalhar com conjuntos de registros
@@ -48,7 +48,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
   
  O método **Find** limita a pesquisa ao conteúdo de um campo. O método **Seek** requer que você tenha um índice e também tenha outras limitações. Se for necessário pesquisar em vários campos que não sejam a base de um índice, ou se seu provedor não oferecer suporte a índices, você poderá limitar os resultados usando a propriedade **Filter** do objeto **Recordset** .  
   
-### <a name="find"></a>Encontrar  
+### <a name="find"></a>Localizar  
  O método **Find** pesquisa um **conjunto de registros** para a linha que atende a um critério especificado. Opcionalmente, a direção da pesquisa, a linha inicial e o deslocamento da linha inicial podem ser especificados. Se o critério for atendido, a posição da linha atual será definida no registro encontrado; caso contrário, a posição será definida como o final (ou início) do **conjunto de registros**, dependendo da direção da pesquisa.  
   
  Somente um nome de coluna única pode ser especificado para o critério. Em outras palavras, esse método não oferece suporte a pesquisas de várias colunas.  
@@ -111,7 +111,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
 ### <a name="filtering-with-a-constant"></a>Filtrando com uma constante  
  As constantes a seguir estão disponíveis para filtrar **conjuntos de registros**.  
   
-|Constante|DESCRIÇÃO|  
+|Constante|Descrição|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtros para exibir somente os registros afetados pela última chamada de **exclusão**, **ressincronização**, **UpdateBatch**ou **CancelBatch** .|  
 |**adFilterConflictingRecords**|Filtros para exibir os registros que falharam na última atualização do lote.|  

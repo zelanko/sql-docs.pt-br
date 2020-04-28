@@ -14,16 +14,16 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926841"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de erro do objeto DataControl
 A tabela a seguir lista o [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Códigos de erro do objeto DataControl. A tradução decimal positiva dos dois bytes baixos, a conversão decimal negativa do código de erro completo e os valores hexadecimais são mostrados.
 
-|Serviços. Códigos de erro de controle de|Número|DESCRIÇÃO|
+|Serviços. Códigos de erro de controle de|Número|Descrição|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|Não é possível executar a operação enquanto a operação Async está pendente.|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|Tablegram embutido inválido.|

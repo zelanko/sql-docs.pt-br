@@ -13,10 +13,10 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925257"
 ---
 # <a name="getting-data"></a>Obtendo dados
@@ -24,7 +24,7 @@ Os [conceitos básicos do ADO](../../../ado/guide/data/ado-fundamentals.md)e o e
   
  Em um nível básico, vários objetos ADO contribuem para as operações de obtenção de dados. Primeiro, você deve se conectar a uma fonte de dados usando um objeto de **conexão** ADO. Em seguida, você passa instruções para a fonte de dados usando um objeto de **comando** ADO. Por fim, geralmente você recebe dados em um objeto **RECORDSET** ADO.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Conectando-se a fontes de dados](../../../ado/guide/data/connecting-to-data-sources.md)  
   

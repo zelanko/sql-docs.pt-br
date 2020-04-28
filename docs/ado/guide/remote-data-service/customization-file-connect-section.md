@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922803"
 ---
 # <a name="customization-file-connect-section"></a>Seção Conexão do arquivo de personalização
@@ -53,11 +53,11 @@ connectionString
   
 ## <a name="remarks"></a>Comentários  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**Connect**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de cadeia de conexão.|  
 |**_connectionString_**|Uma cadeia de caracteres que substitui toda a cadeia de conexão do cliente.|  
-|**Access**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de acesso.|  
+|**Acesso**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de acesso.|  
 |**_accessRight_**|Um dos seguintes direitos de acesso:<br /><br /> -   **NoAccess** -o usuário não pode acessar a fonte de dados.<br />-   **ReadOnly** -o usuário pode ler a fonte de dados.<br />-   **ReadWrite** -o usuário pode ler ou gravar na fonte de dados.|  
   
  Se você quiser permitir qualquer conexão (na verdade, desabilitando o comportamento do manipulador padrão), defina a entrada de acesso na seção **conectar padrão** como `Access=ReadWrite`e exclua ou comente qualquer outra seção do _identificador_ de **conexão** .  

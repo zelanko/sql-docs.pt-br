@@ -17,17 +17,17 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923810"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
 Há dois tipos básicos de eventos. "Serão eventos", que são chamados antes de uma operação ser iniciada, normalmente incluem "o" em seus nomes-por exemplo, **WillChangeRecordset** ou **WillConnect**. Eventos que são chamados após a conclusão de um evento geralmente incluem "concluído" em seus nomes-por exemplo, **RecordChangeComplete** ou **ConnectComplete**. Existem exceções-como **InfoMessage** -mas elas ocorrem após a conclusão da operação associada.  
   
 ## <a name="will-events"></a>Eventos serão  
- Os manipuladores de eventos chamados antes do início da operação oferecem a oportunidade de examinar ou modificar os parâmetros da operação e, em seguida, cancelar a operação ou permitir que ela seja concluída. Essas rotinas de manipulador de eventos geralmente têm nomes no <strong>formulário**.</strong>  
+ Os manipuladores de eventos chamados antes do início da operação oferecem a oportunidade de examinar ou modificar os parâmetros da operação e, em seguida, cancelar a operação ou permitir que ela seja concluída. Essas rotinas de manipulador de eventos geralmente têm nomes no <strong>formulário*Event*.</strong>  
   
 ## <a name="complete-events"></a>Concluir eventos  
  Os manipuladores de eventos chamados após a conclusão de uma operação podem notificar o aplicativo de que uma operação foi concluída. Esse manipulador de eventos também é notificado quando um manipulador de eventos for cancelar uma operação pendente. Essas rotinas de manipulador de eventos geralmente têm nomes de <strong> *evento*de formulário concluídos</strong>.  

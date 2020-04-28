@@ -18,10 +18,10 @@ ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925363"
 ---
 # <a name="event-parameters"></a>Parâmetros de evento
@@ -43,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Parâmetro de status  
  Quando a rotina do manipulador de eventos é chamada, o parâmetro *status* é definido como um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**adStatusOK**|Passado para os eventos concluídos e completos. Esse valor significa que a operação que causou o evento foi concluída com êxito.|  
 |**adStatusErrorsOccurred**|Passado somente para eventos de conclusão. Esse valor significa que a operação que causou o evento não foi bem-sucedida ou um evento será cancelado na operação. Verifique o parâmetro de *erro* para obter mais detalhes.|  
@@ -53,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Se você não quiser mais processar um evento, poderá definir o *status* como **adStatusUnwantedEvent** e seu aplicativo não receberá mais a notificação desse evento. No entanto, lembre-se de que alguns eventos podem ser gerados por mais de um motivo. Nesse caso, você deve especificar **adStatusUnwantedEvent** para cada motivo possível. Por exemplo, para interromper o recebimento de notificação de eventos **RecordChange** pendentes, você deve definir o parâmetro de *status* como **adStatusUnwantedEvent** para **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**e **adRsnFirstChange** conforme eles ocorrem.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Solicite que este manipulador de eventos não receba notificações adicionais.|  
 |**adStatusCancel**|Solicitação de cancelamento da operação que está prestes a ocorrer.|  

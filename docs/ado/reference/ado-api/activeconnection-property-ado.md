@@ -18,10 +18,10 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921519"
 ---
 # <a name="activeconnection-property-ado"></a>Propriedade ActiveConnection (ADO)
@@ -59,7 +59,7 @@ Indica a qual objeto de [conexão](../../../ado/reference/ado-api/connection-obj
 > [!NOTE]
 >  **Uso do serviço de dados remoto** Quando usado em um objeto **Recordset** do lado do cliente, essa propriedade pode ser definida somente como uma cadeia de conexão ou (no Microsoft Visual Basic ou Visual Basic, Scripting Edition) como *Nothing*.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Record  
  Essa propriedade é de leitura/gravação quando o objeto de **registro** é fechado e pode conter uma cadeia de conexão ou referência a um objeto de **conexão** aberta. Essa propriedade é somente leitura quando o objeto de **registro** está aberto e contém uma referência a um objeto de **conexão** aberta.  
   
  Um objeto de **conexão** é criado implicitamente quando o objeto de **registro** é aberto a partir de uma URL. Abra o **registro** com um objeto de **conexão** aberto existente atribuindo o objeto de **conexão** a essa propriedade ou usando o objeto de **conexão** como um parâmetro na chamada do método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) . Se o **registro** for aberto a partir de um **registro** ou [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)existente, ele será associado automaticamente a esse **registro** ou objeto de **conexão** do objeto **Recordset** .  

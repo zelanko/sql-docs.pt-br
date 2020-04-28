@@ -14,10 +14,10 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926793"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Visão geral do serviço de cursor da Microsoft para OLE DB
@@ -56,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Não há suporte para a propriedade dinâmica DBPROP_SERVERDATAONINSERT pelo serviço de cursor, mesmo que ele tenha suporte do provedor de dados subjacente.
 
-|Nome da propriedade|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros criados com o data Shaping Service, esse valor indica a frequência com que as colunas calculadas e agregadas são calculadas. O padrão (valor = 1) é recalcular sempre que o serviço de data Shaping determinar que os valores foram alterados. Se o valor for 0, as colunas calculadas ou agregadas só serão calculadas quando a hierarquia for inicialmente compilada.|
 |Tamanho do lote (DBPROP_ADC_BATCHSIZE)|Indica o número de instruções UPDATE que podem ser agrupadas em lote antes de serem enviadas ao armazenamento de dados. Quanto mais instruções em um lote, menos viagens de ida e volta para o armazenamento de dados.|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamento de propriedade interna
  O serviço de cursor para OLE DB também afeta o comportamento de determinadas propriedades internas.
 
-|Nome da propriedade|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa os tipos de cursores que estão disponíveis para um **conjunto de registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa os tipos de bloqueios disponíveis para um **conjunto de registros**. Habilita atualizações em lotes.|

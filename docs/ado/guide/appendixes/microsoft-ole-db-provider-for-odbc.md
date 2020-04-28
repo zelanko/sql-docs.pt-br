@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926633"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Visão geral do provedor de OLE DB da Microsoft para ODBC
@@ -31,7 +31,7 @@ Para um programador de ADO ou RDS, um mundo ideal seria aquele em que cada fonte
 
  Esse é o provedor padrão para ADO, e há suporte para todos os métodos e propriedades ADO dependentes do provedor.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o **provedor =** argumento da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```
@@ -49,7 +49,7 @@ MSDASQL
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para ODBC.|
 |**DSN**|Especifica o nome da fonte de dados.|
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propriedades de conexão específicas do provedor
  O provedor de OLE DB para ODBC adiciona várias propriedades à coleção de [Propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) do objeto de **conexão** . A tabela a seguir lista essas propriedades com o nome da propriedade OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Procedimentos acessíveis (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se o usuário tem acesso aos procedimentos armazenados.|
 |Tabelas acessíveis (KAGPROP_ACCESSIBLETABLES)|Indica se o usuário tem permissão para executar instruções SELECT em relação às tabelas de banco de dados.|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros e propriedades de comando específicas do provedor
  O provedor de OLE DB para ODBC adiciona várias propriedades à coleção **Properties** dos objetos **Recordset** e **Command** . A tabela a seguir lista essas propriedades com o nome da propriedade OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Atualizações/exclusões/inserções baseadas em consulta (KAGPROP_QUERYBASEDUPDATES)|Indica se as atualizações, as exclusões e as inserções podem ser executadas usando consultas SQL.|
 |Tipo de simultaneidade ODBC (KAGPROP_CONCURRENCY)|Indica o método usado para reduzir possíveis problemas causados por dois usuários tentando acessar os mesmos dados da fonte de dados simultaneamente.|
@@ -190,8 +190,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|leitura/gravação|não disponível|somente leitura|somente leitura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|leitura/gravação|não disponível|somente leitura|somente leitura|
-|[Origem](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
-|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|somente leitura|somente leitura|somente leitura|
+|[Fonte](../../../ado/reference/ado-api/source-property-ado-recordset.md)|leitura/gravação|leitura/gravação|leitura/gravação|leitura/gravação|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|somente leitura|somente leitura|somente leitura|somente leitura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|somente leitura|somente leitura|somente leitura|somente leitura|
 
  As propriedades [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) são somente gravação quando o ADO é usado com a versão 1,0 do provedor do Microsoft OLE DB para ODBC.
@@ -204,7 +204,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sim|Sim|Sim|Sim|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sim|Sim|Sim|Sim|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Não|Não|Sim|Sim|
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Sim|Sim|Sim|Sim|
 |[Delete (excluir)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sim|Sim|Sim|Sim|
@@ -217,8 +217,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sim|Sim|Sim|Sim|
 |[Repita](../../../ado/reference/ado-api/requery-method.md)|Sim|Sim|Sim|Sim|
 |[Sincronizar novamente](../../../ado/reference/ado-api/resync-method.md)|Não|Não|Sim|Sim|
-|[Suportar](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
-|[Cumulativo](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
+|[Suporta](../../../ado/reference/ado-api/supports-method.md)|Sim|Sim|Sim|Sim|
+|[Atualização](../../../ado/reference/ado-api/update-method.md)|Sim|Sim|Sim|Sim|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sim|Sim|Sim|Sim|
 
  * Não há suporte para bancos de dados do Microsoft Access.
@@ -242,8 +242,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Definição de coluna|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catálogo atual|DBPROP_CURRENTCATALOG|
-|Fonte de dados|DBPROP_INIT_DATASOURCE|
-|Nome da fonte de dados|DBPROP_DATASOURCENAME|
+|fonte de dados|DBPROP_INIT_DATASOURCE|
+|Nome da Fonte de Dados|DBPROP_DATASOURCENAME|
 |Modelo de Threading do objeto de fonte de dados|DBPROP_DSOTHREADMODEL|
 |Nome do DBMS|DBPROP_DBMSNAME|
 |Versão do DBMS|DBPROP_DBMSVER|
@@ -255,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Níveis de isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Retenção de isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificador de Localidade|DBPROP_INIT_LCID|
-|Location|DBPROP_INIT_LOCATION|
+|Local|DBPROP_INIT_LOCATION|
 |Tamanho máximo do índice|DBPROP_MAXINDEXSIZE|
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|
 |O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -294,8 +294,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Termo da tabela|DBPROP_TABLETERM|
 |DDL de transação|DBPROP_SUPPORTEDTXNDDL|
 |Id de Usuário|DBPROP_AUTH_USERID|
-|Nome de usuário|DBPROP_USERNAME|
-|Identificador de janela|DBPROP_INIT_HWND|
+|Nome do Usuário|DBPROP_USERNAME|
+|Identificador da Janela|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriedades dinâmicas do conjunto de registros
  As propriedades a seguir são adicionadas à coleção de **Propriedades** do objeto **Recordset** .

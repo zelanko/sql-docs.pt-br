@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926429"
 ---
 # <a name="visual-c-ado-programming"></a>Programação ADO do Visual C++
@@ -37,7 +37,7 @@ A referência da API do ADO descreve a funcionalidade da API (interface de progr
 ## <a name="using-the-import-compiler-directive"></a>Usando a diretiva de compilador #import  
  A diretiva de compilador **#import** Visual C++ simplifica o trabalho com os métodos e as propriedades do ADO. A diretiva usa o nome de um arquivo que contém uma biblioteca de tipos, como o ADO. dll (MsADO15. dll), e gera arquivos de cabeçalho contendo declarações de typedef, apontadores inteligentes para interfaces e constantes enumeradas. Cada interface é encapsulada, ou encapsulada, em uma classe.  
   
- Para cada operação dentro de uma classe (ou seja, um método ou uma chamada de propriedade), há uma declaração para chamar a operação diretamente (ou seja, a forma "bruta" da operação) e uma declaração para chamar a operação bruta e gerar um erro COM se a operação falhar ao executar succ essfully. Se a operação for uma propriedade, geralmente há uma diretiva de compilador que cria uma sintaxe alternativa para a operação que tem sintaxe como Visual Basic.  
+ Para cada operação dentro de uma classe (ou seja, um método ou uma chamada de propriedade), há uma declaração para chamar a operação diretamente (ou seja, a forma "bruta" da operação) e uma declaração para chamar a operação bruta e gerar um erro COM se a operação não for executada com êxito. Se a operação for uma propriedade, geralmente há uma diretiva de compilador que cria uma sintaxe alternativa para a operação que tem sintaxe como Visual Basic.  
   
  As operações que recuperam o valor de uma propriedade têm nomes do formulário, **obter**_Propriedade_. As operações que definem o valor de uma propriedade têm nomes do formulário, **Put**_Property_. As operações que definem o valor de uma propriedade com um ponteiro para um objeto ADO têm nomes do formulário,_Propriedade_ **PutRef**.  
   
@@ -68,7 +68,7 @@ variable = objectPtr->GetProperty;  // get property value
   
  A diretiva de compilador **__declspec (Property...)** só pode declarar a sintaxe de **Get**, **Put**ou **Get** e **Put** alternativa para uma função. As operações somente leitura têm apenas uma declaração **Get** ; as operações somente gravação têm uma declaração **Put** ; as operações que são de leitura e gravação têm as declarações **Get** e **Put** .  
   
- Somente duas declarações são possíveis com essa diretiva; no entanto, cada propriedade pode ter três funções ****_de propriedade: Propriedade_Get,_Propriedade_ **Put**e_Propriedade_ **PutRef**. Nesse caso, somente duas formas da propriedade têm a sintaxe alternativa.  
+ Somente duas declarações são possíveis com essa diretiva; no entanto, cada propriedade pode ter três funções **Get**_de propriedade: Propriedade_Get,_Propriedade_ **Put**e_Propriedade_ **PutRef**. Nesse caso, somente duas formas da propriedade têm a sintaxe alternativa.  
   
  Por exemplo, a propriedade **ActiveConnection** do objeto **Command** é declarada com uma sintaxe alternativa para **Get**_ActiveConnection_ e **PutRef**_ActiveConnection_. A sintaxe **PutRef**é uma boa opção porque, na prática, normalmente você desejará colocar um objeto de **conexão** aberta (ou seja, um ponteiro de objeto de **conexão** ) nessa propriedade. Por outro lado, o objeto **Recordset** tem operações de_ActiveConnection_ **Get**-, **Put**-e **PutRef**, mas nenhuma sintaxe alternativa.  
   

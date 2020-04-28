@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926614"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Visão geral do provedor do Microsoft OLE DB para SQL Server
@@ -27,7 +27,7 @@ O provedor de OLE DB da Microsoft para SQL Server, SQLOLEDB, permite que o ADO a
 > [!IMPORTANT]
 > O provedor de OLE DB da Microsoft para SQL Server (SQLOLEDB) permanece preterido e não é recomendável usá-lo para novos trabalhos de desenvolvimento. Em vez disso, use o novo [Driver do Microsoft OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), que será atualizado com os recursos de servidor mais recentes.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o argumento do *provedor* como a propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para SQL Server.|
 |**Fonte de dados** ou **servidor**|Especifica o nome de um servidor.|
@@ -61,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Parâmetros de conexão específicos do provedor
  O provedor dá suporte a vários parâmetros de conexão específicos do provedor, além daqueles definidos pelo ADO. Assim como acontece com as propriedades de conexão ADO, essas propriedades específicas do provedor podem ser definidas por meio da coleção [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) de uma [conexão](../../../ado/reference/ado-api/connection-object-ado.md) ou podem ser definidas como parte de **ConnectionString**.
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |Trusted_Connection|Indica o modo de autenticação do usuário. Isso pode ser definido como **Sim** ou **não**. O valor padrão é **no**. Se essa propriedade for definida como **Sim**, SQLOLEDB usará o modo de autenticação do Microsoft Windows NT para autorizar o acesso do usuário ao banco de dados de SQL Server especificado pelos valores de propriedade **local** e [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Se essa propriedade for definida como **não**, SQLOLEDB usará o modo misto para autorizar o acesso do usuário ao banco de dados de SQL Server. O logon de SQL Server e a senha são especificados nas propriedades **ID de usuário** e **senha** .|
 |Idioma Atual|Indica um nome de idioma SQL Server. Identifica o idioma usado para seleção de mensagem de sistema e formatação. O idioma deve ser instalado na SQL Server, caso contrário, abrir a conexão falhará.|
@@ -71,7 +71,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Tradução automática|Indica se os caracteres OEM/ANSI são convertidos. Essa propriedade pode ser definida como **true** ou **false**. O valor padrão é **True**. Se essa propriedade for definida como **true**, SQLOLEDB executará a conversão de caracteres OEM/ANSI quando as cadeias de caracteres de vários bytes forem recuperadas ou enviadas para o SQL Server. Se essa propriedade for definida como **false**, SQLOLEDB não executará a conversão de caracteres OEM/ANSI em dados de cadeia de caracteres de vários bytes.|
 |Tamanho do Pacote|Indica um tamanho de pacote de rede em bytes. O valor da propriedade tamanho do pacote deve estar entre 512 e 32767. O tamanho padrão do pacote de rede SQLOLEDB é 4096.|
 |Nome do Aplicativo|Indica o nome do aplicativo cliente.|
-|ID da Estação de Trabalho|Uma cadeia de caracteres que identifica a estação de trabalho.|
+|ID da Estação de Trabalho|uma cadeia de caracteres que identifica a estação de trabalho.|
 
 ## <a name="command-object-usage"></a>Uso do objeto Command
  SQLOLEDB aceita um mistura de ODBC, ANSI e Transact-SQL específico de SQL Server como sintaxe válida. Por exemplo, a seguinte instrução SQL usa uma sequência de escape do ODBC SQL para especificar a função de cadeia de caracteres LCASE:
@@ -151,8 +151,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Definição de coluna|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catálogo atual|DBPROP_CURRENTCATALOG|
-|Fonte de dados|DBPROP_INIT_DATASOURCE|
-|Nome da fonte de dados|DBPROP_DATASOURCENAME|
+|fonte de dados|DBPROP_INIT_DATASOURCE|
+|Nome da Fonte de Dados|DBPROP_DATASOURCENAME|
 |Modelo de Threading do objeto de fonte de dados|DBPROP_DSOTHREADMODEL|
 |Nome do DBMS|DBPROP_DBMSNAME|
 |Versão do DBMS|DBPROP_DBMSVER|
@@ -200,8 +200,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Termo da tabela|DBPROP_TABLETERM|
 |DDL de transação|DBPROP_SUPPORTEDTXNDDL|
 |Id de Usuário|DBPROP_AUTH_USERID|
-|Nome de usuário|DBPROP_USERNAME|
-|Identificador de janela|DBPROP_INIT_HWND|
+|Nome do Usuário|DBPROP_USERNAME|
+|Identificador da Janela|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriedades dinâmicas do conjunto de registros
  As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Recordset** .

@@ -14,10 +14,10 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922795"
 ---
 # <a name="customization-file-sql-section"></a>Seção SQL do arquivo de personalização
@@ -45,7 +45,7 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|Parte|DESCRIÇÃO|  
+|Parte|Descrição|  
 |----------|-----------------|  
 |**SQL**|Uma cadeia de caracteres literal que indica que se trata de uma entrada de seção SQL.|  
 |***sqlString***|Uma cadeia de caracteres SQL que substitui a cadeia de caracteres do cliente.|  

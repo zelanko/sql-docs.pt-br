@@ -14,10 +14,10 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922971"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de associação de dados do catálogo de endereço
@@ -50,15 +50,15 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>Parâmetros de marca de objeto genérico  
  A tabela a seguir descreve os parâmetros associados à marca OBJECT.  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |***CLASSID***|Um número exclusivo de 128 bits que identifica o tipo de objeto inserido para o sistema. Esse identificador é mantido no registro do sistema do computador local. (Para as IDs de classe do **RDS. Objeto DataControl** , consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
-|***SESSÃO***|Define um identificador de todo o documento para o objeto inserido que é usado para identificá-lo no código.|  
+|***ID***|Define um identificador de todo o documento para o objeto inserido que é usado para identificá-lo no código.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>Serviços. Parâmetros de marca do DataControl  
  A tabela a seguir descreve os parâmetros específicos para o **RDS. Objeto DataControl** . (Para obter uma lista completa de **RDS. **Parâmetros de objeto DataControl e quando implementá-los, consulte [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Se você estiver usando HTTP, o valor será o nome do computador do servidor precedido por `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornece as informações de conexão necessárias para o **RDS. DataControl** para se conectar ao SQL Server.|  

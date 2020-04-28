@@ -17,10 +17,10 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932899"
 ---
 # <a name="execute-method-ado-connection"></a>Método Execute (conexão ADO)
@@ -37,7 +37,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 ## <a name="return-value"></a>Valor retornado  
  Retorna uma referência de objeto de [objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *CommandText*  
  Um valor de **cadeia de caracteres** que contém a instrução SQL, o procedimento armazenado, uma URL ou um texto específico do provedor a ser executado. **Opcionalmente**, os nomes de tabela podem ser usados, mas somente se o provedor tiver reconhecimento de SQL. Por exemplo, se o nome de uma tabela de "Customers" for usado, o ADO precederá automaticamente a sintaxe padrão do SQL SELECT para formar e passará [!INCLUDE[tsql](../../../includes/tsql-md.md)] "SELECT * FROM Customers" como uma instrução para o provedor.  
   
@@ -47,7 +47,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Opções*  
  Opcional. Um valor **longo** que indica como o provedor deve avaliar o argumento CommandText. Pode ser um bitmask de um ou mais valores de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
- **Observação** Use o **** valor ExecuteOptionEnum **adExecuteNoRecords** para melhorar o desempenho, minimizando o processamento interno e para aplicativos dos quais você está portando Visual Basic 6,0.  
+ **Observação** Use o **ExecuteOptionEnum** valor ExecuteOptionEnum **adExecuteNoRecords** para melhorar o desempenho, minimizando o processamento interno e para aplicativos dos quais você está portando Visual Basic 6,0.  
   
  Não use **adExecuteStream** com o método **Execute** de um objeto **Connection** .  
   

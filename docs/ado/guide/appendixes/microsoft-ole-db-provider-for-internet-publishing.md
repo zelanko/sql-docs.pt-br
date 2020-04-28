@@ -15,16 +15,16 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926759"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Visão geral do provedor do Microsoft OLE DB para publicação na Internet
 O provedor de OLE DB da Microsoft para publicação na Internet permite que o ADO acesse recursos servidos pelo Microsoft FrontPage ou pelo Microsoft Internet Information Server. Os recursos incluem arquivos de origem da Web, como arquivos HTML, ou pastas da Web do Windows 2000.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o argumento do *provedor* da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) como:
 
 ```vb
@@ -48,7 +48,7 @@ MSDAIPP.DSO
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para publicação na Internet.|
 |**Fonte de dados** -ou- **URL**|Especifica a URL de um arquivo ou diretório publicado em uma pasta da Web.|

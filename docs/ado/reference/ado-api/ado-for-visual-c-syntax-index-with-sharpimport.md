@@ -18,10 +18,10 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920961"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Índice de sintaxe ADO for Visual C++ com #import
@@ -39,7 +39,7 @@ Esse índice é uma referência cruzada para a referência da linguagem ADO com 
   
 -   [Objeto de Conexão](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objeto Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objeto de erro](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Objeto Campo](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -53,7 +53,7 @@ Esse índice é uma referência cruzada para a referência da linguagem ADO com 
   
 -   [Objeto Stream](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Eventos de conexão](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Eventos de Conexão](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Eventos do conjunto de registros](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923449"
 ---
 # <a name="what-is-a-lock"></a>O que é um bloqueio?
@@ -35,6 +35,6 @@ O bloqueio é o processo pelo qual um DBMS restringe o acesso a uma linha em um 
   
  A propriedade **LockType** é leitura/gravação quando o **conjunto de registros** é fechado e somente leitura quando ele está aberto.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Tipos de bloqueios](../../../ado/guide/data/types-of-locks.md)

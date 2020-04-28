@@ -15,16 +15,16 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926643"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Visão geral do provedor do Microsoft OLE DB para Microsoft Jet
 O provedor de OLE DB para Microsoft Jet permite que o ADO acesse bancos de dados Microsoft Jet.
 
-## <a name="connection-string-parameters"></a>Parâmetros da cadeia de conexão
+## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão
  Para se conectar a esse provedor, defina o argumento do *provedor* da propriedade [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para o seguinte:
 
 ```vb
@@ -42,7 +42,7 @@ Microsoft.Jet.OLEDB.4.0
 
  A cadeia de caracteres consiste nessas palavras-chave:
 
-|Palavra-chave|DESCRIÇÃO|
+|Palavra-chave|Descrição|
 |-------------|-----------------|
 |**Provedor**|Especifica o provedor de OLE DB para o Microsoft Jet.|
 |**Fonte de Dados**|Especifica o caminho do banco de dados e o nome do `c:\Northwind.mdb`arquivo (por exemplo,).|
@@ -57,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  A tabela a seguir lista essas propriedades junto com o nome da propriedade OLE DB correspondente entre parênteses.
 
-|Parâmetro|DESCRIÇÃO|
+|Parâmetro|Descrição|
 |---------------|-----------------|
 |Jet OLEDB: compactar valor de espaço recuperado (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indica uma estimativa da quantidade de espaço, em bytes, que pode ser recuperada compactando o banco de dados. Esse valor só é válido depois que uma conexão de banco de dados é estabelecida.|
 |Jet OLEDB: controle de conexão (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indica se os usuários podem se conectar ao banco de dados.|
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros e propriedades de comando específicas do provedor
  O provedor Jet também dá suporte a várias propriedades de **conjuntos de registros** e **comandos** específicas do provedor. Essas propriedades são acessadas e definidas por meio da coleção **Properties** do **conjunto de registros** ou do objeto **Command** . A tabela lista o nome da propriedade ADO e seu nome de propriedade OLE DB correspondente entre parênteses.
 
-|Nome da propriedade|DESCRIÇÃO|
+|Nome da propriedade|Descrição|
 |-------------------|-----------------|
 |Jet OLEDB: transações em massa (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica se as operações em massa do SQL são transacionadas. Grandes operações em massa podem falhar quando transacionadas, devido a atrasos de recursos.|
 |Jet OLEDB: habilitar cursores de FAT (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica se o Jet deve armazenar em cache várias linhas ao preencher um conjunto de registros para fontes de linha remotas.|
@@ -131,8 +131,8 @@ Microsoft.Jet.OLEDB.4.0
 |Termo do catálogo|DBPROP_CATALOGTERM|
 |Definição de coluna|DBPROP_COLUMNDEFINITION|
 |Catálogo atual|DBPROP_CURRENTCATALOG|
-|Fonte de dados|DBPROP_INIT_DATASOURCE|
-|Nome da fonte de dados|DBPROP_DATASOURCENAME|
+|fonte de dados|DBPROP_INIT_DATASOURCE|
+|Nome da Fonte de Dados|DBPROP_DATASOURCENAME|
 |Modelo de Threading do objeto de fonte de dados|DBPROP_DSOTHREADMODEL|
 |Nome do DBMS|DBPROP_DBMSNAME|
 |Versão do DBMS|DBPROP_DBMSVER|
@@ -178,8 +178,8 @@ Microsoft.Jet.OLEDB.4.0
 |Termo da tabela|DBPROP_TABLETERM|
 |DDL de transação|DBPROP_SUPPORTEDTXNDDL|
 |Id de Usuário|DBPROP_AUTH_USERID|
-|Nome de usuário|DBPROP_USERNAME|
-|Identificador de janela|DBPROP_INIT_HWND|
+|Nome do Usuário|DBPROP_USERNAME|
+|Identificador da Janela|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriedades dinâmicas do conjunto de registros
  As propriedades a seguir são adicionadas à coleção **Properties** do objeto **Recordset** .

@@ -17,10 +17,10 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932338"
 ---
 # <a name="infomessage-event-ado"></a>Evento InfoMessage (ADO)
@@ -33,7 +33,7 @@ O evento **InfoMessage** é chamado sempre que ocorrer um aviso durante uma oper
 InfoMessage pError, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *pError*  
  Um objeto de [erro](../../../ado/reference/ado-api/error-object.md) . Esse parâmetro contém todos os erros retornados. Se vários erros forem retornados, enumere a coleção de **erros** para encontrá-los.  
   

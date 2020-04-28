@@ -16,10 +16,10 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931912"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Exemplo dos métodos Open e Close (VBScript)

@@ -13,10 +13,10 @@ ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926872"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Apêndice C: programando com ADO em ambientes de desenvolvimento
@@ -26,11 +26,11 @@ ADO é um componente de interface de automação COM que pode ser usado com muit
 
  Para obter mais informações sobre programação com o ADO em vários ambientes de desenvolvimento, consulte os seguintes tópicos:
 
--   [Usar o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)
+-   [Usando o ADO com o Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)
 
--   [Usar o ADO com linguagens de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+-   [Usando o ADO com linguagens de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
 
--   [Usar o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
+-   [Usando o ADO com o Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
 ## <a name="see-also"></a>Consulte Também
  Apêndice de [referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [D: exemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [Configurando](../../../ado/guide/remote-data-service/configuring-rds.md) [o ActiveX Data Objects do RDS Microsoft (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Apêndice A: provedores](../../../ado/guide/appendixes/appendix-a-providers.md) [histórico do ADO](../../../ado/guide/ado-history.md)

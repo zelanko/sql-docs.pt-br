@@ -17,10 +17,10 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924592"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistência de registros em formato XML
@@ -68,7 +68,7 @@ rs.Save "btitles.sav", adPersistXML
   
  O ADO sempre usa o conjunto de linhas do mecanismo de cursor do cliente para produzir um objeto de **conjunto de registros** que poderá ser marcado como rolável sobre os dados somente de encaminhamento gerados pelo provedor de persistência.  
   
- Esta seção contém os seguintes tópicos:  
+ Esta seção contém os seguintes tópicos.  
   
 -   [Formato de persistência XML](../../../ado/guide/data/xml-persistence-format.md)  
   
@@ -84,7 +84,7 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Transformações XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Salvar no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Salvando no objeto DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Considerações sobre segurança XML](../../../ado/guide/data/xml-security-considerations.md)  
   

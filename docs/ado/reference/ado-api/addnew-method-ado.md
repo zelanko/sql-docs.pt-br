@@ -17,10 +17,10 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921321"
 ---
 # <a name="addnew-method-ado"></a>Método AddNew (ADO)
@@ -33,7 +33,7 @@ Cria um novo registro para um objeto [Recordset](../../../ado/reference/ado-api/
 recordset.AddNew FieldList, Values  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *registros*  
  Um objeto **Recordset** .  
   

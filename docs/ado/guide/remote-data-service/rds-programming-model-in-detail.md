@@ -13,10 +13,10 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922523"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo de programação do RDS em detalhes

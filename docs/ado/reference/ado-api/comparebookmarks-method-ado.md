@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919594"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
@@ -37,7 +37,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## <a name="return-value"></a>Valor retornado  
  Retorna um valor [CompareEnum](../../../ado/reference/ado-api/compareenum.md) que indica a posição de linha relativa de dois registros representados por seus indicadores.  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
  *Bookmark1*  
  O indicador da primeira linha.  
   

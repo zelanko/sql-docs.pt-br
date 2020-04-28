@@ -15,10 +15,10 @@ ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926538"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Usar o ADO com o Microsoft Visual C++
@@ -28,7 +28,7 @@ Para obter informações sobre como usar o ADO com Visual C++, consulte as segui
   
 -   [Extensões do Visual C++ para ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
   
--   [Usar as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
+-   [Usando as extensões do Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
   
 -   [Cabeçalho de extensões do Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)  
   
