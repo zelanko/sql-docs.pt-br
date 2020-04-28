@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890324"
 ---
 # <a name="data-mining-query"></a>Consulta de mineração de dados
@@ -26,17 +26,17 @@ ms.locfileid: "68890324"
  Botão para alternar a exibição  
  Clique em um ícone para alternar entre o painel de design e o painel de consulta. Por padrão, é aberto o painel de design.  
   
- Para alternar para o painel Design, clique no ícone ![ícone de design](../media/ssis-designicon.gif "Ícone de design") .  
+ Para mudar para o painel de design, clique no ícone ![ícone Design](../media/ssis-designicon.gif "Ícone de design").  
   
- Para alternar para o painel de consulta, clique no ícone ![ícone SQL](../media/ssis-queryicon.gif "Ícone do SQL") .  
+ Para mudar para o painel de consulta, clique no ícone ![ícone SQL](../media/ssis-queryicon.gif "Ícone do SQL").  
   
  **Modelo de mineração**  
  Exibe o modelo de mineração selecionado no qual você deseja basear as previsões.  
   
- **Selecionar modelo**  
+ **Selecionar Modelo**  
  Abre a caixa de diálogo **Selecionar Modelo de Mineração** .  
   
- **Colunas de entrada**  
+ **Colunas de Entrada**  
  Exibe as colunas de entrada selecionadas usadas para gerar as previsões.  
   
  **Origem**  
@@ -56,14 +56,14 @@ ms.locfileid: "68890324"
  **Agrupar**  
  Use com a coluna **E/ou** para agrupar expressões. Por exemplo, (expr1 OU expr2) E expr3.  
   
- **E/ou**  
+ **E/Ou**  
  Use para criar uma consulta lógica. Por exemplo, (expr1 OU expr2) E expr3.  
   
- **Critério/argumento**  
+ **Critérios/Argumento**  
  Especifique uma condição ou expressão de usuário que se aplica à coluna. As colunas podem ser arrastadas das tabelas que contêm o modelo de mineração e colunas de entrada para a célula.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Interfaces de consulta de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

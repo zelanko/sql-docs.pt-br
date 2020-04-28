@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530944"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Ferramentas e abordagens para processamento (Analysis Services)
@@ -92,14 +92,13 @@ ms.locfileid: "69530944"
   
 6.  Quando o processamento terminar, clique em **Fechar**.  
   
-##  <a name="bkmk_impactanalysis"></a>Executar análise de impacto para identificar dependências de objeto e escopo de operações  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>Executar análise de impacto para identificar dependências de objeto e escopo de operações  
   
 1.  Antes de processar um objeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode analisar o efeito sobre objetos relacionados clicando em **Análise de Impacto** em uma das caixas de diálogo **Processar Objetos** .  
   
 2.  Clique com o botão direito do mouse em uma dimensão, cubo, grupo de medidas ou partição para abrir uma caixa de diálogo **Processar Objetos** .  
   
-3.  Clique em **Análise de Impacto**. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina o modelo e relata sobre o reprocessamento de requisitos para objetos que estão relacionados ao que você selecionou para processar.  
+3.  Clique em **Análise de Impacto**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina o modelo e relata sobre o reprocessamento de requisitos para objetos que estão relacionados ao que você selecionou para processar.  
   
 ### <a name="processing-objects-using-xmla"></a>Processando objetos usando o XMLA  
   
@@ -123,7 +122,7 @@ ms.locfileid: "69530944"
   
 1.  A partir desta versão do SQL Server, você pode usar cmdlets do Analysis Services PowerShell para processar objetos. Os seguintes cmdlets podem ser executados de forma interativa ou no script:  
   
-    -   [Cmdlet Invoke-ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Cmdlet ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
   
     -   [Cmdlet Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
@@ -139,13 +138,13 @@ ms.locfileid: "69530944"
   
 3.  Escolha os seguintes eventos:  
   
-    -   **Comando BEGIN** e **Command end** para mostrar quando o processamento inicia e para.  
+    -   **Command Begin** e **Command End** para mostrar ao processar inícios e paradas  
   
-    -   **Erro** ao capturar erros  
+    -   **Error** para capturar erros  
   
-    -   **Início do relatório de progresso**, relatório de **progresso atual**e **relatório de andamento fim** de relatório sobre o status do processo e mostram as consultas SQL usadas para recuperar os dados  
+    -   **Progress Report Begin**, **Progress Report Current**e **Progress Report End** para reportar sobre o status do processo e mostrar as consultas de SQL usadas para recuperar os dados  
   
-    -   **Execute o script MDX Begin** e **Execute o script MDX end** para mostrar os cálculos do cubo  
+    -   **Execute MDX Script Begin** e **Execute MDX Script End** para mostrar os cálculos de cubo  
   
     -   Opcionalmente, adicione eventos de bloqueio se você estiver diagnosticando problemas de desempenho relacionados ao processamento  
   

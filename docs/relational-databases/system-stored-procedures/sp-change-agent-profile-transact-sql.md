@@ -16,10 +16,10 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c49a710b25bad0cf36115afadc439cbe793981c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768918"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -47,7 +47,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  Essa tabela descreve as propriedades de perfil que podem ser alteradas.  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**ndescrição**|Descrição do perfil.|  
   

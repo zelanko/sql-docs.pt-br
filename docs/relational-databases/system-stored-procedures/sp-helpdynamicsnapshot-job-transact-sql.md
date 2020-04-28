@@ -22,10 +22,10 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770983"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
@@ -57,9 +57,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|Identifica o trabalho de instantâneo de dados filtrado.|  
+|**id**|**int**|Identifica o trabalho de instantâneo de dados filtrado.|  
 |**job_name**|**sysname**|Nome do trabalho de instantâneo de dados filtrado.|  
 |**job_id**|**uniqueidentifier**|Identifica o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no distribuidor.|  
 |**dynamic_filter_login**|**sysname**|Valor usado para avaliar a função [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) em um filtro de linha com parâmetros definido para a publicação.|  

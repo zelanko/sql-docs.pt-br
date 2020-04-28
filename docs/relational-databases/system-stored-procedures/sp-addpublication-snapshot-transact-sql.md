@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769108"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -61,7 +61,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual o Agente de Instantâneo é executado. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez.|  
 |**4** (padrão)|Diariamente.|  
@@ -85,7 +85,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`É a unidade para *freq_subday_interval*. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  

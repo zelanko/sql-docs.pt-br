@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771014"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -44,13 +44,13 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ID do artigo**|**int**|A ID do artigo.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
 |**linha**|**varbinary (1024)**|O valor do comando.|  
-|**xactid**|**binário (10)**|ID da transação.|  
-|**xact_seqno**|**varbinary (16)**|O número de sequência da transação.|  
+|**xactid**|**binary(10)**|ID da transação.|  
+|**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
 |**publication_id**|**int**|A ID da publicação.|  
 |**command_id**|**int**|ID do comando em [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo de comando.|  
@@ -59,7 +59,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|Somente para uso interno.|  
 |**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
 |**originator_db_version**|**int**|Versão do banco de dados onde a transação originou.|  
-|**originator_lsn**|**varbinary (16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem.|  
+|**originator_lsn**|**varbinary(16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_replcmds** é usado pelo processo do leitor de log na replicação transacional.  

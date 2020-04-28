@@ -21,10 +21,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68468519"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
@@ -34,7 +34,7 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções da sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Nome do Colmn      |Tipo de dados      |DESCRIÇÃO|  
+|Nome do Colmn      |Tipo de dados      |Descrição|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|ID do pool de recursos. Não permite valor nulo. |
 | name|**sysname**|O nome do pool de recursos. Não permite valor nulo. 
@@ -56,6 +56,6 @@ Retorna informações sobre o estado atual do pool de recursos externos, a confi
 Requer a permissão `VIEW SERVER STATE`.
 
 ## <a name="see-also"></a>Consulte Também  
- [sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

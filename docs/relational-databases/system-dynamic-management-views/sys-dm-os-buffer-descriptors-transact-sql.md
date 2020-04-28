@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265860"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68265860"
   
 > **Observação:** Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificação do banco de dados associada à página no pool de buffer. Permite valor nulo.|  
 |file_id|**int**|Identificação do arquivo que armazena a imagem persistida da página. Permite valor nulo.|  
 |page_id|**int**|Identificação da página no arquivo. Permite valor nulo.|  
 |page_level|**int**|Nível de índice da página. Permite valor nulo.|  
 |allocation_unit_id|**bigint**|ID da unidade de alocação da página. Esse valor pode ser usado para unir sys.allocation_units. Permite valor nulo.|  
-|page_type|**nvarchar (60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
+|page_type|**nvarchar(60)**|Tipo da página, como: página de Dados ou página de Índice. Permite valor nulo.|  
 |row_count|**int**|Número de linhas na página. Permite valor nulo.|  
 |free_space_in_bytes|**int**|Quantidade de espaço livre disponível, em bytes, na página. Permite valor nulo.|  
 |is_modified|**bit**|1 = A página foi modificada depois de lida no disco. Permite valor nulo.|  
@@ -117,7 +117,7 @@ ORDER BY cached_pages_count DESC;
  
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Banco de dados de recursos](../../relational-databases/databases/resource-database.md)   
- [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

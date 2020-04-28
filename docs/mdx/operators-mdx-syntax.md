@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892111"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxe MDX)
@@ -86,7 +86,7 @@ ms.locfileid: "68892111"
   
  Há também regras que determinam a precisão, a escala e a extensão do resultado, com base na precisão, na escala e na extensão das expressões simples.  
   
-## <a name="converting-data-types"></a>Convertendo tipos de dados  
+## <a name="converting-data-types"></a>Converter tipos de dados  
  O MDX converte implicitamente um objeto em um tipo diferente quando esse objeto é usado em uma expressão que requer um tipo diferente. A tabela a seguir define as regras de conversão para cada objeto.  
   
 |Tipo original|Tipo necessário|Conversão|  
@@ -99,6 +99,6 @@ ms.locfileid: "68892111"
   
 ## <a name="see-also"></a>Consulte Também  
  [Referência de operador MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
- [Elementos de sintaxe MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de sintaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

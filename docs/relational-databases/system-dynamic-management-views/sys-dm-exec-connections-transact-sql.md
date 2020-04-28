@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263801"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68263801"
 > [!NOTE]
 > Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use [Sys. DM_PDW_EXEC_CONNECTIONS &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifica a sessão associada a esta conexão. Permite valor nulo.|  
 |most_recent_session_id|**int**|Representa a ID de sessão da solicitação mais recente associada a esta conexão. (As conexões SOAP podem ser reutilizadas por outra sessão.) Permite valor nulo.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68263801"
 |local_tcp_port|**int**|Representa a porta do servidor TCP ao qual esta conexão foi destinada se houver uma conexão que use o transporte TCP. Permite valor nulo.<br /><br /> No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], essa coluna sempre retorna NULL.|  
 |connection_id|**uniqueidentifier**|Identifica cada conexão exclusivamente. Não permite valor nulo.|  
 |parent_connection_id|**uniqueidentifier**|Identifica a conexão primária que a sessão MARS está usando. Permite valor nulo.|  
-|most_recent_sql_handle|**varbinary (64)**|O identificador SQL da última solicitação executada nesta conexão. A coluna most_recent_sql_handle sempre está em sincronia com a coluna most_recent_session_id. Permite valor nulo.|  
+|most_recent_sql_handle|**varbinary(64)**|O identificador SQL da última solicitação executada nesta conexão. A coluna most_recent_sql_handle sempre está em sincronia com a coluna most_recent_session_id. Permite valor nulo.|  
 |pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões
@@ -73,7 +73,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
 ||||  
 |-|-|-|  
-|dm_exec_sessions.session_id|dm_exec_connections.session_id|Um-para-um|  
+|dm_exec_sessions.session_id|dm_exec_connections.session_id|Um para um|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Muitos para um|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|Um para um|  
   

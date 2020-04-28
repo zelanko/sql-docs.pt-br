@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762260"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -61,12 +61,12 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar o agente. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
+|**4**|Diário|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -75,27 +75,27 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Especifica os dias em que o agente é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
-|**Beta**|Terça-feira|  
-|**quatro**|Quarta-feira|  
-|**05**|Quinta-feira|  
+|**3**|Terça-feira|  
+|**4**|Quarta-feira|  
+|**5**|Quinta-feira|  
 |**6**|Friday|  
 |**7**|Sábado|  
 |**8**|Dia|  
-|**99**|Dias da semana|  
-|**254**|Dias de fim de semana|  
+|**9**|Dias da semana|  
+|**10**|Dias de fim de semana|  
 |NULL (padrão)||  
   
 `[ @frequency_subday = ] frequency_subday`É as unidades para *freq_subday_interval*. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   

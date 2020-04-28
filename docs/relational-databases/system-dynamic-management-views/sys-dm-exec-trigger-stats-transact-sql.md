@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262210"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "68262210"
 
   Retorna estatísticas de desempenho de agregação dos gatilhos em cache. A exibição contém uma linha por gatilho e o tempo de vida da linha equivale ao tempo de permanência do gatilho em cache. Quando um gatilho é removido do cache, a linha correspondente é eliminada desta exibição. Nesse momento, é gerado um evento de Rastreamento do SQL de Estatísticas de Desempenho similar a **sys.dm_exec_query_stats**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados no qual o gatilho reside.|  
 |**object_id**|**int**|Número de identificação de objeto do gatilho.|  
-|**tipo**|**Char (2)**|Tipo do objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
-|**Type_desc**|**nvarchar (60)**|Descrição do tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary (64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste gatilho.|  
-|**plan_handle**|**varbinary (64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .|  
+|**type**|**char(2)**|Tipo do objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
+|**Type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste gatilho.|  
+|**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .|  
 |**cached_time**|**datetime**|Hora em que o gatilho foi adicionado ao cache.|  
 |**last_execution_time**|**datetime**|Hora da última execução do gatilho.|  
 |**execution_count**|**bigint**|O número de vezes que o gatilho foi executado desde a última compilação.|  

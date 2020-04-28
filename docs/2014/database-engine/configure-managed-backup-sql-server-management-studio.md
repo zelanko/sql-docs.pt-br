@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154337"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar o Backup Gerenciado (SQL Server Management Studio)
@@ -29,12 +29,11 @@ ms.locfileid: "70154337"
   
 ## <a name="task-list"></a>Lista de Tarefas  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Funções usando Interface Backup Gerenciado no SQL Server Management Studio  
+## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Funções usando Interface Backup Gerenciado no SQL Server Management Studio  
  Nesta versão, você só pode configurar as configurações padrão de nível de instância usando a interface **Backup de Gerenciamento** . Não é possível configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para um banco de dados, pausar ou retomar operações [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] , nem configurar notificações por email. Para obter informações sobre como executar operações que não têm suporte no momento por meio da interface de **backup gerenciado** , consulte [SQL Server Backup gerenciado para o Azure – retenção e configurações de armazenamento](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ## <a name="permissions"></a>Permissões  
- O **nó exibir backup gerenciado é SQL Server Management Studio:** Para exibir o nó de **backup gerenciado** no Pesquisador de **objetos**, você deve ser um administrador do sistema ou ter as seguintes permissões concedidas especificamente à sua conta de usuário:  
+ **P Nó de Backup Gerenciado da exibição é o SQL Server Management Studio:** Para exibir o nó  **Backup gerenciado** no **Pesquisador de Objetos**, você deve ser um administrador do sistema ou ter as seguintes permissões concedidas especificamente à sua conta de usuário:  
   
 -   `db_backupoperator`  
   
@@ -48,7 +47,7 @@ ms.locfileid: "70154337"
   
 -   `SELECT`em `smart_admin.fn_backup_instance_config`.  
   
- **Para configurar o backup gerenciado:** para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configurar o no SQL Server Management Studio, você deve ser um administrador do sistema ou ter as seguintes permissões:  
+ **Para configurar o Backup gerenciado:** para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no SQL Server Management Studio, você deve ser um administrador do sistema ou ter as seguintes permissões:  
   
  Associação na função de banco de dados `db_backupoperator`, com permissões `ALTER ANY CREDENTIAL` e permissões `EXECUTE` no procedimento armazenado `sp_delete_backuphistory`.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "70154337"
   
  Permissões `EXECUTE` em `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch`.  
   
-## <a name="configure-includess_smartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usando o SQL Server Management Studio  
+## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usando o SQL Server Management Studio  
  Do **Pesquisador de Objetos**, expanda o nó **Gerenciamento** e clique com o botão direito do mouse em **Backup Gerenciado**. Selecione **Configurar**. Essa ação abre a caixa de diálogo **Backup Gerenciado** .  
   
  Marque a opção **Habilitar Backup Gerenciado** e especifique os valores de configuração:  

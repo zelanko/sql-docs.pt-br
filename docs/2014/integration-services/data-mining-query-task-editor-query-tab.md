@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890716"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Consulta)
@@ -40,18 +40,18 @@ ms.locfileid: "68890716"
  **Consulta de mineração de dados**  
  Digite uma consulta de mineração de dados.  
   
- **Tópicos relacionados:**  [referência de&#41; de extensões de mineração de dados &#40;DMX](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Tópicos relacionados:**  [Referência de &#40;extensões DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
- **Criar nova consulta**  
+ **Construir Nova Consulta**  
  Crie a consulta de mineração de dados usando uma ferramenta gráfica.  
   
- **Tópicos relacionados:** [consulta de mineração de dados](control-flow/data-mining-query.md)  
+ **Tópicos relacionados:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opções da guia Mapeamento de Parâmetros  
  **Nome do parâmetro**  
  Opcionalmente, atualize o nome de parâmetro. Mapeie o parâmetro para uma variável, selecionando uma variável na lista **Nome da Variável** .  
   
- **Nome da variável**  
+ **Nome da Variável**  
  Selecione uma variável na lista para mapeá-la para o parâmetro.  
   
  **Adicionar**  
@@ -61,15 +61,15 @@ ms.locfileid: "68890716"
  Selecione um parâmetro e clique em **Remover**.  
   
 ## <a name="result-set-tab-options"></a>Opções da guia Conjunto de Resultados  
- **Nome do resultado**  
+ **Nome do Resultado**  
  Opcionalmente, atualize o nome do conjunto de resultados. Mapeie o resultado para uma variável, selecionando uma variável na lista **Nome da Variável** .  
   
  Depois que você adicionar um resultado, clicando em **Adicionar**, forneça um nome exclusivo para o resultado.  
   
- **Nome da variável**  
+ **Nome da Variável**  
  Selecione uma variável na lista para mapeá-la para o conjunto de resultados.  
   
- **Tipo de resultado**  
+ **Tipo de Resultado**  
  Indique se deve ser retornada uma única linha ou um conjunto de resultados completo.  
   
  **Adicionar**  
@@ -79,9 +79,9 @@ ms.locfileid: "68890716"
  Selecione um resultado e clique em **Remover**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia modelo de mineração&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Designer de Mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

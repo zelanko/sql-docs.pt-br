@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530952"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guia do desenvolvedor&#39;s (Mecanismo de Banco de Dados)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fornece um conjunto avançado de ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
+  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conceitos de programação da Integração CLR &#40;Common Language Runtime&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

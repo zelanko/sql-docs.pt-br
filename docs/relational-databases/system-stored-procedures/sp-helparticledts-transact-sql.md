@@ -16,10 +16,10 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771069"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**pre_script_ignore_error_task_name**|**sysname**|Nome de tarefa para a tarefa de programação que ocorre antes que os dados de instantâneo sejam copiados. A execução do programa deve continuar se um erro de script for encontrado.|  
 |**pre_script_task_name**|**sysname**|Nome de tarefa para a tarefa de programação que ocorre antes que os dados de instantâneo sejam copiados. A execução do programa para ao encontrar um erro.|  

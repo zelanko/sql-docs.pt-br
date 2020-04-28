@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890841"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -78,12 +78,12 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Especifica se a descrição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erro do log de aplicativos do Windows deve ser incluída na mensagem de notificação. *include_event_description_in* é **tinyint**, com um padrão de NULL, e pode ser um ou mais desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Nenhum|  
 |**1**|Email|  
 |**2**|Pager|  
-|**quatro**|**net send**|  
+|**4**|**net send**|  
 |**7**|Todos|  
   
 `[ @database_name = ] 'database'`O nome do banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. o *banco de dados* é **sysname.** Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
@@ -110,9 +110,9 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap`Reservado.  
   
-`[ @performance_condition = ] 'performance_condition'`Um valor expresso no formato **'**__ comparador **'**. *performance_condition* é **nvarchar (512)**, com um padrão de NULL, e consiste nesses elementos.  
+`[ @performance_condition = ] 'performance_condition'`Um valor expresso no formato **'**_itemcomparatorvalue_comparador **'**. *performance_condition* é **nvarchar (512)**, com um padrão de NULL, e consiste nesses elementos.  
   
-|Elemento Format|DESCRIÇÃO|  
+|Elemento Format|Descrição|  
 |--------------------|-----------------|  
 |*Item*|Um objeto de desempenho, contador de desempenho ou instância nomeada do contador|  
 |*Comparador*|Um destes operadores: **>**,, **<****=**|  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_add_alert](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_help_alert](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255607"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -44,15 +44,15 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|atributo|**varchar (128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os possíveis atributos, seus tipos de dados e suas descrições.|  
+|atributo|**varchar(128)**|O nome do atributo associado com este plano. A tabela imediatamente abaixo dessa lista os possíveis atributos, seus tipos de dados e suas descrições.|  
 |value|**sql_variant**|Valor do atributo que é associado ao plano.|  
 |is_cache_key|**bit**|Indica se o atributo é usado como parte da chave de consulta de cache para o plano.|  
 
 Na tabela acima, o **atributo** pode ter os seguintes valores:
 
-|Atributo|Tipo de dados|DESCRIÇÃO|  
+|Atributo|Tipo de dados|Descrição|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica os valores de opção com os quais o plano foi compilado.|  
 |objectid|**int**|Uma das chaves principais usadas para pesquisar um objeto no cache. Essa é a ID de objeto armazenada em [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de banco de dados (procedimentos, exibições, gatilhos e assim por diante). Para planos do tipo "Adhoc" ou "Preparado", é um hash interno do texto de lote.|  
@@ -103,7 +103,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |ANSI_NULL_DFLT_ON|128|  
 |ANSI_NULL_DFLT_OFF|256|  
 |NoBrowseTable<br /><br /> Indica que o plano não usa uma tabela de trabalho para implementar uma operação de FOR BROWSE.|512|  
-|TriggerOneRow<br /><br /> Indica que o plano contém uma única otimização de linha para tabelas delta de gatilho AFTER.|1.024|  
+|TriggerOneRow<br /><br /> Indica que o plano contém uma única otimização de linha para tabelas delta de gatilho AFTER.|1024|  
 |ResyncQuery<br /><br /> Indica que a consulta foi submetida através de procedimentos armazenados do sistema interno.|2.048|  
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
@@ -132,7 +132,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |KEYSET|128|  
 |DYNAMIC|256|  
 |SCROLL_LOCKS|512|  
-|OPTIMISTIC|1.024|  
+|OPTIMISTIC|1024|  
 |STATIC|2.048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
@@ -167,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

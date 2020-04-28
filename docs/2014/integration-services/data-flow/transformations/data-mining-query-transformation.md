@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890522"
 ---
 # <a name="data-mining-query-transformation"></a>Transformação Consulta de Mineração de Dados
@@ -36,15 +36,15 @@ ms.locfileid: "68890522"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Transformação de Consultas de Mineração de Dados** , clique em um dos seguintes tópicos:  
   
--   [Editor de transformação consulta de mineração de dados &#40;guia modelo de mineração&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de Transformação Consultas de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Editor de transformação consulta de mineração de dados &#40;guia modelo de mineração&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de Transformação Consultas de Mineração de Dados &#40;Guia Modelo de Mineração&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
 -   [Propriedades comuns](../../common-properties.md)  
   
--   [Propriedades personalizadas de Transformação](transformation-custom-properties.md)  
+-   [Propriedades personalizadas da transformação](transformation-custom-properties.md)  
   
  Para obter mais informações sobre como definir as propriedades, consulte [Definir as propriedades de um componente de fluxo de dados](../set-the-properties-of-a-data-flow-component.md).  
   

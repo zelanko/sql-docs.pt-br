@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811232"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicação para assinantes de tabela com otimização de memória
@@ -303,7 +303,7 @@ GO
   
 -   A chave estrangeira, a restrição exclusiva, os disparadores, as modificações de esquema, ROWGUIDCOL, as colunas computadas, a compactação de dados, os tipos de dados de alias, o controle de versões e os bloqueios não têm suporte em tabelas com otimização de memória. Consulte [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obter informações.  
   
-##  <a name="Schema"></a> Modificando um arquivo de esquema  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Modificando um arquivo de esquema  
   
 -   Índices clusterizados não têm suporte. Altere todos os índices clusterizados para índices não clusterizados.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING deve ser ON.  
   
-##  <a name="PrimaryKey"></a>Replicando alterações em uma chave primária  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Replicando alterações em uma chave primária  
  A chave primária de uma tabela com otimização de memória não pode ser atualizada. Para replicar uma atualização de chave primária em um assinante, modifique o procedimento armazenado de atualização para fornecer a atualização como um par de inserção e exclusão.  
   
 ## <a name="see-also"></a>Consulte Também  

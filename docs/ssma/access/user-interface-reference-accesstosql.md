@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266959"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referência da interface do usuário (AccessToSQL)
@@ -25,7 +25,7 @@ Esta seção inclui tópicos de ajuda [!INCLUDE[ssNoVersion](../../includes/ssno
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Seleção de objeto avançada &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Use a caixa de diálogo **seleção de objeto avançado** para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Use a caixa de diálogo **relatório de avaliação** para analisar a conversão de objetos de banco de dados do Access e para estimar quanto tempo a migração levará.|  
@@ -52,6 +52,6 @@ Esta seção inclui tópicos de ajuda [!INCLUDE[ssNoVersion](../../includes/ssno
   
 ## <a name="see-also"></a>Confira também  
 [Introdução com Assistente de Migração do SQL Server para acesso &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Preparar bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
+[Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

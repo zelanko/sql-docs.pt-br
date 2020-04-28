@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771335"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -72,9 +72,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`É o status da assinatura na tabela **syssubscriptions** . *status* é **sysname**, sem padrão, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**ativo**|O Assinante está sincronizado e recebendo dados.|  
+|**activo**|O Assinante está sincronizado e recebendo dados.|  
 |**inativo**|Entrada de assinante existe sem uma assinatura.|  
 |**assinado**|O Assinante está solicitando dados, mas ainda não está sincronizado.|  
   
@@ -88,11 +88,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como 32 (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
 |NULL (padrão)||  
@@ -101,11 +101,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_subday = ] frequency_subday`É a frequência, em minutos, para reagendar durante o período definido. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   

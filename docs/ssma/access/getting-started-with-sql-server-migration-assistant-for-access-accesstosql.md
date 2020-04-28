@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259921"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introdução ao Assistente de Migração do SQL Server para acesso (AccessToSQL)
@@ -56,7 +56,7 @@ Depois de carregar os esquemas convertidos [!INCLUDE[ssNoVersion](../../includes
   
 Para obter mais informações sobre essas tarefas e como executá-las, consulte os seguintes tópicos:  
   
--   [Preparar bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
+-   [Preparando bancos de dados do Access para migração](preparing-access-databases-for-migration-accesstosql.md)  
   
 -   [Migrando bancos de dados do Access para SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
@@ -116,7 +116,7 @@ A barra de ferramentas de migração contém os seguintes comandos:
 ### <a name="menus"></a>Menus  
 O SSMA contém os seguintes menus:  
   
-|Menu|DESCRIÇÃO|  
+|Menu|Descrição|  
 |--------|---------------|  
 |**Arquivo**|Contém comandos para o assistente de migração, trabalhando com projetos, adicionando e removendo arquivos de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Access e conectando-se ao ou ao BD SQL do Azure.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel detalhes do SQL. Para abrir a caixa de diálogo **gerenciar indicadores** , no menu Editar, clique em gerenciar indicadores. Na caixa de diálogo, você verá uma lista de indicadores existentes. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

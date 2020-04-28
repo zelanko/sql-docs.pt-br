@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889073"
 ---
 # <a name="create-mining-model-dmx"></a>CRIAR UM MODELO DE MINERAÇÃO (DMX)
@@ -94,13 +94,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipos de conteúdo &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuições de coluna &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Sinalizadores de modelagem &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  É possível adicionar uma cláusula a instrução para descrever a relação entre duas colunas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dá suporte ao uso da seguinte \<cláusula de> de relação de coluna.  
   
@@ -109,7 +109,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Use uma cláusula de previsão para descrever como a coluna de previsão é usada. A seguinte tabela descreve as duas possíveis cláusulas.  
   
-|\<cláusula de> de previsão|DESCRIÇÃO|  
+|\<cláusula de> de previsão|Descrição|  
 |---------------------------|-----------------|  
 |**PREDICT**|Esta coluna pode ser prevista pelo modelo e pode ser fornecida em casos de entrada para prever o valor de outras colunas de previsão.|  
 |**PREDICT_ONLY**|Esta coluna pode ser prevista pelo modelo, mas seus valores não podem ser usados em casos de entrada para prever o valor de outras colunas de previsão.|  
@@ -189,6 +189,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Consulte Também  
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

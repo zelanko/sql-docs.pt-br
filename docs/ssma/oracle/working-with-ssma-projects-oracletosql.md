@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266356"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Trabalhar com projetos do SSMA (OracleToSQL)
@@ -62,7 +62,7 @@ Para migrar dados de bancos de dados Oracle [!INCLUDE[ssNoVersion](../../include
   
 **Para criar um projeto**  
   
-1.  No menu **arquivo** , clique em **novo projeto**.  
+1.  No menu **Arquivo**, clique em **Novo Projeto**.  
   
     A caixa de diálogo **Novo Projeto** aparecerá.  
   
@@ -72,9 +72,9 @@ Para migrar dados de bancos de dados Oracle [!INCLUDE[ssNoVersion](../../include
   
 4.  Na lista suspensa **migração para** , selecione a versão do destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para migração. As opções disponíveis são:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -100,7 +100,7 @@ Quando você salva um projeto, o SSMA retém as configurações do projeto e, op
   
         Salvar metadados pode levar vários minutos. Se você não quiser salvar os metadados ainda, não marque nenhuma caixa de seleção.  
   
-    2.  Clique no botão **Salvar**.  
+    2.  Clique no botão **Salvar** .  
   
         O SSMA analisará os esquemas Oracle e salvará os metadados no arquivo de projeto.  
   

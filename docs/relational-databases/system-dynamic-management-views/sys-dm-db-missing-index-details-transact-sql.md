@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263794"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "68263794"
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, todas as linhas que contêm dados que não pertencem ao locatário conectado serão filtradas.  
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|Identifica um determinado índice ausente. O identificador é exclusivo no servidor. **index_handle** é a chave desta tabela.|  
 |**database_id**|**smallint**|Identifica o banco de dados onde reside a tabela com o índice ausente.|  
 |**object_id**|**int**|Identifica a tabela onde o índice está ausente.|  
-|**equality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para os predicados de igualdade do formulário:<br /><br /> *constant_value de tabela. coluna* =**|  
-|**inequality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para predicados de desigualdade, por exemplo, predicados do formulário:<br /><br /> *constant_value de tabela. coluna* > **<br /><br /> Qualquer operador de comparação diferente de "=" expressa desigualdade.|  
+|**equality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para os predicados de igualdade do formulário:<br /><br /> *constant_value de tabela. coluna* =*constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas que contribuem para predicados de desigualdade, por exemplo, predicados do formulário:<br /><br /> *constant_value de tabela. coluna* > *constant_value*<br /><br /> Qualquer operador de comparação diferente de "=" expressa desigualdade.|  
 |**included_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas necessárias como colunas de cobertura para a consulta. Para obter mais informações sobre como abranger ou incluir colunas, consulte [criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Para índices com otimização de memória (hash e não clusterizado com otimização de memória), ignore **included_columns**. Todas as colunas da tabela são incluídas em cada índice com otimização de memória.|  
 |**privacidade**|**nvarchar(4000)**|Nome da tabela onde o índice está ausente.|  
   

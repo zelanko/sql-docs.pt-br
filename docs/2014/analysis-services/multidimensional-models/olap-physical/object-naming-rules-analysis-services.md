@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530886"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a>Convenções de nomenclatura  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>Convenções de nomenclatura  
  Todo objeto tem as propriedades `Name` e `ID` que devem ser exclusivas no escopo da coleção pai. Por exemplo, duas dimensões podem ter o mesmo nome, desde que cada uma resida em um banco de dados diferente.  
   
  Embora você possa especificar isso manualmente, a `ID` costuma ser gerada automaticamente quando o objeto é criado. Após começar a criar um modelo, nunca altere a `ID`. Todas as referências de objeto em um modelo se baseiam na `ID`. Então, a alteração de uma `ID` pode facilmente resultar na corrupção do modelo.  
@@ -39,7 +39,7 @@ ms.locfileid: "69530886"
   
 -   Não há nenhum requisito especial para o primeiro caractere de um identificador. O primeiro caractere pode ser qualquer caractere válido.  
   
-##  <a name="bkmk_reserved"></a>Palavras reservadas e caracteres  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>Palavras reservadas e caracteres  
  As palavras reservadas estão em inglês e se aplicam a nomes de objetos, e não a legendas. Se você usar inadvertidamente uma palavra reservada em um nome de objeto, ocorrerá um erro de validação. Nos modelos multidimensionais e de mineração de dados, as palavras reservadas descritas a seguir não podem ser usadas em qualquer objeto, a qualquer momento.  
   
  Em modelos de tabela, em que a compatibilidade do banco de dados é definida como 1103, as regras de validação foram atenuadas para certos objetos, fora de conformidade para os requisitos de caracteres estendidos e convenções de nomenclatura de determinados aplicativos cliente. Os bancos de dados que atendem a esses critérios estão sujeitos a regras de validação menos rigorosas. Nesse caso, é possível que um nome de objeto inclua um caractere restrito e ainda passe na validação.  

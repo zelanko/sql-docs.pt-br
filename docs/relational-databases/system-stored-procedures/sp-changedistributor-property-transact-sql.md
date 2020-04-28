@@ -16,10 +16,10 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771299"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
@@ -40,7 +40,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @property = ] 'property'`É a propriedade para um determinado distribuidor. a *Propriedade* é **sysname**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Número máximo de minutos que um agente pode executar sem registrar uma mensagem de progresso.|  
 |NULL (padrão)|Todos os valores de *Propriedade* disponíveis são impressos.|  
@@ -60,7 +60,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Exibir e modificar as propriedades do distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [&#41;&#40;Transact-SQL de sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdistributor](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

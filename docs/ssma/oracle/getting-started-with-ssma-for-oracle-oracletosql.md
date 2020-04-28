@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264454"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introdução ao SSMA para Oracle (OracleToSQL)
@@ -94,7 +94,7 @@ A tabela a seguir mostra os comandos da barra de ferramentas de migração:
 ### <a name="menus"></a>Menus  
 A tabela a seguir mostra os menus do SSMA.  
   
-|Menu|DESCRIÇÃO|  
+|Menu|Descrição|  
 |----|-----------|  
 |**Arquivo**|Contém comandos para trabalhar com projetos, conectar-se ao Oracle e conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-se ao.|  
 |**Editar**|Contém comandos para localizar e trabalhar com texto nas páginas de detalhes, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] do painel detalhes do SQL. Também contém a opção **gerenciar indicadores** , em que você poderá ver uma lista de indicadores existentes. Você pode usar os botões no lado direito da caixa de diálogo para gerenciar os indicadores.|  

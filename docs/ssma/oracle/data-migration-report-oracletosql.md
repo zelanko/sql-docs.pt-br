@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264247"
 ---
 # <a name="data-migration-report--oracletosql"></a>Relatório de migração de dados (OracleToSQL)
@@ -42,6 +42,6 @@ A porcentagem de linhas migradas com êxito.
 **Detalhes**  
 Se houver falha na migração de dados, clique para exibir os detalhes de migração para a linha selecionada no relatório. O SSMA exibirá o motivo da falha.  
   
-**Salvar relatório**  
+**Salvar Relatório**  
 Salva o relatório em um. Arquivo CSV, (valores separados por vírgula), que pode ser examinado usando o Microsoft Excel.  
   

@@ -16,10 +16,10 @@ ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770997"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
@@ -39,14 +39,14 @@ sp_replcounters
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Backup de banco de dados**|**sysname**|Nome do banco de dados.|  
 |**Replicated transactions**|**int**|Número de transações no log esperando serem entregues ao banco de dados de distribuição.|  
 |**Replication rate trans/sec**|**float**|Número médio de transações por segundo entregue ao banco de dados de distribuição.|  
 |**Latência de replicação**|**float**|Tempo médio, em segundos, de permanência das transações no log antes de serem distribuídas.|  
-|**Replbeginlsn**|**binário (10)**|LSN (número de sequência de log) do ponto atual de truncamento no log.|  
-|**Replnextlsn**|**binário (10)**|LSN do próximo registro de confirmação que aguarda entrega ao banco de dados de distribuição.|  
+|**Replbeginlsn**|**binary(10)**|LSN (número de sequência de log) do ponto atual de truncamento no log.|  
+|**Replnextlsn**|**binary(10)**|LSN do próximo registro de confirmação que aguarda entrega ao banco de dados de distribuição.|  
   
 ## <a name="remarks"></a>Comentários  
  **sp_replcounters** é usado na replicação transacional.  
@@ -55,7 +55,7 @@ sp_replcounters
  Requer associação na função de banco de dados fixa **db_owner** ou função de servidor fixa **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte Também  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_repldone](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

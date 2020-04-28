@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2fe246a1f8baf1ab9f60ab1fa73e21e81c052aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153699"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
-  Use essa guia para exibir ou especificar opções ao se conectar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ao.  
+  Use essa guia para exibir ou especificar opções ao se conectar ao [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
 >  Para se conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deverá ser configurado no modo de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do Windows. Para obter mais informações sobre como determinar o modo de autenticação e alterar o modo de autenticação, consulte [alterar o modo de autenticação do servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "70153699"
  **Tipo de servidor**  
  Ao registrar um servidor a partir do Pesquisador de Objetos, selecione o tipo de servidor ao qual se conectar: [!INCLUDE[ssDE](../../includes/ssde-md.md)], Analysis Services, Reporting Services ou Integration Services. O restante da caixa de diálogo mostra somente as opções que se aplicam ao tipo de servidor selecionado. Ao registrar um servidor de Servidores Registrados, a caixa **Tipo de servidor** é somente leitura e corresponde ao tipo de servidor exibido no componente Servidores Registrados. Para registrar outro tipo de servidor, selecione [!INCLUDE[ssDE](../../includes/ssde-md.md)], Analysis Services, Reporting Services ou Integration Services na barra de ferramentas Servidores Registrados antes de iniciar o registro de um novo servidor.  
   
- Ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados por [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]meio do, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve usar a autenticação do e especificar um banco de dados na caixa de diálogo **conectar ao servidor** , na guia **Propriedades da conexão** . Marque a caixa de seleção **criptografar conexão** .  
+ Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
  Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
@@ -39,13 +39,12 @@ ms.locfileid: "70153699"
  **Autenticação**  
  Dois modos de autenticação estão disponíveis quando se estabelece conexão com uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
- Ao se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo de banco de dados por [!INCLUDE[ssSDS](../../includes/sssds-md.md)]meio do, você [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve usar a autenticação do e especificar um banco de dados na caixa de diálogo **conectar ao servidor** , na guia **Propriedades da conexão** . Marque a caixa de seleção **criptografar conexão** .  
+ Ao conectar-se a uma instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do [!INCLUDE[ssSDS](../../includes/sssds-md.md)], você deve usar a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e especificar um banco de dados na caixa de diálogo **Conectar ao Servidor** , na guia **Propriedades da Conexão** . Verifique se você marcou a caixa de seleção **Criptografar conexão** .  
   
  Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conecta-se ao **mestre**. Se você especificar um banco de dados de usuário, consultará somente esse banco de dados e seus objetos no Pesquisador de Objetos. Se você se conectar ao **mestre**, poderá ver todos os bancos de dados. Para obter mais informações, consulte [visão geral do banco de dados SQL do Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Modo de Autenticação do Windows (Autenticação do Windows)**  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] O modo de Autenticação do Windows permite que um usuário se conecte por uma conta de usuário Windows.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] O modo de Autenticação do Windows permite que um usuário se conecte por uma conta de usuário Windows.  
   
  **Autenticação do SQL Server**  
  Quando um usuário se conecta com um nome de logon e uma senha especificados em uma conexão não confiável, o próprio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efetua a autenticação verificando se foi definida uma conta de logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se a senha especificada corresponde a uma senha já registrada. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tiver uma conta de logon definida, ocorrerá falha na autenticação e o usuário receberá uma mensagem de erro.  

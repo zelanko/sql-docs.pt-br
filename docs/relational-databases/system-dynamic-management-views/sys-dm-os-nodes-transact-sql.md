@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265735"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -40,7 +40,7 @@ A tabela seguinte fornece informações sobre esses nós.
 > [!NOTE]
 > Para chamar esse DMV de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **Sys. dm_pdw_nodes_os_nodes**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID do nó.|  
 |node_state_desc|**nvarchar(256)**|Descrição do estado do nó. Os valores são exibidos primeiro com os valores mutuamente exclusivos, seguidos pelos valores combinados. Por exemplo:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Há quatro valores de node_state_desc mutuamente exclusivos. Eles são listados abaixo com suas descrições.<br /><ul><li>ONLINE: o nó está online<li>OFFLINE: o nó está offline<li>IDLE: o nó não tem nenhuma solicitação de trabalho pendente e entrou em estado ocioso.<li>IDLE_READY: o nó não tem nenhuma solicitação de trabalho pendente e está pronto para entrar em um estado ocioso.</li></ul><br />Há três valores de node_state_desc combináveis, listados abaixo com suas descrições.<br /><ul><li>DAC: esse nó é reservado para a [conexão administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: nenhum thread novo pode ser criado neste nó devido a uma condição de memória insuficiente.<li>ADIÇÃO ativa: indica que os nós foram adicionados em resposta a um evento de adição de CPU a quente.</li></ul>|  

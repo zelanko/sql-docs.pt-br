@@ -16,10 +16,10 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771087"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
@@ -53,11 +53,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ID da coluna**|**int**|Identificador para a coluna.|  
-|**column**|**sysname**|Nome da coluna.|  
-|**Checked**|**bit**|Se a coluna for publicada:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
+|**pilha**|**sysname**|Nome da coluna.|  
+|**published**|**bit**|Se a coluna for publicada:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
 |**tipo de editor**|**sysname**|Tipo de dados da coluna no Publicador.|  
 |**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   

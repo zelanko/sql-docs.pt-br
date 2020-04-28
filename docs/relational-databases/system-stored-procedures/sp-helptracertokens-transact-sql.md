@@ -16,10 +16,10 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771539"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**trace_id**|**int**|Identifica um registro de token de rastreamento.|  
 |**publisher_commit**|**datetime**|A data e hora que o registro do token foi confirmado no Publicador no banco de dados de publicação.|  
@@ -70,7 +70,7 @@ sp_helptracertokens [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** no banco de dados de publicação ou **db_owner** banco de dados fixo ou funções **replmonitor** no banco de dados de distribuição podem executar **sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [&#41;&#40;Transact-SQL de sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 138a44184276e1eecc524747ad801df7a8991482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262685"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "68262685"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_tran_active_transactions**.  
   
-|Nome da coluna|Tipo de Dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de Dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|ID da transação no nível da instância, e não no nível do banco de dados. É exclusiva apenas em todos os bancos de dados em uma instância, mas não em todas as instâncias de servidor.|  
-|name|**nvarchar (32)**|Nome da transação. O nome será substituído se a transação for marcada e o nome marcado substituirá o nome de transação.|  
+|name|**nvarchar(32)**|Nome da transação. O nome será substituído se a transação for marcada e o nome marcado substituirá o nome de transação.|  
 |transaction_begin_time|**datetime**|Hora de início da transação.|  
 |transaction_type|**int**|Tipo de transação.<br /><br /> 1 = Transação de leitura/gravação<br /><br /> 2 = Transação somente leitura<br /><br /> 3 = Transação de sistema<br /><br /> 4 = Transação distribuída|  
 |transaction_uow|**uniqueidentifier**|Identificador da UOW (unidade de trabalho) da transação para transações distribuídas. O MS DTC usa o identificador UOW para trabalhar com a transação distribuída.|  
@@ -59,7 +59,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 ## <a name="see-also"></a>Consulte Também  
  [sys. dm_tran_session_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [sys. dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

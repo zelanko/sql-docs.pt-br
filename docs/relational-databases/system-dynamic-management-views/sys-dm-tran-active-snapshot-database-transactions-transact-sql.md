@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262697"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -58,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Número de identificação exclusivo atribuído à transação. O ID transação é usado principalmente para identificar a transação em operações de bloqueio.|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação. Trata-se de um número de sequência exclusivo atribuído a uma transação quando ela se inicia. Transações que não geram registros de versão e não usam verificações de instantâneo não receberão um número de sequência de transação.|  
@@ -155,7 +155,7 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>Consulte Também  
  [DEFINIR o nível de isolamento da transação &#40;&#41;Transact-SQL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

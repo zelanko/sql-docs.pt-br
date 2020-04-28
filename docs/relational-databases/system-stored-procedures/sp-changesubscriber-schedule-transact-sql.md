@@ -16,10 +16,10 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770730"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)

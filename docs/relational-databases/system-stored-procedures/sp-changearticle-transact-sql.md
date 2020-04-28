@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771396"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -53,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Valores|DESCRIÇÃO|  
+|Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
 |**creation_script**||Caminho e nome de um script de esquema de artigo usados para criar tabelas de destino. O padrão é NULO.|  
 |**del_cmd**||Instrução DELETE a ser executada; caso contrário, será construída do log.|  
@@ -63,13 +63,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**destination_owner**||Nome do proprietário do objeto de destino.|  
 |**sem**||Novo procedimento armazenado a ser usado para filtrar a tabela (filtragem horizontal). O padrão é NULO. Não pode ser alterado para publicações em replicação ponto a ponto.|  
 |**fire_triggers_on_snapshot**|**true**|Gatilhos de usuário replicados são executados quando o instantâneo inicial é aplicado.<br /><br /> Observação: para que os gatilhos sejam replicados, o valor de bitmask de *schema_option* deve incluir o valor **0x100**.|  
-||**for**|Gatilhos de usuário replicados não são executados quando o instantâneo inicial é aplicado.|  
+||**false**|Gatilhos de usuário replicados não são executados quando o instantâneo inicial é aplicado.|  
 |**identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**ins_cmd**||Instrução INSERT a ser executada; caso contrário, será construída do log.|  
 |**pre_creation_cmd**||Comando de pré-criação que pode descartar, excluir ou truncar a tabela de destino antes que a sincronização seja aplicada.|  
-||**None**|Não usa um comando.|  
+||**nenhum**|Não usa um comando.|  
 ||**suspensa**|Descarta a tabela de destino.|  
-||**apagar**|Exclui a tabela de destino.|  
+||**delete**|Exclui a tabela de destino.|  
 ||**truncar**|Trunca a tabela de destino.|  
 |**pub_identity_range**||Controla o tamanho de intervalos de identidade atribuídos atribuído ao Assinante. Sem suporte para replicação ponto a ponto.|  
 |**schema_option**||Especifica o bitmap da opção de geração de esquema para o artigo determinado. *schema_option* é **binary (8)**. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.|  
@@ -118,18 +118,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|Replica o atributo SPARSE para colunas. Para obter mais informações sobre esse atributo, consulte [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Habilite o script pelo agente de instantâneo para criar a tabela com otimização de memória no Assinante.|  
 ||**0x80000000000**|Converte o índice clusterizado em índice não clusterizado para artigos com otimização de memória.|  
-|**Estado**||Especifica o novo status da propriedade.|  
+|**status**||Especifica o novo status da propriedade.|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|Nomes de coluna são incluídos na instrução INSERT replicada.|  
 ||**no column names**|Nomes de coluna não são incluídos na instrução INSERT replicada.|  
 ||**no dts horizontal partitions**|A partição horizontal para o artigo não é definida por uma assinatura transformável.|  
-||**None**|Limpa todas as opções de status na tabela [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e marca o artigo como inativo.|  
+||**nenhum**|Limpa todas as opções de status na tabela [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e marca o artigo como inativo.|  
 ||**parâmetro**|As alterações são propagadas ao Assinante usando comandos com parâmetros. Essa é a configuração padrão para um novo artigo.|  
 ||**literais de cadeia de caracteres**|As alterações são propagadas ao Assinante usando valores de literal de cadeia de caracteres.|  
 |**sync_object**||Nome da tabela ou exibição usado para produzir um arquivo de saída de sincronização. O padrão é NULO. Sem suporte para Publicadores Oracle.|  
 |**espaços**||Identifica o espaço de tabela usado pela tabela de log para um artigo publicado de um banco de dados de Oracle. Para obter mais informações, consulte [Gerenciar espaços de tabela Oracle](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**os**||Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Sem suporte para replicação ponto a ponto.|  
-|**tipo**||Sem suporte para Publicadores Oracle.|  
+|**type**||Sem suporte para Publicadores Oracle.|  
 ||**logbased**|Artigo com base em log.|  
 ||**logbased manualboth**|Artigo com base em log com filtro manual e exibição manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
 ||**logbased manualfilter**|Artigo com base em log com filtro manual. Essa opção requer que as propriedades *sync_object* e *Filter* também sejam definidas. Sem suporte para Publicadores Oracle.|  
@@ -198,7 +198,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **ins_cmd**  
   
--   **Estado**  
+-   **status**  
   
 -   **upd_cmd**  
   

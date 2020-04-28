@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769051"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -53,19 +53,19 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @agent_type = ] agent_type`É o tipo de agente. *agent_type* é **smallint**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0** (padrão)|Agente de Distribuição|  
 |**1**|Merge Agent|  
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Distribuição. *frequency_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
+|**4**|Diário|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64** (padrão)|Iniciar automaticamente|  
@@ -75,11 +75,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
   
@@ -87,7 +87,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  

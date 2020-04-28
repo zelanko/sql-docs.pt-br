@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530822"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "69530822"
   
      O Analysis Services está disponível apenas nestas edições: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Observe que as edições do SQL Server Express não incluem o Analysis Services. [Baixe a edição de avaliação](https://go.microsoft.com/fwlink/?LinkId=392824) se quiser experimentar o software gratuitamente.  
+     Observe que as edições do SQL Server Express não incluem o Analysis Services. [Baixe a edição Evaluation](https://go.microsoft.com/fwlink/?LinkId=392824) se desejar experimentar gratuitamente o software.  
   
      Por padrão, o Analysis Services é instalado como uma instância multidimensional, que você pode substituir escolhendo Modo de Servidor de Tabela na página de configuração do servidor do Assistente de Instalação. Se você desejar executar ambos os modos de servidor, reexecute a Instalação do SQL Server no mesmo computador para instalar uma segunda instância do Analysis Services no outro modo.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530822"
 ## <a name="see-also"></a>Consulte Também  
  [Instale o SQL Server 2014 do assistente de instalação &#40;a instalação&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurar o Firewall do Windows para permitir acesso Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

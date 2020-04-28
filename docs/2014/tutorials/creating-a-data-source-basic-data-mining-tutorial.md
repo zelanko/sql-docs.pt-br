@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494020"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Criando uma fonte de dados (Tutorial de mineração de dados básico)
@@ -44,7 +44,7 @@ ms.locfileid: "69494020"
   
 7.  Na lista **selecionar ou inserir nome de banco de dados** , [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] selecione e clique em **OK**.  
   
-8.  Clique em **Próximo**.  
+8.  Clique em **Avançar**.  
   
 9. Na página **informações sobre representação** , clique em **usar a conta de serviço**e, em seguida, clique em **Avançar**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "69494020"
 ## <a name="see-also"></a>Consulte Também  
  [Criar uma fonte de dados &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Definindo uma fonte de dados](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Definir opções de representação &#40;SSAS-multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Definir opções de representação &#40;SSAS – Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

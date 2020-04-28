@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892836"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Selecione do &lt;modelo&gt;. CONTEÚDO (DMX)
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  Os algoritmos podem interpretar as colunas de forma diferente para representar corretamente o conteúdo. Para obter uma descrição do conteúdo do modelo de mineração para cada algoritmo e dicas sobre como interpretar e consultar o conteúdo do modelo de mineração para cada tipo de modelo, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|Coluna de conjunto de linhas DE CONTEÚDO|DESCRIÇÃO|  
+|Coluna de conjunto de linhas DE CONTEÚDO|Descrição|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Nome de um catálogo. NULL se o provedor não oferecer suporte a catálogos.|  
 |MODEL_SCHEMA|Nome de um esquema não qualificado. NULL se o provedor não oferecer suporte a esquemas.|  
@@ -116,11 +116,11 @@ FROM [TM_NaiveBayes].CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Ausente|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -134,17 +134,17 @@ FROM TM_NaiveBayes.CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|  
+|TM_NaiveBayes|Bike Buyer|Ausente|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Consulte Também  
  [SELECIONAR&#41;&#40;DMX](../dmx/select-dmx.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

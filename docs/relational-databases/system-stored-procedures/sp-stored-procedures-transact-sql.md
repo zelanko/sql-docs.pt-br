@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702784"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -68,7 +68,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome do qualificador de procedimento. Esta coluna pode ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome do proprietário do procedimento. Esta coluna sempre retorna um valor.|  
@@ -76,9 +76,8 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
-|**Comentários**|**varchar (254)**|Descrição do procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
-|**PROCEDURE_TYPE**|**smallint**|Tipo do procedimento. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 2.0. Este valor pode ser um dos seguintes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**COMENTÁRIOS**|**varchar (254)**|Descrição do procedimento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor para essa coluna.|  
+|**PROCEDURE_TYPE**|**smallint**|Tipo do procedimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna 2.0. Este valor pode ser um dos seguintes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter interoperabilidade máxima, o cliente de gateway deve supor apenas a correspondência de padrões SQL padrão (os caracteres curinga porcentagem % e sublinhado_).  

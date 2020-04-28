@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70026254"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -66,11 +66,11 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Se *stats_flag* não for especificado, **sp_autostats** retornará o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Nome do índice**|**varchar(60)**|Nome do índice ou das estatísticas.|  
 |**AUTOSTATS**|**varchar (3)**|Valor atual da opção AUTO_UPDATE_STATISTICS.|  
-|**Última atualização**|**datetime**|Data da atualização mais recente das estatísticas.|  
+|**Última Atualização**|**datetime**|Data da atualização mais recente das estatísticas.|  
   
  O conjunto de resultados de uma tabela ou exibição indexada inclui estatísticas criadas para índices, estatísticas de coluna única geradas com a opção AUTO_CREATE_STATISTICS e estatísticas criadas com a instrução [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
   

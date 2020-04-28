@@ -16,10 +16,10 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771499"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
@@ -47,11 +47,11 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID do Agente de Instantâneo.|  
+|**id**|**int**|ID do Agente de Instantâneo.|  
 |**name**|**nvarchar (100)**|Nome do Agente de Instantâneo.|  
-|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
+|**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
 |**publisher_login**|**sysname**|Logon usado na conexão com o Publicador.|  
 |**publisher_password**|**nvarchar (524)**|Por motivos de segurança, um valor ** \* \* \* \* \* \* \* \* de \* ** é sempre retornado.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  

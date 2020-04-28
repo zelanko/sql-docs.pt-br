@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769130"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`É o tipo de assinante. *subscriber_type*é **nvarchar (15)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**local** (padrão)|Assinante conhecido somente pelo Publicador.|  
 |**geral**|Assinante conhecido por todos os servidores.|  
@@ -90,39 +90,39 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É um valor que indica quando o Agente de Mesclagem será executado. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
-|**254**|Mensal|  
+|**4**|Diário|  
+|**8**|Semanal|  
+|**10**|Mensal|  
 |**20,00**|Mensalmente, relativo ao intervalo de frequência|  
 |**40**|Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent inicia|  
 |NULL (padrão)||  
   
 `[ @frequency_interval = ] frequency_interval`O dia ou os dias em que o Agente de Mesclagem é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
-|**Beta**|Terça-feira|  
-|**quatro**|Quarta-feira|  
-|**05**|Quinta-feira|  
+|**3**|Terça-feira|  
+|**4**|Quarta-feira|  
+|**5**|Quinta-feira|  
 |**6**|Friday|  
 |**7**|Sábado|  
 |**8**|Dia|  
-|**99**|Dias da semana|  
-|**254**|Dias de fim de semana|  
+|**9**|Dias da semana|  
+|**10**|Dias de fim de semana|  
 |NULL (padrão)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a ocorrência de mesclagem agendada do intervalo de frequência em cada mês. *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
 |NULL (padrão)||  
@@ -131,11 +131,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`É a unidade para *frequency_subday_interval*. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Criar uma assinatura push](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Resolução interativa de conflitos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

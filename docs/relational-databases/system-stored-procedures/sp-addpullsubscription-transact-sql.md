@@ -16,10 +16,10 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769076"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
@@ -58,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`É o tipo de atualização. *update_mode* é **nvarchar (30)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**somente leitura** (padrão)|A assinatura é somente leitura. Qualquer alteração no Assinante não será mandada de volta ao Publicador. Deve ser usado quando não são feitas atualizações no Assinante.|  
 |**synctran**|Habilita suporte para assinaturas de atualização imediata.|  

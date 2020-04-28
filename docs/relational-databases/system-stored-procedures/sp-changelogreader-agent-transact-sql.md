@@ -16,10 +16,10 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768879"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
@@ -78,7 +78,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_changelogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [&#41;&#40;Transact-SQL de sp_helplogreader_agent](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   

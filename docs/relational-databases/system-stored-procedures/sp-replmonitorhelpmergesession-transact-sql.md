@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771243"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -46,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`É o intervalo de tempo, em horas, para o qual as informações de sessão histórica do agente são retornadas. *horas* é **int**, que pode ser um dos intervalos a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |< **0**|Retorna informações sobre execuções de agente anteriores, até um máximo de 100 execuções.|  
 |**0** (padrão)|Retorna informações sobre todas as execuções de agente anteriores.|  
@@ -54,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type`Filtra o conjunto de resultados com base no resultado final da sessão. *session_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Sessões de agente com um resultado de repetição ou êxito.|  
 |**0**|Sessões de agente com um resultado de falha.|  
@@ -67,13 +67,13 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID da sessão de trabalho do agente.|  
 |**Status**|**int**|Status de execução do agente:<br /><br /> **1** = iniciar<br /><br /> **2** = com sucesso<br /><br /> **3** = em andamento<br /><br /> **4** = ocioso<br /><br /> **5** = repetir<br /><br /> **6** = falha|  
 |**StartTime**|**datetime**|Iniciada sessão de trabalho do agente de tempo.|  
-|**EndTime**|**datetime**|A sessão de trabalho do agente de tempo foi concluída.|  
-|**Duration**|**int**|Duração acumulada, em segundos, dessa sessão de trabalho.|  
+|**Final**|**datetime**|A sessão de trabalho do agente de tempo foi concluída.|  
+|**Permanência**|**int**|Duração acumulada, em segundos, dessa sessão de trabalho.|  
 |**UploadedCommands**|**int**|Número de comandos carrgeado durante a sessão do agente.|  
 |**DownloadedCommands**|**int**|Número de comandos baixados durante a sessão do agente.|  
 |**ErrorMessages**|**int**|Número de mensagens de erro geradas durante a sessão do agente.|  
@@ -95,6 +95,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Somente os membros da função de banco de dados fixa **db_owner** ou **replmonitor** no banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante podem executar **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Monitorar a replicação de forma programática](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

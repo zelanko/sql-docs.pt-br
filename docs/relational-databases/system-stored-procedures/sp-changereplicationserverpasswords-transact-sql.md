@@ -16,10 +16,10 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762249"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
@@ -44,7 +44,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = autenticação integrada do Windows  
   
- **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
+ **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
   
 `[ @login = ] 'login'`É o nome da conta do Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do logon que está sendo alterado. o *logon* é **nvarchar (257)**, sem padrão  
   
@@ -55,11 +55,11 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'`É a conexão do servidor para a qual a senha armazenada está sendo alterada. o *servidor* é **sysname**e pode ser um destes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**distribuidor**|Todas as conexões do agente com o Distribuidor.|  
-|**Publicador**|Todas as conexões do agente com o Publicador.|  
-|**Assinante**|Todas as conexões do agente com o Assinante.|  
+|**programa**|Todas as conexões do agente com o Publicador.|  
+|**farão**|Todas as conexões do agente com o Assinante.|  
 |**%** os|Todas as conexões do agente com todos os servidores em uma topologia de replicação.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

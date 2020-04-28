@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892391"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -73,7 +73,7 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Expression|  
 |----------------|  
@@ -81,7 +81,7 @@ NATURAL PREDICTION JOIN
   
  Para descobrir qual é esse cluster, você pode substituir  `Cluster` for `ClusterDistance` no exemplo anterior.  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |$CLUSTER|  
 |--------------|  
@@ -96,7 +96,7 @@ FROM <model>.CONTENT
 WHERE NODE_TYPE = 5  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |NODE_UNIQUE_NAME|NODE_CAPTION|  
 |------------------------|-------------------|  
@@ -118,7 +118,7 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Distância do Cluster 2|  
 |------------------------|  
@@ -128,6 +128,6 @@ NATURAL PREDICTION JOIN
  [&#41;de cluster &#40;DMX](../dmx/cluster-dmx.md)   
  [Referência de função&#41; DMX &#40;extensões de mineração de dados](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Conteúdo do modelo de mineração para modelos de clustering &#40;mineração de dados Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [Conteúdo do modelo de mineração para modelos de clustering &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

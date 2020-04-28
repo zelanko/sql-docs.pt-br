@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809907"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Dados espaciais-sys. dm_db_objects_disabled_on_compatibility_level_change
@@ -40,19 +40,19 @@ ms.locfileid: "68809907"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  *compatibility_level*  
  **int** que identifica o nível de compatibilidade que você planeja definir.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
-|**class_desc**|**nvarchar (60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
+|**classe**|**int**|1 = restrições<br /><br /> 7 = índices e heaps|  
+|**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN para restrições<br /><br /> INDEX para índices e heaps|  
 |**major_id**|**int**|OBJECT ID de restrições<br /><br /> OBJECT ID da tabela que contém índices e heaps|  
 |**minor_id**|**int**|NULL para restrições<br /><br /> Index_id para índices e heaps|  
-|**dependência**|**nvarchar (60)**|Descrição da dependência que está causando a desabilitação da restrição ou do índice. Os mesmos valores também são usados nos avisos que são lançados durante atualização. Os exemplos incluem o seguinte:<br /><br /> "space" para um intrínseco<br /><br /> "geometry" para um sistema UDT<br /><br /> "geography::Parse" para um método de um sistema UDT|  
+|**Estados**|**nvarchar(60)**|Descrição da dependência que está causando a desabilitação da restrição ou do índice. Os mesmos valores também são usados nos avisos que são lançados durante atualização. Os exemplos incluem o seguinte:<br /><br /> "space" para um intrínseco<br /><br /> "geometry" para um sistema UDT<br /><br /> "geography::Parse" para um método de um sistema UDT|  
   
 ## <a name="general-remarks"></a>Comentários gerais  
  Colunas computadas persistentes que usam algumas funções intrínsecas são desabilitadas quando o nível de compatibilidade é alterado. Além disso, colunas computadas persistentes que usam qualquer método de geometria ou geografia são desabilitadas quando um banco de dados é atualizado.  

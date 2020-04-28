@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892769"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funções de previsão gerais (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68892769"
 |-|-|  
 |[&#41;&#40;DMX BottomCount](../dmx/bottomcount-dmx.md)|[&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)|  
 |[&#41;&#40;DMX BottomPercent](../dmx/bottompercent-dmx.md)|[&#41;&#40;DMX TopCount](../dmx/topcount-dmx.md)|  
-|[Prever &#40;&#41;DMX](../dmx/predict-dmx.md)|[&#41;&#40;DMX TopPercent](../dmx/toppercent-dmx.md)|  
+|[Prever &#40;DMX&#41;](../dmx/predict-dmx.md)|[&#41;&#40;DMX TopPercent](../dmx/toppercent-dmx.md)|  
 |[&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)|[TopSum &#40;&#41;DMX](../dmx/topsum-dmx.md)|  
 |[&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)||  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68892769"
   
 -   [Existe &#40;DMX&#41;](../dmx/exists-dmx.md)  
   
--   [&#40;DMX IsDescendant&#41;](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
 -   [&#41;&#40;DMX IsTestCase](../dmx/istestcase-dmx.md)  
   
 -   [&#41;&#40;DMX IsTrainingCase](../dmx/istrainingcase-dmx.md)  
   
--   [Prever &#40;&#41;DMX](../dmx/predict-dmx.md)  
+-   [Prever &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)  
   
@@ -61,10 +61,10 @@ ms.locfileid: "68892769"
 |Tipo de consulta|Funções suportadas|Comentários|  
 |----------------|-------------------------|-------------|  
 |[Selecione DISTINCT do \<modelo>](../dmx/select-distinct-from-model-dmx.md)|[&#41;&#40;DMX RangeMin](../dmx/rangemin-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMid](../dmx/rangemid-dmx.md)<br /><br /> [&#41;&#40;DMX RangeMax](../dmx/rangemax-dmx.md)|Essas funções podem ser usadas para fornecer valores máximos, valores mínimos e médias para qualquer coluna que contenha tipos de dados numéricos, independentemente de a coluna ser contínua ou ter sido diferenciada.|  
-|[Selecione do \<modelo>. DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [Selecione do \<modelo>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[&#40;DMX IsDescendant&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você tiver salvo o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX que estão disponíveis para consultar uma hierarquia de atributo.|  
-|[Selecione do \<modelo>. BOLSAS](../dmx/select-from-model-cases-dmx.md)|[&#41;&#40;DMX IsInNode](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;&#40;DMX IsTrainingCase](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;&#40;DMX IsTestCase](../dmx/istestcase-dmx.md)|A função Lag tem suporte apenas para modelos de série temporal.<br /><br /> A função IsTestCase tem suporte em modelos baseados em uma estrutura que foi criada usando a opção de controle para criar um conjunto de dados de teste. Se o modelo não for baseado em uma estrutura com um conjunto de teste de validação, todos os casos serão considerados como casos de treinamento.|  
-|[Selecione do \<modelo>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[&#41;&#40;DMX IsInNode](../dmx/isinnode-dmx.md)|Nesse contexto, a função IsInNode retorna um caso que pertence a um conjunto de casos de exemplo ideais.|  
-|Selecione do \<modelo>. PMML|Não aplicável. Em vez disso, use funções de consulta XML.|As representações PMML são suportadas apenas pelos tipos de modelo a seguir:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Árvores de decisão<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering|  
+|[Selecione do \<modelo>. DISPUTA](../dmx/select-from-model-content-dmx.md)<br /><br /> ou o<br /><br /> [Selecione do \<modelo>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Essa função recupera nós filho para o nó especificado no modelo e pode ser usada, por exemplo, para iterar através de nós no conteúdo do modelo de mineração. A organização dos nós no conteúdo do modelo de mineração depende do tipo de modelo. Para obter informações sobre a estrutura de cada tipo de modelo de mineração, consulte [conteúdo do modelo de mineração &#40;&#41;de mineração de dados Analysis Services ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Se você tiver salvo o conteúdo do modelo de mineração como uma dimensão, também poderá usar outras funções MDX que estão disponíveis para consultar uma hierarquia de atributo.|  
+|[Selecione do \<modelo>. BOLSAS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;&#40;DMX IsTrainingCase](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;&#40;DMX IsTestCase](../dmx/istestcase-dmx.md)|A função Lag tem suporte apenas para modelos de série temporal.<br /><br /> A função IsTestCase tem suporte em modelos baseados em uma estrutura que foi criada usando a opção de controle para criar um conjunto de dados de teste. Se o modelo não for baseado em uma estrutura com um conjunto de teste de validação, todos os casos serão considerados como casos de treinamento.|  
+|[Selecione do \<modelo>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Nesse contexto, a função IsInNode retorna um caso que pertence a um conjunto de casos de exemplo ideais.|  
+|Selecione do \<modelo>. PMML|Não aplicável. Em vez disso, use funções de consulta XML.|As representações PMML são suportadas apenas pelos tipos de modelo a seguir:<br /><br /> Árvores de Decisão da [!INCLUDE[msCoName](../includes/msconame-md.md)]<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECIONAR do \<modelo> junção de previsão](../dmx/select-from-model-prediction-join-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
 |[SELECIONAR do \<modelo>](../dmx/select-from-model-dmx.md)|Funções de previsão que são específicas do algoritmo usado para criar o modelo.|Para obter uma lista de funções de previsão para cada tipo de modelo, consulte [consultas de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   

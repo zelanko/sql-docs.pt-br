@@ -18,10 +18,10 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702851"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
@@ -47,7 +47,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|Número do ID do atributo.|  
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nome do atributo.|  
@@ -59,14 +59,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x. XX. xxxx*|  
-|**254**|OWNER_TERM|proprietário|  
+|**10**|OWNER_TERM|proprietário|  
 |**11**|TABLE_TERM|tabela|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> Especifica o número máximo de caracteres para um nome de tabela.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Especifica o comprimento máximo do nome de um qualificador de tabela (a primeira parte de um nome de tabela com três partes).|128|  
 |**15**|COLUMN_LENGTH<br /><br /> Especifica o número máximo de caracteres para um nome de coluna.|128|  
 |**16**|IDENTIFIER_CASE<br /><br /> Especifica os nomes definidos pelo usuário (nomes de tabelas, nomes de colunas, nomes de procedimentos armazenados) no banco de dados (maiúsculas/minúsculas dos objetos nos catálogos do sistema).|SENSITIVE|  
-|**17**|TX_ISOLATION<br /><br /> Especifica o nível de isolamento inicial da transação que o servidor assume, o qual corresponde a um nível de isolamento definido em SQL-92.|2|  
+|**16**|TX_ISOLATION<br /><br /> Especifica o nível de isolamento inicial da transação que o servidor assume, o qual corresponde a um nível de isolamento definido em SQL-92.|2|  
 |**anos**|COLLATION_SEQ<br /><br /> Especifica a ordenação do conjunto de caracteres para este servidor.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**aprimora**|SAVEPOINT_SUPPORT<br /><br /> Especifica se o DBMS subjacente oferece suporte a pontos de salvamento nomeados.|S|  
 |**20,00**|MULTI_RESULT_SETS<br /><br /> Especifica se o banco de dados subjacente ou o próprio gateway oferece suporte a vários conjuntos de resultados (várias instruções podem ser enviadas pelo gateway com vários conjuntos de resultados retornados ao cliente).|S|  

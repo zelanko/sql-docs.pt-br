@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264684"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migração de dados do Oracle para o SQL Server (OracleToSQL)

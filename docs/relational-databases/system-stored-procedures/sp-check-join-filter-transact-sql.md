@@ -22,10 +22,10 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771269"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
@@ -53,7 +53,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|É se a publicação for qualificada para partições preputadas; em que **1** significa que as partições precomupted podem ser usadas, e **0** significa que elas não podem ser usadas.|  
 |**has_dynamic_filters**|**bit**|É se a cláusula de filtro fornecida incluir pelo menos uma função de filtragem com parâmetros; em que **1** significa que uma função de filtragem com parâmetros é usada e **0** significa que essa função não é usada.|  

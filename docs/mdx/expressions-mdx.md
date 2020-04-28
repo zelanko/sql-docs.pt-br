@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893594"
 ---
 # <a name="expressions-mdx"></a>Expressões (MDX)
@@ -73,7 +73,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Usando expressões de cubo e subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define as expressões de cubo e subcubo.|  
 |[Usando expressões de dimensão](../mdx/using-dimension-expressions.md)|Define as expressões de dimensão.|  

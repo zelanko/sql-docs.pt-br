@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762777"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`É o tipo de assinante. o *tipo* é **tinyint**, com um padrão de NULL. **0** indica um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante. **1** especifica um assinante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de servidor de fonte de dados ODBC não ou outro.  
   
-`[ @login = ] 'login'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *logon* é **sysname**, com um padrão de NULL.  
+`[ @login = ] 'login'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de logon de autenticação. *login* é **sysname**, com um padrão de NULL.  
   
 `[ @password = ] 'password'`É a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senha de autenticação. a *senha* é **sysname**, com um padrão **%** de. **%** indica que não há nenhuma alteração na propriedade password.  
   
@@ -72,12 +72,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a tarefa de distribuição. *frequency_type* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
+|**4**|Diário|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -87,11 +87,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
   
@@ -99,11 +99,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequence_subday*. *frequency_subday_interval* é **int**, com um padrão de NULL.  
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`É o modo de segurança implementado. *security_mode* é **int**e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticação|  
 |**1**|Autenticação do Windows|  

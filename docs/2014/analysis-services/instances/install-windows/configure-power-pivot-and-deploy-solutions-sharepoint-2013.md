@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493976"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
@@ -36,15 +36,15 @@ ms.locfileid: "69493976"
   
  [Solucionar problemas](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a>Executar configuração do PowerPivot para SharePoint 2013  
- **Observação:** O [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] assistente de instalação instala duas ferramentas de configuração [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]diferentes para o. Cada um deles oferece suporte a uma versão diferente do SharePoint.  
+##  <a name="run-powerpivot-for-sharepoint-2013-configuration"></a><a name="bkmk_run_configuration_tool"></a>Executar configuração do PowerPivot para SharePoint 2013  
+ **Observação:** o assistente para instalação do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instala duas ferramentas de configuração diferentes para [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Cada um deles oferece suporte a uma versão diferente do SharePoint.  
   
-|Nome|DESCRIÇÃO|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |Configuração do PowerPivot para SharePoint 2013|SharePoint 2013|  
 |Ferramenta de Configuração do PowerPivot|SharePoint 2010 com SharePoint 2010 Service Pack 1 (SP1)|  
   
- **Observação:** Para concluir as etapas a seguir, você deve ser um administrador do farm. Se uma mensagem de erro semelhante à seguinte for exibida:  
+ **Observação:** para concluir as etapas a seguir, você deve ser um administrador de farm. Se uma mensagem de erro semelhante à seguinte for exibida:  
   
 -   "O usuário não é um administrador de farm. Corrija as falhas de validação e tente novamente."  
   
@@ -58,13 +58,13 @@ ms.locfileid: "69493976"
   
 4.  Na guia **Parâmetros** :  
   
-    1.  Nome de usuário da **conta padrão**: Insira uma conta de domínio da conta padrão. Essa conta será usada para provisionar serviços, inclusive o pool de aplicativos do serviço PowerPivot. Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.  
+    1.  **Nome de Usuário da Conta Padrão**: insira uma conta de usuário de domínio para a conta padrão. Essa conta será usada para provisionar serviços, inclusive o pool de aplicativos do serviço PowerPivot. Não especifique uma conta interna, como Serviço de Rede ou Sistema Local. A ferramenta bloqueia configurações que especificam contas internas.  
   
-    2.  **Servidor de banco de dados**: você pode usar SQL Server mecanismo de banco de dados com suporte para o farm do SharePoint.  
+    2.  **Servidor de Banco de Dados**: você pode usar qualquer mecanismo de Banco de Dados do SQL Server com suporte para farm do SharePoint.  
   
-    3.  **Senha**: Insira uma frase secreta. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
+    3.  **Frase Secreta**: insira um frase secreta. Se você estiver criando um novo farm do SharePoint, a frase secreta será usada sempre que você adicionar um servidor ou aplicativo ao farm do SharePoint. Se o farm já existir, insira a frase secreta que permite adicionar um aplicativo de servidor ao farm.  
   
-    4.  **Servidor do PowerPivot para serviços do Excel**: digite o nome [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de um servidor de modo do SharePoint. Em uma implantação de servidor único, ele será o servidor de banco de dados. `[ServerName]\powerpivot`  
+    4.  **Servidor do PowerPivot para Serviços do Excel**: digite o nome de um servidor de modo do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint. Em uma implantação de servidor único, ele será o servidor de banco de dados. `[ServerName]\powerpivot`  
   
     5.  Clique em **Criar Coleção de Sites** na janela esquerda. Observe a **URL do Site** para poder referenciá-la em etapas posteriores. Se o servidor do SharePoint ainda não estiver configurado, o assistente de configuração usa como padrão o aplicativo Web e as URLs da coleção de sites da raiz de `http://[ServerName]`. Para alterar os padrões, analise as seguintes páginas na janela esquerda: **Criar Aplicativo Web Padrão** e **Implantar Solução de Aplicativo Web**  
   
@@ -78,26 +78,26 @@ ms.locfileid: "69493976"
   
  Para obter mais informações, consulte [Configurar ou reparar 2010 PowerPivot para SharePoint &#40;ferramenta de configuração do PowerPivot&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
-##  <a name="bkmk_verify_powerpivot"></a>Verificar a configuração do PowerPivot  
+##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>Verificar a configuração do PowerPivot  
  **Serviços**  
   
-1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar serviços no servidor**.  
+1.  Na administração central, em configurações do sistema, clique em **gerenciar serviços no servidor**.  
   
 2.  Verifique se o **SQL Server Analysis Services** e o **Serviço de Sistema PowerPivot do SQL Server** foram iniciados.  
   
- **Recurso de farm:**  
+ **Recurso do farm:**  
   
 1.  Na Administração Central, em Configurações do Sistema, clique em **Gerenciar recursos de farm**.  
   
 2.  Verifique se **Recurso de Integração com o PowerPivot** está **Ativo**.  
   
- **Recurso de conjunto de sites:**  
+ **Recurso da coleção de sites:**  
   
 1.  Navegue até a URL do site que foi criada pela ferramenta de configuração.  
   
      Clique em **configurações**![configurações do SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configurações do SharePoint")e clique em **configurações do site**.  
   
-     Clique em **recursos do conjunto de sites**.  
+     Clique em **Recursos do Conjunto de Sites**.  
   
 2.  Verifique se a **Integração de recursos do PowerPivot para coleções de sites** está **Ativa**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "69493976"
   
  Para obter mais informações, consulte [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
-##  <a name="bkmk_troubleshoot_issues"></a>Solucionar problemas  
+##  <a name="troubleshoot-issues"></a><a name="bkmk_troubleshoot_issues"></a>Solucionar problemas  
  Para ajudar a solucionar problemas, é uma boa ideia verificar se o log de diagnóstico está habilitado.  
   
 1.  Na Administração Central do SharePoint, clique em **Monitoramento** e clique em **Configurar coleta de dados de integridade e uso**.  

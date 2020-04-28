@@ -16,10 +16,10 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771560"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 `[ @publication_type = ] publication_type`É o tipo de publicação. *publication_type* é **int**, com um padrão de NULL. Se fornecido, *publication_type* deve ser um dos seguintes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Publicação transacional|  
 |**1**|Publicação de instantâneo|  
@@ -56,19 +56,19 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|Nome do Publicador.|  
+|**programa**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados do Publicador.|  
 |**documento**|**sysname**|Nome da publicação.|  
 |**publication_type**|**int**|O tipo de publicação:<br /><br /> **0** = transacional<br /><br /> **1** = instantâneo<br /><br /> **2** = mesclagem|  
 |**publisher_login**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_password**|**nvarchar (524)**|Senha usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (criptografada).|  
-|**publisher_security_mode**|**int**|Modo de segurança usado no Publicador:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
+|**publisher_security_mode**|**int**|Modo de segurança usado no Publicador:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
 |**distribuidor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|O logon do Distribuidor|  
 |**distributor_password**|**nvarchar (524)**|Senha do Distribuidor (criptografada).|  
-|**distributor_security_mode**|**int**|Modo de segurança usado no Distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
+|**distributor_security_mode**|**int**|Modo de segurança usado no Distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
 |**ftp_address**|**sysname**|Somente para compatibilidade com versões anteriores. Endereço de rede do serviço FTP (File Transfer Protocol) para o Distribuidor.|  
 |**ftp_port**|**int**|Somente para compatibilidade com versões anteriores. Número da porta do serviço FTP para Distribuidor.|  
 |**ftp_login**|**sysname**|Somente para compatibilidade com versões anteriores. Nome de usuário usado para se conectar ao serviço FTP.|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar (524)**|Senha para o logon que o Merge Agent usa ao se conectar ao servidor da Web que está hospedando a sincronização da Web usando Autenticação Básica.|  
 |**internet_security_mode**|**int**|O modo de autenticação usado durante a conexão com o servidor Web que está hospedando a sincronização da Web, em que o valor **1** significa autenticação do Windows e um valor de **0** significa autenticação básica.|  
 |**internet_timeout**|**int**|Período de tempo, em segundos, antes que uma solicitação de sincronização da Web expire.|  
-|**nome do host**|**nvarchar(128)**|Especifica o valor para HOST_NAME() onde essa função é usada no filtro de linha com parâmetros da cláusula WHERE.|  
+|**hostname**|**nvarchar(128)**|Especifica o valor para HOST_NAME() onde essa função é usada no filtro de linha com parâmetros da cláusula WHERE.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

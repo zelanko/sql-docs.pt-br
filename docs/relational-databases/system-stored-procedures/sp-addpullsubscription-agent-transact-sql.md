@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028948"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -130,12 +130,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar a Agente de Distribuição. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2** (padrão)|Sob demanda|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
+|**4**|Diário|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -148,11 +148,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data da Agente de Distribuição. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
   
@@ -160,11 +160,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1** (padrão)|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`É o intervalo para *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de **1**.  
@@ -246,6 +246,6 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [&#41;&#40;Transact-SQL de sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

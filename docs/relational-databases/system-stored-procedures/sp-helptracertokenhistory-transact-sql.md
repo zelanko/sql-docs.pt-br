@@ -16,10 +16,10 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771149"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
@@ -53,10 +53,10 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|Número de segundos entre o registro de token de rastreamento sendo aplicado no Publicador e o registro sendo aplicado no Distribuidor.|  
-|**Assinante**|**sysname**|Nome do Assinante que recebeu o token de rastreamento.|  
+|**farão**|**sysname**|Nome do Assinante que recebeu o token de rastreamento.|  
 |**subscriber_db**|**sysname**|Nome do banco de dados de assinatura no qual o registro de token de rastreamento foi inserido.|  
 |**subscriber_latency**|**bigint**|Número de segundos entre o registro de token de rastreamento aplicado no Distribuidor e o registro aplicado no Assinante.|  
 |**overall_latency**|**bigint**|Número de segundos entre o registro de token de rastreamento aplicado no Publicador e o registro de token aplicado no Assinante.|  
@@ -78,7 +78,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** , a função de banco de dados fixa **db_owner** no banco de dados de publicação ou **db_owner** banco de dados fixo ou funções **replmonitor** no banco de dados de distribuição podem executar **sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [&#41;&#40;Transact-SQL de sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266578"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configurações do projeto (mapeamento de tipo) (OracleToSQL)
@@ -48,7 +48,7 @@ Clique para editar o tipo de dados selecionado na lista mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mappings"></a>Mapeamentos de tipo padrão  
@@ -97,7 +97,7 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |ROWID|UNIQUEIDENTIFIER|  
 |sinal de|SMALLINT|  
 |SMALLINT|SMALLINT|  
-|string|varchar(max)|  
+|cadeia de caracteres|varchar(max)|  
 |timestamp|datetime2|  
 |carimbo de data/hora com fuso horário local|datetimeoffset|  
 |carimbo de data/hora com fuso horário|datetimeoffset|  
@@ -194,7 +194,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |variação de caractere [8001.. *]|varchar(max)|  
 |Char [*.. 8000]|Char [*]|  
 |Char [8001.. *]|varchar(max)|  
-|Character|char|  
+|Caractere|char|  
 |variável de caractere [*.. 8000]|varchar [*]|  
 |variável de caractere [8001.. *]|varchar(max)|  
 |caractere [*.. 8000]|Char [*]|  

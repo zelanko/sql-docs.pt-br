@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493939"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usando uma versão modificada do projeto do Tutorial do Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "69493939"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Baixando e extraindo o Arquivo do Projeto  
   
-1.  [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo que acompanham este tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
+1.  [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para ir para a página de download que fornece os projetos de exemplo fornecidos neste tutorial. Os projetos do tutorial estão incluídos no download do **Tutorial do Analysis Services do SQL Server 2012** .  
   
 2.  Clique em **Tutorial do Analysis Services do SQL Server 2012** para baixar o pacote que contém os projetos para este tutorial.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "69493939"
 #### <a name="internet-sales-diagram"></a>Diagrama Vendas pela Internet  
  O diagrama **Vendas pela Internet** contém as tabelas relacionadas à venda de produtos do [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] diretamente aos clientes pela Internet. As tabelas do diagrama são as quatro tabelas de dimensão e a tabela de fatos que você adicionou à exibição da fonte de dados **Adventure Works DW 2012** na Lição 1. Essas tabelas são as seguintes:  
   
--   **Gráfico**  
+-   **Geografia**  
   
 -   **Cliente**  
   
--   **Data**  
+-   **Date**  
   
--   **Produto**  
+-   **Remessa**  
   
 -   **InternetSales**  
   
@@ -76,17 +76,17 @@ ms.locfileid: "69493939"
   
 -   **Revendedor**  
   
--   **Promocionais**  
+-   **Promoção**  
   
 -   **SalesTerritory**  
   
--   **Gráfico**  
+-   **Geografia**  
   
--   **Data**  
+-   **Date**  
   
--   **Produto**  
+-   **Remessa**  
   
--   **Funcionário**  
+-   **Employee**  
   
 -   **ResellerSales**  
   

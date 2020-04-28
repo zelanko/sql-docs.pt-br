@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263937"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -37,16 +37,16 @@ ms.locfileid: "68263937"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_cached_plans**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID do segmento de hash em que a entrada é armazenada em cache. O valor indica um intervalo de 0 ao tamanho de tabela de hash para o tipo de cache.<br /><br /> Para os caches de planos SQL e planos de objeto, o tamanho da tabela de hash pode ser de até 10007 em sistemas de 32 bits e até 40009 em sistemas de 64 bits. Para os caches de árvores associadas, o tamanho da tabela de hash pode ser de até 1009 em sistemas de 32 bits e até 4001 em sistemas de 64 bits. Para os caches de procedimentos armazenados estendidos, o tamanho da tabela de hash pode ser de até 127 em sistemas de 32 e 64 bits.|  
-|refcounts|**int**|Número de objetos de cache que fazem referência a este objeto de cache. **RefCounts** deve ser pelo menos 1 para que uma entrada esteja no cache.|  
+|refcounts|**int**|Número de objetos de cache que fazem referência a este objeto de cache. **Refcounts** deve ser pelo menos 1 para que uma entrada fique no cache.|  
 |usecounts|**int**|Número de vezes que o objeto de cache foi examinado. Não incrementado quando consultas parametrizadas localizam um plano no cache. Pode ser incrementado várias vezes durante o us do plano de execução.|  
 |size_in_bytes|**int**|Número de bytes consumidos pelo objeto de cache.|  
 |memory_object_address|**varbinary (8)**|Endereço de memória da entrada em cache. Esse valor pode ser usado com [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obter a análise de memória do plano em cache e com entradas [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) para obter o custo do armazenamento em cache da entrada.|  
 |cacheobjtype|**nvarchar (34)**|Tipo de objeto no cache. O valor pode ser um dos seguintes:<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
 |objtype|**nvarchar (16)**|Tipo de objeto. Abaixo estão os possíveis valores e suas descrições correspondentes.<br /><br /> Proc: procedimento armazenado<br />Preparada: instrução preparada<br />Adhoc: consulta ad hoc. Refere- [!INCLUDE[tsql](../../includes/tsql-md.md)] se a eventos de linguagem enviados usando **osql** ou **sqlcmd** em vez de chamadas de procedimento remoto.<br />ReplProc: procedimento de filtro de replicação<br />Gatilho: gatilho<br />Exibir: exibir<br />Padrão: padrão<br />UsrTab: tabela de usuário<br />SysTab: tabela do sistema<br />Verificar: restrição de verificação<br />Regra: regra|  
-|plan_handle|**varbinary (64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Este valor pode ser usado com as seguintes funções de gerenciamento dinâmico:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|plan_handle|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Este valor pode ser usado com as seguintes funções de gerenciamento dinâmico:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|ID do pool de recursos no qual o uso de memória do plano é contabilizado.|  
 |pdw_node_id|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   

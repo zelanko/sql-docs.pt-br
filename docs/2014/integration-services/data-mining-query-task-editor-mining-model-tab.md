@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890781"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor da Tarefa Consulta de Mineração de Dados (guia Modelo de Mineração)
@@ -40,12 +40,12 @@ ms.locfileid: "68890781"
  **Conexão**  
  Selecione um gerenciador de conexões do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] na lista, ou clique em **Novo** para criar um novo gerenciador de conexões.  
   
- **Tópicos relacionados:**  [Analysis Services Gerenciador de conexões](connection-manager/analysis-services-connection-manager.md)  
+ **Tópicos relacionados:**  [Gerenciador de conexões do Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Novo**  
  Crie um novo gerenciador de conexões do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Tópicos relacionados:** [Adicionar Analysis Services referência da interface do usuário da caixa de diálogo do Gerenciador de conexões](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Tópicos relacionados:** [Referência da interface do usuário da caixa de diálogo Adicionar Gerenciador de Conexões do Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Estrutura de mineração**  
  Selecione uma estrutura de mineração na lista.  
@@ -54,9 +54,9 @@ ms.locfileid: "68890781"
  Selecione um modelo de mineração com base na estrutura de mineração selecionada.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência de mensagens e erros do Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services referência de erro e mensagem](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Editor da tarefa consulta de mineração de dados &#40;guia saída&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Designer de Mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

@@ -22,15 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811085"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selecionar uma conta para o Serviço do SQL Server Agent
-  A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
+  A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado como uma conta de usuário especificada. Selecione uma conta para o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, no qual estão disponíveis as seguintes opções:  
   
 -   **Conta interna**. Em uma lista, você pode escolher uma das seguintes contas de serviço Windows internas:  
   
@@ -77,8 +76,7 @@ ms.locfileid: "68811085"
   
 |Tipo de conta de serviço|Servidor não clusterizado|Servidor em cluster|Controlador de domínio (não clusterizado)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Conta de domínio do Windows (membro do grupo Administradores do Windows)|Suportado|Suportado|Suportado|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Conta de domínio do Windows (membro do grupo Administradores do Windows)|Com suporte|Com suporte|Com suporte|  
 |Conta de domínio do Windows (não administrativa)|Com suporte<sup>1</sup>|Com suporte<sup>1</sup>|Com suporte<sup>1</sup>|  
 |Conta de Serviço de Rede (NT AUTHORITY\NetworkService)|Com suporte<sup>1, 3, 4</sup>|Sem suporte|Sem suporte|  
 |Conta de usuário local (não administrativa)|Com suporte<sup>1</sup>|Sem suporte|Não aplicável|  
@@ -96,7 +94,7 @@ ms.locfileid: "68811085"
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitação 1: Usando contas não administrativas para administração multisservidor  
  A inscrição de servidores de destino para um servidor mestre pode falhar com a seguinte mensagem de erro: "Falha na operação de inscrição".  
   
- Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Para resolver esse erro, reinicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações, consulte [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, SQL Server Agent ou SQL Server Browser serviço](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitação 2: Usando a conta Sistema Local para administração multisservidor  
  Quando o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado com a conta Sistema Local, só haverá suporte para administração multisservidor se o servidor mestre e o servidor de destino residirem no mesmo computador. Se você usar essa configuração, será retornada a seguinte mensagem quando você inscrever servidores de destino para o servidor mestre:  
@@ -106,23 +104,21 @@ ms.locfileid: "68811085"
  Você pode ignorar essa mensagem informativa. A operação de inscrição deve ser concluída com êxito. Para obter mais informações, veja [Criar um ambiente multisservidor](create-a-multiserver-environment.md).  
   
 ### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Limitação 3: Usando a conta de Serviço de Rede, quando ela é um usuário do SQL Server  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta de Serviço de Rede e esta tiver recebido acesso explicitamente para fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta de Serviço de Rede e esta tiver recebido acesso explicitamente para fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um usuário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para resolver isso, reinicialize o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Isso só precisa ser feito uma vez.  
   
 ### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Limitação 4: Usando a conta do Serviço de Rede quando os serviços de relatório do SQL Server são executados no mesmo computador  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta do Serviço de Rede e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também estiver em execução no mesmo computador.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent poderá não conseguir iniciar se você executar o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent com a conta do Serviço de Rede e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também estiver em execução no mesmo computador.  
   
  Para resolver isso, reinicie o computador em que está sendo executado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, em seguida, reinicialize os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Isso só precisa ser feito uma vez.  
   
 ## <a name="common-tasks"></a>Tarefas comuns  
- **Para especificar a conta de inicialização para o serviço de SQL Server Agent**  
+ **Para especificar a conta de inicialização do serviço do SQL Server Agent**  
   
--   [Defina a conta de inicialização do serviço para SQL Server Agent &#40;SQL Server Configuration Manager&#41;](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Definir a conta de inicialização de serviço para o SQL Server Agent &#40;SQL Server Configuration Manager&#41;](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
- **Para especificar o perfil de email para SQL Server Agent**  
+ **Para especificar o perfil de email do SQL Server Agent**  
   
 -   [Configurar o SQL Server Agent Mail para usar o Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   

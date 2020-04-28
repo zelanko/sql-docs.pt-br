@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264538"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Seleção de objetos avançada (OracleToSQL)
@@ -47,6 +47,6 @@ Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exem
   
 Se os itens corresponderem aos critérios de filtro, as categorias ou os itens aparecerão à medida que você digitar a cadeia de caracteres. Para ver os itens correspondentes, recomendamos que você clique no botão **exibido somente itens carregados** .  
   
-**Limpar filtro**  
+**Limpar Filtro**  
 Limpa a caixa de **filtro** .  
   

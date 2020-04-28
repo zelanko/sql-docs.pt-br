@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259686"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Instalar o cliente SSMA para Oracle (OracleToSQL)
@@ -34,7 +34,7 @@ O cliente do SSMA consiste nos arquivos de programa que executam as seguintes ta
   
 Este tópico fornece os pré-requisitos de instalação e as instruções para instalar o SSMA.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 O SSMA foi projetado para funcionar com o Oracle 9 ou versões posteriores e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]todas as edições do.  
   
 Antes de instalar o SSMA, verifique se o computador atende aos seguintes requisitos:  

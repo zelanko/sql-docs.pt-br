@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262963"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mapeamento de tipos de dados do Oracle e do SQL Server (OracleToSQL)

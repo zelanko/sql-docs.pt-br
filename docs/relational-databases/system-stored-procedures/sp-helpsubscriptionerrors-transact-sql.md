@@ -16,10 +16,10 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771519"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
@@ -53,16 +53,16 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|A ID do erro.|  
+|**id**|**int**|A ID do erro.|  
 |**time**|**datetime**|Hora em que o erro ocorreu.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|ID do tipo de origem do erro.|  
 |**source_name**|**nvarchar (100)**|Nome de origem do erro.|  
 |**error_code**|**sysname**|Código do erro.|  
 |**error_text**|**ntext**|Mensagem de erro.|  
-|**xact_seqno**|**varbinary (16)**|Número de sequência do log de transações iniciais do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
+|**xact_seqno**|**varbinary(16)**|Número de sequência do log de transações iniciais do lote de execução com falha. Usado somente por Distribution Agents, esse é o número de sequência do log de transações da primeira transação do lote de execução com falha.|  
 |**command_id**|**int**|ID do comando do lote de execução com falha. Usado somente por Distribution Agents, essa é a ID de comando do primeiro comando do lote de execução com falha.|  
 |**session_id**|**int**|ID da sessão do agente na qual ocorreu o erro.|  
   
@@ -77,6 +77,6 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Transact-SQL de sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [&#41;&#40;Transact-SQL de sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

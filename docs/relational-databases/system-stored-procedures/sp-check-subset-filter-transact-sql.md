@@ -21,10 +21,10 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771310"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|É se a publicação é qualificada para usar partições preputadas; em que **1** significa que as partições já computadas podem ser usadas, e **0** significa que elas não podem ser usadas.|  
 |**has_dynamic_filters**|**bit**|É se a cláusula de filtro fornecida incluir pelo menos um filtro de linha com parâmetros; em que **1** significa que um filtro de linha com parâmetros é usado e **0** significa que essa função não é usada.|  

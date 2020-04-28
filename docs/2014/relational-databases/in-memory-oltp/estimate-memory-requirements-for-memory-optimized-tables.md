@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811013"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar requisitos de memória para tabelas com otimização de memória
@@ -26,17 +26,17 @@ ms.locfileid: "68811013"
   
 -   [Exemplo de tabela com otimização de memória](#bkmk_ExampleTable)  
   
--   [Memória da tabela](#bkmk_MemoryForTable)  
+-   [Memória da tabela.](#bkmk_MemoryForTable)  
   
 -   [Memória para índices](#bkmk_IndexMeemory)  
   
--   [Memória para o controle de versão de linha](#bkmk_MemoryForRowVersions)  
+-   [Memória para controle de versão de linha](#bkmk_MemoryForRowVersions)  
   
 -   [Memória para variáveis de tabela](#bkmk_TableVariables)  
   
 -   [Memória para o crescimento](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> Exemplo de tabela com otimização de memória  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>Exemplo de tabela com otimização de memória  
  Considere o esquema de tabela com otimização de memória a seguir:  
   
 ```sql  
@@ -61,16 +61,16 @@ GO
   
  Usando esse esquema, determinaremos a memória mínima necessária para essa tabela com otimização de memória.  
   
-##  <a name="bkmk_MemoryForTable"></a> Memória da tabela  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>Memória para a tabela  
  Uma linha de tabela com otimização de memória é composta de três partes:  
   
--   **Carimbos de data/hora**   
+-   **Carimbos**   
     Cabeçalho de linha/carimbos de data/hora = 24 bytes.  
   
 -   **Ponteiros de índice**   
     Para cada índice de hash na tabela, cada linha tem um ponteiro de endereço de 8 bytes para a próxima linha no índice.  Uma vez que há 4 índices, cada linha alocará 32 bytes para ponteiros de índice (um ponteiro de 8 bytes para cada índice).  
   
--   **Dados**   
+-   **Dado**   
     O tamanho da parte dos dados da linha é determinado pela adição do tamanho de tipo para cada coluna de dados.  Em nossa tabela temos cinco números inteiros de 4 bytes, três colunas de caracteres de 50 bytes e uma coluna de caracteres de 30 bytes.  Como consequência, a parte de dados de cada linha tem 4 + 4 + 4 + 4 + 4 + 50 + 50 + 30 + 50 ou 200 bytes.  
   
  Veja a seguir uma computação de tamanho para 5.000.000 (5 milhões) de linhas em uma tabela com otimização de memória. A memória total usada pelas linhas de dados é estimada como se segue:  
@@ -79,7 +79,7 @@ GO
   
  Pelos cálculos acima, o tamanho de cada linha na tabela com otimização de memória é 24 + 32 + 200 ou 256 bytes.  Como temos 5 milhões de linhas, a tabela consumirá 5.000.000 * 256 bytes ou 1.280.000.000 bytes – aproximadamente 1,28 GB.  
   
-##  <a name="bkmk_IndexMeemory"></a> Memória para índices  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>Memória para índices  
  **Memória para cada índice de hash**  
   
  Cada índice de hash é uma matriz de hash de ponteiros de endereço de 8 bytes.  O tamanho da matriz é melhor determinado pelo número de valores de índice exclusivos para esse índice – por exemplo, o número de valores exclusivos Col2 é um bom ponto de partida para o tamanho da matriz para o t1c2_index. Uma matriz de hash que é muito grande desperdiça memória.  Uma matriz de hash que é muito pequena reduz o desempenho já que haverá muitas colisões pelos valores de índice que usam o hash para o mesmo índice.  
@@ -135,7 +135,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  A memória necessária pelos índices não clusterizados pode ser computada da seguinte forma:  
   
--   **Memória alocada a nós que não são nós folha**   
+-   **Memória alocada para nós não folha**   
     Para uma configuração comum, a memória alocada para nós não folha é uma porcentagem muito pequena da memória total usada pelo índice. Ela é tão pequena que pode seguramente ser ignorada.  
   
 -   **Memória para nós folha**   
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> Memória para o controle de versão de linha  
  Para evitar bloqueios, OLTP de memória usa a simultaneidade otimista ao atualizar ou excluir linhas. Isso significa que quando uma linha é atualizada, uma versão de linha adicional será criada. O sistema mantém as versões anteriores disponíveis até que todas as transações que poderiam possivelmente usar a versão concluiu a execução. Quando uma linha for excluída, o sistema atua de uma maneira semelhante a uma atualização, mantendo a versão disponível até que não estão mais necessário. Leitura e inserções não criam versões adicionais de linha.  
   
  Como pode haver um número de linhas adicionais na memória a qualquer momento aguardando o ciclo de coleta de lixo para liberar a memória, você deve ter memória suficiente para acomodar estas linhas adicionais.  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> Memória para variáveis de tabela  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>Memória para variáveis de tabela  
  A memória usada para uma variável de tabela é liberada apenas quando a variável de tabela sai do escopo. As linhas excluídas, inclusive as linhas excluídas como parte de uma atualização, de uma variável de tabela, não estão sujeitas à coleta de lixo. Nenhuma memória é liberada até a variável de tabela sair do escopo.  
   
  As variáveis de tabela definidas em um lote SQL grande, e não em um escopo do procedimento, que são usadas em muitas transações podem consumir bastante memória. Como elas não têm coleta de lixo, as linhas excluídas em uma variável de tabela podem consumir muita memória e diminuir o desempenho, pois as operações de leitura precisam verificar as linhas excluídas.  
   
-##  <a name="bkmk_MemoryForGrowth"></a> Memória para o crescimento  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>Memória para crescimento  
  Os cálculos acima estima suas necessidades de memória para a tabela como existe atualmente. Além dessa memória, você precisa estimar o aumento da tabela e fornecimento de memória suficiente para acomodar esse crescimento.  Por exemplo, se você antecipar o crescimento de 10% no múltiplo da necessidade dos resultados acima por 1,1 para obter a memória total necessária para a tabela.  
   
 ## <a name="see-also"></a>Consulte Também  

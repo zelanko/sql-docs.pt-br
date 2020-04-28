@@ -16,10 +16,10 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768897"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
@@ -52,8 +52,8 @@ sp_changedistributor_password [ @password= ] 'password'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistributor_password**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Proteger o distribuidor](../../relational-databases/replication/security/secure-the-distributor.md)   
+ [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Proteger o Distribuidor](../../relational-databases/replication/security/secure-the-distributor.md)   
  [&#41;&#40;Transact-SQL de sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

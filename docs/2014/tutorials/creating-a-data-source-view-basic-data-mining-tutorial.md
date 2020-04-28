@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888645"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Criando uma exibição da fonte de dados (Tutorial de mineração de dados básico)
@@ -26,7 +26,7 @@ ms.locfileid: "68888645"
   
 2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione a fonte de dados Adventure Works DW 2012 que você criou na última tarefa. Clique em **Próximo**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione a fonte de dados Adventure Works DW 2012 que você criou na última tarefa. Clique em **Avançar**.  
   
     > [!NOTE]  
     >  Se você quiser criar uma fonte de dados, clique com o botão direito do mouse em **fontes de dados** e clique em **nova fonte de dados** para iniciar o assistente de fonte de dados.  
@@ -37,7 +37,7 @@ ms.locfileid: "68888645"
   
     -   **vTargetMail (dbo)** -exibição de dados históricos sobre os compradores de bicicletas anteriores  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de dados é chamada Adventure Works DW 2012. Altere o nome para `Targeted Mailing`e clique em **concluir**.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "68888645"
  [Lição 2: criando uma estrutura de endereçamento direcionada &#40;tutorial de mineração de dados básico&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Definindo uma exibição da fonte de dados &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+ [Como definir uma exibição da fonte de dados &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

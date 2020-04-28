@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265957"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68265957"
   Retorna informações sobre a atividade atual do host (ou hosts) daemon do filtro da instância de servidor.  
   
  
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|ID do host daemon do filtro.|  
-|**fdhost_name**|**nvarchar (120)**|Nome de host daemon do filtro.|  
+|**fdhost_name**|**nvarchar(120)**|Nome de host daemon do filtro.|  
 |**fdhost_process_id**|**int**|ID de processo do Windows do host daemon do filtro.|  
-|**fdhost_type**|**nvarchar (120)**|Tipo de documento que está sendo processado pelo host daemon do filtro, um de:<br /><br /> Thread único<br /><br /> Multi-thread<br /><br /> Documento enorme|  
+|**fdhost_type**|**nvarchar(120)**|Tipo de documento que está sendo processado pelo host daemon do filtro, um de:<br /><br /> Thread único<br /><br /> Multi-thread<br /><br /> Documento enorme|  
 |**max_thread**|**int**|Número de máximo de threads no host daemon do filtro.|  
 |**batch_count**|**int**|Número de lotes que estão sendo processados no host daemon do filtro.|  
   

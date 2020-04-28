@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889190"
 ---
 # <a name="upgrade-analysis-services"></a>Atualizar o Analysis Services
   Use a configuração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações detalhadas sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como atualizar o no modo do SharePoint, consulte [Atualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obter mais informações sobre como atualizar uma instância existente do SQL Server, consulte [atualizar para o SQL Server 2014 usando o assistente de instalação &#40;&#41;de instalação ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problemas de atualização conhecidos  
- Antes de atualizar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]para o, examine o seguinte:  
+ Antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise o seguinte:  
   
 -   [Notas de versão do SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68889190"
   
 -   [Atualizações de versão e edição com suporte](supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Requisitos de hardware e software para instalação do SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Verificar parâmetros do Verificador de Configuração do Sistema](check-parameters-for-the-system-configuration-checker.md)  
   

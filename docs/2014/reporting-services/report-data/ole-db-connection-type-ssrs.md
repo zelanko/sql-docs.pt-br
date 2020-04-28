@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891986"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Tipo de conexão OLE DB (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "68891986"
   
  OLE DB é uma tecnologia de acesso a dados que permite aos clientes conectar-se a vários provedores de dados. Depois que você selecionar o tipo de fonte de dados OLE DB, deverá selecionar um provedor de dados específico. O suporte a recursos, como parâmetros e credenciais, depende do provedor de dados selecionado.  
   
- Use as informações deste tópico para criar uma fonte de dados. Para obter instruções passo a passo, consulte [Adicionar e Verificar uma conexão de dados ou fonte de dados &#40;o de Relatórios e o SSR&#41;S ](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Use as informações deste tópico para criar uma fonte de dados. Para obter instruções detalhadas, consulte [Adicionar e verificar uma &#40;de conexão de dados ou fonte de dados Construtor de relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> Cadeia de Conexão  
  A cadeia de caracteres de conexão da extensão de processamento de dados OLE DB depende do provedor de dados desejado. Uma cadeia de caracteres de conexão típica contém pares de nome/valor que são suportados pelo provedor de dados. Por exemplo, a cadeia de caracteres de conexão a seguir especifica o provedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e do banco de dados AdventureWorks:  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Após a publicação do relatório, talvez seja necessário alterar as credenciais da fonte de dados para que, quando o relatório for executado no servidor de relatório, as permissões recuperadas sejam válidas.  
   
- Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão em serviços de relatórios](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especifique credenciais no 'Report Builder '](../specify-credentials-in-report-builder.md)  
+ Para obter mais informações, consulte [conexões de dados, fontes de dados e cadeias de conexão em Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) ou [especificar credenciais no construtor de relatórios](../specify-credentials-in-report-builder.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Caracteres especiais em uma senha  
  Se você configurar a fonte de dados OLE DB para exigir uma senha ou para incluir uma senha na cadeia de conexão e um usuário inserir a senha com caracteres especiais, como sinais de pontuação, alguns drivers de fonte de dados subjacentes não conseguirão validar os caracteres especiais. Quando você processar o relatório, a mensagem "Senha inválida" poderá indicar esse problema.  
@@ -72,10 +72,10 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
   
-##  <a name="how-to-topics"></a><a name="HowTo"></a>Tópicos de como fazer  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Tópicos de instruções  
  Esta seção contém instruções passo a passo para trabalhar com conexões de dados, fontes de dados e conjuntos de dados.  
   
- [Adicionar e verificar uma conexão de dados ou fonte de dados &#40;construtor de relatórios e&#41;ssrs](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Adicionar e verificar uma conexão de dados ou uma fonte de dados &#40;Construtor de Relatórios e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,13 +86,13 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="related-sections"></a><a name="Related"></a>Seções relacionadas  
  Estas seções da documentação fornecem informações conceituais detalhadas sobre dados de relatório, bem como informações de procedimentos sobre como definir, personalizar e usar partes de um relatório relacionadas aos dados.  
   
- [Adicionar dados a um relatório &#40;relatório construtor e ssrs&#41;](report-datasets-ssrs.md)  
+ [Adicionar dados a um relatório &#40;Construtor de Relatórios e SSRS&#41;](report-datasets-ssrs.md)  
  Fornece uma visão geral de como acessar dados de seu relatório.  
   
  [Conexões de dados, fontes de dados e cadeias de conexão no Construtor de Relatórios](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Fornece informações sobre conexões de dados e fontes de dados.  
   
- [Reportar conjuntos de dados incorporados e conjuntos de dados compartilhados &#40;o de relatórios e ssrs&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de itens de relatório inseridos e conjuntos de &#40;compartilhados Construtor de Relatórios e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fornece informações sobre conjuntos de dados inseridos e compartilhados.  
   
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
@@ -104,8 +104,8 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  
   
 ## <a name="see-also"></a>Consulte Também  
- [Relatório parâmetros &#40;Construtor de Relatórios e&#41;de Designer de Relatórios](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filter, Group e Sort Data &#40;Report Builder e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Parâmetros de relatório &#40;Construtor de Relatórios e Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressões &#40;Construtor de Relatórios e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

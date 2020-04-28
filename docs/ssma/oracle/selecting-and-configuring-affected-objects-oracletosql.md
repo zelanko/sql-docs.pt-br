@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266501"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selecionar e configurar os objetos afetados (OracleToSQL)
@@ -50,7 +50,7 @@ A guia tabela contém a exibição de grade da tabela selecionada. A grade cont�
 ## <a name="sql"></a>Sql  
 A guia SQL contém o SQL "criar tabela" da tabela selecionada.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Dados  
 Guia dados exibe os dados presentes na tabela selecionada.  
   
 ## <a name="properties"></a>Propriedades  

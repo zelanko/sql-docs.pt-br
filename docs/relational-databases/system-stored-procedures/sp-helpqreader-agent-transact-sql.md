@@ -16,10 +16,10 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771419"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
@@ -41,9 +41,9 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**sessão**|**int**|ID do agente.|  
+|**id**|**int**|ID do agente.|  
 |**name**|**nvarchar (100)**|O nome do agente.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
 |**job_login**|**nvarchar(512)**|É a conta do Windows na qual o Distribution Agent é executado, que é retornado no formato *domínio*\\*nome de usuário*.|  

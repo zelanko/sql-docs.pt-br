@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266598"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Configurações do projeto (migração) (OracleToSQL)
@@ -43,7 +43,7 @@ O painel migração está disponível nas caixas de diálogo **configurações d
 |**Verificar restrições**|Especifica se o SSMA deve verificar as restrições ao inserir dados em SQL Server tabelas.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
 |**Tempo limite de migração de dados**|Especifica o tempo limite usado durante a migração de dados<br /><br />**Modo padrão**: 15<br /><br />**Modo otimista**: 15<br /><br />**Modo completo**: 15|  
 |**Opções de migração de dados estendidas**|Mostra opções de migração de dados adicionais para cada tabela na guia detalhes separados.<br /><br />**Modo padrão**: ocultar<br /><br />**Modo otimista**: ocultar<br /><br />**Modo completo**: ocultar|  
-|**Gatilhos de incêndio**|Especifica se o SSMA deve acionar gatilhos de inserção ao adicionar dados a tabelas SQL Server.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
+|**Acionadores**|Especifica se o SSMA deve acionar gatilhos de inserção ao adicionar dados a tabelas SQL Server.<br /><br />**Modo padrão**: false<br /><br />**Modo otimista**: false<br /><br />**Modo completo**: falso|  
 |**Manter identidade**|Especifica se o SSMA preserva valores nulos nos dados de origem quando adiciona dados a SQL Server, independentemente dos valores padrão especificados em SQL Server.<br /><br />**Modo padrão**: verdadeiro<br /><br />**Modo otimista**: verdadeiro<br /><br />**Modo completo**: falso|  
 |**Manter nulos**|Especifica se o SSMA preserva valores nulos nos dados de origem quando adiciona dados a SQL Server, independentemente dos valores padrão especificados em SQL Server.<br /><br />**Modo padrão**: verdadeiro<br /><br />**Modo otimista**: verdadeiro<br /><br />**Modo completo**: verdadeiro|  
 |**Operação de corte de marca de cadeia de caracteres com erro**|Se o tamanho da coluna de destino for menor que o comprimento da cadeia de caracteres de origem, o valor será cortado e marcado como um erro.<br /><br />**Modo padrão**: Sim<br /><br />**Modo otimista**: Sim<br /><br />**Modo completo**: Sim|  

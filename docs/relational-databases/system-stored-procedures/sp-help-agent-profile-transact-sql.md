@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771462"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -40,19 +40,19 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>Argumentos  
 `[ @agent_type = ] agent_type`É o tipo de agente. *agent_type* é **int**, com um padrão de **0**, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
-|**Beta**|Agente de Distribuição|  
-|**quatro**|Merge Agent|  
-|**99**|Queue Reader Agent|  
+|**3**|Agente de Distribuição|  
+|**4**|Merge Agent|  
+|**9**|Queue Reader Agent|  
   
 `[ @profile_id = ] profile_id`É a ID do perfil a ser exibido. *profile_id* é **int**, com um padrão de **-1**, que retorna todos os perfis na tabela **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|A ID do perfil.|  
 |**profile_name**|**sysname**|Exclusivo para o tipo de agente.|  

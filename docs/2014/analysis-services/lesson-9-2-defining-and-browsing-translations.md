@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493785"
 ---
 # <a name="defining-and-browsing-translations"></a>Definindo e procurando traduções
@@ -123,7 +123,7 @@ ms.locfileid: "69493785"
      Observe que agora os nomes de mês e de medida são exibidos em francês.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)  
+ [Lição 10: Como definir funções administrativas](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Traduções de dimensão](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

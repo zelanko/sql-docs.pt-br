@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890650"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
@@ -35,15 +35,15 @@ ms.locfileid: "68890650"
   
  Este destino tem uma entrada e nenhuma saída.  
   
- O destino treinamento de modelo de mineração de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dados usa um Gerenciador de conexões [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para se conectar ao projeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à instância do que contém a estrutura de mineração e os modelos de mineração que o destino treina. Para obter mais informações, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ O destino Treinamento do Modelo de Mineração de Dados usa um gerenciador de conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se conecta ao projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou à instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contém a estrutura de mineração e os modelos de mineração treinados pelo destino. Para obter mais informações, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Treinamento de Modelo de Mineração de Dados** , clique em um dos seguintes tópicos:  
   
--   [Editor de treinamento de modelo de mineração de dados &#40;guia conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Conexão&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Editor de treinamento de modelo de mineração de dados &#40;guia colunas&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Editor de Treinamento de Modelo de Mineração de Dados &#40;guia Colunas&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  A caixa de diálogo **Editor Avançado** reflete as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   

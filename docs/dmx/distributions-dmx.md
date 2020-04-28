@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fda2eb169985eb670614f611764fbf149c71a42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892790"
 ---
 # <a name="distributions-dmx"></a>Distribuições (DMX)
@@ -25,7 +25,7 @@ ms.locfileid: "68892790"
  **NORMAL**  
  Os valores para a coluna contínua formam um histograma com uma distribuição Gaussiana normal.  
   
- **Log normal**  
+ **Log Normal**  
  Os valores da coluna contínua formam um histograma, onde o logaritmo dos valores é normalmente distribuído.  
   
  **UNIVERSAL**  

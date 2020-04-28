@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771440"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -50,9 +50,9 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|Nome do Publicador.|  
+|**programa**|**sysname**|Nome do Publicador.|  
 |**publisher database**|**sysname**|Nome do banco de dados do Publicador.|  
 |**documento**|**sysname**|Nome da publicação.|  
 |**independent_agent**|**bit**|Indica se existe um Distribution Agent autônomo para essa publicação.|  
@@ -60,21 +60,21 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**Agente de distribuição**|**nvarchar (100)**|O Distribution Agent que trata a assinatura.|  
 |**publication description**|**nvarchar (255)**|Descrição da publicação.|  
 |**last updating time**|**date**|Hora em que as informações de assinatura foram atualizadas. Esta é uma cadeia de caracteres UNICODE de data ISO (114) + hora de ODBC (121). O formato é yyyymmdd hh:mi:sss.mmm onde 'yyyy' é ano, 'mm' é mês, 'dd' é dia, 'hh' é hora, 'mi' é minuto, 'sss' é segundo e 'mmm' é milissegundo.|  
-|**nome da assinatura**|**varchar (386)**|Nome da assinatura.|  
-|**último carimbo de data/hora da transação**|**varbinary (16)**|Carimbo de data e hora da última transação replicada.|  
+|**nome da assinatura**|**varchar (386)**|O nome da assinatura.|  
+|**último carimbo de data/hora da transação**|**varbinary(16)**|Carimbo de data e hora da última transação replicada.|  
 |**update mode**|**tinyint**|O tipo de atualizações permitido.|  
 |**distribution agent job_id**|**int**|A ID de trabalho do Distribution Agent.|  
 |**enabled_for_synmgr**|**int**|Se a assinatura pode ou não ser sincronizada pelo Gerenciador de Sincronização da [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**subscription guid**|**Binary (16)**|Identificador global para a versão da assinatura na publicação.|  
-|**subid**|**Binary (16)**|Identificador global para uma assinatura anônima.|  
+|**subscription guid**|**binary(16)**|Identificador global para a versão da assinatura na publicação.|  
+|**subid**|**binary(16)**|Identificador global para uma assinatura anônima.|  
 |**immediate_sync**|**bit**|Se os arquivos de sincronização serão criados ou recriados em cada execução do Agente de Instantâneo.|  
 |**logon do Publicador**|**sysname**|ID do logon usado no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**senha do Publicador**|**nvarchar (524)**|A senha (criptografada) usada no Publicador para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
+|**security_mode de publicador**|**int**|O modo de segurança implementado no Publicador.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows<br /><br /> **2** = os gatilhos de sincronização usam uma entrada **sysservers** estática para fazer RPC (chamada de procedimento remoto) e o *Publicador* deve ser definido na tabela **sysservers** como um servidor remoto ou servidor vinculado.|  
 |**distribuidor**|**sysname**|Nome do Distribuidor.|  
 |**distributor_login**|**sysname**|A ID de logon usado no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar (524)**|A senha (criptografada) usada no Distribuidor para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
+|**distributor_security_mode**|**int**|Modo de segurança implementado no distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows|  
 |**ftp_address**|**sysname**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_port**|**int**|Somente para compatibilidade com versões anteriores.|  
 |**ftp_login**|**sysname**|Somente para compatibilidade com versões anteriores.|  

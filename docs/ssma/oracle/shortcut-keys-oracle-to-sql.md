@@ -11,14 +11,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266467"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Teclas de atalho (OracleToSQL)
-Você pode usar atalhos de teclado para navegar pelo aplicativo SSMA. Para obter mais informações, consulte os tópicos a seguir.  
+Você pode usar atalhos de teclado para navegar pelo aplicativo SSMA. Para obter mais informações, consulte estes tópicos.  
   
 -   [Comandos de menu e outras teclas de atalho&#40;Oracle para SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   

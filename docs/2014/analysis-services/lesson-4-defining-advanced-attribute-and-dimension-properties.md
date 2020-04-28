@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493990"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Definindo propriedades de dimensão e atributo avançadas
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lição 4: Como definir propriedades avançadas de dimensão e de atributo
   Nesta lição, você aprenderá como usar algumas propriedades avançadas de atributos, hierarquias de atributo e propriedades de dimensão.  
   
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.locfileid: "69493990"
  Nesta tarefa, você definirá nomes de nível em uma dimensão pai-filho e especificará se os dados relacionados aos membros pai serão exibidos. Para obter mais informações, consulte [hierarquia pai-filho](multidimensional-models/parent-child-dimension.md) e [atributos em hierarquias pai-filho](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Agrupando membros de atributo automaticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
- Nesta tarefa, você criará automaticamente agrupamento de membros de atributos com base na distribuição de membros dentro da hierarquia de atributos. Para obter mais informações, consulte [Agrupar membros de atributo &#40;discretização&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ Nesta tarefa, você criará automaticamente agrupamento de membros de atributos com base na distribuição de membros dentro da hierarquia de atributos. Para obter mais informações, consulte [Agrupar membros de atributo &#40;Diferenciação&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Ocultando e desabilitando as hierarquias de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  Nesta tarefa, você aprenderá como e quando desativar ou ocultar as hierarquias de atributo.  
@@ -41,13 +41,13 @@ ms.locfileid: "69493990"
  Nesta tarefa, você aprenderá como classificar os membros de dimensão com base em um atributo secundário para atingir a ordem de classificação desejada.  
   
  [Especificando relações de atributo entre atributos em uma hierarquia definida pelo usuário](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- Nesta tarefa, você aprenderá a definir propriedades de membro para atributos e especificar relações de agregação entre eles. Para obter mais informações, consulte [Definir relações de atributo](multidimensional-models/attribute-relationships-define.md) e [Propriedades da hierarquia de usuário](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Nesta tarefa, você aprenderá a definir propriedades de membro para atributos e especificar relações de agregação entre eles. Para obter mais informações, consulte [definir relações de atributo](multidimensional-models/attribute-relationships-define.md) e [Propriedades de hierarquia de usuário](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  [Definindo o membro desconhecido e as propriedades de processamento nulo](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  Nesta tarefa, você configura as propriedades UnknownMember e UnknownMemberName para tratar as condições de erro causadas por membros de dimensão nulos.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 5: Definindo relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lição 5: Como definir relações entre grupos de medidas e dimensões](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   

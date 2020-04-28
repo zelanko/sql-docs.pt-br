@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154028"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de Destino ADO NET (Página Gerenciador de Conexões)
@@ -24,7 +24,7 @@ ms.locfileid: "70154028"
   
  Para obter mais informações sobre o destino ADO NET, consulte [ADO NET Destination](data-flow/ado-net-destination.md).  
   
- **Para abrir a página Gerenciador de conexões**  
+ **Para abrir a página Gerenciador de Conexões**  
   
 1.  Em [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra o pacote [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tenha o destino ADO NET.  
   
@@ -33,22 +33,22 @@ ms.locfileid: "70154028"
 3.  No **Editor de Destino ADO NET**, clique em **Gerenciador de Conexões**.  
   
 ## <a name="static-options"></a>Opções estáticas  
- **Connection manager**  
+ **Gerenciador de conexões**  
  Selecione um gerenciador de conexões existente na lista ou crie uma nova conexão clicando em **Nova**.  
   
  **Novo**  
  Crie um novo gerenciador de conexões usando a caixa de diálogo **Configurar Gerenciador de Conexões ADO NET** .  
   
- **Usar uma tabela ou exibição**  
- Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **novo**.  
+ **Use uma tabela ou exibição**  
+ Selecione uma tabela ou exibição existente na lista ou crie uma nova tabela clicando em **Nova**.  
   
  **Novo**  
  Crie uma nova tabela ou exibição usando a caixa de diálogo **Criar Tabela** .  
   
 > [!NOTE]  
->  Quando você clica **** em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Quando você clica **New**em novo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , o gera uma instrução de CREATE TABLE padrão com base na fonte de dados conectada. A instrução CREATE TABLE padrão não incluirá o atributo FILESTREAM mesmo que a tabela de origem inclua uma coluna com o atributo FILESTREAM declarado. Para executar um componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] com o atributo FILESTREAM, implemente primeiro o armazenamento FILESTREAM no banco de dados de destino. Em seguida, adicione o atributo FILESTREAM à instrução CREATE TABLE na caixa de diálogo **Criar Tabela** . Para obter mais informações, consulte [Dados de blob &#40;objeto binário grande&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
- **Visualização**  
+ **Visualizar**  
  Visualize os resultados usando a caixa de diálogo **Visualizar Resultados da Consulta** . A visualização pode exibir até 200 linhas.  
   
  **Use a inserção em massa quando disponível**  

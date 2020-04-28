@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742897"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
@@ -39,14 +39,14 @@ ms.locfileid: "68742897"
 > Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID do banco de dados no qual o procedimento armazenado reside.|  
 |**object_id**|**int**|Número de identificação de objeto do procedimento armazenado.|  
-|**tipo**|**Char (2)**|Tipo do objeto:<br /><br /> P = Procedimento armazenado SQL<br /><br /> PC = Procedimento armazenado de assembly (CLR)<br /><br /> X = Procedimento armazenado estendido|  
-|**type_desc**|**nvarchar (60)**|Descrição do tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary (64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste procedimento armazenado.|  
-|**plan_handle**|**varbinary (64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
+|**type**|**char(2)**|Tipo do objeto:<br /><br /> P = Procedimento armazenado SQL<br /><br /> PC = Procedimento armazenado de assembly (CLR)<br /><br /> X = Procedimento armazenado estendido|  
+|**type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas em **Sys. dm_exec_query_stats** que foram executadas de dentro deste procedimento armazenado.|  
+|**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com a exibição de gerenciamento dinâmico **Sys. dm_exec_cached_plans** .<br /><br /> Sempre será 0x000 quando um procedimento armazenado compilado nativamente consultar uma tabela com otimização de memória.|  
 |**cached_time**|**datetime**|Hora em que o procedimento armazenado foi adicionado ao cache.|  
 |**last_execution_time**|**datetime**|Hora em que o procedimento armazenado foi executado pela última vez.|  
 |**execution_count**|**bigint**|O número de vezes que o procedimento armazenado foi executado desde a última compilação.|  

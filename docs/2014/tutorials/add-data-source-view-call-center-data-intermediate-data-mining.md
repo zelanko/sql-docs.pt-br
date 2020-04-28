@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888682"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados aos dados de call center (Tutorial de mineração de dados intermediário)
@@ -32,7 +32,7 @@ ms.locfileid: "68888682"
   
 2.  Na página **Bem-vindo ao Assistente de Exibição da Fonte de Dados**, clique em **Próximo**.  
   
-3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] a fonte de dados. Se você não tiver essa fonte de dados, consulte o [tutorial básico de mineração de dados](../../2014/tutorials/basic-data-mining-tutorial.md). Clique em **Próximo**.  
+3.  Na página **selecionar uma fonte de dados** , em **fontes de dados relacionais**, selecione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] a fonte de dados. Se você não tiver essa fonte de dados, consulte o [tutorial básico de mineração de dados](../../2014/tutorials/basic-data-mining-tutorial.md). Clique em **Avançar**.  
   
 4.  Na página **selecionar tabelas e exibições** , selecione a tabela a seguir e clique na seta para a direita para adicioná-la à exibição da fonte de dados:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68888682"
   
     -   **DimDate**  
   
-5.  Clique em **Próximo**.  
+5.  Clique em **Avançar**.  
   
 6.  Na página **concluindo o assistente** , por padrão, a exibição da fonte de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]dados é denominada. Altere o nome para **callcenter**e clique em **concluir**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68888682"
     |-|-|  
     |**Nome da coluna**|DayOfWeek|  
     |**Descrição**|Obter dia de semana da tabela DimDate|  
-    |**Expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**Expressão**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      Para verificar se a expressão cria os dados necessários, clique com o botão direito do mouse na tabela **FactCallCenter**e selecione **explorar dados**.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "68888682"
 |FactCallCenterID|Uma chave arbitrária criada durante a importação dos dados para o data warehouse.<br /><br /> Esta coluna identifica registros exclusivos e deve ser usada como o chave de caso para o modelo de mineração de dados.|  
 |DateKey|A data da operação do call center, expressa como um inteiro. Chaves de datas em valores inteiros são usadas frequentemente em data warehouses, mas você pode obter a data no formato data/hora se agrupar por valores de data.<br /><br /> Observe que as datas não são exclusivas porque o fornecedor oferece um relatório separado para cada turno em cada dia de operação.|  
 |WageType|Indica se o dia era um dia da semana, um fim de semana ou um feriado.<br /><br /> É possível que haja uma diferença na qualidade do atendimento ao cliente em fins de semana versus dias da semana, portanto, você usará essa coluna como uma entrada.|  
-|Shift|Indica o turno para o qual as chamadas são registradas. Esse call center divide o dia de trabalho em quatro turnos: AM, PM1, PM2 e Meia-noite.<br /><br /> É possível que o turno influencie na qualidade de atendimento ao consumidor; então, você usará isso como entrada.|  
+|Turno|Indica o turno para o qual as chamadas são registradas. Esse call center divide o dia de trabalho em quatro turnos: AM, PM1, PM2 e Meia-noite.<br /><br /> É possível que o turno influencie na qualidade de atendimento ao consumidor; então, você usará isso como entrada.|  
 |LevelOneOperators|Indica o número de operadores de nível 1 no imposto.<br /><br /> Os funcionários do call center começam no Nível 1. Então, esses funcionários são menos experientes.|  
 |LevelTwoOperators|Indica o número de operadores de Nível 2 em serviço.<br /><br /> Um funcionário deve registrar um certo número de horas de serviço para ser qualificado como operador de Nível 2.|  
 |TotalOperators|O número total de operadores presentes durante o turno.|  
 |Chamadas|O número de chamadas recebidas durante o turno.|  
 |AutomaticResponses|O número de chamadas administradas totalmente pelo processamento de chamada automatizado (Resposta Interativa de Voz ou IVR).|  
-|Pedidos|O número de pedidos resultantes das chamadas.|  
+|Orders|O número de pedidos resultantes das chamadas.|  
 |IssuesRaised|O número de emissões geradas pelas chamadas que exigem acompanhamento.|  
 |AverageTimePerIssue|O tempo médio necessário para responder a uma chamada de entrada.|  
 |ServiceGrade|Uma métrica que indica a qualidade de serviço geral, medida como a *taxa de abandono* para toda a mudança. Quanto maior a taxa de abandono, maior a probabilidade de insatisfação dos clientes e de perda dos pedidos em potencial.|  

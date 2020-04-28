@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771527"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Restringe o conjunto de resultados para conter somente os bancos de dados nos quais o valor do *tipo* de opção de replicação especificado foi habilitado. o *tipo* é **sysname**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**publicou**|Replicação transacional permitida.|  
 |**publicação de mesclagem**|Replicação de mesclagem permitida.|  
@@ -53,10 +53,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do banco de dados.|  
-|**sessão**|**int**|Identificador de banco de dados.|  
+|**id**|**int**|Identificador de banco de dados.|  
 |**transpublish**|**bit**|Se o banco de dados tiver sido habilitado para publicação de instantâneo ou transacional; em que um valor de **1** significa que a publicação de instantâneo ou transacional está habilitada.|  
 |**mergepublish**|**bit**|Se o banco de dados tiver sido habilitado para publicação de mesclagem; em que um valor de **1** significa que a publicação de mesclagem está habilitada.|  
 |**dbowner**|**bit**|Se o usuário for membro da função de banco de dados fixa **db_owner** ; em que um valor de **1** indica que o usuário é um membro dessa função.|  

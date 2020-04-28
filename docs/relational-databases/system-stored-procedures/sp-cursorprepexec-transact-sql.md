@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652431"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -59,17 +59,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  As regras para especificar o valor stmt são as mesmas que as para sp_cursoropen, com a exceção de que o tipo de dados da cadeia de caracteres *stmt* deve ser **ntext**.  
   
- *Opções*  
+ *options*  
  Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. * as opções exigem o valor de entrada **int** a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opção SCROLL. *scrollopt* é um parâmetro opcional que requer um dos seguintes valores de entrada **int** .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Opção de controle de simultaneidade. *ccopt* é um parâmetro opcional que requer um dos seguintes valores de entrada **int** .  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (anteriormente conhecido como LOCKCC)|  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Assim como ** com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, o pode atribuir um valor diferente daquele solicitado.  
+ Assim como *scrollpt*com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, o pode atribuir um valor diferente daquele solicitado.  
   
  *linhas*  
  É um parâmetro opcional que significa o número de linhas de buffer de busca a ser usado com AUTO_FETCH. O padrão é 20 linhas. o *número de linhas* se comporta de forma diferente quando atribuído como um valor de entrada versus um valor de retorno.  

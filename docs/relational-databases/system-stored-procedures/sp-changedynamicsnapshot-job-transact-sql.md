@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768954"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -59,12 +59,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`É a frequência com a qual agendar o agente. *frequency_type* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob demanda|  
-|**quatro**|Diário|  
-|**8**|Semanalmente|  
+|**4**|Diário|  
+|**8**|Semanal|  
 |**16**|Mensal|  
 |**32**|Relativo ao mês|  
 |**64**|Iniciar automaticamente|  
@@ -73,27 +73,27 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Os dias em que o agente é executado. *frequency_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Sunday|  
 |**2**|Monday|  
-|**Beta**|Terça-feira|  
-|**quatro**|Quarta-feira|  
-|**05**|Quinta-feira|  
+|**3**|Terça-feira|  
+|**4**|Quarta-feira|  
+|**5**|Quinta-feira|  
 |**6**|Friday|  
 |**7**|Sábado|  
 |**8**|Dia|  
-|**99**|Dias da semana|  
-|**254**|Dias de fim de semana|  
+|**9**|Dias da semana|  
+|**10**|Dias de fim de semana|  
 |NULL (padrão)||  
   
 `[ @frequency_subday = ] frequency_subday`É a frequência de reagendar durante o período definido. *frequency_subday* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
-|**quatro**|Minuto|  
+|**4**|Minuto|  
 |**8**|Hora|  
 |NULL (padrão)||  
   
@@ -101,11 +101,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`É a data em que a Agente de Mesclagem é executada. Esse parâmetro é usado quando *frequency_type* é definido como **32** (relativo mensal). *frequency_relative_interval* é **int**e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**1**|Primeiro|  
 |**2**|Segundo|  
-|**quatro**|Terceiro|  
+|**4**|Terceiro|  
 |**8**|Quarto|  
 |**16**|Último|  
 |NULL (padrão)||  
@@ -139,7 +139,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou **db_owner** função de banco de dados fixa podem ser executados **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [Exibir e modificar as configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Instantâneos para publicações de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

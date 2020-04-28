@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266553"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
@@ -33,7 +33,7 @@ Quando o teste for concluído, o relatório de caso de teste será criado. Cliqu
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução de caso de teste  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 O SSMA Tester verifica se todos os pré-requisitos foram atendidos para a execução de teste antes do início do teste. Se algumas condições não forem satisfeitas, uma mensagem de erro será exibida.  
   
 ### <a name="initialization"></a>Inicialização  
@@ -43,7 +43,7 @@ Suponha que a tabela verificada seja nomeada USER_TABLE. Para essa tabela, os se
   
 ||||  
 |-|-|-|  
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AUDID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
@@ -56,14 +56,14 @@ O objeto a seguir é criado no esquema da tabela verificada [!INCLUDE[ssNoVersio
   
 ||||  
 |-|-|-|  
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |USER_TABLE $ trg|gatilho|Disparar a auditoria das alterações na tabela verificada.|  
   
 E os seguintes objetos são criados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nome|Type|DESCRIÇÃO|  
+|Nome|Type|Descrição|  
 |USER_TABLE $ AUD|tabela|Tabela na qual as linhas excluídas e substituídas são salvas.|  
 |USER_TABLE $ AudID|tabela|Tabela na qual as linhas novas e alteradas são salvas.|  
 |USER_TABLE|exibição|Representação simplificada das modificações da tabela.|  

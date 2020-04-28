@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811063"
 ---
 # <a name="understanding-incremental-generation"></a>Entendendo a geração com incremento
@@ -85,6 +85,6 @@ ms.locfileid: "68811063"
   
 ## <a name="see-also"></a>Consulte Também  
  [Gerenciar alterações em fontes de dados e exibições de fonte de dados](manage-changes-to-data-source-views-and-data-sources.md)   
- [&#40;Analysis Services do assistente de geração de esquema&#41;](schema-generation-wizard-analysis-services.md)  
+ [Assistente de Geração de Esquema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

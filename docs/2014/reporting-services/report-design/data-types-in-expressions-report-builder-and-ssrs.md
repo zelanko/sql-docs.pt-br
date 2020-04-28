@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891862"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de dados em expressões (Construtor de Relatórios e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "68891862"
 |String|Padrão: cadeia de caracteres<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Padrão: Boolean|  
 |Integer|Padrão: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Padrão: DateTime<br /><br /> DateTimeOffset|  
+|Datetime|Padrão: DateTime<br /><br /> DateTimeOffset|  
 |Float|Padrão: Double<br /><br /> Single, Decimal|  
 |Binário|Padrão: Byte[]|  
 |Variante|Qualquer um dos itens acima, exceto Byte[]|  
@@ -65,7 +65,7 @@ ms.locfileid: "68891862"
   
 -   Crie um campo calculado com base em um campo de conjunto de dados de relatório existente, escrevendo uma expressão que converta todos os dados em uma coluna de conjunto de resultados em uma nova coluna com um tipo de dados diferente. Por exemplo, a expressão seguir converte o campo Ano de um valor inteiro para um valor de cadeia: `=CStr(Fields!Year.Value)`. Para saber mais, confira [Adicionar, editar e atualizar campos no painel de dados do relatório &#40;Construtor de Relatórios e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consulta MDX inclui uma FORMATTED_VALUE propriedade estendida para valores de cubo que já foram formatados durante o processamento do cubo. Para obter mais informações, consulte [Propriedades de campo estendidas para um banco de dados Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Verifique se a extensão de processamento de dados que você está usando inclui metadados para recuperar dados pré-formatados. Por exemplo, uma consulta MDX do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclui a propriedade estendida FORMATTED_VALUE para valores de cubo que já foram formatados ao processar o cubo. Para obter mais informações, consulte [Propriedades de campos estendidos para um banco de dados do Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Entendendo os tipos de dados de parâmetro  
  Os parâmetros de relatório devem ser um dos cinco tipos de dados: Boolean, DateTime, Integer, Float ou Text (também conhecido como String). Quando sua consulta de conjunto de dados inclui parâmetros de consulta, os parâmetros de relatório são criados automaticamente e vinculados a parâmetros de consulta. O tipo de dados padrão para um parâmetro de relatório é String. Para alterar o tipo de dados padrão de um parâmetro de relatório, selecione o valor correto da lista suspensa **Tipo de dados** na página **Geral** da caixa de diálogo **Propriedades do Parâmetro de Relatórios** .  
@@ -84,7 +84,7 @@ ms.locfileid: "68891862"
 |String para DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |String para DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Extraindo o ano|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 é verdadeiro e 0 é falso.|  
+|Booleano para Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 é verdadeiro e 0 é falso.|  
 |Booleano para Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 é verdadeiro e 0 é falso.|  
 |Apenas a parte DateTime do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Apenas a parte Offset do valor DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  

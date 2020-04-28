@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259782"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Trabalhando com o console do SSMA para Access (AccessToSQL)
@@ -39,5 +39,5 @@ Os tópicos abordados nesta seção incluem:
 |[Solução de problemas &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Fornece informações breves sobre como corrigir problemas de migração.|  
   
 ## <a name="see-also"></a>Confira também  
-[Introdução ao Console do SSMA para Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
+[Introdução com o console do SSMA para Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893040"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
@@ -52,7 +52,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 > [!NOTE]  
 >  Neste exemplo, o valor fornecido como entrada contém uma única aspa e, portanto, deve ser precedido por outra aspa. Se você não tiver certeza da sintaxe para inserção de um caractere de escape, use o Construtor de Consultas de Previsão para criar a consulta. Quando você seleciona o valor da lista suspensa, o caractere de escape exigido é inserido. Para obter mais informações, consulte [criar uma consulta singleton no designer de mineração de dados](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
   
  O terceiro argumento para a função **TopSum** especifica a soma de destino, como um Double. Para obter as linhas dos principais produtos que somam até 50 por cento de probabilidade, digite .5.  
   
- Exemplos de resultados:  
+ Resultados do exemplo:  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  

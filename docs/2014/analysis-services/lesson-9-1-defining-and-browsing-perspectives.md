@@ -1,5 +1,5 @@
 ---
-title: Definindo e Navegando Perspectivas | Microsoft Docs
+title: Definindo e procurando perspectivas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493772"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definindo e procurando perspectivas
@@ -41,7 +41,7 @@ ms.locfileid: "69493772"
   
      ![Nova perspectiva na coluna Nome da Perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nova perspectiva na coluna Nome da Perspectiva")  
   
-3.  Mude o nome `Internet Sales`da perspectiva para .  
+3.  Altere o nome da perspectiva `Internet Sales`para.  
   
 4.  Na próxima linha, defina DefaultMeasure como **Vendas pela Internet/Valor das Vendas**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493772"
   
 5.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Reseller Sales`grupo de medida  
+    -   `Reseller Sales`grupo de medidas  
   
     -   Grupo de medidas**Cotas de Vendas**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Mude o nome da `Reseller Sales`nova perspectiva para .  
+2.  Altere o nome da nova perspectiva para `Reseller Sales`.  
   
 3.  Defina **Vendas do Revendedor/Valor das Vendas** como a medida padrão.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493772"
   
 4.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Internet Sales`grupo de medida  
+    -   `Internet Sales`grupo de medidas  
   
     -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
@@ -131,16 +131,16 @@ ms.locfileid: "69493772"
   
 1.  Na barra de ferramentas da guia **Perspectivas** , clique no botão **Nova Perspectiva** .  
   
-2.  Mude o nome da `Sales Summary`nova perspectiva para .  
+2.  Altere o nome da nova perspectiva para `Sales Summary`.  
   
     > [!NOTE]  
     >  Você não pode especificar uma medida calculada como a medida padrão.  
   
 3.  Desmarque a caixa de seleção dos seguintes objetos:  
   
-    -   `Internet Sales`grupo de medida  
+    -   `Internet Sales`grupo de medidas  
   
-    -   `Reseller Sales`grupo de medida  
+    -   `Reseller Sales`grupo de medidas  
   
     -   Grupo de medidas**Motivo de Vendas pela Internet**  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493772"
   
      ![Assistente de Conexão de Dados no Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Assistente de Conexão de Dados no Excel")  
   
-6.  Selecione `Internet Sales` na lista **Perspectiva** e, em seguida, revise as medidas e dimensões no painel de metadados.  
+6.  Selecione `Internet Sales` na lista **perspectiva** e, em seguida, examine as medidas e dimensões no painel metadados.  
   
      Observe que somente aqueles objetos especificados na perspectiva Vendas pela Internet são exibidos.  
   
 7.  No painel de metadados, expanda **Medidas**.  
   
-     Observe que `Internet Sales` apenas o grupo de medidas aparece, juntamente com o **GPM** da Internet e a **Razão de Vendas pela Internet para todos os membros** calculados.  
+     Observe que apenas o `Internet Sales` grupo de medidas aparece, junto com o **GPM da Internet** e a taxa de **vendas pela Internet para** membros calculados de todos os produtos.  
   
 8.  No modelo, selecione Excel novamente. Selecione `Sales Summary`.  
   

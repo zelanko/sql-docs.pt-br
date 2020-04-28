@@ -27,10 +27,10 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771294"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
@@ -52,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|É se a publicação é qualificada para usar partições preputadas; em que **1** significa que as partições já computadas podem ser usadas, e **0** significa que elas não podem ser usadas.|  
 |**has_dynamic_filters**|**bit**|É se pelo menos um filtro de linha com parâmetros tiver sido definido na publicação; em que **1** significa que um ou mais filtros de linha com parâmetros existem e **0** significa que não existem filtros dinâmicos.|  

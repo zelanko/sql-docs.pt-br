@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811113"
 ---
 # <a name="sql-graph-architecture"></a>Arquitetura do SQL Graph  
@@ -43,7 +43,7 @@ Uma tabela de nó representa uma entidade em um esquema de grafo. Toda vez que u
 ## <a name="edge-table"></a>Tabela de borda
 Uma tabela de borda representa uma relação em um grafo. As bordas são sempre direcionadas e conectadas a dois nós. Uma tabela de borda permite que os usuários modelem relações muitos para muitos no grafo. Uma tabela de borda pode ou não ter nenhum atributo definido pelo usuário nela. Toda vez que uma tabela de borda é criada, juntamente com os atributos definidos pelo usuário, três colunas implícitas são criadas na tabela de borda:
 
-|Nome da coluna    |DESCRIÇÃO  |
+|Nome da coluna    |Descrição  |
 |---   |---  |
 |`$edge_id`   |Identifica exclusivamente uma determinada borda no banco de dados. É uma coluna gerada e o valor é uma combinação de object_id da tabela de borda e um valor bigint gerado internamente. No entanto, `$edge_id` quando a coluna é selecionada, um valor calculado na forma de uma cadeia de caracteres JSON é exibido. `$edge_id`é uma pseudo coluna, que mapeia para um nome interno com cadeia de caracteres hexadecimal. Quando você seleciona `$edge_id` na tabela, o nome da coluna será exibido como `$edge_id_\<hex_string>`. Usar nomes de pseudo-colunas em consultas é a maneira recomendada de consultar a coluna `$edge_id` interna e usar o nome interno com uma cadeia de caracteres hexadecimal deve ser evitada. |
 |`$from_id`   |Armazena o `$node_id` do nó, de onde a borda se origina.  |
@@ -67,7 +67,7 @@ Use essas exibições de metadados para ver os atributos de uma tabela de nó ou
 ### <a name="systables"></a>sys.tables
 O novo tipo de bit a seguir, as colunas serão adicionadas a SYS. Tabelas. Se `is_node` é definido como 1, isso indica que a tabela é uma tabela de nó e `is_edge` se é definida como 1, que indica que a tabela é uma tabela de borda.
  
-|Nome da coluna |Tipo de Dados |DESCRIÇÃO |
+|Nome da coluna |Tipo de Dados |Descrição |
 |--- |---|--- |
 |is_node |bit |1 = Esta é uma tabela de nó |
 |is_edge |bit |1 = Esta é uma tabela de borda |
@@ -75,14 +75,14 @@ O novo tipo de bit a seguir, as colunas serão adicionadas a SYS. Tabelas. Se `i
 ### <a name="syscolumns"></a>sys.columns
 A `sys.columns` exibição contém colunas `graph_type` adicionais e `graph_type_desc`, que indicam o tipo da coluna em tabelas de nó e borda.
  
-|Nome da coluna |Tipo de Dados |DESCRIÇÃO |
+|Nome da coluna |Tipo de Dados |Descrição |
 |--- |---|--- |
 |graph_type |INT |Coluna interna com um conjunto de valores. Os valores estão entre 1-8 para colunas de grafo e nulos para outros.  |
 |graph_type_desc |nvarchar(60)  |coluna interna com um conjunto de valores |
  
 A tabela a seguir lista os valores válidos `graph_type` para a coluna
 
-|Valor da coluna  |DESCRIÇÃO  |
+|Valor da coluna  |Descrição  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -100,26 +100,26 @@ Colunas implícitas em uma tabela de nó
 
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |coluna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |coluna `graph_id` interna  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Coluna de `node_id` nó externo  |
 
 Colunas implícitas em uma tabela de borda
 
 |Nome da coluna    |Tipo de Dados  |is_hidden  |Comentário  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |coluna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |coluna `graph_id` interna  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |coluna `edge_id` externa  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno do nó`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |Interno do nó`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interno do nó`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |externo do nó`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interno ao nó`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |Interno ao nó`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |Interno ao nó`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |externo ao nó`node_id`  |
  
 ### <a name="system-functions"></a>Funções de sistema
 As funções internas a seguir são adicionadas. Eles ajudarão os usuários a extrair informações das colunas geradas. Observe que, esses métodos não validarão a entrada do usuário. Se o usuário especificar um método `sys.node_id` inválido, ele extrairá a parte apropriada e a retornará. Por exemplo, OBJECT_ID_FROM_NODE_ID utilizará `$node_id` como entrada e retornará o object_id da tabela ao qual este nó pertence. 
  
-|Interno   |DESCRIÇÃO  |
+|Interno   |Descrição  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extrair o object_id de um`node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extrair o graph_id de um`node_id`  |

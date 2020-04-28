@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255350"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68255350"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nome|Tipo de dados|DESCRIÇÃO|  
+|Nome|Tipo de dados|Descrição|  
 |----------|---------------|-----------------|  
 |**neutraliza**|**nvarchar(4000)**|Nome do evento de estatísticas do otimizador.|  
-|**C'**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
-|**valor**|**float**|Valor de propriedade médio por ocorrência de evento.|  
+|**occurrence**|**bigint**|Número de ocorrências do evento de otimização para este contador.|  
+|**value**|**float**|Valor de propriedade médio por ocorrência de evento.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -69,14 +69,14 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
 |pesquisar 2 tarefas|Somente interno|Somente interno|  
 |estágio de ganho 0 para estágio 1|Somente interno|Somente interno|  
 |estágio de ganho 1 para estágio 2|Somente interno|Somente interno|  
-|Tempo limite|Somente interno|Somente interno|  
+|tempo limite|Somente interno|Somente interno|  
 |limite de memória excedido|Somente interno|Somente interno|  
 |insert stmt|Número de otimizações existentes para instruções INSERT.|Não aplicável|  
 |delete stmt|Número de otimizações existentes para instruções DELETE.|Não aplicável|  
 |update stmt|Número de otimizações existentes para instruções UPDATE.|Não aplicável|  
 |contém subconsulta|Número de otimizações para uma consulta que contém ao menos uma subconsulta.|Não aplicável|  
 |unnest falhou|Somente interno|Somente interno|  
-|tables|Número total de otimizações.|Calcule o número médio de tabelas referenciadas por consulta otimizada.|  
+|tabelas|Número total de otimizações.|Calcule o número médio de tabelas referenciadas por consulta otimizada.|  
 |dicas|Número de vezes que alguma dica foi especificada. Dicas contadas incluem: dicas de consulta JOIN, GROUP, UNION e FORCE ORDER, a opção definida FORCE PLAN e dicas de associação.|Não aplicável|  
 |dica order|Número de vezes que dica de ordem de força foi especificada.|Não aplicável|  
 |dica de associação|Número de vezes que o algoritmo de junção foi forçado por uma dica de associação.|Não aplicável|  
@@ -128,7 +128,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

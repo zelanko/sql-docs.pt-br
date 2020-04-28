@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892820"
 ---
 # <a name="create-mining-structure-dmx"></a>CRIAR UMA ESTRUTURA DE MINERAÇÃO (DMX)
@@ -95,13 +95,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obter uma lista dos tipos de dados, dos tipos de conteúdo, de distribuições de coluna e de sinalizadores de modelagem que podem ser usados para definir uma coluna de estrutura, consulte os seguintes tópicos:  
   
--   [Tipos de dados &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de dados &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipos de conteúdo &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipos de conteúdo &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuições de coluna &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuições de colunas &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Sinalizadores de modelagem &#40;mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Sinalizadores de modelagem &#40;Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Você pode definir vários valores de sinalizadores de modelagem para uma coluna. No entanto, é possível ter apenas um tipo de conteúdo e um tipo de dados para uma coluna.  
   
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Consulte Também  
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

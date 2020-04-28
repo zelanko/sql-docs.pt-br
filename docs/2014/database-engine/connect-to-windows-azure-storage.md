@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154299"
 ---
 # <a name="connect-to-azure-storage"></a>Conectar-se a um Armazenamento do Azure
@@ -29,7 +29,7 @@ ms.locfileid: "70154299"
   
 2.  **Chave de Conta** – Especifique a chave de conta para a conta de armazenamento especificada.  
   
-3.  **Use pontos de extremidade seguros (HTTPS)** – esta opção utiliza a comunicação criptografada e a identificação segura de um servidor Web de rede.  
+3.  **Usar pontos de extremidade seguros (https)** – essa opção utiliza a comunicação criptografada e a identificação segura de um servidor Web de rede.  
   
 4.  **Salvar chave de conta** – Esta opção salva sua senha em um arquivo criptografado.  
   

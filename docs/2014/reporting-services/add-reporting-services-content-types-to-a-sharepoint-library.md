@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891626"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Adicionar tipos de conteúdo do servidor de relatório a uma biblioteca (Reporting Services no modo integrado do SharePoint)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece tipos de conteúdo predefinidos do SharePoint usados para gerenciar arquivos de fonte de dados compartilhada (.rsds), modelos de relatórios (.smdl) e arquivos de definição de relatório (.rdl) do Construtor de Relatórios. A adição de um tipo de conteúdo do **Construtor de Relatórios**, do **Modelo de Relatório**ou da **Fonte de Dados de Relatório** a uma biblioteca ativa o comando **Novo** para que você possa criar novos documentos desse tipo.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo do SharePoint  
@@ -32,7 +31,7 @@ ms.locfileid: "68891626"
 > [!TIP]  
 >  Se você **não** tiver configurado anteriormente tipos de conteúdo para uma biblioteca, primeiro habilite o gerenciamento de tipos de conteúdo e, depois, habilite os tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Consulte os procedimentos para habilitar o gerenciamento de tipo de conteúdo em uma única biblioteca de documentos.  
   
- **Vídeo curto:** [(SSRS) habilitando tipos de conteúdo em SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Vídeo rápido:** [(SSRS) Habilitando tipos de conteúdo no SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Neste tópico:**  
   
@@ -44,11 +43,11 @@ ms.locfileid: "68891626"
   
 -   [Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2010)](#bkmk_enable_content_management_2010)  
   
--   [Para adicionar tipos de conteúdo do servidor de relatório (SharePoint 2010)](#bkmk_add_single_2010)  
+-   [Para adicionar tipos de conteúdo de servidor de relatório (SharePoint 2010)](#bkmk_add_single_2010)  
   
 -   [Para habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites de BI](#bkmk_enable_multiple_sites)  
   
-##  <a name="bkmk_enable_all"></a>Habilitar tipos de conteúdo em todas as bibliotecas de documentos em um centro de BI existente  
+##  <a name="enable-content-types-in-all-document-libraries-in-an-existing-bi-center"></a><a name="bkmk_enable_all"></a>Habilitar tipos de conteúdo em todas as bibliotecas de documentos em um centro de BI existente  
   
 1.  Para habilitar os tipos de conteúdo e o gerenciamento de conteúdo em todas as bibliotecas de documentos em um site existente da **Central de Business Intelligence** , você pode alternar o recurso de integração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68891626"
   
     -   No SharePoint 2010, clique em **Ações do Site**e, depois, em **Configurações de Site**.  
   
-3.  Clique em **Recursos do conjunto de sites**.  
+3.  Clique em **recursos do conjunto de sites**.  
   
 4.  Localize o **Recurso de Integração do Servidor de Relatório** e clique em **Desativar**.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68891626"
   
     ![Ativar](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
-##  <a name="bkmk_enable_content_management"></a>Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2013)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a>Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2013)  
   
 1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "68891626"
   
 6.  Clique em **OK**.  
   
-##  <a name="bkmk_add_single"></a>Para adicionar tipos de conteúdo de Reporting Services (SharePoint 2013)  
+##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> Para adicionar tipos de conteúdo do Reporting Services (SharePoint 2013)  
   
 1.  Abra a biblioteca para a qual você deseja adicionar tipos de conteúdo do Reporting Services.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "68891626"
   
     -   Todos os tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] já foram adicionados à biblioteca. Se todos os tipos de conteúdo são parte de uma biblioteca, o grupo é removido da página **Adicionar Tipos de Conteúdo** . Se você excluir um ou mais dos tipos de conteúdo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o grupo **Tipos de Conteúdo do SQL Server Reporting Services** ficará visível na página **Adicionar Tipos de Conteúdo** .  
   
-##  <a name="bkmk_enable_content_management_2010"></a>Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2010)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a>Para habilitar o gerenciamento de tipo de conteúdo para uma única biblioteca de documentos (SharePoint 2010)  
   
 1.  Abra a biblioteca para a qual você deseja habilitar vários tipos de conteúdo. Na barra de menus da biblioteca, os seguintes menus serão exibidos: **Novo**, **Carregar**, **Ações**e **Configurações**. Se **Configurações**não aparecer, você não terá permissão para adicionar um tipo de conteúdo.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "68891626"
   
 6.  Clique em **OK**.  
   
-##  <a name="bkmk_add_single_2010"></a>Para adicionar tipos de conteúdo do servidor de relatório (SharePoint 2010)  
+##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a>Para adicionar tipos de conteúdo do servidor de relatório (SharePoint 2010)  
   
 1.  Abra a biblioteca para a qual você deseja adicionar tipos de conteúdo do Reporting Services.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "68891626"
   
 8.  Quando terminar de adicionar tipos de conteúdo, clique em **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Para habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites de BI  
+##  <a name="to-enable-content-types-and-content-management-for-multiple-bi-sites"></a><a name="bkmk_enable_multiple_sites"></a>Para habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites de BI  
   
 1.  Para servidores de relatório do SQL Server Reporting Services 2008 e 2008 R2, você pode habilitar tipos de conteúdo e gerenciamento de conteúdo para vários sites do Business Intelligence Center:  
   
@@ -161,10 +160,10 @@ ms.locfileid: "68891626"
   
      ![rs_general_app_settings_old_integrations](media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  Clique em **OK**.  
+4.  Clique em **Ok**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência à permissão de listas e sites do SharePoint para itens do servidor de relatório](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Referência de permissão de lista e site do SharePoint para itens do servidor de relatório](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Iniciar Construtor de Relatórios &#40;Construtor de Relatórios&#41;](report-builder/start-report-builder.md)  
   
   

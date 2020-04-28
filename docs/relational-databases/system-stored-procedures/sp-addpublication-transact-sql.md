@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769097"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -91,19 +91,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`É o modo de sincronização. *sync_method* é **nvarchar (13)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**native**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas. *Não há suporte para Publicadores Oracle*.|  
-|**character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um Publicador Oracle, o_ **caractere** _é válido somente para replicação de instantâneo_.|  
+|**espaço**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas. _Para um Publicador Oracle, o_ **caractere** _é válido somente para replicação de instantâneo_.|  
 |**simultâneas**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais. *Não há suporte para Publicadores Oracle*.|  
 |**concurrent_c**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas, mas não bloqueia as tabelas durante o instantâneo. Com suporte somente para publicações transacionais.|  
-|**instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas de um instantâneo de banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**instantâneo do banco de dados**|Produz saída de programa de cópia em massa em modo nativo de todas as tabelas de um instantâneo do banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Produz saída de programa de cópia em massa em modo de caractere de todas as tabelas de um instantâneo de banco de dados. Os instantâneos do banco de dados não estão disponíveis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]em todas as edições do. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (padrão)|O padrão é **nativo** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, o padrão é **caractere** quando o valor de *repl_freq* é **instantâneo** e para **concurrent_c** para todos os outros casos.|  
   
 `[ \@repl_freq = ] 'repl_freq'`É o tipo de frequência de replicação, *repl_freq* é **nvarchar (10)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**contínuo** (padrão)|O Publicador fornece saída de todas as transações com base em log. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **concurrent_c**.|  
 |**instantânea**|O Publicador só produz eventos de sincronização agendados. Para não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, isso requer que *sync_method* seja definido como **caractere**.|  
@@ -112,9 +112,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`Especifica se os dados da publicação estão disponíveis. *status* é **nvarchar (8)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
-|**ativo**|O dados da publicação estão imediatamente disponíveis para os Assinantes.|  
+|**activo**|O dados da publicação estão imediatamente disponíveis para os Assinantes.|  
 |**inativo** (padrão)|Os dados da publicação não estão disponíveis aos Assinantes quando a publicação é criada pela primeira vez (eles podem assinar, mas as assinaturas não são processadas).|  
   
  *Não há suporte para Publicadores Oracle*.  
@@ -135,10 +135,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`Especifica se o procedimento armazenado de sincronização para assinaturas de atualização é gerado no Publicador. *autogen_sync_procs* é **nvarchar (5)** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**true**|Definido automaticamente quando assinaturas de atualização estão habilitadas.|  
-|**for**|Definido automaticamente quando assinaturas de atualização não estão habilitadas ou para Publicadores Oracle.|  
+|**false**|Definido automaticamente quando assinaturas de atualização não estão habilitadas ou para Publicadores Oracle.|  
 |NULL (padrão)|O padrão é **verdadeiro** quando as assinaturas de atualização estão habilitadas e para **falso** quando as assinaturas de atualização não estão habilitadas.|  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`Especifica a política de resolução de conflitos seguida quando a opção de assinante de atualização em fila é usada. *conflict_policy* é **nvarchar (100)** com um padrão de NULL e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**pub wins**|O Publicador vence o conflito.|  
 |**sub reinit**|Reinicialize a assinatura.|  
@@ -191,7 +191,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`Especifica qual tipo de fila é usado. *queue_type* é **nvarchar (10)**, com um padrão de NULL, e pode ser um desses valores.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**SQL**|Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.|  
 |NULL (padrão)|O padrão é **SQL**, que especifica o uso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para armazenar transações.|  
@@ -214,10 +214,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`Indica se os assinantes podem inicializar uma assinatura para esta publicação a partir de um backup em vez de um instantâneo inicial. *allow_initialize_from_backup* é **nvarchar (5)** e pode ser um destes valores:  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**true**|Habilita inicialização de um backup.|  
-|**for**|Desabilita inicialização de um backup.|  
+|**false**|Desabilita inicialização de um backup.|  
 |NULL (padrão)|O padrão é **true** para uma publicação em uma topologia de replicação ponto a ponto e **false** para todas as outras publicações.|  
   
  Para obter mais informações, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -336,7 +336,7 @@ sp_addpublication [ @publication = ] 'publication'
  [&#41;&#40;Transact-SQL de sp_droppublication](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
- [Publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+ [Publicar objetos de banco de dados e](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

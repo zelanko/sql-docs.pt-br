@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262598"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -45,7 +45,7 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação que gera a versão de registro.|  
 |**version_sequence_num**|**bigint**|Número de sequência da versão de registro. Este valor é exclusivo dentro da transação que gera a versão.|  
@@ -54,9 +54,9 @@ sys.dm_tran_version_store
 |**status**|**tinyint**|Indica se um registro com controle de versão foi dividido em dois registros. Se o valor for 0, o registro será armazenado em uma página. Se o valor for 1, o registro será dividido em dois registros armazenados em duas páginas diferentes.|  
 |**min_length_in_bytes**|**smallint**|Comprimento mínimo do registro em bytes.|  
 |**record_length_first_part_in_bytes**|**smallint**|Comprimento em bytes da primeira parte do registro com controle de versão.|  
-|**record_image_first_part**|**varbinary (8000)**|Imagem binária da primeira parte do registro com controle de versão.|  
+|**record_image_first_part**|**varbinary(8000)**|Imagem binária da primeira parte do registro com controle de versão.|  
 |**record_length_second_part_in_bytes**|**smallint**|Comprimento em bytes da segunda parte do registro com controle de versão.|  
-|**record_image_second_part**|**varbinary (8000)**|Imagem binária da segunda parte do registro com controle de versão.|  
+|**record_image_second_part**|**varbinary(8000)**|Imagem binária da segunda parte do registro com controle de versão.|  
   
 ## <a name="permissions"></a>Permissões
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  A saída mostra que XSN-57 criou três versões de linha de uma tabela e XSN-58 criou uma versão da linha de outra tabela.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à transação &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

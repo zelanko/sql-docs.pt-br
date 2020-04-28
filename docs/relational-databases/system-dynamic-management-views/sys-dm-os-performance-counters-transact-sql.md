@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265706"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68265706"
 > [!NOTE]  
 >  Para chamá-lo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou, use o nome **Sys. dm_pdw_nodes_os_performance_counters**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar (128)**|Categoria para a qual este contador pertence.|  
-|**counter_name**|**nchar (128)**|Nome do contador. Para obter mais informações sobre um contador, este é o nome do tópico a ser selecionado na lista de contadores em [usar SQL Server objetos](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**instance_name**|**nchar (128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
+|**object_name**|**nchar(128)**|Categoria para a qual este contador pertence.|  
+|**counter_name**|**nchar(128)**|Nome do contador. Para obter mais informações sobre um contador, este é o nome do tópico a ser selecionado na lista de contadores em [usar SQL Server objetos](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
+|**instance_name**|**nchar(128)**|Nome da instância específica do contador. Normalmente, contém o nome do banco de dados.|  
 |**cntr_value**|**bigint**|Valor atual do contador.<br /><br /> **Observação:** Para contadores por segundo, esse valor é cumulativo. O valor de taxa deve ser calculado pela amostragem do valor a intervalos de tempo curtos. A diferença entre qualquer dois valores de amostra sucessivos é igual à taxa para o intervalo de tempo usado.|  
 |**cntr_type**|**int**|Tipo de contador conforme definido pela arquitetura de desempenho do Windows. Consulte [tipos de contador de desempenho WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) em documentos ou a documentação do Windows Server para obter mais informações sobre os tipos de contador de desempenho.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador do nó em que essa distribuição está.|  

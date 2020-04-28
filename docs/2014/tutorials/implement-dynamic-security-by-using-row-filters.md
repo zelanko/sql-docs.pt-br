@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530880"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar a segurança dinâmica usando filtros de linha
@@ -26,9 +26,9 @@ ms.locfileid: "69530880"
   
  Para concluir esta lição suplementar, você executará uma série de tarefas. Aquelas tarefas que são exclusivas deste cenário de modelo tabular da Adventure Works, mas que não seriam aplicariam necessariamente a um cenário do mundo real, são identificadas como tal. Cada tarefa inclui informações adicionais que descrevem o propósito da tarefa.  
   
- Tempo estimado para concluir esta lição: **30 minutos**  
+ Tempo estimado para conclusão desta lição: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Este tópico de lição suplementar faz parte de um tutorial de modelagem tabular, que deve ser concluído na devida ordem. Antes de executar as tarefas nesta lição suplementar, você deve ter concluído todas as lições anteriores.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Adicione a tabela dimSalesTerritory ao Projeto de Modelo de Tabela de Vendas pela Internet da AW  

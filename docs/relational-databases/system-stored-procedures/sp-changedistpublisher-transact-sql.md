@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771359"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -53,10 +53,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  Esta tabela descreve as propriedades de Publicadores e os valores para essas propriedades.  
   
-|Propriedade|Valores|DESCRIÇÃO|  
+|Propriedade|Valores|Descrição|  
 |--------------|------------|-----------------|  
-|**ativo**|**true**|Ativa o Publicador.|  
-||**for**|Desativa o Publicador.|  
+|**activo**|**true**|Ativa o Publicador.|  
+||**false**|Desativa o Publicador.|  
 |**distribution_db**||Nome do banco de dados de distribuição.|  
 |**entrar**||Nome de logon.|  
 |**password**||Senha forte para o logon fornecido.|  
@@ -76,7 +76,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Somente os membros da função de servidor fixa **sysadmin** podem executar **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Exibir e modificar as propriedades do distribuidor e do Publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [&#41;&#40;Transact-SQL de sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helpdistpublisher](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263927"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "68263927"
 
   Retorna uma linha para cada trabalho de processador de consulta agendado para execução assíncrona (em segundo plano).  
   
-> **OBSERVAÇÃO!** Para chamá-lo **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** de **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ou, use o nome **Sys. dm_pdw_nodes_exec_background_job_queue**.  
+> **Observação!!** Para chamá-lo **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** de **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** ou, use o nome **Sys. dm_pdw_nodes_exec_background_job_queue**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|Hora em que a tarefa foi adicionada à fila.|  
 |**job_id**|**int**|Job identifier.|  
@@ -60,7 +60,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
  Os valores de **object_id1** por meio de **object_id4** dependem do tipo de solicitação de trabalho. A tabela a seguir resume o significado dessas colunas para os diferentes tipos de trabalho.  
   
-|Tipo de Solicitação|object_id1|object_id2|object_id3|object_id4|  
+|Tipo de solicitação|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |Estatísticas de atualização assíncrona|Tabela ou ID de exibição|ID de estatísticas|Não usado|Não usado|  
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funções e exibições de gerenciamento dinâmico relacionadas à execução &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Estatística](../../relational-databases/statistics/statistics.md)   
- [TRABALHO de KILL stats &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
+ [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
 

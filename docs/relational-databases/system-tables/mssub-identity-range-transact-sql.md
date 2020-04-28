@@ -18,10 +18,10 @@ ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ec1f915e7cc70cb2d8ed0f09a9b0394dc7e09aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68221960"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "68221960"
 
   A tabela **MSsub_identity_range** fornece suporte ao gerenciamento de intervalo de identidade para assinaturas. Essa tabela é armazenada nos bancos de dados de assinatura.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**objID**|**int**|A ID da tabela que tem a coluna de identidade administrada pela replicação.|  
+|**objid**|**int**|A ID da tabela que tem a coluna de identidade administrada pela replicação.|  
 |**amplitude**|**bigint**|Controla o tamanho do intervalo dos valores de identidade consecutivos que seriam atribuídos ao Assinante em um ajuste.|  
 |**last_seed**|**bigint**|A associação mais baixa do intervalo atual.|  
 |**os**|**int**|Valor percentual para controle quando o Distribution Agent atribuir um novo intervalo de identidade. Quando a porcentagem de valores especificados no *limite* é usada, o agente de distribuição cria um novo intervalo de identidade.|  

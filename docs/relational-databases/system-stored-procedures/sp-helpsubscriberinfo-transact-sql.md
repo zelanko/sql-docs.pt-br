@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771493"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -47,11 +47,11 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Publicador**|**sysname**|Nome do Publicador.|  
-|**Assinante**|**sysname**|Nome do Assinante.|  
-|**tipo**|**tinyint**|O tipo de Assinante:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] Database 1 = fonte de dados ODBC **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**programa**|**sysname**|Nome do Publicador.|  
+|**farão**|**sysname**|Nome do Assinante.|  
+|**type**|**tinyint**|O tipo de Assinante:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] Database 1 = fonte de dados ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**entrar**|**sysname**|ID de logon para Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Sem suporte.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|Sem suporte.|  
 |**retrydelay**|**int**|Sem suporte.|  
 |**ndescrição**|**nvarchar (255)**|Descrição de texto do Assinante.|  
-|**security_mode**|**int**|Modo de segurança implementado:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows|  
+|**security_mode**|**int**|Modo de segurança implementado:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticação do Windows|  
 |**frequency_type2**|**int**|Frequência de execução do Merge Agent:<br /><br /> **1** = uma vez<br /><br /> **2** = sob demanda<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = relativo mensal<br /><br /> **64** = inicialização automática<br /><br /> **128** = recorrente|  
 |**frequency_interval2**|**int**|Valor aplicado à frequência definida por *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Data do Agente de Mesclagem usado quando *frequency_type* é definido como 32 (relativo mensal):<br /><br /> **1** = primeiro<br /><br /> **2** = segundo<br /><br /> **4** = terceiro<br /><br /> **8** = quarto<br /><br /> **16** = última|  

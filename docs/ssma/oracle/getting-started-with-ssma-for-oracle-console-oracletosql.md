@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264499"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introdução ao console do SSMA para Oracle (OracleToSQL)
@@ -56,7 +56,7 @@ Após a execução dos comandos e opções do script do SSMA, o programa de cons
   
 Interpretação de cores da saída do console na tabela a seguir:  
   
-|Color|DESCRIÇÃO|  
+|Color|Descrição|  
 |---------|---------------|  
 |Vermelho|Erro fatal durante a execução|  
 |Cinza|Carimbo de data e hora, mensagem para o usuário|  

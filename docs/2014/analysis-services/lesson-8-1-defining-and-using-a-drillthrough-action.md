@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493820"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definindo e usando uma ação de detalhamento
@@ -143,7 +143,7 @@ ms.locfileid: "69493820"
      ![Pedidos enviados para Adam Powell](../../2014/tutorials/media/l8-action8.gif "Pedidos enviados para Adam Powell")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 9: Definindo perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
+ [Lição 9: Como definir perspectivas e traduções](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Ações &#40;Analysis Services de dados multidimensionais&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

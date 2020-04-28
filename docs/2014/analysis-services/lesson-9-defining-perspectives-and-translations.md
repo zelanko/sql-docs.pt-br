@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530830"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Definindo perspectivas e traduções
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Lição 9: Como definir perspectivas e traduções
   Nesta lição, você aprenderá a definir perspectivas e traduções. Você pode definir perspectivas para reduzir a complexidade aparente de um cubo e definir traduções que permitam que os usuários exibam os metadados do cubo no idioma que preferirem.  
   
 > [!NOTE]  
->  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo que acompanham este tutorial.  
+>  Projetos concluídos de todas as lições deste tutorial estão disponíveis online. Você pode avançar para qualquer lição com o uso do projeto concluído na lição anterior como um ponto de partida. [Clique aqui](https://go.microsoft.com/fwlink/?LinkID=221866) para baixar os projetos de exemplo fornecidos com este tutorial.  
   
  Esta lição contém as seguintes tarefas:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69530830"
  Nesta tarefa, você definirá e navegará por traduções de metadados específicos para determinados idiomas.  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 10: Definindo funções administrativas](lesson-10-defining-administrative-roles.md)  
+ [Lição 10: Como definir funções administrativas](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Cenário do tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   

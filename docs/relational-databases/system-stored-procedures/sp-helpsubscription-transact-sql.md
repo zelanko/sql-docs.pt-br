@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771567"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -63,9 +63,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|**Assinante**|**sysname**|Nome do Assinante.|  
+|**farão**|**sysname**|Nome do Assinante.|  
 |**documento**|**sysname**|Nome da publicação.|  
 |**artigo**|**sysname**|Nome do artigo.|  
 |**banco de dados de destino**|**sysname**|Nome do banco de dados de destino no qual os dados replicados são colocados.|  
@@ -73,10 +73,10 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**tipo de sincronização**|**tinyint**|O tipo de sincronização da assinatura:<br /><br /> **1** = automático<br /><br /> **2** = nenhum|  
 |**tipo de assinatura**|**int**|O tipo de assinatura:<br /><br /> **0** = enviar por push<br /><br /> **1** = pull<br /><br /> **2** = anônimo|  
 |**full subscription**|**bit**|Se a assinatura é para todos os artigos na publicação:<br /><br /> **0** = não<br /><br /> **1** = Sim|  
-|**nome da assinatura**|**nvarchar (255)**|Nome da assinatura.|  
+|**nome da assinatura**|**nvarchar (255)**|O nome da assinatura.|  
 |**update mode**|**int**|**0** = somente leitura<br /><br /> **1** = atualização imediata-assinatura|  
-|**distribution job id**|**Binary (16)**|A ID de trabalho do Distribution Agent.|  
-|**loopback_detection**|**bit**|A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **0** = envia de volta.<br /><br /> **1** = não envia de volta.<br /><br /> Usado com replicação transacional bidirecional. Para obter mais informações, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**distribution job id**|**binary(16)**|A ID de trabalho do Distribution Agent.|  
+|**loopback_detection**|**bit**|A detecção de loopback determina se o Distribution Agent envia transações originadas no Assinante de volta para o Assinante:<br /><br /> **0** = envia de volta.<br /><br /> **1** = não envia de volta.<br /><br /> Usado com replicação transacional bidirecional. Para obter mais informações, consulte [replicação transacional bidirecional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante.<br /><br /> Se for **0**, o agente será executado no Publicador.<br /><br /> Se **1**, o agente será executado no Assinante.|  
 |**offload_server**|**sysname**|Nome do servidor habilitado para ativação de agente remota. Se for NULL, a offload_server atual listada na tabela [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) será usada.|  
 |**dts_package_name**|**sysname**|Especifica o nome do pacote DTS (Data Transformation Services).|  

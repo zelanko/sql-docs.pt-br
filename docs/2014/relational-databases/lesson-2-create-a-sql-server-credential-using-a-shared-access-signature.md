@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153831"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lição 3: Criar uma credencial do SQL Server
@@ -59,6 +59,6 @@ ms.locfileid: "70153831"
   
  **Próxima lição:**  
   
- [Lição 4: Criar um banco de dados no Armazenamento do Azure](lesson-3-database-backup-to-url.md)  
+ [Lição 4: Criar um banco de dados no Armazenamento do Microsoft Azure](lesson-3-database-backup-to-url.md)  
   
   

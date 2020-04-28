@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892028"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
-  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidos em seu relatório escrevendo expressões que os especificam por nome usando a `Fields` coleção interna.  
+  A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo `Value` e `IsMissing` que estão disponíveis na fonte de dados e são suportadas pela extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode incluir valores de propriedade de campo estendidos em seu relatório escrevendo expressões que os especificam por nome usando a `Fields` coleção interna.  
   
  As propriedades estendidas incluem propriedades predefinidas e propriedades personalizadas. As propriedades predefinidas são propriedades comuns para várias fontes de dados mapeadas para nomes de propriedade de campo específico e podem ser acessadas por nome através da coleção incorporada de `Fields`. As propriedades personalizadas são específicas de cada provedor de dados e pode ser acessada por meio da coleção interna de `Fields` apenas pela sintaxe usando o nome da propriedade estendida como uma cadeia de caracteres.  
   
@@ -29,16 +29,16 @@ ms.locfileid: "68892028"
   
  Para consultar uma propriedade estendida que não seja predefinida, use a seguinte sintaxe em uma expressão:  
   
--   *Campo! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Propriedades de campo predefinidas  
  Na maioria dos casos, as propriedades de campo predefinidas são aplicadas a medidas, níveis ou dimensões. Uma propriedade de campo predefinida deve ter um valor correspondente armazenado na fonte de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se não existir um valor ou se você especificar uma propriedade de campo em um nível apenas para medida (por exemplo), a propriedade retornará um valor nulo.  
   
  Para consultar uma propriedade predefinida a partir de uma expressão, use as seguintes sintaxes:  
   
--   *Campo! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *Campo! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
  A tabela a seguir fornece uma lista das propriedades de campo predefinidas que você pode usar.  
   

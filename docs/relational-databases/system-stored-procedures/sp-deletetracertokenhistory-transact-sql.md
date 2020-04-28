@@ -16,10 +16,10 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771138"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
@@ -88,6 +88,6 @@ Somente a equipe a seguir tem autoridade para executar **sp_deletetracertokenhis
 
 ## <a name="see-also"></a>Consulte Também
 
-[Medir a latência e validar conexões para replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[Medir a latência e validar as conexões para a replicação transacional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
 [&#41;&#40;Transact-SQL de sp_helptracertokenhistory](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889044"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -28,7 +28,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *subquery*  
+ *subconsulta*  
  Uma instrução SELECT do formulário selecione * do nome \<da coluna> [onde \<a lista de predicados>].  
   
 ## <a name="result-type"></a>Tipo de resultado  
@@ -57,6 +57,6 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>Consulte Também  
  [Funções &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Sintaxe de filtro de modelo e exemplos &#40;mineração de dados Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+ [Sintaxe de filtro de modelo e exemplos &#40;Analysis Services – Mineração de dados&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

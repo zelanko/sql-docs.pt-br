@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b74c767c50e8a62c2d65ad089e386a94b9c8a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151855"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar o Firewall do Windows para permitir o acesso ao Analysis Services
@@ -42,21 +42,21 @@ ms.locfileid: "70151855"
   
  Este tópico contém as seguintes seções:  
   
--   [Verificar as configurações de porta e firewall para Analysis Services](#bkmk_checkport)  
+-   [Verificar as configurações de porta e de firewall do Analysis Services](#bkmk_checkport)  
   
 -   [Configurar o Firewall do Windows para uma instância padrão do Analysis Services](#bkmk_default)  
   
--   [Configurar o acesso ao firewall do Windows para uma instância nomeada do Analysis Services](#bkmk_named)  
+-   [Configurar o acesso ao Firewall do Windows para uma instância nomeada do Analysis Services](#bkmk_named)  
   
--   [Configuração de porta para um cluster Analysis Services](#bkmk_cluster)  
+-   [Configuração de porta para um cluster do Analysis Services](#bkmk_cluster)  
   
 -   [Configuração de porta do PowerPivot para SharePoint](#bkmk_powerpivot)  
   
--   [Use uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed)  
+-   [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed)  
   
  Para obter mais informações sobre as configurações padrão do Firewall do Windows e uma descrição das portas TCP que afetam o Mecanismo de Banco de Dados, o Analysis Services, o Reporting Services e o Integration Services, veja [Configurar o Firewall do Windows para permitir acesso ao SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-##  <a name="bkmk_checkport"></a>Verificar as configurações de porta e firewall para Analysis Services  
+##  <a name="check-port-and-firewall-settings-for-analysis-services"></a><a name="bkmk_checkport"></a>Verificar as configurações de porta e firewall para Analysis Services  
  Nos sistemas operacionais Microsoft Windows com suporte pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o Windows Firewall fica ativo por padrão e bloqueia conexões remotas. Abra uma porta manualmente no firewall para permitir solicitações de entrada para o Analysis Services. A instalação do SQL Server não executa essa etapa para você.  
   
  As configurações de porta são especificadas no arquivo msmdsrv.ini e na página de propriedades Geral de uma instância do Analysis Services no SQL Server Management Studio. Se `Port` for definido como um inteiro positivo, o serviço estará escutando em uma porta fixa. Se `Port` for definido como 0, o serviço estará escutando na porta 2383 se for a instância padrão, ou em uma porta atribuída dinamicamente se for uma instância nomeada.  
@@ -75,7 +75,7 @@ ms.locfileid: "70151855"
   
  Observe que para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], todas as regras de firewall devem ser definidas manualmente. Embora o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and SQL Server Browser reservem as portas 2382 e 2383, o programa de instalação do SQL Server e as ferramentas de configuração não definem regras de firewall que permitam o acesso às portas ou aos arquivos executáveis de programa.  
   
-##  <a name="bkmk_default"></a>Configurar o Firewall do Windows para uma instância padrão do Analysis Services  
+##  <a name="configure-windows-firewall-for-a-default-instance-of-analysis-services"></a><a name="bkmk_default"></a>Configurar o Firewall do Windows para uma instância padrão do Analysis Services  
  A instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escuta na porta TCP 2383. Se você instalou a instância padrão e deseja usar esta porta, basta desbloquear o acesso de entrada à porta TCP 2383 no Firewall do Windows para habilitar o acesso remoto à instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se você instalou a instância padrão mas deseja configurar o serviço para escutar em uma porta fixa, consulte [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed) neste tópico.  
   
  Para verificar se o serviço está sendo executado como a instância padrão (MSSQLServerOLAPService), verifique o nome do serviço no Gerenciador de Configuração do SQL Server. Uma instância padrão do Analysis Services sempre é listada como o **SQL Server Analysis Services (MSSQLSERVER)**.  
@@ -85,7 +85,7 @@ ms.locfileid: "70151855"
   
  Ao especificar uma regra de entrada, procure adotar uma convenção de nomenclatura que lhe permita localizar facilmente as regras posteriormente (por exemplo, **SQL Server Analysis Services (TCP-in) 2383**).  
   
-#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com segurança avançada  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "70151855"
     netsh advfirewall firewall add rule name="SQL Server Analysis Services inbound on TCP 2383" dir=in action=allow protocol=TCP localport=2383 profile=domain  
     ```  
   
-##  <a name="bkmk_named"></a>Configurar o acesso ao firewall do Windows para uma instância nomeada do Analysis Services  
+##  <a name="configure-windows-firewall-access-for-a-named-instance-of-analysis-services"></a><a name="bkmk_named"></a>Configurar o acesso ao firewall do Windows para uma instância nomeada do Analysis Services  
  As instâncias nomeadas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] podem escutar em uma porta fixa ou em uma porta dinamicamente atribuída, onde o serviço SQL Server Browser fornece as informações atuais de conexão ao serviço no momento da conexão.  
   
  O serviço SQL Server Browser escuta na porta TCP 2382. O UDP não é usado. O TCP é o único protocolo de transmissão usado pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -129,7 +129,7 @@ ms.locfileid: "70151855"
   
  Se você não puder usar o serviço SQL Server Browser, deverá atribuir uma porta fixa na cadeia de conexão, ignorando a resolução do nome de domínio. Sem o serviço SQL Server Browser, todas as conexões de cliente devem incluir o número da porta na cadeia de conexão (por exemplo, AW-SRV01: 54321).  
   
- **Opção 1: usar atribuições de porta dinâmica e desbloquear o acesso ao serviço SQL Server Browser**  
+ **Opção 1: Use as atribuições de porta dinâmica e desbloqueie o acesso ao serviço SQL Server Browser**  
   
  As atribuições de porta dinâmica para instâncias nomeadas do Analysis Services são estabelecidas pelo `MSOLAP$InstanceName` quando o serviço inicia. Por padrão, o serviço reivindica o primeiro número de porta disponível encontrado, usando um número de porta diferente cada vez que o serviço é reiniciado.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "70151855"
 > [!NOTE]  
 >  O serviço SQL Server Browser escuta na porta UDP 1434 e na porta TCP 2382 para o Mecanismo de Banco de Dados e o Analysis Services, respectivamente. Mesmo que você já tenha desbloqueado a porta UDP 1434 para o serviço SQL Server Browser, ainda precisará desbloquear a porta TCP 2382 para o Analysis Services.  
   
-#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com segurança avançada  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "70151855"
   
 8.  Para verificar se as conexões remotas estão habilitadas, abra o SQL Server Management Studio ou o Excel em um computador diferente e conecte-se ao Analysis Services especificando o nome de rede do servidor e o nome \<da instância \\ neste formato\>: servername><InstanceName. Por exemplo, em um servidor nomeado **AW-SRV01** com uma instância nomeada de **Finanças**, o nome do servidor é **AW-SRV01\Finance**.  
   
- **Opção 2: usar uma porta fixa para uma instância nomeada**  
+ **Opção 2: Usar uma porta fixa para uma instância nomeada**  
   
  Outra alternativa é atribuir uma porta fixa e desbloquear o acesso a essa porta. Esta abordagem oferece um recurso melhor de auditoria quando você permite o acesso ao executável do programa. Por isso, o uso de uma porta fixa é a abordagem recomendada para acessar qualquer instância do Analysis Services.  
   
  Para atribuir uma porta fixa, siga as instruções em [Usar uma porta fixa para uma instância padrão ou nomeada do Analysis Services](#bkmk_fixed) neste tópico e, depois, volte a esta seção para desbloquear a porta.  
   
-#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com segurança avançada  
+#### <a name="windows-firewall-with-advanced-security"></a>Firewall do Windows com Advanced Security  
   
 1.  No Windows 7 ou Windows Vista, no Painel de Controle, clique em **Sistema e Segurança**, selecione **Firewall do Windows**e clique em **Configurações avançadas**. No Windows Server 2008 ou 2008 R2, abra Ferramentas do Administrador e clique em **Firewall do Windows com Segurança Avançada**. No Windows Server 2012, abra a página de aplicativos e digite **Windows Firewall**.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "70151855"
     netsh advfirewall firewall add rule name="SQL Server Browser Services inbound on TCP 2382" dir=in action=allow protocol=TCP localport=2382 profile=domain  
     ```  
   
-##  <a name="bkmk_fixed"></a>Use uma porta fixa para uma instância padrão ou nomeada do Analysis Services  
+##  <a name="use-a-fixed-port-for-a-default-or-named-instance-of-analysis-services"></a><a name="bkmk_fixed"></a>Use uma porta fixa para uma instância padrão ou nomeada do Analysis Services  
  Esta seção explica como configurar o Analysis Services para escutar em uma porta fixa. O uso de uma porta fixa é comum quando você instala o Analysis Services como uma instância nomeada, mas você também pode usar esta abordagem quando os requisitos de negócios ou de segurança especificam o uso de atribuições de porta não padrão.  
   
  Observe que o uso de uma porta fixa alterará a sintaxe de conexão para a instância padrão, exigindo o acréscimo do número de porta ao nome de servidor. Por exemplo, a conexão a uma instância padrão local do Analysis Services que escuta na porta 54321 no SQL Server Management Studio exigiria que você digitasse localhost:54321 como o nome de servidor na caixa de diálogo Conectar ao Servidor no Management Studio.  
@@ -213,10 +213,10 @@ ms.locfileid: "70151855"
   
 5.  Verifique isso conectando-se localmente (no Management Studio) e, em seguida, remotamente, de um aplicativo cliente em outro computador. Para usar Management Studio, conecte-se a uma instância de Analysis Services padrão, especificando um nome de servidor \<neste formato:\<ServerName>: PortNumber>. Para uma instância nomeada, especifique o nome do servidor \<como servername \\>\><InstanceName.  
   
-##  <a name="bkmk_cluster"></a>Configuração de porta para um cluster Analysis Services  
+##  <a name="port-configuration-for-an-analysis-services-cluster"></a><a name="bkmk_cluster"></a>Configuração de porta para um cluster Analysis Services  
  Um cluster de failover do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sempre realiza a escuta na porta TCP 2383, independentemente de você ter feito a instalação como uma instância padrão ou nomeada. As atribuições de porta dinâmica não são usadas pelo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quando ele é instalado em um cluster de failover do Windows. Abra a TCP 2383 em todos os nós que estão executando o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no cluster. Para obter mais informações sobre o clustering do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Como clusterizar o SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-##  <a name="bkmk_powerpivot"></a>Configuração de porta para PowerPivot para SharePoint  
+##  <a name="port-configuration-for-powerpivot-for-sharepoint"></a><a name="bkmk_powerpivot"></a>Configuração de porta para PowerPivot para SharePoint  
  A arquitetura de servidor para o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] é bem diferente dependendo da versão do SharePoint que você está usando.  
   
  **SharePoint 2013**  
@@ -229,7 +229,7 @@ ms.locfileid: "70151855"
   
  **SharePoint 2010**  
   
- Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o PowerPivot para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do PowerPivot para SharePoint 2010, o Serviço de Sistema PowerPivot tem uso exclusivo da instância de serviço local do SQL Server Analysis Services (PowerPivot) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados PowerPivot no servidor do SharePoint. Para solicitar dados PowerPivot de aplicativos cliente, as solicitações são roteadas por meio de portas que são abertas pela instalação do SharePoint (especificamente, as regras de entrada são definidas para permitir o acesso ao SharePoint-80, à administração central do SharePoint v4, aos serviços Web do SharePoint e SPUserCodeV4). Como os serviços Web PowerPivot são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados PowerPivot em um farm do SharePoint.  
+ Se você estiver usando o SharePoint 2010, não precisa abrir portas no Firewall do Windows. O SharePoint abre as portas necessárias e os suplementos como o PowerPivot para SharePoint funcionam no ambiente do SharePoint. Em uma instalação do PowerPivot para SharePoint 2010, o Serviço de Sistema PowerPivot tem uso exclusivo da instância de serviço local do SQL Server Analysis Services (PowerPivot) que é instalada com ele no mesmo computador. Ele usa conexões locais, e não de rede, para acessar o serviço de mecanismo local Analysis Services que carrega, consulta e processa dados PowerPivot no servidor do SharePoint. Para solicitar dados PowerPivot de aplicativos cliente, as solicitações são roteadas por meio de portas que são abertas pela instalação do SharePoint (especificamente, as regras de entrada são definidas para permitir o acesso ao SharePoint-80, à administração central do SharePoint v4, aos serviços Web do SharePoint e ao SPUserCodeV4). Como os serviços Web PowerPivot são executados em um farm do SharePoint, as regras de firewall do SharePoint são suficientes para o acesso remoto a dados PowerPivot em um farm do SharePoint.  
   
 ## <a name="see-also"></a>Consulte Também  
  [&#41;&#40;Mecanismo de Banco de Dados e SSAS do SQL Server Browser Service](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

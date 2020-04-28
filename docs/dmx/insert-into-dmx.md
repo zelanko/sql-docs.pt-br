@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892721"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -64,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||A estrutura de mineração é não processada.|O modelo de mineração e a estrutura de mineração são processadas.|  
 ||A estrutura de mineração contém modelos de mineração adicionais.|Falha no processo. É preciso reprocessar a estrutura e os modelos de mineração associados.|  
 |Inserir na estrutura da*\<estrutura de mineração>*|A estrutura de mineração é processada ou não processada.|A estrutura de mineração e os modelos de mineração associados são processados.|  
-|Inserir no*\<modelo* modelo de mineração>que contém uma consulta de origem<br /><br /> ou<br /><br /> Inserir em*\<estrutura* de estrutura de mineração>que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|Inserir no*\<modelo* modelo de mineração>que contém uma consulta de origem<br /><br /> ou o<br /><br /> Inserir em*\<estrutura* de estrutura de mineração>que contém uma consulta de origem|A estrutura ou o modelo já encerram um conteúdo.|Falha no processo. Você deve limpar os objetos antes de executar essa operação, usando [excluir &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Colunas de modelo mapeado  
  Usando o \<elemento> de colunas de modelo mapeado, você pode mapear as colunas da fonte de dados para as colunas em seu modelo de mineração. O \<elemento de> de colunas de modelo mapeado tem a seguinte forma:  
@@ -122,6 +122,6 @@ AS [Models]
 ## <a name="see-also"></a>Consulte Também  
  [&#40;&#41; instruções de definição de dados DMX de extensões de mineração de dados](../dmx/dmx-statements-data-definition.md)   
  [&#40;instruções de manipulação de dados do DMX&#41; extensões do Data Mining](../dmx/dmx-statements-data-manipulation.md)   
- [Referência de instrução&#41; &#40;DMX de extensões de mineração de dados](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referência de instruções de DMX &#40extensões de Mineração de Dados&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

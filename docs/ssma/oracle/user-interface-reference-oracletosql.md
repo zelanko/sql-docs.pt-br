@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266405"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referência da interface do usuário (OracleToSQL)
@@ -25,7 +25,7 @@ A tabela a seguir lista as caixas de diálogo do SSMA:
   
 |||  
 |-|-|  
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |[Seleção de objeto avançada &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Use a caixa de diálogo **seleção de objeto avançado** para localizar objetos de banco de dados usando critérios de filtro e, em seguida, marque ou desmarque esses objetos.|  
 |[Relatório de avaliação &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Use o relatório de avaliação para exibir os resultados da conversão de objetos Oracle em [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe e para estimar o tempo e a complexidade de uma migração [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para o.|  
 |[Conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Use a caixa de diálogo **conectar-se ao Oracle** para se conectar ao banco de dados Oracle que você deseja migrar.|  

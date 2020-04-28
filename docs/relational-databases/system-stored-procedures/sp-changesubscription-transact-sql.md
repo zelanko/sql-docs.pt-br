@@ -18,10 +18,10 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770674"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'`É o novo valor para a *Propriedade*especificada. o *valor* é **nvarchar (4000)** e pode ser um dos valores na tabela.  
   
-|Propriedade|Valor|DESCRIÇÃO|  
+|Propriedade|Valor|Descrição|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
@@ -75,7 +75,7 @@ sp_changesubscription [ @publication = ] 'publication'
 |**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Esta propriedade só é válida para* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes não.*|  
 |**SubscriptionStreams**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Há suporte para um intervalo de valores de **1** a **64** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Essa propriedade deve ser **0** para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes não, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
-||**Beta**|Provedor OLE DB|  
+||**3**|Provedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* é **bit**, em que 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
 `[ @publisher = ] 'publisher'`Especifica um não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicador. o *Publicador* é **sysname**, com um padrão de NULL.  

@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889495"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locais (Analysis Services – Dados Multidimensionais)
@@ -24,7 +24,7 @@ ms.locfileid: "68889495"
   
  Os cubos locais e os modelos de mineração locais permitem a análise em uma estação de trabalho cliente enquanto ela estiver desconectada da rede. Por exemplo, um aplicativo cliente pode chamar o OLE DB for OLAP 9.0 Provider (MSOLAP.3), que carrega o mecanismo do cubo local para criar e consultar cubos locais, conforme mostra a seguinte ilustração:  
   
- ![Arquitetura cliente para cubos e modelos locais](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "Arquitetura cliente para cubos e modelos locais")  
+ ![Arquitetura cliente para cubos e modelos locais](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "Arquitetura cliente para cubos e modelos locais")  
   
  O ADMOD.NET e os Objetos de Gerenciamento de Análise (AMO) também carregam o mecanismo do cubo local ao interagir com cubos locais. Apenas um processo simples pode acessar um arquivo de cubo local, pois o mecanismo de cubo local bloqueia com exclusividade um arquivo de cubo local quando estabelece uma conexão com o cubo local. Com um processo, são permitidas até 5 conexões simultâneas.  
   

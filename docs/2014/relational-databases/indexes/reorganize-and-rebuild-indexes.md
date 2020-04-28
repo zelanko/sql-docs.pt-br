@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811033"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
@@ -52,26 +52,26 @@ ms.locfileid: "68811033"
   
      [Segurança](#Security)  
   
--   **Para verificar a fragmentação de um índice, usando:**  
+-   **Para verificar a fragmentação de um índice usando:**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **Para reorganizar ou recriar um índice usando:**  
+-   **Para reorganizar ou recompilar um índice usando:**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de começar  
   
-###  <a name="Fragmentation"></a>Detectando a fragmentação  
+###  <a name="detecting-fragmentation"></a><a name="Fragmentation"></a>Detectando a fragmentação  
  A primeira etapa para optar pelo método de fragmentação a ser usado é analisar o índice para determinar o grau de fragmentação. Usando a função de sistema [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql), você pode detectar a fragmentação em um índice específico, em todos os índices de uma tabela ou exibição indexada, em todos os índices de um banco de dados ou em todos os índices de todos os bancos de dados. Para índices particionados, **sys.dm_db_index_physical_stats** também fornece informações de fragmentação por partição.  
   
- O conjunto de resultados retornado pela função **Sys. dm_db_index_physical_stats** inclui as colunas a seguir.  
+ O conjunto de resultados retornado pela função **sys.dm_db_index_physical_stats** inclui as colunas a seguir.  
   
-|Coluna|DESCRIÇÃO|  
+|Coluna|Descrição|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Porcentagem de fragmentação lógica (páginas fora de ordem no índice).|  
 |**fragment_count**|Número de fragmentos (páginas folha fisicamente consecutivas) do índice.|  
@@ -109,7 +109,7 @@ Cenários que não requerem que todos os índices não clusterizados sejam autom
 -  Recompilar um índice clusterizado não exclusivo
 -  Alterar o esquema de índice (assim como ao aplicar um esquema de particionamento a um índice clusterizado) ou mover o índice clusterizado para um grupo de arquivos diferente
   
-###  <a name="Restrictions"></a> Limitações e restrições  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitações e restrições  
   
 Índices com mais de 128 extensões são recriados em duas fases separadas: lógica e física. Na fase lógica, as unidades de alocação existentes usadas pelo índice são marcadas para desalocação, as linhas de dados são copiadas, ordenadas e, depois, movidas para novas unidades de alocação criadas para armazenar o índice recriado. Na fase física, as unidades de alocação previamente marcadas para desalocação são fisicamente canceladas em transações curtas que ocorrem em segundo plano e que não exigem muitos bloqueios. Para obter mais informações sobre as extensões, consulte o [Guia de arquitetura de páginas e extensões](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
 
@@ -119,12 +119,12 @@ A instrução `ALTER INDEX REORGANIZE` exige que o arquivo de dados que contém 
 
 Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no qual ele está localizado estiver offline ou definido como somente leitura. Quando a palavra-chave `ALL` for especificada e um ou mais índices estiver em um grupo de arquivos offline ou somente leitura, a instrução falhará.
   
-###  <a name="Security"></a> Segurança  
+###  <a name="security"></a><a name="Security"></a> Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissões  
  Requer a permissão `ALTER` na tabela ou exibição. O usuário deve ser membro da função de servidor fixa **sysadmin** ou das funções de banco de dados fixas **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureFrag"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para verificar a fragmentação de um índice  
   
@@ -175,13 +175,13 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
      **Páginas**  
      O número total de páginas de dados.  
   
-     **Identificação da Partição**  
+     **Partition ID**  
      A ID da partição da árvore b que contém o índice.  
   
      **Linhas fantasmas de versão**  
      O número de registros fantasmas que estão sendo retidos devido a uma transação de isolamento de instantâneo pendente.  
   
-##  <a name="TsqlProcedureFrag"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureFrag"></a> Usando o Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para verificar a fragmentação de um índice  
   
@@ -219,7 +219,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
  Para obter mais informações, consulte [Sys. dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Usando o SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureReorg"></a> Usando o SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>Para reorganizar ou recriar um índice  
   
@@ -237,7 +237,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 7.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-8.  Clique em **OK.**  
+8.  Clique em **OK**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos os índices de uma tabela  
   
@@ -253,7 +253,7 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 6.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-7.  Clique em **OK.**  
+7.  Clique em **OK**  
   
 #### <a name="to-rebuild-an-index"></a>Para recriar um índice  
   
@@ -271,9 +271,9 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
   
 7.  Marque a caixa de seleção **Compactar dados de coluna de objeto grande** para especificar que todas as páginas que contêm dados de objeto grande (LOB) também sejam compactadas.  
   
-8.  Clique em **OK.**  
+8.  Clique em **OK**  
   
-##  <a name="TsqlProcedureReorg"></a> Usando o Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Usando o Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>Para reorganizar um índice desfragmentado  
   
@@ -333,6 +333,6 @@ Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no q
  Para obter mais informações, consulte [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Práticas recomendadas de desfragmentação de índice Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
+ [Práticas recomendadas de desfragmentação de índice do Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

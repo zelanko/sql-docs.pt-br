@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265975"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -36,17 +36,17 @@ ms.locfileid: "68265975"
 >  As colunas a seguir serão removidas em uma versão [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]futura do: is_paused, previous_status, previous_status_description, row_count_in_thousands, status, status_description e worker_count. Evite usar essas colunas em novos projetos de desenvolvimento e planeje a modificação dos aplicativos que as utilizam atualmente.  
   
  
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
 |**catalog_id**|**int**|ID do catálogo de texto completo ativo.|  
 |**memory_address**|**varbinary (8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
 |**name**|**nvarchar(128)**|Nome do catálogo de texto completo ativo.|  
 |**is_paused**|**bit**|Indica se a população do catálogo de texto completo ativo está em pausa.|  
-|**Estado**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
-|**status_description**|**nvarchar (120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
+|**status**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**status_description**|**nvarchar(120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
 |**previous_status**|**int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
-|**previous_status_description**|**nvarchar (120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
+|**previous_status_description**|**nvarchar(120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
 |**worker_count**|**int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
 |**active_fts_index_count**|**int**|Número de índices de texto completo que estão sendo populados.|  
 |**auto_population_count**|**int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
@@ -70,8 +70,8 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
   
 |De|Para|Relação|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Um-para-um|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Um-para-um|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Um para um|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Um para um|  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre os catálogos de texto completo ativos no banco de dados atual.  

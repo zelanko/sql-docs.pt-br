@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265694"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68265694"
 Retorna informações sobre todas as esperas de spinlock organizadas por tipo.  
   
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Nome do tipo de SpinLock.|  
 |colisões|**bigint**|O número de vezes que um thread tenta adquirir o SpinLock e está bloqueado porque outro thread atualmente contém o SpinLock.|  
@@ -67,11 +67,11 @@ GO
 >  Essas estatísticas não persistirão se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Todos os dados são acumulados desde a última vez em que as estatísticas foram redefinidas ou desde que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi iniciado.  
   
 ## <a name="spinlocks"></a>Spinlocks  
- Um spinlock é um objeto de sincronização leve usado para serializar o acesso a estruturas de dados que normalmente são mantidas por um curto período de tempo. Quando um thread tenta acessar um recurso protegido por um spinlock que está sendo mantido por outro thread, o Thread executará um loop ou "girar" e tentará acessar o recurso novamente, em vez de conceder imediatamente o Agendador como com uma trava ou outro recurso esperado. O thread continuará girando até que o recurso esteja disponível, ou o loop será concluído, ponto em que o thread produzirá o Agendador e voltará para a fila executável. Essa prática ajuda a reduzir a alternância excessiva de contexto de thread, mas quando a contenção de um spinlock é alta, a utilização significativa da CPU pode ser observada.
+ Um spinlock é um objeto de sincronização leve usado para serializar o acesso a estruturas de dados que normalmente são mantidas por um curto período de tempo. Quando um thread tenta acessar um recurso protegido por um spinlock que está sendo mantido por outro thread, o Thread executará um loop ou "girar" e tentará acessar o recurso novamente, em vez de conceder imediatamente o Agendador como com uma trava ou outra espera de recurso. O thread continuará girando até que o recurso esteja disponível, ou o loop será concluído, ponto em que o thread produzirá o Agendador e voltará para a fila executável. Essa prática ajuda a reduzir a alternância excessiva de contexto de thread, mas quando a contenção de um spinlock é alta, a utilização significativa da CPU pode ser observada.
    
  A tabela a seguir contém breves descrições de alguns dos tipos de spinlock mais comuns.  
   
-|Tipo de spinlock|DESCRIÇÃO|  
+|Tipo de spinlock|Descrição|  
 |-----------------|-----------------|  
 |ABR|Somente para uso interno.|
 |ADB_CACHE|Somente para uso interno.|
@@ -177,7 +177,7 @@ GO
 |HTTP|Somente para uso interno.|
 |HTTP_CONNCACHE|Somente para uso interno.|
 |HTTP_ENDPOINT|Somente para uso interno.|
-|IDENTIDADE|Somente para uso interno.|
+|IDENTITY|Somente para uso interno.|
 |INDEX_CREATE|Somente para uso interno.|
 |IO_DISPENSER_PAUSE|Somente para uso interno.|
 |IO_RG_VOLUME_HASHTABLE|Somente para uso interno.|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  
- [&#41;DBCC SQLPERF &#40;Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
