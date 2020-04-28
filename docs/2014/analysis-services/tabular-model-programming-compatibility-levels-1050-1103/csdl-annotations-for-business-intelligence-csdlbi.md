@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525447"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDLBI (Anotações CSDL para Business Intelligence)
@@ -29,7 +29,7 @@ ms.locfileid: "79525447"
   
 -   [Soluções de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Implantação de solução de modelo de tabela &#40;SSAS de tabela&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Implantação de uma solução de modelo de tabela &#40;SSAS de Tabela&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [Conexão de modelo semântico de BI do PowerPivot &#40;. BISM&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

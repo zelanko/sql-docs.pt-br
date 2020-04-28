@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380697"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar uma URL (Gerenciador de Configurações do SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "80380697"
   
 -   Configurar propriedades avançadas de URL para definir URLs adicionais.  
   
- Para obter mais informações sobre como os URLs são armazenados e mantidos ou problemas de interoperabilidade, consulte [Sobre reservas de URL e cadastro &#40;o SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [instale serviços de relatórios e serviços de informação da Internet lado a lado &#40;modo nativo ssrs&#41;](install-reporting-and-internet-information-services-side-by-side.md)em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] livros on-line. Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
+ Para obter mais informações sobre como as URLs são armazenadas e mantidas ou problemas de interoperabilidade, consulte [sobre reservas de URL e registro &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [instalar Reporting Services e serviços de informações da Internet lado a lado &#40;modo nativo do SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)nos manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para revisar exemplos de URLs usadas frequentemente em uma instalação do Reporting Services, consulte [Exemplos de URLs](#URLExamples) neste tópico.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Antes de criar ou modificar uma URL, lembre-se dos seguintes pontos:  
@@ -71,7 +71,7 @@ ms.locfileid: "80380697"
   
     -   **::1** é o endereço de loopback no formato IPv6.  
   
-    -   Endereços IP específicos também aparecem nessa lista. Os endereços IP podem estar nos formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* é o endereço IPv4 de 32 bits de uma placa de adaptador de rede em seu computador. Os endereços IPv6 são de 128 bits, com oito \<campos de 4 bytes separados por cólons: prefixo>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Endereços IP específicos também aparecem nessa lista. Os endereços IP podem estar nos formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* é o endereço IPv4 de 32 bits de uma placa de adaptador de rede em seu computador. Os endereços IPv6 são de 128 bits, com oito campos de 4 bytes separados por dois-pontos: \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Se você tiver várias placas ou se a sua rede der suporte a endereços IPv4 e IPv6, você verá vários endereços IP. Se você selecionar apenas um endereço IP, isso limitará o acesso do aplicativo somente ao endereço IP (e qualquer nome de host que um servidor de nome de domínio mapear para esse endereço). Você não pode usar localhost para acessar um servidor de relatório e não pode usar os endereços IP de outras placas de adaptador de rede que estejam instaladas no computador do servidor de relatório. Normalmente, se você selecionar esse valor, é porque está configurando várias reservas de URL que também especificam endereços IP explícitos ou nomes de host (por exemplo, uma para uma placa de adaptador de rede usada para conexões à intranet e uma segunda usada para conexões à extranet).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "80380697"
   
 10. Teste a URL clicando no link na seção **URLs** da página. Observe que o banco de dados do servidor de relatório deve ser criado e configurado antes que você possa testar a URL. Para obter instruções, consulte [Criar um banco de dados de servidor de relatório no modo nativo &#40;Gerenciador de Configurações do SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Além disso, se o servidor de relatório estiver configurado para usar o modo Integrado do SharePoint, configure a URL do serviço Web Servidor de Relatórios na Administração Central do SharePoint. Para obter mais informações sobre como atualizar a URL do serviço Web do Servidor de Relatórios na Administração Central do SharePoint, consulte [Configuração e Administração de um Servidor de Relatórios &#40;Serviços de Relatório ssharePoint mode&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) e [relatórios de serviços de relatório do servidor &#40;o modo SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Além disso, se o servidor de relatório estiver configurado para usar o modo Integrado do SharePoint, configure a URL do serviço Web Servidor de Relatórios na Administração Central do SharePoint. Para obter mais informações sobre como atualizar a URL do serviço Web servidor de relatórios na administração central do SharePoint, consulte [configuração e administração de um servidor de relatório &#40;Reporting Services modo do sharepoint&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) e [Reporting Services servidor de relatório &#40;modo do SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Para criar uma reserva de URL para o Gerenciador de Relatórios  
   
@@ -103,7 +103,7 @@ ms.locfileid: "80380697"
   
 2.  Clique em **URL do Gerenciador de Relatórios**.  
   
-3.  Especifique o diretório virtual. O Gerenciador de Relatórios escuta no mesmo endereço IP e porta que o serviço Web Servidor de Relatório. Se você configurou o Gerenciador de Relatórios para que aponte para um serviço Web Servidor de Relatório diferente, deverá modificar as configurações da URL do Gerenciador de Relatórios no arquivo RSReportServer.config. Para obter instruções, consulte [Configurar o Gerenciador de relatórios &#40;modo nativo&#41;](../report-server/configure-web-portal.md) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Livros Online.  
+3.  Especifique o diretório virtual. O Gerenciador de Relatórios escuta no mesmo endereço IP e porta que o serviço Web Servidor de Relatório. Se você configurou o Gerenciador de Relatórios para que aponte para um serviço Web Servidor de Relatório diferente, deverá modificar as configurações da URL do Gerenciador de Relatórios no arquivo RSReportServer.config. Para obter instruções, consulte [configurar Report Manager &#40;modo nativo&#41;](../report-server/configure-web-portal.md) nos manuais online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Se você instalou um certificado SSL, poderá selecioná-lo para requerer que todas as solicitações para o Gerenciador de Relatórios sejam roteadas por HTTPS.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "80380697"
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>URLs para várias instâncias do Servidor de Relatório no mesmo computador  
  Se você estiver reservando URLs para várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], deverá seguir as convenções de nomenclatura para que possa evitar conflitos de nomenclatura. Para obter mais informações, veja [Reservas de URL para implantações do Servidor de Relatório com várias instâncias &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a>Exemplos de configurações de URL  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Exemplos de configurações de URL  
  A lista a seguir mostra alguns exemplos de qual pode ser a aparência de uma URL de servidor de relatório:  
   
 -   http://localhost/reportserver  
@@ -168,8 +168,8 @@ ms.locfileid: "80380697"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>Consulte também  
- [O gerenciador de configuração de serviços de relatórios &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

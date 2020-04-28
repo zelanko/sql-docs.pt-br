@@ -1,5 +1,5 @@
 ---
-title: Sequências de fuga de data, hora e carimbo de tempo | Microsoft Docs
+title: Sequências de escape Date, time e timestamp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284338"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Sequências de escape de data, hora e carimbo de data/hora
-O ODBC define seqüências de fuga para literais de data, hora e carimbo de data. A sintaxe dessas seqüências de fuga é a seguinte:  
+O ODBC define as sequências de escape para os literais de data, hora e timestamp. A sintaxe dessas sequências de escape é a seguinte:  
   
 ```  
   
@@ -32,7 +32,7 @@ O ODBC define seqüências de fuga para literais de data, hora e carimbo de data
 {ts 'value'}  
 ```  
   
- Na notação da BNF, a sintaxe é a seguinte:  
+ Na notação BNF, a sintaxe é a seguinte:  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>Comentários  
- As seqüências de escape literal data, hora e carimbo de data são suportadas se os tipos de dados de data, hora e carimbo de data forem suportados pela fonte de dados. Um aplicativo deve ligar para **o SQLGetTypeInfo** para determinar se esses tipos de dados são suportados.
+ As sequências de escape de data, hora e carimbo de hora literal têm suporte se a fonte de dados tiver suporte para os tipos de dados Date, time e timestamp. Um aplicativo deve chamar **SQLGetTypeInfo** para determinar se esses tipos de dados têm suporte.

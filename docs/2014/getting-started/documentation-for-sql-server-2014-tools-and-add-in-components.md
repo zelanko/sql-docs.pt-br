@@ -1,5 +1,5 @@
 ---
-title: Documentação para ferramentas e componentes adicionais do SQL Server 2014 | Microsoft Docs
+title: Documentação para SQL Server ferramentas e componentes de suplemento do 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402575"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentação de ferramentas e componentes de suplementos do SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "80402575"
 |||  
 |-|-|  
 |**Ferramenta**|**Descrição**|  
-|[Gerenciador de Configurações](../relational-databases/sql-server-configuration-manager.md)|O Gerenciador de Configurações é uma ferramenta para gerenciar os serviços associados ao SQL Server, configurar os protocolos de rede usados pelo SQL Server e para gerenciar a configuração de conectividade de rede de computadores cliente do SQL Server.|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|O Gerenciador de Configurações é uma ferramenta para gerenciar os serviços associados ao SQL Server, configurar os protocolos de rede usados pelo SQL Server e para gerenciar a configuração de conectividade de rede de computadores cliente do SQL Server.|  
 |[Supervisor de Atualização do SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|O Supervisor de Atualização do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] analisa a configuração dos componentes instalados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e gera um relatório de problemas que devem ser solucionados para uma atualização bem-sucedida.|  
 |[Suplementos de Mineração de Dados do SQL Server para o Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Suplementos de Mineração de Dados do para Office é um conjunto de ferramentas leve para análise preditiva que permite a você usar dados no Excel para criar modelos analíticos para previsão, recomendação ou exploração.|  
 |[Change Data Capture Designer para Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|O Change Data Capture Designer para Oracle é usado para desenvolver e manter Instâncias do Oracle CDC.|  
@@ -35,5 +35,5 @@ ms.locfileid: "80402575"
 |[Microsoft ODBC Driver 11 para SQL Server no Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|O Driver ODBC Driver 11 para Windows da Microsoft é um driver autônomo que fornece uma API (interface de programação de aplicativos) que implementa as interfaces ODBC padrão para o Microsoft Windows.|  
 |[Power Pivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|O Power Pivot para SharePoint é um servidor do Analysis Services em execução no modo do SharePoint.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Documentação do SQL Server 2014](../2014-toc/index.yml)  

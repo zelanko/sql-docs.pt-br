@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289514"
 ---
 # <a name="identity-and-access-control-replication"></a>Identidade e controle de acesso (Replicação)
@@ -41,11 +41,11 @@ ms.locfileid: "79289514"
  A filtragem de dados publicados restringe o acesso aos dados e permite que você especifique os dados disponíveis no Assistente. Por exemplo, você pode filtrar a tabela **Customer** para que os parceiros da corporação recebam apenas as informações sobre os clientes cuja coluna **ShareInfo** tenha um valor de "sim." Para a replicação de mesclagem, haverá considerações de segurança se você usar um filtro com parâmetros que inclua HOST_NAME(). Para obter mais detalhes, consulte a seção "Filtragem com HOST_NAME ()" em [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Gerenciar logons e senhas na replicação
-  Ao configurar a replicação, especifique os logons e as senhas para agentes de replicação. Depois de configurar a replicação, você pode alterar os logons e as senhas. Para obter mais informações, consulte [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Se você alterar a senha de uma conta usada por um agente de replicação, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
+  Ao configurar a replicação, especifique os logons e as senhas para agentes de replicação. Depois de configurar a replicação, você pode alterar os logons e as senhas. Para obter mais informações, consulte [Exibir e modificar as configurações de segurança de replicação](view-and-modify-replication-security-settings.md). Se você alterar a senha de uma conta usada por um agente de replicação, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modelo de segurança do agente de replicação](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Práticas recomendadas de segurança de replicação](replication-security-best-practices.md)   
  [Segurança de Replicação do SQL Server](view-and-modify-replication-security-settings.md)   
  [Ameaça de replicação e mitigação de vulnerabilidade](threat-and-vulnerability-mitigation-replication.md)   
 

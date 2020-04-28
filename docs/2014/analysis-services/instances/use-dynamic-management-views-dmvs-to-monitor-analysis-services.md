@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217117"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Usar DMVs (Exibições de Gerenciamento Dinâmico) para monitorar o Analysis Services
@@ -38,29 +38,25 @@ SELECT * FROM $System.<schemaRowset>
   
  [Ferramentas e permissões](#bkmk_tools)  
   
- [Referência DMV](#bkmk_ref)  
+ [Referência de DMV](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a>Benefícios do uso de consultas DMV  
+##  <a name="benefits-of-using-dmv-queries"></a><a name="bkmk_ben"></a>Benefícios do uso de consultas DMV  
  As consultas DMV retornam informações sobre operações e consumo de recursos que não estão disponíveis por outros meios.  
   
  As consultas de DMV são uma alternativa à execução de comandos XML/UM Discover. Para a maioria dos administradores, gravar uma consulta DMV é mais simples porque a sintaxe dessa consulta se baseia em SQL. Além disso, o conjunto de resultados é retornado em um formato de tabela que torna mais fácil a leitura e a cópia.  
   
-##  <a name="bkmk_ex"></a>Exemplos e cenários  
+##  <a name="examples-and-scenarios"></a><a name="bkmk_ex"></a>Exemplos e cenários  
  Uma consulta DMV pode ajudá-lo a responder perguntas sobre sessões ativas e conexões e quais objetos estão consumindo a maior parte da CPU ou da memória em um determinado momento. Esta seção fornece exemplos de cenários em que as consultas DMV são geralmente mais usadas. Você também pode examinar o [Guia de Operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) para obter insights sobre como usar consultas DMV para monitorar uma instância de servidor.  
   
- 
-  `Select * from $System.discover_object_activity` /** Esta consulta relata a atividade do objeto desde a última vez em que o serviço foi iniciado. Por exemplo, para consultas baseadas nesta DMV, consulte [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
+ `Select * from $System.discover_object_activity` /** Esta consulta relata a atividade do objeto desde a última vez em que o serviço foi iniciado. Por exemplo, para consultas baseadas nesta DMV, consulte [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
- 
-  `Select * from $System.discover_object_memory_usage` /** Esta consulta relata o consumo de memória por objeto.  
+ `Select * from $System.discover_object_memory_usage` /** Esta consulta relata o consumo de memória por objeto.  
   
- 
-  `Select * from $System.discover_sessions` /** Esta consulta relata as sessões ativas, incluindo o usuário e a duração da sessão.  
+ `Select * from $System.discover_sessions` /** Esta consulta relata as sessões ativas, incluindo o usuário e a duração da sessão.  
   
- 
-  `Select * from $System.discover_locks` /** Esta consulta retorna um instantâneo dos bloqueios usados em um momento específico.  
+ `Select * from $System.discover_locks` /** Esta consulta retorna um instantâneo dos bloqueios usados em um momento específico.  
   
-##  <a name="bkmk_syn"></a>Sintaxe de consulta  
+##  <a name="query-syntax"></a><a name="bkmk_syn"></a>Sintaxe de consulta  
  O mecanismo de consulta para DMVs é o analisador de Mineração de Dados. A sintaxe da consulta DMV se baseia na instrução [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
  Embora a sintaxe da consulta DMV se baseie em uma instrução SQL SELECT, ela não oferece suporte à sintaxe completa de uma instrução SELECT. Em especial, não há suporte para JOIN, GROUP BY, LIKE, CAST e CONVERT.  
@@ -85,14 +81,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a>Ferramentas e permissões  
+##  <a name="tools-and-permissions"></a><a name="bkmk_tools"></a>Ferramentas e permissões  
  Você deve ter permissões de administrador de sistema na instância do Analysis Services para consultar uma DMV.  
   
  Você pode usar qualquer aplicativo cliente que tenha suporte para consultas MDX ou DMX, incluindo o SQL Server Management Studio, um relatório do Reporting Services ou um PerformancePoint Dashboard.  
   
  Para executar uma consulta DMV a partir do Management Studio, conecte-se à instância que você deseja consultar e clique em **Nova Consulta**. Você pode executar uma consulta em uma janela de consulta MDX ou DMX.  
   
-##  <a name="bkmk_ref"></a>Referência DMV  
+##  <a name="dmv-reference"></a><a name="bkmk_ref"></a>Referência DMV  
  Nem todos os conjuntos de linhas de esquema têm uma interface DMV. Para retornar uma lista de todos os conjuntos de linhas de esquema que possam ser consultadas usando DMV, execute a consulta a seguir.  
   
 ```  
@@ -107,7 +103,7 @@ ORDER BY TABLE_NAME ASC
 |Conjunto de linhas|Descrição|  
 |------------|-----------------|  
 |[Conjunto de linhas DBSCHEMA_CATALOGS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|Retorna uma lista de bancos de dados do Analysis Services na conexão atual.|  
-|[Conjunto de linhas DBSCHEMA_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Retorna uma lista de todas as colunas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
+|[Conjunto de linhas de DBSCHEMA_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|Retorna uma lista de todas as colunas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
 |[Conjunto de linhas DBSCHEMA_PROVIDER_TYPES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-provider-types-rowset)|Retorna propriedades sobre os tipos de dados base para os quais o provedor de dados OLE DB oferece suporte.|  
 |[Conjunto de linhas DBSCHEMA_TABLES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Retorna uma lista de todas as tabelas no banco de dados atual. Você pode usar esta lista para construir uma consulta DMV.|  
 |[Conjunto de linhas DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Retorna uma lista de colunas e tabelas usadas em um modelo que têm dependências em outras colunas e tabelas.|  
@@ -142,7 +138,7 @@ ORDER BY TABLE_NAME ASC
 |[Conjunto de linhas DISCOVER_TRACES](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)|Retorna uma lista de rastreamentos em execução ativa na conexão atual.|  
 |[Conjunto de linhas DISCOVER_TRANSACTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-transactions-rowset)|Retorna uma lista de transações em execução ativa na conexão atual.|  
 |[Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION](../dev-guide/discover-xevent-trace-definition-rowset.md)|Retorna uma lista de rastreamentos xevent em execução ativa na conexão atual.|  
-|[Conjunto de linhas DMSCHEMA_MINING_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|Lista as colunas individuais de todos os modelos de mineração disponíveis na conexão atual.|  
+|[Conjunto de linhas de DMSCHEMA_MINING_COLUMNS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-columns-rowset)|Lista as colunas individuais de todos os modelos de mineração disponíveis na conexão atual.|  
 |[Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-functions-rowset)|Retorna uma lista de funções com suporte dos algoritmos de mineração de dados no servidor.|  
 |[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual.|  
 |[Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|Retorna um conjunto de linhas que consiste em colunas que descrevem o modelo atual no formato PMML.|  
@@ -169,6 +165,6 @@ ORDER BY TABLE_NAME ASC
 ## <a name="see-also"></a>Consulte Também  
  [Guia de operações do SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [Novo sistema. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas e DMVs restritos](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [Nova função SYSTEMRESTRICTEDSCHEMA para conjuntos de linhas restritos e DMVs](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

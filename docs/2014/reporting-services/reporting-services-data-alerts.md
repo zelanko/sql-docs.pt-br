@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6478be669b53cd4d1a919ff6142be834de187dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289564"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são uma solução de alerta de dados que ajuda você a manter-se informado sobre os dados de relatório interessantes ou importantes para você, na hora certa. Usando dados de alerta você não precisa mais procurar informações, elas vêm até você.
 
  As mensagens de alerta de dados são enviadas por email. Dependendo da importância das informações, você pode optar por enviar mensagens com maior ou menor frequência e somente quando os resultados forem alterados. Você pode especificar vários destinatários de email e, assim, manter os outros informados e aprimorar a eficiência e a colaboração.
@@ -27,7 +26,7 @@ ms.locfileid: "79289564"
 |-|
 |**[!INCLUDE[applies](../includes/applies-md.md)]** Modo do SharePoint|
 
-##  <a name="AlertingWF"></a> Arquitetura de alertas de dados e fluxo de trabalho
+##  <a name="data-alerts-architecture-and-workflow"></a><a name="AlertingWF"></a> Arquitetura de alertas de dados e fluxo de trabalho
  A seguir é apresentado um resumo das áreas principais dos alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :
 
 -   **Definir e salvar definições de alerta de dados** – você executa um relatório, cria regras que identificam valores de dados interessantes, define um padrão de recorrência para enviar a mensagem de alerta de dados e especifica os destinatários da mensagem de alerta.
@@ -110,7 +109,7 @@ ms.locfileid: "79289564"
 
  Para obter mais informações, consulte [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).
 
-##  <a name="InstallAlerting"></a> Instalar os alertas de dados
+##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> Instalar os alertas de dados
  O recurso de alertas de dados está disponível apenas quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint. Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, a instalação cria automaticamente o banco de dados de alertas que armazena definições de alertas de dados e metadados de alertas, e duas páginas do SharePoint para gerenciamento de alertas, e adiciona o Designer de Alertas no site do SharePoint. Não há nenhuma etapa especial para execução, ou opções para definição de alertas durante a instalação.
 
  Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) na biblioteca MSDN.
@@ -119,7 +118,7 @@ ms.locfileid: "79289564"
 
  Você pode usar a página **Provisionar Assinaturas e Alertas** na Administração Central do SharePoint para descobrir se o SQL Server Agent está sendo executado e criar e baixar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que executa para conceder permissões ao SQL Server Agent. Se possível, gere também os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usando o PowerShell. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).
 
-##  <a name="ConfigAlert"></a> Configurar alertas de dados
+##  <a name="configure-data-alerts"></a><a name="ConfigAlert"></a> Configurar alertas de dados
  Desde o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , as configurações para recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , inclusive alertas de dados, são distribuídas entre o arquivo de configuração de servidor de relatório (rsreportserver.config) e um banco de dados de configuração do SharePoint sempre que você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint. Quando você cria o aplicativo de serviço como uma etapa na instalação e configuração do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o banco de dados de configuração do SharePoint é criado automaticamente. Para obter mais informações, consulte [arquivo de configuração RSReportServer](report-server/rsreportserver-config-configuration-file.md) e [arquivos de configuração de Reporting Services](report-server/reporting-services-configuration-files.md).
 
  As configurações para alertas de dados do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluem os intervalos para limpar dados e metadados de alertas e o número de repetições ao enviar mensagens de alerta de dados por email. Você pode atualizar o arquivo de configuração e o banco de dados de configuração para usarem valores diferentes para configurações de alertas de dados
@@ -174,7 +173,7 @@ ms.locfileid: "79289564"
 
 -   SmtpStatusCode.MailboxUnavailable
 
-###  <a name="bkmk_disablealerts"></a> Desabilitar alertas de dados
+###  <a name="disable-data-alerts"></a><a name="bkmk_disablealerts"></a> Desabilitar alertas de dados
  Para desabilitar o recurso de alerta de dados, atualize a seção Serviço do arquivo de configuração. O código a seguir mostra a seção Serviço do arquivo de configuração.
 
  `<Service>`
@@ -193,7 +192,7 @@ ms.locfileid: "79289564"
 
  Para desabilitar o alerta, altere True para False em `<IsAlertingService>True</IsAlertingService>`.
 
-##  <a name="Permissions"></a> Permissões para alertas de dados
+##  <a name="permissions-for-data-alerts"></a><a name="Permissions"></a> Permissões para alertas de dados
  Para poder criar alertas de dados em relatórios, você deve ter permissão para executar o relatório e para criar alertas no site do SharePoint. Para obter mais informações sobre permissões de relatório, consulte o seguinte.
 
 -   [Gerando feeds de dados de relatórios &#40;Construtor de Relatórios e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)
@@ -207,7 +206,7 @@ ms.locfileid: "79289564"
 |Operador de informações|Exibir Itens<br /><br /> Criar alertas|Exibir os itens como relatórios e criar alertas de dados nos relatórios. Editar e excluir alertas.|
 |Administrador de alerta|Gerenciar Alertas|Exiba uma lista de todos os alertas de dados salvos no site do SharePoint e exclua alertas.|
 
-##  <a name="DiagnosticsLogging"></a> Diagnóstico e log
+##  <a name="diagnostics-and-logging"></a><a name="DiagnosticsLogging"></a> Diagnóstico e log
  Os alertas de dados fornecem várias maneiras para ajudar os operadores de informações e administradores a manter o controle de alertas e a compreender porque houve falha de alertas e para ajudar os administradores a usar os logs de execução para saber quais mensagens de alerta foram enviadas para quem, o número de instâncias de alertas e assim por diante.
 
 ### <a name="data-alert-manager"></a>Gerenciador de Alertas de Dados
@@ -251,7 +250,7 @@ ms.locfileid: "79289564"
 #### <a name="report-server-trace-log"></a>Log de rastreamento do Servidor de Relatório
  O log de rastreamento do servidor de relatório contém informações detalhadas sobre as operações do serviço Servidor de Relatório, incluindo as operações executadas pelo serviço Web Servidor de Relatório, pelo Gerenciador de Relatórios e pelo processamento em segundo plano. As informações do log de rastreamento podem ser úteis se você estiver depurando um aplicativo que inclui um servidor de relatório ou investigando um problema específico que foi gravado no log de evento ou de execução. Para obter mais informações, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).
 
-##  <a name="PerformanceCounters"></a> Contadores de desempenho
+##  <a name="performance-counters"></a><a name="PerformanceCounters"></a> Contadores de desempenho
  Os alertas de dados fornecem seus próprios contadores de desempenho. Todos menos um contador de desempenho estão relacionados a um evento que faz parte do serviço de runtime de alerta. O contador de desempenho relacionado à fila de evento informa o comprimento da fila de todos os eventos ativos.
 
 |Evento ou fila de eventos|Contador de desempenho|
@@ -267,14 +266,14 @@ ms.locfileid: "79289564"
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece contadores de desempenho para outros recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obter mais informações, consulte contadores de desempenho [para os objetos de desempenho ReportServer: Service e ReportServerSharePoint: Service](report-server/performance-counters-reportserver-service-performance-objects.md), [contadores de desempenho para o serviço Web MSRS 2014 e objetos de desempenho do serviço windows MSRS 2014 &#40;modo nativo&#41;](report-server/performance-counters-msrs-2011-web-service-performance-objects.md)e [contadores de desempenho para o modo do SharePoint do serviço Web do MSRS 2014 e os objetos de desempenho do modo do sharepoint do serviço Windows MSRS 2014 &#40;o modo SharePoint&#41;](report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).
 
-##  <a name="SupportForSSL"></a> Suporte para SSL
+##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Suporte para SSL
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pode usar o serviço HTTP SSL (protocolo SSL) para estabelecer conexões criptografadas com um servidor de relatório ou site do SharePoint.
 
  O serviço de runtime de alerta e a interface do usuário de alertas de dados oferecem suporte para SSL e funcionam de modo semelhante quer você use SSL ou HTTP; no entanto, há algumas diferenças sutis. Quando a definição de alerta de dados é criada usando uma conexão SSL, a URL associada à biblioteca do SharePoint da mensagem de alerta de dados também usa SSL. Você pode identificar a conexão SSL porque ela usa HTTPS, em vez de HTTP em sua URL. De modo semelhante, se a definição de alerta de dados foi criada usando uma conexão HTTP, o link para o site do SharePoint usa HTTP. Se a definição de alerta foi criada usando SSL ou HTTP, a experiência para usuários e administradores de alertas será idêntica ao uso do Designer de Alerta de Dados ou do Gerenciador de Alertas de Dados. Se o protocolo (HTTP ou SSL) for alterado entre a hora em que a definição de alerta foi criada e atualizada e salva novamente, o protocolo original será mantido e usado em URLs de link.
 
  Se você criar um alerta de dados em um site do SharePoint que está configurado para usar o SSL e, em seguida, remover o requisito de SSL, o alerta continuará funcionando no site. Se o site for excluído, o site de zona padrão será usado.
 
-##  <a name="UserInterface"></a> Interface do usuário de alerta de dados
+##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interface do usuário de alerta de dados
  Os alertas de dados fornecem páginas do SharePoint para o gerenciamento de alertas e um designer para criação e edição de definições de alertas de dados.
 
 -   **Designer de Alertas de Dados** no qual você cria ou edita definições de alertas de dados. Para obter mais informações, consulte [Designer de Alertas de Dados](../../2014/reporting-services/data-alert-designer.md), [Criar um Alerta de Dados no Designer de Alertas de Dados](create-a-data-alert-in-data-alert-designer.md) e [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).
@@ -287,7 +286,7 @@ ms.locfileid: "79289564"
 
 -   **Provisione assinaturas e alertas de dados** nos quais você descobre se os Reporting Services podem usar o SQL Server Agent para alertas de dados e scripts de download que permitem acesso ao SQL Server Agent. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).
 
-##  <a name="Globalization"></a> Globalização de alertas de dados
+##  <a name="globalization-of-data-alerts"></a><a name="Globalization"></a> Globalização de alertas de dados
  Certos scripts, como Árabe e Hebraico, são escritos da direita para a esquerda. Os dados de alertas oferecem suporte para scripts da direita para a esquerda, bem como da esquerda para a direita. Os dados de alerta detectam a cultura e alteram a aparência e o comportamento da interface do usuário e o layout de mensagens de alertas de dados de acordo. A cultura é derivada da configuração regional do sistema operacional no computador do usuário. A cultura é salva cada vez que você atualiza e salva novamente a definição de alerta de dados.
 
  A cultura pode afetar se os dados atendem às regras na definição de alerta. Comparações de cadeias de caracteres geralmente são afetadas pelas regras específicas de cultura.
@@ -298,7 +297,7 @@ ms.locfileid: "79289564"
 
  Dependendo da interface do usuário de alerta de dados que você usar, o suporte para itens da direita para a esquerda variará. O Designer de Alerta de Dados oferece suporte para o script da direita para a esquerda em caixas de texto, mas o layout do designer não é da direita para a esquerda. Seu layout é da esquerda para a direita, assim como outras ferramentas. Se uma definição de alerta for criada com orientação da direita para a esquerda, e depois editada em um ambiente da esquerda para a direita, a orientação de texto da direita para a esquerda será preservada quando você salvar a definição de alerta. O Gerenciador de Alertas de Dados se comporta da mesma forma que uma página do SharePoint. Seu layout é da direita para esquerda, assim como outras páginas do SharePoint. Mensagens de alertas de dados se baseiam em definições de alerta da direita para a esquerda, exibem texto de mensagem da direita para a esquerda e o layout de mensagem é da esquerda para a direita.
 
-##  <a name="HowTo"></a> Tarefas relacionadas
+##  <a name="related-tasks"></a><a name="HowTo"></a> Tarefas relacionadas
 
 -   [Salvar um relatório em uma biblioteca do SharePoint &#40;Construtor de Relatórios&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)
 

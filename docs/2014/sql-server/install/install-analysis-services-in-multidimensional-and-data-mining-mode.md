@@ -17,10 +17,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280833"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar o Analysis Services em modo multidimensional e de mineração de dados
@@ -43,8 +43,7 @@ ms.locfileid: "78280833"
   
 -   Componentes de conectividade de ferramentas de clientes, usados na comunicação entre clientes e servidores, inclusive bibliotecas de rede para DB-Library, ODBC e OLE DB.  
   
--   
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], um conjunto de objetos gráficos e programáveis para mover, copiar e transformar dados.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], um conjunto de objetos gráficos e programáveis para mover, copiar e transformar dados.  
   
 -   Ferramentas de gerenciamento, incluindo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] e o Replication Monitor.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "78280833"
 |[Requisitos de hardware e software para instalar o SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) e [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Antes de executar a Instalação, verifique os pré-requisitos para instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e determine a conta a ser usada para provisionar o servidor.|  
 |[Instale o SQL Server 2014 do assistente de instalação &#40;&#41;de ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)instalação.|Execute a Instalação do SQL Server para instalar o software.|  
 |[Configurar o Firewall do Windows para permitir o acesso ao Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Ao concluir a Instalação, você deve definir as configurações de firewall para permitir conexões remotas com o servidor.|  
-|[Autorizar o acesso a objetos e operações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Os usuários que acessam os bancos de dados do Analysis Services devem ter permissão de Leitura em pelo menos um banco de dados do servidor.|  
+|[Autorizando o acesso a objetos e operações &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Os usuários que acessam os bancos de dados do Analysis Services devem ter permissão de Leitura em pelo menos um banco de dados do servidor.|  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  O conteúdo de instalação adicional pode ser encontrado nos seguintes tópicos:  
@@ -65,7 +64,7 @@ ms.locfileid: "78280833"
   
  [Instalação do PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
- [Determinar o modo de servidor de uma instância de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
  [SQL Server suplementos de mineração de dados](https://www.microsoft.com/download/details.aspx?id=35578)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.external_library_files (Transact-SQL) | Microsoft Docs
+title: sys. external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2f1bbdc3936dc6295b9ecc51b937e50cae20670
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80664234"
 ---
 # <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
@@ -33,9 +33,9 @@ Lista uma linha para cada arquivo que compõe uma biblioteca externa.
 |Nome da coluna |Tipo de dados |Descrição|
 |------|------|-----|
 |external_library_id | INT |ID do objeto da biblioteca externa. |
-|content |varbinary(max) |Conteúdo do artefato de arquivo da biblioteca externa. |
-|plataforma |TINYINT |ID da plataforma host na qual o SQL Server está instalado. |
-|platform_desc | nvarchar(60) |Nome da plataforma de host. Os valores válidos são 'WINDOWS', 'LINUX'. |
+|conteúdo |varbinary(max) |Conteúdo do artefato do arquivo da biblioteca externa. |
+|plataforma |TINYINT |ID da plataforma de host na qual o SQL Server está instalado. |
+|platform_desc | nvarchar(60) |Nome da plataforma do host. Os valores válidos são ' WINDOWS ', ' LINUX '. |
 
 ### <a name="see-also"></a>Confira também  
 

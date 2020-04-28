@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289554"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Criar relatórios com o Designer de Relatórios (SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "79289554"
   
  Use as informações deste tópico para criar relatórios e itens relacionados para um único projeto de relatório em uma solução do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para obter mais informações sobre soluções e vários projetos no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_SharedDataSources"></a> Fontes de dados compartilhadas  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a>Fontes de dados compartilhadas  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar fontes de dados compartilhadas para uma solução de relatório. As fontes de dados compartilhadas podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDataSources** e **TargetDataSourceFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir as fontes de dados usadas em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir fontes de dados publicadas em um servidor de relatório ou site do SharePoint, mas não incluídas na solução do [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Para esse recurso, use [Construtor de Relatórios &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "79289554"
  Para obter mais informações, consulte [Conexões de dados, fontes de dados e cadeias de conexão no Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
   
-##  <a name="bkmk_SharedDatasets"></a> Conjuntos de dados compartilhados  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a>Conjuntos de itens compartilhados  
  Use o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implantar conjuntos de dados compartilhados para uma solução de relatório. Os conjuntos de dados compartilhados podem ser implantadas independentemente de outros itens em um projeto por meio das propriedades **OverwriteDatasets** e **TargetDatasetFolder** . Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  No Designer de Relatórios, você trabalha no painel Dados do Relatório e no Gerenciador de Soluções para definir os conjuntos de dados compartilhados usados em um relatório. Para obter mais informações, consulte [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Você não pode usar o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir conjuntos de dados publicados diretamente em um servidor de relatório ou site do SharePoint. Para esse recurso, use [Construtor de Relatórios &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md) no modo de conjunto de recursos compartilhado.  
@@ -53,7 +53,7 @@ ms.locfileid: "79289554"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] é uma ferramenta de cliente. Você pode usar designers de consulta para ajudar a criar e testar os resultados de suas consultas localmente em Visualização. Depois da implantação, você pode gerenciar conjuntos de dados compartilhados independentemente das fontes de dados compartilhadas e dos relatórios dos quais eles dependem. Para obter mais informações, consulte conjuntos de dados [inseridos de relatório e conjuntos de dados compartilhados &#40;Construtor de relatórios e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [ferramentas de design de consultas no Report Designer SQL Server Data Tools &#40;SSRS ](../report-data/query-design-tools-ssrs.md)&#41;e [gerenciar conjuntos](../report-data/manage-shared-datasets.md)de dados compartilhados.  
   
   
-##  <a name="bkmk_Reports"></a>Fornece  
+##  <a name="reports"></a><a name="bkmk_Reports"></a>Fornece  
  Relatórios são arquivos armazenados em um projeto de relatório. Os relatórios podem ser usados como relatórios autônomos, sub-relatórios ou os destinos para ações de detalhamento de relatórios principais. Os relatórios podem ser implantadas independentemente de outros itens em um projeto por meio da propriedade **TargetReportFolder** e de outras propriedades. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -85,29 +85,29 @@ ms.locfileid: "79289554"
      Para obter mais informações, consulte [Linguagem RDL &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).  
   
   
-##  <a name="bkmk_ReportParts"></a> Partes de relatório  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a>Partes de relatório  
  No Designer de Relatórios, depois de criar tabelas, gráficos e outros itens de relatório em um projeto, você pode publicá-los como *partes de relatório* em um servidor de relatório ou site do SharePoint integrado com um servidor de relatório de forma que você e outros usuários possam reutilizá-las em outros relatórios. Para obter mais informações, consulte [Partes de relatório no Designer de Relatórios &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
  As partes de relatório podem ser implantadas independentemente de outros itens em um projeto por meio da propriedade **TargetReportPartFolder** e de outras propriedades. Para obter mais informações, consulte [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
   
-##  <a name="bkmk_Resources"></a> Recursos  
+##  <a name="resources"></a><a name="bkmk_Resources"></a>Os  
  Você pode adicionar arquivos a seu projeto que estejam relacionados a seu relatório, mas não sejam processados pelo servidor de relatório. Por exemplo, você pode adicionar imagens para imagens ou arquivos de forma ESRI para dados espaciais. Para saber mais, confira [Recursos](../report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
   
   
-##  <a name="bkmk_ReportLayout"></a>Layout do relatório  
+##  <a name="report-layout"></a><a name="bkmk_ReportLayout"></a>Layout do relatório  
  Para criar o layout do relatório, arraste itens do relatório e regiões de dados da Caixa de Ferramentas para a superfície de design e organize-os. Arraste os campos de conjunto de dados para os itens na superfície de design para adicionar dados ao relatório. Para organizar dados em grupos em uma região de dados tablix, arraste campos de conjunto de dados para o painel Agrupamento. Como as ferramentas de criação de relatório são essencialmente uma maneira de criar definições de relatório, a abordagem do design de relatórios é bastante semelhante entre Construtor de Relatórios e Designer de Relatórios.  
   
   
-##  <a name="bkmk_Preview"></a>Visualizar  
+##  <a name="preview"></a><a name="bkmk_Preview"></a>Visualizar  
  Use a **Visualização** para verificar os dados e o design de layout do relatório. Quando você visualiza um relatório, o processador de relatório valida o esquema de definição de relatório e a sintaxe de expressão e lista os problemas na janela [Output](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  Quando você visualizar um relatório, seus dados serão armazenados em cache em um arquivo no computador local. Ao visualizar novamente o mesmo relatório usando a mesma consulta, os mesmos parâmetros e as mesmas credenciais, o Designer de Relatórios recuperará a cópia em cache em vez de executar a consulta mais uma vez. O arquivo de dados será salvo como *\<nomedorelatório>* .rdl.data no mesmo diretório do arquivo de definição de relatório. Ele não será excluído quando você fechar o Designer de Relatórios.  
+>  Quando você visualizar um relatório, seus dados serão armazenados em cache em um arquivo no computador local. Ao visualizar novamente o mesmo relatório usando a mesma consulta, os mesmos parâmetros e as mesmas credenciais, o Designer de Relatórios recuperará a cópia em cache em vez de executar a consulta mais uma vez. O arquivo de dados é salvo como * \<ReportName>*. RDL. Data no mesmo diretório que o arquivo de definição de relatório. Ele não será excluído quando você fechar o Designer de Relatórios.  
   
  Você pode visualizar um relatório das seguintes maneiras:  
   
--   **Exibição de visualização.** Clique na guia **Visualização** . O relatório é executado localmente, por meio da mesma funcionalidade de processamento e renderização de relatório do servidor de relatório. O relatório será exibido como uma imagem interativa: é possível selecionar parâmetros, clicar em links, exibir o mapa do documento e expandir e recolher áreas ocultas do relatório. Também é possível exportar o relatório para qualquer formato de renderização instalado.  
+-   **Exibição de visualização.** Clique na guia **Visualizar** . O relatório é executado localmente, usando a mesma funcionalidade de processamento e renderização de relatório fornecida com o servidor de relatório. O relatório será exibido como uma imagem interativa: é possível selecionar parâmetros, clicar em links, exibir o mapa do documento e expandir e recolher áreas ocultas do relatório. Também é possível exportar o relatório para qualquer formato de renderização instalado.  
   
 -   **Visualização autônoma.** Execute o relatório local em um navegador. Por meio de uma configuração de depuração, você também pode usar esse modo para depurar assemblies personalizados criados por você. Há três maneiras de executar um projeto em modo de Depuração:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79289554"
   
      Se quiser visualizar um relatório específico que não é o item inicial do projeto, selecione uma configuração que cria o relatório, mas que não o implanta (por exemplo, a configuração DebugLocal), clique com o botão direito do mouse no relatório e clique em **Executar**. Escolha uma configuração que não implante o relatório, caso contrário, o relatório será publicado no servidor de relatórios em vez de ser exibido localmente na janela de visualização.  
   
--   **Visualizar Impressão.**  
+-   **Visualizar impressão.**  
   
      Na primeira vez em que você visualizar o relatório em modo de Visualização ou na janela de visualização, a exibição do relatório será similar a um relatório gerado pela extensão de renderização HTML. A visualização não é HTML, mas o layout e a paginação do relatório são semelhantes a uma saída em HTML.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "79289554"
     -   O layout do relatório precisa de modificação para melhor leitura em um formato impresso.  
   
   
-##  <a name="bkmk_SaveandDeploy"></a>Salvar e implantar  
+##  <a name="save-and-deploy"></a><a name="bkmk_SaveandDeploy"></a>Salvar e implantar  
  No Designer de Relatórios, você pode salvar relatórios e outros arquivos de projeto localmente ou implantá-los em um servidor de relatório ou site do SharePoint. Fontes de dados compartilhadas, conjuntos de dados compartilhados, relatórios, recursos e partes de relatório podem ser implantados independentemente ou em conjunto dependendo das propriedades de implantação configuradas. Para obter mais informações, consulte [Configuration and Deployment Properties](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  No Designer de Relatórios, é importante entender que você cria um relatório por meio do esquema de definição de relatório com suporte da versão atual do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando você define propriedades de implantação de projeto para um servidor de relatório específico ou site do SharePoint e, em seguida, salva o relatório, o Designer de Relatórios salva a definição de relatório no diretório de compilação no esquema que corresponde à versão no servidor de relatório de destino. Para criar relatórios que podem ser publicados em um servidor de relatório de versão anterior, o Designer de Relatórios remove itens de relatório que não existem no esquema de destino. Isto ocorre automaticamente e sem solicitar. Quando isso ocorre, a definição de relatório original é preservada na pasta do projeto. A definição de relatório modificada que é implantada está na pasta de compilação.  
@@ -156,7 +156,7 @@ ms.locfileid: "79289554"
 ### <a name="save-a-report-locally"></a>Salvar um relatório localmente  
  Quando você trabalha em um relatório ou em outros itens de projeto no Designer de Relatórios, os arquivos são salvos em seu computador local ou em um compartilhamento em outro computador ao qual você tem acesso.  
   
- Se estiver usando software de controle de código-fonte, você talvez esteja verificando seus relatórios no servidor de controle do código-fonte ao salvar o relatório. Para obter mais informações, consulte [Source Control](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl).  
+ Se estiver usando software de controle de código-fonte, você talvez esteja verificando seus relatórios no servidor de controle do código-fonte ao salvar o relatório. Para obter mais informações, consulte [controle do código-fonte](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_SourceControl).  
   
 ### <a name="deploy-or-publish"></a>Implantar ou publicar  
  No [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], você pode implantar relatórios ou outros itens de projeto em várias versões de servidores de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Use as configurações de projeto para controlar a atualização de definições de relatório para versões de esquema compatíveis com os servidores de relatório de destino. As propriedades controladas por configurações de projeto incluem o servidor de relatório de destino, a pasta onde o processo de compilação armazena temporariamente as definições de relatórios para visualização e implantação e os níveis de erro. Para obter mais informações, consulte [Propriedades e configuração e de implantação](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties) e [Definir propriedades de implantação &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "79289554"
  Os relatórios podem ser exportados para diversos formatos; esses formatos afetam o funcionamento de alguns recursos de interatividade e de layout de relatório. Para obter mais informações sobre considerações de design para vários formatos de saída, consulte [Exportando relatórios &#40;Construtor de relatórios e SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validação de relatórios e níveis de erro  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Validação de relatórios e níveis de erro  
  Os relatórios são validados antes da visualização e durante a implantação. Vários problemas de compilação podem ocorrer ao compilar relatórios. Os relatórios podem conter cadeias de caracteres como expressões ou consultas incompatíveis com a versão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que a configuração do projeto especifica, por exemplo.  
   
  Use a propriedade ErrorLevel para gerenciar os avisos e os erros de build. A propriedade ErrorLevel pode conter um valor de 0 a 4, inclusive. O valor determina quais problemas de compilação são relatados como erros e quais são relatados como avisos. O valor padrão é 2. Os avisos e erros são gravados na janela [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Saída](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  

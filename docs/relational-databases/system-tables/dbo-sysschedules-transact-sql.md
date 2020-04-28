@@ -20,10 +20,10 @@ ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79090572"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "79090572"
   Contém informações sobre agendas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Essa tabela é armazenada no banco de dados **msdb** .  
   
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID da agenda de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador exclusivo da agenda do trabalho. Este valor é usado para identificar uma agenda para trabalhos distribuídos.|  
 |**originating_server_id**|**int**|ID do servidor mestre do qual a agenda de trabalho foi originada.|  
 |**name**|**sysname (nvarchar (128))**|Nome definido pelo usuário para a agenda de trabalho. Este nome deve ser exclusivo em um trabalho.|  
-|**owner_sid**|**varbinary(85)**|O Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
-|**Habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
+|**owner_sid**|**varbinary (85)**|O Microsoft Windows *security_identifier* do usuário ou grupo que possui a agenda de trabalho.|  
+|**habilitado**|**int**|O status da agenda de trabalho:<br /><br /> **0** = não habilitado.<br /><br /> **1** = habilitado.<br /><br /> Se o agendamento não estiver habilitado, nenhum trabalho será executado nele.|  
 |**freq_type**|**int**|A frequência com que um trabalho é executado para esta agenda.<br /><br /> **1** = somente uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, em relação a **freq_interval**<br /><br /> **64** = é executado quando o serviço de SQL Server Agent é iniciado<br /><br /> **128** = é executado quando o computador está ocioso|  
 |**freq_interval**|**int**|Dias em que o trabalho é executado. Depende do valor de **freq_type**. O valor padrão é **0**, o que indica que **freq_interval** não é usado. Consulte a tabela abaixo para obter os possíveis valores e seus efeitos.|  
 |**freq_subday_type**|**int**|Unidades para o **freq_subday_interval**. A seguir estão os possíveis valores e suas descrições.<br /><br /> <br /><br /> **1** : na hora especificada<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  

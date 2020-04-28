@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112246"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
@@ -195,12 +195,12 @@ END
 |-|-----------------------|-----------------|  
 |Compilação inicial|No momento da criação.|Na primeira execução.|  
 |Recompilação automática|Na primeira execução do procedimento após o reinício do banco de dados ou do servidor.|Na reinicialização do servidor. Ou, remoção do cache do plano, geralmente com base nas alterações de estatísticas ou esquema, ou demanda de memória.|  
-|Recompilação manual|Sem suporte. A solução alternativa é descartar e recriar o procedimento armazenado.|Usar o `sp_recompile`. Você pode remover manualmente o plano do cache, por exemplo, usando DBCC FREEPROCCACHE. Você também pode criar o procedimento armazenado WITH RECOMPILE e o procedimento armazenado será recompilado em cada execução.|  
+|Recompilação manual|Sem suporte. A solução alternativa é descartar e recriar o procedimento armazenado.|Use `sp_recompile`. Você pode remover manualmente o plano do cache, por exemplo, usando DBCC FREEPROCCACHE. Você também pode criar o procedimento armazenado WITH RECOMPILE e o procedimento armazenado será recompilado em cada execução.|  
   
 ### <a name="compilation-and-query-processing"></a>Processamento de compilação e consulta  
  O diagrama a seguir ilustra o processo de compilação para procedimentos armazenados compilados nativamente:  
   
- ![Compilação original dos procedimentos armazenados.](../../database-engine/media/hekaton-query-plan-6.gif "Compilação original dos procedimentos armazenados.")  
+ ![Compilação nativa de procedimentos armazenados.](../../database-engine/media/hekaton-query-plan-6.gif "Compilação original dos procedimentos armazenados.")  
 Compilação original dos procedimentos armazenados.  
   
  O processo é descrito como:  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém as estatísticas no nível de coluna para tabelas com otimização de memória. Além disso, ele mantém a contagem real de linhas da tabela. No entanto, em contraposição às tabelas baseadas em disco, as estatísticas de tabelas com otimização de memória não são atualizadas automaticamente. Portanto, as estatísticas precisam ser atualizadas manualmente depois que alterações significativas são feitas nas tabelas. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Tabelas com otimização de memória](memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes da programação do driver paradoxo | Microsoft Docs
+title: Outros detalhes de programação do driver do Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f2b19abbb3c1a05342707cf80c9266bc19ee689d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290946"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Outros detalhes de programação de drivers do Paradox
 > [!NOTE]  
->  Esta seção fornece informações específicas do Driver Paradoxsobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas do driver do Paradox sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta seção contém os seguintes tópicos.  
   

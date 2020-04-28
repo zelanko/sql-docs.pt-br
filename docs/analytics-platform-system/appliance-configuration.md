@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289734"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de verificação de configuração do dispositivo para o Analytics Platform System
@@ -22,7 +22,7 @@ Fornece listas de verificação para as tarefas necessárias para configurar o s
 > [!WARNING]  
 > O uso da**Configuration Manager** do sistema de plataforma de análise é a melhor maneira e a única maneira com suporte, para executar as tarefas disponíveis na ferramenta.  
   
-## <a name="BeforeTasks"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>Antes de começar  
   
 ### <a name="prerequisites"></a>Pré-requisitos  
   
@@ -44,7 +44,7 @@ Fornece listas de verificação para as tarefas necessárias para configurar o s
   
     2.  Inicie o **Configuration Manager** no menu **Iniciar** do nó de controle do PDW. A primeira tela da Configuration Manager exibe a topologia do dispositivo, que foi criada pelo seu IHV. É uma lista dos nós de hardware reconhecidos pelo software SQL Server PDW como parte do seu dispositivo. Não é necessário alterar as configurações na tela de topologia do dispositivo.  
   
-## <a name="CMTasks"></a>Executar tarefas de Configuration Manager  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>Executar tarefas de Configuration Manager  
 O**Configuration Manager** de SQL Server PDW (PDWCM) é uma ferramenta de administração de dispositivo que SQL Server PDW os administradores de sistema usam para executar operações em nível de dispositivo e alterar as configurações de nível de dispositivo. Por exemplo, use PDWCM para redefinir senhas, definir o fuso horário, alterar endereços IP, configurar certificados SSL, habilitar o acesso remoto por meio do firewall, iniciar ou parar o dispositivo e definir a inicialização instantânea de arquivo.  
   
 Use **Configuration Manager** para executar as seguintes tarefas de configuração.  
@@ -64,7 +64,7 @@ Use **Configuration Manager** para executar as seguintes tarefas de configuraç�
 |Examinar as opções de inicialização de arquivo instantânea usando a caixa de diálogo **privilégios**|A inicialização instantânea de arquivo é um recurso SQL Server que permite que as operações de arquivo de dados sejam executadas mais rapidamente. Ela será habilitada em SQL Server PDW somente se a conta de serviço de rede tiver recebido o privilégio de SE_MANAGE_VOLUME_NAME. Ela é desativada por padrão.<br /><br />Para obter mais informações, consulte [configuração de inicialização de arquivo instantâneo &#40;&#41;do sistema de plataforma de análise ](instant-file-initialization-configuration.md).|  
 |Restaurar o banco de dados mestre de um backup|Exclui o banco de dados **mestre** atual e o substitui por um backup. Para obter mais informações, consulte [restaurar o banco de dados mestre &#40;o sistema de plataforma de análise&#41;](restore-the-master-database.md).|  
   
-## <a name="AddTasks"></a>Executar tarefas de configuração adicionais  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>Executar tarefas de configuração adicionais  
 Depois de executar as tarefas de **Configuration Manager** , execute a lista de tarefas de configuração adicionais a seguir. Algumas dessas tarefas são opcionais.  
   
 |Tarefa de configuração|Descrição|  

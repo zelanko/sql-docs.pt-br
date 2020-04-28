@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280922"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lição 1: Criando objetos de banco de dados
@@ -36,11 +36,11 @@ ms.locfileid: "78280922"
   
 -   [Criando um banco de dados &#40;Tutorial&#41;](lesson-1-1-creating-a-database.md)  
   
--   [Criando uma tabela &#40;tutorial&#41;](lesson-1-2-creating-a-table.md)  
+-   [Criando uma tabela &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
 -   [Inserindo e atualizando dados em uma tabela &#40;tutorial&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Lendo os dados em uma tabela &#40;tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [Lendo os dados em uma tabela &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [Resumo: Criando objetos de banco de dados](lesson-1-5-summary-creating-database-objects.md)  
   

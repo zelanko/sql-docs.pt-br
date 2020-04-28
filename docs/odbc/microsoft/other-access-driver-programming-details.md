@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes da programação do driver de acesso | Microsoft Docs
+title: Outros detalhes de programação de driver de acesso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291086"
 ---
 # <a name="other-access-driver-programming-details"></a>Outros detalhes de programação do driver do Access
 > [!NOTE]  
->  Esta seção fornece informações específicas do Access Driver sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas do driver de acesso sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta seção contém os seguintes tópicos.  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180121"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -51,7 +51,7 @@ sp_describe_undeclared_parameters
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em *Transact-SQL_batch*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. n é um espaço reservado que indica definições de parâmetro adicionais. Se a instrução Transact-SQL ou o lote na instrução não contiver parâmetros, \@params não será necessário. O valor padrão para este parâmetro é NULL.  
   
- Tipo de dados  
+ Datatype  
  O tipo de dados do parâmetro.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -60,7 +60,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_undeclared_parameters** retorna o seguinte conjunto de resultados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contém a posição ordinal do parâmetro no conjunto de resultados. A posição do primeiro parâmetro será especificada como 1.|  
 |**name**|**sysname não nulo**|Contém o nome do parâmetro.|  

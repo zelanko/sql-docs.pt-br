@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112408"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de banco de dados WideWorldImporters
@@ -65,11 +65,11 @@ Todas as tabelas no banco de dados estão nos esquemas de data.
 
 Detalhes de parâmetros e pessoas (usuários e contatos), juntamente com tabelas de referência comuns (comuns a vários outros esquemas).
 
-|Tabela|DESCRIÇÃO|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |SystemParameters|Contém parâmetros configuráveis para todo o sistema.|
 |Pessoas|Contém nomes de usuário, informações de contato, para todos os que usam o aplicativo e para as pessoas que a Wide World Importers lidam em organizações de clientes. Isso inclui a equipe, os clientes, os fornecedores e outros contatos. Para pessoas que receberam permissão para usar o sistema ou site, as informações incluem detalhes de logon.|
-|Primeiras|Há muitos endereços armazenados no sistema, para pessoas, endereços de entrega da organização do cliente, endereços de retirada em fornecedores, etc. Sempre que um endereço é armazenado, há uma referência a uma cidade nesta tabela. Também há um local espacial para cada cidade.|
+|Cidades|Há muitos endereços armazenados no sistema, para pessoas, endereços de entrega da organização do cliente, endereços de retirada em fornecedores, etc. Sempre que um endereço é armazenado, há uma referência a uma cidade nesta tabela. Também há um local espacial para cada cidade.|
 |StateProvinces|As cidades fazem parte de Estados ou províncias. Esta tabela tem detalhes daqueles, incluindo dados espaciais que descrevem os limites de cada Estado ou província.|
 |Países|Estados ou províncias são parte dos países. Esta tabela tem detalhes daqueles, incluindo dados espaciais que descrevem os limites de cada país.|
 |DeliveryMethods|Opções para entrega de itens de estoque (por exemplo, caminhão/Van, post, pickup, Courier, etc.)|
@@ -80,9 +80,9 @@ Detalhes de parâmetros e pessoas (usuários e contatos), juntamente com tabelas
 
 Detalhes de fornecedores e compras de itens de estoque.
 
-|Tabela|DESCRIÇÃO|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
-|Suppliers|Tabela principal de entidades para fornecedores (organizações)|
+|Fornecedores|Tabela principal de entidades para fornecedores (organizações)|
 |SupplierCategories|Categorias para fornecedores (por exemplo, Novelties, brinquedos, roupas, empacotamento etc.)|
 |SupplierTransactions|Todas as transações financeiras que são relacionadas ao fornecedor (faturas, pagamentos)|
 |PurchaseOrders|Detalhes de pedidos de compra do fornecedor|
@@ -93,14 +93,14 @@ Detalhes de fornecedores e compras de itens de estoque.
 
 Detalhes de clientes, vendedores e vendas de itens de estoque.
 
-|Tabela|DESCRIÇÃO|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |Clientes|Tabelas de entidade principal para clientes (organizações ou indivíduos)|
 |CustomerCategories|Categorias para clientes (do IE novidade lojas, supermercados, etc.)|
 |BuyingGroups|As organizações de clientes podem fazer parte de grupos que exercem maior poder de compra|
 |CustomerTransactions|Todas as transações financeiras relacionadas ao cliente (faturas, pagamentos)|
 |SpecialDeals|Preços especiais. Isso pode incluir preços fixos, desconto em dólares ou percentual de desconto.|
-|Pedidos|Detalhe de pedidos de clientes|
+|Orders|Detalhe de pedidos de clientes|
 |OrderLines|Linhas de detalhes de pedidos de clientes|
 |Faturas|Detalhes de notas fiscais de clientes|
 |InvoiceLines|Linhas de detalhes de notas fiscais do cliente|
@@ -109,7 +109,7 @@ Detalhes de clientes, vendedores e vendas de itens de estoque.
 
 Detalhes de itens de estoque, seus ententos e transações.
 
-|Tabela|DESCRIÇÃO|
+|Tabela|Descrição|
 |-----------------------------|---------------------|
 |StockItems|Tabela principal de entidade para itens de estoque|
 |StockItemHoldings|Colunas não temporais para itens de estoque. Essas são colunas atualizadas com frequência.|
@@ -122,7 +122,7 @@ Detalhes de itens de estoque, seus ententos e transações.
 |ColdRoomTemperatures|Temperaturas regularmente registradas de resfriadores de sala frio|
 
 
-## <a name="design-considerations"></a>Considerações sobre o design
+## <a name="design-considerations"></a>Consideração sobre design
 
 O design do banco de dados está sujeito e não há uma maneira correta ou errada de criar um banco de dados. Os esquemas e as tabelas neste banco de dados mostram ideias sobre como você pode criar seu próprio banco de dados.
 

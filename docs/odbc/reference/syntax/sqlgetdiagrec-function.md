@@ -20,18 +20,18 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285376"
 ---
 # <a name="sqlgetdiagrec-function"></a>Função SQLGetDiagRec
 **Conformidade**  
- Versão introduzida: ODBC 3.0 Standards Compliance: ISO 92  
+ Versão introduzida: conformidade de padrões do ODBC 3,0: ISO 92  
   
  **Resumo**  
- **O SQLGetDiagRec** retorna os valores atuais de vários campos de um registro de diagnóstico que contém informações de erro, aviso e status. Ao contrário **do SQLGetDiagField**, que retorna um campo de diagnóstico por chamada, **o SQLGetDiagRec** retorna vários campos comumente usados de um registro de diagnóstico, incluindo o SQLSTATE, o código de erro nativo e o texto da mensagem de diagnóstico.  
+ **SQLGetDiagRec** retorna os valores atuais de vários campos de um registro de diagnóstico que contém informações de erro, aviso e status. Ao contrário de **SQLGetDiagField**, que retorna um campo de diagnóstico por chamada, **SQLGetDiagRec** retorna vários campos usados com frequência de um registro de diagnóstico, incluindo o SQLSTATE, o código de erro nativo e o texto da mensagem de diagnóstico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,8 +49,8 @@ SQLRETURN SQLGetDiagRec(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Handletype*  
- [Entrada] Um identificador de tipo de alça que descreve o tipo de alça para a qual os diagnósticos são necessários. Deve ser uma destas opções:  
+ *HandleType*  
+ Entrada Um identificador de tipo de identificador que descreve o tipo de identificador para o qual o diagnóstico é necessário. Deve ser uma destas opções:  
   
 -   SQL_HANDLE_DBC  
   
@@ -62,80 +62,80 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN alça é usada apenas pelo Driver Manager e pelo motorista. Os aplicativos não devem usar este tipo de alça. Para obter mais informações sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [Developing Connection-Pool Awareness em um Driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ O identificador de SQL_HANDLE_DBC_INFO_TOKEN é usado somente pelo driver e pelo Gerenciador de driver. Os aplicativos não devem usar esse tipo de identificador. Para obter mais informações sobre SQL_HANDLE_DBC_INFO_TOKEN, consulte [desenvolvendo o reconhecimento do pool de conexões em um driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *Handle*  
- [Entrada] Uma alça para a estrutura de dados diagnósticos, do tipo indicado pelo *HandleType*. Se *o HandleType* estiver SQL_HANDLE_ENV, *o Handle* pode ser um cabo de ambiente compartilhado ou não compartilhado.  
+ Entrada Um identificador para a estrutura de dados de diagnóstico, do tipo indicado por *HandleType*. Se *HandleType* for SQL_HANDLE_ENV, o *identificador* poderá ser um identificador de ambiente compartilhado ou não compartilhado.  
   
  *RecNumber*  
- [Entrada] Indica o registro de status a partir do qual o aplicativo busca informações. Os registros de status são numerados a partir de 1.  
+ Entrada Indica o registro de status do qual o aplicativo busca informações. Os registros de status são numerados a partir de 1.  
   
  *SQLState*  
- [Saída] Ponteiro para um buffer no qual retornar um código SQLSTATE de cinco caracteres (e terminando NULL) para o registro de diagnóstico *RecNumber*. Os dois primeiros caracteres indicam a classe; os próximos três indicam a subclasse. Essas informações estão contidas no campo de diagnóstico SQL_DIAG_SQLSTATE. Para obter mais informações, consulte [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md).  
+ Der Ponteiro para um buffer no qual retornar um código SQLSTATE de cinco caracteres (e terminando NULL) para o registro de diagnóstico *RecNumber*. Os dois primeiros caracteres indicam a classe; os próximos três indicam a subclasse. Essas informações estão contidas no campo diagnóstico de SQL_DIAG_SQLSTATE. Para obter mais informações, consulte [SQLstates](../../../odbc/reference/develop-app/sqlstates.md).  
   
  *NativeErrorPtr*  
- [Saída] Ponteiro para um buffer no qual retornar o código de erro nativo, específico para a fonte de dados. Essas informações estão contidas no campo de diagnóstico SQL_DIAG_NATIVE.  
+ Der Ponteiro para um buffer no qual retornar o código de erro nativo, específico à fonte de dados. Essas informações estão contidas no campo diagnóstico de SQL_DIAG_NATIVE.  
   
  *MessageText*  
- [Saída] Ponteiro para um buffer no qual retornar a seqüência de texto da mensagem de diagnóstico. Essas informações estão contidas no campo de diagnóstico SQL_DIAG_MESSAGE_TEXT. Para o formato da seqüência, consulte [Mensagens de diagnóstico](../../../odbc/reference/develop-app/diagnostic-messages.md).  
+ Der Ponteiro para um buffer no qual retornar a cadeia de texto da mensagem de diagnóstico. Essas informações estão contidas no campo diagnóstico de SQL_DIAG_MESSAGE_TEXT. Para o formato da cadeia de caracteres, consulte [mensagens de diagnóstico](../../../odbc/reference/develop-app/diagnostic-messages.md).  
   
- Se *o MessageText* for NULL, *TextLengthPtr* ainda retornará o número total de caracteres (excluindo o caractere de rescisão nula para dados de caracteres) disponível para retornar no buffer apontado pelo *MessageText*.  
+ Se *MessageText* for NULL, *TextLengthPtr* ainda retornará o número total de caracteres (excluindo o caractere de terminação nula para dados de caracteres) disponíveis para retornar no buffer apontado por *MessageText*.  
   
  *BufferLength*  
- [Entrada] Comprimento do buffer **MessageText* em caracteres. Não há comprimento máximo do texto da mensagem de diagnóstico.  
+ Entrada Comprimento do buffer **MessageText* em caracteres. Não há nenhum comprimento máximo do texto da mensagem de diagnóstico.  
   
  *TextLengthPtr*  
- [Saída] Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o número de caracteres necessários para o caractere de rescisão nula) disponível para retornar no * \*MessageText*. Se o número de caracteres disponíveis para retornar for maior que *BufferLength,* o texto da mensagem de diagnóstico no * \*MessageText* será truncado para *BufferLength* menos o comprimento de um caractere de rescisão nula.  
+ Der Ponteiro para um buffer no qual retornar o número total de caracteres (excluindo o número de caracteres necessários para o caractere de terminação nula) disponível para retornar em * \*MessageText*. Se o número de caracteres disponíveis para retornar for maior que *BufferLength*, o texto da mensagem de diagnóstico em * \*MessageText* será truncado para *BufferLength* menos o comprimento de um caractere de terminação nula.  
   
 ## <a name="returns"></a>Retornos  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
- **O SQLGetDiagRec** não publica registros de diagnóstico para si mesmo. Ele usa os seguintes valores de retorno para relatar o resultado de sua própria execução:  
+## <a name="diagnostics"></a>Diagnóstico  
+ **SQLGetDiagRec** não publica registros de diagnóstico para si mesmo. Ele usa os seguintes valores de retorno para relatar o resultado de sua própria execução:  
   
--   SQL_SUCCESS: A função retornou com sucesso as informações de diagnóstico.  
+-   SQL_SUCCESS: a função retornou informações de diagnóstico com êxito.  
   
--   SQL_SUCCESS_WITH_INFO: \*O buffer *MessageText* era muito pequeno para manter a mensagem de diagnóstico solicitada. Nenhum registro de diagnóstico foi gerado. Para determinar que ocorreu uma truncamento, o aplicativo deve comparar *BufferLength* com o número real de bytes disponíveis, que está escrito em **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: o \*buffer *MessageText* era muito pequeno para manter a mensagem de diagnóstico solicitada. Nenhum registro de diagnóstico foi gerado. Para determinar que ocorreu um truncamento, o aplicativo deve comparar *BufferLength* com o número real de bytes disponíveis, que é gravado em **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: A alça indicada por *HandleType* e *Handle* não era uma alça válida.  
+-   SQL_INVALID_HANDLE: o identificador indicado por *HandleType* e *identificador* não era um identificador válido.  
   
--   SQL_ERROR: Ocorreu um dos seguintes:  
+-   SQL_ERROR: uma das seguintes ocorrências:  
   
-    -   *RecNumber* foi negativo ou 0.  
+    -   *RecNumber* era negativo ou 0.  
   
     -   *BufferLength* era menor que zero.  
   
-    -   Ao usar a notificação assíncrona, a operação assíncrona na alça não foi concluída.  
+    -   Ao usar a notificação assíncrona, a operação assíncrona no identificador não foi concluída.  
   
--   SQL_NO_DATA: *RecNumber* foi maior do que o número de registros de diagnóstico que existiam para a alça especificada no *Handle.* A função também retorna SQL_NO_DATA para qualquer *RecNumber* positivo se não houver registros de diagnóstico para *Handle*.  
+-   SQL_NO_DATA: *RecNumber* foi maior que o número de registros de diagnóstico que existia para o identificador especificado no *identificador.* A função também retorna SQL_NO_DATA para qualquer *RecNumber* positivo se não houver nenhum registro de diagnóstico para o *identificador*.  
   
 ## <a name="comments"></a>Comentários  
- Um aplicativo normalmente chama **SQLGetDiagRec** quando uma chamada anterior para uma função ODBC retornou SQL_ERROR ou SQL_SUCCESS_WITH_INFO. No entanto, como qualquer função ODBC pode postar zero ou mais registros de diagnóstico cada vez que é chamada, um aplicativo pode chamar **SQLGetDiagRec** após qualquer chamada de função ODBC. Um aplicativo pode ligar para **o SQLGetDiagRec** várias vezes para retornar alguns ou todos os registros na estrutura de dados de diagnóstico. A ODBC não impõe limite ao número de registros diagnósticos que podem ser armazenados a qualquer momento.  
+ Um aplicativo normalmente chama **SQLGetDiagRec** quando uma chamada anterior a uma função ODBC retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO. No entanto, como qualquer função ODBC pode postar zero ou mais registros de diagnóstico cada vez que é chamado, um aplicativo pode chamar **SQLGetDiagRec** após qualquer chamada de função ODBC. Um aplicativo pode chamar **SQLGetDiagRec** várias vezes para retornar alguns ou todos os registros na estrutura de dados de diagnóstico. O ODBC impõe nenhum limite para o número de registros de diagnóstico que podem ser armazenados a qualquer momento.  
   
- **O SQLGetDiagRec** não pode ser usado para retornar campos do cabeçalho da estrutura de dados de diagnóstico. (O argumento *RecNumber* deve ser maior que 0.) O aplicativo deve chamar **SQLGetDiagField** para este fim.  
+ **SQLGetDiagRec** não pode ser usado para retornar campos do cabeçalho da estrutura de dados de diagnóstico. (O argumento *RecNumber* deve ser maior que 0.) O aplicativo deve chamar **SQLGetDiagField** para essa finalidade.  
   
- **O SQLGetDiagRec** recupera apenas as informações de diagnóstico mais recentemente associadas à alça especificada no argumento *Lidar.* Se o aplicativo chamar outra função ODBC, exceto **SQLGetDiagRec,** **SQLGetDiagField**ou **SQLError,** quaisquer informações de diagnóstico das chamadas anteriores na mesma alça serão perdidas.  
+ **SQLGetDiagRec** recupera apenas as informações de diagnóstico mais recentemente associadas ao identificador especificado no argumento *Handle* . Se o aplicativo chamar outra função ODBC, exceto **SQLGetDiagRec**, **SQLGetDiagField**ou **SqlError**, todas as informações de diagnóstico das chamadas anteriores no mesmo identificador serão perdidas.  
   
- Um aplicativo pode escarná-los por looping, incrementando *o RecNumber,* desde que **o SQLGetDiagRec** retorne SQL_SUCCESS. As chamadas para **SQLGetDiagRec** não são destrutivas para os campos de cabeçalho e gravação. O aplicativo pode chamar **SQLGetDiagRec** novamente posteriormente para recuperar um campo de um registro, desde que nenhuma outra função, exceto **SQLGetDiagRec,** **SQLGetDiagField**ou **SQLError,** tenha sido chamada nesse ínterim. O aplicativo também pode recuperar uma contagem do número total de registros de diagnóstico disponíveis ligando para **SQLGetDiagField** para recuperar o valor do campo SQL_DIAG_NUMBER e, em seguida, chamando **SQLGetDiagRec** muitas vezes.  
+ Um aplicativo pode verificar todos os registros de diagnóstico por loop, incrementando *RecNumber*, desde que **SQLGetDiagRec** retorne SQL_SUCCESS. As chamadas para **SQLGetDiagRec** não são destrutivas para os campos de cabeçalho e registro. O aplicativo pode chamar **SQLGetDiagRec** novamente mais tarde para recuperar um campo de um registro, desde que nenhuma outra função, exceto **SQLGetDiagRec**, **SQLGetDiagField**ou **SqlError**, tenha sido chamada no interim. O aplicativo também pode recuperar uma contagem do número total de registros de diagnóstico disponíveis chamando **SQLGetDiagField** para recuperar o valor do campo SQL_DIAG_NUMBER e, em seguida, chamando **SQLGetDiagRec** que muitas vezes.  
   
- Para obter uma descrição dos campos da estrutura de dados diagnósticos, consulte [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Para obter mais informações, consulte [Usando SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) e [Implementando SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
+ Para obter uma descrição dos campos da estrutura de dados de diagnóstico, consulte [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Para obter mais informações, consulte [usando SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) e [implementando SQLGetDiagRec e SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Chamar uma API diferente da que está sendo executada de forma assíncrona gerará HY010 "Erro de seqüência de funções". No entanto, o registro de erro não pode ser recuperado antes que a operação assíncrona seja concluída.  
+ Chamar uma API diferente daquela que está sendo executada de forma assíncrona gerará HY010 "erro de sequência de função". No entanto, o registro de erro não pode ser recuperado antes que a operação assíncrona seja concluída.  
   
-## <a name="handletype-argument"></a>Argumento handleType  
- Cada tipo de alça pode ter informações de diagnóstico associadas a ele. O argumento *HandleType* denota o tipo de alça do argumento *Lidar.*  
+## <a name="handletype-argument"></a>Argumento HandleType  
+ Cada tipo de identificador pode ter informações de diagnóstico associadas a ele. O argumento *HandleType* denota o tipo de identificador do argumento *Handle* .  
   
- Alguns campos de cabeçalho e registro não podem ser retornados para alças de ambiente, conexão, declaração e descritor. As alças para as quais um campo não é aplicável são indicadas nas seções "Campos de cabeçalho" e "Campos de registro" no [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Alguns campos de cabeçalho e de registro não podem ser retornados para identificadores de ambiente, conexão, instrução e descritor. Esses identificadores para os quais um campo não é aplicável são indicados nas seções "campos de cabeçalho" e "campos de registro" em [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
- Uma chamada para **o SQLGetDiagRec** retornará SQL_INVALID_HANDLE se *o HandleType* for SQL_HANDLE_SENV, o que denota uma alça de ambiente compartilhada. No entanto, se *o HandleType* for SQL_HANDLE_ENV, *o Handle* pode ser um cabo de ambiente compartilhado ou não compartilhado.  
+ Uma chamada para **SQLGetDiagRec** retornará SQL_INVALID_HANDLE se *handletype* for SQL_HANDLE_SENV, que denota um identificador de ambiente compartilhado. No entanto, se *HandleType* for SQL_HANDLE_ENV, o *identificador* poderá ser um identificador de ambiente compartilhado ou não compartilhado.  
   
 ## <a name="related-functions"></a>Funções relacionadas  
   
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
-|Obtenção de um campo de um registro de diagnóstico ou um campo do cabeçalho de diagnóstico|[Função SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|Obtendo um campo de um registro de diagnóstico ou um campo do cabeçalho de diagnóstico|[Função SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa ODBC de exemplo](../../../odbc/reference/sample-odbc-program.md)

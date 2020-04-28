@@ -1,5 +1,5 @@
 ---
-title: Outros detalhes da programação do driver dBASE | Microsoft Docs
+title: Outros detalhes de programação de driver do dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d47915f9a8b38e450fb8ca9bc9797b748400d82c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291016"
 ---
 # <a name="other-dbase-driver-programming-details"></a>Outros detalhes de programação de drivers do dBASE
 > [!NOTE]  
->  Esta seção fornece informações específicas do dBASE Driver sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [Referência à API oDBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações específicas do driver do dBASE sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API do ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta seção contém os seguintes tópicos:  
   
@@ -47,4 +47,4 @@ ms.locfileid: "81291016"
   
 -   [SQLTransact (Driver do dBASE)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [DBASE Indexes (dBASE Driver)](../../odbc/microsoft/dbase-indexes.md)
+-   [Índices do dBASE (driver do dBASE)](../../odbc/microsoft/dbase-indexes.md)

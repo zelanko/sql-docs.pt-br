@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112162"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexões do SSIS (Integration Services)
@@ -66,7 +66,7 @@ ms.locfileid: "79112162"
 ### <a name="built-in-connection-managers"></a>Gerenciadores de conexões internos  
  A tabela a seguir lista os tipos de gerenciadores de conexões que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o fornece.  
   
-|Type|DESCRIÇÃO|Tópico|  
+|Type|Descrição|Tópico|  
 |----------|-----------------|-----------|  
 |ADO|Conecta-se a objetos ActiveX Data Objects (ADO).|[Gerenciador de conexões ADO](ado-connection-manager.md)|  
 |ADO.NET|Conecta-se a uma fonte de dados usando um provedor .NET.|[Gerenciador de conexões ADO.NET](ado-net-connection-manager.md)|  
@@ -74,7 +74,7 @@ ms.locfileid: "79112162"
 |DQS|Conecta-se a um servidor a um banco de dados do Data Quality Services no servidor.|[Gerenciador de Conexões de Limpeza DQS](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Conecta-se a um arquivo da pasta de trabalho do Excel.|[Gerenciador de conexões do Excel](excel-connection-manager.md)|  
 |FILE|Conecta-se a um arquivo ou uma pasta.|[Gerenciador de conexões de arquivos](file-connection-manager.md)|  
-|FLATFILE|Conecta-se a dados em um único arquivo simples.|[Gerenciador de Conexões de Arquivos Simples](flat-file-connection-manager.md)|  
+|FLATFILE|Conecta-se a dados em um único arquivo simples.|[Gerenciador de conexões de arquivos simples](flat-file-connection-manager.md)|  
 |FTP|Conecta-se a um servidor FTP.|[Gerenciador de conexões FTP](ftp-connection-manager.md)|  
 |HTTP|Conecta-se a um servidor Web.|[Gerenciador de conexões HTTP](http-connection-manager.md)|  
 |MSMQ|Conecta-se a uma fila de mensagens.|[Gerenciador de conexões MSMQ](msmq-connection-manager.md)|  
@@ -94,7 +94,7 @@ ms.locfileid: "79112162"
 > [!IMPORTANT]  
 >  Os gerenciadores de conexões listados na tabela a seguir funcionam apenas com o [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e o [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Type|DESCRIÇÃO|Tópico|  
+|Type|Descrição|Tópico|  
 |----------|-----------------|-----------|  
 |ORACLE|Conecta-se a \<um servidor do> de informações de versão do Oracle.|O gerenciador de conexões Oracle é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle da Attunity também inclui uma origem e um destino. Para obter mais informações, consulte a página de download de [Microsoft Connectors para Oracle e Teradata da Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Conecta a um sistema SAP NetWeaver BI versão 7.|O gerenciador de conexões SAP BI é o componente de gerenciador de conexões do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI também inclui uma origem e um destino. Para obter mais informações, consulte a página de download [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  

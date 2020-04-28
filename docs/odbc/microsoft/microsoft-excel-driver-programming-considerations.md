@@ -1,5 +1,5 @@
 ---
-title: Considerações sobre programação do Microsoft Excel Driver | Microsoft Docs
+title: Considerações de programação de driver do Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5e0eec3f6cfc8b4c0e761ec0eea9b1dfd42005df
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81283756"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Considerações sobre programação de driver do Microsoft Excel

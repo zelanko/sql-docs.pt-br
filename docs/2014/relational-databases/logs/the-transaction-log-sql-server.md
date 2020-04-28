@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289404"
 ---
 # <a name="the-transaction-log-sql-server"></a>O log de transações (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "79289404"
   
 -   [Tarefas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Benefícios: operações com suporte no log de transações  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>Benefícios: operações com suporte no log de transações  
  O log de transações dá suporte às seguintes operações:  
   
 -   Recuperação de transações individuais.  
@@ -54,7 +54,7 @@ ms.locfileid: "79289404"
   
 -   Dando suporte a soluções de alta disponibilidade e recuperação de desastre: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], espelhamento de banco de dados e envio de log.  
   
-##  <a name="Truncation"></a> Truncamento do log de transações  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a>Truncamento do log de transações  
  O truncamento de log libera espaço no arquivo de log para ser reutilizado pelo log de transações. O truncamento de log é essencial para impedir o preenchimento do log. O truncamento de log exclui arquivos de log virtuais inativos do log de transações lógicas de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , liberando espaço no log lógico para reutilização pelo log de transações físicas. Se um log de transações nunca foi truncado, eventualmente, ele preencherá todo o espaço em disco alocado para seus arquivos de log físicos.  
   
  Para evitar esse problema, a menos que o truncamento de log esteja sendo atrasado por alguma razão, o truncamento ocorrerá automaticamente depois dos seguintes eventos:  
@@ -63,12 +63,12 @@ ms.locfileid: "79289404"
   
 -   No modelo de recuperação completa ou bulk-logged, se um ponto de verificação ocorreu desde o backup anterior, o truncamento ocorrerá depois de um backup de log (a menos que esse seja um backup de log de cópia somente).  
   
- Para obter mais informações, consulte [fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation), mais adiante neste tópico.  
+ Para obter mais informações, consulte [Fatores que podem atrasar o truncamento de log](#FactorsThatDelayTruncation), mais adiante neste tópico.  
   
 > [!NOTE]  
 >  O truncamento de log não reduz o tamanho do arquivo de log físico. Para reduzir o tamanho físico de um arquivo de log físico, você precisa reduzir o arquivo de log. Para obter informações sobre como encolher o tamanho do arquivo de log físico, consulte [Gerenciar o tamanho do arquivo de log de transações](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a>Fatores que podem atrasar o truncamento de log  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>Fatores que podem atrasar o truncamento de log  
  Quando os registros de log permanecem ativos por muito tempo, o truncamento do log de transações é atrasado e esse log poderá ocupar todo o espaço.  
   
 > [!IMPORTANT]  
@@ -95,7 +95,7 @@ ms.locfileid: "79289404"
 |14|OTHER_TRANSIENT|Esse valor não é usado atualmente.|  
 |16|XTP_CHECKPOINT|Quando um banco de dados tem um grupo de arquivos com otimização de memória, o log de transações não pode truncar até o ponto de verificação automático [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ser acionado (o que acontece a cada 512 MB de aumento do log).<br /><br /> Observação: para truncar o log de transações antes do tamanho de 512 MB, acione o comando de ponto de verificação manualmente no banco de dados em questão.|  
   
-##  <a name="MinimallyLogged"></a>Operações que podem ser minimamente registradas em log  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>Operações que podem ser minimamente registradas em log  
  O*registro mínimo em log* envolve o registro somente das informações que são necessárias para recuperar a transação sem oferecer suporte à recuperação pontual. Este tópico identifica as operações com registro mínimo em log no modelo de recuperação bulk-logged (como também no modelo de recuperação simples, exceto quando há um backup em execução).  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "79289404"
   
  As operações a seguir, completamente registradas sob o modelo de recuperação completa, têm log mínimo no modelo de recuperação simples e bulk-logged:  
   
--   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operações de importação em massa ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obter mais informações sobre quando a importação em massa para uma tabela é minimamente registrada em log, consulte [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  Quando a replicação transacional está habilitada, as operações BULK INSERT são completamente registradas mesmo no modelo de recuperação bulk-logged.  
@@ -135,27 +135,27 @@ ms.locfileid: "79289404"
     -   Recriação de novo heap DROP INDEX (se aplicável).  
   
         > [!NOTE]  
-        >  A desalocação de página de índice durante uma [drop index](/sql/t-sql/statements/drop-index-transact-sql) operação é sempre totalmente registrada.  
+        >   A desalocação de páginas de índice durante uma operação [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) sempre é totalmente registrada em log.  
   
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tarefas relacionadas  
  `Managing the transaction log`  
   
 -   [Gerenciar o tamanho do arquivo de log de transações](manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Solução de problemas de um log de transação completa &#40;Erro do SQL Server 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Fazendo backup do log de transações (Modelo de recuperação completa)**  
+ **Fazendo backup do log de transações (modelo de recuperação completa)**  
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Restaurando o log de transações (Modelo de recuperação completa)**  
+ **Restaurando o log de transações (modelo de recuperação completa)**  
   
 -  [Restaurar um backup de log de transações](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## <a name="see-also"></a>Consulte Também  
  [Controlar a durabilidade da transação](control-transaction-durability.md)   
- [Pré-requisitos para log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Fazer backup e restaurar bancos de dados do SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Pré-requisitos para log mínimo na importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [Backup e restauração de bancos de dados SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Pontos de verificação de banco de dados &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Exibir ou alterar as propriedades de um banco de dados](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modelos de recuperação &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  

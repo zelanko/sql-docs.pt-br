@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448336"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -53,14 +53,14 @@ sp_change_users_login [ @Action = ] 'action'
 |Valor|Descrição|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula uma entrada de usuário na exibição do catálogo de sistema sys.database_principals no banco de dados atual a um logon de nome igual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se ainda não existir um logon com o mesmo nome, ele será criado. Examine o resultado da instrução **Auto_Fix** para confirmar se o link correto foi feito de fato. Evite usar **Auto_Fix** em situações sensíveis à segurança.<br /><br /> Ao usar **Auto_Fix**, você deverá especificar *usuário* e *senha* se o logon ainda não existir, caso contrário, você deverá especificar o *usuário* , mas a *senha* será ignorada. o *logon* deve ser nulo. o *usuário* deve ser um usuário válido no banco de dados atual. Não pode haver outro usuário mapeado para o logon.|  
-|**Report**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
+|**Relatório**|Lista os usuários e o SID (identificador de segurança) correspondentes no banco de dados atual que não estão vinculados a nenhum logon. *usuário*, *logon*e *senha* devem ser nulos ou não especificados.<br /><br /> Para substituir a opção de relatório por uma consulta usando as tabelas do sistema, compare as entradas em **Sys. server_prinicpals** com as entradas em **Sys. database_principals**.|  
 |**Update_One**|Vincula o *usuário* especificado no banco de dados atual a um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *logon*existente. o *usuário* e o *logon* devem ser especificados. a *senha* deve ser nula ou não especificada.|  
   
  [ @UserNamePattern= ] '*usuário*'  
  É o nome de um usuário no banco de dados atual. o *usuário* é **sysname**, com um padrão de NULL.  
   
  [ @LoginName= ] '*logon*'  
- E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *logon* é **sysname**, com um padrão de NULL.  
+ E o nome de um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
  [ @Password= ] '*senha*'  
  É a senha atribuída a um novo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon que é criado especificando **Auto_Fix**. Se um logon correspondente já existir, o usuário e o logon serão mapeados e a *senha* será ignorada. Se um logon correspondente não existir, o sp_change_users_login criará um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] novo logon e atribuirá a *senha* como a senha para o novo logon. a *senha* é **sysname**e não deve ser nula.  
@@ -72,10 +72,10 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Nome do usuário do banco de dados.|  
-|UserSID|**varbinary(85)**|O identificador de segurança do usuário.|  
+|UserSID|**varbinary (85)**|O identificador de segurança do usuário.|  
   
 ## <a name="remarks"></a>Comentários  
  Use sp_change_users_login para vincular um usuário do banco de dados atual a um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o logon do usuário for alterado, use sp_change_users_login para vinculá-lo ao novo logon sem perder as permissões de usuário. O novo *logon* não pode ser SA e o *usuário* não pode ser dbo, guest ou um usuário INFORMATION_SCHEMA.  
@@ -124,10 +124,10 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [CRIAR logon &#40;&#41;Transact-SQL](../../t-sql/statements/create-login-transact-sql.md)   
+ [&#41;&#40;Transact-SQL de sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

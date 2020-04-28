@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b5572ee784f47b0444e1d825de1b6dd53db8066
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291538"
 ---
 # <a name="native-error-numbers"></a>Números de erro nativos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Para erros que ocorrem na fonte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados (retornado por ), o driver Cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nativo ODBC retorna o número de erro nativo devolvido a ele por . Para erros detectados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver, o driver Cliente Nativo ODBC retorna um número de erro nativo de 0. Para obter mais informações sobre uma lista de números de erro nativos, consulte **master** a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]coluna de erro da tabela do sistema **sysmessages** no banco de dados mestre em .  
+  Para erros que ocorrem na fonte de dados (retornada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client retorna o número de erro nativo retornado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ele pelo. Para erros detectados pelo driver, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client retorna um número de erro nativo de 0. Para obter mais informações sobre uma lista de números de erro nativos, consulte a coluna erro da tabela do sistema **sysmessages** no banco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dados **mestre** no.  
   
- Para obter informações sobre os códigos de erro do estado, consulte [SQLSTATE &#40;Códigos de erro ODBC&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md). Para erros retornados pela Biblioteca de Rede, o número de erro nativo é do software de rede subjacente.  
+ Para obter informações sobre os códigos de erro de estado, consulte [SQLSTATE &#40;códigos de erro ODBC&#41;](../../relational-databases/native-client-odbc-error-messages/sqlstate-odbc-error-codes.md). Para erros retornados pela Biblioteca de Rede, o número de erro nativo é do software de rede subjacente.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Tratando de erros e mensagens](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

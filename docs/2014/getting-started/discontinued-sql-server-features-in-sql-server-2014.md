@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112225"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
@@ -51,8 +51,8 @@ ms.locfileid: "79112225"
 |Configurações de substituição e recursos de componente|Como configurar|  
 |-------------------------------------------------|----------------------|  
 |Opções de protocolos, conexão e inicialização|Use o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]Features|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Features|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|Recursos do [!INCLUDE[ssDE](../includes/ssde-md.md)]|Use o Gerenciamento Baseado em Política, as configurações de propriedade no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou sp_Configure.|  
+|Recursos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Propriedade de segurança Propriedade EnableIntegrated|Use as configurações de propriedade do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"Agendar eventos e entrega de relatório" e "serviço Web e acesso HTTP"|Edite o arquivo de configuração RSReportServer.config.|  
 |Opções de linha de comando|Sem suporte nesta versão.|  

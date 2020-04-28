@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289744"
 ---
 # <a name="transparent-data-encryption"></a>Criptografia de Dados Transparente
@@ -37,7 +37,7 @@ A ilustração a seguir mostra a hierarquia de chaves para criptografia TDE:
   
 ![Exibe a hierarquia](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Usando Transparent Data Encryption  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Usando Transparent Data Encryption  
 Para usar a TDE, execute estes procedimentos. As três primeiras etapas são feitas apenas uma vez, ao preparar SQL Server PDW para dar suporte a TDE.  
   
 1.  Crie uma chave mestra no banco de dados mestre.  
@@ -121,9 +121,9 @@ A tabela a seguir fornece links e explicações de comandos e funções da TDE.
 |Comando ou função|Finalidade|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Cria uma chave usada para criptografar um banco de dados.|  
-|[ALTERAR CHAVE DE CRIPTOGRAFIA DO BANCO DE DADOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
-|[REMOVER CHAVE DE CRIPTOGRAFIA DO BANCO DE DADOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Altera a chave usada para criptografar um banco de dados.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Remove a chave usada para criptografar um banco de dados.|  
+|[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica a opção **ALTER DATABASE** usada para habilitar a TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Exibições do catálogo e exibições de gerenciamento dinâmico  
 A tabela a seguir mostra exibições do catálogo de TDE e exibições de gerenciamento dinâmico.  
@@ -278,7 +278,7 @@ Os links a seguir contêm informações gerais sobre como SQL Server gerencia a 
 
   
 ## <a name="see-also"></a>Consulte Também  
-[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[ALTERAR BANCO DE DADOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

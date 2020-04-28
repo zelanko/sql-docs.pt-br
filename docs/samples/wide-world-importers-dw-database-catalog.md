@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112436"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
@@ -49,7 +49,7 @@ WideWorldImportersDW tem as tabelas de dimensão a seguir. A descrição inclui 
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Data|Nova tabela com informações sobre datas, incluindo ano financeiro (com base em 1º de novembro de início para o ano financeiro).|
-|Funcionário|`Application.People`.|
+|Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornecedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -63,9 +63,9 @@ WideWorldImportersDW tem as seguintes tabelas de fatos. A descrição inclui a r
 |-----------------------------|---------------------|---------------------|
 |Order|`Sales.Orders` e `Sales.OrderLines`|Vendedores, o seletor/produtividade do empacotador e no tempo para selecionar pedidos. Além disso, situações de ações baixas levando a pedidos pendentes.|
 |Venda|`Sales.Invoices` e `Sales.InvoiceLines`|Datas de vendas, datas de entrega, rentabilidade ao longo do tempo, rentabilidade por vendedor.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Tempos de Lead reais esperados versus|
+|Adquirir|`Purchasing.PurchaseOrderLines`|Tempos de Lead reais esperados versus|
 |Transação|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Medindo datas de problemas vs. datas de finalização e valores.|
-|Migração|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
+|Movimentação|`Warehouse.StockTransactions`|Movimentações ao longo do tempo.|
 |Retenção de estoque|`Warehouse.StockItemHoldings`|Valores e níveis de estoque disponíveis.|
 
 ## <a name="stored-procedures"></a>Procedimentos armazenados

@@ -1,5 +1,5 @@
 ---
-title: Conectando-se a uma fonte de dados Visual FoxPro | Microsoft Docs
+title: Conectando-se a uma fonte de dados do Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9ee35a5d8c6eaf3e1800097dffcd3fab079ff8db
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281286"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Conectar-se a uma fonte de dados do Visual FoxPro
-Você pode se conectar a uma fonte de dados Visual FoxPro usando seu aplicativo Microsoft Office ou usando a API SQL.  
+Você pode se conectar a uma fonte de dados do Visual FoxPro usando seu aplicativo Microsoft Office ou usando a API do SQL.  
   
-|Para se conectar a partir de|Consulte|  
+|Para se conectar de|Consulte|  
 |---------------------|---------|  
 |Microsoft Access, Microsoft Excel ou Microsoft Word|[Acessando dados do Visual FoxPro do Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|Sua aplicação C ou C++|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
-|Seu aplicativo Visual Basic|[Usando o driver Visual FoxPro ODBC com seu aplicativo básico visual](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+|Seu aplicativo C ou C++|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
+|Seu aplicativo Visual Basic|[Usando o driver ODBC do Visual FoxPro com seu aplicativo Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|

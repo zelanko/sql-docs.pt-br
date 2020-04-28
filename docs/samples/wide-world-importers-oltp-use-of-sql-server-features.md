@@ -12,10 +12,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112413"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de recursos e funcionalidades do SQL Server
@@ -44,7 +44,7 @@ O WideWorldImporters foi projetado para demonstrar muitos dos principais recurso
 |Colunas computadas persistentes indexadas|Colunas computadas persistentes indexadas usadas em SupplierTransactions e CustomerTransactions.|
 |Verificar restrições|Uma restrição check relativamente complexa está em `Sales.SpecialDeals`. Isso garante que um e apenas um dos DiscountAmount, DiscountPercentage e UnitPrice estejam configurados.|
 |Restrições únicas|Uma construção muitos para muitos (e restrições exclusivas) é configurada para `Warehouse.StockItemStockGroups`o.|
-|Particionamento de tabela|(Versão completa do banco de dados) As tabelas `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` são particionadas por ano usando a função `PF_TransactionDate` de partição e o esquema `PS_TransactionDate`de partição. O particionamento é usado para melhorar a capacidade de gerenciamento de tabelas grandes.|
+|Partições de tabela|(Versão completa do banco de dados) As tabelas `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions` são particionadas por ano usando a função `PF_TransactionDate` de partição e o esquema `PS_TransactionDate`de partição. O particionamento é usado para melhorar a capacidade de gerenciamento de tabelas grandes.|
 |Processamento de lista|Um exemplo de tipo `Website.OrderIDList` de tabela é fornecido. Ele é usado por um procedimento `Website.InvoiceCustomerOrders`de exemplo. O procedimento usa as CTEs (expressões de tabela comuns), TRY/CATCH, JSON_MODIFY, XACT_ABORT, iscount, THROW e XACT_STATE para demonstrar a capacidade de processar uma lista de pedidos em vez de apenas um único pedido, para minimizar viagens de ida e volta do aplicativo para o mecanismo de banco de dados.|
 |Compactação GZip|Na `Warehouse.VehicleTemperature` exibição, sua tabela contém dados de sensor completos. Mas quando esses dados têm mais de alguns meses, eles são compactados para conservar espaço. A função COMPRESS usa a compactação GZip.<br/><br/>A exibição `Website.VehicleTemperatures` usa a função descompactar ao recuperar dados que foram compactados anteriormente.|
 |Repositório de Consultas|O Repositório de Consultas está habilitado no banco de dados. Depois de executar algumas consultas, execute as seguintes etapas:<br/><br/>1. Abra o banco de dados no Management Studio.<br/>2. Abra o nó Repositório de Consultas, que está no banco de dados.<br/>3. Abra o relatório *principais consultas de consumo de recursos*. Consulte as execuções de consulta e veja os planos para as consultas que você acabou de executar.|

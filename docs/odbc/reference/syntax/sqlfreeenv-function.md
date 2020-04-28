@@ -20,22 +20,22 @@ ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285796"
 ---
 # <a name="sqlfreeenv-function"></a>Função SQLFreeEnv
 **Conformidade**  
- Versão introduzida: ODBC 1.0 Normas Conformidade: Preterido  
+ Versão introduzida: conformidade de padrões do ODBC 1,0: preterida  
   
  **Resumo**  
- Em ODBC *3.x,* a função ODBC 2.0 **SQLFreeEnv** foi substituída por **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ No ODBC *3. x*, a função **SQLFreeEnv** do ODBC 2,0 foi substituída por **SQLFreeHandle**. Para obter mais informações, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Para obter mais informações sobre o que o Driver Manager mapeia essa função para quando um aplicativo ODBC *2.x* estiver trabalhando com um driver ODBC *3.x,* consulte [Mapeamento de Funções Depreciadas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no Apêndice G: Diretrizes do driver para compatibilidade retrógrada.  
+>  Para obter mais informações sobre como o Gerenciador de driver mapeia essa função quando um aplicativo ODBC *2. x* está trabalhando com um driver ODBC *3. x* , consulte [mapeando funções preteridas](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) no apêndice G: diretrizes de driver para compatibilidade com versões anteriores.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Referência da API oDBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

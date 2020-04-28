@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289284"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
@@ -28,11 +28,11 @@ ms.locfileid: "79289284"
   
  Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
   
- [Limites de escala entre caixas](#CrossBoxScale)  
+ [Limites de escala da caixa cruzada](#CrossBoxScale)  
   
  [Alta disponibilidade](#High_availability)  
   
- [Desempenho e escalabilidade](#Scalability)  
+ [Escalabilidade e desempenho](#Scalability)  
   
  [Segurança](#Enterprise_security)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "79289284"
   
  [Serviços espaciais e de localização](#Spatial)  
   
- [Serviços de banco de dados adicionais](#Add_DBServices)  
+ [Database Services adicionais](#Add_DBServices)  
   
  [Outros componentes](#Other_Components)  
   
-##  <a name="CrossBoxScale"></a>Limites de escala entre caixas  
+##  <a name="cross-box-scale-limits"></a><a name="CrossBoxScale"></a>Limites de escala entre caixas  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -87,9 +87,9 @@ ms.locfileid: "79289284"
 |Memória máxima utilizada (por instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|64 GB|4 GB|N/D|N/D|  
 |Tamanho máximo do banco de dados relacional|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition com servidor + licenciamento baseado em Cal (licença de acesso para cliente) (não disponível para novos contratos) é limitado a um máximo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 20 núcleos por instância. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para obter mais informações, consulte [computação Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> Enterprise Edition com servidor + licenciamento baseado em Cal (licença de acesso para cliente) (não disponível para novos contratos) é limitado a um máximo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 20 núcleos por instância. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-##  <a name="High_availability"></a>Alta disponibilidade  
+##  <a name="high-availability"></a><a name="High_availability"></a>Alta disponibilidade  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "79289284"
   
  <sup>2</sup> Este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-##  <a name="Scalability"></a>Escalabilidade e desempenho  
+##  <a name="scalability-and-performance"></a><a name="Scalability"></a>Escalabilidade e desempenho  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "79289284"
   
  <sup>1</sup> este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-##  <a name="Enterprise_security"></a> Segurança  
+##  <a name="security"></a><a name="Enterprise_security"></a> Segurança  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -145,11 +145,11 @@ ms.locfileid: "79289284"
 |Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Criptografia para backups|Sim|Sim|Sim|||||  
   
-##  <a name="Replication"></a> Replicação  
+##  <a name="replication"></a><a name="Replication"></a> Replicação  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]controle de alterações|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Controle de alterações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Replicação de mesclagem|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação transacional|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação de instantâneo|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
@@ -157,14 +157,14 @@ ms.locfileid: "79289284"
 |publicação Oracle|Sim|||||||  
 |Replicação transacional ponto a ponto|Sim|||||||  
   
-##  <a name="Mgmt_Tools"></a>Ferramentas de gerenciamento  
+##  <a name="management-tools"></a><a name="Mgmt_Tools"></a>Ferramentas de gerenciamento  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SQL Management Objects (SMO)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |SQL Configuration Manager|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |SQL CMD (ferramenta de prompt de comando)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|Sim|Sim|Sim|Sim|Sim|Sim||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Sim|Sim|Sim|Sim|Sim|Sim||  
 |Distributed Replay – Ferramenta de Administração|Sim|Sim|Sim|Sim|Sim|Sim||  
 |Distributed Replay - Client|Sim|Não|Sim|Sim||||  
 |Distributed Replay - Controller|Sim (Enterprise dá suporte a até 16 clientes, o Developer dá suporte a apenas 1 cliente)|Não|Sim (suporte a apenas 1 cliente)|Sim (suporte a apenas 1 cliente)||||  
@@ -179,7 +179,7 @@ ms.locfileid: "79289284"
   
  <sup>3</sup> o ajuste está habilitado apenas nos recursos da edição Standard.  
   
-##  <a name="RDBMS_mgmt"></a>Gerenciamento de RDBMS  
+##  <a name="rdbms-manageability"></a><a name="RDBMS_mgmt"></a>Gerenciamento de RDBMS  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -204,15 +204,15 @@ ms.locfileid: "79289284"
 |Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Extensão do pool de buffers<sup>2</sup>|Sim|Sim|Sim|||||  
   
- <sup>1</sup> para obter mais informações, consulte [considerações para instalar SQL Server usando o Sysprep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
+ <sup>1</sup> Para obter mais informações, veja [Considerações para instalação do SQL Server usando SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
   
  <sup>2</sup> esse recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-##  <a name="Dev_tools"></a>Ferramentas de desenvolvimento  
+##  <a name="development-tools"></a><a name="Dev_tools"></a>Ferramentas de desenvolvimento  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../includes/msconame-md.md)]Integração do Visual Studio|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Integração com [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] e MDX)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Sim|Sim|Sim|Sim|Sim|||  
 |Ferramentas de design e edição de consulta SQL<sup>1</sup>|Sim|Sim|Sim|||||  
@@ -221,7 +221,7 @@ ms.locfileid: "79289284"
   
  <sup>1</sup> este recurso não está disponível para a versão de 64 bits da Standard Edition.  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -236,9 +236,9 @@ ms.locfileid: "79289284"
 |Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|Sim|||  
 |Especificação de idioma em consulta|Sim|Sim|Sim|Sim|Sim|||  
 |Service Broker (mensagens)|Sim|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]extremidade|Sim|Sim|Sim|Sim||||  
+|Pontos de extremidade de [!INCLUDE[tsql](../includes/tsql-md.md)]|Sim|Sim|Sim|Sim||||  
   
-##  <a name="SSIS"></a> Integration Services  
+##  <a name="integration-services"></a><a name="SSIS"></a> Integration Services  
   
 |Recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -250,7 +250,7 @@ ms.locfileid: "79289284"
 |Serviço Change Data Capture para Oracle da Attunity|Sim|||||||  
 |Change Data Capture Designer para Oracle da Attunity|Sim|||||||  
   
-###  <a name="SSIS_AA"></a>Adaptadores Integration Services-avançado  
+###  <a name="integration-services---advanced-adapters"></a><a name="SSIS_AA"></a>Adaptadores Integration Services-avançado  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -263,7 +263,7 @@ ms.locfileid: "79289284"
 |Componentes do Change Data Capture da Attunity|Sim|||||||  
 |Conector para ODBC (Conectividade Aberta de Banco de Dados) da Attunity.|Sim|||||||  
   
-###  <a name="SSIS_AT"></a>Transformações Integration Services avançadas  
+###  <a name="integration-services---advanced-transforms"></a><a name="SSIS_AT"></a>Transformações Integration Services avançadas  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -272,17 +272,17 @@ ms.locfileid: "79289284"
 |Transformações de pesquisa e agrupamento difuso|Sim|||||||  
 |Transformações de extração e pesquisa de termos|Sim|||||||  
   
-##  <a name="MDS"></a>Master Data Services  
+##  <a name="master-data-services"></a><a name="MDS"></a>Master Data Services  
   
 > [!NOTE]  
 >  -   O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponível apenas nas edições de 64 bits somente do Business Intelligence e do Enterprise.  
   
 |Recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]banco|Sim|Sim||||||  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]aplicativo Web|Sim|Sim||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados|Sim|Sim||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicativo Web|Sim|Sim||||||  
   
-##  <a name="Data_warehouse"></a>data warehouse  
+##  <a name="data-warehouse"></a><a name="Data_warehouse"></a>data warehouse  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -295,7 +295,7 @@ ms.locfileid: "79289284"
 |Índices columnstore xVelocity com otimização de memória|Sim|||||||  
 |Agregação global do lote|Sim|||||||  
   
-##  <a name="SSAS"></a>Analysis Services  
+##  <a name="analysis-services"></a><a name="SSAS"></a>Analysis Services  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -305,7 +305,7 @@ ms.locfileid: "79289284"
 |Alta disponibilidade|Sim|Sim|Sim|||||  
 |Programabilidade (AMO, ADOMD.Net, OLEDB, XML/A, ASSL)|Sim|Sim|Sim|||||  
   
-###  <a name="BISemModel_multi"></a>Modelo semântico de BI (Multidimensional)  
+###  <a name="bi-semantic-model-multidimensional"></a><a name="BISemModel_multi"></a>Modelo semântico de BI (Multidimensional)  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -342,7 +342,7 @@ ms.locfileid: "79289284"
   
  <sup>1</sup> A medida semiaditiva LastChild tem suporte na edição Standard, mas outras medidas semiaditivas, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount, não são. Medidas aditivas, como Sum, Count, Min, Max e medidas não aditivas (DistinctCount) têm suporte em todas as edições.  
   
-###  <a name="BISemModel_tabular"></a>Modelo semântico de BI (tabular)  
+###  <a name="bi-semantic-model-tabular"></a><a name="BISemModel_tabular"></a>Modelo semântico de BI (tabular)  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -355,7 +355,7 @@ ms.locfileid: "79289284"
 |Partições|Sim|Sim||||||  
 |Modos de armazenamento Na Memória e DirectQuery (somente Tabelar)|Sim|Sim||||||  
   
-###  <a name="PowerPivot"></a>PowerPivot para SharePoint  
+###  <a name="powerpivot-for-sharepoint"></a><a name="PowerPivot"></a> PowerPivot para SharePoint  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -366,7 +366,7 @@ ms.locfileid: "79289284"
 |Atualização de dados PowerPivot|Sim|Sim||||||  
 |Feeds de dados PowerPivot|Sim|Sim||||||  
   
-###  <a name="DataMining"></a>Mineração de dados  
+###  <a name="data-mining"></a><a name="DataMining"></a>Mineração de dados  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -385,9 +385,9 @@ ms.locfileid: "79289284"
 |Previsão de sequências|Sim|Sim||||||  
 |Destinos de várias previsões para Naïve Bayes, rede neural e regressão logística|Sim|Sim||||||  
   
-##  <a name="Reporting"></a>Reporting Services  
+##  <a name="reporting-services"></a><a name="Reporting"></a>Reporting Services  
   
-###  <a name="Reporting_features"></a>Recursos de Reporting Services  
+###  <a name="reporting-services-features"></a><a name="Reporting_features"></a>Recursos de Reporting Services  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -433,21 +433,21 @@ ms.locfileid: "79289284"
 |Express with Advanced Services|Express with Advanced Services (apenas local).|  
 |Avaliação|Avaliação|  
   
-##  <a name="BIClients"></a>Clientes de Business Intelligence  
+##  <a name="business-intelligence-clients"></a><a name="BIClients"></a> Clientes de Business Intelligence  
  Os seguintes aplicativos cliente de software estão disponíveis na Central de Downloads da Microsoft e são fornecidos para ajudar a criar documentos de Business Intelligence que são executados em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Quando esses documentos forem hospedados em um ambiente de servidor, use uma edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que tenha suporte para esse tipo de documento. A tabela a seguir identifica qual edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contém os recursos de servidor necessários para hospedar os documentos criados nesses aplicativos cliente.  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Sim|Sim|Sim|||||  
 |Suplementos de mineração de dados para Excel e Visio 2010|Sim|Sim|Sim|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]2010|Sim|Sim||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sim|Sim||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sim|Sim||||||  
   
 > [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]é um suplemento do Excel e não depende do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No entanto, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] é necessário para compartilhar e colaborar com pastas de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] no SharePoint e este recurso está disponível como parte das edições [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
 > 2.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, esses recursos podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-##  <a name="Spatial"></a>Serviços espaciais e de localização  
+##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>Serviços espaciais e de localização  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -456,15 +456,14 @@ ms.locfileid: "79289284"
 |Bibliotecas espaciais avançadas|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
   
-##  <a name="Add_DBServices"></a>Serviços de banco de dados adicionais  
+##  <a name="additional-database-services"></a><a name="Add_DBServices"></a>Serviços de banco de dados adicionais  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistente de Migração|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistente de Migração|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Database Mail|Sim|Sim|Sim|Sim||||  
   
-##  <a name="Other_Components"></a>Outros componentes  
+##  <a name="other-components"></a><a name="Other_Components"></a>Outros componentes  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -475,6 +474,6 @@ ms.locfileid: "79289284"
 ## <a name="see-also"></a>Consulte Também  
  [Especificações do produto para o SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Instalação do SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Instalação de início rápido do SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Instalação de Início Rápido do SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

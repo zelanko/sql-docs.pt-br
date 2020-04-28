@@ -1,5 +1,5 @@
 ---
-title: Plano de elaboração de relatórios e implantação de relatórios (Reporting Services 2014) | Microsoft Docs
+title: Plano para design de relatório e implantação de relatório (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380817"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planejar a criação e a implantação de relatórios (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para a autoria e implantação de relatórios. Use este tópico para aprender a planejar um ambiente de criação de relatórios e servidor de relatório que funcionam em conjunto. Este tópico apresenta uma visão geral do suporte para definição de relatório pelos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Uma definição de relatório é um arquivo XML escrito em RDL ou RDLC. Cada definição de relatório segue uma versão específica de esquema listado no início do arquivo.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece várias abordagens para criar e implantar relatórios. Use este tópico para aprender a planejar um ambiente de criação de relatórios e servidor de relatório que funcionam em conjunto. Este tópico apresenta uma visão geral do suporte para definição de relatório pelos componentes do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Uma definição de relatório é um arquivo XML escrito em RDL ou RDLC. Cada definição de relatório segue uma versão específica de esquema listado no início do arquivo.  
   
  Arquivos RDL são criados no Designer de Relatórios em projetos do [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] e no Construtor de Relatórios 3.0. Os arquivos RDLC são criados com o uso de controles ReportViewer incluídos no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
  Neste tópico:  
   
--   [Versões de Esquema RDL](#bkmk_rdl_schema_versions)  
+-   [Versões de esquema RDL](#bkmk_rdl_schema_versions)  
   
--   [Suporte ao servidor de relatórios e ao esquema RDL](#bkmk_report_server_rdl_schema_support)  
+-   [Suporte ao servidor de relatório e ao esquema RDL](#bkmk_report_server_rdl_schema_support)  
   
--   [Suporte à autoria e implantação de relatórios](#bkmk_report_authoring_and_deployment)  
+-   [Suporte à criação e à implantação de relatórios](#bkmk_report_authoring_and_deployment)  
   
--   [Controles do ReportViewer](#bkmk_reportviewer)  
+-   [Controles ReportViewer](#bkmk_reportviewer)  
   
 ##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> Versões de esquema RDL  
  A tabela a seguir lista cada versão de esquema disponível e a abreviação usada no restante deste tópico:  
@@ -98,9 +98,9 @@ ms.locfileid: "80380817"
   
 -   [Implantação e suporte de versão no SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Ferramentas de dados do Microsoft SQL Server - Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
+-   [Microsoft SQL Server Data Tools – Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
-##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Controles do ReportViewer  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Controles ReportViewer  
  Um controle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer pode exibir um relatório .rdlc no modo de visualização local ou no modo remoto, o controle pode exibir um arquivo .rdl hospedado em um servidor de relatório [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . A tabela a seguir fornece a lista de versões de RDL com suporte dos controles ReportViewer para processamento local (.rdlc). O suporte para RDL no lado do servidor é resumido na seção [Suporte para servidor de relatório e esquema RDL](#bkmk_report_server_rdl_schema_support).  
   
 |Controle ReportViewer no produto|Versão do RDL para a visualização local|  
@@ -108,7 +108,7 @@ ms.locfileid: "80380817"
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Ou<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Ou<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Ou<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- Para saber mais, consulte o seguinte:   
+ Para saber mais, consulte o seguinte:  
   
 -   [Convertendo arquivos RDLC em arquivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -116,9 +116,9 @@ ms.locfileid: "80380817"
   
 -   [Adicionando e configurando controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Consulte também  
- [Relatórios, relatórios de peças e definições de relatórios &#40;o construtor de relatórios e o SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Ferramentas de serviços de relatórios](tools/reporting-services-tools.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Relatórios, partes de relatório e definições de relatório &#40;Construtor de Relatórios e SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Ferramentas de Reporting Services](tools/reporting-services-tools.md)   
  [Linguagem RDL &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289684"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gerenciando permissões em paralelo data warehouse
 Este artigo descreve os requisitos e as opções para gerenciar permissões de banco de dados para SQL Server PDW.
 
-## <a name="BackupRestoreBasics"></a>Noções básicas de permissão Mecanismo de Banco de Dados
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>Noções básicas de permissão Mecanismo de Banco de Dados
 Mecanismo de Banco de Dados permissões em SQL Server PDW são gerenciadas no nível do servidor por meio de logons e no nível do banco de dados por meio de usuários de banco de dados e funções de banco de dados definidas pelo usuário.
 
 **Logons** Os logons são contas de usuário individuais para fazer logon no SQL Server PDW. O SQL Server PDW dá suporte a logons usando a autenticação do Windows e a autenticação do SQL Server.  Os logons de autenticação do Windows podem ser usuários do Windows ou grupos do Windows de qualquer domínio confiável pelo SQL Server PDW. SQL Server logons de autenticação são definidos e autenticados pelo SQL Server PDW e devem ser criados especificando uma senha.
@@ -52,7 +52,7 @@ Os logons são objetos de nível de servidor e podem ser listados exibindo [Sys.
 
 Usuários e funções de banco de dados são objetos de nível de banco de dados e podem ser listados exibindo [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Somente permissões de nível de banco de dados podem ser concedidas a entidades de banco de dados.
 
-## <a name="BackupTypes"></a>Permissões padrão
+## <a name="default-permissions"></a><a name="BackupTypes"></a>Permissões padrão
 A lista a seguir descreve as permissões padrão:
 
 -   Quando um logon é criado usando a instrução **Create login** , o logon recebe a permissão **Connect SQL** , permitindo que o logon se conecte ao SQL Server PDW.
@@ -80,7 +80,7 @@ Todos os novos logons de dispositivo pertencem automaticamente à função públ
 
 -   A função de servidor público não pode herdar Permissões implícitas. Todas as permissões fornecidas para a função pública devem ser concedidas explicitamente.
 
-## <a name="BackupProc"></a>Determinando permissões
+## <a name="determining-permissions"></a><a name="BackupProc"></a>Determinando permissões
 Se um logon ou não tem permissão para executar uma ação específica depende das permissões concedidas ou negadas ao logon, ao usuário e às funções das quais o usuário é membro. As permissões de nível de servidor (como **criar logon** e **Exibir estado do servidor**) estão disponíveis para entidades de segurança no nível do servidor (logons). As permissões em nível de banco de dados (como **selecionar** de uma tabela ou **executar** em um procedimento) estão disponíveis para entidades de segurança no nível do banco de dados (usuários e funções de banco de dados).
 
 ### <a name="implicit-and-explicit-permissions"></a>Permissões implícitas e explícitas
@@ -165,7 +165,7 @@ Para pesquisar as permissões de um usuário, verifique o seguinte.
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>Práticas recomendadas de permissões de banco de dados
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>Práticas recomendadas de permissões de banco de dados
 
 -   Conceda permissões no nível mais granular que seja prático. A concessão de permissões nas permissões de tabela ou de nível de exibição pode se tornar não gerenciável. Mas a concessão de permissões no nível do banco de dados pode ser muito permissiva. Se o banco de dados for projetado com esquemas para definir limites de trabalho, talvez a concessão de permissão para o esquema seja um comprometimento apropriado entre o nível de tabela e o nível de banco de dados.
 
@@ -234,7 +234,7 @@ Cada logon que pode se conectar a SQL Server PDW é um membro da função de ser
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Funções de servidor fixas vs. concedendo permissões
 O sistema de funções de servidor fixas e de funções de banco de dados fixas é um sistema herdado originado no de 1980. As funções fixas ainda têm suporte e são úteis em ambientes em que há poucos usuários e as necessidades de segurança são simples. A partir do SQL Server 2005, um sistema mais detalhado de concessão de permissão foi criado. Esse novo sistema é mais granular, fornecendo muitas outras opções para conceder e negar permissões. A complexidade extra do sistema mais granular dificulta o aprendizado, mas a maioria dos sistemas empresariais deve conceder permissões em vez de usar as funções fixas. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->
 
-## <a name="related-topics"></a>Tópicos Relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 - [Conceder permissões](grant-permissions.md)
 

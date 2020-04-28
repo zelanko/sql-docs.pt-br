@@ -1,5 +1,5 @@
 ---
-title: Argumentos de função Unicode | Microsoft Docs
+title: Argumentos da função Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,59 +14,59 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284286"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos da função Unicode
-O Gerenciador de driver ODBC 3.5 (ou superior) suporta versões ANSI e Unicode de todas as funções que aceitam ponteiros para strings de caracteres ou SQLPOINTER em seus argumentos. As funções Unicode são implementadas como funções (com um sufixo de *W),* não como macros. As funções ANSI (que podem ser chamadas com ou sem um sufixo de *A*) são idênticas às funções atuais da API ODBC.  
+O Gerenciador de driver ODBC 3,5 (ou superior) dá suporte a versões ANSI e Unicode de todas as funções que aceitam ponteiros para cadeias de caracteres ou sqlpointr em seus argumentos. As funções Unicode são implementadas como funções (com um sufixo de *W*), não como macros. As funções ANSI (que podem ser chamadas com ou sem um sufixo de *a*) são idênticas às funções da API ODBC atual.  
   
 ## <a name="remarks"></a>Comentários  
- Funções unicode que sempre retornam ou tomam strings ou argumentos de comprimento são passadas como contagem de caracteres. Para funções que retornam informações de comprimento para dados do servidor, o tamanho e a precisão do display são descritos em número de caracteres. Quando um comprimento (tamanho de transferência dos dados) pode se referir a dados de seqüência ou não, o comprimento é descrito em comprimentos de octeto. Por exemplo, **o SQLGetInfoW** ainda terá o comprimento como contagem de bytes, mas **o SQLExecDirectW** usará contagem de caracteres.  
+ As funções Unicode que sempre retornam ou usam cadeias de caracteres ou argumentos de comprimento são passados como contagem de caractere. Para funções que retornam informações de comprimento para dados do servidor, o tamanho de exibição e a precisão são descritos em número de caracteres. Quando um comprimento (tamanho de transferência dos dados) puder se referir a dados de cadeia de caracteres ou não de cadeia, o comprimento será descrito em comprimentos de octeto. Por exemplo, **SQLGetInfoW** ainda terá o comprimento como contagem de bytes, mas o **SQLExecDirectW** usará a contagem de caracteres.  
   
- Contagem de caracteres refere-se ao número de bytes (octetos) para funções ANSI e ao número de WCHAR (palavras de 16 bits) para funções UNICODE. Em particular, uma seqüência de caracteres de byte duplo (DBCS) ou uma seqüência de caracteres multibytes (MBCS) pode ser composta de vários bytes. Uma seqüência de caracteres Unicode UTF-16 pode ser composta de vários WCHARs.  
+ A contagem de caracteres refere-se ao número de bytes (octetos) para funções ANSI e o número de WCHAR (palavras de 16 bits) para funções UNICODE. Em particular, uma seqüência de caracteres de byte duplo (DBCS) ou uma seqüência de caracteres multibyte (MBCS) pode ser composta por vários bytes. Uma sequência de caracteres Unicode UTF-16 pode ser composta por vários WCHARs.  
   
- A seguir está uma lista das funções da API ODBC que suportam as versões Unicode (W) e ANSI (A):  
+ Veja a seguir uma lista das funções da API ODBC que dão suporte às versões Unicode (W) e ANSI (A):  
   
 |||  
 |-|-|  
 |**SQLBrowseConnect**|**SQLGetDiagRec**|  
 |**SQLColAttribute**|**SQLGetInfo**|  
-|**SQLColAttributea**|**SQLGetStmtAttr**|  
+|**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQlnativesqL**|  
+|**SQLColumns**|**SQLNativeSQL**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
 |**SQLDriverConnect**|**SQLProcedures**|  
 |**SQLDrivers**|**SQLSetConnectAttr**|  
-|**Sqlerror**|**Sqlsetconnectoption**|  
-|**SQLExecDirect**|**Sqlsetcursorname**|  
+|**SQLError**|**SQLSetConnectOption**|  
+|**SQLExecDirect**|**SQLSetCursorName**|  
 |**SQLForeignKeys**|**SQLSetDescField**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
-|**Opção SQLGetConnect**|**SQLSpecialColumns**|  
+|**SQLGetConnectOption**|**SQLSpecialColumns**|  
 |**SQLGetCursorName**|**SQLStatistics**|  
 |**SQLGetDescField**|**SQLTablePrivileges**|  
 |**SQLGetDescRec**|**SQLTables**|  
 |**SQLGetDiagField**||  
   
- A seguir está uma lista das funções ODBC Installer e ODBC Translator que suportam as versões Unicode (W) e ANSI (A):  
+ A seguir está uma lista de funções do ODBC Installer e do conversor ODBC que dão suporte às versões Unicode (W) e ANSI (A):  
   
 |||  
 |-|-|  
 |**SQLConfigDataSource**|**SQLInstallDriverManager**|  
 |**SQLCreateDataSource**|**SQLInstallerError**|  
-|**SQLDataSourceToDriver**|**Sqlinstallodbc**|  
-|**SQLDriverToDataFonte**|**SQlReadfiledsn**|  
-|**SQLGetAvailableDrivers**|**SQLremovedsnfromINI**|  
-|**SQLGetDrivers instalados**|**SQLvaliddSN**|  
-|**SqlGetTranslator**|**SQLWritedsntoINI**|  
+|**SQLDataSourceToDriver**|**SQLInstallODBC**|  
+|**SQLDriverToDataSource**|**SQLReadFileDSN**|  
+|**SQLGetAvailableDrivers**|**SQLRemoveDSNFromINI**|  
+|**SQLGetInstalledDrivers**|**SQLValidDSN**|  
+|**SQLGetTranslator**|**SQLWriteDSNToINI**|  
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  As funções depreciadas têm suporte a mapeamento Unicode-to-ANSI porque o ODBC *3.x* Driver Manager suporta a recompilação de aplicativos ODBC *2.x* com o **#define**UNICODE .  
+>  Funções preteridas têm suporte para mapeamento de Unicode para ANSI porque o Gerenciador de driver ODBC *3. x* dá suporte à recompilação de aplicativos ODBC *2. x* com o **#define**Unicode.  
   
  Esta seção contém os seguintes tópicos.  
   

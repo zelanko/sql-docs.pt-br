@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896802"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
@@ -82,7 +82,7 @@ Após a conclusão da avaliação, use o [serviço de migração de banco de dad
 
 ## <a name="data-migration-assistant-v40"></a>Assistente de Migração de Dados v 4.0
 
-A versão v 4.0 do Assistente de Migração de Dados introduz o recurso de recomendações de SKU do banco de dados SQL do Azure, que permite aos usuários identificar o SKU mínimo recomendado do banco de dados SQL do Azure com base nos contadores de desempenho coletados do (s) computador (es) que hospeda o seu bancos. Esse recurso fornece recomendações relacionadas ao tipo de preço, nível de computação e tamanho máximo de dados, bem como ao custo estimado por mês. Ele também oferece a capacidade de provisionar todos os seus bancos de dados no Azure em massa.
+A versão v 4.0 do Assistente de Migração de Dados introduz o recurso recomendações de SKU do banco de dados SQL do Azure, que permite aos usuários identificar o SKU mínimo recomendado do banco de dados SQL do Azure com base em contadores de desempenho coletados do (s) computador (es) que hospedam seus bancos de dados. Esse recurso fornece recomendações relacionadas ao tipo de preço, nível de computação e tamanho máximo de dados, bem como ao custo estimado por mês. Ele também oferece a capacidade de provisionar todos os seus bancos de dados no Azure em massa.
 
 > [!NOTE]
 > Essa funcionalidade está disponível no momento apenas por meio da CLI (interface de linha de comando).

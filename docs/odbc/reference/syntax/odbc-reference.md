@@ -14,14 +14,14 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290526"
 ---
 # <a name="odbc-reference"></a>Propriedade ODBC
-Os tópicos a seguir contêm sintaxe e informações semânticas para todas as funções da ODBC.  
+Os tópicos a seguir contêm informações de sintaxe e semântica para todas as funções ODBC.  
   
 -   [Resumo de funções](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ Os tópicos a seguir contêm sintaxe e informações semânticas para todas as f
   
 -   [Referência de API de DLL de instalação](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Referência de API do instalador DLL](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [Referência da API da DLL do instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [Referência da função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Referência de função DLL de tradução](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [Referência da SPI (Interface do Provedor de Serviços) do ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

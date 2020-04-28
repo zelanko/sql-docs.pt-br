@@ -1,5 +1,5 @@
 ---
-title: Colunas de vinculação para uso com cursores de bloco | Microsoft Docs
+title: Vinculando colunas para uso com cursores de bloco | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284896"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Colunas de associação para uso com cursores em bloco
-Como os cursores de bloco retornam várias linhas, os aplicativos que os usam devem vincular uma matriz de variáveis a cada coluna em vez de uma única variável. Essas matrizes são coletivamente conhecidas como *buffers de conjunto de linhas*. A seguir estão os dois estilos de vinculação:  
+Como os cursores de bloco retornam várias linhas, os aplicativos que os usam devem associar uma matriz de variáveis a cada coluna, em vez de uma única variável. Essas matrizes são coletivamente conhecidas como *buffers de conjunto de linhas*. A seguir estão os dois estilos de associação:  
   
--   Vincule uma matriz a cada coluna. Isso é chamado *de vinculação em termos de coluna* porque cada estrutura de dados (array) contém dados para uma única coluna.  
+-   Associar uma matriz a cada coluna. Isso é chamado de *associação por coluna,* pois cada estrutura de dados (matriz) contém dados para uma única coluna.  
   
--   Defina uma estrutura para reter os dados por uma linha inteira e vincule uma matriz dessas estruturas. Isso é chamado *de vinculação em termos de linha* porque cada estrutura de dados contém os dados de uma única linha.  
+-   Defina uma estrutura para manter os dados de uma linha inteira e associar uma matriz dessas estruturas. Isso é chamado de *Associação de linha,* pois cada estrutura de dados contém os dados de uma única linha.  
   
- Como quando o aplicativo vincula variáveis únicas a colunas, ele chama **SQLBindCol** para vincular matrizes a colunas. A única diferença é que os endereços aprovados são endereços de matriz, não endereços variáveis únicos. O aplicativo define o atributo de declaração SQL_BIND_BY_COLUMN para especificar se ele está usando a vinculação em termos de coluna ou em forma de linha. Se usar a vinculação em termos de coluna ou de linha é em grande parte uma questão de preferência de aplicativo. A vinculação em termos de linha pode corresponder mais de perto ao layout de dados do aplicativo, nesse caso, ele forneceria melhor desempenho.  
+ Como quando o aplicativo associa variáveis únicas a colunas, ele chama **SQLBindCol** para associar matrizes a colunas. A única diferença é que os endereços passados são endereços de matriz, não endereços de variável única. O aplicativo define o atributo SQL_BIND_BY_COLUMN instrução para especificar se ele está usando a associação de linha ou de coluna. A possibilidade de usar a associação de linha ou de coluna é basicamente uma questão de preferência de aplicativo. A associação de linha pode corresponder mais próximo ao layout de dados do aplicativo; nesse caso, ele forneceria um melhor desempenho.  
   
  Esta seção contém os seguintes tópicos.  
   

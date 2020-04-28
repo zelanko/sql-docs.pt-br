@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525457"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Noções básicas sobre o Power View para modelos multidimensionais
@@ -24,7 +24,7 @@ ms.locfileid: "79525457"
   
  O Power View é um cliente Web fino iniciado diretamente no navegador de um arquivo de Fonte de Dados de Relatório (.rsds) compartilhado em uma biblioteca do SharePoint. A Fonte de Dados de Relatório age como uma ponte entre o cliente e a fonte de dados de back-end. A fonte de dados de back-end pode ser uma pasta de trabalho PowerPivot no SharePoint, um modelo Tabular em um servidor do Analysis Services executado em modo Tabular ou um modelo Multidimensional em um servidor do Analysis Services executado em modo Multidimensional. Os relatórios do Power View podem então ser salvos em uma biblioteca ou galeria do SharePoint e compartilhados com outros membros de sua organização.  
   
- **Power View para arquitetura de modelos multidimensionais**  
+ **Power View para arquitetura de Modelos Multidimensionais**  
   
  ![Power View para arquitetura de modelos multidimensionais](../media/daxmd-architecture.gif "Power View para arquitetura de modelos multidimensionais")  
   
@@ -35,12 +35,12 @@ ms.locfileid: "79525457"
   
 -   Suplemento SQL Server 2014 Reporting Services para Microsoft SharePoint Server 2010 ou 2013 Enterprise Edition.  
   
- **Requisitos do cliente**  
+ **Requisitos de cliente**  
   
 -   A funcionalidade de cliente do Power View exige o Microsoft Silverlight 5. Para obter mais informações, consulte [planejando o suporte para Reporting Services e Power View Browser &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 ## <a name="features"></a>Recursos  
- **Suporte nativo para Power View**  
+ **Suporte nativo para o Power View**  
   
  Com esta versão, os modelos multidimensionais oferecem suporte à análise e à visualização usando o Power View no modo SharePoint. Nenhuma configuração especial dos seus modelos multidimensionais é necessária. Entretanto, existem algumas diferenças na forma como os objetos do modelo multidimensional são exibidos no Power View em comparação a outras ferramentas cliente, como o Microsoft Excel e o Microsoft Performance Point. Esta versão não dá suporte à análise e à visualização de modelos multidimensionais usando o Power View no Excel 2013.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "79525457"
   
  Os grupos de medidas em um cubo multidimensional são vistos na Lista de Campos do Power View como tabelas com o sinal sigma (∑).  
   
- **Grupos de medidas na lista de campos de Power View**  
+ **Grupos de medidas na Lista de Campos do Power View**  
   
  ![Lista de Campos no Power View](../media/daxmd-powerviewfieldlist.gif "Lista de Campos no Power View")  
   
@@ -99,14 +99,14 @@ ms.locfileid: "79525457"
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensões, atributos e hierarquias  
  As dimensões de cubo são expostas como tabelas em metadados tabulares. Na Lista de Campos do Power View, os atributos de dimensão são mostrados como colunas nas pastas de exibição.  Os atributos de dimensão com a propriedade AttributeHierarchyEnabled definida como false; por exemplo, o atributo Data de Nascimento na dimensão Cliente ou a propriedade AttributeHierarchyVisible definida como false não aparecerão na Lista de Campos do Power View. Hierarquias de vários níveis ou hierarquias de usuário; por exemplo, Geografia do Cliente na dimensão Cliente, são expostas como hierarquias na Lista de Campos do Power View. UnknownMembers ocultos de um atributo de dimensão são expostos em Consultas DAX e no Power View.  
   
- **Dimensão, atributos e hierarquias em SQL Server Data Tools (SSDT) e Power View lista de campos**  
+ **Dimensão, atributos e hierarquias no SQL Server Data Tools (SSDT) e na Lista de Campos do Power View**  
   
  ![Dimensões no SSDT e na Lista de Campos do Power View](../media/daxmd-ssdt-dimensions.gif "Dimensões no SSDT e na Lista de Campos do Power View")  
   
 ### <a name="dimension-attribute-type"></a>Tipo de atributo de dimensão  
  Os modelos multidimensionais dão suporte à associação de atributos de dimensão com tipos de atributo de dimensão específicos. A imagem abaixo mostra a dimensão Geografia, onde os atributos de dimensão Cidade, Estado-Província, País e CEP têm tipos geográficos associados a eles. Eles serão expostos nos metadados tabulares. O Power View reconhece os metadados, permitindo que os usuários criem visualizações de mapa. Isso é indicado pelo ícone de mapa ao lado das colunas Cidade, País, CEP e Estado-Província na tabela Geografia da Lista de Campos do Power View.  
   
- **Tipos de Geografia de atributo de dimensão na lista de campos SSDT e Power View**  
+ **Tipos de geografia de atributo de dimensão no SSDT e Lista de Campos do Power View**  
   
  ![Tipo de geografia do atributo de dimensão](../media/daxmd-ssdt-attribute-geog-types.gif "Tipo de geografia do atributo de dimensão")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "79525457"
   
  A imagem abaixo mostra um relatório Power View para um cubo que contém membros calculados de inteligência de tempo no atributo de dimensão "cálculos de data fiscal" na dimensão Data.  
   
- **Power View relatório com membros calculados**  
+ **Relatório do Power View com membros calculados**  
   
  ![Membros calculados no Power View](../media/daxmd-calcmembersinpowerview.gif "Membros calculados no Power View")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "79525457"
 ## <a name="images"></a>Imagens  
  O Power View fornece a capacidade de renderizar imagens. Em modelos multidimensionais, uma das maneiras de poder fornecer imagens ao Power View é expor colunas com URLs das imagens. Com esta versão, o Analysis Services dá suporte à marcação de atributos de dimensão, como o tipo ImageURL. Esse tipo de dados é então fornecido ao Power View nos metadados tabulares. O Power View pode então baixar e exibir as imagens especificadas nas URLs nas visualizações.  
   
- **Tipo de atributo de dimensão ImageURL em SSDT**  
+ **Tipo de atributo de dimensão ImageURL no SSDT**  
   
  ![Propriedades do atributo de dimensão](../media/daxmd-dimattribute-properties.gif "Propriedades do atributo de dimensão")  
   
@@ -172,16 +172,16 @@ ms.locfileid: "79525457"
 ## <a name="power-view-pinned-filters"></a>Filtros fixados no Power View  
  Os relatórios do Power View podem conter várias exibições. Com esta versão, o recurso *Fixar Filtro* para os modelos tabulares e multidimensionais oferece a capacidade de criar filtros que se apliquem a todas as exibições em um relatório. A imagem abaixo mostra o botão de alternância Fixar filtro para um filtro de exibição. Por padrão, um filtro de exibição é desafixado e se aplica somente àquela exibição. A fixação de um filtro de exibição o aplica a todas as exibições; desafixá-lo o removerá de outras exibições.  
   
- **Filtros fixados**  
+ **Filtros Fixados**  
   
  ![Filtro Fixado](../media/daxmd-pinnedfilterinpowerview.gif "Filtro Fixado")  
   
 ## <a name="unsupported-features"></a>Recursos sem suporte  
  **Power View no Excel 2013** – não oferece suporte à conexão e à criação de relatórios para modelos multidimensionais. O Power View para modelos multidimensionais dá suporte somente a clientes do Power View baseados em navegador.  
   
- **Ações** -não têm suporte em relatórios Power View ou em consultas Dax em um modelo multidimensional.  
+ **Ações** – não têm suporte em relatórios do Power View ou em consultas DAS em um modelo multidimensional.  
   
- Não há suporte para **conjuntos nomeados** em modelos multidimensionais em Power View ou em consultas Dax em um modelo multidimensional.  
+ **Conjuntos nomeados** – em modelos multidimensionais, não têm suporte no Power View ou em consultas DAX em um modelo multidimensional.  
   
 > [!NOTE]  
 >  Ações Sem Suporte e Conjuntos Nomeados não impedem que os usuários se conectem a modelos multidimensionais e os explorem usando o Power View.  
@@ -193,7 +193,7 @@ ms.locfileid: "79525457"
   
  Os metadados multidimensionais são representados como um namespace de modelo tabular em um documento CSDLBI, ou CSDL de saída, quando uma solicitação DISCOVER_CSDL_METADATA for enviada para a instância do Analysis Services.  
   
- **Solicitação de DISCOVER_CSDL_METADATA de exemplo**  
+ **Solicitação DISCOVER_CSDL_METADATA de exemplo**  
   
 ```  
 <Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -217,7 +217,7 @@ ms.locfileid: "79525457"
   
  A solicitação DISCOVER_CSDL_METADATA tem as seguintes restrições:  
   
-|Nome|Obrigatório|Descrição|  
+|Nome|Necessária|Descrição|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sim|O nome do catálogo/banco de dados.|  
 |PERSPECTIVE_NAME|Sim, se o cubo contiver mais de uma perspectiva. Opcional se houver somente um cubo ou se houver uma perspectiva padrão.|O nome do cubo ou o nome da perspectiva no banco de dados multidimensional.|  
@@ -230,7 +230,7 @@ ms.locfileid: "79525457"
 ## <a name="client-help-on-officecom"></a>Ajuda do cliente no Office.com  
  Os artigos a seguir são fornecidos no site Office.com para ajudar os usuários a descobrir como os objetos do Modelo Multidimensional aparecem no Power View e como criar relatório de exemplo:  
   
- [Noções básicas sobre objetos de modelo multidimensional no Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Noções básicas sobre objetos do Modelo Multidimensional no Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Explore o modelo multidimensional da Adventure Works usando Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [Explore o Modelo Multidimensional da Adventure Works usando o Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

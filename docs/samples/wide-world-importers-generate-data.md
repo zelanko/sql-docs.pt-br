@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112317"
 ---
 # <a name="wideworldimporters-data-generation"></a>Geração de dados WideWorldImporters
@@ -71,7 +71,7 @@ Você pode usar o `Application.Configuration_PopulateLargeSaleTable` procediment
 
     Application.Configuration_PopulateLargeSaleTable
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
   `@EstimatedRowsFor2012`**bigint** (com um padrão de 12 milhões)
 

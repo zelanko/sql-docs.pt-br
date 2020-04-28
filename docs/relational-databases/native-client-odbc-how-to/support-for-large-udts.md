@@ -1,5 +1,5 @@
 ---
-title: Suporte para Grandes UDTs | Microsoft Docs
+title: Suporte para UDTs grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81281738"
 ---
 # <a name="support-for-large-udts"></a>Suporte a UDTs grandes
@@ -25,12 +25,12 @@ ms.locfileid: "81281738"
   
  Este exemplo não funcionará com nenhuma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obter mais informações sobre o suporte a Grandes UDTs, consulte [Grandes tipos definidos pelo usuário da CLR &#40;o ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Para obter mais informações sobre o suporte a UDTs grandes, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código é o código de origem C#. Cole-a em um arquivo chamado LargeStringUDT.cs e compile-a para uma DLL. Copie LargeStringUDT.dll no diretório raiz da unidade C.  
   
- A segunda [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) listagem de código cria a montagem no banco de dados mestre.  
+ A segunda listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () cria o assembly no banco de dados mestre.  
   
  Compile a segunda listagem de código (C++) com odbc32.lib e user32.lib. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281738"
   
  Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Para conectar-se a uma instância nomeada, altere a definição da fonte de dados ODBC para especificar a instância usando o seguinte formato: servidor\instância_nomeada. Por padrão, o [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] é instalado em uma instância nomeada.  
   
- A quarta [!INCLUDE[tsql](../../includes/tsql-md.md)]( ) listagem de código exclui a montagem do banco de dados mestre.  
+ A quarta listagem [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () exclui o assembly do banco de dados mestre.  
   
 ```  
 // LargeStringUDT.cs  

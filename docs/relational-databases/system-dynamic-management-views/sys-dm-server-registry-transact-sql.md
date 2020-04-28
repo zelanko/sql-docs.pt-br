@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530821"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "80530821"
 |Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome da chave do Registro. Permite valor nulo.|  
-|value_name|**nvarchar(256)**|Nome do valor da chave. Este é o item mostrado na coluna **Nome** do Editor de Registro. Permite valor nulo.|  
-|value_data|**Sql_variant**|Valor dos dados da chave. Este é o valor mostrado na coluna **Dados** do Editor de Registro para uma determinada entrada. Permite valor nulo.|  
+|value_name|**nvarchar(256)**|Nome do valor da chave. Esse é o item mostrado na coluna **Name** do editor do registro. Permite valor nulo.|  
+|value_data|**sql_variant**|Valor dos dados da chave. Esse é o valor mostrado na coluna de **dados** do editor do registro para uma determinada entrada. Permite valor nulo.|  
   
 ## <a name="security"></a>Segurança  
   
@@ -88,7 +88,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [sys.dm_server_services &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+## <a name="see-also"></a>Consulte Também  
+ [sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

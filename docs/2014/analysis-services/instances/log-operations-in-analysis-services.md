@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289134"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operações de log no Analysis Services
@@ -26,7 +26,7 @@ ms.locfileid: "79289134"
   
 -   [Local e tipos de logs](#bkmk_location)  
   
--   [Informações gerais sobre as definições de configuração do arquivo de log](#bkmk_general)  
+-   [Informações gerais sobre definições de configuração do arquivo de log](#bkmk_general)  
   
 -   [Arquivo de log do serviço MSMDSRV](#bkmk_msmdsrv)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "79289134"
 > [!NOTE]  
 >  Se você estiver procurando informações sobre o registro em log, talvez também esteja interessado no rastreamento de operações que mostram o processamento e caminhos de execução de consulta. Objetos de rastreamento para rastreamento ad hoc e persistente (como a auditoria de acesso de cubo), bem como recomendações sobre como usar melhor o Flight Recorder, SQL Server Profiler e xEvents, podem ser encontrados usando os links nesta página: [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md).  
   
-##  <a name="bkmk_location"></a>Local e tipos de logs  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Local e tipos de logs  
  O Analysis Services fornece os logs descritos abaixo.  
   
 |Nome ou local do arquivo|Type|Usado para|Ativado por padrão|  
@@ -50,14 +50,14 @@ ms.locfileid: "79289134"
   
  O link a seguir é altamente recomendável para a obtenção de recursos de informações adicionais que não são abordados neste tópico: [Dicas para coleta de dados inicial do Suporte da Microsoft](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
-##  <a name="bkmk_general"></a>Informações gerais sobre as definições de configuração do arquivo de log  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a>Informações gerais sobre as definições de configuração do arquivo de log  
  Você pode encontrar as seções para cada log no arquivo de configuração do servidor msmdsrv.ini, localizado na pasta \Arquivos de Programas\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Consulte [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) para obter instruções sobre como editar o arquivo.  
   
  Sugerimos que, se possível, defina as propriedades de log na página de propriedades de servidor do Management Studio. Exceto alguns casos, você deve editar o arquivo msmdsrv.ini diretamente para definir as configurações que não são visíveis nas ferramentas administrativas.  
   
  ![Seção do arquivo config mostrando as configurações de log](../media/ssas-logfilesettings.png "Seção do arquivo config mostrando as configurações de log")  
   
-##  <a name="bkmk_msmdsrv"></a>Arquivo de log do serviço MSMDSRV  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>Arquivo de log do serviço MSMDSRV  
  Operações de servidor de logs do Analysis Services para o arquivo msmdsrv.log, um por instância, localizado em \arquivos de programas\Microsoft SQL Server\\<instância\>\Olap\Log.  
   
  Esse arquivo de log é esvaziado em cada reinicialização do serviço. Em versões anteriores, os administradores às vezes reiniciavam o serviço com o único propósito de eliminar o arquivo de log antes que ele crescesse excessivamente a ponto de se tornar inutilizável. Isso não é mais necessário. As definições de configuração, apresentadas no SQL Server 2012 SP2 e versões posteriores, oferecem controle sobre o tamanho do arquivo de log e seu histórico:  
@@ -96,7 +96,7 @@ ms.locfileid: "79289134"
   
 6.  Reinicie o serviço.  
   
-##  <a name="bkmk_querylog"></a>Logs de consulta  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a> Logs de consulta  
  O log de consulta é um nome um tanto inapropriado, pois ele não registra a atividade de consulta MDX ou DAX dos usuários. Em vez disso, ele coleta dados sobre consultas geradas pelo Analysis Services, que são subsequentemente utilizadas como entrada de dados no Assistente de Otimização com Base no Uso. Os dados coletados no log de consultas não se destina à análise direta. Especificamente, os conjuntos de dados são descritos em matrizes de bits, com um zero ou um que indica as partes do conjunto de dados incluídas na consulta. Novamente, esses dados destinam-se ao assistente.  
   
  Para monitorar e solucionar problemas de consulta, muitos desenvolvedores e administradores usam uma ferramenta da comunidade, **ASTrace**, para monitorar consultas. Você também pode usar o SQL Server Profiler, xEvents ou um rastreamento do Analysis Services. Consulte [Monitorar uma instância do Analysis Services](monitor-an-analysis-services-instance.md) para ver links com mais informações sobre rastreamento.  
@@ -125,7 +125,7 @@ ms.locfileid: "79289134"
   
  Consulte [Configurando o log de consulta do Analysis Services](https://technet.microsoft.com/library/Cc917676) para saber mais sobre a configuração de logs de consulta. Embora o documento seja bastante antigo, a configuração de logs de consulta não foi alterada nas versões recentes e as informações que ele contém ainda se aplicam.  
   
-##  <a name="bkmk_mdmp"></a>Arquivos de mini Dump (. mdmp)  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a> Arquivos de minidespejo (.mdmp)  
  Arquivos de despejo capturam dados usados para analisar eventos extraordinários. O Analysis Services gera minidespejos (.mdmp) automaticamente em resposta a uma falha do servidor, exceções e alguns erros de configuração. O recurso está habilitado, mas não envia automaticamente relatórios de falha.  
   
  Relatórios de falha são configurados por meio da seção Exceção no arquivo Msmdsrv.ini. Essas configurações controlam a criação do arquivo de despejo de memória. O snippet a seguir mostra os valores padrão:  
@@ -146,7 +146,7 @@ ms.locfileid: "79289134"
 </Exception>  
 ```  
   
- **Configurar relatórios de falhas**  
+ **Configurar relatórios de falha**  
   
  Salvo orientação em contrário pelo Suporte da Microsoft, a maioria dos administradores usam as configurações padrão. Este artigo mais antigo da Base de Dados de Conhecimento ainda é usado para fornecer instruções sobre como configurar arquivos de despejo: [Como configurar o Analysis Services para gerar arquivos de despejo de memória](https://support.microsoft.com/kb/919711).  
   
@@ -158,21 +158,19 @@ ms.locfileid: "79289134"
 |1|(Padrão) Habilita, mas não envia o arquivo de despejo de memória.|  
 |2|Habilita e envia automaticamente um relatório de erros à Microsoft.|  
   
- 
-  `CrashReportsFolder` é o local dos arquivos de despejo de memória. Por padrão, um arquivo .mdmp e os registros de log associados podem ser encontrados na pasta \Olap\Log.  
+ `CrashReportsFolder` é o local dos arquivos de despejo de memória. Por padrão, um arquivo .mdmp e os registros de log associados podem ser encontrados na pasta \Olap\Log.  
   
- 
-  `SQLDumperFlagsOn` é usado para gerar um despejo completo. Por padrão, os despejos completos não estão habilitados. Você pode definir essa propriedade para `0x34`.  
+ `SQLDumperFlagsOn` é usado para gerar um despejo completo. Por padrão, os despejos completos não estão habilitados. Você pode definir essa propriedade para `0x34`.  
   
  Os links a seguir fornecem mais informações:  
   
--   [Analisando mais detalhadamente SQL Server usando minidespejos](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Procurando mais profundo no SQL Server usando minidespejos](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
 -   [Como criar um arquivo de despejo do modo de usuário](https://support.microsoft.com/kb/931673)  
   
--   [Como usar o utilitário sqldumpr. exe para gerar um arquivo de despejo em SQL Server](https://support.microsoft.com/kb/917825)  
+-   [Como usar o utilitário Sqldumper.exe para gerar um arquivo de despejo no SQL Server](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>Dicas e práticas recomendadas  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>Dicas e práticas recomendadas  
  Esta seção é uma recapitulação das dicas mencionadas neste artigo.  
   
 -   Configure o arquivo msmdsrv.log para controlar o tamanho e o número de arquivos de log msmdsrv. As configurações não estão habilitadas por padrão, portanto certifique-se de adicioná-las como uma etapa pós-instalação. Consulte [Arquivo de log do serviço MSMDSRV](#bkmk_msmdsrv) neste tópico.  
