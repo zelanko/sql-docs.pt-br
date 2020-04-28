@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399870"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "74399870"
 
   Fornece informações de índice columnstore clusterizado por segmento para ajudar o administrador a tomar decisões de gerenciamento de sistema no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys. pdw_nodes_column_store_row_groups** tem uma coluna para o número total de linhas armazenadas fisicamente (incluindo aquelas marcadas como excluídas) e uma coluna para o número de linhas marcadas como excluídas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar quais grupos de linhas têm uma alta porcentagem de linhas excluídas e devem ser recriados.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela subjacente. Essa é a tabela física no nó de computação, não o object_id para a tabela lógica no nó de controle. Por exemplo, object_id não corresponde ao object_id em sys. Tables.<br /><br /> Para ingressar com sys. Tables, use sys. pdw_index_mappings.|  
 |**index_id**|**int**|ID do índice columnstore clusterizado na tabela *object_id* .|  
 |**partition_number**|**int**|ID da partição de tabela que mantém o grupo de linhas *row_group_id*. Você pode usar *partition_number* para unir essa DMV a sys. partitions.|  
 |**row_group_id**|**int**|ID deste grupo de linhas. Isso é exclusivo dentro da partição.|  
 |**dellta_store_hobt_id**|**bigint**|O hobt_id para grupos de linhas delta ou NULL se o tipo de grupo de linhas não for delta. Um grupo de linhas delta é um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas Delta tem o status **aberto** . Um grupo de linhas delta ainda está no formato rowstore e não foi compactado para o formato columnstore.|  
-|**status**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar (60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> ABRIR-um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED-um grupo de linhas que foi preenchido, mas ainda não foi compactado pelo processo de movimentação de tupla.<br /><br /> COMPACTado-um grupo de linhas que foi preenchido e compactado.|  
+|**state**|**tinyint**|O número de ID associado a state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state_desccription**|**nvarchar(60)**|Descrição do estado persistente do grupo de linhas:<br /><br /> ABRIR-um grupo de linhas de leitura/gravação que está aceitando novos registros. Um grupo de linhas aberto ainda está no formato rowstore e não foi compactado para o formato columnstore.<br /><br /> CLOSED-um grupo de linhas que foi preenchido, mas ainda não foi compactado pelo processo de movimentação de tupla.<br /><br /> COMPACTado-um grupo de linhas que foi preenchido e compactado.|  
 |**total_rows**|**bigint**|Total de linhas fisicamente armazenadas no grupo de linhas. Algumas podem ter sido excluídas, mas ainda estão armazenadas. O número máximo de linhas em um grupo de linhas é 1.048.576 (FFFFF hexadecimal).|  
 |**deleted_rows**|**bigint**|Número de linhas fisicamente armazenadas no grupo de linhas que estão marcadas para exclusão.<br /><br /> Sempre 0 para grupos de linhas DELTA.|  
 |**size_in_bytes**|**int**|Tamanho combinado, em bytes, de todas as páginas deste grupo de linhas. Esse tamanho não inclui o tamanho necessário para armazenar metadados ou dicionários compartilhados.|  
@@ -51,9 +51,9 @@ ms.locfileid: "74399870"
  Quando um grupo de linhas de columnstore tiver sido preenchido, ele é compactado e para de aceitar novas linhas. Quando as linhas são excluídas de um grupo compactado, elas permanecem, mas são marcadas como excluídas. As atualizações para um grupo compactado são implementadas como uma exclusão do grupo compactado, e uma inserção em um grupo aberto.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a permissão **View Server State** .  
+ Requer a permissão **VIEW SERVER STATE**.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  O exemplo a seguir une a tabela **Sys. pdw_nodes_column_store_row_groups** a outras tabelas do sistema para retornar informações sobre tabelas específicas. A coluna calculada `PercentFull` é uma estimativa da eficiência do grupo de linhas. Para localizar informações em uma única tabela, remova os hifens de comentário na frente da cláusula WHERE e forneça um nome de tabela.  
   
 ```  

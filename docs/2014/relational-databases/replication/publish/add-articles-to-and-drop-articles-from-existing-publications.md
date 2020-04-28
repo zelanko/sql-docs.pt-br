@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882334"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Adicionar e remover artigos de publicações existentes
@@ -33,13 +33,13 @@ ms.locfileid: "73882334"
  Adicionar um artigo envolve: adicionar o artigo à publicação; criar um novo instantâneo para a publicação; sincronizar a assinatura para aplicar o esquema e os dados para o novo artigo.  
   
 > [!NOTE]
->  Se você adicionar um artigo a uma publicação de mesclagem e o artigo existente depender do artigo novo, será preciso especificar uma ordem de processamento para ambos os artigos usando o parâmetro **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Ao adicionar a função à publicação: especifique o valor **1** para o parâmetro **\@processing_order** de **sp_addmergearticle** e especifique o valor **2** para o parâmetro **\@processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o parâmetro **\@article**. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
+>  Se você adicionar um artigo a uma publicação de mesclagem e um artigo existente depender do novo artigo, deverá especificar uma ordem de processamento para ambos os artigos ** \@** usando o parâmetro processing_order de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere o seguinte cenário: uma tabela é publicada, mas não é publicada a função que é referenciada pela tabela. Se a função não for publicada, a tabela não poderá ser criada no Assinante. Quando você adiciona a função à publicação: especifique um valor de **1** para o ** \@parâmetro processing_order** de **sp_addmergearticle**; e especifique um valor de **2** para o ** \@parâmetro processing_order** de **sp_changemergearticle**, especificando o nome da tabela para o ** \@artigo**do parâmetro. Essa ordem de processamento garante a criação da função no Assinante antes da tabela que depende disso. É possível usar números diferentes para cada artigo, desde que o número para a função seja menor que o número para a tabela.  
   
 1.  Adicione um ou mais artigos com um dos métodos seguintes:  
   
     -   [Adicionar e remover artigos em uma publicação &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
-    -   [Defina um Artigo](define-an-article.md)  
+    -   [Definir um artigo](define-an-article.md)  
   
 2.  Após adicionar um artigo a uma publicação, é necessário criar um novo instantâneo para a publicação (e todas as partições se for uma publicação de mesclagem com filtros com parâmetros). O Agente de Distribuição ou o Agente de Mesclagem então copiará o esquema e os dados para o novo artigo para o Assinante (ele não reinicializa a publicação inteira).  
   
@@ -81,8 +81,8 @@ ms.locfileid: "73882334"
  Como observado anteriormente, em alguns casos, descartar um artigo exige descartar assinaturas, recriá-las e, então, sincronizá-las. Para obter mais informações, consulte [Assinar publicações](../subscribe-to-publications.md) e [Sincronizar dados](../synchronize-data.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)   
- [Reinicializar as assinaturas](../reinitialize-subscriptions.md)   
+ [Publicar objetos de banco de dados e](publish-data-and-database-objects.md)   
+ [Reinicializar assinaturas](../reinitialize-subscriptions.md)   
  [Fazer alterações de esquema em bancos de dados de publicação](make-schema-changes-on-publication-databases.md)  
   
   

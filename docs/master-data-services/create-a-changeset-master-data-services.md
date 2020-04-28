@@ -11,10 +11,10 @@ ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729630"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Criar um Conjunto de Alterações (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73729630"
 
   Um conjunto de alterações é uma coleção das alterações pendentes nos dados mestre. Se a entidade requer aprovação para alterações, as alterações pendentes devem ser salvas em um conjunto de alterações e, em seguida, enviadas para aprovação do administrador.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
--   Você deve ter permissão para acessar a área funcional do Gerenciador. Para obter mais informações, consulte [permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
+-   Você deve ter permissão para acessar a área funcional do Gerenciador. Para obter mais informações, consulte [Permissões de área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)  
   
 -   Você deve ter pelo menos o acesso de leitura para a entidade ou um de seus atributos.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729630"
   
 3.  Faça alterações na entidade e clique em**OK**.  
   
-4.  **A caixa de diálogo escolher um conjunto de alterações** é exibida.  
+4.  **Escolher um Conjunto de Alterações** será exibida.  
   
 5.  Clique em **Novo**, insira um nome para o conjunto de alterações e clique em **Salvar**. O nome do conjunto de alterações deve ser exclusivo dentro de um modelo.  
   

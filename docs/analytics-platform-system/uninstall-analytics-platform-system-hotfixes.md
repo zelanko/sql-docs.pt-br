@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399762"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalar os hotfixes do Analytics Platform System 
@@ -21,7 +21,7 @@ As etapas a seguir descrevem como desinstalar um hotfix do sistema de plataforma
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 Para executar essas etapas, será necessário:  
   
 -   Um logon do sistema de plataforma de análise com permissões para acessar o console de administração para monitorar o dispositivo.  
@@ -30,7 +30,7 @@ Para executar essas etapas, será necessário:
   
 -   O número do artigo da base de dados de conhecimento do hotfix a ser desinstalado.  
   
-## <a name="HowToUninstallPDW"></a>Para desinstalar um hotfix SQL Server PDW  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>Para desinstalar um hotfix SQL Server PDW  
   
 1.  Faça logon no nó <em><appliance_domain></em> **-HST01** como administrador de domínio de malha.  
   

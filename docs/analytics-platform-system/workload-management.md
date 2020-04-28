@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399440"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
@@ -28,7 +28,7 @@ Por exemplo, com as técnicas de gerenciamento de carga de trabalho no SQL Serve
   
 -   Solucione um problema de hash de execução lenta para ver se ele precisa de mais memória e, em seguida, dê a ele mais memória.  
   
-## <a name="Basics"></a>Noções básicas de gerenciamento de carga de trabalho  
+## <a name="workload-management-basics"></a><a name="Basics"></a>Noções básicas de gerenciamento de carga de trabalho  
   
 ### <a name="key-terms"></a>Principais termos  
 Gerenciamento da Carga de Trabalho  
@@ -55,13 +55,13 @@ Por exemplo, para alocar uma grande quantidade de recursos do sistema a uma soli
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>Descrições de classe de recurso  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>Descrições de classe de recurso  
 A tabela a seguir descreve as classes de recurso e suas alocações de recursos do sistema.  
   
-|Classe de recurso|Importância da solicitação|Uso máximo de memória *|Slots de simultaneidade (máximo = 32)|DESCRIÇÃO|  
+|Classe de recurso|Importância da solicitação|Uso máximo de memória *|Slots de simultaneidade (máximo = 32)|Descrição|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|padrão|Média|400 MB|1|Por padrão, cada logon é permitido uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe tem precedência. Quando um logon é Descartado de todas as classes de recurso, o logon reverte para a alocação de recursos padrão.|  
-|MediumRC|Média|1200 MB|3|Exemplos de solicitações que podem precisar da classe de recurso médio:<br /><br />Operações CTAS que têm grandes junções de hash.<br /><br />Selecione operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
+|default|Médio|400 MB|1|Por padrão, cada logon é permitido uma pequena quantidade de memória e recursos de simultaneidade para suas solicitações.<br /><br />Quando um logon é adicionado a uma classe de recurso, a nova classe tem precedência. Quando um logon é Descartado de todas as classes de recurso, o logon reverte para a alocação de recursos padrão.|  
+|MediumRC|Médio|1200 MB|3|Exemplos de solicitações que podem precisar da classe de recurso médio:<br /><br />Operações CTAS que têm grandes junções de hash.<br /><br />Selecione operações que precisam de mais memória para evitar o cache em disco.<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
 |Largerc|Alta|2,8 GB|7|Exemplos de solicitações que podem precisar da classe de recurso grande:<br /><br />Operações CTAS muito grandes que têm enormes junções de hash ou que contêm grandes agregações, como cláusulas grandes ORDER BY ou GROUP BY.<br /><br />Selecione operações que exigem quantidades muito grandes de memória para operações como junções de hash ou agregações, como cláusulas ORDENAr por ou GROUP BY<br /><br />Carregando dados em índices columnstore clusterizados.<br /><br />Criação, recriação e reorganização de índices columnstore clusterizados para tabelas menores que têm 10-15 colunas.|  
 |xlargerc|Alta|8,4 GB|22|A classe extra grande de recursos é para solicitações que podem exigir consumo extra de recursos grandes em tempo de execução.|  
   
@@ -98,7 +98,7 @@ Suponha que 6 solicitações grandes sejam enviadas para SQL Server PDW e 10 sol
   
 Dentro de cada classe de recurso, as solicitações são executadas na ordem primeiro a entrar primeiro a sair (FIFO).  
   
-## <a name="GeneralRemarks"></a>Comentários gerais  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>Comentários gerais  
 Se um logon for membro de mais de uma classe de recurso, a classe com a maioria dos recursos terá precedência.  
   
 Quando um logon é adicionado ou descartado de uma classe de recurso, a alteração entra em vigor imediatamente para todas as solicitações futuras; as solicitações atuais que estão em execução ou aguardando não são afetadas. O logon não precisa ser desconectado e reconectado para que a alteração ocorra.  
@@ -137,10 +137,10 @@ Instruções e operações SQL governadas por classes de recursos:
   
 -   SELECIONAR, excluindo consultas somente DMV  
   
-## <a name="Limits"></a>Limitações e Restrições  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Limitações e restrições  
 As classes de recurso regem a memória e as alocações de simultaneidade.  Eles não controlam as operações de entrada/saída.  
   
-## <a name="Metadata"></a>Metadados  
+## <a name="metadata"></a><a name="Metadata"></a>Metadados  
 DMVs que contêm informações sobre classes de recursos e membros de classe de recurso.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Exibições do sistema relacionadas expostas dos DMVs SQL Server nos nós de com
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
 [Tarefas de gerenciamento de carga de trabalho](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

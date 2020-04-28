@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728905"
 ---
 # <a name="transactions-master-data-services"></a>Transações (Master Data Services)
@@ -54,7 +54,7 @@ ms.locfileid: "73728905"
   
  Também é possível chamar os procedimentos armazenados a seguir para limpar os logs de transações.  
   
-|Procedimento armazenado|DESCRIÇÃO|  
+|Procedimento armazenado|Descrição|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|Limpa o histórico de transações|  
 |mdm.udpValidationsCleanup|Limpa o histórico de validação|  
@@ -90,7 +90,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 |Descrição da tarefa|Tópico|  
 |----------------------|-----------|  
-|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma &#40;de transação Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
+|Desfazer uma ação por meio de reversão de uma transação (somente administradores).|[Inverter uma transação &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374)(Transações, problemas de validação e limpeza de tabela de preparo), no msdn.com.  
@@ -99,6 +99,6 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 -   [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [&#40;de anotações Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [Anotações &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   

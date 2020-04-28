@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401006"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamento de bloqueio em paralelo data warehouse
 Saiba como o data warehouse paralelo usa o bloqueio para garantir a integridade das transações e para manter a consistência dos bancos de dados quando vários usuários estão acessando o dado ao mesmo tempo.  
   
-## <a name="Basics"></a>Noções básicas de bloqueio  
-**Modelos**  
+## <a name="locking-basics"></a><a name="Basics"></a>Noções básicas de bloqueio  
+**Modos**  
   
 O SQL Server PDW dá suporte a quatro modos de bloqueio:  
   
@@ -38,9 +38,9 @@ O bloqueio SharedUpdate proíbe os modos de bloqueio exclusivo e ExclusiveUpdate
   
 **Classes de recurso**  
   
-Os bloqueios são mantidos nas seguintes classes de objetos: banco de dados, esquema, objeto (tabela, exibição ou procedimento), aplicativo (usado internamente), EXTERNALDATASOURCE, EXTERNALFILEFORMAT e SCHEMARESOLUTION (um bloqueio de nível de banco de dados é obtido durante a criação, alteração ou descartando objetos de esquema ou usuários de banco de dados). Essas classes de objeto podem aparecer na coluna object_type de [Sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
+Os bloqueios são mantidos nas seguintes classes de objetos: banco de dados, esquema, objeto (tabela, exibição ou procedimento), aplicativo (usado internamente), EXTERNALDATASOURCE, EXTERNALFILEFORMAT e SCHEMARESOLUTION (um bloqueio de nível de banco de dados é obtido ao criar, alterar ou descartar objetos de esquema ou usuários de banco de dados). Essas classes de objeto podem aparecer na coluna object_type de [Sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Comentários gerais  
+## <a name="general-remarks"></a><a name="Remarks"></a>Comentários gerais  
 Os bloqueios podem ser aplicados a bancos de dados, tabelas ou exibições.  
   
 SQL Server PDW não implementa nenhum nível de isolamento configurável. Ele dá suporte ao nível de isolamento READ_UNCOMMITTED conforme definido pelo padrão ANSI. No entanto, como as operações de leitura são executadas em READ_UNCOMMITTED, poucas operações de bloqueio realmente ocorrem ou levam à contenção no sistema.  

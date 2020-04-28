@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729023"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar um banco de dados MDS em uma instância gerenciada
@@ -48,7 +48,7 @@ Para preparar, você precisa criar e configurar uma instância gerenciada do ban
      - Ferramentas de gerenciamento da Web
      - Console de Gerenciamento IIS
      - Serviços da World Wide Web
-     - Desenvolvimento de Aplicativo
+     - Desenvolvimento de aplicativo
      - .NET Extensibility 3.5
      - Extensibilidade do .NET 4.5
      - ASP.NET 3.5
@@ -198,9 +198,9 @@ O MDS também dá suporte à autenticação de senha e SQL Server de Active Dire
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Atualização [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e versão do banco de dados SQL
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Atualização [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] e versão do banco de dados SQL
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Melhora[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Melhora[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 Instale a **atualização cumulativa do SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]será atualizado automaticamente.
 
@@ -233,5 +233,5 @@ Para corrigir esse problema, você precisa atualizar a versão do banco de dados
 
 - [Banco de dados do Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicativo Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)
-- [Página de configuração do banco de dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [O que há de novo no Master Data Services &#40;o MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [Página Configuração do Banco de Dados &#40;Gerenciador de Configuração do Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Novidades no MDS &#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)

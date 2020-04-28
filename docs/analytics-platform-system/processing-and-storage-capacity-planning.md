@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400540"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidade de processamento e armazenamento no Analytics Platform System
 Seus requisitos de negócios determinam o número de unidades de escala de dados e o tamanho dos discos do nó de computação que você precisa em seu dispositivo de sistema de plataforma de análise (APS). Use esses cálculos de armazenamento e processamento para orientar suas decisões de compra e planejamento de capacidade.  
   
   
-## <a name="section1"></a>Planejando a capacidade de processamento  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>Planejando a capacidade de processamento  
 O desempenho de consulta para o PDW (data warehouse paralelo) SQL Server depende muito do número de núcleos de CPU trabalhando em seus dados em paralelo. Dentro dos limites, o paralelismo crescente melhora o desempenho de consulta MPP (processamento paralelo maciço). Mesmo que o tamanho dos dados seja relativamente pequeno, o poder do mecanismo de consulta MPP é aprimorado por ter um paralelismo maior.  
   
 Por exemplo, um dispositivo com 12 nós de computação tem 192 núcleos de CPU que processam seus dados em paralelo. Esse é um paralelismo de 192 vias! Um dispositivo com nós de computação 56 tem 896 núcleos funcionando em paralelo. Essa magnitude de paralelismo não é atingível sem a computação MPP.  
@@ -35,7 +35,7 @@ O upgrade é o percentual de aumento da capacidade aumentando o Uunits de escala
 |Unidades de escala de dados|Nós de computação|Núcleos de CPU|Memória (GB)|Premium|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
-|2|4|64|1.024|100%|  
+|2|4|64|1024|100%|  
 |3|6|96|1536|50%|  
 |4|8|128|2.048|33%|  
 |5|10|160|2560|25%|  
@@ -72,16 +72,16 @@ O upgrade é o percentual de aumento da capacidade aumentando o Uunits de escala
 |5|15|240|3.840|25%|  
 |6|18|288|4.608|20%|  
 |7|21|336|5.376|17%|  
-|8|24|384|6.144|140|  
+|8|24|384|6.144|14%|  
 |9|27|432|6.912|13|  
 |12|36|576|9.216|33%|  
 |15|45|720|11.520|25%|  
 |18|54|864|13.824|20%|  
   
-## <a name="section2"></a>Planejando a capacidade de armazenamento  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Planejando a capacidade de armazenamento  
 Esta tabela estima que você pode carregar e armazenar até 6 petabytes de dados não compactados em um dispositivo de sistema de plataforma de análise totalmente compilado. 
   
-|Console|Tamanho da unidade|Armazenamento de dados físicos por nó de computação|Máximo de nós de computação por rack|Armazenamento de dados máximo físico por rack|Armazenamento máximo de dados de usuário estimado por rack|Máximo de racks|Armazenamento máximo de dados do usuário estimado por dispositivo|  
+|Fornecedor|Tamanho da unidade|Armazenamento de dados físicos por nó de computação|Máximo de nós de computação por rack|Armazenamento de dados máximo físico por rack|Armazenamento máximo de dados de usuário estimado por rack|Máximo de racks|Armazenamento máximo de dados do usuário estimado por dispositivo|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  

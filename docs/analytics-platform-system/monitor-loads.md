@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400963"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorar cargas em data warehouse paralelos
@@ -26,7 +26,7 @@ Monitore cargas de [dwloader](dwloader.md) ativas e recentes usando o console de
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Independentemente do método usado para monitorar uma carga, o logon deve ter permissão para acessar as fontes de dados subjacentes. 
 
 <!-- MISSING LINKS

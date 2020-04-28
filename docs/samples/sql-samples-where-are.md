@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74318979"
 ---
 # <a name="sql-samples"></a>Exemplos de SQL
@@ -52,7 +52,7 @@ Os bancos de dados AdventureWorks podem ser encontrados na página de [instalaç
 Há uma série de exemplos de código Microsoft Azure e exemplos disponíveis no GitHub no .NET, Java, Python, Node. js, PHP e Ruby. Além disso, Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um modelo único, você pode implantar vários serviços, juntamente com suas dependências. Use o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
 
 - [Exemplos do Azure](https://github.com/Azure-Samples)
-- [Modelos de início rápido do Azure](https://azure.microsoft.com/resources/templates/)
+- [Modelos de Início Rápido do Azure](https://azure.microsoft.com/resources/templates/)
 
 
 

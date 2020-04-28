@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400902"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Redefinição de senha-sistema de plataforma de análise
@@ -33,7 +33,7 @@ A conta de **administrador** local nos computadores que hospedam as máquinas vi
 > [!IMPORTANT]  
 > Para a atualização 1 do dispositivo, **Configuration Manager** não altera corretamente a senha das contas de administrador local em todas as VMs do PDW. Se isso for necessário, entre em contato com o CSS para obter instruções adicionais.  
   
-**administrador**  
+**sa**  
 O logon do **SA** no SQL Server. **SA** é um membro da função de servidor fixa **sysadmin** e é um administrador de SQL Server. A senha do logon **SA** também pode ser alterada usando a instrução **ALTER LOGIN** .  
   
 ## <a name="password-requirements"></a>Requisitos de senha  

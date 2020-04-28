@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095983"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de execução de procedimentos armazenados estendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Em vez disso, use a integração CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Em vez disso, use a integração CLR.  
   
  A execução de um procedimento armazenado estendido tem as seguintes características:  
   
@@ -47,8 +47,8 @@ ms.locfileid: "74095983"
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
-## <a name="parameters"></a>parâmetros  
- \@*retval*  
+## <a name="parameters"></a>Parâmetros  
+ \@ *retval*  
  É um valor de retorno.  
   
  \@*param1*  
@@ -62,6 +62,6 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
   
 ## <a name="see-also"></a>Consulte Também  
  [Programando procedimentos armazenados estendidos](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
- [Consultando procedimentos armazenados estendidos no SQL Server](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
+ [Consulta de procedimentos armazenados estendidos no SQL Server](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

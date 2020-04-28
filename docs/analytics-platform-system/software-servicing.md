@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400311"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Manutenção de software no Analytics Platform System
 Esta seção resume os requisitos de manutenção de software para os dispositivos de análise da plataforma do Analytics, incluindo os hotfixes do WSUS e do sistema de plataforma de análise.  
   
-## <a name="Basics"></a>Noções básicas de manutenção de software  
+## <a name="software-servicing-basics"></a><a name="Basics"></a>Noções básicas de manutenção de software  
 **WSUS:** Seu dispositivo de sistema de plataforma de análise precisa ser configurado para receber atualizações do Windows Server Update Services (WSUS). Essas atualizações incluem alterações importantes no software do dispositivo. Depois de configuradas, muitas atualizações serão instaladas automaticamente e não exigirão gerenciamento prático. Normalmente, as atualizações do WSUS são configuradas durante a configuração [Windows Server Update Services &#40;WSUS&#41; &#40;o sistema de plataforma de análise&#41;](configure-windows-server-update-services-wsus.md) etapa executada durante a nova instalação do dispositivo. Caso contrário, essa etapa de configuração poderá ser executada mais tarde. Para obter informações sobre o WSUS, consulte o [Guia do site do WSUS](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Hotfixes:** Além disso, talvez seja necessário aplicar os hotfixes do Analytics Platform System. Um *hotfix* é uma atualização de software que é criada para um cliente específico para resolver um problema com o software de sistema de plataforma de análise. Cada hotfix é um arquivo executável que instala a correção para o problema específico do cliente. Cada hotfix também contém um acúmulo de todas as atualizações de software lançadas anteriormente para Windows, SQL Server e o sistema de plataforma de análise. Se você precisar instalar um hotfix, o suporte da Microsoft fornecerá o hotfix e as instruções.  

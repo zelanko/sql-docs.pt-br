@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401140"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Componentes de hardware para o Analytics Platform System
@@ -21,13 +21,13 @@ ms.locfileid: "74401140"
 O sistema de plataforma de análise (APS) usa componentes escalonáveis para que você possa comprar a quantidade certa de processamento e armazenamento de acordo com seus requisitos de negócios. Ao ordenar APS, você precisará de uma combinação desses componentes principais de hardware. Fornecedores de hardware específicos podem usar diferentes convenções de nomenclatura ou ter componentes adicionais.  
  
   
-## <a name="rackandnetwork"></a>Rack e rede 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>Rack e rede 
  
 Os componentes do APS são todos armazenados em um ou mais racks que se ajustam ao seu data center. Cada rack vem com unidades de distribuição de energia (PDUs), dois interruptores InfiniBand e dois comutadores Ethernet.  
   
 ![Rack e rede](media/rack-and-network.png "Rack e rede do APS")  
   
-## <a name="datascaleunit"></a>Unidade de escala de dados
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>Unidade de escala de dados
  
 Uma unidade de escala de dados contém os hosts de dados e o DAS (armazenamento de conexão direta) para processamento e armazenamento de dados do usuário. Para adicionar capacidade, você adiciona unidades de escala de dados de acordo com as configurações com suporte pelo seu fornecedor de hardware. À medida que aumenta o número de unidades de escala de dados, você precisa adicionar mais componentes de rede & de rack, conforme necessário, para fornecer mais energia, rede e infraestrutura de rack.  
   
@@ -65,7 +65,7 @@ O número total de discos para os nós de computação:
   
 **Para tamanhos de disco**, o armazenamento de conexão direta pode ter unidades de disco de 1, 2 ou 3 terabytes. Todas as unidades de escala de dados devem ter discos do mesmo tamanho.  
   
-## <a name="basescaleunit"></a>Unidade de escala de base 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>Unidade de escala de base 
  
 A unidade de escala de base contém o número mínimo de hosts de energia cérebro, hosts de dados e armazenamento de conexão direta que é necessário para o dispositivo. Ele inclui os componentes a seguir. 
   

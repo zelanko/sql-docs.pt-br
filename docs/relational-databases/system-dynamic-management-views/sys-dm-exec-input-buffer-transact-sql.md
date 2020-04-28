@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74097876"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
@@ -51,7 +51,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>Tabela retornada
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|
+|Nome da coluna|Tipo de dados|Descrição|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|O tipo de evento no buffer de entrada para o SPID especificado.|
 |**parâmetro**|**smallint**|Todos os parâmetros fornecidos para a instrução.|

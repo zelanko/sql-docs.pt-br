@@ -11,10 +11,10 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728908"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Atualizar Assistente para Banco de Dados (Gerenciador de Configuração do Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728908"
 ## <a name="upgrade-review"></a>Análise da atualização  
  Analise as informações especificadas nesta página. Se estiver correto, clique em **Avançar** para atualizar o banco de dados especificado.  
   
-|Nome do controle|DESCRIÇÃO|  
+|Nome do controle|Descrição|  
 |------------------|-----------------|  
-|**Instância de SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
+|**Instância do SQL Server**|O nome da instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] selecionada no momento.|  
 |**Banco de dados Master Data Services**|O nome do banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] selecionado no momento.|  
   
 ## <a name="progress-and-finish"></a>Progresso e Conclusão  

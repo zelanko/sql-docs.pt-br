@@ -15,20 +15,20 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056655"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o Assistente de Migração de Dados
 
 As instruções passo a passo a seguir ajudam a usar o Assistente de Migração de Dados para executar uma avaliação dimensionada com êxito para atualização de SQL Server locais ou SQL Server em execução em VMs do Azure ou para migrar para o banco de dados SQL do Azure.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Designe um computador de ferramentas em sua rede a partir do qual o DMA será iniciado. Verifique se este computador tem conectividade com seus destinos de SQL Server.
-- Baixar e instalar:
+- Baixe e instale:
   - [Assistente de migração de dados](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 ou superior.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 ou superior.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 ou superior.
@@ -64,7 +64,7 @@ Para carregar os módulos, execute as seguintes etapas:
 
     O PowerShell agora deve carregar esses módulos automaticamente quando uma nova sessão do PowerShell é iniciada.
 
-## <a name="create-inventory"></a>Criar um inventário de servidores SQL
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Criar um inventário de servidores SQL
 
 Antes de executar o script do PowerShell para avaliar seus SQL Servers, você precisa criar um inventário dos SQL Servers que você deseja avaliar.
 
@@ -113,7 +113,7 @@ Depois de carregar os módulos do PowerShell no diretório Modules e criar um in
 
 Os parâmetros associados à função dmaDataCollector são descritos na tabela a seguir.
 
-|Parâmetro  |DESCRIÇÃO |
+|Parâmetro  |Descrição |
 |---------|---------|
 |**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**.<br/>Para obter mais informações, consulte [criar um inventário de servidores SQL](#create-inventory). |
 |**csvPath** | O caminho para o arquivo de inventário CSV.  Usado somente quando **getServerListFrom** é definido como **CSV**. |
@@ -136,14 +136,14 @@ Após a conclusão da avaliação, agora você estará pronto para importar os d
 
 Os parâmetros associados à função dmaProcessor são descritos na tabela a seguir.
 
-|Parâmetro  |DESCRIÇÃO |
+|Parâmetro  |Descrição |
 |---------|---------|
 |**processo** | O local para o qual o arquivo JSON será processado. Os valores possíveis são **SqlServer** e **AzureSQLDatabase**. |
 |**serverName** | A instância de SQL Server para a qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o parâmetro **processto** , inclua somente o nome SQL Server (não include. Database.Windows.net). Você será solicitado a fornecer dois logons ao direcionar o banco de dados SQL do Azure; a primeira é suas credenciais de locatário do Azure, enquanto a segunda é seu logon de administrador para o SQL Server do Azure. |
 |**CreateDMAReporting** | O banco de dados de preparo a ser criado para processar o arquivo JSON.  Se o banco de dados especificado já existir e você definir esse parâmetro como um, os objetos não serão criados.  Esse parâmetro é útil para recriar um único objeto que foi Descartado. |
 |**Createdatawarehouse** | Cria o data warehouse que será usado pelo relatório de Power BI. |
 |**NomeDoBancoDeDados** | O nome do banco de dados DMAReporting. |
-|**warehousename** | O nome do banco de dados de data warehouse. |
+|**warehousename** | O nome do banco de dados data warehouse. |
 |**jsonDirectory** | O diretório que contém o arquivo de avaliação JSON.  Se houver vários arquivos JSON no diretório, então eles serão processados um a um. |
 
 A função dmaProcessor deve levar apenas alguns segundos para processar um único arquivo.
@@ -263,7 +263,7 @@ Esta seção é a parte principal do relatório, que mostra a prontidão de um b
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Título
 - ObjectType
 - ImpactedObjectName
 

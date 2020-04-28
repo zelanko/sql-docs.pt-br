@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400928"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes data warehouse paralelos – Analytics Platform System
@@ -40,7 +40,7 @@ To learn more about Analytics Platform System, see:
   
 ![Software data warehouse paralelo](media/parallel-data-warehouse-software.png "Software data warehouse paralelo")  
   
-## <a name="sec1"></a>Software de dispositivo – processamento de consultas e armazenamento de dados do usuário  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>Software de dispositivo – processamento de consultas e armazenamento de dados do usuário  
   
 ### <a name="control-node"></a>Nó de Controle  
 Mecanismo MPP  
@@ -127,7 +127,7 @@ Os espaços de armazenamento do Windows gerenciam os dados do usuário como um p
 ### <a name="hyper-v"></a>Hyper-V  
 O Microsoft Hyper-V Server fornece uma solução de virtualização simples e confiável. O Analytics Platform System usa virtualização para balancear os recursos de CPU e fornecer alta disponibilidade para os nós do PDW e para os componentes do Appliance Fabric.  
   
-## <a name="sec2"></a>Dados não relacionais
+## <a name="non-relational-data"></a><a name="sec2"></a>Dados não relacionais
 A tecnologia polybase integra dados de SQL Server PDW com dados do Hadoop externos. Os dados do Hadoop podem ser armazenados em qualquer uma dessas fontes de dados do Hadoop:  
   
 -   Distribuição do Hadoop Hortonworks  

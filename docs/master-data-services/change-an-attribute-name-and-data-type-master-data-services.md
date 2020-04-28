@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729673"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Alterar um Nome de Atributo e um Tipo de Dados (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729673"
 
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode alterar o nome de um atributo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-name-and-type"></a>Para alterar um nome e um tipo de atributo  
   
@@ -53,11 +53,11 @@ ms.locfileid: "73729673"
   
 6.  Selecione a linha do atributo que deseja editar e clique em **Editar**.  
   
-7.  Na caixa **Nome** , digite o nome atualizado do atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributo, consulte [Palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+7.  Na caixa **Nome** , digite o nome atualizado do atributo. Para obter uma lista de palavras que não devem ser usadas como nomes de atributos, consulte [palavras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 8.  Na lista **Tipo de atributo** , selecione outro tipo.  
   
-9. Clique em **Save** (Salvar).  
+9. Clique em **Salvar**.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Criar um atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729349"
 ---
 # <a name="deprecated-master-data-services-features"></a>Recursos preteridos do Master Data Services
@@ -49,13 +49,13 @@ ms.locfileid: "73729349"
   
 ## <a name="attribute-entity-transaction-log-type"></a>Tipo de log de transações da entidade Atributo  
 O tipo de log de transações da entidade “Atributo” foi preterido. Migre para o tipo de log de transações da entidade “Membro”. Para obter informações sobre tipos de log de transação de entidade, consulte o seguinte tópico:
-* [Alterar o tipo de log de transações de entidade (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [Alterar o Tipo de Log de Transações de Entidade (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Histórico de revisão de membro](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Recursos externos  
  Postagem do blog, [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Preterido: hierarquias explícitas e coleções), no msdn.com.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)  
+ [Recursos do Master Data Services descontinuados](../master-data-services/discontinued-master-data-services-features.md)  
   
   

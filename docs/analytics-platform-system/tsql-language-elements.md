@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399831"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos da linguagem T-SQL para data warehouse paralelos
@@ -30,7 +30,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [Execute](../t-sql/language-elements/execute-transact-sql.md)
 * [expressões](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [Solução alternativa de propriedade de identidade](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [Solução alternativa da propriedade IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
@@ -46,20 +46,20 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
 ## <a name="operators"></a>Operadores
-* [+ (Adicionar)](../t-sql/language-elements/add-transact-sql.md)
-* [+ (Concatenação de cadeias de caracteres)](../t-sql/language-elements/string-concatenation-transact-sql.md)
+* [+ (Somar)](../t-sql/language-elements/add-transact-sql.md)
+* [+ (Concatenação de cadeia de caracteres)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-(Negativo)](../t-sql/language-elements/unary-operators-negative.md)
 * [-(Subtrair)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplicar)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/(Divisão)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (dividir)](../t-sql/language-elements/divide-transact-sql.md)
 * [Módulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caracteres curinga para correspondência
 * [= (Igual a)](../t-sql/language-elements/equals-transact-sql.md)
-* [> (maior que)](../t-sql/language-elements/greater-than-transact-sql.md)
-* [< (menor que)](../t-sql/language-elements/less-than-transact-sql.md)
-* [>= (ótimo ou igual a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [<= (menor ou igual a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [> (Maior que)](../t-sql/language-elements/greater-than-transact-sql.md)
+* [< (Menor que)](../t-sql/language-elements/less-than-transact-sql.md)
+* [>= (Maior ou igual a)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [>= (Menor ou igual a)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  (diferente de)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Diferente de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
@@ -69,16 +69,16 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [NÃO É](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [OU](../t-sql/language-elements/or-transact-sql.md)
 
-### <a name="bitwise-operators"></a>Operadores Bit a bit
-* [& (AND-bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
+### <a name="bitwise-operators"></a>Operadores bit a bit
+* [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (OR bit a bit)](../t-sql/language-elements/bitwise-or-transact-sql.md)
 * [^ (OR exclusivo de or)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (Não de bit a bit)](../t-sql/language-elements/bitwise-not-transact-sql.md)
-* [^ = (Or EQUALs exclusivo de or)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
-* [| = (Or EQUALs or)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
-* [&= (bit e EQUALs)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
+* [^= (OR EQUALS exclusivo bit a bit)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
+* [|= (OR EQUALS bit a bit)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
+* [&= (AND EQUALS bit a bit)](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
 
 ## <a name="functions"></a>Funções
 * [@@DATEFIRST](../t-sql/functions/datefirst-transact-sql.md)
@@ -153,7 +153,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [LOG10](../t-sql/functions/log10-transact-sql.md)
 * [LOWER](../t-sql/functions/lower-transact-sql.md)
 * [LTRIM](../t-sql/functions/ltrim-transact-sql.md)
-* [MÁX.](../t-sql/functions/max-transact-sql.md)
+* [MAX](../t-sql/functions/max-transact-sql.md)
 * [MÍN.](../t-sql/functions/min-transact-sql.md)
 * [MONTH](../t-sql/functions/month-transact-sql.md)
 * [NCHAR](../t-sql/functions/nchar-transact-sql.md)
@@ -163,7 +163,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
 * [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [Funções escalares de ODBC](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [Funções escalares ODBCS](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
 * [Cláusula OVER](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
@@ -217,7 +217,7 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
 * [UNICODE](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
-* [USER](../t-sql/functions/user-transact-sql.md)
+* [USUÁRIO](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
 * [VAR](../t-sql/functions/var-transact-sql.md)
 * [VARP](../t-sql/functions/varp-transact-sql.md)
@@ -253,27 +253,27 @@ Elementos de linguagem T-SQL para APS (sistema de plataforma analítica) SQL Ser
 * [sp_tables](../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
 * [sp_unprepare](../relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md)
 
-## <a name="set-statements"></a>Instruções SET
-* [DEFINIR ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
-* [DEFINIR ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
+## <a name="set-statements"></a>instruções SET
+* [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
+* [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [DEFINIR ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [DEFINIR IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [DEFINIR LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [DEFINIR NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
-* [DEFINIR TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
+* [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [DEFINIR XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Próximas etapas
 Para obter mais informações de referência, consulte [instruções t-SQL](tsql-statements.md) e [exibições do sistema t-SQL](tsql-system-views.md).

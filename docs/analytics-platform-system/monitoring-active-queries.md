@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400912"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitorando consultas ativas – data warehouse paralelos
 Este artigo mostra como usar o console de administração do e o SQL Server PDW exibições do sistema para monitorar consultas ativas. Consulte [monitorar o dispositivo usando o console de administração](monitor-the-appliance-by-using-the-admin-console.md) e [exibições do sistema](tsql-system-views.md) para obter informações sobre essas ferramentas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 Independentemente do método usado para monitorar consultas ativas, o logon deve ter as permissões descritas em "usar todo o console de administração" em [conceder permissões para usar o console de administração](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Monitorar consultas ativas  
+## <a name="monitor-active-queries"></a><a name="PermsAdminConsole"></a>Monitorar consultas ativas  
 Tanto o console de administração do quanto o SQL Server PDW exibições do sistema podem ser usados para monitorar consultas ativas. Siga as instruções abaixo.  
   
 ### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Para monitorar consultas ativas usando o console de administração  

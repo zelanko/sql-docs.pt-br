@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095382"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guia de Programação do SQL Server Management Objects (SMO)
@@ -27,7 +27,7 @@ ms.locfileid: "74095382"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]O SMO (Management Objects) é uma coleção de objetos projetados para a programação de todos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aspectos do gerenciamento. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Management Objects (RMO) é uma coleção de objetos que encapsula o gerenciamento de replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|
 |[Guia de Introdução ao SMO](getting-started-in-smo.md)|Fornece informações sobre como iniciar o desenvolvimento de um aplicativo SMO
 |[Criando programas SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Tarefas específicas de programação](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Fornece informações sobre como programar os objetos SMO nos namespaces Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi e Microsoft.SqlServer.Management.Trace.<br /><br /> Isso inclui as instruções para gravar programas que definem bancos de dados e gerenciam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar SMO para criar bancos de dados, executar backups, criar trabalhos, configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], atribuir permissões e executar muitas outras tarefas administrativas.|  

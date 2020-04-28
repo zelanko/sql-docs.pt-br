@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782658"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -82,12 +82,12 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Você pode usar o|**float-null**|  
 |**SQLAOPSUM**|Você pode usar o|**Quantia**|  
 |**SQLAOPAVG**|Você pode usar o|**Média**|  
-|**SQLAOPCNT**|Você pode usar o|**Contar**|  
+|**SQLAOPCNT**|Você pode usar o|**Count**|  
 |**SQLAOPMIN**|Você pode usar o|**Min**|  
 |**SQLAOPMAX**|Você pode usar o|**Maximizar**|  
 |**SQLDATETIM4**|Você pode usar o|**smalldatetime**|  
 |**SQLMONEY4**|Você pode usar o|**Smallmoney**|  
-|**SQLFLT4**|Você pode usar o|**Real**|  
+|**SQLFLT4**|Você pode usar o|**Foto**|  
 |**SQLUNIQUEID**|Você pode usar o|**uniqueidentifier**|  
 |**SQLNCHAR**|Não|**Nchar**|  
 |**SQLNVARCHAR**|Não|**Nvarchar**|  

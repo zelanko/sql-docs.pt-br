@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728970"
 ---
 # <a name="model-permissions-master-data-services"></a>Permissões de modelo (Master Data Services)
@@ -27,16 +27,16 @@ ms.locfileid: "73728970"
   As permissões de modelo se aplicam a todas as entidades, hierarquias derivadas, hierarquias explícitas e coleções existentes dentro do modelo. As permissões atribuídas ao modelo podem ser substituídas para qualquer objeto individual.  
   
 > [!NOTE]  
->  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+>  Se um usuário for administrador de modelo, o modelo será exibido em todas as áreas funcionais da interface do usuário. Caso contrário, o modelo será exibido apenas na área funcional **Gerenciador** . Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
-|Permissão|DESCRIÇÃO|  
+|Permissão|Descrição|  
 |----------------|-----------------|  
 |**Ler**|O usuário pode ler membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
-|**Criada**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
-|**Cumulativo**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
+|**Criar**|O usuário pode criar membros e atribuir valores de atributo durante a criação.|  
+|**Atualização**|O usuário pode atualizar membros, atributos, associações de hierarquia ou hierarquias de coleção.|  
 |**Delete (excluir)**|O usuário pode excluir membros.|  
-|**Deny**|Nega todo o acesso ao modelo|  
-|**Admin**|Permissão de administrador no modelo. A permissão de administrador está disponível somente no nível do modelo.|  
+|**Negar**|Nega todo o acesso ao modelo|  
+|**Administração**|Permissão de administrador no modelo. A permissão de administrador está disponível somente no nível do modelo.|  
   
  As permissões Ler, Criar, Atualizar e Excluir podem ser combinadas entre si. Ao atribuir permissões Criar, Atualizar e Excluir, a permissão Ler será atribuída automaticamente.  
   

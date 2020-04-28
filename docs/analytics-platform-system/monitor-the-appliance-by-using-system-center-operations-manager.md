@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400976"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitorar com o sistema de plataforma System Center Operations Manager-Analytics
@@ -21,7 +21,7 @@ Use o System Center Operations Manager (SCOM) para monitorar o dispositivo de si
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
   
 1.  System Center Operations Manager 2007 R2, 2012 ou 2012 SP1 devem estar instalados e em execução.  
   
@@ -46,7 +46,7 @@ Alertas são onde você pode encontrar os alertas atuais a serem gerenciados.
   
 ![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
-### <a name="appliances"></a>Dispositivos  
+### <a name="appliances"></a>Eletrodomésticos  
 Os dispositivos são onde você encontrará os dispositivos SQL Server PDW atualmente descobertos e monitorados em seu ambiente. Se um dispositivo não aparecer aqui e você tiver criado a conexão ODBC para ele, pode haver algo errado com sua conta do PDWWatcher. Se eles aparecerem como "não monitorado", pode haver algo errado com sua conta do PDWMonitor. Seja paciente, pois o SCOM não faz alterações em tempo real, mas periodicamente verifica se os novos dispositivos monitoram e enviam periodicamente consultas a dispositivos para monitoramento.  
   
 ![Dispositivos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  

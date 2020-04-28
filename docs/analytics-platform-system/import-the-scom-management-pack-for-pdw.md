@@ -10,33 +10,33 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401079"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar o pacote de gerenciamento do SCOM – sistema de plataforma de análise
 Siga estas etapas para importar os pacotes de gerenciamento System Center Operations Manager (SCOM) para o sistema de plataforma de análise (APS). Os pacotes de gerenciamento são necessários para monitorar data warehouse paralelos do SCOM. 
   
-## <a name="BeforeBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de começar  
 **Pré-requisitos**  
   
 System Center Operations Manager 2007 R2 deve estar instalado e em execução.  
   
 Os pacotes de gerenciamento devem ser instalados. Confira [instalar os pacotes de gerenciamento do SCOM &#40;o sistema de plataforma de análise&#41;](install-the-scom-management-packs.md).  
   
-## <a name="Step1"></a>Etapa 1: importar o pacote de gerenciamento básico do dispositivo SQL Server  
+## <a name="step-1-import-the-sql-server-appliance-base-management-pack"></a><a name="Step1"></a>Etapa 1: importar o pacote de gerenciamento básico do dispositivo SQL Server  
   
 1.  Faça logon no computador com uma conta que seja membro da função Administradores do Operations Manager do Grupo de Gerenciamento do Operations Manager 2007.  
   
 2.  No console de Operações, clique em **Administração**.  
   
-3.  Clique com o botão direito do mouse no nó **pacotes de gerenciamento** e clique em **importar pacotes de gerenciamento**.  
+3.  Clique com o botão direito do mouse no nó **Pacotes de Gerenciamento** e, em seguida, clique em **Importar Pacotes de Gerenciamento**.  
   
     ![Clique em Importar Pacotes de Gerenciamento](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  Na lista de pacotes de gerenciamento, selecione o pacote de gerenciamento que você deseja importar, clique em **selecionar**e, em seguida, clique em **Adicionar**.  
+4.  Na lista de pacotes de gerenciamento, selecione o pacote de gerenciamento que deseja importar, clique em **Selecionar** e, em seguida, clique em **Adicionar**.  
   
     ![Lista de pacotes de gerenciamento](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -56,9 +56,9 @@ Os pacotes de gerenciamento devem ser instalados. Confira [instalar os pacotes d
   
     ![Depois de concluir, clique em Fechar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>Importar o pacote de monitoramento para o Microsoft SQL Server 2008 R2 Parallel data warehouse Appliance  
+## <a name="import-the-monitoring-pack-for-microsoft-sql-server-2008-r2-parallel-data-warehouse-appliance"></a><a name="Step2"></a>Importar o pacote de monitoramento para o Microsoft SQL Server 2008 R2 Parallel data warehouse Appliance  
   
-1.  Clique com o botão direito do mouse no nó **pacotes de gerenciamento** e clique em **importar pacotes de gerenciamento**.  
+1.  Clique com o botão direito do mouse no nó **Pacotes de Gerenciamento** e, em seguida, clique em **Importar Pacotes de Gerenciamento**.  
   
 2.  Escolha **Adicionar do disco**....  
   
@@ -72,7 +72,7 @@ Os pacotes de gerenciamento devem ser instalados. Confira [instalar os pacotes d
   
     ![Clique em instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
     ![Clique em fechar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

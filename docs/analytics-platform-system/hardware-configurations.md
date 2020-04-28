@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401130"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurações de hardware – Analytics Platform System
@@ -26,7 +26,7 @@ O hardware do sistema de plataforma de análise (APS) é arquitetado com unidade
 -   [Configurações de vários racks](#section2)  
 
   
-## <a name="section1"></a>Configurações de um rack  
+## <a name="one-rack-configurations"></a><a name="section1"></a>Configurações de um rack  
 O primeiro rack do dispositivo contém os componentes necessários para executar o PDW. A configuração mínima do dispositivo é um rack e uma rede, além de uma unidade de escala de base. Esses diagramas mostram maneiras que o primeiro rack do dispositivo pode ser configurado. Você pode ter entre 2 e 9 nós de computação no primeiro rack, dependendo do fornecedor do hardware.  
   
 ### <a name="first-rack-configurations---dell"></a>Primeiras configurações de rack-DELL  
@@ -39,7 +39,7 @@ A configuração mínima para um dispositivo HPE tem 2 nós de computação. Voc
   
 ![Configurações do primeiro rack do HPE para HPE](media/first-rack-configurations-hpe.png "Configurações do primeiro rack do HPE")  
   
-## <a name="section2"></a>Configurações de vários racks  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>Configurações de vários racks  
 Para adicionar capacidade ao PDW, você pode adicionar unidades de escala de dados, juntamente com o rack adicional & componentes de rede, conforme necessário, para fornecer a energia, a rede e a infraestrutura de rack apropriadas. Cada rack adicional & rede requer um host passivo.  
   
 Cada fornecedor de hardware especifica o número de unidades de escala de dados que você pode adicionar, dada a capacidade de seu dispositivo. É recomendável adicionar unidades de escala de dados suficientes para ver pelo menos um upgrade de 20% no desempenho. Por exemplo, a adição de uma unidade de escala de dados a um dispositivo que já tem 20 unidades de escala de dados pode resultar em um lucro de desempenho insignificante. O lucro líquido não valeria o custo e o esforço.  

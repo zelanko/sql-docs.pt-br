@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728936"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Exigir valores de atributos (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728936"
 > [!NOTE]  
 >  Os membros que não possuírem valores de atributos baseados em domínio não serão exibidos em hierarquias derivadas baseadas nessas relações.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Para executar esse procedimento:  
   
 -   Você deve ter permissão para acessar a área funcional **Administração do sistema** .  
   
--   Você deve ser um administrador de modelo. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Você deve ser um administrador de modelo. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Para solicitar valores de atributos  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728936"
   
 2.  Na barra de menus, aponte para **Gerenciar** e clique em **Regras de Negócios**.  
   
-3.  Na página **Regras de Negócio** , na lista suspensa **Modelo** , selecione um modelo.  
+3.  Na página **regras de negócio** , na lista suspensa **modelo** , selecione um modelo.  
   
 4.  Na lista suspensa **Entidade** , escolha uma entidade.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73728936"
   
 7.  Na caixa **Nome** , digite um nome para a regra de negócios.  
   
-8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócio.  
+8.  Opcionalmente, no campo **Descrição** , digite a descrição da regra de negócios.  
   
 9. Abaixo do bloco **Então** , clique em **Adicionar**. Um painel será exibido.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "73728936"
   
 11. Na lista suspensa **Atributo** , selecione um atributo.  
   
-12. Clique em **Save** (Salvar). Uma nova linha será adicionada à grade **Então** .  
+12. Clique em **Salvar**. A nova linha será adicionada à grade **Então** .  
   
-13. Clique em **Save** (Salvar).  
+13. Clique em **Salvar**.  
   
 14. Clique em **Publicar Tudo**.  
   
-15. Na caixa de diálogo de confirmação, clique em **OK**. O valor da coluna **Estado da Regra de Negócio** é **Ativa**.  
+15. Na caixa de diálogo de confirmação, clique em **OK**. O valor da coluna **Estado da Regra de Negócios** é **Ativa**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
   
 -   Aplique regras de negócio a dados seguindo um destes procedimentos:  
   
-    -   [Validar membros específicos em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Validar membros específicos em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Validar uma versão em relação às regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Validar uma versão em relação a regras de negócio &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

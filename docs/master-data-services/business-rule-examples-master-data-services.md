@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728702"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ações de regras de negócio (Master Data Services)
@@ -27,7 +27,7 @@ Para obter instruções sobre como implantar os modelos de exemplo, consulte [In
   
   
 ## <a name="business-rule-examples"></a>Exemplos de regras de negócio  
-Modelo de exemplo |Entidade  |Nome da regra de negócio| DESCRIÇÃO  
+Modelo de exemplo |Entidade  |Nome da regra de negócio| Descrição  
 ---------|---------|---------|-----------|  
 Cliente    | Cliente   | Termos de pgto. de pessoa| Especifica as condições de pagamento padrão para clientes.          
 Na regra de negócio a seguir, se o valor do atributo CustomerType atender à `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Caso contrário, nenhuma ação será tomada.  
@@ -42,7 +42,7 @@ Else
   
 **--------------------------------------------------**  
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio|DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|---------------  
 Cliente     | Cliente    | Termos de pgto. da org. | Especifica as condições de pagamento padrão para organizações.         
 Na regra de negócio a seguir, se o valor do atributo CustomerType atender à `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Caso contrário, nenhuma ação será tomada.  
@@ -58,7 +58,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio| DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio| Descrição    
 ---------|---------|---------|-----------  
 Produto     |  Produto       | DaysToManufacture |Especifica o intervalo de dias até a fabricação interna.          
 Na regra de negócio a seguir, se o valor do atributo InHouseManufacture atender à `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Caso contrário, nenhuma ação será tomada.  
@@ -74,7 +74,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio|DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|-------------  
 Produto     |Produto         |Campos obrigatórios| Especifica os atributos necessários para os membros da entidade de produto.           
 Na regra de negócio a seguir, em todas as condições, a `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Os valores de atributo não podem ser Nulo nem vazio.  
@@ -99,7 +99,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio|DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|-----------  
 Produto     | Produto        |  Custo padrão| Exige que o custo padrão seja maior que 0.        
 Na regra de negócio a seguir, em todas as condições, a `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
@@ -115,7 +115,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio|DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|------------  
 Produto     | Produto        | FG MSRP Custo|Especifica que, se o produto for uma mercadoria concluída, o MSRP (preço de varejo sugerido pelo fabricante) e os custos do revendedor deverão ser maiores que 0.           
   
@@ -133,10 +133,10 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de exemplo  |Entidade  |Nome da regra de negócio|DESCRIÇÃO    
+Modelo de exemplo  |Entidade  |Nome da regra de negócio|Descrição    
 ---------|---------|---------|------------  
 Produto     | Produto        |  Nome padrão| Especifica o nome do produto padrão com base nos valores dos atributos Color e Class. Quando o valor do atributo Color não for YLO e o atributo Class não for NA, o nome padrão será Yellow NA.         
-Na regra de negócio a seguir, se os atributos Color e Class não atenderem à condição de regra `is equal` , a `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
+Na regra de negócio a seguir, se os atributos Color e Class não atenderem à condição de regra `is equal` , a `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) será aplicada ao atributo Name.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -149,7 +149,7 @@ Else
 **--------------------------------------------------**  
   
   
-**Para exibir os exemplos de regras de negócio nos modelos de exemplo**  
+**Para exibir exemplos de regras de negócio nos modelos de exemplo**  
 1. Navegue até o site do [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] que você configurou depois de instalar o MDS e clique na caixa **Administração do Sistema** .   
 Para obter instruções sobre a configuração do site, consulte [Instalação e configuração do Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Clique no modelo de exemplo que contém a regra de negócio, conforme listado nas tabelas acima, e clique em **Entidades**.  

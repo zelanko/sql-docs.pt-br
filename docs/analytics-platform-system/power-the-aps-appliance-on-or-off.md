@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400627"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Ligar ou desligar o dispositivo para o Analytics Platform System
@@ -25,7 +25,7 @@ Quando essas instruções especificam a conexão a um nó SQL Server PDW, a cone
   
 Conexões com SQL Server PDW nós podem ser feitas usando os endereços IP atribuídos aos nós ou do computador **HST01** usando os aplicativos **Gerenciador de cluster de failover** (**cluadmin. msc**) ou **Gerenciador do Hyper-V** (**virtmgmt. msc**) e clicando com o botão direito do mouse no nome do nó.  
   
-## <a name="PowerOff"></a>Desligar o dispositivo  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Desligar o dispositivo  
   
 ### <a name="before-you-begin"></a>Antes de começar  
 Antes de desligar o dispositivo, você deve encerrar todas as atividades no dispositivo. Para encerrar todas as atividades:  
@@ -61,7 +61,7 @@ Antes de desligar o dispositivo, você deve encerrar todas as atividades no disp
   
 9. Desligue as unidades de distribuição de energia (PDUs).  
   
-## <a name="PowerOn"></a>Ligar o dispositivo  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Ligar o dispositivo  
   
 ### <a name="to-power-on-the-appliance"></a>Para ligar o dispositivo  
   

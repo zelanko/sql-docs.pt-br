@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056529"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Atualizar SQL Server usando o Assistente de Migração de Dados
@@ -41,7 +41,7 @@ Este artigo fornece instruções passo a passo para atualizar SQL Server locais 
 
 1. Para a origem, insira o SQL Server nome da instância no campo **nome do servidor** na seção detalhes do servidor de **origem** . 
 
-2. Selecione o **tipo de autenticação** com suporte na instância de SQL Server de origem.
+2. Selecione o **Tipo de autenticação** compatível com a instância do SQL Server de origem.
 
 3. Para o destino, insira o SQL Server nome da instância no campo **nome do servidor** na seção detalhes do servidor de **destino** . 
 
@@ -49,7 +49,7 @@ Este artigo fornece instruções passo a passo para atualizar SQL Server locais 
 
 5. É recomendável criptografar a conexão selecionando **criptografar conexão** na seção **Propriedades da conexão** .
 
-6. Clique em **Próximo**.
+6. Clique em **Avançar**.
 
    ![Especificar página de origem e de destino](../dma/media/SourceTarget.png)
 
@@ -95,7 +95,7 @@ O Assistente de Migração de Dados executa validações nas pastas de backup, d
 
    ![Selecionar logons e iniciar a migração](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Exibir resultados
+## <a name="view-results"></a>Exibir os resultados
 
 Você pode monitorar o progresso da migração na página **exibir resultados** .
 

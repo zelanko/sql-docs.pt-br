@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056610"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar SQL Server locais ou SQL Server em VMs do Azure para o banco de dados SQL do Azure usando o Assistente de Migração de Dados
@@ -41,7 +41,7 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 
 1. Para a origem, em **conectar-se ao servidor de origem**, na caixa de texto **nome do servidor** , digite o nome da instância de SQL Server de origem.
 
-2. Selecione o **tipo de autenticação** com suporte na instância de SQL Server de origem.
+2. Selecione o **Tipo de autenticação** compatível com a instância do SQL Server de origem.
 
    > [!NOTE]
    > É recomendável criptografar a conexão marcando a caixa de seleção **criptografar conexão** em **poperties de conexão**.
@@ -72,7 +72,7 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 
 3. Selecione **Conectar**.
 
-4. Selecione um único banco de dados de destino para o qual deseja migrar.
+4. Selecione um único banco de dados de destino da migração.
 
    > [!NOTE]
    > Se você pretende migrar usuários do Windows, na caixa de texto **nome de domínio de usuário externo de destino** , verifique se o nome de domínio do usuário externo meta está especificado corretamente.
@@ -81,11 +81,11 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 
 5. Selecione **Avançar**.
 
-## <a name="select-schema-objects"></a>Selecionar objetos de esquema
+## <a name="select-schema-objects"></a>Selecionar os objetos de esquema
 
-1. Selecione os objetos de esquema do banco de dados de origem que você deseja migrar para o banco de dados SQL do Azure.
+1. Selecione os objetos de esquema do banco de dados de origem que você deseja migrar para o Banco de Dados SQL do Azure.
 
-    ![Selecionar objetos de esquema](../dma/media/select-schema-objects.png)
+    ![Selecionar os objetos de esquema](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
@@ -98,7 +98,7 @@ Este artigo fornece instruções passo a passo para migrar SQL Server no local p
 
     ![Script gerado](../dma/media/generated-script.png)
 
-## <a name="deploy-schema"></a>Implantar esquema
+## <a name="deploy-schema"></a>Implantar o esquema
 
 1. Selecione **implantar esquema**.
 

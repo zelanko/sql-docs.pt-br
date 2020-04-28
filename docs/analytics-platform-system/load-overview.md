@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401046"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Carregando dados em data warehouse paralelos
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Tarefa|DESCRIÇÃO|  
+|Tarefa|Descrição|  
 |--------|---------------|  
 |Crie o banco de dados de preparo.|[Criar o banco de dados de preparo](staging-database.md)|  
 |Carregar com Integration Services.|[Carregar com o Integration Services](load-with-ssis.md)|  

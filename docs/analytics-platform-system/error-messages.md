@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401161"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Mensagens de erro em paralelo data warehouse
 
 As mensagens de erro do PDW (data warehouse paralelo) relatam erros e problemas encontrados pelos componentes do PDW e também podem incluir SQL Server erros na superfície do PDW. Essas mensagens de erro usam uma sintaxe consistente para apresentar informações. Entender essa sintaxe permitirá que você identifique e corrija problemas em SQL Server PDW.  
   
-## <a name="Basics"></a>Noções básicas de mensagem de erro  
+## <a name="error-message-basics"></a><a name="Basics"></a>Noções básicas de mensagem de erro  
 As mensagens de erro retornadas seguem a mesma sintaxe.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
 Estes são os valores possíveis para cada campo:  
   
-|Campo|DESCRIÇÃO|Exemplo|  
+|Campo|Descrição|Exemplo|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|A palavra "erro" ou outro texto alertando o usuário sobre um problema.|ERROR|  
 |*SQL_State_Code*|O código do estado SQL, de acordo com a especificação ODBC. O driver gera o código de estado SQL apropriado sempre que retorna uma mensagem para um aplicativo. O texto "Microsoft" indica a origem do erro.|42000|  

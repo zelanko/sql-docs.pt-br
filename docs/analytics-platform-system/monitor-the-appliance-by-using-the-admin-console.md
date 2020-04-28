@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400939"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorar o dispositivo com o console do administrador-Analytics Platform System
 O console de administração é um aplicativo Web SQL Server PDW que mostra as informações de estado, integridade e desempenho do dispositivo. Os usuários se conectam ao console de administração por meio do Internet Explorer.  
   
-## <a name="About"></a>Sobre o console de administração  
+## <a name="about-the-admin-console"></a><a name="About"></a>Sobre o console de administração  
 ![Início do console de dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Baseado**  
-Página inicial  
+Home  
 Fornece um resumo rápido do estado do dispositivo.  
   
 Integridade  
@@ -35,7 +35,7 @@ Monitor de desempenho
 Exibe grafos do monitor de desempenho.  
   
 **Parallel Data Warehouse**  
-Página inicial  
+Home  
 Fornece um resumo rápido do estado do PDW.  
   
 Sessões  
@@ -67,7 +67,7 @@ Exibe grafos do monitor de desempenho do PDW.
 > [!NOTE]  
 > O console de administração tem uma resolução de tela de 1024x768. O console de administração do exibe melhor com uma resolução de tela de 1280 X 1024 ou superior.  
   
-## <a name="Connect"></a>Conectar-se ao console de administração  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>Conectar-se ao console de administração  
 Para se conectar ao console de administração, o requer:  
   
 -   Pelo menos o Internet Explorer versão 10.  
@@ -78,12 +78,12 @@ Para se conectar ao console de administração, o requer:
   
 Para se conectar ao console de administração, use o Internet Explorer e o HTTPS para navegar até o endereço IP do cluster do nó de controle. Por exemplo, se o endereço IP do cluster do nó de controle `10.192.63.102`for, `https://10.192.63.102` insira na barra de endereços do navegador. A primeira tela solicitará seu **logon** e **senha**. Forneça um logon de autenticação SQL Server e uma senha, ou um logon de autenticação do Windows e uma senha do Windows. Se você estiver usando um logon de autenticação do Windows, o console de administração usará a representação.  
   
-## <a name="RelatedTasks"></a>Tarefas do console de administração  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Tarefas do console de administração  
 O console de administração do fornece a capacidade de monitorar o seguinte:  
   
 |||  
 |-|-|  
-|**Information Type**|**Como acessar no console de administração**|  
+|**Tipo de informação**|**Como acessar no console de administração**|  
 |Status geral do dispositivo|Clique em **estado do dispositivo** no menu superior ou em **página inicial**.|  
 |Alertas|Clique em **Alertas**. Para obter mais informações, consulte [Understanding admin console alerts &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Componentes do dispositivo e seu status|Clique em **estado do dispositivo** no menu superior ou em **página inicial**.|  

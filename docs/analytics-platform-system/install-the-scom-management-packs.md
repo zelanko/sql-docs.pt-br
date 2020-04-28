@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401069"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalar os pacotes de gerenciamento do SQL Server Operations Manager (SCOM) para o Analytics Platform System
 Siga estas etapas para baixar e instalar os pacotes de gerenciamento do System Center Operations Manager (SCOM) para SQL Server PDW. Os pacotes de gerenciamento são necessários para monitorar SQL Server PDW do SCOM.  
   
-## <a name="BeforeBegin"></a>Antes de começar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de começar  
 **Pré-requisitos**  
   
 System Center Operations Manager deve estar instalado e em execução. SQL Server PDW 2012 requer System Center Operations Manager 2007 R2, System Center Operations Manager 2012 ou System Center Operations Manager 2012 service pack 1.  
   
-## <a name="Step1"></a>Etapa 1: baixar os pacotes de gerenciamento  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Etapa 1: baixar os pacotes de gerenciamento  
 Para a carga de trabalho de PDW do APS, baixe o [pacote de gerenciamento do System Center para o Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
 Para o gerenciamento de dispositivos, baixe o [pacote de gerenciamento básico do dispositivo SQL Server](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
@@ -33,7 +33,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Etapa 2: instalar os pacotes de gerenciamento  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>Etapa 2: instalar os pacotes de gerenciamento  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Instalar o pacote de gerenciamento básico do dispositivo SQL Server  
   
@@ -51,7 +51,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Confirmar a instalação](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
     ![Clique em fechar](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -71,7 +71,7 @@ Para versões mais antigas do PDW sem APS, baixe o[pacote de monitoramento do Sy
   
     ![Confirmar a instalação](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  Clique em **fechar**  
+5.  Clique em **Fechar**.  
   
     ![Instalação concluída](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

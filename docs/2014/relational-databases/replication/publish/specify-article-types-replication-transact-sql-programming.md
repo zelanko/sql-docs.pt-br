@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882122"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artigo (Programação Transact-SQL de replicação)
@@ -34,7 +34,7 @@ ms.locfileid: "73882122"
   
 1.  No Publicador do banco de dados de publicação, execute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Especifique um dos seguintes valores para ** \@tipo** para definir o tipo de artigo:  
   
-    -   **logbased** -um artigo de tabela baseada em log, que é o padrão para replicação transacional e de instantâneo. A replicação gera automaticamente o procedimento armazenado usado para filtragem horizontal e a exibição que define um artigo filtrado verticalmente.  
+    -   **logbased** - um artigo de tabela baseado em log que é o padrão para replicação transacional e de instantâneo. A replicação gera automaticamente o procedimento armazenado usado para filtragem horizontal e a exibição que define um artigo filtrado verticalmente.  
   
     -   **logbased manualfilter** -um artigo filtrado horizontalmente, baseado em log, em que o procedimento armazenado usado para filtragem horizontal é criado manualmente e definido pelo usuário e especificado para ** \@filtro**. Para obter mais informações, consulte [Definir e modificar um filtro de linha estático](define-and-modify-a-static-row-filter.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882122"
      Isso define um novo artigo para a publicação. Para obter mais informações, consulte [Define an Article](define-an-article.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceitos de procedimentos armazenados do sistema de replicação](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar dados e objetos de banco de dados](publish-data-and-database-objects.md)  
   
   

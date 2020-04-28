@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983309"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73983309"
 
   Retorna uma linha para cada tabela de usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |\<colunas herdadas>||Para obter uma lista de colunas que essa exibição herda, consulte [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|O valor diferente de zero é a ID do espaço de dados (esquema de partição ou grupo de arquivos) que armazena os dados de objeto binário grande (LOB) dessa tabela. Exemplos de tipos de dados LOB incluem **varbinary (max)**, **varchar (max)**, **geography**ou **XML**.<br /><br /> 0 = A tabela não contém dados LOB.|  
@@ -49,13 +49,13 @@ ms.locfileid: "73983309"
 |large_value_types_out_of_row|**bit**|1 = Tipos de valor grande são armazenados fora de linha. Para obter mais informações, veja [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |is_tracked_by_cdc|**bit**|1 = A tabela está habilitada para Change Data Capture. Para obter mais informações, consulte [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|O valor da opção LOCK_ESCALATION da tabela:<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar (60)**|Uma descrição de texto da opção lock_escalation da tabela. Os valores possíveis são: TABLE, AUTO e DISABLE.|  
+|lock_escalation_desc|**nvarchar(60)**|Uma descrição de texto da opção lock_escalation da tabela. Os valores possíveis são: TABLE, AUTO e DISABLE.|  
 |is_filetable|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = A tabela é uma FileTable.<br /><br /> Para obter mais informações sobre FileTables, veja [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  
 |durabilidade|**tinyint**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> O valores possíveis são os seguintes:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> O valor de 0 é o valor padrão.|  
-|durability_desc|**nvarchar (60)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> O valores possíveis são os seguintes:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> O valor de SCHEMA_AND_DATA indica que a tabela é uma tabela na memória e durável. SCHEMA_AND_DATA é o valor padrão para tabelas com otimização de memória. O valor de SCHEMA_ONLY indica que os dados da tabela não serão mantidos na reinicialização do banco de dados com objetos com otimização de memória.|  
+|durability_desc|**nvarchar(60)**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> O valores possíveis são os seguintes:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> O valor de SCHEMA_AND_DATA indica que a tabela é uma tabela na memória e durável. SCHEMA_AND_DATA é o valor padrão para tabelas com otimização de memória. O valor de SCHEMA_ONLY indica que os dados da tabela não serão mantidos na reinicialização do banco de dados com objetos com otimização de memória.|  
 |is_memory_optimized|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> O valores possíveis são os seguintes:<br /><br /> 0 = sem otimização de memória.<br /><br /> 1 = com otimização de memória.<br /><br /> Um valor de 0 é o valor padrão.<br /><br /> As tabelas com otimização de memória são tabelas de usuário na memória, o esquema que é persistido em disco semelhante a outras tabelas de usuário. As tabelas otimizadas em memória podem ser acessadas de procedimentos armazenados compilados nativamente.|  
 |temporal_type|**tinyint**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> O valor numérico que representa o tipo de tabela:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar (60)**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> A descrição de texto do tipo de tabela:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> A descrição de texto do tipo de tabela:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Quando temporal_type em (2, 4) retorna object_id da tabela que mantém os dados históricos; caso contrário, retorna NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e posterior e[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica se a tabela está habilitada para Stretch.<br /><br /> 0 = a tabela não está habilitada para Stretch.<br /><br /> 1 = a tabela é habilitada para Stretch.<br /><br /> Para obter mais informações, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]posterior, [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]e.<br /><br /> Indica que a tabela é uma tabela externa.<br /><br /> 0 = a tabela não é uma tabela externa.<br /><br /> 1 = a tabela é uma tabela externa.| 
@@ -66,7 +66,7 @@ ms.locfileid: "73983309"
 |is_edge|**bit**|**Aplica-se a**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] e [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = Esta é uma tabela de borda do gráfico. <br /><br />0 = esta não é uma tabela de borda do gráfico. |  
 
 ## <a name="permissions"></a>Permissões  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Para obter mais informações, consulte [configuração de visibilidade de metadados](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna todas as tabelas de usuário que não possuem uma chave primária.  
@@ -110,8 +110,8 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Exibições de catálogo de objeto&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Exibições de catálogo de objetos &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Exibições de catálogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKtable &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [Consultando as perguntas frequentes sobre o catálogo do sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

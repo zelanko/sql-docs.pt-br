@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401051"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Iniciar o Configuration Manager no Analytics Platform System
@@ -21,10 +21,10 @@ Este tópico fornece instruções para iniciar o **Configuration Manager** para 
   
 ## <a name="before-you-begin"></a>Antes de começar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Pré-requisitos  
 O**Configuration Manager** do sistema de plataforma de análise só pode ser executado pelo administrador de domínio do dispositivo. Para executar essa ferramenta, você precisa da senha para o administrador do domínio do dispositivo. Para criar administradores de APS adicionais, consulte [criar um administrador de domínio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Iniciar a ferramenta de Configuration Manager  
+## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Iniciar a ferramenta de Configuration Manager  
 Para executar o Configuration Manager, use Área de Trabalho Remota para se conectar ao nó de controle do PDW (**_PDW_region_-CTL01**) e faça logon como _appliance_domain_**\Administrador**. Ao iniciar o programa de **Configuration Manager** , use a opção **Executar como administrador** para garantir que suas credenciais de administrador sejam usadas.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Para iniciar a partir de uma janela do navegador  

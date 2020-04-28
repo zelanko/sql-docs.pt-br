@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401172"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Carregador de linha de comando dwloader para data warehouse paralelos
@@ -123,7 +123,7 @@ Exibe informações de ajuda simples sobre o uso do carregador. A ajuda só ser�
 **-U** *login_name*  
 Um logon de autenticação SQL Server válido com as permissões apropriadas para executar a carga.  
   
-**-P** *senha*  
+**-P** *password*  
 A senha para um *login_name*de autenticação SQL Server.  
   
 **-W**  
@@ -230,7 +230,7 @@ O delimitador para cada campo (coluna) na linha. O delimitador de campo é um ou
 |CRLF|\r\n|0x0d0x0a|  
 |Vírgula|','|0x2c|  
 |Aspas duplas|\\"|0x22|  
-|Aspa simples|\\'|0x27|  
+|Aspas simples|\\'|0x27|  
   
 Para especificar o caractere de pipe na linha de comando, coloque-o entre aspas duplas, "|". Isso evitará a interpretação inalterada pelo analisador de linha de comando. Outros caracteres são colocados entre aspas simples.  
   
@@ -349,7 +349,7 @@ YDM e dmy permitem os mesmos formatos de entrada. Ambos permitem que o ano estej
 YDM  
 Você só pode carregar a entrada formatada como ydm em colunas do tipo de dados DateTime e smalldatetime. Não é possível carregar valores ydm em uma coluna do tipo de dados datetime2, Date ou DateTimeOffset.  
   
-mdy  
+mda  
 <month> <space> <day>MDY permite <comma>. <year>  
   
 Exemplos de dados de entrada MDY para 1º de janeiro de 1975:  
@@ -552,12 +552,12 @@ O acréscimo pode ser executado no modo de várias transacionais (usando o argum
   
 O modo de acréscimo carrega dados em duas fases. A fase 1 carrega os dados do arquivo de origem em uma tabela de preparo simultaneamente (a fragmentação pode ocorrer). A fase dois carrega dados da tabela de preparo para a tabela final. A segunda fase executa uma **inserção em... Selecione WITH (TABLOCK)** operação. A tabela a seguir mostra o comportamento de bloqueio na tabela final e o comportamento de log ao usar o modo de acréscimo:  
   
-|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registro em log|  
+|Tipo de tabela|Transações múltiplas<br />Modo (-m)|A tabela está vazia|Simultaneidade com suporte|Registrando em log|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Sim|Sim|Sim|Mínimo|  
-|Heap|Sim|Não|Sim|Mínimo|  
-|Heap|Não|Sim|Não|Mínimo|  
-|Heap|Não|Não|Não|Mínimo|  
+|Pilha|Sim|Sim|Sim|Mínimo|  
+|Pilha|Sim|Não|Sim|Mínimo|  
+|Pilha|Não|Sim|Não|Mínimo|  
+|Pilha|Não|Não|Não|Mínimo|  
 |L|Sim|Sim|Não|Mínimo|  
 |L|Sim|Não|Sim|Completo|  
 |L|Não|Sim|Não|Mínimo|  

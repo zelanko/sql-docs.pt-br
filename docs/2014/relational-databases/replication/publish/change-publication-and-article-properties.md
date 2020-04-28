@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882343"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
@@ -36,7 +36,7 @@ ms.locfileid: "73882343"
 |Alterar a compactação de instantâneo.|**sp_changepublication**|**compress_snapshot**|Novo instantâneo.|  
 |Alterar qualquer opção de instantâneo de FTP (File Transfer Protocol).|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Novo instantâneo.|  
 |Alterar localização do script pré ou pós-instantâneo.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Novo instantâneo (também é necessário se você alterar os conteúdos de script).<br /><br /> A reinicialização é necessária para aplicar o script novo ao Assinante.|  
-|Habilitar ou desabilitar o suporte para[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assinantes não.|**sp_changepublication**|**is_enabled_for_het_sub**|Novo instantâneo.|  
+|Habilitar ou desabilitar o suporte para assinantes não [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Novo instantâneo.|  
 |Alterar relatórios conflitantes para assinaturas de atualização em fila|**sp_changepublication**|**centralized_conflicts**|Só poderá ser alterado se não houver nenhuma assinatura ativa.|  
 |Alterar a política de resolução de conflito para as assinaturas de atualização em fila.|**sp_changepublication**|**conflict_policy**|Só poderá ser alterado se não houver nenhuma assinatura ativa.|  
   
@@ -45,22 +45,22 @@ ms.locfileid: "73882343"
 |DESCRIÇÃO|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo|**sp_droparticle**|Todos os parâmetros.|Os artigos podem ser descartados antes que as assinaturas sejam criadas. Com os procedimentos armazenados, é possível descartar uma assinatura de um artigo, usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], a assinatura inteira deve ser descartada, recriada e sincronizada. Para obter mais informações, consulte [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
-|Alterar um filtro de coluna.|**sp_articlecolumn**|**\@pilha**<br /><br /> **\@operacional**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar um filtro de coluna.|**sp_articlecolumn**|**\@pilha**<br /><br /> **\@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Adicionar um filtro de linha.|**sp_articlefilter**|Todos os parâmetros.|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um filtro de linha.|**sp_articlefilter**|**\@artigo**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar um filtro de linha.|**sp_articlefilter**|**\@filter_clause**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar um filtro de linha.|**sp_changearticle**|**sem**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar opções de esquema.|**sp_changearticle**|**schema_option**|Novo instantâneo.|  
 |Alterar como as tabelas são controladas no Assinante antes de aplicar o instantâneo.|**sp_changearticle**|**pre_creation_cmd**|Novo instantâneo.|  
-|Alterar o status de artigo|**sp_changearticle**|**Estado**|Novo instantâneo.|  
+|Alterar o status de artigo|**sp_changearticle**|**status**|Novo instantâneo.|  
 |Alterar os comandos INSERT, UPDATE ou DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar o nome da tabela de destino|**sp_changearticle**|**dest_table**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Alterar o proprietário da tabela de destino (esquema).|**sp_changearticle**|**destination_owner**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
-|Alterar os mapeamentos de tipo de dados (aplica-se somente à edição com o Oracle).|**sp_changearticlecolumndatatype**|**\@Escreva**<br /><br /> **\@muito**<br /><br /> **\@Preciso**<br /><br /> **\@escalonáve**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Alterar os mapeamentos de tipo de dados (aplica-se somente à edição com o Oracle).|**sp_changearticlecolumndatatype**|**\@Escreva**<br /><br /> **\@muito**<br /><br /> **\@precisão**<br /><br /> **\@escalonáve**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propriedades de publicação para a replicação de mesclagem  
   
-|DESCRIÇÃO|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Alterar o formato de instantâneo|**sp_changemergepublication**|**sync_mode**|Novo instantâneo.|  
 |Alterar o local do instantâneo.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Novo instantâneo.|  
@@ -79,12 +79,12 @@ ms.locfileid: "73882343"
   
 ## <a name="article-properties-for-merge-replication"></a>Propriedades do artigo para replicação de mesclagem  
   
-|DESCRIÇÃO|Procedimento armazenado|Propriedades|Requisitos|  
+|Descrição|Procedimento armazenado|Propriedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Descartar um artigo, quando o artigo tem o último filtro com parâmetros na publicação.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, quando é um artigo pai em um filtro de junção ou em um registro lógico (isso tem como efeito colateral o descarte da junção).|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Descartar um artigo, todas as outras circunstâncias.|**sp_dropmergearticle**|Todos os parâmetros|Novo instantâneo.|  
-|Incluir um filtro de coluna que não foi publicado anteriormente.|**sp_mergearticlecolumn**|**\@pilha**<br /><br /> **\@operacional**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
+|Incluir um filtro de coluna que não foi publicado anteriormente.|**sp_mergearticlecolumn**|**\@pilha**<br /><br /> **\@operation**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
 |Adicionar, descartar ou alterar um filtro de linha.|**sp_changemergearticle**|**subset_filterclause**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.<br /><br /> Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.<br /><br /> Se um artigo não estiver envolvido em um filtro de junção, você poderá descartar o artigo e adicioná-lo novamente, com um filtro de linha diferente, não é necessário reinicializar a assinatura inteira. Para obter mais informações sobre como adicionar e remover artigos, consulte [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Adicionar e remover artigos para/de publicações existentes).|  
 |Alterar opções de esquema.|**sp_changemergearticle**|**schema_option**|Novo instantâneo.|  
 |Controlar as alterações do nível de coluna para o nível de linha (alterar o controle do nível de linha para controle do nível de coluna não requer nenhuma ação especial).|**sp_changemergearticle**|Um valor **false** para **column_tracking**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
@@ -93,9 +93,9 @@ ms.locfileid: "73882343"
 |Alterar o proprietário da tabela de destino.|**sp_changemergearticle**|**destination_owner**|Novo instantâneo.<br /><br /> Reinicialize as assinaturas.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Perguntas Frequentes sobre Administração de Replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Perguntas frequentes sobre administração de replicação](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Criar e aplicar o instantâneo](../create-and-apply-the-snapshot.md)   
- [Reinicializar as assinaturas](../reinitialize-subscriptions.md)   
+ [Reinicializar assinaturas](../reinitialize-subscriptions.md)   
  [&#41;&#40;Transact-SQL de sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)   
@@ -109,6 +109,6 @@ ms.locfileid: "73882343"
  [&#41;&#40;Transact-SQL de sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)   
  [&#41;&#40;Transact-SQL de sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)   
- [&#41;&#40;Transact-SQL de sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
+ [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
   
   

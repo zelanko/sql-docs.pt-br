@@ -18,10 +18,10 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962454"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
@@ -29,14 +29,14 @@ ms.locfileid: "73962454"
 
   Retorna uma linha para cada tabela de alteração do banco de dados. Uma tabela de alteração é criada quando o Change Data Capture é habilitado em uma tabela de origem. É recomendável não consultar diretamente as tabelas do sistema. Em vez disso, execute o procedimento armazenado [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
 
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID da tabela de alteração. É exclusivo em um banco de dados.|  
-|**Versão**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], essa coluna sempre retorna 0.|  
+|**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], essa coluna sempre retorna 0.|  
 |**source_object_id**|**int**|ID da tabela de origem habilitada para Change Data Capture.|  
 |**capture_instance**|**sysname**|Nome da instância de captura usada para denominar objetos de controle específicos da instância. Por padrão, o nome é derivado do nome do esquema de origem mais o nome da tabela de origem no formato *schemaname_sourcename*.|  
-|**start_lsn**|**binário (10)**|LSN (número de sequência de log) representando o ponto de extremidade inferior na consulta de dados de alteração na tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
-|**end_lsn**|**binário (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], essa coluna sempre retorna NULL.|  
+|**start_lsn**|**binary(10)**|LSN (número de sequência de log) representando o ponto de extremidade inferior na consulta de dados de alteração na tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
+|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], essa coluna sempre retorna NULL.|  
 |**supports_net_changes**|**bit**|Suporte para consulta de alterações líquidas é habilitado na tabela de alterações.|  
 |**has_drop_pending**|**bit**|O processo de captura recebeu notificação que a tabela de origem foi descartada.|  
 |**role_name**|**sysname**|Nome da função de banco de dados usada como acesso aos dados de alteração.<br /><br /> NULL = uma função não é usada.|  
@@ -46,6 +46,6 @@ ms.locfileid: "73962454"
 |**partition_switch**|**bit**|Indica se o comando **switch Partition** de **ALTER TABLE** pode ser executado em uma tabela habilitada para a captura de dados de alterações. 0 indica que a alternância de partição está bloqueada. As tabelas não particionadas sempre retornam 1.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

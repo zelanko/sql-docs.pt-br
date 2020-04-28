@@ -15,10 +15,10 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729203"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permissões de área funcional (Master Data Services)
@@ -29,19 +29,19 @@ ms.locfileid: "73729203"
   
 -   **Explorer**  
   
--   **Gerenciamento de versões**  
+-   **Gerenciamento de Versões**  
   
--   **Gerenciamento de integração**  
+-   **Gerenciamento de Integração**  
   
--   **Administração do sistema**  
+-   **Administração do Sistema**  
   
--   **Permissões de usuário e grupo**  
+-   **Permissões de Usuário e Grupo**  
   
 -   **Superusuário**  
   
  Ao atribuir permissão a uma área funcional, você torna uma área da interface do usuário visível para o usuário ou grupo.  
   
- Na área funcional **Explorer** , permissões adicionais atribuídas a objetos de modelo e membros de hierarquia determinam quais dados que um usuário pode acessar. Dentro de todas as outras áreas funcionais, um usuário deve ser um administrador de modelo para exibir um modelo e agir sobre ele. Para obter mais informações, veja [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Na área funcional **Explorer** , permissões adicionais atribuídas a objetos de modelo e membros de hierarquia determinam quais dados que um usuário pode acessar. Dentro de todas as outras áreas funcionais, um usuário deve ser um administrador de modelo para exibir um modelo e agir sobre ele. Para obter mais informações, consulte [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Um usuário com permissão de Superusuário efetivamente tem permissão de Administrador em todos os modelos e tem todas as outras permissões funcionais.  

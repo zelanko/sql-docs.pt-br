@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399430"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar um encaminhador DNS para resolver nomes DNS que não são de dispositivo no Analytics Platform System
 Um encaminhador de DNS pode ser configurado nos nós de Active Directory Domain Services (**_domínio de dispositivo\__– AD01** e domínio de ** _dispositivo\__-AD02**) do seu dispositivo de sistema de plataforma de análise para permitir que scripts e aplicativos de software acessem servidores externos.  
   
-## <a name="ResolveDNS"></a>Usando um encaminhador DNS  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>Usando um encaminhador DNS  
 O dispositivo Analytics Platform System está configurado para impedir a resolução de nomes DNS de servidores que não estão no dispositivo. Alguns processos, como o WSUS (Windows Software Update Services), precisarão acessar os servidores fora do dispositivo. Para dar suporte a esse cenário de uso, o DNS do sistema da plataforma de análise pode ser configurado para dar suporte a um encaminhador de nome externo que permitirá que os hosts do sistema da plataforma de análise e VMs (máquinas virtuais) usem servidores DNS externos para resolver nomes fora do dispositivo. Não há suporte para a configuração personalizada de sufixos DNS, o que significa que você deve usar nomes de domínio totalmente qualificados para resolver um nome de servidor que não seja de dispositivo.  
   
 **Para criar um encaminhador DNS com a GUI do DNS**  

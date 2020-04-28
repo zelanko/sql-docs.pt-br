@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400146"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>banco de dados tempdb em paralelo data warehouse
@@ -21,7 +21,7 @@ ms.locfileid: "74400146"
   
 Para obter mais informações sobre bancos de dados do sistema, consulte [bancos de dados do sistema](system-databases.md).  
   
-## <a name="Basics"></a>Principais termos e conceitos  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>Principais termos e conceitos  
 *tabela temporária local*  
 Uma *tabela temporária local* usa o prefixo # antes do nome da tabela e é uma tabela temporária criada por uma sessão de usuário local. Cada sessão só pode acessar os dados em tabelas temporárias locais para sua própria sessão.  
   
@@ -51,7 +51,7 @@ SQL Server PDW descarta as tabelas do **tempdb** quando:
 ## <a name="general-remarks"></a>Comentários gerais  
 SQL Server PDW executa as mesmas operações em tabelas temporárias e tabelas permanentes, a menos que explicitamente declarado de outra forma. Por exemplo, os dados em tabelas temporárias locais, assim como as tabelas permanentes, são distribuídos ou replicados em todos os nós de computação.  
   
-## <a name="LimitationsRestrictions"></a>Limitações e Restrições  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>Limitações e restrições  
 Limitações e restrições no banco de dados SQL Server PDW**tempdb** . Você *não pode:*  
   
 -   Crie uma tabela temporária global que comece com # #.  
@@ -82,9 +82,9 @@ Limitações e restrições em tabelas temporárias locais. Você *não pode:*
 ## <a name="permissions"></a>Permissões  
 Qualquer usuário pode criar objetos temporários no tempdb. Os usuários podem acessar somente seus próprios objetos, a menos que recebam permissões adicionais. É possível revogar a permissão de conexão ao tempdb para impedir um usuário de usar tempdb, mas isto não é recomendado porque algumas operações rotineiras exigem o uso de tempdb.  
   
-## <a name="RelatedTasks"></a>Tarefas relacionadas  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
   
-|Tarefas|DESCRIÇÃO|  
+|Tarefas|Descrição|  
 |---------|---------------|  
 |Crie uma tabela em **tempdb**.|Você pode criar uma tabela temporária de usuário com as instruções CREATE TABLE e CREATE TABLE como SELECT. Para obter mais informações, consulte [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [CREATE TABLE como SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Exiba uma lista de tabelas existentes no **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

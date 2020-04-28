@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056397"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -117,7 +117,7 @@ Em alguns casos, os planos inválidos podem ser gerados para consultas com um n�
 ## <a name="examples"></a>Exemplos 
 Para as consultas de exemplo mostradas aqui, vamos usar as tabelas node e Edge criadas no [SQL Graph Sample](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>a.  Localizar caminho mais curto entre 2 pessoas
+### <a name="a--find-shortest-path-between-2-people"></a>A.  Localizar caminho mais curto entre 2 pessoas
  No exemplo a seguir, encontramos um caminho mais curto entre Jacob e Alice. Precisaremos do nó Person e da borda FriendOf criada a partir do script de exemplo do Graph. 
 
  ```
@@ -211,6 +211,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>Consulte Também  
  [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Insert (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Processamento de grafo com o SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
  

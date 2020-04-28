@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729797"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
@@ -64,9 +64,9 @@ ms.locfileid: "73729797"
   
 ## <a name="comparing-administrator-types"></a>Comparando tipos de administrador  
   
-|Tipo de administrador|DESCRIÇÃO|  
+|Tipo de administrador|Descrição|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Superusuário|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Pode ser um superusuário com base em permissões de área funcional atribuídas explicitamente ou em permissões herdadas de um grupo.<br /><br /> Tem, automaticamente, todas as permissões para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Superusuário|As permissões atribuídas no [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] não têm nenhum efeito sobre o acesso do administrador.<br /><br /> Pode ser um superusuário com base em permissões de área funcional atribuídas explicitamente ou em permissões herdadas de um grupo.<br /><br /> Tem, automaticamente, todas as permissões para todos os modelos.<br /><br /> Tem acesso automaticamente a todas as áreas funcionais.|  
 |Administrador de modelo|Pode ser um administrador de modelo com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros no modelo específico.|  
 |Administrador de entidade|Pode ser um administrador de entidade com base nas permissões de administrador atribuídas explicitamente ou nas permissões herdadas de um grupo.<br /><br /> Tem acesso somente a áreas funcionais às quais esse acesso é concedido.<br /><br /> Tem automaticamente todas as permissões para todos os objetos e membros na entidade específica.<br /><br /> Poderá aprovar os conjuntos de alterações pendentes se as alterações de entidade exigirem aprovação.|  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73729797"
 ## <a name="see-also"></a>Consulte Também  
  [Criar um administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Criar um banco de dados Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Master Data Services de notificações &#40;&#41;](../master-data-services/notifications-master-data-services.md)  
+ [Notificações &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

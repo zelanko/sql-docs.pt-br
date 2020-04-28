@@ -22,16 +22,16 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055084"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Cria ou atualiza as regras de firewall no nível de banco [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de dados para seu. As regras de firewall de banco de dados **** podem ser configuradas para o banco de dados [!INCLUDE[ssSDS](../../includes/sssds-md.md)]mestre e para bancos de dados de usuário no. As regras de firewall de banco de dados são particularmente úteis ao usar usuários de banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Cria ou atualiza as regras de firewall no nível de banco [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]de dados para seu. As regras de firewall de banco de dados **master** podem ser configuradas para o banco de dados [!INCLUDE[ssSDS](../../includes/sssds-md.md)]mestre e para bancos de dados de usuário no. As regras de firewall de banco de dados são particularmente úteis ao usar usuários de banco de dados independente. Para obter mais informações, consulte [Usuários de bancos de dados independentes – Tornando seu banco de dados portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  A tabela a seguir demonstra os argumentos e as opções [!INCLUDE[ssSDS](../../includes/sssds-md.md)]com suporte no.  
   
 > [!NOTE]  
->  As tentativas de conexão do Azure são permitidas quando esse ** campo e o `0.0.0.0`campo de start_ip_address é igual a.  
+>  As tentativas de conexão do Azure são permitidas quando esse *start_ip_address* campo e o `0.0.0.0`campo de start_ip_address é igual a.  
   
 ## <a name="remarks"></a>Comentários  
  Os nomes das configurações de firewall de nível de banco de dados para um banco de dados devem ser exclusivos. Se o nome da configuração do firewall em nível de banco de dados fornecida para o procedimento armazenado já existir na tabela de configurações de firewall de nível de banco de dados, os endereços IP inicial e final serão atualizados. Caso contrário, uma nova configuração de firewall de nível de banco de dados será criada.  

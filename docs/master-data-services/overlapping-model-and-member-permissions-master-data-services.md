@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728985"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Sobrepondo permissões de modelo e membro (Serviços de Dados Mestre)
@@ -29,9 +29,9 @@ ms.locfileid: "73728985"
   
  Se um membro tiver uma permissão que seja diferente daquela correspondente ao objeto de modelo, as seguintes regras se aplicarão:  
   
--   **Deny** substitui todas as outras permissões.  
+-   **Negar** substitui todas as outras permissões.  
   
--   A permissão de **administrador** no nível de modelo substitui todas as outras permissões e é alterada para toda a permissão de acesso (CRUD) em subníveis.  
+-   A permissão**Admin** no nível do Modelo substitui todas as outras permissões e é alterada para a permissão de acesso Todos (CRUD) nos subníveis.  
   
 -   A permissão de acesso efetiva cruza as permissões dos membros e dos atributos.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73728985"
   
 ## <a name="see-also"></a>Consulte Também  
  [Como as permissões são determinadas &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Sobreposição de permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Sobrepondo permissões de usuário e grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

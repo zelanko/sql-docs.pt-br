@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400927"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componentes físicos do dispositivo – Analytics Platform System
@@ -21,7 +21,7 @@ Nomes e descrições para os componentes físicos do PDW e do Appliance Fabric.
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Diagramas de componente  
+## <a name="component-diagrams"></a><a name="diagrams"></a>Diagramas de componente  
 Isso mostra os nomes dos componentes físicos e onde eles estão localizados no primeiro rack de um dispositivo de nó de 6 computadores.  
   
 ![PDW Region Component Names - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ Aqui está uma exibição consolidada de uma região do PDW com 6 nós de comput
   
 ![Nomes dos componentes do PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>Componentes do PDW  
+## <a name="pdw-components"></a><a name="pdw"></a>Componentes do PDW  
 As máquinas virtuais do PDW fazem parte da região do PDW.  
   
 *PDW_region*-CTL01  
@@ -46,7 +46,7 @@ Uma máquina virtual que executa o nó de controle. Isso é executado em HST01 e
 *PDW_region*-CMP01 por meio de *PDW_Region*-CMP06  
 Uma máquina virtual que executa o nó de computação. Neste diagrama de seis nós de computação, os hosts HSA01 por meio do HSA06 executam VMs do nó de computação CMP01 por meio de CMP06, respectivamente.  
   
-## <a name="fabric"></a>Componentes do Appliance Fabric  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>Componentes do Appliance Fabric  
 Esses componentes fazem parte da malha do dispositivo.  
   
 ### <a name="virtual-machines"></a>Máquinas Virtuais  

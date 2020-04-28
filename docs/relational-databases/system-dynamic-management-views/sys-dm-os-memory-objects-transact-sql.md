@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983084"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73983084"
 
   Retorna objetos da memória que estão alocados no momento pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar **Sys. dm_os_memory_objects** para analisar o uso de memória e identificar possíveis vazamentos de memória.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary (8)**|Endereço do objeto de memória. Não permite valor nulo.|  
 |**parent_address**|**varbinary (8)**|Endereço do objeto de memória pai. Permite valor nulo.|  
@@ -40,8 +40,8 @@ ms.locfileid: "73983084"
 |**pages_in_bytes**|**bigint**|**Aplica-se a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e posterior.<br /><br /> Quantidade de memória em bytes alocada por essa instância do objeto de memória. Não permite valor nulo.|  
 |**creation_options**|**int**|Somente para uso interno. Permite valor nulo.|  
 |**bytes_used**|**bigint**|Somente para uso interno. Permite valor nulo.|  
-|**tipo**|**nvarchar (60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
-|**name**|**varchar (128)**|Somente para uso interno. Anulável.|  
+|**type**|**nvarchar(60)**|Tipo de objeto de memória.<br /><br /> Isso indica algum componente ao qual este objeto de memória pertence ou a função do objeto de memória. Permite valor nulo.|  
+|**name**|**varchar(128)**|Somente para uso interno. Anulável.|  
 |**memory_node_id**|**smallint**|ID de um nó de memória que está sendo usado por esse objeto de memória. Não permite valor nulo.|  
 |**creation_time**|**datetime**|Somente para uso interno. Permite valor nulo.|  
 |**max_pages_allocated_count**|**int**|**Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Número máximo de páginas alocadas por esse objeto de memória. Não permite valor nulo.|  
@@ -84,7 +84,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
   [SQL Server exibições de gerenciamento dinâmico relacionadas ao sistema operacional &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

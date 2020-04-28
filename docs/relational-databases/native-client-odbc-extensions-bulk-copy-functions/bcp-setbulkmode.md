@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782401"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -68,7 +68,7 @@ RETCODE bcp_setbulkmode (
   
  A tabela a seguir lista as constantes do parâmetro *property* .  
   
-|Propriedade|DESCRIÇÃO|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE, e para bcp_setcolfmt com a propriedade **BCP_FMT_TYPE** definida como **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e bcp_setcolfmt com a propriedade **BCP_FMT_TYPE** definida como **SQLNCHAR**.|  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  Se você tentar chamar bcp_setbulkmode com uma sequência de chamadas de função que inclui bcp_setcolfmt, bcp_control e bcp_readfmt, uma das chamadas de função retornará uma falha de erro de sequência. Se você optar por corrigir a falha, Chame bcp_init para redefinir todas as configurações e recomeçar.  
   
- Abaixo estão alguns exemplos de chamadas de função que resultam em um erro de sequência de função:  
+ Abaixo estão alguns exemplos de chamadas de funções que resultam em um erro de sequência de função:  
   
 ```  
 bcp_init("table", DB_IN);  

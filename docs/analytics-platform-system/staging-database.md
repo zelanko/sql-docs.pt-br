@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400278"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usando um banco de dados de preparo em Parallel data warehouse (PDW)
 SQL Server o PDW (data warehouse paralelo) usa um banco de dados de preparo para armazenar os dados temporariamente durante o processo de carregamento. Por padrão, SQL Server PDW usa o banco de dados de destino como o banco de dados de preparo, o que pode causar a fragmentação da tabela. Para reduzir a fragmentação da tabela, você pode criar um banco de dados de preparo definido pelo usuário. Ou, quando a reversão de uma falha de carregamento não é uma preocupação, você pode usar o modo de carregamento fastappend para melhorar o desempenho, ignorando a tabela temporária e carregando diretamente na tabela de destino.  
   
-## <a name="StagingDatabase"></a>Noções básicas do banco de dados de preparo  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>Noções básicas do banco de dados de preparo  
 Um *banco de dados de preparo* é um banco de dados de PDW criado pelo usuário, que armazena o dado temporariamente enquanto é carregado no dispositivo. Quando um banco de dados de preparo for especificado para uma carga, o dispositivo copiará primeiro os dados para o banco de dado de preparo e, em seguida, copiará os dados das tabelas temporárias no banco de dados de preparo para tabelas permanentes no banco de dados de destino.  
   
 Quando um banco de dados de preparo não é especificado para uma carga, o SQL ServerPDW cria as tabelas temporárias no banco de dados de destino e as usa para armazenar os dados carregados antes de inserir os dados carregados nas tabelas de destino permanentes.  
@@ -38,7 +38,7 @@ A estrutura de armazenamento para cada tabela de banco de dados depende da tabel
   
 -   Para cargas em um índice clusterizado do repositório de armazenamento, a tabela de preparo é um índice clusterizado do armazenamento.  
   
-## <a name="Permissions"></a>Permissões  
+## <a name="permissions"></a><a name="Permissions"></a>Permissões  
 Requer a permissão CREATE (para criar uma tabela temporária) no banco de dados de preparo. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Práticas recomendadas para criar um banco de dados de preparo  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>Práticas recomendadas para criar um banco de dados de preparo  
   
 1.  Deve haver apenas um banco de dados de preparo por dispositivo. O banco de dados de preparo pode ser compartilhado por todos os trabalhos de carga para todos os bancos de dados de destino.  
   
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   O tamanho do log normalmente é semelhante ao tamanho da tabela replicada.  
   
-## <a name="Examples"></a>Exemplos  
+## <a name="examples"></a><a name="Examples"></a>Exemplos  
   
-### <a name="a-create-a-staging-database"></a>a. Criar um banco de dados de preparo 
+### <a name="a-create-a-staging-database"></a>A. Criar um banco de dados de preparo 
 O exemplo a seguir cria um banco de dados de preparo, Stagedb, para uso com todas as cargas no dispositivo. Suponha que você estima que cinco tabelas replicadas de tamanho de 5 GB cada uma delas será carregada simultaneamente. Essa simultaneidade resulta na alocação de pelo menos 25 GB para o tamanho replicado. Suponha que você estima que seis tabelas distribuídas de tamanhos 100, 200, 400, 500, 500 e 550 GB serão carregadas simultaneamente. Essa simultaneidade resulta na alocação de pelo menos 2250 GB para o tamanho da tabela distribuída.  
   
 ```sql  

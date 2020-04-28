@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056622"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar Assistente de Migração de Dados da linha de comando
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argumento  |DESCRIÇÃO  | Necessário (s/N)
+|Argumento  |Descrição  | Necessário (s/N)
 |---------|---------|---------------|
 | `/help or /?`     | Como usar o texto de ajuda do dmacmd. exe        | N
 |`/AssessmentName`     |   Nome do projeto de avaliação   | S
@@ -248,7 +248,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argumento  |DESCRIÇÃO  | Necessário (s/N)
+|Argumento  |Descrição  | Necessário (s/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Executar avaliação de SKU usando linha de comando DMA | S
 |`/SkuRecommendationInputDataFilePath` | Caminho completo do arquivo do contador de desempenho coletado do computador que hospeda seus bancos de dados | S
@@ -259,7 +259,7 @@ Esses comandos dão suporte a recomendações para o banco de dados SQL do Azure
 |`/SkuRecommendationCurrencyCode` | A moeda na qual os preços são exibidos (por exemplo, "USD") | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationOfferName` | O nome da oferta (por exemplo, "MS-AZR-0003P"). Para obter mais informações, consulte a página [detalhes da oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationRegionName` | O nome da região (por exemplo, "Westus") | S <br> (Para obter os preços mais recentes)
-|`/SkuRecommendationSubscriptionId` | O ID da assinatura. | S <br> (Para obter os preços mais recentes)
+|`/SkuRecommendationSubscriptionId` | A ID da assinatura. | S <br> (Para obter os preços mais recentes)
 |`/SkuRecommendationDatabasesToRecommend` | Lista de bancos de dados separados por espaços para recomendar (por exemplo, "Database1" "Database2" "Database3"). Os nomes diferenciam maiúsculas de minúsculas e devem estar entre aspas duplas. Se omitido, serão fornecidas recomendações para todos os bancos de dados. | N
 |`/AzureAuthenticationTenantId` | O locatário de autenticação. | S <br> (Para obter os preços mais recentes)
 |`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br> (Para obter os preços mais recentes)

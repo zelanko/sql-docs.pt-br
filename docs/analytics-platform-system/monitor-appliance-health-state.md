@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400988"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitorar estado de integridade do dispositivo
@@ -69,13 +69,13 @@ ORDER BY
   
 Os valores possíveis retornados para a propriedade status são:  
   
--   OK  
+-   Ok  
   
 -   Não crítico  
   
 -   Crítico  
   
--   Unknown (desconhecido)  
+-   Unknown  
   
 -   Sem suporte  
   

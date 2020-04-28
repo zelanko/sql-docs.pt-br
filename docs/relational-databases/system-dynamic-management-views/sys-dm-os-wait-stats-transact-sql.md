@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190345"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -35,9 +35,9 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
 > [!NOTE] 
 > Para chamá-lo ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]ou **, use o nome **Sys. dm_pdw_nodes_os_wait_stats**.  
   
-|Nome da coluna|Tipo de dados|DESCRIÇÃO|  
+|Nome da coluna|Tipo de dados|Descrição|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
+|wait_type|**nvarchar(60)**|Nome do tipo de espera. Para obter mais informações, consulte [Tipos de espera](#WaitTypes) mais adiante neste tópico.|  
 |waiting_tasks_count|**bigint**|Número de esperas nesse tipo de espera. O contador é incrementado no início de cada espera.|  
 |wait_time_ms|**bigint**|Tempo de espera total para esse tipo de espera em milissegundos. Essa hora é inclusiva de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tempo de espera máximo neste tipo de espera.|  
@@ -49,7 +49,7 @@ Retorna informações sobre todas as esperas encontradas por threads executados.
 Ativado [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a `VIEW DATABASE STATE` permissão no banco de dados. Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Standard e Basic, o requer o **administrador do servidor** ou uma conta de **administrador do Azure Active Directory** .   
 
-##  <a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
  **Esperas de recursos** As esperas de recurso ocorrem quando um trabalho solicita acesso a um recurso que não está disponível porque o recurso está sendo usado por algum outro operador ou ainda não está disponível. Exemplos de esperas de recurso são bloqueios, travas, rede e esperas de E/S de disco. Bloqueio e trava são esperas em objetos de sincronização  
   
 **Esperas de fila**  
@@ -58,8 +58,7 @@ Nas [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] camadas Premium, o requer a
  **Esperas externas**  
  As esperas externas ocorrem quando um trabalhador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está aguardando um evento externo, como uma chamada de procedimento armazenado estendido ou consulta de servidor vinculada, terminar Quando você diagnostica os problemas de bloqueio, lembre-se de que as esperas externas nem sempre indicam que o trabalhador está ocioso, porque ele pode estar ativamente executando algum código externo.  
   
- 
-  `sys.dm_os_wait_stats` mostra a hora das esperas concluídas. Essa exibição de gerenciamento dinâmico não mostra esperas atuais.  
+ `sys.dm_os_wait_stats` mostra a hora das esperas concluídas. Essa exibição de gerenciamento dinâmico não mostra esperas atuais.  
   
  Não será considerado que um thread de trabalho [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esteja sendo esperado se qualquer um dos seguintes for verdadeiro:  
   
@@ -89,7 +88,7 @@ Esse comando redefine todos os contadores como 0.
   
  A tabela a seguir lista os tipos de espera encontrados por tarefas.  
 
-|type |DESCRIÇÃO| 
+|type |Descrição| 
 |-------------------------- |--------------------------| 
 |ABR |Identificado apenas para fins informativos. Sem suporte. A compatibilidade futura não está garantida.| | 
 |AM_INDBUILD_ALLOCATION |Somente para uso interno. <br />**Aplica-se a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] e posterior.| 
@@ -936,7 +935,7 @@ Esse comando redefine todos os contadores como 0.
 |VIA_ACCEPT |Ocorre quando uma conexão do provedor Virtual Interface Adapter (VIA) é concluída durante a inicialização.| 
 |VIEW_DEFINITION_MUTEX |Ocorre durante a sincronização no acesso às definições de exibição em cache.| 
 |WAIT_FOR_RESULTS |Ocorre ao esperar a ativação de uma notificação de consulta.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |Ocorre ao aguardar a conclusão da atualização de estatísticas síncrona antes da compilação da consulta e a execução ser retomada.<br /> **Aplica-se a: a**partir de[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Ocorre ao aguardar a conclusão da atualização de estatísticas síncrona antes da compilação da consulta e a execução ser retomada.<br /> **Aplica-se ao**: A partir do [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e posterior.| 
 |WAIT_XLOGREAD_SIGNAL |Somente para uso interno. <br /> **Aplica-se a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e posterior.| 

@@ -16,10 +16,10 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056230"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
@@ -45,7 +45,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'`É se deve retornar apenas o número de linhas da tabela. *rowcount_only* é **smallint** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: quando um artigo é filtrado horizontalmente, uma operação de número de linhas é executada em vez de uma operação de soma de verificação.|  
 |**1** (padrão)|Só execute uma verificação de número de linhas.|  
@@ -53,7 +53,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'`É o método usado para calcular o número de linhas. *full_or_fast* é **tinyint** e pode ser um dos valores a seguir.  
   
-|Valor|DESCRIÇÃO|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
 |**1**|A contagem rápida de **sysindexes. Rows**. A contagem de linhas em [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápida do que contar linhas na tabela real. No entanto, como [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é atualizado lentamente, o número de linhas pode não ser preciso.|  
@@ -80,7 +80,7 @@ sp_publication_validation [ @publication = ] 'publication'
  Somente os membros da função de servidor fixa **sysadmin** ou a função de banco de dados fixa **db_owner** podem ser executados **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Validar dados no Assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [&#41;&#40;Transact-SQL de sp_article_validation](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [&#41;&#40;Transact-SQL de sp_table_validation](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
