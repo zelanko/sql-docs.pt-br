@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a4ed0e63c0a4502321a21f04f5b65e878fcca17
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118279"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087376"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>Downloads do CAB para atualizações cumulativas dos Serviços de Machine Learning do SQL Server
 
@@ -81,7 +81,7 @@ Os arquivos CAB são listados na ordem cronológica inversa. Ao baixar os arquiv
 
 |Versão  |Componente | Link de download  | Problemas resolvidos | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | Corrige o bug em que `sp_execute_external_script` executando um script R mostra uma mensagem de aviso |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | Nenhuma alteração das versões anteriores. |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | Nenhuma alteração das versões anteriores. |

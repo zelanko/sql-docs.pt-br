@@ -32,14 +32,14 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 944db91150b932676c9caa1e291ac4f963328580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217116"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138134"
 ---
-# <a name="resolve-index-fragmentation-using-by-reorganizing-or-rebuilding-indexes"></a>Resolver a fragmentação do índice reorganizando ou recompilando índices
+# <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Resolver a fragmentação do índice reorganizando ou recompilando índices
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -50,8 +50,8 @@ Este artigo descreve como ocorre a desfragmentação do índice e discute seu im
 O que é a fragmentação de índice e por que devo me preocupar com ela:
 
 - A fragmentação ocorre quando os índices têm páginas nas quais a ordenação lógica no índice, com base no valor de chave do índice, não corresponde à ordenação física das páginas de índice.
-- O mecanismo de banco de dados modifica os índices automaticamente sempre que são executadas operações de inserção, atualização ou exclusão nos dados subjacentes. Por exemplo, a adição de linhas em uma tabela pode fazer com que as páginas existentes nos índices de rowstore sejam divididas para liberar espaço para a inserção de novos valores de chave. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados.
-- Os índices intensamente fragmentados podem prejudicar o desempenho da consulta, porque uma E/S adicional é necessária para localizar dados para os quais o índice aponta. Mais E/S faz com que o aplicativo responda mais devagar, especialmente quando as operações de verificação estão envolvidas.
+- O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] modifica os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. Por exemplo, a adição de linhas em uma tabela pode fazer com que as páginas existentes nos índices de rowstore sejam divididas para liberar espaço para a inserção de novos valores de chave. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados.
+- Índices intensamente fragmentados podem prejudicar o desempenho da consulta, porque uma E/S adicional é necessária para localizar dados para os quais o índice aponta. E/S adicionais fazem com que a resposta do aplicativo seja lenta, especialmente quando operações de verificação estão envolvidas.
 
 ## <a name="detecting-the-amount-of-fragmentation"></a>Detectando a quantidade de fragmentação
 
@@ -215,12 +215,12 @@ Você desfragmenta um índice fragmentado usando um dos seguinte métodos:
 
 A reorganização de um índice usa recursos mínimos do sistema e é uma operação online. Isso significa que os bloqueios de tabela de longo prazo não são mantidos e que as consultas ou atualizações da tabela subjacente podem continuar durante a transação `ALTER INDEX REORGANIZE`.
 
-- Para [índices rowstore](clustered-and-nonclustered-indexes-described.md), o mecanismo de banco de dados desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica dos nós folha (da esquerda para a direita). A reorganização também compacta as páginas de índice com base no valor do fator de preenchimento do índice. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para obter exemplos de sintaxe, confira [Exemplos: reorganização de rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+- Para [índices rowstore](clustered-and-nonclustered-indexes-described.md), o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] desfragmenta o nível folha de índices clusterizados e não clusterizados em tabelas e exibições, reordenando fisicamente as páginas de nível folha para que correspondam à ordem lógica dos nós folha (da esquerda para a direita). A reorganização também compacta as páginas de índice com base no valor do fator de preenchimento do índice. Para exibir a configuração do fator de preenchimento, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para obter exemplos de sintaxe, confira [Exemplos: reorganização de rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
 - Ao usar [índices columnstore](columnstore-indexes-overview.md), o repositório delta pode acabar com vários pequenos rowgroups após a inserção, a atualização e a exclusão de dados ao longo do tempo. A reorganização de um índice columnstore força todos os rowgroups no columnstore e, em seguida, combina os rowgroups em menos rowgroups com mais linhas. A operação de reorganização também remove as linhas que foram excluídas do columnstore. Inicialmente, a reorganização exige recursos adicionais de CPU para compactar os dados, o que pode reduzir o desempenho geral do sistema. No entanto, assim que os dados forem compactados, o desempenho de consulta será aprimorado. Para obter exemplos de sintaxe, confira [Exemplos: reorganização de columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="rebuild-an-index"></a>Recompilar um índice
 
-A recriação de um índice descarta e recria o índice. Dependendo do tipo de índice e da versão do mecanismo de banco de dados, uma operação de recompilação pode ser feita online ou offline. Para obter a sintaxe T-SQL, confira [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
+A recriação de um índice descarta e recria o índice. Dependendo do tipo de índice e da versão do [!INCLUDE[ssde_md](../../includes/ssde_md.md)], uma operação de recompilação pode ser feita online ou offline. Para obter a sintaxe T-SQL, confira [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - Para [índices rowstore](clustered-and-nonclustered-indexes-described.md), a recompilação remove a fragmentação, recupera o espaço em disco compactando as páginas com base na configuração do fator de preenchimento especificada ou existente e reordena as linhas do índice em páginas contíguas. Quando `ALL` é especificado, todos os índices da tabela são descartados e recriados em uma única transação. As restrições de chave estrangeira não precisam ser descartadas com antecedência. Quando índices com 128 extensões ou mais são recriados, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] adia as desalocações de página atuais e seus bloqueios associados até depois da confirmação da transação. Para obter exemplos de sintaxe, confira [Exemplos: reorganização de rowstore](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
 - Para [índices columnstore](columnstore-indexes-overview.md), a recompilação remove a fragmentação, move todas as linhas para o columnstore e recupera o espaço em disco excluindo fisicamente as linhas que foram excluídas logicamente da tabela. Iniciando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], normalmente, não é necessário recompilar o índice columnstore porque `REORGANIZE` executa as etapas básicas de uma recompilação em segundo plano como uma operação online. Para obter exemplos de sintaxe, confira [Exemplos: reorganização de columnstore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
@@ -342,13 +342,13 @@ Os seguintes cenários não exigem que todos os índices rowstore não clusteriz
 > [!IMPORTANT]
 > Um índice não poderá ser reorganizado ou recriado se o grupo de arquivos no qual ele está localizado estiver offline ou definido como somente leitura. Quando a palavra-chave ALL for especificada e um ou mais índices estiver em um grupo de arquivos offline ou somente leitura, a instrução falhará.
 >
-> Enquanto ocorre uma reconstrução de índice, a mídia física deve ter espaço suficiente para armazenar duas cópias do índice. Quando a recompilação é concluída, o mecanismo de banco de dados exclui o índice original.
+> Enquanto ocorre uma reconstrução de índice, a mídia física deve ter espaço suficiente para armazenar duas cópias do índice. Quando a recompilação é concluída, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] exclui o índice original.
 
 Quando `ALL` for especificado com a instrução `ALTER INDEX`, os índices relacionais, clusterizados e não clusterizados e os índices XML da tabela serão reorganizados.
 
 ## <a name="considerations-specific-to-rebuilding-a-columnstore-index"></a>Considerações específicas para recompilar um índice columnstore
 
-Ao recompilar um índice columnstore, o mecanismo de banco de dados lê todos os dados do índice columnstore original, incluindo o armazenamento delta. Combina os dados em novos rowgroups e compacta os rowgroups em columnstore. O mecanismo de banco de dados desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela. Os bytes excluídos são recuperados no disco.
+Ao recriar um índice columnstore, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] lê todos os dados do índice columnstore original, incluindo o armazenamento Delta. Combina os dados em novos rowgroups e compacta os rowgroups em columnstore. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] desfragmenta o columnstore excluindo fisicamente as linhas que foram excluídas logicamente da tabela. Os bytes excluídos são recuperados no disco.
 
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>Recompilar uma partição em vez de toda a tabela
 
@@ -365,11 +365,11 @@ A recompilação de uma partição após o carregamento de dados garante que tod
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>Considerações específicas para reorganizar um índice columnstore
 
-Ao reorganizar um índice columnstore, o mecanismo de banco de dados compacta cada rowgroup delta FECHADO no columnstore como um rowgroup compactado. No [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] em diante e no Banco de Dados SQL do Azure, o comando `REORGANIZE` executa as seguintes otimizações adicionais de desfragmentação online:
+Ao reorganizar um índice columnstore, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] compacta cada rowgroup delta FECHADO no columnstore como um rowgroup compactado. A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], o comando `REORGANIZE` executa as seguintes otimizações adicionais de desfragmentação online:
 
-- Remove fisicamente linhas de um grupo de linhas quando 10% ou mais linhas foram excluídas logicamente. Os bytes excluídos são recuperados na mídia física. Por exemplo, se um grupo de linhas compactado de 1 milhão de linhas tiver 100 mil linhas excluídas, o SQL Server removerá as linhas excluídas e recompactará o rowgroup com 900 mil linhas. Ele salva no armazenamento removendo as linhas excluídas.
-- Combina um ou mais rowgroups compactados para aumentar linhas por rowgroup até o máximo de 1.024.576 linhas. Por exemplo, se você importar em massa cinco lotes de 102.400 linhas, obterá cinco rowgroups compactados. Se você executar REORGANIZE, esses rowgroups serão mesclados em um grupo de linhas compactado de 512 mil linhas de tamanho. Isso pressupõe que não havia nenhuma limitação de tamanho ou memória de dicionário.
-- Para os rowgroups em que 10% ou mais linhas foram excluídas logicamente, o mecanismo de banco de dados tenta combinar esse rowgroup com um ou mais rowgroups. Por exemplo, o rowgroup 1 é compactado com 500 mil linhas e o rowgroup 21 é compactado com o máximo de 1.048.576 linhas. O rowgroup 21 tem 60% das linhas excluídas, o que deixa 409.830 linhas. O mecanismo de banco de dados favorece a combinação desses dois rowgroups para compactar um novo rowgroup que tenha 909.830 linhas.
+- Remove fisicamente linhas de um grupo de linhas quando 10% ou mais linhas foram excluídas logicamente. Os bytes excluídos são recuperados na mídia física. Por exemplo, se um grupo de linhas compactado de 1 milhão de linhas tiver 100 mil linhas excluídas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] removerá as linhas excluídas e recompactará o rowgroup com 900 mil linhas. Ele salva no armazenamento removendo as linhas excluídas.
+- Combina um ou mais rowgroups compactados para aumentar linhas por rowgroup até o máximo de 1.048.576 linhas. Por exemplo, se você importar em massa cinco lotes de 102.400 linhas, obterá cinco rowgroups compactados. Se você executar REORGANIZE, esses rowgroups serão mesclados em um grupo de linhas compactado de 512 mil linhas de tamanho. Isso pressupõe que não havia nenhuma limitação de tamanho ou memória de dicionário.
+- Para rowgroups em que 10% ou mais linhas tenham sido excluídas logicamente, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tenta combinar esse grupo de linhas com um ou mais rowgroups. Por exemplo, o rowgroup 1 é compactado com 500 mil linhas e o rowgroup 21 é compactado com o máximo de 1.048.576 linhas. O rowgroup 21 tem 60% das linhas excluídas, o que deixa 409.830 linhas. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] favorece combinar esses dois rowgroups para compactar um novo rowgroup com 909.830 linhas.
 
 Depois de executar os carregamentos de dados, você poderá ter vários rowgroups pequenos no armazenamento Delta. Use `ALTER INDEX REORGANIZE` para forçar todos os rowgroups no índice columnstore e, em seguida, combinar os rowgroups em rowgroups menores com mais linhas. A operação de reorganização removerá também as linhas que foram excluídas do columnstore.
 
@@ -401,8 +401,8 @@ Em uma tabela do Azure Synapse Analytics (antigo SQL Data Warehouse do Azure) co
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>Como usar INDEX REBUILD para se recuperar de falhas de hardware
 
-Nas versões anteriores do SQL Server, às vezes, era possível recompilar um índice rowstore não clusterizado para corrigir as inconsistências causadas por falhas de hardware.
-No SQL Server 2008 em diante, ainda é possível reparar essas inconsistências entre o índice e o índice clusterizado recompilando um índice não clusterizado offline. Entretanto, não é possível reparar inconsistências de índice não clusterizado recompilando o índice online, porque o mecanismo de recompilação online usa o índice não clusterizado existente como base para a recompilação e, portanto, a inconsistência persiste. A recriação do índice offline poderá forçar, algumas vezes, um exame do índice clusterizado (ou heap) e, consequentemente, remover a inconsistência. Para garantir uma recompilação do índice clusterizado, remova e recrie o índice não clusterizado. Como nas versões anteriores, é recomendável que a recuperação de inconsistências seja feita com a restauração dos dados afetados de um backup; porém, talvez seja possível reparar as inconsistências do índice recriando o índice não clusterizado offline. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
+Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], às vezes, era possível recriar um índice não clusterizado do rowstore para corrigir as inconsistências causadas por falhas de hardware.
+Iniciando com o [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)], ainda é possível reparar essas inconsistências entre o índice e o índice clusterizado recriando um índice não clusterizado offline. Entretanto, não é possível reparar inconsistências de índice não clusterizado recompilando o índice online, porque o mecanismo de recompilação online usa o índice não clusterizado existente como base para a recompilação e, portanto, a inconsistência persiste. A recriação do índice offline poderá forçar, algumas vezes, um exame do índice clusterizado (ou heap) e, consequentemente, remover a inconsistência. Para garantir uma recompilação do índice clusterizado, remova e recrie o índice não clusterizado. Como nas versões anteriores, é recomendável que a recuperação de inconsistências seja feita com a restauração dos dados afetados de um backup; porém, talvez seja possível reparar as inconsistências do índice recriando o índice não clusterizado offline. Para obter mais informações, veja [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
 
 ## <a name="see-also"></a>Confira também
 

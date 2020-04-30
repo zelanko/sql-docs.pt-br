@@ -1,5 +1,6 @@
 ---
-title: Como configurar o cliente para criptografia | Microsoft Docs
+title: Configurando o cliente para criptografia
+description: Saiba mais sobre criptografia do lado do cliente e confiança de certificado para garantir a segurança dos clientes que usam o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922485"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728483"
 ---
 # <a name="configuring-the-client-for-encryption"></a>Configurando o cliente para criptografia
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

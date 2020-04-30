@@ -1,5 +1,6 @@
 ---
-title: Aplicativo de exemplo (driver SQLSRV) | Microsoft Docs
+title: Aplicativo de exemplo (driver SQLSRV)
+description: O exemplo de Revisões do Produto da AdventureWorks é um aplicativo da Web que usa o driver SQLSRV para demonstrar como interagir com um banco de dados SQL Server por meio do PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82f12dd1a5a50f05f6e831f269ed017e55e46e97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916632"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728351"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Aplicativo de exemplo (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

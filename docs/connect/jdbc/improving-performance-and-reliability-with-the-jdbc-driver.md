@@ -1,5 +1,6 @@
 ---
-title: Melhorando o desempenho e a confiabilidade com o JDBC Driver | Microsoft Docs
+title: Melhorando o desempenho e a confiabilidade com o JDBC Driver
+description: Conheça várias técnicas para melhorar o desempenho do aplicativo e a confiabilidade ao usar o Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920733"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728481"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Melhorando o desempenho e a confiabilidade com o JDBC Driver
 
@@ -27,7 +28,7 @@ Os tópicos nesta seção descrevem várias técnicas para melhorar o desempenho
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|Tópico|DESCRIÇÃO|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Fechando os objetos quando não estão em uso](../../connect/jdbc/closing-objects-when-not-in-use.md)|Descreve a importância de fechar objetos do driver JDBC quando eles não forem mais necessários.|  
 |[Gerenciando o tamanho da transação](../../connect/jdbc/managing-transaction-size.md)|Descreve técnicas para melhorar o desempenho de transação.|  

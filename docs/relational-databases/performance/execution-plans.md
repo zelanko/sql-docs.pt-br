@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256920"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087346"
 ---
 # <a name="execution-plans"></a>Planos de execução
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Para poder executar consultas, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deve analisar a instrução para determinar a maneira mais eficiente de acessar os dados necessários. Essa análise é tratada por um componente chamado de Otimizador de Consulta. A entrada do Otimizador de Consulta consiste em uma consulta, o esquema de banco de dados (definições de tabela e de índice) e as estatísticas de banco de dados. A saída do Otimizador de Consulta é um plano de execução de consulta, às vezes chamado de plano de consulta ou plano de execução.   
 
@@ -45,9 +45,9 @@ Um plano de execução de consulta é uma definição do seguinte:
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem três opções para exibir os planos de execução:        
-> -  O ***[Plano de Execução Estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, que é o plano compilado, como produzido pelo Otimizador de Consulta com base em estimativas.        
-> -  O ***[Plano de Execução Real](../../relational-databases/performance/display-an-actual-execution-plan.md)***, que é o mesmo que o plano compilado mais o [contexto de execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Inclui informações de runtime disponíveis depois que a execução é concluída, como avisos de execução, ou em versões mais recentes do [!INCLUDE[ssde_md](../../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.        
-> -  As ***[Estatísticas de Consulta Dinâmica](../../relational-databases/performance/live-query-statistics.md)***, que são o mesmo que o plano compilado, mais o contexto de execução. Isso inclui informações de runtime durante o progresso da execução e é atualizado a cada segundo. As informações de runtime incluem, por exemplo, o número real de linhas que fluem pelos operadores.       
+> -  O ***[Plano de Execução Estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** é o plano compilado, como produzido pelo Otimizador de Consulta com base em estimativas. Esse é o plano de consulta armazenado no cache de planos.        
+> -  O ***[Plano de Execução Real](../../relational-databases/performance/display-an-actual-execution-plan.md)*** é o plano compilado mais o [contexto de execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Ele fica disponível **após a execução da consulta ter sido concluída**. Inclui informações de runtime como avisos de execução ou, em versões mais recentes do [!INCLUDE[ssde_md](../../includes/ssde_md.md)], o tempo decorrido e o tempo de CPU usados durante a execução.         
+> -  As ***[Estatísticas de Consulta Dinâmica](../../relational-databases/performance/live-query-statistics.md)*** são o plano compilado mais o contexto de execução. Estão disponíveis para **execuções de consulta em andamento** e são atualizadas a cada segundo. Isso inclui informações de runtime, como o número real de linhas fluindo pelos [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), tempo decorrido e progresso estimado da consulta.
 
 > [!TIP]
 > Para obter mais informações sobre o processamento de consultas e planos de execução de consulta, confira as seções [Otimizar as instruções SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) e [Cache e Reutilização do Plano de Execução](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) do Guia de Arquitetura de Processamento de Consultas.

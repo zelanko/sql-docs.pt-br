@@ -1,5 +1,6 @@
 ---
-title: Configuração do IIS para o Microsoft Drivers para PHP para SQL Server | Microsoft Docs
+title: Configurar IIS para os Drivers para PHP
+description: Saiba como configurar o IIS para hospedar aplicativos PHP que usam os Drivers para PHP para SQL Server. Os recursos listados aqui são específicos para usar o FastCGI com o IIS.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31d46254f153742ff3923aa2484872aedb7cf077
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907332"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728401"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuração do IIS para os drivers da Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

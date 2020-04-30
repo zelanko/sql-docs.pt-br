@@ -1,6 +1,6 @@
 ---
-title: Quando usar o OLE DB Driver for SQL Server | Microsoft Docs
-description: Quando usar o OLE DB Driver for SQL Server
+title: Quando usar o Driver do OLE DB
+description: Saiba quando usar o Driver do OLE DB para SQL Server e conheça os conceitos de acesso a dados de alto nível que o diferencia dos outros drivers.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015193"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727955"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quando usar o OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015193"
  Confira mais informações sobre as diferenças entre o Driver do OLE DB para SQL Server e o MDAC em [Atualizar um aplicativo do MDAC para o Driver do OLE DB para SQL Server](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [Tópicos de instruções do OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Driver do OLE DB para SQL Server](oledb-driver-for-sql-server.md)  
+ [Tópicos de instruções do OLE DB](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

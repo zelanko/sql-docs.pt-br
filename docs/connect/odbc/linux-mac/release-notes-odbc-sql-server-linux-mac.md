@@ -1,7 +1,7 @@
 ---
 title: Notas sobre a versão do ODBC Driver for SQL Server em Linux e macOS
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090501"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153272"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de versão para o Microsoft ODBC Driver for SQL Server em Linux e macOS
 
@@ -35,6 +35,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, abril de 2020 (somente Alpine Linux)
+
+| Recurso adicionado | Detalhes |
+| :------------ | :------ |
+| Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="1752-march-2020"></a>17.5.2, março de 2020
 
@@ -74,7 +81,7 @@ Ao usar Always Encrypted com enclaves seguros e o Azure Key Vault, os compriment
 | :------------ | :------ |
 | Always Encrypted com enclaves seguros. | Confira [Uso do Always Encrypted com o driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
 | Carregamento dinâmico do OpenSSL | Confira [Diretrizes de programação](programming-guidelines.md#bkmk-openssl). |
-| Definições keep alive do TCP configuráveis. | Confira [Conectar-se ao SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
+| Definições de Keep Alive de TCP configuráveis. | Confira [Conectar-se ao SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Correções de bugs. | Veja [Correções de bug](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
@@ -114,7 +121,7 @@ Ao usar Always Encrypted com enclaves seguros e o Azure Key Vault, os compriment
 
 **Novas distribuições compatíveis**: macOS High Sierra e Ubuntu 17.10 
 
-**Melhorias de desempenho**: melhoria de desempenho de mais de 10 vezes quando o driver converte para/de UTF-8/16.
+**Aprimoramentos de Desempenho**: melhoria de desempenho em mais de 10 vezes quando o driver converte para/de UTF-8/16.
 
 **Recursos adicionados**:
 
@@ -140,11 +147,11 @@ Suporte para a Instância Gerenciada SQL do Azure.
 
 O Driver ODBC 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adiciona suporte para Always Encrypted e Azure Active Directory quando usado em conjunto com o Microsoft SQL Server 2016.
 
-**Novas distribuições compatíveis**: há suporte para OS X 10.11 e macOS 10.12 na primeira versão do Driver ODBC no macOS. Agora há suporte para Ubuntu 16.10, juntamente com o Red Hat 6, 7 e SUSE 12. Cada plataforma tem um pacote relevante para a plataforma (RPM ou DEB) para facilitar a instalação e a configuração. Para obter mais informações, confira as instruções de instalação do driver ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) e [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+**Novas distribuições com suporte**: há suporte para OS X 10.11 e macOS 10.12 na primeira versão do Driver ODBC no macOS. Agora há suporte para Ubuntu 16.10, juntamente com o Red Hat 6, 7 e SUSE 12. Cada plataforma tem um pacote relevante para a plataforma (RPM ou DEB) para facilitar a instalação e a configuração. Para obter mais informações, confira as instruções de instalação do driver ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) e [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Alterações de suporte do unixODBC Driver Manager 2.3.1**: driver o ODBC não depende mais de empacotamento personalizado para o gerenciador de driver unixODBC (exceto no Red Hat 6) e depende, em vez disso, do gerenciador de pacotes de distribuição para resolver a dependência do UnixODBC de repositórios de distribuição.
+**Alterações no suporte para Gerenciador de Driver unixODBC 2.3.1**: o driver ODBC não depende mais de empacotamento personalizado para o Gerenciador de Driver unixODBC (exceto no Red Hat 6) e, em vez disso, depende do gerenciador de pacotes de distribuição para resolver a dependência do UnixODBC de repositórios de distribuição.
 
-**Suporte à API BCP**: o driver ODBC para Linux e macOS agora é compatível com o uso de [funções de API BCP (**bcp_init** etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**Suporte à API BCP**: o driver ODBC para Linux e macOS agora dá suporte ao uso de [funções de API BCP (**bcp_init** etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## <a name="130-for-ssnoversion-on-linux"></a>13.0 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux
 
@@ -154,11 +161,11 @@ Com o Microsoft ODBC Driver 13.0 for SQL Server, agora também há suporte para 
 
 O Ubuntu agora tem suporte, juntamente com o Red Hat e o SUSE. Cada plataforma tem um pacote relevante para a plataforma (RPM ou DEB) para facilitar a instalação e a configuração.  Veja [Instalando o Driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) para instruções de instalação.
 
-**Suporte para unixODBC Driver Manager 2.3.1**: além de um gerenciador de driver mais novos, também há um pacote para instalar essa dependência que facilita a instalação e a configuração.  
+**Suporte para Gerenciador de Driver unixODBC 2.3.1**: além de um gerenciador de driver mais novo, também há um pacote para instalar essa dependência que facilita a instalação e a configuração.  
 
-**Resolução de IP de Rede Transparente**: a Resolução de IP de Rede Transparente é uma revisão do recurso existente de Failover de Várias Sub-Redes que afeta a sequência de conexão do driver no caso em que o primeiro IP resolvido do nome do host não responde e há vários IPs associados ao nome do host.
+**Resolução IP de Rede Transparente**: a Resolução IP de Rede Transparente é uma revisão do recurso existente de Failover de Várias Sub-Redes que afeta a sequência de conexão do driver no caso em que o primeiro IP resolvido do nome do host não responde e há vários IPs associados ao nome do host.
 
-**Suporte a TLS 1.2**: o Microsoft ODBC Driver 13.0 for SQL Server em Linux agora dá suporte a TLS 1.2 quando são usadas comunicações seguras com o SQL Server.
+**Suporte a TLS 1.2**: o Microsoft ODBC Driver 13.0 para SQL Server em Linux agora dá suporte a TLS 1.2 quando são usadas comunicações seguras com o SQL Server.
 
 ## <a name="11-for-ssnoversion-on-linux"></a>11 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux
 
@@ -166,6 +173,6 @@ O driver ODBC no SUSE Linux (visualização) oferece suporte para o SUSE Linux E
 
 O driver ODBC no Linux é compatível com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obter mais informações, veja [ODBC Driver no suporte do Linux para alta disponibilidade, recuperação de desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Saiba mais em [Como conectar o Banco de Dados SQL do Azure usando ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+O driver ODBC no Linux oferece suporte para conexões com o Banco de Dados SQL do Microsoft Azure. Para obter mais informações, confira [Como conectar-se ao Banco de dados SQL do Azure usando o ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 A opção `-l` (tempo limite de logon) foi adicionada ao `bcp`. Para obter mais informações, veja [Como conectar-se com **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

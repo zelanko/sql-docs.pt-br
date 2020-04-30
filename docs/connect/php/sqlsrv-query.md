@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Microsoft Docs
+title: sqlsrv_query
+description: A função sqlsrv_query fornece um método para executar uma consulta com uma quantidade mínima de código e pode ser usada para executar consultas parametrizadas.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928556"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728405"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +37,12 @@ Prepara e executa uma instrução.
 sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
-#### <a name="parameters"></a>parâmetros  
+#### <a name="parameters"></a>Parâmetros  
 *$conn*: o recurso de conexão associado à instrução preparada.  
   
 *$tsql*: a expressão Transact-SQL que corresponde à instrução preparada.  
   
-*$params* [OPCIONAL]: uma **matriz** de valores que correspondem a parâmetros em uma consulta parametrizada. Cada elemento da matriz pode ser um dos seguintes:
+*$params* [OPTIONAL]: uma **matriz** de valores que correspondem aos parâmetros em uma consulta parametrizada. Cada elemento da matriz pode ser um dos seguintes:
   
 -   Um valor literal.  
   
@@ -55,14 +56,14 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     A descrição de cada elemento da matriz está na tabela a seguir:  
   
-    |Elemento|DESCRIÇÃO|  
+    |Elemento|Descrição|  
     |-----------|---------------|  
     |*$value*|Um valor literal, uma variável do PHP ou uma variável do PHP por referência.|  
-    |*$direction*[OPCIONAL]|Uma das seguintes constantes **SQLSRV_PARAM_\*** usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[OPCIONAL]|Uma dos seguintes constantes **SQLSRV_PARAM_\*** usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[OPCIONAL]|Uma constante **SQLSRV_PHPTYPE _\*** que especifica o tipo de dados do PHP do valor retornado.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[OPCIONAL]|Uma constante **SQLSRV_SQLTYPE_\*** que especifica o tipo de dados do SQL Server do valor de entrada.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [OPCIONAL]: uma matriz associativa que define as propriedades da consulta. É a mesma lista de chaves às quais o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) também dá suporte.
+*$options* [OPTIONAL]: uma matriz associativa que define as propriedades da consulta. É a mesma lista de chaves às quais o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) também dá suporte.
   
 ## <a name="return-value"></a>Valor retornado  
 Um recurso de instrução. Se não for possível criar e/ou executar a instrução, **false** será retornado.  
@@ -70,7 +71,7 @@ Um recurso de instrução. Se não for possível criar e/ou executar a instruç�
 ## <a name="remarks"></a>Comentários  
 A função **sqlsrv_query** é adequada para consultas únicas e deve ser a opção padrão para executar consultas, a menos que circunstâncias especiais se apliquem. Essa função fornece um método simplificado para executar uma consulta com uma quantidade mínima de código. A função **sqlsrv_query** realiza a preparação e a execução da instrução e pode ser usada para executar consultas parametrizadas.  
   
-Para obter mais informações, consulte [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Para obter mais informações, confira [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  
 No exemplo a seguir, uma única linha é inserida na tabela *Sales.SalesOrderDetail* do banco de dados AdventureWorks. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
@@ -243,11 +244,11 @@ Second field:  test_data
 ## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[Como executar consultas parametrizadas](../../connect/php/how-to-perform-parameterized-queries.md)  
+[Como: Executar consultas parametrizadas](../../connect/php/how-to-perform-parameterized-queries.md)  
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
 
-[Como enviar dados como um fluxo](../../connect/php/how-to-send-data-as-a-stream.md)  
+[Como: Enviar dados como um fluxo](../../connect/php/how-to-send-data-as-a-stream.md)  
 
 [Usando parâmetros direcionais](../../connect/php/using-directional-parameters.md)  
 

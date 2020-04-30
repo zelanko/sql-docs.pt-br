@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012960"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087336"
 ---
 # <a name="clr-strict-security"></a>Segurança estrita do CLR   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Controla a interpretação das permissões `SAFE`, `EXTERNAL ACCESS` e `UNSAFE` no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|Valor |DESCRIÇÃO | 
+|Valor |Descrição | 
 |----- |----- | 
 |0 |Desabilitado – fornecido para fins de compatibilidade com versões anteriores. O valor `Disabled` não é recomendado. | 
-|1 |Habilitado – faz com que o [!INCLUDE[ssde-md](../../includes/ssde-md.md)] ignore as informações de `PERMISSION_SET` sobre os assemblies e sempre interprete-as como `UNSAFE`.  `Enabled` é o valor padrão do [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
+|1 |Habilitado – faz com que o [!INCLUDE[ssde-md](../../includes/ssde-md.md)] ignore as informações de `PERMISSION_SET` sobre os assemblies e sempre interprete-as como `UNSAFE`.  `Enabled` é o valor padrão, começando com [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
 
 > [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Os administradores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também podem adicionar assemblies a uma lista de assemblies, na qual o Mecanismo de Banco de Dados deve confiar. Para obter mais informações, consulte [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).

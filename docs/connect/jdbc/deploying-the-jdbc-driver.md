@@ -1,5 +1,6 @@
 ---
 title: Implantando o JDBC Driver
+description: Saiba como você pode redistribuir e implantar o Microsoft JDBC Driver para SQL Server com seu aplicativo e quais arquivos são necessários.
 ms.custom: ''
 ms.date: 03/13/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36eb8896a18a6dd87e9b75818f6e4aae2c336905
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922436"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728362"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implantando o JDBC Driver
 
@@ -56,4 +57,4 @@ As versões 4.x do JDBC Driver são antigas e obsoletas. O suporte para as vers�
 
 ## <a name="see-also"></a>Confira também
 
-[Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Visão geral do JDBC Driver](overview-of-the-jdbc-driver.md)  

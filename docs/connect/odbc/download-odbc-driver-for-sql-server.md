@@ -1,7 +1,7 @@
 ---
 title: Baixar o driver ODBC para SQL Server
 description: Baixe o Microsoft ODBC Driver for SQL Server para desenvolver aplicativos de código nativo que se conectam ao SQL Server e ao Banco de Dados SQL do Azure.
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba443225baa1e84a56fd9ce114ec8ff6fa96ebb9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488576"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153247"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Baixar o driver ODBC para SQL Server
 
@@ -71,7 +71,9 @@ Se você precisar baixar os pacotes para instalação offline, todas as versões
 
 ### <a name="alpine"></a>Alpine
 
-- [Pacote do Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([Assinatura do PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [Pacote do Alpine 17.5.2.2](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([Assinatura do PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
+- [Pacote do Alpine 17.5.2.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([Assinatura do PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [Pacote do Alpine 17.5.1.1](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk) ([Assinatura do PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

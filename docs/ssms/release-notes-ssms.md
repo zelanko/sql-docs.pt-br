@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873102"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086806"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas sobre a versão do SQL Server Management Studio (SSMS)
 
@@ -87,11 +87,11 @@ A versão 18.5 é uma atualização da 18.4, com os itens novos e correções de
 | Always On | Corrigido um problema em que um erro era mostrado ao tentar exibir o dashboard quando conectado a um ponto de extremidade de Cluster de Big Data. |
 | Auditoria | Corrigido um problema em que a Janela de mesclagem dos logs de auditoria falha quando há uma pasta com um nome vazio na pasta raiz da conta de armazenamento. |
 | Auditoria | Corrigido um problema em que a Janela de mesclagem de logs de auditoria não mostra todos os servidores quando há muitos itens na raiz do contêiner. |
-| Esclarecimento de dados | Corrigido um problema em que o assistente de *Classificação de Dados* não é aberto em bancos de dados com um grande número de tabelas. |
-| Esclarecimento de dados | Agora estamos impondo GUIDs diferentes para todas as estruturas de rótulo/InfoType e GUID no processo de validação. |
-| Esclarecimento de dados | Remoção do processo de classificação no SqlServer2019. |
-| Esclarecimento de dados | Correção dos testes de validação anteriores (adição de classificação, remoção da propriedade ilegal *InformationTypes*) e adição de novos para os dois primeiros pontos. |
-| Esclarecimento de dados | O botão logo acima da tabela de colunas classificadas agora minimiza o painel de recomendações, como informado. |
+| Classificação de dados | Corrigido um problema em que o assistente de *Classificação de Dados* não é aberto em bancos de dados com um grande número de tabelas. |
+| Classificação de dados | Agora estamos impondo GUIDs diferentes para todas as estruturas de rótulo/InfoType e GUID no processo de validação. |
+| Classificação de dados | Remoção do processo de classificação no SqlServer2019. |
+| Classificação de dados | Correção dos testes de validação anteriores (adição de classificação, remoção da propriedade ilegal *InformationTypes*) e adição de novos para os dois primeiros pontos. |
+| Classificação de dados | O botão logo acima da tabela de colunas classificadas agora minimiza o painel de recomendações, como informado. |
 | SSMS geral | Atualização da versão dos drivers MSODBC e MSOLEDB. |
 | SSMS geral | Foram abordadas pelo menos duas fontes comuns que travavam e falhavam no SSMS. |
 | SSMS geral | Foi abordado mais um caso em que a *caixa de diálogo Restaurar* trava ao selecionar o botão Procurar. |
@@ -593,7 +593,7 @@ A versão 18.1 é uma pequena atualização da versão 18.0 com as seguintes ite
 |Pesquisador de Objetos|Corrigido um problema em que o SSMS gerava uma exceção como "Não foi possível converter o objeto de DBNull para outros tipos" ao tentar expandir o nó "Gerenciamento" no OE (DataCollector configurado incorretamente).|
 |Pesquisador de Objetos|Corrigido um problema em que o OE não estava ignorando as aspas antes de invocar "Editar Top N…", causando confusão para o designer.|
 |Pesquisador de Objetos|Corrigido um problema em que o assistente para "Importar Aplicativo da Camada de Dados" estava falhando ao iniciar da árvore de Armazenamento do Azure.|
-|Pesquisador de Objetos|Corrigido um problema em "Configuração do Database Mail" em que o status da caixa de seleção SSL não era persistente. Para saber detalhes, veja [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Pesquisador de Objetos|Correção de um problema em "Configuração do Database Mail" em que o status da caixa de seleção TLS/SSL não era persistente. Para saber detalhes, veja [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Pesquisador de Objetos|Corrigido um problema em que o SSMS esmaecia a opção para fechar conexões existentes ao tentar restaurar o banco de dados com is_auto_update_stats_async_on.|
 |Pesquisador de Objetos|Corrigido um problema em que clicar com o botão direito do mouse em nós no Pesquisador de Objetos (por exemplo, em "Tabelas", e esperar para executar uma ação, como filtrar tabelas acessando Filtro > Configurações de Filtro, o formulário de configurações de filtro podia aparecer na outra tela, em vez de onde o SSMS está ativo no momento). Para saber detalhes, veja [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Pesquisador de Objetos|Corrigido um problema antigo em que a tecla DELETE não estava funcionando no OE ao tentar renomear um objeto. Para saber detalhes, confira [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) e outras duplicatas.|

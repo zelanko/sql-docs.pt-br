@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de implantação do modo Active Directory
+title: Solucionar problemas do escopo do grupo de domínio do Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Solucionar problemas de implantação de um cluster de Big Data do SQL Server em um domínio do Active Directory.
 author: rl-msft
@@ -9,38 +9,94 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d887eadd021641241516a1478c6ac13e0d0bdec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79191207"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153258"
 ---
-# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-mode-deployment"></a>Solucionar problemas da implantação do modo Active Directory do Cluster de Big Data do SQL Server
+# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solucionar problemas de integração do Active Directory com o cluster de Big Data do SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artigo explica como solucionar problemas de implantação de um Cluster de Big Data do SQL Server no modo Active Directory.
 
-## <a name="check-deployment-progress"></a>Verificar o progresso da implantação
+## <a name="symptom"></a>Sintoma
 
-A implantação pode levar vários minutos. Se o cluster não estiver pronto após 15 minutos, verifique os logs do controlador para obter mais detalhes.
+Você começou a implantar o BDC com o modo AD, mas a implantação está paralisada e não está avançando.
 
-Durante a implantação do cluster, verifique os pods.
+O exemplo a seguir mostra os resultados da implantação em um shell com o bash.
 
-```console
+```
+The privacy statement can be viewed at:
+https://go.microsoft.com/fwlink/?LinkId=853010
+ 
+The license terms for SQL Server Big Data Cluster can be viewed at:
+Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
+Standard: https://go.microsoft.com/fwlink/?linkid=2104294
+Developer: https://go.microsoft.com/fwlink/?linkid=2104079
+ 
+Cluster deployment documentation can be viewed at:
+https://aka.ms/bdc-deploy
+ 
+NOTE: Cluster creation can take a significant amount of time depending on
+configuration, network speed, and the number of nodes in the cluster.
+ 
+Starting cluster deployment.
+Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
+Waiting for control plane to be ready after 5 minutes.
+Waiting for control plane to be ready after 10 minutes.
+Waiting for control plane to be ready after 15 minutes.
+Waiting for control plane to be ready after 20 minutes.
+Waiting for control plane to be ready after 25 minutes.
+```
+
+Verifique os pods implantados atualmente.
+
+```bash
 kubectl get pods -n mssql-cluster
 ```
 
-Verifique se a lista de pods retornada inclui:
+A lista a seguir mostra apenas os pods que pertencem ao controlador e que foram implantados. Nenhum pod de computação, dados ou pool de armazenamento está sendo criado.
 
-- `compute-`$
-- `data-`
-- `storage-`
+```
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-6q4rm    2/2     Running   0          32m
+compute-0-0       3/3     Running   0          32m
+control-n8jqh     3/3     Running   0          35m
+controldb-0       2/2     Running   0          35m
+controlwd-fgpj8   1/1     Running   0          34m
+data-0-0          3/3     Running   0          32m
+data-0-1          3/3     Running   0          32m
+dns-fjp7n         2/2     Running   0          34m
+gateway-0         2/2     Running   0          32m
+logsdb-0          1/1     Running   0          34m
+logsui-d26c5      1/1     Running   0          34m
+master-0          3/4     Running   0          32m
+master-1          3/4     Running   0          32m
+master-2          3/4     Running   0          32m
+metricsdb-0       1/1     Running   0          34m
+metricsdc-c2kbh   1/1     Running   0          34m
+metricsdc-lmqzx   1/1     Running   0          34m
+metricsdc-r6499   1/1     Running   0          34m
+metricsdc-tj99w   1/1     Running   0          34m
+metricsui-dg8rz   1/1     Running   0          34m
+mgmtproxy-dvzpc   2/2     Running   0          34m
+nmnode-0-0        2/2     Running   0          32m
+nmnode-0-1        2/2     Running   0          32m
+operator-27gt9    1/1     Running   0          32m
+sparkhead-0       4/4     Running   0          31m
+sparkhead-1       4/4     Running   0          31m
+storage-0-0       4/4     Running   0          31m
+storage-0-1       4/4     Running   0          31m
+storage-0-2       4/4     Running   0          31m
+zookeeper-0       2/2     Running   0          32m
+zookeeper-1       2/2     Running   0          32m
+zookeeper-2       2/2     Running   0          32m
+```
 
-Se os pods de computação, dados e armazenamento não forem criados, verifique os logs para identificar o motivo.
-
-## <a name="check-logs"></a>Verificar os logs
+### <a name="check-logs"></a>Verificar os logs
 
 Para identificar por que a implantação é encerrada sem criar pods de computação, dados ou armazenamento, verifique os seguintes logs: 
 
@@ -65,9 +121,11 @@ Para identificar por que a implantação é encerrada sem criar pods de computa�
   WARNING | Retrying.
   ```
 
-  No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos no escopo de domínio universal ou de domínio global. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](deploy-active-directory.md) explica os requisitos de escopo do grupo do AD.
+## <a name="cause"></a>Causa
 
-## <a name="check-the-scope-of-domain-groups"></a>Verifique o escopo dos grupos de domínio.
+No exemplo acima, a implantação não cria um logon para o usuário de domínio porque o grupo de domínio está no escopo como domínio local. Use grupos no escopo de domínio universal ou de domínio global. [Implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] no modo Active Directory](deploy-active-directory.md) explica os requisitos de escopo do grupo do AD.
+
+## <a name="resolution"></a>Resolução
 
 Verifique o escopo do grupo de domínio (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 
@@ -117,56 +175,7 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## <a name="check-security-support-container"></a>Verificar contêiner de suporte de segurança 
+## <a name="resolution"></a>Resolução
 
-Examine os logs de contêiner de suporte de segurança.
+Para resolver o problema, crie os grupos do AD com escopo universal ou global e execute a implantação novamente.
 
-O comando a seguir coleta os logs de suporte de segurança em um cluster no namespace `mssql-cluster`.
-
-```console
-azdata bdc debug copy-logs -n mssql-cluster -c security-support
-```
-
-Extraia os logs e localize `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
-
-Procure as seguintes entradas no log:
-
-```
-ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
-```
-
-Essas entradas podem acontecer quando o servidor DNS do controlador de domínio não tem uma entrada DNS reversa (registro PTR).
-
-## <a name="verify-reverse-lookup-ptr-record"></a>Verificar a pesquisa inversa (registro PTR)
-    
-Execute o seguinte script do PowerShell para confirmar se você tem a entrada de DNS reversa (registro PTR) configurada.
-
-```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
-
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
-}
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
-}
-
-#show the results 
-$DcControllerDnsPtr_Result
-```
-
-[Verificar a entrada DNS reversa (registro PTR) para o controlador de domínio](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).

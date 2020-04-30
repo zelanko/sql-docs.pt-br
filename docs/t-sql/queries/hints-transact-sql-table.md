@@ -1,7 +1,7 @@
 ---
 title: Dicas de tabela (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,20 +36,20 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981759"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087499"
 ---
 # <a name="hints-transact-sql---table"></a>Dicas (Transact-SQL) – tabela
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  As dicas de tabela substituem o comportamento padrão do otimizador de consulta durante a instrução DML (linguagem de manipulação de dados) ao especificar um método de bloqueio, um ou mais índices, uma operação de processamento de consulta, como uma verificação de tabela ou busca de índice, ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
+  As dicas de tabela substituem o comportamento padrão do Otimizador de Consulta durante a instrução DML (linguagem de manipulação de dados) ao especificar um método de bloqueio, um ou mais índices, uma operação de processamento de consulta, como uma verificação de tabela ou busca de índice, ou outras opções. As dicas da tabela são especificadas na cláusula FROM da instrução DML e afetam apenas a tabela ou exibição referenciada nessa cláusula.  
   
 > [!CAUTION]  
->  Como o otimizador de consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente seleciona o melhor plano de execução para uma consulta, é recomendável que desenvolvedores e administradores de banco de dados experientes usem as dicas apenas como um último recurso.  
+>  Como o Otimizador de Consulta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente seleciona o melhor plano de execução para uma consulta, recomendamos que desenvolvedores e administradores de banco de dados experientes usem as dicas apenas como um último recurso.  
   
  **Aplica-se a:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73981759"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ Com algumas exceções, há suporte para dicas de tabela na cláusula FROM somen
 > [!IMPORTANT]  
 > A omissão da palavra-chave WITH é um recurso preterido: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-As seguintes dicas de tabelas são permitidas com ou sem a palavra-chave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:  
+As seguintes dicas de tabela são permitidas com e sem a palavra-chave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` e `NOEXPAND`. Quando essas dicas de tabela forem especificadas sem a palavra-chave WITH, as dicas deverão ser especificadas sozinhas. Por exemplo:   
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ NOLOCK
 > Para instruções UPDATE ou DELETE: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Instrui o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a retornar uma mensagem assim que um bloqueio for encontrado na tabela. NOWAIT é equivalente a especificar SET LOCK_TIMEOUT 0 para uma tabela específica. A dica NOWAIT não funciona quando a dica TABLOCK também é incluída. Para terminar uma consulta sem aguardar ao usar a dica TABLOCK, preceda a consulta por `SETLOCK_TIMEOUT 0;`.  
+Instrui o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a retornar uma mensagem assim que um bloqueio for encontrado na tabela. NOWAIT é equivalente a especificar `SET LOCK_TIMEOUT 0` para determinada tabela. A dica NOWAIT não funciona quando a dica TABLOCK também é incluída. Para terminar uma consulta sem aguardar ao usar a dica TABLOCK, preceda a consulta por `SETLOCK_TIMEOUT 0;`.  
   
 PAGLOCK  
 Usa bloqueios de página onde bloqueios individuais são usados normalmente em linhas ou chaves ou onde um único bloqueio de tabela é usado normalmente. Por padrão, usa o modo de bloqueio adequado para a operação. Quando especificados em transações que operam no nível de isolamento de SNAPSHOT, os bloqueios de página não são usados a menos que PAGLOCK seja combinado com outras dicas de tabela que requerem bloqueios, como UPDLOCK e HOLDLOCK.  
@@ -339,7 +339,7 @@ Esta opção permite ajustar o tempo de execução de consulta ajustando o inter
 TABLOCK  
 Especifica que o bloqueio adquirido seja aplicado no nível de tabela. O tipo de bloqueio que é adquirido depende da instrução que está sendo executada. Por exemplo, uma instrução SELECT pode adquirir um bloqueio compartilhado. Ao especificar TABLOCK, o bloqueio compartilhado é aplicado à tabela inteira, e não no nível de linha ou página. Se HOLDLOCK também for especificado, o bloqueio de tabela será mantido até o final da transação.  
   
-Ao importar dados para um heap usando a instrução \<target_table> SELECT \<columns> FROM \<source_table>, você pode habilitar o registro em log e o bloqueio otimizados da instrução, especificando a dica TABLOCK para a tabela de destino. Além disso, o modelo de recuperação do banco de dados deve ser definido como simples ou bulk-logged. Para obter mais informações, consulte [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Ao importar dados para um heap usando a instrução `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`, você pode habilitar o registro em log mínimo e bloqueio otimizado da instrução, especificando a dica TABLOCK para a tabela de destino. Além disso, o modelo de recuperação do banco de dados deve ser definido como simples ou bulk-logged. A dica TABLOCK também permite inserções paralelas para heaps ou índices columnstore clusterizados. Para obter mais informações, consulte [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Quando usado com o provedor de conjuntos de linhas em massa [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) para importar dados em uma tabela, TABLOCK permite que vários clientes carreguem dados simultaneamente na tabela de destino com o registro em log e o bloqueio otimizados. Para obter mais informações, confira [Pré-requisitos para registro em log mínimo em importação em massa](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   

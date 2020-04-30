@@ -1,5 +1,6 @@
 ---
 title: Copiar bancos de dados com backup e restauração | Microsoft Docs
+description: No SQL Server, é possível criar um novo banco de dados por meio da restauração de um backup de um banco de dados do usuário criado por meio de versões anteriores.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 828357399c1c63c046362c2b25cf3e71cc5def67
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137319"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138137"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bancos de dados com backup e restauração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +66,7 @@ Algumas considerações adicionais que podem afetar esse processo:
  Para evitar erros e consequências não intencionais, antes da operação de restauração, você pode usar a tabela de histórico [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) para localizar o banco de dados e os arquivos de log no backup que você planeja restaurar.  
   
 ## <a name="moving-the-database-files"></a>Movendo os arquivos do banco de dados  
- Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:  
+ Se os arquivos que estão no backup do banco de dados não puderem ser restaurados no computador de destino, será necessário mover os arquivos para um novo local enquanto estiverem sendo restaurados. Por exemplo:   
   
 -   Você deseja restaurar um banco de dados de backups criado no local padrão da versão anterior.  
   

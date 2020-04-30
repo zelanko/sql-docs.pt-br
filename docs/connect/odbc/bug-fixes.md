@@ -2,7 +2,7 @@
 title: Lista de bugs corrigidos
 description: Esta página contém uma lista de bugs corrigidos em cada versão, começando com o Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629696"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153219"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de bugs corrigidos
 
 Esta página contém uma lista de bugs corrigidos em cada versão, começando com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (apenas Alpine Linux)
+
+- Correção de uma falha ao usar o Always Encrypted com enclaves seguros no Alpine Linux
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correções de bugs no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

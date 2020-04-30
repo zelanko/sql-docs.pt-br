@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215475"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087326"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215475"
 | Alterar | Detalhes |
 | :----- | :------ |
 | Alteração da anexação do menu suspenso de conexão em notebooks para listar apenas a conexão ativa no momento | [Nº 8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| Adição da configuração bigdatacluster.ignoreSslVerification para permitir ignorar os erros de verificação do SSL ao se conectar a um BDC | [Nº 8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| Adição da configuração bigdatacluster.ignoreSslVerification para permitir ignorar os erros de verificação do TLS/SSL ao se conectar a um BDC | [Nº 8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | Permissão da alteração do tipo de linguagem padrão para editores de consulta offline | [Nº 8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | Status de GA para recursos de cluster de Big Data/do SQL 2019 | [Nº 8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1). |
@@ -495,7 +495,7 @@ _A 0.32.8 contém correções para algumas regressões encontradas na 0.32.7 ([1
 - Correção do [problema 1836](https://github.com/Microsoft/azuredatastudio/issues/1836): arquivos .sql não associados ao SQL Operations Studio.
 - Correção do [problema 1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Ao digitar N'' ocorre o preenchimento automático de N'''.
 - Correção do [problema 1985](https://github.com/Microsoft/azuredatastudio/issues/1985): A cópia da grade de resultados da consulta é deslocada em 1 coluna.
-- Correção do [problema 1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Adicionar a versão do VS Code à caixa de diálogo Sobre.
+- Correção do [problema 1998](https://github.com/Microsoft/azuredatastudio/pull/1998): Adicionar a versão do VS Code à caixa de diálogo Sobre.
 - Correção do [problema 2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agente: Botão habilitado para importar consultas de arquivos sql.
 - Correção do [problema 2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Não é possível usar o atalho CTRL + C para copiar no painel de resultados.
 - Correção do [problema 2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Adição de mais opções de saveAsCsv.
