@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versão prévia)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use a instrução COPY no SQL Data Warehouse do Azure para carregar de contas de armazenamento externo.
-ms.date: 12/13/2019
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631956"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619649"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versão prévia)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Este artigo explica como usar a instrução COPY no SQL Data Warehouse do Azure para carregar de contas de armazenamento externo. A instrução COPY fornece a maior flexibilidade para a ingestão de dados com alta taxa de transferência no SQL Data Warehouse.
+Este artigo explica como usar a instrução COPY no SQL Data Warehouse do Azure para carregar de contas de armazenamento externo. A instrução COPY fornece a maior flexibilidade para a ingestão de dados com alta taxa de transferência no SQL Data Warehouse. Use COPY para os seguintes recursos:
+
+- Usar usuários com menor privilégio para carregar sem a necessidade de permissões CONTROL estritas no data warehouse
+- Executar uma instrução T-SQL sem precisar criar nenhum objeto de banco de dados adicional
+- Analisar e carregar corretamente os arquivos CSV nos quais os **delimitadores** (cadeia de caracteres, campo, linha) **têm** **escape dentro de colunas delimitadas por cadeia de caracteres**
+- Especificar um modelo de permissão mais preciso sem expor as chaves de conta de armazenamento usando SAS (assinaturas de acesso compartilhado)
+- Usar uma conta de armazenamento diferente para a localização ERRORFILE (REJECTED_ROW_LOCATION)
+- Personalizar valores padrão para cada coluna de destino e especificar campos de dados de origem para carregar em colunas de destino específicas
+- Especificar um terminador de linha personalizado para arquivos CSV
+- Usar formatos de data do SQL Server para arquivos CSV
+- Especificar caracteres curinga e vários arquivos no caminho do local de armazenamento
 
 > [!NOTE]  
 > Atualmente, a instrução COPY está em visualização pública.
@@ -130,24 +140,32 @@ Vários locais de arquivo só podem ser especificados na mesma conta de armazena
 
 Ao autenticar usando o AAD ou uma conta de armazenamento pública, o valor de CREDENTIAL não precisa ser especificado. 
 
-- Autenticação com SAS (Assinaturas de Acesso Compartilhado) *IDENTITY: Uma constante com um valor de “Assinatura de Acesso Compartilhado”* 
-  *SECRET: A* [*Assinatura de Acesso Compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos da sua conta de armazenamento.*
-  Permissões mínimas necessárias: READ e LIST
-
+- Autenticação com SAS (Assinaturas de Acesso Compartilhado)
+  
+  - *IDENTITY: uma constante com um valor de “Assinatura de Acesso Compartilhado”*
+  - *SECRET: A* [*Assinatura de Acesso Compartilhado*](/azure/storage/common/storage-sas-overview) *fornece acesso delegado aos recursos da sua conta de armazenamento.*
+  -  Permissões mínimas necessárias: READ e LIST
+  
 - Autenticação com [*Entidades de Serviço*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET: Chave de Entidade de Serviço de Aplicativo do AAD* Funções de RBAC mínimas necessárias: Colaborador de dados do blob de armazenamento, colaborador de dados do blob de armazenamento, proprietário de dados do blob de armazenamento ou leitor de dados do blob de armazenamento
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: chave da Entidade de Serviço de Aplicativo do AAD*
+  -  Funções de RBAC mínimas necessárias: Colaborador de dados do blob de armazenamento, colaborador de dados do blob de armazenamento, proprietário de dados do blob de armazenamento ou leitor de dados do blob de armazenamento
 
-  > [!NOTE]  
-  > Use o ponto de extremidade do token OAuth 2.0 **V1**
-
-- Autenticação com a chave da conta de armazenamento *IDENTITY: Uma constante com o valor da “Chave de Conta de Armazenamento*
-  *SECRET: Chave de conta de armazenamento*
+- Autenticação com a chave da conta de armazenamento
   
-- Autenticação com [Identidade Gerenciada](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (Pontos de Extremidade de Serviço de VNet) *IDENTITY: Uma constante com um valor de "Identidade Gerenciada"* Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento, proprietário de dados do blob de armazenamento ou leitor de dados do blob de armazenamento para o Servidor do banco de dados SQL registrado no AAD 
+  - *IDENTITY: uma constante com o valor da “Chave de Conta de Armazenamento”*
+  - *SECRET: Chave de conta de armazenamento*
   
-- Autenticação com um usuário do AAD *CREDENTIAL não é necessária* Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento, proprietário de dados do blob de armazenamento ou leitor de dados do blob de armazenamento para o usuário do AAD
+- Autenticação com [Identidade Gerenciada](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (Pontos de Extremidade de Serviço de VNet)
+  
+  - *IDENTITY: uma constante com um valor de “Identidade Gerenciada”*
+  - Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento ou proprietário de dados do blob de armazenamento para o Servidor do banco de dados SQL registrado no AAD
+  
+- Autenticação com um usuário do AAD
+  
+  - *CREDENTIAL não é necessária*
+  - Funções de RBAC mínimas necessárias: colaborador de dados do blob de armazenamento ou proprietário de dados do blob de armazenamento para o usuário do AAD
 
 *ERRORFILE = local do diretório*</br>
 *ERRORFILE* aplica-se somente ao CSV. Especifica o diretório na instrução COPY em que as linhas rejeitadas e o arquivo de erro correspondente devem ser gravados. O caminho completo da conta de armazenamento ou o caminho relativo do contêiner pode ser especificado. Se o caminho especificado não existir, um será criado em seu nome. Um diretório filho é criado com o nome "_rejectedrows". O caractere "_ " garante que o diretório tenha escape para outro processamento de dados, a menos que explicitamente nomeado no parâmetro de localização. 
@@ -208,21 +226,20 @@ O comando COPY detectará automaticamente o tipo de compactação com base na ex
 - .deflate – **DefaultCodec**  (somente Parquet e ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* aplica-se a CSV e especifica um único caractere que será usado como o caractere de aspas (delimitador de cadeia de caracteres) no arquivo CSV. Se não for especificado, o caractere de aspas (") será usado como o caractere de aspas, conforme definido no padrão RFC 4180. Não há suporte para caracteres ASCII estendidos com UTF-8 para FIELDQUOTE.
+*FIELDQUOTE* aplica-se a CSV e especifica um único caractere que será usado como o caractere de aspas (delimitador de cadeia de caracteres) no arquivo CSV. Se não for especificado, o caractere de aspas (") será usado como o caractere de aspas, conforme definido no padrão RFC 4180. Não há suporte para caracteres ASCII estendidos e multibytes com UTF-8 para FIELDQUOTE.
 
 > [!NOTE]  
 > O escape dos caracteres FIELDQUOTE é efetuado em colunas de cadeia de caracteres em que há a presença de um FIELDQUOTE (delimitador) duplo. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* aplica-se somente ao CSV. Especifica o terminador de campo que será usado no arquivo CSV. O terminador de campo pode ser especificado usando a notação hexadecimal. O terminador de campo pode ter vários caracteres. O terminador de campo padrão é um (,).
-Para obter mais informações, confira [Especificar terminadores de campo e linha (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* aplica-se somente ao CSV. Especifica o terminador de campo que será usado no arquivo CSV. O terminador de campo pode ser especificado usando a notação hexadecimal. O terminador de campo pode ter vários caracteres. O terminador de campo padrão é um (,). Não há suporte para caracteres ASCII estendidos e multibytes com UTF-8 para FIELDTERMINATOR.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* aplica-se somente ao CSV. Especifica o terminador de linha que será usado no arquivo CSV. O terminador de linha pode ser especificado usando a notação hexadecimal. O terminador de linha pode ter vários caracteres. Por padrão, o terminador de linha é \r\n. 
 
 O comando COPY prefixa o caractere \r ao especificar \n (nova linha), resultando em \r\n. Para especificar apenas o caractere \n, use a notação hexadecimal (0x0A). Ao especificar terminadores de linha de vários caracteres em formato hexadecimal, não especifique 0x entre cada caractere.
 
-Consulte a [documentação](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) a seguir para obter diretrizes adicionais sobre como especificar terminadores de linha.
+Não há suporte para caracteres ASCII estendidos e multibytes com UTF-8 para ROW TERMINATOR.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* aplica-se a CSV e especifica o número da linha que é lida primeiro em todos os arquivos para o comando COPY. Os valores começam com 1, que é o valor padrão. Se o valor for definido como dois, a primeira linha em todos os arquivos (linha de cabeçalho) será ignorada quando os dados forem carregados. As linhas são ignoradas com base na existência de terminadores de linhas.
@@ -361,10 +378,10 @@ WITH (
 ## <a name="faq"></a>Perguntas frequentes
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Qual é o desempenho do comando COPY em comparação com o PolyBase?
-O comando COPY terá melhor desempenho quando o recurso estiver em disponibilidade geral. Para obter o melhor desempenho de carregamento durante a versão prévia pública, considere a possibilidade de dividir a entrada em vários arquivos ao carregar o CSV. Atualmente, o comando COPY está no mesmo nível do PolyBase em termos de desempenho durante o uso de INSERT SELECT. 
+O comando COPY terá um desempenho melhor dependendo da carga de trabalho. Para obter o melhor desempenho de carregamento durante a versão prévia pública, considere a possibilidade de dividir a entrada em vários arquivos ao carregar o CSV. Compartilhe seus resultados de desempenho com nossa equipe durante a versão prévia! sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Quais são as diretrizes de divisão de arquivo para o comando COPY que carrega arquivos CSV?
-As diretrizes referentes ao número de arquivos são descritas na tabela abaixo. Depois que o número recomendado de arquivos for atingido, você terá um desempenho melhor quanto maior os arquivos. 
+As diretrizes referentes ao número de arquivos são descritas na tabela abaixo. Depois que o número recomendado de arquivos for atingido, você terá um desempenho melhor quanto maior os arquivos. Para obter uma experiência de divisão de arquivo simples, confira a [documentação](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474) a seguir. 
 
 | **DWU** | **Nº de arquivos** |
 | :-----: | :--------: |

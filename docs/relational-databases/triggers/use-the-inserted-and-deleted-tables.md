@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075506"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220691"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar as tabelas inseridas e excluídas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075506"
  Quando você definir os critérios para o gatilho, use adequadamente as tabelas inseridas e excluídas para a ação que acionou o gatilho. Embora referenciando a tabela excluída quando testar INSERT ou a tabela inserida quando testar DELETE não cause qualquer erro, essas tabelas de teste de gatilhos não contêm nenhuma linha nesses casos.  
   
 > [!NOTE]  
->  Se as ações de gatilhos dependem do número de linhas que uma modificação de dados afeta, use os testes (como um exame de @@ROWCOUNT) para modificações de dados em várias linhas (uma instrução INSERT, DELETE ou UPDATE com base em uma instrução SELECT) e execute as ações apropriadas.  
+>  Se as ações de gatilhos dependem do número de linhas que uma modificação de dados afeta, use os testes (como um exame de @@ROWCOUNT) para modificações de dados em várias linhas (uma instrução INSERT, DELETE ou UPDATE com base em uma instrução SELECT) e execute as ações apropriadas. Para obter mais informações, veja [Criar gatilhos DML para tratar várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não permite referências de coluna **text**, **ntext**ou **image** nas tabelas inseridas e excluídas para gatilhos AFTER. Entretanto, esses tipos de dados são incluídos somente para fins de compatibilidade com versões anteriores. O armazenamento preferencial para dados grandes é usar os tipos de dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . Os gatilhos AFTER e INSTEAD OF dão suporte a dados **varchar(max)** , **nvarchar(max)** e **varbinary(max)** nas tabelas inseridas e excluídas. Para obter mais informações, veja [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075506"
   
  Como as restrições CHECK só podem referenciar as colunas nas quais a restrição de nível de coluna ou de nível de tabela é definida, qualquer restrição de tabela cruzada (neste caso, as regras de negócio) deverá ser definida como gatilho.  
   
- O exemplo a seguir cria um gatilho DML. Esse gatilho realiza uma verificação para ter certeza de que a avaliação de crédito do fornecedor é satisfatória quando for efetuar uma tentativa para inserir uma nova ordem de compra na tabela `PurchaseOrderHeader` . Para obter a avaliação de crédito do fornecedor correspondente à ordem de compra que acaba de ser inserida, a tabela `Vendor` deve ser referenciada e associada a uma tabela inserida. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada. Observe que este exemplo não permite modificações de dados de multilinha. Para obter mais informações, veja [Criar gatilhos DML para tratar várias linhas de dados](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ O exemplo a seguir cria um gatilho DML. Esse gatilho realiza uma verificação para ter certeza de que a avaliação de crédito do fornecedor é satisfatória quando for efetuar uma tentativa para inserir uma nova ordem de compra na tabela `PurchaseOrderHeader` . Para obter a avaliação de crédito do fornecedor correspondente à ordem de compra que acaba de ser inserida, a tabela `Vendor` deve ser referenciada e associada a uma tabela inserida. Se a classificação de crédito for muito baixa, uma mensagem será exibida e a inserção não será executada.
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68075506"
   
  Quando uma instrução INSERT, UPDATE ou DELETE faz referência a uma exibição que tenha um gatilho INSTEAD OF, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] chama o gatilho em vez de tomar qualquer ação direta contra qualquer tabela. O gatilho deve usar as informações apresentadas nas tabelas inseridas e excluídas para construir as instruções necessárias para implementar a ação solicitada nas tabelas base, mesmo quando o formato das informações nas tabelas inseridas e excluídas construído para a exibição for diferente do formato dos dados nas tabelas base.  
   
- O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:  
+ O formato das tabelas inseridas e excluídas passadas para o gatilho INSTEAD OF definido em uma exibição corresponde à lista de seleção da instrução SELECT definida para exibição. Por exemplo:   
   
 ```  
 USE AdventureWorks2012;  
