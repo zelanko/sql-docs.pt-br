@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1718d71412f92b32e3a68c54e3070c10fdec8a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8f8edfa82e611fe10ba3645f16370e7d4b54542a
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634200"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262085"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT – Cláusula ORDER BY (Transact-SQL)
 
@@ -392,20 +392,19 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Especificando variáveis para valores de OFFSET e FETCH  
- O exemplo a seguir declara as variáveis `@StartingRowNumber` e `@FetchRows`, e especifica essas variáveis nas cláusulas OFFSET e FETCH.  
+ O exemplo a seguir declara as variáveis `@RowsToSkip` e `@FetchRows`, e especifica essas variáveis nas cláusulas OFFSET e FETCH.  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Especificando expressões para valores de OFFSET e FETCH  

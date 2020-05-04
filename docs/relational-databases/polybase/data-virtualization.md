@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227510"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588082"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usar o Assistente de Tabela Externa com fontes de dados relacionais
 
@@ -64,7 +64,7 @@ A próxima etapa é configurar uma credencial. Insira um nome para a credencial.
 
 Na próxima página, selecione as tabelas para criar modos de exibição externos. Ao selecionar os bancos de dados pai, as tabelas filho também são incluídas. Depois de selecionar tabelas, uma tabela de mapeamento será exibida à direita. Aqui, você poderá fazer alterações nos tipos. Você também poderá alterar o nome da tabela externa selecionada.
 
-![Credenciais de fonte de dados externa](media/data-virtualization/data-table-mapping.png)
+![Credenciais de fonte de dados externa](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Para alterar o modo de exibição de mapeamento, clique duas vezes em outra tabela selecionada.
