@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ef9afc7492e371562cbdba8c84af84f5b8bd9f51
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980570"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643355"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importar dados do Excel para o SQL Server ou Banco de Dados SQL do Azure
 
@@ -37,7 +37,7 @@ Há várias maneiras de importar dados de arquivos do Excel para o SQL Server ou
 | [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
 
-Se você quiser importar várias planilhas de uma pasta de trabalho do Excel, normalmente precisará executar cada uma dessas ferramentas uma vez para cada planilha.
+Se quiser importar várias planilhas de uma pasta de trabalho do Excel, normalmente você precisará executar cada uma dessas ferramentas uma vez para cada planilha.
 
 Uma descrição completa das ferramentas e serviços complexos, como SSIS ou Azure Data Factory, está além do escopo desta lista. Para saber mais sobre a solução que lhe interessa, siga os links fornecidos.
 

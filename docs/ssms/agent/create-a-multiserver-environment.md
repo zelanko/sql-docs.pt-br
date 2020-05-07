@@ -17,12 +17,12 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b01a04dfc4dbf31c08d595de184cd64f635e2c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 896b0a435eee20dbe8616e4610e1f51f70cbb4c0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245905"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087541"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "75245905"
 
 A administração multisservidor requer a configuração de um servidor mestre (MSX) e de um ou mais servidores de destino (TSX). Os trabalhos a serem processados em todos os servidores de destino são definidos primeiramente no servidor mestre e depois são baixados nos servidores de destino.  
   
-Por padrão, a criptografia SSL completa e a validação de certificado são habilitadas para conexões entre servidores mestres e servidores de destino. Para obter mais informações, veja [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
+Por padrão, a criptografia TLS completa, anteriormente conhecida como SSL, e a validação de certificado são habilitadas para conexões entre servidores mestres e servidores de destino. Para obter mais informações, veja [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
 Se você tiver um número grande de servidores de destino, evite definir seu servidor mestre em um servidor de produção que tenha requisitos de desempenho significantes de outra funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , porque o tráfego do servidor de destino pode reduzir o desempenho em seu servidor de produção. Se também encaminhar eventos a um servidor mestre dedicado, você poderá centralizar a administração em um servidor. Para obter mais informações, consulte [Gerenciar eventos](../../ssms/agent/manage-events.md).  
   
@@ -56,7 +56,7 @@ Considere as seguintes questões ao criar um ambiente multisservidor:
 ## <a name="related-tasks"></a>Related Tasks  
 Os tópicos a seguir documentam tarefas comuns de criação de um ambiente multisservidor.  
   
-|DESCRIÇÃO|Tópico|  
+|Descrição|Tópico|  
 |---------------|---------|  
 |Descreve como criar um servidor mestre.|[Criar um servidor mestre](../../ssms/agent/make-a-master-server.md)|  
 |Descreve como criar um servidor de destino.|[Criar um servidor de destino](../../ssms/agent/make-a-target-server.md)|  

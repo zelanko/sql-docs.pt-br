@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433823"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087386"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433823"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Falha na tentativa de logon para "%1". Esse erro ocorre quando as credenciais de logon fornecidas estão incorretas. Verifique as credenciais de logon.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|O nome do servidor especificado na URL %1 não pode ser resolvido.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|Falha na autenticação do proxy. Esse erro ocorre quando não são fornecidas credenciais de logon, ou as credenciais estão incorretas.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|A resposta do certificado SSL obtida do servidor não era válida. Não é possível processar a solicitação.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|A resposta do certificado TLS/SSL obtida do servidor não era válida. Não é possível processar a solicitação.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|O tempo limite da solicitação foi atingido. Esse erro pode ocorrer quando o tempo limite especificado é muito curto ou não é possível estabelecer uma conexão com o servidor ou proxy. Verifique se a URL do servidor e a do proxy estão corretas.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Falta certificado de cliente. Esse erro ocorre quando o servidor espera um certificado de cliente SSL e o usuário fornece um certificado inválido ou não fornece nenhum certificado. Configure um certificado de cliente para essa conexão.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|Falta certificado de cliente. Esse erro ocorre quando o servidor espera um certificado de cliente TLS/SSL e o usuário fornece um certificado inválido ou não fornece nenhum certificado. Configure um certificado de cliente para essa conexão.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|O servidor especificado, URL %1, tem um redirecionamento e a solicitação de redirecionamento falhou.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|Falha na autenticação do servidor. Esse erro ocorre quando não são fornecidas credenciais de logon, ou as credenciais estão incorretas.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|A solicitação não pode ser processada. Tente novamente depois.|  

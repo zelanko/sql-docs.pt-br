@@ -1,5 +1,6 @@
 ---
 title: Fazer backup de um conjunto de mídias espelhado (Transact-SQL)   Microsoft Docs
+description: Este artigo descreve como usar a instrução BACKUP do Transact-SQL para especificar um conjunto de mídias espelhadas ao fazer o backup de um banco de dados do SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b498aaa0a5a82294bc68942a68859939aff0fb7f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc903b8d999c370304b177fa195ab9aa116498da
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940871"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220534"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Fazer backup em um conjunto de mídias espelhado (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

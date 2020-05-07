@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107978"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181089"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Cláusula OUTPUT  
  Retorna linhas inseridas como parte da operação de inserção. Os resultados podem ser retornados ao aplicativo de processamento ou inseridos em uma tabela ou variável de tabela para processamento futuro.  
   
- Não há compatibilidade com a [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) em instruções DML que referenciam exibições particionadas locais, exibições particionadas distribuídas, tabelas remotas ou instruções INSERT que contêm uma *execute_statement*. A cláusula OUTPUT INTO não é compatível com instruções INSERT que contêm uma cláusula \<dml_table_source>. 
+ A cláusula OUTPUT não tem suporte em instruções DML que referenciam exibições particionadas locais, exibições particionadas distribuídas, tabelas remotas nem instruções INSERT que contêm *execute_statement*. A cláusula OUTPUT INTO não é compatível com instruções INSERT que contêm uma cláusula \<dml_table_source>. Para saber mais sobre os argumentos e o comportamento dessa cláusula, confira [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Apresenta a(s) lista(s) de valores de dados a serem inseridos. Deve haver um valor de dados para cada coluna em *column_list*, se especificado, ou na tabela. A lista de valores deve ser colocada entre parênteses.  

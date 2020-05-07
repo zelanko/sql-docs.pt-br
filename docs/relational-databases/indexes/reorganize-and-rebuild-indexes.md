@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138134"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220711"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Resolver a fragmentação do índice reorganizando ou recompilando índices
 
@@ -57,6 +57,9 @@ O que é a fragmentação de índice e por que devo me preocupar com ela:
 
 A primeira etapa para optar pelo método de desfragmentação de índice a ser usado é analisar o índice para determinar o grau de fragmentação. Você detecta a fragmentação de maneira diferente para índices rowstore e columnstore.
 
+> [!NOTE]
+> É especialmente importante examinar a fragmentação de índice ou de heap depois que grandes quantidades de dados são excluídas. Para heaps, se houver atualizações frequentes, também poderá ser necessário examinar a fragmentação para evitar a proliferação de registros de encaminhamento. Para obter mais informações sobre heaps, confira [Heaps (tabelas sem índices clusterizados)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>Detectando a fragmentação de índices rowstore
 
 Usando [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), você pode detectar a fragmentação em um índice específico, todos os índices em uma tabela ou uma exibição indexada, todos os índices em um banco de dados ou todos os índices em todos os bancos de dados. Para índices particionados, **sys.dm_db_index_physical_stats** também fornece informações de fragmentação por partição.
@@ -73,18 +76,22 @@ Depois que o grau de fragmentação for conhecido, use a seguinte tabela para de
 
 |Valor**avg_fragmentation_in_percent**|Instrução corretiva|
 |-----------------------------------------------|--------------------------|
-|> 5% e < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% e < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> A recompilação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online. Para obter mais informações, confira [INDEX](#rebuild-an-index) e [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve alternar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente.      
 
-Esses valores fornecem uma orientação aproximada para determinar o ponto em que você deve mudar entre `ALTER INDEX REORGANIZE` e `ALTER INDEX REBUILD`. Contudo, os valores reais podem variar de acordo com o caso. É importante que você experimente para poder determinar o melhor limite para um ambiente. Por exemplo, se um determinado índice for usado principalmente para operações de verificação, o desempenho delas poderá ser aprimorado pela remoção da fragmentação. O benefício de desempenho é menos perceptível para índices que são usados principalmente para operações de busca. Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clusterizado) é especialmente útil para operações de verificação de índice não clusterizado, mas tem pouco efeito em operações de pesquisa.
+> [!TIP] 
+> Por exemplo, se um determinado índice for usado principalmente para operações de verificação, o desempenho delas poderá ser aprimorado pela remoção da fragmentação. O benefício de desempenho pode não ser perceptível para índices que são usados principalmente para operações de busca.    
+Da mesma forma, remover a fragmentação em um heap (uma tabela sem índice clusterizado) é especialmente útil para operações de verificação de índice não clusterizado, mas tem pouco efeito em operações de pesquisa.
 
-Índices com níveis de fragmentação inferiores a 5% não precisam ser desfragmentados, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da CPU gerado pela reorganização ou pela recompilação do índice. Além disso, a recriação ou reorganização de índices rowstore pequenos geralmente não reduz a fragmentação. As páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação. Confira também [Considerações específicas para recompilar índices rowstore](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> A recompilação de um índice pode ser executada online ou offline. A reorganização de um índice sempre é executada online. Para atingir disponibilidade semelhante à opção de reorganização, recrie índices online. Para obter mais informações, confira [INDEX](#rebuild-an-index) e [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Índices com níveis de fragmentação inferiores a 5% não precisam ser desfragmentados, pois o benefício da remoção de uma pequena quantidade de fragmentação é quase sempre amplamente excedido pelo custo da CPU gerado pela reorganização ou pela recompilação do índice. Além disso, a recriação ou reorganização de índices rowstore pequenos geralmente não reduz a fragmentação. Até o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], incluindo-o, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] aloca espaço usando extensões mistas. Portanto, as páginas de índices pequenos às vezes são armazenadas em extensões mistas. Extensões mistas são compartilhadas por até oito objetos, portanto, a fragmentação em um índice pequeno pode não ser reduzida após a reorganização ou recriação. Confira também [Considerações específicas para recompilar índices rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Para obter mais informações sobre as extensões, confira o [Guia de arquitetura de páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Detectando a fragmentação de índices de columnstore
 
-Usando [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), você pode determinar o percentual de linhas excluídas em um índice, o que é uma boa medida para a fragmentação em um rowgroup de um índice columnstore. Use essas informações para computar a fragmentação em um índice específico, todos os índices em uma tabela, todos os índices em um banco de dados ou todos os índices em todos os bancos de dados.
+Usando [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), você pode determinar o percentual de linhas excluídas em um índice, o que é uma medida razoável para a fragmentação em um rowgroup de um índice columnstore. Use essas informações para computar a fragmentação em um índice específico, todos os índices em uma tabela, todos os índices em um banco de dados ou todos os índices em todos os bancos de dados.
 
 O conjunto de resultados retornado por **sys.dm_db_column_store_row_group_physical_stats** inclui as seguintes colunas:
 

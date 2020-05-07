@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296893"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588150"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>SSIS (Integration Services) em um cluster
 
@@ -128,7 +128,7 @@ Para os clientes que chegaram à conclusão de que as vantagens dessa configura�
   
 4.  Altere o valor do elemento **StorePath** para o caminho totalmente qualificado da pasta **Pacotes** que foi criada no disco compartilhado em uma etapa anterior.  
   
-5.  Atualize o valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** no Registro para o caminho totalmente qualificado e o nome do arquivo de configuração de serviço no disco compartilhado.  
+5.  Em cada nó, atualize o valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** no Registro para o caminho totalmente qualificado e o nome do arquivo de configuração de serviço no disco compartilhado.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>Para colocar o serviço do Integration Services online  
   

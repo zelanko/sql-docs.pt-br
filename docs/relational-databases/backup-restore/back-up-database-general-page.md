@@ -1,5 +1,6 @@
 ---
 title: Fazer backup do banco de dados (página Geral) | Microsoft Docs
+description: No SQL Server, use a página Geral da caixa de diálogo Backup de Banco de Dados para exibir ou modificar as configurações de origem e destino de uma operação de backup de banco de dados.
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97521f50bd002cc67a3d73dbfde3999f4ea3dabc
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940922"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220611"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "67940922"
   
  **Para criar um backup parcial**  
   
--   Para um backup parcial, use a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ do ](../../t-sql/statements/backup-transact-sql.md) com a opção PARTIAL.  
+-   Para um backup parcial, use a instrução [BACKUP](../../t-sql/statements/backup-transact-sql.md) do [!INCLUDE[tsql](../../includes/tsql-md.md)] com a opção PARTIAL.  
   
 ## <a name="options"></a>Opções  
   
@@ -89,7 +90,7 @@ ms.locfileid: "67940922"
 |||  
 |-|-|  
 |**Disco**|Faz o backup em disco. Pode ser um arquivo de sistema ou um dispositivo de backup lógico baseado em disco criado para o banco de dados. Os discos atualmente selecionados são exibidos na lista **Backup em** . Você pode selecionar até 64 dispositivos de disco para a operação de backup.|  
-|**Fita**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**Fita**|Faz o backup em fita. Pode ser uma unidade de fita local ou um dispositivo de backup lógico baseado em fita criado para o banco de dados. As fitas atualmente selecionadas são exibidas na lista **Backup em** . O número máximo é 64. Se não houver nenhum dispositivo de fita anexado ao servidor, essa opção será desativada. As fitas selecionadas são incluídas na lista **Backup em** .<br /><br /> Observação: O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
 |**URL**|Faz backup no armazenamento de Blobs do Microsoft Azure.|  
   
  O próximo conjunto de opções exibido depende do tipo de destino selecionado. Se você selecionar Disco ou Fita, as opções a seguir são exibidas.  

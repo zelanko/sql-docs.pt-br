@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635448"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643371"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  É o nome da tabela a ser truncada ou da qual todas as linhas são removidas. *table_name* deve ser um literal. *table_name* não pode ser a função **OBJECT_ID()** nem uma variável.  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Especifica as partições para truncar ou das quais todas as linhas são removidas. Se a tabela não for particionada, o argumento **WITH PARTITIONS** gerará um erro. Se a cláusula **WITH PARTITIONS** não for fornecida, a tabela inteira será truncada.  
+ Especifica as partições para truncar ou das quais todas as linhas são removidas. Se a tabela não for particionada, o argumento `WITH PARTITIONS` ON PARTITIONS gerará um erro. Se a cláusula `WITH PARTITIONS` não for fornecida, a tabela inteira será truncada.  
   
  *\<partition_number_expression>* pode ser especificado das seguintes maneiras: 
   
@@ -89,32 +89,39 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  Para truncar uma tabela particionada, a tabela e os índices deverão estar alinhados (particionados na mesma função de partição).  
   
 ## <a name="remarks"></a>Comentários  
- Em comparação com a instrução DELETE, TRUNCATE TABLE possui as seguintes vantagens:  
+ Em comparação com a instrução DELETE, `TRUNCATE TABLE` tem as seguintes vantagens:  
   
 -   O espaço utilizado para log de transações é menor.  
   
-     A instrução DELETE remove as linhas uma de cada vez e registra uma entrada no log de transações para cada linha excluída. TRUNCATE TABLE remove os dados desalocando as páginas de dados usadas para armazenar os dados da tabela e registra somente as desalocações de página no log de transações.  
+     A instrução DELETE remove as linhas uma de cada vez e registra uma entrada no log de transações para cada linha excluída. `TRUNCATE TABLE` remove os dados desalocando as páginas de dados usadas para armazenar os dados da tabela e registra somente as desalocações de página no log de transações.  
   
 -   Normalmente são utilizados menos bloqueios.  
   
-     Quando a instrução DELETE é executada com o uso de um bloqueio de linha, cada linha na tabela é bloqueada para exclusão. TRUNCATE TABLE sempre bloqueia a tabela (incluindo um bloqueio de esquema (SCH-M)) e a página, mas não cada linha.  
+     Quando a instrução DELETE é executada com o uso de um bloqueio de linha, cada linha na tabela é bloqueada para exclusão. `TRUNCATE TABLE` sempre bloqueia a tabela (incluindo um bloqueio de esquema (SCH-M)) e a página, mas não cada linha.  
   
 -   Sem exceção, nenhuma página é deixada na tabela.  
   
      Após a execução de uma instrução DELETE, a tabela ainda pode conter páginas vazias. Por exemplo, páginas vazias em um heap não podem ser desalocadas sem pelo menos um bloqueio de tabela exclusivo (LCK_M_X). Se a operação de exclusão não usar um bloqueio de tabela, a tabela (heap) conterá muitas páginas vazias. Para índices, a operação de exclusão pode deixar páginas vazias, embora essas páginas sejam desalocadas rapidamente por um processo de limpeza em segundo plano.  
   
- TRUNCATE TABLE remove todas as linhas de uma tabela, mas permanecem a estrutura da tabela e suas colunas, restrições, índices, etc. Para remover a definição de tabela junto com seus dados, use a instrução DROP TABLE.  
+ `TRUNCATE TABLE` remove todas as linhas de uma tabela, mas permanecem a estrutura da tabela e suas colunas, restrições, índices etc. Para remover a definição de tabela junto com seus dados, use a instrução `DROP TABLE`.  
   
  Se a tabela contiver uma coluna de identidade, o contador daquela coluna será redefinido no valor da semente definido para a coluna. Se não for definida nenhuma semente, o valor padrão utilizado será 1. Para manter o contador de identidade, use DELETE.  
+ 
+ > [!NOTE]
+ > Uma operação `TRUNCATE TABLE`pode ser revertida.
   
 ## <a name="restrictions"></a>Restrições  
- Você não pode usar TRUNCATE TABLE em tabelas que:  
+ Você não pode usar `TRUNCATE TABLE` em tabelas que:  
   
--   São referenciadas por uma restrição FOREIGN KEY. (É possível truncar uma tabela que tenha uma chave estrangeira que referencie a ela mesma.)  
+-   São referenciadas por uma restrição FOREIGN KEY. É possível truncar uma tabela que tenha uma chave estrangeira que referencie a ela mesma. 
   
 -   Participam de uma exibição indexada.  
   
 -   São publicadas com replicação transacional ou replicação de mesclagem.  
+
+-   São temporais com controle de versão do sistema.
+
+-   São referenciadas por uma restrição EDGE.  
   
  Para tabelas com uma ou mais dessas características, use a instrução DELETE.  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  Em [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
-- TRUNCATE TABLE não é permitida dentro da instrução EXPLAIN.
+- `TRUNCATE TABLE` não é permitido dentro da instrução EXPLAIN.
 
-- TRUNCATE TABLE não pode ser executada dentro de uma transação.
+- `TRUNCATE TABLE` não pode ser executado dentro de uma transação.
   
 ## <a name="truncating-large-tables"></a>Truncando tabelas grandes  
  O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tem a capacidade de remover ou truncar tabelas com mais de 128 extensões sem manter bloqueios simultâneos em todas as extensões necessárias para a remoção.  
   
 ## <a name="permissions"></a>Permissões  
- A permissão mínima necessária é ALTER em *table_name*. As permissões TRUNCATE TABLE assumem como padrão o proprietário da tabela, membros da função de servidor fixa sysadmin, e das funções de banco de dados fixas db_owner e db_ddladmin, e não são transferíveis. Entretanto, você pode incorporar a instrução TRUNCATE TABLE dentro de um módulo, como um procedimento armazenado, e conceder permissões adequadas ao módulo por meio da cláusula EXECUTE AS.  
+ A permissão mínima necessária é `ALTER` em *table_name*. As permissões `TRUNCATE TABLE` são padronizadas para o proprietário da tabela, os membros da função de servidor fixa `sysadmin` e as funções de banco de dados fixas `db_owner` e `db_ddladmin`, e não podem ser transferidas. Entretanto, você pode incorporar a instrução `TRUNCATE TABLE` dentro de um módulo, como um procedimento armazenado, e conceder permissões adequadas ao módulo por meio da cláusula `EXECUTE AS`.  
   
 ## <a name="examples"></a>Exemplos  
   

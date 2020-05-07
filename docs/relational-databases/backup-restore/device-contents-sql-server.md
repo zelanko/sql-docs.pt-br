@@ -1,5 +1,6 @@
 ---
 title: Conteúdos do dispositivo (SQL Server) | Microsoft Docs
+description: No SQL Server, use a caixa de diálogo Conteúdo do Dispositivo para exibir as informações de backup que descrevem o dispositivo, a mídia, o conjunto de mídias e o conjunto ou conjuntos de backup.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068487"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179177"
 ---
 # <a name="device-contents-sql-server"></a>Conteúdos do dispositivo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +58,8 @@ ms.locfileid: "68068487"
 |Cabeçalho|Valores|  
 |------------|------------|  
 |**Nome**|O nome do conjunto de backup.|  
-|**Tipo**|O tipo de backup efetuado: Completo, Diferencial ou Log de Transações.|  
-|**Componente**|O componente com backup: Banco de Dados, Arquivo ou *\<blank>* (para logs de transações).|  
+|**Tipo**|O tipo de backup realizado: Total, Diferencial ou Log de Transações.|  
+|**Componente**|o componente de backup: Banco de dados, Arquivo ou *\<blank>* (para logs de transação).|  
 |**Servidor**|O nome da instância de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizou a operação de backup.|  
 |**Backup de banco de dados**|O nome do banco de dados cujo backup foi efetuado.|  
 |**Posição**|A posição do conjunto de backup no volume.|  

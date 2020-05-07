@@ -1,5 +1,6 @@
 ---
 title: Fazer backup de banco de dados (página Opções de Backup) | Microsoft Docs
+description: No SQL Server, use a página Opções de Backup da caixa de diálogo Backup de Banco de Dados para exibir ou modificar as opções de conjunto de backup, compactação e criptografia.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d9b831b3350c6a895c86868180a1134f871c8d5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940972"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220621"
 ---
 # <a name="back-up-database-backup-options-page"></a>Backup de Banco de Dados (página Opções de Backup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

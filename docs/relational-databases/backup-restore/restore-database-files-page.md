@@ -1,5 +1,6 @@
 ---
 title: Restaurar banco de dados (página Arquivos) | Microsoft Docs
+description: Enquanto restaura um banco de dados no SQL Server, use a página Arquivos da caixa de diálogo Restaurar Banco de Dados para gerenciar os arquivos específicos escolhidos para restaurar no banco de dados.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944827"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180757"
 ---
 # <a name="restore-database-files-page"></a>Restaurar banco de dados (página de arquivos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67944827"
  **Realoque todos os arquivos para pasta**  
  Realoque os arquivos restaurados.  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**Pasta Arquivo de dados**|Insira ou procure o nome de pasta de arquivo de dados para o qual o arquivo de dados restaurado ou arquivos devem ser realocados.|  
 |**Pasta Arquivo de log**|Insira ou procure o arquivo de log ou pasta de arquivos para o qual o arquivo de log deve ser realocado.|  

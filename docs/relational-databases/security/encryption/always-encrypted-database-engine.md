@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e9b3bc3862b39d1332416ed33fdfcea85b7f6ac
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254828"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262042"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ Para obter detalhes sobre os algoritmos de criptografia Always Encrypted, confir
 |Criptografar os dados existentes nas colunas do banco de dados selecionado|Sim|Sim|Não|
 
 > [!NOTE]
-> O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md), introduzido no [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], dá suporte à criptografia de dados existentes usando o Trasact-SQL. Ele também elimina a necessidade de mover os dados para fora dos dados para operações criptográficas.
+> O [Always Encrypted com enclaves seguros](always-encrypted-enclaves.md), introduzido no [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], dá suporte à criptografia de dados existentes usando Transact-SQL. Ele também elimina a necessidade de mover os dados para fora dos dados para operações criptográficas.
 
 > [!NOTE]
 > Lembre-se de executar as ferramentas de provisionamento de chaves ou de criptografia de dados em um ambiente seguro e em um computador diferente daquele que hospeda o banco de dados. Caso contrário, dados confidenciais ou as chaves podem vazar no ambiente de servidor, reduzindo os benefícios de usar o Always Encrypted.  

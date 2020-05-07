@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634126"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181087"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81634126"
 
 Executa operações de inserção, atualização ou exclusão em uma tabela de destino usando os resultados de uma união com uma tabela de origem. Por exemplo, sincronize duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela com base nas diferenças encontradas na outra tabela.  
   
-**Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:  
+**Dica de desempenho:** O comportamento condicional descrito para a instrução de MERGE funciona melhor quando as duas tabelas têm uma mistura complexa de características coincidentes. Por exemplo, inserindo uma linha se ela não existir ou atualizando uma linha se ela tiver correspondência. Ao simplesmente atualizar uma tabela com base nas linhas de outra tabela, melhore o desempenho e a escalabilidade com as instruções básicas INSERT, UPDATE e DELETE. Por exemplo:   
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Especifica o nome ou a ID de um ou mais índices na tabela de destino para a execução de uma união implícita à tabela de origem. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<output_clause>  
-Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação executada na linha. Para obter mais informações sobre os argumentos dessa cláusula, veja [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Retorna uma linha para cada linha de *target_table* que é atualizada, inserida ou excluída, sem nenhuma ordem específica. **$action** pode ser especificada na cláusula output. **$action** é uma coluna do tipo **nvarchar(10)** que retorna um dos três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação executada na linha. Para saber mais sobre os argumentos e o comportamento dessa cláusula, confira [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Especifica que dicas do otimizador são usadas para personalizar o modo como o Mecanismo de Banco de Dados processa a instrução. Para obter mais informações, veja [Dicas de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  

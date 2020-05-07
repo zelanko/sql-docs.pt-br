@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386185"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262132"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas sobre a versão do SqlPackage.exe
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>sqlpackage 18.5
+
+|Plataforma|Baixar|Data de liberação|Versão|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2128142)|28 de abril de 2020|18.5|15.0.4769.1|
+|.NET Core para macOS |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2128145)|28 de abril de 2020| 18.5|15.0.4769.1|
+|.NET Core para Linux |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2128144)|28 de abril de 2020| 18.5|15.0.4769.1|
+|.NET Core para Windows |[arquivo zip](https://go.microsoft.com/fwlink/?linkid=2128143)|28 de abril de 2020| 18.5|15.0.4769.1|
+
+### <a name="features"></a>Recursos
+| Recurso | Detalhes |
+| :------ | :------ |
+| Implantação | Agora, a classificação de Confidencialidade de Dados tem suporte para o SQL Server 2008 e superiores, o Banco de Dados SQL do Azure e o SQL Data Warehouse do Azure |
+| Implantação | Adicionar suporte do SQL Data Warehouse do Azure para restrições de tabela |
+| Implantação | Adicionar suporte do SQL Data Warehouse do Azure para índice columnstore clusterizado ordenado |
+| Implantação | Adicionar suporte para Fonte de Dados Externa (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, Cluster de Big Data) e Tabela Externa para o Cluster de Big Data do SQL Server 2019 |
+| Implantação | Adicionar Instância do Banco de Dados SQL no Edge como edição com suporte |
+| Implantação | Suporte a nomes de servidor da Instância Gerenciada no formato '\<server>.\<dnszone>.database.windows.net' |
+| Implantação | Adicionar suporte para comando de cópia no SQL Data Warehouse do Azure |
+| Implantação | Adicionar a opção de implantação 'IgnoreTablePartitionOptions' durante a publicação para evitar a recriação de tabela quando houver alteração na função de partição na tabela para o SQL Data Warehouse do Azure |
+| .NET Core | Adicionar suporte para Microsoft.Data.SqlClient na versão do .NET Core do sqlpackage |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correções
+| Fix | Detalhes |
+| :-- | :------ |
+| Implantação | Corrigir o dacpac de publicação de um banco de dados que contém um usuário externo que lançava um erro de "Referência de objeto não definida para uma instância de um objeto". |
+| Implantação | Corrigir a análise do caminho JSON como expressão |
+| Implantação | Corrigir a geração de instruções GRANT para as permissões AlterAnyDatabaseScopedConfiguration e AlterAnySensitivityClassification |
+| Implantação | A permissão Corrigir Script Externo não era reconhecida |
+| Implantação | Correção para propriedade embutida – a adição implícita da propriedade não deve aparecer na diferença, mas a menção explícita deve aparecer por meio do script |
+| Implantação | Foi resolvido um problema em que alterar uma Tabela referenciada por uma MV (Exibição Materializada) faz com que as instruções ALTER VIEW sejam geradas, o que não é compatível com as MVs do SQL Data Warehouse do Azure |
+| Implantação | Corrigir falha na publicação ao adicionar coluna a uma tabela usando dados para o SQL Data Warehouse do Azure |
+| Implantação | Corrigir o script de atualização que deve mover dados para uma nova tabela ao alterar o tipo de coluna de distribuição (cenário de perda de dados) para o SQL Data Warehouse do Azure |
+| ScriptDom | Corrigir o bug de ScriptDom em que ele não reconhecia as restrições embutidas definidas após um índice embutido |
+| ScriptDom | Corrigir o parêntese de fechamento ausente em SYSTEM_TIME de ScriptDom quando em uma instrução de lote |
+| Always Encrypted | Corrigir a tabela #tmpErrors, em que o descarte falhava se o sqlpackage se reconectasse e a tabela temporária já tivesse sido desativada, pois a tabela temporária desaparece quando a conexão é eliminada |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>sqlpackage 18.4.1
 
 |Plataforma|Baixar|Data de liberação|Versão|Build

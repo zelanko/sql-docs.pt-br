@@ -1,5 +1,6 @@
 ---
 title: Fazer backup de arquivos e grupos de arquivos | Microsoft Docs
+description: Este artigo descreve como fazer backup de arquivos e grupos de arquivos no SQL Server usando o SQL Server Management Studio, o Transact-SQL ou o PowerShell.
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708681"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220596"
 ---
 # <a name="back-up-files-and-filegroups"></a>Arquivos de backup e grupos de arquivos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ A sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para um backup de 
   
   [ WITH *com_opções* [ **,** ...*o* ] ] ;  
   
-|Opção|DESCRIÇÃO|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |*database*|É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo.|  
 |FILE _=_ *logical_file_name*|Especifica o nome lógico de um arquivo a ser incluído no backup de arquivos.|  

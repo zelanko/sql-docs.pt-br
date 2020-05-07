@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634273"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220351"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>Comentários  
  A configuração de SHOWPLAN_ALL é definida durante a execução ou tempo de execução, e não no momento da análise.  
   
- Quando SET SHOWPLAN_ALL for ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará informações de execução para cada instrução, sem executá-las, e as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não serão executadas. Depois que essa opção estiver definida como ON, as informações sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas até que a opção seja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada que enquanto SET SHOWPLAN_ALL estiver definido como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro de uma instrução SELECT subsequente, envolvendo essa mesma tabela, informando os usuários de que a tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_ALL for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará as instruções sem gerar um relatório.  
+ Quando `SET SHOWPLAN_ALL` for ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará informações de execução para cada instrução, sem executá-las, e as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não serão executadas. Depois que essa opção estiver definida como ON, as informações sobre todas as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] subsequentes serão retornadas até que a opção seja definida como OFF. Por exemplo, se uma instrução CREATE TABLE for executada enquanto `SET SHOWPLAN_ALL` estiver definido como ON, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará uma mensagem de erro de uma instrução SELECT posterior, envolvendo essa mesma tabela, informando os usuários de que a tabela especificada não existe. Portanto, haverá falha nas referências subsequentes para essa tabela. Quando SET SHOWPLAN_ALL for OFF, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executará as instruções sem gerar um relatório.  
   
- SET SHOWPLAN_ALL deve ser usado pelos aplicativos gravados para controlar sua saída. Use SET SHOWPLAN_TEXT para retornar uma saída legível para aplicativos de prompt de comando do Microsoft Win32, como o utilitário **osql**.  
+ O `SET SHOWPLAN_ALL` deve ser usado pelos aplicativos escritos para controlar sua saída. Use SET SHOWPLAN_TEXT para retornar uma saída legível para aplicativos de prompt de comando do Microsoft Win32, como o utilitário **osql**.  
   
  SET SHOWPLAN_TEXT e SET SHOWPLAN_ALL não podem ser especificados em um procedimento armazenado; eles devem ser as únicas instruções em um lote.  
   
  SET SHOWPLAN_ALL retorna informações como um conjunto de linhas que formam uma árvore hierárquica que representa as etapas cumpridas pelo processador de consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que ele executa cada instrução. Cada instrução refletida na saída contém uma única linha com o texto da instrução, seguida de várias linhas com os detalhes das etapas de execução. A tabela mostra as colunas que a saída contém.  
   
-|Nome da coluna|DESCRIÇÃO|  
+|Nome da coluna|Descrição|  
 |-----------------|-----------------|  
 |**StmtText**|Para linhas que não são do tipo PLAN_ROW, essa coluna contém o texto da instrução [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para linhas do tipo PLAN_ROW, essa coluna contém uma descrição da operação. Essa coluna contém o operador físico e pode também conter, opcionalmente, o operador lógico. Essa coluna também pode ser seguida de uma descrição determinada pelo operador físico. Para obter mais informações, consulte [Referência de operadores lógicos e físicos de plano de execução](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Número da instrução no lote atual.|  
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Tamanho médio estimado (em bytes) da linha da linha que está sendo passada por esse operador.|  
 |**TotalSubtreeCost**|Custo* estimado (cumulativo) dessa operação e de todas as operações filho.|  
 |**OutputList**|Contém uma lista separada por vírgulas de colunas que estão sendo projetadas pela operação atual.|  
-|**Warnings**|Contém uma lista separada por vírgulas de mensagens de aviso relativas à operação atual. As mensagens de aviso podem incluir a cadeia de caracteres "NO STATS:()" com uma lista de colunas. Essa mensagem de aviso significa que o otimizador de consulta tentou tomar uma decisão com base nas estatísticas dessa coluna, mas não havia nenhuma disponível. Por conseguinte, o otimizador de consulta precisou fazer uma suposição, que pode ter resultado na seleção de um plano de consulta ineficaz. Para obter mais informações sobre como criar ou atualizar estatísticas de coluna (que ajudam o otimizador de consulta a escolher um plano de consulta mais eficiente), consulte [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Essa coluna pode incluir, opcionalmente, a cadeia de caracteres "MISSING JOIN PREDICATE", que significa que uma junção (envolvendo tabelas) está ocorrendo sem um predicado de junção. Descartar acidentalmente um predicado de junção pode resultar em uma consulta que leva mais tempo de execução que o esperado, e que retorna um grande conjunto de resultados. Se esse aviso estiver presente, verifique se a ausência do predicado de junção é intencional.|  
-|**Tipo**|Tipo de nó. Para o nó pai de cada consulta, esse é o tipo de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] (por exemplo, SELECT, INSERT, EXECUTE entre outras). Para os subnós que representam planos de execução, o tipo é PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Contém uma lista separada por vírgulas de mensagens de aviso relativas à operação atual. As mensagens de aviso podem incluir a cadeia de caracteres "NO STATS:()" com uma lista de colunas. Essa mensagem de aviso significa que o otimizador de consulta tentou tomar uma decisão com base nas estatísticas dessa coluna, mas não havia nenhuma disponível. Por conseguinte, o otimizador de consulta precisou fazer uma suposição, que pode ter resultado na seleção de um plano de consulta ineficaz. Para obter mais informações sobre como criar ou atualizar estatísticas de coluna (que ajudam o otimizador de consulta a escolher um plano de consulta mais eficiente), consulte [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Essa coluna pode incluir, opcionalmente, a cadeia de caracteres "MISSING JOIN PREDICATE", que significa que uma junção (envolvendo tabelas) está ocorrendo sem um predicado de junção. Descartar acidentalmente um predicado de junção pode resultar em uma consulta que leva mais tempo de execução que o esperado, e que retorna um grande conjunto de resultados. Se esse aviso estiver presente, verifique se a ausência do predicado de junção é intencional.|  
+|**:::no-loc text="Type":::**|Tipo de nó. Para o nó pai de cada consulta, esse é o tipo de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] (por exemplo, SELECT, INSERT, EXECUTE entre outras). Para os subnós que representam planos de execução, o tipo é PLAN_ROW.|  
 |**Parallel**|**0** = O operador não está sendo executado em paralelo.<br /><br /> **1** = O operador está sendo executado em paralelo.|  
 |**EstimateExecutions**|Número estimado de vezes que esse operador será executado durante a execução da consulta atual.|  
 |||

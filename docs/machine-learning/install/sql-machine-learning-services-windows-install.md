@@ -3,18 +3,18 @@ title: Instalar no Windows
 description: Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. Você pode usar Serviços do Machine Learning (no banco de dados) para executar scripts de Python e R no banco de dados.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118409"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588222"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalar Serviços de Machine Learning do SQL Server (R e Python) no Windows
 
@@ -28,7 +28,7 @@ Saiba como instalar os Serviços de Machine Learning do SQL Server no Windows. V
 
 + Para continuidade dos negócios, os [grupos de disponibilidade Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) são compatíveis com os Serviços de Machine Learning. Instale os Serviços de Machine Learning e configure os pacotes em cada nó.
 
-+ *Não é possível* instalar os Serviços de Machine Learning em um cluster de failover no SQL Server 2017. Eles são compatíveis com o SQL Server 2019.
++ *Não há suporte* para a instalação dos Serviços de Machine Learning em uma [FCI (Instância do Cluster de Failover) Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) no SQL Server 2017. Ela tem suporte com o SQL Server 2019 e posteriores.
  
 + Não instale os Serviços de Machine Learning em um controlador de domínio. A parte dos Serviços de Machine Learning da instalação falhará.
 

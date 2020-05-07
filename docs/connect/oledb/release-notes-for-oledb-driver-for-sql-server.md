@@ -1,5 +1,6 @@
 ---
-title: Notas sobre a versão (Driver do OLE DB para SQL Server)
+title: Notas sobre a versão do Driver do OLE DB
+description: Este artigo de notas sobre a versão descreve as alterações em cada versão do Driver do Microsoft OLE DB para SQL Server.
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2c50ae262516fab757d4de7c254af79f0184ea84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80345441"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727970"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 

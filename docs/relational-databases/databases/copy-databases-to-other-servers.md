@@ -1,5 +1,6 @@
 ---
 title: Copiar bancos de dados para outros servidores | Microsoft Docs
+description: Saiba como copiar um banco de dados do SQL Server de um computador a outro para teste, disponibilizando-o para operações de branch remoto ou por outros motivos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a16eb1e7d6c94f87d77cac93c4f07f6ae251cd4a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93f42e9234ee9cd67503c2abc70c37e309a041ea
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137358"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138142"
 ---
 # <a name="copy-databases-to-other-servers"></a>Copiar bancos de dados em outros servidores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

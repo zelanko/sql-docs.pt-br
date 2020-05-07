@@ -1,5 +1,6 @@
 ---
 title: Reiniciar restauração interrompida (Transact-SQL)
+description: Este exemplo mostra como reiniciar uma operação de restauração interrompida no SQL Server usando o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49b2cd932ea40e2f45010785edcd033b8530d6bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4eb0e80201694ca6bb6109cc4013500f31a8bf2a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244357"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180838"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>Reiniciar uma operação de restauração interrompida (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

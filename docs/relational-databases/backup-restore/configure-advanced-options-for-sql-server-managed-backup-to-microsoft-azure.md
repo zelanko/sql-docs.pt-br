@@ -1,5 +1,6 @@
 ---
 title: Backup gerenciado – configurar opções avançadas
+description: Este tutorial descreve como definir as opções avançadas do Backup Gerenciado do SQL Server para o Microsoft Azure, caso as opções padrão não atendam às suas necessidades.
 titleSuffix: to Microsoft Azure
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242566"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220469"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar opções avançadas de backup gerenciado do SQL Server para o Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75242566"
 ## <a name="configure-encryption"></a>Configurar a criptografia  
  As etapas a seguir descrevem como especificar as configurações de criptografia usando o procedimento armazenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
 
-1.  **Determinar o algoritmo de criptografia:** primeiro determine o nome do algoritmo de criptografia a ser usado. Selecione um dos seguintes algoritmos.  
+1.  **Determine o algoritmo de criptografia:** primeiro determine o nome do algoritmo de criptografia a ser usado. Selecione um dos seguintes algoritmos.  
   
     -   AES_128  
   
@@ -55,7 +56,7 @@ ms.locfileid: "75242566"
     GO  
     ```  
   
-3.  **Criar um certificado de backup ou uma chave assimétrica:** você pode usar um certificado ou uma chave assimétrica com a criptografia. O exemplo a seguir cria um certificado de backup a ser usado na criptografia.  
+3.  **Para criar um certificado de backup ou uma chave assimétrica:** você pode usar um certificado ou uma chave assimétrica com a criptografia. O exemplo a seguir cria um certificado de backup a ser usado na criptografia.  
   
     ```sql  
     USE Master;  
@@ -84,17 +85,17 @@ ms.locfileid: "75242566"
 ## <a name="configure-a-custom-backup-schedule"></a>Configurar um agendamento de backup personalizado  
  As etapas a seguir descrevem como definir um agendamento personalizado com o procedimento armazenado [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
-1.  **Determinar a frequência de backups completos:** determine a frequência de backups completos do banco de dados. Você pode escolher entre backups completos “Diariamente” e “Semanalmente”.  
+1.  **Determine a frequência de backups completos:** determine a frequência de backups completos do banco de dados. Você pode escolher entre backups completos “Diariamente” e “Semanalmente”.  
   
-2.  **Determinar a frequência de backups do log:** determine a frequência de um backup de log. Esse valor é em minutos ou horas.  
+2.  **Determine a frequência de backups de log de transações:** Determine a frequência de backup de log de transações. Esse valor é em minutos ou horas.  
   
-3.  **Determinar o dia da semana para os backups semanais:** se o backup for semanal, escolha um dia da semana para o backup completo.  
+3.  **Determine o dia da semana dos backups semanais:** se o backup for semanal, escolha um dia da semana para o backup completo.  
   
-4.  **Determinar a hora de início do backup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
+4.  **Determine a hora de início do backup:** usando a notação de 24 horas, escolha um horário para iniciar o backup.  
   
-5.  **Determinar o período de tempo do backup:** especifica a quantidade de tempo que um backup tem para ser concluído.  
+5.  **Determine o período de tempo para permitir o backup:** Isso especifica a quantidade de tempo que um backup tem para ser concluído.  
   
-6.  **Definir o agendamento de backup personalizada:** o procedimento armazenado a seguir define um agendamento personalizada para o banco de dados `MyDB` . Backups completos são realizados semanalmente em `Monday` às `17:30`. Backups de log são executados a cada `5` minutos. Os backups têm duas horas para serem concluídos.  
+6.  **Definir o agendamento de backup personalizado:** o procedimento armazenado a seguir define um agendamento personalizada para o banco de dados `MyDB`. Backups completos são realizados semanalmente em `Monday` às `17:30`. Backups de log são executados a cada `5` minutos. Os backups têm duas horas para serem concluídos.  
   
     ```  
     USE msdb;  

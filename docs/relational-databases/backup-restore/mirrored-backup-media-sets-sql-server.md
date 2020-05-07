@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de mídia de backup espelhado (SQL Server) | Microsoft Docs
+description: O SQL Server dá suporte ao espelhamento de conjuntos de mídias, o que aumenta a confiabilidade do backup reduzindo o impacto do mau funcionamento do dispositivo de backup.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5489a69aa7d1e44eb02605226fd80e3f4a9b298
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033733"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180947"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Conjuntos de mídias de backup espelhadas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

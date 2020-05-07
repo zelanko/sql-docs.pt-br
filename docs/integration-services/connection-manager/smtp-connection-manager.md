@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298484"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087426"
 ---
 # <a name="smtp-connection-manager"></a>Gerenciador de conexões SMTP
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298484"
     > [!IMPORTANT]  
     >  O gerenciador de conexões SMTP dá suporte apenas para autenticação anônima e Autenticação do Windows. Ele não suporta a autenticação básica.  
   
--   Especificando se é necessário criptografar a comunicação utilizando o SSL ao enviar mensagens de email.  
+-   Especificando se é necessário criptografar a comunicação utilizando o protocolo TLS, anteriormente conhecido como protocolo SSL, ao enviar mensagens de email.  
   
  Você pode definir propriedades pelo Designer do [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou programaticamente.  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298484"
 >  Ao utilizar o Microsoft Exchange como servidor SMTP, talvez seja preciso definir **Usar Autenticação do Windows** como **True**. Os servidores do Exchange podem ser configurados para não permitir conexões SMTP não autenticadas.  
   
  **Habilitar SSL (Secure Sockets Layer)**  
- Selecione para criptografar a comunicação utilizando a SSL (Secure Sockets Layer) ao enviar mensagens de email.  
+ Selecione para criptografar a comunicação utilizando a TLS/SSL ao enviar mensagens de email.  
   

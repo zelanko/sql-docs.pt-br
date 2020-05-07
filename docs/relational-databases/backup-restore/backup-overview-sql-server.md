@@ -1,5 +1,6 @@
 ---
 title: Visão geral de backup (SQL Server) | Microsoft Docs
+description: Saiba mais sobre o componente de backup do SQL Server, incluindo os tipos e as restrições de backup, bem como os dispositivos de backup e as mídias de backup.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70176269"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220488"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

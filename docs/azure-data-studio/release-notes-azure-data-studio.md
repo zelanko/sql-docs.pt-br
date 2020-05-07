@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087326"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619669"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas sobre a versão relacionadas ao Azure Data Studio
 
 **[Baixe e instale a versão mais recente!](download.md)**
+
+## <a name="april-2020-hotfix"></a>Abril de 2020 (hotfix)
+
+30 de abril de 2020, versão &nbsp; / &nbsp;: 1.17.1
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Correção do bug #10197 Não é possível se conectar via MFA | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>Abril de 2020
+
+27 de abril de 2020, versão &nbsp; / &nbsp;: 1.17.0
+
+&nbsp;
+
+| Alterar | Detalhes |
+| :----- | :------ |
+| Página inicial aprimorada | Atualização da interface do usuário na página inicial para facilitar a visualização de ações comuns e o realce de extensões. |
+| Novos recursos de notebook | &bull;&nbsp; Adicionada a barra de ferramentas de Markdown ao editar células de texto para ajudar a escrever com Markdown <br/> &bull;&nbsp;Visualização do Jupyter Books remodelada para se tornar uma visualização de Notebooks em que você pode gerenciar Jupyter Books e notebooks juntos <br/>&bull;&nbsp; Adicionado suporte para persistir gráficos ao salvar um notebook <br/> &bull;&nbsp; Adicionado suporte para magic de KQL em notebooks Python|
+| Painéis aprimorados | Os painéis em todo o Azure Data Studio foram atualizados com os padrões de design mais recentes, incluindo uma barra de ferramentas de ações. Isso também se aplica a muitas extensões. |
+| Adicionada a integração do Cloud Shell no modo de exibição do Azure. | |
+| Suporte para Always Encrypted e Always Encrypted com enclaves seguros. | |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
+| Bugs e problemas resolvidos | Para obter uma lista completa das correções, confira [Bugs e problemas, no GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>Março de 2020
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087326"
 
 ## <a name="february-2020"></a>Fevereiro de 2020
 
-13 de fevereiro de 2020 &nbsp; / &nbsp; versão: 1.15.0 
+13 de fevereiro de 2020 &nbsp; / &nbsp; versão: 1.15.0
 
 &nbsp;
 
@@ -228,7 +257,7 @@ ms.locfileid: "82087326"
 | Alterar | Detalhes |
 | :----- | :------ |
 | Lançamento da extensão CMS (Servidores de Gerenciamento Central) | Os servidores de gerenciamento central armazenam uma lista de instâncias do SQL Server que é organizada em um ou mais grupos de servidores de gerenciamento central. Os usuários podem se conectar aos seus próprios servidores de CMS existentes e gerenciá-los, como adicionar e remover servidores. Para saber mais, você pode ler [aqui](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
-| Lançamento das extensões da Ferramenta de Administração de Banco de Dados para Windows | Essa extensão inicializa duas das experiências mais usadas no SQL Server Management Studio por meio do Azure Data Studio. Os usuários podem clicar com o botão direito do mouse em muitos objetos diferentes (como Bancos de Dados, Tabelas, Colunas, Exibições e muito mais) e selecionar Propriedades para exibir a caixa de diálogo de propriedades do SSMS para aquele objeto. Além disso, os usuários podem clicar com o botão direito do mouse em um banco de dados e selecionar Gerar Scripts para iniciar o famoso Assistente de Geração de Scripts do SSMS. 
+| Lançamento das extensões da Ferramenta de Administração de Banco de Dados para Windows | Essa extensão inicializa duas das experiências mais usadas no SQL Server Management Studio por meio do Azure Data Studio. Os usuários podem clicar com o botão direito do mouse em muitos objetos diferentes (como Bancos de Dados, Tabelas, Colunas, Exibições e muito mais) e selecionar Propriedades para exibir a caixa de diálogo de propriedades do SSMS para aquele objeto. Além disso, os usuários podem clicar com o botão direito do mouse em um banco de dados e selecionar Gerar Scripts para iniciar o conhecido Assistente para Gerar Scripts do SSMS. 
 | Melhorias na Comparação de Esquemas | &bull; &nbsp; Adição das opções Excluir/Incluir <br/>&bull; &nbsp; A opção Gerar Script é aberta após a geração do script <br/>&bull; &nbsp; Remoção das barras de rolagem duplas  <br/>&bull; &nbsp; Melhorias de formatação e layout <br/>&bull; &nbsp; Encontre as alterações completas [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Seção Mensagens movida para a própria guia | Quando os usuários executavam consultas SQL, os resultados e as mensagens ficavam em painéis empilhados. Agora eles estão em guias separadas em um painel como no SSMS. |
 | Melhorias do Notebook do SQL | &bull; &nbsp; Agora os usuários podem optar por usar as próprias instalações do Python 3 ou do Anaconda em notebooks <br/>&bull; &nbsp; Várias correções de estabilidade e de ajuste/término <br/> &bull; &nbsp; Veja a lista completa de melhorias [aqui](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
@@ -391,7 +420,7 @@ ms.locfileid: "82087326"
 - Correção do [problema 2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Correção da Edição do nome do documento de dados quando o nome da tabela contém caracteres especiais
 - Correção do [problema 2929](https://github.com/Microsoft/azuredatastudio/issues/2929): O log de mudanças da extensão interna diz para verificar as Notas sobre a versão do VSCode quanto às alterações
 - Correção do [problema 2719](https://github.com/Microsoft/azuredatastudio/issues/2719): Ícones duplos/triplos do tema Alto Contraste
-- Correção do [problema 3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Adição de uma interface de linha de comando para conexão com um SQL Server
+- Correção do [problema 3047](https://github.com/Microsoft/azuredatastudio/pull/3047): adição de uma interface de linha de comando para conexão com um SQL Server
 - Correção do [problema 3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Adição de suporte ao tema do plano de consulta
 
 ## <a name="october-2018"></a>Outubro de 2018

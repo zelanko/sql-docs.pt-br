@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531093"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178127"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Introdução ao [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Introdução à implantação de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este artigo apresenta uma visão geral de como implantar o [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+Este artigo apresenta uma visão geral de como implantar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. O artigo apresenta conceitos e fornece uma estrutura para entender os cenários de implantação. Suas etapas de implantação específicas variam de acordo com suas opções de plataforma para o cliente e o servidor. Para ver uma introdução do [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], confira [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-Para ver outros cenários de implantação, confira:
+Para ver outros cenários de implantação do SQL Server, confira:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Contêineres do Docker](../linux/sql-server-linux-configure-docker.md)
 
-Este artigo descreve os conceitos e fornece uma estrutura para que você possa entender os outros artigos de implantação nesta seção. Suas etapas de implantação específicas variam de acordo com suas opções de plataforma para o cliente e o servidor.
-
-> [!TIP]
-> Para obter rapidamente um ambiente com o Kubernetes e o cluster de Big Data implantados para ajudar você a se familiarizar com suas funcionalidades, use um dos scripts de exemplo indicados na [seção sobre scripts](#scripts). Após a implantação, para gerenciar o cluster, use as [ferramentas de cliente](#tools) na seção a seguir.
+## <a name="quick-introduction"></a>Introdução rápida 
 
 Assista a este vídeo de 9 minutos para obter uma visão geral de como implantar clusters de Big data:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Para obter rapidamente um ambiente com o Kubernetes e o cluster de Big Data implantados para ajudar você a se familiarizar com suas funcionalidades, use um dos scripts de exemplo indicados na [seção sobre scripts](#scripts). Após a implantação, para gerenciar o cluster, use as [ferramentas de cliente](#tools) na seção a seguir.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Ferramentas de cliente

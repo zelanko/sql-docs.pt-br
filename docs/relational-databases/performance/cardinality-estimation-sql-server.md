@@ -15,12 +15,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c72de4a0070595b9e1a371d5309d4e1d3e43853
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946996"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588242"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimativa de cardinalidade (SQL Server)
 
@@ -48,30 +48,25 @@ Nos casos a seguir, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 Este artigo ilustra como você pode avaliar e escolher a melhor configuração de CE para seu sistema. A maior parte dos sistemas se beneficia da CE mais recente, pois ela é a mais precisa. A CE prevê o número de linhas que sua consulta provavelmente retornará. A previsão de cardinalidade é usada pelo Otimizador de Consulta para gerar o plano de consulta ideal. Com estimativas mais precisas, o Otimizador de Consulta normalmente pode fazer um trabalho melhor de produção de um plano de consulta melhor.  
   
-Provavelmente, seu sistema de aplicativos poderia ter uma consulta importante cujo plano é alterado para um plano mais lento devido à nova CE. Uma consulta desse tipo pode ser parecida com esta:  
-  
-- Uma consulta OLTP (processamento de transações online) executada com tanta frequência que várias instâncias dessa geralmente são executadas ao mesmo tempo.  
-- SELECT com agregação significativa que é executado durante o horário comercial do OLTP.  
-  
-Você tem técnicas para identificar uma consulta que tem um desempenho mais lento com a nova CE. Além disso, você tem opções para resolver o problema de desempenho.
+Seu sistema de aplicativos poderia ter uma consulta importante cujo plano foi alterado para um plano mais lento devido às alterações na CE ao longo das versões. Você tem técnicas e ferramentas para identificar uma consulta com desempenho mais lento devido a problemas na CE. Além disso, você tem opções para resolver problemas de desempenho decorrentes disso.
   
 ## <a name="versions-of-the-ce"></a>Versões da CE
 
 Em 1998, uma importante atualização da CE fez parte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, para o qual o nível de compatibilidade era 70. Essa versão do modelo da CE é definida em quatro suposições básicas:
 
--  **Independência:** as distribuições de dados em diferentes colunas devem ser independentes entre si, a menos que as informações de correlação estejam disponíveis e sejam utilizáveis.
+-  **Independência:** as distribuições de dados em diferentes colunas são consideradas independentes entre si, a menos que haja informações de correlação disponíveis e elas sejam utilizáveis.
 -  **Uniformidade:** diferentes valores são espaçados uniformemente e todos eles têm a mesma frequência. Mais precisamente, dentro de cada etapa de [histograma](../../relational-databases/statistics/statistics.md#histogram), diferentes valores são distribuídos uniformemente e cada valor tem a mesma frequência. 
--  **Confinamento (simples):** os usuários consultam dados existente. Por exemplo, para uma junção de igualdade entre duas tabelas, considere a seletividade de predicados<sup>1</sup> em cada histograma de entrada antes de ingressar histogramas para estimar a seletividade da junção. 
+-  **Independência (simples):** os usuários consultam dados existentes. Por exemplo, para uma junção de igualdade entre duas tabelas, considere a seletividade de predicados<sup>1</sup> em cada histograma de entrada antes de ingressar histogramas para estimar a seletividade da junção. 
 -  **Inclusão:** para filtrar predicados em que `Column = Constant`, supõe-se que a constante realmente exista para a coluna associada. Se uma etapa do histograma correspondente não estiver vazia, presume-se que um dos valores diferentes da etapa corresponda ao valor do predicado.
 
   <sup>1</sup> Contagem de linhas que satisfaz o predicado.
 
 Atualizações posteriores iniciadas com o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], significando níveis de compatibilidade 120 e acima. As atualizações da CE dos níveis 120 e acima incorporam suposições e algoritmos atualizados que funcionam bem em data warehousing moderno e em cargas de trabalho OLTP. De suposições da CE 70, as seguintes suposições de modelo foram alteradas a partir da CE 120:
 
--  A **independência** se torna **correlação:** a combinação dos diferentes valores de coluna não é necessariamente independente. Isso poderia parecer mais com uma consulta de dados da vida real.
--  O **confinamento simples** torna-se **confinamento básico:** os usuários podem consultar dados que não existem. Por exemplo, para que haja uma junção de igualdade entre duas tabelas, usamos histogramas de tabelas básicos para calcular a seletividade da junção e, sem seguida, consideramos a seletividade de predicados.
+-  **Independência** torna-se **Correlação:** a combinação dos diferentes valores de coluna não é necessariamente independente. Isso poderia parecer mais com uma consulta de dados da vida real.
+-  **Independência simples** torna-se **Independência de base:** Os usuários podem consultar dados que não existem. Por exemplo, para que haja uma junção de igualdade entre duas tabelas, usamos histogramas de tabelas básicos para calcular a seletividade da junção e, sem seguida, consideramos a seletividade de predicados.
   
-**Nível de compatibilidade:** é possível garantir que seu banco de dados esteja em determinado nível usando o seguinte código do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Nível de compatibilidade:** é possível garantir que o banco de dados esteja em determinado nível usando o seguinte código do [!INCLUDE[tsql](../../includes/tsql-md.md)] para [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -89,7 +84,7 @@ GO
   
 Para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 ou superior, a ativação do [sinalizador de rastreamento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) força o sistema a usar a CE versão 70.  
   
-**CE herdada:** para um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e acima, a CE versão 70 pode ser ativada usando o nível do banco de dados usando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**CE herdada:** para um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido no nível de compatibilidade 120 e superior, a CE versão 70 pode ser ativada usando o nível do banco de dados com [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 
@@ -111,7 +106,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Repositório de consultas:** a começar no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o repositório de consultas é uma ferramenta útil para examinar o desempenho de suas consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
+**Repositório de Consultas:** Começando pelo [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o Repositório de Consultas é uma ferramenta útil para examinar o desempenho das consultas. No [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], no **Pesquisador de Objetos**, no nó do seu banco de dados, um nó **Repositório de Consultas** é exibido quando o repositório de consultas está habilitado.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -129,7 +124,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> É recomendado instalar a versão mais recente do [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) e atualizá-lo com frequência.  
+> É recomendado instalar a versão mais recente do [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) e atualizá-lo com frequência.  
+
+> [!IMPORTANT] 
+> Verifique se a Repositório de Consultas está configurado corretamente para seu banco de dados e carga de trabalho. Para obter mais informações, consulte [Melhores práticas com Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md). 
   
 Outra opção para acompanhar o processo de estimativa de cardinalidade é usar o evento estendido chamado **query_optimizer_estimate_cardinality**. O exemplo de código [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir é executado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele grava um arquivo .xel em `C:\Temp\` (embora o caminho possa ser alterado). Quando você abre o arquivo .xel no [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], as informações detalhadas são exibidas de forma amigável.  
   
@@ -176,7 +174,7 @@ A seguir, veja as etapas que você pode usar para avaliar se qualquer uma das su
   
     3.  Verifique se o seu banco de dados tem a configuração `LEGACY_CARDINALITY_ESTIMATION` como OFF.  
   
-    4.  LIMPE seu repositórios de consultas. É claro, verifique se seu repositório de consultas está ON.  
+    4.  Limpe seu Repositório de Consultas. Verifique se o Repositório de Consultas está ON.  
   
     5.  Execute a instrução: `SET NOCOUNT OFF;`  
   
@@ -282,8 +280,8 @@ Com a nova e ampla pesquisa sobre cargas de trabalho modernas e dados corporativ
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

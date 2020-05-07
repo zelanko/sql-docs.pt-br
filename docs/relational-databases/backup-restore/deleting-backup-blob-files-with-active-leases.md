@@ -1,5 +1,6 @@
 ---
 title: Excluindo arquivos de blob de backup com concessões ativas | Microsoft Docs
+description: Se um backup ou uma restauração do SQL Server falhar, um blob no Armazenamento do Azure poderá se tornar órfão. Saiba como excluir um blob órfão.
 ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 716daad4f639fffa3970d80b97502731c32514cd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908942"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179196"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Excluir arquivos de blob de backup com concessões ativas
 
@@ -33,14 +34,14 @@ Se houver uma falha na restauração, as próximas restaurações não serão bl
 
 As etapas a seguir descrevem como efetuar a limpeza após uma atividade de restauração ou backup com falha. Você pode realizar todas as etapas usando scripts do PowerShell. A seção a seguir inclui um exemplo de script do PowerShell:  
   
-1. **Identificar os blobs com concessões:** se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
+1. **Identificar blobs com concessões:** Se houver um script ou um processo que execute os processos de backup, você poderá capturar a falha no script ou no processo e usá-la para limpar os blobs.  Você também pode usar o LeaseStats e as propriedades do LeastState para identificar blobs que contêm concessões. Depois de ter identificado os blobs, examine a lista e verifique a validade do arquivo de backup antes de excluir o blob.  
   
-1. **Interromper a concessão:** uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
+1. **Interromper a concessão:** Uma solicitação autorizada pode interromper a concessão sem fornecer uma ID de concessão. Consulte [aqui](https://go.microsoft.com/fwlink/?LinkID=275664) para obter mais informações.  
   
     > [!TIP]  
     > O SQL Server emite uma ID de concessão para estabelecer o acesso exclusivo durante a operação de restauração. A ID de concessão da restauração é BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Excluir o Blob:** para excluir um blob com uma concessão ativa, primeiro você deve interromper a concessão.  
+1. **Excluir o Blob:** Para excluir um blob com uma concessão ativa, primeiro, é necessário interromper a concessão.  
 
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Exemplo de script do PowerShell  
   

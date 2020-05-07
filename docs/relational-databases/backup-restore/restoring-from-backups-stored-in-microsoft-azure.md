@@ -1,5 +1,6 @@
 ---
 title: Restauração de backups armazenados no Microsoft Azure | Microsoft Docs
+description: Compreenda os aspectos da restauração de um banco de dados do SQL Server usando um backup armazenado no Armazenamento de Blobs do Azure.
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cda4fd3fa0bbb66e95d61ec87ff66dee809e2962
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a1947ce2821bf02b09ea1a3a49f3d83c2613c357
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155449"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180670"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurando de backups armazenados no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

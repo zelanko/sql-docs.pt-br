@@ -1,5 +1,6 @@
 ---
 title: 'Fazer backup de vários bancos de dados: Armazenamento do Blobs do Azure'
+description: Este artigo fornece scripts de exemplo que podem ser usados para automatizar backups no SQL Server para o serviço de Armazenamento de Blobs do Azure usando cmdlets do PowerShell.
 titleSuffix: PowerShell
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd19075f0a9f0d807dd2523f28b46c190e0f981a
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247463"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220558"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Fazer backup de vários bancos de dados para o Armazenamento de Blobs do Azure – PowerShell
 

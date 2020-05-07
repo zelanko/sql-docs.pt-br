@@ -1,5 +1,6 @@
 ---
 title: Linha do tempo de backup | Microsoft Docs
+description: No SQL Server, a caixa de diálogo Linha do Tempo de Backup permite localizar e especificar backups para restaurar um banco de dados para um ponto específico no tempo.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68081430"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220473"
 ---
 # <a name="backup-timeline"></a>Linha do tempo de backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

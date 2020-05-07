@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81490745"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220651"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>O que são os Serviços de Machine Learning do SQL Server (Python e R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Há duas maneiras de executar scripts do Python e do R nos Serviços de Machine 
 
 ## <a name="python-and-r-versions"></a>Versões do Python e do R
 
-A versão do Python e do R incluída no Serviços de Machine Learning depende de versão do SQL Server que você usa. 
+Veja as seguintes versões do Python e do R incluídas nos Serviços de Machine Learning com cada versão do SQL Server.
 
 | Versão do SQL Server | Versão do Python | Versão do R |
 |-|-|-|

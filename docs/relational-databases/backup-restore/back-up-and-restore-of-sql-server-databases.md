@@ -1,5 +1,6 @@
 ---
 title: Fazer backup e restauração de bancos de dados do SQL Server | Microsoft Docs
+description: Este artigo descreve os benefícios de fazer backup dos bancos de dados do SQL Server e apresenta estratégias de backup e restauração e considerações de segurança.
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bea2f639677de4869b537d3fb6cfbd1faa271134
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487895"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220631"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

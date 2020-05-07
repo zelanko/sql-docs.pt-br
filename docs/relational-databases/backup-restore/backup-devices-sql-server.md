@@ -1,5 +1,6 @@
 ---
 title: Dispositivos de backup (SQL Server) | Microsoft Docs
+description: Este artigo descreve os dispositivos de backup para um banco de dados do SQL Server, incluindo a terminologia e como trabalhar com dispositivos de backup.
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909181"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220529"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "72909181"
   
  TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -101,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **OBSERVAÇÃO:** o local padrão é armazenado na chave do Registro **BackupDirectory** em **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
+> **OBSERVAÇÃO:** O local padrão é armazenado na chave do Registro **BackupDirectory** em **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> Fazer backup em um arquivo de compartilhamento de rede  
@@ -118,7 +119,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Especificar um nome UNC  
  Para especificar um compartilhamento de rede em um comando de backup ou restauração, use o nome UNC totalmente qualificado do arquivo para o dispositivo de backup. Um nome UNC tem a forma **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_.  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -129,7 +130,7 @@ GO
  
 ##  <a name="using-tape-devices"></a><a name="TapeDevices"></a> Usando dispositivos de fita  
   
-> **OBSERVAÇÃO:** o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
+> **OBSERVAÇÃO:** O suporte a dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
    
  Para fazer o backup de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em fita, é necessário que haja suporte para a(s) unidade(s) de fita no sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Além disso, para determinada unidade de fita, nós recomendamos que você só utilize as fitas recomendadas pelo fabricante da unidade. Para obter mais informações sobre como instalar uma unidade de fita, consulte a documentação do sistema operacional Windows.  
   
@@ -148,7 +149,7 @@ GO
   
  TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- Por exemplo:  
+ Por exemplo:   
   
 ```sql  
 BACKUP LOG AdventureWorks2012   
@@ -173,12 +174,12 @@ GO
   
      Você pode controlar se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém a fita aberta após a operação de backup ou restauração ou libera e rebobina a fita após o preenchimento. O comportamento padrão é rebobinar a fita (REWIND).  
   
-> **OBSERVAÇÃO:** para obter mais informações sobre a sintaxe BACKUP e argumentos, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Para obter mais informações sobre a sintaxe e os argumentos de RESTORE, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectivamente.  
+> **OBSERVAÇÃO:** Para obter mais informações sobre sintaxe e argumentos BACKUP, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Para obter mais informações sobre a sintaxe e os argumentos de RESTORE, consulte [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) e [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectivamente.  
   
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> Gerenciando fitas abertas  
  Para exibir uma lista de dispositivos de fitas abertas e o status das solicitações de montagem, consulte a exibição de gerenciamento dinâmico [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Esta exibição mostra todas as fitas abertas. Elas incluem fitas em uso que estão temporariamente inativas enquanto esperam a próxima operação de BACKUP ou RESTAURAÇÃO.  
   
- Se uma fita foi acidentalmente deixada aberta, o modo mais rápido de liberá-la é usando o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Se uma fita for deixada aberta acidentalmente, a maneira mais rápida de liberá-la será usar o seguinte comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obter mais informações, consulte [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>Usar o serviço de Armazenamento de Blobs do Azure  
@@ -199,7 +200,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **OBSERVAÇÃO:** em uma instrução BACKUP ou RESTORE específica, o nome do dispositivo de backup lógico e o nome do dispositivo de backup físico correspondente são intercambiáveis.  
+> **OBSERVAÇÃO:** Em uma determinada instrução de BACKUP ou RESTAURAÇÃO, o nome do dispositivo de backup lógico e o nome do dispositivo de backup físico correspondente são intercambiáveis.  
   
  Uma vantagem de usar um dispositivo de backup lógico é que é mais simples do que usar um caminho longo. Usar um dispositivo de backup lógico poderá ajudar se você planeja gravar uma série de backups no mesmo caminho ou em um dispositivo de fita. Os dispositivos de backup lógicos são especialmente úteis para identificar dispositivos de backup em fita.  
   
@@ -212,7 +213,7 @@ GO
 ##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a> Conjuntos de mídias de backup espelhado  
  O espelhamento de conjuntos de mídias de backup reduz o efeito de maus funcionamentos do dispositivo de backup. Esses maus funcionamentos são especialmente sérios uma vez que os backups são a última linha de defesa contra a perda de dados. À medida que o tamanho dos bancos de dados cresce, aumenta a probabilidade de que uma falha de um dispositivo de backup ou mídia torne impossível a restauração de um backup. O espelhamento de mídias de backup aumenta a confiabilidade de backups fornecendo redundância para o dispositivo de backup físico. Para obter mais informações, veja [Conjuntos de mídias de backup espelhadas &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
-> **OBSERVAÇÃO:** há suporte para conjuntos de mídias de backup espelhado apenas no [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versões posteriores.  
+> **OBSERVAÇÃO:** Os conjuntos de mídias de backup espelhados oferecem suporte somente em [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versões posteriores.  
   
   
 ##  <a name="archive-sql-server-backups"></a><a name="Archiving"></a> Arquivar backups do SQL Server  

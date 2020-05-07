@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: DNS do Active Directory
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Falhas de logon do Active Directory
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: Direitos de administrador do HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Referência
@@ -10049,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Recursos
   items:
+    - name: Documentação offline do SQL Server
+      href: sql-server/sql-server-offline-documentation.md
     - name: Saiba mais
       items:
         - name: Recursos educativos
@@ -10099,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: Desenvolvimento
           href: sql-server/partner-dev-sql-server.md
-    - name: Documentação offline do SQL Server
-      href: sql-server/sql-server-offline-documentation.md
 - name: Referência
   items:
-    - name: Conteúdo arquivado (SQL 2005 – 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Exemplos de banco de dados
       items:
         - name: Visão geral dos exemplos

@@ -1,5 +1,6 @@
 ---
 title: Definir o modelo de recuperação do banco de dados
+description: Saiba como alternar o banco de dados do SQL Server entre diferentes modelos de recuperação usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6a9f1d7c4397a93b6df3b235f715627e7be320e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254048"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179625"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Recomendações: após a alteração do modelo de recuperação  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Recomendações: após você alterar o modelo de recuperação  
   
 -   **Depois de alternar entre os modelos de recuperação completa e bulk-logged**  
   
@@ -110,13 +111,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Depois de alternar do modelo de recuperação bulk-logged novamente para o modelo de recuperação completa, faça backup do log.  
   
-        >**OBSERVAÇÃO:** sua estratégia de backup permanecerá a mesma: continue executando backups periódicos do banco de dados, do log e backups diferenciais.  
+        >**OBSERVAÇÃO:** Sua estratégia de backup permanecerá a mesma: continue executando backups periódicos do banco de dados, do log e backups diferenciais.  
   
 -   **Depois de alternar do modelo de recuperação simples**  
   
     -   Imediatamente depois de alternar para a troca para o modelo de recuperação completa ou modelo de recuperação bulk-logged, faça um backup completo ou diferencial de banco de dados para iniciar a cadeia de logs.  
   
-        >**OBSERVAÇÃO:** a alternância para o modelo de recuperação completa ou com log de operações em massa só entrará em vigor depois do primeiro backup de dados.  
+        >**OBSERVAÇÃO:** A alternância para o modelo de recuperação completa ou com log de operações em massa só entrará em vigor depois do primeiro backup de dados.  
   
     -   Agende backups de log regulares e atualize seu plano de restauração adequadamente.  
   
