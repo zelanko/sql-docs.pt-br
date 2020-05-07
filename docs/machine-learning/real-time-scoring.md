@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117179"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719282"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>Pontuação em tempo real com sp_rxPredict no aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ A pontuação em tempo real usa o procedimento armazenado do sistema [sp_rxPredi
 
 ## <a name="how-real-time-scoring-works"></a>Como funciona a pontuação em tempo real
 
-Há suporte para a pontuação em tempo real em tipos de modelos específicos com base em funções do RevoScaleR ou do MicrosoftML como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Ela usa bibliotecas C++ nativas para gerar pontuações, com base na entrada do usuário fornecida a um modelo de machine learning armazenado em um formato binário especial.
+Há suporte para a pontuação em tempo real em tipos de modelos específicos com base em funções do RevoScaleR ou do MicrosoftML, como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) e [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Ela usa bibliotecas C++ nativas para gerar pontuações, com base na entrada do usuário fornecida a um modelo de machine learning armazenado em um formato binário especial.
 
 Como um modelo treinado pode ser usado para pontuação sem a necessidade de chamar um runtime de linguagem externo, a sobrecarga de vários processos é reduzida. Isso dá suporte a um desempenho de previsão muito mais rápido para cenários de pontuação de produção. Como os dados nunca saem do SQL Server, os resultados podem ser gerados e inseridos em uma nova tabela sem nenhuma conversão de dados entre o R e o SQL.
 
@@ -34,7 +34,7 @@ A pontuação em tempo real é um processo de várias etapas:
 3. Você fornece novos dados de entrada a serem pontuados, de tabela ou linhas únicas, como entrada para o modelo.
 4. Para gerar pontuações, chame o procedimento armazenado [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 + [Habilitar a integração CLR do SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 

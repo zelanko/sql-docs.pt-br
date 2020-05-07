@@ -1,7 +1,7 @@
 ---
 title: Parando o controle de versão do sistema de uma tabela temporal com versão do sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165447"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220382"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Interrompendo o controle de versão do sistema em uma tabela temporal com controle de versão do sistema
 
@@ -39,6 +39,7 @@ Pare o controle de versão de sistema se quiser realizar operações de manuten�
 - Quando você define **SYSTEM_VERSIONING = OFF** e não remove o período **SYSTEM_TIME** , o sistema continuará a atualizar as colunas de período para cada operação de inserção e atualização. Exclusões na tabela atual serão permanentes.
 - Remova o período **SYSTEM_TIME** para remover as colunas de período completamente.
 - Quando você define **SYSTEM_VERSIONING = OFF**, todos os usuários com permissões suficientes poderão modificar o esquema e o conteúdo da tabela de histórico ou até mesmo excluir permanentemente a tabela de histórico.
+- Não é possível definir **SYSTEM_VERSIONING = OFF** quando você tem outros objetos criados com SCHEMABINDING usando extensões de consulta temporais, como ao referenciar **SYSTEM_TIME**. Essa restrição impede que esses objetos falhem quando você define **SYSTEM_VERSIONING = OFF**.
 
 ### <a name="permanently-remove-system_versioning"></a>Remover permanentemente o SYSTEM_VERSIONING
 

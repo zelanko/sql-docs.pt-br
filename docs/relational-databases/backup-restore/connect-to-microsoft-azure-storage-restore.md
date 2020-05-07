@@ -1,5 +1,6 @@
 ---
 title: Conectar ao Armazenamento do Microsoft Azure (Restaurar) | Microsoft Docs
+description: No SQL Server, a caixa de diálogo Conta de Armazenamento do Azure permite especificar uma conexão com as informações da conta de armazenamento do Azure a fim de obter o armazenamento de arquivos em uma conta do Azure.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c6564d9dc63a4d2e35ac306db91cead15f024c6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155614"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220451"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Conectar ao Armazenamento do Microsoft Azure (Restaurar)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

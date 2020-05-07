@@ -1,5 +1,6 @@
 ---
 title: Fazer backup do log de transações quando o banco de dados estiver danificado (SQL Server) | Microsoft Docs
+description: Este tópico descreve como fazer backup de um log de transações quando o banco de dados está danificado no SQL Server usando o SQL Server Management Studio ou o Transact-SQL.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9db020c354212a492d4f41f78df3257a7b8e3fc5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909186"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220559"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Fazer backup do log de transações quando o banco de dados está danificado (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
