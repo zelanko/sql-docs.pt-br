@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: Desabilitar restrições com INSERT e UPDATE
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: Restrições únicas
+        - name: Restrições exclusivas e restrições de verificação
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: Criar
