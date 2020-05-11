@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922430"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Monitorar e solucionar problemas de grupos de disponibilidade
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 
@@ -64,15 +64,15 @@ ms.locfileid: "74822039"
 |-----------|-----------------|  
 |[Monitorar o desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md)|Descreve o processo de sincronização de dados para grupos de disponibilidade, os portões de controle de fluxo e as métricas úteis ao monitorar um grupo de disponibilidade; também mostra como coletar métricas de RTO e RPO.|  
 |[Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornece informações sobre ferramentas para monitorar um grupo de disponibilidade.|  
-|[O modelo de integridade Always On, parte 1: arquitetura do modelo de integridade](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Fornece uma visão geral do modelo de integridade do Always On.|  
-|[O modelo de integridade Always On, parte 2: estendendo o modelo de integridade](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Mostra como personalizar o modelo de integridade Always On e personalizar o Painel Always On para mostrar informações adicionais.|  
-|[Monitorando a integridade do Always On com o PowerShell, parte 1: visão geral básica do cmdlet](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|Fornece uma visão geral básica de cmdlets do PowerShell para o Always On que podem ser usados para monitorar a integridade de um grupo de disponibilidade.|  
-|[Monitorando a integridade do Always On com o PowerShell, parte 2: uso avançado do cmdlet](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|Fornece informações sobre o uso avançado dos cmdlets do PowerShell para o Always On para monitorar a integridade de um grupo de disponibilidade.|  
-|[Monitorando a integridade do Always On com o PowerShell, parte 3: um aplicativo simples de monitoramento](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|Mostra como monitorar automaticamente um grupo de disponibilidade com um aplicativo.|  
-|[Monitorando a integridade do Always On com o PowerShell, parte 4: integração com o SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|Fornece informações sobre como integrar o monitoramento do grupo de disponibilidade com o SQL Server Agent e configurar notificações para as pessoas apropriadas quando surgirem problemas.|  
+|[O modelo de integridade Always On, parte 1: arquitetura do modelo de integridade](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Fornece uma visão geral do modelo de integridade do Always On.|  
+|[O modelo de integridade Always On, parte 2: estendendo o modelo de integridade](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Mostra como personalizar o modelo de integridade Always On e personalizar o Painel Always On para mostrar informações adicionais.|  
+|[Monitorando a integridade do Always On com o PowerShell, parte 1: visão geral básica do cmdlet](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Fornece uma visão geral básica de cmdlets do PowerShell para o Always On que podem ser usados para monitorar a integridade de um grupo de disponibilidade.|  
+|[Monitorando a integridade do Always On com o PowerShell, parte 2: uso avançado do cmdlet](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Fornece informações sobre o uso avançado dos cmdlets do PowerShell para o Always On para monitorar a integridade de um grupo de disponibilidade.|  
+|[Monitorando a integridade do Always On com o PowerShell, parte 3: um aplicativo simples de monitoramento](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Mostra como monitorar automaticamente um grupo de disponibilidade com um aplicativo.|  
+|[Monitorando a integridade do Always On com o PowerShell, parte 4: integração com o SQL Server Agent](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Fornece informações sobre como integrar o monitoramento do grupo de disponibilidade com o SQL Server Agent e configurar notificações para as pessoas apropriadas quando surgirem problemas.|  
 
 ## <a name="next-steps"></a>Próximas etapas  
- [Blog da equipe do Always On do SQL Server](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Blog da equipe do Always On do SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
  [Blogs dos engenheiros do CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
   

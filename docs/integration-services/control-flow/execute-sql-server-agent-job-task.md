@@ -1,9 +1,7 @@
 ---
 title: Tarefa Executar Trabalho do SQL Server Agent
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
@@ -16,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 081cfc1b5808ca38fb536197cfa44d60f2203b99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b937c549cc58bf7db1e1a7c15bec9050f7dc3065
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750932"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>Tarefa Executar Trabalho do SQL Server Agent
 

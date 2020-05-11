@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924011"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922308"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Como usar a autenticação integrada do Kerberos para se conectar ao SQL Server
 
@@ -73,7 +73,7 @@ Para obter mais informações sobre SPNs (nomes de entidade de serviço), consul
 
 - [Como usar a autenticação Kerberos no SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Uso de Kerberos com SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Uso de Kerberos com SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Antes da versão 6.2 do driver JDBC, para o uso adequado do Cross Realm Kerberos, você precisaria definir explicitamente o **serverSpn**.

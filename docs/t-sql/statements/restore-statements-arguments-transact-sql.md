@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982456"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922215"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instruções RESTORE – argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ CREDENTIAL
  Usado apenas ao restaurar um backup do serviço de Armazenamento de Blobs do Microsoft Azure.  
   
 > [!NOTE]  
->  Com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode apenas restaurar de um único dispositivo ao fazer uma restauração de uma URL. Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) e usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter mais informações, consulte [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  Com o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 até o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode apenas restaurar de um único dispositivo ao fazer uma restauração de uma URL. Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [versão atual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) e usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter mais informações, consulte [Habilitar o backup gerenciado do SQL Server no Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Com suporte de:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

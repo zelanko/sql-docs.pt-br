@@ -1,5 +1,6 @@
 ---
 title: Notas de Versão do SQL Server 2008 R2 SP2 | Microsoft Docs
+description: Este documento de Notas de Versão descreve problemas conhecidos sobre os quais você deve ler antes de instalar ou solucionar problemas do Microsoft SQL Server 2008 R2 Service Pack 2.
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 9625b8f37d69a8360859c8fd17a207b696234b9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb817c9983e3bf4a7dd4e1d148dd5a26b18a8738
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112368"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999406"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +56,9 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 |Nenhuma instalação de 64 bits do SQL Server 2008 R2 Management Studio|Instalar o SQL Server 2008 R2 Management Studio incluindo SP2|SQLManagementStudio_x64_ENU.exe [aqui](https://go.microsoft.com/fwlink/p/?LinkId=251791) para instalar gratuitamente o SQL Server 2008 R2 SP2 Management Studio Express Edition.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 A instalação pode falhar se SQAGTRES.dll estiver bloqueado por outro processo  
-**Problema**: uma operação de instalação do SQL Server pode falhar com este erro: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` A causa raiz é que C:\Windows\system32\SQAGTRES.DLL está bloqueado por outro processo de instalação e não foi capaz de atualizá-lo.  
+**Problema**: uma operação de configuração do SQL Server pode falhar com este erro: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` A causa raiz é que C:\Windows\system32\SQAGTRES.DLL está bloqueado por outro processo e a Instalação não foi capaz de atualizá-lo.  
   
-**Solução alternativa**: renomeie C:\Windows\system32\SQAGTRES.DLL para um nome temporário, por exemplo, C:\Windows\system32\SQAGTRES_old.DLL, e em seguida selecione a opção Tentar novamente na mensagem de erro de instalação. Isso fará a Instalação continuar. Depois de reinicializar, você poderá excluir o arquivo temporário C:\Windows\system32\SQAGTRES_old.DLL.  
+**Solução alternativa**: renomeie C:\Windows\system32\SQAGTRES.DLL para um nome temporário, por exemplo, C:\Windows\system32\SQAGTRES_old.DLL e, em seguida, selecione a opção Tentar novamente na mensagem de erro de instalação. Isso fará a Instalação continuar. Depois de reinicializar, você poderá excluir o arquivo temporário C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Problemas conhecidos corrigidos neste Service Pack  
 Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste service pack, consulte este [artigo mestre da Base de Dados de Conhecimento](https://support.microsoft.com/kb/2630455).  
