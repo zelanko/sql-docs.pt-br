@@ -1,6 +1,7 @@
 ---
-title: Como usar o Always Encrypted com o **Provedor de Dados do Microsoft .NET para SQL Server** | Microsoft Docs
-ms.date: 11/18/2019
+title: Como usar o Always Encrypted com SqlClient
+description: Saiba como desenvolver aplicativos usando Microsoft.Data.SqlClient e Always Encrypted para manter os seus dados seguros.
+ms.date: 05/06/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75233922"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886457"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Como usar o Always Encrypted com o Provedor de Dados do Microsoft .NET para SQL Server
 
@@ -559,7 +560,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>Confira também
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Blog do Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial do Banco de Dados SQL: proteger dados confidenciais com Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 - [Tutorial: Desenvolver um aplicativo .NET usando o Always Encrypted com enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Exemplo: o Azure Key Vault trabalhando com o Always Encrypted](azure-key-vault-example.md)
