@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529014"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886273"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial de instalação de Linux e macOS para Drivers da Microsoft para PHP para SQL Server
 As instruções a seguir consideram um ambiente limpo e mostram como instalar o PHP 7.x, o driver ODBC da Microsoft, o servidor Web do Apache e os Microsoft Drivers for PHP for SQL Server no Ubuntu 16.04, 18.04 e 19.10, no RedHat 7 e 8, no Debian 8, 9 e 10, no Suse 12 e 15, no Alpine 3.11 e no macOS 10.13, 10.14 e 10.15. Essas instruções aconselham a instalar os drivers usando PECL, mas também é possível baixar os binários predefinidos na página de projetos do GitHub [Drivers da Microsoft para PHP e para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalá-los seguindo as instruções em [Como carregar os Drivers da Microsoft para PHP e para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obter uma explicação do carregamento da extensão e por que não adicionamos as extensões ao php.ini, confira a seção sobre [carregar os drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
@@ -98,7 +98,7 @@ Instale o driver ODBC para Ubuntu seguindo as instruções do [artigo sobre a in
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Etapa 3. Instalar os drivers PHP para Microsoft SQL Server
 ```
-sudo pecl config-set php_ini /etc/php/7.3/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su

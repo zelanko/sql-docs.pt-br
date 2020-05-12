@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014684"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922361"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorar o desempenho de Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Para o banco de dados primário, o **last_commit_time** é a hora em que última
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Monitoramento de RTO e RPO  
- Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
+ Esta seção demonstra como monitorar as métricas de RTO e RPO de seus grupos de disponibilidade. Esta demonstração é semelhante ao tutorial de GUI fornecido em [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (O modelo de integridade do Always On, parte 2: estendendo o modelo de integridade).  
   
  Os elementos do tempo de failover e os cálculos da possível perda de dados em [Estimando o tempo de failover (RTO)](#estimating-failover-time-rto) e [Estimando o potencial de perda de dados (RPO)](#estimating-potential-data-loss-rpo) são fornecidos convenientemente como métricas de desempenho na faceta de gerenciamento de política, **Estado da réplica de banco de dados** (veja [Exibir as facetas do gerenciamento baseado em políticas em um objeto do SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Você pode monitorar essas duas métricas de acordo com um agendamento e ser alertado quando as métricas excederem o RTO e RPO, respectivamente.  
   
