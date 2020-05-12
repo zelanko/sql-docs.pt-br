@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558481"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001096"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar o cluster do Ubuntu e o recurso do grupo de disponibilidade
 
@@ -190,7 +190,7 @@ sudo apt-get install mssql-server-ha
 Para criar o recurso do grupo de disponibilidade, use o comando `pcs resource create` e defina as propriedades do recurso. O comando abaixo cria um recurso do tipo mestre/subordinado `ocf:mssql:ag` para o grupo de disponibilidade com o nome `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
 
 ```
 

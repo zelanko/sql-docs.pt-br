@@ -1,7 +1,8 @@
 ---
-title: Perguntas frequentes para Linux e macOS ODBC | Microsoft Docs
+title: Perguntas frequentes para Linux e macOS ODBC
+description: Encontre respostas para perguntas comuns sobre o Microsoft ODBC Driver for SQL Server em Linux e em macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b266913d6e8e1a073c8831880ddcd4938b2b9dc9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 700c89b520cdaa33a60f1adabe69c669388bcccb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886449"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Perguntas frequentes para Linux e macOS ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,7 +40,7 @@ UTF-8 para dados SQL_CHAR e UTF-16 para dados SQL_WCHAR. Dependendo da localidad
 
 **Há exemplos de ODBC que eu possa baixar e executar com o driver para experimentar ou avaliar?**
 
-Consulte [Use exemplos ODBC do MSDN C ++ para o driver ODBC no Linux](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) para obter um exemplo. Isso também e aplicável ao driver ODBC do macOS. 
+Consulte [Use exemplos ODBC do MSDN C ++ para o driver ODBC no Linux](/archive/blogs/sqlblog/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver) para obter um exemplo. Isso também e aplicável ao driver ODBC do macOS.
 
 **O driver ODBC no Linux ou no macOS é software livre?**
 

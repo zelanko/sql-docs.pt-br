@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d52273ac3ea7722abe6e0607c2ab5d0be12e4694
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297964"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922425"
 ---
 # <a name="data-conversion-transformation"></a>transformação Conversão de Dados
 
@@ -53,7 +53,7 @@ ms.locfileid: "71297964"
  Você pode definir propriedades por meio do [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer ou programaticamente. Para obter informações sobre como usar a transformação Conversão de Dados no Designer SSIS, consulte [Converter dados em um tipo de dados diferente por meio da transformação Conversão de Dados](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Para obter informações sobre como definir as propriedades dessa transformação programaticamente, consulte [Propriedades comuns](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) e [Propriedades personalizadas de Transformação](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
- Entrada de blog, [Comparação de desempenho entre as técnicas de conversão de tipo de dados no SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), em blogs.msdn.com.  
+ Entrada de blog, [Comparação de desempenho entre as técnicas de conversão de tipo de dados no SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), em blogs.msdn.com.  
   
 ## <a name="data-conversion-transformation-editor"></a>Editor de Transformação Conversão de Dados
   Use a caixa de diálogo **Editor de Transformação Conversão de Dados** para selecionar as colunas a converter, selecionar o tipo de dados ao qual converter a coluna e definir atributos de conversão.  

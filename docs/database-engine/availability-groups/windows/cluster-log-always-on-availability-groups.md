@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244380"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925268"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Gerar e analisar o CLUSTER.LOG de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244380"
 ## <a name="generate-cluster-log"></a>Gerar o log do cluster  
  Você pode gerar os logs do cluster de duas maneiras:  
   
-1.  Use o comando `cluster /log /g` no prompt de comando. Este comando gera os logs do cluster no diretório \windows\cluster\reports em cada nó do WSFC. A vantagem desse método é que você pode especificar o nível de detalhe dos logs gerados usando a opção `/level`. A desvantagem é que você não pode especificar o diretório de destino para os logs de cluster gerados. Para obter mais informações, veja [Como criar o cluster.log no Clustering de failover do Windows Server 2008](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  Use o comando `cluster /log /g` no prompt de comando. Este comando gera os logs do cluster no diretório \windows\cluster\reports em cada nó do WSFC. A vantagem desse método é que você pode especificar o nível de detalhe dos logs gerados usando a opção `/level`. A desvantagem é que você não pode especificar o diretório de destino para os logs de cluster gerados. Para obter mais informações, veja [Como criar o cluster.log no Clustering de failover do Windows Server 2008](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
 2.  Use o cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) do PowerShell. A vantagem desse método é que você pode gerar o log do cluster em todos os nós em um diretório de destino do nó em que você executa o cmdlet. A desvantagem é que você não pode especificar o nível de detalhes dos logs gerados.  
   
