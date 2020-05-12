@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2af58481babf1ba9e19465a67c530275db0402
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06a9978a2406e710f5b87c1aafb6ea9480967111
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295682"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922378"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Executando e gerenciando pacotes programaticamente
 
@@ -39,7 +39,7 @@ ms.locfileid: "71295682"
 ## <a name="running-packages-on-the-integration-services-server"></a>Executando pacotes no servidor do Integration Services  
  Quando você implanta pacotes no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], pode executar os pacotes programaticamente usando o namespace <xref:Microsoft.SqlServer.Management.IntegrationServices>. O assembly Microsoft.SqlServer.Management.IntegrationServices é compilado com o .NET Framework 3.5. Se você estiver compilando um aplicativo do .NET Framework 4.0, terá que adicionar a referência de assembly diretamente no seu arquivo de projeto.  
   
- Você também pode usar o namespace para implantar e gerenciar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter uma visão geral do namespace e dos snippets de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://go.microsoft.com/fwlink/?LinkId=253122)em blogs.msdn.com.  
+ Você também pode usar o namespace para implantar e gerenciar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obter uma visão geral do namespace e dos snippets de códigos, consulte a entrada do blog [Prévia do modelo do objeto gerenciado do catálogo do SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)em blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Compreender as diferenças entre execução local e remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
