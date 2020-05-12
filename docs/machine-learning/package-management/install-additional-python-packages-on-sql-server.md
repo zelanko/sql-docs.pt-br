@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487099"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886443"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalar pacotes de Python com sqlmlutils
 
@@ -25,7 +25,7 @@ Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://gith
 Para obter mais informações sobre a localização e os caminhos de instalação do pacote, confira [Obter informações do pacote de Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> O comando de Python padrão `pip install` não é recomendado para adicionar pacotes de Python do SQL Server 2019. Em vez disso, use **sqlmlutils**, conforme descrito neste artigo.
+> O pacote **sqlmlutils** descrito neste artigo é usado para adicionar pacotes do Python ao SQL Server 2019 ou posterior. Para o SQL Server 2017 e anterior, consulte [Instalar pacotes com ferramentas do Python](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -63,7 +63,6 @@ Para usar **sqlmlutils**, primeiro você precisa instalá-lo no computador clien
 1. Abra um **Prompt de Comando** e execute os comandos a seguir para instalar o pacote do **sqlmlutils**. Substitua o caminho completo para o arquivo zip do **sqlmlutils** que você baixou – este exemplo supõe que o arquivo baixado seja `c:\temp\sqlmlutils-1.0.0.zip`.
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 

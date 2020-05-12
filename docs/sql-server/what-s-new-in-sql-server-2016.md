@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665373"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886233"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novidades no SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -35,7 +35,7 @@ Esta página fornece informações de resumo e links para informações mais det
  **Experimente o SQL Server hoje mesmo!** 
 - Baixe **gratuitamente** o [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Baixe a versão mais recente do [SSMS (SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
+- Tem uma conta do Azure? Ative uma [Máquina Virtual com o SQL Server 2016 já instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 
 ## <a name="sql-server-2016-database-engine"></a>Mecanismo de Banco de Dados do SQL Server 2016
 - Agora você pode configurar **vários arquivos de banco de dados tempDB** durante a instalação e configuração do SQL Server.

@@ -2,7 +2,7 @@
 title: Como usar o Always Encrypted com o driver JDBC
 description: Saiba como usar o Always Encrypted em seu aplicativo Java com o JDBC Driver para SQL Server para criptografar dados confidenciais no servidor.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634863"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886349"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Esta página fornece informações sobre como desenvolver aplicativos o Java usando [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) e o Microsoft JDBC Driver 6.0 (ou superior) para SQL Server.
@@ -58,7 +59,8 @@ Para os provedores de repositório de chaves previamente registrados, você não
 Todos esses provedores de repositório de chaves são descritos mais detalhadamente nas seções a seguir. Você só precisa implementar um provedor de keystore para usar Always Encrypted.
 
 ### <a name="using-azure-key-vault-provider"></a>Usando o provedor do Cofre de Chaves do Azure
-O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se o seu aplicativo está hospedado no Azure). O Driver Microsoft JDBC para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no Azure Key Vault. O nome deste provedor é AZURE_KEY_VAULT. Para usar o provedor do repositório do Azure Key Vault, um desenvolvedor de aplicativos precisa criar o cofre e as chaves em Azure Key Vault e criar um registro de aplicativo no Azure Active Directory. O aplicativo registrado deve receber as permissões Obter, Descriptografar, Criptografar, Desencapsular Chave, Encapsular Chave e Verificar nas políticas de acesso definidas para o cofre de chaves criado para uso com Always Encrypted. Para obter mais informações sobre como configurar o cofre de chaves e criar uma chave mestra de coluna, confira [Azure Key Vault – passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [Como criar chaves mestras de coluna no Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+
+O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves mestras de coluna do Always Encrypted (especialmente se o seu aplicativo está hospedado no Azure). O Driver Microsoft JDBC para SQL Server inclui um provedor interno, SQLServerColumnEncryptionAzureKeyVaultProvider, para aplicativos que têm chaves armazenadas no Azure Key Vault. O nome deste provedor é AZURE_KEY_VAULT. Para usar o provedor do repositório do Azure Key Vault, um desenvolvedor de aplicativos precisa criar o cofre e as chaves em Azure Key Vault e criar um registro de aplicativo no Azure Active Directory. O aplicativo registrado deve receber as permissões Obter, Descriptografar, Criptografar, Desencapsular Chave, Encapsular Chave e Verificar nas políticas de acesso definidas para o cofre de chaves criado para uso com Always Encrypted. Para obter mais informações sobre como configurar o cofre de chaves e criar uma chave mestra de coluna, confira [Azure Key Vault – passo a passo](/archive/blogs/kv/azure-key-vault-step-by-step) e [Como criar chaves mestras de coluna no Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 Ao usar o provedor de Azure Key Vault, o JDBC Driver valida o caminho da chave mestra da coluna em relação à lista de pontos de extremidade confiáveis. Começando na versão 8.2.2 do driver, essa lista é configurável: crie o arquivo "mssql-jdbc.properties" no diretório de trabalho do aplicativo e defina a propriedade `AKVTrustedEndpoints` como uma lista delimitada por ponto e vírgula. Se o valor começar com um ponto e vírgula, ele estenderá a lista padrão; caso contrário, substituirá a lista padrão.
 

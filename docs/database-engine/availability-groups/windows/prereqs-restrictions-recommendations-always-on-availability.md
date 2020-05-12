@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e2cbdf8467ac119b4fa5831a73a03cf1a54f956c
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831931"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925300"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações para Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "76831931"
   
 ##### <a name="related-content-powershell"></a>Conteúdo relacionado (PowerShell)  
   
--   [Clustering e alta disponibilidade](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Blog da equipe de Clustering de Failover e Balanceamento de Carga de Rede)  
+-   [Clustering e alta disponibilidade](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Blog da equipe de Clustering de Failover e Balanceamento de Carga de Rede)  
   
 -   [Guia de Introdução ao Windows PowerShell em um cluster de failover](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "76831931"
   
 -   [Definir configurações DNS em um cluster de failover multissite](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [Registro de DNS com recurso de nome de rede](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [Registro de DNS com recurso de nome de rede](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 
 ##  <a name="sql-server-instance-prerequisites-and-restrictions"></a><a name="ServerInstance"></a> Pré-requisitos e restrições da instância de SQL Server  
