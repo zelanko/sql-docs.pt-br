@@ -1,8 +1,8 @@
 ---
-title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
+title: Driver do Microsoft OLE DB para SQL Server
 description: O Driver do Microsoft OLE DB para SQL Server fornece conectividade com o SQL Server e o Banco de Dados SQL do Azure por meio de APIs OLE DB padrão.
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488505"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886337"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Driver do Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ O OLE DB Driver for SQL Server é uma interface de programação de aplicativo (
 Há três gerações distintas de provedores Microsoft OLE DB para SQL Server.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Provedor Microsoft OLE DB para SQL Server (SQLOLEDB)
-O [Microsoft OLE DB Provider para SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) ainda é fornecido como parte do [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). Ele não é mais mantido e não é recomendável usar esse driver para um novo desenvolvimento.
+O [Microsoft OLE DB Provider para SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) ainda é fornecido como parte do [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)). Ele não é mais mantido e não é recomendável usar esse driver para um novo desenvolvimento.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SNAC (SQL Server Native Client)
 A partir da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) inclui a interface do provedor OLE DB (SQLNCLI), sendo o provedor OLE DB fornecido com [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] através do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-Foi [anunciado como preterido em 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e não é mais mantido, não sendo recomendável usar esse driver para um novo desenvolvimento. Para saber mais sobre o ciclo de vida de SNAC e downloads disponíveis, confira [Explicação do ciclo de vida de SNAC](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+Foi [anunciado como preterido em 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) e não é mais mantido, não sendo recomendável usar esse driver para um novo desenvolvimento. Para saber mais sobre o ciclo de vida de SNAC e downloads disponíveis, confira [Explicação do ciclo de vida de SNAC](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)
-O OLE DB [não está mais preterido](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) e foi lançado em 2018.
+O OLE DB [não está mais preterido](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) e foi lançado em 2018.
 
 O novo provedor OLE DB é chamado Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). De agora em diante, o novo provedor será atualizado com os mais recentes recursos de servidor.
 
