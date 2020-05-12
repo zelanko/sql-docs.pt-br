@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b122ee434979bb25c9a1fb0fa1c67887f5cb3eba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72260165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826585"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de dados geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,21 +39,21 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *Lat*  
- É uma expressão **float** que representa a coordenada X do **Point** que está sendo gerado.  
+ É uma expressão **float** que representa a coordenada Y do **Point** gerado.  
   
  *Long*  
- É uma expressão **float** que representa a coordenada Y do **Point** gerado. Para obter mais informações sobre os valores válidos de longitude e latitude, confira [Point](../../relational-databases/spatial/point.md).  
+ É uma expressão **float** que representa a coordenada X do **Point** que está sendo gerado. Para obter mais informações sobre os valores válidos de longitude e latitude, confira [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
  É uma expressão **int** que representa a [ID de referência espacial](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) da instância de **geography** que você deseja retornar.  
   
+> [!NOTE]  
+>  Argumentos para o método Point (tipo de dados geography) têm coordenadas em ordem inversa se comparados a WKT.  
+  
 ## <a name="return-types"></a>Tipos de retorno  
  Tipo de retorno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Tipo de retorno do CLR: **SqlGeography**  
-  
-> [!NOTE]  
->  Argumentos para o método Point (tipo de dados geography) têm coordenadas em ordem inversa se comparados a WKT.  
+ Tipo de retorno CLR: **SqlGeography**  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `Point()` para criar uma instância `geography`.  
@@ -66,5 +66,3 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>Consulte Também  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  
