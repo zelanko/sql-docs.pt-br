@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912052"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849834"
 ---
 # <a name="resource-governor"></a>Administrador de Recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites na quantidade de CPU, E/S física e memória que solicitações recebidas de aplicativos podem usar.  
+  O Resource Governor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Resource Governor permite que você especifique os limites na quantidade de CPU, E/S física e memória que solicitações recebidas de aplicativos podem usar.  
   
 ## <a name="benefits-of-resource-governor"></a>Benefícios do Administrador de Recursos  
  O Administrador de Recursos permite gerenciar cargas de trabalho e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando limites de consumo de recursos por solicitações de entrada. No contexto do Administrador de Recursos, carga de trabalho é um conjunto de consultas ou solicitações de tamanho similar que podem e devem, ser tratadas como uma única entidade. Não se trata de um requisito, mas quanto mais uniforme for o padrão de uso dos recursos de uma carga de trabalho, maior a probabilidade de obter benefícios derivados do Administrador de Recursos. Limites de recurso podem ser reconfigurados em tempo real, com impacto mínimo sobre as cargas de trabalho que se encontram em execução.  
@@ -41,13 +41,13 @@ ms.locfileid: "67912052"
 ## <a name="resource-governor-constraints"></a>Restrições do Administrador de Recursos  
  Essa versão do Administrador de Recursos possui as seguintes restrições:  
   
--   O gerenciamento de recursos se limita ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O Administrador de Recursos não pode ser usado para o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   O gerenciamento de recursos se limita ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. O Resource Governor não pode ser usado para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Não há monitoramento ou gerenciamento de carga de trabalho entre instâncias do SQL Server.  
+-   Não há monitoramento nem gerenciamento de carga de trabalho entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   O Administrador de Recursos pode gerenciar cargas de trabalho OLTP, mas esses tipos de consulta, normalmente de duração bastante curta, nem sempre ficam na CPU o suficiente para a aplicação de controles de largura de banda. Isso pode distorcer as estatísticas retornadas quanto à porcentagem de uso da CPU.  
+-   O Administrador de Recursos pode gerenciar cargas de trabalho OLTP, mas esses tipos de consulta, normalmente de duração bastante curta, nem sempre ficam na CPU o suficiente para a aplicação de controles de largura de banda. Isso pode distorcer as estatísticas retornadas quanto ao percentual de uso da CPU.  
   
--   A capacidade de administrar E/S física aplica-se apenas a operações do usuário e não a tarefas do sistema. As tarefas do sistema incluem operações de gravação no log de transações e operações de E/S do Gravador Lento. O Administrador de Recursos se aplica basicamente às operações de leitura do usuário, pois a maioria das operações de gravação normalmente é executada por tarefas do sistema.  
+-   A capacidade de administrar E/S física aplica-se apenas a operações do usuário e não a tarefas do sistema. As tarefas do sistema incluem operações de gravação no log de transações e operações de E/S do Gravador Lento. O Resource Governor se aplica basicamente às operações de leitura do usuário, pois a maioria das operações de gravação normalmente é executada por tarefas do sistema.  
   
 -   Você não pode definir limites de E/S no pool de recursos interno.  
   

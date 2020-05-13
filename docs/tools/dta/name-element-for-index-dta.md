@@ -1,5 +1,6 @@
 ---
 title: Elemento de nome para índice (DTA)
+description: No utilitário dta, o elemento Name para Índice especifica um nome para um índice na configuração especificada pelo usuário.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7f2df8bfce1f9b4cbb4e27c44c8f6b37e8d5e0f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9762464e1cd00814c6c09046b5987fac76b5553a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304657"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831485"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento de nome para índice (DTA)
 
@@ -39,7 +40,7 @@ Especifica um nome para um índice na configuração especificada pelo usuário.
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

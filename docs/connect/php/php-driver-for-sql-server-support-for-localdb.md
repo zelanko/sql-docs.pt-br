@@ -1,7 +1,8 @@
 ---
-title: Suporte para LocalDB | Microsoft Docs
+title: Suporte do driver PHP para LocalDB
+description: Saiba como os drivers da Microsoft para PHP para SQL Server são compatíveis com conexões com instâncias de banco de dados LocalDB.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909132"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886283"
 ---
 # <a name="support-for-localdb"></a>Suporte ao LocalDB
 
@@ -59,7 +60,7 @@ Em suma, o LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Ao executar no IIS, você precisa executar no âmbito da conta correta para obter os mesmos resultados que quando você executa na linha de comando; confira [Usar o LocalDB com o IIS Completo, Parte 2: propriedade da instância](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obter mais informações.)
+Se necessário, você pode criar uma instância do LocalDB com sqllocaldb.exe. Você também pode usar sqlcmd.exe para adicionar e modificar bancos de dados em uma instância do LocalDB. Por exemplo, `sqlcmd -S (localdb)\v11.0`. (Ao executar no IIS, você precisa executar no âmbito da conta correta para obter os mesmos resultados que quando você executa na linha de comando; confira [Usar o LocalDB com o IIS Completo, Parte 2: propriedade da instância](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership) para obter mais informações.)
 
 Os seguintes exemplos são cadeias de conexão que usam o driver SQLSRV que se conecta a um banco de dados em uma instância nomeada do LocalDB chamada myInstance:
 

@@ -1,7 +1,8 @@
 ---
-title: Pooling de conexão com reconhecimento do ODBC Driver for SQL Server | Microsoft Docs
+title: Pooling de conexão com reconhecimento de driver no driver ODBC
+description: Aprenda sobre os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for SQL Server no Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928308"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922081"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows:  
+  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows:  
   
 -   Independentemente das propriedades de conexão, as conexões que usam `SQLDriverConnect` entram em um pool separado das conexões que usam `SQLConnect`.
 - Ao usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o pool de conexões com reconhecimento de driver, o driver não usa o contexto de segurança do usuário do Windows do thread atual para separar as conexões no pool. Ou seja, se as conexões forem equivalentes em seus parâmetros para cenários de representação do Windows com Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiverem usando as mesmas credenciais de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para se conectar ao back-end, diferentes usuários do Windows poderão potencialmente usar o mesmo pool de conexões. Ao usar a Autenticação do Windows e o pool de conexões com reconhecimento de driver, o driver usa o contexto de segurança do usuário do Windows para separar as conexões no pool. Ou seja, para cenários de representação do Windows, diferentes usuários do Windows não compartilharão conexões mesmo se elas usarem os mesmos parâmetros.

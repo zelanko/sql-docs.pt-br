@@ -1,5 +1,6 @@
 ---
 title: Visão geral da restauração e recuperação (SQL Server) | Microsoft Docs
+description: Este artigo é uma visão geral das operações envolvidas na recuperação de um banco de dados SQL Server de uma falha ao restaurar um conjunto de backups do SQL Server em sequência.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288570"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924906"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Visão geral da restauração e recuperação (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +97,7 @@ Caso ocorra um failover ou outro desligamento não limpo, os bancos de dados pod
 
 -   A **Fase desfazer** reverte transações incompletas encontradas na ATT para garantir que a integridade do banco de dados seja preservada. Depois da reversão, o banco de dados fica online e mais nenhum backup de log de transações pode ser aplicado ao banco de dados.
 
-As informações sobre o andamento de cada fase de recuperação do banco de dados são registradas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]log de erros[ do ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). O progresso da recuperação do banco de dados também pode ser acompanhado usando eventos estendidos. Saiba mais na postagem do blog [Novos eventos estendidos para o progresso da recuperação do banco de dados](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
+As informações sobre o andamento de cada fase de recuperação do banco de dados são registradas no [log de erros](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O progresso da recuperação do banco de dados também pode ser acompanhado usando eventos estendidos. Saiba mais na postagem do blog [Novos eventos estendidos para o progresso da recuperação do banco de dados](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
 
 > [!NOTE]
 > Em um cenário de restauração por etapas, se o status de um grupo de arquivos for somente leitura desde antes de o backup de arquivo ser criado, aplicar backups de log ao grupo de arquivos será desnecessário e será ignorado pela restauração de arquivo. 
@@ -169,16 +170,16 @@ O orientador de recuperação de banco de dados facilita a criação de planos d
   
 -   **Algoritmo do plano de restauração:**  o algoritmo usado para criar planos de restauração melhorou significativamente, particularmente em cenários de restauração complexos. Muitos casos extremos, inclusive cenários de bifurcação em restaurações pontuais, são tratados de forma mais eficiente do que nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restaurações pontuais:**  o Orientador de Recuperação de Banco de Dados simplifica consideravelmente a restauração de um banco de dados em um determinado momento. Uma linha de tempo de backup visual aprimora significativamente o suporte a restaurações pontuais. Essa linha de tempo visual permite que você identifique um momento viável como ponto de recuperação de destino para a restauração de um banco de dados. A linha do tempo facilita a transposição de um caminho de recuperação bifurcado (um caminho que abrange bifurcações de recuperação). Um plano de restauração pontual inclui automaticamente os backups relevantes para a restauração do momento desejado (data e hora). Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restaurações pontuais:**  o Assistente de Recuperação de Banco de Dados simplifica consideravelmente a restauração de um banco de dados em um determinado momento. Uma linha de tempo de backup visual aprimora significativamente o suporte a restaurações pontuais. Essa linha de tempo visual permite que você identifique um momento viável como ponto de recuperação de destino para a restauração de um banco de dados. A linha do tempo facilita a transposição de um caminho de recuperação bifurcado (um caminho que abrange bifurcações de recuperação). Um plano de restauração pontual inclui automaticamente os backups relevantes para a restauração do momento desejado (data e hora). Para obter mais informações, veja [Restaurar um banco de dados do SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 Para obter mais informações, obtenha informações sobre o orientador de recuperação de banco de dados consultando os seguintes blogs sobre capacidade de gerenciamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Orientador de recuperação: Introdução](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Assistente de Recuperação: Uma introdução](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Orientador de recuperação: Usando o SSMS para criar/restaurar backup divididos](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Assistente de Recuperação: Usando o SSMS para criar/restaurar backups divididos](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Recuperação acelerada de banco de dados
-A [recuperação acelerada do banco de dados](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponível no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A recuperação acelerada de banco de dados aprimora significativamente a disponibilidade do banco de dados, especialmente na presença de transações de execução prolongada, remodelando o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]processo de recuperação[ do ](#TlogAndRecovery). Um banco de dados para o qual a recuperação acelerada do banco de dados foi habilitada conclui o processo de recuperação significativamente mais rápido após um failover ou outro desligamento não limpo. Quando habilitada, a recuperação acelerada do banco de dados também conclui a reversão de transações canceladas de longa execução muito mais rapidamente.
+A [recuperação acelerada do banco de dados](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponível no [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A recuperação acelerada de banco de dados aprimora significativamente a disponibilidade do banco de dados, especialmente na presença de transações de execução prolongada, remodelando o [processo de recuperação](#TlogAndRecovery) do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Um banco de dados para o qual a recuperação acelerada do banco de dados foi habilitada conclui o processo de recuperação significativamente mais rápido após um failover ou outro desligamento não limpo. Quando habilitada, a recuperação acelerada do banco de dados também conclui a reversão de transações canceladas de longa execução muito mais rapidamente.
 
 Para habilitar a recuperação acelerada do banco de dados por banco de dados em [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] use a seguinte sintaxe:
 

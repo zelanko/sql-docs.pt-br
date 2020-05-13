@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM, funções, procedimentos armazenados, exibições | Microsoft Docs
+description: O FILESTREAM funciona com instruções Transact-SQL, APIs, funções, procedimentos armazenados e exibições específicos. Saiba quais instruções e objetos são compatíveis com FILESTREAM.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3bc559bce60b4b179cd6e5a69846e1caa9b4668b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6d6678a195f148e9d1bb234d47e9f8686d7fa07
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257960"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999784"
 ---
 # <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM, funções, procedimentos armazenados e exibições
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

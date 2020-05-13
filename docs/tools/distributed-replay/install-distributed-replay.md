@@ -1,6 +1,7 @@
 ---
 title: Instalar o Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: 'Este artigo descreve as maneiras de instalar o Distributed Replay: usando o Assistente de Instalação, a janela do Prompt de Comando ou um arquivo de configuração.'
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992175"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999386"
 ---
 # <a name="install-distributed-replay"></a>Instalar o Distributed Replay
 
@@ -98,7 +99,7 @@ Você pode instalar o Distributed Replay de uma destas três maneiras:
   
     -   Para instalar o serviço do cliente, selecione **Distributed Replay Client**.  
   
-     **Importante**: Quando você configura o controlador Distributed Replay, pode especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
+     **Importante**: Ao configurar o Distributed Replay Controller é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:  
   
     -   Conta de usuário do domínio  
   
@@ -156,12 +157,12 @@ Você pode instalar o Distributed Replay de uma destas três maneiras:
   
  Use os parâmetros listados na tabela a seguir para desenvolver scripts de linha de comando para a instalação.  
   
-|Parâmetro|DESCRIÇÃO|Valores com suporte|  
+|Parâmetro|Descrição|Valores com suporte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do controlador do Distributed Replay Utility.|Verifica a conta e a senha|  
 |/CTLRSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do controlador do Distributed Replay Controller.|Verifica a conta e a senha|  
 |/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do controlador do Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Opcional**|Especifique os usuários que têm permissões para o serviço do Distributed Replay Controller.|Conjunto de cadeias de contas de usuário que usam " " (espaço) para delimitador<br /><br /> **Importante**: quando você configura o serviço do controlador Distributed Replay, é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:<br /><br /> Conta de usuário do domínio<br /><br /> Conta de usuário local criada pelo usuário<br /><br /> Administrador<br /><br /> Administrador<br /><br /> Conta virtual e MSA (Conta de Serviço Gerenciada)<br /><br /> Serviços de rede, serviços locais e sistema<br /><br /> <br /><br /> Observação: não são aceitas contas de grupo (local ou domínio) e outras contas internas (como Todos).|  
+|/CTLRUSERS<br /><br /> **Opcional**|Especifique os usuários que têm permissões para o serviço do Distributed Replay Controller.|Conjunto de cadeias de contas de usuário que usam " " (espaço) para delimitador<br /><br /> **Importante**: Quando você configura o serviço do controlador Distributed Replay, é possível especificar uma ou mais contas de usuário que serão usadas para executar os serviços de cliente do Distributed Replay. Esta é a lista das contas com suporte:<br /><br /> Conta de usuário do domínio<br /><br /> Conta de usuário local criada pelo usuário<br /><br /> Administrador<br /><br /> Administrador<br /><br /> Conta virtual e MSA (Conta de Serviço Gerenciada)<br /><br /> Serviços de rede, serviços locais e sistema<br /><br /> <br /><br /> Observação: Não são aceitas contas de grupo (local ou domínio) e outras contas internas (como Todos).|  
 |/CLTSVCACCOUNT<br /><br /> **Opcional**|Conta de serviço para o serviço do cliente do Distributed Replay.|Verifica a conta e a senha|  
 |/CLTSVCPASSWORD<br /><br /> **Opcional**|Senha da conta de serviço do cliente Distributed Replay.|Verifica a conta e a senha|  
 |/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicialização do serviço do cliente Distributed Replay.|Automático<br /><br /> Desabilitado<br /><br /> Manual|  
@@ -210,18 +211,17 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  O seguinte é um exemplo de como especificar o arquivo de configuração no prompt de comando:  
   
-```  
+```
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
-```  
-  
-> [!NOTE]  
->  Você deve especificar as duas senhas na linha de comando, porque não é possível configurá-las no arquivo de configuração.  
-  
-## <a name="see-also"></a>Consulte Também  
- [Recursos com suporte nas edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+```
+
+> [!NOTE]
+> Você deve especificar as duas senhas na linha de comando, porque não é possível configurá-las no arquivo de configuração.  
+
+## <a name="see-also"></a>Consulte Também
+
+- [Recursos com suporte das edições do SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Requisitos do Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configurar o Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

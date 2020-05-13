@@ -1,5 +1,6 @@
 ---
 title: Cabeçalho e histórico de backup | Microsoft Docs
+description: O banco de dados msdb armazena o histórico de operação de backup e de restauração do SQL Server de uma instância de servidor. Saiba mais sobre instruções Transact-SQL que acessam o histórico de backup.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242587"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824094"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "75242587"
 ##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
  Esta seção apresenta as tabelas de histórico que armazenam backup e restauram metadados no banco de dados do sistema **msdb** .  
   
-|Tabela de histórico|DESCRIÇÃO|  
+|Tabela de histórico|Descrição|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Contém uma linha para cada arquivo de dados ou arquivo de log para o qual é feito o backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contém uma linha para cada grupo de arquivos em um conjunto de backup.|  
@@ -88,7 +89,7 @@ ms.locfileid: "75242587"
 > [!IMPORTANT]  
 >  As instruções Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY exigem a permissão CREATE DATABASE. Com essa exigência, seus arquivos e suas informações de backup estão mais protegidos do que nas versões anteriores. Para obter informações sobre essa permissão, veja [Permissões de banco de dados GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Instrução de informações|Tabela de histórico de backup|DESCRIÇÃO|  
+|Instrução de informações|Tabela de histórico de backup|Descrição|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  

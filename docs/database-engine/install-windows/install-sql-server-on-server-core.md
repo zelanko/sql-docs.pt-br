@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325442"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872790"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar o SQL Server no Server Core
 
@@ -27,7 +27,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
  Para obter informações sobre os sistemas operacionais com suporte no momento, consulte [Requisitos de hardware e software para a instalação do SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
   
 |Requisito|Como instalar o|  
 |-----------------|--------------------|  
@@ -39,7 +39,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 ##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> Recursos com suporte  
  Use a tabela a seguir para descobrir quais recursos têm suporte no [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] em uma instalação do Server Core.  
   
-|Recurso|Suportado|Informações adicionais|  
+|Recurso|Com suporte|Informações adicionais|  
 |-------------|---------------|----------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serviços|Sim||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicação|Sim||  
@@ -89,7 +89,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
   
 ### <a name="feature-parameters"></a>Parâmetros de recursos  
   
-|Parâmetro de recurso|DESCRIÇÃO|  
+|Parâmetro de recurso|Descrição|  
 |-----------------------|-----------------|  
 |SQLENGINE|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |REPLICAÇÃO|Instala o componente Replicação juntamente com o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -102,7 +102,7 @@ A opção de instalação do Server Core oferece um ambiente mínimo para a exec
 
  Veja os exemplos a seguir do uso de parâmetros de recurso:  
   
-|Parâmetro e valores|DESCRIÇÃO|  
+|Parâmetro e valores|Descrição|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Instala apenas o [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Instala o [!INCLUDE[ssDE](../../includes/ssde-md.md)] e o texto completo.|  
@@ -287,13 +287,9 @@ Para habilitar conexões remotas, use o SQLCMD.exe localmente e execute as instr
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Habilitar TCP/IP na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  O protocolo TCP/IP pode ser habilitado por meio do Windows PowerShell para uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Server Core. Siga estas etapas:  
   
-1.  No servidor, inicie o Gerenciador de Tarefas.  
+1.  No PowerShell: Import-Module SQLPS.  
   
-2.  Na guia **Aplicativos** , clique em **Nova Tarefa**.  
-  
-3.  Na caixa de diálogo **Criar Nova Tarefa** , digite **sqlps.exe** no campo **Abrir** e clique em **OK**. Isso abrirá a janela **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
-  
-4.  Na janela **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, execute o script a seguir para habilitar o protocolo TCP/IP:  
+2.  Na janela **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, execute o script a seguir para habilitar o protocolo TCP/IP:  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

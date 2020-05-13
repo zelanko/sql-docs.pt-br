@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165564"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849606"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Criar e testar uma função de classificação definida pelo usuário
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74165564"
   
 1.  Crie e configure os novos pools de recurso e os grupos de carga de trabalho. Atribua cada grupo de carga de trabalho ao pool de recurso apropriado.  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -57,6 +57,7 @@ ms.locfileid: "74165564"
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -64,13 +65,14 @@ ms.locfileid: "74165564"
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -78,6 +80,7 @@ ms.locfileid: "74165564"
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -93,14 +96,14 @@ ms.locfileid: "74165564"
   
 2.  Atualize a configuração em-memória.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Crie uma tabela e defina as horas de início e término para o intervalo de hora de processamento de produção.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -113,7 +116,7 @@ ms.locfileid: "74165564"
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  Crie a função de classificador que usa as funções e os valores de hora que podem ser avaliados em relação aos tempos na tabela de consulta. Para obter informações sobre como usar Tabelas de pesquisa em uma função de classificador, confira "Práticas recomendadas para usar Tabelas de pesquisa em uma função de classificador", neste tópico.  
@@ -121,7 +124,7 @@ ms.locfileid: "74165564"
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduziu um conjunto expandido de tipos e funções de dados de data e hora. Para obter mais informações, veja [Tipos de dados e funções de data e hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -149,7 +152,7 @@ ms.locfileid: "74165564"
   
 5.  Registre a função de classificador e atualize a configuração em-memória.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -159,7 +162,7 @@ ms.locfileid: "74165564"
   
 1.  Obtenha o pool de recurso e configuração do grupo de carga de trabalho usando a seguinte consulta.  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -168,7 +171,7 @@ ms.locfileid: "74165564"
   
 2.  Verifique se a função de classificador existe e está habilitadas usando as consultas a seguir.  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -182,7 +185,7 @@ ms.locfileid: "74165564"
   
 3.  Obtenha os dados de runtime atuais para os pools de recurso e os grupos de carga de trabalho usando a seguinte consulta.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -190,7 +193,7 @@ ms.locfileid: "74165564"
   
 4.  Descubra que sessões estão em cada grupo usando a seguinte consulta.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -202,7 +205,7 @@ ms.locfileid: "74165564"
   
 5.  Descubra quais solicitações estão em cada grupo usando a seguinte consulta.  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -215,7 +218,7 @@ ms.locfileid: "74165564"
   
 6.  Descubra que solicitações estão em execução no classificador usando a seguinte consulta.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -237,11 +240,11 @@ ms.locfileid: "74165564"
   
 ## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>Práticas recomendadas para usar Tabelas de Pesquisa em uma função de classificação  
   
-1.  Não use uma tabela de pesquisa, a menos que seja absolutamente necessário. Se precisar usar uma tabela de pesquisa, ela poderá ser embutida em código na própria função. No entanto, ela precisará ser equilibrada com as alterações dinâmicas e de complexidade da função de classificação.  
+1.  Não use uma tabela de pesquisa, a menos que seja absolutamente necessário. Se você precisar usar uma tabela de pesquisa, ela poderá ser embutida em código na própria função. No entanto, ela precisará ser equilibrada com as alterações dinâmicas e de complexidade da função de classificação.  
   
 2.  Limite a E/S executada para tabelas de pesquisa.  
   
-    1.  Use o TOP 1 para retornar apenas uma linha.  
+    1.  Use o `TOP 1` para retornar apenas uma linha.  
   
     2.  Minimize o número de linhas na tabela.  
   
@@ -253,7 +256,7 @@ ms.locfileid: "74165564"
   
 3.  Evite o bloqueio na tabela de pesquisa.  
   
-    1.  Use a dica `NOLOCK` para evitar o bloqueio ou use `SET LOCK_TIMEOUT` na função com um valor máximo de 1000 milissegundos.  
+    1.  Use a dica `NOLOCK` para evitar o bloqueio ou use `SET LOCK_TIMEOUT` na função com um valor máximo de 1.000 milissegundos.  
   
     2.  As tabelas devem estar no banco de dados mestre. (O banco de dados mestre é o único que tem a garantia de ser recuperado quando os computadores cliente tentam se conectar.)  
   

@@ -1,5 +1,6 @@
 ---
 title: Elemento EventString (DTA)
+description: No utilitário dta, o elemento EventString especifica uma carga de trabalho de script Transact-SQL diretamente no arquivo de entrada XML.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9944a2e9d9dc1ec8aad069aa74b90a6a420fad4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307690"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826510"
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
 
@@ -41,13 +42,13 @@ Especifica uma carga de trabalho de script do [!INCLUDE[tsql](../../includes/tsq
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**Weight**|Opcional. Especifica o fator de peso da consulta (um fator de importância) para o evento especificado. Use um tipo de dados **float** para especificar o peso. Por exemplo, **Peso**= "100,01". O valor mínimo que você pode especificar para **Weight** é "0."|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, tamanho é ilimitado.|  
 |**Valor padrão**|Nenhum.|  

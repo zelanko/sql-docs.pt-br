@@ -1,5 +1,6 @@
 ---
 title: RBS (Armazenamento de Blobs Remoto) (SQL Server) | Microsoft Docs
+description: O RBS (Remote BLOB Store) do SQL Server armazena objetos binários grandes no armazenamento de commodity, em vez de no servidor de banco de dados principal. Saiba mais sobre este componente complementar.
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 383b5739e75d0d7e3ff42d2994e2a70c96842861
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258180"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999586"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS (Armazenamento de Blob Remoto) [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ ms.locfileid: "75258180"
   
 ### <a name="rotating-the-symmetric-key"></a>Girando a chave simétrica  
  Ao usar o RBS, você deve girar periodicamente a chave simétrica do repositório de credenciais. Essa é uma melhor prática comum de segurança para atender às políticas de segurança organizacional.  Um modo de girar a chave simétrica do repositório de credenciais do RBS é usar o [script abaixo](#Key_rotation) no banco de dados RBS.  Você também pode usar esse script para migrar para propriedades com nível de criptografia mais forte, como o comprimento da chave ou algoritmo. Faça backup de seu banco de dados antes da rotação de chaves.  Na conclusão do seu script, ele tem algumas etapas de verificação.  
-Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporárias 2) a criação da chave permanente.  
+Se suas políticas de segurança exigem diferentes propriedades de chave (por exemplo, comprimento de chave ou algoritmo) daquelas fornecidas, o script pode ser usado como um modelo. Modifique as propriedades de chave em dois locais: 1) a criação da chave temporária 2) a criação da chave permanente.  
   
 ##  <a name="rbs-resources"></a><a name="rbsresources"></a> Recursos do RBS  
   

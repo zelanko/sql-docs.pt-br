@@ -1,7 +1,8 @@
 ---
-title: Acessando informações de diagnóstico no log de eventos estendidos | Microsoft Docs
+title: Acessando informações de diagnóstico no log de eventos estendidos
+description: Saiba como acessar eventos estendidos no servidor que estão relacionados a eventos do Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920342"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922249"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessando informações de diagnóstico no log de eventos estendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  No [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o rastreamento ([Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md)) foi atualizado para facilitar a correlação de eventos do cliente com as informações de diagnóstico, como falhas na conexão, do buffer de anéis de conectividade do servidor e informações de desempenho do aplicativo no log de eventos estendido. Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  No [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], o rastreamento ([Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md)) foi atualizado para facilitar a correlação de eventos do cliente com as informações de diagnóstico, como falhas na conexão, do buffer de anéis de conectividade do servidor e informações de desempenho do aplicativo no log de eventos estendido. Para obter mais informações sobre como ler o log de eventos estendidos, confira [Eventos Estendidos](../../relational-databases/extended-events/extended-events.md).  
   
 ## <a name="details"></a>Detalhes  
- Para operações de conexão, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará uma ID de conexão do cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](https://go.microsoft.com/fwlink/?LinkId=207752)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote pré-logon, uma ID conexão do cliente não será gerada.) A ID de conexão de cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão do cliente na saída do destino de eventos estendidos se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendidos. Caso precise de assistência adicional com o diagnóstico do driver do cliente, habilite o rastreamento e reexecute o comando de execução para observar o campo **ClientConnectionID** no rastreamento.  
+ Para operações de conexão, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará uma ID de conexão do cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([Solução de problemas de conectividade no SQL Server 2008 com o Buffer de Anéis de Conectividade](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) e localizar o campo **ClientConnectionID** e poderá obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote pré-logon, uma ID conexão do cliente não será gerada.) A ID de conexão de cliente é um GUID de 16 bytes. Você também poderá localizar a ID de conexão do cliente na saída do destino de eventos estendidos se a ação de **client_connection_id** for adicionada a eventos em uma sessão de eventos estendidos. Caso precise de assistência adicional com o diagnóstico do driver do cliente, habilite o rastreamento e reexecute o comando de execução para observar o campo **ClientConnectionID** no rastreamento.  
   
  Você pode obter a ID de conexão do cliente programaticamente, usando a [Interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). A ID de conexão também estará presente em todas as exceções relacionadas à conexão.  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Confira também  
- [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Confira também
+
+[Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

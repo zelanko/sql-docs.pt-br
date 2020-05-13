@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487096"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746322"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar novos pacotes de R com sqlmlutils
 
@@ -24,9 +24,9 @@ ms.locfileid: "81487096"
 Este artigo descreve como usar funções no pacote [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar novos pacotes do R em uma instância dos Serviços de Machine Learning do SQL Server ou o SQL Server R Services. Os pacotes que você instalar poderão ser usados em scripts R em execução no banco de dados usando a instrução T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 > [!NOTE]
-> O comando do R padrão `install.packages` não é recomendado para adicionar pacotes do R do SQL Server. Em vez disso, use **sqlmlutils**, conforme descrito neste artigo.
+> O pacote **sqlmlutils** descrito neste artigo é usado para adicionar pacotes do R ao SQL Server 2019 ou posterior. Para o SQL Server 2017 e anterior, confira [Instalar pacotes com ferramentas do R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Instale o [R](https://www.r-project.org) e o [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) no computador cliente que você usa para conectar-se ao SQL Server. Você pode usar qualquer IDE do R para executar scripts, mas este artigo pressupõe o RStudio.
 

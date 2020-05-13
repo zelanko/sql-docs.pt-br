@@ -1,5 +1,6 @@
 ---
 title: Elemento DTAXML (DTA)
+description: No utilitário dta, o elemento DTAXML contém todos os elementos que descrevem o ajuste de entrada e saída que o Orientador de Otimização do Mecanismo de Banco de Dados gera.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aeb5bfc3544d5de783a40fcfe8692a466fee6b40
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fc1f4b52fa73ecc014e4f22139496f471bf46f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307729"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831515"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
 
@@ -41,14 +42,14 @@ O elemento raiz de um arquivo de entrada ou saída XML do Orientador de Otimiza�
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |**xmlns:xsi**|Obrigatórios. Identifica o namespace da instância do esquema XML. Os atributos deste espaço para namespace são usados como referência ao esquema que é utilizado para validar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Valor obrigatório: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|Obrigatórios. Identifica o namespace do Orientador de Otimização do Mecanismo de Banco de Dados.<br /><br /> Se você editar o arquivo XML do Orientador de Otimização do Mecanismo de Banco de Dados usando o editor de XML no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esse valor será usado pela Ajuda de F1 e pela Ajuda Dinâmica para localizar possíveis tópicos de referência nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor obrigatório:<br /><br /> do[Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados](https://go.microsoft.com/fwlink/?LinkId=43100)|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

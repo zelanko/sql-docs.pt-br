@@ -1,5 +1,6 @@
 ---
 title: Trabalhar com diretórios e caminhos em FileTables | Microsoft Docs
+description: O recurso FileTables usa uma estrutura de diretório para armazenar arquivos. Saiba como trabalhar com seus diretórios, caminhos, restrições e semântica.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908696"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999444"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabalhar com diretórios e caminhos em FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Descreve a estrutura de diretórios na qual os arquivos são armazenados em FileTables.  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Como trabalhar com diretórios e caminhos em FileTables  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Como Trabalhar com diretórios e caminhos em FileTables  
  É possível usar as 3 funções a seguir para trabalhar com diretórios FileTable no [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obter este resultado|Use esta função|  

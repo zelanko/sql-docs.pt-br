@@ -1,6 +1,6 @@
 ---
 title: Visão geral de tipos de dados espaciais | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048526"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784671"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ No sistema elipsoidal ou de terra redonda, as coordenadas são fornecidas em gra
 ### <a name="orientation-of-spatial-data"></a>Orientação de dados espaciais  
 No sistema de planar, a orientação de anel de um polígono não é um fator importante. Por exemplo, um polígono descrito por ((0, 0), (10, 0), (0, 20), (0, 0)) é o mesmo que um polígono descrito por ((0, 0), (0, 20), (10, 0), (0, 0)). Os Recursos Simples do OGC para SQL Specification não ditam uma ordenação de anel e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não impõe ordenação de anel.  
 
-Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o tipo de dados **geography** para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela regra à esquerda.  
+Em um sistema elipsoidal, um polígono não tem nenhum significado ou é ambíguo, sem uma orientação. Por exemplo, um anel ao redor do equador descreve o hemisfério norte ou o sul? Se usarmos o tipo de dados **geography** para armazenar a instância espacial, deveremos especificar a orientação do anel e descrever precisamente o local da instância. O interior do polígono em um sistema elipsoidal é definido pela "regra à esquerda": se você imaginar que está caminhando ao longo do anel de um polígono de Geografia, seguindo os pontos na ordem em que são listados, a área à esquerda será tratada como o interior do polígono e a área à direita, como o exterior do polígono.
 
 Quando o nível de compatibilidade é 100 ou abaixo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , o tipo de dados **geography** tem as seguintes restrições:  
 -   Cada instância de **geography** deve se ajustar dentro de um único hemisfério. Nenhum objeto espacial maior do que um hemisfério pode ser armazenado.  

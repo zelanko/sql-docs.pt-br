@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825519"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts 
+# <a name="generate-and-publish-scripts-wizard"></a>Assistente para Gerar e Publicar Scripts
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ Use essa página para especificar como você deseja que esse assistente gere scr
 - **Preenchimento ANSI** – Inclui **ANSI PADDING ON** no script. O padrão é **True**.
 
 - **Acrescentar ao arquivo** – Se for **True**, este script será adicionado à parte inferior de um script existente, especificado na página **Definir Opções de Script** . Se for **False**, o novo script substituirá um script anterior. O padrão é **False**.
+
+- **Verifique a existência do objeto** – quando **True**, o adiciona a verificação de existência antes de gerar a instrução CREATE para seus Objetos SQL. Por exemplo: tabelas, exibições, funções ou procedimentos armazenados. A instrução CREATE é encapsulada em uma instrução IF. Se você souber que seu destino está limpo, o script será muito mais limpo. Se você NÃO esperar que os objetos existam no destino, receberá um erro. O padrão é **False**.
 
 - **Continuar o script se houver erro** – Quando for **False**, o script será interrompido quando ocorrer um erro. Se for **True**, o script continuará. O padrão é **False**.
 

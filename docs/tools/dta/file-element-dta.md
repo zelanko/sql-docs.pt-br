@@ -1,5 +1,6 @@
 ---
 title: Elemento de arquivo (DTA)
+description: No utilitário dta, o elemento File especifica um arquivo de carga de trabalho, que inclui instruções Transact-SQL executadas para um banco de dados ajustar.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c09dc0d2a4a31f63d0359fa7845dd37ff7e55fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf8f9996c9f0dbd2b888abe70299561bd07c870f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307682"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826475"
 ---
 # <a name="file-element-dta"></a>Elemento de arquivo (DTA)
 
@@ -41,7 +42,7 @@ Especifica o arquivo da carga de trabalho. A carga de trabalho é um conjunto de
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Use o tipo de dados **string** para especificar o caminho de diretório para o arquivo de carga de trabalho. Por exemplo:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Observe que o limite de comprimento é aplicado pelo servidor.|  
 |**Valor padrão**|Nenhum.|  

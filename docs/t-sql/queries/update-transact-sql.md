@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169364"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872771"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>Comportamento de bloqueio  
- Uma instrução UPDATE sempre adquire um bloqueio exclusivo (X) na tabela que modifica e mantém esse bloqueio até que a transação seja concluída. Com um bloqueio exclusivo, nenhuma outra transação pode modificar dados. Você pode especificar dicas de tabela para substituir esse comportamento padrão durante a instrução UPDATE especificando outro método de bloqueio; entretanto, é recomendável que as dicas só sejam usadas como último recurso por desenvolvedores experientes e administradores de bancos de dados. Para obter mais informações, consulte [Dicas de tabela &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Uma declaração UPDATE adquire um bloqueio exclusivo (X) em todas as linhas que ele modifica e mantém esses bloqueios até que a transação seja concluída. Dependendo do plano de consulta da declaração UPDATE, do número de linhas que estão sendo modificadas e do nível de isolamento da transação, os bloqueios podem ser adquiridos no nível de página ou tabela, em vez de no nível de linha. Para evitar esses bloqueios de nível mais alto, considere dividir as declarações de atualização que afetam milhares de linhas ou mais em lotes e verifique se os índices são compatíveis com as condições de associação e de filtro. Confira o artigo sobre [Bloqueio no Mecanismo de Banco de Dados](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) para obter mais detalhes sobre a mecânica de bloqueio no SQL Server.  
   
 ## <a name="logging-behavior"></a>Comportamento de registro em log  
  A instrução UPDATE é registrada em log, no entanto, as atualizações parciais de tipos de dados de valor grande que usam a cláusula **\.WRITE** são registradas minimamente. Para obter mais informações, confira "Atualizando tipos de dados de valor grande" na seção anterior "Tipos de dados".  

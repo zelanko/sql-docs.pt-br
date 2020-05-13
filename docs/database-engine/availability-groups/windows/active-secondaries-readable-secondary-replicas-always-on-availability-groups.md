@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822407"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784627"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarregar a carga de trabalho somente leitura na réplica secundária de um grupo de disponibilidade Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822407"
   
 -   A operação DBCC SHRINKFILE em arquivos que contêm tabelas baseadas em disco poderá falhar na réplica primária se o arquivo contiver registros fantasmas que ainda são necessários em uma réplica secundária.  
   
--   A partir do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], as réplicas secundárias legíveis podem permanecer online mesmo quando a réplica primária estiver offline devido à ação do usuário ou a uma falha. No entanto, o roteamento somente leitura não funciona nessa situação porque o ouvinte do grupo de disponibilidade está offline também. Os clientes devem se conectar diretamente às réplicas secundárias somente leitura para cargas de trabalho somente leitura.  
+-   Da [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] em diante, as réplicas secundárias para leitura podem permanecer online mesmo quando a réplica primária está offline devido a uma ação do usuário ou uma falha, por exemplo, a sincronização foi suspensa devido a um comando do usuário ou uma falha ou uma réplica está resolvendo o status porque o WSFC está offline. No entanto, o roteamento somente leitura não funciona nessa situação porque o ouvinte do grupo de disponibilidade está offline também. Os clientes devem se conectar diretamente às réplicas secundárias somente leitura para cargas de trabalho somente leitura.  
   
 > [!NOTE]  
 >  Se você consultar a exibição de gerenciamento dinâmico [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) em uma instância de servidor que está hospedando uma réplica secundária legível, poderá encontrar um problema de bloqueio REDO. Isso ocorre porque essa exibição de gerenciamento dinâmico adquire um bloqueio IS na exibição ou tabela de usuário especificada, que pode bloquear solicitações por um thread REDO para um bloqueio X na exibição ou tabela de usuário.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822407"
  Isso significa que há alguma latência, normalmente apenas uma questão de segundos, entre as réplicas primárias e secundárias. No entanto, em casos incomuns, como quando problemas de rede reduzem a taxa de transferência, a latência pode se tornar significativa. A latência aumenta quando ocorrem gargalos de E/S e quando a movimentação de dados é suspensa. Para monitorar a movimentação de dados suspensa, você pode usar o [Painel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) ou a exibição de gerenciamento dinâmico [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latência de dados em banco de dados com tabelas com otimização de memória  
- No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], havia considerações especiais relativas à latência de dados em secundárias ativas – consulte [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundárias ativas: réplicas secundárias legíveis](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , não há considerações especiais em relação à latência de dados em tabelas com otimização de memória. A latência de dados esperada para tabelas com otimização de memória é comparável à latência para tabelas baseadas em disco.  
+ No [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], havia considerações especiais relativas à latência de dados em secundárias ativas – confira [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundárias ativas: Réplicas secundárias legíveis](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir do [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , não há considerações especiais em relação à latência de dados em tabelas com otimização de memória. A latência de dados esperada para tabelas com otimização de memória é comparável à latência para tabelas baseadas em disco.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Impacto da carga de trabalho somente leitura  
  Ao configurar uma réplica secundária para acesso somente leitura, suas cargas de trabalho somente leitura nos bancos de dados secundários consumirão recursos do sistema, como CPU e E/S (para tabelas baseadas em disco) de threads de restauração, especialmente se as cargas de trabalho somente leitura (para tabelas baseadas em disco) consumirem muitos recursos de E/S. Não há nenhum impacto de E/S ao acessar tabelas com otimização de memória porque todas as linhas residem na memória.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Blog da equipe do AlwaysOn do SQL Server: o blog oficial da equipe do AlwaysOn do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog da equipe do Always On do SQL Server: o blog oficial da equipe do Always On do SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

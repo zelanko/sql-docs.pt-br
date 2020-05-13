@@ -1,8 +1,8 @@
 ---
-title: Informações em interfaces de erro | Microsoft Docs
-description: Informações em interfaces de erro
+title: Informações em interfaces de erro
+description: O Driver do OLE DB para SQL Server relata algumas informações sobre erros e status nas interfaces de erro definidas por OLE DB IErrorInfo, IErrorRecords e ISQLErrorInfo.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92e396b88ec7fe0869d2657b602ad3463d7b95da
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994937"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922396"
 ---
 # <a name="information-in-error-interfaces"></a>Informações em interfaces de erro
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67994937"
   
  O Driver do OLE DB para SQL Server dá suporte a funções de membro **IErrorInfo** como a seguir.  
   
-|Função de membro|DESCRIÇÃO|  
+|Função de membro|Descrição|  
 |---------------------|-----------------|  
 |**GetDescription**|Cadeia de caracteres de mensagem de erro descritiva.|  
 |**GetGUID**|GUID da interface que definiu o erro.|  
@@ -43,7 +43,7 @@ ms.locfileid: "67994937"
   
  O Driver do OLE DB para SQL Server dá suporte a funções de membro **IErrorInfo** disponíveis para consumidor como a seguir.  
   
-|Função de membro|DESCRIÇÃO|  
+|Função de membro|Descrição|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Preenche uma estrutura ERRORINFO com informações básica sobre um erro. Uma estrutura ERRORINFO contém membros que identificam o valor de retorno HRESULT para o erro e o provedor e interface aos quais o erro se aplica.|  
 |**GetCustomErrorObject**|Retorna uma referência em interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
@@ -53,7 +53,7 @@ ms.locfileid: "67994937"
   
  O Driver do OLE DB para SQL Server dá suporte para os parâmetros **ISQLErrorInfo::GetSQLInfo** como a seguir.  
   
-|Parâmetro|DESCRIÇÃO|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*pbstrSQLState*|Retorna um valor SQLSTATE para o erro. São definidos valores SQLSTATE nas especificações SQL-92, ODBC ISO SQL e de API. Nem o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nem o Driver do OLE DB para SQL Server definiram valores SQLSTATE específicos de implementação.|  
 |*plNativeError*|Retorna o número do erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de **master.dbo.sysmessages** quando disponível. Os erros nativos estão disponíveis após uma tentativa bem-sucedida de inicializar uma fonte de dados do Driver do OLE DB para SQL Server. Antes da tentativa, o Driver do OLE DB para SQL Server sempre retorna zero.|  

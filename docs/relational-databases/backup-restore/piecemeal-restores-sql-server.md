@@ -1,5 +1,6 @@
 ---
 title: Restaurações por etapas (SQL Server) | Microsoft Docs
+description: No SQL Server, a restauração por etapas permite que os bancos de dados com vários grupos de arquivo sejam restaurados/recuperados em estágios. A restauração por etapas funciona com todos os modelos de recuperação.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916004"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824074"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,9 +121,9 @@ ms.locfileid: "72916004"
   
 ### <a name="examples"></a>Exemplos  
   
--   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemplo: Restauração por etapas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemplo: restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemplo: Restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Restauração por etapas no modelo de recuperação completa  
  No modelo de recuperação completa ou bulk-logged, a restauração por etapas está disponível para qualquer banco de dados que contenha vários grupos de arquivo, e você pode restaurar um banco de dados para qualquer ponto especificado. A sequência de restauração por etapas se comporta assim:  
@@ -148,9 +149,9 @@ ms.locfileid: "72916004"
   
 ### <a name="examples"></a>Exemplos  
   
--   [Exemplo: restauração por etapas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemplo: Restauração por etapas de banco de dados &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemplo: restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemplo: Restauração por etapas de apenas alguns grupos de arquivos &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Para obter mais informações, consulte "Executando uma restauração por etapas de um banco de dados cujo modelo de recuperação foi trocado de simples para completo", adiante neste tópico.  
  Você pode executar uma restauração por etapas de um banco de dados que foi trocado do modelo de recuperação simples para o modelo de recuperação completa, a partir do backup de banco de dados completo ou parcial. Por exemplo, considere um banco de dados para o qual você executa as seguintes etapas:  

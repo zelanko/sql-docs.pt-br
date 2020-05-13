@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558021"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999411"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted com enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ O Always Encrypted com enclaves seguros soluciona algumas limitações do Always
 - Correspondência de padrões (LIKE) e operadores de comparação em colunas criptografadas com criptografia aleatória.
     > [!NOTE]
     > As operações acima são compatíveis com colunas de cadeia de caracteres que usam ordenações com classificação binário2 (ordenações BIN2). Colunas de cadeia de caracteres que usam ordenações não BIN2 podem ser criptografadas com criptografia aleatória e chaves de criptografia de coluna habilitadas para enclave. No entanto, a única nova funcionalidade habilitada para essas colunas é a criptografia no local.
-- Criação de índices não clusterizados em colunas usando criptografia aleatória.
+- Criação de índices não clusterizados e estatísticas em colunas usando criptografia aleatória.
 
 Todas as outras limitações do Always Encrypted listadas em [Detalhes do Recurso](always-encrypted-database-engine.md#feature-details) também se aplicam ao Always Encrypted com enclaves seguro.
 

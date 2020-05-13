@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180372"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849804"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar o Administrador de Recursos para limitar o uso de CPU por meio de compactação de backup (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [&#91;Início&#93;](#Top)  
@@ -137,35 +136,33 @@ GO
   
 1.  Emita uma instrução [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) para criar um pool de recursos. O exemplo deste procedimento usa a seguinte sintaxe:  
   
-     *CREATE RESOURCE POOL pool_name* WITH ( MAX_CPU_PERCENT = *value* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* é um inteiro de 1 a 100 que indica a porcentagem da largura de banda média máxima da CPU. O valor adequado depende do ambiente. Para fins de ilustração, o exemplo deste tópico usa 20 por cento (MAX_CPU_PERCENT = 20).  
+    *Value* é um inteiro de 1 a 100 que indica a porcentagem da largura de banda média máxima da CPU. O valor adequado depende do ambiente. Para fins de ilustração, o exemplo deste tópico usa 20 por cento (MAX_CPU_PERCENT = 20).  
   
 2.  Emita uma instrução [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) para criar um grupo de carga de trabalho para operações de baixa prioridade cujo uso de CPU deve ser administrado. O exemplo deste procedimento usa a seguinte sintaxe:  
   
-     CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  Emita uma instrução [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) para criar uma função de classificação que mapeie o grupo de carga de trabalho criado na etapa anterior para o usuário do logon de baixa prioridade. O exemplo deste procedimento usa a seguinte sintaxe:  
   
-     CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*user_of_low_priority_login*')  
-  
-     SET @workload_group_name = '*workload_group_name*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     Para obter informações sobre os componentes dessa instrução CREATE FUNCTION, consulte:  
+    Para obter informações sobre os componentes desta instrução `CREATE FUNCTION`, confira:  
   
     -   [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -175,14 +172,16 @@ GO
         >  SUSER_NAME é apenas uma das várias funções do sistema que podem ser usadas em uma função de classificação. Para obter mais informações, consulte [Criar e testar uma função de classificação definida pelo usuário](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
-  
+      
 4.  Emita uma instrução [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) para registrar a função de classificação com o Administrador de Recursos. O exemplo deste procedimento usa a seguinte sintaxe:  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *schema_name*.*function_name*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  Emita uma segunda instrução ALTER RESOURCE GOVERNADOR para aplicar as alterações à configuração na memória do Administrador de Recursos, da seguinte maneira:  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -204,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -233,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [&#91;Início&#93;](#Top)  

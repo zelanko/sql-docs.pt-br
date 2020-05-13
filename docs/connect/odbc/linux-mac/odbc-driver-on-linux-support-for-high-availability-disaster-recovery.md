@@ -1,7 +1,8 @@
 ---
-title: Driver ODBC no Linux e no macOS – alta disponibilidade e recuperação de desastre | Microsoft Docs
+title: Driver ODBC no Linux e no macOS – alta disponibilidade e recuperação de desastre
+description: Saiba mais sobre como o Microsoft ODBC Driver para Linux e macOS é compatível com Grupos de Disponibilidade AlwaysOn.
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912432"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922178"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC no Linux e no macOS – compatibilidade com alta disponibilidade e recuperação de desastre
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Os drivers ODBC para Linux e macOS são compatíveis com [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para saber mais sobre [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Ouvintes do grupo de disponibilidade, conectividade de cliente e failover de aplicativo (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [Criação e configuração de grupos de disponibilidade (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Criação e configuração de grupos de disponibilidade (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Secundárias ativas: Réplicas secundárias para leitura (Grupos de Disponibilidade AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 Você pode especificar o ouvinte de um determinado grupo de disponibilidade na cadeia de conexão. Se um aplicativo do ODBC no Linux ou macOS estiver conectado a um banco de dados em um grupo de disponibilidade que executa failover, a conexão original será interrompida e o aplicativo deverá abrir uma nova conexão para continuar o trabalho após o failover.
 
@@ -93,7 +94,7 @@ Para saber mais sobre as propriedades de conexão do ODBC, consulte [SQLSetConne
   
 Um aplicativo no driver ODBC que use os [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] pode usar uma dessas duas funções para fazer a conexão:  
   
-|Função|DESCRIÇÃO|  
+|Função|Descrição|  
 |------------|---------------|  
 |[Função SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|O **SQLConnect** é compatível com **ApplicationIntent** e **MultiSubnetFailover** por meio de um DSN (nome de fonte de dados) ou atributo de conexão.|  
 |[Função SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|O **SQLDriverConnect** é compatível com **ApplicationIntent** e **MultiSubnetFailover** por meio de palavras-chave de cadeia de conexão, atributo de conexão ou DSN.|

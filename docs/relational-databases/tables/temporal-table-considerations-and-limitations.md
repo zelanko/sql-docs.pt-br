@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487441"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784482"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerações e limitações da tabela temporal
 
@@ -51,7 +51,7 @@ Considere o seguinte ao trabalhar com tabelas temporais:
 
   - **Always On:** suporte completo
   - **Captura de dados de alterações e Acompanhamento de dados de alterações:** suporte apenas na tabela atual
-  - **Instantâneo e replicação transacional**: com suporte apenas para um único publicador sem o temporal habilitado e um assinante com o temporal habilitado. Nesse caso, o editor é usado para uma carga de trabalho OLTP, enquanto o assinante serve para o descarregamento de relatórios (incluindo consulta 'AS OF'). Quando o agente de distribuição é iniciado, ele abre uma transação que é mantida aberta até o agente de distribuição parar. Devido a esse comportamento, SysStartTime e SysEndTime são preenchidos com a hora de início da primeira transação que o agente de distribuição inicia. Consequentemente, pode ser preferível executar o agente de distribuição em um agendamento, em vez do padrão de executá-lo continuamente. Não há suporte para o uso de vários assinantes, pois isso pode levar a dados temporais inconsistentes devido à dependência do relógio do sistema local.
+  - **Instantâneo e replicação transacional**: com suporte apenas para um único publicador sem o temporal habilitado e um assinante com o temporal habilitado. Nesse caso, o editor é usado para uma carga de trabalho OLTP, enquanto o assinante serve para o descarregamento de relatórios (incluindo consulta 'AS OF'). Quando o agente de distribuição é iniciado, ele abre uma transação que é mantida aberta até o agente de distribuição parar. Devido a esse comportamento, SysStartTime e SysEndTime são preenchidos com a hora de início da primeira transação que o agente de distribuição inicia. Assim, poderá ser preferível executar o agente de distribuição conforme uma agenda, em vez de usar o comportamento padrão de executá-lo continuamente, se ter SysStartTime e SysEndTime preenchidos com um horário próximo ao horário atual do sistema for importante para seu aplicativo ou organização. Não há suporte para o uso de vários assinantes, pois isso pode levar a dados temporais inconsistentes devido à dependência do relógio do sistema local.
   - **Replicação de mesclagem:** não tem suporte para tabelas temporais
 
 - As consultas comuns afetam somente os dados na tabela atual. Para consultar os dados na tabela de histórico, você deverá usar consultas temporais. Isso será discutido neste documento na seção intitulada Consultando dados temporais.

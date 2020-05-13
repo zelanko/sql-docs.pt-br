@@ -1,5 +1,6 @@
 ---
 title: Elemento de configuração (DTA)
+description: No utilitário dta, o elemento Configuration especifica uma configuração especificada pelo usuário que consiste em estruturas de design físico existentes e hipotéticas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 79073bca20afa853c1b6fbf548ed804f71f074fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 265b66ece4d4430f7d26763cbd72f24f528dd959
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307981"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831635"
 ---
 # <a name="configuration-element-dta"></a>Elemento de configuração (DTA)
 
@@ -44,13 +45,13 @@ Determina uma configuração especificada pelo usuário, que consiste em estrutu
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de configuração|DESCRIÇÃO|  
+|Atributo de configuração|Descrição|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|Opcional. Especifica se o Orientador de Otimização do Mecanismo de Banco de Dados deve analisar a configuração especificada em relação à configuração existente atual ou como configuração totalmente nova e autônoma. Use um tipo de dados de **cadeia de caracteres** para especificar esse atributo com um dos seguintes valores permitidos:<br /><br /> **Relative**:<br />                  Avalia a configuração especificada em relação à configuração existente atual das estruturas de design físicas (índices, exibições indexadas, particionamento) do banco de dados que está sendo ajustado. Por exemplo:<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Avalia a configuração especificada como uma configuração autônoma. Quando Absolute é especificado, o Orientador de Otimização do Mecanismo de Banco de Dados não considera a configuração existente. Por exemplo:<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

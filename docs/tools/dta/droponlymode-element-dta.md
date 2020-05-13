@@ -1,5 +1,6 @@
 ---
 title: Elemento DropOnlyMode (DTA)
+description: No utilitário dta, o elemento DropOnlyMode especifica que o Orientador de Otimização do Mecanismo de Banco de Dados considera apenas descartar índices, exibições indexadas ou partições existentes.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305596"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831535"
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
 
@@ -43,7 +44,7 @@ Especifica que o Orientador de Otimização do Mecanismo de Banco de Dados deve 
   
  **Valor padrão**  
   
- **Ocorrência**: opcional. Pode-se usar apenas uma vez para cada elemento **TuningOptions** . Não poderá ser usado se os elementos seguintes forem especificados no elemento de **TuningOptions** :  
+ **Ocorrência**: Opcional. Pode-se usar apenas uma vez para cada elemento **TuningOptions** . Não poderá ser usado se os elementos seguintes forem especificados no elemento de **TuningOptions** :  
   
 -   [Elemento FeatureSet &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ Especifica que o Orientador de Otimização do Mecanismo de Banco de Dados deve 
 -   O [Elemento KeepExisting &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) é definido como **ALL**  
   
 ## <a name="element-relationships"></a>Relações do elemento  
- **Elemento pai**: [elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **Elemento pai**: [Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Elementos filho**  
   

@@ -1,5 +1,6 @@
 ---
 title: Elemento DatabaseToConnect (DTA)
+description: No utilitário dta, o elemento DatabaseToConnect especifica o primeiro banco de dados ao qual Orientador de Otimização do Mecanismo de Banco de Dados se conecta ao ajustar uma carga de trabalho.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5ea514d4f401eeebc822e8d6bbaafcf09282da34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6fbf9f58f7370f2fb1638f1736627544bc51c52
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831557"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
 
@@ -39,7 +40,7 @@ Especifica o primeiro banco de dados que o Orientador de Otimização do Mecanis
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, comprimento ilimitado.|  
 |**Valor padrão**|Nenhum.|  

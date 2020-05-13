@@ -1,5 +1,6 @@
 ---
 title: utilitário dta
+description: O utilitário dta é uma versão de prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados que permite que você use a funcionalidade em aplicativos e scripts.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -21,12 +22,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: 7225e09e0cda9c371d1fc24934f9aeb9a803be9b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a72ad8b0cfe32fa7d89238f68e6ae504f1f3167a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831519"
 ---
 # <a name="dta-utility"></a>utilitário dta
 

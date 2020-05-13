@@ -1,5 +1,6 @@
 ---
 title: Elemento de índice (DTA)
+description: No utilitário dta, o elemento Index contém informações sobre um índice que você deseja criar ou remover para uma configuração especificada pelo usuário.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df13c50363723ca9351b6e73cf5db59bc6a183d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307701"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831556"
 ---
 # <a name="index-element-dta"></a>Elemento de índice (DTA)
 
@@ -42,7 +43,7 @@ Contém informações sobre um índice que você quer criar ou descartar para um
   
 ## <a name="element-attributes"></a>Atributos do elemento  
   
-|Atributo de índice|Tipo de dados|DESCRIÇÃO|  
+|Atributo de índice|Tipo de dados|Descrição|  
 |---------------------|---------------|-----------------|  
 |**Clusterizado**|**booleano**|Opcional. Especifica um índice clusterizado. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
 |**Exclusivo**|**booleano**|Opcional. Especifica um índice exclusivo. Defina como "verdadeiro" ou "falso". Por exemplo:<br /><br /> `<Index Unique="true">`<br /><br /> Por padrão, esse atributo é definido como "falso".|  
@@ -59,7 +60,7 @@ Contém informações sobre um índice que você quer criar ou descartar para um
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|Nenhum.|  
 |**Valor padrão**|Nenhum.|  

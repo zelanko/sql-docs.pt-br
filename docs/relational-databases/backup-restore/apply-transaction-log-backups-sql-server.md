@@ -1,5 +1,6 @@
 ---
 title: Aplicar backups do log de transações (SQL Server) | Microsoft Docs
+description: Este artigo descreve como aplicar backups de log de transações como parte da restauração de um banco de dados SQL Server no modelo de recuperação completa ou no modelo de recuperação bulk-logged.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916195"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834531"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar backups de log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "72916195"
 ##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a> Requisitos para restaurar backups de log de transação  
  Para aplicar um backup de log de transações, devem ser atendidos os seguintes requisitos:  
   
--   **Backups de log suficientes para uma sequência de restauração:** você deverá ter backups de registros de log suficientes para concluir uma sequência de restauração. Os backups de log necessários, incluindo o [backup da parte final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) , quando necessário, devem estar disponíveis antes do início da sequência de restauração.  
+-   **backups de log suficientes para uma sequência de restauração:** Você deve ter backups de registros de log suficientes para concluir uma sequência de restauração. Os backups de log necessários, incluindo o [backup da parte final do log](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) , quando necessário, devem estar disponíveis antes do início da sequência de restauração.  
   
--   **Ordem de restauração correta:**  o backup de banco de dados completo imediatamente anterior ou backup de banco de dados diferencial deve ser restaurado primeiro. Em seguida, todos os logs de transações criados após o backup de banco de dados completo ou diferencial devem ser restaurados em ordem cronológica. Se um backup de log de transações nessa cadeia de logs for perdido ou danificado, você poderá restaurar apenas os logs de transações anteriores ao log ausente.  
+-   **Ordem de restauração correta:**  O backup de banco de dados completo imediatamente anterior ou backup de banco de dados diferencial deve ser restaurado primeiro. Em seguida, todos os logs de transações criados após o backup de banco de dados completo ou diferencial devem ser restaurados em ordem cronológica. Se um backup de log de transações nessa cadeia de logs for perdido ou danificado, você poderá restaurar apenas os logs de transações anteriores ao log ausente.  
   
--   **Banco de dados ainda não recuperado:**  o banco de dados não poderá ser recuperado até que o log de transações final seja aplicado. Se você recuperar o banco de dados depois de restaurar um dos backups de log de transações intermediários antes do final da cadeia de logs, não poderá restaurar o banco de dados além desse ponto sem restaurar a sequência completa, começando com o backup de banco de dados completo.  
+-   **Banco de dados ainda não recuperado:**  O banco de dados não poderá ser recuperado até que o log de transações final seja aplicado. Se você recuperar o banco de dados depois de restaurar um dos backups de log de transações intermediários antes do final da cadeia de logs, não poderá restaurar o banco de dados além desse ponto sem restaurar a sequência completa, começando com o backup de banco de dados completo.  
   
     > [!TIP]
     > Uma prática recomendada é restaurar todos os backups de log (`RESTORE LOG *database_name* WITH NORECOVERY`). Depois de restaurar o último backup de log, recupere o banco de dados em uma operação separada (`RESTORE DATABASE *database_name* WITH RECOVERY`).  
@@ -65,13 +66,13 @@ ms.locfileid: "72916195"
   
  Para restaurar o banco de dados a seu estado às 21h45 (o ponto de falha), um dos seguintes procedimentos alternativos pode ser usado.  
 
- **Alternativa 1: Restaure o banco de dados usando o backup de banco de dados completo mais recente**  
+ **Alternativa 1: restaurar o banco de dados usando o backup de banco de dados completo mais recente**  
   
 1.  Crie um backup do final do log de transações atualmente ativo a partir do ponto de falha.  
   
 2.  Não restaure o backup de banco de dados completo das 8h 18h. Restaure o backup de banco de dados completo mais recente das 18h e aplique o backup de log das 20h e o backup da parte final do log.  
   
- **Alternativa 2: Restaure o banco de dados usando o backup de banco de dados completo mais antigo**  
+ **Alternativa 2: restaurar o banco de dados usando o backup de banco de dados completo mais antigo**  
   
 > Esse processo alternativo será útil se um problema impedir o uso do backup de banco de dados completo 18h. Esse processo leva mais muito tempo do que restaurar o backup de banco de dados completo das 18h.  
   

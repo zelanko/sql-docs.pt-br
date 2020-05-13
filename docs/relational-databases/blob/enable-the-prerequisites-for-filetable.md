@@ -1,5 +1,6 @@
 ---
 title: Habilitar os pré-requisitos para FileTable | Microsoft Docs
+description: Para usar FileTables, primeiro ative o FILESTREAM, especifique um diretório e defina determinadas opções e níveis de acesso. Saiba como atender a todos os pré-requisitos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 960020f14560a68dd9cf4fdaac9c75037592165d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974307"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999846"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar os pré-requisitos para FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +41,12 @@ ms.locfileid: "71974307"
 ##  <a name="enabling-filestream-at-the-instance-level"></a><a name="BasicsFilestream"></a> Habilitando o FILESTREAM no nível de instância  
  As FileTables ampliam os recursos de FILESTREAM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, você precisa habilitar o FILESTREAM para acesso de E/S de arquivo no nível do Windows e na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que possa criar e usar FileTables.  
   
-###  <a name="how-to-enable-filestream-at-the-instance-level"></a><a name="HowToFilestream"></a> Como habilitar o FILESTREAM no nível de instância  
+###  <a name="how-to-enable-filestream-at-the-instance-level"></a><a name="HowToFilestream"></a> Como Habilitar o FILESTREAM no nível de instância  
  Para obter informações sobre como habilitar o FILESTREAM, veja [Habilitar e configurar o FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md).  
   
  Quando você chama **sp_configure** para habilitar FILESTREAM no nível da instância, precisa definir a opção filestream_access_level como 2. Para obter mais informações, veja [Opção filestream access level de configuração de servidor](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).  
   
-###  <a name="how-to-allow-filestream-through-the-firewall"></a><a name="firewall"></a> Como permitir o FILESTREAM através do Firewall  
+###  <a name="how-to-allow-filestream-through-the-firewall"></a><a name="firewall"></a> Como Permitir o FILESTREAM através do firewall  
  Para obter informações sobre como permitir o FILESTREAM através do firewall, consulte [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md).  
   
 ##  <a name="providing-a-filestream-filegroup-at-the-database-level"></a><a name="filegroup"></a> Fornecendo um grupo de arquivos FILESTREAM no nível de banco de dados  
@@ -54,7 +55,7 @@ ms.locfileid: "71974307"
 ##  <a name="enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsNTAccess"></a> Habilitando o acesso não transacional em nível de banco de dados  
  As FileTables permitem que os aplicativos do Windows obtenham um identificador de arquivo do Windows para dados de FILESTREAM sem precisar de uma transação. Para permitir esse acesso não transacional a arquivos armazenados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve especificar o nível desejado de acesso não transacional no nível de banco de dados para cada banco de dados que conterá FileTables.  
   
-###  <a name="how-to-check-whether-non-transactional-access-is-enabled-on-databases"></a><a name="HowToCheckAccess"></a> Como verificar se o acesso não transacional está habilitado em bancos de dados  
+###  <a name="how-to-check-whether-non-transactional-access-is-enabled-on-databases"></a><a name="HowToCheckAccess"></a> Como Verificar se o acesso não transacional está habilitado em bancos de dados  
  Consulte a exibição de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) e verifique as colunas **non_transacted_access** e **non_transacted_access_desc**.  
 
 ```sql
@@ -63,7 +64,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```
 
-###  <a name="how-to-enable-non-transactional-access-at-the-database-level"></a><a name="HowToNTAccess"></a> Como habilitar o acesso não transacional no nível de banco de dados  
+###  <a name="how-to-enable-non-transactional-access-at-the-database-level"></a><a name="HowToNTAccess"></a> Como Habilitar o acesso não transacional no nível de banco de dados  
  Os níveis disponíveis de acesso não transacional são FULL, READ_ONLY e OFF.  
   
  **Especificar o nível de acesso não transacional usando Transact-SQL**  
@@ -89,7 +90,7 @@ GO
   
  Na hierarquia de pastas de FileTable, esse diretório em nível de banco de dados se torna o filho do nome de compartilhamento especificado para FILESTREAM no nível de instância, e o pai das FileTables criadas no banco de dados. Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="how-to-specify-a-directory-for-filetables-at-the-database-level"></a><a name="HowToDirectory"></a> Como especificar um diretório para FileTables no nível de banco de dados  
+###  <a name="how-to-specify-a-directory-for-filetables-at-the-database-level"></a><a name="HowToDirectory"></a> Como Especifique um diretório para FileTables no nível de banco de dados  
  O nome que você especifica deve estar exclusivo na instância para diretórios em nível de banco de dados.  
   
 **Especificar um diretório para FileTables usando Transact-SQL**  
@@ -128,7 +129,7 @@ GO
  **Especificar um diretório para FileTables usando o SQL Server Management Studio**  
  Você pode especificar um nome de diretório no campo **Nome do Diretório FILESTREAM** da página **Opções** da caixa de diálogo **Propriedades do Banco de dados** . Para obter mais informações sobre essa caixa de diálogo, veja [Propriedades de banco de dados &#40;Página Opções&#41;](../../relational-databases/databases/database-properties-options-page.md).  
   
-###  <a name="how-to-view-existing-directory-names-for-the-instance"></a><a name="viewnames"></a> Como exibir nomes de diretórios existentes para a instância  
+###  <a name="how-to-view-existing-directory-names-for-the-instance"></a><a name="viewnames"></a> Como Exibir nomes de diretórios existentes para a instância  
  Para exibir a lista de nomes de diretórios existentes para a instância, veja a exibição de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) e verifique a coluna **filestream_database_directory_name**.  
   
 ```sql  

@@ -1,5 +1,6 @@
 ---
 title: Elemento KeepExisting (DTA)
+description: No utilitário dta, o elemento KeepExisting especifica estruturas de design físico que Orientador de Otimização do Mecanismo de Banco de Dados retém quando gera recomendações.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50741d36bfd0dd3b9f566954d1ef53b86be14609
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d76ae0a45b08ff826deaac7750688d521746c077
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307640"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831495"
 ---
 # <a name="keepexisting-element-dta"></a>Elemento KeepExisting (DTA)
 
@@ -40,7 +41,7 @@ Especifica as estruturas físicas de design (índices, exibições indexadas ou 
   
 ## <a name="element-characteristics"></a>Características do elemento  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
 |**Comprimento e tipo de dados**|**string**, o limite de tamanho é imposto pelo servidor.|  
 |**Valores permitidos**|**NONE**<br /> Não existe nenhuma estrutura.<br /><br /> **ALL**<br /> Todas as estruturas existentes.<br /><br /> **ALIGNED**<br /> Todas as estruturas alinhadas por partição.<br /><br /> **CL_IDX**<br /> Todos os índices clusterizados em tabelas<br /><br /> **IDX**<br /> Todos os índices clusterizados e não cluster em tabelas<br /><br /> Use apenas um desses valores com este elemento.|  
