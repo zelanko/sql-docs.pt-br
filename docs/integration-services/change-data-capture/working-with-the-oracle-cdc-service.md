@@ -82,7 +82,7 @@ ms.locfileid: "79288230"
 |status|O código de status que é usado pela tabela de estado.|  
 |sub_status|O código de substatus que é usado pela tabela de estado.|  
 |status_message|A mensagem de status que é usada pela tabela de estado.|  
-|source|O nome do componente do Oracle CDC que produziu o registro de rastreamento.|  
+|target|O nome do componente do Oracle CDC que produziu o registro de rastreamento.|  
 |text_data|Os dados de texto adicionais para casos em que o erro ou registro de rastreamento contém uma carga textual.|  
 |binary_data|Os dados binários adicionais para casos em que o erro ou registro de rastreamento contém uma carga binária.|  
   
