@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b1c27eb728c3cd368b4d2acc10609785c06514a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920348"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748614"
 ---
 # <a name="bookmark-property-ado"></a>Propriedade Bookmark (ADO)
 Indica um indicador que identifica exclusivamente o registro atual em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou define o registro atual em um objeto **Recordset** para o registro identificado por um indicador válido.  

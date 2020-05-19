@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADOX], Visual Basic example
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d270dbc8bc14ba0ce5fdde9a5c964117856e8f51
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965369"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748635"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Exemplo do método Delete de procedimentos (VB)
 O código a seguir demonstra como excluir um procedimento usando o método [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) da coleção de [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) .  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923184"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748085"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Visão geral de dados e esquemas multidimensionais
 ## <a name="understanding-multidimensional-schemas"></a>Noções básicas sobre esquemas multidimensionais  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>Hierarquias  
  As hierarquias definem as maneiras em que os níveis de uma dimensão podem ser "acumulados" ou agrupados. Uma dimensão pode ter mais de uma hierarquia. Existe uma hierarquia natural na dimensão Geografia:  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>Níveis  
  Na dimensão Geografia de exemplo, mostrada na figura anterior, cada caixa representa um nível na hierarquia.  
   
  Cada nível tem um conjunto de membros, da seguinte maneira:  

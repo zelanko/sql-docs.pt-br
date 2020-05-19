@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70400206f0fc7628586b13e93681f349237cda52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5932a53218913ef91687744f819a5e67a3ae699
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923302"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748193"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>Extensões ADO para segurança e linguagem de definição de dados (ADOX)
 Esta seção contém os seguintes tópicos.  

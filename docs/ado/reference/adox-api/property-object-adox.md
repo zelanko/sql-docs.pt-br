@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965395"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748563"
 ---
 # <a name="property-object-adox"></a>Objeto Property (ADOX)
 Representa uma característica de um objeto ADOX.  

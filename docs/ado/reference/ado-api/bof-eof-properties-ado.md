@@ -15,21 +15,21 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920382"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748741"
 ---
 # <a name="bof-eof-properties-ado"></a>Propriedades BOF, EOF (ADO)
 -   **BOF** Indica que a posição atual do registro é anterior ao primeiro registro em um objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 -   **EOF** Indica que a posição atual do registro é posterior ao último registro em um objeto **Recordset** .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  As propriedades **BOF** e **EOF** retornam valores **boolianos** .  
   
 ## <a name="remarks"></a>Comentários  
@@ -49,8 +49,8 @@ ms.locfileid: "67920382"
   
 ||MoveFirst<br /><br /> Velas|MovePrevious<br /><br /> Mover < 0|Mover 0|MoveNext<br /><br /> Mover > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Permitido|Erro|Erro|Permitido|  
-|**BOF**=**false**, **EOF**=**true**|Permitido|Permitido|Erro|Erro|  
+|**BOF** = **True**, **EOF** = **falso**|Permitido|Erro|Erro|Permitido|  
+|**BOF** = **False**, **EOF** = **true**|Permitido|Permitido|Erro|Erro|  
 |Ambos **verdadeiros**|Erro|Erro|Erro|Erro|  
 |Ambos **falsos**|Permitido|Permitido|Permitido|Permitido|  
   

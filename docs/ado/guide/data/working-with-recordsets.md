@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923410"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748336"
 ---
 # <a name="working-with-recordsets"></a>Trabalhar com conjuntos de registros
 O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem dos dados no conjunto de resultados, pesquisar um registro específico com base nos critérios fornecidos e até mesmo otimizar essas operações de pesquisa usando índices. A possibilidade de esses recursos estarem disponíveis para uso depende do provedor e, em alguns casos, da propriedade [index](../../../ado/reference/ado-api/index-property.md) – a estrutura da própria fonte de dados.  
@@ -33,7 +33,7 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
   
  Definir a propriedade **Sort** como uma cadeia de caracteres vazia redefinirá as linhas para sua ordem original e excluirá índices temporários. Os índices existentes não serão excluídos.  
   
- Suponha que um **conjunto de registros** contenha três campos nomeados *FirstName*, *inicialdomeio*e *LastName*. Defina a propriedade **Sort** como a cadeia de`lastName DESC, firstName ASC`caracteres "", que ordenará o **conjunto de registros** por sobrenome em ordem decrescente e, em seguida, pelo primeiro nome em ordem crescente. A inicial do meio é ignorada.  
+ Suponha que um **conjunto de registros** contenha três campos nomeados *FirstName*, *inicialdomeio*e *LastName*. Defina a propriedade **Sort** como a cadeia de caracteres " `lastName DESC, firstName ASC` ", que ordenará o **conjunto de registros** por sobrenome em ordem decrescente e, em seguida, pelo primeiro nome em ordem crescente. A inicial do meio é ignorada.  
   
  Nenhum campo referenciado em uma cadeia de caracteres de critérios de classificação pode ser nomeado "ASC" ou "DESC" porque esses nomes entram em conflito com as palavras-chave **ASC** e **desc**. Forneça um campo que tenha um nome conflitante **como** um alias usando a palavra-chave as na consulta que retorna o **conjunto de registros**.  
   
@@ -53,13 +53,13 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
   
  Somente um nome de coluna única pode ser especificado para o critério. Em outras palavras, esse método não oferece suporte a pesquisas de várias colunas.  
   
- O operador de comparação para o critério pode ser**>**"" (maior que),**\<**"" (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
+ O operador de comparação para o critério pode ser " **>** " (maior que), " **\<** " (menor que), "=" (igual), ">=" (maior ou igual), "<=" (menor ou igual), "<>" (não igual) ou "Like" (correspondência de padrões).  
   
  O valor do critério pode ser uma cadeia de caracteres, um número de ponto flutuante ou uma data. Os valores de cadeia de caracteres são delimitados por aspas simples ou marcas "#" (sinal numérico) (por exemplo, "estado = ' WA '" ou "estado = #WA #"). Os valores de data são delimitados com marcas "#" (sinal numérico) (por exemplo, "start_date > #7/22/97 #").  
   
- Se o operador de comparação for "Like", o valor da cadeia de caracteres poderá conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou Subcadeia de caracteres. Por exemplo, "estado like\*" "corresponde a Maine e a Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres que está contida nos valores. Por exemplo, "estado como"\*como\*"" corresponde a Alasca, Arkansas e Massachusetts.  
+ Se o operador de comparação for "Like", o valor da cadeia de caracteres poderá conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou Subcadeia de caracteres. Por exemplo, "estado like" \* "corresponde a Maine e a Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres que está contida nos valores. Por exemplo, "estado como" \* como " \* " corresponde a Alasca, Arkansas e Massachusetts.  
   
- Os asteriscos só podem ser usados no final de uma cadeia de caracteres de critérios ou juntos no início e no final de uma cadeia de caracteres de critério, conforme mostrado anteriormente. Você não pode usar o asterisco como um curinga principal (' * Str ') ou curinga inserido (\*r '). Isso causará um erro.  
+ Os asteriscos só podem ser usados no final de uma cadeia de caracteres de critérios ou juntos no início e no final de uma cadeia de caracteres de critério, conforme mostrado anteriormente. Você não pode usar o asterisco como um curinga principal (' * Str ') ou curinga inserido ( \* r '). Isso causará um erro.  
   
 ### <a name="seek-and-index"></a>Busca e índice  
  Use o método **Seek** junto com a propriedade **index** se o provedor subjacente oferecer suporte a índices no objeto **Recordset** . Use o método de [suporte](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** para determinar se o provedor subjacente dá suporte à **busca**e ao método de **suporte (adIndex)** para determinar se o provedor oferece suporte a índices. (Por exemplo, o [provedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) dá suporte a **busca** e **índice**.)  
@@ -83,16 +83,16 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
  Para remover um filtro de um **conjunto de registros**, use a constante **adFilterNone** . Definir a propriedade **Filter** para uma cadeia de caracteres de comprimento zero ("") tem o mesmo efeito que usar a constante **adFilterNone** .  
   
 ### <a name="filtering-with-a-criteria-string"></a>Filtrando com uma cadeia de caracteres de critérios  
- A cadeia de caracteres de critérios consiste em cláusulas no *valor do operador Form FieldName* ( `"LastName = 'Smith'"`por exemplo,). Você pode criar cláusulas compostas concatenando cláusulas individuais com **and** (por exemplo `"LastName = 'Smith' AND FirstName = 'John'"`,) e **or** (por exemplo `"LastName = 'Smith' OR LastName = 'Jones'"`,). Use as seguintes diretrizes para cadeias de caracteres de critérios:  
+ A cadeia de caracteres de critérios consiste em cláusulas no *valor do operador Form FieldName* (por exemplo, `"LastName = 'Smith'"` ). Você pode criar cláusulas compostas concatenando cláusulas individuais com **and** (por exemplo, `"LastName = 'Smith' AND FirstName = 'John'"` ) e **or** (por exemplo, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Use as seguintes diretrizes para cadeias de caracteres de critérios:  
   
 -   *FieldName* deve ser um nome de campo válido do **conjunto de registros**. Se o nome do campo contiver espaços, você deverá colocar o nome entre colchetes.  
   
--   O *operador* deve ser um dos seguintes: **\<**, **>**, ** \< **, **>=**, **<>** **=**, ou **like**.  
+-   O *operador* deve ser um dos seguintes: **\<** , **>** ,,,, **\<=** **>=** **<>** **=** ou **like**.  
   
--   *Valor* é o valor com o qual você irá comparar os valores de campo (por `'Smith'`exemplo `#8/24/95#`, `12.345`,, `$50.00`ou). Use aspas simples (') com cadeias de caracteres e sinais`#`de sustenido () com datas. Para números, você pode usar pontos decimais, sinais de dólar e notação científica. Se o *operador* for **como**, o *valor* poderá usar caracteres curinga. Somente o asterisco (\*) e o sinal de porcentagem (%) caracteres curinga são permitidos e devem ser o último caractere na cadeia de caracteres. O *valor* não pode ser nulo.  
+-   *Valor* é o valor com o qual você irá comparar os valores de campo (por exemplo,,, `'Smith'` `#8/24/95#` `12.345` ou `$50.00` ). Use aspas simples (') com cadeias de caracteres e sinais de sustenido ( `#` ) com datas. Para números, você pode usar pontos decimais, sinais de dólar e notação científica. Se o *operador* for **como**, o *valor* poderá usar caracteres curinga. Somente o asterisco ( \* ) e o sinal de porcentagem (%) caracteres curinga são permitidos e devem ser o último caractere na cadeia de caracteres. O *valor* não pode ser nulo.  
   
     > [!NOTE]
-    >  Para incluir aspas simples (') no *valor*do filtro, use duas aspas simples para representar uma. Por exemplo, para filtrar em *' Malley*, a cadeia de caracteres de `"col1 = 'O''Malley'"`critérios deve ser. Para incluir aspas simples no início e no final do valor do filtro, coloque a cadeia de caracteres em sinais de sustenido (#). Por exemplo, para filtrar em *' 1 '*, a cadeia de caracteres de `"col1 = #'1'#"`critérios deve ser.  
+    >  Para incluir aspas simples (') no *valor*do filtro, use duas aspas simples para representar uma. Por exemplo, para filtrar em *' Malley*, a cadeia de caracteres de critérios deve ser `"col1 = 'O''Malley'"` . Para incluir aspas simples no início e no final do valor do filtro, coloque a cadeia de caracteres em sinais de sustenido (#). Por exemplo, para filtrar em *' 1 '*, a cadeia de caracteres de critérios deve ser `"col1 = #'1'#"` .  
   
  Não há precedência entre **e** e **ou**. As cláusulas podem ser agrupadas entre parênteses. No entanto, você não pode agrupar cláusulas Unidas por um **ou** e, em seguida, unir o grupo a outra cláusula com um e, da seguinte maneira.  
   
@@ -106,12 +106,12 @@ O objeto **Recordset** tem recursos internos que permitem reorganizar a ordem do
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- Em uma cláusula **like** , você pode usar um caractere curinga no início e no final do padrão (por exemplo, `LastName Like '*mit*'`) ou somente no final do padrão (por exemplo, `LastName Like 'Smit*'`).  
+ Em uma cláusula **like** , você pode usar um caractere curinga no início e no final do padrão (por exemplo, `LastName Like '*mit*'` ) ou somente no final do padrão (por exemplo, `LastName Like 'Smit*'` ).  
   
 ### <a name="filtering-with-a-constant"></a>Filtrando com uma constante  
  As constantes a seguir estão disponíveis para filtrar **conjuntos de registros**.  
   
-|Constante|Descrição|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtros para exibir somente os registros afetados pela última chamada de **exclusão**, **ressincronização**, **UpdateBatch**ou **CancelBatch** .|  
 |**adFilterConflictingRecords**|Filtros para exibir os registros que falharam na última atualização do lote.|  

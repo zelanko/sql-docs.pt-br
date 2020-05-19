@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922553"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747875"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimizar o uso de espaço de arquivo de log
 Um arquivo de log pode ser preenchido rapidamente (o que interrompe o servidor), se houver um grande volume de atividade em um banco de dados SQL Server. Você pode definir o arquivo de log para **truncar no ponto de verificação** para estender significativamente a vida útil do arquivo de log para um banco de dados.  
