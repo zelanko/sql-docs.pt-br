@@ -12,15 +12,15 @@ helpviewer_keywords:
 - next fetch position
 - rowsets [OLE DB], fetching
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2c47f1a8692cf7d2e3fb4f00c64770b3b0c69e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05d2c63c2d973416883562512ac45dd391f6c4b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183644"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694518"
 ---
 # <a name="next-fetch-position"></a>Próxima posição de busca
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo controla a próxima posição de busca para que uma sequência de chamadas para o método **GetNextRows** (sem ignorar, alterações de direção ou chamadas intermediárias para os métodos **FindNextRow**, **Seek**ou **RestartPosition** ) Leia todo o conjunto de linhas sem ignorar ou repetir nenhuma linha. A próxima posição de fetch é alterada chamando **IRowset::GetNextRows**, **IRowset::RestartPosition** ou **IRowsetIndex::Seek**, ou chamando **FindNextRow** com um valor de *pBookmark* nulo. A chamada de **FindNextRow** com um valor *pBookmark* não nulo não afeta a próxima posição de fetch.  

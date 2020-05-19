@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631367"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702282"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Índices XML podem ser criados em colunas de tipo de dados `xml`. Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  O processador de consultas usa índice XML primário para consultas que envolvem [Métodos de tipo de dados xml](/sql/t-sql/xml/xml-data-type-methods) e retorna valores escalares ou as subárvores XML do próprio índice primário. (Esse índice armazena todas as informações necessárias para reconstruir a instância XML.)  
   
- Por exemplo, a consulta a seguir retorna informações resumidas `CatalogDescription``xml` armazenadas na coluna type `ProductModel` da tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
+ Por exemplo, a consulta a seguir retorna informações resumidas armazenadas na `CatalogDescription``xml` coluna Type da `ProductModel` tabela. A consulta retorna informações de <`Summary`> apenas para modelos de produto cuja descrição de catálogo também armazena a descrição de <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]` onde a consulta procura o elemento <`book`> que tem algum atributo contendo o valor `"someValue"`.  
   
- A consulta a seguir retorna `ContactID` da tabela `Contact` . A `WHERE` cláusula Especifica um filtro que procura valores na coluna `AdditionalContactInfo``xml` tipo. As IDs de contato serão retornadas apenas se o objeto binário grande XML das informações de contato adicionais correspondentes incluírem um número de telefone específico. Como o elemento <`telephoneNumber`> pode aparecer em qualquer lugar no XML, a expressão de caminho especifica o eixo descendente ou independente.  
+ A consulta a seguir retorna `ContactID` da tabela `Contact` . A `WHERE` cláusula Especifica um filtro que procura valores na `AdditionalContactInfo``xml` coluna tipo. As IDs de contato serão retornadas apenas se o objeto binário grande XML das informações de contato adicionais correspondentes incluírem um número de telefone específico. Como o elemento <`telephoneNumber`> pode aparecer em qualquer lugar no XML, a expressão de caminho especifica o eixo descendente ou independente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Exceto pelas diferenças descritas posteriormente neste tópico, a criação de um índice XML em`xml` uma coluna de tipo é semelhante à criação de um índice em`xml` uma coluna que não seja de tipo. As instruções DDL do [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir podem ser usadas para criar e gerenciar índices XML:  
+ Exceto pelas diferenças descritas posteriormente neste tópico, a criação de um índice XML em uma `xml` coluna de tipo é semelhante à criação de um índice em uma coluna que não seja de `xml` tipo. As instruções DDL do [!INCLUDE[tsql](../../includes/tsql-md.md)] a seguir podem ser usadas para criar e gerenciar índices XML:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

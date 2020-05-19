@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188691"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702145"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte ao modelo de cursor misto (conjunto de chaves/dinâmico). As tentativas de definir o tamanho do conjunto de chaves usando SQL_ATTR_KEYSET_SIZE falhará se o valor definido não for igual a 0.  
@@ -50,7 +50,7 @@ ms.locfileid: "63188691"
   
 |Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Padrão. Desabilita somente encaminhamento rápido, cursores somente leitura e busca rápida, habilita **SQLGetData** em cursores somente de avanço e somente leitura. Quando SQL_SOPT_SS_CURSOR_OPTIONS for definido como SQL_CO_OFF, o tipo de cursor não será alterado. Ou seja, o cursor somente de avanço rápido permanecerá um cursor somente de avanço rápido. Para alterar o tipo de cursor, o aplicativo agora deve definir um tipo de cursor `SQLSetStmtAttr`diferente usando/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Padrão. Desabilita somente encaminhamento rápido, cursores somente leitura e busca rápida, habilita **SQLGetData** em cursores somente de avanço e somente leitura. Quando SQL_SOPT_SS_CURSOR_OPTIONS for definido como SQL_CO_OFF, o tipo de cursor não será alterado. Ou seja, o cursor somente de avanço rápido permanecerá um cursor somente de avanço rápido. Para alterar o tipo de cursor, o aplicativo agora deve definir um tipo de cursor diferente usando `SQLSetStmtAttr` /SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Permite somente encaminhamento rápido, cursores somente leitura, desabilita **SQLGetData** em cursores somente de avanço e somente leitura.|  
 |SQL_CO_AF|Habilita a opção autofetch em qualquer tipo de cursor. Quando essa opção é definida para um identificador de instrução, **SQLExecute** ou **SQLExecDirect** gerará um **SQLFetchScroll** implícito (SQL_FIRST). O cursor é aberto e o primeiro lote de linhas é retornado em uma única viagem de ida e volta ao servidor.|  
 |SQL_CO_FFO_AF|Habilita cursores somente de avanço rápido com a opção autofetch. É igual a se SQL_CO_AF e SQL_CO_FFO forem especificados.|  
@@ -131,10 +131,10 @@ ms.locfileid: "63188691"
   
 |Valor de *ValuePtr*|Descrição|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Padrão.<br /><br /> Ao usar parâmetros com valor de tabela, indica que metadados de tabelas reais devem ser retornados.<br /><br /> Ao usar o recurso de colunas esparsas, SQLColumns retornará apenas colunas que não sejam membros do esparso `column_set`.|  
+|SQL_SS_NAME_SCOPE_TABLE|Padrão.<br /><br /> Ao usar parâmetros com valor de tabela, indica que metadados de tabelas reais devem ser retornados.<br /><br /> Ao usar o recurso de colunas esparsas, SQLColumns retornará apenas colunas que não sejam membros do esparso `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que o aplicativo exige metadados para um tipo de tabela, em vez de uma tabela real (funções de catálogo devem retornar metadados para tipos de tabela). Em seguida, o aplicativo passa a TYPE_NAME do parâmetro com valor de tabela como o parâmetro *TableName* .|  
-|SQL_SS_NAME_SCOPE_EXTENDED|Ao usar o recurso de colunas esparsas, SQLColumns retorna todas as colunas `column_set` , independentemente da associação.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Ao usar o recurso de colunas esparsas, SQLColumns retorna apenas colunas que são membros do `column_set`esparso.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|Ao usar o recurso de colunas esparsas, SQLColumns retorna todas as colunas, independentemente da `column_set` associação.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Ao usar o recurso de colunas esparsas, SQLColumns retorna apenas colunas que são membros do esparso `column_set` .|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Igual a SQL_SS_NAME_SCOPE_TABLE.|  
   
  SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME são usados com os parâmetros *CatalogName* e *SchemaName* , respectivamente, para identificar o catálogo e o esquema para o parâmetro com valor de tabela. Quando um aplicativo concluir a recuperação de metadados para parâmetros com valor de tabela, ele deve definir SQL_SOPT_SS_NAME_SCOPE novamente com seu valor padrão SQL_SS_NAME_SCOPE_TABLE.  

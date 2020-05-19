@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241225"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702559"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
   O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  

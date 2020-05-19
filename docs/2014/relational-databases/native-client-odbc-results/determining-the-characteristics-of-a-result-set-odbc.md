@@ -15,20 +15,20 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200206"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699337"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>Determinando as características de um conjunto de resultados (ODBC)
   Metadados são dados que descrevem outros dados. Por exemplo, os metadados de conjunto de resultados descrevem as características de um conjunto de resultados, como o número de colunas no conjunto de resultados, os tipos de dados dessas colunas, seus nomes, precisão e nulidade.  
   
- ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client implementa muitas das funções do catálogo de API do ODBC como chamadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para um procedimento de catálogo correspondente.  
+ ODBC fornece metadados a aplicativos por meio de suas funções de API de catálogo. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client implementa muitas das funções do catálogo de API do ODBC como chamadas para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento de catálogo correspondente.  
   
  Os aplicativos exigem metadados para a maioria das operações de conjunto de resultados. Por exemplo, o aplicativo usa o tipo de dados de uma coluna para determinar que tipo de variável associar a essa coluna. Usa o comprimento de byte de uma coluna de caractere para determinar a quantidade de espaço necessária para exibir dados dessa coluna. Como um aplicativo determina os metadados para uma coluna depende do tipo do aplicativo.  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor header field
 - table-valued parameters (ODBC), statement attribute
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62626211"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698107"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Atributos de instruções que afetam parâmetros com valor de tabela
   A tabela a seguir descreve os atributos em um campo descritor.  

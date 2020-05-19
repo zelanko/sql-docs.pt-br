@@ -18,15 +18,15 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca5ab2c7c3b92f30701fd51ddef95eccff4842fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200034"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699708"
 ---
 # <a name="assigning-storage"></a>Atribuindo armazenamento
   Um aplicativo pode atribuir armazenamento para resultados antes ou depois de executar uma instrução SQL. Caso prepare ou execute a instrução SQL primeiro, um aplicativo pode consultar o conjunto de resultados antes de atribuir o armazenamento para resultados. Por exemplo, caso o conjunto de resultados seja desconhecido, o aplicativo deve recuperar o número de colunas antes de atribuir o armazenamento a eles.  

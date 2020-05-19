@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689041"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701960"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   Executa uma cópia em massa completa dos dados entre uma tabela de banco de dados e um arquivo de usuário.  
@@ -59,7 +59,7 @@ pnRowsProcessed
   
  **bcp_exec** é a única função de cópia em massa que provavelmente ficará pendente para qualquer duração de tempo. Portanto, é a única função de cópia em massa que suporta o modo assíncrono. Para definir o modo assíncrono, use [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) para definir SQL_ATTR_ASYNC_ENABLE como SQL_ASYNC_ENABLE_ON antes de chamar **bcp_exec**. Para testar se houve a conclusão, chame **bcp_exec** com os mesmos parâmetros. Se a cópia em massa ainda não tiver sido concluída, **bcp_exec** retornará SUCCEED_ASYNC. Retornará também em *pnRowsProcessed* uma contagem de status do número de linhas que foram enviadas para o servidor. As linhas enviadas para o servidor não serão confirmadas até que o fim de um lote seja atingido.  
   
- Para obter informações sobre uma alteração significativa na cópia em massa a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]partir do, consulte [executando operações de cópia em massa &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obter informações sobre uma alteração significativa na cópia em massa a partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consulte [executando operações de cópia em massa &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar **bcp_exec**:  

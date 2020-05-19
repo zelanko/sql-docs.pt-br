@@ -1,20 +1,20 @@
 ---
 title: SQL Server documentos do 2014 estão sendo movidos | Microsoft Docs
 description: A documentação da Microsoft para SQL Server 2014 será movida antes de 2018 de julho, do MSDN para aqui no docs.
-author: mightypen
+author: rothja
 manager: craigg
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.date: 04/26/2018
-ms.author: genemi
+ms.author: jroth
 ms.reviewer: sudeepk
-ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe626ad99e4e0c5842d3551c8864116ee7b8634
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62473634"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693713"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>A documentação do SQL Server 2014 está sendo movida para o Docs
 

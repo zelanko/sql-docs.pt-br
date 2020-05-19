@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120250"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262136"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  É o nome do banco de dados do qual é feito o backup. *dbname* é do tipo sysname.  
   
 ## <a name="returns"></a>Retornos  
- Retornará 1 se o banco de dados da instância atual estiver na réplica preferencial. Caso contrário, retorna 0.  
+ Retorna o tipo de dado **bool**: 1 se o banco de dados na instância atual estiver na réplica preferencial, caso contrário, 0.  
   
 ## <a name="remarks"></a>Comentários  
  Use esta função em um script de backup para determinar se o banco de dados atual está na réplica preferencial para backups. Você pode executar um script em cada réplica de disponibilidade. Cada um desses trabalhos examina os mesmos dados para determinar qual trabalho deve ser executado, portanto, somente um dos trabalhos agendados realmente passa para o estágio de backup. O código de exemplo pode ser semelhante ao seguinte:  

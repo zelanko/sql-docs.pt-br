@@ -15,21 +15,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012348"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702879"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado do cliente e Formatação XML do lado do servidor (SQLXML 4.0)
   Este tópico descreve as diferenças gerais entre a formatação XML no lado cliente e no lado servidor no SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Várias consultas a conjuntos de linhas sem suporte na formatação no lado do cliente  
- Consultas que geram vários conjuntos de linha não têm suporte quando você usa a formatação XML no lado do cliente. Por exemplo, suponha que você tenha um diretório virtual em que a formatação no lado do cliente seja especificada. Considere este modelo de exemplo, que tem duas instruções SELECT em um ** \<bloco SQL: Query>** :  
+ Consultas que geram vários conjuntos de linha não têm suporte quando você usa a formatação XML no lado do cliente. Por exemplo, suponha que você tenha um diretório virtual em que a formatação no lado do cliente seja especificada. Considere este modelo de exemplo, que tem duas instruções SELECT em um bloco ** \< SQL: Query>** :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,12 +40,12 @@ ms.locfileid: "66012348"
 </ROOT>  
 ```  
   
- Você pode executar este modelo em código do aplicativo e um erro será retornado, porque a formatação XML no lado do cliente não dá suporte à formatação de vários conjuntos de linha. Se você especificar as consultas em dois blocos ** \<SQL: Query>** separados, obterá os resultados desejados.  
+ Você pode executar este modelo em código do aplicativo e um erro será retornado, porque a formatação XML no lado do cliente não dá suporte à formatação de vários conjuntos de linha. Se você especificar as consultas em dois blocos ** \< SQL: Query>** separados, obterá os resultados desejados.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Carimbo de data e hora mapeia de forma diferente as formatações no lado do cliente e no lado do servidor  
  Na formatação XML no lado do servidor, a coluna do banco de dados do tipo `timestamp` mapeia para o tipo i8 XDR (quando a opção XMLDATA é especificada na consulta).  
   
- Na formatação XML no lado cliente, a coluna do banco de dados do tipo `timestamp` mapeia para o tipo `uri` ou para o tipo XDR `bin.base64` (dependendo se a opção base64 binária é especificada na consulta). O `bin.base64` tipo de XDR será útil se você usar os recursos updategram e carregamento em massa, pois esse tipo é convertido para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` o tipo. Deste modo, as operações de inserção, atualização ou exclusão são bem-sucedidas.  
+ Na formatação XML no lado cliente, a coluna do banco de dados do tipo `timestamp` mapeia para o tipo `uri` ou para o tipo XDR `bin.base64` (dependendo se a opção base64 binária é especificada na consulta). O `bin.base64` tipo de XDR será útil se você usar os recursos updategram e carregamento em massa, pois esse tipo é convertido para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` tipo. Deste modo, as operações de inserção, atualização ou exclusão são bem-sucedidas.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>VARIANTs profundas são usadas na formatação no lado do servidor  
  Na formatação no lado do servidor, os tipos profundos de um tipo VARIANT são usados. Se você usar uma formatação XML no lado do cliente, as variantes serão convertidas à cadeia de caracteres Unicode e os subtipos de VARIANT não serão usados.  

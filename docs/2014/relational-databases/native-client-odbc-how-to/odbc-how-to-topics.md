@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200379"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700401"
 ---
 # <a name="odbc-how-to-topics"></a>Tópicos de instruções sobre ODBC
   Para usar o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , você deve ser capaz de criar fontes de dados ODBC e garantir que o servidor tenha a versão correta dos procedimentos armazenados do catálogo. Para codificar um aplicativo do SQL Server, você deve saber como alocar identificadores ODBC, definir atributos, se conectar a uma instância do SQL Server, executar consultas e processar resultados.  

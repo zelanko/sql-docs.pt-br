@@ -3,22 +3,32 @@ title: O que há de novo no SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 53a159627750a5ec66b5aa0b3fd6510c647e26a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625519"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220083"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>O que há de novo no SSMA para DB2 (DB2ToSQL)
 
 Este artigo lista Assistente de Migração do SQL Server (SSMA) para as alterações do DB2 em cada versão.
+
+## <a name="ssma-v89"></a>8.9 do SSMA v
+
+A versão v 8.9 do SSMA para DB2 contém as seguintes alterações:
+
+* Correção para conversão da `TIMESTAMPDIFF` função
+* Correção para a descoberta de índices quando o índice particionado estiver presente
+* Correção da descoberta de chaves estrangeiras quando o índice primário é definido em outro esquema
+* Conversão aprimorada para colunas que correspondem a nomes de funções internas
+* Correção do problema com caracteres especiais no nome do projeto
 
 ## <a name="ssma-v88"></a>8.8 do SSMA v
 
@@ -27,7 +37,7 @@ A versão v 8.8 do SSMA para DB2 inclui:
 * Melhorias na estabilidade da sincronização de objetos do SQL Server
 * Melhorias de desempenho de GUI durante a avaliação e conversão
 * Mapeamento atualizado de `ROWID` para `varbinary(40)` para facilitar a migração de dados
-* Conversão aprimorada `SELECT ... FROM NEW/OLD TABLE` de instruções
+* Conversão aprimorada de `SELECT ... FROM NEW/OLD TABLE` instruções
 * Nova conversão de `ALTER` instruções para procedimentos e funções
 * Nova conversão de atribuições de desestruturação
 
@@ -38,10 +48,10 @@ A versão v 8.7 do SSMA para DB2 inclui um analisador de sintaxe DB2 totalmente 
 Além disso, o SSMA para DB2 agora fornece:
 
 * Uma correção para a descoberta de chaves estrangeiras ao migrar do DB2 no LUW.
-* Conversão aprimorada `SELECT ... FOR UPDATE` da instrução.
-* Conversão aprimorada `COUNT` para a função em tabelas do MQ.
+* Conversão aprimorada da `SELECT ... FOR UPDATE` instrução.
+* Conversão aprimorada para a `COUNT` função em tabelas do MQ.
 * Conversão de `SAVEPOINT` instruções.
-* Conversão para emular o comportamento de `NULL` DB2's para `ORDER BY` os valores na cláusula.
+* Conversão para emular o comportamento de DB2's para `NULL` os valores na `ORDER BY` cláusula.
 * Suporte de análise para a instrução do conjunto de resultados associado.
 
 > [!IMPORTANT]
@@ -51,7 +61,7 @@ Além disso, o SSMA para DB2 agora fornece:
 
 Além de um conjunto direcionado de correções projetadas para melhorar a usabilidade e o desempenho, a versão do v 8.6 do SSMA para DB2 foi aprimorada com a adição de uma configuração que permite aos usuários omitir as propriedades estendidas do SSMA no código convertido.
 
-Para aproveitar essa configuração, no SSMA para DB2, navegue até **ferramentas** > **configurações** > do projeto**conversão****geral** > e **, em seguida, atualize**o valor da configuração **omitir propriedades estendidas** para **Sim**.
+Para aproveitar essa configuração, no SSMA para DB2, navegue até **ferramentas**  >  **configurações do projeto**  >  **General**  >  **conversão**geral e **, em**seguida, atualize o valor da configuração **omitir propriedades estendidas** para **Sim**.
 
 ![Omitir a configuração de propriedades estendidas](../db2/media/ssma-omit-extended-properties.png)
 
@@ -70,7 +80,7 @@ A versão v 8.5 do SSMA para DB2 foi aprimorada com suporte para autenticação 
 
 Além disso, o SSMA para DB2 foi aprimorado com:
 
-* Suporte para adição de conversão `GET DIAGNOSTICS` para a `ROW_NUMBER`instrução com.
+* Suporte para adição de conversão para `GET DIAGNOSTICS` a instrução com `ROW_NUMBER` .
 * Uma correção para um bug relacionado a espaços no início do nome do objeto não está sendo respeitado.
 
 > [!IMPORTANT]
@@ -88,16 +98,16 @@ A versão v 8.4 do SSMA para DB2 foi aprimorada com correções direcionadas que
 A versão v 8.3 do SSMA para DB2 foi aprimorada com correções direcionadas que foram projetadas para melhorar a qualidade e a conversão de métricas. Além disso, esta versão do SSMA para DB2 fornece correções que:
 
 * Solucionar problemas de acessibilidade.
-* Adicione suporte básico para `hierarchyid` o tipo em SQL Server.
-* Substitua o uso da função TRIM em consultas de descoberta de `RTRIM` / `LTRIM`z/os por.
-* Permitir que o usuário especifique a coleção de pacotes ao se conectar no ' modo padrão ' `NULLID`(o padrão é).
-* Adicione conversão para `CREATE TABLE AS SELECT`.
+* Adicione suporte básico para o `hierarchyid` tipo em SQL Server.
+* Substitua o uso da função TRIM em consultas de descoberta de z/OS por `RTRIM` / `LTRIM` .
+* Permitir que o usuário especifique a coleção de pacotes ao se conectar no ' modo padrão ' (o padrão é `NULLID` ).
+* Adicione conversão para `CREATE TABLE AS SELECT` .
 * Melhorar conversões para tabelas temporárias globais.
 * Resolva um problema com a ordem de verificação de exclusividade do objeto para priorizar tabelas sobre restrições, se os nomes colidirem.
-* Resolva um problema com o carregamento de valores de coluna `DATE` padrão `TIMESTAMP` para e para z/os.
-* Suporte ao caractere de alimentação de linha Unicode ( `NEL`também conhecido como).
-* Resolva um problema com a conversão de cursor `RETURN TO` com a cláusula Missing.
-* Adicione suporte para rótulos e `GOTO`.
+* Resolva um problema com o carregamento de valores de coluna padrão para `DATE` e `TIMESTAMP` para z/os.
+* Suporte ao caractere de alimentação de linha Unicode (também conhecido como `NEL` ).
+* Resolva um problema com a conversão de cursor com a `RETURN TO` cláusula Missing.
+* Adicione suporte para rótulos e `GOTO` .
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -138,7 +148,7 @@ A versão v 8.0 do SSMA para DB2 é aprimorada para fornecer correções direcio
 A versão v 7.10 do SSMA para DB2 contém as seguintes alterações:
 
 * Correções direcionadas projetadas para fornecer segurança adicional e proteções de privacidade para atender às alterações nos requisitos globais.
-* Uma correção para a conversão `BEGIN-END` de blocos.
+* Uma correção para a conversão de `BEGIN-END` blocos.
 
 ## <a name="ssma-v79"></a>7.9 do SSMA v
 
@@ -224,9 +234,9 @@ A versão de maio de 2016 do SSMA para DB2 contém as seguintes alterações:
 * Adicionada a conversão de tabelas de versão do sistema do DB2 para SQL Server tabelas temporais.
 * Analisador e resolvedor do DB2 aprimorados.
 * Verificação do instalador removida para .NET 2,0.
-* Removido. \*dll desnecessário do instalador do DB2.
-* `save-project` Corrigidos `open-project` e comandos para o console do SSMA.
-* Comando `securepassword` fixo para o console do SSMA.
+* Removido \* . dll desnecessário do instalador do DB2.
+* Corrigidos `save-project` e `open-project` comandos para o console do SSMA.
+* `securepassword`Comando fixo para o console do SSMA.
 * Contagem fixa de objetos para carregamento inicial.
 * Corrigido o bug nas configurações globais.
   

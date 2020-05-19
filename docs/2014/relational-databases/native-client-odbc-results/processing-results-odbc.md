@@ -15,15 +15,15 @@ helpviewer_keywords:
 - result sets [ODBC]
 - COMPUTE BY clause
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761f74a56fd846361ca98dd8f2746a01b53106ec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207044"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699313"
 ---
 # <a name="processing-results-odbc"></a>Processando resultados (ODBC)
   Depois que um aplicativo envia uma instrução SQL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna qualquer dado resultante como um ou mais conjuntos de resultados. Um conjunto de resultados é um conjunto de linhas e colunas que correspondem aos critérios da consulta. As instruções SELECT, funções de catálogo e alguns procedimentos armazenados geram um conjunto de resultados disponibilizado para um aplicativo no formato tabular. Se a instrução SQL executada for um procedimento armazenado, um lote contendo vários comandos ou uma instrução SELECT contendo palavras-chave, haverá vários conjuntos de resultados a serem processados.  

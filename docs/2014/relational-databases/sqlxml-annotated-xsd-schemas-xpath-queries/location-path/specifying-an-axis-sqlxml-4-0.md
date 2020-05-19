@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012644"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703092"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificando um eixo (SQLXML 4.0)
     
@@ -33,7 +33,7 @@ ms.locfileid: "66012644"
   
      Contém o filho do nó de contexto.  
   
-     A seguinte expressão XPath (caminho de localização) seleciona no nó de contexto atual todos os>filhos do ** \<cliente** :  
+     A seguinte expressão XPath (caminho de localização) seleciona no nó de contexto atual todos os>filhos do ** \< cliente** :  
   
     ```  
     child::Customer  
@@ -45,7 +45,7 @@ ms.locfileid: "66012644"
   
      Contém o pai do nó de contexto.  
   
-     A expressão XPath a seguir seleciona todos os ** \<clientes>** pais da ** \<ordem>** filhos:  
+     A expressão XPath a seguir seleciona todos os ** \< clientes>** pais da ** \< ordem>** filhos:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  

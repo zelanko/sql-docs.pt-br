@@ -11,15 +11,15 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69fe9c7decd7521ca752b0b5092748c907036f40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012710"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703126"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introdução para usar consultas XPath (SQLXML 4.0)
   Uma consulta de linguagem XPath pode ser especificada como parte de uma URL ou em um modelo. O esquema de mapeamento determina a estrutura desse fragmento resultante, e os valores são recuperados no banco de dados. Conceitualmente, esse processo é semelhante a criar exibições que usem a instrução CREATE VIEW e escrever consultas SQL com base nelas.  
@@ -45,17 +45,17 @@ ms.locfileid: "66012710"
 </root>  
 ```  
   
- Neste documento, ** \<o cliente>** é um nó de elemento, **CID** é um nó de atributo e **"importante"** é um nó de texto.  
+ Neste documento, o ** \< cliente>** é um nó de elemento, **CID** é um nó de atributo e **"importante"** é um nó de texto.  
   
- XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de nós de ** \<>de clientes** , o XPath pode selecionar todos os ** \<** nós de>de pedidos com o valor de atributo de **Data** de **"7/14/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
+ XPath é uma linguagem de navegação gráfica usada para selecionar um conjunto de nós em um documento XML. Cada operador de XPath seleciona um conjunto de nós com base em um conjunto selecionado por um operador de XPath anterior. Por exemplo, dado um conjunto de nós de ** \<>de clientes** , o XPath pode selecionar todos os nós de ** \<>de pedidos** com o valor de atributo de **Data** de **"7/14/1999"**. O conjunto de nós resultante contém todos os pedidos com a data 14/7/1999.  
   
- XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4,0 implementa um subconjunto da especificação XPath do W3C, que está http://www.w3.org/TR/1999/PR-xpath-19991008.htmllocalizado em.  
+ XPath é definida pelo W3C como uma linguagem de navegação padrão. O SQLXML 4,0 implementa um subconjunto da especificação XPath do W3C, que está localizado em http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
  Estas são as principais diferenças entre a implementação da XPath do W3C e a implementação do SQLXML 4.0.  
   
 -   **Consultas raiz**  
   
-     O SQLXML 4.0 não oferece suporte à consulta raiz (/). Cada consulta XPath deve começar em um ElementType de nível ** \<superior>** no esquema.  
+     O SQLXML 4.0 não oferece suporte à consulta raiz (/). Cada consulta XPath deve começar em um ElementType de nível superior ** \<>** no esquema.  
   
 -   **Relatando erros**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66012710"
 |-------------|----------|----------------------------|  
 |Eixos|Eixos `attribute`, `child`, `parent` e `self`|[Especificando eixos em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Predicados com valor booliano incluindo predicados sucessivos e aninhados||[Especificando operadores aritméticos em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Todos os operadores relacionais|=,! =, <, \<=, >, >=|[Especificando operadores relacionais em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Todos os operadores relacionais|=,! =, <, \< =, >, >=|[Especificando operadores relacionais em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores aritméticos|+, -, *, div|[Especificando operadores aritméticos em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funções de conversão explícitas|`number()`, `string()`, `Boolean()`|[Especificando funções de conversão explícitas em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores boolianos|AND, OR|[Especificando operadores boolianos em consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  

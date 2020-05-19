@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0df84bb0a4ee7e933666705a9d1a1d8fb31edf2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205454"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698163"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviando dados como um parâmetro com valor de tabela com todos os valores na memória (ODBC)
   Este tópico descreve como enviar dados a um procedimento armazenado como um parâmetro com valor de tabela quando todos os valores estão na memória. Para outro exemplo que demonstra parâmetros com valor de tabela, consulte [usar parâmetros com valor de tabela &#40;&#41;ODBC ](table-valued-parameters-odbc.md).  

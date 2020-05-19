@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa06587b2b84c7c44d6b73a89c00a52fa419e9b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679817"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702509"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI (índices XML seletivos)
   Os índices XML seletivos são outro tipo de índice XML que está disponível para você além de índices XML comuns. Os objetivos do recurso de índice XML seletivo são os seguintes:  

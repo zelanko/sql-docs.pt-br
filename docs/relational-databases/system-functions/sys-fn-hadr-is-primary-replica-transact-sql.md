@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811406"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262121"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  É o nome do banco de dados. *dbname* é do tipo sysname.  
   
 ## <a name="returns"></a>Retornos  
- Retornará 1 se o banco de dados na instância atual for a réplica primária. Caso contrário, retorna 0.  
+ Retorna o tipo de dado **bool**: 1 se o banco de dados na instância atual for a réplica primária, caso contrário, 0.  
   
 ## <a name="remarks"></a>Comentários  
  Use esta função para determinar se aparentemente a instância local está hospedando a réplica primária do banco de dados de disponibilidade especificado. O código de exemplo pode ser semelhante ao seguinte:  

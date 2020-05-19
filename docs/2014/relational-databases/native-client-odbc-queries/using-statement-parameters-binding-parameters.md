@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89b124ea6c73b9ebb80ab5a047b6d7e4cafe2e81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175838"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699897"
 ---
 # <a name="binding-parameters"></a>Associando parâmetros
   Para que a instrução possa ser executada, cada marcador de parâmetro em uma instrução SQL deve ser associado a uma variável no aplicativo. Isso é feito chamando a função [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** descreve a variável do programa (endereço, tipo de dados C e assim por diante) para o driver. Ela também identifica o marcador de parâmetro indicando seu valor ordinal e, em seguida, descreve as características do objeto SQL que representa (tipo de dados SQL, precisão e assim por diante).
@@ -54,9 +54,9 @@ ms.locfileid: "78175838"
 
 -   Especificar os parâmetros no aplicativo em uma ordem diferente daquela especificada quando o procedimento armazenado foi criado.
 
- Só há suporte para parâmetros nomeados ao [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` usar a instrução ou a sequência de escape de chamada ODBC para executar um procedimento armazenado.
+ Só há suporte para parâmetros nomeados ao usar a [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` instrução ou a sequência de escape de chamada ODBC para executar um procedimento armazenado.
 
- Se `SQL_DESC_NAME` for definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir `SQL_DESC_NAME`.  Se literais forem usadas em chamadas de procedimento armazenado, em que `SQL_DESC_NAME` os parâmetros foram definidos, os literais deverão usar o formato *' name*=*Value*', em que *Name* é o nome do parâmetro de @p1procedimento armazenado (por exemplo,). Para obter mais informações, consulte [ligando parâmetros por nome (parâmetros nomeados)](https://go.microsoft.com/fwlink/?LinkId=167215).
+ Se `SQL_DESC_NAME` for definido para um parâmetro de procedimento armazenado, todos os parâmetros de procedimento armazenado na consulta também deverão definir `SQL_DESC_NAME`.  Se literais forem usadas em chamadas de procedimento armazenado, em que `SQL_DESC_NAME` os parâmetros foram definidos, os literais deverão usar o formato *' name* = *Value*', em que *Name* é o nome do parâmetro de procedimento armazenado (por exemplo, @p1 ). Para obter mais informações, consulte [ligando parâmetros por nome (parâmetros nomeados)](https://go.microsoft.com/fwlink/?LinkId=167215).
 
 ## <a name="see-also"></a>Consulte Também
  [Usando parâmetros de instrução](using-statement-parameters.md)

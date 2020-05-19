@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696230"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usar recursos avançados de data e hora (OLE DB)
-  Este exemplo mostra como usar os recursos de data/hora introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. O exemplo usa os quatro novos tipos de data e hora`date`( **time**, hora `datetime2`, e `datetimeoffset`) para executar comandos com parâmetros e recuperar os resultados do conjunto de linhas.  
+  Este exemplo mostra como usar os recursos de data/hora introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. O exemplo usa os quatro novos tipos de data e hora ( `date` , **hora**, `datetime2` e `datetimeoffset` ) para executar comandos com parâmetros e recuperar os resultados do conjunto de linhas.  
   
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 18651b91ee2a47819360eae4c57c18ac3eae672b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013774"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703536"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)
-  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar os dados de um banco de dados usando esquemas anotados, o atributo `sql:overflow-field` pode ser especificado para identificar a coluna da tabela na qual os dados de estouro estão armazenados. O `sql:overflow-field` atributo pode ser especificado no ** \<elemento>**.  
+  Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar os dados de um banco de dados usando esquemas anotados, o atributo `sql:overflow-field` pode ser especificado para identificar a coluna da tabela na qual os dados de estouro estão armazenados. O `sql:overflow-field` atributo pode ser especificado no ** \< elemento>**.  
   
  Em seguida, esses dados são recuperados destas formas:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66013774"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Especificando sql:overflow-field para um elemento  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>a. Especificando sql:overflow-field para um elemento  
  Este exemplo presume que o seguinte script foi executado de forma que existe uma tabela chamada Customers2 no banco de dados tempdb:  
   
 ```  
@@ -60,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Além disso, você deve criar um diretório virtual para o banco de dados tempdb-e um nome virtual `template` de modelo do tipo chamado "template".  
+ Além disso, você deve criar um diretório virtual para o banco de dados tempdb-e um nome virtual de modelo do `template` tipo chamado "template".  
   
  No exemplo a seguir, o esquema de mapeamento recupera os dados não consumidos que são armazenados na coluna AddressOverflow tabela Customers2:  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702532"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos e limitações de uso de coleções de esquema XML no servidor
   A validação da linguagem XSD tem algumas limitações em relação a colunas SQL que usam o tipo de dados `xml`. A tabela a seguir fornece detalhes sobre essas limitações e diretrizes para modificação de seu esquema XSD para que ele possa funcionar com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os tópicos nesta seção fornecem informações adicionais sobre limitações específicas e diretrizes para trabalhar com elas.  
@@ -47,7 +47,7 @@ ms.locfileid: "63241256"
 |Adicionando membros a um grupo de substituição existente|Não é possível adicionar membros a um grupo de substituições existente em uma coleção de esquema XML. Um grupo de substituição em um esquema XML é restrito no sentido de que o elemento principal e todos os seus elementos membros devem ser definidos na mesma instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Formas canônicas e restrições de padrões|A representação canônica de um valor não pode violar a restrição de padrão de seu tipo. Para obter mais informações, consulte [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md).|  
 |Aspectos de enumeração|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a esquemas XML com tipos que têm aspectos padrão ou enumerações que violam essas facetas.|  
-|Comprimento do aspecto|As facetas **Length**, **minLength**e **MaxLength** são armazenadas como um `long` tipo. Esse é um tipo de 32 bits. Portanto, o intervalo de valores aceitáveis para esses valores é<sup>^</sup>2 31.|  
+|Comprimento do aspecto|As facetas **Length**, **minLength**e **MaxLength** são armazenadas como um `long` tipo. Esse é um tipo de 32 bits. Portanto, o intervalo de valores aceitáveis para esses valores é 2 <sup>^</sup> 31.|  
 |Atributo ID|Cada componente de esquema XML pode ter um atributo de ID. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impõe exclusividade para as declarações **\<xsd:attribute>** do tipo **ID**, mas não armazena esses valores. O escopo para imposição de exclusividade é a instrução {CREATE &#124; ALTER} XML SCHEMA COLLECTION.|  
 |Tipo ID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não oferece suporte a elementos de tipo **xs:ID**, **xs:IDREF**ou **xs:IDREFS**. Um esquema pode não declarar elementos desse tipo ou elementos derivados pela restrição ou extensão desse tipo.|  
 |Namespace local|O namespace local precisa ser especificado explicitamente para o elemento **\<xsd:any>** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejeita esquemas que usam uma cadeia de caracteres vazia ("") como um valor para o atributo de namespace. Em vez disso, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exige o uso explícito de "##local" para indicar um elemento ou atributo não qualificado, como a instância do caractere curinga.|  

@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98752b4eb754bb3f29d8b42eb27d9122d79cd03d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62513187"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693923"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações do SQL Server
 
   Em um banco de dados, o gerenciamento incorreto de transações normalmente leva a problemas de contenção e de desempenho em sistemas com muitos usuários. À medida que o número de usuários que acessam os dados aumenta, torna-se importante ter aplicativos que utilizem as transações de maneira eficaz. Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente.  
   
-**Aplica-se a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] menos que indicado o contrário.  
+**Aplica-se a**: a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] menos que indicado o contrário.  
   
 ##  <a name="in-this-guide"></a><a name="Top"></a>Neste guia  
 
@@ -141,7 +141,7 @@ ms.locfileid: "62513187"
   
  Se ocorrer um erro de instrução de tempo de execução (como uma violação de restrição) em um lote, o comportamento padrão no [!INCLUDE[ssDE](../includes/ssde-md.md)] será reverter somente a instrução que gerou o erro. Você pode alterar esse comportamento usando a instrução SET XACT_ABORT. Depois que SET XACT_ABORT ON for executada, qualquer erro de instrução em tempo de execução fará com que a transação atual seja revertida. Os erros de compilação, como erros de sintaxe, não são afetados por SET XACT_ABORT. Para obter mais informações, veja [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
- Quando ocorrerem erros, a ação corretiva (COMMIT ou ROLLBACK) deverá ser incluída em um código de aplicativo. Uma ferramenta eficaz para lidar com erros, incluindo aqueles em transações, é [!INCLUDE[tsql](../includes/tsql-md.md)] a tentativa... CAPTURAR construção. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]do, você pode usar a instrução Throw para gerar uma exceção e transfere a execução para um bloco catch de um try... CAPTURAR construção. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
+ Quando ocorrerem erros, a ação corretiva (COMMIT ou ROLLBACK) deverá ser incluída em um código de aplicativo. Uma ferramenta eficaz para lidar com erros, incluindo aqueles em transações, é a [!INCLUDE[tsql](../includes/tsql-md.md)] tentativa... CAPTURAR construção. Para obter mais informações com exemplos que incluem transações, veja [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql). A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] do, você pode usar a instrução Throw para gerar uma exceção e transfere a execução para um bloco catch de um try... CAPTURAR construção. Para obter mais informações, veja [THROW &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Erros em tempo de execução e de compilação no modo de confirmação automática  
 
@@ -323,8 +323,8 @@ GO
   
 |Nível de isolamento|Leitura suja|Leitura não repetível|Fantasma|  
 |---------------------|----------------|------------------------|-------------|  
-|**Leitura não confirmada**|Sim|Sim|Sim|  
-|**Leitura confirmada**|Não|Sim|Sim|  
+|**Leitura não confirmada**|Sim|Sim|Yes|  
+|**Leitura confirmada**|Não|Sim|Yes|  
 |**Leitura repetida**|Não|Não|Sim|  
 |**Instantâneo**|Não|Não|Não|  
 |**Serializável**|Não|Não|Não|  
@@ -475,9 +475,9 @@ GO
   
 ||Modo concedido existente||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Modo solicitado**|**FOR**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**Intencional compartilhado (IS)**|Sim|Sim|Sim|Sim|Sim|Não|  
-|**Compartilhado (S)**|Sim|Sim|Sim|Não|Não|Não|  
+|**Modo solicitado**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
+|**Intencional compartilhado (IS)**|Yes|Yes|Yes|Yes|Sim|No|  
+|**Compartilhado (S)**|Yes|Yes|Sim|Não|Não|Não|  
 |**Atualização (U)**|Sim|Sim|Não|Não|Não|Não|  
 |**Intencional exclusivo (IX)**|Sim|Não|Não|Sim|Não|Não|  
 |**Compartilhado com intenção exclusiva (SIX)**|Sim|Não|Não|Não|Não|Não|  
@@ -506,9 +506,9 @@ GO
   
 -   A fila representa o modo de bloqueio que protege a entrada de índice.  
   
--   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range*T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas com um hífen (-), como o intervalo*T*-*K*.  
+-   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range*T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas com um hífen (-), como o intervalo*T* - *K*.  
   
-    |Intervalo|Linha|Mode|Descrição|  
+    |Intervalo|Linha|Modo|Descrição|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de intervalo serializável.|  
     |RangeS|U|RangeS-U|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de atualização serializável.|  
@@ -523,12 +523,12 @@ GO
 ||Modo concedido existente|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**Modo solicitado**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**Compartilhado (S)**|Sim|Sim|Não|Sim|Sim|Sim|Não|  
-|**Atualização (U)**|Sim|Não|Não|Sim|Não|Sim|Não|  
-|**Exclusivo (X)**|Não|Não|Não|Não|Não|Sim|Não|  
-|**RangeS-S**|Sim|Sim|Não|Sim|Sim|Não|Não|  
+|**Compartilhado (S)**|Yes|Sim|Não|Sim|Yes|Sim|Não|  
+|**Atualização (U)**|Sim|Não|Não|Sim|Não|Sim|No|  
+|**Exclusivo (X)**|Não|Não|Não|Não|Não|Sim|No|  
+|**RangeS-S**|Yes|Sim|Não|Sim|Sim|Não|Não|  
 |**RangeS-U**|Sim|Não|Não|Sim|Não|Não|Não|  
-|**RangeI-N**|Sim|Sim|Sim|Não|Não|Sim|Não|  
+|**RangeI-N**|Yes|Yes|Sim|Não|Não|Sim|No|  
 |**RangeX-X**|Não|Não|Não|Não|Não|Não|Não|  
   
 #### <a name="conversion-locks"></a>Bloqueios de Conversão  
@@ -663,7 +663,7 @@ INSERT mytable VALUES ('Dan');
   
  Na ilustração, a transação T1 tem uma dependência da transação T2 para o recurso de bloqueio de tabela **Part**. Da mesma forma, a transação T2 tem uma dependência da transação T1 para o recurso de bloqueio de tabela **Supplier**. Devido a essas dependências formarem um ciclo, há um deadlock entre as transações T1 e T2.  
   
- Os deadlocks também podem ocorrer quando uma tabela é particionada e a configuração LOCK_ESCALATION do ALTER TABLE é configurada para AUTO. Quando LOCK_ESCALATION é definido como AUTO, a simultaneidade aumenta, [!INCLUDE[ssDE](../includes/ssde-md.md)] permitindo que o bloqueie partições de tabela no nível de HoBT em vez de no nível de tabela. Entretanto, quando transações separadas mantêm bloqueios de partição em uma tabela e querem um bloqueio em algum lugar de outra partição de transações, isso causa um deadlock. Esse tipo de deadlock pode ser evitado configurando LOCK_ESCALATION para TABLE; embora essa configuração irá reduzir a simultaneidade forçando as atualizações extensas em uma partição a esperarem por um bloqueio de tabela.  
+ Os deadlocks também podem ocorrer quando uma tabela é particionada e a configuração LOCK_ESCALATION do ALTER TABLE é configurada para AUTO. Quando LOCK_ESCALATION é definido como AUTO, a simultaneidade aumenta, permitindo que o [!INCLUDE[ssDE](../includes/ssde-md.md)] bloqueie partições de tabela no nível de HoBT em vez de no nível de tabela. Entretanto, quando transações separadas mantêm bloqueios de partição em uma tabela e querem um bloqueio em algum lugar de outra partição de transações, isso causa um deadlock. Esse tipo de deadlock pode ser evitado configurando LOCK_ESCALATION para TABLE; embora essa configuração irá reduzir a simultaneidade forçando as atualizações extensas em uma partição a esperarem por um bloqueio de tabela.  
   
 #### <a name="detecting-and-ending-deadlocks"></a>Detectando e encerrando deadlocks  
 
@@ -745,7 +745,7 @@ INSERT mytable VALUES ('Dan');
 |Propriedade|Sinalizadores de rastreamento 1204 e 1222|Apenas sinalizador de rastreamento 1204|Apenas sinalizador de rastreamento 1222|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |Formato da saída|A saída captada no log de erros do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|Focado nos nós envolvidos no deadlock. Cada nó tem uma seção dedicada e a seção final descreve a vítima de deadlock.|Retorna informações em um formato parecido com XML que não está em conformidade com uma definição de esquema XML (XSD). O formato tem três seções principais. A primeira seção declara a vítima de deadlock. A segunda seção descreve cada processo envolvido no deadlock. A terceira seção descreve os recursos que são sinônimos com os nós no sinalizador de rastreamento 1204.|  
-|Identificando atributos|**SPID:\<x> ECID:\<x>.** Identifica o thread de ID de processo de sistema em casos de processos paralelos. A entrada `SPID:<x> ECID:0`, em \<que x> é substituído pelo valor SPID, representa o thread principal. A entrada `SPID:<x> ECID:<y>`, em \<que x> é substituída pelo valor spid \<e y> é maior que 0, representa os subthreads para o mesmo SPID.<br /><br /> **BatchID** (**sbid** para sinalizador de rastreamento 1222). Identifica o lote do qual a execução de código está solicitando ou mantendo um bloqueio. Quando vários conjuntos de resultados ativos (MARS) estão desabilitados, o valor BatchID é 0. Quando MARS está habilitado, o valor para lotes ativos é 1 para *n*. Se não houver lotes ativos na sessão, BatchID será 0.<br /><br /> **Modo**. Especifica o tipo de bloqueio de um determinado recurso que é solicitado, concedido ou aguardado por um thread. O modo pode ser IS (Intencional Compartilhado), S (Compartilhado), U (Atualização), IX (Intencional Exclusivo), SIX (Compartilhado com Intenção Exclusiva) e X (Exclusivo).<br /><br /> **Nº de linha** (**linha** para o sinalizador de rastreamento 1222). Lista o número de linha no lote atual de instruções que estava sendo executado quando o deadlock aconteceu.<br /><br /> **Input Buf** (**inputbuf** para o sinalizador de rastreamento 1222). Lista todas as instruções no lote atual.|**Nó**. Representa o número de entrada na cadeia de deadlock.<br /><br /> **Listas**. O proprietário do bloqueio pode fazer parte destas listas:<br /><br /> **Lista de Concessões**. Enumera os proprietários atuais do recurso.<br /><br /> **Lista de Conversão**. Enumera os proprietários atuais que estão tentando converter seus bloqueios em um nível mais alto.<br /><br /> **Lista de Espera**. Enumera as novas solicitações de bloqueio do recurso.<br /><br /> **Tipo de Instrução**. Descreve o tipo de instrução DML (SELECT, INSERT, UPDATE ou DELETE) em que os threads têm permissões.<br /><br /> **Proprietário do Recurso Vítima**. Especifica o thread participante que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escolhe como a vítima para quebrar o ciclo de deadlock. O thread escolhido e todos os sub-threads existentes são encerrados.<br /><br /> **Próximo Branch**. Representa os dois ou mais sub-threads do mesmo SPID envolvidos no ciclo de deadlock.|**vítima do deadlock**. Representa o endereço de memória física da tarefa (consulte [os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) que foi selecionada como vítima de deadlock. Pode ser 0 (zero) no caso de um deadlock não resolvido. Uma tarefa que está sendo revertida não pode ser escolhida como vítima de deadlock.<br /><br /> **executionstack**. Representa o código [!INCLUDE[tsql](../includes/tsql-md.md)] que está sendo executado no momento em que o deadlock ocorre.<br /><br /> **prioridade**. Representa a prioridade do deadlock. Em determinados casos, o [!INCLUDE[ssDE](../includes/ssde-md.md)] pode optar por alterar a prioridade de deadlock para uma duração curta para obter uma simultaneidade melhor.<br /><br /> **logused**. Espaço de log usado pela tarefa.<br /><br /> **ID do proprietário**. A ID da transação que tem o controle da solicitação.<br /><br /> **status**. O estado da tarefa. Pode ser um dos seguintes valores:<br /><br /> >> **pendente**. Esperando por um thread de trabalho.<br /><br /> >> **executável**. Pronto para ser executado, mas esperando por um quantum.<br /><br /> >> **em execução**. Atualmente em execução no agendador.<br /><br /> >> **suspenso**. A execução está suspensa.<br /><br /> >> **concluído**. A tarefa foi concluída.<br /><br /> >> **spinloop**. Esperando que um spinlock seja liberado.<br /><br /> **waitresource**. O recurso exigido pela tarefa.<br /><br /> **waittime**. O tempo em milissegundos de espera pelo recurso.<br /><br /> **schedulerid**. O agendador associado à essa tarefa. Veja [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nome do host**. O nome da estação de trabalho.<br /><br /> **IsolationLevel**. O nível de isolamento da transação atual.<br /><br /> **Xactid**. A ID da transação que tem controle da solicitação.<br /><br /> **CurrentDb**. A ID do banco de dados.<br /><br /> **lastbatchstarted**. A última vez em que um processo cliente iniciou uma execução em lote.<br /><br /> **lastbatchcompleted**. A última vez em que um processo cliente concluiu uma execução em lote.<br /><br /> **clientoption1 e clientoption2**. Defina as opções nessa conexão de cliente. Esse é um bitmask que inclui informações sobre opções normalmente controladas por instruções SET, como SET NOCOUNT e SET XACTABORT.<br /><br /> **associatedObjectId**. Representa a ID de HoBT (heap ou árvore B).|  
+|Identificando atributos|**SPID: \< x> ECID: \< x>.** Identifica o thread de ID de processo de sistema em casos de processos paralelos. A entrada `SPID:<x> ECID:0` , em que \< x> é substituído pelo valor SPID, representa o thread principal. A entrada `SPID:<x> ECID:<y>` , em que \< x> é substituída pelo valor SPID e \< y> é maior que 0, representa os subthreads para o mesmo SPID.<br /><br /> **BatchID** (**sbid** para sinalizador de rastreamento 1222). Identifica o lote do qual a execução de código está solicitando ou mantendo um bloqueio. Quando vários conjuntos de resultados ativos (MARS) estão desabilitados, o valor BatchID é 0. Quando MARS está habilitado, o valor para lotes ativos é 1 para *n*. Se não houver lotes ativos na sessão, BatchID será 0.<br /><br /> **Modo**. Especifica o tipo de bloqueio de um determinado recurso que é solicitado, concedido ou aguardado por um thread. O modo pode ser IS (Intencional Compartilhado), S (Compartilhado), U (Atualização), IX (Intencional Exclusivo), SIX (Compartilhado com Intenção Exclusiva) e X (Exclusivo).<br /><br /> **Nº de linha** (**linha** para o sinalizador de rastreamento 1222). Lista o número de linha no lote atual de instruções que estava sendo executado quando o deadlock aconteceu.<br /><br /> **Input Buf** (**inputbuf** para o sinalizador de rastreamento 1222). Lista todas as instruções no lote atual.|**Nó**. Representa o número de entrada na cadeia de deadlock.<br /><br /> **Lista**. O proprietário do bloqueio pode fazer parte destas listas:<br /><br /> **Lista de Concessões**. Enumera os proprietários atuais do recurso.<br /><br /> **Lista de Conversão**. Enumera os proprietários atuais que estão tentando converter seus bloqueios em um nível mais alto.<br /><br /> **Lista de Espera**. Enumera as novas solicitações de bloqueio do recurso.<br /><br /> **Tipo de Instrução**. Descreve o tipo de instrução DML (SELECT, INSERT, UPDATE ou DELETE) em que os threads têm permissões.<br /><br /> **Proprietário do Recurso Vítima**. Especifica o thread participante que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escolhe como a vítima para quebrar o ciclo de deadlock. O thread escolhido e todos os sub-threads existentes são encerrados.<br /><br /> **Próximo Branch**. Representa os dois ou mais sub-threads do mesmo SPID envolvidos no ciclo de deadlock.|**vítima do deadlock**. Representa o endereço de memória física da tarefa (consulte [os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)) que foi selecionada como vítima de deadlock. Pode ser 0 (zero) no caso de um deadlock não resolvido. Uma tarefa que está sendo revertida não pode ser escolhida como vítima de deadlock.<br /><br /> **executionstack**. Representa o código [!INCLUDE[tsql](../includes/tsql-md.md)] que está sendo executado no momento em que o deadlock ocorre.<br /><br /> **prioridade**. Representa a prioridade do deadlock. Em determinados casos, o [!INCLUDE[ssDE](../includes/ssde-md.md)] pode optar por alterar a prioridade de deadlock para uma duração curta para obter uma simultaneidade melhor.<br /><br /> **logused**. Espaço de log usado pela tarefa.<br /><br /> **ID do proprietário**. A ID da transação que tem o controle da solicitação.<br /><br /> **status**. O estado da tarefa. Pode ser um dos seguintes valores:<br /><br /> >> **pendente**. Esperando por um thread de trabalho.<br /><br /> >> **executável**. Pronto para ser executado, mas esperando por um quantum.<br /><br /> >> **em execução**. Atualmente em execução no agendador.<br /><br /> >> **suspenso**. A execução está suspensa.<br /><br /> >> **concluído**. A tarefa foi concluída.<br /><br /> >> **spinloop**. Esperando que um spinlock seja liberado.<br /><br /> **waitresource**. O recurso exigido pela tarefa.<br /><br /> **waittime**. O tempo em milissegundos de espera pelo recurso.<br /><br /> **schedulerid**. O agendador associado à essa tarefa. Veja [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql).<br /><br /> **nome do host**. O nome da estação de trabalho.<br /><br /> **IsolationLevel**. O nível de isolamento da transação atual.<br /><br /> **Xactid**. A ID da transação que tem controle da solicitação.<br /><br /> **CurrentDb**. A ID do banco de dados.<br /><br /> **lastbatchstarted**. A última vez em que um processo cliente iniciou uma execução em lote.<br /><br /> **lastbatchcompleted**. A última vez em que um processo cliente concluiu uma execução em lote.<br /><br /> **clientoption1 e clientoption2**. Defina as opções nessa conexão de cliente. Esse é um bitmask que inclui informações sobre opções normalmente controladas por instruções SET, como SET NOCOUNT e SET XACTABORT.<br /><br /> **associatedObjectId**. Representa a ID de HoBT (heap ou árvore B).|  
 |Atributos do recurso|**RID**. Identifica a única linha dentro de uma tabela na qual um bloqueio é mantido ou solicitado. RID é representado como RID: *db_id:file_id:page_no:row_no*. Por exemplo, `RID: 6:1:20789:0`.<br /><br /> **Objeto**. Identifica a tabela na qual um bloqueio é mantido ou solicitado. OBJECT é representado como OBJECT: *db_id:object_id*. Por exemplo, `TAB: 6:2009058193`.<br /><br /> **Chave**. Identifica o intervalo de chave dentro de um índice em que um bloqueio é mantido ou solicitado. KEY é representado como KEY: *db_id:hobt_id* (*o valor de hash da chave de índice*). Por exemplo, `KEY: 6:72057594057457664 (350007a4d329)`.<br /><br /> **PAG**. Identifica o recurso de página no qual um bloqueio é mantido ou solicitado. PAG é representado como PAG: *db_id:file_id:page_no*. Por exemplo, `PAG: 6:1:20789`.<br /><br /> **Ext**. Identifica a estrutura de extensão. EXT é representado como EXT: *db_id:file_id:extent_no*. Por exemplo, `EXT: 6:1:9`.<br /><br /> **DB**. Identifica o bloqueio de banco de dados. **DB é representado de um dos seguintes modos:**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB], que identifica o bloqueio de banco de dados feito pelo banco de dados de backup.<br /><br /> DB: *db_id*[BULK-OP-LOG], que identifica o bloqueio feito pelo log de backup daquele banco de dados específico.<br /><br /> **Aplicativo**. Identifica o bloqueio feito por um recurso de aplicativo. APP é representado por APP: *lock_resource*. Por exemplo, `APP: Formf370f478`.<br /><br /> **Metadados**. Representa os recursos de metadados envolvidos em um deadlock. Como METADATA tem muitos sub-recursos, o valor retornado depende do sub-recurso envolvido no deadlock. Por exemplo, METADATA.USER_TYPE retorna `user_type_id =` \<*integer_value*>. Para obter mais informações sobre os recursos e sub-recursos METADATA, consulte [sys.DM tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql).<br /><br /> **HoBT**. Representa um heap ou árvore B envolvida em um deadlock.|Nenhum exclusivo para esse sinalizador de rastreamento.|Nenhum exclusivo para esse sinalizador de rastreamento.|  
   
 ###### <a name="trace-flag-1204-example"></a>Exemplo do sinalizador de rastreamento 1204  
@@ -862,7 +862,7 @@ deadlock-list
   
  ![Diagrama de fluxo lógico mostrando deadlock de processo do usuário.](media/udb9-profilerdeadlockgraphc.gif "Diagrama de fluxo lógico mostrando deadlock de processo do usuário.")  
   
- Para obter mais informações sobre como [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] executar o grafo de deadlock, consulte [salvar grafos de deadlock &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
+ Para obter mais informações sobre como executar o [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] grafo de deadlock, consulte [salvar grafos de deadlock &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md).  
   
 #### <a name="handling-deadlocks"></a>Manipulando deadlocks  
 
@@ -1309,7 +1309,7 @@ BEGIN TRANSACTION
 
  Os exemplos a seguir mostram as diferenças de comportamento entre transações de isolamento de instantâneo e transações de leitura confirmada que usam controle de versão de linha.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>A. Trabalhando com isolamento de instantâneo  
+#### <a name="a-working-with-snapshot-isolation"></a>a. Trabalhando com isolamento de instantâneo  
 
  Neste exemplo, uma transação sendo executada sob um isolamento de instantâneo lê dados que são então modificados por outra transação. A transação de instantâneo não bloqueia a operação de atualização executada pela outra transação, e continua lendo dados do controle de versão de linha, ao mesmo tempo em que ignora a modificação de dados. Porém, quando a transação de instantâneo tentar modificar os dados que já foram modificados pela outra transação, a transação de instantâneo gera um erro e é terminada.  
   
@@ -1647,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  A implementação de um identificador de erro que intercepte a mensagem de erro 1222 permite que um aplicativo possa lidar com a situação de tempo limite e execute uma ação para corrigir a situação, como: automaticamente enviar novamente a instrução que estava bloqueada ou reverter toda a transação.  
   
- Para determinar a configuração atual de LOCK_TIMEOUT, execute a@LOCK_TIMEOUT função @:  
+ Para determinar a configuração atual de LOCK_TIMEOUT, execute a @LOCK_TIMEOUT função @:  
   
 ```  
 SELECT @@lock_timeout;  
@@ -1656,7 +1656,7 @@ GO
   
 ### <a name="customizing-transaction-isolation-level"></a>Personalizando o nível de isolamento da transação  
 
- READ COMMITTED é o nível de isolamento padrão para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]o. Se um aplicativo precisar operar em um nível de isolamento diferente, poderá usar os seguintes métodos para definir o nível de isolamento:  
+ READ COMMITTED é o nível de isolamento padrão para o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] . Se um aplicativo precisar operar em um nível de isolamento diferente, poderá usar os seguintes métodos para definir o nível de isolamento:  
   
 -   Executar a instrução [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
@@ -1833,7 +1833,7 @@ GO
   
  Não é válido para o parâmetro *transaction_name* de uma instrução ROLLBACK TRANSACTION para se referir às transações internas de um conjunto de transações aninhadas nomeadas. *transaction_name* pode se referir apenas ao nome da transação mais externa. Se uma instrução de ROLLBACK TRANSACTION *transaction_name* que usa o nome da transação externa for executada em qualquer nível de um conjunto de transações aninhadas, todas as transações aninhadas serão revertidas. Se uma instrução ROLLBACK WORK ou ROLLBACK TRANSACTION sem um parâmetro *transaction_name* for executada em qualquer nível de um conjunto de transações aninhadas, ela reverterá todas as transações aninhadas, incluindo a transação externa.  
   
- A função@TRANCOUNT @ registra o nível de aninhamento da transação atual. Cada instrução de BEGIN TRANSACTION incrementa @@TRANCOUNT por um. Cada instrução COMMIT transação ou confirmar trabalho diminui @@TRANCOUNT por um. Um trabalho de reversão ou uma instrução ROLLBACK TRANSACTION que não tem um nome de transação reverte todas as transações aninhadas e@TRANCOUNT decrementa @ para 0. Uma transação de reversão que usa o nome da transação da transação mais externa em um conjunto de transações aninhadas reverte todas as transações aninhadas e@TRANCOUNT decrementa @ para 0. Quando você não tiver certeza se já está em uma transação, selecione @@TRANCOUNT para determinar se ela é 1 ou mais. Se @@TRANCOUNT for 0, você não estará em uma transação.  
+ A @TRANCOUNT função @ registra o nível de aninhamento da transação atual. Cada instrução de BEGIN TRANSACTION incrementa @ @TRANCOUNT por um. Cada instrução COMMIT transação ou confirmar trabalho diminui @ @TRANCOUNT por um. Um trabalho de reversão ou uma instrução ROLLBACK TRANSACTION que não tem um nome de transação reverte todas as transações aninhadas e decrementa @ @TRANCOUNT para 0. Uma transação de reversão que usa o nome da transação da transação mais externa em um conjunto de transações aninhadas reverte todas as transações aninhadas e decrementa @ @TRANCOUNT para 0. Quando você não tiver certeza se já está em uma transação, selecione @ @TRANCOUNT para determinar se ela é 1 ou mais. Se @ @TRANCOUNT for 0, você não estará em uma transação.  
   
 ### <a name="using-bound-sessions"></a>Usando sessões associadas  
 

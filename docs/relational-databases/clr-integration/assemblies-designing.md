@@ -2,7 +2,7 @@
 title: Projetando assemblies | Microsoft Docs
 description: Este artigo descreve os fatores a serem considerados quando você cria um assembly para hospedar em SQL Server, incluindo empacotamento, gerenciamento e restrições em assemblies.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488032"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262061"
 ---
 # <a name="assemblies---designing"></a>Assemblies – criação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,19 +102,22 @@ eUI
  Qualquer assembly referenciado por seu assembly personalizado deve ser carregado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando CREATE ASSEMBLY. Os seguintes assemblies do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] já estão carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, portanto, podem ser consultados por assemblies personalizados sem ter que usar CREATE ASSEMBLY.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

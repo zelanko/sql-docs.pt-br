@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532099a9d60a4fa5ccc3a206d2e7e86194423ace
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206660"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696115"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDTs grandes do CLR (OLE DB)
   Este exemplo mostra como buscar linhas com tipos grandes definidos pelo usuário em um conjunto de resultados. Para obter mais informações, veja [Tipos CLR grandes definidos pelo usuário &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702552"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover valores XML frequentemente usados com colunas computadas
   Se as consultas forem feitas principalmente em um pequeno número de valores de elementos e atributos, você poderá desejar promover essas quantidades em colunas relacionais. Isso é útil quando consultas são emitidas em uma pequena parte dos dados XML enquanto toda a instância XML é recuperada. A criação de um índice XML na coluna XML não é necessária. Em vez disso, a coluna promovida pode ser indexada. As consultas devem ser escritas para usar a coluna promovida. Isto é, o otimizador de consultas não destina consultas novamente na coluna XML para a coluna promovida.  
@@ -26,7 +26,7 @@ ms.locfileid: "68195579"
  A coluna promovida pode ser uma coluna computada na mesma tabela ou ser uma coluna separada, mantida pelo usuário em uma tabela. Isso é suficiente quando valores singleton são promovidos de cada instância XML. No entanto para propriedades com vários valores, é necessário criar uma tabela separada para a propriedade, conforme descrito na seção a seguir.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Coluna computada com base no tipo de dados xml  
- Uma coluna computada pode ser criada usando uma função definida pelo usuário que invoca métodos `xml` de tipo de dados. O tipo da coluna computada pode ser qualquer tipo SQL, inclusive XML. Isso é ilustrado no exemplo a seguir.  
+ Uma coluna computada pode ser criada usando uma função definida pelo usuário que invoca `xml` métodos de tipo de dados. O tipo da coluna computada pode ser qualquer tipo SQL, inclusive XML. Isso é ilustrado no exemplo a seguir.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemplo: Coluna computada com base no método do tipo de dados xml  
  Crie a função definida pelo usuário para um número ISBN de livro:  

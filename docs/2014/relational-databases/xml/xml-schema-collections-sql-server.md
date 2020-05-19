@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193034"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702257"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
-  Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio do `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD a uma variável ou a uma coluna `xml` do tipo por meio de uma coleção de esquema XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
+  Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio do `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD a uma variável ou a uma coluna do `xml` tipo por meio de uma coleção de esquema XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  
   
 -   Validar instâncias XML  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193034"
   
  O mecanismo do processamento de consultas também usa o esquema para verificação de tipo e otimizar modificação de dados e consultas.  
   
- Além disso, SQL Server usa a coleção de esquema XML associada, no caso de `xml`tipo, para validar a instância XML. Se a instância XML estiver de acordo com o esquema, o banco de dados permitirá que a instância seja armazenada no sistema com suas informações de tipo. Caso contrário, a instância será rejeitada.  
+ Além disso, SQL Server usa a coleção de esquema XML associada, no caso de tipo `xml` , para validar a instância XML. Se a instância XML estiver de acordo com o esquema, o banco de dados permitirá que a instância seja armazenada no sistema com suas informações de tipo. Caso contrário, a instância será rejeitada.  
   
  É possível usar a função intrínseca XML_SCHEMA_NAMESPACE para recuperar a coleção de esquema que está armazenada no banco de dados. Para obter mais informações, veja [Exibir uma coleção de esquemas XML armazenados](../xml/view-a-stored-xml-schema-collection.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "63193034"
   
 -   Descartar a coleção de esquema XML  
   
--   Usar a coleção de esquema XML para `xml` digitar colunas de tipo, variáveis e parâmetros, ou usá-la em restrições de tabela ou coluna  
+-   Usar a coleção de esquema XML para digitar `xml` colunas de tipo, variáveis e parâmetros, ou usá-la em restrições de tabela ou coluna  
   
  O modelo de segurança do SQL permite a permissão CONTROL em todos os objetos. O usuário autorizado dessa permissão obtém todas as outras permissões no objeto. O proprietário do objeto também tem todas as permissões no objeto.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "63193034"
 ##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> Adquirindo Informações sobre esquemas XML e coleções de esquemas  
  Coleções de esquema XML são enumeradas na exibição do catálogo sys.xml_schema_collections. A coleção de esquema XML "sys" está definida pelo sistema. Ela contém os namespaces predefinidos que podem ser usados em todas as coleções de esquema XML definidas pelo usuário sem precisar carregá-las explicitamente. Essa lista contém os namespaces para xml, xs, xsi, fn e xdt. Duas outras exibições do catálogo são sys.xml_schema_namespaces, que enumera todos os namespaces dentro de cada coleção de esquema XML, e sys.xml_components, que enumera todos os componentes do esquema XML dentro de cada esquema XML.  
   
- A função interna **XML_SCHEMA_NAMESPACE**, *SchemaName, XmlSchemaCollectionName, namespace-URI*, produz uma instância de tipo `xml` de dados.. Essa instância contém fragmentos de esquema XML estão contidos em uma coleção de esquema XML, exceto os esquemas XML predefinidos.  
+ A função interna **XML_SCHEMA_NAMESPACE**, *SchemaName, XmlSchemaCollectionName, namespace-URI*, produz uma `xml` instância de tipo de dados.. Essa instância contém fragmentos de esquema XML estão contidos em uma coleção de esquema XML, exceto os esquemas XML predefinidos.  
   
  É possível enumerar o conteúdo de uma coleção de esquema XML das seguintes maneiras:  
   

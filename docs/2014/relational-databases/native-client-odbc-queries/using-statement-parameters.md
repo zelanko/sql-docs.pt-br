@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200250"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699863"
 ---
 # <a name="using-statement-parameters"></a>Usando parâmetros de instrução
   Um parâmetro é uma variável em uma instrução SQL que pode permitir a aplicativo ODBC:  
@@ -32,7 +32,7 @@ ms.locfileid: "63200250"
   
 -   Aprimorar a interação do usuário na construção dos critérios de consulta.  
   
--   Gerencie dados de **texto**, **ntext**e **imagem** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de dados C específicos.  
+-   Gerencie dados de **texto**, **ntext**e **imagem** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados C específicos.  
   
  Por exemplo, uma tabela de **peças** tem colunas denominadas **partid**, **Descrição**e **preço**. Adicionar uma parte sem parâmetros exige a criação de uma instrução SQL como, por exemplo:  
   

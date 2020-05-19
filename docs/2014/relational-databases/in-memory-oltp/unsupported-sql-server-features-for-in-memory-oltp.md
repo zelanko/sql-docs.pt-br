@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157235"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702220"
 ---
 # <a name="supported-sql-server-features"></a>Recursos do SQL Server com suporte
   Este tópico aborda os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com ou sem suporte para uso com objetos com otimização de memória.  
@@ -107,8 +107,8 @@ ms.locfileid: "63157235"
   
 |Bancos de dados|Permitido|Descrição|  
 |---------------|-------------|-----------------|  
-|Bancos de dados de usuário, modelo e msdb|Não|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
-|Banco de dados de recursos e tempdb|Sim|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
+|Bancos de dados de usuário, modelo e msdb|No|Não há suporte para consultas e transações entre bancos de dados.<br /><br /> As consultas e transações que acessam tabelas com otimização de memória ou procedimentos armazenados compilados nativamente não podem acessar outros bancos de dados, com exceção dos bancos de dados do sistema mestre (acesso somente leitura) e tempdb.|  
+|Banco de dados de recursos e tempdb|Yes|Não há nenhuma limitação em transações entre bancos de dados que, salvo um banco de dados de usuário único, usam somente banco de dados de recursos e o tempdb.|  
 |master|somente leitura|As transações entre bancos de dados que tocam o OLTP na memória e o banco de dados mestre falharão na confirmação se incluírem gravações no banco de dados mestre. As transações entre bancos de dados que leem apenas no mestre e usam somente um banco de dados de usuário são permitidas.|  
   
 ## <a name="see-also"></a>Consulte Também  

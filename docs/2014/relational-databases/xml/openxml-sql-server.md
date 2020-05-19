@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174005"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702568"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, uma palavra-chave do [!INCLUDE[tsql](../../includes/tsql-md.md)] , fornece um conjunto de linhas em documentos XML na memória que é semelhante a uma tabela ou exibição. OPENXML permite acesso a dados XML ainda que ele seja um conjunto de linhas relacional. Ele faz isso fornecendo uma exibição do conjunto de linhas da representação interna de um documento XML. Os registros no conjunto de linhas podem ser armazenados em tabelas do banco de dados.
 
  OPENXML pode ser usado em instruções SELECT e SELECT INTO sempre que provedores de conjunto de linhas, uma exibição ou OPENROWSET podem ser exibidos como a origem. Para obter informações sobre a sintaxe do OPENXML, veja [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).
 
- Para escrever consultas em um documento XML usando OPENXML, você deve primeiro chamar `sp_xml_preparedocument`. Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.
+ Para escrever consultas em um documento XML usando OPENXML, você deve primeiro chamar `sp_xml_preparedocument` . Isso analisa o documento XML e retorna um identificador ao documento analisado pronto para consumo. O documento analisado é uma representação da árvore DOM (Document Object Model) de vários nós no documento XML. O identificador do documento é passado para OPENXML. Em seguida, o OPENXML fornece uma exibição do conjunto de linhas do documento, baseado nos parâmetros passados para ele.
 
 > [!NOTE]
 >  `sp_xml_preparedocument`usa uma versão atualizada por SQL do analisador MSXML, Msxmlsql. dll. Essa versão do analisador MSXML foi criada para oferecer suporte ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e permanecer para compatível com o MSXML versão 2.6.

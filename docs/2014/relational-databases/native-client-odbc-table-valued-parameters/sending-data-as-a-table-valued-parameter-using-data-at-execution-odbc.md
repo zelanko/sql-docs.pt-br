@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205466"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698614"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviando dados como um parâmetro com valor de tabela usando dados em execução (ODBC)
   Isso é semelhante ao procedimento [All in Memory](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mas usa dados em execução para o parâmetro com valor de tabela.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61c8186f84a391b3b2394e82e21ecc407f6f3864
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288763"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702629"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
   É possível conceder permissões para criar uma coleção de esquema XML e também permissões em um objeto da coleção de esquemas XML.  

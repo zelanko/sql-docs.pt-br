@@ -12,18 +12,18 @@ helpviewer_keywords:
 - ODBC cursors, server cursors
 - server cursors [SQL Server]
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8bcae5ab64fff47528c30a67c13fd1c859ea4e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011848"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702035"
 ---
 # <a name="using-server-cursors"></a>Usando cursores de servidor
-  Se um aplicativo ODBC definir qualquer um dos atributos de cursor do ODBC para qualquer coisa diferente dos padrões, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o driver ODBC do Native Client solicitará que o servidor implemente um cursor do servidor de API do mesmo tipo. O uso de cursores de servidor de API libera memória no cliente e pode reduzir significativamente o tráfego de rede entre o cliente e o servidor.  
+  Se um aplicativo ODBC definir qualquer um dos atributos de cursor do ODBC para qualquer coisa diferente dos padrões, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client solicitará que o servidor implemente um cursor do servidor de API do mesmo tipo. O uso de cursores de servidor de API libera memória no cliente e pode reduzir significativamente o tráfego de rede entre o cliente e o servidor.  
   
  Uma desvantagem potencial de cursores de servidor de API é que atualmente eles não dão suporte a todas as instruções SQL. Os cursores de servidor de API não podem ser usados para executar:  
   

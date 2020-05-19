@@ -11,29 +11,29 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046621"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702197"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  As restrições a seguir se aplicam ao usar o SQLPutData para enviar mais de 65.535 bytes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de dados (para a versão 4.21 a) ou 400 KB de dados (para SQL Server versão 6,0 e posterior`text`) para uma coluna`ntext`SQL_LONGVARCHAR (),`image`SQL_WLONGVARCHAR () ou SQL_LONGVARBINARY ():  
+  As restrições a seguir se aplicam ao usar o SQLPutData para enviar mais de 65.535 bytes de dados (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a versão 4.21 a) ou 400 KB de dados (para SQL Server versão 6,0 e posterior) para uma coluna SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) ou SQL_LONGVARBINARY ( `image` ):  
   
 -   O parâmetro referenciado pode ser o *insert_value* em uma instrução INSERT.  
   
 -   O parâmetro referenciado pode ser uma *expressão* na cláusula SET de uma instrução UPDATE.  
   
- Cancelar uma sequência de chamadas SQLPutData que fornecem dados em blocos para um servidor em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] causa uma atualização parcial do valor da coluna ao usar a versão 6,5 ou anterior. A `text`coluna `ntext`,, `image` ou que foi referenciada quando SQLCancel foi chamado é definida como um valor de espaço reservado intermediário.  
+ Cancelar uma sequência de chamadas SQLPutData que fornecem dados em blocos para um servidor em execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] causa uma atualização parcial do valor da coluna ao usar a versão 6,5 ou anterior. A `text` `ntext` coluna,, ou `image` que foi referenciada quando SQLCancel foi chamado é definida como um valor de espaço reservado intermediário.  
   
 > [!NOTE]  
 >  O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client não dá suporte à conexão ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 6.5 e anteriores.  
   
-## <a name="diagnostics"></a>Diagnóstico  
+## <a name="diagnostics"></a>Diagnósticos  
  Há um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSTATE específico de cliente nativo para SQLPutData:  
   
 |SQLSTATE|Erro|Descrição|  

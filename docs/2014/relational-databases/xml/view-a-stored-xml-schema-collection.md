@@ -15,15 +15,15 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4c83a6bde711d2e653fdf19d4d3e145efae8d1d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63233608"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702287"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Exibir uma coleção de esquema XML armazenada
   Depois de você importar uma coleção de esquema XML usando [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), os componentes do esquema são armazenados nos metadados. É possível usar a função intrínseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)para reconstruir a coleção de esquemas XML. Essa função retorna uma instância de tipo de dados `xml`.  

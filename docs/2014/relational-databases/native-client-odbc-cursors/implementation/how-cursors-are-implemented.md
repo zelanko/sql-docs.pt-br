@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - cursors [ODBC], about ODBC cursors
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c92391b1d8874da3a8901ccc5c6245e48334241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400e35752855d23db324054a0caed944d74b715d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188522"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702025"
 ---
 # <a name="how-cursors-are-implemented"></a>Como os cursores são implementados
   Os aplicativos ODBC controlam o comportamento de um cursor definindo um ou mais atributos de instrução antes de executar uma instrução SQL. ODBC tem dois modos diferentes de especificar as características de um cursor:  

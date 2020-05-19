@@ -14,15 +14,15 @@ helpviewer_keywords:
 - providers [SQLXML]
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a45742bb7a827f9f63676b51e83f795058f48f6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014349"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703208"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Data Access Components do SQLXML 4.0
   O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 dispõe de três provedores de dados que podem inserir dados XML e recuperá-los de um banco de dados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  

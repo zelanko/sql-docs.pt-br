@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e28d79b94a964895afc85e4e2a964eece8aa398f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240727"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702501"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revogar permissões em uma coleção de esquemas XML
   A permissão para criar uma coleção de esquema XML pode ser revogada usando uma das seguintes opções:  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6c5ded9f42da267cfd137f0adfd4465d965d9a06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6b41e72d3421d24a160dbcc226ce285e37981c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702042"
 ---
 # <a name="cursor-behaviors"></a>Comportamentos de cursor
   O ODBC dá suporte às opções ISO para especificar o comportamento de cursores por meio da definição de sua rolagem e sensibilidade. Esses comportamentos são especificados definindo as opções SQL_ATTR_CURSOR_SCROLLABLE e SQL_ATTR_CURSOR_SENSITIVITY em uma chamada para [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md). O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa essas opções solicitando cursores de servidor com as características a seguir.  

@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240272"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695686"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Cria uma associação entre variáveis de programa e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -75,7 +75,7 @@ DBORDINALidxServerCol);
  Índice do campo no arquivo de dados do usuário.  
   
  *eUserDataType*[in]  
- O tipo de dados do campo no arquivo de dados do usuário. Os tipos de dados disponíveis são listados no arquivo de cabeçalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) com o formato BCP_TYPE_XXX; por exemplo, BCP_TYPE_SQLINT4. Caso o valor BCP_TYPE_DEFAULT seja especificado, o provedor tenta usar o mesmo tipo como a tabela ou o tipo de coluna de exibição. Para operações de cópia em massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de e para um arquivo quando `eUserDataType` o argumento é BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC:  
+ O tipo de dados do campo no arquivo de dados do usuário. Os tipos de dados disponíveis são listados no arquivo de cabeçalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) com o formato BCP_TYPE_XXX; por exemplo, BCP_TYPE_SQLINT4. Caso o valor BCP_TYPE_DEFAULT seja especificado, o provedor tenta usar o mesmo tipo como a tabela ou o tipo de coluna de exibição. Para operações de cópia em massa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e para um arquivo quando o `eUserDataType` argumento é BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC:  
   
 -   Se a coluna de origem não for decimal ou numeric, serão usadas a precisão e escala padrão.  
   
@@ -89,11 +89,11 @@ DBORDINALidxServerCol);
   
  Definir `cbUserData` como BCP_LENGTH_NULL indica que todos os valores nos campos do arquivo de dados são ou devem ser definidos como NULL. Definir `cbUserData` como BCP_LENGTH_VARIABLE indica que o sistema deve determinar o comprimento dos dados para cada campo. Para alguns campos, isso poderia significar que um indicador de comprimento/nulidade é gerado para preceder dados de uma cópia do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou que o indicador é esperado nos dados copiados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados Binary e de `cbUserData` caractere, pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou algum valor positivo. Se `cbUserData` o for BCP_LENGTH_VARIABLE, o sistema usará o indicador de comprimento, se estiver presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se `cbUserData` for BCP_LENGTH_VARIABLE, o tipo de dados é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um tipo de caractere ou binário e, se nenhum indicador de comprimento nem uma sequência de terminador for especificado, o sistema retornará uma mensagem de erro.  
+ Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados Binary e de caractere, `cbUserData` pode ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 ou algum valor positivo. Se `cbUserData` o for BCP_LENGTH_VARIABLE, o sistema usará o indicador de comprimento, se estiver presente, ou uma sequência de terminador para determinar o comprimento dos dados. Se forem fornecidos um indicador de comprimento e uma sequência de terminador, a cópia em massa usará aquele que resultar na menor quantidade de dados sendo copiados. Se `cbUserData` for BCP_LENGTH_VARIABLE, o tipo de dados é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de caractere ou binário e, se nenhum indicador de comprimento nem uma sequência de terminador for especificado, o sistema retornará uma mensagem de erro.  
   
- Se `cbUserData` for 0 ou um valor positivo, o sistema usará `cbUserData` como o comprimento máximo dos dados. No entanto, se, além de um `cbUserData`positivo, um indicador de comprimento ou uma sequência de terminador for fornecido, o sistema determinará o comprimento dos dados usando o método que resultará na menor quantidade de dados sendo copiados.  
+ Se `cbUserData` for 0 ou um valor positivo, o sistema usará `cbUserData` como o comprimento máximo dos dados. No entanto, se, além de um positivo `cbUserData` , um indicador de comprimento ou uma sequência de terminador for fornecido, o sistema determinará o comprimento dos dados usando o método que resultará na menor quantidade de dados sendo copiados.  
   
- O `cbUserData` valor representa a contagem de bytes de dados. Se os dados de caractere forem representados por caracteres largos Unicode `cbUserData` , um valor de parâmetro positivo representará o número de caracteres multiplicado pelo tamanho, em bytes, de cada caractere.  
+ O `cbUserData` valor representa a contagem de bytes de dados. Se os dados de caractere forem representados por caracteres largos Unicode, um `cbUserData` valor de parâmetro positivo representará o número de caracteres multiplicado pelo tamanho, em bytes, de cada caractere.  
   
  *pbUserDataTerm*[size_is][in]  
  A sequência de terminador a ser usada para o campo. Este parâmetro é útil principalmente para tipos de dados character porque todos os outros tipos têm comprimento fixo ou, no caso de dados binary, exigem um indicador de comprimento que permite registrar com precisão o número de bytes presentes.  

@@ -21,18 +21,18 @@ helpviewer_keywords:
 - deleting data
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014598"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702990"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Usando diagramas de atualização para modificar dados no SQLXML 4.0
-  Você pode modificar (inserir, atualizar ou excluir) um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do em um documento XML existente usando um updategram ou a função [!INCLUDE[tsql](../../../includes/tsql-md.md)] OPENXML.  
+  Você pode modificar (inserir, atualizar ou excluir) um banco de dados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do em um documento XML existente usando um updategram ou a [!INCLUDE[tsql](../../../includes/tsql-md.md)] função OPENXML.  
   
  Esta seção fornece informações sobre diagramas de atualização e exemplos de uso.  
   

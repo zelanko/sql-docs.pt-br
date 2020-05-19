@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225536"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701987"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Define o número total de colunas encontrado no arquivo de usuário para uso com uma cópia em massa dentro ou fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) pode ser usado em vez de bcp_columns e [bcp_colfmt](bcp-colfmt.md).  
@@ -47,7 +47,7 @@ nColumns
  É o identificador de conexão ODBC habilitado para cópia em massa.  
   
  *nColumns*  
- É o número total de colunas no arquivo de usuário. Mesmo que você esteja se preparando para copiar dados em massa do arquivo de usuário [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma tabela e não pretende copiar todas as colunas no arquivo de usuário, você ainda deve definir *nColumns* para o número total de colunas do arquivo de usuário.  
+ É o número total de colunas no arquivo de usuário. Mesmo que você esteja se preparando para copiar dados em massa do arquivo de usuário para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela e não pretende copiar todas as colunas no arquivo de usuário, você ainda deve definir *nColumns* para o número total de colunas do arquivo de usuário.  
   
 ## <a name="returns"></a>Retornos  
  SUCCEED ou FAIL.  
@@ -57,7 +57,7 @@ nColumns
   
  Você só deveria chamar esta função se pretender usar um formato de arquivo de usuário diferente do padrão. Para obter mais informações sobre uma descrição do formato de arquivo de usuário padrão, consulte **bcp_init**.  
   
- Depois de `bcp_columns`chamar, você deve chamar [bcp_colfmt](bcp-colfmt.md)para cada coluna no arquivo de usuário para definir completamente um formato de arquivo personalizado.  
+ Depois de chamar `bcp_columns` , você deve chamar [bcp_colfmt](bcp-colfmt.md)para cada coluna no arquivo de usuário para definir completamente um formato de arquivo personalizado.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  

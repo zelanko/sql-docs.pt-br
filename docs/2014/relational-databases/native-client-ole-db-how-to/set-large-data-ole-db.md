@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218659"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696194"
 ---
 # <a name="set-large-data-ole-db"></a>Definir dados grandes (OLE DB)
   Este exemplo mostra como definir dados de BLOB, criar uma tabela, adicionar um registro de exemplo, buscar esse registro no conjunto de linhas e definir o valor do campo BLOB. Este exemplo não tem suporte em IA64.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012316"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702890"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do cliente (SQLXML 4.0)
   Este tópico fornece informações sobre formatação de XML do lado do cliente. A formatação do lado do cliente refere-se à formatação de XML na camada intermediária.  
@@ -28,7 +28,7 @@ ms.locfileid: "66012316"
 > [!NOTE]  
 >  Este tópico fornece informações adicionais sobre como usar a cláusula FOR XML no lado do cliente e supõe que você já esteja familiarizado com a cláusula FOR XML. Para obter mais informações sobre o FOR XML, consulte [construindo XML Using for XML](../../xml/for-xml-sql-server.md).  
   
- **Importante** Para usar a funcionalidade para XML do lado do cliente com `xml` o novo tipo de dados, os clientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre devem usar o provedor de dados do Native Client (SQLNCLI11) em vez do provedor SQLOLEDB. SQLNCLI11 é a última versão do provedor do SQL Server e compreende plenamente os tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O comportamento da cláusula FOR XML do lado do cliente com o provedor SQLOLEDB tratará os tipos de dados `xml` como cadeias de caracteres.  
+ **Importante** Para usar a funcionalidade para XML do lado do cliente com o novo `xml` tipo de dados, os clientes sempre devem usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de dados do Native Client (SQLNCLI11) em vez do provedor SQLOLEDB. SQLNCLI11 é a última versão do provedor do SQL Server e compreende plenamente os tipos de dados introduzidos no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O comportamento da cláusula FOR XML do lado do cliente com o provedor SQLOLEDB tratará os tipos de dados `xml` como cadeias de caracteres.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Formatando documentos XML no lado do cliente  
  Quando um aplicativo cliente executa a seguinte consulta:  
@@ -117,7 +117,7 @@ AS
      Você pode especificar a formatação do lado do cliente definindo essa propriedade das classes gerenciadas SQLXML como true.  
   
 ## <a name="enhanced-xml-template-support"></a>Suporte a modelos XML aprimorados  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]do, o modelo XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no foi aprimorado com a adição do atributo **XML do lado do cliente** . Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade para a propriedade ClientSideXML específica do provedor SQLXMLOLEDB.  
+ A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorado com a adição do atributo **XML do lado do cliente** . Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade para a propriedade ClientSideXML específica do provedor SQLXMLOLEDB.  
   
 > [!NOTE]  
 >  Se você executar um modelo XML em um aplicativo ADO que está usando o provedor SQLXMLOLEDB e especificar tanto o atributo **XML do lado do cliente** no modelo quanto a propriedade ClientSideXML do provedor, o valor especificado no modelo terá precedência.  

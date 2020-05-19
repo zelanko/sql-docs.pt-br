@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data providers [SQLXML], SQLOLEDB Provider
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30b46fba97e5608fa91a2b0a52bffc797982e923
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703169"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Executando um DiffGram usando o ADO (SQLXML 4.0)
   Este aplicativo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic usa o ADO para estabelecer uma conexão com uma instância do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e então executar um DiffGram. Nesse aplicativo, o DiffGram e o esquema XSD são armazenados em um arquivo. O aplicativo carrega o DiffGram a partir do arquivo especificado. Você pode usar qualquer um dos DiffGrams (e o esquema XSD associado) descrito em [exemplos de DiffGram](diffgram-examples-sqlxml-4-0.md).  

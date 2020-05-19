@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067617"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702089"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertendo de cópia em massa DB-Library em ODBC
-  A conversão de um programa de cópia em massa de biblioteca de banco de BD para ODBC é fácil porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as funções de cópia em massa com suporte do driver ODBC do Native Client são semelhantes às funções de cópia em massa da biblioteca de banco de BD, com as seguintes exceções:  
+  A conversão de um programa de cópia em massa de biblioteca de banco de BD para ODBC é fácil porque as funções de cópia em massa com suporte do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client são semelhantes às funções de cópia em massa da biblioteca de banco de BD, com as seguintes exceções:  
   
 -   Os aplicativos DB-Library passam, para uma estrutura DBPROCESS, um ponteiro como o primeiro parâmetro de funções de cópia em massa. Em aplicativos ODBC, o ponteiro DBPROCESS é substituído por um identificador de conexão ODBC.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63067617"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client não dá suporte a mensagens de biblioteca de DB e manipuladores de erro; Você deve chamar **SQLGetDiagRec** para obter erros e mensagens geradas pelas funções de cópia em massa do ODBC. As versões ODBC das funções de cópia em massa retornam os códigos de retorno padrão da cópia em massa, SUCCEED ou FAILED, e não os códigos de retorno ODBC, como SQL_SUCCESS ou SQL_ERROR.  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client não dá suporte a mensagens de biblioteca de BD e manipuladores de erro; você deve chamar **SQLGetDiagRec** para obter erros e mensagens geradas pelas funções de cópia em massa ODBC. As versões ODBC das funções de cópia em massa retornam os códigos de retorno padrão da cópia em massa, SUCCEED ou FAILED, e não os códigos de retorno ODBC, como SQL_SUCCESS ou SQL_ERROR.  
   
 -   Os valores especificados para o parâmetro DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* são interpretados de forma diferente do parâmetro_cbData_ do ODBC **bcp_bind**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63067617"
   
      Na biblioteca de banco de dados, um valor de *varlen* de-1 indica que os dados de comprimento variável estão sendo fornecidos, que no *cbData* ODBC é interpretado para significar que apenas valores nulos estão sendo fornecidos. Altere as especificações de-1 de *varlen* da biblioteca de banco de forma para SQL_VARLEN_DATA e quaisquer especificações de *varlen* de 0 para SQL_NULL_DATA.  
   
--   O_arquivo\__ **colfmt bcp\_** da biblioteca DB Collen e o ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*CbUserData* têm o mesmo problema que os parâmetros_varlen_ **bcp_bind**e *cbData* indicados acima. Altere todas as especificações de *file_collen* de biblioteca de banco de BD de-1 para SQL_VARLEN_DATA e quaisquer *file_collen* especificações de 0 a SQL_NULL_DATA.  
+-   O arquivo ** \_ colfmt bcp**da biblioteca DB_ \_ Collen_ e o ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* têm o mesmo problema que os parâmetros_varlen_ **bcp_bind**e *cbData* indicados acima. Altere todas as especificações de *file_collen* de biblioteca de banco de BD de-1 para SQL_VARLEN_DATA e quaisquer *file_collen* especificações de 0 a SQL_NULL_DATA.  
   
 -   O parâmetro *iValue* da função ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) é um ponteiro void. Em DB-Library, *iValue* era um número inteiro. Converta os valores para o *IVALUE* ODBC em void *.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63067617"
   
     -   cadeias de caracteres **DateTime** e **smalldatetime** em qualquer formato com suporte pela função **DBConvert** do DB-Library.  
   
-    -   Quando a caixa **usar configurações internacionais** é marcada na guia **Opções** da biblioteca de banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do utilitário de rede do cliente, as funções de cópia em massa da biblioteca de banco de dados também aceitam datas no formato de data regional definido para a configuração de localidade do registro do computador cliente.  
+    -   Quando a caixa **usar configurações internacionais** é marcada na guia **Opções** da biblioteca de banco de dados do utilitário de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rede do cliente, as funções de cópia em massa da biblioteca de banco de dados também aceitam datas no formato de data regional definido para a configuração de localidade do registro do computador cliente.  
   
      As funções de cópia em massa da biblioteca DB não aceitam os formatos ODBC **DateTime** e **smalldatetime** .  
   

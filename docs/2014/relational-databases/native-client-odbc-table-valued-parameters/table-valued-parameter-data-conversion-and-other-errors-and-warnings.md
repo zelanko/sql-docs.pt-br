@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), data conversion
 - table-valued parameters (ODBC), error messages
 ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 576e8e49411412264afc5828fe606a19cc3751f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a82c6f5e76693ac03ddfd0c442249d7935927848
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468249"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698293"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>Conversão de dados de parâmetros com valor de tabela e outros erros e avisos
   Valores da coluna de parâmetros com valor de tabela podem ser convertidos entre tipos de dados de cliente e servidor da mesma forma que outros valores de parâmetro e coluna. Mas como um parâmetro com valor de tabela pode conter várias colunas e várias linhas, é importante conseguir identificar o valor real quando o erro ocorrer.  

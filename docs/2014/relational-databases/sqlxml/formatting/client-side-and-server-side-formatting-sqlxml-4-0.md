@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a8bcf160fe7baf8fbb98efa80b4f28516041f36
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012308"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702898"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formatação do lado do cliente e do lado do servidor (SQLXML 4.0)
   O SQLXML fornece dois modos de formatar um documento de XML:  
@@ -29,7 +29,7 @@ ms.locfileid: "66012308"
   
 -   Formatação do lado do cliente  
   
- Esta seção inclui informações sobre a formatação de documentos XML no lado do cliente ou no lado do servidor a partir dos conjuntos de linhas gerados por consultas executadas em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]banco de dados no.  
+ Esta seção inclui informações sobre a formatação de documentos XML no lado do cliente ou no lado do servidor a partir dos conjuntos de linhas gerados por consultas executadas em um banco de dados no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Arquitetura da formatação XML do lado do cliente e do servidor &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  

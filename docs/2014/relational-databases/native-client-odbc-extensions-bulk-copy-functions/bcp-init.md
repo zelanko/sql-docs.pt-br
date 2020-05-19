@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689070"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701949"
 ---
 # <a name="bcp_init"></a>bcp_init
   Inicializa a operação de cópia em massa.  
@@ -75,7 +75,7 @@ eDirection
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Comentários  
- Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de trabalho e o.  
+ Chame **bcp_init** antes de chamar qualquer outra função de cópia em massa. **bcp_init** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A função **bcp_init** deve ser fornecida com um identificador de conexão ODBC habilitado para uso com funções de cópia em massa. Para habilitar o identificador, use [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) com SQL_COPT_SS_BCP definido como SQL_BCP_ON em um identificador de conexão alocado, mas não conectado. A tentativa de atribuir o atributo em um identificador conectado resulta em erro.  
   
@@ -89,7 +89,7 @@ eDirection
   
 -   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo de dados deve ter dados em cada coluna na tabela do banco de dados. Ao copiar do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados de todas as colunas na tabela, exibição ou conjunto de resultados de SELECT do banco de dados são copiados para o arquivo de dados.  
   
--   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** coloca os dados com base na posição ordinal da coluna na tabela do banco de dados.  
+-   Ao copiar para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **bcp_exec** coloca os dados com base na posição ordinal da coluna na tabela do banco de dados.  
   
 -   Se um tipo de dado de banco de dados for variável em comprimento (por exemplo, **varbinary (22)**) ou se uma coluna Database puder conter valores nulos, os dados no arquivo de dados serão prefixados por um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa.  
   
@@ -97,7 +97,7 @@ eDirection
   
  As cópias em massa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser otimizadas para tabelas que não contêm índices, definindo o modelo de recuperação de banco de dados como SIMPLE ou BULK_LOGGED. Para obter mais informações, consulte [pré-requisitos para log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [alterar banco de dados](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Se nenhum arquivo de dados for usado, você deverá chamar [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para especificar o formato e o local na memória dos dados fsor cada coluna e, em seguida, copiar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as linhas de dados para o [bcp_sendrow](bcp-sendrow.md)usando.  
+ Se nenhum arquivo de dados for usado, você deverá chamar [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para especificar o formato e o local na memória dos dados fsor cada coluna e, em seguida, copiar as linhas de dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)usando.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como usar a função ODBC bcp_init com um arquivo de formato.  

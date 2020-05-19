@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989989"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694585"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fornece uma alternativa para [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) para especificar o formato da coluna. Ao contrário de IBCPSession::BCPColFmt, que define atributos de formato de coluna individuais, IBCPSession2::BCPSetBulkMode define todos os atributos.  
@@ -71,14 +71,14 @@ HRESULT BCPSetBulkMode (
   
 |Propriedade|Descrição|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE e para IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_SQLNCHAR`como.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção-N no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_SQLNCHAR` como se o tipo de coluna for uma `BCP_TYPE_DEFAULT` cadeia de caracteres ou se não for uma cadeia de caracteres.|  
-|BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção-n no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida `BCP_TYPE_DEFAULT`como.|  
+|BCP_OUT_CHARACTER_MODE|Especifica o modo de saída de caractere.<br /><br /> Corresponde à opção-c no BCP. EXE e para IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica o modo de saída de Unicode.<br /><br /> Corresponde à opção-w no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica tipos nativos para tipos de não caracteres e Unicode para tipos de caracteres.<br /><br /> Corresponde à opção-N no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_SQLNCHAR` se o tipo de coluna for uma cadeia de caracteres ou `BCP_TYPE_DEFAULT` se não for uma cadeia de caracteres.|  
+|BCP_OUT_NATIVE_MODE|Especifica tipos de bancos de dados nativos.<br /><br /> Corresponde à opção-n no BCP. EXE e IBCPSession:: BCPColFmt com a propriedade *eUserDataType* definida como `BCP_TYPE_DEFAULT` .|  
   
  Você pode chamar as opções IBCPSession::BCPControl e IBCPSession2::BCPSetBulkMode para IBCPSession::BCPControl que não entram em conflito com IBCPSession2::BCPSetBulkMode. Por exemplo, você pode chamar IBCPSession:: BCPControl com `BCP_OPTION_FIRST` e IBCPSession2:: BCPSetBulkMode.  
   
- Você não pode chamar IBCPSession:: BCPControl `BCP_OPTION_TEXTFILE` com e IBCPSession2:: BCPSetBulkMode.  
+ Você não pode chamar IBCPSession:: BCPControl com `BCP_OPTION_TEXTFILE` e IBCPSession2:: BCPSetBulkMode.  
   
  Se você tentar chamar IBCPSession2::BCPSetBulkMode com uma sequência de chamadas de função que inclui IBCPSession::BCPColFmt, IBCPSession::BCPControl e IBCPSession::BCPReadFmt, uma das chamadas de função retornará uma falha de erro de sequência. Se você optar por corrigir a falha, chame IBCPSession::BCPInit para redefinir as configurações e recomeçar.  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696513"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
   O processamento de resultados em um aplicativo OLE DB envolve primeiro a determinação das características do conjunto de resultados e depois a recuperação dos dados em variáveis do programa. Caso o comando execute um procedimento armazenado, você também deve saber como processar códigos de retorno e parâmetros de saída dos procedimentos armazenados.  
@@ -33,6 +33,6 @@ ms.locfileid: "63225476"
 -   [Buscar linhas em um conjunto de resultados &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tópicos de instruções sobre OLE DB](../ole-db-how-to-topics.md)  
+ [Tópicos de instruções do OLE DB](../ole-db-how-to-topics.md)  
   
   

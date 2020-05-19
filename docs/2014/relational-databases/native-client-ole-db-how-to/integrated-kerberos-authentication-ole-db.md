@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 275306c40caeb9308401f73c2071458ee8b26a36
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718143"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82697405"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticação integrada do Kerberos (BD OLE)
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o OLE DB em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou posterior.  

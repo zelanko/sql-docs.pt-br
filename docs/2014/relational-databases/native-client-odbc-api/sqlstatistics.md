@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLStatistics function
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 412dea0c99c8351e8f7747b0acbd09a3116d468f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188611"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702103"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   O**SQLStatistics** pode ser executado em um cursor estático. Uma tentativa de executar o **SQLStatistics** em um atualizável (controlado por conjunto de chaves ou dinâmico) retorna SQL_SUCCESS_WITH_INFO indicando que o tipo de cursor foi alterado.  

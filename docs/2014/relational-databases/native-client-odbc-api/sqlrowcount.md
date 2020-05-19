@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046601"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702179"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
-  Quando as matrizes de valores de parâmetro são associadas à `SQLRowCount` execução da instrução, o retorna SQL_ERROR se qualquer linha de valores de parâmetro gera uma condição de erro na execução da instrução. Nenhum valor é retornado pelo argumento *RowCountPtr* da função.  
+  Quando as matrizes de valores de parâmetro são associadas à execução da instrução, o `SQLRowCount` retorna SQL_ERROR se qualquer linha de valores de parâmetro gera uma condição de erro na execução da instrução. Nenhum valor é retornado pelo argumento *RowCountPtr* da função.  
   
  O aplicativo pode tirar proveito do atributo da instrução SQL_ATTR_PARAMS_PROCESSED_PTR para capturar o número de parâmetros processados antes de ocorrer o erro.  
   

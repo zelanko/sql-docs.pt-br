@@ -19,15 +19,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013859"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703592"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Excluindo elementos de esquema do documento XML resultante usando sql:mapped (SQLXML 4.0)
   Todo elemento e atributo no esquema XSD é mapeado para uma tabela/exibição e uma coluna do banco de dados devido ao mapeamento padrão. Se desejar criar um elemento no esquema XSD que não é mapeado para nenhuma tabela (exibição) ou coluna do banco de dados e que não aparece no XML, é possível especificar a anotação `sql:mapped`.  
@@ -39,12 +39,12 @@ ms.locfileid: "66013859"
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [Requirements for running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificando a anotação sql:mapped  
- Suponha que você tenha um esquema XSD de alguma outra origem. Este esquema XSD consiste em uma ** \<pessoa. contate>** elemento com os atributos **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>a. Especificando a anotação sql:mapped  
+ Suponha que você tenha um esquema XSD de alguma outra origem. Este esquema XSD consiste em uma ** \< pessoa. contate>** elemento com os atributos **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
   
- No mapeamento deste esquema XSD para a tabela Person. Contact no banco de dados AdventureWorks `sql:mapped` , é especificado no atributo **HomeAddress** porque a tabela Employees não armazena os endereços residenciais dos funcionários. Como resultado, este atributo não é mapeado para o banco de dados e não é retornado no documento XML resultante quando uma consulta XPath é especificada com relação ao esquema de mapeamento.  
+ No mapeamento deste esquema XSD para a tabela Person. Contact no banco de dados AdventureWorks, `sql:mapped` é especificado no atributo **HomeAddress** porque a tabela Employees não armazena os endereços residenciais dos funcionários. Como resultado, este atributo não é mapeado para o banco de dados e não é retornado no documento XML resultante quando uma consulta XPath é especificada com relação ao esquema de mapeamento.  
   
- O mapeamento padrão é executado para o restante do esquema. O ** \<elemento Person. Contact>** mapeia para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
+ O mapeamento padrão é executado para o restante do esquema. O elemento ** \< Person. Contact>** mapeia para a tabela Person. Contact e todos os atributos são mapeados para as colunas com o mesmo nome na tabela Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

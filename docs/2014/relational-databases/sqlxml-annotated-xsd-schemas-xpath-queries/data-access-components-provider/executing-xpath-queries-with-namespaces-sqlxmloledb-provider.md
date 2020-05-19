@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013075"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703227"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Executando consultas XPath com namespaces (provedor SQLXMLOLEDB)
   As consultas XPath podem incluir namespaces. Se os elementos de esquema forem qualificados por namespace (ou seja, se incluírem um namespace de destino), as consultas XPath com relação ao esquema precisarão especificar esse namespace.  
   
  Como não há suporte ao uso do caractere curinga (*) no SQLXML 4.0, você precisa especificar a consulta XPath usando um prefixo de namespace. Para resolver esse prefixo, use a propriedade namespaces para especificar a associação de namespace.  
   
- No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga (\*) e as funções XPath de nome local () e namespace-URI (). Essa consulta XPath retorna todos os elementos em que o nome local é `Contact` e o URI de namespace é `urn:myschema:Contacts`.  
+ No exemplo a seguir, a consulta XPath especifica namespaces usando o caractere curinga ( \* ) e as funções XPath de nome local () e namespace-URI (). Essa consulta XPath retorna todos os elementos em que o nome local é `Contact` e o URI de namespace é `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

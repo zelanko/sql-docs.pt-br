@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77d4bea058b9fc4cf63436ec055c597393d5496f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206813"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700823"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Como fazer: Inserir linhas em coluna de geografia (ODBC)
   Este exemplo insere duas linhas em uma tabela com uma coluna de geografia de WellKnownBinary (WKB) que usa duas associações diferentes (SQLCCHAR e SQLCBINARY). Em seguida, o exemplo seleciona uma linha daquela tabela e usa ::STAsText() para exibi-la. WKB é 0x01010000000700ECFAD03A4C4001008000B5DF07C0 e o aplicativo imprime no console: POINT(56.4595 -2.9842).  

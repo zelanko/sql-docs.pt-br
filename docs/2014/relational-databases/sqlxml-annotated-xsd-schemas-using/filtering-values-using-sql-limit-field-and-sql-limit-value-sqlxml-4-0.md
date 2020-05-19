@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013805"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703578"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)
   Você pode limitar as linhas retornadas de uma consulta de banco de dados com base em algum valor limitador. As anotações `sql:limit-field` e `sql:limit-value` são usadas para identificar a coluna de banco de dados que contém os valores limitadores e especificar um valor limitador específico a ser usado para filtrar os dados retornados.  
@@ -44,7 +44,7 @@ ms.locfileid: "66013805"
   
  Nestes exemplos, são usados modelos para especificar consultas XPath com base no esquema XSD de mapeamento.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Limitar os endereços de cliente retornados para um tipo de endereço específico  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>a. Limitar os endereços de cliente retornados para um tipo de endereço específico  
  Neste exemplo, um banco de dados contém duas tabelas:  
   
 -   Customer (CustomerID, CompanyName)  
@@ -170,7 +170,7 @@ ms.locfileid: "66013805"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Esse é o esquema de mapeamento no qual o atributo **OrderID** nos detalhes da ordem é mapeado para a coluna OrderID na relação Orders. Os valores retornados para esse atributo são limitados apenas aos que têm um valor de 2.0000000 e-001 (0,2) conforme especificado para o atributo de **desconto** usando as `sql:limit-field` anotações e `sql:limit-value` .  
+ Esse é o esquema de mapeamento no qual o atributo **OrderID** nos detalhes da ordem é mapeado para a coluna OrderID na relação Orders. Os valores retornados para esse atributo são limitados apenas aos que têm um valor de 2.0000000 e-001 (0,2) conforme especificado para o atributo de **desconto** usando as `sql:limit-field` `sql:limit-value` anotações e.  
   
  Este é o esquema:  
   
