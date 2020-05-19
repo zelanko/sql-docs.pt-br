@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9752510e51f8486f40a16f353b603a8f8e3c7596
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917109"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756222"
 ---
 # <a name="row-property-ado"></a>Propriedade Row (ADO)
 Obtém ou define um objeto de **linha** de OLE DB de ou em um objeto de [interface ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Quando você usa **put_Row** para definir um objeto de **linha** , uma linha é transformada em um objeto de **registro** ADO.  

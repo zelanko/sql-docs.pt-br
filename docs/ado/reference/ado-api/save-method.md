@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931170"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755866"
 ---
 # <a name="save-method"></a>Método Save
 Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um objeto de arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) .  

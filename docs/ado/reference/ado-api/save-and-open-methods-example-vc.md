@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90360589fb15e9b71bdd8776a709d1464db428ff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917070"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755904"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Exemplo dos métodos Save e Open (VC + +)
 Esses três exemplos demonstram como os métodos [Save](../../../ado/reference/ado-api/save-method.md) e **Open** podem ser usados juntos.  

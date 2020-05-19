@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931191"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755927"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Exemplo dos métodos Save e Open (VB)
 Esses três exemplos demonstram como os métodos [Save](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) podem ser usados juntos.  
