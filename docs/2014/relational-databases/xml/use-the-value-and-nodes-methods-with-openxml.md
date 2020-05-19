@@ -11,20 +11,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193237"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702327"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
   Você pode usar vários métodos **Value ()** no `xml` tipo de dados em uma cláusula **Select** para gerar um conjunto de linhas de valores extraídos. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  
   
- O método **Nodes ()** produz instâncias de um tipo `xml` de dados especial, cada um com seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()** , **value()** , **nodes()** e **exist()** e pode ser usado em agregações **count(\*)** . Todos os outros usos provocam um erro.  
+ O método **Nodes ()** produz instâncias de um `xml` tipo de dados especial, cada um com seu contexto definido como um nó selecionado diferente. Esse tipo de instância XML dá suporte aos métodos **query()** , **value()** , **nodes()** e **exist()** e pode ser usado em agregações **count(\*)** . Todos os outros usos provocam um erro.  
   
 ## <a name="example-using-nodes"></a>Exemplo: Usando nodes()  
  Assuma que você deseja extrair os nomes e sobrenomes de autores e o nome não é "David". Além disso, você deseja extrair essas informações como um conjunto de linhas que contém duas colunas, FirstName e LastName. Usando os métodos **nodes()** e **value()** , isso pode ser feito da seguinte forma:  

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013122"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703260"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Executando modelos que contêm consultas SQL (provedor SQLXMLOLEDB)
   Este exemplo ilustra o uso da propriedade ClientSideXML específica do provedor SQLXMLOLEDB. Nesse aplicativo de exemplo de ADO do lado cliente, um modelo XML que consiste em uma consulta SQL é executado no servidor.  
   
  Como a propriedade ClientSideXML é definida como true, a instrução SELECT sem a cláusula FOR XML é enviada ao servidor. O servidor executa a consulta e retorna um conjunto de linhas para o cliente. O cliente aplica a transformação de FOR XML ao conjunto de linhas e produz um documento XML.  
   
- O modelo XML fornece um único elemento raiz de nível superior (\<> raiz) para o documento XML que é gerado; Portanto, a propriedade raiz XML não é fornecida.  
+ O modelo XML fornece um único elemento raiz de nível superior ( \<> raiz) para o documento XML que é gerado; portanto, a propriedade raiz XML não é fornecida.  
   
  Para executar modelos de XML, o dialeto {5d531cb2-e6ed-11d2-b252-00c04f681b71} deve ser especificado.  
   

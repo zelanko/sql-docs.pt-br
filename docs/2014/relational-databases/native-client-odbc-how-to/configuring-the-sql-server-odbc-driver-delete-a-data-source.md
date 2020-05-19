@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c87d0123c5174461e4e3470b4e77ccb4bc5b10a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126099"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701889"
 ---
 # <a name="delete-a-data-source-odbc"></a>Excluir uma fonte de dados (ODBC)
   Você pode excluir uma fonte de dados usando o Administrador ODBC, programaticamente (usando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) ou excluindo um arquivo (se for um nome de fonte de dados de arquivo).  

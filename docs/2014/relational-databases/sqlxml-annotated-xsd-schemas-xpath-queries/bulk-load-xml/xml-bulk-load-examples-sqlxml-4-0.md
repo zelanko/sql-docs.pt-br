@@ -28,21 +28,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013272"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703328"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemplos do XML Bulk Load (SQLXML 4.0)
   Os exemplos a seguir ilustram a funcionalidade do XML Bulk Load no Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cada exemplo fornece um esquema XSD e seu esquema XDR equivalente.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>Script de Carregador em Massa (ValidateAndBulkload.vbs)  
- O script a seguir, escrito na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carrega um documento XML no DOM XML; valida-o em relação a um esquema; e, se o documento for válido, o executará um carregamento em massa XML para carregar o XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em uma tabela. Esse script pode ser usado com cada um dos exemplos individuais que farão referência a ele posteriormente neste tópico.  
+ O script a seguir, escrito na [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript), carrega um documento XML no DOM XML; o valida em relação a um esquema; e, se o documento for válido, executará um carregamento em massa XML para carregar o XML em uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela. Esse script pode ser usado com cada um dos exemplos individuais que farão referência a ele posteriormente neste tópico.  
   
 > [!NOTE]  
 >  O XML Bulk Load não lançará um aviso ou um erro se nenhum conteúdo for carregado do arquivo de dados. Portanto, é uma prática recomendada validar seu arquivo de dados XML antes de executar uma operação de carregamento em massa.  
@@ -110,7 +110,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. Carregando o XML em massa em uma tabela  
+## <a name="a-bulk-loading-xml-in-a-table"></a>a. Carregando o XML em massa em uma tabela  
  Este exemplo estabelece uma conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que é especificada na propriedade ConnectionString (meuservidor). O exemplo também especifica a Propriedade LogFile. Portanto, a saída de erro é salva no arquivo especificado ("C:\error.log") que você também poderá decidir alterar para um local diferente. Observe também que o método Execute tem como parâmetros o arquivo de esquema de mapeamento (SampleSchema. xml) e o arquivo de dados XML (SampleXMLData. xml). Quando o carregamento em massa for executado, a tabela Cust que você criou no banco de dados **tempdb** conterá novos registros com base no conteúdo do arquivo de dados XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para testar um exemplo de carregamento em massa  
@@ -199,7 +199,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Carregando dados XML em massa em várias tabelas  
- Neste exemplo, o documento XML consiste nos elementos do ** \<cliente>** e ** \<do pedido>** .  
+ Neste exemplo, o documento XML consiste nos elementos do ** \< cliente>** e do ** \< pedido>** .  
   
 ```  
 <ROOT>  
@@ -231,7 +231,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- O seguinte esquema XSD define a exibição XML dessas tabelas. O esquema especifica a relação pai-filho entre os elementos do ** \<cliente>** e ** \<do pedido>** .  
+ O seguinte esquema XSD define a exibição XML dessas tabelas. O esquema especifica a relação pai-filho entre os elementos do ** \< cliente>** e do ** \< pedido>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +270,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- O carregamento em massa de XML usa a relação de chave primária/chave estrangeira especificada acima entre os ** \<elementos>cust** e ** \<CustOrder>** para carregar em massa os dados em ambas as tabelas.  
+ O carregamento em massa de XML usa a relação de chave primária/chave estrangeira especificada acima entre os elementos ** \<>cust** e ** \< CustOrder>** para carregar em massa os dados em ambas as tabelas.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para testar um exemplo de carregamento em massa  
   
@@ -383,7 +383,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- O esquema especifica um ** \<** elemento de>de ordem com um elemento de ** \<produto>** filho. O ** \<elemento Order>** mapeia para a tabela Ord e o elemento ** \<>do produto** é mapeado para a tabela Product no banco de dados. A relação de cadeia especificada no elemento ** \<>do produto** identifica uma relação M:N representada pela tabela OrderDetail. (Uma ordem pode incluir vários produtos, e um produto pode ser incluído em muitos pedidos.)  
+ O esquema especifica um elemento de ** \<>de ordem** com um elemento de ** \< produto>** filho. O elemento ** \< Order>** mapeia para a tabela Ord e o elemento ** \<>do produto** é mapeado para a tabela Product no banco de dados. A relação de cadeia especificada no elemento ** \<>do produto** identifica uma relação M:N representada pela tabela OrderDetail. (Uma ordem pode incluir vários produtos, e um produto pode ser incluído em muitos pedidos.)  
   
  Quando você está carregando em massa um documento XML com esse esquema, os registros são adicionados às tabelas Ord, Product e OrderDetail.  
   
@@ -587,7 +587,7 @@ Set objBL = Nothing
   
 1.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleSchema.xml. Adicione ao arquivo o esquema XSD fornecido no exemplo anterior, "Usando relações de cadeia no esquema para carregamento em massa do XML".  
   
-2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleXMLD.xml. Adicione ao arquivo o documento XML fornecido no exemplo anterior, "Usando relações de cadeia no esquema para carregamento em massa do XML". Remova o \<elemento de> raiz do documento (para torná-lo um fragmento).  
+2.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como SampleXMLD.xml. Adicione ao arquivo o documento XML fornecido no exemplo anterior, "Usando relações de cadeia no esquema para carregamento em massa do XML". Remova o \< elemento de> raiz do documento (para torná-lo um fragmento).  
   
 3.  Crie um arquivo em seu editor de texto ou editor XML preferido e salve-o como ValidateAndBulkload.vbs. Para este arquivo, adicione o código VBScript neste exemplo. Modifique a cadeia de conexão para fornecer o nome apropriado de servidor e de banco de dados. Especifique o caminho apropriado para os arquivos que são especificados como parâmetros para o método execute.  
   
@@ -845,7 +845,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- O esquema identifica uma coluna de estouro (OverflowColumn) para a tabela Cust. Como resultado, todos os dados XML não consumidos para ** \<** cada elemento de>do cliente são adicionados a essa coluna.  
+ O esquema identifica uma coluna de estouro (OverflowColumn) para a tabela Cust. Como resultado, todos os dados XML não consumidos para cada elemento de ** \<>do cliente** são adicionados a essa coluna.  
   
 > [!NOTE]  
 >  Todos os elementos abstratos (elementos para os quais **Abstract = "true"** é especificado) e todos os atributos proibidos (atributos para os quais **proibido = "true"** é especificado) são considerados estouro pelo carregamento em massa de XML e são adicionados à coluna de estouro, se especificado. (Caso contrário, eles serão ignorados.)  
@@ -972,7 +972,7 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  O caminho do arquivo temporário deve ser um local compartilhado que seja acessível à conta de serviço da instância de destino do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e à conta que está executando o aplicativo de carregamento em massa. A menos que você esteja carregando em massa em um servidor local, o caminho do arquivo temporário deve ser um caminho \\UNC (como \Servername\Sharename).  
+>  O caminho do arquivo temporário deve ser um local compartilhado que seja acessível à conta de serviço da instância de destino do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e à conta que está executando o aplicativo de carregamento em massa. A menos que você esteja carregando em massa em um servidor local, o caminho do arquivo temporário deve ser um caminho UNC (como \\ \Servername\Sharename).  
   
 #### <a name="to-test-a-working-sample"></a>Para testar um exemplo de funcionamento  
   
@@ -1031,7 +1031,7 @@ set objBL=Nothing
   
 5.  Execute o código VBScript.  
   
-     O esquema deve especificar o correspondente `sql:datatype` para o atributo **CustomerID** quando o valor de **CUSTOMERID** é especificado como um GUID que inclui chaves ({e}), como:  
+     O esquema deve especificar o correspondente `sql:datatype` para o atributo **CustomerID** quando o valor de **CustomerID** é especificado como um GUID que inclui chaves ({e}), como:  
   
     ```  
     <ROOT>  
@@ -1063,7 +1063,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     Quando `sql:datatype` é especificado identificando o tipo de `uniqueidentifier`coluna como, a operação de carregamento em massa remove as chaves ({e}) do valor **CustomerID** antes de inseri-la na coluna.  
+     Quando `sql:datatype` é especificado identificando o tipo de coluna como `uniqueidentifier` , a operação de carregamento em massa remove as chaves ({e}) do valor **CustomerID** antes de inseri-la na coluna.  
   
  Este é o esquema XDR equivalente:  
   
@@ -1245,7 +1245,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. Carregamento em massa em colunas de tipo de dados xml  
  Se o esquema de mapeamento especificar uma coluna de [tipo de dados XML](/sql/t-sql/xml/xml-transact-sql) usando a `sql:datatype="xml"` anotação, o carregamento em massa de XML poderá copiar elementos filho XML para o campo mapeado do documento de origem para esta coluna.  
   
- Considere o esquema XSD a seguir, o qual mapeia uma exibição da tabela Production.ProductModel no banco de dados AdventureWorks de exemplo. Nesta tabela, o campo CatalogDescription do tipo `xml` de dados é mapeado para um ** \<elemento>desc** usando as `sql:field` anotações `sql:datatype="xml"` e.  
+ Considere o esquema XSD a seguir, o qual mapeia uma exibição da tabela Production.ProductModel no banco de dados AdventureWorks de exemplo. Nesta tabela, o campo CatalogDescription do `xml` tipo de dados é mapeado para um elemento ** \<>desc** usando as `sql:field` `sql:datatype="xml"` anotações e.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -28,18 +28,18 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013289"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703346"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objeto de carregamento em massa de XML do SQL Server (SQLXML 4.0)
-  O modelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de objeto de carregamento em massa do Microsoft XML consiste no objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
+  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modelo de objeto de carregamento em massa do Microsoft XML consiste no objeto SQLXMLBulkLoad. Esse objeto suporta os métodos e propriedades a seguir.  
   
 ## <a name="methods"></a>Métodos  
  Execute (executar)  
@@ -118,7 +118,7 @@ ms.locfileid: "66013289"
  SchemaGen  
  Especifica se as tabelas necessárias serão criadas antes de executar uma operação de Carregamento em Massa. Essa é uma propriedade booliana. Se essa propriedade for definida como TRUE, serão criadas as tabelas identificadas no esquema de mapeamento (o banco de dados deve existir). Se uma ou mais das tabelas já existirem no banco de dados, a propriedade SGDropTables determinará se essas tabelas preexistentes devem ser descartadas e recriadas.  
   
- O valor padrão para a propriedade SchemaGen é FALSE. SchemaGen não cria restrições de chave primária nas tabelas recém-criadas. O SchemaGen, no entanto, cria restrições de chave estrangeira no banco de dados se `sql:relationship` puder `sql:key-fields` encontrar correspondência e anotações no esquema de mapeamento e se o campo de chave consistir em uma única coluna.  
+ O valor padrão para a propriedade SchemaGen é FALSE. SchemaGen não cria restrições de chave primária nas tabelas recém-criadas. O SchemaGen, no entanto, cria restrições de chave estrangeira no banco de dados se puder encontrar correspondência `sql:relationship` e `sql:key-fields` anotações no esquema de mapeamento e se o campo de chave consistir em uma única coluna.  
   
  Observe que, se você definir a propriedade SchemaGen como TRUE, o carregamento em massa de XML fará o seguinte:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66013289"
  Especifica se o Carregamento em Massa deveria ser executado como uma transação, caso em que a reversão será garantida se houver falha do Carregamento em Massa. Essa é uma propriedade booliana. Se a propriedade for definida como TRUE, o Carregamento em Massa ocorrerá em um contexto transacional. A propriedade TempFilePath é útil somente quando a transação é definida como TRUE.  
   
 > [!NOTE]  
->  Se você estiver carregando dados binários (como os tipos de dados XML bin. Hex, bin. base64 para os tipos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados Binary, Image), a propriedade Transaction deverá ser definida como false.  
+>  Se você estiver carregando dados binários (como os tipos de dados XML bin. Hex, bin. base64 para os tipos de dados Binary, Image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), a propriedade Transaction deverá ser definida como false.  
   
  O valor padrão é FALSE.  
   

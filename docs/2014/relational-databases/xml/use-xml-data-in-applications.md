@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232427"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702320"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar dados XML em aplicativos
   Este tópico descreve as opções disponíveis para trabalhar com o tipo de dados `xml` em seus aplicativos. O tópico contém informações sobre o seguinte:  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Tratando XML de uma coluna de tipo xml usando o ADO.NET  
- Para manipular XML de uma `xml` coluna de tipo de dados usando ADO.net e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] o, você pode usar o comportamento padrão `SqlCommand` da classe. Por exemplo, uma coluna de tipo de dados `xml` e seus valores podem ser recuperados da mesma maneira como qualquer coluna SQL é recuperada usando um `SqlDataReader`. No entanto se você desejar trabalhar com o conteúdo de uma coluna de tipo de dados `xml` como XML, primeiro precisará atribuir o conteúdo a um tipo `XmlReader`.  
+ Para manipular XML de uma `xml` coluna de tipo de dados usando ADO.net e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , você pode usar o comportamento padrão da `SqlCommand` classe. Por exemplo, uma coluna de tipo de dados `xml` e seus valores podem ser recuperados da mesma maneira como qualquer coluna SQL é recuperada usando um `SqlDataReader`. No entanto se você desejar trabalhar com o conteúdo de uma coluna de tipo de dados `xml` como XML, primeiro precisará atribuir o conteúdo a um tipo `XmlReader`.  
   
  Para obter mais informações e um código de exemplo, confira "Valores de coluna XML em um leitor de dados" na documentação do SDK do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
