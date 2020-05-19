@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920792"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747082"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interface ADORecordsetConstruction
 A interface **ADORecordsetConstruction** é usada para construir um objeto **Recordset** ado de um objeto **conjunto de linhas** OLE DB em um aplicativo C/C++.  
@@ -42,7 +42,7 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
  Nenhum.  
   
 ## <a name="remarks"></a>Comentários  
- Dado um OLE DB objeto de conjunto`pRowset`de **linhas** (), a construção de um objeto`adoRs` **Recordset** ADO () resulta em três operações básicas a seguir:  
+ Dado um OLE DB objeto de **conjunto de linhas** ( `pRowset` ), a construção de um objeto **Recordset** ADO ( `adoRs` ) resulta em três operações básicas a seguir:  
   
 1.  Criar um objeto ADO **Recordset** :  
   
@@ -67,7 +67,7 @@ A interface **ADORecordsetConstruction** é usada para construir um objeto **Rec
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- O `adoRs` objeto resultante agora representa o objeto **Recordset** ADO construído a partir do objeto de **conjunto de linhas** OLE DB.  
+ O objeto resultante `adoRs` agora representa o objeto **Recordset** ADO construído a partir do objeto de **conjunto de linhas** OLE DB.  
   
  Você também pode construir um objeto **RECORDSET** ado a partir de um OLE DB **capítulo** ou objeto de uma **posição** .  
   

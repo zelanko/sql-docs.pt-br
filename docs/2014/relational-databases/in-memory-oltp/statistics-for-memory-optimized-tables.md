@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155794"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718942"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estatísticas para tabelas com otimização de memória
   O otimizador de consulta usa estatísticas sobre colunas para criar planos de consulta que melhoram o desempenho das consultas. As estatísticas são coletadas de tabelas no banco de dados e armazenadas nos metadados do banco de dados.  
@@ -26,11 +26,11 @@ ms.locfileid: "63155794"
   
  As estatísticas sobre tabelas com otimização de memória não são atualizadas por padrão. É preciso atualizá-las manualmente. Use [Update statistics &#40;&#41;Transact-SQL](/sql/t-sql/statements/update-statistics-transact-sql) para colunas individuais, índices ou tabelas. Use [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) para atualizar as estatísticas de todas as tabelas de usuário e internas no banco de dados.  
   
- Ao usar [Create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [atualizar estatísticas &#40;&#41;Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), você deve `NORECOMPUTE` especificar para desabilitar a atualização automática de estatísticas para tabelas com otimização de memória. Para tabelas baseadas em disco, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) atualiza apenas as estatísticas se a tabela tiver sido modificada desde o último [Sp_updatestats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para tabelas com otimização de memória, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) sempre gera estatísticas atualizadas. [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) é uma boa opção para tabelas com otimização de memória; caso contrário, você precisa saber quais tabelas têm alterações significativas para poder atualizar estatísticas individualmente.  
+ Ao usar [Create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [atualizar estatísticas &#40;&#41;Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), você deve especificar `NORECOMPUTE` para desabilitar a atualização automática de estatísticas para tabelas com otimização de memória. Para tabelas baseadas em disco, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) atualiza apenas as estatísticas se a tabela tiver sido modificada desde o último [Sp_updatestats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). Para tabelas com otimização de memória, [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) sempre gera estatísticas atualizadas. [sp_updatestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) é uma boa opção para tabelas com otimização de memória; caso contrário, você precisa saber quais tabelas têm alterações significativas para poder atualizar estatísticas individualmente.  
   
  As estatísticas podem ser geradas pela amostragem dos dados ou executando um exame completo. As estatísticas por amostra usam apenas uma amostra dos dados da tabela para estimar a distribuição de dados. As estatísticas por exame completo verificam a tabela inteira para determinar a distribuição de dados. As estatísticas por exame completo geralmente são mais precisas, mas levam mais tempo para serem calculadas. As estatísticas por amostra podem ser coletadas mais rapidamente.  
   
- As tabelas baseadas em disco usam estatísticas por amostra, por padrão. As tabelas com otimização de memória oferecem suporte apenas às estatísticas por exame completo. Ao usar [Create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [atualizar estatísticas &#40;&#41;do Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), você deve `FULLSCAN` especificar a opção para tabelas com otimização de memória.  
+ As tabelas baseadas em disco usam estatísticas por amostra, por padrão. As tabelas com otimização de memória oferecem suporte apenas às estatísticas por exame completo. Ao usar [Create statistics &#40;Transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) ou [atualizar estatísticas &#40;&#41;do Transact-SQL ](/sql/t-sql/statements/update-statistics-transact-sql), você deve especificar a `FULLSCAN` opção para tabelas com otimização de memória.  
   
  Considerações adicionais para estatísticas em tabelas com otimização de memória:  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

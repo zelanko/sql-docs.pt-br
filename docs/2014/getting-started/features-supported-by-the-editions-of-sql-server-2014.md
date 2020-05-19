@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289284"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706959"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
 
@@ -24,7 +24,7 @@ ms.locfileid: "79289284"
 
  > **Observação:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em uma edição de avaliação para um período de avaliação de 180 dias. Para obter mais informações, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Site de avaliação do software](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **Observação:** Para obter recursos com suporte nas edições de avaliação e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desenvolvedor, consulte o conjunto de recursos corporativos.  
+> **Observação:** Para obter recursos com suporte nas edições de avaliação e desenvolvedor, consulte o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de recursos corporativos.  
   
  Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "79289284"
   
  [Escalabilidade e desempenho](#Scalability)  
   
- [Segurança](#Enterprise_security)  
+ [Security](#Enterprise_security)  
   
  [Replicação](#Replication)  
   
@@ -80,102 +80,102 @@ ms.locfileid: "79289284"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Capacidade máxima de computação usada por uma única instância[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (mecanismo de banco de dados)<sup>1</sup>|Máximo do sistema operacional|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
+|Capacidade máxima de computação usada por uma única instância ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mecanismo de banco de dados)<sup>1</sup>|Máximo do sistema operacional|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
 |Capacidade máxima de computação usada por uma única instância (Analysis Services, Reporting Services) <sup>1</sup>|Máximo do sistema operacional|Máximo do sistema operacional|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 4 soquetes ou 16 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|Limitado a menos de 1 soquete ou 4 núcleos|  
 |Memória máxima utilizada (por instância do Mecanismo de Banco de Dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Máximo do sistema operacional|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |Memória máxima utilizada (por instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|N/D|N/D|N/D|N/D|  
 |Memória máxima utilizada (por instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Máximo do sistema operacional|Máximo do sistema operacional|64 GB|64 GB|4 GB|N/D|N/D|  
 |Tamanho máximo do banco de dados relacional|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition com servidor + licenciamento baseado em Cal (licença de acesso para cliente) (não disponível para novos contratos) é limitado a um máximo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 20 núcleos por instância. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+ <sup>1</sup> Enterprise Edition com servidor + licenciamento baseado em Cal (licença de acesso para cliente) (não disponível para novos contratos) é limitado a um máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instância. Não há limites no modelo de Licenciamento de Servidor Baseado em Núcleo. Para saber mais, confira [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ##  <a name="high-availability"></a><a name="High_availability"></a>Alta disponibilidade  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Suporte do Server Core<sup>1</sup>|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Envio de logs|Sim|Sim|Sim|Sim||||  
-|Espelhamento de banco de dados|Sim|Sim (somente segurança completa)|Sim (somente segurança completa)|Somente testemunha|Somente testemunha|Somente testemunha|Somente testemunha|  
-|Compactação de backup|Sim|Sim|Sim|||||  
-|Instantâneo do banco de dados|Sim|||||||  
+|Suporte do Server Core<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Envio de logs|Yes|Yes|Yes|Yes||||  
+|Espelhamento de banco de dados|Yes|Sim (somente segurança completa)|Sim (somente segurança completa)|Somente testemunha|Somente testemunha|Somente testemunha|Somente testemunha|  
+|Compactação de backup|Yes|Yes|Yes|||||  
+|Instantâneo do banco de dados|Yes|||||||  
 |Instâncias de cluster de failover AlwaysOn|Sim (suporte de nó: máximo do sistema operacional|Sim (suporte de nó: 2)|Sim (suporte de nó: 2)|||||  
 |Grupos de disponibilidade AlwaysOn|Sim (até oito réplicas secundárias, incluindo duas réplicas secundárias síncronas)|||||||  
-|Diretor de Conexão|Sim|||||||  
-|Restauração de arquivo e página online|Sim|||||||  
-|Indexação online|Sim|||||||  
-|Alteração de esquema online|Sim|||||||  
-|Recuperação rápida|Sim|||||||  
-|Backups espelhados|Sim|||||||  
-|Adição de memória a quente e CPU<sup>2</sup>|Sim|||||||  
-|Orientador de recuperação de banco de dados|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Backup criptografado|Sim|Sim|Sim|||||  
-|Backup inteligente|Sim|Sim|Sim|Não||||  
+|Diretor de Conexão|Yes|||||||  
+|Restauração de arquivo e página online|Yes|||||||  
+|Indexação online|Yes|||||||  
+|Alteração de esquema online|Yes|||||||  
+|Recuperação rápida|Yes|||||||  
+|Backups espelhados|Yes|||||||  
+|Adição de memória a quente e CPU<sup>2</sup>|Yes|||||||  
+|Orientador de recuperação de banco de dados|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Backup criptografado|Yes|Yes|Yes|||||  
+|Backup inteligente|Yes|Yes|Yes|Não||||  
   
- <sup>1</sup> Para obter mais informações sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] como instalar o no Server Core, consulte [instalar o SQL Server 2014 no Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
+ <sup>1</sup> Para obter mais informações sobre como instalar o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] no Server Core, consulte [instalar o SQL Server 2014 no Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
- <sup>2</sup> Este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>2</sup> Este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="scalability-and-performance"></a><a name="Scalability"></a>Escalabilidade e desempenho  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Suporte de várias instâncias|50|50|50|50|50|50|50|  
-|Particionamento de tabela e índice|Sim|||||||  
+|Particionamento de tabela e índice|Yes|||||||  
 |Compactação de dados|Sim|||||||  
 |Administrador de Recursos|Sim|||||||  
-|Paralelismo de tabela de partição|Sim|||||||  
-|Contêineres de vários fluxos de arquivos|Sim|||||||  
-|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Sim|||||||  
-|Extensão do pool de buffers <sup>1</sup>|Sim|Sim|Sim|||||  
-|Administração do recurso de E/S|Sim|||||||  
-|OLTP na memória <sup>1</sup>|Sim|||||||  
-|Durabilidade atrasada|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Paralelismo de tabela de partição|Yes|||||||  
+|Contêineres de vários fluxos de arquivos|Yes|||||||  
+|Memória de página grande com reconhecimento para NUMA e alocação de matriz de buffer|Yes|||||||  
+|Extensão do pool de buffers <sup>1</sup>|Yes|Yes|Yes|||||  
+|Administração do recurso de E/S|Yes|||||||  
+|OLTP na memória <sup>1</sup>|Yes|||||||  
+|Durabilidade atrasada|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- <sup>1</sup> este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>1</sup> este recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="security"></a><a name="Enterprise_security"></a> Segurança  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Auditoria Básica|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Auditoria refinada|Sim|||||||  
+|Auditoria Básica|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Auditoria refinada|Yes|||||||  
 |Criptografia transparente do banco de dados|Sim|||||||  
-|Gerenciamento Extensível de Chaves|Sim|||||||  
-|Funções definidas pelo usuário|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Criptografia para backups|Sim|Sim|Sim|||||  
+|Gerenciamento Extensível de Chaves|Yes|||||||  
+|Funções definidas pelo usuário|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Bancos de dados independentes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Criptografia para backups|Yes|Yes|Sim|||||  
   
 ##  <a name="replication"></a><a name="Replication"></a> Replicação  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Controle de alterações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Replicação de mesclagem|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
-|Replicação transacional|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
-|Replicação de instantâneo|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
-|Assinantes heterogêneos|Sim|Sim|Sim|||||  
-|publicação Oracle|Sim|||||||  
-|Replicação transacional ponto a ponto|Sim|||||||  
+|Controle de alterações do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Replicação de mesclagem|Yes|Yes|Yes|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
+|Replicação transacional|Yes|Yes|Yes|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
+|Replicação de instantâneo|Yes|Yes|Yes|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
+|Assinantes heterogêneos|Yes|Yes|Yes|||||  
+|publicação Oracle|Yes|||||||  
+|Replicação transacional ponto a ponto|Yes|||||||  
   
 ##  <a name="management-tools"></a><a name="Mgmt_Tools"></a>Ferramentas de gerenciamento  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|SQL Management Objects (SMO)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|SQL Configuration Manager|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|SQL CMD (ferramenta de prompt de comando)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Sim|Sim|Sim|Sim|Sim|Sim||  
-|Distributed Replay – Ferramenta de Administração|Sim|Sim|Sim|Sim|Sim|Sim||  
-|Distributed Replay - Client|Sim|Não|Sim|Sim||||  
-|Distributed Replay - Controller|Sim (Enterprise dá suporte a até 16 clientes, o Developer dá suporte a apenas 1 cliente)|Não|Sim (suporte a apenas 1 cliente)|Sim (suporte a apenas 1 cliente)||||  
-|SQL Profiler|Sim|Sim|Sim|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Sim|Sim|Sim|Sim||||  
-|Pacote de gerenciamento do Microsoft System Center Operations Manager|Sim|Sim|Sim|Sim||||  
-|Database Tuning Advisor (DTA)|Sim|Sim|Sim<sup>3</sup>|Sim<sup>3</sup>||||  
-|Assistente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implantar um banco de dados em uma VM do Azure|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Arquivos de dados no Azure|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|SQL CMD (ferramenta de prompt de comando)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Yes|Yes|Yes|Yes|Yes|Yes||  
+|Distributed Replay – Ferramenta de Administração|Yes|Yes|Yes|Yes|Yes|Yes||  
+|Distributed Replay - Client|Sim|Não|Sim|Yes||||  
+|Distributed Replay - Controller|Sim (Enterprise dá suporte a até 16 clientes, o Developer dá suporte a apenas 1 cliente)|No|Sim (suporte a apenas 1 cliente)|Sim (suporte a apenas 1 cliente)||||  
+|SQL Profiler|Yes|Yes|Yes|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|Não<sup>2</sup>|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
+|Pacote de gerenciamento do Microsoft System Center Operations Manager|Yes|Yes|Yes|Yes||||  
+|Database Tuning Advisor (DTA)|Yes|Yes|Sim<sup>3</sup>|Sim<sup>3</sup>||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Assistente para implantar um banco de dados em uma VM do Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Arquivos de dados no Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a Web [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , com ferramentas, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] e com serviços avançados podem ser Profiles [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edições Standard e Enterprise.  
+ <sup>2</sup> a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com ferramentas, e [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] com serviços avançados podem ser Profiles usando as [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edições Standard e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
   
  <sup>3</sup> o ajuste está habilitado apenas nos recursos da edição Standard.  
   
@@ -183,41 +183,41 @@ ms.locfileid: "79289284"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Instâncias de usuário|||||Sim|Sim|Sim|  
-|LocalDB|||||Sim|Sim||  
-|Conexão dedicada de administrador|Sim|Sim|Sim|Sim|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|  
-|Suporte de scripts PowerShell|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Suporte a SysPrep<sup>1</sup>|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Suporte para operações de componente de aplicativo da camada de dados – extrair, implantar, atualizar, excluir|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Automação de política (verificação de agenda e alterações)|Sim|Sim|Sim|Sim||||  
-|Coletor de dados de desempenho|Sim|Sim|Sim|Sim||||  
-|Capaz de se inscrever como uma instância gerenciada em um gerenciamento com várias instâncias|Sim|Sim|Sim|Sim||||  
-|Relatórios de desempenho padrão|Sim|Sim|Sim|Sim||||  
-|Guias de plano e planejar congelamento para guias de plano|Sim|Sim|Sim|Sim||||  
-|Direcione a consulta de exibições indexadas (usando a dica de NOEXPAND)|Sim|Sim|Sim|Sim||||  
-|Manutenção de exibição indexada automática|Sim|Sim|Sim|Sim||||  
+|Instâncias de usuário|||||Yes|Yes|Yes|  
+|LocalDB|||||Yes|Yes||  
+|Conexão dedicada de administrador|Yes|Yes|Yes|Yes|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|Sim (sob sinalizador de rastreamento)|  
+|Suporte de scripts PowerShell|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Suporte a SysPrep<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Suporte para operações de componente de aplicativo da camada de dados – extrair, implantar, atualizar, excluir|Yes|Yes|Yes|Yes|Yes|Yes|Sim|  
+|Automação de política (verificação de agenda e alterações)|Yes|Yes|Yes|Yes||||  
+|Coletor de dados de desempenho|Yes|Yes|Yes|Yes||||  
+|Capaz de se inscrever como uma instância gerenciada em um gerenciamento com várias instâncias|Yes|Yes|Yes|Yes||||  
+|Relatórios de desempenho padrão|Yes|Yes|Yes|Yes||||  
+|Guias de plano e planejar congelamento para guias de plano|Yes|Yes|Yes|Yes||||  
+|Direcione a consulta de exibições indexadas (usando a dica de NOEXPAND)|Yes|Yes|Yes|Yes||||  
+|Manutenção de exibição indexada automática|Yes|Yes|Yes|Yes||||  
 |Exibições particionadas distribuídas|Sim|Parcial. As exibições particionadas distribuídas não são atualizáveis|Parcial. As exibições particionadas distribuídas não são atualizáveis|Parcial. As exibições particionadas distribuídas não são atualizáveis|Parcial. As exibições particionadas distribuídas não são atualizáveis|Parcial. As exibições particionadas distribuídas não são atualizáveis|Parcial. As exibições particionadas distribuídas não são atualizáveis|  
-|Operações indexadas paralelas|Sim|||||||  
-|Uso automático da exibição indexada através do otimizador de consulta|Sim|||||||  
-|Verificação de consistência paralela|Sim|||||||  
-|Ponto de controle do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|||||||  
-|Bancos de dados independentes|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Extensão do pool de buffers<sup>2</sup>|Sim|Sim|Sim|||||  
+|Operações indexadas paralelas|Yes|||||||  
+|Uso automático da exibição indexada através do otimizador de consulta|Yes|||||||  
+|Verificação de consistência paralela|Yes|||||||  
+|Ponto de controle do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Yes|||||||  
+|Bancos de dados independentes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Extensão do pool de buffers<sup>2</sup>|Yes|Yes|Yes|||||  
   
  <sup>1</sup> Para obter mais informações, veja [Considerações para instalação do SQL Server usando SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
   
- <sup>2</sup> esse recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ <sup>2</sup> esse recurso está disponível somente para 64 bits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ##  <a name="development-tools"></a><a name="Dev_tools"></a>Ferramentas de desenvolvimento  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Integração com [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] e MDX)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Sim|Sim|Sim|Sim|Sim|||  
-|Ferramentas de design e edição de consulta SQL<sup>1</sup>|Sim|Sim|Sim|||||  
-|Suporte ao controle de versão<sup>1</sup>|Sim|Sim|Sim|||||  
-|Ferramentas de edição, depuração e design MDX<sup>1</sup>|Sim|Sim|Sim|||||  
+|Integração com [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] e MDX)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Yes|Yes|Yes|Yes|Yes|||  
+|Ferramentas de design e edição de consulta SQL<sup>1</sup>|Yes|Yes|Yes|||||  
+|Suporte ao controle de versão<sup>1</sup>|Yes|Yes|Yes|||||  
+|Ferramentas de edição, depuração e design MDX<sup>1</sup>|Yes|Yes|Yes|||||  
   
  <sup>1</sup> este recurso não está disponível para a versão de 64 bits da Standard Edition.  
   
@@ -225,59 +225,59 @@ ms.locfileid: "79289284"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Integração do CLR (Common Language Runtime)|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Suporte a XML nativo|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Indexação XML|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|MESCLAr & recursos de UPSERT|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|suporte a FILESTREAM|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|FileTable|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Tipos de dados de Data e Hora|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Suporte à internacionalização|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Pesquisa semântica e de texto completo|Sim|Sim|Sim|Sim|Sim|||  
-|Especificação de idioma em consulta|Sim|Sim|Sim|Sim|Sim|||  
-|Service Broker (mensagens)|Sim|Sim|Sim|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|  
-|Pontos de extremidade de [!INCLUDE[tsql](../includes/tsql-md.md)]|Sim|Sim|Sim|Sim||||  
+|Integração do CLR (Common Language Runtime)|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Suporte a XML nativo|Yes|Yes|Yes|Yes|Yes|Yes|Sim|  
+|Indexação XML|Sim|Yes|Yes|Yes|Yes|Yes|Yes|  
+|MESCLAr & recursos de UPSERT|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|suporte a FILESTREAM|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|FileTable|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Tipos de dados de Data e Hora|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Suporte à internacionalização|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Pesquisa semântica e de texto completo|Yes|Yes|Yes|Yes|Yes|||  
+|Especificação de idioma em consulta|Yes|Yes|Yes|Yes|Yes|||  
+|Service Broker (mensagens)|Sim|Yes|Sim|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|Não (Somente cliente)|  
+|Pontos de extremidade de [!INCLUDE[tsql](../includes/tsql-md.md)]|Yes|Yes|Yes|Yes||||  
   
 ##  <a name="integration-services"></a><a name="SSIS"></a> Integration Services  
   
 |Recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Conectores internos de fonte de dados|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Designer de SSIS e runtime|Sim|Sim|Sim|||||  
-|Transformações básicas|Sim|Sim|Sim|||||  
-|Ferramentas de criação de perfil de dados básicos|Sim|Sim|Sim|||||  
-|Serviço Change Data Capture para Oracle da Attunity|Sim|||||||  
-|Change Data Capture Designer para Oracle da Attunity|Sim|||||||  
+|Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Conectores internos de fonte de dados|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Designer de SSIS e runtime|Yes|Yes|Yes|||||  
+|Transformações básicas|Yes|Yes|Yes|||||  
+|Ferramentas de criação de perfil de dados básicos|Yes|Yes|Yes|||||  
+|Serviço Change Data Capture para Oracle da Attunity|Yes|||||||  
+|Change Data Capture Designer para Oracle da Attunity|Yes|||||||  
   
 ###  <a name="integration-services---advanced-adapters"></a><a name="SSIS_AA"></a>Adaptadores Integration Services-avançado  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Destino Oracle de alto desempenho|Sim|||||||  
-|Destino Teradata de alto desempenho|Sim|||||||  
-|Origem e destino do SAP BW|Sim|||||||  
-|Adaptador de destino de treinamento do modelo de mineração de dados|Sim|||||||  
-|Adaptador de destino de processamento de dimensões|Sim|||||||  
-|Adaptador de destino de processamento de partições|Sim|||||||  
-|Componentes do Change Data Capture da Attunity|Sim|||||||  
-|Conector para ODBC (Conectividade Aberta de Banco de Dados) da Attunity.|Sim|||||||  
+|Destino Oracle de alto desempenho|Yes|||||||  
+|Destino Teradata de alto desempenho|Yes|||||||  
+|Origem e destino do SAP BW|Yes|||||||  
+|Adaptador de destino de treinamento do modelo de mineração de dados|Yes|||||||  
+|Adaptador de destino de processamento de dimensões|Yes|||||||  
+|Adaptador de destino de processamento de partições|Yes|||||||  
+|Componentes do Change Data Capture da Attunity|Yes|||||||  
+|Conector para ODBC (Conectividade Aberta de Banco de Dados) da Attunity.|Yes|||||||  
   
 ###  <a name="integration-services---advanced-transforms"></a><a name="SSIS_AT"></a>Transformações Integration Services avançadas  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Pesquisas persistentes (alto desempenho)|Sim|||||||  
-|Transformação de consulta de mineração de dados|Sim|||||||  
-|Transformações de pesquisa e agrupamento difuso|Sim|||||||  
-|Transformações de extração e pesquisa de termos|Sim|||||||  
+|Pesquisas persistentes (alto desempenho)|Yes|||||||  
+|Transformação de consulta de mineração de dados|Yes|||||||  
+|Transformações de pesquisa e agrupamento difuso|Yes|||||||  
+|Transformações de extração e pesquisa de termos|Yes|||||||  
   
 ##  <a name="master-data-services"></a><a name="MDS"></a>Master Data Services  
   
 > [!NOTE]  
 >  -   O [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponível apenas nas edições de 64 bits somente do Business Intelligence e do Enterprise.  
   
-|Recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|Recurso|Empresarial|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] banco de dados|Sim|Sim||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] aplicativo Web|Sim|Sim||||||  
@@ -288,12 +288,12 @@ ms.locfileid: "79289284"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Criar cubos sem um banco de dados|Sim|Sim|Sim|||||  
 |Gerar automaticamente esquema e data warehouse de preparo|Sim|Sim|Sim|||||  
-|captura de dados de alterações|Sim|||||||  
-|Otimizações de consulta de junção em estrela|Sim|||||||  
-|Configuração escalonável somente leitura do Analysis Services|Sim|||||||  
-|Processamento paralelo de consultas em tabelas e índices particionados|Sim|||||||  
-|Índices columnstore xVelocity com otimização de memória|Sim|||||||  
-|Agregação global do lote|Sim|||||||  
+|captura de dados de alterações|Yes|||||||  
+|Otimizações de consulta de junção em estrela|Yes|||||||  
+|Configuração escalonável somente leitura do Analysis Services|Yes|||||||  
+|Processamento paralelo de consultas em tabelas e índices particionados|Yes|||||||  
+|Índices columnstore xVelocity com otimização de memória|Yes|||||||  
+|Agregação global do lote|Yes|||||||  
   
 ##  <a name="analysis-services"></a><a name="SSAS"></a>Analysis Services  
   
@@ -393,7 +393,7 @@ ms.locfileid: "79289284"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Banco de dados de catálogo com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard ou superior|Standard ou superior|Standard ou superior|Web|Express|||  
 |Fonte de dados com suporte - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Todas as edições do   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Todas as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Web|Express|||  
-|Servidor de relatório|Sim|Sim|Sim|Sim|Sim|||  
+|Servidor de relatórios|Sim|Sim|Sim|Sim|Sim|||  
 |Designer de Relatórios|Sim|Sim|Sim|Sim|Sim|||  
 |Gerenciador de Relatórios|Sim|Sim|Sim|Sim|Sim|||  
 |Segurança baseada em função|Sim|Sim|Sim|Sim|Sim|||  
@@ -417,7 +417,7 @@ ms.locfileid: "79289284"
 |Alerta<sup>2</sup>|Sim|Sim||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|Sim|Sim||||||  
   
- <sup>1</sup> Para obter mais informações sobre as fontes de dados com [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]suporte no, consulte [fontes de dado com suporte pelo Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ <sup>1</sup> Para obter mais informações sobre as fontes de dados com suporte no [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , consulte [fontes de dado com suporte pelo Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  <sup>2</sup> Requer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint. Para obter mais informações, consulte [Reporting Services instalação do modo sharepoint &#40;sharepoint 2010 e sharepoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -426,7 +426,7 @@ ms.locfileid: "79289284"
   
 |Para esta edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Use esta edição da instância do Mecanismo de Banco de Dados para hospedar o banco de dados|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|Enterprise|Edições Standard, Business Intelligence, Enterprise (locais ou remotas)|  
+|Empresarial|Edições Standard, Business Intelligence, Enterprise (locais ou remotas)|  
 |Business Intelligence|Edições Standard, Business Intelligence, Enterprise (locais ou remotas)|  
 |Standard|Edições Standard, Enterprise (local ou remotamente)|  
 |Web|Web Edition (apenas localmente)|  
@@ -438,30 +438,30 @@ ms.locfileid: "79289284"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Sim|Sim|Sim|||||  
-|Suplementos de mineração de dados para Excel e Visio 2010|Sim|Sim|Sim|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sim|Sim||||||  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sim|Sim||||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Yes|Yes|Yes|||||  
+|Suplementos de mineração de dados para Excel e Visio 2010|Yes|Yes|Yes|||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Yes|Yes||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]é um suplemento do Excel e não depende do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No entanto, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] é necessário para compartilhar e colaborar com pastas de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] no SharePoint e este recurso está disponível como parte das edições [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]é um suplemento do Excel e não depende do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . No entanto, o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] é necessário para compartilhar e colaborar com pastas de trabalho do [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] no SharePoint e este recurso está disponível como parte das edições [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise e Business Intelligence.  
 > 2.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, esses recursos podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>Serviços espaciais e de localização  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|Índices espaciais|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Tipos de dados planares e geodésicos|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Bibliotecas espaciais avançadas|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|Índices espaciais|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Tipos de dados planares e geodésicos|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Bibliotecas espaciais avançadas|Yes|Yes|Yes|Yes|Yes|Yes|Sim|  
+|Importação/exportação de formatos de dados espaciais padrão da indústria|Sim|Yes|Yes|Yes|Yes|Yes|Yes|  
   
 ##  <a name="additional-database-services"></a><a name="Add_DBServices"></a>Serviços de banco de dados adicionais  
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistente de Migração|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
-|Database Mail|Sim|Sim|Sim|Sim||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistente de Migração|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Database Mail|Yes|Yes|Yes|Yes||||  
   
 ##  <a name="other-components"></a><a name="Other_Components"></a>Outros componentes  
   

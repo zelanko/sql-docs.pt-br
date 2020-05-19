@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aca17d997632312164c7b308b09009c0f037875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657825"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706017"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   A interface do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client obedece aos três níveis de conformidade definidos para ODBC (ISO, Open Group e ODBC nível 2). **SQLGetFunctions** informa que é dado suporte a todas as funções ODBC para o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

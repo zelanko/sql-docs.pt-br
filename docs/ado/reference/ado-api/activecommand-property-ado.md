@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747472"
 ---
 # <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
 Indica o objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que criou o objeto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) associado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Retorna uma **variante** que contém um objeto de **comando** . O padrão é uma referência de objeto nulo.  
   
 ## <a name="remarks"></a>Comentários  

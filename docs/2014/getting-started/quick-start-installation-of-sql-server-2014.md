@@ -11,15 +11,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683612"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706883"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Instalação de início rápido do SQL Server 2014
     
@@ -42,15 +42,15 @@ ms.locfileid: "74683612"
   
 -   Componentes de conectividade  
   
- Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e os componentes disponíveis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]no, consulte [edições e componentes do SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Você pode instalar cada componente individualmente ou selecionar uma combinação dos componentes listados acima. Para fazer a melhor escolha entre as edições e os componentes disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , consulte [edições e componentes do SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponível em edições de 32 e 64 bits. A Instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dá suporte às seguintes opções de instalação:  
   
 -   **Assistente de Instalação**  
   
-     Consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) de instalação para obter informações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procedimento sobre como instalar o usando o assistente de instalação.  
+     Consulte [instalar SQL Server 2014 no assistente de instalação &#40;&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) de instalação para obter informações de procedimento sobre como instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o usando o assistente de instalação.  
   
--   **Prompt de Comando de Administrador**  
+-   **Prompt de comando**  
   
      Consulte [instalar SQL Server 2014 no prompt de comando](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) para obter a sintaxe de exemplo e os parâmetros de instalação para executar a instalação autônoma.  
   
@@ -60,19 +60,19 @@ ms.locfileid: "74683612"
   
 -   **SysPrep**  
   
-     Consulte [instalar SQL Server 2014 usando o Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) para obter informações de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procedimentos sobre como instalar o usando o Sysprep.  
+     Consulte [instalar SQL Server 2014 usando o Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) para obter informações de procedimentos sobre como instalar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando o Sysprep.  
   
 -   **Instalação do Server Core**  
   
-     Consulte [instalar SQL Server 2014 no Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) para obter informações de procedimentos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sobre como instalar o no Windows Server Core.  
+     Consulte [instalar SQL Server 2014 no Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) para obter informações de procedimentos sobre como instalar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no Windows Server Core.  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]Instalação de recursos do  BI**  
   
-     Consulte [instalar SQL Server recursos de bi 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) para obter informações sobre como instalar os recursos que fazem parte da plataforma de BI da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Microsoft [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]que [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]incluem,,, e vários aplicativos cliente usados para criar ou trabalhar com dados analíticos.  
+     Consulte [instalar SQL Server recursos de bi 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) para obter informações sobre como instalar os recursos que fazem parte da plataforma de BI da Microsoft, que incluem,,, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e vários aplicativos cliente usados para criar ou trabalhar com dados analíticos.  
   
 -   **Instalação do cluster de failover**  
   
-     Consulte [SQL Server instalação de cluster de failover](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para obter informações [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de procedimento [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sobre como instalar o em um cluster de failover.  
+     Consulte [SQL Server instalação de cluster de failover](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para obter informações de procedimento sobre como instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o em um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster de failover.  
   
  Por padrão, os bancos de dados de exemplo e o código de exemplo não são instalados como parte da instalação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para instalar bancos de dados de exemplo e código de exemplo de edições não Express do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte o [site do CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Para ler sobre o suporte para bancos de dados de exemplo do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e código de exemplo para [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], consulte [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) (Visão geral dos exemplos e bancos de dados).  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62715083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706402"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   Esta seção documenta as funções ODBC que exibem comportamentos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando usadas com o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Nem todas as funções de ODBC são documentadas aqui. Os tópicos individuais só discutem os assuntos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para uma função de ODBC. Eles não são uma referência completa para as funções de ODBC.  

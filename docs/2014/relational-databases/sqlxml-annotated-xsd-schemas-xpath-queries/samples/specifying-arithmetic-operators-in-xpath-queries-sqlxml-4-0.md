@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], arithmetic operators
 - operators [SQLXML]
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012473"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717856"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificando operadores aritméticos em consultas XPath (SQLXML 4.0)
   O exemplo a seguir mostra como são especificados operadores aritméticos em consultas XPath. A consulta XPath deste exemplo é especificada com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +28,13 @@ ms.locfileid: "66012473"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>a. Especifique o operador aritmético *.  
- Essa consulta XPath retorna ** \<elementos de>OrderDetail** que atendem ao predicado especificado:  
+ Essa consulta XPath retorna elementos de ** \<>OrderDetail** que atendem ao predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- `child` Na consulta, é o eixo e `OrderDetail` é o teste de nó (true se **OrderDetail** é um ** \<nó de elemento>**, porque o ** \<elemento>** nó é o nó primário do `child` eixo). Para todos os nós de elementos do ** \<>OrderDetail** , o teste no predicado é aplicado e somente os nós que atendem à condição são retornados.  
+ Na consulta, `child` é o eixo e `OrderDetail` é o teste de nó (true se **OrderDetail** é um ** \< nó de elemento>**, porque o ** \< elemento>** nó é o nó primário do `child` eixo). Para todos os nós de elementos do ** \<>OrderDetail** , o teste no predicado é aplicado e somente os nós que atendem à condição são retornados.  
   
 > [!NOTE]  
 >  Os números em XPath são números de pontos flutuantes de precisão dupla e a comparação de números de pontos flutuantes como no exemplo provoca arredondamento.  

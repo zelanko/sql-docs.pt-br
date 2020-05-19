@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014789"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717504"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
   Este tópico fornece uma amostra funcional do usingOLE DB para executar um updategram.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014789"
 </Schema>  
 ```  
   
- A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o ** \<elemento Person. Contact>** é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
+ A consulta retorna todos os elementos do funcionário. Com o mapeamento padrão, o elemento ** \< Person. Contact>** é mapeado para a tabela Person. Contact no banco de dados AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para definir XML como um comando e recuperar resultados como um documento XML  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- O modelo inclui uma consulta SQL. A consulta requer um valor para seu parâmetro (@Title). Se nenhum valor de parâmetro for passado, o valor padrão ("Mr.") será usado.  
+ O modelo inclui uma consulta SQL. A consulta requer um valor para seu parâmetro ( @Title ). Se nenhum valor de parâmetro for passado, o valor padrão ("Mr.") será usado.  
   
  Ao passar valores de parâmetros para um modelo, o nome e o valor do parâmetro devem ser especificados.  
   

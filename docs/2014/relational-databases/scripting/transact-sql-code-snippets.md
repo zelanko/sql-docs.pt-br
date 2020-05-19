@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 03e4182cee09771ac3667b57a69f64cee3cf1ecc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243116"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718521"
 ---
 # <a name="transact-sql-code-snippets"></a>Snippets de código Transact-SQL
   Um snippet [!INCLUDE[tsql](../../includes/tsql-md.md)].code é um modelo que contém a estrutura básica de um bloco ou uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Você pode usar os snippets como ponto de partida ao adicionar instruções ao Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Você pode inserir os snippets predefinidos fornecidos com o SQL Server ou criar o seu próprio.  

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010742"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717945"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objeto SqlXmlCommand (classes gerenciadas SQLXML)
   Este é o construtor para o objeto SqlXmlCommand:  
@@ -44,7 +44,7 @@ ms.locfileid: "66010742"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Em `cnString` que é a cadeia de conexão ADO ou OleDb que identifica o servidor, o banco de dados e as informações de `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`logon, por exemplo,.  
+ Em que `cnString` é a cadeia de conexão ADO ou OleDb que identifica o servidor, o banco de dados e as informações de logon, por exemplo, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  Na cadeia de conexão, o `Provider` precisa ser SQLOLEDB e o `Data Provider` não deve ser incluído na cadeia de caracteres do provedor.  
   

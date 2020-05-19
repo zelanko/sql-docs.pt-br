@@ -19,15 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772272"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706896"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Fornecendo comentários sobre o SQL Server 2014
   A [!INCLUDE[msCoName](../includes/msconame-md.md)] agradece sua contribuição para nos ajudar a melhorar nossos produtos e documentação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Você pode fornecer sugestões e relatórios de erros sobre os recursos e a interface do usuário do produto, enviar comentários sobre a documentação e optar por enviar relatórios de erros e dados de uso automaticamente para a [!INCLUDE[msCoName](../includes/msconame-md.md)] para análise. Cada uma dessas três opções de comentários é descrita aqui.  

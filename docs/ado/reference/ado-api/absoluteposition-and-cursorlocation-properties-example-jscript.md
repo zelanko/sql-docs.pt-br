@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b946d98214047203147fb5c0bbba0e01ea09b7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921793"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747533"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Exemplo das propriedades AbsolutePosition e CursorLocation (JScript)
 Este exemplo demonstra como a propriedade [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) pode acompanhar o progresso de um loop que enumera todos os registros de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa a propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) para habilitar a propriedade **AbsolutePosition** definindo o cursor como um cursor do cliente. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como **AbsolutePositionJS. asp**.  

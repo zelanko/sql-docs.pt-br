@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921010"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747346"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
 A seção Visual C++ da [instanciação do evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como instanciar o modelo de evento ADO. Veja a seguir um exemplo específico de instanciação do modelo de evento dentro do ambiente criado pela diretiva **#import** .  
@@ -44,7 +44,7 @@ A seção Visual C++ da [instanciação do evento ADO por linguagem](../../../ad
   
 -   O exemplo é escrito como um aplicativo de console.  
   
--   Você deve inserir seu próprio código no comentário "`// Do some work`".  
+-   Você deve inserir seu próprio código no comentário " `// Do some work` ".  
   
 -   Todos os manipuladores de eventos assumem o padrão de não fazer nada e cancelar outras notificações. Você deve inserir o código apropriado para seu aplicativo e permitir notificações, se necessário.  
   

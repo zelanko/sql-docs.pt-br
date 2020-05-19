@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff0a44f8c5cb48df58912f73f0af51a58891f2fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704841"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716858"
 ---
 # <a name="example-retrieving-binary-data"></a>Exemplo: Recuperando dados binários
   A consulta a seguir retorna a fotografia do produto armazenada em uma coluna de tipo `varbinary(max)`. A opção `BINARY BASE64` é especificada na consulta para retornar os dados binários em formato codificado na base 64.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965852"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746547"
 ---
 # <a name="keys-collection-adox"></a>Coleção Keys (ADOX)
 Contém todos os objetos de [chave](../../../ado/reference/adox-api/key-object-adox.md) de uma [tabela](../../../ado/reference/adox-api/table-object-adox.md).  

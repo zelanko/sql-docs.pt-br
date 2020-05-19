@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964583"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746271"
 ---
 # <a name="connect-property-example-vbscript"></a>Exemplo da propriedade Connect (VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964583"
   
  O exemplo a seguir mostra como definir a propriedade **Connect** em tempo de execução no código VBScript.  
   
- Para testar este exemplo, recorte e cole o código entre \<o corpo> \<e/Body> marcas em um documento HTML normal e nomeie-o **ConnectVBS. asp**. O script ASP identificará seu servidor.  
+ Para testar este exemplo, recorte e cole o código entre o \< corpo> e \< /Body> marcas em um documento HTML normal e nomeie-o **ConnectVBS. asp**. O script ASP identificará seu servidor.  
   
 ```  
 <!-- BeginConnectVBS -->  

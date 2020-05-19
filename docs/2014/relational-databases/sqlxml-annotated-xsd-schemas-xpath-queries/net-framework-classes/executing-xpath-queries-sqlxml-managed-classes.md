@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3698a4c5f1279dae31d9c49ecba5c1ef9cc2330
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010872"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718042"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Executando consultas XPath (classes gerenciadas por SQLXML)
   Este exemplo ilustra como consultas de XPath são executadas em relação a um esquema de mapeamento.  

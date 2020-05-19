@@ -13,15 +13,15 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012391"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717804"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificando funções boolianas em consultas XPath (SQLXML 4.0)
   Os exemplos a seguir mostram como as funções boolianas são especificadas em consultas XPath. As consultas XPath nesses exemplos são especificadas com relação ao esquema de mapeamento contido em SampleSchema1.xml. Para obter informações sobre este esquema de exemplo, consulte [exemplo de esquema XSD anotado para exemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "66012391"
 ## <a name="examples"></a>Exemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>a. Especificar a função booliana not()  
- Essa consulta retorna todos os ** \<** elementos filho do cliente>do nó de contexto que não têm ** \<a ordem>** elementos filho:  
+ Essa consulta retorna todos os elementos filho do ** \< cliente>** do nó de contexto que não têm a ** \< ordem>** elementos filho:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "66012391"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar as funções boolianas true() e false()  
- Essa consulta retorna todos ** \<** os elementos de>do cliente filho do nó de contexto que não têm ** \<a ordem>** elementos filho. Em termos relacionais, esta consulta retorna todos os clientes que não fizeram nenhum pedido.  
+ Essa consulta retorna todos os elementos de ** \<>do cliente** filho do nó de contexto que não têm a ** \< ordem>** elementos filho. Em termos relacionais, esta consulta retorna todos os clientes que não fizeram nenhum pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  

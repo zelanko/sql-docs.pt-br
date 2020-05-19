@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50679a4d9654307140ef798c0ab612349d1ed175
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046721"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705972"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permite que o aplicativo recupere vários conjuntos de linhas de resultado. Uma instrução SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] que contém uma cláusula COMPUTE ou um lote enviado de ODBC ou instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] , faz o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gerar vários conjuntos de resultados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permite criar um cursor de servidor para processar os resultados em nenhum caso. Portanto, o desenvolvedor deve assegurar que a instrução ODBC esteja bloqueando. O desenvolvedor deve esvaziar os dados retornados ou cancelar a instrução ODBC antes de processar dados de outras instruções ativas na conexão.  

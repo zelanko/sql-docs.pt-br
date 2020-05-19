@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920924"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747253"
 ---
 # <a name="ado-methods"></a>Métodos ADO
 
@@ -31,7 +31,7 @@ ms.locfileid: "67920924"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela a execução de uma chamada de método pendente e assíncrona.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela uma atualização de lote pendente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela as alterações feitas na linha atual ou nova de um objeto **Recordset** ou na coleção **Fields** de um objeto **Record** , antes de chamar o método **Update** .|  
-|[Formatação](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os objetos de **erro** da coleção de **erros** .|  
+|[Limpar](../../../ado/reference/ado-api/clear-method-ado.md)|Remove todos os objetos de **erro** da coleção de **erros** .|  
 |[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Cria um objeto **Recordset** duplicado a partir de um objeto **Recordset** existente. Opcionalmente, especifica que o clone é somente leitura.|  
 |[Fechar](../../../ado/reference/ado-api/close-method-ado.md)|Fecha um objeto aberto e quaisquer objetos dependentes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dois indicadores e retorna uma indicação de seus valores relativos.|  
@@ -44,7 +44,7 @@ ms.locfileid: "67920924"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Exclui um arquivo ou diretório e todos os seus subdiretórios.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Executa a consulta, a instrução SQL ou o procedimento armazenado especificado na propriedade **CommandText** .|  
 |[Executar (conexão ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Executa a consulta especificada, a instrução SQL, o procedimento armazenado ou o texto específico do provedor.|  
-|[Considerar](../../../ado/reference/ado-api/find-method-ado.md)|Pesquisa um **conjunto de registros** para a linha que satisfaz os critérios especificados.|  
+|[Localizar](../../../ado/reference/ado-api/find-method-ado.md)|Pesquisa um **conjunto de registros** para a linha que satisfaz os critérios especificados.|  
 |[Libere](../../../ado/reference/ado-api/flush-method-ado.md)|Força o conteúdo do **fluxo** restante no buffer do ADO para o objeto subjacente ao qual o **fluxo** está associado.|  
 |[Método get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retorna o comando OLEDB subjacente, primeiro propagando todas as informações de parâmetro definidas no comando ADO para o comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retorna um **conjunto de registros** cujas linhas representam os arquivos e subdiretórios no diretório representado por esse **registro**.|  

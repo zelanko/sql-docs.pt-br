@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158166"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719102"
 ---
 # <a name="implementing-an-outer-join"></a>Implementando uma junção externa
   A junção externa não tem suporte em procedimentos armazenados compilados nativamente. O exemplo a seguir mostra uma maneira de implementar a funcionalidade de uma junção externa esquerda em um procedimento armazenado compilado nativamente.  
   
  Os exemplos usam uma variável de tabela para simular um cursor no lado esquerdo da junção e um único conjunto de resultados de uma variável de tabela, que só é adequado ao processar um número limitado de linhas, pois isso envolve a criação de uma cópia adicional das linhas de dados.  
   
- Uma variável (@outer) do tipo t1_type é usada para iterar sobre as linhas de T1, usando um loop while para simular um cursor. A variável @result do tipo t1t2_join_type é usada para construir o conjunto de resultados.  
+ Uma variável ( @outer ) do tipo t1_type é usada para iterar sobre as linhas de T1, usando um loop while para simular um cursor. A variável @result do tipo t1t2_join_type é usada para construir o conjunto de resultados.  
   
  Você deve testar o desempenho dessa solução alternativa, para garantir que ela seja executada como esperado em seu aplicativo.  
   

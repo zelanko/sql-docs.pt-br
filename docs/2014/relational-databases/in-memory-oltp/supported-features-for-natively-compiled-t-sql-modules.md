@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155721"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718810"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construções com suporte nos procedimentos armazenados compilados de modo nativo
   Este tópico contém uma lista de recursos com suporte para procedimentos armazenados compilados nativamente ([criar procedimento &#40;&#41;Transact-SQL ](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +66,7 @@ ms.locfileid: "63155721"
 ##  <a name="supported-operators"></a><a name="so"></a>Operadores com suporte  
  Há suporte para os operadores que se seguem.  
   
--   Os [operadores de comparação &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por exemplo, \<>,, >= e <=) têm suporte em condicionais (if, while).  
+-   Os [operadores de comparação &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por exemplo, >, \< , >= e <=) têm suporte em condicionais (if, while).  
   
 -   Operadores unários (+, -).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155721"
   
 -   Predicado de filtro IS [NOT] NULL  
   
--   Da \<tabela com otimização de memória>  
+-   Da \< tabela com otimização de memória>  
   
 -   Há suporte para [GROUP BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , juntamente com as funções de agregação AVG, COUNT, COUNT_BIG, min, Max e Sum. MIN e MAX não têm suporte para os tipos nvarchar, char, varchar, varchar, varbinary e binary. A [cláusula ORDER BY &#40;&#41;Transact-SQL](/sql/t-sql/queries/select-order-by-clause-transact-sql) tem suporte com o [&#40;do transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) se uma expressão na lista ordenar por for exibida literalmente na lista Agrupar por. Por exemplo, GROUP BY + b ORDER BY a + b tem suporte, mas GROUP BY a, b ORDER BY a + b, não.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "63155721"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitações na classificação  
  Você pode classificar maior que 8.000 linhas em uma consulta que usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). No entanto, sem a [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) pode classificar até 8.000 linhas (menos linhas se houver junções).  
   
- Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **msg 41398, nível 16, estado 1, procedimento * \<ProcedureName>*, linha * \<LineNumber>* o operador Top pode retornar um máximo de 8192 linhas; número>solicitado. * \<* **  
+ Se sua consulta usar o operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e uma [Cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), você pode especificar até 8192 linhas para o operador TOP. Se você especificar mais de 8192 linhas, receberá a mensagem de erro: **Msg 41398, nível 16, estado 1, procedimento * \< ProcedureName>*, linha * \< LineNumber>* o operador Top pode retornar um máximo de 8192 linhas; * \< número>* solicitado.**  
   
  Se você não tiver uma cláusula TOP, poderá classificar qualquer número de linhas com ORDER BY.  
   

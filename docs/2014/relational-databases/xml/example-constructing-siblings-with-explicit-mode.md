@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1404b0ab91c4812b5b08576818bfa8e74dcb664c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704732"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716914"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemplo: Construindo irmãos com o modo EXPLICIT
   Assuma que você quer construir XML que forneça informações de pedidos de vendas. Observe que os elementos <`SalesPerson`> e <`OrderDetail`> são irmãos. Cada Pedido tem um elemento <`OrderHeader`>, um elemento <`SalesPerson`> e um ou mais elementos <`OrderDetail`>.  

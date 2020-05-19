@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010722"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717824"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificando eixos em consultas XPath (SQLXML 4.0)
   Os seguintes exemplos mostram como os eixos são especificados em consultas XPath.  
@@ -33,13 +33,13 @@ ms.locfileid: "66010722"
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>a. Recuperar elementos filho do nó de contexto  
- A consulta XPath a seguir seleciona todos ** \<** os elementos filho de contato>do nó de contexto:  
+ A consulta XPath a seguir seleciona todos os elementos filho de ** \< contato>** do nó de contexto:  
   
 ```  
 /child::Contact  
 ```  
   
- Na consulta `child` , é o eixo e `Contact` é o teste de nó (verdadeiro se `Contact` for um ** \<elemento>** nó, porque \<o elemento> é o tipo de nó primário associado `child` ao eixo).  
+ Na consulta, `child` é o eixo e `Contact` é o teste de nó (verdadeiro se `Contact` for um ** \< elemento>** nó, porque \< o elemento> é o tipo de nó primário associado ao `child` eixo).  
   
  O eixo `child` é o padrão. Portanto, a consulta pode ser escrita da seguinte forma:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010722"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar os netos do nó de contexto  
- A consulta XPath a seguir seleciona todos ** \<** os elementos de>de ordem dos filhos do elemento ** \<>do cliente** do nó de contexto:  
+ A consulta XPath a seguir seleciona todos os elementos de ** \<>de ordem** dos filhos do elemento ** \<>do cliente** do nó de contexto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Na `child` consulta, é o `Customer` eixo e e `Order` são os testes de nó (esses testes de nó são verdadeiros se o cliente e a ordem são ** \<elementos>** nós, porque o ** \<elemento>** nó é o nó primário do `child` eixo). Para cada nó correspondente ** \<>do cliente **, os nós que correspondem ** \<aos pedidos>** são adicionados ao resultado. Somente ** \<Order>** é retornado no conjunto de resultados.  
+ Na consulta, `child` é o eixo e `Customer` e `Order` são os testes de nó (esses testes de nó são verdadeiros se o cliente e a ordem são ** \< elementos>** nós, porque o ** \< elemento>** nó é o nó primário do `child` eixo). Para cada nó correspondente ** \<>do cliente **, os nós que correspondem aos ** \< pedidos>** são adicionados ao resultado. Somente ** \< Order>** é retornado no conjunto de resultados.  
   
  O eixo `child` é o padrão. Assim, a consulta pode ser especificada como:  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010722"
 </ROOT>  
 ```  
   
- Se a consulta XPath for especificada como `Customer/Order/OrderDetail`, de cada nó correspondente ** \<ao cliente>** a consulta navegará para o ** \<pedido>** elementos. E para cada nó que corresponde ** \<a Order>**, a consulta adiciona os nós ** \<>a OrderDetail** para o resultado. Somente ** \<>OrderDetail** é retornado no conjunto de resultados.  
+ Se a consulta XPath for especificada como `Customer/Order/OrderDetail` , de cada nó correspondente ** \< ao cliente>** a consulta navegará para o ** \< pedido>** elementos. E para cada nó que corresponde a ** \< Order>**, a consulta adiciona os nós ** \<>a OrderDetail** para o resultado. Somente ** \<>OrderDetail** é retornado no conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar o eixo pai  
- A consulta a seguir recupera todos os elementos de ** \<>de ordem** com um elemento de ** \<>de cliente** pai com um valor de atributo **CustomerID** de 1. A consulta usa o `child` eixo no predicado para localizar o pai do elemento ** \<Order>** .  
+ A consulta a seguir recupera todos os elementos de ** \<>de ordem** com um elemento de ** \<>de cliente** pai com um valor de atributo **CustomerID** de 1. A consulta usa o `child` eixo no predicado para localizar o pai do elemento ** \< Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010722"
 ```  
   
 > [!NOTE]  
->  A consulta `/Order[../@CustomerID="1"]` XPath retornará um erro porque não há nenhum pai de ** \<>de ordem **. Embora possa haver elementos no esquema de mapeamento que contenham ** \<Order>**, o XPath não começou em nenhum deles; Consequentemente, ** \<Order>** é considerado um tipo de elemento de nível superior no documento.  
+>  A consulta XPath `/Order[../@CustomerID="1"]` retornará um erro porque não há nenhum pai de ** \<>de ordem **. Embora possa haver elementos no esquema de mapeamento que contenham ** \< Order>**, o XPath não começou em nenhum deles; consequentemente, ** \< Order>** é considerado como o tipo de elemento de nível superior no documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para testar a consulta XPath com relação ao esquema de mapeamento  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010722"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar o eixo de atributo  
- A consulta XPath a seguir seleciona todos os **CustomerID** ** \<** elementos filho do cliente>do nó de contexto com um valor de atributo CustomerId de 1:  
+ A consulta XPath a seguir seleciona todos os elementos filho do ** \< cliente>** do nó de contexto com um valor de atributo **CustomerID** de 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- No `attribute::CustomerID`predicado `attribute` , é o eixo `CustomerID` e é o teste de nó `CustomerID` (se for um atributo que o teste de nó é verdadeiro, porque o ** \<atributo>** nó é o `attribute` nó primário do eixo).  
+ No predicado `attribute::CustomerID` , `attribute` é o eixo e `CustomerID` é o teste de nó (se `CustomerID` for um atributo que o teste de nó é verdadeiro, porque o ** \< atributo>** nó é o nó primário do `attribute` eixo).  
   
  Um atalho para o eixo `attribute` (@) pode ser especificado e, como o eixo `child` é o padrão, ele pode ser omitido da consulta:  
   

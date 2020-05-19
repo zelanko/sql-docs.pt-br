@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242998"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718232"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxe Transact-SQL com suporte do IntelliSense
   Este tópico descreve as instruções e os elementos de sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] aos quais o IntelliSense dá suporte no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "75242998"
 |-----------------------------|----------------------|  
 |[INSERT](/sql/t-sql/statements/insert-transact-sql)|Toda a sintaxe, exceto a cláusula *execute_statement* .|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda a sintaxe.|  
-|[Delete (excluir)](/sql/t-sql/statements/delete-transact-sql)|Toda a sintaxe.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda a sintaxe.|  
 |[Claro@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda a sintaxe.|  
 |[Definição@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda a sintaxe.|  
 |[Execute](/sql/t-sql/language-elements/execute-transact-sql)|Execução de procedimentos armazenados definidos pelo usuário, procedimentos armazenados do sistema, funções definidas pelo usuário e funções do sistema.|  

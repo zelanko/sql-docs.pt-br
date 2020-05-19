@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638753"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719175"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacotes de Eventos Estendidos do SQL Server
   Um pacote é um contêiner para objetos de Eventos Estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Há três tipos de pacotes de Eventos Estendidos que incluem o seguinte:  
@@ -70,7 +70,7 @@ ms.locfileid: "62638753"
 #### <a name="event-categorization"></a>Categorização do evento  
  O Extended Events usa um modelo de categorização de evento semelhante ao ETW (Rastreamento de Eventos do Windows). Duas propriedades de evento são usadas para categorização, canal e palavra-chave. O uso dessas propriedades dá suporte à integração do Extended Events com o ETW e suas ferramentas.  
   
- **Canal**  
+ **Canaliza**  
   
  Um canal identifica a audiência para um evento. Esses canais são descritos na tabela a seguir.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920804"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747172"
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
 A interface **ADORecordConstruction**é usada para construir um objeto de **registro** ado de um objeto de **linha** OLE DB em um aplicativo C/C++.  
@@ -41,7 +41,7 @@ A interface **ADORecordConstruction**é usada para construir um objeto de **regi
  Nenhum.  
   
 ## <a name="remarks"></a>Comentários  
- Considerando um objeto de **linha** de`pRow`OLE DB (), a construção de um objeto de`adoR` **registro** ADO (), valores para as três operações básicas a seguir:  
+ Considerando um objeto de **linha** de OLE DB ( `pRow` ), a construção de um objeto de **registro** ADO ( `adoR` ), valores para as três operações básicas a seguir:  
   
 1.  Criar um objeto de **registro** ADO:  
   

@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746413"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Exemplo do método CancelUpdate (VBScript)
 > [!IMPORTANT]
 >  A partir do Windows 8 e do Windows Server 2012, os componentes do servidor RDS não são mais incluídos no sistema operacional Windows (consulte Windows 8 e [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obter mais detalhes). Os componentes do cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Os aplicativos que usam o RDS devem migrar para o [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para testar este exemplo, recorte e cole esse código entre \<o corpo> \<e/Body> marcas em um documento HTML normal e nomeie-o **CancelUpdateVBS. asp**. O script ASP identificará seu servidor de Internet. Será necessário editar o nome do servidor para refletir sua própria configuração. Basta alterar o valor na cadeia de conexão de meuservidor para o nome de sua instalação do SQL Server.  
+ Para testar este exemplo, recorte e cole esse código entre o \< corpo> e \< /Body> marcas em um documento HTML normal e nomeie-o **CancelUpdateVBS. asp**. O script ASP identificará seu servidor de Internet. Será necessário editar o nome do servidor para refletir sua própria configuração. Basta alterar o valor na cadeia de conexão de meuservidor para o nome de sua instalação do SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
