@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964799"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752994"
 ---
 # <a name="views-append-method-example-vb"></a>Exemplo do método Append de exibições (VB)
 O código a seguir demonstra como usar um objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) e o método [views](../../../ado/reference/adox-api/views-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-views.md) para criar uma nova exibição na fonte de dados subjacente.  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964312"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752672"
 ---
 # <a name="execute-method-rds"></a>Método Execute (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2,5 e posterior.  
@@ -41,7 +41,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Uma cadeia de caracteres de duas partes que identifica o manipulador a ser usado com essa execução. A cadeia de caracteres contém duas partes. A primeira parte contém o nome (ProgID) do manipulador a ser usado. A segunda parte contém argumentos a serem passados para o manipulador. Os detalhes de como a cadeia de caracteres de argumentos são interpretados são específicos para cada manipulador. As duas partes são separadas pela primeira instância de uma vírgula na cadeia de caracteres. A cadeia de caracteres de argumentos pode conter vírgulas adicionais. Os argumentos são opcionais.  
   
  *QueryString*  
- Um comando no idioma de comando com suporte do provedor de OLE DB identificado na cadeia de conexão. Para provedores baseados em SQL, o *QueryString* pode conter uma instrução de comando TRANSACT-SQL, mas para provedores não SQL (por exemplo, MSDataShape), isso pode não [!INCLUDE[tsql](../../../includes/tsql-md.md)] ser uma instrução de consulta.  
+ Um comando no idioma de comando com suporte do provedor de OLE DB identificado na cadeia de conexão. Para provedores baseados em SQL, o *QueryString* pode conter uma instrução de comando TRANSACT-SQL, mas para provedores não SQL (por exemplo, MSDataShape), isso pode não ser uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução de consulta.  
   
  Se um manipulador estiver sendo usado, o manipulador poderá alterar ou substituir o valor especificado aqui. Por exemplo, o manipulador normalmente substitui o *QueryString* por uma cadeia de caracteres de consulta de seu arquivo. ini. Por padrão, o arquivo Msdfmap. ini é usado.  
   
