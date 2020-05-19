@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921088"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749225"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice da propriedade dinâmica do ADO
 Provedores de dados, provedores de serviços e componentes de serviço podem adicionar propriedades dinâmicas às coleções de **Propriedades** dos objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e de [conexões](../../../ado/reference/ado-api/connection-object-ado.md) não abertas. Um determinado provedor também pode inserir propriedades adicionais quando esses objetos são abertos. Algumas dessas propriedades são listadas na seção [propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . Mais estão listados sob os provedores específicos na seção [Apêndice A: provedores](../../../ado/guide/appendixes/appendix-a-providers.md) .  
@@ -56,7 +56,7 @@ Provedores de dados, provedores de serviços e componentes de serviço podem adi
 |Tamanho máximo da linha|DBPROP_MAXROWSIZE|  
 |O tamanho máximo da linha inclui o BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Máximo de tabelas em SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modo|DBPROP_INIT_MODE|  
 |Vários conjuntos de parâmetros|DBPROP_MULTIPLEPARAMSETS|  
 |Vários resultados|DBPROP_MULTIPLERESULTS|  
 |Vários objetos de armazenamento|DBPROP_MULTIPLESTORAGEOBJECTS|  

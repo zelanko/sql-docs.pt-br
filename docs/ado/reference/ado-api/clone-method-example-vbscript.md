@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920001"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748997"
 ---
 # <a name="clone-method-example-vbscript"></a>Exemplo do método Clone (VBScript)
 Este exemplo usa o método [clone](../../../ado/reference/ado-api/clone-method-ado.md) para criar cópias de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicione o ponteiro de registro de cada cópia de forma independente.  
   
  Use o exemplo a seguir em uma página de Active Server (ASP). Este exemplo usa o banco de dados **Northwind** distribuído com o Microsoft Access. Recorte e cole o código a seguir no bloco de notas ou em outro editor de texto e salve-o como CloneVBS. ASP. Você pode exibir o resultado em qualquer navegador cliente.  
   
- Para exercitar o exemplo, altere a `RsCustomerList.Source = "Customers"` linha `RsCustomerList.Source = "Products"` para para contar uma tabela maior.  
+ Para exercitar o exemplo, altere a linha `RsCustomerList.Source = "Customers"` para `RsCustomerList.Source = "Products"` para contar uma tabela maior.  
   
 ```  
 <!-- BeginCloneVBS -->  
