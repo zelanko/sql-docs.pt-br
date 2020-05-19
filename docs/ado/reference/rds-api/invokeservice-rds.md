@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963868"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751903"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retorna um ponteiro para a interface solicitada em uma versão mais compatível do objeto.  
@@ -46,7 +46,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  fora O endereço da variável de ponteiro que recebe o ponteiro de interface solicitado em *riid*. Após o retorno bem-sucedido, o parâmetro *ppunkMoreFunctionalInterface* contém o ponteiro de interface solicitado para o objeto. Se o objeto não oferecer suporte à interface especificada em *riid*, *ppunkMoreFunctionalInterface* será definido como NULL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor Retornado  
  Um valor HRESULT que indica se a chamada para o método **InvokeService** foi bem-sucedida.  
   
 ## <a name="remarks"></a>Comentários  

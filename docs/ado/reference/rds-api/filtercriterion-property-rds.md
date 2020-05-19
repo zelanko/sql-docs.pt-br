@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b14e042c7566b6b6f8559e9dc371028a509979
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964064"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752032"
 ---
 # <a name="filtercriterion-property-rds"></a>Propriedade FilterCriterion (RDS)
 Indica o operador de avaliação a ser usado no valor do filtro.  
@@ -38,7 +38,7 @@ DataControl.FilterCriterion = String
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *Cadeia de caracteres*  
- Um valor de **cadeia de caracteres** que especifica o operador de avaliação dos [filtros](../../../ado/reference/rds-api/filtervalue-property-rds.md) para os registros. Pode ser qualquer um dos seguintes: <, \<=, >, >=, = ou <>.  
+ Um valor de **cadeia de caracteres** que especifica o operador de avaliação dos [filtros](../../../ado/reference/rds-api/filtervalue-property-rds.md) para os registros. Pode ser qualquer um dos seguintes: <, \< =, >, >=, = ou <>.  
   
 ## <a name="remarks"></a>Comentários  
  As propriedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fornecem funcionalidade de classificação e filtragem no cache do lado do cliente. A funcionalidade de classificação ordena registros por valores de uma coluna. A funcionalidade de filtragem exibe um subconjunto de registros com base em critérios de localização, enquanto o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo é mantido no cache. O método [Reset](../../../ado/reference/rds-api/reset-method-rds.md) executará os critérios e substituirá o **conjunto** de registros atual por um **conjunto de registros**atualizável.  

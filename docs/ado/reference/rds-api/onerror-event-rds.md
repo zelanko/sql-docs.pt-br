@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - onError event [ADO]
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c0e398b80af037763dce479a9fe3a26956b0e3b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751546"
 ---
 # <a name="onerror-event-rds"></a>Evento onError (RDS)
 O evento **OnError** é chamado sempre que ocorrer um erro durante uma operação.  

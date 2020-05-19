@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964003"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751944"
 ---
 # <a name="handler-property-rds"></a>Propriedade Handler (RDS)
 Indica o nome de um programa de personalização do lado do servidor (manipulador) que estende a funcionalidade do [RDSServer. datafactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)e quaisquer parâmetros usados pelo *manipulador*.  
@@ -40,7 +40,7 @@ DataControl.Handler = String
  Uma variável de objeto que representa um [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *Cadeia de caracteres*  
- Um valor de **cadeia de caracteres** que contém o nome do manipulador e quaisquer parâmetros, todos separados por vírgulas (por `"handlerName,parm1,parm2,...,parm`exemplo, *N*`"`).  
+ Um valor de **cadeia de caracteres** que contém o nome do manipulador e quaisquer parâmetros, todos separados por vírgulas (por exemplo, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
 ## <a name="remarks"></a>Comentários  
  Essa propriedade dá suporte à [personalização](../../../ado/guide/remote-data-service/datafactory-customization.md), uma funcionalidade que requer a definição da propriedade [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) como **adUseClient**.  
