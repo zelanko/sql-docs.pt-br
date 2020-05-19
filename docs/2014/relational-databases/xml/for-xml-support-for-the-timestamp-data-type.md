@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e20326c1f91711580e102bd28a705a628fc472dc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287674"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716632"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Suporte de FOR XML para o tipo de dados timestamp
   Na transformação FOR XML, valores de tipo **timestamp** são tratados como dados **varbinary(8)** e sempre serão codificados na base 64. O esquema XSD ou XDR, se solicitado, reflete esse tipo.  

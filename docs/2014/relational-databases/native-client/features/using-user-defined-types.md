@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa78cc2d4d27fdfb1db6333f21685263d22dd97e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206607"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707170"
 ---
 # <a name="using-user-defined-types"></a>Usando tipos definidos pelo usuário
   O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu os UDTs (tipos definidos pelo usuário). Os UDTs estendem o sistema de tipos SQL, permitindo que você armazene objetos e estruturas de dados personalizadas em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os UDTs podem conter vários tipos de dados e ter comportamentos, o que os diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dado do sistema no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. UDTs são definidos usando quaisquer dos idiomas com suporte pelo .NET CRL (Common Language Runtime) que gera código verificável. Isso inclui o Microsoft Visual C#<sup>?</sup> e Visual Basic<sup>??</sup> Virtual. Os dados são expostos como campos e propriedades de uma classe ou estrutura .NET e os comportamentos são definidos pelos métodos da classe ou estrutura.  
@@ -40,7 +40,7 @@ ms.locfileid: "68206607"
 >  O método **IRowsetFind::FindNextRow** não funciona com o tipo de dados UDT. DB_E_BADCOMPAREOP será retornado se o UDT for usado como um tipo de coluna de pesquisa.  
   
 ### <a name="data-bindings-and-coercions"></a>Coerções e associações de dados  
- A tabela a seguir descreve a associação e a coerção que ocorrem ao usar os tipos de dados listados com o UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As colunas UDT são expostas por meio do provedor de OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente nativo como DBTYPE_UDT. Você pode obter metadados por meio dos conjuntos de linhas de esquema apropriados de forma que possa gerenciar seus próprios tipos definidos como objetos.  
+ A tabela a seguir descreve a associação e a coerção que ocorrem ao usar os tipos de dados listados com o UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. As colunas UDT são expostas por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo como DBTYPE_UDT. Você pode obter metadados por meio dos conjuntos de linhas de esquema apropriados de forma que possa gerenciar seus próprios tipos definidos como objetos.  
   
 |Tipo de dados|Para servidor<br /><br /> **UDT**|Para servidor<br /><br /> **não UDT**|Do servidor<br /><br /> **UDT**|Do servidor<br /><br /> **não UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "68206607"
 #### <a name="the-procedure_parameters-schema-rowset"></a>O conjunto de linhas do esquema PROCEDURE_PARAMETERS  
  As adições a seguir foram feitas ao conjunto de linhas de esquema de PROCEDURE_PARAMETERS.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|O identificador de nome de três partes.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|O identificador de nome de três partes.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68206607"
 #### <a name="the-sql_assemblies-schema-rowset"></a>O conjunto de linhas do esquema SQL_ASSEMBLIES  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe um novo conjunto de linhas de esquema específico de provedor que descreve os UDTs registrados. O servidor de ASSEMBLY pode ser especificado como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. Se não estiver especificado, o conjunto de linhas seguirá o padrão do servidor atual. O conjunto de linhas de esquema de SQL_ASSEMBLIES é definido na tabela a seguir.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|O nome de catálogo do assembly que contém o tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário que é refletido aqui.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68206607"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>O conjunto de linhas do esquema SQL_ASSEMBLIES_ DEPENDENCIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O provedor de OLE DB de cliente nativo expõe um novo conjunto de linhas de esquema específico de provedor que descreve as dependências de assembly para um servidor especificado. O ASSEMBLY_SERVER pode ser especificado pelo chamador como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. Se não estiver especificado, o conjunto de linhas seguirá o padrão do servidor atual. O conjunto de linhas de esquema de SQL_ASSEMBLY_DEPENDENCIES é definido na tabela a seguir.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|O nome de catálogo do assembly que contém o tipo.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário, que é refletido aqui.|  
@@ -114,7 +114,7 @@ ms.locfileid: "68206607"
 #### <a name="the-sql_user_types-schema-rowset"></a>O conjunto de linhas do esquema SQL_USER_TYPES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O provedor de OLE DB de cliente nativo expõe o novo conjunto de linhas de esquema, SQL_USER_TYPES, que descreve quando os UDTs registrados para um servidor especificado são adicionados. O UDT_SERVER deve ser especificado pelo chamador como um DBTYPE_WSTR, mas não está presente no conjunto de linhas. O conjunto de linhas de esquema de SQL_USER_TYPES é definido na tabela a seguir.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT esta propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o UDT é definido.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT esta propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o UDT é definido.|  
@@ -124,7 +124,7 @@ ms.locfileid: "68206607"
 #### <a name="the-columns-schema-rowset"></a>O conjunto de linhas do esquema COLUMNS  
  Adições para o conjunto de linhas de esquema de COLUMNS incluem as colunas a seguir.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para colunas de UDT esta propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o UDT é definido.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para colunas de UDT esta propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o UDT é definido.|  
@@ -135,9 +135,9 @@ ms.locfileid: "68206607"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O Native Client adiciona novos valores ou alterações a muitos dos principais conjuntos de propriedades de OLE DB.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER  
- Para dar suporte a UDTs por meio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB, o Native Client implementa o novo conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER que contém os valores a seguir.  
+ Para dar suporte a UDTs por meio de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client implementa o novo conjunto de propriedades de DBPROPSET_SQLSERVERPARAMETER que contém os valores a seguir.  
   
-|Nome|Tipo|Descrição|  
+|Nome|Tipo|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|O identificador de nome de três partes.<br /><br /> Para parâmetros de UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o tipo definido pelo usuário é definido.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|O identificador de nome de três partes.<br /><br /> Para parâmetros de UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o tipo definido pelo usuário é definido.|  
@@ -148,7 +148,7 @@ ms.locfileid: "68206607"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>O conjunto de propriedades de DBPROPSET_SQLSERVERCOLUMN  
  Para dar suporte à criação de tabelas na interface **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client adiciona as três novas colunas a seguir ao conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Descrição|Type|Descrição|  
+|Name|Descrição|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Para colunas de tipo DBTYPE_UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do catálogo onde o UDT é definido.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Para colunas de tipo DBTYPE_UDT, essa propriedade é uma cadeia de caracteres que especifica o nome do esquema onde o UDT é definido.|  
@@ -171,15 +171,15 @@ ms.locfileid: "68206607"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]O Native Client adiciona novos valores ou alterações a muitas das principais interfaces de OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>A interface ISSCommandWithParameters  
- Para dar suporte a UDTs por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] meio de OLE DB, o Native Client implementa várias alterações, incluindo a adição da interface **ISSCommandWithParameters** . Essa nova interface herda as propriedades da interface principal do OLE DB **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **SetParameterInfo**; **ISSCommandWithParameters** fornece os métodos **ParameterProperties** e **ParameterProperties** que são usados para tratar tipos de dados específicos do servidor.  
+ Para dar suporte a UDTs por meio de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client implementa várias alterações, incluindo a adição da interface **ISSCommandWithParameters** . Essa nova interface herda as propriedades da interface principal do OLE DB **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **SetParameterInfo**; **ISSCommandWithParameters** fornece os métodos **ParameterProperties** e **ParameterProperties** que são usados para tratar tipos de dados específicos do servidor.  
   
 > [!NOTE]  
 >  A interface **ISSCommandWithParameters** também usa a nova estrutura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>A interface IColumnsRowset  
- Além da interface **ISSCommandWithParameters** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client também adiciona novos valores ao conjunto de linhas retornado da chamada do método **IColumnsRowset:: GetColumnRowset** , incluindo o seguinte.  
+ Além da interface **ISSCommandWithParameters** , o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client também adiciona novos valores ao conjunto de linhas retornado da chamada do método **IColumnsRowset:: GetColumnRowset** , incluindo o seguinte.  
   
-|Nome da coluna|Tipo|Descrição|  
+|Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Um identificador do nome de catálogo do UDT.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Um identificador do nome do esquema do UDT.|  
@@ -189,7 +189,7 @@ ms.locfileid: "68206607"
  É possível diferenciar uma coluna de UDT do servidor de outros tipos binários quando DBCOLUMN_TYPE for definido como DBTYPE_UDT observando os metadados de UDT adicionados especificados acima. Se esses dados estiverem parcialmente completos, o tipo de servidor será um UDT. Para tipos de servidores não UDT, essas colunas são sempre retornadas como NULL.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
- Várias alterações foram feitas no driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para dar suporte a UDTs. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client mapeia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o UDT para SQL_SS_UDT identificador de tipo de dados do SQL específico do driver. São exibidas colunas de UDT como SQL_SS_UDT. Se você mapear uma coluna UDT explicitamente para outro tipo em uma instrução SQL usando os métodos **ToString** ou **ToXmlString** do UDT ou por meio da função **Cast/Convert** , o tipo da coluna no conjunto de resultados refletirá o tipo real para o qual a coluna foi convertida  
+ Várias alterações foram feitas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client para dar suporte a UDTs. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client mapeia o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT para SQL_SS_UDT identificador de tipo de dados do SQL específico do driver. São exibidas colunas de UDT como SQL_SS_UDT. Se você mapear uma coluna UDT explicitamente para outro tipo em uma instrução SQL usando os métodos **ToString** ou **ToXmlString** do UDT ou por meio da função **Cast/Convert** , o tipo da coluna no conjunto de resultados refletirá o tipo real para o qual a coluna foi convertida  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute, SQLDescribeParam, SQLGetDescField  
  Quatro novos campos de descritor específicos de driver foram adicionados para fornecer informações adicionais para uma coluna UDT de um conjunto de resultados, ou um parâmetro UDT da consulta de procedimento armazenado/parametrizada, a ser recuperada por meio das funções [SQLColAttribute](../../native-client-odbc-api/sqlcolattribute.md), [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)e [SQLGetDescField](../../native-client-odbc-api/sqlgetdescfield.md) .  
@@ -205,7 +205,7 @@ ms.locfileid: "68206607"
  Na conversão de tipos de dados C para SQL, é possível converter SQL_C_WCHAR, SQL_C_BINARY e SQL_C_CHAR a SQL_SS_UDT. No entanto, observe que os dados binários são convertidos em uma cadeia de caracteres hexadecimal durante a conversão dos tipos de dados SQL_C_WCHAR e SQL_C_CHAR SQL.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de SQL Server Native Client](sql-server-native-client-features.md)   
+ [Recursos do SQL Server Native Client](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

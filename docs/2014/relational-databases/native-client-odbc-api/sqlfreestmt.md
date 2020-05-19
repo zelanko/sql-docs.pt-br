@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLFreeStmt function
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4aa7e597bcfa80d7d45064c844986018d64617d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b7fbc3754121418ea2059ea511f3b247dcff8dd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190310"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706098"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
   **SQLFreeStmt** não é recomendado no ODBC 3.0 e posterior. O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte a todos os valores de *Option* definidos para **SQLFreeStmt**. Porém, [SQLCloseCursor](sqlclosecursor.md), [SQLBindParameter](sqlbindparameter.md), [SQLBindCol](sqlbindcol.md), **SQLSetDescField**e [SQLFreeHandle](sqlfreehandle.md) substituem ou duplicam a função do **SQLFreeStmt** e devem ser usados no lugar dela.  

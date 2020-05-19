@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - InsertRow method
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0781ab267556b9869412d24d95ffdf94b8b11aaf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511625"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707386"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
   Adiciona uma linha ao conjunto de linhas de cópia em massa. Para obter exemplos, confira [Copiar Dados em massa usando IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [Enviar dados de blob para o SQL Server usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - batches [ODBC]
 - ODBC CALL escape sequence
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b50350006abba5085b11010f26aa88a89b07393f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce14de191cb8b57496cf2de87d241810e32624ec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205496"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709869"
 ---
 # <a name="batching-stored-procedure-calls"></a>Processando em lote as chamadas de procedimento armazenado
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client faz automaticamente o lote de chamadas de procedimento armazenado para o servidor quando apropriado. O driver só faz isso quando é usada a sequência de escape de ODBC CALL; não o faz para a instrução EXECUTE [!INCLUDE[tsql](../../includes/tsql-md.md)]. O processamento em lote de chamadas de procedimento armazenado pode reduzir o número de viagens de ida e volta ao servidor e aumentar significativamente o desempenho.  

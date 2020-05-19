@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0e4798caf545c84f97cd05075d455980083bf4d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63301322"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717074"
 ---
 # <a name="create-views-over-xml-columns"></a>Criar exibições sobre colunas XML
   É possível usar uma coluna de tipo `xml` para criar exibições. O exemplo a seguir cria uma exibição na qual o valor de uma coluna de tipo `xml` é recuperada usando o método `value()` do tipo de dados `xml`.  

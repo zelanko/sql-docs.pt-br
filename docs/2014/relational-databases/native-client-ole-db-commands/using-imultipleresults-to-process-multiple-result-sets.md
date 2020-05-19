@@ -12,18 +12,18 @@ helpviewer_keywords:
 - IMultipleResults interface
 - multiple-rowset results
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e160733e01c3df2063a57d61bb8178438d383e1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4c2ee0f7a96ad30f3b13c36625077a74deca9fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155019"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707515"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Usando IMultipleResults para processar vários conjuntos de resultados
-  Os consumidores usam a interface **IMultipleResults** para processar resultados retornados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pela execução do comando do provedor de OLE DB de cliente nativo. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo envia um comando para execução [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o executa as instruções e retorna os resultados.  
+  Os consumidores usam a interface **IMultipleResults** para processar resultados retornados pela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execução do comando do provedor de OLE DB de cliente nativo. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo envia um comando para execução, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o executa as instruções e retorna os resultados.  
   
  Um cliente deve processar todos os resultados a partir da execução do comando. Como a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execução do comando do provedor de OLE DB de cliente nativo pode gerar objetos de vários conjuntos de linhas como resultados, use a interface **IMultipleResults** para garantir que a recuperação de dados do aplicativo conclua a viagem de ida e volta iniciada pelo cliente.  
   
@@ -39,9 +39,9 @@ COMPUTE
     BY OrderID  
 ```  
   
- Se um consumidor executar um comando que contém esse texto e solicitar um conjunto de linhas como a interface de resultados retornados, apenas o primeiro conjunto de linhas será retornado. O consumidor pode processar todas as linhas no conjunto de linhas retornado. Mas, se a propriedade de fonte de dados DBPROP_MULTIPLECONNECTIONS for definida como VARIANT_FALSE e o MARS não estiver habilitado na conexão, nenhum outro comando poderá ser executado no objeto de sessão ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o provedor de OLE DB do cliente nativo não criará outra conexão) até que o comando seja cancelado. Se o MARS não estiver habilitado na conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retornará um erro de DB_E_OBJECTOPEN se DBPROP_MULTIPLECONNECTIONS for VARIANT_FALSE e retornar E_FAIL se houver uma transação ativa.  
+ Se um consumidor executar um comando que contém esse texto e solicitar um conjunto de linhas como a interface de resultados retornados, apenas o primeiro conjunto de linhas será retornado. O consumidor pode processar todas as linhas no conjunto de linhas retornado. Mas, se a propriedade de fonte de dados DBPROP_MULTIPLECONNECTIONS for definida como VARIANT_FALSE e o MARS não estiver habilitado na conexão, nenhum outro comando poderá ser executado no objeto de sessão (o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB do cliente nativo não criará outra conexão) até que o comando seja cancelado. Se o MARS não estiver habilitado na conexão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo retornará um erro de DB_E_OBJECTOPEN se DBPROP_MULTIPLECONNECTIONS for VARIANT_FALSE e retornar E_FAIL se houver uma transação ativa.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também retornará DB_E_OBJECTOPEN ao usar parâmetros de saída em fluxo e o aplicativo não consumiu todos os valores de parâmetro de saída retornados antes de chamar **IMultipleResults:: GetResults** para obter o próximo conjunto de resultados. Se o MARS não estiver habilitado e a conexão estiver ocupada executando um comando que não produz um conjunto de linhas ou que produz um conjunto de linhas que não é um cursor de servidor, e se a propriedade de fonte de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBPROP_MULTIPLECONNECTIONS for definida como VARIANT_TRUE, o provedor de OLE DB de cliente nativo criará conexões adicionais para dar suporte a objetos de comando simultâneos, a menos que uma transação esteja ativa; nesse As transações e o bloqueio são gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por conexão. Se uma segunda conexão for gerada, o comando nas conexões separadas não compartilhará bloqueios. É necessário ser cuidadoso em assegurar que um comando não bloqueie outro ao manter bloqueios em linhas solicitadas pelo outro comando. Se o MARS estiver habilitado, vários comandos poderão estar ativos nas conexões e, se estiverem sendo usadas transações explícitas, todos os comandos compartilharão uma transação comum.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo também retornará DB_E_OBJECTOPEN ao usar parâmetros de saída em fluxo e o aplicativo não consumiu todos os valores de parâmetro de saída retornados antes de chamar **IMultipleResults:: GetResults** para obter o próximo conjunto de resultados. Se o MARS não estiver habilitado e a conexão estiver ocupada executando um comando que não produz um conjunto de linhas ou que produz um conjunto de linhas que não é um cursor de servidor, e se a propriedade de fonte de dados DBPROP_MULTIPLECONNECTIONS for definida como VARIANT_TRUE, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo criará conexões adicionais para dar suporte a objetos de comando simultâneos, a menos que uma transação esteja ativa; nesse As transações e o bloqueio são gerenciados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por conexão. Se uma segunda conexão for gerada, o comando nas conexões separadas não compartilhará bloqueios. É necessário ser cuidadoso em assegurar que um comando não bloqueie outro ao manter bloqueios em linhas solicitadas pelo outro comando. Se o MARS estiver habilitado, vários comandos poderão estar ativos nas conexões e, se estiverem sendo usadas transações explícitas, todos os comandos compartilharão uma transação comum.  
   
  O consumidor pode cancelar o comando usando [ISSAbort::Abort](../native-client-ole-db-interfaces/issabort-abort-ole-db.md) ou liberando todas as referências mantidas no objeto de comando e no conjunto de linhas derivado.  
   

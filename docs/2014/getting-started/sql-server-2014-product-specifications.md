@@ -12,15 +12,15 @@ helpviewer_keywords:
 - product specifications [SQL Server]
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 418827b496cc7e35f11b893ee2c50b96571c419d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772285"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706868"
 ---
 # <a name="sql-server-2014-product-specifications"></a>Especificações do produto para SQL Server 2014
   Os tópicos na tabela a seguir contêm os detalhes das especificações de produto desta versão:  
@@ -48,10 +48,10 @@ This HTML comment can be erased, if you like.
  [Edições e componentes do SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)  
  Selecionando componentes e recursos a serem instalados.  
   
- [Recursos compatíveis com as edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Recursos com suporte nas edições do SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
  Os recursos com suporte para cada edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Especificações de capacidade máxima do SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
+ [Especificações de capacidade máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)  
  Capacidades máximas para diversos objetos do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
   

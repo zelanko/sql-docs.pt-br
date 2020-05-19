@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d21a69105dbc419ad7c596a7ae0cc6ae4ceb57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691954"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707032"
 ---
 # <a name="sparse-columns-support-odbc"></a>Suporte a colunas esparsas (ODBC)
   Este tópico descreve o suporte a ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para colunas esparsas. Para obter um exemplo que demonstra o suporte ODBC para colunas esparsas, consulte [chamar SQLColumns em uma tabela com colunas esparsas](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas em SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  

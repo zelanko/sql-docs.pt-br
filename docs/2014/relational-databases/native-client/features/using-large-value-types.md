@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206995"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707209"
 ---
 # <a name="using-large-value-types"></a>Usando tipos de valor grande
   Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], trabalhar com tipos de dados de valor grande exigia procedimentos especiais. Os tipos de dados de valores grandes são os que excedem o tamanho de linha máximo de 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]introduziu um especificador **Max** para tipos de dados **varchar**, **nvarchar** e **varbinary** para permitir o armazenamento de valores tão grandes quanto 2 ^ 31-1 bytes. As colunas e [!INCLUDE[tsql](../../../includes/tsql-md.md)] variáveis de tabela podem especificar os tipos de dados **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
@@ -687,7 +687,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Para obter mais informações sobre como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o provedor de OLE DB de cliente nativo expõe tipos de dados de valor grande, consulte [BLOBs e objetos OLE](../../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obter mais informações sobre como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo expõe tipos de dados de valor grande, consulte [BLOBs e objetos OLE](../../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client expõe os tipos **varchar (max)**, **varbinary (max)** e **nvarchar (max)** como SQL_VARCHAR, SQL_VARBINARY e SQL_WVARCHAR nas funções da API ODBC que aceitam ou retornam tipos de dados ODBC SQL.  

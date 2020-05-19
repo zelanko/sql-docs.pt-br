@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61084969ad28c94dd2047cda1d05f685751a70f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691857"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707397"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
   A interface IBCPSession2 é uma extensão de IBCPSession que fornece uma função de membro que é uma alternativa à chamada de IBCPSession::BCPColFmt para cada coluna.  IBCPSession2 herda de IBCPSession e adiciona um novo método: [IBCPSession2:: BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  

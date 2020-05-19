@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200352"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712930"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrar Consultas de execução longa (ODBC)
   Este exemplo mostra as opções específicas do driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de longa execução. Quando executado, esse exemplo cria o Odbcqry.log, que contém uma lista de consultas cuja execução excede um conjunto de intervalos pelo aplicativo. Este exemplo não tem suporte em IA64. Esse exemplo foi desenvolvido para o ODBC versão 3.0 ou posterior.  

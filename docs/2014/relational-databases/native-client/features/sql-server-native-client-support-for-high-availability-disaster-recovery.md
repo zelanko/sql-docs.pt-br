@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7243e28bf17b6c38f7274e221a1b6b5e5cf830f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206640"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707236"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre
   Este tópico discute o suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (adicionado no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para obter mais informações sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consulte [Ouvintes do Grupo de Disponibilidade, Conectividade do Cliente e Failover do Aplicativo &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Criação e Configuração de Grupos de Disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de Failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Secundárias Ativas: Réplicas Secundárias Legíveis (Grupos de Disponibilidade AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "68206640"
   
  Se você atualizar um aplicativo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que atualmente usa o espelhamento de banco de dados em um cenário de várias sub-redes, deverá remover a propriedade de conexão `Failover_Partner` e substituí-la por `MultiSubnetFailover` definido como `Yes` e substituir o nome do servidor da cadeia de conexão por um ouvinte de grupo de disponibilidade. Se a cadeia de conexão usar `Failover_Partner` e `MultiSubnetFailover=Yes`, o driver gerará um erro. No entanto, se uma cadeia de conexão usar `Failover_Partner` e `MultiSubnetFailover=No` (ou `ApplicationIntent=ReadWrite`), o aplicativo usará o espelhamento de banco de dados.  
   
- O driver retornará um erro se o espelhamento de banco de dados for usado no banco de dados primário no grupo de `MultiSubnetFailover=Yes` disponibilidade e se for usado na cadeia de conexão que se conecta a um banco de dados primário em vez de a um ouvinte de grupo de disponibilidade.  
+ O driver retornará um erro se o espelhamento de banco de dados for usado no banco de dados primário no grupo de disponibilidade e se `MultiSubnetFailover=Yes` for usado na cadeia de conexão que se conecta a um banco de dados primário em vez de a um ouvinte de grupo de disponibilidade.  
   
 ## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo  
  Quando `ApplicationIntent=ReadOnly`, o cliente solicita uma carga de trabalho leitura ao se conectar a um banco de dados habilitado para AlwaysOn. O servidor irá impor a intenção no momento da conexão e durante uma instrução USE de banco de dados, mas somente para um banco de dados habilitado para AlwaysOn.  
@@ -150,7 +150,7 @@ ms.locfileid: "68206640"
  Quando forem estabelecidas conexões implícitas, a conexão implícita usará a configuração de tentativa de aplicativo da conexão pai. Da mesma forma, várias sessões criadas a partir da mesma fonte de dados herdarão a configuração de tentativa de aplicativo da fonte de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de SQL Server Native Client](sql-server-native-client-features.md)   
+ [Recursos do SQL Server Native Client](sql-server-native-client-features.md)   
  [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

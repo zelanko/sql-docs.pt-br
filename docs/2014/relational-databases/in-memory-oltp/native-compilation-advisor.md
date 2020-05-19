@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072735"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706470"
 ---
 # <a name="native-compilation-advisor"></a>Orientador de compilação nativa
   A ferramenta de relatórios de desempenho da transação (consulte [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre quais procedimentos armazenados interpretados no banco de dados serão beneficiados se usarem a compilação nativa. Depois de identificar um procedimento armazenado que você gostaria de ser aprovado para usar a compilação nativa, você poderá usar o orientador de compilação nativa para ajudá-lo a migrar o procedimento armazenado interpretado para compilação nativa. Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Server Native Client, table-valued parameters
 - table-valued parameters (SQL Server Native Client)
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bfad3885d6b6842871fddb90f6ce31a71e72f3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206622"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707197"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parâmetros com valor de tabela (SQL Server Native Client)
   No [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], foram introduzidos parâmetros com valor de tabela que fornecem uma maneira eficiente de passar várias linhas de dados para o servidor. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante às matrizes de parâmetro, mas eles oferecem mais flexibilidade e uma integração melhor com o [!INCLUDE[tsql](../../../includes/tsql-md.md)], podendo, com frequência, melhorar o desempenho. Os parâmetros com valor de tabela também podem participar de operações baseadas em conjuntos, o que não ocorre com as matrizes de parâmetro.  

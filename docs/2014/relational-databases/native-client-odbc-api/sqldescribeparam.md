@@ -11,22 +11,22 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeParam function
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aa5dcb3ff23c5a9a57124e59b50b70969fddd68
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067717"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706283"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   Para descrever os parâmetros de qualquer instrução SQL, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client cria e executa uma [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT quando SQLDescribeParam é chamado em um identificador de instrução ODBC preparado. Os metadados do conjunto de resultados determinam as características dos parâmetros na instrução preparada. SQLDescribeParam pode retornar qualquer código de erro que SQLExecute ou SQLExecDirect possa retornar.  
   
- Melhorias no mecanismo de banco de dados [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] começando com permitir SQLDescribeParam para obter descrições mais precisas dos resultados esperados. Esses resultados mais precisos podem ser diferentes dos valores retornados pelo SQLDescribeParam em versões anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]do. Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).  
+ Melhorias no mecanismo de banco de dados começando com [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir SQLDescribeParam para obter descrições mais precisas dos resultados esperados. Esses resultados mais precisos podem ser diferentes dos valores retornados pelo SQLDescribeParam em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obter mais informações, veja [Descoberta de metadados](../native-client/features/metadata-discovery.md).  
   
- Também novo no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* agora retorna um valor que se alinha com a definição do tamanho, em caracteres, da coluna ou expressão do marcador de parâmetro correspondente, conforme definido na [especificação ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* poderia ser o valor correspondente de `SQL_DESC_OCTET_LENGTH` para o tipo, ou um valor de tamanho de coluna irrelevante que foi fornecido a SQLBindParameter para um tipo, o valor que deve ser`SQL_INTEGER`ignorado (, por exemplo).  
+ Também novo no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* agora retorna um valor que se alinha com a definição do tamanho, em caracteres, da coluna ou expressão do marcador de parâmetro correspondente, conforme definido na [especificação ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* poderia ser o valor correspondente de `SQL_DESC_OCTET_LENGTH` para o tipo, ou um valor de tamanho de coluna irrelevante que foi fornecido a SQLBindParameter para um tipo, o valor que deve ser ignorado ( `SQL_INTEGER` , por exemplo).  
   
  O driver não dá suporte à chamada de SQLDescribeParam nas seguintes situações:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63067717"
   
 -   Para qualquer consulta em que um dos parâmetros é um parâmetro para uma função.  
   
--   Quando houver comentários (/* \*/) no [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+-   Quando houver comentários (/* \* /) no [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
   
  Ao processar um lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções, o driver também não oferece suporte à chamada de SQLDescribeParam para marcadores de parâmetro em instruções após a primeira instrução no lote.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "63067717"
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- A execução de SQLDescribeParam após a preparação bem-sucedida retorna um conjunto de linhas vazio quando conectado `master`a qualquer banco de dados, mas. A mesma chamada, preparada da seguinte maneira, faz com que o SQLDescribeParam seja bem sucedido, independentemente do banco de dados de usuário atual:  
+ A execução de SQLDescribeParam após a preparação bem-sucedida retorna um conjunto de linhas vazio quando conectado a qualquer banco de dados, mas `master` . A mesma chamada, preparada da seguinte maneira, faz com que o SQLDescribeParam seja bem sucedido, independentemente do banco de dados de usuário atual:  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- Para tipos de dados de valor grande, o valor retornado em *DataTypePtr* é SQL_VARCHAR, SQL_VARBINARY ou SQL_NVARCHAR. Para indicar que o tamanho do parâmetro de tipo de dados de valor grande é "ilimitado" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o driver ODBC do Native Client define *ParameterSizePtr* como 0. Os valores de tamanho reais são retornados para os parâmetros padrão `varchar`.  
+ Para tipos de dados de valor grande, o valor retornado em *DataTypePtr* é SQL_VARCHAR, SQL_VARBINARY ou SQL_NVARCHAR. Para indicar que o tamanho do parâmetro de tipo de dados de valor grande é "ilimitado", o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client define *ParameterSizePtr* como 0. Os valores de tamanho reais são retornados para os parâmetros padrão `varchar`.  
   
 > [!NOTE]  
 >  Se o parâmetro já tiver sido associado a um tamanho máximo para os parâmetros SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR, o tamanho associado do parâmetro será retornado, não "ilimitado".  
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|date|SQL_TYPE_DATE|10|0|  
+|data|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

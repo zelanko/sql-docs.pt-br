@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127786"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707355"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-  Retorna um ponteiro para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estrutura SSERRORINFO do provedor de OLE DB de cliente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo que contém os detalhes do erro.  
+  Retorna um ponteiro para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estrutura SSERRORINFO do provedor de OLE DB de cliente nativo que contém os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalhes do erro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -71,7 +71,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Membro|Descrição|  
+|Membro|Description|  
 |------------|-----------------|  
 |*pwszMessage*|A mensagem de erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A mensagem é retornada por meio do método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na qual o erro ocorreu.|  

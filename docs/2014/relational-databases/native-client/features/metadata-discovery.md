@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162015"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707278"
 ---
 # <a name="metadata-discovery"></a>Descoberta de metadados
   A melhoria na descoberta de metadados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite que aplicativos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client assegurem que os metadados de colunas ou parâmetros retornados da execução de uma consulta sejam idênticos ou compatíveis com o formato de metadados especificado antes da execução da consulta. Você receberá um erro se os metadados retornados depois da execução da consulta não forem compatíveis com o formato de metadados especificado antes da execução da consulta.  
@@ -39,7 +39,7 @@ ms.locfileid: "63162015"
   
  Você também verá uma melhoria no desempenho ao especificar o formato de metadados usando [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md).  
   
- [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) tem um novo *eOption* para controlar o comportamento de bcp_readfmt: `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) tem um novo *eOption* para controlar o comportamento de bcp_readfmt: `BCPDELAYREADFMT` .  
   
  As funções ODBC a seguir foram aperfeiçoadas no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] para fornecer descoberta de metadados aprimorada:  
   

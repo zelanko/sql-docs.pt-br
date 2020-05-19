@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967132"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763967"
 ---
 # <a name="attributes-property-example-vb"></a>Exemplo da propriedade Attributes (VB)
 Este exemplo demonstra a propriedade [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). Configurá-lo como **adColNullable** permite que o usuário defina o valor de um [campo](../../../ado/reference/ado-api/field-object.md) de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro em que os dados não são conhecidos e um registro em que os dados não se aplicam.  

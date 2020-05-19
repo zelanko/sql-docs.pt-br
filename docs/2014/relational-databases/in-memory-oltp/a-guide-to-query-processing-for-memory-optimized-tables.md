@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112246"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706574"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Um guia para processamento de consulta de tabelas com otimização de memória
   O OLTP na memória incorpora as tabelas com otimização de memória e os procedimentos armazenados compilados nativamente no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este artigo fornece uma visão geral do processamento de consulta para tabelas com otimização de memória e procedimentos armazenados compilados nativamente.  
@@ -222,7 +222,7 @@ Execução de procedimentos armazenados compilados nativamente.
   
  A invocação de um procedimento armazenado originalmente compilado é descrita a seguir:  
   
-1.  O usuário emite uma `EXEC`instrução *usp_myproc* .  
+1.  O usuário emite uma `EXEC` instrução *usp_myproc* .  
   
 2.  O analisador extrai os parâmetros de nome e procedimento armazenado.  
   
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantém as estatísticas no nível de coluna para tabelas com otimização de memória. Além disso, ele mantém a contagem real de linhas da tabela. No entanto, em contraposição às tabelas baseadas em disco, as estatísticas de tabelas com otimização de memória não são atualizadas automaticamente. Portanto, as estatísticas precisam ser atualizadas manualmente depois que alterações significativas são feitas nas tabelas. Para obter mais informações, consulte [Estatísticas para tabelas com otimização de memória](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Tabelas com otimização de memória](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

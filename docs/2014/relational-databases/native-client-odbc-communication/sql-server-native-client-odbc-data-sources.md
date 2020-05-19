@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - ODBC data sources
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b7a5ea06fb2b720e635f5d8310cefa425aa1646
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028383"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705695"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>fontes de dados ODBC do SQL Server Native Client
   Um DSN (nome da fonte de dados) do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica uma fonte de dados ODBC que contém todas as informações de que um aplicativo ODBC precisa para se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor específico. Há duas maneiras de definir um nome da fonte de dados ODBC:  

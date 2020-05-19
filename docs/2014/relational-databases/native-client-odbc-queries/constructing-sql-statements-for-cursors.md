@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207083"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711063"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construindo instruções SQL para cursores
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client usa cursores de servidor para implementar a funcionalidade de cursor definida na especificação ODBC. Um aplicativo ODBC controla o comportamento do cursor usando [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) para definir atributos de instrução diferentes. Estes são os atributos e seus padrões.  

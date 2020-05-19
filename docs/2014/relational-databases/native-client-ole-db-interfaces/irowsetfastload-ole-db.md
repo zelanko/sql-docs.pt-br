@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209819"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707338"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
-  A `IRowsetFastLoad` interface expõe o suporte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para operações de cópia em massa baseadas em memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os consumidores do provedor de OLE DB de cliente nativo usam a interface para adicionar dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapidamente a uma tabela existente.  
+  A `IRowsetFastLoad` interface expõe o suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operações de cópia em massa baseadas em memória. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Os consumidores do provedor de OLE DB de cliente nativo usam a interface para adicionar dados rapidamente a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela existente.  
   
  Se você definir SSPROP_ENABLEFASTLOAD como VARIANT_TRUE para uma sessão, não poderá ler dados de conjuntos de linhas subsequentemente passados como retorno dessa sessão. Quando SSPROP_ENABLEFASTLOAD for definido como VARIANT_TRUE, todos os conjuntos de linhas criados na sessão serão do tipo IRowsetFastLoad. Os conjuntos de linhas IRowsetFastLoad não dão suporte à funcionalidade de fetch de conjuntos de linhas; portanto, os dados desses conjuntos de linhas não podem ser lidos.  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503cc731ede59b4cc3cf70e9cf2daafec436243c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287235"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716732"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemplo: Especificando a diretiva ELEMENT e codificação de entidade
   Este exemplo ilustra a diferença entre as diretivas **ELEMENT** e **XML** . A entidade dos dados é definida pela diretiva **ELEMENT** , mas não pela diretiva **XML** . O elemento \<Summary> é atribuído como XML, `<Summary>This is summary description</Summary>`, na consulta.  

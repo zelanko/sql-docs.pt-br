@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519300"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706831"
 ---
 # <a name="event-tracing-for-windows-target"></a>destino do rastreamento de eventos do Windows
   Antes de usar o Rastreamento de Eventos do Windows (ETW) como destino, é recomendável ter um conhecimento prático do ETW. O rastreamento ETW é usado junto com o recurso Eventos Estendidos ou como um consumidor de Eventos Estendidos. Os links externos a seguir fornecem um ponto de partida para a obtenção de informações gerais do ETW:  
@@ -48,7 +48,7 @@ ms.locfileid: "62519300"
   
  A tabela a seguir descreve as opções disponíveis para configuração do destino de ETW.  
   
-|Opção|Valores permitidos|Descrição|  
+|Opção|Valores permitidos|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O nome da sessão de Eventos Estendidos. Por padrão, este é XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualquer cadeia de caracteres até 256 caracteres. Esse valor é opcional.|O caminho para o arquivo de log da sessão de Eventos Estendidos. Por padrão, esse é % TEMP% \ XEEtw.etl.|  
@@ -75,7 +75,7 @@ ms.locfileid: "62519300"
     > [!IMPORTANT]  
     >  O caminho do arquivo não pode ser alterado depois que a sessão for iniciada.  
   
--   Os arquivos de Managed Object Format (MOF) estão em * \<seu caminho de instalação>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
+-   Os arquivos de Managed Object Format (MOF) estão em * \< seu caminho de instalação>* \Microsoft SQL Server\Shared. Para obter mais informações, veja [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) no MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Adicionando o destino a uma sessão  
  Para adicionar o destino de ETW a uma sessão de Eventos Estendidos, você deve incluir a instrução a seguir ao criar ou alterar uma sessão de evento:  

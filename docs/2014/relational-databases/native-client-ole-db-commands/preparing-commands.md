@@ -12,15 +12,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd3be1705411dd84a4bc3e0ad9e55f6e6c8d97b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62865014"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707456"
 ---
 # <a name="preparing-commands"></a>Preparando comandos
   O provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oferece suporte à preparação de comando tendo em vista várias execuções de um único comando. No entanto, ela gera sobrecarga, e um cliente não precisa preparar um comando para ser executado mais de uma vez. Em geral, um comando deverá ser preparado se for executado mais de três vezes.  

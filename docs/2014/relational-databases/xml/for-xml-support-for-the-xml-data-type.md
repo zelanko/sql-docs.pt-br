@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205003"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716479"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Suporte a FOR XML para o tipo de dados xml
   Se uma consulta FOR XML especificar uma coluna de tipo `xml` na cláusula SELECT, os valores da coluna serão mapeados como elementos no XML retornado, independentemente da diretiva ELEMENTS estar especificada. Qualquer declaração XML na coluna de tipo `xml` não é serializada.  
   
- Por exemplo, a consulta a seguir recupera informações de contato do cliente `BusinessEntityID`, `FirstName`como as `LastName` colunas, e, e os números de `AdditionalContactInfo` telefone da `xml` coluna do tipo.  
+ Por exemplo, a consulta a seguir recupera informações de contato do cliente, como as `BusinessEntityID` colunas, e `FirstName` `LastName` , e os números de telefone da `AdditionalContactInfo` coluna do `xml` tipo.  
   
 ```  
 USE AdventureWorks2012;  

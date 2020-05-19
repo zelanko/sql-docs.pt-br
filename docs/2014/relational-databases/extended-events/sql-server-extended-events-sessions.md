@@ -11,15 +11,15 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705748"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706604"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
@@ -35,7 +35,7 @@ ms.locfileid: "62705748"
   
  Mencionando a figura precedente, observe que o estado da sessão é alterado quando os comandos DDL diferentes são emitidos para uma sessão de evento. Essas alterações de estado são descritas na tabela a seguir.  
   
-|Rótulo de ilustração|instrução DDL|Descrição|  
+|Rótulo de ilustração|instrução DDL|Description|  
 |------------------------|-------------------|-----------------|  
 |Criar|CREATE EVENT SESSION|O processo do host cria um objeto de sessão que contém os metadados fornecidos pela CREATE EVENT SESSION. O processo do host valida a definição de sessão, valida o nível de permissão do usuário, e armazena os metadados no banco de dados mestre. Neste momento a sessão não está ativa.|  
 |Alterar|ALTER EVENT SESSION, STATE=START|O processo do host inicia a sessão. O processo do host lê os metadados armazenados, valida a definição da sessão, verifica o nível de permissão do usuário e cria a sessão. Objetos de sessão, como eventos e destinos, são carregados e a manipulação de eventos está ativa.|  

@@ -18,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client, password expiration
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046248"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707326"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o Native Client dá suporte ao tratamento de expiração de senha programaticamente por meio do provedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB de cliente nativo e do driver ODBC do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e por meio de alterações nas caixas de diálogo de logon do **SQL Server** .  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do, o Native Client dá suporte ao tratamento de expiração de senha programaticamente por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client e por meio de alterações nas caixas de diálogo de **logon do SQL Server** .  
   
 > [!NOTE]  
 >  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../security/strong-passwords.md).  

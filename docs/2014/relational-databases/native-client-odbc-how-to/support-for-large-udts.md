@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205556"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712279"
 ---
 # <a name="support-for-large-udts"></a>Suporte a UDTs grandes
   Esta solução de exemplo contém dois projetos. Um projeto cria um assembly (DLL) de código-fonte C#. Este assembly contém o tipo CLR. Uma tabela será adicionada ao banco de dados. Uma coluna na tabela será de um tipo definido no assembly, por padrão, este exemplo usará o banco de dados mestre. O segundo projeto é um aplicativo nativo C que lê dados da tabela.  

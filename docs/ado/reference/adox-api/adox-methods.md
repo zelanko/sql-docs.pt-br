@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928542"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764117"
 ---
 # <a name="adox-methods"></a>Métodos do ADOX
 
@@ -34,7 +34,7 @@ ms.locfileid: "67928542"
 |[Acrescentar (exibições)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo objeto de **exibição** à coleção **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
 |[Criar](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
-|[Delete (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
+|[Excluir](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retorna as permissões para um grupo ou usuário em um objeto.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Especifica o proprietário de um objeto em um catálogo.|  

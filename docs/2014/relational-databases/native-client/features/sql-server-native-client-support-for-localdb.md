@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225482"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707220"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>Suporte do SQL Server Native Client para LocalDB
   A partir do [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], uma versão leve do SQL Server, denominada LocalDB, será disponibilizada. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.  
@@ -31,7 +31,7 @@ ms.locfileid: "63225482"
   
 -   Usar `sqllocaldb.exe i` para descobrir o nome da instância padrão.  
   
--   Usar a palavra-chave da cadeia de conexão `AttachDBFilename` para especificar o arquivo de banco de dados que o servidor deve anexar. Ao usar `AttachDBFilename`, se você não especificar o nome do banco de dados com a palavra-chave String de conexão de **banco** de dados, o banco de dados será removido da instância de LocalDB quando o aplicativo for fechado.  
+-   Usar a palavra-chave da cadeia de conexão `AttachDBFilename` para especificar o arquivo de banco de dados que o servidor deve anexar. Ao usar `AttachDBFilename` , se você não especificar o nome do banco de dados com a palavra-chave String de conexão de **banco** de dados, o banco de dados será removido da instância de LocalDB quando o aplicativo for fechado.  
   
 -   Especifique uma instância do LocalDB em sua cadeia de conexão:  
   

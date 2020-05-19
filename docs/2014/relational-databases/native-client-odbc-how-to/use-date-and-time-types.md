@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9373aeec2086e330da95eba343645c0c0d68ab6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205505"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712067"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de data e hora
   Este exemplo mostra como inicializar as estruturas de dados de data/hora que foram adicionadas ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Em seguida, prepara os valores de entrada, associa parâmetros e executa a consulta. Para obter mais informações sobre como usar esses tipos, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683595"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707019"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Acessibilidade para pessoas com deficiências
   A [!INCLUDE[msCoName](../includes/msconame-md.md)] é uma empresa que tem o compromisso de tornar seus produtos e serviços mais fáceis para o uso de todos. Este tópico fornece informações sobre os seguintes recursos, produtos e serviços que tornam os produtos da família [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server mais acessíveis a pessoas com deficiências.  
@@ -82,7 +82,7 @@ ms.locfileid: "74683595"
  Você pode obter documentação acessível para [!INCLUDE[msCoName](../includes/msconame-md.md)] produtos do [site de acessibilidade da Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Você pode obter publicações [!INCLUDE[msCoName](../includes/msconame-md.md)] adicionais da Recording for the Blind & Dyslexic, Inc. Esses documentos são distribuídos para membros registrados e qualificados do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
+ Você pode obter [!INCLUDE[msCoName](../includes/msconame-md.md)] publicações adicionais da Recording for the Blind & Dyslexic, Inc. Esses documentos são distribuídos para membros registrados e qualificados do serviço de distribuição em audiocassettes ou disquetes. A coleção contém mais de 80 mil títulos, incluindo documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Para obter informações sobre qualificação e disponibilidade de documentação de produtos da [!INCLUDE[msCoName](../includes/msconame-md.md)] e livros da [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, entre em contato com:  
   
  Recording for the Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
   
@@ -97,8 +97,8 @@ ms.locfileid: "74683595"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Serviço de atendimento ao consumidor para pessoas surdas ou com deficiência auditiva  
  Se você é surdo ou possui deficiência auditiva, acesso completo aos produtos e serviços de atendimento ao consumidor da [!INCLUDE[msCoName](../includes/msconame-md.md)] estão disponíveis através de um serviço TTY/TDD (telefone de texto).  
   
-### <a name="customer-service"></a>Serviço de atendimento ao consumidor  
- Você pode entrar em [!INCLUDE[msCoName](../includes/msconame-md.md)] contato com o centro de informações de vendas em um telefone de texto discando (800) 892-5234 entre 6:30 A.M. e 17h30. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados.  
+### <a name="customer-service"></a>Customer Service  
+ Você pode entrar em contato com o [!INCLUDE[msCoName](../includes/msconame-md.md)] centro de informações de vendas em um telefone de texto discando (800) 892-5234 entre 6:30 A.M. e 17h30. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados.  
   
 ### <a name="technical-help"></a>Suporte técnico  
  Para obter suporte técnico nos Estados Unidos, entre em contato com o [!INCLUDE[msCoName](../includes/msconame-md.md)] Product Support Services em um telefone de texto, no número (800) 892-5234 entre 6h e 18h. Hora do Pacífico, de segunda-feira a sexta-feira, exceto feriados. No Canadá, disque (905) 568-9641 entre 8h e 18h. Hora do Leste dos EUA, de segunda a sexta-feira, exceto feriados. Os serviços de suporte da [!INCLUDE[msCoName](../includes/msconame-md.md)] estão sujeitos a preços, prazos e condições em vigor no momento em que o serviço é usado.  

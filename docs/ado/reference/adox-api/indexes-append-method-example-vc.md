@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d9c8cf7e99c05b7213d3731e6aecb97fc46d203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 77624629aeb68381729f891f74f57a980f71a589
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929492"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763867"
 ---
 # <a name="indexes-append-method-example-vc"></a>Exemplo do método Indexes Append (VC++)
 O código a seguir demonstra como criar um novo índice. O índice está em duas colunas na tabela.  

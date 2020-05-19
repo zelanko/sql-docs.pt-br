@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657771"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706043"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expõe campos de descritor específicos de driver apenas para o IRD (descritor de linhas de implementação). No IRD, a referência aos campos de descritor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é feita com atributos de coluna específicos de driver. Para obter uma lista completa dos campos de descritor específicos de driver disponíveis, consulte [SQLColAttribute](sqlcolattribute.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62657771"
   
  Para obter mais informações, consulte [melhorias de data e hora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]do, SQLGetDescField pode `SQL_C_SS_TIME2` retornar ( `time` para tipos) `SQL_C_SS_TIMESTAMPOFFSET` ou ( `datetimeoffset`for) em `SQL_C_BINARY`vez de, se seu aplicativo usar o ODBC 3,8.  
+ A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , SQLGetDescField pode retornar `SQL_C_SS_TIME2` (para `time` tipos) ou `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset` ) em vez de `SQL_C_BINARY` , se seu aplicativo usar o ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Suporte do SQLGetDescField a UDTs de CLR grandes  
  `SQLGetDescField` dá suporte a UDTs grandes do CLR. Para obter mais informações, consulte [tipos CLR grandes definidos pelo usuário &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

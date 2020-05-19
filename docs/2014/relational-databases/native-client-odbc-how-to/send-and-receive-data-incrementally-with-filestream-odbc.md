@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b504f09049ac765c707ee0c814d5b73d8ec3aa22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205531"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712290"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Enviar e receber dados de forma incremental com FILESTREAM (ODBC)
   Este exemplo mostra como usar o recurso FILESTREAM para enviar e receber dados de forma incremental com SQLPutData e SQLGetData.  

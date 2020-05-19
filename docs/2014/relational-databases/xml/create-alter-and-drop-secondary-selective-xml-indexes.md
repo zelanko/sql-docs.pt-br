@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563b2c786f7ac1f9031dbddc4c5f343ebf688e9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637839"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717130"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Criar, alterar e remover índices XML seletivos secundários
   Descreve como criar um novo índice XML seletivo secundário, ou como alterar ou remover um índice XML seletivo secundário.  

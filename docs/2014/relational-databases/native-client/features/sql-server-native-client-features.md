@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225559"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707238"
 ---
 # <a name="sql-server-native-client-features"></a>Recursos do SQL Server Native Client
   Além de expor os recursos do WDAC (Windows (anteriormente Microsoft) Data Access Components), o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client também implementa vários outros recursos para expor a funcionalidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "63225559"
  Discute uma alteração de comportamento a partir do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Usando o espelhamento de banco de dados](using-database-mirroring.md)  
- Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte ao uso de bancos de dados espelhados, que é a capacidade de manter uma cópia, ou espelho, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um banco de dados em um servidor em espera.  
+ Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte ao uso de bancos de dados espelhados, que é a capacidade de manter uma cópia, ou espelho, de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados em um servidor em espera.  
   
  [Executando operações assíncronas](performing-asynchronous-operations.md)  
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a operações assíncronas, o que possibilita o retorno imediato sem bloqueio no thread que fez a chamada.  
@@ -42,7 +42,7 @@ ms.locfileid: "63225559"
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte ao tipo de dados XML, um tipo de dados baseado em XML que pode ser usado como um tipo de coluna, um tipo de variável, um tipo de parâmetro ou um tipo de retorno de função.  
   
  [Usando tipos definidos pelo usuário](using-user-defined-types.md)  
- Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte a UDT (tipos definidos pelo usuário), que estende o sistema de tipos SQL, permitindo que você armazene objetos e estruturas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de dados personalizadas em um banco de dado.  
+ Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte a UDT (tipos definidos pelo usuário), que estende o sistema de tipos SQL, permitindo que você armazene objetos e estruturas de dados personalizadas em um banco de dado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [Usando tipos de valor grande](using-large-value-types.md)  
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte a tipos de dados de valor grande, que são tipos de dados LOB (objeto binário grande).  
@@ -57,7 +57,7 @@ ms.locfileid: "63225559"
  Aborda como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client oferece suporte à notificação do consumidor na modificação do conjunto de linhas.  
   
  [Executando operações de cópia em massa](performing-bulk-copy-operations.md)  
- Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte a operações de cópia em massa que permitem a transferência de grandes quantidades de dados para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dentro ou para fora de uma tabela ou exibição.  
+ Discute como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Native Client dá suporte a operações de cópia em massa que permitem a transferência de grandes quantidades de dados para dentro ou para fora de uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela ou exibição.  
   
  [Usando criptografia sem validação](using-encryption-without-validation.md)  
  Aborda como usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para criptografar dados enviados para o servidor sem validar o certificado.  
@@ -69,7 +69,7 @@ ms.locfileid: "63225559"
  Aborda o suporte a UDTs CLR (Common Language Runtime) grandes.  
   
  [Suporte a FILESTREAM](filestream-support.md)  
- Discute o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte de cliente nativo para o recurso de fluxo de recursos avançado.  
+ Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o suporte de cliente nativo para o recurso de fluxo de recursos avançado.  
   
  [Suporte a SPN &#40;Nome da Entidade de Serviço&#41; em conexões com o cliente](service-principal-name-spn-support-in-client-connections.md)  
  Aborda como o suporte a SPNs (nomes da entidade de serviço) foi estendido para possibilitar autenticação mútua em todos os protocolos.  

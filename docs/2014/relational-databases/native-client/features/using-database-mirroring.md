@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225334"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707201"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
     
@@ -60,9 +60,9 @@ ms.locfileid: "63225334"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo dá suporte ao espelhamento de banco de dados através de atributos de cadeia de conexão e conexão. A propriedade SSPROP_INIT_FAILOVERPARTNER foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT e a palavra-chave `FailoverPartner` é um novo atributo de cadeia de conexão para DBPROP_INIT_PROVIDERSTRING. Para obter mais informações, consulte [usando palavras-chave da cadeia de conexão com SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- O cache de failover é mantido, desde que o provedor seja carregado, o que é até que **CoUninitialize** seja chamado ou desde que o aplicativo tenha uma referência a algum objeto gerenciado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pelo provedor de OLE DB de cliente nativo, como um objeto de fonte de dados.  
+ O cache de failover é mantido, desde que o provedor seja carregado, o que é até que **CoUninitialize** seja chamado ou desde que o aplicativo tenha uma referência a algum objeto gerenciado pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor de OLE DB de cliente nativo, como um objeto de fonte de dados.  
   
- Para obter detalhes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sobre o suporte ao provedor de OLE DB nativo do cliente para espelhamento de banco de dados, consulte [Propriedades de inicialização e autorização](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obter detalhes sobre o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte ao provedor de OLE DB nativo do cliente para espelhamento de banco de dados, consulte [Propriedades de inicialização e autorização](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC do SQL Server Native Client  
  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte ao espelhamento de banco de dados por meio de atributos de cadeia de conexão e conexão. Especificamente, o atributo SQL_COPT_SS_FAILOVER_PARTNER foi adicionado para uso com as funções [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) ; e a `Failover_Partner` palavra-chave foi adicionada como um novo atributo de cadeia de conexão.  
@@ -73,7 +73,7 @@ ms.locfileid: "63225334"
 >  O Gerenciador de Driver ODBC foi aprimorado para dar suporte à especificação do nome do servidor de failover.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Recursos de SQL Server Native Client](sql-server-native-client-features.md)   
+ [Recursos do SQL Server Native Client](sql-server-native-client-features.md)   
  [Conectar clientes a uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statements [ODBC], constructing
 - ODBC applications, statements
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa955f31d26c87b39585ddead6bc5899a9e00679
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee3dbc4c685337a930a8d7aa5ce741b2e0b876b3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206784"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711255"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Construindo uma instrução SQL (ODBC)
   Aplicativos ODBC realizam quase todo o acesso ao banco de dados executando instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. A forma dessas instruções depende dos requisitos do aplicativo. As instruções SQL podem ser construídas das seguintes maneiras:  
@@ -32,7 +32,7 @@ ms.locfileid: "68206784"
   
      Instruções SQL construídas em tempo de execução que permitem ao usuário adaptar a instrução usando cláusulas comuns, como SELECT, WHERE e ORDER BY. Isso inclui consultas ad hoc inseridas por usuários.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do cliente analisa instruções SQL somente para sintaxe ODBC e ISO sem suporte direto do [!INCLUDE[ssDE](../../includes/ssde-md.md)], que o driver transforma em. [!INCLUDE[tsql](../../includes/tsql-md.md)] Todas as outras sintaxes SQL são transmitidas inalteradas ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará se é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Essa abordagem gera dois benefícios:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do cliente analisa instruções SQL somente para sintaxe ODBC e ISO sem suporte direto do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , que o driver transforma em [!INCLUDE[tsql](../../includes/tsql-md.md)] . Todas as outras sintaxes SQL são transmitidas inalteradas ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará se é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Essa abordagem gera dois benefícios:  
   
 -   Redução da sobrecarga  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68206784"
   
 -   Flexibilidade  
   
-     Os programadores podem adaptar a portabilidade dos aplicativos. Para aumentar a portabilidade em vários bancos de dados, use principalmente as sintaxes ISO e ODBC. Para usar aprimoramentos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] apropriada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte [!INCLUDE[tsql](../../includes/tsql-md.md)] à sintaxe completa, portanto, os aplicativos baseados em ODBC podem aproveitar todos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]os recursos do.  
+     Os programadores podem adaptar a portabilidade dos aplicativos. Para aumentar a portabilidade em vários bancos de dados, use principalmente as sintaxes ISO e ODBC. Para usar aprimoramentos específicos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] apropriada. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte à [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxe completa, portanto, os aplicativos baseados em ODBC podem aproveitar todos os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  A lista de colunas em uma instrução SELECT deverá conter apenas as colunas necessárias para executar a tarefa atual. Isso não apenas reduz a quantidade de dados enviados pela rede, mas também reduz o efeito das alterações no banco de dados no aplicativo. Se um aplicativo não fizer referência a uma coluna de uma tabela, ele não será afetado por qualquer alteração feita nessa coluna.  
   

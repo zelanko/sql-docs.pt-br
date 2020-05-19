@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143576"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707070"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Criando perfil de desempenho do driver ODBC
   O driver ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client driver pode criar perfil de dois tipos de dados de desempenho:  
@@ -74,14 +74,14 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Estatísticas de perfil de aplicativo  
   
-|Campo de SQLPERF|Descrição|  
+|Campo de SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Resolução mínima da hora de relógio do servidor em milissegundos. Isto será relatado normalmente como 0 (zero) e deverá ser considerado somente se o número relatado for maior. Se a resolução mínima do relógio do servidor for maior que o intervalo provável para algumas das estatísticas baseadas em temporizador, estas estatísticas poderão ser aumentadas.|  
 |SQLidu|Número de instruções INSERT, DELETE ou UPDATE depois de SQL_PERF_START.|  
 |SQLiduRows|Número de instruções INSERT, DELETE ou UPDATE depois de SQL_PERF_START.|  
 |SQLSelects|Número de instruções SELECT processadas depois de SQL_PERF_START.|  
 |SQLSelectRows|Número de linhas selecionadas depois de SQL_PERF_START.|  
-|Transações|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
+|Transactions|Número de transações de usuário depois de SQL_PERF_START, incluindo reversões. Quando um aplicativo ODBC estiver sendo executado com SQL_AUTOCOMMIT_ON, cada comando será considerado uma transação.|  
 |SQLPrepares|Número de chamadas de [função SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) após SQL_PERF_START.|  
 |ExecDirects|Número de chamadas **SQLExecDirect** após SQL_PERF_START.|  
 |SQLExecutes|Número de chamadas **SQLExecute** após SQL_PERF_START.|  
@@ -112,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Time Statistics  
   
-|Campo SQLPERF|Descrição|  
+|Campo SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Quantidade cumulativa de horas que o driver gastou processando depois de SQL_PERF_START, incluindo o tempo gasto esperando respostas do servidor.|  
 |msNetworkServerTime|Quantidade cumulativa de horas que o driver gastou esperando respostas do servidor.|  

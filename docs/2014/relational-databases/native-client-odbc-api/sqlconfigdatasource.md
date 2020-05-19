@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44c6036de909ed8c18a120ec3de1108fb92cfb6e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067698"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706316"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]suporte a vários pares de palavras-chave/valores específicos para cadeias de caracteres de atributo de configuração da fonte de dados  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client dá suporte a vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pares de palavras-chave/valores específicos para cadeias de caracteres de atributo de configuração da fonte de dados  
   
- Para obter uma lista das palavras-chave disponíveis no driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC do Native Client, consulte [usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Para obter uma lista das palavras-chave disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC do Native Client, consulte [usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Função SQLConfigDataSource](https://go.microsoft.com/fwlink/?LinkId=59337)   

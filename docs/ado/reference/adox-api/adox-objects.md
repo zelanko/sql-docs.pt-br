@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928508"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764107"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumo do objeto ADOX  
@@ -27,7 +27,7 @@ ms.locfileid: "67928508"
 |------------|-----------------|  
 |[Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contém coleções que descrevem o catálogo de esquema de uma fonte de dados.|  
 |[Coluna](../../../ado/reference/adox-api/column-object-adox.md)|Representa uma coluna de uma tabela, índice ou chave.|  
-|[Agrupar](../../../ado/reference/adox-api/group-object-adox.md)|Representa uma conta de grupo que tem permissões de acesso em um banco de dados protegido.|  
+|[Group](../../../ado/reference/adox-api/group-object-adox.md)|Representa uma conta de grupo que tem permissões de acesso em um banco de dados protegido.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Representa um índice de uma tabela de banco de dados.|  
 |[Chave](../../../ado/reference/adox-api/key-object-adox.md)|Representa um campo de chave primária, estrangeira ou exclusiva de uma tabela de banco de dados.|  
 |[Procedure](../../../ado/reference/adox-api/procedure-object-adox.md)|Representa um procedimento armazenado.|  

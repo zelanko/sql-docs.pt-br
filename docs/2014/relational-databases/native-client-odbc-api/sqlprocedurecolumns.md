@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705878"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`Retorna uma linha relatando os atributos de valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de retorno de todos os procedimentos armazenados.  
+  `SQLProcedureColumns`Retorna uma linha relatando os atributos de valor de retorno de todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimentos armazenados.  
   
  `SQLProcedureColumns`retorna SQL_SUCCESS se os valores existem ou não para os parâmetros *CatalogName*, *schemas*, *ProcName*ou *ColumnName* . **SQLFetch** retorna SQL_NO_DATA quando são usados valores inválidos nesses parâmetros.  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530952"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706856"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guia do desenvolvedor&#39;s (Mecanismo de Banco de Dados)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornece um excelente conjunto ferramentas para desenvolver, administrar e controlar aplicativos de banco de dados.  
@@ -34,7 +34,7 @@ ms.locfileid: "69530952"
  Descreve a versão mais recente do SQLXML, que oferece a mesma funcionalidade que o SQLXML 3.0, além de atualizações adicionais que se ajustam aos novos recursos introduzidos no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], como o tipo de dados xml.  
   
  [Provedor WMI para conceitos de gerenciamento de configuração](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Descreve uma camada publicada que é usada com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-in Configuration Manager para o MMC (console de gerenciamento Microsoft) [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e o Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Descreve uma camada publicada que é usada com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-in Configuration Manager para o MMC (console de gerenciamento Microsoft) e o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Provedor WMI para conceitos de eventos de servidor](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Descreve como usar o WMI (Instrumentação de Gerenciamento do Windows) para monitorar eventos em uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072358"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706534"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
-  O coletor de desempenho de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] transação no ajuda a avaliar se o OLTP na memória melhorará o desempenho do aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
+  O coletor de desempenho de transação no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda a avaliar se o OLTP na memória melhorará o desempenho do aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
   
  Este tópico descreverá como:  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63072358"
     > [!IMPORTANT]  
     >  O desempenho de um sistema de banco de dados depende de vários fatores e nem todos podem ser observados e medidos pelo coletor de desempenho da transação. Portanto, o relatório de análise de desempenho da transação não garante que os ganhos de desempenho reais corresponderão a essas previsões, caso elas sejam feitas.  
   
- O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho de transação são instalados quando você seleciona **ferramentas de gerenciamento-ferramentas básicas** ou [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] **de gerenciamento-avançadas** quando você instala o.  
+ O coletor de desempenho de transação e a capacidade de gerar um relatório de análise de desempenho de transação são instalados quando você seleciona **ferramentas de gerenciamento-ferramentas básicas** ou **de gerenciamento-avançadas** quando você instala o [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  O fluxo de trabalho recomendado é ilustrado no fluxograma a seguir. Os nós amarelos representam os procedimentos opcionais:  
   
  ![Fluxo de trabalho da AMR](../../database-engine/media/amr-1.gif "Fluxo de trabalho da AMR")  
@@ -63,7 +63,7 @@ ms.locfileid: "63072358"
   
  O coletor de desempenho da transação captura dados a cada 15 minutos. Para obter resultados utilizáveis, execute o coletor de desempenho da transação por, pelo menos, uma hora. Para obter os melhores resultados, execute o coletor de desempenho da transação pelo tempo necessário para capturar dados de seus cenários primários. Gere um relatório de análise de desempenho da transação somente depois de concluir a coleta de dados.  
   
- Configure o coletor de desempenho da transação para ser executado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em produção e colete os dados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente de desenvolvimento (teste) para garantir uma sobrecarga mínima. Para obter informações sobre como salvar dados em um data warehouse de gerenciamento em uma instância [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remota, consulte [Configurar a coleta de dados em uma instância de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure o coletor de desempenho da transação para ser executado na instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em produção e colete os dados em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no ambiente de desenvolvimento (teste) para garantir uma sobrecarga mínima. Para obter informações sobre como salvar dados em um data warehouse de gerenciamento em uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância remota, consulte [Configurar a coleta de dados em uma instância de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impactos do desempenho  
  O coletor de desempenho da transação consiste em dois conjuntos de coleta de dados:  
@@ -102,7 +102,7 @@ ms.locfileid: "63072358"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurar a coleta de dados em uma instância local do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  A coleta de dados exige que o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente seja iniciado. Você só precisará configurar um coletor de dados em um servidor.  
   
- Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
+ Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para configurar a coleta de dados para carregar um banco de dados do Data Warehouse de Gerenciamento na mesma instância,  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072358"
   
 6.  Verifique as seleções. Clique em **voltar** para modificar as configurações. Clique em **Concluir** quando tiver terminado.  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar a coleta de dados em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uma instância remota  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar a coleta de dados em uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância remota  
  A coleta de dados exige que o Agente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seja iniciado na instância que coletará os dados.  
   
- Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]do.  
+ Um coletor de dados pode ser configurado em uma versão SQL Server 2012 ou posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Consulte [como: criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
   

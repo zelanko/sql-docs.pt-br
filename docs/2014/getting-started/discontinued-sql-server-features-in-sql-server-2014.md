@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112225"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706977"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Recursos do SQL Server descontinuados no SQL Server 2014
   Este tópico descreve os recursos que não estão mais disponíveis após a atualização para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "79112225"
   
  <sup>1</sup> Esses parâmetros são válidos somente para instalação.  
   
- <sup>2</sup> A [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]partir de, especifique/Action = EditionUpgrade para atualizar uma edição existente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do para uma edição diferente, a qualquer momento, sem usar a mídia de instalação original. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> A partir de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , especifique/Action = EditionUpgrade para atualizar uma edição existente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para uma edição diferente, a qualquer momento, sem usar a mídia de instalação original. Para obter mais informações sobre a versão e as atualizações de edição com suporte, consulte [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Para obter mais informações, consulte [Install SQL Server 2014 from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) (Instalar o SQL Server 2014 do Prompt de Comando).  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 525a52894c0e53ed6939c22370e38723ecb1309e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126199"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82714519"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Chamar SQLColumns em uma tabela com colunas esparsas
   Este exemplo mostra como chamar SQLColumns em uma tabela com colunas esparsas que foram definidas usando o ODBC no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

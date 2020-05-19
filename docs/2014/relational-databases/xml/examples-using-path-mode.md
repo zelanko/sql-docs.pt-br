@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8c809190e8c0230dfe301f973fcab3017d69ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287779"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716654"
 ---
 # <a name="examples-using-path-mode"></a>Exemplos: Usando modo PATH
   Os exemplos a seguir ilustram o uso do modo PATH para gerar XML a partir de uma consulta SELECT. Muitas dessas consultas são especificadas em relação a documentos XML de instruções da fabricação de bicicletas que são armazenados na coluna Instructions da tabela ProductModel.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Este é o resultado parcial. Como a consulta especifica ManuInstr como o nome da coluna, o XML retornado pelo `query()` método é encapsulado em uma `ManuInstr` marca de> de <, conforme mostrado a seguir:  
+ Este é o resultado parcial. Como a consulta especifica ManuInstr como o nome da coluna, o XML retornado pelo `query()` método é encapsulado em uma marca de> de <, `ManuInstr` conforme mostrado a seguir:  
   
  `<Root>`  
   

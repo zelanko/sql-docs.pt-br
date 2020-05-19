@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206836"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705799"
 ---
 # <a name="using-data-files-and-format-files"></a>Usando arquivos de dados e de formato
   O programa de cópia em massa mais simples executa estas tarefas:  
@@ -49,7 +49,7 @@ ms.locfileid: "68206836"
   
  Ao copiar em massa de um arquivo de dados descrito por um arquivo de formato, leia o arquivo de formato chamando [bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) após **bcp_init** , mas antes de **bcp_exec**.  
   
- A função **bcp_control** controla várias opções ao copiar em massa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um arquivo de dados. **bcp_control** define opções, como o número máximo de erros antes do encerramento, a linha no arquivo no qual iniciar a cópia em massa, a linha a ser interrompida e o tamanho do lote.  
+ A função **bcp_control** controla várias opções ao copiar em massa em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um arquivo de dados. **bcp_control** define opções, como o número máximo de erros antes do encerramento, a linha no arquivo no qual iniciar a cópia em massa, a linha a ser interrompida e o tamanho do lote.  
   
 ## <a name="see-also"></a>Consulte Também  
  [Executando operações de cópia em massa &#40;&#41;ODBC](performing-bulk-copy-operations-odbc.md)  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66108d50898610949cb5cab7fb3bdd2dcc726801
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128602"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706785"
 ---
 # <a name="alter-an-extended-events-session"></a>Alterar uma sessão de Eventos Estendidos
   Depois que você criar uma sessão de Eventos Estendidos, poderá alterá-la de acordo com suas necessidades usando o **Assistente de Eventos Estendidos do SQL Server**.  

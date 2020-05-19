@@ -13,15 +13,15 @@ helpviewer_keywords:
 - information properties [OLE DB]
 - OLE DB data source properties [SQL Server Native Client]
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6defada32a68472e4578cff1622288c973399118
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679784"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707438"
 ---
 # <a name="data-source-information-properties"></a>Propriedades de informações da fonte de dados
   No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define as seguintes propriedades de informações da fonte de dados.  
